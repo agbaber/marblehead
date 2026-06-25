@@ -1,0 +1,54 @@
+---
+layout: page
+title: Ask a neighbor to vouch
+permalink: /vouch-request.html
+---
+
+<section class="vm-hero">
+  <p class="vm-eye">No Facebook? <span class="dot">&middot;</span> Get verified by a neighbor</p>
+  <h1 class="vm-big">Ask a Marblehead neighbor to vouch for you.</h1>
+  <p class="vm-cap">Enter your name and address. We'll give you a link to send to any verified neighbor &mdash; text, email, in person, however you reach them. When they confirm, you're verified.</p>
+</section>
+
+<section id="vr-form-section" class="vm-claim">
+  <p class="vm-claim-eye">Step 1</p>
+  <h2>Tell us who you are</h2>
+
+  <form id="vr-form" autocomplete="off">
+    <div class="vm-field">
+      <label for="vr-name">Your full name</label>
+      <input class="vm-input" id="vr-name" name="name" type="text"
+             required autocomplete="off" placeholder="First Last">
+    </div>
+    <div class="vm-field">
+      <label for="vr-street">Street</label>
+      <input class="vm-input" id="vr-street" name="street" type="text" required autocomplete="off">
+    </div>
+    <div class="vm-field">
+      <label for="vr-number">House number</label>
+      <input class="vm-input" id="vr-number" name="number" type="text" inputmode="numeric" required autocomplete="off">
+    </div>
+    <button class="vm-submit" type="submit" id="vr-submit">
+      Request a vouch
+      <span class="vm-submit-arrow" aria-hidden="true">&rarr;</span>
+    </button>
+  </form>
+</section>
+
+<section id="vr-waiting-section" class="vm-claim" hidden>
+  <p class="vm-claim-eye">Step 2</p>
+  <h2>Send this link to a verified neighbor</h2>
+  <p>Anyone in Marblehead who has already verified on this site can confirm. The link works once, expires in 7 days.</p>
+
+  <div class="vm-field">
+    <label for="vr-link">Your vouch link</label>
+    <input class="vm-input" id="vr-link" type="text" readonly>
+    <button class="vm-submit" id="vr-copy" type="button" style="margin-top:8px;max-width:200px">Copy link</button>
+  </div>
+
+  <p class="vm-loading" style="margin-top:24px">Waiting for a neighbor to confirm</p>
+
+  <div id="vr-result" style="margin-top:24px"></div>
+</section>
+
+<script type="module" src="/assets/community-pulse/vouch.js"></script>

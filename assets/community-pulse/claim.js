@@ -2,6 +2,9 @@
 // Drives FB OAuth bootstrap, the claim form, the custom street autocomplete,
 // and result branching.
 
+import { tryConditionalPasskey } from './passkey-signin.js';
+import { mountPasskeySaveCard, shouldPromptPasskeySave } from './passkey-save.js';
+
 const VERIFY_API = (location.hostname === 'localhost')
   ? 'http://localhost:8787'
   : 'https://marblehead-community-pulse.agbaber.workers.dev';
@@ -283,7 +286,20 @@ async function onSubmit(e) {
     case 'match':
       if (body.session_jwt) setJwt(body.session_jwt);
       result.innerHTML = renderSuccess(claimed);
-      setTimeout(() => { location.href = '/profile.html'; }, 1500);
+      // Offer to save a passkey before redirecting.
+      if (shouldPromptPasskeySave()) {
+        const container = document.getElementById('claim-passkey-save');
+        await mountPasskeySaveCard(container, {
+          onSaved: () => { setTimeout(() => { location.href = '/profile.html'; }, 1200); },
+          onSkipped: () => { setTimeout(() => { location.href = '/profile.html'; }, 800); },
+        });
+        // If the card was suppressed (unsupported device), still redirect.
+        if (!container.innerHTML) {
+          setTimeout(() => { location.href = '/profile.html'; }, 1500);
+        }
+      } else {
+        setTimeout(() => { location.href = '/profile.html'; }, 1500);
+      }
       break;
     case 'first_initial_mismatch':
       result.innerHTML = renderFirstInitialMismatch(claimed, body.alternatives || []);
@@ -312,6 +328,16 @@ async function init() {
     fbLink.addEventListener('click', () => track('verify_fb_start_clicked'));
   }
 
+  // If we don't have a session and we're not handling an OAuth callback,
+  // try conditional-UI passkey sign-in in parallel. The browser surfaces
+  // a biometric prompt only if a passkey exists for this origin; otherwise
+  // it does nothing visible.
+  if (!readJwt() && !oauth) {
+    tryConditionalPasskey().then(r => {
+      if (r && r.token) location.href = '/profile.html';
+    });
+  }
+
   const profile = await fetchSelf();
   if (profile && profile.identity_hash) {
     location.href = '/profile.html';
@@ -325,9 +351,8 @@ async function init() {
   if (primary) primary.hidden = true;
   const or = document.querySelector('.vm-or');
   if (or) or.hidden = true;
-  const fallback = document.querySelector('.vm-fallback');
-  if (fallback) fallback.hidden = true;
-  // Trim the hero copy in the claim step -- the form has its own context.
+  const fallback = document.querySelectorAll('.vm-fallback');
+  fallback.forEach(el => { el.hidden = true; });
   document.querySelectorAll('.vm-hero .vm-cap, .vm-hero .vm-cap-sub')
     .forEach(el => { el.hidden = true; });
 

@@ -230,6 +230,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
   <h3>What's missing for the real version</h3>
   <ul>
     <li><strong>Monthly cash position.</strong> The Treasurer tracks pooled cash continuously. Nothing month-by-month is published. Free cash is a year-end DOR-certified figure, not a running balance.</li>
+    <li><strong>FY25 and FY26 are ACFR figures, not DOR-certified.</strong> DOR's FreeCash2 report tops out at Year 2023 (= FY24 by our convention). The two most recent bars use the town's ACFR year-end General Fund Unassigned (FY24 ACFR for FY25, FY25 ACFR for FY26) as the best available proxy. DOR's certified value typically lands somewhat below the ACFR unassigned. Faded bars flag the methodology difference.</li>
     <li><strong>Investments and reserves breakdown.</strong> The Annual Report's Treasurer section gives one year-end pooled cash figure. Stabilization Fund and OPEB Trust balances are in the ACFR, also annually.</li>
   </ul>
 </div>
@@ -438,14 +439,22 @@ og_url: https://marbleheaddata.org/monthly-pacing/
         var flbl = (fv >= 1e6) ? ('$' + (fv/1e6).toFixed(1) + 'M') : ('$' + Math.round(fv/1e3) + 'K');
         fcParts.push('<text class="fc-axis-text" x="' + (fpadL - 6) + '" y="' + (fy + 3) + '" text-anchor="end">' + flbl + '</text>');
       }
-      // bars
+      // bars. FY15-FY24 use DOR-certified values; FY25-FY26 use the
+      // town's ACFR year-end unassigned fund balance because DOR hasn't
+      // refreshed its FreeCash2 report past Year 2023 yet. DOR typically
+      // certifies a value below the ACFR unassigned, so the two most
+      // recent bars are rendered with reduced opacity to flag that
+      // they're not strictly comparable to the FY15-FY24 series.
       fcRows.forEach(function (r, i) {
         var val = Number(r.certified_free_cash);
         var h = (FH - fpadT - fpadB) * (val / fyMax);
         var x = fpadL + bw * i + bw * 0.18;
         var w = bw * 0.64;
         var y = FH - fpadB - h;
-        fcParts.push('<rect class="fc-bar" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="var(--c-navy)" rx="2"/>');
+        var src = (r.certified_source || '').toLowerCase();
+        var pendingDor = !src.includes('dor');
+        var opacity = pendingDor ? 0.45 : 1;
+        fcParts.push('<rect class="fc-bar" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="var(--c-navy)" fill-opacity="' + opacity + '" rx="2"><title>' + (r.fiscal_year || '') + ': $' + (val/1e6).toFixed(1) + 'M' + (pendingDor ? ' (ACFR unassigned, pending DOR certification)' : ' (DOR certified)') + '</title></rect>');
         // label
         fcParts.push('<text class="fc-axis-text" x="' + (fpadL + bw * i + bw / 2) + '" y="' + (FH - fpadB + 14) + '" text-anchor="middle">' + (r.fiscal_year || '').replace('FY', '') + '</text>');
       });
