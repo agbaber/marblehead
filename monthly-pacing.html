@@ -85,6 +85,46 @@ og_url: https://marbleheaddata.org/monthly-pacing/
   .fc-bar { }
   .fc-axis-text { font-size: 10.5px; fill: var(--text-muted); font-variant-numeric: tabular-nums; }
 
+  /* Reserves snapshot tiles */
+  .reserves-tiles {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+    margin: 10px 0 18px;
+  }
+  .reserves-tile {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 12px 14px;
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .reserves-tile .rt-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; color: var(--text-subtle);
+  }
+  .reserves-tile .rt-value {
+    font-size: 22px; font-weight: 700; color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .reserves-tile .rt-foot {
+    font-size: 11px; color: var(--text-muted); line-height: 1.4;
+  }
+  @media (max-width: 720px) {
+    .reserves-tiles { grid-template-columns: repeat(2, 1fr); }
+    .reserves-tile .rt-value { font-size: 18px; }
+  }
+
+  /* Reserves trend chart */
+  .reserves-chart { width: 100%; height: 240px; display: block; margin: 8px 0; }
+  .reserves-legend {
+    display: flex; flex-wrap: wrap; gap: 6px 16px;
+    font-size: 12px; color: var(--text-muted); margin: 4px 0 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .reserves-legend-item { display: inline-flex; align-items: center; gap: 6px; }
+  .reserves-legend-swatch {
+    width: 12px; height: 12px; border-radius: 3px; display: inline-block;
+  }
+  .rt-grid { stroke: var(--border); stroke-width: 1; }
+  .rt-axis-text { font-size: 10.5px; fill: var(--text-muted); font-variant-numeric: tabular-nums; }
+
   /* Caveat block */
   .caveats {
     background: color-mix(in srgb, var(--c-brass) 8%, var(--surface));
@@ -217,21 +257,39 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 </div>
 
 <h2 class="section-h">3. Town cash balance</h2>
-<p class="section-sub">Year-end certified free cash, FY15&ndash;FY26. One value per year, certified after the prior fiscal year closes.</p>
+<p class="section-sub">Year-end reserve balances, FY16&ndash;FY25, and year-end certified free cash, FY15&ndash;FY26. One value per year per series; reserves come from the audited ACFR, free cash from DOR DLS Gateway.</p>
 
 <div class="data-stamp">
-  <span><span class="stamp-label">Source</span> Massachusetts DOR DLS Gateway (FreeCash2 report)</span>
-  <span><span class="stamp-label">Cadence</span> <strong>Annual</strong> &middot; certified in the fall after the FY closes</span>
+  <span><span class="stamp-label">Source</span> FY25 ACFR (statistical section + RSI tables); FY24 ACFR for general stabilization detail</span>
+  <span><span class="stamp-label">Cadence</span> <strong>Annual</strong> &middot; ACFR published the spring after FY closes</span>
 </div>
 
+<h3 style="font-size:14px;font-weight:600;margin:14px 0 4px;color:var(--text);">Reserves at the most recent year-end (June 30, 2025)</h3>
+
+<div class="reserves-tiles" id="reserves-tiles"></div>
+
+<p style="font-size:12.5px;color:var(--text-muted);line-height:1.55;margin:0 0 18px;">
+  The dedicated <strong>General Stabilization Fund</strong> (MGL Ch. 40, Sec. 5B; requires a 2/3 Town Meeting vote to draw) is reported <em>inside</em> the General Fund Unassigned line in the audited statements. At FY25 year-end it held <strong>$557,204</strong> &mdash; a small fraction of the $9.88M unassigned total.<sup class="cite" data-source="FY25 ACFR Note III.J">[s]</sup>
+</p>
+
+<h3 style="font-size:14px;font-weight:600;margin:22px 0 4px;color:var(--text);">Certified free cash by year</h3>
+<p style="font-size:12px;color:var(--text-muted);margin:0 0 6px;">Certified by Massachusetts DOR DLS Gateway (FreeCash2 report). FY15&ndash;FY24 are DOR-certified; FY25&ndash;FY26 are ACFR-unassigned proxies pending DOR refresh (faded).</p>
+
 <svg class="fc-chart" id="fc-chart" viewBox="0 0 800 220" preserveAspectRatio="none" aria-label="Annual certified free cash by fiscal year"></svg>
+
+<h3 style="font-size:14px;font-weight:600;margin:22px 0 4px;color:var(--text);">Reserves trend, FY16&ndash;FY25</h3>
+<p style="font-size:12px;color:var(--text-muted);margin:0 0 6px;">Three reserve categories on the same scale. The Pension Trust (~$133M at FY25YE) is on its own scale to the right because it dwarfs the others; bar heights between the left-axis series and the pension line aren't directly comparable.</p>
+
+<svg class="reserves-chart" id="reserves-chart" viewBox="0 0 800 240" preserveAspectRatio="none" aria-label="Reserve fund balances by fiscal year"></svg>
+<div class="reserves-legend" id="reserves-legend"></div>
 
 <div class="caveats">
   <h3>What's missing for the real version</h3>
   <ul>
-    <li><strong>Monthly cash position.</strong> The Treasurer tracks pooled cash continuously. Nothing month-by-month is published. Free cash is a year-end DOR-certified figure, not a running balance.</li>
-    <li><strong>FY25 and FY26 are ACFR figures, not DOR-certified.</strong> DOR's FreeCash2 report tops out at Year 2023 (= FY24 by our convention). The two most recent bars use the town's ACFR year-end General Fund Unassigned (FY24 ACFR for FY25, FY25 ACFR for FY26) as the best available proxy. DOR's certified value typically lands somewhat below the ACFR unassigned. Faded bars flag the methodology difference.</li>
-    <li><strong>Investments and reserves breakdown.</strong> The Annual Report's Treasurer section gives one year-end pooled cash figure. Stabilization Fund and OPEB Trust balances are in the ACFR, also annually.</li>
+    <li><strong>Monthly cash position.</strong> The Treasurer tracks pooled cash continuously. Nothing month-by-month is published. Free cash and reserves are year-end ACFR/DOR figures, not running balances.</li>
+    <li><strong>FY25 and FY26 free cash are ACFR proxies, not DOR-certified.</strong> DOR's FreeCash2 report tops out at Year 2023 (= FY24 by our convention). The two most recent bars use the town's ACFR year-end General Fund Unassigned (FY24 ACFR for FY25, FY25 ACFR for FY26) as the best available proxy. DOR's certified value typically lands somewhat below the ACFR unassigned. Faded bars flag the methodology difference.</li>
+    <li><strong>Operating cash, enterprise cash, and individual trust funds.</strong> The Treasurer's internal monthly report breaks pooled cash by category (general / Water+Sewer / Light / restricted trusts). Only year-end totals show up publicly, in the ACFR balance sheet.</li>
+    <li><strong>Pension/OPEB market sensitivity.</strong> The Pension Trust and OPEB Trust balances move with PRIT/SRBT investment returns, not just contributions. A drop year-to-year doesn't mean a draw; it can mean a market correction. The FY22-FY23 dip in the pension line is the 2022 market.</li>
   </ul>
 </div>
 
@@ -259,6 +317,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
   function setText(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
   var BURN_URL   = '../data/monthly_burn_FY26.json';
   var FC_URL     = '../data/marblehead_free_cash.csv';
+  var CR_URL     = '../data/cash_reserves_history.csv';
 
   // Minimal CSV parser for the free-cash file (no embedded commas/quotes in this dataset).
   function parseCsv(text) {
@@ -275,11 +334,13 @@ og_url: https://marbleheaddata.org/monthly-pacing/
   Promise.all([
     fetch(BUDGET_URL).then(function (r) { return r.json(); }),
     fetch(BURN_URL).then(function (r) { return r.json(); }),
-    fetch(FC_URL).then(function (r) { return r.text(); }).then(parseCsv)
+    fetch(FC_URL).then(function (r) { return r.text(); }).then(parseCsv),
+    fetch(CR_URL).then(function (r) { return r.text(); }).then(parseCsv)
   ]).then(function (results) {
     renderPace(results[0]);
     renderBurn(results[1]);
     renderFreeCash(results[2]);
+    renderReserves(results[3]);
   }).catch(function (err) {
     console.error('monthly-pacing data load failed:', err);
   });
@@ -461,6 +522,133 @@ og_url: https://marbleheaddata.org/monthly-pacing/
       fcSvg.innerHTML = fcParts.join('');
     }
   }
+  }
+
+  // ---------- Reserves tiles + trend chart ----------
+  function fmtMoneyShort(v) {
+    if (!isFinite(v)) return '—';
+    if (Math.abs(v) >= 1e6) return '$' + (v / 1e6).toFixed(2) + 'M';
+    if (Math.abs(v) >= 1e3) return '$' + Math.round(v / 1e3) + 'K';
+    return '$' + Math.round(v).toLocaleString();
+  }
+  function renderReserves(rows) {
+    if (!Array.isArray(rows) || !rows.length) return;
+    // Tiles use the latest year-end row.
+    var last = rows[rows.length - 1];
+    var tiles = document.getElementById('reserves-tiles');
+    if (tiles) {
+      var lastFy = (last.fiscal_year || '').replace('FY', '20');
+      var tileSpec = [
+        { label: 'GF Unassigned', key: 'gf_unassigned',    foot: 'General Fund cushion (incl. $557k General Stabilization)' },
+        { label: 'OPEB Trust (Town)', key: 'opeb_trust_town', foot: 'Pre-funds retiree health benefits' },
+        { label: 'OPEB Trust (Light)', key: 'opeb_trust_light', foot: 'MMLD’s share of OPEB trust assets' },
+        { label: 'Pension Trust',    key: 'pension_trust', foot: 'Town’s fiduciary net position in PRIT' }
+      ];
+      tiles.innerHTML = tileSpec.map(function (t) {
+        var v = Number(last[t.key] || 0);
+        return '<div class="reserves-tile">' +
+          '<span class="rt-label">' + t.label + '</span>' +
+          '<span class="rt-value">' + fmtMoneyShort(v) + '</span>' +
+          '<span class="rt-foot">' + t.foot + '</span>' +
+        '</div>';
+      }).join('');
+    }
+
+    var svg = document.getElementById('reserves-chart');
+    if (!svg) return;
+    // Trend chart: GF Unassigned, OPEB Town, OPEB Light as grouped bars on
+    // left axis; Pension Trust as a line on a separate right axis (it's
+    // ~25x larger and would compress the others to nothing on a shared
+    // scale).
+    var W = 800, H = 240, padL = 56, padR = 56, padT = 14, padB = 32;
+    var n = rows.length;
+    var groupW = (W - padL - padR) / n;
+    var leftKeys = ['gf_unassigned', 'opeb_trust_town', 'opeb_trust_light'];
+    var leftColors = { gf_unassigned: '#0b1d3a', opeb_trust_town: '#156d68', opeb_trust_light: '#b59456' };
+    var leftLabels = { gf_unassigned: 'GF Unassigned', opeb_trust_town: 'OPEB Trust (Town)', opeb_trust_light: 'OPEB Trust (Light)' };
+    var pensionColor = '#7a1f1f';
+
+    var leftMax = 0;
+    rows.forEach(function (r) {
+      leftKeys.forEach(function (k) {
+        var v = Number(r[k] || 0);
+        if (v > leftMax) leftMax = v;
+      });
+    });
+    var rightMax = 0;
+    rows.forEach(function (r) {
+      var v = Number(r.pension_trust || 0);
+      if (v > rightMax) rightMax = v;
+    });
+    function niceMax(v) {
+      if (!v) return 1;
+      var p = Math.pow(10, Math.floor(Math.log10(v)));
+      var n = v / p;
+      var nn = n < 1.5 ? 1.5 : n < 3 ? 3 : n < 5 ? 5 : n < 7.5 ? 7.5 : 10;
+      return nn * p;
+    }
+    leftMax = niceMax(leftMax);
+    rightMax = niceMax(rightMax);
+
+    var parts = [];
+    var ticks = 4;
+    // Left axis grid + labels
+    for (var t = 0; t <= ticks; t++) {
+      var v = leftMax * t / ticks;
+      var y = H - padB - (H - padT - padB) * (v / leftMax);
+      parts.push('<line class="rt-grid" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + y + '" y2="' + y + '"/>');
+      var lbl = (v >= 1e6) ? ('$' + (v/1e6).toFixed(1) + 'M') : (v >= 1e3 ? ('$' + Math.round(v/1e3) + 'K') : ('$' + Math.round(v)));
+      parts.push('<text class="rt-axis-text" x="' + (padL - 6) + '" y="' + (y + 3) + '" text-anchor="end">' + lbl + '</text>');
+    }
+    // Right axis labels (no grid duplicate)
+    for (var rt = 0; rt <= ticks; rt++) {
+      var rv = rightMax * rt / ticks;
+      var ry = H - padB - (H - padT - padB) * (rv / rightMax);
+      var rlbl = (rv >= 1e6) ? ('$' + Math.round(rv/1e6) + 'M') : ('$' + Math.round(rv/1e3) + 'K');
+      parts.push('<text class="rt-axis-text" x="' + (W - padR + 6) + '" y="' + (ry + 3) + '" text-anchor="start" fill="' + pensionColor + '">' + rlbl + '</text>');
+    }
+    // Per-FY grouped bars + pension line
+    var linePts = [];
+    rows.forEach(function (r, i) {
+      var groupX = padL + groupW * i;
+      var barW = (groupW * 0.78) / leftKeys.length;
+      leftKeys.forEach(function (k, ki) {
+        var v = Number(r[k] || 0);
+        if (!v) return;
+        var h = (H - padT - padB) * (v / leftMax);
+        var x = groupX + groupW * 0.11 + ki * barW;
+        var y = H - padB - h;
+        parts.push('<rect x="' + x + '" y="' + y + '" width="' + (barW * 0.88) + '" height="' + h + '" fill="' + leftColors[k] + '" rx="1.5"><title>' + (r.fiscal_year || '') + ' ' + leftLabels[k] + ': ' + fmtMoneyShort(v) + '</title></rect>');
+      });
+      var pv = Number(r.pension_trust || 0);
+      if (pv) {
+        var py = H - padB - (H - padT - padB) * (pv / rightMax);
+        var px = groupX + groupW / 2;
+        linePts.push([px, py, pv, r.fiscal_year || '']);
+      }
+      // FY label on x-axis
+      parts.push('<text class="rt-axis-text" x="' + (groupX + groupW / 2) + '" y="' + (H - padB + 14) + '" text-anchor="middle">' + (r.fiscal_year || '').replace('FY', '') + '</text>');
+    });
+    // Pension trend line
+    if (linePts.length > 1) {
+      var d = 'M' + linePts.map(function (p) { return p[0].toFixed(1) + ',' + p[1].toFixed(1); }).join(' L');
+      parts.push('<path d="' + d + '" stroke="' + pensionColor + '" stroke-width="2" fill="none"/>');
+      linePts.forEach(function (p) {
+        parts.push('<circle cx="' + p[0] + '" cy="' + p[1] + '" r="3" fill="' + pensionColor + '"><title>' + p[3] + ' Pension Trust: ' + fmtMoneyShort(p[2]) + '</title></circle>');
+      });
+    }
+    svg.innerHTML = parts.join('');
+
+    // Legend
+    var legend = document.getElementById('reserves-legend');
+    if (legend) {
+      var legHtml = '';
+      leftKeys.forEach(function (k) {
+        legHtml += '<span class="reserves-legend-item"><span class="reserves-legend-swatch" style="background:' + leftColors[k] + '"></span>' + leftLabels[k] + ' (left)</span>';
+      });
+      legHtml += '<span class="reserves-legend-item"><span class="reserves-legend-swatch" style="background:' + pensionColor + '"></span>Pension Trust (right)</span>';
+      legend.innerHTML = legHtml;
+    }
   }
 })();
 </script>
