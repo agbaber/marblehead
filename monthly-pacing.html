@@ -59,7 +59,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 
   /* Monthly burn chart */
   .burn-wrap { margin: 12px 0 8px; }
-  .burn-chart { width: 100%; height: 320px; display: block; }
+  .burn-chart { width: 100%; height: auto; display: block; aspect-ratio: 800 / 320; }
   .burn-legend {
     display: flex; flex-wrap: wrap; gap: 12px 18px;
     font-size: 12px; color: var(--text-muted);
@@ -81,7 +81,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
   .burn-dot { stroke-width: 0; }
 
   /* Free cash chart */
-  .fc-chart { width: 100%; height: 220px; display: block; margin: 8px 0; }
+  .fc-chart { width: 100%; height: auto; display: block; margin: 8px 0; aspect-ratio: 800 / 220; }
   .fc-bar { }
   .fc-axis-text { font-size: 10.5px; fill: var(--text-muted); font-variant-numeric: tabular-nums; }
 
@@ -112,7 +112,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
   }
 
   /* Reserves trend chart */
-  .reserves-chart { width: 100%; height: 240px; display: block; margin: 8px 0; }
+  .reserves-chart { width: 100%; height: auto; display: block; margin: 8px 0; aspect-ratio: 800 / 240; }
   .reserves-legend {
     display: flex; flex-wrap: wrap; gap: 6px 16px;
     font-size: 12px; color: var(--text-muted); margin: 4px 0 0;
@@ -244,7 +244,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 </div>
 
 <div class="burn-wrap">
-  <svg class="burn-chart" id="burn-chart" viewBox="0 0 800 320" preserveAspectRatio="none" aria-label="Monthly cumulative spend by fund vs. straight-line target"></svg>
+  <svg class="burn-chart" id="burn-chart" viewBox="0 0 800 320" aria-label="Monthly cumulative spend by fund vs. straight-line target"></svg>
   <div class="burn-legend" id="burn-legend"></div>
 </div>
 
@@ -275,12 +275,12 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 <h3 style="font-size:14px;font-weight:600;margin:22px 0 4px;color:var(--text);">Certified free cash by year</h3>
 <p style="font-size:12px;color:var(--text-muted);margin:0 0 6px;">Certified by Massachusetts DOR DLS Gateway (FreeCash2 report). FY15&ndash;FY24 are DOR-certified; FY25&ndash;FY26 are ACFR-unassigned proxies pending DOR refresh (faded).</p>
 
-<svg class="fc-chart" id="fc-chart" viewBox="0 0 800 220" preserveAspectRatio="none" aria-label="Annual certified free cash by fiscal year"></svg>
+<svg class="fc-chart" id="fc-chart" viewBox="0 0 800 220" aria-label="Annual certified free cash by fiscal year"></svg>
 
 <h3 style="font-size:14px;font-weight:600;margin:22px 0 4px;color:var(--text);">Reserves trend, FY16&ndash;FY25</h3>
 <p style="font-size:12px;color:var(--text-muted);margin:0 0 6px;">Three reserve categories on the same scale. The Pension Trust (~$133M at FY25YE) is on its own scale to the right because it dwarfs the others; bar heights between the left-axis series and the pension line aren't directly comparable.</p>
 
-<svg class="reserves-chart" id="reserves-chart" viewBox="0 0 800 240" preserveAspectRatio="none" aria-label="Reserve fund balances by fiscal year"></svg>
+<svg class="reserves-chart" id="reserves-chart" viewBox="0 0 800 240" aria-label="Reserve fund balances by fiscal year"></svg>
 <div class="reserves-legend" id="reserves-legend"></div>
 
 <div class="caveats">
