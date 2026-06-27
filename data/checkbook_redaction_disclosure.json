@@ -1,5 +1,5 @@
 {
- "as_of": "2026-06-22",
+ "as_of": "2026-06-24",
  "generated_by": "scripts/build_checkbook_csv.py",
  "excluded_funds": [
   {
@@ -12,8 +12,8 @@
   {
    "name": "WORKERS COMPENSATION FUND",
    "reason": "Pays for medical care of named town employees with workers-compensation claims. Same identifiability concern as 111F.",
-   "row_count": 446,
-   "total_amount": 412304.78,
+   "row_count": 453,
+   "total_amount": 419173.81,
    "distinct_vendors": 43
   }
  ],
