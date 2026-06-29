@@ -104,6 +104,9 @@ describe('renderText', () => {
   });
 });
 
+// link_url intentionally carries a trailing slash. Plain Jekyll pages on the
+// site serve at /about (no slash) and 404 on /about/, so the renderer is
+// expected to drop it before emitting the link.
 const PRIMER_1 = {
   filename: '01-welcome.md',
   week_index: 1,
@@ -130,7 +133,7 @@ describe('renderHtml with primer', () => {
 
   it('UTM-tags the primer link with per-week campaign', () => {
     const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-15', PRIMER_1, 4);
-    expect(html).toMatch(/href="https:\/\/marbleheaddata\.org\/about\/\?utm_source=digest&utm_medium=email&utm_campaign=primer-week-1"/);
+    expect(html).toMatch(/href="https:\/\/marbleheaddata\.org\/about\?utm_source=digest&utm_medium=email&utm_campaign=primer-week-1"/);
   });
 
   it('HTML-escapes primer body content', () => {
@@ -158,7 +161,21 @@ describe('renderText with primer', () => {
     expect(text).toContain('What this site is');
     expect(text).toContain('First para.');
     expect(text).toContain('Second para.');
-    expect(text).toMatch(/About marbleheaddata\.org: https:\/\/marbleheaddata\.org\/about\/\?utm_source=digest&utm_medium=email&utm_campaign=primer-week-1/);
+    expect(text).toMatch(/About marbleheaddata\.org: https:\/\/marbleheaddata\.org\/about\?utm_source=digest&utm_medium=email&utm_campaign=primer-week-1/);
+  });
+});
+
+describe('primer link_url trailing-slash normalization', () => {
+  it('leaves the bare root (/) untouched', () => {
+    const primer = { ...PRIMER_1, link_url: '/' };
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-15', primer, 4);
+    expect(html).toMatch(/href="https:\/\/marbleheaddata\.org\/\?utm_source=digest/);
+  });
+
+  it('passes full URLs through unchanged', () => {
+    const primer = { ...PRIMER_1, link_url: 'https://example.com/external/' };
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-15', primer, 4);
+    expect(html).toMatch(/href="https:\/\/example\.com\/external\/\?utm_source=digest/);
   });
 });
 

@@ -61,7 +61,7 @@ Each primer file: `_primers/NN-slug.md`. Example `_primers/01-welcome.md`:
 ---
 week_index: 1
 title: "What this site is"
-link_url: /about/
+link_url: /about
 link_label: "About marbleheaddata.org"
 ---
 Plain-text body, 2 to 4 sentences. Renders as the primer card's dek
@@ -75,7 +75,7 @@ it for HTML output, and drops it into the card.
 |---|---|---|
 | `week_index` | int | Position in the drip. Worker matches `week_index === drip_week_index + 1`. |
 | `title` | string | Primer card headline. |
-| `link_url` | string | Path or full URL the CTA links to. UTM appended at render time. |
+| `link_url` | string | Path or full URL the CTA links to. UTM appended at render time. Plain pages take no trailing slash (a trailing slash 404s on the live site); the renderer drops one if present. |
 | `link_label` | string | CTA link text, with `→` appended at render. |
 
 Body: plain text, no markdown formatting. The Worker preserves paragraph breaks (`\n\n`) and escapes for HTML, then emits one `<p>` per paragraph.
