@@ -11,10 +11,21 @@ function withUtm(url) {
   return url.includes('?') ? `${url}&${UTM_QUERY}` : `${url}?${UTM_QUERY}`;
 }
 
+// Plain Jekyll pages (e.g. /the-debate) serve without a trailing slash and
+// 404 on /the-debate/. Directory-permalink pages (/meetings/x/, /me/subscription/)
+// 301 from the no-slash form to the slash form, so dropping the slash resolves
+// either way. Drop a trailing slash from author-written site paths; leave the
+// bare root and full URLs alone.
+function normalizeSitePath(path) {
+  if (path === '/') return path;
+  return path.replace(/\/$/, '');
+}
+
 function withPrimerUtm(url, weekIndex, env) {
   const PRIMER_QUERY = `utm_source=digest&utm_medium=email&utm_campaign=primer-week-${weekIndex}`;
-  // Primer link_url may be a path (/about/) or full URL. Resolve against SITE_BASE_URL.
-  const absolute = url.startsWith('http') ? url : `${env.SITE_BASE_URL}${url}`;
+  // Primer link_url may be a path (/the-debate) or a full URL. Resolve paths
+  // against SITE_BASE_URL; pass full URLs through untouched.
+  const absolute = url.startsWith('http') ? url : `${env.SITE_BASE_URL}${normalizeSitePath(url)}`;
   return absolute.includes('?') ? `${absolute}&${PRIMER_QUERY}` : `${absolute}?${PRIMER_QUERY}`;
 }
 
