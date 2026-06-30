@@ -1,10 +1,10 @@
 {
- "as_of": "2026-06-24",
- "as_of_human": "Jun 24",
- "total_amount": 103424541.13,
- "total_M": "$103.4M",
- "row_count": 16105,
- "row_count_human": "16,105",
- "csv_filename": "checkbook_FY26_2026-06-24.csv",
+ "as_of": "2026-06-29",
+ "as_of_human": "Jun 29",
+ "total_amount": 105475060.77,
+ "total_M": "$105.5M",
+ "row_count": 16517,
+ "row_count_human": "16,517",
+ "csv_filename": "checkbook_FY26_2026-06-29.csv",
  "generated_by": "scripts/build_checkbook_csv.py"
 }

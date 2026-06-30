@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-06-24",
+    "date": "2026-06-29",
     "fiscal_year": "FY26",
-    "row_count": 16105,
-    "total_paid": 103424541.13,
-    "interfund_total": 1424616.91,
-    "external_paid": 101999924.22,
+    "row_count": 16517,
+    "total_paid": 105475060.77,
+    "interfund_total": 1477325.79,
+    "external_paid": 103997734.98,
     "first_payment": "2025-07-01",
-    "last_payment": "2026-06-24",
-    "source_file": "checkbook_FY26_2026-06-24.csv"
+    "last_payment": "2026-06-29",
+    "source_file": "checkbook_FY26_2026-06-29.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 6927653.42,
-      "share": 0.067,
+      "share": 0.0657,
       "fund_count": 4,
       "top_funds": [
         {
@@ -44,19 +44,19 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 56271270.74,
-      "share": 0.5441,
+      "amount": 57720446.83,
+      "share": 0.5472,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 45700089.57,
-          "row_count": 6167
+          "amount": 45721664.16,
+          "row_count": 6206
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 8148597.59,
-          "row_count": 3260
+          "amount": 9576199.09,
+          "row_count": 3502
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -69,7 +69,7 @@
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
       "amount": 32204247.81,
-      "share": 0.3114,
+      "share": 0.3053,
       "fund_count": 9,
       "top_funds": [
         {
@@ -117,14 +117,14 @@
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 5392894.54,
-      "share": 0.0521,
+      "amount": 5850262.13,
+      "share": 0.0555,
       "fund_count": 27,
       "top_funds": [
         {
           "name": "CIRCUIT BREAKER",
-          "amount": 1768306.38,
-          "row_count": 115
+          "amount": 1996899.6,
+          "row_count": 125
         },
         {
           "name": "COVID 19 ARPA (FED)",
@@ -133,18 +133,18 @@
         },
         {
           "name": "SCHOOL LUNCH",
-          "amount": 906912.97,
-          "row_count": 621
+          "amount": 917527.29,
+          "row_count": 631
         },
         {
           "name": "SPED IDEA 94-142 (240)",
-          "amount": 703083.79,
-          "row_count": 329
+          "amount": 873180.35,
+          "row_count": 382
         },
         {
           "name": "METCO (317)",
-          "amount": 276303.23,
-          "row_count": 28
+          "amount": 321760.22,
+          "row_count": 39
         },
         {
           "name": "CHAPTER 90",
@@ -166,8 +166,8 @@
     {
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
-      "amount": 1302968.94,
-      "share": 0.0126,
+      "amount": 1303112.94,
+      "share": 0.0124,
       "fund_count": 7,
       "top_funds": [
         {
@@ -187,8 +187,8 @@
         },
         {
           "name": "SCHOOL TUITION REVOLVING",
-          "amount": 16985.48,
-          "row_count": 10
+          "amount": 17129.48,
+          "row_count": 11
         },
         {
           "name": "STREET OPENNING REVOLVING",
@@ -210,14 +210,14 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 1325505.68,
-      "share": 0.0128,
-      "fund_count": 72,
+      "amount": 1469337.64,
+      "share": 0.0139,
+      "fund_count": 73,
       "top_funds": [
         {
           "name": "HIGH SCHOOL STUDENT ACTIVITY",
-          "amount": 178363.64,
-          "row_count": 10
+          "amount": 248909.64,
+          "row_count": 11
         },
         {
           "name": "LARZ ANDERSON FUND",
@@ -250,27 +250,27 @@
           "row_count": 10
         },
         {
-          "name": "YOUTH BASEBALL DONATION FUND",
-          "amount": 50000.0,
-          "row_count": 1
+          "name": "VILLAGE STUDENT ACTIVITY FUND",
+          "amount": 55512.98,
+          "row_count": 13
         }
       ]
     }
   ],
   "gf_town_carveout": {
-    "total": 45700089.57,
-    "fixed_total": 39107472.58,
-    "fixed_share": 0.8557,
+    "total": 45721664.16,
+    "fixed_total": 39112332.58,
+    "fixed_share": 0.8554,
     "admin_contracts_total": 2806308.34,
     "admin_contracts_share": 0.0614,
-    "other_recurring_total": 3786308.65,
-    "other_recurring_share": 0.0829,
+    "other_recurring_total": 3803023.24,
+    "other_recurring_share": 0.0832,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 15834427.69,
-        "share": 0.3465,
+        "share": 0.3463,
         "row_count": 684,
         "top_vendors": [
           {
@@ -311,7 +311,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 14236642.58,
-        "share": 0.3115,
+        "share": 0.3114,
         "row_count": 32,
         "top_vendors": [
           {
@@ -336,13 +336,13 @@
       {
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
-        "amount": 3655777.31,
-        "share": 0.08,
-        "row_count": 133,
+        "amount": 3660637.31,
+        "share": 0.0801,
+        "row_count": 134,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 3655777.31
+            "amount": 3660637.31
           }
         ]
       },
@@ -390,9 +390,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 3786308.65,
-        "share": 0.0829,
-        "row_count": 5072,
+        "amount": 3803023.24,
+        "share": 0.0832,
+        "row_count": 5110,
         "top_vendors": [
           {
             "name": "DENNIS K BURKE INC",
@@ -415,16 +415,16 @@
             "amount": 90004.0
           },
           {
+            "name": "CORPORATE BILLING LLC",
+            "amount": 81127.73
+          },
+          {
             "name": "PRO AV SYSTEMS INC",
             "amount": 80263.0
           },
           {
             "name": "CATALIS TAX & CAMA INC",
             "amount": 79995.86
-          },
-          {
-            "name": "OPENGOV INC",
-            "amount": 79202.46
           }
         ]
       }
@@ -441,7 +441,7 @@
       "row_count": 88,
       "first_paid": "2025-08-12",
       "last_paid": "2026-06-18",
-      "days_since_last_paid": 6,
+      "days_since_last_paid": 11,
       "status": "active",
       "top_vendors": [
         {
@@ -481,7 +481,7 @@
       "row_count": 42,
       "first_paid": "2025-11-05",
       "last_paid": "2026-05-19",
-      "days_since_last_paid": 36,
+      "days_since_last_paid": 41,
       "status": "active",
       "top_vendors": [
         {
@@ -521,7 +521,7 @@
       "row_count": 10,
       "first_paid": "2025-09-29",
       "last_paid": "2026-06-02",
-      "days_since_last_paid": 22,
+      "days_since_last_paid": 27,
       "status": "engineering",
       "top_vendors": [
         {
@@ -546,7 +546,7 @@
       "row_count": 8,
       "first_paid": "2025-08-27",
       "last_paid": "2026-06-11",
-      "days_since_last_paid": 13,
+      "days_since_last_paid": 18,
       "status": "active",
       "top_vendors": [
         {
