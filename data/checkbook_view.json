@@ -1,28 +1,28 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "fiscal_year": "FY26",
-    "row_count": 16517,
-    "total_paid": 105475060.77,
-    "interfund_total": 1477325.79,
-    "external_paid": 103997734.98,
+    "row_count": 16803,
+    "total_paid": 107185521.25,
+    "interfund_total": 1481783.76,
+    "external_paid": 105703737.49,
     "first_payment": "2025-07-01",
-    "last_payment": "2026-06-29",
-    "source_file": "checkbook_FY26_2026-06-29.csv"
+    "last_payment": "2026-06-30",
+    "source_file": "checkbook_FY26_2026-06-30.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
-      "amount": 6927653.42,
-      "share": 0.0657,
+      "amount": 6962797.58,
+      "share": 0.065,
       "fund_count": 4,
       "top_funds": [
         {
           "name": "A11 2022 CAPITAL IMPROVEMENT",
-          "amount": 5085488.21,
-          "row_count": 88
+          "amount": 5117836.55,
+          "row_count": 91
         },
         {
           "name": "A34 2015 NEW TRANSF STATION",
@@ -36,22 +36,22 @@
         },
         {
           "name": "A35 2021 ABBOT LIBRARY RENOV",
-          "amount": 19714.77,
-          "row_count": 8
+          "amount": 22510.59,
+          "row_count": 9
         }
       ]
     },
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 57720446.83,
-      "share": 0.5472,
+      "amount": 57883919.62,
+      "share": 0.54,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 45721664.16,
-          "row_count": 6206
+          "amount": 45879116.95,
+          "row_count": 6302
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -60,37 +60,37 @@
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
-          "amount": 2422583.58,
-          "row_count": 95
+          "amount": 2428603.58,
+          "row_count": 97
         }
       ]
     },
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 32204247.81,
-      "share": 0.3053,
+      "amount": 33616889.2,
+      "share": 0.3136,
       "fund_count": 9,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 19706847.15,
-          "row_count": 1511
+          "amount": 21098866.67,
+          "row_count": 1545
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 4481008.51,
-          "row_count": 580
+          "amount": 4486295.64,
+          "row_count": 600
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
-          "amount": 3919852.46,
-          "row_count": 963
+          "amount": 3929449.37,
+          "row_count": 1002
         },
         {
           "name": "SEWER CAPITAL ARTICLES",
-          "amount": 1012464.18,
-          "row_count": 37
+          "amount": 1013294.38,
+          "row_count": 39
         },
         {
           "name": "WATER CAPITAL ARTICLES",
@@ -109,17 +109,17 @@
         },
         {
           "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 493421.92,
-          "row_count": 471
+          "amount": 498329.55,
+          "row_count": 483
         }
       ]
     },
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 5850262.13,
-      "share": 0.0555,
-      "fund_count": 27,
+      "amount": 5912626.64,
+      "share": 0.0552,
+      "fund_count": 28,
       "top_funds": [
         {
           "name": "CIRCUIT BREAKER",
@@ -128,13 +128,13 @@
         },
         {
           "name": "COVID 19 ARPA (FED)",
-          "amount": 1222270.76,
-          "row_count": 144
+          "amount": 1226054.36,
+          "row_count": 145
         },
         {
           "name": "SCHOOL LUNCH",
-          "amount": 917527.29,
-          "row_count": 631
+          "amount": 948077.87,
+          "row_count": 654
         },
         {
           "name": "SPED IDEA 94-142 (240)",
@@ -166,8 +166,8 @@
     {
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
-      "amount": 1303112.94,
-      "share": 0.0124,
+      "amount": 1323302.12,
+      "share": 0.0123,
       "fund_count": 7,
       "top_funds": [
         {
@@ -177,13 +177,13 @@
         },
         {
           "name": "PARK REVOLVING FUND",
-          "amount": 505542.73,
-          "row_count": 528
+          "amount": 521250.12,
+          "row_count": 539
         },
         {
           "name": "COA REVOLVING",
-          "amount": 59122.12,
-          "row_count": 225
+          "amount": 63603.91,
+          "row_count": 237
         },
         {
           "name": "SCHOOL TUITION REVOLVING",
@@ -210,9 +210,9 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 1469337.64,
+      "amount": 1485986.09,
       "share": 0.0139,
-      "fund_count": 73,
+      "fund_count": 74,
       "top_funds": [
         {
           "name": "HIGH SCHOOL STUDENT ACTIVITY",
@@ -231,8 +231,8 @@
         },
         {
           "name": "MOSES A PICKETT CHARITY",
-          "amount": 62234.82,
-          "row_count": 57
+          "amount": 62366.54,
+          "row_count": 60
         },
         {
           "name": "DONALD & BARBARA GRAY SCHOLARS",
@@ -258,19 +258,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 45721664.16,
-    "fixed_total": 39112332.58,
-    "fixed_share": 0.8554,
-    "admin_contracts_total": 2806308.34,
-    "admin_contracts_share": 0.0614,
-    "other_recurring_total": 3803023.24,
-    "other_recurring_share": 0.0832,
+    "total": 45879116.95,
+    "fixed_total": 39113925.85,
+    "fixed_share": 0.8525,
+    "admin_contracts_total": 2824134.5,
+    "admin_contracts_share": 0.0616,
+    "other_recurring_total": 3941056.6,
+    "other_recurring_share": 0.0859,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 15834427.69,
-        "share": 0.3463,
+        "share": 0.3451,
         "row_count": 684,
         "top_vendors": [
           {
@@ -311,7 +311,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 14236642.58,
-        "share": 0.3114,
+        "share": 0.3103,
         "row_count": 32,
         "top_vendors": [
           {
@@ -324,7 +324,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5380625.0,
-        "share": 0.1177,
+        "share": 0.1173,
         "row_count": 1,
         "top_vendors": [
           {
@@ -336,22 +336,22 @@
       {
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
-        "amount": 3660637.31,
-        "share": 0.0801,
-        "row_count": 134,
+        "amount": 3662230.58,
+        "share": 0.0798,
+        "row_count": 138,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 3660637.31
+            "amount": 3662230.58
           }
         ]
       },
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 2806308.34,
-        "share": 0.0614,
-        "row_count": 245,
+        "amount": 2824134.5,
+        "share": 0.0616,
+        "row_count": 252,
         "top_vendors": [
           {
             "name": "REPUBLIC SERVICES INC",
@@ -367,11 +367,11 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 318455.17
+            "amount": 320883.74
           },
           {
             "name": "FUTURE TECHNOLOGIES GROUP LLC",
-            "amount": 225963.8
+            "amount": 230950.55
           },
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -379,7 +379,7 @@
           },
           {
             "name": "MEAD TALERMAN & COSTA LLC",
-            "amount": 175899.14
+            "amount": 186309.98
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
@@ -390,9 +390,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 3803023.24,
-        "share": 0.0832,
-        "row_count": 5110,
+        "amount": 3941056.6,
+        "share": 0.0859,
+        "row_count": 5195,
         "top_vendors": [
           {
             "name": "DENNIS K BURKE INC",
@@ -415,16 +415,16 @@
             "amount": 90004.0
           },
           {
+            "name": "CATALIS TAX & CAMA INC",
+            "amount": 84995.86
+          },
+          {
             "name": "CORPORATE BILLING LLC",
-            "amount": 81127.73
+            "amount": 84698.36
           },
           {
             "name": "PRO AV SYSTEMS INC",
             "amount": 80263.0
-          },
-          {
-            "name": "CATALIS TAX & CAMA INC",
-            "amount": 79995.86
           }
         ]
       }
@@ -437,37 +437,37 @@
       "ballot_date": "2022-06-21",
       "purpose": "roofs, roads/sidewalks, smart panels, HVAC, salt shed, HS boiler",
       "context": "Bonds run 10-20 years; debt service appears in U.S. Bank rows through the late 2030s.",
-      "amount": 5085488.21,
-      "row_count": 88,
+      "amount": 5117836.55,
+      "row_count": 91,
       "first_paid": "2025-08-12",
-      "last_paid": "2026-06-18",
-      "days_since_last_paid": 11,
+      "last_paid": "2026-06-24",
+      "days_since_last_paid": 6,
       "status": "active",
       "top_vendors": [
         {
           "name": "D & R GENERAL CONTRACTING INC",
           "amount": 1297918.2,
-          "share": 0.2552
+          "share": 0.2536
         },
         {
           "name": "HOMER CONTRACTING IN",
           "amount": 951900.0,
-          "share": 0.1872
+          "share": 0.186
         },
         {
           "name": "RAYMOND DESIGN ASSOCIATES INC",
           "amount": 898722.5,
-          "share": 0.1767
+          "share": 0.1756
         },
         {
           "name": "MDM ENGINEERING COMPANY INC",
           "amount": 823141.27,
-          "share": 0.1619
+          "share": 0.1608
         },
         {
           "name": "RICHARD D AMBROSIA INC",
           "amount": 575211.29,
-          "share": 0.1131
+          "share": 0.1124
         }
       ]
     },
@@ -481,7 +481,7 @@
       "row_count": 42,
       "first_paid": "2025-11-05",
       "last_paid": "2026-05-19",
-      "days_since_last_paid": 41,
+      "days_since_last_paid": 42,
       "status": "active",
       "top_vendors": [
         {
@@ -521,7 +521,7 @@
       "row_count": 10,
       "first_paid": "2025-09-29",
       "last_paid": "2026-06-02",
-      "days_since_last_paid": 27,
+      "days_since_last_paid": 28,
       "status": "engineering",
       "top_vendors": [
         {
@@ -542,37 +542,37 @@
       "ballot_date": "2021-06-22",
       "purpose": "~$8.5M bond, the library reopened in 2023",
       "context": "Project fund essentially closed; bond debt service on the $8.5M continues in U.S. Bank rows for the remainder of the ~20-year term.",
-      "amount": 19714.77,
-      "row_count": 8,
+      "amount": 22510.59,
+      "row_count": 9,
       "first_paid": "2025-08-27",
-      "last_paid": "2026-06-11",
-      "days_since_last_paid": 18,
+      "last_paid": "2026-06-16",
+      "days_since_last_paid": 14,
       "status": "active",
       "top_vendors": [
         {
           "name": "ANNESE ELECTRICAL SERVICES INC",
           "amount": 7488.41,
-          "share": 0.3798
+          "share": 0.3327
         },
         {
           "name": "HAYDENS SAFE & LOCK CO. INC.",
           "amount": 5345.07,
-          "share": 0.2711
+          "share": 0.2374
+        },
+        {
+          "name": "RUSTIC FIRE PROTECTION INC",
+          "amount": 2795.82,
+          "share": 0.1242
         },
         {
           "name": "DANIEL LEE",
           "amount": 2037.14,
-          "share": 0.1033
+          "share": 0.0905
         },
         {
           "name": "BRITT DECKER",
           "amount": 1686.0,
-          "share": 0.0855
-        },
-        {
-          "name": "SUPERIOR LANDSCAPING",
-          "amount": 1593.0,
-          "share": 0.0808
+          "share": 0.0749
         }
       ]
     }
