@@ -3,10 +3,10 @@
   "snapshot": {
     "date": "2026-06-30",
     "fiscal_year": "FY26",
-    "row_count": 16803,
-    "total_paid": 107185521.25,
+    "row_count": 16804,
+    "total_paid": 107185588.25,
     "interfund_total": 1481783.76,
-    "external_paid": 105703737.49,
+    "external_paid": 105703804.49,
     "first_payment": "2025-07-01",
     "last_payment": "2026-06-30",
     "source_file": "checkbook_FY26_2026-06-30.csv"
@@ -44,14 +44,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 57883919.62,
+      "amount": 57883986.62,
       "share": 0.54,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 45879116.95,
-          "row_count": 6302
+          "amount": 45879183.95,
+          "row_count": 6303
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -258,12 +258,12 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 45879116.95,
+    "total": 45879183.95,
     "fixed_total": 39113925.85,
     "fixed_share": 0.8525,
     "admin_contracts_total": 2824134.5,
     "admin_contracts_share": 0.0616,
-    "other_recurring_total": 3941056.6,
+    "other_recurring_total": 3941123.6,
     "other_recurring_share": 0.0859,
     "segments": [
       {
@@ -390,9 +390,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 3941056.6,
+        "amount": 3941123.6,
         "share": 0.0859,
-        "row_count": 5195,
+        "row_count": 5196,
         "top_vendors": [
           {
             "name": "DENNIS K BURKE INC",
