@@ -198,22 +198,27 @@ def _massachusetts_fiscal_year(iso_date: str) -> str:
     return f"FY{fy % 100:02d}"
 
 
-def _latest_checkbook_csv() -> Path:
-    """Return the most recent checkbook_FY26_*.csv in data/, by filename date."""
-    matches = sorted(DATA_DIR.glob("checkbook_FY26_*.csv"))
+def _checkbook_csvs() -> list[Path]:
+    """Return every checkbook_FY##_*.csv in data/, sorted by filename.
+
+    One CSV per fiscal year (e.g. checkbook_FY26_2026-06-30.csv is the
+    frozen FY26 archive; checkbook_FY27_*.csv is the live year).
+    """
+    matches = sorted(DATA_DIR.glob("checkbook_FY[0-9][0-9]_*.csv"))
     if not matches:
-        raise FileNotFoundError("No checkbook_FY26_*.csv in data/")
-    return matches[-1]
+        raise FileNotFoundError("No checkbook_FY##_*.csv in data/")
+    return matches
 
 
 def build_vendor_payments(conn: sqlite3.Connection) -> int:
-    """Ingest the latest FY26 checkbook CSV into a vendor_payments table.
+    """Ingest every fiscal-year checkbook CSV into a vendor_payments table.
 
     The Open Finance export has columns: Vendor, Fund, Division, Description,
-    Date, Amount. We normalize the date, derive fiscal_year, and write the
-    spec-defined schema.
+    Date, Amount. We normalize the date, derive fiscal_year per row from the
+    payment date, and write the spec-defined schema. source_file records
+    which CSV each row came from.
     """
-    path = _latest_checkbook_csv()
+    paths = _checkbook_csvs()
     conn.execute('DROP TABLE IF EXISTS "vendor_payments"')
     conn.execute(
         """CREATE TABLE vendor_payments (
@@ -238,38 +243,39 @@ def build_vendor_payments(conn: sqlite3.Connection) -> int:
         "CREATE INDEX vp_date ON vendor_payments(payment_date)"
     )
 
-    with path.open(newline="", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        payload: list[tuple] = []
-        for row in reader:
-            raw_date = (row.get("Date") or "").strip()
-            payment_date = raw_date.split("T", 1)[0] if raw_date else ""
-            fiscal_year = _massachusetts_fiscal_year(payment_date)
-            amount_str = (row.get("Amount") or "").strip().replace(",", "")
-            try:
-                amount = float(amount_str) if amount_str else None
-            except ValueError:
-                amount = None
-            division = (row.get("Division") or "").strip()
-            fund = (row.get("Fund") or "").strip()
-            if division and division != "UNDEFINED":
-                department = division
-            elif fund:
-                department = fund
-            else:
-                department = "Unattributed"
-            payload.append(
-                (
-                    payment_date or None,
-                    fiscal_year or None,
-                    (row.get("Vendor") or "").strip() or None,
-                    department,
-                    (row.get("Description") or "").strip() or None,
-                    amount,
-                    fund or None,
-                    path.name,
+    payload: list[tuple] = []
+    for path in paths:
+        with path.open(newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                raw_date = (row.get("Date") or "").strip()
+                payment_date = raw_date.split("T", 1)[0] if raw_date else ""
+                fiscal_year = _massachusetts_fiscal_year(payment_date)
+                amount_str = (row.get("Amount") or "").strip().replace(",", "")
+                try:
+                    amount = float(amount_str) if amount_str else None
+                except ValueError:
+                    amount = None
+                division = (row.get("Division") or "").strip()
+                fund = (row.get("Fund") or "").strip()
+                if division and division != "UNDEFINED":
+                    department = division
+                elif fund:
+                    department = fund
+                else:
+                    department = "Unattributed"
+                payload.append(
+                    (
+                        payment_date or None,
+                        fiscal_year or None,
+                        (row.get("Vendor") or "").strip() or None,
+                        department,
+                        (row.get("Description") or "").strip() or None,
+                        amount,
+                        fund or None,
+                        path.name,
+                    )
                 )
-            )
 
     conn.executemany(
         """INSERT INTO vendor_payments (
@@ -280,17 +286,18 @@ def build_vendor_payments(conn: sqlite3.Connection) -> int:
     )
 
     today = date.today().isoformat()
+    file_list = ", ".join(p.name for p in paths)
     conn.execute(
         'INSERT OR REPLACE INTO _meta '
         '("table", description, source, row_count, csv_name, last_updated) '
         "VALUES (?, ?, ?, ?, ?, ?)",
         (
             "vendor_payments",
-            "Every vendor check the town has paid this fiscal year, "
-            "from the Open Finance portal export.",
-            f"Marblehead Open Finance vendor payments export, {path.name}.",
+            "Every vendor check the town has paid, across all fiscal years "
+            "we have exports for, from the Open Finance portal.",
+            f"Marblehead Open Finance vendor payments exports: {file_list}.",
             len(payload),
-            path.name,
+            file_list,
             today,
         ),
     )
@@ -597,7 +604,8 @@ def main() -> None:
             )
             print(f"  {ds.table:32s} {n:>7,} rows  ({ds.csv_name})")
         n_vp = build_vendor_payments(conn)
-        print(f"  {'vendor_payments':32s} {n_vp:>7,} rows  ({_latest_checkbook_csv().name})")
+        vp_files = ", ".join(p.name for p in _checkbook_csvs())
+        print(f"  {'vendor_payments':32s} {n_vp:>7,} rows  ({vp_files})")
         n_bl = build_budget_lines(conn)
         print(f"  {'budget_lines':32s} {n_bl:>7,} rows  (FY*_budget_summary.json)")
         n_m = build_meetings(conn)
