@@ -1,0 +1,346 @@
+---
+title: "Union contracts and when they expire"
+description: "Nine collective bargaining agreements set most of Marblehead's payroll. What each one says, when each one expires, and where the public record ends."
+permalink: /labor-contracts.html
+og_title: "Marblehead's union contracts and when they expire"
+og_description: "72% of the general fund is personnel costs set by nine union contracts. The calendar of terms, wage increases, and expirations, traced to the signed documents."
+og_url: https://marbleheaddata.org/labor-contracts.html
+scripts: [citations]
+---
+<style>
+  .lc-lead { font-size: 18px; line-height: 1.55; max-width: 720px; }
+  .lc-stat { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .lc-section { margin: 48px 0; }
+  .lc-section h2 { font-size: 24px; margin-bottom: 14px; }
+  .lc-section h3 { font-size: 17px; margin: 22px 0 6px; }
+  .lc-note {
+    font-size: 14px; line-height: 1.55; color: var(--text-muted);
+    border-left: 3px solid var(--border); padding-left: 14px; margin: 18px 0;
+  }
+  .lc-caption { font-size: 13px; color: var(--text-subtle); margin-top: 10px; }
+
+  /* Timeline SVG */
+  .lc-bar { fill: var(--c-navy); }
+  .lc-bar--reported { fill: none; stroke: var(--c-navy); stroke-width: 1.5; }
+  .lc-bar--ended { fill: var(--text-subtle); opacity: 0.55; }
+  .lc-bar--reported.lc-bar--ended { fill: none; stroke: var(--text-subtle); opacity: 0.8; }
+  .lc-gap { stroke: var(--text-subtle); stroke-width: 1.5; stroke-dasharray: 4 5; fill: none; }
+  .lc-now { stroke: var(--c-buoy); stroke-width: 1; stroke-dasharray: 2 3; }
+  .lc-now-label { font-size: 11px; fill: var(--c-buoy); }
+  .lc-row-label { font-size: 12px; fill: var(--text-muted); }
+  .lc-bar-note { font-size: 10.5px; fill: var(--text-subtle); }
+  .lc-legend { display: flex; gap: 18px; font-size: 13px; color: var(--text-muted); margin-top: 6px; flex-wrap: wrap; }
+  .lc-legend .swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  .lc-legend .swatch--filed { background: var(--c-navy); }
+  .lc-legend .swatch--reported { background: transparent; border: 1.5px solid var(--c-navy); }
+  .lc-legend .swatch--ended { background: var(--text-subtle); opacity: 0.55; }
+
+  /* Unit cards */
+  .lc-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 20px; }
+  @media (min-width: 720px) { .lc-cards { grid-template-columns: 1fr 1fr; } }
+  .lc-card { border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; background: var(--surface); }
+  .lc-card h3 { margin: 0 0 4px; font-size: 16px; line-height: 1.3; }
+  .lc-card .term { font-size: 13px; color: var(--text-subtle); margin: 0 0 8px; font-variant-numeric: tabular-nums; }
+  .lc-card p { font-size: 14px; line-height: 1.55; color: var(--text-muted); margin: 6px 0 0; }
+  .lc-card .lineage { font-size: 12.5px; color: var(--text-subtle); font-style: italic; }
+</style>
+
+<h1>Union contracts and when they expire</h1>
+
+<p class="lc-lead">
+  About <span class="lc-stat">72 cents of every dollar</span> in Marblehead's
+  general fund goes to people: <span class="lc-stat">$58.2M</span> in salaries,
+  <span class="lc-stat">$15.2M</span> in employee group insurance, and
+  <span class="lc-stat">$5.4M</span> in pension contributions, out of a
+  <span class="lc-stat">$109.3M</span> FY26 operating budget.<sup class="cite"
+    data-href="/data/operating_budget_FY26.csv"
+    data-source="Town of Marblehead Open Budget export, FY26 general fund original budget (salary character codes 01-03; group insurance and contributory retirement organization lines; capital excluded)"></sup>
+  Those costs are set in nine collective bargaining agreements, negotiated by
+  the School Committee on the school side and approved by the Select Board on
+  the town side, largely outside the annual
+  <a href="/town-budget.html">budget process</a>. This is the calendar of what
+  each contract says and when each one comes up again.
+</p>
+
+<section class="lc-section" id="timeline">
+  <h2>The calendar</h2>
+
+  <svg class="chart" viewBox="0 0 880 372" role="img"
+       aria-label="Timeline of Marblehead union contract terms from 2024 through 2028, ordered by expiration date">
+    <!-- x-axis: Jan 2024 (x=140) to Dec 2028 (x=860), 12px per month -->
+    <line class="grid-minor" x1="284" y1="30" x2="284" y2="322"/>
+    <line class="grid-minor" x1="428" y1="30" x2="428" y2="322"/>
+    <line class="grid-minor" x1="572" y1="30" x2="572" y2="322"/>
+    <line class="grid-minor" x1="716" y1="30" x2="716" y2="322"/>
+
+    <!-- now marker: July 2026 -->
+    <line class="lc-now" x1="500" y1="24" x2="500" y2="322"/>
+    <text class="lc-now-label" x="500" y="16" text-anchor="middle">now (July 2026)</text>
+
+    <!-- Row 1: PEC health agreement (ended Jun 2024) -->
+    <text class="lc-row-label" x="132" y="53" text-anchor="end">Health (PEC)</text>
+    <rect class="lc-bar--ended" x="140" y="42" width="72" height="14" rx="3"/>
+    <line class="lc-gap" x1="212" y1="49" x2="860" y2="49"/>
+    <text class="lc-bar-note" x="140" y="38">in effect from July 2018</text>
+    <text class="lc-bar-note" x="536" y="38">expired June 2024, no successor on file</text>
+
+    <!-- Row 2: Fire (bridge ended Jun 2026) -->
+    <text class="lc-row-label" x="132" y="83" text-anchor="end">Fire</text>
+    <rect class="lc-bar--reported lc-bar--ended" x="356" y="72" width="144" height="14" rx="3"/>
+    <line class="lc-gap" x1="500" y1="79" x2="860" y2="79"/>
+    <text class="lc-bar-note" x="512" y="68">bridge expired June 2026</text>
+
+    <!-- Row 3: MMEU (Jul 2024 - Jun 2027) -->
+    <text class="lc-row-label" x="132" y="113" text-anchor="end">Municipal (MMEU)</text>
+    <rect class="lc-bar--reported" x="212" y="102" width="432" height="14" rx="3"/>
+
+    <!-- Row 4: Police (Jul 2025 - Jun 2028) -->
+    <text class="lc-row-label" x="132" y="143" text-anchor="end">Police</text>
+    <rect class="lc-bar--reported" x="356" y="132" width="432" height="14" rx="3"/>
+
+    <!-- Row 5: Custodians (Jul 2025 - Jun 2028) -->
+    <text class="lc-row-label" x="132" y="173" text-anchor="end">Custodians</text>
+    <rect class="lc-bar" x="356" y="162" width="432" height="14" rx="3"/>
+
+    <!-- Row 6: Unit A (Sep 2025 - Aug 2028) -->
+    <text class="lc-row-label" x="132" y="203" text-anchor="end">Teachers (Unit A)</text>
+    <rect class="lc-bar" x="380" y="192" width="432" height="14" rx="3"/>
+
+    <!-- Row 7: Instructional assistants -->
+    <text class="lc-row-label" x="132" y="233" text-anchor="end">Instructional asst.</text>
+    <rect class="lc-bar" x="380" y="222" width="432" height="14" rx="3"/>
+
+    <!-- Row 8: Permanent substitutes -->
+    <text class="lc-row-label" x="132" y="263" text-anchor="end">Perm. substitutes</text>
+    <rect class="lc-bar" x="380" y="252" width="432" height="14" rx="3"/>
+
+    <!-- Row 9: Operational support -->
+    <text class="lc-row-label" x="132" y="293" text-anchor="end">Operational support</text>
+    <rect class="lc-bar" x="380" y="282" width="432" height="14" rx="3"/>
+
+    <!-- Dec 2027: Unit A successor talks -->
+    <line class="annotation-line" x1="704" y1="186" x2="704" y2="348"/>
+    <text class="annotation annotation--hide-sm" x="700" y="360" text-anchor="end">Dec 2027: teacher successor talks must open</text>
+
+    <!-- axis -->
+    <line class="axis-base" x1="140" y1="322" x2="860" y2="322"/>
+    <text class="tick-label" x="140" y="340" text-anchor="middle">2024</text>
+    <text class="tick-label" x="284" y="340" text-anchor="middle">2025</text>
+    <text class="tick-label" x="428" y="340" text-anchor="middle">2026</text>
+    <text class="tick-label" x="572" y="340" text-anchor="middle">2027</text>
+    <text class="tick-label" x="716" y="340" text-anchor="middle">2028</text>
+    <text class="tick-label tick-label--minor" x="860" y="340" text-anchor="middle">2029</text>
+  </svg>
+
+  <div class="lc-legend" aria-hidden="true">
+    <span><span class="swatch swatch--filed"></span>Signed document on file</span>
+    <span><span class="swatch swatch--reported"></span>Known only from reporting</span>
+    <span><span class="swatch swatch--ended"></span>Expired</span>
+  </div>
+
+  <p class="lc-caption">
+    Bars run from each contract's effective date to its stated end date, ordered
+    by expiration. Rows are drawn from the signed documents where we have them
+    (school side, health agreement) and from reporting where we don't (town
+    side); sources are footnoted per row in the sections below.
+  </p>
+
+  <p>
+    Three dates matter most. The firefighters' one-year bridge contract expired
+    on June 30, 2026, so a successor is either signed and unpublished, or under
+    negotiation right now. The municipal employees' agreement runs out June 30,
+    2027. And in the summer of 2028, seven contracts expire within nine weeks
+    of each other: police, custodians, and all four
+    <abbr class="g" title="Marblehead Education Association">MEA</abbr> school
+    units, including teachers. Those settlements will be negotiated during the
+    same period the override's phase-in completes, and they are the largest
+    variable in whether the town's
+    <a href="/override-tracker.html">no-new-override pledge through FY2030</a>
+    holds.
+  </p>
+</section>
+
+<section class="lc-section" id="school-side">
+  <h2>School side: five units, all expiring mid-2028</h2>
+
+  <p>
+    The School Committee negotiates with five bargaining units. All five
+    settled three-year agreements in the 2024-25 round, and all five expire
+    between June 30 and August 31, 2028. The signed documents are public,
+    posted by the district, and each card links to our archived copy.
+  </p>
+
+  <p class="lc-note">
+    The percentages below apply to each step of a salary schedule. Most
+    employees below the top step also advance one step per year, so payroll
+    for any given roster grows faster than the listed percentages alone.
+    Where a contract prints dollar tables instead of percentages, the
+    year-over-year change shown is derived from the tables; one example is
+    footnoted per card.
+  </p>
+
+  <div class="lc-cards">
+    <article class="lc-card">
+      <h3>Teachers and nurses (MEA Unit A)</h3>
+      <p class="term">September 1, 2025 &ndash; August 31, 2028</p>
+      <p>Raises of 2% (2025-26), 3% (2026-27), and 3.5% (2027-28) on most
+      steps, with larger increases on the top step (3%, then 4%) and, in year
+      three, the bottom step eliminated and a new top step added 2% above the
+      old one. Successor negotiations must open no later than December
+      2027.<sup class="cite"
+        data-href="/data/schools/contracts/unit-a-3-year-moa-2025-2028.txt"
+        data-source="Memorandum of Agreement, Marblehead School Committee and MEA Unit A, November 26, 2024"></sup></p>
+    </article>
+
+    <article class="lc-card">
+      <h3>Custodians (Custodians' Association)</h3>
+      <p class="term">July 1, 2025 &ndash; June 30, 2028</p>
+      <p>Raises of 2%, 2.5%, and 2.5% on all steps. The only school-side unit
+      on a fiscal-year term rather than a school-year term.<sup class="cite"
+        data-href="/data/schools/contracts/custodian-3-year-moa-2025-2028.txt"
+        data-source="Memorandum of Agreement, Marblehead School Committee and Custodians' Association, 2025-2028"></sup></p>
+    </article>
+
+    <article class="lc-card">
+      <h3>Instructional assistants</h3>
+      <p class="term">September 1, 2025 &ndash; August 31, 2028</p>
+      <p class="lineage">Formerly the Tutors unit; renamed in this settlement
+      round.</p>
+      <p>Hourly schedule rises from $26.18 to $26.70 to $27.37 at the entry
+      step (about 2%, then 2.5%, derived: 26.70 &divide; 26.18 = 1.0199), with
+      a new top step added in year two and a $1.00/hour differential for
+      <abbr class="g" title="Special Education">SPED</abbr> assistants in
+      sub-separate programs holding a relevant license.<sup class="cite"
+        data-href="/data/schools/contracts/instructional-assistants-2025-2028.txt"
+        data-source="Instructional Assistants collective bargaining agreement, 2025-2028, Article 6"></sup></p>
+    </article>
+
+    <article class="lc-card">
+      <h3>Permanent substitutes</h3>
+      <p class="term">September 1, 2025 &ndash; August 31, 2028</p>
+      <p>Salary schedule rises from $30,600 to $31,200 to $31,980 at the entry
+      step (about 2%, then 2.5%), with the bottom step eliminated in year one
+      and a new top step added in year two.<sup class="cite"
+        data-href="/data/schools/contracts/permanent-substitute-3-year-moa-2025-2028.txt"
+        data-source="Memorandum of Agreement, Marblehead School Committee and MEA Permanent Substitutes, Appendix A salary schedule"></sup></p>
+    </article>
+
+    <article class="lc-card">
+      <h3>Operational support personnel</h3>
+      <p class="term">September 1, 2025 &ndash; August 31, 2028</p>
+      <p class="lineage">Formerly the Paraprofessionals unit; covers
+      lunchroom and recess monitors, van monitors, and two school clerical
+      positions.</p>
+      <p>Hourly tables rise about 2% then 2.5% at each step (derived: Group A
+      entry step $16.32 to $16.65 to $17.07), with a new top step
+      added.<sup class="cite"
+        data-href="/data/schools/contracts/operational-support-personnel-2025-2028.txt"
+        data-source="Operational Support Personnel collective bargaining agreement, 2025-2028, Article 6 pay plan"></sup></p>
+    </article>
+  </div>
+</section>
+
+<section class="lc-section" id="town-side">
+  <h2>Town side: three units, documents not published</h2>
+
+  <p>
+    Police, fire, and general municipal employees bargain with the town. Unlike
+    the school district, the town does not publish the agreements themselves,
+    and they were approved after executive session, so what follows comes from
+    news reporting of the May 5, 2025 Select Board votes rather than from the
+    signed documents.<sup class="cite"
+      data-href="https://marbleheadcurrent.org/2025/05/05/marblehead-select-board-oks-three-union-contracts-hours-before-town-meeting/"
+      data-source="Marblehead Current, May 5, 2025: Marblehead Select Board OKs three union contracts hours before Town Meeting"></sup>
+    If you have copies of the contracts, we would like to archive them; until
+    then, every number in this section should be read as reported, not
+    verified against a primary document.
+  </p>
+
+  <div class="lc-cards">
+    <article class="lc-card">
+      <h3>Firefighters (<abbr class="g" title="International Association of Fire Fighters">IAFF</abbr> Local 2043)</h3>
+      <p class="term">July 1, 2025 &ndash; June 30, 2026 (one-year bridge; now expired)</p>
+      <p>A one-year "bridge" contract with a 3% cost-of-living increase,
+      signed after the prior contract expired June 30, 2025. It ran out on
+      June 30, 2026. As of this page's last update we have found no public
+      record of a successor.</p>
+    </article>
+
+    <article class="lc-card">
+      <h3>Municipal employees (MMEU)</h3>
+      <p class="term">July 1, 2024 &ndash; June 30, 2027</p>
+      <p>The Marblehead Municipal Employees Union covers roughly 80% of the
+      non-school town workforce. Three-year agreement with raises of 2%
+      (FY25), 3% (FY26), and 3% (FY27).</p>
+    </article>
+
+    <article class="lc-card">
+      <h3>Police (MASS C.O.P. Local 437)</h3>
+      <p class="term">July 1, 2025 &ndash; June 30, 2028</p>
+      <p>Three-year agreement reached after the union worked without a
+      contract from July 2024. The salary schedule was accepted but specific
+      annual increases were not disclosed in open session.</p>
+    </article>
+  </div>
+
+  <p class="lc-note">
+    Collective bargaining agreements are public records in Massachusetts once
+    executed. A resident can request them from the town through a public
+    records request; the town has ten business days to respond. The school
+    district already posts its agreements, which is why the school-side cards
+    above cite signed documents and this section cites a newspaper.
+  </p>
+</section>
+
+<section class="lc-section" id="health-agreement">
+  <h2>The health agreement is the biggest lever, and its status is unclear</h2>
+
+  <p>
+    Separate from the wage contracts, one agreement governs health insurance
+    for all town and school employees together: the
+    <abbr class="g" title="Public Employee Committee">PEC</abbr> agreement, a
+    deal between the town and a committee of all its unions. The last
+    published version ran July 1, 2018 through June 30, 2024. It committed the
+    town to buying insurance through the state's
+    <abbr class="g" title="Group Insurance Commission, the agency that buys health insurance for state and some municipal employees">GIC</abbr>
+    and fixed the premium split between town and employees for its
+    duration.<sup class="cite"
+      data-href="/data/schools/contracts/public-employee-committee-health-agreement.txt"
+      data-source="Public Employee Committee health insurance agreement, July 1, 2018 - June 30, 2024"></sup>
+  </p>
+
+  <p>
+    Employee health insurance costs the general fund about $15.2M a year.
+    Whatever
+    replaced the 2018-2024 agreement, we have not found it published: either a
+    successor exists and is unpublished, or coverage has continued while one
+    is negotiated. The town remains in the GIC today. The terms of the next
+    PEC agreement (premium split, plan design, whether to stay in the GIC)
+    will move more dollars than any single wage settlement above. Background
+    on the insurance line is on
+    <a href="/the-insurance-surplus.html">the insurance surplus</a> page.
+  </p>
+</section>
+
+<section class="lc-section" id="override">
+  <h2>Why this calendar decides the override's math</h2>
+
+  <p>
+    The boards' override
+    <abbr class="g" title="Memorandum of Understanding">MOU</abbr> commits to
+    no new override at least through FY2030.<sup class="cite"
+      data-href="/data/2026-04-15_Override_Presentation_FINAL.txt"
+      data-source="April 15, 2026 override presentation, MOU section"></sup>
+    The $15M override phases in through FY29; the contracts above all expire
+    and reset during that same window: fire now, municipal employees in 2027,
+    and seven units in mid-2028. Because
+    <a href="/what-is-actually-flexible.html">most of the budget is personnel
+    and most personnel costs are contractual</a>, the size of the 2027 and
+    2028 settlements largely determines whether the override's revenue lasts
+    to FY2030 as pledged. The <a href="/override-tracker.html">override
+    tracker</a> follows the commitments; this page follows the contracts.
+    Both update as documents surface, and both link the sources so you can
+    check the math. Meeting coverage of the negotiating boards is at
+    <a href="/meetings/">meetings and transcripts</a>.
+  </p>
+</section>
