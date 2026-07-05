@@ -119,7 +119,17 @@ jobs:
           shopt -s nullglob
           enriched=0
           failed=0
+          # Cap per-run enrichment. A large unenriched backlog (e.g. the 134
+          # transcripts from the YouTube backfill) would otherwise exceed the
+          # 30-minute job timeout, the job would die before the commit step,
+          # and the next run would re-enrich from scratch: repeated API spend
+          # with no progress. Capped, each daily run commits what it finished.
+          cap=25
           for f in _transcripts/*.md; do
+            if [ "$enriched" -ge "$cap" ]; then
+              echo "Per-run enrichment cap ($cap) reached; the rest continue tomorrow."
+              break
+            fi
             # Already enriched on a previous run.
             if grep -q '^summary_card:' "$f"; then continue; fi
             # Hand-crafted entries (frontmatter starts with `ingest:`) are
