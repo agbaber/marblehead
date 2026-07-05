@@ -39,3 +39,13 @@ def test_months_elapsed():
     assert fylib.months_elapsed(2027, dt.date(2026, 7, 5)) == 1
     assert fylib.months_elapsed(2026, dt.date(2026, 5, 29)) == 11
     assert fylib.months_elapsed(2026, dt.date(2026, 6, 30)) == 12
+    assert fylib.months_elapsed(2027, dt.date(2026, 6, 15)) == 1
+    assert fylib.months_elapsed(2026, dt.date(2026, 8, 1)) == 12
+
+
+def test_pct_elapsed():
+    assert fylib.pct_elapsed(2027, dt.date(2026, 7, 1)) == 0.3
+    assert fylib.pct_elapsed(2027, dt.date(2027, 6, 30)) == 100.0
+    assert fylib.pct_elapsed(2026, dt.date(2026, 5, 29)) == 91.2
+    assert fylib.pct_elapsed(2027, dt.date(2026, 6, 15)) == 0.0
+    assert fylib.pct_elapsed(2027, dt.date(2027, 7, 15)) == 100.0
