@@ -9,8 +9,11 @@ const MONTHS = {
 
 // Titles from the MPS YouTube channel that *should* be classified as
 // school-committee even though they don't say "School Committee" — meetings,
-// "S C  Meeting" shorthand, and the SC's subcommittees.
-const MEETING_LIKE = /\b(meeting|subcommittee|sub-committee|s\s+c\b|\bsc\b)/i;
+// "S C  Meeting" shorthand, the SC's subcommittees (including the observed
+// "Sub Committee" spacing and "Submcommittee" uploader typo), Budget
+// Sub-Joint sessions, and budget workshops/votes/public hearings. Forums
+// and press conferences intentionally do not match.
+const MEETING_LIKE = /\b(meeting|subm?committee|sub[-\s]committee|sub[-\s]joint|budget\s+(workshop|vote|public\s+hearing)|s\s+c\b|\bsc\b)/i;
 
 function normalizeYear(y) {
   const n = Number(y);
