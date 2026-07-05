@@ -6,7 +6,7 @@ name: Refresh checkbook CSV
 #   scripts/fetch_checkbook_export.py
 #     → /tmp/checkbook_raw_export.csv  (PII-bearing, never committed)
 #       → scripts/build_checkbook_csv.py
-#         → data/checkbook_FY26_<as-of>.csv  (publishable)
+#         → data/checkbook_<FY-label>_<as-of>.csv  (publishable)
 #         → data/checkbook_redaction_disclosure.json
 #         → /tmp/checkbook_redaction_review.tsv  (audit log)
 #
@@ -98,7 +98,11 @@ jobs:
           if not new_csv.exists():
               raise SystemExit(f'expected {new_csv} after build, not found')
 
-          for old in Path('data').glob('checkbook_FY26_*.csv'):
+          # Prune only same-FY dated CSVs; prior-FY archive CSVs
+          # (e.g. checkbook_FY26_2026-06-30.csv) are deliberately out
+          # of scope of the prune and are kept forever.
+          prefix = dashboard['csv_filename'].rsplit('_', 1)[0]
+          for old in Path('data').glob(prefix + '_*.csv'):
               if old != new_csv:
                   old.unlink()
                   print(f'removed {old}')
@@ -110,21 +114,27 @@ jobs:
           with open('refresh.env', 'w') as f:
               f.write(f'AS_OF={as_of}\n')
               f.write(f'AS_OF_HUMAN={dashboard["as_of_human"]}\n')
+              f.write(f'FY_LABEL={dashboard["fiscal_year"]}\n')
+              f.write(f'FY_YEAR={dashboard["year"]}\n')
               f.write(f'TOTAL_M={dashboard["total_M"]}\n')
               f.write(f'ROW_COUNT={dashboard["row_count"]}\n')
               f.write(f'MASKED_COUNT={disclosure["description_masking"]["masked_row_count"]}\n')
           PY
 
-      - name: Rebuild choice-bucketed view JSON for the /sketches/ page
-        if: steps.gate.outputs.skip == 'false'
-        run: |
-          python3 scripts/build_checkbook_view.py
-
-          # Re-export the simple key=value file as step outputs.
+          # Re-export the simple key=value file as step outputs. This
+          # must run inside this step (id: refresh): outputs written to
+          # $GITHUB_OUTPUT are attributed to the step that writes them,
+          # and the downstream commit/PR step reads steps.refresh.outputs.
           while IFS='=' read -r k v; do
             echo "$k=$v" >> "$GITHUB_OUTPUT"
           done < refresh.env
           rm refresh.env
+
+      - name: Rebuild choice-bucketed view JSON for the /sketches/ page
+        if: steps.gate.outputs.skip == 'false'
+        run: |
+          python3 scripts/build_checkbook_view.py
+          python3 scripts/build_checkbook_performance.py
 
       - name: Detect changes
         if: steps.gate.outputs.skip == 'false'
@@ -145,6 +155,8 @@ jobs:
           GH_TOKEN: ${{ secrets.INGEST_PAT }}
           AS_OF: ${{ steps.refresh.outputs.AS_OF }}
           AS_OF_HUMAN: ${{ steps.refresh.outputs.AS_OF_HUMAN }}
+          FY_LABEL: ${{ steps.refresh.outputs.FY_LABEL }}
+          FY_YEAR: ${{ steps.refresh.outputs.FY_YEAR }}
           TOTAL_M: ${{ steps.refresh.outputs.TOTAL_M }}
           ROW_COUNT: ${{ steps.refresh.outputs.ROW_COUNT }}
           MASKED_COUNT: ${{ steps.refresh.outputs.MASKED_COUNT }}
@@ -155,7 +167,7 @@ jobs:
           git config user.name "marblehead-bot"
           git config user.email "noreply@marbleheaddata.org"
           git checkout -b "$branch"
-          git commit -m "Refresh checkbook FY26 through ${AS_OF}"
+          git commit -m "Refresh checkbook ${FY_LABEL} through ${AS_OF}"
           git push -u origin "$branch"
 
           cat > /tmp/pr-body.md <<EOF
@@ -169,13 +181,13 @@ jobs:
           ## Pipeline
 
           1. \`scripts/fetch_checkbook_export.py\` hit
-             \`/api/checkbook_data.csv?year=2026\` on the portal and
+             \`/api/checkbook_data.csv?year=${FY_YEAR}\` on the portal and
              wrote the raw export to \`/tmp/\` (never committed).
           2. \`scripts/build_checkbook_csv.py\` dropped rows in the two
              medical-claim funds (111F Injury Leave, Workers Comp),
              masked descriptions matching the student/employee
              identifying patterns, and wrote
-             \`data/checkbook_FY26_${AS_OF}.csv\` +
+             \`data/checkbook_${FY_LABEL}_${AS_OF}.csv\` +
              \`data/checkbook_redaction_disclosure.json\`.
           3. \`build_checkbook_csv.py\` also rewrote
              \`_data/checkbook.json\`; \`index.html\`, \`checkbook.html\`,
