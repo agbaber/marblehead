@@ -3,7 +3,6 @@ title: "Override tracker"
 og_title: "Marblehead override tracker: what the town committed to"
 og_description: "Thirty-one named commitments tied to the $15M operating override and $2.3M trash override approved June 9, 2026. Updated quarterly. Every line traces to a primary source."
 og_url: https://marbleheaddata.org/override-tracker.html
-sitemap: false
 scripts: [citations]
 ---
 <style>
@@ -206,6 +205,32 @@ scripts: [citations]
   }
   .tk-placeholder strong { color: var(--text); font-weight: 700; }
 
+  /* Changelog (renders once site.data.override_tracker.changelog has entries) */
+  .tk-changelog {
+    list-style: none;
+    padding: 0;
+    margin: 22px 0 0;
+    display: grid;
+    gap: 10px;
+  }
+  .tk-changelog li {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    font-size: 14px;
+  }
+  .tk-changelog-date {
+    font-variant-numeric: tabular-nums;
+    color: var(--text-subtle);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .tk-changelog-item { font-weight: 700; }
+  .tk-changelog-arrow { color: var(--text-subtle); }
+  .tk-changelog-note { color: var(--text-muted); flex-basis: 100%; }
+
   /* Close cards */
   .tk-close-cards {
     display: grid; gap: 14px;
@@ -267,68 +292,10 @@ scripts: [citations]
   <h2 class="tk-section-h2">What the money is for.</h2>
   <p class="tk-section-lead">The override is phased in over three years and split among three buckets. The Select Board acknowledged on June 10 that roughly $7.7 million of the $15 million is for restorations the public can readily identify, and the remaining $9.6 million still needs clearer articulation.</p>
 
+  {% assign cards = site.data.override_tracker.items | where: "section", "allocations" %}
   <div class="tk-grid">
-
-    <article class="tk-card" data-status="met">
-      <header class="tk-card-h">
-        <span class="tk-card-num">01</span>
-        <h3 class="tk-card-title">$15M operating override approved at the ballot</h3>
-        <span class="tk-status" data-s="met">Met</span>
-      </header>
-      <p class="tk-card-body">Question 3 (Tier 3 &ldquo;Invest&rdquo;) carried 4,278&ndash;3,594 (54.3%&ndash;45.7%) on June 9, 2026. Questions 1 and 2 also carried but were superseded.</p>
-      <p class="tk-card-src">Source: <a href="https://www.marbleheadindependent.com/marblehead-voters-approve-15m-override-ending-more-than-two-decades-of-resistance/">Marblehead Independent, June 9 2026</a>.</p>
-    </article>
-
-    <article class="tk-card" data-status="met">
-      <header class="tk-card-h">
-        <span class="tk-card-num">02</span>
-        <h3 class="tk-card-title">$2.3M trash override approved at the ballot</h3>
-        <span class="tk-status" data-s="met">Met</span>
-      </header>
-      <p class="tk-card-body">Question 4 carried with 67.4% support, funding curbside trash, recycling, yard waste, and disposal services through the levy.</p>
-      <p class="tk-card-src">Source: <a href="https://www.marbleheadindependent.com/marblehead-voters-approve-15m-override-ending-more-than-two-decades-of-resistance/">Marblehead Independent, June 9 2026</a>.</p>
-    </article>
-
-    <article class="tk-card" data-status="phase-in">
-      <header class="tk-card-h">
-        <span class="tk-card-num">03</span>
-        <h3 class="tk-card-title">$6.5M allocated to municipal services</h3>
-        <span class="tk-status" data-s="phase-in">Phase-in</span>
-      </header>
-      <p class="tk-card-body">Of the $15M total, $6.5M is earmarked for the town side, separate from the schools&rsquo; allocation. Phased in over three years per the April 15 plan.</p>
-      <p class="tk-card-src">Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~24:53).</p>
-    </article>
-
-    <article class="tk-card" data-status="phase-in">
-      <header class="tk-card-h">
-        <span class="tk-card-num">04</span>
-        <h3 class="tk-card-title">$8.5M allocated to schools</h3>
-        <span class="tk-status" data-s="phase-in">Phase-in</span>
-      </header>
-      <p class="tk-card-body">The school portion of the override. The School Committee&rsquo;s May 21 proclamation lays out what Tier 1 ($6.2M school), Tier 2 ($7.2M school), and Tier 3 ($8.5M school) each cover; voters chose Tier 3.</p>
-      <p class="tk-card-src">Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); Select Board, June 10 2026.</p>
-    </article>
-
-    <article class="tk-card" data-status="phase-in">
-      <header class="tk-card-h">
-        <span class="tk-card-num">05</span>
-        <h3 class="tk-card-title">~$4.3M phased into Year 1 (FY27) under Article 29</h3>
-        <span class="tk-status" data-s="phase-in">Phase-in</span>
-      </header>
-      <p class="tk-card-body">Article 29 of the 2026 Annual Town Meeting passed 1,227&ndash;159. Year 1 spend is a fraction of the $15M total; phase-in continues through FY29.</p>
-      <p class="tk-card-src">Sources: 2026 ATM Article 29 vote; <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a> (phase-in table).</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">06</span>
-        <h3 class="tk-card-title">Articulate where the remaining $9.6M goes</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Moses Grader, June 10: voters readily understood ~$7.7M of the $15M as restorations; the remaining $9.6M &ldquo;we have to do a better job articulating&rdquo;.</p>
-      <p class="tk-card-src">Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~24:53).</p>
-    </article>
-
+    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% endfor %}
   </div>
 </section>
 
@@ -340,58 +307,10 @@ scripts: [citations]
   <h2 class="tk-section-h2">Five promises signed by the Select Board, School Committee, and Finance Committee.</h2>
   <p class="tk-section-lead">From the final page of the April 15 override presentation. Each item runs through at least FY2030. Whether the numbers hold depends heavily on the union contracts that reset in 2027 and 2028; <a href="/labor-contracts.html">which contracts expire when</a> tracks that calendar.</p>
 
+  {% assign cards = site.data.override_tracker.items | where: "section", "mou" %}
   <div class="tk-grid">
-
-    <article class="tk-card" data-status="holds">
-      <header class="tk-card-h">
-        <span class="tk-card-num">07</span>
-        <h3 class="tk-card-title">No new override pursued at least through FY2030</h3>
-        <span class="tk-status" data-s="holds">Holds</span>
-      </header>
-      <p class="tk-card-body">The Select Board, School Committee, and Finance Committee jointly commit to not pursue another override at least through fiscal year 2030.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.</p>
-    </article>
-
-    <article class="tk-card" data-status="holds">
-      <header class="tk-card-h">
-        <span class="tk-card-num">08</span>
-        <h3 class="tk-card-title">62%&ndash;38% unrestricted-revenue split formalized</h3>
-        <span class="tk-status" data-s="holds">Holds</span>
-      </header>
-      <p class="tk-card-body">Establishes a clear allocation of unrestricted revenues and benefits between schools and the town.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.</p>
-    </article>
-
-    <article class="tk-card" data-status="phase-in">
-      <header class="tk-card-h">
-        <span class="tk-card-num">09</span>
-        <h3 class="tk-card-title">Quarterly joint financial reviews</h3>
-        <span class="tk-status" data-s="phase-in">Phase-in</span>
-      </header>
-      <p class="tk-card-body">Quarterly finance reviews and annual public updates from the Town Administrator and School Superintendent. First scheduled for early October 2026 after Q1 close.</p>
-      <p class="tk-card-src">Sources: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section; Select Board, June 10 2026.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">10</span>
-        <h3 class="tk-card-title">Phase out Free Cash to balance the budget</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Shift to structural budgeting and reduce reliance on Free Cash as a balancing mechanism.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">11</span>
-        <h3 class="tk-card-title">Build Stabilization Fund to 5% of operating budget</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Establishes a target reserve level providing a meaningful financial cushion against future volatility, in line with the financial policy.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.</p>
-    </article>
-
+    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% endfor %}
   </div>
 </section>
 
@@ -403,98 +322,10 @@ scripts: [citations]
   <h2 class="tk-section-h2">28 staff positions and named program commitments.</h2>
   <p class="tk-section-lead">Tier 3 covers 15 restored positions (Tier 1), 7 new positions (Tier 2), and 6 additional new positions (Tier 3 add-ons) &mdash; 28 FTEs total. Specific named items below.</p>
 
+  {% assign cards = site.data.override_tracker.items | where: "section", "municipal" %}
   <div class="tk-grid">
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">12</span>
-        <h3 class="tk-card-title">28 total FTEs committed across the three tiers</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">15 restored (Tier 1) + 7 new (Tier 2) + 6 new (Tier 3). FTE summary printed in the April 15 deck.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, FTE summary row.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">13</span>
-        <h3 class="tk-card-title">Library: full restoration and accreditation preserved</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Full restoration of 8.5 positions, plus +1 part-time Assistant Librarian and increased materials funding under Tier 2; accreditation no longer at risk.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">14</span>
-        <h3 class="tk-card-title">Police: SRO restored, force grows from 29 to 33 officers</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">School Resource Officer restored under Tier 1; +1 officer under Tier 2; +1 officer under Tier 3 add-ons. End state: 33 officers, described as the historic staffing level.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">15</span>
-        <h3 class="tk-card-title">Fire: +4 firefighters added across Tiers 2 and 3</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">2 firefighters added under Tier 2 plus 2 more under Tier 3 add-ons, intended to reduce overtime costs. Department currently down one full shift.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">16</span>
-        <h3 class="tk-card-title">DPW: full restoration plus 4 new positions</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Tier 1 restores 1 PT Clerk, 1 HEO, 1 Laborer, and the $60K asphalt cut. Tier 2 adds a GIS position. Tier 3 adds 1 Foreman and 1 Specialized HEO.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">17</span>
-        <h3 class="tk-card-title">Public Buildings: 2 custodians and a $450K maintenance budget</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Tier 1 restores 2 Special Labor Custodians serving Mary Alley and Abbot Hall. Tier 2 establishes a $450,000 townwide maintenance budget covering buildings and the rail trail.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">18</span>
-        <h3 class="tk-card-title">Community Development: Director plus Assistant Planner, Conservation Agent, Grant Writer</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Tier 1 restores the Community Development Director. Tier 2 adds 1 Assistant Planner and 1 Conservation Agent (replacing the Sustainability Coordinator and Grant Coordinator roles cut in FY27). Tier 3 adds 1 Grant Writer for additional grant revenue.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">19</span>
-        <h3 class="tk-card-title">Mental health: $60K counseling investment via Health Department</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Tier 3 doubles Mental Health funding with a $60,000 investment in counseling.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">20</span>
-        <h3 class="tk-card-title">$1M recurring annual capital investment</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Tier 3 funds $1 million in recurring capital for leases, equipment, and building improvements &mdash; three articles appearing annually on the Town Warrant.</p>
-      <p class="tk-card-src">Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.</p>
-    </article>
-
+    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% endfor %}
   </div>
 </section>
 
@@ -506,58 +337,10 @@ scripts: [citations]
   <h2 class="tk-section-h2">Five school-side commitments from the May 21 vote.</h2>
   <p class="tk-section-lead">The School Committee voted 4&ndash;0 on May 21, 2026 to officially support Tier 3. The proclamation laid out what each tier funds. Voters chose Tier 3, locking in all of the items below.</p>
 
+  {% assign cards = site.data.override_tracker.items | where: "section", "schools" %}
   <div class="tk-grid">
-
-    <article class="tk-card" data-status="phase-in">
-      <header class="tk-card-h">
-        <span class="tk-card-num">21</span>
-        <h3 class="tk-card-title">Maintain existing school staff (Tier 1)</h3>
-        <span class="tk-status" data-s="phase-in">Phase-in</span>
-      </header>
-      <p class="tk-card-body">$6.2M school-side floor preserves the staffing left after the FY27 balanced budget eliminated 18.25 FTEs.</p>
-      <p class="tk-card-src">Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.</p>
-    </article>
-
-    <article class="tk-card" data-status="phase-in">
-      <header class="tk-card-h">
-        <span class="tk-card-num">22</span>
-        <h3 class="tk-card-title">SPED out-of-district obligations funded through FY29 (Tier 1)</h3>
-        <span class="tk-status" data-s="phase-in">Phase-in</span>
-      </header>
-      <p class="tk-card-body">The FY27 gap was closed in part by a one-time $1.5M SPED OOD prepayment. Tier 1 establishes recurring funding for SPED through FY29 without repeating that one-time measure.</p>
-      <p class="tk-card-src">Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">23</span>
-        <h3 class="tk-card-title">Full-day kindergarten (Tier 2)</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Tier 2 funds full-day kindergarten and a sustainable student technology lifecycle.</p>
-      <p class="tk-card-src">Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">24</span>
-        <h3 class="tk-card-title">Recurring school building capital fund (Tier 3)</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Tier 3 adds a recurring school building capital fund to address deferred maintenance on a planned basis.</p>
-      <p class="tk-card-src">Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">25</span>
-        <h3 class="tk-card-title">In-district 18&ndash;22 special education program (Tier 3)</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Tier 3 funds an in-district program for students aged 18 to 22, intended to reduce out-of-district placement costs.</p>
-      <p class="tk-card-src">Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.</p>
-    </article>
-
+    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% endfor %}
   </div>
 </section>
 
@@ -569,68 +352,10 @@ scripts: [citations]
   <h2 class="tk-section-h2">Six process commitments made on June 10, after the vote.</h2>
   <p class="tk-section-lead">At its first meeting following the ballot, the Select Board named six items that govern how it intends to handle the override over time.</p>
 
+  {% assign cards = site.data.override_tracker.items | where: "section", "process" %}
   <div class="tk-grid">
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">26</span>
-        <h3 class="tk-card-title">First quarterly financial review in early October 2026</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Jim Sisson, June 10: "the quarter ends September. I would think we would have it in the first couple weeks of October." Both Select Board and School Committee chairs expected to attend.</p>
-      <p class="tk-card-src">Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~21:51).</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">27</span>
-        <h3 class="tk-card-title">Develop a written accountability plan</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Moses Grader, June 10: "in addition to the quarterly meetings, I think we should really try to develop a plan around accountability. In other words, how are we going to show that accountability".</p>
-      <p class="tk-card-src">Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~25:00).</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">28</span>
-        <h3 class="tk-card-title">Develop a communication strategy and public cadence</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Erin Newby, June 10: "I do think we need a communication strategy. How are we going to keep the community updated? What's the cadence? What's the form?"</p>
-      <p class="tk-card-src">Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~26:27).</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">29</span>
-        <h3 class="tk-card-title">Implement GFOA budget module to link departmental strategy to numbers</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Moses Grader, June 10: an 80-page strategic document at the department level that links to the financial data, intended to drive forward strategic oversight of the town.</p>
-      <p class="tk-card-src">Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~25:00).</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">30</span>
-        <h3 class="tk-card-title">Continue cost-cutting and efficiency work alongside the override</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Erin Newby, June 10: "I think we have responsibility to continue to cut costs and find efficiencies, not just rely on the taxpayer's money." Jim Sisson echoed: try to stretch the override "as long as we can".</p>
-      <p class="tk-card-src">Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~21:05 and ~21:51).</p>
-    </article>
-
-    <article class="tk-card" data-status="pending">
-      <header class="tk-card-h">
-        <span class="tk-card-num">31</span>
-        <h3 class="tk-card-title">Expand the Select Board / School Committee collaboration model to other boards</h3>
-        <span class="tk-status" data-s="pending">Pending</span>
-      </header>
-      <p class="tk-card-body">Moses Grader, June 10: the collaboration with the schools during the override was "very impressive" &mdash; intent to continue it and expand to other boards.</p>
-      <p class="tk-card-src">Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~28:00).</p>
-    </article>
-
+    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% endfor %}
   </div>
 </section>
 
@@ -666,10 +391,27 @@ scripts: [citations]
   <h2 class="tk-section-h2">First check-in: early October 2026.</h2>
   <p class="tk-section-lead">Under the MOU and the June 10 Select Board commitment, the first joint financial review with the School Committee and Finance Committee is scheduled for the first weeks of October, after the close of Q1. This section updates after each quarterly meeting with what changed on the list above.</p>
 
+  {% assign log = site.data.override_tracker.changelog %}
+  {% if log.size > 0 %}
+  <ul class="tk-changelog">
+    {% assign log_sorted = log | sort: "date" | reverse %}
+    {% for entry in log_sorted %}
+    <li>
+      <span class="tk-changelog-date">{{ entry.date }}</span>
+      <span class="tk-changelog-item">Item {{ entry.item }}</span>
+      <span class="tk-status" data-s="{{ entry.from }}">{{ entry.from | capitalize }}</span>
+      <span class="tk-changelog-arrow">&rarr;</span>
+      <span class="tk-status" data-s="{{ entry.to }}">{{ entry.to | capitalize }}</span>
+      <span class="tk-changelog-note">{{ entry.note_html }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
   <div class="tk-placeholder">
     <p style="margin:0;"><strong>Q1 FY27 review &mdash; awaiting October 2026</strong></p>
     <p style="margin:8px 0 0;">Status changes, new commitments, and items pulled off the list will be logged here after the meeting.</p>
   </div>
+  {% endif %}
 </section>
 
 <!-- ============================================================ -->

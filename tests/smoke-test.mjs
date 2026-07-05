@@ -36,9 +36,9 @@ async function testHomepageLoads(page) {
   }
 
   const tiles = await page.$$('.home-tile');
-  tiles.length === 9
-    ? ok(`9 pillar tiles on homepage (incl. the-insurance-surplus)`)
-    : fail('Homepage tiles', `expected 9 .home-tile, got ${tiles.length}`);
+  tiles.length === 10
+    ? ok(`10 pillar tiles on homepage (incl. override-tracker)`)
+    : fail('Homepage tiles', `expected 10 .home-tile, got ${tiles.length}`);
 
   const deeper = await page.$('.home-deeper');
   deeper ? ok('Homepage has Checkbook CTA') : fail('Homepage CTA', '.home-deeper missing');
