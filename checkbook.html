@@ -1234,17 +1234,18 @@ og_url: https://marbleheaddata.org/checkbook/
     }
     var label = dimDisplay(current);
     var parts = [];
-    var pctOfYear = (perf && perf.fy26_pct_elapsed) ? Math.round(perf.fy26_pct_elapsed) : null;
+    var pctOfYear = (perf && perf.fy_pct_elapsed) ? Math.round(perf.fy_pct_elapsed) : null;
     var monthsLeft = pctOfYear !== null ? Math.max(0, 12 - Math.round(pctOfYear / 100 * 12)) : null;
+    var fyLabel = (perf && perf.fiscal_year) || 'the fiscal year';
     if (rb !== null && ac !== null && rb > 0) {
       var pct = Math.round(ac / rb * 100);
       var clause = '<strong>' + escapeHtml(label) + '</strong> has spent ' +
         '<strong>' + fmtMoney(ac, { compact: true }) + '</strong> of its ' +
         fmtMoney(rb, { compact: true }) + ' budget (' + pct + '%)';
       if (pctOfYear !== null) {
-        if (monthsLeft === 0) clause += ', with FY26 effectively closed';
-        else if (monthsLeft === 1) clause += ', with one month left in FY26';
-        else clause += ', with ' + monthsLeft + ' months left in FY26';
+        if (monthsLeft === 0) clause += ', with ' + fyLabel + ' effectively closed';
+        else if (monthsLeft === 1) clause += ', with one month left in ' + fyLabel;
+        else clause += ', with ' + monthsLeft + ' months left in ' + fyLabel;
       }
       parts.push(clause);
     } else if (ac !== null) {
@@ -1958,13 +1959,14 @@ og_url: https://marbleheaddata.org/checkbook/
       var totalCount = allDepts.length;
       var overCount = over.length;
       var withinCount = totalCount - overCount;
+      var fyLabel = (perf && perf.fiscal_year) || 'current-year';
       if (totalCount === 0) {
         footHost.textContent = '';
       } else if (overCount === 0) {
-        footHost.textContent = 'All ' + totalCount + ' departments are tracking within their FY26 appropriations.';
+        footHost.textContent = 'All ' + totalCount + ' departments are tracking within their ' + fyLabel + ' appropriations.';
       } else {
         footHost.textContent = 'The other ' + withinCount + ' of ' + totalCount +
-          ' departments are tracking within their FY26 appropriations. Overruns are typically reconciled through a supplemental appropriation at a Special Town Meeting.';
+          ' departments are tracking within their ' + fyLabel + ' appropriations. Overruns are typically reconciled through a supplemental appropriation at a Special Town Meeting.';
       }
     }
 
