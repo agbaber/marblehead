@@ -157,12 +157,28 @@ All data compiled April 2026 from primary public sources. Every number is either
   - Superseded for ongoing analysis by `data/town_spending/` (refreshed daily by `.github/workflows/data-refresh.yml`). This dated file is kept as a fixed Q3 reference point.
 - **Confidence:** High for vendor identities and dollar amounts at the snapshot instant. Low for year-end interpretation (8-10 weeks of FY26 still to post).
 
-### FY26 Open Finance rollup (daily, automated)
+### Open Finance rollup (current fiscal year, daily, automated)
 - **Files:** `town_spending/department_totals.csv`, `town_spending/vendor_totals.csv`, `town_spending/snapshot_meta.json`
-- Year-to-date FY26 totals broken down by department (9 rows) and by vendor (~2,000 rows), refreshed daily at 10:00 UTC by `.github/workflows/data-refresh.yml`. Department sum equals vendor sum (built-in sanity check). Day-over-day diffs in the git log show which departments and vendors took new payments since the previous business day.
-- **Source:** Same portal as the dated snapshot above (`townofmarblehead-ma-oe.spending.socrata.com/api/chart_data.json`). The `chart_data.json` endpoint only exposes current-FY rollups by a single dimension; date filters and parent/child drilldown are silently ignored. So this is an aggregate sidecar to the richer `checkbook_FY26_*.csv` transaction ledger, not a replacement.
-- **Caveats:** All the FY26 vendor-snapshot caveats above apply (Berkshire Wind, Commonwealth of MA, current-FY only). The "UNDEFINED" department bucket is non-trivial ($13M+) and is the ledger's catch-all for payments not yet mapped to a department code at posting time.
+- Year-to-date totals for the fiscal year in progress (FY27 since July 1, 2026), broken down by department and by vendor, refreshed daily at 10:00 UTC by `.github/workflows/data-refresh.yml`. Department sum equals vendor sum (built-in sanity check). Day-over-day diffs in the git log show which departments and vendors took new payments since the previous business day.
+- **Source:** Same portal as the dated snapshot above (`townofmarblehead-ma-oe.spending.socrata.com/api/chart_data.json`). The `chart_data.json` endpoint only exposes current-FY rollups by a single dimension; date filters and parent/child drilldown are silently ignored. So this is an aggregate sidecar to the richer `checkbook_FY27_*.csv` transaction ledger below, not a replacement.
+- **Caveats:** All the FY26 vendor-snapshot caveats above apply (Berkshire Wind, Commonwealth of MA, current-FY only). The "UNDEFINED" department bucket is the ledger's catch-all for payments not yet mapped to a department code at posting time; in FY26 it grew past $13M.
 - **Confidence:** High for current-day totals. Day-to-day deltas are useful for "what got paid yesterday?" provenance, not for trend lines (no historical years available).
+
+### FY27 Checkbook Ledger and Budget Portal Extracts (current, auto-refreshed)
+- **What it is:** The transaction-level vendor-check ledger and budget-vs-actual extracts behind `/checkbook/` and `/monthly-pacing/`, for the fiscal year in progress.
+- **Files:** `checkbook_FY27_<as-of>.csv` (dated by last covered payment; the 2026-07-01 snapshot has 49 rows, $7,490,746.48 paid), `budget_actual_FY27.json` (revised budget vs. actual by fund, department, category, division, and object), `monthly_burn_FY27.json` (cumulative monthly spend by fund), `budget_drill_FY27.json` (drill-down tree), `operating_budget_FY27.csv` (raw portal export), `checkbook_view.json` (current-FY choice-bucket rollup)
+- **Source:** Spending portal checkbook export (`townofmarblehead-ma-oe.spending.socrata.com/api/checkbook_data.csv`) and Open Budget portal (`townofmarblehead-ma-ob.budget.socrata.com`), refreshed daily by `.github/workflows/checkbook-refresh.yml` and `.github/workflows/budget-refresh.yml` via `scripts/build_checkbook_csv.py`, `scripts/build_budget_actual.py`, and `scripts/build_monthly_burn.py`; `budget_drill_FY27.json` is rebuilt on demand by `scripts/crawl_budget_drill.py`. Endpoint details and the PII-redaction pass are in `SOURCE_LOOKUP.md`.
+- **Caveats:**
+  - Unaudited running ledger. Excludes payroll, inter-fund transfers, and intergovernmental remittances posted through the GL.
+  - Early-FY27 portal load is partial: only the $129.7M annual operating envelope (Town and School general funds plus Water, Sewer, and Harbor enterprises) has posted. Capital and tax articles, grants, and revolving and trust funds have not. Do not cite an FY27 all-funds budget total until the portal finishes loading.
+- **Confidence:** High for check-level amounts at the snapshot instant. Unaudited until the FY27 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>.
+
+### FY26 Checkbook Ledger and Budget Portal Extracts (archived)
+- **What it is:** Year-end FY26 counterparts of the FY27 files above, frozen when the portals rolled to FY27 on July 1, 2026. No longer refreshed.
+- **Files:** `checkbook_FY26_2026-06-30.csv` (16,804 rows, $107,185,588.25 paid 2025-07-01 through 2026-06-30), `budget_actual_FY26.json`, `monthly_burn_FY26.json`, `budget_drill_FY26.json`, `operating_budget_FY26.csv`, `checkbook_view_FY26.json` (frozen choice-bucket snapshot backing `/spending-by-vote/`)
+- **Source:** Same portals and build scripts as the FY27 entry above; final pull covered payments through June 30, 2026.
+- **Caveats:** FY26 figures remain subject to year-end close adjustments (late-posted invoices, reclassifications, audit entries) through fall 2026. The audited FY26 totals will be the FY26 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>'s, not these.
+- **Confidence:** High for check-level amounts as posted. Unaudited until the FY26 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>.
 
 ### Auditor Management Letter Findings (6 fiscal years, FY18-FY23)
 - **What it is:** Every internal-control comment in the Town's independent-auditor management letters, FY2018 through FY2023, as a finding-by-year matrix (23 rows). Each row records the finding, the year, its classification (current-year comment, prior-year comment, or material weakness), its status in that year's letter (Raised / Unresolved / Resolved / Ongoing / Carried), a one-line detail, and the source letter plus section/page. Tracks the cash-reconciliation material weakness from its FY2019 origin to its FY2023 resolution, plus accounts-receivable, OPEB-trust, internal-financial-statement, capital-asset, worker-comp, and payroll-withholding findings.

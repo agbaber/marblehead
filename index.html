@@ -144,10 +144,10 @@ og_url: https://marbleheaddata.org/
 </style>
 
 <section class="home-hero">
-  <p class="home-eye">FY26 spending so far <span class="dot">&middot;</span> as of {{ site.data.checkbook.as_of_human }}</p>
+  <p class="home-eye">{{ site.data.checkbook.fiscal_year }} spending so far <span class="dot">&middot;</span> as of {{ site.data.checkbook.as_of_human }}</p>
   <p class="home-big home-big--cost">{{ site.data.checkbook.total_M }}</p>
   <p class="home-cap">paid out across departments, vendors, and capital projects this fiscal year.</p>
-  <p class="home-cap-sub">$127.3M annual operating budget. Drill into every line, by fund, department, category, division, or object.</p>
+  <p class="home-cap-sub">{{ site.data.budget.annual_operating_M }} annual operating budget. Drill into every line, by fund, department, category, division, or object.</p>
   <a class="home-deeper" href="/checkbook/">Open the Checkbook</a>
 </section>
 
@@ -161,7 +161,7 @@ og_url: https://marbleheaddata.org/
     <a class="home-tile" href="/checkbook/">
       <div class="tile-eye">CHECKBOOK</div>
       <h3>What the town is spending</h3>
-      <p>FY26 vendor checks and budget pacing, drill-down by department.</p>
+      <p>{{ site.data.checkbook.fiscal_year }} vendor checks and budget pacing, drill-down by department.</p>
     </a>
     <a class="home-tile" href="/data/">
       <div class="tile-eye">DATA</div>

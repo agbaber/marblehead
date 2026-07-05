@@ -4,7 +4,7 @@ permalink: /monthly-pacing/
 scripts: [citations]
 sitemap: false
 og_title: "Monthly spending, variance to budget, and town cash balance"
-og_description: "A first-draft view of FY26 monthly spending, variance to budget, and town cash balance, built from data the town has published. Each section ends with what's missing for the real version."
+og_description: "A first-draft view of FY27 monthly spending, variance to budget, and town cash balance, built from data the town has published. Each section ends with what's missing for the real version."
 og_url: https://marbleheaddata.org/monthly-pacing/
 ---
 <style>
@@ -142,7 +142,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 </style>
 
 <h1>Monthly spending and budget pacing</h1>
-<p class="subtitle">A first-draft view of FY26 monthly spending, variance to budget, and town cash balance, built from data the town has already published.</p>
+<p class="subtitle">A first-draft view of {{ site.data.budget.fiscal_year }} monthly spending, variance to budget, and town cash balance, built from data the town has already published.</p>
 
 <div class="lead-card">
   <div class="tag">First draft</div>
@@ -157,7 +157,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 </div>
 
 <h2 class="section-h">1. Variance to budget, by department</h2>
-<p class="section-sub">FY26 revised budget vs. year-to-date actual.</p>
+<p class="section-sub">{{ site.data.budget.fiscal_year }} revised budget vs. year-to-date actual.</p>
 
 <div class="data-stamp">
   <span><span class="stamp-label">Source</span> <a href="https://townofmarblehead-ma-ob.budget.socrata.com/" rel="noopener">Town of Marblehead Open Budget portal</a></span>
@@ -165,7 +165,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 </div>
 
 <div class="pacing-meta">
-  <span><strong>FY26 elapsed:</strong> <strong><span id="pace-fy-elapsed">&hellip;</span></strong> <span id="pace-fy-elapsed-detail"></span></span>
+  <span><strong>{{ site.data.budget.fiscal_year }} elapsed:</strong> <strong><span id="pace-fy-elapsed">&hellip;</span></strong> <span id="pace-fy-elapsed-detail"></span></span>
   <span><strong>Read:</strong> % used above the elapsed-FY mark is pacing hot; below is pacing cold.</span>
 </div>
 
@@ -246,9 +246,9 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 
 <script>
 (function () {
-  var BUDGET_URL = '../data/budget_actual_FY26.json';
-  var FY_START = new Date('2025-07-01T00:00:00Z');
-  var FY_END   = new Date('2026-06-30T00:00:00Z');
+  var BUDGET_URL = '../data/{{ site.data.budget.actual_filename }}';
+  var FY_START = new Date('{{ site.data.budget.fy_start }}T00:00:00Z');
+  var FY_END   = new Date('{{ site.data.budget.fy_end }}T00:00:00Z');
   var FY_TOTAL_DAYS = Math.round((FY_END - FY_START) / 86400000);
 
   function fmtDateUS(iso) {
@@ -257,7 +257,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
     return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
   }
   function setText(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
-  var BURN_URL   = '../data/monthly_burn_FY26.json';
+  var BURN_URL   = '../data/{{ site.data.budget.burn_filename }}';
   var FC_URL     = '../data/marblehead_free_cash.csv';
 
   // Minimal CSV parser for the free-cash file (no embedded commas/quotes in this dataset).
@@ -302,7 +302,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
   setText('pace-fy-elapsed-detail',
     daysLeft > 0
       ? '(' + daysLeft + ' days left before the year closes on June 30)'
-      : '(FY26 has closed)');
+      : '({{ site.data.budget.fiscal_year }} has closed)');
 
   var rows = ((budgetActual && budgetActual.by_department) || []).filter(function (r) { return (r.revised_budget || 0) > 0; });
   rows.sort(function (a, b) { return (b.revised_budget || 0) - (a.revised_budget || 0); });
