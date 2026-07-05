@@ -5,16 +5,20 @@ sketch reads to fill in every dollar amount, percentage, project status
 card, carve-out segment, and what-moved-this-week row.
 
 Inputs:
-  - The latest data/checkbook_FY26_<date>.csv  (current snapshot)
-  - The previous data/checkbook_FY26_<date>.csv (prior snapshot, optional)
+  - The latest data/checkbook_FY<N>_<date>.csv  (current snapshot)
+  - The previous data/checkbook_FY<N>_<date>.csv (prior snapshot, optional)
     Used for the "what moved this week" panel. If missing, the panel
     data is omitted and the sketch will hide that section.
+
+The fiscal year defaults to the current one (fylib.current_fiscal_year);
+pass --year to build from another year's snapshots.
 
 Output:
   - data/checkbook_view.json
 
 Usage:
   scripts/build_checkbook_view.py              # auto-detect current + prior
+  scripts/build_checkbook_view.py --year 2026  # build from FY26 snapshots
   scripts/build_checkbook_view.py --current data/checkbook_FY26_2026-06-11.csv \\
                                   --prior   data/checkbook_FY26_2026-06-09.csv
 
@@ -33,6 +37,8 @@ import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
+
+import fylib
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
@@ -164,15 +170,17 @@ def display_vendor(row: dict) -> str:
     return v
 
 
-def latest_snapshot() -> Path:
-    candidates = sorted(DATA.glob("checkbook_FY26_*.csv"))
+def latest_snapshot(year: int) -> Path:
+    prefix = f"checkbook_{fylib.fy_label(year)}_"
+    candidates = sorted(DATA.glob(prefix + "*.csv"))
     if not candidates:
-        sys.exit("error: no data/checkbook_FY26_*.csv snapshots found")
+        sys.exit(f"error: no data/{prefix}*.csv snapshots found")
     return candidates[-1]
 
 
-def prior_snapshot(current: Path) -> Path | None:
-    candidates = sorted(DATA.glob("checkbook_FY26_*.csv"))
+def prior_snapshot(current: Path, year: int) -> Path | None:
+    prefix = f"checkbook_{fylib.fy_label(year)}_"
+    candidates = sorted(DATA.glob(prefix + "*.csv"))
     if current not in candidates:
         return None
     idx = candidates.index(current)
@@ -182,12 +190,12 @@ def prior_snapshot(current: Path) -> Path | None:
 
 
 def snapshot_date_from_filename(path: Path) -> str:
-    """data/checkbook_FY26_2026-06-11.csv  →  '2026-06-11'."""
-    m = re.search(r"checkbook_FY26_(\d{4}-\d{2}-\d{2})", path.name)
+    """data/checkbook_FY27_2026-07-01.csv  →  '2026-07-01'."""
+    m = re.search(r"checkbook_FY\d+_(\d{4}-\d{2}-\d{2})", path.name)
     return m.group(1) if m else ""
 
 
-def build(current_path: Path, prior_path: Path | None) -> dict:
+def build(current_path: Path, prior_path: Path | None, year: int) -> dict:
     current_rows = load_csv(current_path)
     if not current_rows:
         sys.exit(f"error: no rows in {current_path}")
@@ -417,7 +425,7 @@ def build(current_path: Path, prior_path: Path | None) -> dict:
         "schema_version": 1,
         "snapshot": {
             "date":           snap_date,
-            "fiscal_year":    "FY26",
+            "fiscal_year":    fylib.fy_label(year),
             "row_count":      len(current_rows),
             "total_paid":     round(total_paid, 2),
             "interfund_total": round(interfund_total, 2),
@@ -435,6 +443,8 @@ def build(current_path: Path, prior_path: Path | None) -> dict:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--year", type=int, default=fylib.current_fiscal_year(),
+                    help="Fiscal year to build (default: current fiscal year)")
     ap.add_argument("--current", type=Path,
                     help="Current checkbook CSV (defaults to newest)")
     ap.add_argument("--prior", type=Path,
@@ -442,10 +452,10 @@ def main() -> None:
     ap.add_argument("--out", type=Path, default=DATA / "checkbook_view.json")
     args = ap.parse_args()
 
-    current = args.current or latest_snapshot()
-    prior = args.prior or prior_snapshot(current)
+    current = args.current or latest_snapshot(args.year)
+    prior = args.prior or prior_snapshot(current, args.year)
 
-    view = build(current, prior)
+    view = build(current, prior, args.year)
     args.out.write_text(json.dumps(view, indent=2) + "\n")
     print(f"wrote {args.out.relative_to(REPO)} from {current.name}"
           + (f" (diffed vs {prior.name})" if prior else " (no prior diff)"))
