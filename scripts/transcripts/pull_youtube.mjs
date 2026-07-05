@@ -22,8 +22,9 @@
  *     (no date in title, no upload_date available, or no board match)
  */
 import { spawn, spawnSync } from 'node:child_process';
-import { writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { YOUTUBE_YTDLP_ARGS } from './lib/config.mjs';
+import { buildPreviousDateMap, resolveFallbackDate } from './lib/fallback_date.mjs';
 import { parseTitle } from './lib/parse_title.mjs';
 
 const CHANNEL_URL = 'https://www.youtube.com/channel/UC3mmZuBmhKUJsXeWbqwFQJQ';
@@ -83,8 +84,13 @@ async function main() {
   const lines = raw.split('\n').filter(l => l.includes('|'));
   console.error(`Got ${lines.length} videos from channel.`);
 
+  const previousMap = existsSync(outPath)
+    ? buildPreviousDateMap(JSON.parse(readFileSync(outPath, 'utf8')))
+    : new Map();
+
   const meetings = [];
   const failed = [];
+  let fromPrevious = 0;
   for (const line of lines) {
     const parts = line.split('|');
     const youtube_id = parts[0]?.trim();
@@ -108,17 +114,19 @@ async function main() {
       continue;
     }
 
-    // Recoverable: we know the board, just not the date — try upload_date.
+    // Recoverable: we know the board, just not the date. A previously
+    // resolved date wins; otherwise try a per-video upload_date fetch.
     if (parsed.reason === 'no date in title' && parsed.board_slug) {
-      const uploadDate = fetchUploadDate(youtube_id);
-      if (uploadDate) {
+      const resolved = resolveFallbackDate(youtube_id, previousMap, fetchUploadDate);
+      if (resolved) {
+        if (resolved.from_previous_index) fromPrevious += 1;
         meetings.push({
           youtube_id,
           title: raw_title,
           board_slug: parsed.board_slug,
           board_display: parsed.board_display,
-          date: uploadDate,
-          date_approximate: true,
+          date: resolved.date,
+          date_approximate: resolved.date_approximate,
           duration_seconds: Number.isFinite(durationSeconds) ? durationSeconds : null,
           raw_title,
         });
@@ -142,7 +150,7 @@ async function main() {
     failed,
   };
   writeFileSync(outPath, JSON.stringify(output, null, 2) + '\n');
-  console.error(`Wrote ${meetings.length} in-scope meetings (${failed.length} unclassified) to ${outPath}.`);
+  console.error(`Wrote ${meetings.length} in-scope meetings (${failed.length} unclassified, ${fromPrevious} dates carried from previous index) to ${outPath}.`);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });

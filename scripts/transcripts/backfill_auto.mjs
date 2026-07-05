@@ -36,13 +36,23 @@ const boardFilter = args.includes('--board') ? args[args.indexOf('--board') + 1]
 const sourceFilter = args.includes('--source') ? args[args.indexOf('--source') + 1] : null;
 const dryRun = args.includes('--dry-run');
 
+// First ERROR/WARNING line of a yt-dlp run, so a failure log says WHY
+// (e.g. YouTube's "Sign in to confirm you're not a bot" from datacenter
+// IPs) instead of just "no caption track".
+function ytdlpFailureHint(res) {
+  const line = (res.stderr ?? '')
+    .split('\n')
+    .find(l => /ERROR|WARNING/.test(l));
+  return line ? line.trim().slice(0, 200) : null;
+}
+
 function downloadVimeoVtt(vimeoId) {
   const cachePath = join(CACHE_DIR, `vimeo-${vimeoId}.en-x-autogen.vtt`);
   if (existsSync(cachePath)) {
     console.error(`  - cache hit: ${cachePath}`);
     return cachePath;
   }
-  spawnSync(YT_DLP, [
+  const res = spawnSync(YT_DLP, [
     '--write-subs',
     '--sub-langs', 'en-x-autogen',
     '--skip-download',
@@ -50,7 +60,10 @@ function downloadVimeoVtt(vimeoId) {
     '-o', join(CACHE_DIR, `vimeo-${vimeoId}.%(ext)s`),
     `https://vimeo.com/${vimeoId}`,
   ], { encoding: 'utf8' });
-  return existsSync(cachePath) ? cachePath : null;
+  if (existsSync(cachePath)) return cachePath;
+  const hint = ytdlpFailureHint(res);
+  if (hint) console.error(`  - yt-dlp: ${hint}`);
+  return null;
 }
 
 function downloadYouTubeVtt(youtubeId) {
@@ -62,7 +75,7 @@ function downloadYouTubeVtt(youtubeId) {
   // YouTube auto-caption lang code is `en` (sometimes `en-orig`). Take the
   // first match across both. yt-dlp downloads to a file pattern with the
   // detected lang in the name; we glob-match after the fact.
-  spawnSync(YT_DLP, [
+  const res = spawnSync(YT_DLP, [
     ...YOUTUBE_YTDLP_ARGS,
     '--write-auto-subs',
     '--sub-langs', 'en.*,en',
@@ -76,7 +89,10 @@ function downloadYouTubeVtt(youtubeId) {
     const p = join(CACHE_DIR, `youtube-${youtubeId}.${lang}.vtt`);
     if (existsSync(p)) return p;
   }
-  return existsSync(cachePath) ? cachePath : null;
+  if (existsSync(cachePath)) return cachePath;
+  const hint = ytdlpFailureHint(res);
+  if (hint) console.error(`  - yt-dlp: ${hint}`);
+  return null;
 }
 
 function getVimeoDurationSeconds(vimeoId) {
