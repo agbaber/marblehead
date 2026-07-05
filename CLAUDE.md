@@ -27,7 +27,8 @@ Then:
 
 - `npm run dev` &ndash; `bundle exec jekyll serve --port 4000`, live rebuild.
 - `npm run test:local` &ndash; builds, serves `_site/`, runs Playwright smoke
-  (`tests/smoke-test.mjs`), tears down. 52 pass / 0 fail expected.
+  (`tests/smoke-test.mjs`), tears down. 118 pass / 0 fail expected
+  (count grows as pages are added; 0 fail is the invariant).
 
 The Gemfile pins `jekyll 3.10.0` and `kramdown-parser-gfm` to match
 GitHub Pages prod, so local output equals what visitors see. Both CI
@@ -37,6 +38,27 @@ workflows (`smoke-tests.yml`, `preview.yml`) use the same Gemfile via
 For changes you want a second pair of eyes on (or to view from
 another device), keep using the Cloudflare PR preview URL &ndash; local
 is for fast iteration, preview is for review.
+
+## Meeting transcript ingest
+
+Two sources: MHTV Vimeo (fully automated, daily CI) and the MPS YouTube
+channel. **YouTube per-video calls (captions, upload_date) are bot-blocked
+from GitHub Actions IPs** &ndash; enumeration works in CI, downloads do not.
+To backfill YouTube transcripts, run locally from a residential IP:
+`node scripts/transcripts/pull_youtube.mjs` then
+`node scripts/transcripts/backfill_auto.mjs --source youtube`.
+`pull_youtube` carries previously resolved dates forward, so degraded CI
+runs can't erase local work.
+
+LLM enrichment runs in the daily `ingest-meetings.yml` at max 25
+transcripts/run (job-timeout guard); a large backlog drains over days by
+design. Never enrich a 100+ backlog in one run.
+
+## Meeting-digest worker tests
+
+`cd meeting-digest && npx vitest run`. New test files must be added to the
+`include` list in `meeting-digest/vitest.config.js` or they are silently
+skipped.
 
 ## Editorial stance
 
