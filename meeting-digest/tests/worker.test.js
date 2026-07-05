@@ -298,17 +298,40 @@ describe('POST /api/unsubscribe', () => {
 });
 
 describe('POST /api/mail-event', () => {
+  // Mirrors RESEND_WEBHOOK_SECRET in vitest.config.js.
+  const WEBHOOK_SECRET = 'whsec_' + btoa('0123456789abcdef0123456789abcdef');
+
+  async function svixHeaders(payload) {
+    const id = 'msg_worker_test';
+    const ts = String(Math.floor(Date.now() / 1000));
+    const raw = Uint8Array.from(atob(WEBHOOK_SECRET.slice('whsec_'.length)), c => c.charCodeAt(0));
+    const key = await crypto.subtle.importKey('raw', raw, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+    const mac = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(`${id}.${ts}.${payload}`));
+    const sig = 'v1,' + btoa(String.fromCharCode(...new Uint8Array(mac)));
+    return { 'svix-id': id, 'svix-timestamp': ts, 'svix-signature': sig };
+  }
+
   it('marks bounced subscriber on hard bounce', async () => {
     const row = await confirmedSubscriber('bounced@example.com');
     await env.DB.prepare('INSERT INTO delivery_log (id, subscriber_id, sent_at, n_meetings, provider_message_id, status) VALUES (?, ?, ?, ?, ?, ?)')
       .bind('dl1', row.id, Date.now(), 1, 'pmid-1', 'queued').run();
+    const payload = JSON.stringify({ type: 'email.bounced', data: { email_id: 'pmid-1' } });
     const r = await SELF.fetch('https://worker/api/mail-event', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ type: 'email.bounced', data: { email_id: 'pmid-1' } })
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...(await svixHeaders(payload)) },
+      body: payload
     });
     expect(r.status).toBe(200);
     const after = await env.DB.prepare('SELECT status FROM subscriber WHERE id = ?').bind(row.id).first();
     expect(after.status).toBe('bounced');
+  });
+
+  it('rejects an unsigned request', async () => {
+    const r = await SELF.fetch('https://worker/api/mail-event', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'email.bounced', data: { email_id: 'pmid-1' } })
+    });
+    expect(r.status).toBe(401);
   });
 });
 

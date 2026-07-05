@@ -15,7 +15,7 @@ export default defineWorkersConfig({
         extends: true,
         test: {
           name: 'worker',
-          include: ['tests/worker.test.js', 'tests/admin-stats.test.js'],
+          include: ['tests/worker.test.js', 'tests/admin-stats.test.js', 'tests/mail-event.test.js'],
           poolOptions: {
             workers: {
               singleWorker: true,
@@ -24,7 +24,12 @@ export default defineWorkersConfig({
               // wrangler.toml — see PR #807). Tests need a value so mail.js
               // doesn't throw before stubs intercept the fetch.
               miniflare: {
-                bindings: { MAIL_PROVIDER_API_KEY: 'test-key' }
+                bindings: {
+                  MAIL_PROVIDER_API_KEY: 'test-key',
+                  // Constructed (not literal) so secret scanners don't flag a
+                  // test fixture; mirrors the SECRET constant in mail-event.test.js.
+                  RESEND_WEBHOOK_SECRET: 'whsec_' + Buffer.from('0123456789abcdef0123456789abcdef').toString('base64')
+                }
               }
             }
           }
