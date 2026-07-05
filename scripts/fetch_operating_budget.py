@@ -37,12 +37,13 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import datetime as dt
 import sys
 import time
 import urllib.error
 import urllib.request
 from pathlib import Path
+
+import fylib
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
@@ -50,10 +51,6 @@ DATA_DIR = REPO_ROOT / "data"
 PORTAL = "https://townofmarblehead-ma-ob.budget.socrata.com"
 USER_AGENT = "marbleheaddata.org daily-refresh (https://marbleheaddata.org)"
 RETRY_BACKOFFS = (5, 15, 45)
-
-
-def current_fiscal_year(today: dt.date) -> int:
-    return today.year + 1 if today.month >= 7 else today.year
 
 
 def fetch_csv(year: int) -> bytes:
@@ -91,7 +88,7 @@ def main() -> int:
                     help="fiscal year (default: current FY)")
     args = ap.parse_args()
 
-    year = args.year or current_fiscal_year(dt.date.today())
+    year = args.year or fylib.current_fiscal_year()
     print(f"Fetching operating_budget.csv for FY{year}...")
     body = fetch_csv(year)
 
