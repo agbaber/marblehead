@@ -9,6 +9,16 @@ export const DEFAULT_BOARDS = [
   { slug: 'board-of-health',  display: 'Board of Health',  patterns: [/\bboard of health\b/i] },
 ];
 
+// Extra yt-dlp args for per-video YouTube calls (caption download,
+// upload_date fallback). YouTube's player poses JS challenges; without a JS
+// runtime plus the EJS solver component, public videos intermittently report
+// "This video is not available" and caption listings come back empty.
+// Channel enumeration (--flat-playlist) does not need these.
+export const YOUTUBE_YTDLP_ARGS = [
+  '--js-runtimes', 'node',
+  '--remote-components', 'ejs:github',
+];
+
 // Titles that look like board names but are actually member profiles, interviews,
 // or one-off content. Reject if these markers are present.
 const PROFILE_MARKERS = [

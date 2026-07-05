@@ -18,6 +18,7 @@
 import { spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { YOUTUBE_YTDLP_ARGS } from './lib/config.mjs';
 import { buildSlug, renderTranscript } from './lib/render_transcript.mjs';
 import { vttToProse } from './lib/vtt_to_prose.mjs';
 
@@ -62,6 +63,7 @@ function downloadYouTubeVtt(youtubeId) {
   // first match across both. yt-dlp downloads to a file pattern with the
   // detected lang in the name; we glob-match after the fact.
   spawnSync(YT_DLP, [
+    ...YOUTUBE_YTDLP_ARGS,
     '--write-auto-subs',
     '--sub-langs', 'en.*,en',
     '--skip-download',

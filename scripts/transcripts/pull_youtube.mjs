@@ -23,6 +23,7 @@
  */
 import { spawn, spawnSync } from 'node:child_process';
 import { writeFileSync } from 'node:fs';
+import { YOUTUBE_YTDLP_ARGS } from './lib/config.mjs';
 import { parseTitle } from './lib/parse_title.mjs';
 
 const CHANNEL_URL = 'https://www.youtube.com/channel/UC3mmZuBmhKUJsXeWbqwFQJQ';
@@ -65,6 +66,7 @@ function decode(s) {
 // upload_date arrives as YYYYMMDD; convert to ISO YYYY-MM-DD.
 function fetchUploadDate(youtubeId) {
   const res = spawnSync(YT_DLP, [
+    ...YOUTUBE_YTDLP_ARGS,
     '--print', '%(upload_date)s',
     '--skip-download',
     '--no-warnings',
