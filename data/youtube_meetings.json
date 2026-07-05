@@ -1,178 +1,8 @@
 {
-  "last_updated": "2026-07-05T13:58:30.506Z",
+  "last_updated": "2026-07-05T14:07:30.413Z",
   "channel_url": "https://www.youtube.com/channel/UC3mmZuBmhKUJsXeWbqwFQJQ",
   "total_videos": 262,
   "meetings": [
-    {
-      "youtube_id": "gYE7TlHvW9o",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-06-23",
-      "date_approximate": true,
-      "duration_seconds": 2717,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "wAD-P3mGpq8",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-06-12",
-      "date_approximate": true,
-      "duration_seconds": 5823,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "hB3gXwRkCzo",
-      "title": "Goals Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-06-11",
-      "date_approximate": true,
-      "duration_seconds": 1290,
-      "raw_title": "Goals Subcommittee"
-    },
-    {
-      "youtube_id": "5HYGeWOE710",
-      "title": "MHS Roof Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-06-03",
-      "date_approximate": true,
-      "duration_seconds": 4558,
-      "raw_title": "MHS Roof Subcommittee"
-    },
-    {
-      "youtube_id": "fdEqLGNzELw",
-      "title": "Policy Subcommittee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-05-29",
-      "date_approximate": true,
-      "duration_seconds": 4415,
-      "raw_title": "Policy Subcommittee Meeting"
-    },
-    {
-      "youtube_id": "5zKYwpmxa7M",
-      "title": "Communications Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-05-28",
-      "date_approximate": true,
-      "duration_seconds": 950,
-      "raw_title": "Communications Subcommittee"
-    },
-    {
-      "youtube_id": "SKCehujHhcw",
-      "title": "Policy Subcommittee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-05-28",
-      "date_approximate": true,
-      "duration_seconds": 61,
-      "raw_title": "Policy Subcommittee Meeting"
-    },
-    {
-      "youtube_id": "RPJmPUs1OtI",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-05-22",
-      "date_approximate": true,
-      "duration_seconds": 8197,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "DGNrNkd3zrw",
-      "title": "Marblehead School Committee Facilities Subcommittee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-05-19",
-      "date_approximate": true,
-      "duration_seconds": 5266,
-      "raw_title": "Marblehead School Committee Facilities Subcommittee Meeting"
-    },
-    {
-      "youtube_id": "JBxGDFA5HRc",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-05-08",
-      "date_approximate": true,
-      "duration_seconds": 5846,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "_h3CUzblslc",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-05-01",
-      "date_approximate": true,
-      "duration_seconds": 5949,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "BzrU-4eQsSc",
-      "title": "Policy Subcommittee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-05-01",
-      "date_approximate": true,
-      "duration_seconds": 2712,
-      "raw_title": "Policy Subcommittee Meeting"
-    },
-    {
-      "youtube_id": "hD5wHlANirY",
-      "title": "Policy Subcommittee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-04-30",
-      "date_approximate": true,
-      "duration_seconds": 63,
-      "raw_title": "Policy Subcommittee Meeting"
-    },
-    {
-      "youtube_id": "1mXR3zTleAg",
-      "title": "School Committee Communications Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-04-16",
-      "date_approximate": true,
-      "duration_seconds": 1762,
-      "raw_title": "School Committee Communications Subcommittee"
-    },
-    {
-      "youtube_id": "ht7QyxvvV8c",
-      "title": "Marblehead School Committee Facilities Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-04-15",
-      "date_approximate": true,
-      "duration_seconds": 3627,
-      "raw_title": "Marblehead School Committee Facilities Subcommittee"
-    },
-    {
-      "youtube_id": "7DEKQ9QazQI",
-      "title": "Marblehead School Committee Facilities Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-04-14",
-      "date_approximate": true,
-      "duration_seconds": 62,
-      "raw_title": "Marblehead School Committee Facilities Subcommittee"
-    },
-    {
-      "youtube_id": "VFf_HUGS1o0",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-04-10",
-      "date_approximate": true,
-      "duration_seconds": 6952,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
     {
       "youtube_id": "UMABNnY3zeQ",
       "title": "Marblehead School Committee Meeting April 9, 2026",
@@ -184,76 +14,6 @@
       "raw_title": "Marblehead School Committee Meeting April 9, 2026"
     },
     {
-      "youtube_id": "pFVpojFNiT0",
-      "title": "MHS Roof Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-04-03",
-      "date_approximate": true,
-      "duration_seconds": 1763,
-      "raw_title": "MHS Roof Subcommittee"
-    },
-    {
-      "youtube_id": "6kHhwWjgRL0",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-03-28",
-      "date_approximate": true,
-      "duration_seconds": 3843,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "nRYkOciL6xo",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-03-20",
-      "date_approximate": true,
-      "duration_seconds": 8056,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "RZzfdBE_ask",
-      "title": "School Committee Facilities Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-03-17",
-      "date_approximate": true,
-      "duration_seconds": 2936,
-      "raw_title": "School Committee Facilities Subcommittee"
-    },
-    {
-      "youtube_id": "4veaOWi4IZg",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-03-13",
-      "date_approximate": true,
-      "duration_seconds": 6922,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "eod9JSODNHw",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-03-06",
-      "date_approximate": true,
-      "duration_seconds": 6362,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "k35-XI4LSok",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-02-27",
-      "date_approximate": true,
-      "duration_seconds": 8778,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
       "youtube_id": "Nd12oEz9BrM",
       "title": "Marblehead School Committee Meeting 2/26/26",
       "board_slug": "school-committee",
@@ -262,196 +22,6 @@
       "date_approximate": false,
       "duration_seconds": 10097,
       "raw_title": "Marblehead School Committee Meeting 2/26/26"
-    },
-    {
-      "youtube_id": "VCRLi_9RX_0",
-      "title": "School Committee Facilities Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-02-14",
-      "date_approximate": true,
-      "duration_seconds": 3497,
-      "raw_title": "School Committee Facilities Subcommittee"
-    },
-    {
-      "youtube_id": "xsoS-2Lt1Nw",
-      "title": "Marblehead School Committee Goals Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-02-14",
-      "date_approximate": true,
-      "duration_seconds": 2486,
-      "raw_title": "Marblehead School Committee Goals Subcommittee"
-    },
-    {
-      "youtube_id": "Dvou973usLI",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-02-06",
-      "date_approximate": true,
-      "duration_seconds": 6163,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "IyMgCaXShNo",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-01-30",
-      "date_approximate": true,
-      "duration_seconds": 4758,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "RDZ43aHKObE",
-      "title": "Marblehead School Committee Budget Subcommittee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-01-30",
-      "date_approximate": true,
-      "duration_seconds": 5608,
-      "raw_title": "Marblehead School Committee Budget Subcommittee Meeting"
-    },
-    {
-      "youtube_id": "azh5gUmyz54",
-      "title": "Policy Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-01-23",
-      "date_approximate": true,
-      "duration_seconds": 3243,
-      "raw_title": "Policy Subcommittee"
-    },
-    {
-      "youtube_id": "uccAc38CpfM",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-01-16",
-      "date_approximate": true,
-      "duration_seconds": 5503,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "oeyWw31z7sI",
-      "title": "Marblehead School Committee Budget Sub-Committee meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2026-01-06",
-      "date_approximate": true,
-      "duration_seconds": 3210,
-      "raw_title": "Marblehead School Committee Budget Sub-Committee meeting"
-    },
-    {
-      "youtube_id": "0iavxpBr4iY",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2025-12-19",
-      "date_approximate": true,
-      "duration_seconds": 13557,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "g3Y1PdO0xWE",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2025-12-05",
-      "date_approximate": true,
-      "duration_seconds": 7802,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "oMpolsuLl4I",
-      "title": "Policy Subcommittee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2025-12-05",
-      "date_approximate": true,
-      "duration_seconds": 1295,
-      "raw_title": "Policy Subcommittee Meeting"
-    },
-    {
-      "youtube_id": "wpU6oFPNz-4",
-      "title": "School Committee Facilities Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2025-12-03",
-      "date_approximate": true,
-      "duration_seconds": 4423,
-      "raw_title": "School Committee Facilities Subcommittee"
-    },
-    {
-      "youtube_id": "OHSv9NM_A4o",
-      "title": "School Committee Communications Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2025-12-02",
-      "date_approximate": true,
-      "duration_seconds": 942,
-      "raw_title": "School Committee Communications Subcommittee"
-    },
-    {
-      "youtube_id": "mNoyNUVy9hA",
-      "title": "Marblehead School Committee Budget Sub-Committee/FinCom School Liaisons Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2025-12-02",
-      "date_approximate": true,
-      "duration_seconds": 6971,
-      "raw_title": "Marblehead School Committee Budget Sub-Committee/FinCom School Liaisons Subcommittee"
-    },
-    {
-      "youtube_id": "bYXk5p5cE8k",
-      "title": "Marblehead School Committee Budget Sub-Committee/FinCom School Liaisons Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2025-12-01",
-      "date_approximate": true,
-      "duration_seconds": 31,
-      "raw_title": "Marblehead School Committee Budget Sub-Committee/FinCom School Liaisons Subcommittee"
-    },
-    {
-      "youtube_id": "Ct6jpfRy61A",
-      "title": "Marblehead School Committee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2025-11-21",
-      "date_approximate": true,
-      "duration_seconds": 7123,
-      "raw_title": "Marblehead School Committee Meeting"
-    },
-    {
-      "youtube_id": "nkL-q6MRxh4",
-      "title": "Policy Subcommittee Meeting",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2025-11-21",
-      "date_approximate": true,
-      "duration_seconds": 5391,
-      "raw_title": "Policy Subcommittee Meeting"
-    },
-    {
-      "youtube_id": "bUIqHbW61sk",
-      "title": "School Committee MHS Roof Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2025-11-19",
-      "date_approximate": true,
-      "duration_seconds": 2456,
-      "raw_title": "School Committee MHS Roof Subcommittee"
-    },
-    {
-      "youtube_id": "2eCG4KFj1fA",
-      "title": "Marblehead School Committee Budget Sub-committee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2025-11-18",
-      "date_approximate": true,
-      "duration_seconds": 6117,
-      "raw_title": "Marblehead School Committee Budget Sub-committee"
     },
     {
       "youtube_id": "W0u8H9YWpnY",
@@ -1634,16 +1204,6 @@
       "raw_title": "2/6/23 Budget Subcommittee"
     },
     {
-      "youtube_id": "C2kdQzHY31E",
-      "title": "Facilities Subcommittee",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2023-01-14",
-      "date_approximate": true,
-      "duration_seconds": 3657,
-      "raw_title": "Facilities Subcommittee"
-    },
-    {
       "youtube_id": "Ug7oA_6BhyE",
       "title": "1/5/2023 school committee",
       "board_slug": "school-committee",
@@ -1652,16 +1212,6 @@
       "date_approximate": false,
       "duration_seconds": 6862,
       "raw_title": "1/5/2023 school committee"
-    },
-    {
-      "youtube_id": "RmmtG0G_g_4",
-      "title": "Budget Subcommittee-Joint with Town",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2022-12-20",
-      "date_approximate": true,
-      "duration_seconds": 3504,
-      "raw_title": "Budget Subcommittee-Joint with Town"
     },
     {
       "youtube_id": "Re0sSoonjec",
@@ -1714,16 +1264,6 @@
       "raw_title": "10.20.2022 SC Meet"
     },
     {
-      "youtube_id": "SFjO9WXDyTM",
-      "title": "School Committee-Budget Priorities Workshop",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2022-10-14",
-      "date_approximate": true,
-      "duration_seconds": 5340,
-      "raw_title": "School Committee-Budget Priorities Workshop"
-    },
-    {
       "youtube_id": "pTapgkwHOYA",
       "title": "10.6.2022 SC Meet",
       "board_slug": "school-committee",
@@ -1752,26 +1292,6 @@
       "date_approximate": false,
       "duration_seconds": 9935,
       "raw_title": "9.7.2022 SC Meet"
-    },
-    {
-      "youtube_id": "g1Mdut5d9qY",
-      "title": "S C  Meeting 04 28 20221",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2022-09-06",
-      "date_approximate": true,
-      "duration_seconds": 7398,
-      "raw_title": "S C  Meeting 04 28 20221"
-    },
-    {
-      "youtube_id": "9f_ugoZLxIk",
-      "title": "S C  04 07 20221",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2022-09-06",
-      "date_approximate": true,
-      "duration_seconds": 8742,
-      "raw_title": "S C  04 07 20221"
     },
     {
       "youtube_id": "fXkNwPFhAoA",
@@ -1842,76 +1362,6 @@
       "date_approximate": false,
       "duration_seconds": 2920,
       "raw_title": "S C  Meeting 5 05 2022"
-    },
-    {
-      "youtube_id": "FNrERBH1aBM",
-      "title": "Sarah Gold she her hers's Personal Meeting Room 2",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2022-04-12",
-      "date_approximate": true,
-      "duration_seconds": 5165,
-      "raw_title": "Sarah Gold she her hers's Personal Meeting Room 2"
-    },
-    {
-      "youtube_id": "5FuO1q0Rv3c",
-      "title": "Sarah Gold she her hers's Personal Meeting Room",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2022-04-12",
-      "date_approximate": true,
-      "duration_seconds": 8064,
-      "raw_title": "Sarah Gold she her hers's Personal Meeting Room"
-    },
-    {
-      "youtube_id": "0QtY4_U5MKs",
-      "title": "Sarah Gold she her hers's Personal Meeting Room 3",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2022-04-12",
-      "date_approximate": true,
-      "duration_seconds": 6177,
-      "raw_title": "Sarah Gold she her hers's Personal Meeting Room 3"
-    },
-    {
-      "youtube_id": "PhyUhBpn8T8",
-      "title": "School Committee   9 23 20201",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2022-04-12",
-      "date_approximate": true,
-      "duration_seconds": 7017,
-      "raw_title": "School Committee   9 23 20201"
-    },
-    {
-      "youtube_id": "qiq_XKRQ6mQ",
-      "title": "Sarah Gold she her hers's Personal Meeting Room 1",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2022-04-12",
-      "date_approximate": true,
-      "duration_seconds": 7358,
-      "raw_title": "Sarah Gold she her hers's Personal Meeting Room 1"
-    },
-    {
-      "youtube_id": "gfeuys2T-nE",
-      "title": "School Committee   9 2 20201",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2022-04-12",
-      "date_approximate": true,
-      "duration_seconds": 7960,
-      "raw_title": "School Committee   9 2 20201"
-    },
-    {
-      "youtube_id": "AT9P2Gs2ZJo",
-      "title": "School Committee   10 7 20201",
-      "board_slug": "school-committee",
-      "board_display": "School Committee",
-      "date": "2022-04-12",
-      "date_approximate": true,
-      "duration_seconds": 8652,
-      "raw_title": "School Committee   10 7 20201"
     },
     {
       "youtube_id": "D8CvAq70TZU",
@@ -2501,9 +1951,269 @@
       "reason": "not a board meeting"
     },
     {
+      "youtube_id": "g1Mdut5d9qY",
+      "raw_title": "S C  Meeting 04 28 20221",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "9f_ugoZLxIk",
+      "raw_title": "S C  04 07 20221",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
       "youtube_id": "9VPdK2Nj5RY",
       "raw_title": "Budget Vote Apr 8, 2021",
       "reason": "not a board meeting"
+    },
+    {
+      "youtube_id": "FNrERBH1aBM",
+      "raw_title": "Sarah Gold she her hers's Personal Meeting Room 2",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "5FuO1q0Rv3c",
+      "raw_title": "Sarah Gold she her hers's Personal Meeting Room",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "0QtY4_U5MKs",
+      "raw_title": "Sarah Gold she her hers's Personal Meeting Room 3",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "PhyUhBpn8T8",
+      "raw_title": "School Committee   9 23 20201",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "qiq_XKRQ6mQ",
+      "raw_title": "Sarah Gold she her hers's Personal Meeting Room 1",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "gfeuys2T-nE",
+      "raw_title": "School Committee   9 2 20201",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "AT9P2Gs2ZJo",
+      "raw_title": "School Committee   10 7 20201",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "gYE7TlHvW9o",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "wAD-P3mGpq8",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "hB3gXwRkCzo",
+      "raw_title": "Goals Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "5HYGeWOE710",
+      "raw_title": "MHS Roof Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "5zKYwpmxa7M",
+      "raw_title": "Communications Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "fdEqLGNzELw",
+      "raw_title": "Policy Subcommittee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "SKCehujHhcw",
+      "raw_title": "Policy Subcommittee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "RPJmPUs1OtI",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "DGNrNkd3zrw",
+      "raw_title": "Marblehead School Committee Facilities Subcommittee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "JBxGDFA5HRc",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "_h3CUzblslc",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "BzrU-4eQsSc",
+      "raw_title": "Policy Subcommittee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "hD5wHlANirY",
+      "raw_title": "Policy Subcommittee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "1mXR3zTleAg",
+      "raw_title": "School Committee Communications Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "ht7QyxvvV8c",
+      "raw_title": "Marblehead School Committee Facilities Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "7DEKQ9QazQI",
+      "raw_title": "Marblehead School Committee Facilities Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "VFf_HUGS1o0",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "pFVpojFNiT0",
+      "raw_title": "MHS Roof Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "6kHhwWjgRL0",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "nRYkOciL6xo",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "RZzfdBE_ask",
+      "raw_title": "School Committee Facilities Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "4veaOWi4IZg",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "eod9JSODNHw",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "k35-XI4LSok",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "VCRLi_9RX_0",
+      "raw_title": "School Committee Facilities Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "xsoS-2Lt1Nw",
+      "raw_title": "Marblehead School Committee Goals Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "Dvou973usLI",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "IyMgCaXShNo",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "RDZ43aHKObE",
+      "raw_title": "Marblehead School Committee Budget Subcommittee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "azh5gUmyz54",
+      "raw_title": "Policy Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "uccAc38CpfM",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "oeyWw31z7sI",
+      "raw_title": "Marblehead School Committee Budget Sub-Committee meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "0iavxpBr4iY",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "g3Y1PdO0xWE",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "oMpolsuLl4I",
+      "raw_title": "Policy Subcommittee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "OHSv9NM_A4o",
+      "raw_title": "School Committee Communications Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "wpU6oFPNz-4",
+      "raw_title": "School Committee Facilities Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "mNoyNUVy9hA",
+      "raw_title": "Marblehead School Committee Budget Sub-Committee/FinCom School Liaisons Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "bYXk5p5cE8k",
+      "raw_title": "Marblehead School Committee Budget Sub-Committee/FinCom School Liaisons Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "Ct6jpfRy61A",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "nkL-q6MRxh4",
+      "raw_title": "Policy Subcommittee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "bUIqHbW61sk",
+      "raw_title": "School Committee MHS Roof Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "2eCG4KFj1fA",
+      "raw_title": "Marblehead School Committee Budget Sub-committee",
+      "reason": "no date in title; upload_date fetch failed"
     },
     {
       "youtube_id": "93BPFsoQ7DY",
@@ -2546,6 +2256,16 @@
       "reason": "not a board meeting"
     },
     {
+      "youtube_id": "C2kdQzHY31E",
+      "raw_title": "Facilities Subcommittee",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
+      "youtube_id": "RmmtG0G_g_4",
+      "raw_title": "Budget Subcommittee-Joint with Town",
+      "reason": "no date in title; upload_date fetch failed"
+    },
+    {
       "youtube_id": "Y8VFCOfajV8",
       "raw_title": "11.10.2022 Finance and Budget Forum",
       "reason": "not a board meeting"
@@ -2554,6 +2274,11 @@
       "youtube_id": "4v4rJFsInS0",
       "raw_title": "11.10.2022 Finance and Budget Forum",
       "reason": "not a board meeting"
+    },
+    {
+      "youtube_id": "SFjO9WXDyTM",
+      "raw_title": "School Committee-Budget Priorities Workshop",
+      "reason": "no date in title; upload_date fetch failed"
     }
   ]
 }
