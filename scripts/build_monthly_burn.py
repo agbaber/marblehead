@@ -1,25 +1,31 @@
 #!/usr/bin/env python3
 """
-Build data/monthly_burn_FY26.json — the JSON the /monthly-pacing/ page
+Build data/monthly_burn_FY<N>.json — the JSON the /monthly-pacing/ page
 reads to render the per-fund monthly cumulative-spend chart.
 
-Aggregates data/operating_budget_FY26.csv (fetched daily from the
+Aggregates data/operating_budget_FY<N>.csv (fetched daily from the
 Open Budget portal) by Fund x fiscalmonth and emits the top funds by
 total actual spending. Unlike the checkbook (vendor payments only),
 this dataset INCLUDES payroll, so General Fund - School can be charted
 honestly instead of dropped.
 
+Rows are restricted to the fiscal year's twelve months (the portal's
+year=<N> export can carry rows from other fiscal years, whose
+fiscalmonth buckets fall outside this FY's Jul-Jun window).
+
 Inputs:
-  - data/operating_budget_FY26.csv  (built by fetch_operating_budget.py)
+  - data/operating_budget_FY<N>.csv  (built by fetch_operating_budget.py)
 
 Output:
-  - data/monthly_burn_FY26.json
+  - data/monthly_burn_FY<N>.json
 
 Usage:
-  scripts/build_monthly_burn.py
+  scripts/build_monthly_burn.py              # current fiscal year
+  scripts/build_monthly_burn.py --year 2026  # rebuild a prior FY
 """
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import sys
@@ -27,15 +33,11 @@ from collections import defaultdict
 from datetime import UTC, date, datetime
 from pathlib import Path
 
+import fylib
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
-SRC = DATA_DIR / "operating_budget_FY26.csv"
-OUT = DATA_DIR / "monthly_burn_FY26.json"
 
-FY26_MONTHS = [
-    "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12",
-    "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06",
-]
 TOP_N = 6
 
 
@@ -67,10 +69,21 @@ def latest_fiscal_month(rows: list[dict]) -> str | None:
 
 
 def main() -> int:
-    if not SRC.exists():
-        sys.exit(f"missing {SRC}; run scripts/fetch_operating_budget.py first")
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[1])
+    ap.add_argument("--year", type=int, default=fylib.current_fiscal_year(),
+                    help="fiscal year to build (default: current fiscal year)")
+    args = ap.parse_args()
+    year = args.year
+    label = fylib.fy_label(year)
+    fy_months = fylib.fy_months(year)
 
-    with SRC.open(newline="") as f:
+    src = DATA_DIR / f"operating_budget_{label}.csv"
+    out = DATA_DIR / f"monthly_burn_{label}.json"
+
+    if not src.exists():
+        sys.exit(f"missing {src}; run scripts/fetch_operating_budget.py first")
+
+    with src.open(newline="") as f:
         rows = list(csv.DictReader(f))
 
     # Aggregate actual by fund x fiscal month
@@ -83,7 +96,7 @@ def main() -> int:
         if not fund:
             continue
         ym = (r.get("fiscalmonth") or "")[:7]
-        if ym not in FY26_MONTHS:
+        if ym not in fy_months:
             continue
         fund_month[fund][ym] += actual
 
@@ -94,7 +107,7 @@ def main() -> int:
     for fund_name, total in top:
         cum = 0.0
         series = []
-        for ym in FY26_MONTHS:
+        for ym in fy_months:
             cum += fund_month[fund_name].get(ym, 0.0)
             series.append({
                 "month": ym,
@@ -111,15 +124,15 @@ def main() -> int:
         "as_of": datetime.now(UTC).date().isoformat(),
         "latest_fiscal_month": latest_fiscal_month(rows),
         "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
-        "fiscal_year": "FY26",
-        "fy_months": FY26_MONTHS,
+        "fiscal_year": label,
+        "fy_months": fy_months,
         "funds": funds_out,
-        "source": "data/operating_budget_FY26.csv (Open Budget portal, payroll included)",
+        "source": f"data/operating_budget_{label}.csv (Open Budget portal, payroll included)",
         "generated_by": "scripts/build_monthly_burn.py",
     }
 
-    OUT.write_text(json.dumps(payload, indent=2) + "\n")
-    print(f"Wrote {OUT.relative_to(REPO_ROOT)} "
+    out.write_text(json.dumps(payload, indent=2) + "\n")
+    print(f"Wrote {out.relative_to(REPO_ROOT)} "
           f"(as_of={payload['as_of']}, {len(funds_out)} funds)")
     for f in funds_out:
         print(f"  {f['fund']:<32} ${f['total_through_as_of']:>13,.0f}")

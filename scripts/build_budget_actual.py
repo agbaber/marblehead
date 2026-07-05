@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build data/budget_actual_FY26.json from data/operating_budget_FY26.csv
+Build data/budget_actual_FY<N>.json from data/operating_budget_FY<N>.csv
 (fetched daily by scripts/fetch_operating_budget.py from the Town of
 Marblehead Open Budget portal).
 
@@ -16,6 +16,16 @@ Output JSON shape is preserved (modulo the added `encumbrance` field
 on each dimension row) so consumers like /monthly-pacing/ and
 /checkbook/ don't need to be updated in lockstep.
 
+The portal export is NOT strictly scoped to the requested year: the
+year=<N> CSV can carry rows tagged with other fiscalyears (the FY26
+export grew FY27 rows once FY27 opened, and the FY27 export includes
+thousands of FY26 rows). All aggregation therefore filters on the CSV's
+`fiscalyear` column first.
+
+Also writes _data/budget.json (the small dashboard blob Jekyll exposes
+as site.data.budget) — but only when building the current fiscal year,
+so a close-out re-run of a prior FY can't clobber the live dashboard.
+
 Aggregation rules:
   - by_fund / by_department / by_category / by_division / by_object:
     sliced to BUDGETED ANNUAL FUNDS only (matches the prior dimension
@@ -28,10 +38,12 @@ Aggregation rules:
   - charactercodedescription is used as "Category".
 
 Usage:
-  python3 scripts/build_budget_actual.py
+  python3 scripts/build_budget_actual.py              # current fiscal year
+  python3 scripts/build_budget_actual.py --year 2026  # rebuild a prior FY
 """
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import sys
@@ -39,10 +51,10 @@ from collections import OrderedDict, defaultdict
 from datetime import UTC, date, datetime
 from pathlib import Path
 
+import fylib
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
-SRC = DATA_DIR / "operating_budget_FY26.csv"
-OUT_PATH = DATA_DIR / "budget_actual_FY26.json"
 
 BUDGETED_ANNUAL = "BUDGETED ANNUAL FUNDS"
 
@@ -124,11 +136,26 @@ def latest_fiscalmonth(rows: list[dict]) -> str | None:
 
 
 def main() -> int:
-    if not SRC.exists():
-        sys.exit(f"missing {SRC}; run scripts/fetch_operating_budget.py first")
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[1])
+    ap.add_argument("--year", type=int, default=fylib.current_fiscal_year(),
+                    help="fiscal year to build (default: current fiscal year)")
+    args = ap.parse_args()
+    year = args.year
+    label = fylib.fy_label(year)
 
-    with SRC.open(newline="") as f:
-        rows = list(csv.DictReader(f))
+    src = DATA_DIR / f"operating_budget_{label}.csv"
+    out_path = DATA_DIR / f"budget_actual_{label}.json"
+
+    if not src.exists():
+        sys.exit(f"missing {src}; run scripts/fetch_operating_budget.py first")
+
+    with src.open(newline="") as f:
+        raw_rows = list(csv.DictReader(f))
+
+    # The portal's year=<N> export can include rows tagged with other
+    # fiscalyears (verified 2026-07-05: year=2027 returned 13k FY26 rows
+    # alongside 3.5k FY27 rows). Keep only the requested year.
+    rows = [r for r in raw_rows if (r.get("fiscalyear") or "").strip() == str(year)]
 
     fundgroup_totals = total_by_fundgroup(rows)
     budgeted_annual = fundgroup_totals.get(BUDGETED_ANNUAL, {})
@@ -151,9 +178,10 @@ def main() -> int:
 
     out = OrderedDict()
     out["as_of"] = datetime.now(UTC).date().isoformat()
-    out["fiscal_year"] = "FY26"
+    out["fiscal_year"] = label
     out["checkbook_period_end"] = period_end
-    out["source"] = "data/operating_budget_FY26.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)"
+    out["source"] = (f"data/operating_budget_{label}.csv (Town of Marblehead "
+                     "Open Budget portal, /api/operating_budget.csv)")
     out["generated_by"] = "scripts/build_budget_actual.py"
     out["totals"] = OrderedDict([
         ("all_funds_revised_budget", all_funds_revised),
@@ -176,10 +204,37 @@ def main() -> int:
     out["by_object"] = by_object
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(json.dumps(out, indent=2) + "\n", encoding="utf-8")
+    out_path.write_text(json.dumps(out, indent=2) + "\n", encoding="utf-8")
 
-    print(f"Wrote {OUT_PATH.relative_to(REPO_ROOT)}")
-    print(f"  rows in source CSV     = {len(rows):,}")
+    # Dashboard JSON Jekyll exposes as site.data.budget so pages can cite
+    # the live FY's budget totals and artifact filenames without per-page
+    # regexes. Only written for the current fiscal year: a close-out
+    # re-run of a prior FY must not clobber the live dashboard.
+    dashboard_path = REPO_ROOT / "_data" / "budget.json"
+    if year == fylib.current_fiscal_year():
+        dashboard = {
+            "fiscal_year": label,
+            "year": year,
+            "fy_start": fylib.fy_start(year).isoformat(),
+            "fy_end": fylib.fy_end(year).isoformat(),
+            "actual_filename": f"budget_actual_{label}.json",
+            "burn_filename": f"monthly_burn_{label}.json",
+            "drill_filename": f"budget_drill_{label}.json",
+            "all_funds_budget_M": f"${all_funds_revised / 1_000_000:.1f}M",
+            "annual_operating_M": (
+                f"${out['totals']['budgeted_annual']['revised_budget'] / 1_000_000:.1f}M"),
+            "generated_by": "scripts/build_budget_actual.py",
+        }
+        dashboard_path.parent.mkdir(parents=True, exist_ok=True)
+        dashboard_path.write_text(json.dumps(dashboard, indent=1) + "\n")
+        print(f"Wrote {dashboard_path.relative_to(REPO_ROOT)}")
+    else:
+        print(f"Skipped {dashboard_path.relative_to(REPO_ROOT)}: {label} is not "
+              f"the current fiscal year ({fylib.fy_label(fylib.current_fiscal_year())})")
+
+    print(f"Wrote {out_path.relative_to(REPO_ROOT)}")
+    print(f"  rows in source CSV     = {len(raw_rows):,} "
+          f"({len(rows):,} tagged fiscalyear={year})")
     print(f"  as_of                  = {out['as_of']}")
     print(f"  period_end (data)      = {period_end}")
     print(f"  all_funds_revised      = ${all_funds_revised:>13,.2f}")
