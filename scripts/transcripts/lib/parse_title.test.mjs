@@ -74,3 +74,73 @@ test('rejects two-digit years before 2000 (sanity guard)', () => {
   const m = parseTitle('Select Board Meeting 1-1-95');
   assert.equal(m.valid, false);
 });
+
+// --- MPS YouTube channel corpus ---------------------------------------------
+// The Marblehead Public Schools YouTube channel posts SC and subcommittee
+// content with messier titles than MHTV's Vimeo channel. Verified against the
+// live channel.
+
+test('parses canonical MPS YouTube SC title', () => {
+  const m = parseTitle('Marblehead School Committee Meeting 2/26/26');
+  assert.equal(m.valid, true);
+  assert.equal(m.board_slug, 'school-committee');
+  assert.equal(m.date, '2026-02-26');
+});
+
+test('parses double-space "S C  Meeting M/D/YY" form', () => {
+  const m = parseTitle('S C  Meeting 2/27/25', { boardHint: 'school-committee' });
+  assert.equal(m.valid, true);
+  assert.equal(m.board_slug, 'school-committee');
+  assert.equal(m.date, '2025-02-27');
+});
+
+test('parses space-separated date "S C  Meeting 06 23 2022"', () => {
+  const m = parseTitle('S C  Meeting 06 23 2022', { boardHint: 'school-committee' });
+  assert.equal(m.valid, true);
+  assert.equal(m.date, '2022-06-23');
+});
+
+test('parses lowercase "SC meeting" with leading date', () => {
+  const m = parseTitle('9/21/2023 SC meeting', { boardHint: 'school-committee' });
+  assert.equal(m.valid, true);
+  assert.equal(m.board_slug, 'school-committee');
+  assert.equal(m.date, '2023-09-21');
+});
+
+test('classifies SC subcommittees under school-committee with boardHint', () => {
+  for (const title of [
+    'Marblehead SC Policy Subcommittee 10/23/25',
+    'Facilities Sub-Committee 7/24/25',
+    'Policy Subcommittee meeting on 3/7/25',
+    'SC Policy Subcommittee 8.4.2023',
+    'MHS Roof Subcommittee meeting 9/23/25',
+  ]) {
+    const m = parseTitle(title, { boardHint: 'school-committee' });
+    assert.equal(m.valid, true, `expected valid for: ${title}`);
+    assert.equal(m.board_slug, 'school-committee');
+  }
+});
+
+test('returns partial board info when title has board but no date', () => {
+  // "Marblehead School Committee Meeting" with no date (the user's example
+  // video gYE7TlHvW9o). pull_youtube falls back to upload_date.
+  const m = parseTitle('Marblehead School Committee Meeting');
+  assert.equal(m.valid, false);
+  assert.match(m.reason, /no date/i);
+  assert.equal(m.board_slug, 'school-committee');
+  assert.equal(m.board_display, 'School Committee');
+});
+
+test('boardHint applies only when title has a meeting-like signal', () => {
+  // A junk title from the SC channel: "Statement at 11-15-24 press conference".
+  // The date parses, but this isn't a meeting — should not become SC.
+  const m = parseTitle('Statement at 11-15-24 press conference', { boardHint: 'school-committee' });
+  assert.equal(m.valid, false);
+});
+
+test('boardHint does not override a real board match', () => {
+  // If the title clearly says Select Board, boardHint must not override.
+  const m = parseTitle('Marblehead Select Board Meeting: 5-27-26', { boardHint: 'school-committee' });
+  assert.equal(m.valid, true);
+  assert.equal(m.board_slug, 'select-board');
+});

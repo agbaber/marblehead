@@ -3,6 +3,19 @@ layout: default
 ---
 {% include nav.html %}
 
+{%- comment -%}
+Resolve source-specific watch fields. New transcripts emit `video_url`; older
+Vimeo-sourced transcripts predate that field and only have `vimeo_url`.
+{%- endcomment -%}
+{% assign watch_url = page.video_url | default: page.vimeo_url %}
+{% if page.source contains "youtube" %}
+  {% assign watch_label = "Watch on YouTube" %}
+  {% assign jump_sep = "&t=" %}
+{% else %}
+  {% assign watch_label = "Watch on MHTV" %}
+  {% assign jump_sep = "#t=" %}
+{% endif %}
+
 <div class="page">
   <article class="meeting-summary">
 
@@ -12,12 +25,15 @@ layout: default
       <h1>{{ page.title }}</h1>
       <p class="ms-meta">
         <time datetime="{{ page.date }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        {% if page.date_approximate %}
+        <span class="ms-meta-approximate" title="Date derived from YouTube upload_date, not the meeting title.">(date approximate)</span>
+        {% endif %}
         {% if page.duration_seconds %}
         <span class="ms-meta-sep">&middot;</span>
         <span>{{ page.duration_seconds | divided_by: 60 }} min</span>
         {% endif %}
         <span class="ms-meta-sep">&middot;</span>
-        <a class="ms-meta-link" href="{{ page.vimeo_url }}" rel="noopener">Watch on MHTV &rarr;</a>
+        <a class="ms-meta-link" href="{{ watch_url }}" rel="noopener">{{ watch_label }} &rarr;</a>
       </p>
       {% if page.summary_card.summary %}
       <p class="ms-deck">{{ page.summary_card.summary }}</p>
@@ -49,7 +65,7 @@ layout: default
           <a class="ms-story-topic" href="{{ '/topics/' | append: seg.topic | append: '/' | relative_url }}">#{{ seg.topic }}</a>
           <span class="ms-story-lead-tag">Lead</span>
           {% assign mins = seg.start_seconds | divided_by: 60 %}
-          <a class="ms-story-jump" href="{{ page.vimeo_url }}#t={{ seg.start_seconds }}s" rel="noopener" onclick="event.stopPropagation()">&#9654; {{ mins }} min</a>
+          <a class="ms-story-jump" href="{{ watch_url }}{{ jump_sep }}{{ seg.start_seconds }}s" rel="noopener" onclick="event.stopPropagation()">&#9654; {{ mins }} min</a>
         </div>
         <h2 class="ms-story-headline">{{ seg.headline | default: seg.topic }}</h2>
         {% if seg.dek %}<p class="ms-story-dek">{{ seg.dek }}</p>{% endif %}
@@ -74,7 +90,7 @@ layout: default
           <div class="ms-story-eyebrow">
             <a class="ms-story-topic" href="{{ '/topics/' | append: seg.topic | append: '/' | relative_url }}">#{{ seg.topic }}</a>
             {% assign mins = seg.start_seconds | divided_by: 60 %}
-            <a class="ms-story-jump" href="{{ page.vimeo_url }}#t={{ seg.start_seconds }}s" rel="noopener" onclick="event.stopPropagation()">&#9654; {{ mins }} min</a>
+            <a class="ms-story-jump" href="{{ watch_url }}{{ jump_sep }}{{ seg.start_seconds }}s" rel="noopener" onclick="event.stopPropagation()">&#9654; {{ mins }} min</a>
           </div>
           <h3 class="ms-story-headline">{{ seg.headline | default: seg.topic }}</h3>
           {% if seg.dek %}<p class="ms-story-dek">{{ seg.dek }}</p>{% endif %}

@@ -93,6 +93,17 @@ jobs:
         if: steps.gate.outputs.skip == 'false'
         run: node scripts/transcripts/pull_vimeo.mjs
 
+      - name: Refresh MPS YouTube index
+        if: steps.gate.outputs.skip == 'false'
+        # Marblehead Public Schools' YouTube channel covers School Committee
+        # meetings and subcommittees (Policy, Facilities, Goals, Roof, etc.)
+        # that MHTV does not always post to Vimeo. backfill_auto.mjs dedupes
+        # against the Vimeo index by (board_slug, date), Vimeo wins.
+        # Tolerant of failure: if YouTube bot-blocks this run we still ship
+        # whatever Vimeo backfilled.
+        run: node scripts/transcripts/pull_youtube.mjs
+        continue-on-error: true
+
       - name: Backfill new transcripts
         if: steps.gate.outputs.skip == 'false'
         # --limit caps per-run work so a one-off backlog (e.g. yt-dlp outage
@@ -139,6 +150,9 @@ jobs:
             exit 0
           fi
           git add data/vimeo_meetings.json
+          # data/youtube_meetings.json may not exist if pull_youtube was rate-
+          # limited; -- ignored if missing.
+          git add data/youtube_meetings.json 2>/dev/null || true
           new_files=$(git diff --cached --name-only --diff-filter=A -- _transcripts/ || true)
           {
             echo "changed=true"

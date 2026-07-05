@@ -61,3 +61,14 @@ test('vttToProse formats each paragraph with a Vimeo deep-link anchor', () => {
 test('vttToProse on empty input returns empty string', () => {
   assert.equal(vttToProse('WEBVTT\n', 'https://vimeo.com/x'), '');
 });
+
+test('vttToProse uses YouTube ?t/&t fragment syntax for youtube.com URLs', () => {
+  const md = vttToProse(SAMPLE, 'https://www.youtube.com/watch?v=UMABNnY3zeQ');
+  assert.match(md, /\[0:00\]\(https:\/\/www\.youtube\.com\/watch\?v=UMABNnY3zeQ&t=0s\)/);
+  assert.match(md, /\[1:00\]\(https:\/\/www\.youtube\.com\/watch\?v=UMABNnY3zeQ&t=60s\)/);
+});
+
+test('vttToProse uses YouTube ?t fragment syntax for youtu.be short URLs', () => {
+  const md = vttToProse(SAMPLE, 'https://youtu.be/UMABNnY3zeQ');
+  assert.match(md, /\[0:00\]\(https:\/\/youtu\.be\/UMABNnY3zeQ\?t=0s\)/);
+});
