@@ -1,0 +1,319 @@
+# Override tracker commitments. Rendered by override-tracker.html.
+# To change a status: edit the item's `status`, then append a `changelog`
+# entry (date, item, from, to, note with source). Statuses:
+# met | phase-in | pending | holds | dropped
+
+first_published: 2026-06-22
+
+changelog: []
+
+items:
+  - num: "01"
+    section: allocations
+    status: met
+    title: >-
+      $15M operating override approved at the ballot
+    body_html: >-
+      Question 3 (Tier 3 &ldquo;Invest&rdquo;) carried 4,278&ndash;3,594 (54.3%&ndash;45.7%) on June 9, 2026. Questions 1 and 2 also carried but were superseded.
+    source_html: >-
+      Source: <a href="https://www.marbleheadindependent.com/marblehead-voters-approve-15m-override-ending-more-than-two-decades-of-resistance/">Marblehead Independent, June 9 2026</a>.
+
+  - num: "02"
+    section: allocations
+    status: met
+    title: >-
+      $2.3M trash override approved at the ballot
+    body_html: >-
+      Question 4 carried with 67.4% support, funding curbside trash, recycling, yard waste, and disposal services through the levy.
+    source_html: >-
+      Source: <a href="https://www.marbleheadindependent.com/marblehead-voters-approve-15m-override-ending-more-than-two-decades-of-resistance/">Marblehead Independent, June 9 2026</a>.
+
+  - num: "03"
+    section: allocations
+    status: phase-in
+    title: >-
+      $6.5M allocated to municipal services
+    body_html: >-
+      Of the $15M total, $6.5M is earmarked for the town side, separate from the schools&rsquo; allocation. Phased in over three years per the April 15 plan.
+    source_html: >-
+      Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~24:53).
+
+  - num: "04"
+    section: allocations
+    status: phase-in
+    title: >-
+      $8.5M allocated to schools
+    body_html: >-
+      The school portion of the override. The School Committee&rsquo;s May 21 proclamation lays out what Tier 1 ($6.2M school), Tier 2 ($7.2M school), and Tier 3 ($8.5M school) each cover; voters chose Tier 3.
+    source_html: >-
+      Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); Select Board, June 10 2026.
+
+  - num: "05"
+    section: allocations
+    status: phase-in
+    title: >-
+      ~$4.3M phased into Year 1 (FY27) under Article 29
+    body_html: >-
+      Article 29 of the 2026 Annual Town Meeting passed 1,227&ndash;159. Year 1 spend is a fraction of the $15M total; phase-in continues through FY29.
+    source_html: >-
+      Sources: 2026 ATM Article 29 vote; <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a> (phase-in table).
+
+  - num: "06"
+    section: allocations
+    status: pending
+    title: >-
+      Articulate where the remaining $9.6M goes
+    body_html: >-
+      Moses Grader, June 10: voters readily understood ~$7.7M of the $15M as restorations; the remaining $9.6M &ldquo;we have to do a better job articulating&rdquo;.
+    source_html: >-
+      Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~24:53).
+
+  - num: "07"
+    section: mou
+    status: holds
+    title: >-
+      No new override pursued at least through FY2030
+    body_html: >-
+      The Select Board, School Committee, and Finance Committee jointly commit to not pursue another override at least through fiscal year 2030.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.
+
+  - num: "08"
+    section: mou
+    status: holds
+    title: >-
+      62%&ndash;38% unrestricted-revenue split formalized
+    body_html: >-
+      Establishes a clear allocation of unrestricted revenues and benefits between schools and the town.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.
+
+  - num: "09"
+    section: mou
+    status: phase-in
+    title: >-
+      Quarterly joint financial reviews
+    body_html: >-
+      Quarterly finance reviews and annual public updates from the Town Administrator and School Superintendent. First scheduled for early October 2026 after Q1 close.
+    source_html: >-
+      Sources: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section; Select Board, June 10 2026.
+
+  - num: "10"
+    section: mou
+    status: pending
+    title: >-
+      Phase out Free Cash to balance the budget
+    body_html: >-
+      Shift to structural budgeting and reduce reliance on Free Cash as a balancing mechanism.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.
+
+  - num: "11"
+    section: mou
+    status: pending
+    title: >-
+      Build Stabilization Fund to 5% of operating budget
+    body_html: >-
+      Establishes a target reserve level providing a meaningful financial cushion against future volatility, in line with the financial policy.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.
+
+  - num: "12"
+    section: municipal
+    status: pending
+    title: >-
+      28 total FTEs committed across the three tiers
+    body_html: >-
+      15 restored (Tier 1) + 7 new (Tier 2) + 6 new (Tier 3). FTE summary printed in the April 15 deck.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, FTE summary row.
+
+  - num: "13"
+    section: municipal
+    status: pending
+    title: >-
+      Library: full restoration and accreditation preserved
+    body_html: >-
+      Full restoration of 8.5 positions, plus +1 part-time Assistant Librarian and increased materials funding under Tier 2; accreditation no longer at risk.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
+
+  - num: "14"
+    section: municipal
+    status: pending
+    title: >-
+      Police: SRO restored, force grows from 29 to 33 officers
+    body_html: >-
+      School Resource Officer restored under Tier 1; +1 officer under Tier 2; +1 officer under Tier 3 add-ons. End state: 33 officers, described as the historic staffing level.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
+
+  - num: "15"
+    section: municipal
+    status: pending
+    title: >-
+      Fire: +4 firefighters added across Tiers 2 and 3
+    body_html: >-
+      2 firefighters added under Tier 2 plus 2 more under Tier 3 add-ons, intended to reduce overtime costs. Department currently down one full shift.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
+
+  - num: "16"
+    section: municipal
+    status: pending
+    title: >-
+      DPW: full restoration plus 4 new positions
+    body_html: >-
+      Tier 1 restores 1 PT Clerk, 1 HEO, 1 Laborer, and the $60K asphalt cut. Tier 2 adds a GIS position. Tier 3 adds 1 Foreman and 1 Specialized HEO.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
+
+  - num: "17"
+    section: municipal
+    status: pending
+    title: >-
+      Public Buildings: 2 custodians and a $450K maintenance budget
+    body_html: >-
+      Tier 1 restores 2 Special Labor Custodians serving Mary Alley and Abbot Hall. Tier 2 establishes a $450,000 townwide maintenance budget covering buildings and the rail trail.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
+
+  - num: "18"
+    section: municipal
+    status: pending
+    title: >-
+      Community Development: Director plus Assistant Planner, Conservation Agent, Grant Writer
+    body_html: >-
+      Tier 1 restores the Community Development Director. Tier 2 adds 1 Assistant Planner and 1 Conservation Agent (replacing the Sustainability Coordinator and Grant Coordinator roles cut in FY27). Tier 3 adds 1 Grant Writer for additional grant revenue.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
+
+  - num: "19"
+    section: municipal
+    status: pending
+    title: >-
+      Mental health: $60K counseling investment via Health Department
+    body_html: >-
+      Tier 3 doubles Mental Health funding with a $60,000 investment in counseling.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
+
+  - num: "20"
+    section: municipal
+    status: pending
+    title: >-
+      $1M recurring annual capital investment
+    body_html: >-
+      Tier 3 funds $1 million in recurring capital for leases, equipment, and building improvements &mdash; three articles appearing annually on the Town Warrant.
+    source_html: >-
+      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
+
+  - num: "21"
+    section: schools
+    status: phase-in
+    title: >-
+      Maintain existing school staff (Tier 1)
+    body_html: >-
+      $6.2M school-side floor preserves the staffing left after the FY27 balanced budget eliminated 18.25 FTEs.
+    source_html: >-
+      Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.
+
+  - num: "22"
+    section: schools
+    status: phase-in
+    title: >-
+      SPED out-of-district obligations funded through FY29 (Tier 1)
+    body_html: >-
+      The FY27 gap was closed in part by a one-time $1.5M SPED OOD prepayment. Tier 1 establishes recurring funding for SPED through FY29 without repeating that one-time measure.
+    source_html: >-
+      Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.
+
+  - num: "23"
+    section: schools
+    status: pending
+    title: >-
+      Full-day kindergarten (Tier 2)
+    body_html: >-
+      Tier 2 funds full-day kindergarten and a sustainable student technology lifecycle.
+    source_html: >-
+      Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.
+
+  - num: "24"
+    section: schools
+    status: pending
+    title: >-
+      Recurring school building capital fund (Tier 3)
+    body_html: >-
+      Tier 3 adds a recurring school building capital fund to address deferred maintenance on a planned basis.
+    source_html: >-
+      Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.
+
+  - num: "25"
+    section: schools
+    status: pending
+    title: >-
+      In-district 18&ndash;22 special education program (Tier 3)
+    body_html: >-
+      Tier 3 funds an in-district program for students aged 18 to 22, intended to reduce out-of-district placement costs.
+    source_html: >-
+      Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.
+
+  - num: "26"
+    section: process
+    status: pending
+    title: >-
+      First quarterly financial review in early October 2026
+    body_html: >-
+      Jim Sisson, June 10: "the quarter ends September. I would think we would have it in the first couple weeks of October." Both Select Board and School Committee chairs expected to attend.
+    source_html: >-
+      Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~21:51).
+
+  - num: "27"
+    section: process
+    status: pending
+    title: >-
+      Develop a written accountability plan
+    body_html: >-
+      Moses Grader, June 10: "in addition to the quarterly meetings, I think we should really try to develop a plan around accountability. In other words, how are we going to show that accountability".
+    source_html: >-
+      Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~25:00).
+
+  - num: "28"
+    section: process
+    status: pending
+    title: >-
+      Develop a communication strategy and public cadence
+    body_html: >-
+      Erin Newby, June 10: "I do think we need a communication strategy. How are we going to keep the community updated? What's the cadence? What's the form?"
+    source_html: >-
+      Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~26:27).
+
+  - num: "29"
+    section: process
+    status: pending
+    title: >-
+      Implement GFOA budget module to link departmental strategy to numbers
+    body_html: >-
+      Moses Grader, June 10: an 80-page strategic document at the department level that links to the financial data, intended to drive forward strategic oversight of the town.
+    source_html: >-
+      Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~25:00).
+
+  - num: "30"
+    section: process
+    status: pending
+    title: >-
+      Continue cost-cutting and efficiency work alongside the override
+    body_html: >-
+      Erin Newby, June 10: "I think we have responsibility to continue to cut costs and find efficiencies, not just rely on the taxpayer's money." Jim Sisson echoed: try to stretch the override "as long as we can".
+    source_html: >-
+      Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~21:05 and ~21:51).
+
+  - num: "31"
+    section: process
+    status: pending
+    title: >-
+      Expand the Select Board / School Committee collaboration model to other boards
+    body_html: >-
+      Moses Grader, June 10: the collaboration with the schools during the override was "very impressive" &mdash; intent to continue it and expand to other boards.
+    source_html: >-
+      Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~28:00).
