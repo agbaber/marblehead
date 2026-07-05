@@ -121,6 +121,36 @@ test('classifies SC subcommittees under school-committee with boardHint', () => 
   }
 });
 
+test('classifies remaining MPS-channel title shapes with boardHint', () => {
+  for (const [title, date] of [
+    ['Policy Sub Committee Oct 27, 2023', '2023-10-27'],   // space variant
+    ['2/13/2023 Facilities Submcommittee', '2023-02-13'],  // uploader typo
+    ['3.16.2023 Budget Sub-Joint', '2023-03-16'],
+    ['3/10/23 Budget Sub Joint', '2023-03-10'],
+    ['2/9/2023 Budget Sub Joint with Liaisons', '2023-02-09'],
+    ['1/30/2023 Budget Workshop', '2023-01-30'],
+    ['Budget Vote Apr 8, 2021', '2021-04-08'],
+    ['3.27.2023 Budget Vote', '2023-03-27'],
+    ['3.21.2023 Budget Public Hearing', '2023-03-21'],
+  ]) {
+    const m = parseTitle(title, { boardHint: 'school-committee' });
+    assert.equal(m.valid, true, `expected valid for: ${title}`);
+    assert.equal(m.board_slug, 'school-committee', title);
+    assert.equal(m.date, date, title);
+  }
+});
+
+test('boardHint still rejects forums and press conferences', () => {
+  for (const title of [
+    'Question 2 Forum   5-24-22',
+    '11.10.2022 Finance and Budget Forum',
+    'Statement at 11-15-24 press conference',
+  ]) {
+    const m = parseTitle(title, { boardHint: 'school-committee' });
+    assert.equal(m.valid, false, `expected invalid for: ${title}`);
+  }
+});
+
 test('returns partial board info when title has board but no date', () => {
   // "Marblehead School Committee Meeting" with no date (the user's example
   // video gYE7TlHvW9o). pull_youtube falls back to upload_date.
