@@ -9,7 +9,158 @@ video_url: "https://www.youtube.com/watch?v=FKHq5qEu36U"
 duration_seconds: 11127
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee votes 4-1 to solicit legal counsel proposals; discusses hybrid reopening plan"
+  summary: "The School Committee voted 4-1 to direct the chair, incoming superintendent, and a committee member to draft a letter soliciting proposals from legal firms on the MASC list to review district legal representation. The committee also received an extended presentation from Superintendent-elect John on a hybrid reopening plan featuring cohort-based in-person instruction for PreK–6 and morning/afternoon split sessions for middle and high school. Additional votes approved a schedule of bills totaling approximately $486,000, a one-year elevator maintenance contract with Embry Elevator for $51,400, acceptance of $3,004.75 in summer meal program donations, and a new district letterhead and business card design."
+  decisions:
+    - "Approved motion to take agenda out of order (items 2 and 5 swapped)"
+    - "Approved motion 4-1 to draft and send a legal counsel solicitation letter to MASC-listed firms"
+    - "Approved schedule of bills totaling approximately $486,000"
+    - "Approved one-year elevator maintenance contract with Embry Elevator of Woburn for $51,400 with two one-year extension options"
+    - "Approved acceptance of $3,004.75 in donations for the summer meal program"
+    - "Approved district business card template"
+    - "Approved letterhead option 1"
+  votes:
+    - motion: "Take agenda out of order"
+      result: "in favor (unanimous)"
+    - motion: "Draft and send legal counsel solicitation letter to MASC-listed firms"
+      result: "in favor (4 to 1)"
+    - motion: "Approve schedule of bills (~$486,000)"
+      result: "in favor (unanimous)"
+    - motion: "Award elevator maintenance contract to Embry Elevator ($51,400)"
+      result: "in favor (unanimous)"
+    - motion: "Accept $3,004.75 in summer meal program donations"
+      result: "in favor (unanimous)"
+    - motion: "Approve business card template"
+      result: "in favor (unanimous)"
+    - motion: "Approve letterhead option 1"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 122
+    end_seconds: 815
+    headline: "Committee calls meeting to order, swaps agenda items 2 and 5"
+    dek: "With new superintendent joining and a MASC representative present, the chair moved to reorder the agenda so district governance discussions would precede re-entry planning."
+    summary: "The meeting was called to order at 10:33 a.m. After brief technical difficulties, the chair moved to swap agenda items 2 and 5 so that the school committee communications and district council discussion could occur while MASC representative Dorothy Presser was available. The motion passed unanimously (Sarah Gold, Emily Baron, Sarah Fox, David Harris, Megan Taylor — all yes)."
+    key_speakers: ["Sarah Fox (Chair)", "Dorothy Presser (MASC representative)"]
+  - topic: labor-personnel
+    topic_confidence: 0.85
+    start_seconds: 955
+    end_seconds: 2540
+    featured: true
+    headline: "Committee votes 4-1 to solicit proposals from legal counsel firms; Fox dissents over institutional knowledge concern"
+    dek: "With collective bargaining approaching and a new administration in place, the committee debated whether to shop for new district legal counsel, ultimately voting to send an exploratory letter to MASC-listed school law firms."
+    summary: |
+      The committee discussed whether to review its current legal representation (Valerio Associates) with guidance from MASC representative Dorothy Presser. Presser explained that school committees are not required to issue a formal RFP for legal counsel and that sending a letter to firms on the MASC Council of School Attorneys list is a common approach.
+      
+      Key points in the discussion:
+      - **David Harris** framed it as sound business practice to periodically review legal services, especially with collective bargaining upcoming.
+      - **Megan Taylor** noted the new superintendent has worked extensively with one firm (Miller, in Boston) for 20 years and could recommend them.
+      - **Sarah Fox** expressed concern about switching counsel while complex legal matters from past administrations are ongoing, citing the value of institutional knowledge at a time when neither the committee nor administration is established.
+      - **Superintendent-elect John** noted the conversation is common when there is a change in administration and said he sees a case on both sides.
+      - Presser advised that if an exploratory process proceeds, the current firm (Valerio Dominello & Hillman) should be notified in advance.
+      
+      The motion — to have the chair, Megan Taylor, and the incoming superintendent draft and send a solicitation letter to appropriate firms on the MASC list — passed **4 to 1**, with Sarah Fox voting no.
+    key_speakers: ["Sarah Fox (Chair)", "David Harris", "Megan Taylor", "Dorothy Presser (MASC representative)", "John (incoming Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2540
+    end_seconds: 4903
+    headline: "MASC representative leads governance orientation; committee reviews and defers vote on operating protocols"
+    dek: "Dorothy Presser presented on school committee roles, governance structures, and operating protocols; committee agreed to form a small subgroup to reconcile existing protocols with a draft prepared by the incoming superintendent."
+    summary: |
+      Dorothy Presser gave a presentation on the overarching mission of a school committee (continuous improvement in student achievement), the governance role of the committee versus the management role of the superintendent, and best practices for operating protocols.
+      
+      Key discussion points:
+      - The committee reviewed two documents: the existing operating protocols (developed over two years with MASC) and a new draft compiled by the incoming superintendent from examples at Triton, Beverly, and Acton-Boxborough.
+      - Members generally agreed the existing protocols have served well but that the incoming superintendent was unaware they existed.
+      - **Emily Baron** (new member) found the new draft clarifying for her role.
+      - **Sarah Fox** raised a concern that one provision in the new draft (pre-submitting questions before meetings) could limit spontaneous public deliberation.
+      - Presser recommended a small subgroup combine and revise the two documents rather than wordsmithing in a large group.
+      - The committee agreed to bring a merged draft back for vote at a subsequent meeting, aiming to complete the process by end of summer.
+    key_speakers: ["Dorothy Presser (MASC representative)", "Sarah Fox (Chair)", "Emily Baron", "Megan Taylor", "John (incoming Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 4966
+    end_seconds: 8097
+    headline: "Superintendent-elect presents hybrid reopening plan featuring cohort-based instruction and daily remote component"
+    dek: "Incoming superintendent John outlined a hybrid model built by teaching and learning subcommittees, with PreK–6 students attending in alternating cohorts approximately three times per week and middle/high school students attending morning or afternoon sessions."
+    summary: |
+      The superintendent-elect stated that a fully in-person return for all students is not feasible given six-foot distancing requirements and building capacity, while a fully remote model is not the district's current direction. A hybrid model was developed through collaborative subcommittees of educators and parents.
+      
+      **PreK–6 model:**
+      - Two cohorts on a two-week rotating schedule; each cohort attends in person approximately five times over ten school days (three days one week, two days the next)
+      - In-person sessions run 8:00–11:50 a.m., focusing on literacy and numeracy
+      - Remote days feature a morning meeting that includes both cohorts, followed by structured asynchronous or supported work overseen by a paraprofessional or tutor
+      - A remote learning liaison is assigned to each school
+      
+      **Middle school:**
+      - Students attend a morning or afternoon session (~2.5 hours each day)
+      
+      **High school:**
+      - Cohort A and Cohort B alternate morning/afternoon sessions
+      
+      Key discussion points raised by committee members:
+      - **Sarah Fox** asked about consistency for families managing childcare and noted two-week rotating schedules are challenging
+      - **Megan Taylor** asked for rationale on why everyday in-person was not feasible; Nan (assistant superintendent) explained teachers prioritized seeing students daily and that building capacity/sanitization constraints eliminated an AM/PM split
+      - **Emily Baron** asked whether sibling cohorts would be aligned and whether there would be weekly reminders of which cohort is in session
+      - The committee discussed calendar flexibility, potential use of the 10 pre-opening professional development days, and concerns about transition to fully remote if necessary
+      - Approximately two-thirds of families surveyed prefer in-person; a majority of staff prefer hybrid
+      - The district plans listening sessions for staff (tomorrow 1–2 p.m.) and families (tomorrow 6–7 p.m. and Thursday sessions)
+      - A preliminary draft plan is due to DESE by Friday; final plan due August 10
+      - The website backtogethermhd.com is being updated in real time
+      
+      **Finance update (Business Manager Michelle):** The district has access to approximately $1.395 million in COVID-related funding:
+      - $454,725 set aside from a town CARES Act allocation of $1.8M
+      - $1,612 ESSER grant (spendable over two years)
+      - ~$680,175 school reopening/coronavirus funding grant (must be spent by December 31)
+      - $168,699 in the district operating budget COVID line
+      - A competitive remote learning technology essentials grant application is being prepared; matching requirement can be drawn from other grants
+    key_speakers: ["John (incoming Superintendent)", "Nan Murphy (Assistant Superintendent)", "Sarah Fox (Chair)", "Megan Taylor", "Emily Baron", "Michelle (Business Manager)"]
+  - topic: bonding-capital
+    topic_confidence: 0.7
+    start_seconds: 8831
+    end_seconds: 8873
+    headline: "Schedule of bills totaling approximately $486,000 approved unanimously"
+    dek: "The committee voted to approve a schedule of bills covering both FY20 and FY21 expenditures."
+    summary: "The committee moved and seconded approval of the identified schedule of bills totaling $486,460.27 (as stated by the chair). The motion passed 5-0."
+    key_speakers: ["Sarah Fox (Chair)", "Michelle (Business Manager)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 8873
+    end_seconds: 9252
+    headline: "Committee awards one-year elevator maintenance contract to Embry Elevator for $51,400"
+    dek: "Following a competitive bid process with three respondents, the low bidder Embry Elevator of Woburn was selected; the contract includes two one-year extension options at the same rate."
+    summary: "The prior contract with City Elevator expired June 30. Three bids were received: City Elevator ($59,090), Embry Elevator ($51,400), and United Elevator Company ($57,710). Embry Elevator was the low bidder; references checked out favorably, including the business manager's prior experience with the firm. The contract is held jointly with the town; the Board of Selectmen will vote concurrently. The motion passed 4-0 (David Harris was absent)."
+    key_speakers: ["Michelle (Business Manager)", "Sarah Fox (Chair)", "Megan Taylor"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 9252
+    end_seconds: 9600
+    headline: "Committee accepts $3,004.75 in community donations to cover summer meal program shortfall"
+    dek: "Parent volunteer Samantha Rosado organized a GoFundMe and Venmo campaign; additional donors contributed existing student lunch account balances."
+    summary: "The estimated net cost of the summer meal program after state and federal reimbursement was approximately $2,900. Parent volunteer Samantha Rosado ran a fundraising campaign through GoFundMe, Venmo, and direct checks, and also accepted transfers of existing lunch account balances from other families, raising a total of $3,004.75. The motion to accept the donations passed 4-0. A formal thank-you note was noted as outstanding."
+    key_speakers: ["Michelle (Business Manager)", "Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 9600
+    end_seconds: 10120
+    headline: "Committee approves new district business card template and letterhead option 1, designed by high school art teacher"
+    dek: "Visual arts teacher Leah Bortieri designed two letterhead options and a business card; the committee selected the business card and letterhead option 1 (with a line beneath the header) unanimously."
+    summary: "The incoming superintendent requested new business cards and letterhead for central office staff. Visual arts teacher Leah Bortieri at Marblehead High School collaborated with the superintendent's office to create the designs, using an 'M with hat' logo. Two letterhead variations were presented (one with a horizontal rule below the header, one without); the committee preferred option 1 with the rule. Minor feedback included making the logo slightly larger and verifying cost differences for two-sided color printing on business cards. Both motions passed 4-0."
+    key_speakers: ["Sarah Fox (Chair)", "John (incoming Superintendent)", "Emily Baron", "Megan Taylor"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 10934
+    end_seconds: 11120
+    headline: "Committee schedules additional meeting Thursday August 6 at 7 p.m. to vote on DESE reopening plan submission"
+    dek: "A preliminary school reopening plan is due to DESE by Friday August 7; committee agreed to meet Thursday August 6 so any revisions can be incorporated before the deadline."
+    summary: "The DESE preliminary reopening plan deadline is Friday; the next previously scheduled meeting is Monday August 10. The committee agreed to hold an additional meeting Thursday August 6 at 7 p.m. to vote on the draft reopening plan before submission, allowing time for minor adjustments. The August 10 meeting will continue as a workshop-style session focused on broader community communication."
+    key_speakers: ["Sarah Fox (Chair)", "John (incoming Superintendent)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;
