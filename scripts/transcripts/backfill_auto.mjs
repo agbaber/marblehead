@@ -200,18 +200,42 @@ function main() {
   let skipped = 0;
   let failed = 0;
 
+  // Circuit breaker: YouTube bot-blocks datacenter IPs (GitHub Actions), so
+  // on a blocked runner every download fails after a ~15s yt-dlp attempt.
+  // Dozens of those burned the job's timeout budget and killed the run
+  // mid-enrichment with nothing committed. After several consecutive
+  // failures, assume the IP is blocked and skip the rest of the YouTube
+  // queue; the next run from an unblocked IP picks it back up.
+  const YT_FAILURE_TRIP = 5;
+  let ytConsecutiveFailures = 0;
+  let ytSkippedByBreaker = 0;
+
   for (const m of merged) {
     if (processed >= limit) break;
     if (boardFilter && m.board_slug !== boardFilter) continue;
     if (sourceFilter && m.source !== sourceFilter) continue;
+    if (m.source === 'youtube' && ytConsecutiveFailures >= YT_FAILURE_TRIP) {
+      ytSkippedByBreaker += 1;
+      continue;
+    }
 
     const result = processMeeting(m);
     if (result.status === 'processed' || result.status === 'would-process') processed += 1;
     else if (result.status === 'skipped') skipped += 1;
     else failed += 1;
+
+    if (m.source === 'youtube' && result.status === 'failed') {
+      ytConsecutiveFailures += 1;
+      if (ytConsecutiveFailures === YT_FAILURE_TRIP) {
+        console.error(`${YT_FAILURE_TRIP} consecutive YouTube download failures; this IP is likely bot-blocked. Skipping the remaining YouTube queue this run.`);
+      }
+    } else if (m.source === 'youtube' && result.status === 'processed') {
+      ytConsecutiveFailures = 0;
+    }
   }
 
-  console.error(`Done. processed=${processed} skipped_existing=${skipped} failed=${failed}`);
+  const breakerNote = ytSkippedByBreaker > 0 ? ` youtube_skipped_by_breaker=${ytSkippedByBreaker}` : '';
+  console.error(`Done. processed=${processed} skipped_existing=${skipped} failed=${failed}${breakerNote}`);
 }
 
 main();
