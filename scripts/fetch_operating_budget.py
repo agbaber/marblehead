@@ -28,7 +28,7 @@ Columns include:
 No PII columns. Safe to commit raw.
 
 Output:
-  data/operating_budget_FY26.csv
+  data/operating_budget_FY<yy>.csv
 
 Usage:
   python3 scripts/fetch_operating_budget.py

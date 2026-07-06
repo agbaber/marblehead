@@ -130,7 +130,7 @@ jobs:
           done < refresh.env
           rm refresh.env
 
-      - name: Rebuild choice-bucketed view JSON for the /sketches/ page
+      - name: Rebuild choice-bucketed view JSON and performance rollup
         if: steps.gate.outputs.skip == 'false'
         run: |
           python3 scripts/build_checkbook_view.py
