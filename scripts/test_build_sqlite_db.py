@@ -40,7 +40,7 @@ def test_build_script_imports():
 
 
 def test_vendor_payments_ingest():
-    """vendor_payments ingest pulls rows from the FY26 checkbook CSV."""
+    """vendor_payments ingest pulls rows from every fiscal-year checkbook CSV."""
     conn = _open_memory_db()
     try:
         n = build_sqlite_db.build_vendor_payments(conn)

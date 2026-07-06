@@ -441,16 +441,19 @@ og_url: https://marbleheaddata.org/spending-by-vote/
 <section class="hero">
     <h2 class="choice-lede-h">What we paid, and the choices we made</h2>
     <p class="finding">
-      Through <span data-fill="snapshot.last_payment|date">Jun 9</span>, Marblehead has paid <strong data-fill="snapshot.total_paid|usd">$99.9M</strong> to vendors in FY26.
+      Through <span data-fill="snapshot.last_payment|date">Jun 9</span>, Marblehead paid <strong data-fill="snapshot.total_paid|usd">$99.9M</strong> to vendors in FY26.
       Inside <a href="#bucket-tm">General Fund &ndash; Town</a> alone, <strong data-fill="gf_town_carveout.fixed_total|usd">$37.6M</strong>
       went to four <a href="#tm-carveout">line items</a> the town can't meaningfully alter in a single year:
       state-set insurance premiums, <abbr class="g" title="Public Employee Retirement Administration Commission">PERAC</abbr> pension, bond debt service, and Cherry Sheet assessments.
       The rest is bucketed below by the authorization that put it on the books, and tagged with <em>when</em> that authorization was made.
     </p>
+    <p class="finding">
+      FY26 (July 2025 through June 2026) is a completed fiscal year, and FY26 figures remain subject to year-end close adjustments recorded through fall 2026.
+    </p>
     <p class="findinglinks">
-      <span data-freshness>Snapshot: Jun 9, 2026 &middot; weekly cadence</span>
+      <span data-freshness>Figures: Jun 9, 2026 export</span>
       &middot; <a href="/checkbook/">raw transaction ledger</a>
-      &middot; <a href="/data/checkbook_view.json">view <abbr class="g" title="JavaScript Object Notation (data file)">JSON</abbr></a>
+      &middot; <a href="/data/checkbook_view_FY26.json">year-end view <abbr class="g" title="JavaScript Object Notation (data file)">JSON</abbr></a>
       &middot; <a href="/data/checkbook_fund_provenance.json">fund &rarr; vote mapping</a>
       &middot; <a href="#about">how this is computed</a>
     </p>
@@ -459,7 +462,7 @@ og_url: https://marbleheaddata.org/spending-by-vote/
   <!-- the bucketed view -->
   <section>
     <div class="lede" style="margin-top: 36px;">
-      <h2>Of the <span data-fill="snapshot.total_paid|usd">$99.9M</span> paid so far, here's what put each dollar on the books</h2>
+      <h2>Of the <span data-fill="snapshot.total_paid|usd">$99.9M</span> paid in FY26, here's what put each dollar on the books</h2>
       <p>Six kinds of authorization, sorted by share of FY26 spend.</p>
     </div>
 
@@ -492,7 +495,7 @@ og_url: https://marbleheaddata.org/spending-by-vote/
         <p class="who"><b>Who chose this:</b> Marblehead voters at past ballot elections, approving debt exclusions to fund specific capital projects outside Proposition 2&frac12;.</p>
         <div class="whenset"><span class="whentag">When set</span><span><b>Past ballot elections (2015&ndash;2025).</b> Once a debt exclusion passes, the bond term locks payments in for 10&ndash;30 years. FY26 is the year on the amortization schedule, not the year of the decision.</span></div>
 
-        <!-- PROJECT STATUS: rendered from ballot_projects[] in checkbook_view.json -->
+        <!-- PROJECT STATUS: rendered from ballot_projects[] in checkbook_view_FY26.json -->
         <!-- Template used by checkbook-view.js to clone one card per project. -->
         <template class="project-template">
           <article class="project">
@@ -509,7 +512,7 @@ og_url: https://marbleheaddata.org/spending-by-vote/
           <h4 style="margin: 4px 0 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-subtle);">Project status, inferred from FY26 ledger activity</h4>
           <!-- The .projects-list container is wiped and rebuilt from JSON.
                The 5 hardcoded cards below are the fallback that displays
-               if checkbook_view.json is unavailable. -->
+               if checkbook_view_FY26.json is unavailable. -->
           <div class="projects-list">
 
           <article class="project">
@@ -772,7 +775,7 @@ og_url: https://marbleheaddata.org/spending-by-vote/
   <!-- WHAT MOVED panel -->
   <section class="moved" id="what-moved">
     <h3>What moved since the last snapshot (Jun 2 &rarr; Jun 9)</h3>
-    <p><b>+$3.22M</b> in new payments across <b>1,181</b> new ledger rows. <b>837</b> prior rows were edited or reversed (normal end-of-month reconciliation). The motion concentrated in fewer than 10 vendors. <span class="src" style="display: block; margin-top: 6px;">Sources: <a href="/data/checkbook_FY26_2026-06-09.csv">Jun 9 snapshot</a> vs. the Jun 2 snapshot (in <a href="https://github.com/agbaber/marblehead/commits/main/data">commit history</a>).</span></p>
+    <p><b>+$3.22M</b> in new payments across <b>1,181</b> new ledger rows. <b>837</b> prior rows were edited or reversed (normal end-of-month reconciliation). The motion concentrated in fewer than 10 vendors. <span class="src" style="display: block; margin-top: 6px;">Sources: Jun 9 snapshot vs. the Jun 2 snapshot (both in <a href="https://github.com/agbaber/marblehead/commits/main/data">commit history</a>; superseded in <code>data/</code> by the year-end file).</span></p>
     <ul>
       <li><span><span class="name">Berkshire Wind Power Cooperative</span><span class="src">Light Dept wholesale, ratepayer not tax</span></span><span class="v">+$1.05M</span></li>
       <li><span><span class="name">Boston Higashi School</span><span class="src">out-of-district SpEd tuition placement</span></span><span class="v">+$0.15M</span></li>
@@ -846,7 +849,7 @@ og_url: https://marbleheaddata.org/spending-by-vote/
   <!-- methodology notes -->
   <section class="notes">
     <h3>About this sketch</h3>
-    <p>All bucket totals are real, computed from the <code>checkbook_FY26_2026-06-09.csv</code> ledger. Fund-to-vote provenance is in <code>data/checkbook_fund_provenance.json</code> (top 20 funds, 97.8% of paid spend). Vote citations cross-reference <code>data/dor_debt_exclusion_all.csv</code> (MA DOR Proposition 2&frac12; Debt Exclusion Votes) for the ballot bucket.</p>
+    <p>All bucket totals are real, computed from a June 9, 2026 export of the FY26 checkbook ledger. The year-end ledger (<code>data/checkbook_FY26_2026-06-30.csv</code>) and its rollup (<code>data/checkbook_view_FY26.json</code>) carry the final three weeks of FY26 payments; the figures on this page have not been restated against them. Fund-to-vote provenance is in <code>data/checkbook_fund_provenance.json</code> (top 20 funds, 97.8% of paid spend). Vote citations cross-reference <code>data/dor_debt_exclusion_all.csv</code> (MA DOR Proposition 2&frac12; Debt Exclusion Votes) for the ballot bucket.</p>
     <p>Only <b>14.3% of vendor checks out of General Fund &ndash; Town</b> are subject to year-to-year Town Meeting discretion. The other 85.7% (GIC + pension + bond debt + state assessments) is set by outside boards or prior contracts. Payroll, the largest discretionary line, is paid via a separate system and isn't in the ledger.</p>
   </section>
 </div>

@@ -17,8 +17,13 @@ What this script does:
   2. Keeps Description on all other rows, except rows matching the
      student/employee-identifying rules below, where Description is
      replaced with "[withheld]". Vendor, fund, date, and amount stay.
-  3. Writes data/checkbook_FY26_<as-of>.csv and rewrites
+  3. Writes data/checkbook_FY<yy>_<as-of>.csv and rewrites
      data/checkbook_redaction_disclosure.json with computed counts.
+     The fiscal year defaults to the FY of the latest payment date in
+     the export; pass --year to override. The Jekyll dashboard data
+     (_data/checkbook.json) is only rewritten when the target year is
+     the current fiscal year, so a close-out re-run of a prior FY
+     can't clobber the live dashboard.
   4. Writes a review file (NOT in data/, never commit it) listing every
      masked description and every kept description in student-related
      funds.
@@ -29,6 +34,7 @@ description identifies a person, add a pattern below and re-run.
 
 Usage:
   python3 scripts/build_checkbook_csv.py ~/Downloads/raw_export.csv
+  python3 scripts/build_checkbook_csv.py ~/Downloads/raw_export.csv --year 2026
   python3 scripts/build_checkbook_csv.py --selftest
 
 After committing the regenerated CSV, update in checkbook.html:
@@ -40,6 +46,7 @@ automatically once the page sees the new column.
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import re
@@ -47,6 +54,8 @@ import sys
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
+
+import fylib
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
@@ -168,9 +177,14 @@ def main() -> None:
     if "--selftest" in sys.argv:
         selftest()
         return
-    if len(sys.argv) != 2:
-        sys.exit(__doc__)
-    raw_path = Path(sys.argv[1]).expanduser()
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("raw_path", type=Path, help="Raw spending-portal CSV export")
+    ap.add_argument("--year", type=int, default=None,
+                    help="Fiscal year, e.g. 2027 for FY27 (default: FY of the "
+                         "latest payment date in the export)")
+    args = ap.parse_args()
+    raw_path = args.raw_path.expanduser()
     if not raw_path.exists():
         sys.exit(f"raw export not found: {raw_path}")
 
@@ -204,7 +218,9 @@ def main() -> None:
         out_rows.append(r)
 
     as_of = max(r["Date"][:10] for r in out_rows)
-    out_path = DATA_DIR / f"checkbook_FY26_{as_of}.csv"
+    as_of_dt = date.fromisoformat(as_of)
+    year = args.year or fylib.fiscal_year_of(as_of_dt)
+    out_path = DATA_DIR / f"checkbook_{fylib.fy_label(year)}_{as_of}.csv"
     with out_path.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=REQUIRED_COLUMNS)
         w.writeheader()
@@ -258,21 +274,31 @@ def main() -> None:
     # Dashboard JSON read by index.html, checkbook.html, and anything
     # else that wants to cite the latest published total. Lives under
     # _data/ so Jekyll loads it as `site.data.checkbook` and the page
-    # values stay locked together with no per-template regex.
-    as_of_dt = date.fromisoformat(as_of)
-    dashboard = {
-        "as_of": as_of,
-        "as_of_human": as_of_dt.strftime("%b ") + str(as_of_dt.day),
-        "total_amount": round(total, 2),
-        "total_M": f"${total / 1_000_000:.1f}M",
-        "row_count": len(out_rows),
-        "row_count_human": f"{len(out_rows):,}",
-        "csv_filename": out_path.name,
-        "generated_by": "scripts/build_checkbook_csv.py",
-    }
+    # values stay locked together with no per-template regex. Only
+    # written for the current fiscal year: a close-out re-run of a
+    # prior FY must not clobber the live dashboard.
     dashboard_path = REPO_ROOT / "_data" / "checkbook.json"
-    dashboard_path.parent.mkdir(parents=True, exist_ok=True)
-    dashboard_path.write_text(json.dumps(dashboard, indent=1) + "\n")
+    if year == fylib.current_fiscal_year():
+        dashboard = {
+            "as_of": as_of,
+            "as_of_human": as_of_dt.strftime("%b ") + str(as_of_dt.day),
+            "fiscal_year": fylib.fy_label(year),
+            "year": year,
+            "fy_start": fylib.fy_start(year).isoformat(),
+            "fy_end": fylib.fy_end(year).isoformat(),
+            "months_elapsed": fylib.months_elapsed(year, as_of_dt),
+            "total_amount": round(total, 2),
+            "total_M": f"${total / 1_000_000:.1f}M",
+            "row_count": len(out_rows),
+            "row_count_human": f"{len(out_rows):,}",
+            "csv_filename": out_path.name,
+            "generated_by": "scripts/build_checkbook_csv.py",
+        }
+        dashboard_path.parent.mkdir(parents=True, exist_ok=True)
+        dashboard_path.write_text(json.dumps(dashboard, indent=1) + "\n")
+        wrote_dashboard = True
+    else:
+        wrote_dashboard = False
 
     print(f"input rows:      {len(raw_rows):,}")
     print(f"dropped rows:    {sum(ex['row_count'] for ex in excluded.values()):,} "
@@ -282,7 +308,12 @@ def main() -> None:
           f"{nonempty:,} with a visible description")
     print(f"wrote {out_path.relative_to(REPO_ROOT)}")
     print(f"wrote {disclosure_path.relative_to(REPO_ROOT)}")
-    print(f"wrote {dashboard_path.relative_to(REPO_ROOT)}")
+    if wrote_dashboard:
+        print(f"wrote {dashboard_path.relative_to(REPO_ROOT)}")
+    else:
+        print(f"note: {fylib.fy_label(year)} is not the current fiscal year "
+              f"({fylib.fy_label(fylib.current_fiscal_year())}); skipped "
+              f"{dashboard_path.relative_to(REPO_ROOT)} to protect the live dashboard")
     print(f"wrote {REVIEW_PATH}  <-- review this before committing")
 
 

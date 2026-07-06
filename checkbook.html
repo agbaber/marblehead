@@ -2,15 +2,15 @@
 title: "Town checkbook"
 permalink: /checkbook/
 scripts: [citations]
-og_title: "FY26: every check the town wrote"
-og_description: "FY26 spending and pacing for Marblehead. __CHECKBOOK_TOTAL_M__ in vendor checks through __CHECKBOOK_AS_OF__, against a $206.1M adopted budget across all funds. Budget vs actual by Fund, Department, Category, Division, and Object."
+og_title: "FY27: every check the town wrote"
+og_description: "FY27 spending and pacing for Marblehead. __CHECKBOOK_TOTAL_M__ in vendor checks through __CHECKBOOK_AS_OF__. Budget vs actual by Fund, Department, Category, Division, and Object."
 og_image: /assets/og/checkbook.png
 og_url: https://marbleheaddata.org/checkbook/
 ---
 <h1 class="h-center">Town checkbook</h1>
-<p class="subtitle h-center">FY26 spending, budget, and pacing &ndash; from the town's own portals.</p>
+<p class="subtitle h-center">{{ site.data.checkbook.fiscal_year }} spending, budget, and pacing &ndash; from the town's own portals.</p>
 <p class="h-center" style="font-size: 13px; color: var(--c-text-mid); margin: -8px 0 24px;">
-  Also see: <a href="/spending-by-vote/">What we paid, and the choices we made</a> &mdash; same FY26 data, organized by who voted on each fund.
+  Also see: <a href="/spending-by-vote/">What we paid, and the choices we made</a> &mdash; the FY26 year in review, organized by who voted on each fund.
 </p>
 
 <style>
@@ -28,7 +28,7 @@ og_url: https://marbleheaddata.org/checkbook/
     padding: 22px 8px; margin: 0 0 8px;
   }
   .hero-row {
-    display: grid; grid-template-columns: repeat(4, 1fr);
+    display: grid; grid-template-columns: repeat(3, 1fr);
   }
   .hero-stat {
     text-align: center; padding: 0 14px;
@@ -56,7 +56,7 @@ og_url: https://marbleheaddata.org/checkbook/
     .hero-row { grid-template-columns: 1fr 1fr; }
     .hero-stat { padding: 14px 8px; border-right: 1px solid var(--divider); border-bottom: 1px solid var(--divider); }
     .hero-stat:nth-child(2n) { border-right: none; }
-    .hero-stat:nth-last-child(-n+2) { border-bottom: none; }
+    .hero-stat:last-child { border-bottom: none; grid-column: 1 / -1; }
     .hero-value { font-size: 24px; }
   }
 
@@ -632,14 +632,9 @@ og_url: https://marbleheaddata.org/checkbook/
 <div class="hero-card" id="hero-card">
   <div class="hero-row">
     <div class="hero-stat">
-      <div class="hero-label">All funds</div>
-      <div class="hero-value">$206.1M</div>
-      <div class="hero-sub">FY26 adopted, every fund</div>
-    </div>
-    <div class="hero-stat">
       <div class="hero-label">Annual operating</div>
-      <div class="hero-value">$127.3M</div>
-      <div class="hero-sub">General + enterprise funds</div>
+      <div class="hero-value">{{ site.data.budget.annual_operating_M }}</div>
+      <div class="hero-sub">{{ site.data.budget.fiscal_year }} adopted, general + enterprise funds</div>
     </div>
     <div class="hero-stat">
       <div class="hero-label">Vendor payments</div>
@@ -649,7 +644,7 @@ og_url: https://marbleheaddata.org/checkbook/
     <div class="hero-stat">
       <div class="hero-label">Through</div>
       <div class="hero-value">{{ site.data.checkbook.as_of_human }}</div>
-      <div class="hero-sub">11 of 12 months</div>
+      <div class="hero-sub">{{ site.data.checkbook.months_elapsed }} of 12 months</div>
     </div>
   </div>
 </div>
@@ -739,9 +734,9 @@ og_url: https://marbleheaddata.org/checkbook/
       <div class="filter-group filter-group--date">
         <label for="f-date-min">Date range</label>
         <div class="filter-row">
-          <input type="date" id="f-date-min" min="2025-07-01" max="2026-05-29">
+          <input type="date" id="f-date-min" min="{{ site.data.checkbook.fy_start }}" max="{{ site.data.checkbook.fy_end }}">
           <span class="sep">to</span>
-          <input type="date" id="f-date-max" min="2025-07-01" max="2026-05-29">
+          <input type="date" id="f-date-max" min="{{ site.data.checkbook.fy_start }}" max="{{ site.data.checkbook.fy_end }}">
         </div>
       </div>
       <div class="filter-group">
@@ -785,36 +780,44 @@ og_url: https://marbleheaddata.org/checkbook/
 
   <dl class="notes-dl">
     <dt>What "the budget" means</dt>
-    <dd><strong>$206.1M</strong> is every appropriation in every fund &ndash; including capital articles, the OPEB trust, the Larz Anderson trust, the Light Department pass-through, and 300+ small revolving and grant funds. <strong>$127.3M</strong> is the annual operating envelope (Town general fund $60.6M + School general fund $49.1M + Water $6.5M + Sewer $5.5M + Tax Articles $4.3M + Harbor $1.3M). The Light Department runs as a self-supporting enterprise outside the appropriation process. The Budget vs Actual chart above filters down to that $127.3M envelope.<sup class="cite"
+    <dd><strong>{{ site.data.budget.annual_operating_M }}</strong> is the {{ site.data.budget.fiscal_year }} annual operating envelope (Town general fund $69.1M + School general fund $47.6M + Water $6.9M + Sewer $4.8M + Harbor $1.3M). Capital and tax articles, grants, and the revolving and trust funds have not yet posted to the portal for FY27 (see "FY27 budget coverage" below). The Light Department runs as a self-supporting enterprise outside the appropriation process. The Budget vs Actual chart above covers that operating envelope.<sup class="cite"
       data-href="https://townofmarblehead-ma-ob.budget.socrata.com/"
-      data-source="Town of Marblehead Budget Portal (Socrata), data fetched via fund_source_data API on 2026-06-01"></sup></dd>
+      data-source="Town of Marblehead Open Budget portal (Socrata), /api/operating_budget.csv fetched 2026-07-05"></sup></dd>
+
+    <dt>FY27 budget coverage</dt>
+    <dd>The budget portal currently carries the FY27 annual operating budget: the town and school general funds plus the water, sewer, and harbor enterprise funds. Budgets for the capital and tax articles, grants, and the revolving and trust funds had not yet posted for FY27 as of early July 2026, though checks drawn on those funds appear in the ledger as they are paid. For scale, FY26's adopted budget across all funds, with those categories included, was $206.1M.<sup class="cite"
+      data-href="https://townofmarblehead-ma-ob.budget.socrata.com/"
+      data-source="Town of Marblehead Open Budget portal (Socrata); FY27 coverage from /api/operating_budget.csv fetched 2026-07-05; FY26 all-funds figure fetched via fund_source_data API on 2026-06-01"></sup></dd>
 
     <dt>Budget vs spent vs vendor payments</dt>
-    <dd>The budget portal also publishes an FY26 <em>actual</em> rollup of <strong>$140.4M</strong> through May 29, which includes payroll and inter-fund transfers. The <strong>$99.9M</strong> on this page is just vendor checks (the accounts-payable side). The gap between the two is mostly payroll.<sup class="cite"
+    <dd>The budget portal also publishes an <em>actual</em> spending rollup that includes payroll and inter-fund transfers; the <strong>{{ site.data.checkbook.total_M }}</strong> on this page is just vendor checks (the accounts-payable side). In FY26, the portal's rollup reached <strong>$140.4M</strong> through May 29 against <strong>$99.9M</strong> in vendor checks; the gap between the two is mostly payroll.<sup class="cite"
       data-href="https://townofmarblehead-ma-oe.spending.socrata.com/#!/year/All%20Years/explore/1-/segment2"
       data-source="Town of Marblehead Spending Portal (Socrata), data exported 2026-06-10"></sup></dd>
 
     <dt>Why some bars look over budget</dt>
-    <dd>The Light Department ($13.2M) is self-supporting and has no appropriation, so it shows up against a $0 budget. Snow Removal ($687K vs $105K) is intentionally under-budgeted and topped up at year-end. Neither is a runaway expense.</dd>
+    <dd>The Light Department is self-supporting and has no appropriation, so its spending shows up against a $0 budget. Snow Removal is intentionally under-budgeted and topped up at year-end (in FY26 it spent $687K against a $105K budget). Neither is a runaway expense.</dd>
 
-    <dt>Why the state is the top vendor</dt>
-    <dd>$17.5M of FY26 checks went to "Commonwealth of MA," more than to any other payee. Most of it is health insurance: <strong>$12.8M</strong> booked under Group Insurance, the premiums the town pays the state's <abbr class="g" title="Group Insurance Commission">GIC</abbr> for employee and retiree coverage. The rest is state assessments and charges spread across town and enterprise funds. A sliver moves through agency funds such as "Due to Commonwealth - Firearms": firearms license fees the town collects and passes through to the state ($19,425 this year). "Due to" funds are pass-throughs the town holds briefly on the state's behalf, never the town's money to spend.</dd>
+    <dt>Why the state was FY26's top vendor</dt>
+    <dd>In FY26, $17.5M of checks went to "Commonwealth of MA," more than to any other payee. Most of it is health insurance: <strong>$12.8M</strong> booked under Group Insurance, the premiums the town pays the state's <abbr class="g" title="Group Insurance Commission">GIC</abbr> for employee and retiree coverage. The rest is state assessments and charges spread across town and enterprise funds. A sliver moves through agency funds such as "Due to Commonwealth - Firearms": firearms license fees the town collects and passes through to the state ($19,425 in FY26). "Due to" funds are pass-throughs the town holds briefly on the state's behalf, never the town's money to spend.</dd>
 
     <dt>Vendor names are ledger labels</dt>
     <dd>Names come straight from the town's accounts-payable ledger. "ONE TIME PAY" ($1.2M across 14 funds) is the ledger's bucket for one-off payees, not a company. "Marblehead Light Dept" appearing as a vendor is town and school departments paying the municipal Light Department for electricity. Where the ledger splits one payee across spelling variants ("National Grid" and "National Grid Company") or garbles a name at the export's 50-character limit, we merge and repair the display using a curated <a href="../data/checkbook_labels.json">alias list</a>; hover any row to see the ledger's original string.</dd>
 
     <dt>What we redacted</dt>
-    <dd id="redact-note-nodesc">The town's source export tags <em>specific employees by surname</em> for medical claims under the 111F Injury Leave Fund (e.g., "BURT INJURY" paid to Spaulding Rehab) and lists <em>student initials</em> for out-of-district SpEd placements. We dropped the Description column entirely and pulled 560 rows ($413K) from the 111F and Workers Comp funds. The aggregate is still in the budget chart above.</dd>
+    <dd id="redact-note-nodesc">The town's source export tags <em>specific employees by surname</em> for medical claims under the 111F Injury Leave Fund (e.g., "BURT INJURY" paid to Spaulding Rehab) and lists <em>student initials</em> for out-of-district SpEd placements. We drop the Description column entirely and pull every row in the 111F and Workers Comp funds (560 rows, $413K, in FY26). The aggregate is still in the budget chart above.</dd>
     <dd id="redact-note-desc" hidden>The town's source export tags <em>specific employees by surname</em> for medical claims under the 111F Injury Leave Fund (e.g., "BURT INJURY" paid to Spaulding Rehab) and lists <em>student initials</em> for out-of-district SpEd placements. We pulled the 111F and Workers Comp rows entirely (their aggregate is still in the budget chart above) and replaced the description with "[withheld]" on rows that identify a student or employee. Every other description appears as exported; the <a href="../data/checkbook_redaction_disclosure.json">disclosure file</a> counts exactly what was removed.</dd>
 
     <dt>Source files</dt>
     <dd>
       <a href="../data/{{ site.data.checkbook.csv_filename }}">{{ site.data.checkbook.csv_filename }}</a> &middot;
-      <a href="../data/budget_actual_FY26.json">budget_actual_FY26.json</a> &middot;
+      <a href="../data/{{ site.data.budget.actual_filename }}">{{ site.data.budget.actual_filename }}</a> &middot;
       <a href="../data/checkbook_performance.json">checkbook_performance.json</a> &middot;
       <a href="../data/checkbook_redaction_disclosure.json">checkbook_redaction_disclosure.json</a> &middot;
       <a href="../data/checkbook_labels.json">checkbook_labels.json</a>
     </dd>
+
+    <dt>Prior fiscal years</dt>
+    <dd>The full FY26 ledger: <a href="../data/checkbook_FY26_2026-06-30.csv">checkbook_FY26_2026-06-30.csv</a>. FY26 figures remain subject to year-end close adjustments recorded through fall 2026. The <a href="/spending-by-vote/">FY26 year in review</a> is a frozen analysis of that year.</dd>
   </dl>
 </div>
 
@@ -825,7 +828,7 @@ og_url: https://marbleheaddata.org/checkbook/
     <div class="read-next-desc">Hub for every dataset, chart, and methodology page on the site.</div>
   </a>
   <a class="read-next-link" href="/town-budget.html">
-    <div class="read-next-title">FY27 proposed budget line-by-line (pre-vote) &rarr;</div>
+    <div class="read-next-title">FY27 budget as proposed, line-by-line &rarr;</div>
     <div class="read-next-desc">Every line in the FY27 Proposed Budget (No Override) with year-over-year change. The adopted budget adds the override funding once published.</div>
   </a>
   <a class="read-next-link" href="/where-has-the-money-gone.html">
@@ -839,11 +842,12 @@ og_url: https://marbleheaddata.org/checkbook/
   'use strict';
 
   var CHECKBOOK_URL = '../data/{{ site.data.checkbook.csv_filename }}';
-  var BUDGET_URL    = '../data/budget_actual_FY26.json';
+  var BUDGET_URL    = '../data/{{ site.data.budget.actual_filename }}';
   var PERF_URL      = '../data/checkbook_performance.json';
-  var DRILL_URL     = '../data/budget_drill_FY26.json';
+  var DRILL_URL     = '../data/{{ site.data.budget.drill_filename }}';
   var LABELS_URL    = '../data/checkbook_labels.json';
-  var TOTAL_ROW_COUNT = 15364;
+  var TOTAL_ROW_COUNT = {{ site.data.checkbook.row_count }};
+  var FY_LABEL = '{{ site.data.checkbook.fiscal_year }}';
 
   // --- Utility ---
   function fmtMoney(n, opts) {
@@ -1000,9 +1004,9 @@ og_url: https://marbleheaddata.org/checkbook/
   var labels = null;           // checkbook_labels.json (aliases, notes, families, decodes)
   var hasDesc = false;         // True when the loaded CSV carries a Description column
   var tableCols = 5;
-  var budget = null;           // budget_actual_FY26.json
+  var budget = null;           // budget-vs-actual JSON for the current fiscal year
   var perf = null;             // checkbook_performance.json (includes .drill)
-  var drill = null;            // budget_drill_FY26.json
+  var drill = null;            // budget drill-down JSON for the current fiscal year
   var sortCol = 'amount';
   var sortDesc = true;
   var page = 0;
@@ -1081,7 +1085,7 @@ og_url: https://marbleheaddata.org/checkbook/
       if (ym) byVendor[key].monthlyMap[ym] = (byVendor[key].monthlyMap[ym] || 0) + r.amount;
     }
     var arr = [];
-    // Build a sorted FY26 month axis from any vendor's keys (each vendor's
+    // Build a sorted fiscal-year month axis from any vendor's keys (each vendor's
     // sparkline is rendered on the same axis so they're comparable).
     var allMonths = {};
     for (var vk in byVendor) {
@@ -1202,7 +1206,7 @@ og_url: https://marbleheaddata.org/checkbook/
       var h = Math.max(1, Math.round((Math.abs(m.amount || 0) / max) * 14));
       return '<span class="drill-sparkline-bar" style="height:' + h + 'px"></span>';
     }).join('');
-    return '<span class="drill-sparkline" aria-hidden="true" title="Monthly checks across FY26">' + bars + '</span>';
+    return '<span class="drill-sparkline" aria-hidden="true" title="Monthly checks across ' + FY_LABEL + '">' + bars + '</span>';
   }
 
   function dimDisplay(entry) {
@@ -1234,17 +1238,18 @@ og_url: https://marbleheaddata.org/checkbook/
     }
     var label = dimDisplay(current);
     var parts = [];
-    var pctOfYear = (perf && perf.fy26_pct_elapsed) ? Math.round(perf.fy26_pct_elapsed) : null;
+    var pctOfYear = (perf && perf.fy_pct_elapsed) ? Math.round(perf.fy_pct_elapsed) : null;
     var monthsLeft = pctOfYear !== null ? Math.max(0, 12 - Math.round(pctOfYear / 100 * 12)) : null;
+    var fyLabel = (perf && perf.fiscal_year) || 'the fiscal year';
     if (rb !== null && ac !== null && rb > 0) {
       var pct = Math.round(ac / rb * 100);
       var clause = '<strong>' + escapeHtml(label) + '</strong> has spent ' +
         '<strong>' + fmtMoney(ac, { compact: true }) + '</strong> of its ' +
         fmtMoney(rb, { compact: true }) + ' budget (' + pct + '%)';
       if (pctOfYear !== null) {
-        if (monthsLeft === 0) clause += ', with FY26 effectively closed';
-        else if (monthsLeft === 1) clause += ', with one month left in FY26';
-        else clause += ', with ' + monthsLeft + ' months left in FY26';
+        if (monthsLeft === 0) clause += ', with ' + fyLabel + ' effectively closed';
+        else if (monthsLeft === 1) clause += ', with one month left in ' + fyLabel;
+        else clause += ', with ' + monthsLeft + ' months left in ' + fyLabel;
       }
       parts.push(clause);
     } else if (ac !== null) {
@@ -1408,9 +1413,9 @@ og_url: https://marbleheaddata.org/checkbook/
   function fmtAsOfMonth() {
     var iso = (perf && perf.as_of) || '';
     var parts = iso.split('-');
-    if (parts.length < 2) return 'FY26';
+    if (parts.length < 2) return FY_LABEL;
     var names = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    return names[parseInt(parts[1], 10)] || 'FY26';
+    return names[parseInt(parts[1], 10)] || FY_LABEL;
   }
 
   // Build a "See N transactions" CTA tailored to the deepest filterable level
@@ -1958,13 +1963,14 @@ og_url: https://marbleheaddata.org/checkbook/
       var totalCount = allDepts.length;
       var overCount = over.length;
       var withinCount = totalCount - overCount;
+      var fyLabel = (perf && perf.fiscal_year) || 'current-year';
       if (totalCount === 0) {
         footHost.textContent = '';
       } else if (overCount === 0) {
-        footHost.textContent = 'All ' + totalCount + ' departments are tracking within their FY26 appropriations.';
+        footHost.textContent = 'All ' + totalCount + ' departments are tracking within their ' + fyLabel + ' appropriations.';
       } else {
         footHost.textContent = 'The other ' + withinCount + ' of ' + totalCount +
-          ' departments are tracking within their FY26 appropriations. Overruns are typically reconciled through a supplemental appropriation at a Special Town Meeting.';
+          ' departments are tracking within their ' + fyLabel + ' appropriations. Overruns are typically reconciled through a supplemental appropriation at a Special Town Meeting.';
       }
     }
 
