@@ -102,6 +102,14 @@ Document links below point at the [primary source archive](archive), a GitHub re
 - Discount rate changed from 5.74% to 5.51%; investment return assumption from 6.97% to 6.09%; mortality tables updated. These assumption changes plus favorable actual-vs-plan experience (-$10.4M) drove the net deficit improvement noted elsewhere.
 - Municipal Light Department OPEB plan (separate): Total $6,130,047 - $2,789,560 fiduciary = Net OPEB liability $3,340,487; funded ratio 45.51%
 
+## Cash Reserves History (FY16&ndash;FY25 year-end balances)
+- File: `data/cash_reserves_history.csv` &mdash; used by [/monthly-pacing/](/monthly-pacing/) section 3
+- General Fund balance by category (Committed / Assigned / Unassigned, plus Restricted and Nonspendable in Other Governmental Funds): [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 118, "Fund Balances, Governmental Funds &mdash; Last Ten Fiscal Years"
+- Pension Trust fiduciary net position (10-year trend): [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 115, RSI Schedule of Changes in Town's Net Pension Liability and Related Ratios
+- OPEB Trust fiduciary net position, Town plan (FY18&ndash;FY25): [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 123, RSI Schedule of Changes in Town's Net OPEB Liability and Related Ratios
+- OPEB Trust fiduciary net position, Municipal Light Department plan (FY19&ndash;FY25): [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 124, same schedule for MMLD
+- General Stabilization Fund balance ($557,204 at 6/30/2025; $532,368 at 6/30/2024): [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) Note III.J (Fund Balances). The dedicated stabilization fund (MGL Ch.40 &sect;5B; 2/3 Town Meeting vote required to draw) is reported as part of the General Fund Unassigned line in the audited statements, not separately on the balance sheet.
+
 ## PERAC Retirement System (358 active, 339 retired in FY24)
 - [PERAC Marblehead Valuation Report 2024](https://www.mass.gov/doc/marblehead-retirement-board-valuation-report-2024/download), page 5 (Executive Summary) and page 14 (Section 8A)
 - Funding schedule: same document, page 13
