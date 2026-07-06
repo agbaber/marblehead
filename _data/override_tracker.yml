@@ -1,7 +1,7 @@
 # Override tracker commitments. Rendered by override-tracker.html.
 # To change a status: edit the item's `status`, then append a `changelog`
 # entry (date, item, from, to, note with source). Statuses:
-# met | phase-in | pending | holds | dropped
+# met | phase-in | pending | standing | dropped
 
 first_published: 2026-06-22
 
@@ -9,26 +9,6 @@ changelog: []
 
 items:
   - num: "01"
-    section: allocations
-    status: met
-    title: >-
-      $15M operating override approved at the ballot
-    body_html: >-
-      Question 3 (Tier 3 &ldquo;Invest&rdquo;) carried 4,278&ndash;3,594 (54.3%&ndash;45.7%) on June 9, 2026. Questions 1 and 2 also carried but were superseded.
-    source_html: >-
-      Source: <a href="https://www.marbleheadindependent.com/marblehead-voters-approve-15m-override-ending-more-than-two-decades-of-resistance/">Marblehead Independent, June 9 2026</a>.
-
-  - num: "02"
-    section: allocations
-    status: met
-    title: >-
-      $2.3M trash override approved at the ballot
-    body_html: >-
-      Question 4 carried with 67.4% support, funding curbside trash, recycling, yard waste, and disposal services through the levy.
-    source_html: >-
-      Source: <a href="https://www.marbleheadindependent.com/marblehead-voters-approve-15m-override-ending-more-than-two-decades-of-resistance/">Marblehead Independent, June 9 2026</a>.
-
-  - num: "03"
     section: allocations
     status: phase-in
     title: >-
@@ -38,7 +18,7 @@ items:
     source_html: >-
       Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~24:53).
 
-  - num: "04"
+  - num: "02"
     section: allocations
     status: phase-in
     title: >-
@@ -48,7 +28,7 @@ items:
     source_html: >-
       Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); Select Board, June 10 2026.
 
-  - num: "05"
+  - num: "03"
     section: allocations
     status: phase-in
     title: >-
@@ -58,7 +38,7 @@ items:
     source_html: >-
       Sources: 2026 ATM Article 29 vote; <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a> (phase-in table).
 
-  - num: "06"
+  - num: "04"
     section: allocations
     status: pending
     title: >-
@@ -68,9 +48,9 @@ items:
     source_html: >-
       Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~24:53).
 
-  - num: "07"
+  - num: "05"
     section: mou
-    status: holds
+    status: standing
     title: >-
       No new override pursued at least through FY2030
     body_html: >-
@@ -78,9 +58,9 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.
 
-  - num: "08"
+  - num: "06"
     section: mou
-    status: holds
+    status: standing
     title: >-
       62%&ndash;38% unrestricted-revenue split formalized
     body_html: >-
@@ -88,7 +68,7 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.
 
-  - num: "09"
+  - num: "07"
     section: mou
     status: phase-in
     title: >-
@@ -98,7 +78,7 @@ items:
     source_html: >-
       Sources: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section; Select Board, June 10 2026.
 
-  - num: "10"
+  - num: "08"
     section: mou
     status: pending
     title: >-
@@ -108,7 +88,7 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.
 
-  - num: "11"
+  - num: "09"
     section: mou
     status: pending
     title: >-
@@ -118,17 +98,7 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, MOU section.
 
-  - num: "12"
-    section: municipal
-    status: pending
-    title: >-
-      28 total FTEs committed across the three tiers
-    body_html: >-
-      15 restored (Tier 1) + 7 new (Tier 2) + 6 new (Tier 3). FTE summary printed in the April 15 deck.
-    source_html: >-
-      Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, FTE summary row.
-
-  - num: "13"
+  - num: "10"
     section: municipal
     status: pending
     title: >-
@@ -138,7 +108,7 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
 
-  - num: "14"
+  - num: "11"
     section: municipal
     status: pending
     title: >-
@@ -148,7 +118,7 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
 
-  - num: "15"
+  - num: "12"
     section: municipal
     status: pending
     title: >-
@@ -158,7 +128,7 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
 
-  - num: "16"
+  - num: "13"
     section: municipal
     status: pending
     title: >-
@@ -168,7 +138,7 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
 
-  - num: "17"
+  - num: "14"
     section: municipal
     status: pending
     title: >-
@@ -178,7 +148,7 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
 
-  - num: "18"
+  - num: "15"
     section: municipal
     status: pending
     title: >-
@@ -188,7 +158,7 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
 
-  - num: "19"
+  - num: "16"
     section: municipal
     status: pending
     title: >-
@@ -198,7 +168,7 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
 
-  - num: "20"
+  - num: "17"
     section: municipal
     status: pending
     title: >-
@@ -208,7 +178,7 @@ items:
     source_html: >-
       Source: <a href="/data/2026-04-15_Override_Presentation_FINAL.txt">April 15, 2026 override presentation</a>, tier comparison table.
 
-  - num: "21"
+  - num: "18"
     section: schools
     status: phase-in
     title: >-
@@ -218,7 +188,7 @@ items:
     source_html: >-
       Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.
 
-  - num: "22"
+  - num: "19"
     section: schools
     status: phase-in
     title: >-
@@ -228,7 +198,7 @@ items:
     source_html: >-
       Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.
 
-  - num: "23"
+  - num: "20"
     section: schools
     status: pending
     title: >-
@@ -238,7 +208,7 @@ items:
     source_html: >-
       Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.
 
-  - num: "24"
+  - num: "21"
     section: schools
     status: pending
     title: >-
@@ -248,7 +218,7 @@ items:
     source_html: >-
       Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.
 
-  - num: "25"
+  - num: "22"
     section: schools
     status: pending
     title: >-
@@ -258,7 +228,7 @@ items:
     source_html: >-
       Source: School Committee, May 21 2026 (<a href="/meetings/school-committee-2026-05-21/">meeting page</a>); override proclamation.
 
-  - num: "26"
+  - num: "23"
     section: process
     status: pending
     title: >-
@@ -268,7 +238,7 @@ items:
     source_html: >-
       Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~21:51).
 
-  - num: "27"
+  - num: "24"
     section: process
     status: pending
     title: >-
@@ -278,7 +248,7 @@ items:
     source_html: >-
       Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~25:00).
 
-  - num: "28"
+  - num: "25"
     section: process
     status: pending
     title: >-
@@ -288,7 +258,7 @@ items:
     source_html: >-
       Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~26:27).
 
-  - num: "29"
+  - num: "26"
     section: process
     status: pending
     title: >-
@@ -298,7 +268,7 @@ items:
     source_html: >-
       Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~25:00).
 
-  - num: "30"
+  - num: "27"
     section: process
     status: pending
     title: >-
@@ -308,7 +278,7 @@ items:
     source_html: >-
       Source: Select Board, June 10 2026 (<a href="/meetings/select-board-2026-06-10/">meeting page</a>; remarks at ~21:05 and ~21:51).
 
-  - num: "31"
+  - num: "28"
     section: process
     status: pending
     title: >-
