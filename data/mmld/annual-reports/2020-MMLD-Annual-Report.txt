@@ -1,0 +1,442 @@
+     MARBLEHEAD MUNICIPAL LIGHT DEPARTMENT
+To the citizens of Marblehead,
+
+The Marblehead Municipal Light Department (MMLD) is pleased to share its 126th
+annual report and financial statements for the calendar year ending December 31,
+2020.
+
+Top-line Results:
+In 2020 MMLD delivered 100,625 megawatt-hours (MWh) of electricity to 10,290
+Marblehead customers (meters), generating revenue of $17,433,321. The 2020
+annual load of is a 1.0% increase from the 2019 load of 99,658 MWh and a 1.9%
+decline from the prior five-year (2015-19) average of 102,610 MWh. The 2020
+annual power sales revenue is a 3.1% increase versus the 2019 revenue of
+$16,905,077, and a 4.8% increase from the prior five-year (2015-19) average of
+$16,627,380. The months with the greatest year-on-year increases in power usage
+were June, with a 7% increase and August with a 10% increase.
+The 2019-20 Marblehead winter peak load of 20.4 MW occurred on December 17,
+2019 between 6-7 p.m. The 2019-20 winter peak load was 9.3% lower than the
+2018-19 winter peak load of 22.5 MW. The 2020 Marblehead summer peak load of
+31.9 MW occurred on July 28, between 4-5 p.m. The 2020 Marblehead summer
+peak load was 4.2% higher than the 2019 summer peak load of 30.6 MW.
+Our monthly energy usage exceeded 10,000 MWh twice in 2020; our July 2020
+demand was 12.1 MWh and our August demand was 11.0 MWh, compared to only
+one month exceeding 10,000 MWh in 2019, which occurred in August 2019.
+The ISO-NE 2020 system peak demand of 24,763 MWh occurred on July 27, from
+5-6 p.m. The Marblehead demand at that hour was 31.6 MWh.
+
+
+2020 Weather Conditions & Impacts on Electric Power Distribution
+ISO-NE Report: New England weather remains a primary driver of the demand for
+electricity in New England. The weather of winter 2019-20 was mild compared to
+previous years. Temperatures in the 2019-20 winter months of December, January
+and February, were 4.3 degrees higher than average, with minimal periods of
+extremely cold weather in the region. The overall winter season demand and winter
+season peak demand were lower than the winter of 2018-19. The mild weather led
+to lower overall electricity use in New England during the winter. Total electricity
+use for the region in winter 2019-20, was down 2.1% from the previous year.
+The 2019-2020 winter peak for ISO New England was 20,599 megawatts (MW) on
+December 19, 2019. Marblehead Municipal Light Department’s peak load on that
+day was 2.04 MW, down slightly from the previous winter’s peak load of 2.2 MW.
+
+The summer saw warmer weather in 2020, along with a slight increase in consumer
+demand for electricity. There were 370 cooling degree days* in New England
+during the summer of 2020, a 23 percent increase over the summer of 2019.
+
+The summer season demand was 33,550 gigawatt-hours, a 1.5 percent increase over
+summer of 2019. In the spring months of 2020 there was less overall electricity use,
+and an atypical use pattern, due to the Covid-19 pandemic. The pandemic changed
+the demand for electricity in the summer, especially during very hot periods. Under
+hot, humid weather conditions, more electricity was used during the pandemic
+versus history, and attributed to more air conditioning units being run for more
+hours, while people worked and self-quarantined at home.
+
+* A degree day is a measure of heating or cooling. A zero degree day occurs when
+no heating or cooling is required. When temperatures drop, more heating days are
+recorded; when temperatures rise, more cooling days are recorded. The base point
+for measuring degree days is 65 degrees. Each degree of a day’s mean temperature
+that’s above 65 degrees is counted as one cooling degree day, while each degree of
+a day's mean temperature that’s below 65 degrees is counted as one heating degree
+day. A day’s mean temperature of 90 degrees equals 25 cooling degree days, while
+a day's mean temperature of 45 degrees equals 20 heating degree days.
+
+Marblehead Specific: Marblehead was fortunate with regard to the 2020 weather
+conditions. Marblehead experienced no extreme weather events in 2020, compared
+to two extreme weather events in 2019 and two in 2018.
+2020 The Changing Fuel Mix of our Electric Power Supply
+With the growing awareness and concern regarding the impacts of climate change,
+MMLD: (1) continuously reviews our wholesale electric power sources, and (2)
+evaluates new options for cost-effective increases to our carbon-free generation. In
+November 2020 MMLD announced a new carbon-free energy supply agreement
+with Hydro-Québec (HQ), a Canadian public utility. The agreement provides
+Marblehead customers with 0.75 megawatts (MW) of firm hydropower that will
+deliver 6,570 megawatt hours of energy per year. The agreement represents the third
+or fourth largest carbon-free supply agreement in the MMLD portfolio, when
+compared to our 2019 & 2020 carbon-free energy sources:
+
+                       2019 Actual         2020 Actual
+      Generator                                                 Generator Type
+                      Energy (MWh)        Power (MWh)
+     Seabrook            21,522              13,934                 Nuclear
+    New York
+      Power               9,467               10,123             Hydroelectric
+     Authority
+   Hydro-Quebec       6,570 (in 2021)     6,570 (in 2021)        Hydroelectric
+     Millstone
+                          6,305               13,934                Nuclear
+       Point
+     Berkshire
+                          3,070                4,880                 Wind
+       Wind
+
+On a full-year basis the Hydro-Quebec agreement is expected to represent 6 % of
+the 2021 MMLD portfolio. The favorable energy pricing is an excellent step
+forward in the department’s strategy to “Go Green without Going in the Red.”
+
+As of March 2021, a new comprehensive Climate Bill for Massachusetts, “An Act
+Creating a Next-Generation Roadmap for Massachusetts Climate Policy”, was
+overwhelmingly approved in the state Senate and House, and now awaits the
+Governor’s signature. The bill includes specific provisions for municipal light plant
+(MLP) communities, as Marblehead. In 2019 the Municipal Electric Association of
+Massachusetts (MEAM) assisted in drafting the MLP provisions in the bill, with the
+support and endorsement of the MMLD Board and GM Joe Kowalik. The bill
+establishes specific greenhouse gas emissions standards on the electricity MLPs will
+sell to retail end-user customers. The minimum standards are: 50% non-carbon
+emitting energy by 2030, 75% by 2040, and net-zero emissions by 2050. To qualify,
+the renewable energy certificates (RECs) associated with the generation must be
+retired (held), not sold. Qualifying non-carbon emitting energy sources include (1)
+solar photovoltaic (PV); (2) solar thermal electric; (3) hydroelectric, including
+energy imported to the ISO-NE grid from NY and Canada; (4) nuclear; (5) marine
+or hydrokinetic energy; (6) geothermal energy; (7) landfill methane; (8) anaerobic
+digester gas; (9) wind energy; and (10) any other generation recognized by Mass
+DEP as qualifying for renewable portfolio standards. To meet the standards MLPs
+may also purchase qualifying New England-based RECs without energy.
+
+When applying the proposed standards to 2020 retail sales MMLD is currently 38%
+non-carbon emitting. In 2020 MMLD sold the Berkshire RECs we generated, which
+represents an additional 5% of our retail sales. In only two months, November and
+December, Hydro-Quebec sourced energy represents 1%. New power portfolio
+updates will be posted on our website https://www.marbleheadelectric.com
+
+
+2020 Department Actions and Initiatives
+• In January, the MMLD Board voted to transfer $22,294 to the Town’s Strategic
+    Electrification fund to enable the Town to purchase a new electric vehicle
+    (EV): a 2019 Chevy Bolt, for the Town Building Department.
+• In January, MMLD met for the first time with members of Raymond Design
+    Associates, Inc. (RDA), the architectural firm designing the new elementary
+    school in Marblehead. In addition to reviewing power requirements for the new
+    school, MMLD’s involvement included NREL guidance on the building roof
+    design to enable the future installation of solar PV arrays on the roof and the
+    siting and installation of level 2 electric vehicle (EV) chargers in the school
+    parking lot.
+• In March, the Department took delivery of a 2020 Freightliner M2 106 medium
+    duty truck chassis with a 45’ Terex Telect side-by-side boom bucket, to replace
+    a 10 year-old bucket truck in need of replacement. The purchase price was
+    $220,645. The truck is vehicle number 34 in the department vehicle fleet.
+• In March, the MMLD Board voted to approve the spending of $2,066,541 from
+    the MMLD Plant & Equipment Depreciation cash fund for new transformer and
+    switchgear equipment at the Village 13 substation, the main substation in
+    Marblehead. The purchase was delayed in 2020 while the Dept. and the South
+    Essex Sewer District determine a safe means to drive the ~100,000 pound gross
+    weight trucks on the utility right-of-way that’s shared with the town’s force
+    sewer main.
+•   In April, the MMLD Board voted to approve a $330,000 payment in lieu of
+    taxes (PILOT payment) to the Town of Marblehead.
+•   In April, MMLD joined the National Community Solar Partnership-Municipal
+    Utility Collaborative, sponsored by the US Dept. of Energy, to learn national
+    best practices in the creating and adopting of community solar programs in
+    Marblehead.
+•   In May, the National Renewable Energy Lab (NREL), presented their analysis
+    to the MMLD Board, that identified the most feasible sites for installing
+    municipal-scale solar PV arrays to generate renewable energy in Marblehead,
+    based on overall project risks and costs (levelized cost of energy). The roofs of
+    four Marblehead public schools, Marblehead High School, Village School,
+    Veterans Middle School and new elementary school under construction were
+    identified as the most attractive building sites. The Marblehead open space sites
+    visited were determined to be less desirable, due to the higher site prep expense
+    involved, and need to remove vegetation at the sites. Given the higher
+    estimated solar PV energy costs of the sites evaluated (~$0.08/kWh) versus the
+    current average MMLD portfolio energy cost, (~ $0.04/kWh) MMLD identified
+    the possible to introduce a separate community solar price for solar PV-
+    generated power.
+•   In parallel with the NREL study, MMLD’s wholesale power partner, MMWEC,
+    analyzed the potential for a utility-scale battery electric storage system at the
+    Village 13 substation. The analysis concluded the economic viability of such a
+    project, by providing a systematic way to reduce the towns peak load energy
+    demand, thus reducing both capacity and transmission costs in future years.
+    Such an addition is now included in Village 13 upgrade plans.
+•   In June, Marblehead voters elected Lisa Wolf to a three-year term as an MMLD
+    Board member.
+•   In July Substation Senior Operations Specialist Jack Ravagno oversaw the
+    purchase and installation of two Mitsubishi P-Series 36K BTU Ductless Heat
+    Pump air conditioners in the switchgear room at the Commercial Street
+    substation, at a price of $17,719.
+•   In September, MMLD, the Town Public Works Dept., and EV charger
+    installation vendor Voltrek, Methuen, MA began the site prep for the two
+    public charging locations in Marblehead: the Mary Alley Building parking lot
+    at Widger Road and the Round House Road parking lot at Anderson St. The
+    final design includes two dual-head Level 2 chargers to be installed at each
+    location. When completed each site will be capable of charging four EV at
+    once, and be expandable to ten vehicles in the future.
+•   In October MMWEC disclosed MMLD was participating in a five-year
+    hydropower purchase agreement with Hydro-Quebec for 0.75 MW of firm
+    hydropower at $0.0385/kWh. MMWEC and MMLD estimate the new
+    agreement will represent 6.2% of MMLD’s annual power demand.
+•   In October MMLD announced the creation of the Neighbors Helping
+    Neighbors Program, to provide support to MMLD customers in need with
+    grants of up to $300 or two months of electric bills. The North Shore
+    Community Action Program (NSCAP), a long-standing north shore social
+    services agency, administers the program for MMLD. Individuals who wish
+    apply for a grant, or who wish to contribute to the fund, can call our customer
+    service line at 781-631-5600.
+•   In December MMLD ordered new poles and luminaires to replace the nine light
+    poles on the Causeway. Delivery is expected in the spring of 2021.
+•   In December, at a joint meeting of the Town Selectmen and MMLD Board
+    Nathanael A. Burke was elected to the MMLD Board. He filled an open
+    position created by the resignation of Michael Maccario.
+•   Preventive maintenance and troubleshooting of our distribution system by
+    MMLD line crews is a year-round responsibility. In 2020, 57 new utility poles
+    were set, down from the 68 new poles set in 2019, but an increase from the 23
+    new poles set in 2018. Of the 57 utility poles set in 2020, 44 were preventive
+    maintenance replacements, three were storm damage related, five were required
+    in response to equipment upgrades made on the poles, and four were utility
+    poles set in new locations.
+•   In 2020 seven residential customers added solar PV arrays to the roofs of their
+    homes, bringing the total number of residential and commercial customers with
+    solar PV to 57. The combined solar PV array nameplate capacity of the 57
+    installations is 459 kW an increase of 8% from 425kW in 2019. The 2020
+    renewable energy MMLD purchased from these customers was 256 MWh, a
+    33.3% increase from 192 MWh in 2019.
+•   In 2020 13 Marblehead EV owners received a FREE residential ChargePoint
+    Level 2 charger from MMLD by enrolling in our Smart Charging Program. The
+    13 2020 participants represents an increase from five in 2019, five in 2018 and
+    three in 2017, for a total enrollment of 26. However 26 is only 24% of the 109
+    Marblehead EV owners registered in the Mass Offers Rebates for Electric
+    Vehicles (MOR-EV) program, as of March 2021. If you are a Marblehead EV
+    owner, learn how you can get a FREE ChargePoint Level 2 charger. Visit
+    https://www.marbleheadelectric.com/ev-vehicles-chargers.html
+•   Under the guidance of Lead Customer Services Rep. Megan Milan, MMLD
+    participates in the MMWEC-sponsored Home Energy Loss Prevention Services
+    (HELPS) Program. In 2020, 40 homeowners received free HELPS home
+    energy efficiency audits. HELPS also provides Marblehead residents with cash
+    rebates of up to $500 on the purchase of a variety of energy efficient
+    appliances, heat pumps, smart thermostats and home efficiency upgrades. In
+    2020 more than $41,700 was paid to 99 MMLD customers eligible for HELPS
+    and Solar PV rebates.
+    For details visit: https://www.marbleheadelectric.com/rebates-incentives.html
+
+MMLD Employee Recognition
+MMLD’s most important asset is our highly skilled workforce. The focus and
+dedication of our employees is essential to our mission to deliver reliable, cost
+competitive and environmentally responsible electric power to Marblehead
+customers, while ensuring a safe and healthy work environment for employees and
+customers alike.
+
+We’re pleased to recognize the following MMLD employees in 2020:
+   • Business Assistant Cheryl Stone celebrated her 20-year anniversary at
+        MMLD;
+   • Substation Senior Operations Specialist Jack Ravagno, Working Foreman
+        Greg Chane and Lead Lineman Kerry Homan celebrated 15-year
+        anniversaries at MMLD;
+   • Lead Lineman Kirk Blaisdell celebrated his 10-year anniversary at MMLD
+   • Finance Manager Matt Barrett celebrated his 5-year anniversary at MMLD.
+   • We also congratulate Matt Barrett on his promotion to Business Manager,
+        from Finance Assistant.
+   • We say goodbye to former Business Manager Mark Dugan who retired in
+        2020, after 34 years as an MMLD employee. At the time of his retirement
+        Mark was the longest serving employee in the department. We wish him
+        well in his retirement.
+
+The Board and Department also wish to recognize and thank Mike Tumulty for his
+six years of leadership and service and Mike Maccario for his five years of
+leadership and service as MMLD Board members. We wish them well in their
+future endeavors.
+
+Respectfully submitted,
+
+Joseph T. Kowalik, General Manager
+Michael A. Hull, Commission Chairman
+Walter E. Homan, Commissioner
+Karl A. Johnson, Commissioner
+Lisa Wolf, Commissioner
+Nathanael A. Burke, Commissioner
+                      MUNICIPAL LIGHT DEPARTMENT
+
+                                    BALANCE SHEET
+
+                            For the year ending December 31, 2020
+
+                                           Assets
+
+Plant Investments                                                           $   17,825,376.74
+
+Current Assets:
+  Cash - Operating                                           5,208,150.18
+         Petty Cash                                                500.00
+         Construction                                           18,908.88
+  Accounts Receivable                                        3,018,660.92
+  Interest Receivable                                                 -
+  Materials & Supplies                                         164,558.23
+     Total Current Assets                                                   $    8,410,778.21
+
+
+Depreciation Fund                                                                8,085,152.70
+Insurance Escrow Account                                                           995,676.31
+Hydro Savings Reserve                                                               42,108.77
+MMWEC - NEPEX Reserve Trust                                                        540,437.74
+Rate Stabilization Reserve                                                         900,000.00
+Consumer Deposits                                                                  221,606.50
+Prepayments                                                                      1,469,688.84
+Pooled Financing Reserve-MMWEC                                                     530,231.19
+MMWEC 2015A Peabody Project                                                        379,435.47
+Deferred Outflows-Pensions                                                       1,132,563.00
+Deferred Outflows-Opeb                                                             569,808.00
+     Total Assets                                                           $   41,102,863.47
+
+
+
+                                   Liabilities And Surplus
+
+Accounts Payable:
+  Depreciation                                        $          6,326.40
+  Operating                                                  1,602,402.15
+  Construction                                                        -
+  Consumer Deposits                                              1,700.00
+     Total Accounts Payable                                                 $    1,610,428.55
+
+Consumer Deposits                                                                  219,906.50
+Bonds Payable                                                                    4,580,756.68
+Accumulated Provision For Rate Stabilization                                       900,000.00
+Reserve-MMWEC Reserve Trust                                                        540,437.74
+Net Pension Liability                                                            6,799,029.00
+Deferred Inflows-Pensions                                                          816,538.00
+Deferred Inflows-Opeb                                                            2,671,482.00
+Reserve for Uncollectible Accounts                                                 434,805.14
+Reserve for Future Compensated Absences                                            106,108.07
+Opeb Liability                                                                   6,233,513.00
+Contribution In Aid For Construction                                               197,616.39
+Unappropriated Earned Surplus                                                   15,992,242.40
+      Total Liabilities And Surplus                                         $   41,102,863.47
+
+NOTE: The Marblehead Municicpal Light Department's financials are based on a calendar year
+and are subject to an independent audit by Goulet, Salvidio & Associates P.C. of Worcester, MA
+                        MUNICIPAL LIGHT DEPARTMENT
+
+                                  STATEMENT OF INCOME
+
+                             For the year ending December 31, 2020
+
+
+
+Operating Revenue                                                           $    17,543,145.86
+
+Less Expenses:
+   Operating                                                12,521,641.79
+   Maintenance                                               1,366,784.43
+   Depreciation                                              2,036,778.56
+      Total Expenses                                                             15,925,204.78
+
+Operating Income                                                                  1,617,941.08
+
+Interest Income                                                                      51,009.93
+
+Other Income                                                                        (99,450.00)
+
+Less Interest on Long Term Debt                                                     153,121.35
+
+Net Income Transferred to Surplus                                           $     1,416,379.66
+
+
+
+                                  STATEMENT OF SURPLUS
+
+                             For the year ending December 31, 2020
+
+
+
+Balance December 31, 2019                                                   $    14,930,896.00
+
+
+
+Add: Credit balance transferred from income                                       1,416,379.66
+    Adjustment to transfer prior years
+    Power Refunds to surplus                                                                -
+
+Subtotal                                                                         16,347,275.66
+
+Deduct: Amount transferred to Town Treasurer
+          strategic electrification fund                                            (22,294.00)
+          payment in lieu of tax payment (Pilot)                                   (330,000.00)
+         adjusting audit entries for year
+          ended December 2019                                                         (2,739.26)
+
+Balance December 31, 2020                                                   $    15,992,242.40
+
+
+NOTE: The Marblehead Municicpal Light Department's financials are based on a calendar year
+and are subject to an independent audit by Goulet, Salvidio & Associates P.C. of Worcester, MA
+                       MUNICIPAL LIGHT DEPARTMENT
+
+                                 OPERATING EXPENSES
+
+                            For the year ending December 31, 2020
+
+Power Generation Expenses:
+  Fuel                                                   $       4,321.87
+  Generating Expense - Lubricants                                     -
+  Misc. Other Power Generating Expense                           4,341.71
+  Maint. of Other Power Generation                             107,129.79
+     Total Power Generation Expense                                          $     115,793.37
+
+Power Supply Expenses:
+  Electric Energy Purchased                                  6,639,701.20
+  Misc. Purchased Power Expense                              2,659,641.11
+     Total Power Supply Expenses                                                 9,299,342.31
+
+Transmission Expense:
+   Maintenance of Overhead Lines                                                           -
+
+Distribution Expenses:
+   Station Expense - Labor & Other                              15,828.75
+   Station Expense - Heat & Electricity                         50,174.68
+   Street Lighting                                              16,762.89
+   Meter Expense - Inspection, Testing,
+                    Removing, Resetting                         88,691.98
+   Customer Installation Expense                                42,435.78
+   Misc. Distribution Expense                                  219,819.79
+   Maintenance of Structures                                          -
+   Maintenance of Station Equipment                             83,201.36
+   Maint. of Overhead & Underground Lines                    1,068,474.58
+   Maintenance of Line Transformers                             (2,370.95)
+   Maintenance of Meters                                        17,050.59
+      Total Distribution Expenses                                                1,600,069.45
+
+Customer Account Expenses:
+  Supervision of Customer Accounting                            66,284.35
+  Meter Reading - Labor & Expenses                              42,435.78
+  Customer Records & Collections                               263,895.23
+  Uncollectible Accounts                                       150,761.76
+  Interest Paid on Consumer Deposits                             4,172.62
+     Total Customer Account Expenses                                               527,549.74
+
+Advertising, Conservation, Energy Audits                                           150,677.47
+
+Administrative & General Expenses:
+  Administrative Salaries                                      185,252.45
+  Office Supplies & Expenses                                   264,380.16
+  Outside Services Employed                                    115,452.08
+  Property Insurance                                            34,053.21
+  Injuries & Damages                                             4,470.31
+  Rents                                                          7,201.23
+  Employee's Pensions & Benefits                             1,426,324.82
+  Maintenance of General Plant                                  28,794.84
+  Transportation                                                64,504.22
+  Miscellaneous General Expense                                 64,560.56
+     Total Administrative & Gen. Expenses                                        2,194,993.88
+
+      Total Operating & Maintenance Expenses                                 $ 13,888,426.22
+
+NOTE: The Marblehead Municicpal Light Department's financials are based on a calendar year
+and are subject to an independent audit by Goulet, Salvidio & Associates P.C. of Worcester, MA
+

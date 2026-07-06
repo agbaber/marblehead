@@ -1,0 +1,1383 @@
+                                                          ••
+                                                           ..
+                                                          ....
+                                                           •
+
+
+
+
+                   Report of Findings
+                   2025 MEAM Residential Customer
+                   Satisfaction Report
+02 December 2025             Confidential & Proprietary
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.   Slide/ 2
+ Project Overview
+ Research Objectives                                                                                   Areas of Investigation
+
+       • GreatBlue Research was commissioned by the Marblehead                                         The 2025 MMLD Residential Customer Satisfaction Study leveraged
+         Municipal Light Department (hereinafter "MMLD") to conduct                                    a digital research methodology as part of the larger MEAM /
+         additional research among its residential customers as part of a                              Massachusetts statewide research initiative to address the following
+         larger statewide research initiative involving public power and                               areas of investigation with their customers:
+         investor-owned utilities in Massachusetts.
+                                                                                                           o   Organizational characteristic ratings
+       • The primary goals of this research study were to assess MMLD                                      o   Customer expectations
+         customers' satisfaction with the utility, compare those satisfaction                              o   Satisfaction with customer service personnel and experience
+         ratings with those of other public power and IOU customers, and                                   o   Preferred methods of receiving information
+         explore customers' interest in various utility-related products and                               o   Importance of and satisfaction with self-service digital options
+              .
+         services.                                                                                         o   Perception of MMLD's major storm and outage preparedness
+                                                                                                           o   Interest in solar energy, electric vehicles, and electrification
+       • The outcome of this research will enable MMLD personnel to a)                                         products
+         more clearly understand and ultimately set customer                                               o   Awareness of MMLD customer programs and rebates
+         expectations, b) act on near-term opportunities for improvement,                                  o   NextZero program familiarity, participation, and experiences.
+         and c) create a strategic roadmap to increase customer                                            o   Interest and awareness of a potential time of use rate
+         satisfaction.                                                                                         program
+                                                                                                           o   Demographic profiles of respondents
+
+
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                  Slide/ 3
+ Research Methodology Snapshot
+
+
+
+                       Methodology                                  No. of Completes                                 No. of Questions                           Incentive            Sample
+
+
+                            Digital                                             350                                              62*                              None           CustomerLists
+
+
+
+
+                                                                                                                                                                                  Research Dates
+                             Target                                Quality Assurance                                   Margin of Error                       Confidence Level
+
+                                                                                                                                                                                   October8 -
+              ResidentialCustomers                                      Dual-level**                                        +/- 5.1%                              95%
+                                                                                                                                                                                November 17, 2025
+
+
+
+
+ * This represents the total possible number of questions; not all respondents will answer all questions based on skip patterns and other instrument bias.
+ ** Data quality personnel, in addition to a computer-aided interviewing platform, ensure the integrity of the data is accurate.
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                           Slide/ 4
+ Respondent Profile I Demographics
+                                        Age                                                             Gender                                                      Income
+                                                                                                                                                               Under $25,000            1.4%
+                           25 to 34         1.1%
+                                                                                                  Woman                                          $25,000 to less than $50,000
+                                                                                                                                                 $50,000 to less than $75,000
+                                                                                                                                                $75,000 to less than $100,000
+                                                                                                                                               $100,000 to less than $125,000
+                                                                                                       Man                48.6%
+                                                                                                                                               $125,000 to less than $150,000
+                                                                                                                                               $150,000 to less than $175,000
+                        65 or older                        52.0%                                                                               $175,000 to less than $200,000           7.4%
+                                                                                       Prefer not to say                                                     $200,000 or more                   32.3%
+                 Prefer not to say          2.6%
+                                                                                                                                                              Prefer not to say'
+                                       0%                50%          100%                                   0%          50%            100%                                       0%            50%      100%
+
+
+
+
+                               Rent or Own                                            # of Children in Household                                          Time as a Customer
+                                                                                                                                                         Less than 1 year         1.4%
+                                                                                            None (0)                           78.3%
+                          Rent                                                                                                                     1 to less than 5 years          5.7%
+                                                                                                                                                  5 to less than 10 years               14.9%
+                                                                                                                                                 10 to less than 15 years
+                          Own                                  90.0%                                                                             15 to less than 20 years
+                                                                                                                                                20 to less than 25 years
+                                                                                               Three        2.9%                                25 to less than 30 years
+            Prefer not to say         1.4%                                                                                                              30 years or more                        42.9%
+                                                                                   Prefer not to say        2.3%
+                                                                                                                                                         Prefer not to say        1.4%
+                                 0%                50%         100%                                    0%          50%           100%                                        0%                 50%       100%
+
+
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                    Slide/ 5
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.   Slide/ 6
+ Key Study Findings I Legend
+                                    The American Flag indicates data leveraged from GreatBlue's proprietary Public Power Data Source (PPDS).
+                                    PPDS leverages data collected from public power customers across the United States.
+
+
+                                    Plus/Minus symbols or colored percentages indicate statistical significance at a 95% confidence level, with the
+               (+/-)                color of the symbol/percentage denoting the subgroup it is being tested against, whether it is higher or lower
+                                    than the compared subgroup.
+
+
+                                    The lowercase "n" is used to indicate the base size, or the amount of repsondents who answered a particular
+            n=362                   question.
+
+
+   ''Aggregate of      This phrase indicates positive ratings from questions that use a 10-point scale. The positive ratings are defined
+   ratings 7-10 shown" as any answer within the range of 7-10.
+
+
+                                    Boxes are sometimes used to emphasize particular data on a slide. The reason for use is always stated in the
+                                    footnote.
+
+
+                                    The NP+S (net positive score) is a score based on a question asking respondents to describe their relationship
+                                    with their utility. The score is an aggregation of the following responses: "an advocate of my utility, " "a loyal
+              NP+S                  customer," and "a satisfied customer."
+
+
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                               Slide/ 7
+ Key Study Findings
+Satisfaction & Trust                                                                         Green Energy & Empowerment
+    • In 2025, MMLD customers provided significantly higher satisfaction ratings                • Over one-half of customers (54.9%) reported MMLD is
+       compared to MA Public Power and IOU customers across most organizational                    doing enough to curb carbon emissions, and over two­
+       characteristics, resulting in an average positive rating of 82.5%.                          thirds believe their personal actions to conserve energy
+    • Nine-out-of-ten MMLD customers (90.9%) reported their utility meets their                    support Net Zero goals (67.4%).
+       expectations "all" or "most of the time;" notably higher than MA Public Power            • Over half of customers (55.2%) are aware of the need
+       customers(+ 7.1 percentage points) and MA IOU customers in 2025 (+26.4                      for MMLD to achieve the statewide goal of Net Zero
+       percentage points).                                                                         greenhouse gas emissions by 2050.
+    • Over two-thirds of customers expressed complete trust in their utility (68.3% ).
+       Nearly eight-out-of-ten customers (78.2%) were "promoters" of their utility,          Programs & Services
+       compared to only 10.8% of customers who were "detractors," leading to a NPS              • Over eight-out-of-ten customers (84.3%) find self-service
+       score of +67 .4.                                                                            digital tools important, and over three-quarters rated the
+    • Over two-thirds of customers (69.4%) viewed their electric rates as reasonable.              MMLD website/app positively for the ease of
+    • Customers provided a net positive rating (advocates+ loyal + satisfied customers)            understanding its content (76.6% ).
+       of 90.0%, which was on par with MA Public Power customers.                               • Over one-third of MMLD customers (35.1 °/o)were
+Customer Service & Communication                                                                   familiar with the NextZero rebate programs, compared to
+    • The top reasons for contacting MMLD were to ask questions about an electric bill or          nearly three-fifths of customers (59.5%) who were not
+       to report an electric outage. Most contact occurred via phone, visiting the office or       familiar.
+       service center, or receiving an email from MMLD.                                         • Of the customers who were familiar with the programs,
+    • Nearly seven-out-of-ten customers (69.2%) reported MMLD "takes care of things                over half (55.3%) have applied for or received a rebate
+       the first time" when they contact customer service, with over eight-out-of-ten              or incentive through MMLD's NextZero programs at least
+       customers (84.6%) rating their customer service interaction positively.                     once.
+    • Three-quarters of customers (74.9%) reported that the frequency of communication          • Of the customers who have applied for or received a
+       they receive from MMLD is "about right," which was on par with MA Public Power              rebate or incentive through the program, seven-out-of­
+       customers.                                                                                  ten (70.7%) found the program valuable in helping them
+    • When asked to rate the value of different methods of contact, over four-fifths of            save energy and reduce costs at home.
+       MMLD customers reported finding "e-mail" (83.1 % ) very or somewhat valuable, and
+       three-quarters reported the same regarding the "MMLD website" (75.4% ).
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                              Slide/ 8
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.   Slide/ 9
+ Satisfaction I OrganizationalCharacteristics
+ In 2025, MMLD customers provided significantly higher average positive ratings across most organizational characteristics compared to Massachusetts
+ (MA) Public Power and MA IOU customers overall. On average, 82.5% of MMLD customers rated their utility positively, driven primarily by positive ratings
+ among customers for the utility "providing consistent and reliable electric service," "restoring power after an outage in a reasonable amount of time," and
+ their "honesty/integrity."
+
+                                                                                                                                                                                                          2025 YTD PPDS
+               Aggregate of ratings 7-10 shown, wlo "don't know" responses                                            MMLD 2025                     MA Public Power             MAIOU
+                                                                                                                                                                                                          NatiQnatAveraae
+                Customer interactions and communication                                                                  86.6%                              79.3%               64.8%                              63.5%
+
+                 Providing good service and value for the cost of electricity                                            84.6%                              78.3%               59.1%                              62.7%
+
+                 Helping customers conserve electricity                                                                  68.9%                              69.1%               59.0%                              54.5%
+
+                 Honesty/ Integrity                                                                                      89.8%                              81.2%               63.8%                              61.8%
+
+                Providing consistent and reliable electric service to                                                                                                                                              74.7%
+                                                                                                                         96.2%                              84.2%               73.9%
+                customers
+
+                Restoring power after an outage in a reasonable amount of                                                                                                                                          71.2%
+                                                                                                                         95.7%                              82.7%               70.4%
+                time
+
+                Offering innovative programs and services                                                                61.8%                              68.4%               59.1%                              55.4%
+
+                 Rates                                                                                                   73.2%                              75.6°/o             46.3%                                 -
+                Community service                                                                                        78.9%                              75.7%               57.8%                              60.1%
+
+                Overall Satisfaction with MMLD                                                                           89.7%                              79.4%               66.8%                              70.3%
+
+                Average                                                                                                  82.5%                              77.4%               62.1%                              63.8%
+
+n= 350 (MMLD 2025), 400 (MA Public Power), 400 (MA IOU), 9,000 (PPDS)                                                                                                            Color indicates statistical significance at a 95% confidence level, denoting
+Q: For each organizational characteristic, please rate MMLD's electric service using a scale of one (1) to ten (10) where one (1) is "very poor" and ten (10) is "very good."       whether the data point is higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                                 Slide/ 10
+ Satisfaction I Most ImportantUtilityCharacteristics
+ Over two-thirds of MMLD customers identified "providing consistent and reliable electric service to customers" and "restoring power after an outage in a
+ reasonable amount of time" as the most important organizational characteristics to them as a customer of MMLD, which were also both highly rated
+ organizational characteristics, followed by nearly three-fifths who identified "providing good service and value for the cost of electricity" as an important
+ characteristic. In contrast, less emphasis was placed on MMLDs' "customer interactions and communication," "offering innovative programs and services,"
+ and displaying "community service."
+
+            Most Prioritized Characteristics Among Customers                                                                   Least Prioritized Characteristics Among Customers
+                                                 -
+                 Providing consistent and
+                                                                                                                               Customer interactions and
+                reliable electric service to                                                               72.6%                                                        20.6%
+                                                                                                                                         communication
+                                 customers
+
+                                                 -
+              Restoring power after an
+                                                                                                                             Offering innovative progams
+        outage in a reasonable amount                                                                 67.7%                                                             18.0%
+                                                                                                                                             and services
+                                of time
+                                                 -
+
+            Providing good service and
+                                                                                               58.6%                                   Community service         6.6%
+          value for the cost of electricity
+
+
+                                                  0%               25%               50%                  75%      100%                                     0%          25%       50%   75%         100%
+
+
+                                                     I MMLD 2025 (n=350)                                                                                    I MMLD 2025 (n=350)
+    Top 3 responses shown                                                                                                 Bottom 3 responses shown
+
+
+
+ Q: Among the characteristics you Just rated, what are the most important to you as a customer of MMLD?
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                          Slide/ 11
+ Expectations I Top Expectationsof Utility
+ Nearly three-fifths of MMLD customers noted the top expectations of
+ their utility were "prompt response to outages," followed by "affordable
+                                                                                                                                                     Top Expectations Among Customers
+ prices / fair pricing / cost savings" and "reliable / consistent service."                                                                                                     -
+                                                                                                                                                                                                                                   I
+
+
+
+
+ Notably, these expectations closely align with the organizational
+                                                                                                                                           Prom pt response to outages                                                             I 59.1 %
+                                                                                                                                                                                    ------------
+ characteristics customers found most important, with common themes                                                                                                             -
+                                                                                                                                                                                                                               I
+ including good value for service, reliable performance, and prompt                                                               Affordable prices / fair pricing / cost
+ outage restoration.                                                                                                                                                                                                                   58.3%
+                                                                                                                                                                 savings
+                                                                                                                                                                                                                               J
+
+
+                                                                                                                                                                                -
+                                                                                                                                                                                                                          I
+                                                                                                                                           Reliable/ consistent service                                                       53.1%
+
+                                                                                                                                                                                -
+                                                                                                                                                                                                            l
+
+                                                                                                                                         Problems solved quickly / fast
+                                                                                                                                                                                                                31.1%
+                                                                                                                                               service / prompt service
+                                                                                                                                                                                                            I
+
+
+
+
+                                                                                                                                                                                -
+                                                                                                                                                                                                        I
+                                                                                                                                    Good customer service / answer
+                                                                                                                                questions / knowledgeable / properly                                    128.0%
+                                                                                                                                                        trained staff                 ----
+                                                                                                                                                                                -
+                                                                                                                                                                                                    l
+
+                                                                                                                                   Proper billing / easy to understand
+                                                                                                                                               bill / prompt processing
+                                                                                                                                                                                                    j 26.0%
+                                                                                                                                                                                    -----
+                                                                                                                                                                                0%                 25%                  50%                75%        100%
+
+
+                                                                                                                                                                                MMLD 2025 (n=350)
+                                                                                                                              Top 6 responses shown
+
+
+ Q: Everyone has expectations of the organizations they do business with over time. What are the top three expectations you have regarding the service you receive from MMLD?
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                                           Slide/ 12
+ Satisfaction I Net PromoterScore & Trust
+ Nearly eight-out-of-ten MMLD customers were "promoters" of the utility compared to only 10.8% of customers who were "detractors," leading to a NPS
+ score of +67.4. Of note, significantly more MMLD customers were promoters of their utility compared to MA Public Power and MA IOU customers (+24.1
+ and +52.8 percentage points, respectively). Further, over two-thirds of MMLD customers (68.3%) indicated they trust their utility completely, which was
+ also significantly higher than MA Public Power and MA IOU customers (+9.0 and +39.8 percentage points, respectively).
+
+                                    Net Promoter Score (NPS)                                                                                                     Total Trust in Utility
+                                                                                                                                                                                                          68.3%
+                                                                                           78.2%                                                                                                      59.3% (-)
+        Promoters (9-10)                                                  54.1 % (-)
+                                                      25.4% (-)                                                                                                                   0
+
+                                                                                                                                   Somewhat trust them                            30.8% (+)
+                                                                                                                                                             •-------                    49.3% (+)
+                                            11.1%
+                                   ·--                                                                                                                        3.1%
+            Passives (7-8)                        20.1 % (+)
+                                                                                        +67.4                                      Slightly distrust them
+                                                                                                                                                          •--
+                                                                                                                                                               5.0%
+                                                                                                                                                                  10.5% (+)
+                                                           32.5% (+)
+                                                                                        MMLD
+                                                                                      NPS Score                                                                0.9%
+                                                                                                                                 Do not trust them at all      1.5%
+                                            10.8%
+                                   --                                                                                                                            6.0% (+)
+          Detractors (0-6)                            25.8% (+)
+                                                                                                                                                                    8.9%
+                                                                 42.1% (+)                                                           Don't know / unsure         3.5% (-)
+                                                                                                                                                                  5.8%
+                                 0%               25%              50%              75%              100%
+                                                                                                                                                            0%             25%             50%               75%              100%
+
+                     MMLD 2025 (n=325)          I MA Public Power (n=388) I MA IOU (n=382)
+                                                                                                                                                MMLD 2025 (n=350)       I MA Public Power (n=400)                MA IOU (n=400)
+    Without don't know I unsure responses
+
+
+ Q: On a scale of Oto 10, how likely are you to recommend MMLD to a friend, family member, or coworker based on your experience with them as a customer?                       (+/-) indicates statistical significance at a 95% confidence level, denoting
+ Q: How much do you trust MMLD?                                                                                                                                                  whether the data point is higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                                Slide/ 13
+ Expectations I Frequencyof ExpectationsMet
+       Ratings Breakdown for                          When asked how frequently their utility meets their expectations, nine-out-of-ten MMLD customers reported their
+         MMLD Customers                               expectations are met "all" or "most of the time," which was significantly higher than MA Public Power and MA IOU
+     100%
+                                                      customers(+ 7.1 and +26.4 percentage points, respectively), and also exceeded the year-to-date PPDS National
+                                                      Average in 2025 (+14.1 percentage points). Notably, over one-half of MMLD customers reported that the utility
+                                                      meets their expectations "all of the time."
+
+
+       75%                   52.0%                                              Expectations Met "All" or "Most of the time" by Subgroup
+
+
+
+       50%
+                                                                                                                                                      90.9%
+
+
+
+                             38.9%
+                                                              "All" or "Most of
+                                                                                                                                               83.8% (-)
+                                                                                                                                                                                 76.8°/o
+       25%                                                            the time"                                                                                            2025 YTD PPDS
+                                                                                                                                                                              National
+                                                                                                                                                                              Average
+                                                                                                                                  64.5% (-)
+                                             0.3 %
+                             7.4%           /41 .4%
+        0%                                  -
+                                                I
+         I All of the time                                                        0%                   25%            50%              75%                 100%
+             Most of the time
+         I Some of the time I Never
+         I Don't know/ unsure                                                          I MMLD 2025 (n=350) I MA Public Power (n=400)   MA IOU (n=400)
+
+                                                                                                                                                (+/-) indicates statistical significance at a 95% confidence level, denoting
+  Q: Does MMLD meet your expectations ...                                                                                                         whether the data point is higher or lower than the MMLD 2025 findings
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                Slide/ 14
+ Expectations I Perceptionof Rates
+       Ratings Breakdown for                                   Over two-thirds of MMLD customers viewed the rates they pay for electricity as reasonable, which was lower
+         MMLD Customers                                        than MA Public Power (-5.6 percentage points), but significantly higher compared to MA IOU customers (+20.6
+      100%
+                                                               percentage points), and outperformed the year-to-date PPDS National Average in 2025 (+3.2 percentage points).
+                                                               Notably, nearly two-fifths of MMLD customers viewed the rates they pay as only "somewhat reasonable."
+
+                             3Q.QOfo
+
+
+       75%
+                                                                                                  Perception of Electric Rates by Subgroup
+
+
+
+       50%                   39.4%
+                                                                                                                                          69.4%
+
+
+                                                                                                                                                                                    66.2°/o
+       25%                   11.4%                                Total "reasonable"                                                          75.0%                            2025 YTD PPDS
+                                                                                                                                                                                  National
+                              7.7%                                                                                                                                                Average
+                              11.4%                                                                                        48.8% (-)
+         0%
+
+             I Very reasonable
+                 Somewhat reasonable
+                                                                                       0%              25%               50%                75%                     100%
+             I Somewhat unreasonable
+             I Very unreasonable
+             I Don't know/ unsure                                                           MMLD 2025 (n=350)   I MA Public Power (n=400) I MA IOU (n=400)
+                                                                                                                                                   (+/-) indicates statistical significance at a 95% confidence level, denoting
+  Q: Would you say the rates you pay for electricity are ...                                                                                         whether the data point is higher or lower than the MMLD 2025 findings
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                   Slide/ 15
+ Expectations I Net PositiveScore
+       Ratings Breakdown for                                MMLD customers provided a net positive score, combining satisfied customers, loyal customers, and advocates, of
+         MMLD Customers                                     90.0%. Nearly two-fifths of customers identified as "a satsified customer," while over one-third identified as "a loyal
+                                                            customer." Notably, the net positive score for MMLD customers was on par with that of MA Public Power and
+     100%
+                                                            significantly higher than MA IOU customers (+15.7 percentage points).
+
+
+
+       75%                                                                                             Net Positive Score by Subgroup
+                           35.7%
+
+
+
+       50%
+                                                                                                                                                   90.0%
+                                                                                                                                                                                      82.1 °/o
+                                                                                                                                                                                2025 YTD PPDS
+                           38.9%                                  Net Positive                                                                                                     National
+       25%                                                                                                                                         90.5%
+                                                                       Score                                                                                                       Average
+
+
+                            6.9%                                                                                                       74.3% (-)
+                                '
+        0%
+
+         I An advocate of [MMLD
+         I A loyal customer                                                      0%             25%               50%                 75%                100%
+             A satisfied customer
+         I A less than satisfied customer
+         I Don't know/unsure                                                          MMLD 2025 (n=350)   I MA Public Power (n=400)     MA IOU (n=400)
+
+                                                                                                                                                     (+/-) indicates statistical significance at a 95% confidence level, denoting
+  Q: Which of the following would best describe your relationship with MMLD?                                                                           whether the data point is higher or lower than the MMLD 2025 findings
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                     Slide/ 16
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.   Slide/ 17
+ Customer Service I ContactReasons& Methods
+            Top Reasons for Contact Among MMLD Customers
+                                                                                                           Among MMLD customers, the top reasons for contacting their utility were to
+                                                                                    MMLD2025           7   ask a question on an electric bill or to report an electric outage. The most
+                                                                                                           common methods of contact included telephone, visiting the office or service
+           Question on electric bill {not a complaint)                                 16.3%               center, or receiving an email from MMLD.
+                                 Electric outage                                       10.6%
+                                                                                                           When comparing traditional contact methods (i.e. phone calls, in-person visits)
+                        High electric bill question                                     7.7%               to digital methods (i.e. website visits, email, text messages, smartphone apps,
+                             Electric service call                                      7.7%               or social media), MMLD customers of all ages used traditional methods
+                                                                                                           significantly more often than digital methods to contact their utility.
+                              To pay electric bill                                      7.7%
+
+        To inquire about energy programs or rebates                                     7.7%
+
+
+
+              Top Methods for Contact Among MMLD Customers                                                                             Methods by Age Group
+                                                                                                                                              -
+                                   By telephone                                       72.1%                                                             14.3%
+                                                                                                                 Younger Respondents (18-44 )
+                                                                                                                                      (n=14 )                                                      85.7% (+)
+                 Visited the office or service center                                  12.5°/o
+                                                                                                                                              -
+                Received or sent an email to MMLD                                      7.7%                                                            10.5%
+                                                                                                               Older Respondents (45 or older )
+                                                                                                                                       (n=86 )                                                       89.5% (+)
+                         Visited MMLD's website                                         1.9%
+                                                                                                                                                  0%      25%            50%            75%            100%
+             Used MMLD's smart phone application                                        1.9%
+                                                                                                                                  I Digital Methods I Traditional Methods
+ n= 104 (MMLD)
+ Q: What was the purpose of the contact?                                                                                                               (+/-) indicates statistical significance at a 95% confidence level, denoting
+ Q: Which of the following methods did you use to contact MMLD?                                                                                           whether the data point is higher or lower than the compared subgroup
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                       Slide/ 18
+ Customer Service I SatisfactionRatings
+ Among the 29.7% of MMLD customers who recently spoke with a customer service representative, ratings were higher across every representative-related
+ characteristic compared to those provided by MA Public Power and MA IOU customers. As a result, MMLD customers reported a significantly higher average
+ positive rating for the customer service representative they spoke with than MA Public Power and MA IOU customers (+6.2 and +7.4 percentage points,
+ respectively).
+
+
+                  Average Positive Ratings by Subgroup
+                                                                                                                     Aggregate of ratings 7-10 shown, wlo   MMLD 2025           MA Public Power                    MAIOU
+                                                                                                                     "don't know" responses
+      100%
+                                85.6%
+                                                       79.4% (-)                                                        Understanding your problem or
+                                                                                 78.2% (-)                                                                   86.4%                       80.0%                      75.7%
+                                                                                                                                    need
+       75%
+
+
+                                                                                                                       Explaining things you needed to
+       50%                                                                                                                                                   83.7%                       79.8%                      77.0%
+                                                                                                                          know about your problem
+
+
+       25%
+                                                                                                                     Being courteous to you and treating
+                                                                                                                                                             87.6%                       80.0%                      84.0%
+                                                                                                                              you with respect
+         0%
+                                            Average Positive Rating
+                                                                                                                      Speed or providing you with results
+                                                                                                                                                             84.7%                       77.9%                      76.0%
+                                                                                                                        in a reasonable amount of time
+             I MMLD 2025 (n=88) I MA Public Power (n=95) I MA IOU (n=74)
+
+
+ Q: Please rate the employee you worked with on how well he or she performed in a number of important                                                         (+/-) indicates statistical significance at a 95% confidence level, denoting
+ characteristics. Please use a scale of one to ten where one (1) means "very poor" and ten (10) means "very good."                                              whether the data point is higher or lower than the MMLD 2025 findings
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                              Slide/ 19
+ Customer Service I ContactResolution
+ Over eight-out-of-ten MMLD customers who recently contacted their utility's customer service department reported being satisfied with the experience.
+ Notably, nearly three-quarters of customers said they were "very satisfied," significantly higher than MA Public Power and MA IOU customers (+17.0 and
+ +35.0 percentage points, respectively). Further, nearly seven-out-of-ten MMLD customers reported the utility "takes care of things the first time" when
+ contacting customer service, higher than MA Public Power and MA IOU customers who reported the same (+6.3 and +17.5 percentage points, respectively).
+
+                             Satisfaction with Customer Service                                                                                            Frequency of Contact Resolution
+                                                                                                    84.6%
+                                                                                                       90.7%                                                                                                             69.2%
+               Total "Satisfied"
+                                                                                                                                   MMLD takes care of things the first time
+                                                                                             74.0%                                                                                                              51.7% (-)
+                   Very satisfied                                                 57.0%(-)
+                                         •-------                    39.0% (-)
+                                                                                                                                                                                          8.7%
+          Somewhat satisfied                                     33.8% (+)                                                                           Must have repeated contact                 20.5% (+)
+                                         ·--------                        46.6% (+)
+                                                                                                                                                                                               18.6% (+)
+                                                7.7%
+     Somewhat dissatisfied                      7.3%
+                                         •--      10.2%
+
+                                               7.7%                                                                                                                      It varies            15.9%
+              Very dissatisfied             2.0% (-)
+                                                                                                                                                                                                     29.7% (+)
+                                             4.2%
+
+                                       0%               25%              50%              75%              100%                                                                      0%       25%          50%          75%         100%
+
+
+                      MMLD 2025 (n=104)              I MA Public Power (n=151) I MA IOU (n=118)                                                     MMLD 2025 (n=104)   I MA Public Power (n=151)               MA IOU (n=118)
+
+
+
+  Q: Genera!IY, when you contact MMLD, are things taken care of to your satisfaction the first time, or must you have repeated contact with them?                               (+/-) indicates statistical significance at a 95% confidence level, denoting
+  Q: How satisfied were you with your experience contacting MMLD?                                                                                                                 whether the data point is higher or lower than the MMLD 2025 findings
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                                Slide/ 20
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.   Slide/ 21
+ Awareness I CommunityOwnership
+ Over nine-out-of-ten MMLD customers correctly identified their utility as a "community-owned municipal utility," while a majority reported it is either "very" or
+ "somewhat important" to maintain local control of their utility. When asked about the perceived benefits of being a customer of a community-owned electric
+ utility, over three-fifths cited "responsive service," followed by "local control" and "affordable rates." Interestingly, significantly more customers saw value in
+ their utility's "responsive service" and "local control," compared to MA Public Power customers (+17.6 and +18.5 percentage points, respectively).
+
+                                    Importance of Community Ownership                                                                                Perceived Benefits of Community Ownership
+                                                                                            93.4%                                                                                                                 63.4%
+              Total "Important" ·--------------                                                                                                    Responsive service                                       45.8% (-)
+                                                                                        81.5% (-)
+                                                                                                                                                             Local control ·--------                       60.0%
+                                                                                                                                                                                                     41.5%(-)
+                 Very important                                                                                                                                                    ------
+                                                                      50.0% (-)                                                                                                                          53.1%
+                                                                                                                                                        Affordable rates                                  55.3%
+                                                                                                                                                                                                         52.9%
+        Somewhat important                                                                                                                                      Reliability                              53.8%
+                                                           31.5% (+)
+
+                                              1/o
+                                                                                                     92.3%                                                    Local office
+                                                                                                                                                                                                    40.9%
+                                                                                                                                                                                                    40.0%
+    Somewhat unimportant                                                                        Correctly identified                                                                            28.6%
+                                              9.5% (+)                                                                                                         Local jobs                        31.3%
+                                                                                                   MMLD as a
+                                                                                               "community owned                                                                              19.7%
+                                                                                                                                                 Customer ownership                           25.0%
+          Not at all important                                                                  municipal utility"
+                                           3.3%
+                                                                                                           n=350                                                                      .7%
+                                                                                                                                                                                    .0% (-)
+           Don't know/unsure
+                                            5.8%                                                                                                  Don't know / unsure
+
+                                      0%           25%            50%           75%           100%                                                                            0%            25%            50%            75%           100%
+
+
+                       I MMLD 2025 (n=350) I MA Public Power (n=400)                                                                                             MMLD 2025 (n=350)            I MA Public Power (n=400)
+  Q: Please think for a moment about who owns your electric company In some cases, electric companies are owned by a town or group of towns in the area in
+  which they provide power. For our purposes today, we will call them "Community Owned Municipal Utilities."
+  Q: MMLD is a "Community Owned Municipal Utility" How important to you is it to maintain local control of your municipal utility?                                                    (+/-) indicates statistical significance at a 95% confidence level, denoting
+  Q: What would you say is beneficial by being a customer of a community-owned electric utility?                                                                                        whether the data point is higher or lower than the MMLD 2025 findings
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                                      Slide/ 22
+ Communication I PreferredMethods& Information
+ When asked how they would prefer to look for information about their utility, three-fifths of MMLD customers reported a preference for their utility's "website,"
+ followed by two-fifths who preferred "bill inserts." Regarding the most important pieces of information customers would like to receive from MMLD, over six­
+ out-of-ten customers reported a preference for receiving "outage and restoration updates" and/or "rate information."
+
+
+                         Preferred Methods of Communication                                                                                     Preferred Information from Utility
+                                    -                  .                                                                                                                   -
+                                        Website                                                     60.9%                                Outages and restoration updates                                      65.7%
+
+                                                   -                                                                                                                       -
+                                                                                                                                                         Rate information                                 I   62.9%
+                           Utility's bill inserts                                   40.3%                                                                                      •-------
+                                                                                                                                                                           -
+                                                   -                                                                                  Energy conservation programs and
+                                                                                                                                                                                                    45.1%
+                                                                                                                                                               services
+        Utility's newsletters I brochures                                      33.1%                                                                                       -
+                                                   -                                                                                          Education on energy topics                      32.3%
+
+                                     Direct mail                         25.4%                                                                                             -
+                                                                                                                                   Environmental and conservation efforts                    29.1%
+                                                   -
+                                                                                                                                                                           -
+                                Direct contact                        21.1%                                                                                                               21.4%
+                                                                                                                                                    Spending information
+                                                   -           '
+                                                                                                                                                                           -
+                          Newspaper stories                        12.9%                                                                      Energy portfolio information           I 17.1 %
+                                                               I                                                                                                               •--
+                                                    0%               25%                50%               75%           100%                                                 0%        25%        50%         75%       100%
+
+
+
+    Top 6 responses shown
+                                                   I MMLD 2025 (n=350)                                                                                         MMLD 2025 (n=350)
+
+
+
+  Q: Where would you prefer to look for information about MMLD? (Select all that apply)                                                                             (+/-) indicates statistical significance at a 95% confidence level, denoting
+  Q: Which of the following are the most important pieces of information to regularly receive from MMLD? (Select all that apply)                                      whether the data point is higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                    Slide/ 23
+ Communication I Frequency & Most Valuable Methods
+ Three-quarters of MMLD customers reported the frequency of communication from their utility is "about right," which was on par with MA Public Power and
+ slightly lower than MA IOU customers who reported the same (-2.6 percentage points). When asked to rate the value of different methods of contact, over
+ four-fifths of MMLD customers reported finding "e-mail" either very or somewhat valuable, and three-quarters reported the same regarding the MMLD
+ website. These methods were followed by approximately two-thirds of MMLD customers who valued "direct mail" and "text messages" from the utility.
+
+                               Frequency of Communication                                                                Most Valued Communication Methods
+
+                                      ~- 13.1%                                                                                                        I                       MMLD 2025
+
+                Not enough                 10.3%
+                                                                                                                            E-mail                                                83.1%
+                                           10.8%
+                                                                                                                         MMLD website                                             75.4%
+                                                                                       74.9%
+                                  ·--------------                                                                        Direct mail                                              66.0%
+                 About right                                                           74.5%
+                                                                                        77.5%                         Text messages                                               65.4%
+
+
+                                      1.1 %                                                                 Bill inserts + Newsletters (digital)                                  62.9%
+
+                  Too much                 11.0%(+)
+                                                                                                           Bill inserts + Newsletters (printed)                                   60.9%
+
+                                                                                                         Social media (Facebook/X/lnstagram)                                      26.9%
+                                 0%              25%             50%              75%           100%
+                                                                                                       Only MMLD Customers Shown                   Aggregate of "Very valuable" and "Somewhat valuable" responses
+                                                                                                       n= 350
+                    MMLD 2025 (n=350)          I MA Public Power (n=400) I MA IOU (n=400)
+
+ Q: How valuable do you find the following methods of communication from MMLD?                                                                 (+/-) indicates statistical significance at a 95% confidence level, denoting
+ Q: How would you describe the frequency at which you receive information from MMLD?                                                             whether the data point is higher or lower than the MMLD 2025 findings
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                Slide/ 24
+ Communication I PreferredBill Payment Methods
+ Nearly one-half of MMLD customers reported a preference for paying their MMLD bill through "Auto Pay ACH (checking or savings withdrawal)," while
+ nearly two-fifths preferred to pay their bill "online via utility website."
+
+
+
+                                                                                              Preferred Bill Payment Method
+           100%
+
+
+
+
+            75%
+
+
+
+                                    48.3%
+            50%
+                                                                         39.7%
+
+
+            25%
+
+
+                                                                                                      3.4%                     3.1%                               5.1%
+                                                                                                                                                0.3%
+                                                                                               I                  l       I           !                       I                 l
+              0%                                                   .         ..
+                             Auto Pay ACH                     I Online via ut1l1tywebsite I    Hand deliver or drop   I                   I   Telephone   I       Other               I
+                          (checking or savings                                                        box
+                              withdrawal)
+
+                                                                                                           MMLD 2025 (n=350)
+
+
+
+
+ Q: In general, how do you prefer to pay your utility bill?
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                      Slide/ 25
+ Self-Service I Satisfaction
+Over eight-out-of-ten MMLD customers reported self-service digital options - such as the website, email, or text - are important to them, which was on par
+with MA Public Power customers and slightly higher than MA IOU customers (+3.8 percentage points). When evaluating their own utility's self-service
+tools, roughly three-quarters of MMLD customers provided positive ratings for the "ease of understanding content on" and the "ease of navigating" the
+utility's website or app.
+
+                        Importance of Self-Service Options
+
+                                                                                              84.3%                                                                     MMLD 2025          MA Public Power                  MAIOU
+             Total "Important"                                                                83.3%                               Aggregate of ratings 7-10 shown,
+                                                                                             80.5%                                wlo "don't know" responses
+                                                                      46.6%
+                Very important                                        46.3%
+                                                                    41.0%                                                           Ease of understanding content on
+                                                                                                                                                                         76.6%                     75.0%                    68.0%
+                                                                                                                                            the website / app
+                                                                 37.7%
+       Somewhat important                                        37.0%
+                                                                  39.5%
+                                               7.7%                                                                                  Ease of navigating the website /
+                                                 11.3%                                                                                                                   73.0%                     74.8%                    67.3%
+           Not very important                                                                                                                      app
+                                                11.0%
+                                            4.3%
+          Not at all important              3.8%                                                                                       Delivering and communicating
+                                            4.0%
+                                                                                                                                       about available programs and      63.9%                     68.4%                    63.2%
+                                       0%             25%            50%             75%            100%
+                                                                                                                                                       .
+                                                                                                                                                  services
+
+               MMLD 2025 (n=350)            I MA Public Power (n=400) I MA IOU (n=400)
+  Q: How important are self-service digital options (website, e-mail, text) that give you the ability to get general needs and
+  questions taken care of without the need to speak to a live representative?
+  Q: How well would you say MMLD is currently performing in the following areas pertaining to its self-service digital options?                                          (+/-) indicates statistical significance at a 95% confidence level, denoting
+  Please rate MMLD's performance on a scale of one to ten where one (1) is "very good" and ten (10) is "very poor."                                                        whether the data point is higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                         Slide/ 26
+ Major Storms I Satisfactionwith UtilityResponse
+ Nearly two-thirds of MMLD customers reported their utility meets their expectations regarding its communication during outages "all" or "most of the time,"
+ with three-out-of-ten customers reporting MMLD's communications meet their expectations "all of the time." Further, nearly nine-out-of-ten customers
+ rated MMLD's outage restoration time as acceptable, with nearly three-quarters describing it as "very acceptable;" significantly higher compared to MA
+ Public Power customers and MA IOU customers (+19.3 and +41.0 percentage points, respectively).
+
+                     Expectations of Outage Communication                                                                                       Outage Restoration Time
+         "All" or "Most of the ------------~-                                               65.8%                                                   ·--------------                                               88.6%
+                                                                                                  76.8% (+)                   Total "Acceptable"                                                                 86.5%
+                        time" ·--------------                                                66.5%
+                                                                                                                                                    ·--------------                                              85.8%
+                                                                    .9%
+                 All of the time                                    35.3%
+
+
+              Most of the time
+                                                                                                                           Somewhat acceptable                             31.5% (+)
+                                                   13.1%                                                                                            •--------                       52.5% (+)
+            Some of the time                        15.0%
+                                                                                                                                                       %
+                                           4.6%                                                                              Not very acceptable ·-     .8% (+)
+                            Never         4.0°/o                                                                                                 ·---- 8.3% (+)
+                                          3.0%
+                                                                                                                                                     0.6%
+                                                    16.6%
+        Don't know / unsure                4.3°/o (-)                                                                       Not at all acceptable     2.8% (+)
+                                           4.0% (-)                                                                                                   3.0% (+)
+                                     0%                 25%                 50%                 75%            100%                                 0%           25%                50%              75%              100%
+
+
+                    MMLD 2025 (n=350)           I MA Public Power (n=400) I MA IOU (n=400)                                         MMLD 2025 (n=350)      I MA Public Power (n=400) I MA IOU (n=400)
+
+  Q: How often does MMLD meet your expectations regarding its communication and notifications provided during an outage?                                              (+/-) indicates statistical significance at a 95% confidence level, denoting
+  Q: Overall, how acceptable do you find the time it takes MMLD to restore power after an outage?                                                                       whether the data point is higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                      Slide/ 27
+ Major Storms I PreferredMethodsfor Outages
+ Eight-out-of-ten MMLD customers reported a preference for receiving information about outages and emergencies through "text message," followed by
+ one-half of customers who preferred "email." Further, over two-fifths of customers preferred an "automated phone call," followed by over one-quarter who
+ would like to look for information on the "MMLD website."
+
+
+                                                                Preferred Methods of Outage & Emergency Communication
+          100%
+
+                           80.6%
+           75%
+
+
+
+                                                    50.0%
+           50%                                 -               -             43.4%
+                                                                        -               -
+
+                                                                                                      28.9%
+           25%
+                                                                                                 -                 -
+
+                                                                                                                                 12.0%               10.6%
+                                                                                                                            -            -
+
+
+
+
+             0%
+                                                                                                                                                 I                  0.9%           0.6%              0.3%
+                                           I                        I                        I                          I                    I      .           I           I      I          I                     I
+                          Text                       Email                  Automated                MMLD                       Mobile app       Social media       Other       Don t know/       I do not care
+                         message                                            phone call               website                                                                      unsure            to receive
+                                                                                                                                                                                                   information
+
+                                                                                                                       MMLD 2025 (n=350)
+
+
+
+
+ Q: How would you prefer to receive information about outages and emergencies from MMLD? (Select all that apply)
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                    Slide/ 28
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.   Slide/ 29
+ Energy Efficiency I Smart Devices
+ Nearly one-half of customers reported currently owning smart home devices, and nearly two-fifths reported currently using a programmable smart
+ thermostat. When asked how likely they are to purchase a new smart home device in the next 12 months, nearly two-fifths of MMLD customers (38.9%)
+ reported being either "very" or "somewhat likely" to do so.
+
+
+                                                                                                 Smart Home Device Adoption
+          Current Smart Home Device Ownership                                                  Programmable Thermostat Ownership                               Likelihod to Purchase a Smart Home Device
+
+
+                                                              46.9%                                                                           37.1%                                          14.0%
+          Yes, I currently own smart
+                                     ·-----                                                                                                                                                    20.3% (+)
+                                                               48.3%                             Yes, I currently use one                    35.3%                    Very likely
+                         home devices
+
+                                                                                                                                                                                                  24.9%
+                                                                                                                                        19.7%                   Somewhat likely                      33.0% (+)
+                                                                                                                                                                                     -----
+      Yes, I have previously owned                                                            No, but I plan to purchase                                                             ·----             34.3% (+)
+                                                  12.0% (+)                                                                              25.5%
+               smart home devices                                                                       one in the future
+                                                 10.3% (+)                                                                                28.5% (+)                                               27.4%
+                                                                                                                               •---                               Not very likely                22.5%
+                                                             43.1%                                                                            38.0%
+                                                                                                                               •----
+           No, I have never owned a                                                          No, and I have no plans to
+                                                                                                                                             36.8%
+                  smart home device                                                          purchase one in the future
+                                                                                                                                                                 Not likely at all
+                                                              46.3%                                                                           37.0%
+
+                                           0%               50%           100%                                                0%              50%       100%
+                                                                                                                                                                                     0%                    50%                   100%
+
+             MMLD 2025 (n=350)           I MA Public Power (n=400)                             MMLD 2025 (n=350)           I MA Public Power (n=400)              MMLD 2025 (n=350)            I MA Public Power (n=400)
+             MA IOU (n=400)                                                                    MA IOU (n=400)
+                                                                                                                                                                  MA IOU (n=400)
+
+
+  Q: Do you currently or have you previously owned any smart home devices in your home?
+  Q: Do you have a wi-fi enabled, programmable thermostat that automatically adjusts the temperature at a specific time of day based on the schedule?                    (+/-) indicates statistical significance at a 95% confidence level, denoting
+  Q: How likely are you to purchase a new smart home device in the next 12 months?                                                                                         whether the data point is higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                         Slide/ 30
+ Energy Efficiency I Carbon EmissionReduction
+ Over one-half of MMLD customers reported their utility is doing enough to curb carbon emissions in its power supply, while nearly two-fifths were unsure.
+ Further, over two-thirds of MMLD customers felt the actions they take at home to conserve energy contribute to their utility's ability to achieve the statewide
+ Net Zero goal. When asked if their utility empowers them to conserve energy at home, nearly two-fifths of MMLD customers agreed, which is significantly
+ lower than MA Public Power customers (-17 .1 percentage points).
+
+
+                                                                           Perceptions of Utility's Carbon Emission Reduction
+         Utility Carbon Emission Reduction Effort                                           Personal Action Impact on Statewide Goal                                                     Utility Empowerment to Conserve
+                                                                                                                                                                                                   Energy at Home
+
+                                                           54.9%                                                                                    67.4%                                                         38.9%
+                       Yes                                                                                 Yes                                                                              Yes
+                                                                64.5% (+)                                                                        60.8%                                                                     56.0% (+)
+
+                                   6.3%                                                                                  10.6%                                                                          18.9%
+                        No                                                                                  No                                                                               No
+                                    9.0%                                                                                     18.5% (+)                                                                  19.0%
+
+
+                                                   38.9%                                                                      22.0%                                                                                 42.3%
+                 Don't                                                                              Don't                                                                                Don't
+          know/unsure                                                                        know/unsure                                                                          know/unsure
+                                             26.5% (-)                                                                       20.8%                                                                         25.0% (-)
+
+                             0%                      50%                  100%                                   0%                     50%                 100%
+                                                                                                                                                                                                  0%                50%                   100%
+
+             MMLD 2025 (n=350)            I MA Public Power (n=400)                             MMLD 2025 (n=350)           I MA Public Power (n=400)                               MMLD 2025 (n=350)   I MA Public Power (n=400)
+   Asked only to Public Power Respondents
+
+  Q: According to a 2019 study, Massachusetts municipal utilities receive more than 75% of their power from non-carbon-emitting sources. Based on these statistics, would you say that
+  MMLD is doing enough to curb carbon emissions in its power supply?                                                                                                                                          (+/-) indicates statistical significance at a 95%
+  Q: Do you feel the actions you take at home to conserve energy have an impact on MMLD's ability to achieve the statewide goal for achieving Net Zero greenhouse gas emissions?                        confidence level, denoting whether the data point is
+  Q: Does MMLD empower you to conserve energy at home in an effort to assist the utility in achieving its goals for Net Zero greenhouse gas emissions?                                                         higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                                   Slide/ 31
+ Energy Efficiency I Awareness& Trust
+ Over half of MMLD customers were aware of the need for their utility to achieve the statewide goal of Net Zero greenhouse gas emissions by 2050, which
+ is higher than MA Public Power customers in general who were aware of this goal (+3.4 percentage points). Further, two-fifths of MMLD customers have a
+ "great deal of trust" in their utility to make decisions related to how the energy portfolio is created and maintained; on par with MA Public Power customers
+ overall.
+
+     Awareness of Net Zero Greenhouse Gas Emissions Goal                                                                                          Trust in Utility's Energy Portfolio Decisions
+                                                                                       55.2%                                                                          ·---------                        40.3%
+                        Total "aware"                                                51.8%                                                A great deal of trust                                         39.5%
+                                             •--------                            46.0% (-)
+                                                             18.6%
+                           Very aware                       16.0%                                                                                                     ·-------                     33.1 %
+                                             ·--         10.5% (-)                                                                                      Some trust --------~                           39.8%
+                                                                                                                                                                      ·---------                          44.3%
+                  Somewhat aware
+                                                                                                                                                                                   10.6%
+                                                                                                                                                      Limited trust                  13.8%
+                                                         10.9%                                                                                                        ·-----              23.5% (+)
+              Somewhat unaware                              17.0% (+)
+                                             •----           19.3% (+)
+                                                                                                                                                                      5.4°/o
+                                                                                                                                       I do not trust my utility
+                                                                  26.9%                                                                                              3.0%
+                                                                23.0%                                                               to make these decisions ·-   •--
+                    Not at all aware                                                                                                                                   7.0% (+)
+                                             ----~               26.0%
+                                                                                                                                                                      10.6%
+                                                                                                                                          Don't know/ unsure     4.0% (-)
+                Don't know/unsure
+                                                                                                                                                             ·--
+                                                                                                                                                                      --
+                                                                                                                                                                    8.5% (+)
+                                            0%                25%                50%                75%            100%                                               0%                25%                  50%                   75%              100%
+
+
+                     MMLD 2025 (n=350)             I MA Public Power (n=400) I MA IOU (n=400)                                                  I MMLD 2025 (n=350) I MA Public Power (n=400)                            MA IOU (n=400)
+
+
+
+  Q: Prior to this survey, how aware were you of the need for MMLD to achieve the statewide goal of achieving Net Zero greenhouse gas emissions by 2050?                               (+/-) indicates statistical significance at a 95% confidence level, denoting
+  Q: How much do you trust MMLD to make decisions related to how the energy portfolio is created and maintained (types of energy, infrastructure, and costs)?                            whether the data point is higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                                       Slide/ 32
+ Energy Efficiency I PrioritizedProgramOfferings
+ Over two-fifths of MMLD customers (43.2%) rated utilities offering energy                                                             Importance of Rebate & Assistance Program Offerings
+ efficiency incentives and rebates as more important, overall, than
+ providing low-income assistance programs. However, MA Public Power                                                                       Offering energy efficiency incentives and                  18.3%
+ customers placed more importance on utilities offering energy efficiency                                                               rebates is significantly more important than
+ incentives versus low-income assistance (56.3%) than MMLD customers.                                                                   providing :low-income assistance programs
+
+
+ Of note, nearly two-fifths of MMLD customers (38.2%) rated utilities                                                                     Offering energy efficiency incentives and                      24.9%
+ providing low-income assistance programs as either "somewhat" or                                                                        rebates is somewhat more important than                            32.3% (+)
+ "significantly more important than offering energy efficiency incentives and                                                           providing :low-income assistance programs
+ rebates," compared to 33.5% of MA public power customers who reported
+                                                                                                                                                                                                          27.1%
+ the same.                                                                                                                          Providing low-income assistance programs is
+                                                                                                                                  somewhat more important than offering energy                           25.0%
+                                                                                                                                                 efficiency incentives and rebates
+                                                                                                                                                                                   ----
+
+                                                                                                                                     Providing low-income assistance programs is               11.1 %
+                                                                                                                                         significantly more important than offering           8.5%
+                                                                                                                                          energy efficiency incentives and rebates                13.3%
+
+                                                                                                                                                                                                   18.6%
+                                                                                                                                                                Don't know/ unsure              10.3% (-)
+                                                                                                                                                                                                11.5% (-)
+
+                                                                                                                                                                                       0%            25%            50%             75%        100%
+
+
+                                                                                                                                                    MMLD 2025 (n=350)   I MA Public Power (n=400)               MA IOU (n=400)
+
+
+
+
+                                                                                                                                                                                (+/-) indicates statistical significance at a 95% confidence level, denoting
+ Q: How would you rate the importance of utilities offering energy efficiency incentives and rebates versus providing low-income assistance programs?                             whether the data point is higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                                Slide/ 33
+ Energy Efficiency I PreferredForm of Clean Energy
+ Over three-fifths of customers preferred MMLD invest in "solar power"
+ among other forms of clean energy.                                                                                                                     Interest in Clean Energy Sources
+                                                                                                                                                             -
+ This source was followed by over two-fifths of customers who preferred                                                                          Solar power                                              I 61.4%
+ the utility invest in "wind power," "hydroelectric power," and/or "geothermal                                                                               -
+ energy" in the future.
+                                                                                                                                                 Wind power                                      145.7%
+                                                                                                                                                             -
+                                                                                                                                                                                             1
+                                                                                                                                          Hydroelectric powe r                                   43.7%
+                                                                                                                                                             -
+                                                                                                                                          Geothermal energy                                  42.6%
+                                                                                                                                                             -
+                                                                                                                                              Nuclear energy                             32.0%
+                                                                                                                                                             -
+                                                                                                                                             Biomass energy                      16.6%
+                                                                                                                                                                             l
+
+                                                                                                                                                             -
+                                                                                                                                           None of the above          6.3%
+                                                                                                                                                             -
+                                                                                                                                          Don't know/ unsure                 14.9%
+                                                                                                                                                                         '
+
+
+
+
+                                                                                                                                                                 0%               25%            50%            75%          100%
+
+                                                                                                                                                                         MMLD 2025 (n=350)
+
+
+
+ Q: Which of the following forms of clean energy, if any, would you be interested in your utility investing in? (Select all that apply)
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                  Slide/ 34
+ Solar I Adoption& PerceivedBenefits
+ Over one-half of MMLD customers reported they are "not considering purchasing rooftop solar panels in the future," which was significantly more than MA
+ Public Power and MA IOU customers overall (+18.1 and +18.8 percentage points, respectively). Among the 20.9% of customers considering purchasing
+ rooftop solar panels or who already own rooftop solar, the primary reasons for doing so were for environmental sustainability or to reduce their electric bill.
+
+
+                               Planned Adoption of Solar Panels                                                                  Reasons for Considering Solar Panels
+                                                         2.0°/o                                                                                                                         42.5%
+                        Within the next year                   13.3% (+)                                                       Environmental sustainability                       29.1% (-)
+                                                              10.8% (+)                                                                                          ,__          16.8% (-)
+                                                                  0
+                 Within the next five years                        3.8% (+)                                                                                                      26.0%
+                                                                   15.0% (+)                                                           Electric bill reduction                             41.2% (+)
+                                                                                                                                                                 --------                       54.3%(+)
+                                                               9.7%
+               Beyond the next five years                         15.5% (+)
+                                                                 13.3%                                                                                                     15.1%
+                                                                                                                   Reduce dependability on the grid / utility          4.9% (-)
+           Never/ I am not considering                                                       56.6%                                                                     4.3% (-)
+                                                                                   38.5% (-)
+        purchasing rooftop solar panels                                            37.8% (-)                                                                             9.6%
+                                                                                                                     Financial incentives like tax credits or          5.5%
+             I already have roof top solar                2.9°/o                                                                                     rebates
+                                                          3.0%
+                      panels on my home                     7.0% (+)
+                                                                                                                                                                       4.1%
+                                                                         22.6%                                     Additional / backup power source during                   16.5% (+)
+                        Don't know/ unsure                            16.0% (-)                                                                   outages ,__               14.7% (+)
+                                                                      16.3% (-)
+                                                                                                                                                                0%            25%            50%             75%         100%
+                                                    0%                 25%              50%           75%   100%
+
+
+                  I MMLD 2025 (n=350) I MA Public Power (n=400) I MA IOU (n=400)                                              MMLD 2025 (n=73)     I MA Public Power (n=182)                MA IOU (n=184)
+
+
+
+  Q: When do you anticipate purchasing rooftop solar panels for your home in the future, if at all?                                                         (+/-) indicates statistical significance at a 95% confidence level, denoting
+  Q: What is your primary reason for previously or considering purchasing solar panels?                                                                       whether the data point is higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                            Slide/ 35
+ Electric Vehicles I Adoption& Barriers
+ When asked about their plans to purchase an electric or plug-in hybrid vehicle, over one-third of MMLD customers reported they are "not considering
+ purchasing one," while one-third (33.1 % ) have plans to purchase one in the future, and 12.9% already own one. The primary barriers to purchasing an
+ electric vehicle among MMLD customers were the "limited range/ distance per charge," "low availability of charging stations," and "higher initial cost to
+ purchase" an electric vehicle.
+
+                           Planned Adoption of Electric Vehicles                                                                          Reasons for Not Purchasing an Electric Vehicle
+                                                                           1.7%
+                                                                                                                                                                                                                     52.4%
+                                      Within the next year •--                11.3% (+)                                                    Limited range / distance per charge                                  41.9%
+                                                                     •--      10.5% (+)                                                                                                                         8% (-)
+
+                                                                                                                                                                                                                 42.1%
+                                                                                                                                           Low availability of charging stations                                 42.6%
+                                                                                                                                                                                     •------                    40.1%
+
+                                                                                                                                                                                                                40.5%
+                                                                                                                                                  Higher initial cost to purchase                               40.3%
+                                                                                                                                                                                     •--------                      50.7%
+                                                                                             36.0%                                                                                                          34.9%
+      Never/ I am not thinking about purchasing                                             32.3%                                                             Long charge time                                39.5%
+      an electric vehicle or plug-in hybrid vehicle                                          35.5%                                                                                   ·------                35.9%
+                                                                               12.9%                                                                                                                 23.8%
+      I already own an electric vehicle or plug-in                          5.3% (-)                                                                                                                   27.9%
+                                                                                                                                                                       Reliability
+                                   hybrid vehicle                          3.8% (-)                                                                                                  ·----           24.6%
+                                                                                    18.0%
+                                      Don't know / unsure                         14.0%                                          I don't know enough about electric vehicles                           27.1 % (+)
+                                                                                  13.5%                                                                                              •----            24.6% (+)
+                                                                   0%              25%             50%            75%   100%                                                         0%           25%             50%            75%        100%
+
+
+                       MMLD 2025 (n=350)             I MA Public Power (n=400) I MA IOU (n=400)                                                MMLD 2025 (n=126)      I MA Public Power (n=129) I MA IOU (n=142)
+                                                                                                                               Top 6 responses shown
+
+   Q: When do you anticipate purchasing an electric vehicle or plug-in hybrid vehicle in the future, if at all?                                                                (+/-) indicates statistical significance at a 95% confidence level, denoting
+   Q: Why are you not considering purchasing an electric vehicle in the future? (Select all that apply)                                                                          whether the data point is higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                               Slide/ 36
+ Electric Vehicles I ChargingStations
+Of the customers that already own an electric vehicle or are considering purchasing one, over three-fifths of MMLD customers preferred level 2 charging
+options, while nearly one-quarter were unsure of their preference. Three-out-of-ten MMLD customers were just as likely to purchase an electric vehicle if there
+were a greater availability of public electric vehicle charging stations in their community, while over one-third of customers (35.1 % ) would be more likely to
+purchase an electric vehicle if there were more charging stations in their community.
+
+                                        Electric Vehicle Chargers                                                                                                        Charger Availability
+            Level 1 charger: Requires no specific                                                                                                                                                   13.1%
+           equipment or installations and uses an                  ·-                   39.5% (+)
+                                                                                                                                            Much more likely to purchase an electric
+                                                                                                                                                                            vehicle ---
+                                                                                                                                                                                                       22.5% (+)
+                                                                                                                                                                                                       21.0% (+)
+         existing 120V wall outlet, which provides
+                                                                                 19.6% (+)                                                                                                               22.0%
+             about 4-5 miles per hour of charging •---                                                                                          Somewhat more likely to purchase an
+                                                                                                                                                                                                          25.0%
+           Level 2 charger: Requires a dedicated                                                                                                                     electric vehicle ·----               23.8%
+                                                                                                    61.5%
+           240V electrical circuit and professional •---------                              39.5% (-)                                             Just as likely to purchase an electric                     30.0%
+             installation, which provides about 20 •-------                                                                                                                                                25.0%
+                                                                                              46.6% (-)                                                                         vehicle ·----              25.8%
+                         miles per hour of charging •-------
+
+                                                                          6.8%                                                                    Somewhat less likely to purchase an          1.7%
+                                                                                                                                                                                                5.3% (+)
+                                                       Neither             10.2%                                                                                       electric vehicle         4.5% (+)
+                                                                             16.2% (+)                                                                                                               18.0%
+                                                                   1---
+                                                                                                                                              Much less likely to purchase an electric
+                                                                                                                                                                                                 8.5% (-)
+                                                                                                                                                                              vehicle --          11.3°/o(-)
+                                                                               23.0%
+                                       Don't know/unsure                   10.7% (-)                                                                                                      •--       15.1%
+                                                                   •---                                                                                            Don't know/ unsure               13.8%
+                                                                             17.6%                                                                                                        •--       13.8%
+                                                                  0%           25%            50%            75%       100%                                                               0%           25%            50%             75%        100%
+
+
+                  I MMLD 2025 (n= 161) I MA Public Power (n=215) I MA IOU (n=204)                                                                        MMLD 2025 (n=350)   I MA Public Power (n=400) I MA IOU (n=400)
+   Q: If you currently own an electric vehicle or were to purchase one in the future, which of the following charging options would you prefer?
+   Q: How would the availability of more public electric vehicle charging stations in your community influence your likelihood to purchase an electric                              (+/-) indicates statistical significance at a 95% confidence level, denoting
+   vehicle or additional electric vehicles in the future? would you say you would be...                                                                                               whether the data point is higher or lower than the MMLD 2025 findings
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                                    Slide/ 37
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.   Slide/ 38
+ NextZero Programs I Overall Familiarity
+ Over one-third of MMLD customers were familiar with the NextZero rebate programs that the utility offers, compared to nearly three-fifths of customers
+ (59.5%) who were not familiar. Of the customers who were familiar with the programs, over half (55.3%) have applied for or received a rebate or incentive
+ through MMLD's NextZero programs at least once. Among the customers who have applied for or received a rebate or incentive through the program,
+ seven-out-of-ten found the program valuable in helping them save energy and reduce costs at home.
+
+
+                                                                                Perceptions of the NextZero Rebate Programs
+          Familiarity with the NextZero Programs                                                 Participation in NextZero Programs                           Percieved Value of the NextZero Programs
+
+
+               Total "Familiar"                        35.1%                                      Yes, multiple times                     24.4%                     Total "Valuable"                                      70.7%
+
+                  Very familiar               13.4%                                                                                                                    Very valuable                    25.2%
+                                                                                                               Yes,once                    30.9%
+
+         Somewhat familiar                       21.7%                                                                                                        Somewhat valuable                                45.5%
+                                                                                          No, but I am considering
+                                                                                                                                   7.3%
+                                                                                                   applying for one
+             Not very familiar                     26.9%                                                                                                          Not very valuable               9.8%
+                                                                                                                         No                 34.1%
+            Not at all familiar                       32.6%                                                                                                      Not at all valuable
+
+       Don't know/ unsure                 5.4%                                                  Don't know / unsure                3.3%                       Don't know/ unsure                  11.4%
+
+                                     0%                  50%              100%                                                0%              50%   100%                                   0%                 50%           100%
+
+
+                                MMLD 2025 (n=350)                                                                 MMLD 2025 (n=123)                                                  MMLD 2025 (n=123)
+                                                                                       Asked only to customer who were familiar with the programs          Asked only to customer who have participated in the programs
+
+
+  Q: How familiar are you with the NextZero rebate programs offered by MMLD (for heat pumps, electric vehicle chargers, smart thermostats, etc.)?
+  Q: Have you ever applied for or received a rebate or incentive through MMLD's NextZero programs?
+  Q: How valuable do you find the NextZero programs in helping you save energy and reduce costs at home?
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                      Slide/ 39
+ NetZero Programs I Drivers& Barriers
+ Of the customers who have participated in NextZero programs or plan to participate in the future, roughly one-third of customers cited their primary
+ motivation was to "take advantage of available rebates/ incentives," and/or "help the environment/ lowering carbon emissions." Among the customers who
+ do not plan on participating in NextZero programs, over one-quarter cited the "cost of technology involved, even after the rebate" as their main
+ barrier, followed by a lack of need for the upgrades.
+
+                 Drivers to Participating in NextZero Programs                                                                                Barriers to Participating in NextZero Programs
+                                                         -                                  I
+                                                                                                                                                                                    -
+                                                                                                                                       Cost of technology involved, even
+                 Taking advantage of available                                                                                                                                                             28.6%
+                           rebates/ incentives
+                                                                                            133.8%                                                       after the rebate
+                                                                 ------
+                                                                                                                                                                                    -
+                                                         -                              I                                                Don't feel the need for upgrades                                23.8%
+          Helping the environment/ lowering                                                                                                                                         -
+                                                                                                32.5%
+                           carbon emissions
+                                                                                                                                        None / no barriers to participating                              21.4%
+                                                         -                                                                                                                                           I
+                                                                              I                                                                                                     -
+         Reducing my monthly energy costs                                         16.9%                                                   Lack of information / awareness                           14.3%
+                                                                              I                                                                                                                 '
+
+
+                                                         -                                                                                                                          -
+                                                                          I
+                                                                                                                                       Installationprocessis too complex
+                                                                                                                                                                                        7 4.8%
+          Improving comfort and efficiency in
+                                                                              15.6%                                                                                                 -
+                                   my home                                I
+                                                         -                                                                                            Other (please specify):             4.8%
+                                                                                                                                                                                    -
+                   Increasing my home's value                    1.3%
+                                                             I                                                                                            Don't know/ unsure J 2.4%
+
+                                                          0%                      25%               50%      75%          100%                                                       0%              25%           50%   75%       100%
+
+                                                         MMLD 2025 (n=77)                                                                                                      I MMLD 2025 (n=42)
+    Asked only to customers who have participated in the programs or plan to in the future                                       Asked only to customer who have not participated in the programs
+
+ Q: Which of the following NextZero rebate programs are you most interested in using in the future? (Select all that apply)
+ Q: What is the biggest barrier, if any, to you participating in NextZero programs?
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                           Slide/ 40
+ NetZero Programs I Interest& Communication
+ Over two-fifths of customers were interested in participating in the NextZero "appliance rebates," and/or "smart thermostat rebates," followed by roughly
+ three-out-of-ten who were interested in participating in the "heat pump rebates" and/or "home energy audits" in the future. One-half of customers preferred
+ to hear about NextZero rebates and programs in the future through "email newsletters," followed by over two-fifths who preferred "utility bill inserts."
+
+
+
+                    NextZero Programs of Interest for Future Use                                                            Preferred Methods of Communicating about NextZero
+                                                 -                                                                                                                 -
+                         Appliance rebates                                             46.3%                                                Email newsletters                                                 50.3%
+                                                 -
+                Smart themostat rebates                                             41.4%                                                                          -
+                                                 -                                                                                              Utility bill inserts                                        45.1%
+                                                                                                                                                                                                        I
+                        Heat pump rebates                                  30.3%                                                                                   -
+                                                 -
+                      Home energy audits                                  28.6%                                                                    Utility website                                    36.3%
+                                                                                                                                                                                                  I
+                                                 -                                                                                                                 -
+       Electric vehicle charger rebates                              22.3%                                                                             Direct mail                              : 30.9%
+                                                 -                                                                                                                     •------
+                                                                                                                                                                   -
+                       Don't know/ unsure                      t 15.4%
+                                                 -     --
+                                                                                                                           Community events / workshops                                10.6%
+                                                                                                                                                                                   I
+                                           None               12.0%                                                                                                -    -------,
+                                                 -
+                                          Other         3.7%                                                                              Social media posts                       7.4%
+
+                                                  0%                25%               50%                75%     100%                                                  0%                 25%               50%       75%       100%
+
+
+                                                     I MMLD 2025 (n=350)                                                                                                 MMLD 2025 (n=350)
+                                                                                                                        Top 6 responses shown
+
+ Q: What is your primary motivation for participating in (or considering) NextZero programs?
+ Q: How would you most like to hear about NextZero rebates and programs in the future? (Select all that apply)
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                                                                        Slide/ 41
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.   Slide/ 42
+ Considerations
+        Increase Rate Education & Value Communication to                                               ~ Strengthen Energy Efficiency Outreach & NextZero
+e       Support Perceptions of Affordability                                                           W   Program Awareness to Boost Participation
+
+        While most MMLD customers view their rates as reasonable,                                          Despite strong trust, loyalty, and satisfaction scores, awareness
+        MMLD ratings trail MA Public Power benchmarks. At the same                                         of MMLD's NextZero programs and broader Net Zero initiatives
+        time, customers place high importance on good value for the                                        has room to improve. Many customers are unsure whether the
+        cost of electricity and want more information on rate-related                                      utility is doing enough to curb emissions, and fewer than two­
+        topics. Strengthening communication around how rates are set,                                      fifths feel empowered to take action at home. Increasing visibility,
+        what drives costs, and how MMLD maintains affordability can                                        education, and personalized guidance around rebates, clean
+        help reinforce trust and clarify the value customers receive from                                  energy investments, and conservation behaviors can help
+        their community-owned utility.                                                                     customers better understand the value of these programs and
+                                                                                                           encourage greater participation.
+
+        Actionable Insights:                                                                               Actionable Insights:
+           • Develop a clear, concise rate education series (website                                          • Highlight the financial benefits of participation, especially
+              modules, bill inserts, short videos) explaining cost drivers                                       for programs with higher upfront costs (e.g., heat pumps,
+              and local decision-making.                                                                         EV charger rebates, etc.).
+           • Highlight reliability achievements and operational                                               • Provide simple, step-by-step guidance on how to
+              efficiencies to connect performance outcomes to customer                                           participate in NextZero programs, including estimated
+              value.                                                                                             cost savings and expected payback.
+           • Provide more frequent updates on clean energy sources                                            • Conduct additional survey research to better understand
+              and long-term planning to increase transparency and trust                                          why customers feel less empowered to conserve energy
+              in rate-related decisions.                                                                         and what program improvements would support stronger
+           • Incorporate cost-savings tips and rebate opportunities                                              engagement.
+              alongside rate communications to help customers manage
+              bills.
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                                Slide/ 43
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.   Slide/ 44
+           ••......
+
+..-•:.• .~- ...
+. .
+  "•   •
+
+             ..
+                      . ...
+                        . - •.   Harnessing the Power of Data
+                                 ...to help clientsachieve organizationalgoals.
+       111Data supporting strategic decisions to                                                Methodologies:                   Studies:
+                  improve products and services. Since 1979,
+                  our experience with study and instrument
+                  design, data collection, analysis, and formal                                        D   Digital Surveys       1
+                                                                                                                                     ~
+                                                                                                                                     ~
+                                                                                                                                            Awareness and
+                                                                                                                                            Perception Studies
+                  presentation assists our clients in identifying
+                  the "why" and "what's next."
+                                                                                                                                            Customer and
+       ~              Ta/entwitha knowledge base in a wide                                                                                  Employee Satisfaction
+                                                                                                                                            Studies
+                  range of industries and methodologies
+                  ensures a 360° view of the challenges faced
+                  and the expertise to address them.
+                                                                                                           In-Depth Interviews              Journey Mapping
+       1mSolutions that are customized to provide
+                  a personalized approach to understanding
+                  organizational, employee, and customer
+                  needs, allowing for more informed decisions.                                                                              Creative and New
+                                                                                                                                            Concept Testing
+
+
+Copyright 2025 Great Blue Research, Inc. All Rights Reserved. Not for Distribution and Reproduction.                                                         Slide/ 45
+

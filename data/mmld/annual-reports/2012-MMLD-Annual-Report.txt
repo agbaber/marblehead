@@ -1,0 +1,60 @@
+                   MUNICIPAL LIGHT DEPARTMENT
+
+                             OPERATING EXPENSES
+
+                        For the year ending December 31, 2012
+
+Power Generation Expenses:
+  Fuel                                                   4,046.32
+  Generating Expense - Lubricants                          334.46
+  Misc. Other Power Generating Expense                   1,816.54
+  Maint. of Other Power Generation                      48,386.58
+     Total Power Generation Expense                                    54,583.90
+
+Power Supply Expenses:
+  Electric Energy Purchased                          7,397,271.69
+  Misc. Purchased Power Expense                      1,702,834.81
+     Total Power Supply Expenses                                     9,100,106.50
+
+Transmission Expense:
+   Maintenance of Overhead Lines                                          252.00
+
+Distribution Expenses:
+   Station Expense - Labor & Other                      38,541.40
+   Station Expense - Heat & Electricity                 24,342.21
+   Street Lighting                                       1,773.96
+   Meter Expense - Inspection, Testing,
+                     Removing, Resetting                63,349.82
+   Customer Installation Expense                        32,152.19
+   Misc. Distribution Expense                           78,645.30
+   Maintenance of Structures                                 0.00
+   Maintenance of Station Equipment                     48,752.77
+   Maint. of Overhead & Underground Lines              781,646.20
+   Maintenance of Line Transformers                      7,727.41
+   Maintenance of Meters                                 1,756.06
+       Total Distribution Expenses                                   1,078,687.32
+
+Customer Account Expenses:
+  Supervision of Customer Accounting                   100,063.73
+  Meter Reading - Labor & Expenses                      78,607.28
+  Customer Records & Collections                       282,589.10
+  Uncollectible Accounts                                32,000.00
+  Interest Paid on Consumer Deposits                       170.59
+     Total Customer Account Expenses                                  493,430.70
+
+Advertising, Conservation, Energy Audits                              137,043.24
+
+Administrative & General Expenses:
+  Administrative Salaries                              135,601.46
+  Office Supplies & Expenses                           227,591.39
+  Outside Services Employed                             56,756.28
+  Property Insurance                                    35,436.07
+  Injuries & Damages                                       702.26
+  Employee's Pensions & Benefits                     1,053,193.35
+  Maintenance of General Plant                          48,224.18
+  Transportation                                        84,501.01
+  Miscellaneous General Expense                         51,715.07
+     Total Administrative & Gen. Expenses                            1,693,721.07
+
+      Total Operating & Maintenance Expenses                        12,557,824.73
+
