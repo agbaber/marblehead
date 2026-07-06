@@ -342,6 +342,15 @@ og_url: https://marbleheaddata.org/monthly-pacing/
     var padL = 56, padR = 14, padT = 14, padB = 36;
     var months = bd.fy_months;
     var n = months.length;
+    // The burn JSON carries the full 12-month axis even mid-year; only
+    // draw through the last month that has data or the lines would run
+    // flat across months that haven't happened yet.
+    var lastIdx = n - 1;
+    if (bd.latest_fiscal_month) {
+      var li = months.indexOf(String(bd.latest_fiscal_month).slice(0, 7));
+      if (li >= 0) lastIdx = li;
+    }
+    var yearComplete = lastIdx === n - 1;
     var colors = ['#1b3a5b', '#2f7a8c', '#b58a2b', '#c25450', '#5b7a3a', '#7a4b8c'];
     // Find max cumulative across funds
     var maxVal = 0;
@@ -379,20 +388,25 @@ og_url: https://marbleheaddata.org/monthly-pacing/
     // For target line we draw straight-line from 0 to the biggest fund's total to show the slope reference.
     // Use the General Fund - Town as the reference target (it's the biggest "budgeted" line everyone cares about).
     var refFund = bd.funds[0]; // already sorted by total desc
-    var refTotal = refFund.total_through_as_of || refFund.total_through_jun9 || 0;
-    var targetPath = 'M ' + xAt(0) + ' ' + yAt(0) + ' L ' + xAt(n - 1) + ' ' + yAt(refTotal);
-    parts.push('<path class="burn-target" d="' + targetPath + '"/>');
+    if (yearComplete) {
+      // The straight-line reference only makes sense against a full-year
+      // total; mid-year it would slope to the running total and misread.
+      var refTotal = refFund.total_through_as_of || refFund.total_through_jun9 || 0;
+      var targetPath = 'M ' + xAt(0) + ' ' + yAt(0) + ' L ' + xAt(n - 1) + ' ' + yAt(refTotal);
+      parts.push('<path class="burn-target" d="' + targetPath + '"/>');
+    }
     // Series
     bd.funds.forEach(function (f, idx) {
       var color = colors[idx % colors.length];
       var d = '';
       f.series.forEach(function (p, i) {
+        if (i > lastIdx) return;
         d += (i === 0 ? 'M ' : ' L ') + xAt(i) + ' ' + yAt(p.cumulative);
       });
       parts.push('<path class="burn-series" stroke="' + color + '" d="' + d + '"/>');
-      // dot at last point
-      var last = f.series[f.series.length - 1];
-      parts.push('<circle class="burn-dot" cx="' + xAt(n - 1) + '" cy="' + yAt(last.cumulative) + '" r="3.5" fill="' + color + '"/>');
+      // dot at last point with data
+      var last = f.series[lastIdx];
+      parts.push('<circle class="burn-dot" cx="' + xAt(lastIdx) + '" cy="' + yAt(last.cumulative) + '" r="3.5" fill="' + color + '"/>');
     });
     svg.innerHTML = parts.join('');
     // Legend
@@ -403,7 +417,9 @@ og_url: https://marbleheaddata.org/monthly-pacing/
       var total = ((f.total_through_as_of || 0) / 1e6).toFixed(1);
       legHtml += '<span class="burn-legend-item"><span class="burn-legend-swatch" style="background:' + color + '"></span>' + name + ' &middot; $' + total + 'M</span>';
     });
-    legHtml += '<span class="burn-legend-target"><span style="display:inline-block;width:14px;border-top:1.5px dashed var(--text-muted);"></span>straight-line target (refs ' + refFund.fund.replace('GENERAL FUND - ', 'GF - ') + ')</span>';
+    if (yearComplete) {
+      legHtml += '<span class="burn-legend-target"><span style="display:inline-block;width:14px;border-top:1.5px dashed var(--text-muted);"></span>straight-line target (refs ' + refFund.fund.replace('GENERAL FUND - ', 'GF - ') + ')</span>';
+    }
     legend.innerHTML = legHtml;
   }
   }
