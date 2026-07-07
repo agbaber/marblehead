@@ -108,7 +108,15 @@ jobs:
           shopt -s nullglob
           enriched=0
           failed=0
+          # Cap per-run enrichment so a large backlog of unenriched
+          # transcripts (e.g. the 2020-22 Whisper backfill) drains over
+          # several daily runs instead of blowing the 30-min job timeout.
+          enrich_limit="${ENRICH_LIMIT:-20}"
           for f in _transcripts/*.md; do
+            if [ "$enriched" -ge "$enrich_limit" ]; then
+              echo "Reached ENRICH_LIMIT=$enrich_limit; remaining files enrich on later runs."
+              break
+            fi
             # Already enriched on a previous run.
             if grep -q '^summary_card:' "$f"; then continue; fi
             # Hand-crafted entries (frontmatter starts with `ingest:`) are

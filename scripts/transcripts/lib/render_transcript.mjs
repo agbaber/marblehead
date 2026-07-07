@@ -12,11 +12,19 @@ export function buildTitle(boardDisplay, isoDate) {
   return `${boardDisplay}: ${MONTH_NAMES[m - 1]} ${d}, ${y}`;
 }
 
-const DISCLAIMER = [
-  '> Transcript captured from MHTV\'s Vimeo auto-captioning. No speaker labels;',
-  '> proper names and dollar figures occasionally misheard. Click any timecode to',
-  '> jump to that moment in the source video.',
-].join('\n');
+const DISCLAIMERS = {
+  'vimeo-auto': [
+    '> Transcript captured from MHTV\'s Vimeo auto-captioning. No speaker labels;',
+    '> proper names and dollar figures occasionally misheard. Click any timecode to',
+    '> jump to that moment in the source video.',
+  ].join('\n'),
+  'whisper-local': [
+    '> Transcript machine-generated with Whisper speech recognition (the source',
+    '> video has no caption track). No speaker labels; proper names and dollar',
+    '> figures occasionally misheard. Click any timecode to jump to that moment',
+    '> in the source video.',
+  ].join('\n'),
+};
 
 export function renderTranscript({
   board_slug,
@@ -25,6 +33,7 @@ export function renderTranscript({
   vimeo_id,
   duration_seconds,
   body,
+  source = 'vimeo-auto',
 }) {
   const slug = buildSlug(board_slug, date);
   const title = buildTitle(board_display, date);
@@ -41,8 +50,8 @@ export function renderTranscript({
     `duration_seconds: ${duration_seconds}`,
     'ai_generated: true',
     'status: published',
-    'source: vimeo-auto',
+    `source: ${source}`,
     '---',
   ].join('\n');
-  return `${frontmatter}\n\n${DISCLAIMER}\n\n${body}\n`;
+  return `${frontmatter}\n\n${DISCLAIMERS[source]}\n\n${body}\n`;
 }
