@@ -214,12 +214,14 @@ og_url: https://marbleheaddata.org/schools-budget.html
 <h2 id="peers">How Marblehead compares to peers, fiscal year 2024</h2>
 
 <p>
-  Total education spending in fiscal year 2024, sorted highest to lowest. Marblehead
-  is highlighted. This is a single-year snapshot from the town's DOR Schedule A
-  returns.
+  Fiscal year 2024 education spending across a peer set, sorted highest to lowest per
+  capita. Marblehead is highlighted. Sourced from the town's DOR Schedule A returns
   <sup class="cite" data-src="dor-schedule-a" data-page="fy24">3</sup>
-  Per-pupil normalization is a follow-up: DESE enrollment is wired up for only four
-  of these towns so far.
+  and DOR fiscal year 2027 income, equalized valuation, and population data.
+  <sup class="cite" data-src="dor-income-eqv-pop" data-page="fy27">4</sup>
+  Per-student is shown where DESE reports it; four of the seventeen towns have
+  fiscal year 2024 enrollment on file.
+  <sup class="cite" data-src="dese-peer-enrollment" data-page="fy24">5</sup>
 </p>
 
 <figure class="peer-block" id="peer-block">
@@ -228,6 +230,9 @@ og_url: https://marbleheaddata.org/schools-budget.html
       <tr>
         <th>Town</th>
         <th>Education (fiscal year 2024)</th>
+        <th>Population</th>
+        <th>Per capita</th>
+        <th>Per student</th>
       </tr>
     </thead>
     <tbody id="peer-block-body"></tbody>
@@ -273,13 +278,18 @@ og_url: https://marbleheaddata.org/schools-budget.html
   actually breaks out:
 </p>
 <ul>
-  <li><strong>Regular instruction</strong>: each school's DESE 2000 total (Brown, Glover, Village, Veterans, MHS). Bundles regular-education teachers, instructional assistants, textbooks, and classroom supplies.</li>
-  <li><strong>Special education</strong>: district-managed SPED lines. Includes the District's 2000 (instructional coaches, SPED specialists, BCBAs), District's 9000 (out-of-district placements), and MHS 9000 (Recovery High School tuition).</li>
-  <li><strong>Student services</strong>: DESE 3000. Nurses, counselors, guidance, library, athletics, cocurricular, and district-level student services (attendance, health, homeless transport).</li>
-  <li><strong>Operations</strong>: DESE 4000. Facilities (custodians, maintenance, utilities), transportation, and technology infrastructure.</li>
-  <li><strong>Administration</strong>: DESE 1000. Central-office administration and business office.</li>
-  <li><strong>Capital</strong>: DESE 7000. Districtwide equipment and equipment replacement lines. Small in this budget.</li>
+  <li><strong>Regular instruction</strong>: teachers, aides, textbooks, classroom supplies. Broken out per school in the packet.</li>
+  <li><strong>Special education</strong>: SPED specialists, BCBAs, and out-of-district tuitions. Managed at the district level.</li>
+  <li><strong>Student services</strong>: nurses, counselors, guidance, library, athletics, cocurricular.</li>
+  <li><strong>Operations</strong>: facilities, transportation, technology infrastructure.</li>
+  <li><strong>Administration</strong>: central office and business office.</li>
+  <li><strong>Capital</strong>: equipment purchases. Small in this budget.</li>
 </ul>
+<p>
+  Bucket names loosely track the DESE Chart of Accounts function codes
+  (1000 through 9000, minus Fixed Charges); the exact mapping per packet
+  line is in the extractor script.
+</p>
 <p>
   <strong>Fixed Charges (DESE 5000) is not included.</strong> Health insurance,
   retirement contributions, and Medicare are budgeted at the town level in Marblehead,
@@ -320,40 +330,48 @@ og_url: https://marbleheaddata.org/schools-budget.html
 </p>
 <ul>
   <li>Positions budgeted but unfilled for part of the year.</li>
-  <li>
-    Group insurance premiums coming in below the budgeted rate. In Marblehead's case
-    this pattern ran an average 18.7 percent under-budget from fiscal year 2014 to
-    fiscal year 2024. The surplus was recycled through free cash to balance the next
-    year's operating budget.
-    <a href="/how-we-got-here.html#group-insurance-pad">See the pad finding</a>
-    for the full arithmetic.
-  </li>
+  <li>Group insurance premiums coming in under the budgeted rate.</li>
   <li>Encumbrance rollovers and end-of-year free cash reclassification.</li>
 </ul>
 <p>
-  None of these are unique to Marblehead or evidence of malfeasance. Every district
-  budget shows some version of the same gap.
+  Marblehead's group insurance pattern is the largest of the three: an average
+  18.7 percent under-budget from fiscal year 2014 to fiscal year 2024, with the
+  surplus recycled through free cash to balance the next year's operating budget.
+  <a href="/how-we-got-here.html#group-insurance-pad">The pad finding</a> has the
+  full arithmetic. None of these three effects are unique to Marblehead; every
+  district budget shows some version of them.
 </p>
 
 <h3>Peer block: fiscal year 2024 Schedule A</h3>
 <p>
-  Peer values come from
+  Peer education totals come from
   <a href="/data/peer_schedule_a_expenditures.csv"><code>data/peer_schedule_a_expenditures.csv</code></a>,
   a DOR Schedule A extract for a peer set of Massachusetts municipalities used
-  elsewhere on this site.
-  <sup class="cite" data-src="dor-schedule-a" data-page="fy24">3</sup>
-  Fiscal year 2024 is the latest year available for the full peer set. Per-pupil and
-  per-capita normalization are not shown because DESE enrollment is currently wired
-  up for only four of these towns
-  <sup class="cite" data-src="dese-peer-enrollment" data-page="fy24">4</sup>
-  and a partial per-pupil view would mislead more than it informs.
+  elsewhere on this site. Population figures come from
+  <a href="/data/dor_income_eqv_pop_FY27.csv"><code>data/dor_income_eqv_pop_FY27.csv</code></a>,
+  the DOR fiscal year 2027 income, equalized valuation, and population release.
+  Per-capita is the education total divided by that population; every peer town in
+  the block has a value.
+</p>
+<p>
+  Per-student uses DESE enrollment from
+  <a href="/data/dese_peer_teachers_enrollment.csv"><code>data/dese_peer_teachers_enrollment.csv</code></a>.
+  Only four peer towns (Marblehead, Melrose, Stoneham, Swampscott) are on file
+  for fiscal year 2024, so the other thirteen rows show a dash rather than a
+  fabricated value. Pulling the missing enrollment for the rest of the peer set
+  is follow-up work.
+</p>
+<p>
+  The table sorts on per-capita rather than raw total. Sorting by total dollars
+  puts Newton and Framingham on top because they are big; sorting by per-capita
+  compares fiscal effort at similar scale.
 </p>
 
 <h3>What is coming in follow-up updates</h3>
 <ul>
-  <li>Panel 2 extended to fiscal year 2018 through fiscal year 2025 as each Feb packet's summary is extracted.</li>
-  <li>A proposed-versus-actual gap table showing the level-funded proposal, the adopted budget, and the audited actual for each year where all three are available.</li>
-  <li>Per-pupil normalization on the peer block once DESE enrollment for the remaining peer towns is loaded.</li>
+  <li>Panel 2 extended back to fiscal year 2018 as each February packet's summary is extracted.</li>
+  <li>A proposed-versus-actual gap table for each year where the proposal, the adopted budget, and the audited actual are all available.</li>
+  <li>Per-student for the thirteen peer towns that currently show a dash, once DESE enrollment for the rest of the set is loaded.</li>
 </ul>
 
 <script>
@@ -881,31 +899,58 @@ og_url: https://marbleheaddata.org/schools-budget.html
     });
   }
 
-  function fmtDollar(v) {
+  function fmtDollarM(v) {
     if (v >= 1e6) return '$' + (v / 1e6).toFixed(1) + 'M';
     return '$' + Math.round(v / 1000) + 'k';
   }
+  function fmtInt(v) {
+    return v.toLocaleString();
+  }
+  function fmtDollarWhole(v) {
+    return '$' + Math.round(v).toLocaleString();
+  }
 
-  function render(rows) {
+  function render(peerRows, popRows, enrollRows) {
     var body = document.getElementById('peer-block-body');
     if (!body) return;
-    var fy24 = rows.filter(function (r) { return r.fiscal_year === '2024'; });
-    fy24.sort(function (a, b) {
-      return Number(b.education.replace(/[",]/g, '')) - Number(a.education.replace(/[",]/g, ''));
+    var popByTown = {};
+    popRows.forEach(function (r) { popByTown[r.municipality] = Number(r.population); });
+    var enrollByTown = {};
+    enrollRows.filter(function (r) { return r.fiscal_year === '2024'; })
+      .forEach(function (r) { enrollByTown[r.district] = Number(r.total_enrollment); });
+
+    var fy24 = peerRows.filter(function (r) { return r.fiscal_year === '2024'; });
+    fy24.forEach(function (r) {
+      r.eduNum = Number(r.education.replace(/[",]/g, ''));
+      r.pop = popByTown[r.municipality] || 0;
+      r.perCapita = r.pop ? r.eduNum / r.pop : 0;
+      r.enroll = enrollByTown[r.municipality] || 0;
+      r.perStudent = r.enroll ? r.eduNum / r.enroll : 0;
     });
+    fy24.sort(function (a, b) { return b.perCapita - a.perCapita; });
+
     body.innerHTML = fy24.map(function (r) {
-      var edu = Number(r.education.replace(/[",]/g, ''));
       var isMhd = r.municipality === 'Marblehead';
       var cls = isMhd ? ' class="peer-highlight"' : '';
-      return '<tr' + cls + '><td>' + r.municipality + '</td><td>' + fmtDollar(edu) + '</td></tr>';
+      var perStudent = r.perStudent ? fmtDollarWhole(r.perStudent) : '&ndash;';
+      return '<tr' + cls + '>' +
+        '<td>' + r.municipality + '</td>' +
+        '<td>' + fmtDollarM(r.eduNum) + '</td>' +
+        '<td>' + fmtInt(r.pop) + '</td>' +
+        '<td>' + fmtDollarWhole(r.perCapita) + '</td>' +
+        '<td>' + perStudent + '</td>' +
+        '</tr>';
     }).join('');
   }
 
   function load() {
-    fetch('/data/peer_schedule_a_expenditures.csv')
-      .then(function (r) { return r.text(); })
-      .then(parseCsv)
-      .then(render);
+    Promise.all([
+      fetch('/data/peer_schedule_a_expenditures.csv').then(function (r) { return r.text(); }).then(parseCsv),
+      fetch('/data/dor_income_eqv_pop_FY27.csv').then(function (r) { return r.text(); }).then(parseCsv),
+      fetch('/data/dese_peer_teachers_enrollment.csv').then(function (r) { return r.text(); }).then(parseCsv)
+    ]).then(function (results) {
+      render(results[0], results[1], results[2]);
+    });
   }
 
   if (document.readyState === 'loading') {
