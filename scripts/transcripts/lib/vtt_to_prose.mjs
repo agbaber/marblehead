@@ -1,5 +1,5 @@
-const PARAGRAPH_TARGET_SECONDS = 45;
-const PAUSE_BREAK_SECONDS = 2.0;
+const PARAGRAPH_TARGET_SECONDS = 90;
+const PAUSE_BREAK_SECONDS = 4.0;
 
 const ENTITIES = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'", '&apos;': "'" };
 

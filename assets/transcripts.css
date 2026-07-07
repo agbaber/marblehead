@@ -480,6 +480,46 @@
   font-weight: 700;
 }
 
+/* Timecode jump links: vimeo-auto transcripts open every paragraph with
+   **[m:ss](...#t=..s)**. Quiet them so the text column reads as prose:
+   small, muted, tabular figures instead of bold navy. Browsers without
+   :has() keep the speaker-attribution bold above, which is still usable. */
+.ms-transcript-body p > strong:first-child:has(> a[href*="#t="]:only-child) {
+  font-weight: 400;
+}
+.ms-transcript-body p > strong:first-child:has(> a[href*="#t="]:only-child) a {
+  color: var(--c-text-sub);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ms-transcript-body p > strong:first-child:has(> a[href*="#t="]:only-child) a:hover,
+.ms-transcript-body p > strong:first-child:has(> a[href*="#t="]:only-child) a:focus-visible {
+  color: var(--c-teal);
+  text-decoration: underline;
+}
+
+/* On wide screens, carve a left gutter inside the text column (the card
+   has overflow:hidden, so the stamp can't hang outside it) and move the
+   stamp out of the text flow, aligned with the paragraph's first line. */
+@media (min-width: 900px) {
+  .ms-transcript-body {
+    padding-left: 92px;
+  }
+  .ms-transcript-body p:has(> strong:first-child > a[href*="#t="]:only-child) {
+    position: relative;
+  }
+  .ms-transcript-body p > strong:first-child:has(> a[href*="#t="]:only-child) {
+    position: absolute;
+    top: 0;
+    left: -78px;
+    width: 64px;
+    text-align: right;
+    line-height: 1.7;
+  }
+}
+
 /* Preamble blockquote: the "Note on this transcript" notice at the top
    of the markdown body. Brass left rail with tinted background reads
    as a calm informational notice, matching the rest of the page. */
