@@ -234,6 +234,128 @@ og_url: https://marbleheaddata.org/schools-budget.html
   </table>
 </figure>
 
+<h2 id="methodology">Methodology</h2>
+
+<h3>Panel 1: audited actuals, fiscal year 2001 to fiscal year 2024</h3>
+<p>
+  Numbers in Panel 1 come from
+  <a href="/data/education_expenditure_FY01-24.csv"><code>data/education_expenditure_FY01-24.csv</code></a>,
+  which was compiled from twenty-four consecutive Marblehead Annual Comprehensive
+  Financial Reports (ACFRs). For each fiscal year, the value is the Education line
+  from that year's Schedule of Expenditures by Function. Source pages per ACFR are
+  documented in
+  <a href="/data/SOURCE_LOOKUP.md"><code>data/SOURCE_LOOKUP.md</code></a>.
+</p>
+<p>
+  Two years get inline annotations rather than being treated as trend points. Fiscal
+  year 2022 reflects a likely Governmental Accounting Standards Board pension or OPEB
+  liability adjustment. Fiscal year 2023 includes prior-year adjustments per the
+  auditor's note in the source CSV. Both are one-time reporting effects. Excluding
+  them, the underlying trend fiscal year 2015 to fiscal year 2024 is broadly linear.
+</p>
+
+<h3>Panel 2: superintendent's proposed budget by category, fiscal year 2026 and fiscal year 2027</h3>
+<p>
+  Panel 2 uses
+  <a href="/data/mps_proposed_budget_by_category.csv"><code>data/mps_proposed_budget_by_category.csv</code></a>,
+  extracted by
+  <a href="https://github.com/agbaber/marblehead/blob/main/scripts/extract_mps_proposed_budget.mjs"><code>scripts/extract_mps_proposed_budget.mjs</code></a>
+  from the February 5, 2026 School Committee meeting packet
+  <sup class="cite" data-src="mps-fy27-packet" data-page="9-40">2</sup>
+  (the only Feb packet used in this v1). Each of the twelve rows carries the source
+  packet slug and the packet line numbers where each section subtotal appears, along
+  with an <code>extraction_confidence</code> field. All twelve rows in v1 are marked
+  <code>high</code> confidence because they come from a native (non-scanned) PDF whose
+  section subtotals are legible without OCR.
+</p>
+<p>
+  The six buckets are DESE-Chart-of-Accounts-inspired but pragmatic for what the packet
+  actually breaks out:
+</p>
+<ul>
+  <li><strong>Regular instruction</strong>: each school's DESE 2000 total (Brown, Glover, Village, Veterans, MHS). Bundles regular-education teachers, instructional assistants, textbooks, and classroom supplies.</li>
+  <li><strong>Special education</strong>: district-managed SPED lines. Includes the District's 2000 (instructional coaches, SPED specialists, BCBAs), District's 9000 (out-of-district placements), and MHS 9000 (Recovery High School tuition).</li>
+  <li><strong>Student services</strong>: DESE 3000. Nurses, counselors, guidance, library, athletics, cocurricular, and district-level student services (attendance, health, homeless transport).</li>
+  <li><strong>Operations</strong>: DESE 4000. Facilities (custodians, maintenance, utilities), transportation, and technology infrastructure.</li>
+  <li><strong>Administration</strong>: DESE 1000. Central-office administration and business office.</li>
+  <li><strong>Capital</strong>: DESE 7000. Districtwide equipment and equipment replacement lines. Small in this budget.</li>
+</ul>
+<p>
+  <strong>Fixed Charges (DESE 5000) is not included.</strong> Health insurance,
+  retirement contributions, and Medicare are budgeted at the town level in Marblehead,
+  not on the school side. See
+  <a href="/how-we-got-here.html#group-insurance-pad">the Group Insurance pad finding</a>
+  for the operational reason this matters, and for why proposed and actual education
+  totals will differ by more than a straight comparison would suggest.
+</p>
+
+<h3>Why the Panel 2 total does not equal the packet's headline</h3>
+<p>
+  The February 5, 2026 packet reports a fiscal year 2027 grand total of $49,120,285,
+  the level-funded target set by the town. Panel 2's bucket sums are higher: about
+  $48.6 million for fiscal year 2026 and $50.0 million for fiscal year 2027. Two
+  separate effects account for the gap.
+</p>
+<ol>
+  <li>
+    Fixed Charges are in the packet's grand total but excluded from the six buckets.
+    That accounts for roughly $883,000 in fiscal year 2026 and $901,000 in fiscal
+    year 2027.
+  </li>
+  <li>
+    The bucket sums here are the level-funded gross before end-of-cycle reductions.
+    The packet's grand total is the adopted budget after roughly $1.6 million in cuts
+    were applied entity-by-entity (pages 14 through 30 of the packet). Because the
+    cuts are listed at the entity level, not the DESE-function level, they cannot be
+    cleanly attributed to individual buckets without reconstructing every position
+    line. Follow-up work may add a post-reduction view.
+  </li>
+</ol>
+
+<h3>Why proposed budgets never match audited actuals</h3>
+<p>
+  When more historical proposed budgets land in a follow-up PR, the gap between
+  Panel 1 and Panel 2 for a given fiscal year will be visible. Three structural
+  reasons that gap exists in every district:
+</p>
+<ul>
+  <li>Positions budgeted but unfilled for part of the year.</li>
+  <li>
+    Group insurance premiums coming in below the budgeted rate. In Marblehead's case
+    this pattern ran an average 18.7 percent under-budget from fiscal year 2014 to
+    fiscal year 2024. The surplus was recycled through free cash to balance the next
+    year's operating budget.
+    <a href="/how-we-got-here.html#group-insurance-pad">See the pad finding</a>
+    for the full arithmetic.
+  </li>
+  <li>Encumbrance rollovers and end-of-year free cash reclassification.</li>
+</ul>
+<p>
+  None of these are unique to Marblehead or evidence of malfeasance. Every district
+  budget shows some version of the same gap.
+</p>
+
+<h3>Peer block: fiscal year 2024 Schedule A</h3>
+<p>
+  Peer values come from
+  <a href="/data/peer_schedule_a_expenditures.csv"><code>data/peer_schedule_a_expenditures.csv</code></a>,
+  a DOR Schedule A extract for a peer set of Massachusetts municipalities used
+  elsewhere on this site.
+  <sup class="cite" data-src="dor-schedule-a" data-page="fy24">3</sup>
+  Fiscal year 2024 is the latest year available for the full peer set. Per-pupil and
+  per-capita normalization are not shown because DESE enrollment is currently wired
+  up for only four of these towns
+  <sup class="cite" data-src="dese-peer-enrollment" data-page="fy24">4</sup>
+  and a partial per-pupil view would mislead more than it informs.
+</p>
+
+<h3>What is coming in follow-up updates</h3>
+<ul>
+  <li>Panel 2 extended to fiscal year 2018 through fiscal year 2025 as each Feb packet's summary is extracted.</li>
+  <li>A proposed-versus-actual gap table showing the level-funded proposal, the adopted budget, and the audited actual for each year where all three are available.</li>
+  <li>Per-pupil normalization on the peer block once DESE enrollment for the remaining peer towns is loaded.</li>
+</ul>
+
 <script>
 (function () {
   'use strict';
