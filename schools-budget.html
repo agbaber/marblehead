@@ -122,6 +122,31 @@ og_url: https://marbleheaddata.org/schools-budget.html
   .stack-swatch-operations { background: var(--c-buoy);  }
   .stack-swatch-admin      { background: color-mix(in srgb, var(--c-navy) 60%, var(--c-buoy) 40%); }
   .stack-swatch-capital    { background: color-mix(in srgb, var(--c-brass) 60%, var(--text-muted) 40%); }
+  .peer-block table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 12px 0 8px;
+  }
+  .peer-block th {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 2px solid var(--text);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .peer-block td {
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .peer-block td:not(:first-child), .peer-block th:not(:first-child) {
+    text-align: right;
+  }
+  .peer-block .peer-highlight {
+    background: color-mix(in srgb, var(--c-navy) 6%, transparent);
+    font-weight: 600;
+  }
 </style>
 
 <h1>Schools budget history</h1>
@@ -184,6 +209,29 @@ og_url: https://marbleheaddata.org/schools-budget.html
     Earlier years (fiscal year 2018 through fiscal year 2025) will land in follow-up updates as
     each packet's summary is extracted.
   </figcaption>
+</figure>
+
+<h2 id="peers">How Marblehead compares to peers, fiscal year 2024</h2>
+
+<p>
+  Total education spending in fiscal year 2024, sorted highest to lowest. Marblehead
+  is highlighted. This is a single-year snapshot from the town's DOR Schedule A
+  returns.
+  <sup class="cite" data-src="dor-schedule-a" data-page="fy24">3</sup>
+  Per-pupil normalization is a follow-up: DESE enrollment is wired up for only four
+  of these towns so far.
+</p>
+
+<figure class="peer-block" id="peer-block">
+  <table>
+    <thead>
+      <tr>
+        <th>Town</th>
+        <th>Education (fiscal year 2024)</th>
+      </tr>
+    </thead>
+    <tbody id="peer-block-body"></tbody>
+  </table>
 </figure>
 
 <script>
@@ -683,6 +731,65 @@ og_url: https://marbleheaddata.org/schools-budget.html
     document.addEventListener('DOMContentLoaded', loadAndRender);
   } else {
     loadAndRender();
+  }
+})();
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  function parseCsv(text) {
+    var lines = text.trim().split('\n');
+    var headers = lines[0].split(',');
+    return lines.slice(1).map(function (line) {
+      var out = [];
+      var cur = '';
+      var inQuote = false;
+      for (var i = 0; i < line.length; i++) {
+        var c = line[i];
+        if (c === '"') { inQuote = !inQuote; continue; }
+        if (c === ',' && !inQuote) { out.push(cur); cur = ''; continue; }
+        cur += c;
+      }
+      out.push(cur);
+      var row = {};
+      headers.forEach(function (h, i) { row[h.trim()] = (out[i] || '').trim(); });
+      return row;
+    });
+  }
+
+  function fmtDollar(v) {
+    if (v >= 1e6) return '$' + (v / 1e6).toFixed(1) + 'M';
+    return '$' + Math.round(v / 1000) + 'k';
+  }
+
+  function render(rows) {
+    var body = document.getElementById('peer-block-body');
+    if (!body) return;
+    var fy24 = rows.filter(function (r) { return r.fiscal_year === '2024'; });
+    fy24.sort(function (a, b) {
+      return Number(b.education.replace(/[",]/g, '')) - Number(a.education.replace(/[",]/g, ''));
+    });
+    body.innerHTML = fy24.map(function (r) {
+      var edu = Number(r.education.replace(/[",]/g, ''));
+      var isMhd = r.municipality === 'Marblehead';
+      var cls = isMhd ? ' class="peer-highlight"' : '';
+      return '<tr' + cls + '><td>' + r.municipality + '</td><td>' + fmtDollar(edu) + '</td></tr>';
+    }).join('');
+  }
+
+  function load() {
+    fetch('/data/peer_schedule_a_expenditures.csv')
+      .then(function (r) { return r.text(); })
+      .then(parseCsv)
+      .then(render);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', load);
+  } else {
+    load();
   }
 })();
 </script>

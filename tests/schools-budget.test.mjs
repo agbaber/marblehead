@@ -42,5 +42,13 @@ assert.equal(rects, 12, `expected 12 stacked segments in Panel 2, got ${rects}`)
 const legendItems = await page.$$eval('#panel2 .stack-legend-item', els => els.length);
 assert.equal(legendItems, 6, `expected 6 legend items, got ${legendItems}`);
 
+// Peer block has 17 rows (all towns present in FY24)
+await page.waitForSelector('#peer-block-body tr', { timeout: 5000 });
+const peerRows = await page.$$eval('#peer-block-body tr', els => els.length);
+assert.ok(peerRows >= 15 && peerRows <= 20, `expected 15-20 peer rows, got ${peerRows}`);
+
+const highlighted = await page.$$eval('#peer-block-body tr.peer-highlight td:first-child', els => els.map(e => e.textContent.trim()));
+assert.deepEqual(highlighted, ['Marblehead'], `expected Marblehead highlighted, got ${JSON.stringify(highlighted)}`);
+
 console.log('schools-budget.test.mjs OK');
 await browser.close();
