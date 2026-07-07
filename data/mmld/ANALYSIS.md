@@ -294,6 +294,64 @@ while "offering innovative programs and services" is its lowest (61.8%,
 below the MA public-power average), and 38.9% don't know whether MMLD is
 doing enough on carbon. Fast trucks, fuzzy strategy.
 
+## Holes filled 2026-07-07 (Town Reports, minutes, DEP records, news)
+
+**2011-2015 financials recovered** from the printed Annual Town Reports
+(marbleheadma.gov/document/annual-town-reports/):
+
+| Year | Revenue | Maintenance | Line maint (OH&UG) | kWh sold |
+|---|---|---|---|---|
+| 2011 | $15,064,322 | $906,252 | $678,228 | 106,093,208 |
+| 2012 | $14,816,354 | $1,021,246 | $781,646* | 105,027,165 |
+| 2013 | $15,385,673 | $1,010,582 | $741,115 | 107,251,937 |
+| 2014 | NOT RECOVERABLE | - | - | 105,357,501 |
+| 2015 | $16,764,245 | $1,030,186 | $753,889 | 105,294,644 |
+
+(*2012 line maint was already in the MMLD-posted PDF.) The 2014 Town
+Report's MMLD section (printed pp. 172-180) is blank placeholder pages in
+the posted PDF; 2014 financials exist only in the DPU annual return
+(records request) or print copies. 2014 surplus balance $24,984,937 is
+recoverable from the 2015 Statement of Surplus.
+
+**Wilkins backstory (all primary):** MassDEP consent order executed
+12/3/2015 (air pollution controls + new stack + sound attenuation; no
+monetary penalty; archived MassDEP Enforcement Actions 2015 PDF, copy in
+this folder). Context: the two EMD engines faced a May 2013 federal
+engine-emissions compliance date under the 2012 operating permit. Fix:
+$1,198,886 single-bid contract to Peaker Services (minutes 1/26/2016);
+2016 retrofit passed emissions but was "louder that it was before the
+upgrade" (minutes 6/28/2016); DEP rejected sound fixes through 2017-18;
+QuietStar finished Feb 2019; DEP approval-to-resume letter received
+March 5, 2019 (minutes 3/27/2019). Zero local press coverage found for
+the entire episode.
+
+**GM churn 2025-26 (minutes + news):** Board told Kowalik late 2024 his
+contract would not be renewed; 4/15/2025 vote 3-1 (Hull no) for
+$150K retention + up to $50K bonuses to stay through April 2026
+(Marblehead Current 4/17/2025). Chair Lisa Wolf resigned 3/28/2025 to
+apply for a paid MMLD job (Current 4/10/2025). Jon Blair (ex-Ipswich
+light GM) chosen from 90+ applicants July 2025 (The Local News
+7/22/2025). 9/9/2025 minutes (in this folder): Vote 2025-25, 4-1 Hull
+no, to terminate Kowalik effective 9/28; Blair starts 9/29; Hull refused
+to sign Blair's contract. Kowalik, 72, sued 2/25/2026 in Essex Superior
+Court (breach of contract + age discrimination, $320K+; defendants
+Yarmoff, Frechette, Harrington, Smith); pending as of July 2026
+(Current + Independent 3/3/2026).
+
+**2022 rate spike news texture:** July 2022 projected $650-700K annual
+loss (Marblehead Beacon 7/13/2022); "Whac-a-Mole" $573K shortfall quote
+(Current 10/27/2022); Nov 2023 average bill down 9.1% YoY (Current
+11/29/2023). Note: Itemlive 9/8/2022 says the base rate's second step
+would be "$18.25," the annual report says $18.50; the annual report is
+primary.
+
+**Peabody peaker:** LWV observer report documents the 6/8/2021 vote
+4-0-1 (Hull, Burke, Johnson, Homan yes; Wolf abstain) and "$430,000 to
+date" already paid. June 22, 2021 MMWEC session in Peabody drew ~150
+people; Sen. Lovely + Reps. Ehrlich and Kerans demanded environmental
+review (Itemlive 7/28/2021). Plant entered service mid-2024, without
+green hydrogen (GBH News 7/5/2024).
+
 ## Gaps / next steps if this becomes a page
 
 - Reports lack: any SAIDI/SAIFI time series before 2021, wholesale cost per
