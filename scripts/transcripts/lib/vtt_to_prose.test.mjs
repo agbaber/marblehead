@@ -52,6 +52,21 @@ test('coalesceCues breaks on paragraph target', () => {
   assert.equal(paragraphs.length, 2);
 });
 
+test('coalesceCues defaults: 90s paragraphs, 4s pause break', () => {
+  // 3s gap (under the 4s default) must NOT break; 60s of speech must not
+  // break either (under the 90s target).
+  const cues = [
+    { start_seconds: 0, end_seconds: 30, text: 'A.' },
+    { start_seconds: 33, end_seconds: 60, text: 'B.' },
+    { start_seconds: 61, end_seconds: 95, text: 'C.' },
+    // 96s from paragraph start exceeds the 90s target -> new paragraph.
+    { start_seconds: 96, end_seconds: 100, text: 'D.' },
+  ];
+  const paragraphs = coalesceCues(cues);
+  assert.equal(paragraphs.length, 2);
+  assert.equal(paragraphs[1].text, 'D.');
+});
+
 test('vttToProse formats each paragraph with a Vimeo deep-link anchor', () => {
   const md = vttToProse(SAMPLE, 'https://vimeo.com/1234567890');
   assert.match(md, /\[0:00\]\(https:\/\/vimeo\.com\/1234567890#t=0s\)/);
