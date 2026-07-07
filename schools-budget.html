@@ -1,0 +1,82 @@
+---
+layout: page
+title: Schools budget history
+description: Marblehead schools spending over 24 years, plus what the district has proposed by category.
+body_class: chart-page
+scripts: [citations]
+og_title: Schools budget history
+og_description: Marblehead schools spending 2001-2024 audited, plus 2018-2027 proposed by category.
+og_url: https://marbleheaddata.org/schools-budget.html
+---
+<style>
+  .lede {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 60ch;
+  }
+  .chart-panel {
+    margin: 1.5rem 0 2.5rem;
+    padding: 1rem 0;
+  }
+  .chart-panel svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: color-mix(in srgb, var(--surface) 95%, var(--c-navy) 5%);
+  }
+  .chart-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .chart-toggle button {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    font: inherit;
+    line-height: 1.2;
+  }
+  .chart-toggle button[aria-selected="true"] {
+    background: var(--c-navy);
+    color: var(--surface);
+    border-color: var(--c-navy);
+  }
+  .chart-line {
+    fill: none;
+    stroke: var(--c-buoy);
+    stroke-width: 2.5;
+  }
+  .chart-axis {
+    stroke: var(--chart-axis);
+    stroke-width: 1;
+  }
+</style>
+
+<h1>Schools budget history</h1>
+
+<p class="lede">
+  Two numbers get called "the schools budget." This page shows both. Audited actuals from
+  the town's ACFRs go back to fiscal year 2001. The superintendent's proposed budget
+  by category goes back to fiscal year 2018, from School Committee meeting packets.
+</p>
+
+<h2 id="acfr-actuals">What actually got spent, fiscal year 2001 to fiscal year 2024</h2>
+
+<figure class="chart-panel" id="panel1">
+  <div class="chart-toggle" role="tablist" aria-label="View">
+    <button type="button" role="tab" aria-selected="true" data-view="nominal">Nominal dollars</button>
+    <button type="button" role="tab" aria-selected="false" data-view="per-pupil">Per pupil</button>
+    <button type="button" role="tab" aria-selected="false" data-view="real">Real dollars (fiscal year 2024 basis)</button>
+  </div>
+  <svg id="panel1-svg" viewBox="0 0 800 420" preserveAspectRatio="xMidYMid meet" aria-label="Marblehead education spending by fiscal year, 2001 to 2024"></svg>
+  <figcaption>
+    Source: fiscal year 2024 ACFR, page 129, Schedule of Expenditures by Function.
+    <sup class="cite" data-src="fy24-acfr" data-page="129">1</sup>
+  </figcaption>
+</figure>
