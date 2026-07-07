@@ -21,5 +21,17 @@ await page.click('#panel1 .chart-toggle button[data-view="per-pupil"]');
 const selected = await page.$eval('#panel1 .chart-toggle button[aria-selected="true"]', el => el.dataset.view);
 assert.equal(selected, 'per-pupil');
 
+// Back to nominal view for anomaly-marker checks.
+await page.click('#panel1 .chart-toggle button[data-view="nominal"]');
+await page.waitForSelector('#panel1-svg circle.chart-anomaly', { timeout: 3000 });
+const nominalAnomalies = await page.$$eval('#panel1-svg circle.chart-anomaly', els => els.length);
+assert.equal(nominalAnomalies, 2, `expected 2 anomaly circles in nominal view, got ${nominalAnomalies}`);
+
+// Per-pupil view has no anomaly circles.
+await page.click('#panel1 .chart-toggle button[data-view="per-pupil"]');
+await page.waitForTimeout(200);
+const perPupilAnomalies = await page.$$eval('#panel1-svg circle.chart-anomaly', els => els.length);
+assert.equal(perPupilAnomalies, 0, `expected 0 anomaly circles in per-pupil view, got ${perPupilAnomalies}`);
+
 console.log('schools-budget.test.mjs OK');
 await browser.close();

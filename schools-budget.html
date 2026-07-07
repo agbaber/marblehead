@@ -66,6 +66,11 @@ og_url: https://marbleheaddata.org/schools-budget.html
     font-size: 11px;
     font-family: inherit;
   }
+  .chart-anomaly {
+    fill: var(--c-brass);
+    stroke: var(--surface);
+    stroke-width: 1.5;
+  }
 </style>
 
 <h1>Schools budget history</h1>
@@ -88,6 +93,11 @@ og_url: https://marbleheaddata.org/schools-budget.html
   <figcaption>
     Source: fiscal year 2024 ACFR, page 129, Schedule of Expenditures by Function.
     <sup class="cite" data-src="fy24-acfr" data-page="129">1</sup>
+    The highlighted fiscal year 2022 and fiscal year 2023 points are reporting
+    anomalies, not operating spending. Fiscal year 2022 reflects a likely
+    Governmental Accounting Standards Board pension or OPEB liability
+    adjustment; fiscal year 2023 includes prior-year adjustments per the
+    auditor's note. Neither is a trend point.
   </figcaption>
 </figure>
 
@@ -294,6 +304,28 @@ og_url: https://marbleheaddata.org/schools-budget.html
       'class': 'chart-line'
     });
     svg.appendChild(path);
+
+    /* ── Anomaly markers (only in nominal view) ── */
+    if (viewMode === 'nominal') {
+      var ANOMALIES = [2022, 2023];
+      ANOMALIES.forEach(function (fy) {
+        var pt = null;
+        for (var i = 0; i < points.length; i++) {
+          if (points[i].fy === fy) {
+            pt = points[i];
+            break;
+          }
+        }
+        if (!pt) return;
+        var dot = svgEl('circle', {
+          cx: xScale(pt.fy),
+          cy: yScale(pt.value),
+          r: 6,
+          'class': 'chart-anomaly'
+        });
+        svg.appendChild(dot);
+      });
+    }
   }
 
   /* ═══════════════════════════════════════════
