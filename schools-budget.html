@@ -71,6 +71,57 @@ og_url: https://marbleheaddata.org/schools-budget.html
     stroke: var(--surface);
     stroke-width: 1.5;
   }
+  .chart-stack-panel {
+    margin: 1rem 0 2rem;
+  }
+  .stack-col-label {
+    fill: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+    font-family: inherit;
+  }
+  .stack-segment-label {
+    fill: var(--surface);
+    font-size: 10px;
+    font-family: inherit;
+    pointer-events: none;
+  }
+  .stack-segment-label-outside {
+    fill: var(--text-muted);
+    font-size: 10px;
+    font-family: inherit;
+  }
+  .stack-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-top: 12px;
+    font-size: 13px;
+  }
+  .stack-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .stack-legend-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  /* Bucket colors -- coastal palette, distinct but harmonizing */
+  .stack-regular      { fill: var(--c-navy);  }
+  .stack-sped         { fill: var(--c-brass); }
+  .stack-services     { fill: var(--c-teal);  }
+  .stack-operations   { fill: var(--c-buoy);  }
+  .stack-admin        { fill: color-mix(in srgb, var(--c-navy) 60%, var(--c-buoy) 40%); }
+  .stack-capital      { fill: color-mix(in srgb, var(--c-brass) 60%, var(--text-muted) 40%); }
+  .stack-swatch-regular    { background: var(--c-navy);  }
+  .stack-swatch-sped       { background: var(--c-brass); }
+  .stack-swatch-services   { background: var(--c-teal);  }
+  .stack-swatch-operations { background: var(--c-buoy);  }
+  .stack-swatch-admin      { background: color-mix(in srgb, var(--c-navy) 60%, var(--c-buoy) 40%); }
+  .stack-swatch-capital    { background: color-mix(in srgb, var(--c-brass) 60%, var(--text-muted) 40%); }
 </style>
 
 <h1>Schools budget history</h1>
@@ -98,6 +149,40 @@ og_url: https://marbleheaddata.org/schools-budget.html
     Governmental Accounting Standards Board pension or OPEB liability
     adjustment; fiscal year 2023 includes prior-year adjustments per the
     auditor's note. Neither is a trend point.
+  </figcaption>
+</figure>
+
+<h2 id="proposed-by-category">What the schools proposed, by category (fiscal year 2026 and fiscal year 2027)</h2>
+
+<p>
+  These amounts are the superintendent's level-funded proposed budget for each fiscal
+  year, taken from the February 2026 School Committee meeting packet. They are
+  <em>before</em> the end-of-cycle reductions the packet lists on pages 14 through 30
+  (roughly $1.6 million cut from fiscal year 2027 to land on the level-funded target),
+  so the totals here run higher than the packet's adopted-budget grand total.
+  Fixed Charges (health insurance and retirement) are not shown because Marblehead
+  budgets these at the town level, not the school side.
+</p>
+
+<figure class="chart-panel chart-stack-panel" id="panel2">
+  <svg id="panel2-svg" viewBox="0 0 800 460" preserveAspectRatio="xMidYMid meet" aria-label="Marblehead schools proposed budget by category, fiscal year 2026 and fiscal year 2027"></svg>
+  <div class="stack-legend" id="panel2-legend" aria-label="Category legend">
+    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-regular"></span>Regular instruction</div>
+    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-sped"></span>Special education</div>
+    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-services"></span>Student services</div>
+    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-operations"></span>Operations</div>
+    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-admin"></span>Administration</div>
+    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-capital"></span>Capital</div>
+  </div>
+  <figcaption>
+    Source: February 5, 2026 School Committee meeting packet, superintendent's proposed
+    fiscal year 2027 budget.
+    <sup class="cite" data-src="mps-fy27-packet" data-page="various">2</sup>
+    Values are level-funded, pre-reduction, and exclude Fixed Charges. Full per-row
+    citations in
+    <a href="/data/mps_proposed_budget_by_category.csv"><code>data/mps_proposed_budget_by_category.csv</code></a>.
+    Earlier years (fiscal year 2018 through fiscal year 2025) will land in follow-up updates as
+    each packet's summary is extracted.
   </figcaption>
 </figure>
 
@@ -421,5 +506,183 @@ og_url: https://marbleheaddata.org/schools-budget.html
       console.error('Panel 1 chart data load failed:', err);
     });
   });
+})();
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  var NS = 'http://www.w3.org/2000/svg';
+  function svgEl(tag, attrs) {
+    var el = document.createElementNS(NS, tag);
+    Object.keys(attrs).forEach(function (k) { el.setAttribute(k, attrs[k]); });
+    return el;
+  }
+
+  var BUCKET_ORDER = ['Regular instruction', 'Special education', 'Student services',
+                      'Operations', 'Administration', 'Capital'];
+  var BUCKET_CLASS = {
+    'Regular instruction': 'stack-regular',
+    'Special education':   'stack-sped',
+    'Student services':    'stack-services',
+    'Operations':          'stack-operations',
+    'Administration':      'stack-admin',
+    'Capital':             'stack-capital'
+  };
+
+  function parseCsv(text) {
+    var lines = text.trim().split('\n');
+    var headers = lines[0].split(',');
+    return lines.slice(1).map(function (line) {
+      // handle quoted fields (simple CSV parser sufficient for this file)
+      var out = [];
+      var cur = '';
+      var inQuote = false;
+      for (var i = 0; i < line.length; i++) {
+        var c = line[i];
+        if (c === '"') { inQuote = !inQuote; continue; }
+        if (c === ',' && !inQuote) { out.push(cur); cur = ''; continue; }
+        cur += c;
+      }
+      out.push(cur);
+      var row = {};
+      headers.forEach(function (h, i) { row[h.trim()] = (out[i] || '').trim(); });
+      return row;
+    });
+  }
+
+  function fmtDollar(v) {
+    if (v >= 1e6) return '$' + (v / 1e6).toFixed(1) + 'M';
+    return '$' + Math.round(v / 1000) + 'k';
+  }
+
+  function render(rows) {
+    var svg = document.getElementById('panel2-svg');
+    if (!svg) return;
+    while (svg.firstChild) { svg.removeChild(svg.firstChild); }
+
+    // Group by FY
+    var byFy = {};
+    rows.forEach(function (r) {
+      var fy = r.FY;
+      byFy[fy] = byFy[fy] || {};
+      byFy[fy][r.bucket] = Number(r.amount);
+    });
+
+    var fys = Object.keys(byFy).sort();
+    if (fys.length === 0) return;
+
+    var VW = 800, VH = 460;
+    var PAD = { top: 28, right: 28, bottom: 60, left: 68 };
+    var PLOT_W = VW - PAD.left - PAD.right;
+    var PLOT_H = VH - PAD.top - PAD.bottom;
+
+    // Y max: the taller stack (with a bit of headroom)
+    var maxTotal = 0;
+    fys.forEach(function (fy) {
+      var t = BUCKET_ORDER.reduce(function (s, b) { return s + (byFy[fy][b] || 0); }, 0);
+      if (t > maxTotal) maxTotal = t;
+    });
+    maxTotal = maxTotal * 1.05;
+
+    // Column geometry
+    var colGap = PLOT_W * 0.08;
+    var colWidth = (PLOT_W - colGap * (fys.length + 1)) / fys.length;
+
+    function xFor(colIdx) {
+      return PAD.left + colGap + colIdx * (colWidth + colGap);
+    }
+    function yScale(v) {
+      return PAD.top + PLOT_H - (v / maxTotal) * PLOT_H;
+    }
+
+    // Y axis + gridlines
+    for (var i = 0; i <= 4; i++) {
+      var v = (maxTotal / 4) * i;
+      var y = yScale(v);
+      if (i > 0) {
+        var grid = svgEl('line', {
+          x1: PAD.left, y1: y, x2: PAD.left + PLOT_W, y2: y,
+          stroke: 'var(--border)', 'stroke-width': '0.5', 'stroke-dasharray': '3 3'
+        });
+        svg.appendChild(grid);
+      }
+      var lbl = svgEl('text', {
+        x: PAD.left - 8, y: y + 4, 'text-anchor': 'end', 'class': 'chart-tick'
+      });
+      lbl.textContent = fmtDollar(v);
+      svg.appendChild(lbl);
+    }
+
+    var yLbl = svgEl('text', {
+      x: -(PAD.top + PLOT_H / 2), y: 14, transform: 'rotate(-90)',
+      'text-anchor': 'middle', 'class': 'chart-ylabel'
+    });
+    yLbl.textContent = 'Millions of dollars';
+    svg.appendChild(yLbl);
+
+    // Draw stacked columns
+    fys.forEach(function (fy, colIdx) {
+      var x = xFor(colIdx);
+      var yCursor = PAD.top + PLOT_H;
+      var runningTotal = 0;
+
+      BUCKET_ORDER.forEach(function (bucket) {
+        var amount = byFy[fy][bucket] || 0;
+        if (amount === 0) return;
+        var segHeight = (amount / maxTotal) * PLOT_H;
+        var segY = yCursor - segHeight;
+
+        var rect = svgEl('rect', {
+          x: x, y: segY, width: colWidth, height: segHeight,
+          'class': BUCKET_CLASS[bucket]
+        });
+        svg.appendChild(rect);
+
+        // Segment inline label if the segment is tall enough (>= 22px)
+        if (segHeight >= 22) {
+          var segLbl = svgEl('text', {
+            x: x + colWidth / 2, y: segY + segHeight / 2 + 3,
+            'text-anchor': 'middle', 'class': 'stack-segment-label'
+          });
+          segLbl.textContent = fmtDollar(amount);
+          svg.appendChild(segLbl);
+        }
+
+        runningTotal += amount;
+        yCursor = segY;
+      });
+
+      // Column total below column
+      var total = BUCKET_ORDER.reduce(function (s, b) { return s + (byFy[fy][b] || 0); }, 0);
+      var colTotalLbl = svgEl('text', {
+        x: x + colWidth / 2, y: PAD.top + PLOT_H + 18,
+        'text-anchor': 'middle', 'class': 'chart-tick'
+      });
+      colTotalLbl.textContent = 'FY' + String(fy).slice(2);
+      svg.appendChild(colTotalLbl);
+
+      var colTotalDollar = svgEl('text', {
+        x: x + colWidth / 2, y: PAD.top + PLOT_H + 34,
+        'text-anchor': 'middle', 'class': 'stack-col-label'
+      });
+      colTotalDollar.textContent = fmtDollar(total);
+      svg.appendChild(colTotalDollar);
+    });
+  }
+
+  function loadAndRender() {
+    fetch('/data/mps_proposed_budget_by_category.csv')
+      .then(function (r) { return r.text(); })
+      .then(parseCsv)
+      .then(render);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadAndRender);
+  } else {
+    loadAndRender();
+  }
 })();
 </script>

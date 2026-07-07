@@ -33,5 +33,14 @@ await page.waitForTimeout(200);
 const perPupilAnomalies = await page.$$eval('#panel1-svg circle.chart-anomaly', els => els.length);
 assert.equal(perPupilAnomalies, 0, `expected 0 anomaly circles in per-pupil view, got ${perPupilAnomalies}`);
 
+// Panel 2 renders 12 rects (2 FYs * 6 buckets)
+await page.waitForSelector('#panel2-svg rect', { timeout: 5000 });
+const rects = await page.$$eval('#panel2-svg rect', els => els.length);
+assert.equal(rects, 12, `expected 12 stacked segments in Panel 2, got ${rects}`);
+
+// Legend has 6 items
+const legendItems = await page.$$eval('#panel2 .stack-legend-item', els => els.length);
+assert.equal(legendItems, 6, `expected 6 legend items, got ${legendItems}`);
+
 console.log('schools-budget.test.mjs OK');
 await browser.close();
