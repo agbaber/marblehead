@@ -1,0 +1,777 @@
+Light Commission December 19, 2023 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           January 2, 2024
+Re:             Commission Meeting December 19, 2023
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:07 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+Participated in meeting:
+     Commissioners:         Commissioners Frechette, Hull, Smith, Wolf and Yarmoff participated in person.
+     Light Department:      General Manager, J. Kowalik; Business Manager, Matt Barrett; Manager of
+                            Technical Operations, Colin Coleman.
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Approval of minutes from previous meetings
+Vote #2023-47           Motion to approve the minutes of the 11/21 Commission public meeting was
+                        Moved by Commissioner Smith, seconded by Commissioner Frechette. Unanimous.
+
+Comments from the Public Following yesterday’s storm, Mary Stuart and Christine Nuccio of Damays
+Way sent a card red by Commissioner Hull to express their appreciation of the “efficient and quick job”
+MMLD’s “linemen did yesterday cutting away a tree, disconnecting wiring, removing a broken telephone
+pole and installing a new one. We had electricity back within hours. … You/we are fortunate to have
+such capable and efficient men working for our town.”
+
+Outstanding items
+Dual meters / analogue meters retirement. Rate filing has been sent to DPU. Notice will be published in
+the local newspapers this week and next. The document explaining the retirement of analogue meters is
+to be drafted, but measurement equipment to test has been received. The Department is moving ahead
+on all these items.
+Recruiting firm/new hires: The General Manager signed a contract with the firm Stanton Chase for help
+recruiting for the Engineering project manager and the IT positions. Commissioner Frechette, who has a
+lot of experience, will work with the General Manager off line to assist with the process. The General
+Manager will make the final call on any hiring.
+With regards to the third position, the General Manager will meet on Thursday with town officials who
+believe they have candidates: although he was ready to post the job description, it is possible that there
+is a pool of satisfactory candidates wanting to work for the town already. The position description has
+not changed significantly from a year ago: the General Manager will circulate the position description to
+the Commissioners.
+Duracell proposal and discussions: have not moved forward since last meeting.
+
+                                                                                                      1/15
+Update on recent storm: the General Manager commented that in spite of high winds, tree damage was
+not as severe in Marblehead as it could have been (see page 6): the tree trimming program has borne fruit.
+The storm has caused a lot of damage in New England, with more mutual aid requests yesterday than
+ever received, from Municipal plants in every state. Marblehead crews were working all day in
+Marblehead yesterday, but many requests came from Maine at end of day, requesting 20 linemen,
+crews with trucks and supervisor requested. Distribution Manager Greg Chane is leading a crew from
+Marblehead: they left on Tuesday morning and may well be working until Saturday in Maine.
+
+Report of Manager of Technical Operations
+Colin Coleman, Manager of Technical Operations, presented the diverse activities of the Engineering and
+Technical Services team he leads: the slides are presented from page 7; the readers interested in the
+details of the multiple projects managed by the team are invited to listen to the details presented during
+the meeting.
+In addition to the manager, the team is composed of:
+    − Jack Ravago, Senior Maintenance and Operations Specialist, responsible for substation
+      maintenance, distribution system switching, and the operations of the Wilkins Plant;
+    − Didi Rubano, Lead Meter Technician, responsible for the Advanced Metering Infrastructure (AMI)
+      which includes all meters and communication systems;
+    − Paul Surette, Maintenance and Operations Specialist, operator of the Wilkins Plant and in charge
+      of its maintenance, as well as that of the MMLD fleet and the 80 Commercial Street facilities;
+    − Nate Kobialka, Advanced Electric Utility General Technician, a trainee in the team working on
+      Substations, Distribution System switching and Wilkins Plant operator.
+The team works on different types of projects. Some are
+MMLD initiated projects which include
+- large infrastructure projects: Village 13 substation upgrade, High Voltage lines upgrade (line 1304
+replacement), as well as the evaluation of sites for utility scale energy storage systems;
+- regular maintenance of systems: e.g. seasonal Capacitor Bank management (to control power quality),
+weekly safety checks of all substations;
+- AMI system management, improvements and trouble-shooting; and
+- unplanned emergency interventions when necessary (recently: Water and Sewer Department pumping
+station alarms and low voltage alert, setting up generator and troubleshooting underground service).
+Customer initiated projects such as expanding power supply to large projects and many residential ones:
+- industrial customer Blue Anchor Millworks, with tri-phase 300 kVA 277/480 V transformer installation;
+- Large new residential projects at 80 Tioga Way with 48 residential units;
+- Mariner Way with large 1MVA transformer, multiple pole relocation, CT installations and new wiring;
+- Town Department of Public Works building at 100 Tower Way; or
+- evaluating the impact of a 100 kW solar PV array at Temple Sinai.
+Substations Operations and Maintenance, Transformers
+Substation maintenance includes switchgear testing, replacing meters, changing breakers as needed.
+MMLD works with UPG, a substation maintenance company (that also periodically tests the aging Village
+13 transformers). Every maintenance operation means careful switching, de-energizing to both allow
+intervention on de-energized systems while maintaining electric service to customers. Safety is paramount
+and needs constant attention reinforced by training.
+Management of the inventory of transformers is important, as lead time for ordering is still very long.
+Wilkins Operation and Maintenance
+The Wilkins Plant was recently the subject of an unscheduled DEP (Departement of Environmental
+Protection) compliance inspection, which seems to have gone well. As MMLD operates the plant in the
+                                                                                                     2/15
+Capacity market, ISO-NE checks the readiness to operate in cold weather conditions: the ISO-NE Winter
+Readyness Survey was submitted in December, and MMLD submits a monthly GADS reportWhen any
+situation causes an inability to run the Plant (which can be lack of appropriate staffing) an Outages
+Report is necessary, which take a substantial amount of work. Every year, a summer audit is also
+necessary.
+MMLD has also taken the decision to participate in the new Inventoried Energy Program which is an ISO-
+NE incentive program to store more fuel on site, in order to be able to generate when called upon during
+prolonged cold spells. During a cold period defined by ISO-NE, MMLD will measure between 7 and 8 am
+the amount of fuel available at Wilkins and report to ISO-NE, which can calculate how long the various
+generators can run. MMLD participation brings in a monetary contribution of $3,500 for each event, and
+about 10-12 events are expected to be called by ISO-NE during the winter.
+IT / communication
+In the interest of time, this aspect of the Technical Services Team work was not reviewed.
+
+General Manager Report
+Winter Reliability Report
+The General Manager explained the essence of the guidance from ISO-NE and MMWEC with regards to
+the expected reliability of electric supply for this winter. The long range forecast is a 50/50 probability
+that peak load this winter will reach 20,269 MW (1% higher than last year), while the weather is likely to
+be warmer and wetter than usual, driven by a strong El Niño oscillation. ISO-NE has launched a new
+Inventoried Energy Program to gain better visibility in the fuel supply of plants engaged in the capacity
+market over the winter, and Marblehead will participate as discussed above. The summary of reserve
+electric capacity in New England under different weather scenario is shown from page 10: the takeaway
+message is that unlike last year, there is no particular reliability concern of load shedding this year. This
+could change with extended period of cold weather and possible unplanned generation and
+transmission outages. (Hence the increased emphasis of ISO-NE on ensuring that generating units that
+are in the capacity market can run if called upon.)
+Budget
+MMLD is ending 2023 in good financial conditions. The latest forecast for bulk power purchase pricing is
+not yet available from MMWEC. MMLD is also continuing to try and hedge some of the open market
+power purchase positions. Based on the November forecasts, MMLD forecasts a 2024 Operating Budget of
+$21.696M (p 11). The main expenses after power purchase are Payroll and Benefits, and Depreciation. The
+final 2024 operating budget with new items compared to 2023 will be provided at the next meeting.
+AMI (Advanced Metering Infrastructure) consultant.
+MMLD has discussed with Jackie Lemmerhirt, a consultant with substantial experience in AMI systems.
+See slides page 12. Having worked with several utilities professionally, in software management
+positions with these companies, she understands the balance between hardware and software for AMI
+and Meter Data Management (MDM) systems. As a consultant, she has worked with a number of
+municipalities in MA and other states. She has experience with a number of vendors in the AMI space,
+including MMLD’s supplier NexGrid. MMLD will retain her as a consultant in a contract not to exceed
+$12,000, to get her expert advice on how to integrate data between proprietary system (NexGrid) and
+more standardized software systems collecting and analysing the data. She is a neutral, experienced
+third party, whose experience will benefit MMLD. There is no need for a formal vote of the Commission,
+as the proposed contract amount is below the threshold and entering into this relationship is at the
+discretion of the General Manager. The Commission does support MMLD hiring Lemmerhirt Consulting,
+as proposed by the General Manager.
+
+
+
+                                                                                                        3/15
+Writing off receivables from inactive accounts
+At the request of the Business Manager, the Chair moved the following proposal:
+         To write off the balance due in inactive accounts with no activity between November 1, 2021
+         and October 31, 2022 in the amount of $73,436.84. Seconded by Commissioner Yarmoff.
+This is a similar amount as last year’s. MMLD does continue to collect on these accounts, but would like
+to take this amount off the books for the accounts with no activity over a year.
+Vote #2023-48           Unanimous.
+
+MIT Sloan School of Management
+The Marblehead Light Commission worked with MIT’s Sloan School in 2023, participating as a host for a
+Sustainability-Lab (S-Lab) project. These projects are part of the curriculum for Sloan School MBA
+students working on real sustainability problems in the corporate and industrial world, page 13. A group
+of three students worked with us on the subject of solar electricity production in Marblehead and the
+possibilities to increase this production. A report was produced which Commissioner Smith and Yarmoff
+reviewed. It will be circulated to the Commission and MMLD.
+The Sloan School contacted Commissioner Yarmoff to see if the Light Commission wants to host another
+team this year. A meeting will take place with faculty on December 20. The timeline calls for potential
+hosts to write up their proposal by January 10, 2024, then discuss the proposal with faculty to ensure
+the problem proposed is adequate in view of the objectives of the student’s project. The proposals will
+then be pitched to the students on February 7, at which point the MBA students will determine which
+project they would be most interested to work on. Marblehead will be competing with companies such
+as Fidelity, Procter & Gamble and GM for the students’ interest. The process, if any student choses to
+work with us, will include having the team redefine the problem (“Good Problem Formulation”) then
+having Commissioners work with the students on a weekly basis during the first and second quarter.
+Commissioner Yarmoff and General Manager Kowalik will meet with MIT’s faculty to discuss possible
+projects themes. Problems considered currently include:
+  - Making ToU rates effective;
+  - Interest and trade-offs between short and long term BESS Storage, residential or utility scale; or
+  - Resilience and micro-grid.
+
+Upnine Contract Proposal
+MMLD has been discussing with Upnine the possibility of this company taking on the monitoring,
+remediation and management of part of the communication system that MMLD maintains to gather
+metering information from the field. A contract proposal has been sent to MMLD. The General Manager
+recommends entering into a three year, 8 am – 4 pm remediation contract. This could be adjusted in
+coming years if additional coverage is felt necessary. This $31,632 contract does not include an on-
+boarding fee of $5,000.
+Vote #2023-49           Motion to approve the spending of $36,632 for year one of a three-year agreement
+                        to provide MMLD with the Proactive Monitoring, Remediation, and Management
+                        of the MMLD Meter Data Fiber Backhaul System was moved by Commissioner
+                        Smith, seconded by Commissioner Frechette. Unanimous.
+
+Village 13 substation replacement update
+Moving transformers and switchgear into the site is complicated because of the weight of the
+equipment. The recommended approach into the substation would allow to avoid the electric duct
+bank, if the path is widened to edge of the property line of the Sewer and Water parcel (where
+
+                                                                                                    4/15
+underground pre-cast concrete sewer parts are currently stored). The fence would have to be modified,
+the transformers would not come through the entrance but where the current fence is located. MMLD
+reviewed last week the proposed design of 11 precast concrete portions which would go over and
+protect the forced sewer line, with South East Essex sewer district, their civil engineering firm, and
+Marblehead Sewer and Water Department. The project is estimated to cost about $200K. Virginia
+Transformer has sent us a document stating that the first transformer is arriving May 1, 2024. Everything
+needs to be ready on site to receive the shipment.
+Commissioner Yarmoff requested that a detailed timeline of all the activities be presented at the next
+meeting. There are still a lot of moving parts: surveying the property; moving the sewer equipment,
+MMLD’s equipment; putting out to bid the pre-cast concrete bridging elements; getting them
+manufactured and installed; modifying the fence… Poles currently stored on site will be removed before
+the transformers arrive. They can be moved to the Tioga way site, see below. Alternatively, they could
+be stored next to the substation next to Temple Emanu-El, where MMLD owns land. All this needs to be
+done before May 1. It would be very useful to have a detailed Microsoft Project Timeline to identify the
+critical path, if any, and ensure that the project is on-time. The General Manager will invite Mike Barett,
+who is very involved in managing this project at the next Commission meeting to present this Microsoft
+project timeline.
+
+Tioga Way property discussion
+In 2019, the Town approved the transfer of the Tioga way property for use by the Light Department.
+There is one entrance into the property from Lincoln Avenue. Another entrance to the parcel could be
+created from Tioga way or from Hoods Lane if an easement to use this private road is obtained. Yet
+another entrance could possibly be created on the side of the boat yard, which would have the added
+benefit of giving fire-access to the site. In a next step, MMLD should talk with a site developer to figure
+out what would be the best way to develop this site. Easements to enter the property should be
+possible to obtain. The part of the property closest to Tioga way can be developed relatively easily as
+access from Tioga way is straightforward, the plot can be graded and used for multiple uses by MMLD,
+to store equipment, potentially for batteries installation.
+
+Electric buses
+The EPA has launched a rebate program for School Electric bus, which is a lottery not a competition,
+allocating up to $200,000. EPA funding unlocks Mass CEC funding. This is an opportunity for Marblehead
+which is not a town eligible for previous round of funding, as part of a non-priority district). Applications
+are due January 31. The School Committee has to be the lead on such a project, but a Light Department
+affirmation that the local utility is in support of the concept is necessary. This subject is on the school
+committee’s agenda for their next meeting taking place this week. Highland bus would be the applicant.
+If the project were to go forward, MMLD would benefit from capacity reduction from the use of the
+battery (226 kWh) during the summer months. With Marblehead’s small bus fleet of 5 vehicles, there
+could be an issue of range, as buses are not only used in town but also used for sports outings. The
+proposed submission is non-binding. There is no expectation that the Light Department finances the
+charging infrastructure: rather this statement is that MMLD will coordinate with the schools. In other
+words, it would become a customer project like any other. The infrastructure in place at the Brown
+school would allow installing a charger.
+Commissioner Hull wants to make sure that by signing this document, MMLD is not locked into anything.
+With this project, there are many reasons why the final decision may be a “no go”, but lack of support
+from the Light Department should not be one: we can eliminate this point of friction so that the School
+Committee can take the appropriate decision from their perspective. The General Manager stated that
+if the School Committee wants to go ahead with this, MMLD will support the project. Commissioner
+Yarmoff remarked that in a town government where each function works in its own silo, we know it is
+                                                                                                          5/15
+difficult to synchronize decisions, we know from experience that support from other town departments
+is not to be taken for granted.
+
+
+Vote #2023-50           Motion to have the General Manager sign the document affirming that MMLD
+                        will coordinate with the school to submit an application to the EPA rebate
+                        program moved by Commissioner Wolf, seconded by Commissioner Frechette.
+                        Unanimous.
+
+The General Manager noted that the board needs to direct the Light Department with regard to the role
+that MMLD should play to plan for electric charging infrastructure in town, for fleets and for private uses.
+
+
+The meeting concluded at 6:52 pm after a motion to adjourn was proposed, seconded and adopted
+unanimously.
+
+
+                                                ----****----
+
+
+
+
+                 Documents presented during the 12/19/23 Light Commission Meeting
+
+
+
+                           December 18, 2023 storm impacts
+              • Wind-blown trees down at two
+                locations, took down MMLD
+                utility poles: Rockaway St and
+                Dameys Way (off Waldron St).
+              • MMLD line crews were able to
+                stay on top of customer calls all
+                day
+
+
+
+
+                                                                                                      6/15
+           December 18, 2023 storm impacts
+• Widespread damage - 6 Different
+  Mutual Aid requests from all 6
+  New England states
+• MMLD line crew Kyle Laron &
+  John Ragusa, and Distribution
+  Mgr Greg Chane in caravan to
+  Calais, Maine ...need is until
+  Saturday
+• Positive benefit of tree trimming
+  program is evident
+
+
+
+
+             Engineering& TechServices- Update
+
+• MMLD-initiated    New Project Engineering
+• Customer-initiated    New Project Engineering
+• Substations - Ongoing Operations & Maintenance
+• Wilkins Plant - Operations & Maintenance
+• IT/Regulatory/Other
+• Emergency Response - extreme weather
+
+
+
+            TechServicesTeam
+
+• Colin - Group Manager and Electrical Engineer
+• Jack Ravago-Senior Maintenance and Operations Specialist:
+  Substation maintenance and testing, distribution system switching,
+  and Wilkins Plant operator
+• Didi Rubano - Lead Meter Technician
+• Paul Surette - Maintenance and Operations Specialist: Fleet
+  mechanic, HVAC/facilities maintenance, Wilkins Plant operator,
+  shipping & receiving
+• Nate Kobialka - Advanced Electric Utility General Tech: Substation
+  specialist (trainee), distribution system switching (trainee), and
+  Wilkins Plant operator (trainee)
+
+
+
+
+                                                                       7/15
+              MMLD-lnitiated Projects
+
+• Village 13 upgrade - tech team member with PLM
+• Battery storage siting evaluations - multiple locations
+• 1304 line upgrade - Village 13 to Beacon substation - daily switching to
+  de-energize line while line crew installs new poles (45 poles)
+• (unplanned) Dec 14. Foster Street- pumping station alarms and low V
+  alerts from meter. Evaluate for short term solution and long term
+  redesign/refeed
+• System PF correction - opened capacitor banks Nov
+• AMI communication     improvements and solutions
+
+
+
+
+              Customer-Initiated Projects
+
+• Expanding power needs for Blue Anchor Millworks, Beacon St woodshop
+  equipment - (3-phase 300 kVA 277/480 volt) new pad and refeed
+• Sailmaker Place - 80 Tioga Way ...48 residential units
+• Mariner Way- lMVA transformer and multiple pole relocations, CTsand
+  wiring for metering
+• Town DPW building 100 Tower Way- increased power needed
+• The Elbridge - Gerry School Condos -1-ph to 3-ph, increased power needs
+  ongoing, relocate feeds, additions 1-ph service requested
+• Temple Sinai - 100 kw solar PV array
+• Residential projects ...
+
+
+
+
+              ResidentialProjects
+
+• Bass Rock Lane
+• Casino Road
+• Wyman - EV charger at a ledge-challenged site
+• Ocean Ave
+• Harbor Ave
+• Beacon St
+• Solar application reviews (distribution       reliability)
+
+
+
+
+                                                                             8/15
+             SubstationO&M
+
+• Clifton - Dec. switchgear testing, switching, de-energizing, and racking
+  out breakers.
+• Commercial St. - remote switchboard meter display
+  replacements/upgrades
+• Oversee/Review weekly substation visits & meter readings
+• Took delivery of retired pole mount transformers from Middleboro Gas
+  and Electric w/ assistance from Irby
+• Transformers Spec'd and Ordered, 45kVA 3-ph pole mount stacker,
+  fiberglass box pad for Blue Anchor project, 10 reconditioned S0kVA pole
+  mounts for stock, 300kVA 3-ph pad mount to replenish inventory.
+
+
+
+              Wilkins O&M
+
+• Oct. unscheduled DEP compliance inspection
+• ISO Winter Readiness Survey submitted Dec
+• Participate in ISO IEP (Inventoried Energy Program)
+• ISO GADS (Generating Availability Data System) monthly review
+• ISO Weekly OP21 Fuel & Emissions survey
+• Wilkins fence unplanned repairs
+• Catalyst monitor data pulls for reporting
+• ISO Summer and Winter Claimed Capability Audits
+
+
+
+              IT/Regulatory/Other
+
+• Dept. Network Server Maintenance Coord with IT vendor lPath
+• Primary contact with Tighe & Bond for DEP& EPAWilkins filings
+• EIA reports (EIA-860, EIA-861, EIA-923A), NPCCparticipation and
+  UFLScompliance surveys, NERCAlert responses and reliability
+  assessments, MassDPU, MMWEC tech contact and filings
+• Town & MMLD fiber optic system projects - new cameras, shared
+  fiber
+• AED battery and pad replacements
+• Backflow tests sprinkler system coordination
+
+
+
+
+                                                                             9/15
+                  MMWEC Winter Reliability Update
+                                                2023/2024
+
+
+
+
+                              WHOlUA,l!IUCTJICCOlilr.tNY
+                              Public Energy Partners
+
+
+
+
+                                    Background
+•       In an effort to keep MLP members informed of the current outlook
+        for generation in the region, MMWEC has prepared the following
+        outlook for Winter 2023/2024
+•       This is intended to relay forecast from ISO-NE and NOAA as well
+        as provide a reminder of MLPs' roles in an energy or capacity
+        deficiency
+
+
+
+
+            What are the Meteorologists Saying?
+
+                 ISO-NE                                                 NOAA
+    •   Peak winter load is forecast at                    •   40%-60% chance of above
+        20,269 MW (50/50 Forecast);                            average temperatures through
+        260 MW higher than last                                February
+    •   Peak winter load is forecast at                    •   40% chance of above average
+        21,032 MW (90/ IO Forecast;                            precipitation for coastal New
+        350 MW higher than last                                England
+    •   Mystic RMR, still in place as is;                  •   Patterns driven strong El Nino
+        IEP program to provide                                 effect in Pacific
+        security
+
+                                                                                                2
+
+
+
+
+                                                                                                    10/15
+     ISO Scenario Analysis (Comparison)
+        Scen;:mo Oescr1pt1ons& Results
+
+                     SCCln3riO:
+
+                  Similar Winter
+                                                               Mochir.lto
+
+                                                       Winter 2017/2018
+                                                                                                               ·-·
+                                                                                                       Winter 2013/2014
+                                                                                                         ,Id      tt'clncrmal
+                                                          :dert aononNI
+                                                        1w1
+                                                                                               st.    ldsnapsoffourorincred.:,ys
+          Ob!>erved
+                  WeatherCondit10ns            two -..ff'k spa-, cf 511Hlcartl'~bdoN
+                                                                                               ane strelth al e mni.nut         ~   a,,,.,.
+                                                           l'IO'm.Jltefl'IIH
+                                                                                                           ~-"-            11
+               PeakLoad Modeled                            19,600MW                                        20300MW
+
+               Total Winter Energy
+                                                          Jq,JOOGWh                                        11,lOOGWh
+                Demal'\d Modeled
+                                              Sufficient c.a,p,elty ,nd cneriv to meet       C..p•dtydclldcacy   ,,;111,ns H.-ois • f.-
+                     Results:                    peak loads ind e,,era dem.nds                     days, ener,v ~orlf1II unllUly
+
+
+
+        Assumptions
+                                                 Vatybrtwec:nl,000          -1.000~W/tv"'hffl1t20"r     1.SOOMW           whet <lO'J
+            B!h nd-t~e-\'1eter PV (apacd.y                                       6.400WWiumtpliiltf
+
+
+
+
+ Key Takeaways from ISO Winter Analysis
+New England should have sufficient resources to meet peak demand this
+winter
+ISO will continue to monitor natural gas deliverability throughout the
+winter; consistent with past winter seasons,the ISO assumes that
+approximately 3,500 - 4,300 MW may be at risk due to constraints
+Based on generator capabilities expected during the winter season,
+capacity analysis indicates a surplus even after accounting for generation
+at risk due to gas supply
+Extended periods of cold weather may rapidly deplete stored fuel
+inventories and capacity outlook will be adjusted accordingly
+Unplanned generation & transmission outages could rapidly decrease
+capacity surplus margins for the region
+
+
+                                                                                                                                              4
+
+
+
+
+                  MMLD Proposed 2024 Operating Budget ($MM} -
+                                   $21.696
+
+                                             All Other OpEx,
+                                               2.620, 12%
+                                                           I
+
+         Employee Benefits & orrn•,
+                    1.760, 8%
+
+
+
+
+             Depreciation, 2.130,
+                    10%
+
+                                                                                                                   Bulk Power, 12. 733,
+                                                                                                                          59%
+
+
+
+
+                                                                                                                                                  11/15
+                   2024 Operating Budget
+
+                       Revenue & Rate Requirement Projection 2024
+                                    Using 5% Depreciation
+                                          (000's)
+                                                                               Projected   Proposed
+                                                        Budget      Budget      Actual      Budget
+                                                         2022        2023        2023        2024
+
+Total Operating & Maintenence Expense Budget             19,510.0   22,996.0    21,085.0    21,365.8
+Surplus Revenues returned to Town of Marblehead             330.0      330.0       330.0       330.0
+                                                              a.a        a.a         a.a         0.0
+                                                              0.0        0.0         0.0         0.0
+                                                              0.0        0.0         0.0         0.0
+                                                              0.0        0.0         0.0         0.0
+   Revenue Requirement                                   19,840.0   23,326.0    21,415.0    21,695.8
+
+
+
+
+    Lemmerhirt Consulting Background
+
+    • 20 years of consulting to utilities: IOUs, co-ops, municipals
+    • Experience
+         • Executive positions with Adara, Mueller Systems
+         • AMI and MDM product management
+         • AMI and MDM project management
+    • Team with over 30 years of utility experience
+    • Focused expertise: AMI, MDM, Integration, Load Research, Rates
+    • Based in Framingham, MA
+
+
+
+     Project Involvement
+    Completed Projects with:                Currently Working with:
+        • Concord Electric                       • North Attleborough Electric
+        • Middleborough Gas & Electric           • Holden Municipal Light Dept
+        • Sterling Municipal - Electric and      • Vermont Public Power Supply
+          Water                                     Authority
+        • Groton Electric                        • New Brunswick Power
+        • Reading Municipal                      • SW Arkansas Electric Cooperative
+        • Clark County Electric Cooperative      • Washington Electric Cooperative
+          {Indiana)                              • Vermont Electric Cooperative
+        • Ipswich MA
+
+
+
+
+                                                                                                       12/15
+AMI Vendor Experience
+
+• Itron and Silver Spring                                  Vendor                   Number of
+                                                           Selection                Projects
+• Landis & Gyr
+                                                           Eaton                              5
+• Adara
+                                                           Adara                              1
+• Eaton
+                                                           Itron                              3
+• Honeywell (Elster)                                       Landis & Gyr                       2
+• Trilliant                                                In progress                        2
+• Sensus
+• NexGrid
+
+
+
+Our Team and Roles
+    Jackie lemmerhirt - Project Lead, AMI Lead                                 Geetha Ganesan
+
+            • Key point of contact                                 Business Process & Benefit Analysis Lead
+
+            • Overall project management                              Conduct "as-is" and "to-be" system
+            • Lead interaction with staff, AMI vendors                evaluations, including technology
+            • Develop AMI Recommendations                              required
+
+                                                                       Develop business process plan
+                                                                       Lead quantification of benefits
+      Barbara Leary - Stakeholder Communications
+
+               Collaborate on stakeholder engagement
+
+               Lead customer strategy development
+
+               Develop stakeholder and customer communications and materials
+
+
+
+
+Sloan School S-Lab Project steps
+
+• Participated as a host in Spring 2023
+
+
+• 2024 calendar
+   • Scoping possible problems proposal with faculty                     2023/12/20
+   • Draft of application                                                2024/01/10
+   • Scoping and problem formulation workshop                            2024/01/10
+   • Pitch of problems to students                                       2024/02/07
+
+   • Work of team: 1Q24 - 2Q24
+
+
+
+• Possible projects
+   • Making Time of Use effective: what does it take?
+   • Storage in Marblehead: short vs long term; Utility vs residents: aiming to
+     reduce energy costs in Marblehead by x%.
+   • Resilience and microgrid
+
+
+• Others?
+
+• Problems need to meet the Sloan School curriculum
+• Important to have a « Good Problem Formulation »
+
+
+                                                                                                              13/15
+                    Three steps to good problem
+                            formulation
+ I. Identify the high-level process you are improving and the metric you
+    care about
+         • Is it cost reduction?Riskmanagement?
+                                             Revenue
+                                                   growth?
+
+ 2. Scope
+        down to a specific
+                         manifestation
+                                    ofthatproblem
+                                                onwhich
+                                                      youcanmake
+    canmakeprogress quickly
+         • Ex.6-8 weeks,durationof the S-Labclass,moreprogresswith manyshort projectsthanonebig change
+           big changeinitiative
+
+ 3. Formyourproblemstatement
+         • A singlesentencewith a clear measurablea
+
+                                                                                                         Mir
+                                                                                                         MANAGEMENT
+                                                                                                         Sustamab1htylnitialiv<l
+
+
+
+
+ Anatomy of a Good Problem Statement
+
+                                                                                     •••
+                                                                                           Core Values
+ It explicitlyreferences something that the organization or
+
+
+
+                                                                                     •••
+ person in question cares about
+     • Revenue, profit, defects, customer satisfaction
+     • Mission and values and usually a good place to start
+
+
+
+                It contains a clear notion of a gap, shortfall, or dissatisfaction
+                Target -Actual=    Gap
+                                                                                     •••
+                                                                                          '''''j"',,~
+                                                                                    --                   --
+The key variables are quantifiable (though not necessarily currently measured)       ;:
+
+
+
+
+               It is as "neutral" as possible concerning causes or solutions
+                                                                                                         M
+                                                                                                         MANAGEMENT
+                                                                                                         SustainabiilitylMiat.,.
+
+
+
+
+ Common failure modes:
+Skipping writing it down, because "we all know the problem" so let's
+get moving
+       Writing it down in one sentence forces you to be clear
+Problem statement as solution in disguise
+       "The problem is that our staff need more training"
+
+'Boil the ocean'- trying to solve too much at once
+       "We need to get to net zero "
+
+Lack of precision and quantification
+       "We need more workplace diversity"                                                                Mr
+                                                                                                         MANAGEMENT
+                                                                                                         S.-..biltty
+
+
+
+
+                                                                                                                                   14/15
+ Some examples (Good!):
+• Bank scores a 3/10 in feeling confident in hiring and supporting an
+ associate with a disability. Improve their confidence increasing their score
+ to a 6/10 or better.
+
+• Our paper losses are at least 10% versus an industry standard of 5%. This is
+ negatively affecting our financial position and our ability to be competitive.
+
+• Reduce emissions at one Pharma plant by 5% in 1 year in order to meet
+ corporate climate goals.
+
+
+                                                                         Mir
+                                                                         MANAGEMENT
+                                                                         SUlblnabllityl
+
+
+
+
+Some examples (Bad!):
+• The problem is we don't have a sustainability strategy.
+• Our CEOdoesn't care enough.
+• We need a model to identify sustainable investments for our portfolio.
+• We need to re-organize our key functions to align with and support the
+ emerging customer 'verticals'.
+• Those guys in marketing are jerks and don't understand a thing about
+ manufacturing. All the changes they request make production impossible
+ to schedule and we always miss our targets.
+
+
+                                                                         ...........
+                                                                         MANAGEMENT
+                                                                               ,,
+                                                                                     r
+
+
+                                  ----****----
+
+
+
+
+                                                                                          15/15
+

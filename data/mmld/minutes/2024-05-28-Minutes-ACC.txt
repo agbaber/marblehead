@@ -1,0 +1,982 @@
+Light Commission May 28, 2024 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           May 29, 2024
+Re:             Commission Meeting Public Session, May 28, 2024
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:00 pm. The meeting was held
+in person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+Participated in meeting:
+     Commissioners:         Commissioners Frechette, Hull, Wolf and Yarmoff participated in person.
+                            Commissioner Smith was excused
+      Light Department:     General Manager, J. Kowalik; Business Manager, Matt Barrett
+      Invited:              Marblehead Fire Department, Chief Jason Gilliland;
+                            Marblehead Building Department, Inspector Ben Lebowitz;
+                            Massachusetts Municipal Wholesale Electric Company (MMWEC)
+                            Sustainable Energy Policy & Program Senior Manager, Zoe Eckert.
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Comments from the Public
+George Hooper commented that he had been told three years ago that residential batteries were not
+allowed, but he would still like to install a Tesla wall in his house. Is this possible?
+A discussion ensued regarding the process residents need to follow to get a battery installation
+approved and connected. Please see below.
+Pal Bickford, Chair of the Trees and urban Forestry group of Sustainable Marblehead and member of
+the Marblehead Green Committee enquired about the possibility of planting trees at the High School,
+where the parking lot represents a heat island. If possible, it would be great to plan for some tree
+planting in the fall, or next spring. The General Manager explained that Marblehead has applied for a
+grant to build a solar canopy. The design has not been finalized, but the size of the array is as
+determined in the NREL study that took place a couple of years ago. It would not make much sense to
+plant trees and then have to move them because of the installation of the solar array. Chair Wolf
+suggested that the parties review the NREL study.
+
+Outstanding items from previous meetings
+Application process for DER Interconnection Application. The General Manager presented the flow
+chart for the application process. The most recent iteration of the interconnection application is
+shown in annex below (pages 3 – 6). It will be published on MMLD’s web site after finalization. Both
+the Fire Chief Jason Gilliland and Building Inspector Ben Lebowitz were present and commented on the
+process, which allows for appropriate communication between MMLD and the Building department.
+Resident George Hooper was encouraged to use this document and to “test out” the process.
+
+
+
+
+                                                                                                1/16
+Employee Survey. The General Manager discussed with Polco’s Laurence Matthews on 5/28: we are
+waiting for Polco to provide a sample survey adapted to MMLD’s needs. In the discussion, it was
+suggested that board members would be welcome to contact Polco as well.
+Time of Use Working Group. Commissioners Smith and Yarmoff were nominated to this working
+group.
+
+
+MMWEC Virtual Power Plant presentation: Zoe Eckert.
+Zoe Eckert, MMWEC’s Sustainable Energy Policy & Program Senior Manager presented a Virtual Power
+Plants program being discussed with Duracell and Municipal Light Plants. See slides p 7-14. Municipal
+Light Plants like MMLD can use programs such as this to manage demand, and infrastructure build-up.
+This can help reduce energy costs and infrastructure build-up costs. It is complementary to the Utility
+Scale BESS MMLD is pursuing. Several possible pilot programs were presented, where the ownership of
+the battery may be with MMLD or with the home-owner. ROI for MMLD and owner were presented
+under a variety of scenario: stand-alone, couple with solar, in the case of TOU rates. The next step is for
+MMLD to determine how the Department may want to participate in this program, if it does.
+
+
+General Manager Updates
+
+Village 13 upgrade. The delivery of the transformers is now scheduled for June 27 and 28: this is
+now during the school vacation period, which makes it easier to temporarily restrict traffic or
+parking on Pleasant street, Bessom Street and the Railroad RoW. These dates might still change as
+travel restrictions for oversized loads are imposed by states, and are not unified. Testing of the
+transformers at the Virginia Transformer facility has not yet been scheduled.
+
+Tioga Way parcel preparation. The General Manager presented the work that was done by Bill
+Capone from Bayside Engineering to survey the plot, and determine the possible locations of BESS
+installations. Two areas were deemed possible (C2 and C3, shown on page 15). In both cases, it
+would be necessary to build retaining walls to have a level site. Next steps include developing a cost
+estimate for the two sites, evaluate their suitability taking into consideration Access, Drainage and
+Conservation concerns, and meeting with abutters.
+
+Fencing 80 Commercial St Building is underway, with fence posts being set, pre-cast footings for the
+sidewalk repair and railing to be completed by mid-June.
+
+System Planning. A meeting with National Grid took place on April 11 to review 5-year load forecasts
+as well as long term power forecasts. There were no specific plans shared with regards to possible
+grid upgrades or battery storage for the Salem/Swampscott area that also serves Marblehead.
+
+Update on hiring. MMLD is currently reviewing applications for the Engineering Project Manager
+position. Interviews will take place in the next couple of weeks.
+
+The meeting concluded at 5:55 pm at which point a motion to adjourn was proposed, seconded and
+adopted.
+
+                                              ----****----
+
+
+
+
+                                                                                                   2/16
+  Documents presented during the May 28, 2024 Light Commission Meeting
+
+
+
+
+ Marblehead Municipal Light Department (MMLD)
+    Customer Distributed Energy Resource (DER)
+            Interconnection Application
+
+This document includes:
+          •   A Flow Chart with numbered steps, detailing the Town of
+              Marblehead's complete Interconnected Distributed Energy
+              Resource (DER) Permitting process: for a Solar PV array, a
+              Battery electric storage system, or both, from start to finish.
+          •   The MMLD Interconnection Application - a two-page
+              document that's Step 2 in the Interconnected DER Permit
+              process.
+          •   Interconnected DER- Customer Terms and Conditions- a
+              three-page supplement to the general Customers Terms and
+              Conditions of Electrical Service.
+
+
+If you have any questions:
+          •   General questions and questions about the application
+              process, please contact our Customer Service representatives
+              at 781-631-5600, email us at customerservice@mhdld.com,     or
+              stop by our office at 80 Commercial St.
+          •   Of a technical nature, contact our Engineering Manager Colin
+              Coleman at 781-631-0240 or email ccoleman@m hd Id.com.
+          •   Other questions or concerns, contact our General Manager Joe
+              Kowalik at 781-631-0240 or jkowalik@mhdld.com.
+
+
+
+
+                                                                                3/16
+                                                          Town of Marblehead Permitting Process
+                   for Interconnected Distributed Energy Resources (DER): Solar PV Array and/or Battery Electric Storage System
+                                                                                       May 24, 2024
+
+
+Marblehead Building Dept Responsibility                                              10. (If needed) Modify
+                                                                              r - .. construction for permit
+                                                                                           compliance
+
+
+
+                                 4. Installer files the
+                               appropriate Building &
+                               Electric permits at Mhd
+                                    Building Dept
+                                                          -                           9. Installer Requests a
+                                                                                     Final Inspection approval
+                                                                                                                               11.Building Dept/Wire
+                                                                                                                               Inspector Issues Final
+                                                                                                                                Inspection Approvals
+                                                                                                                                   (digital & paper)
+
+                                                                                                t
+                                                                                                 .
+Customer & Installer Responsibility
+                                                                                      8. Installer continues
+                                                                                       work to completion
+
+     1. START HERE:
+                                                                                                                                                                           15. FINISH HERE:
+      Select a reliable
+                                                                                                                                                                           Customer enjoys
+    installer to design a
+      code-compliant                                                                                                                                                     their new installation!
+            system                                                                   7. Installer begins work
+                                                                                       based an approved
+                                                                                              permits
+
+
+
+
+                                                                                                                                                                          14. MMLD CS updates
+
+
+                                                                                                                                                                     -
+   2. Installer completes                                                                                 12. MMLD Distrn Mgr              13. MMLD Meter Dept
+                              3. MMLD Tech Services                                                                                                                        Cu5tomer Account &
+                                                               6. M MLD Customer                      generates Service Order to
+  MMLD Interconnection
+     Application
+      (Attached)
+                              reviews design & issues
+                                an     Approval to
+                                                              Service (CS) signs an
+                                                               Approval to Install
+                                                                                        -                install electric meter &
+                                                                                                      upgrade customer's electric
+                                                                                                                                            selects & installs the
+                                                                                                                                               rate-appropriale
+                                                                                                                                             bi-directional meter
+                                                                                                                                                                            communicates an
+                                                                                                                                                                         Approval to Operate to
+                                      Install
+                                                                                                               connections                                                     the customer
+
+              '
+              ''                                                                                                  4
+               ''                                                                                                  '
+                                                                                                                   I
+                                                                                                                   I
+                ''                                 5. Customer confirms
+                                                                                                                   I
+                 ''                                   enrollment in the
+                                                                                                                   I
+                                                                                                                   I
+
+                  L---------------------- ♦         appropriate MMLD      ·-----------------------J
+                                                   Energy/DER Programs
+
+
+
+  Marblehead Municipal Light Dept Responsibility
+
+
+
+
+                                                                                                                                                                                                   4/16
+                                l\1arblehead Municipal Light Department (MlVILD)
+                             Customer Interconnection Application and Se1·vice Agreement
+                                     For Solar PV arrays and/or Battery Storage Systems
+
+
+Applicant Contact Information:
+Customer Name (p1int):_______________________________                                                                    _
+Address of Interconnection Facility: __________________________                                                      _
+Mailing Address. if different from above: _________________________                                                       _
+City: _________________                               State: __________                       Zip Code: ____              _
+Telephone (mobile): ____________                      (home): _________________                                          _
+E-Mail Address:                                       MMLD Account#: --------------
+Installation Vendor Contact Information: ( System Installation Contractor):
+Vendor Name: ______________                           Key Contact -ame: _____________                                    _
+Mailing Address:_________________________________                                                                     _
+City: _________________                               State: __________                       Zip Code: ___           _
+Telephone (mobile):____________                       (Office): ________________                                     _
+E-Mail Address: ____________                      _
+
+(If separate from above) Electrical Contractor:
+Vendor Name: ______________                           Key Contact    ame: _____________                                  _
+Mailing Address:_________________________________                                                                     _
+City: _________________                               State: __________                       Zip Code: ___           _
+Telephone (mobile):____________                       (Office): ________________                                     _
+E-Mail Address: ____________                      _
+New Equipment Information:
+Energy Resource(s): Solar PV D       Batte1y D     Other_______________                                   _
+Estimated Installation Date:______            Estimated In-Service Date: _____________                                   _
+Solar PV Panel: Manufacturer & Model: ___________________                                                # of Panels:
+Inverter Manufacturer & Model: _______________________                                                 # ofinverters:
+ls the Inve11erULI 741 approved? Yes D      oD
+Max Output Power of Each Inverter: ___      (Watts) @ ___      (Volts AC)          Single D or Three D            Phase
+Total PV System Output I (# of panels x max power/panel (W DC) x CEC inve11erefficiency/1.000): ____                          (kW)
+Total PV System Output 2 (maximum power output per inverter (W) x # of inverters/1.000):                                  (kW)
+REQUIRED: Please attach a one-line electtical diagram for the proposed electtical system.
+Battery Storage System: Manufacturer and Model: _______________                                        # of Units: ___           _
+Is the batte1y system UL9540 approved? Yes D      oD
+Total Batte1y System Charge/Discharge Power kW (DC): ___            Total Batte1y System Energy kWh (DC): ___                    _
+Total Batte1y System Charge/Discharge Power kW (AC): ___            Total Batte1y System Energy kWh (AC): ___                    _
+REQUIRED: Please attach a one-line elecuical diagram for the proposed electtical system.
+                                                                I
+                                                                     M!v!LD Customer Electrical Interconnection Application 2024-0S-24v4.docx
+
+
+
+
+                                                                                                                                          5/16
+Customer Signature
+I hereby certify ihat. io the besi of my knowledge. all of ihe infonnation provided in this applicaiion is tme and I agree io the
+Temis and Conditions on the following pages:
+Interconnecting Customer Signature: _______________                             _
+Title (if Company): ____         _   Date: _____         _
+Insialler   ame __________                 Signature: __________                    _       Date: ----
+
+Please complete and 1·eturn this document to:
+Marblehead Municipal Light Department
+PO Box 369
+80 Commercial St.
+Marblehead. MA 01945
+
+Or email to: cusiomerservice@mhdld.com
+
+
+
+
+Approval to INSTALL Facilitv (F01· 1MLD use onlv}
+Installation of the Facility is approved contingent upon the tenns and conditions of this Agreement and MMLD approval
+of any !VIMLDor customer system modifications, if required. Are system modifications required? Yes D                 oD
+MMLD Signature: ________________                                 Title: __________                    Daie: ____         _
+
+
+Approval to OPERATE Facility (For MMLD use onlv}
+Installation of ihe Facility is approved contingent upon the tenns and conditions of this Agreement. and MMLD approval
+of any !VIMLDor customer system modifications. if required. Are system modifications required? Yes D        oD
+If yes. please explain an end of application.
+
+MMLD Signature: ________________                                 Title: __________                    Daie: ____         _
+
+
+Explanaiion of Modifications. if any:
+
+
+
+
+                                                                   2
+                                                                       :MM:LDCustomer Electrical Interconnection Application 2024-05-24v4.docx
+
+
+
+
+                                                                                                                                                 6/16
+      Virtual Power Plants:A Versatile Tool for
+              Decarbonization Impacts
+
+               Marblehead Municipal Light Plant Pilot
+
+
+
+
+                        WMOl.lU.LfUICTtiCCOfll,AMr   ~   .........
+                         Publit E~r9y   Partners         ~
+
+
+
+
+          Why Demand Response is Needed
+       What is the ultimate goal of load shedding
+     during peaks? :To get your peak load to O kWh
+
+ •    Do you BESSreduce your peak load to zero?
+ •    Do your BESSsystems account for load growth?
+ •    How far away are you from TOU?
+ • Are your customers aware of demand response and ready for TOU?
+ • Getting a battery in a home readies it for TOU in the future
+
+
+
+
+                          What is a VPP?
+Virtual power plants (VPPs) are aggregations of distributed
+     energy resources (DERs) such as smart appliances,
+     rooftop solar with batteries, EVs and chargers, and
+      commercial and industrial loads that can balance
+  electricity demand and supply and provide grid services
+                like a traditional power plant.
+
+
+
+
+                                                                     2
+
+
+
+
+                                                                         7/16
+                                   The Program
+
+
+                               Connected Homes 2.0
+
+    Mission: To drive at home and town level resiliency by power
+    sharing methods between municipal light departments
+                           and residents
+
+
+
+
+    -...                                                           3
+
+
+
+
+Potential Manufacturing Partner
+
+•    The Duracell Power Center is an AC coupled
+     Energy Storage System that provides SkW of
+     rated power and 14.2 kWh capacity
+•    The battery can power up to I 00A of critical
+     loads in case of a power outage, providing
+     carbon-free resiliency to the homeowner
+•    Manufactured and assembled in the US
+•    The Duracell Power Center Essential uses LFP
+     (lithium iron phosphate) batteries
+•    Duracell will train installers and unionized
+     electricians from the MLP
+
+
+
+
+                                Model Variations
+
+    • Battery with Solar
+    • Battery with TOU
+    • Battery owned by MM LD, no solar
+    • Battery owned by homeowner, no solar
+    • Crowninshield Pilot
+
+
+                                                                   5
+
+
+
+
+                                                                       8/16
+                                          BatteryWith                      Solar Pilot
+             MLP Provides $100 / kWh incentive and requires enrollment into Connected
+             Homes for the lifetime of the battery. Batteries to not receive Connected Homes
+             incentive and are not able to opt out of a peak event.
+                             When you participate in Connected Homes, you will allow Virtual Peaker to automatically
+                             manage your battery during periods of peak demand. Reducing demand during control
+                             events helps stabilize the efectric grid by using your solar charged battery to reduce energy
+                             use.
+             When we call a peak event for the day.your battery will charge up to full and
+             remain at full until the P.eakdischarge time.After MLP discharges the battery, it
+             will recharge at the earliest time possible from the solar system.
+             Homeowner will always have 40% of the battery reserved. Homeowner is able to
+             choose how to use the remaining 40% of their battery. Either reserve for outage
+             or save for other uses.
+             Non-event periods make the entire amount of the battery available for your use.
+
+
+                                                                                                                                                       6
+
+
+
+
+                                                Breakeven for M LP
+         NextZero VPP Res1dent1alBattery Program
+
+Battery System Details
+                                                           ,.,
+S.nerylnven.crC11P11CitylkW)
+Tou,I ~em
+RoundTrip(lficifncv
+IJMfullif~mt(YNrs}
+                    C~ity   (AC kWh)
+                                                           ...
+                                                            7.7
+
+                                                            15
+                                                                                   Cost/Benefit to MLP Over Battery Lifetime
+
+
+NumbrrofUnit,;
+Lifetime Cost Avoidance for MLP                              '        "'""""'
+                                                                      14.000.00
+                                                                      S,,000.lll
+AYOlded Ene,qy Cons from Lo.cl ShrlbnQ
+Avoided Capacity Costs from PNk ShaY1"q
+Avoided TransmK~on Com from P~ n.-~--
+                                                           "'
+                                                         Sl,590
+                                                         16511
+                                                                      1600000
+                                                                      s~.00000
+ToulAYOidfdC~1f«MLP                                      18159        M.000.00
+                                                                      U.000.110
+Total PrOQram Costs                                                   S,.00000
+l!w:l!!'ltivtCO!t                                        Sl,<100      s1.ooo.oo:,.,,-,----
+Totll MMWECAdmln Ftt!                                    S187S
+T                                                            7                     1   2     l   <I   ~   6   1   8   9   10   11   IJ   1J   u   1~
+
+Net Value
+N« VM!tOYS   System lifetime                             M,81M
+Br~~-    Timf'frame Nears                                 5.00
+
+
+
+
+                                                                                                                                                       7
+
+
+
+
+                                          Breakeven for Customer
+
+                                                              ModelTBD
+
+             MMWEC will take the cost of the battery and graph that will a
+             home's bill savingsfrom charging from solar system and discharging
+             at night, minus expected peak shaving events over lifetime of battery.
+             MMWEC needs a typical Marblehead residential load curve to do
+             this analysis. Awaiting Groton's version and can use their load curve
+             model as stand in.
+
+
+
+
+                                                                                                                                                       8
+
+
+
+
+                                                                                                                                                           9/16
+                                               Batteries with TOU Rates
+
+                 Homeowner would purchase the battery and program it to charge
+                 during off peak times, and discharge during on peak times.
+                 MLP would see the assumed TOU peak shaving cost avoidance
+                 results, and homeowner would not have to change their energy
+                 consumption habits.
+         • MLP to provide incentive to customer to lower barrier to entry on
+                 technology adoption.
+                 BreakevenAnalysisfor homeowner investmentpending Groton model
+                 analysis.Coming soon.
+
+
+                                                                                                                                                   9
+
+
+
+
+                            MLP Owned, Grid Powered Batteries
+         • Municipal light department will lease the battery to a homeowner
+         • Municipal light department will use the battery in the range of IO times a month to
+           subsidize the cost of the battery with expected value of peak shaving cost avoidance
+           savings
+         • The homeowner will have access to the battery during outages as a clean alternative to
+           a generator
+         • The battery is maintained at I 00% charged, waiting for a power outage for the customer
+           of the peak purpose for the light department
+         • The battery recharges at night when energy is the cheapest, creating arbitrage cost
+           savings
+         • The customer will see the energy consumption of the battery being recharged in their
+           portal but will then see all bill credits when the battery is used during peak events
+
+
+
+          -...                                                                                                                                 10
+
+
+
+
+                                         Current Per Unit ROI Details
+         NextZero VPP Residential Battery Program
+
+  Battery System Details                                                      Cost/Benefit to MLP Over Battery Lifetime
+  S.ne,vlnvenerC1JPKitv(kW)
+  T~System (IJPKitv(ACkWh)
+  Round Trip EfftCiency
+  LIM!fulLifetime(YHB)
+  Numt- of Units
+                                                        ...
+                                                         5.0
+                                                        12.8
+
+                                                          15    S20,000.00
+                                                                                      -TotalCost               MlPCOSlSA'IOided
+
+
+                                                                $18,000.00
+  Lifetime Cost Avoidance for MLP
+                                                                $16,000.00
+  AYOidedEnerqyCostsfrom load Shiftinq                   196
+  A.void«! C•p,cify Costs from Puk Sh...,nq           U,649     Sl-4,000.00
+  A'IOidedTninsmissionCosts from PNk Shavinq         S10,8S2    S12,000.00
+  TotM Pmaram PavmMt from HomfOWMJ                    13600
+                                                                $10,000.00
+  Tota!AvoidedCosuforMLP                             1.17198
+                                                                 S,8,000.00
+  Total PrOQramCosts
+  UnitPun:hmPn(:e
+  lnst.li.tionCosu:
+  TotalMMWECAdmin FeM
+
+
+  Net Value
+  Net VMueover S,,,Stem
+                      Ufetime
+                                                      1,6,000
+
+
+
+                                                      .....
+                                                      S1,000
+                                                      '1800
+
+
+
+
+                                                      S8,398
+                                                                 S6,000.00
+                                                                 S4,000.00
+                                                                 S2,000.00
+                                                                       s-
+                                                                              1
+                                                                               -----
+                                                                                  2   3   4        5   6   7     8    9   10   11   12   13   14   15
+
+
+
+  Bfeake\leflTim~elY81'Sl                              5.25
+
+
+
+
+---      -...                                                                                                                                 II
+
+
+
+
+                                                                                                                                                        10/16
+                           Future Assumed Per Battery ROI Details
+                 NextZero VPP Res,dent,alBattery Program
+
+         Battery System Details                                                       Cost/Benefit                   to MLP Over Battery Lifetime
+         httttvlnverterC-,.city{kW)                           5.0
+         TOUIISVs;tffl'I(,pKity(AC      kWh)                 12.8
+                                                                                                         -TotalCost                          MLPCostsAvoided
+         Round Trip Effic:iMcv
+                                                             ""        $20,000.00
+
+
+
+                                                                                                                                                                                                         --
+         Usefullifetime(YNl'S)                                 15
+         Number of units                                       1       $15,000.00
+         Lifetime Cost Avoidance for MLP
+         AYOlded Enerqy Costs from Load Shiftmq
+         AvoidedC11)«ityCostsfromPNlt5havinq
+                                                              ...
+                                                           $2,649
+                                                                       $16,000.00
+                                                                       $14,000.00
+                                                                       $12,000.00                                                                            ~
+         Avoded T111ns1m$$10n(0$l$ from PNlt Shavlnq     SlO,852
+         Totollp,,..,,,,m P-ent
+         T0u,1Avoi~     Com for MlP
+                                      from Homeowner
+                                                           '"°'
+                                                         $17198
+                                                                       $10,0(XU)O
+
+
+
+
+                                                                                         -===-----
+                                                                        sa,000.00
+                                                                        $6,000.00
+         Total Program Costs
+         UnitPurchtiePrice                                 $9,000       $4,000.00
+         InstallationCosts                                 Sl,000       $2,000.00
+         TotalMM'NECAdminfttS                               1800
+         ToulExDMSH                                      1.11800                S·
+
+         Net Value
+                                                                                         1       2
+                                                                                                         '       4       5       6       7
+                                                                                                                                                 •       9        10        11        12       B        14        1
+
+
+         Net: Value owr s,,stem Lifetime                   $5,398
+         SrffkfVfflTtffl@frametvNJS                        10.00
+
+
+  ~-
+::..-~=---                                                                                                                                                                                               12
+
+
+
+
+                                                  Without Customer Payment
+               NextZero VPP Residential Battery Program
+
+       Batterv Svstem Details
+                                                                                     Cost/Benefit                to MLP Over Battery Lifetime
+       ~nerv InverterC.»eitv (kW)
+       Total SVslem (JiPll(ity (AC kWh)
+       Round Tnp Etfkiency
+       Usefullifetime(YNn)
+       Number of Units
+                                                             ...
+                                                              5.0
+                                                             12.8
+
+                                                               15
+                                                               1
+                                                                     $16,000.00
+                                                                                                     -TOWICost                           MlPCostsAvoided
+
+
+
+       lifetime Cost Avoidance for MLP
+       A't'OidedEnerqy Costs from lold Shiftinq
+       Avoid«! Capacity Costs from Pok. Shaving
+                                                              ...
+                                                          S.2.649
+                                                                     $14,000.00
+                                                                     s,2.000.00
+                                                                     SlO,000.00                                                                                         ~
+       Avoided Tnnsmimon Costs from PNk Shavino          S1O852
+        otAIAYOidfdCostsforMLP                           <13598       sa,000.00
+
+
+
+                                                                                                         ~
+                                                                      S6,000.00
+       Total Proaram Costs
+
+
+
+
+                                                                                         --
+                                                                      s,t,000.00
+       Unit PvrchnePrice                                   S6,000
+       Install.Ilion Com                                   Sl,000     $2,000.00
+       Total MMWEC Admin Fees                              <1875
+       To!Alb,_.,ses                                       18875
+                                                                            s
+       Net Value
+                                                                                     1       2
+                                                                                                     '       4       5       6       7
+                                                                                                                                             •       9       10        11        12        B       14        15
+
+
+       Net Value over System Lifetime                      S-4,723
+       Brukl!Yf!f'I Timeframt- rYNn                        10.00
+
+
+-~-
+!!,•.!..,~~
+               -4
+                                                                                                                                                                                                         13
+
+
+
+
+                                  Battery Owned by Customer, No Solar
+
+               • Customer purchases battery
+               • Customer sheds energy to the grid during peak
+                 times
+               • MMLD pays customer net metering amount
+               • Customer sees breakeven and payback on the
+                 battery
+               • MMLD sees cost avoidance on transmission and
+                 capacity costs
+                                                                                                                                                                                                                      14
+
+
+
+
+                                                                                                                                                                                                                           11/16
+                                   Tesla Opportunity
+
+     In order for Tesla to be willing to integrate with Virtual Peaker to
+     allow us to load shed, they are expecting
+          A take or pay contract of at least 500 batteries ( I000 batteries would
+          make this slam dunk).
+          A $1000 incentive for a customer to enroll the battery in Connected
+          Homes, and a $500 a year incentive if the battery performs at least 75% of
+          the peak events called.
+
+
+
+
+                                                                                                                IS
+
+
+
+
+                                                                                                                16
+
+
+
+
+                    A Crowninshield Road Pilot?
+23 customers in the Crowninshield Road neighborhood have experienced three outages so far this year from
+extreme weather causing wave action that floods their underground service that needs to be upgraded.
+What can MMLD incentivize and still see a transmission and capacity cost avoidance savings.
+
+       Household   Dally Average   Q1t1cal Load   Max Duration         Product         kW     kWh    Price
+                        48             29              58        Duracell Max Hybrid   10kW   60kW    28,750
+                       117             70             140        Duracell Maxt+,brid   10kW   SOkW    36,750
+           4            59             36              71        Duracell Max Hybrid   10kW   80kW    36,750
+                        21             13              25        Duracell Max Hybrid   10kW   40Kw    20,750
+           6            41             25              49        Duracell Max Hybrid   10kW   60Kw    28,750
+                        60             :r,             73        Duracell Max Hybrid   10kW   SOKw    36,750
+           12           55             34              67        Duracell Max Hybrid   10kW   SOKw    36,750
+           17          145             !fl            174        Duracell Max Hybrid   10kW   SOKw    36,750
+           18           31             19              38        Duracell MaxHybrid    10kW   40Kw    20,750
+           22           42             26              51        Duracell Max Hybrid   10kW   60Kw    28,750
+
+
+
+
+                                                                                                               17
+
+
+
+
+                                                                                                                     12/16
+                                 Battery Safety
+  MA State Fire Marshall and Division of Professional Licensure issues a Joint Memorandum on
+  Guidance for Energy Storage System Installations in Residential Homes.
+  This guidance document aims to create consistency with issuing building, fire and electrical
+  permits for ESSacross the Commonwealth and provide minimum safeguards for the occupants
+  of one- and two-family dwelling structures.
+  The ESSmust be listed and labeled in accordance with UL 9540 and be installed in accordance
+  with the manufacturer's instructions and NFPA 70. [2020 NFPA 855: 15.2]
+   ESSshall only be installed in basements not used for living or sleeping purposes, and shall only
+  be installed in utility closets, storage closets, or storage spaces within basements (when not
+  installed on exterior walls or in detached or attached garages).
+  A hardwired-powered smoke alarm shall be installed in the immediate vicinity of the ESSand
+  interconnected with the smoke alarms installed throughout the dwelling in compliance with 780
+  CMR R314.
+  Individual ESSunits shall not exceed a maximum rating of 20 kWh. The aggregate rating of the
+  ESSshall not exceed:
+         40 KWh within enclosed utility closets or storage spaces. I
+         80 KWh in attached or detached garages, or detached accessory structures.
+         80 KWh in outdoor/exterior  wall installations. [2020 NFPA 855: I 5.7.1]
+
+
+- ..                                                                                                  18
+
+
+
+
+                            Duracell Fire Safety
+
+   The Duracell Power Center Essential uses LFP (lithium iron phosphate)
+   batteries, which are less prone to thermal runaway and do not release
+   oxygen if they catch fire, making them safer than traditional lithium-ion
+   batteries.
+   The Duracell Power Center Essential has obtained all required safety
+   certifications including UL9540A, which ensures cells and packs do not
+   cause thermal runaway condition when its temperature is increased for
+   any reason.
+   The included Battery Management System (BMS) acts as a layer of
+   protection to ensure cells are operated within its safe operating region
+   while the Power Control System will prevent the system from further
+   operation if the BMS detects an issue.
+
+                                                                                                       19
+
+
+
+
+                       Battery End of Life Plan
+
+While currently lithium-ion battery recycling is focused on
+those from cell phones and laptops, in the coming years
+residential batteries and EV batteries will more predominantly
+be the technology that needs to be recycled.
+
+
+Likely, point of sale manufacturers will be those to collect and
+recycle/sell the end-of-life residential battery.
+
+
+
+                                                                                                       20
+
+
+
+
+                                                                                                            13/16
+                             Next Steps
+              Really depend on what MMLD wants done.
+   I. Solar Connected Residential Battery Incentive
+  2. TOU Rate Optional Pilot for Residents
+  3. MLP Owned Battery for Non-Solar Residents
+  4. Battery Owned By Customer, No Solar
+  5. Crowninshield Road Pilot
+
+
+
+
+                                                                21
+
+
+
+
+             Village 13 update
+
+• Virginia Transformer 4/16 delivery schedule delay: 5/20 to 6/27
+  and 5/6 to 6/28
+• Attended 5/15 Select Board meeting to gain approval for
+  parking restrictions and roadway closures for 6/27 and 6/28
+• Prior VT contract issues...being resolved
+
+
+
+
+             Tioga Way update - steps completed
+
+• Bayside Engineering has completed the site survey, showing
+  one-foot elevations
+• Bayside has categorized every sq ft on the parcel for
+  development potential:
+   - Highly developable
+   - Developable
+   - Un-developable (wetlands)
+   - Unfavorable/Difficult Developable
+• See drawings C2 (north) and C3 (south)
+
+
+
+
+                                                                     14/16
+.....
+-~-
+-_:.•-•
+r:~t··-
+          -
+■ a ■ L•U:-
+
+
+
+
+                                                                       .....
+
+
+                         '   ....
+
+
+
+                  Tioga Way update - Next steps
+
+ • Bayside Structural/Civil Engineer Bill Capone, P.E.determining
+   rough cost estimates for the two sites - leveling & retailing walls
+ • Meet with Town Engineer/Conservation Officer Charlie Quigley
+   & Stormwater Engineer Maggie Wheeler
+        - Develop accessoptions to sites - with or without easements
+        - Develop a Drainage plan
+        -Address conservation concerns
+ • Meet with lllll abutters
+
+
+
+
+                                                                               15/16
+              80 Commercial Fence & Gates
+
+ • Fence posts are now being set.
+ • Trenches dug for UG electric conduit for electric gates
+ • Precast footings to be moved to Commercial St from Village 13
+   starting 5/29 ...expected to be a 4-day project
+ • Child safe railings to be installed by 2nd week in June
+ • New monopole will be installed after the fence
+ • CZM reimbursable expenses must be completed by 6/30/2024
+
+
+
+
+           System Planning MMLD's longer term power needs
+
+• April 11 technical meeting held with National Grid (NGrid), MMLD, and
+  MMWEC participating.
+• NGrid plans by geographic area. Mhd is in the Salem-Swampscott area.
+  Future area system load and power quality needs are based on an NGrid­
+  internal 15-year load forecast.
+• MMLD & MMWEC discussed our 5-year load forecast methodology.
+• MMLD proposed working with NGrid forecasting team to apply their 15-
+  year methodology, comparable to their Swampscott forecast methodology.
+• MMLD also identified the need for increasing resiliency in future grid
+  infrastructure planning.
+• NGrid did not share any specific plans for planned Salem/Swampscott area
+  grid upgrades. No NGrid comments on planned battery storage in the area
+
+
+
+
+            New MMLD employee hiring
+
+• Engineering Project Manager (EPM) candidates are now being
+  vetted ...scheduling leading candidate for onsite interview later
+  this week/next week.
+
+
+                                ----****----
+
+
+
+
+                                                                             16/16
+

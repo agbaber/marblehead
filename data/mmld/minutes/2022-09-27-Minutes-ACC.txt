@@ -1,0 +1,672 @@
+Light Commission September 27, 2022 meeting minutes
+To:            Light Commission: Commissioners
+               Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+From:          Jean-Jacques Yarmoff, Secretary
+Date:          October 23, 2022
+Re:            Commission Meeting September 27, 2022
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:30 pm, the meeting
+being held both in person and with remote access available to the public. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:         Hull, Frechette, Smith, Wolf and Yarmoff participated in person.
+        Light Department:      General Manager Joe Kowalik and Business Manager Matt Barrett.
+        Invited:               Bill Bullock, MMWEC; Jason Gilliland, Marblehead Fire Department Chief.
+
+Approval of minutes of previous meetings of August 30, September 8 and September 14, 2022.
+
+Vote #2022-33 Motion to approve minutes moved by Commissioner Wolf and seconded by
+              Commissioner Yarmoff. Four in favor, Smith abstained.
+
+
+Presentation of Battery Joint Action Project
+
+Bill Bullock presented the results of MMWEC’s solicitation of developers of Utility Scale Battery Storage
+projects, who submitted bids for projects with 14 MLPs. Slides used are reproduced from page 4 of the
+minutes. Due diligence and site visits took place in July, bids were submitted in August, three finalists
+submitted revised bids. The bid proposed by Delorean is the most favorable, with the company sharing
+more than half of the financial benefits with the MLPs on average. The IRA brings substantial economic
+benefits to storage projects. For Marblehead’s MMLD, the NPV estimated over 20 years is positive $8M.
+MMLD would not have to put down any capital for this project. Project would include decommissioning of
+the battery after 20 years, with an option for MMLD to buy the asset at the residual value at that time.
+MMWEC’s recommendation is to move ahead with Delorean proposal, and to start contract discussion after
+buy-in from each of the MLPs participating. The proposed contract structure would be a Master Agreement
+between MMWEC and the developer with common terms for each MLD, who would then introduce specific
+terms into site specific license agreements. Dispatching would be done by Delorean. Mode of dispatch,
+arbitrages, would need to be discussed by the MLPs and memorialized in the site specific agreements.
+
+Residential Batteries: MMWEC Control and Incentives programs.
+
+MMWEC’s Connected Homes program allows dispatch of Generac and Sonnen batteries. In addition to the
+30% investment tax credit customers can claim with IRA, MMWEC is putting in place an incentive and
+outreach program, as there is value for the MLPs to be able to have batteries behind customer’s meters
+that can be dispatched during peak events. The financial incentives are likely to be $200 per kw upfront,
+
+                                                                                                  1/13
+plus $15/month up for participating (allowing dispatch) during peak events. Customers can override
+participation in a particular event, but in that case, will forfeit the incentive payment for the month.
+
+Residential Batteries: safety perspective from the Fire Department
+
+While there are many benefits to batteries, Marblehead Fire Department Chief Jason Gilliland also
+encouraged the Light Commission to consider the risks of residential batteries from the Fire
+Department’s perspective. Batteries can be subject to thermal runaways, and when they burn they can
+emit toxic gases. Li-ion batteries fires, when they occur, are very hard to put out. The regulations are still
+evolving and the fire code, the building code and the electrical code all address installation of battery
+storage systems. See below page 8 and 9, Chief Gilliland’s description of concerns.
+
+As next step, the recommendation is to set up a taskforce composed of Fire Department Chief, the Light
+Department, the Building Inspector, and the Wiring Inspector to come up with a process for approval
+that takes into account concerns of all parties, as was done for the safe installation of solar panels.
+
+General Manager updates
+
+Slides presented are shown from page 6, below.
+ With regards to the Village 13 substation replacement, the switchgear contract discussions are
+    progressing, and will be signed soon. (Post meeting note, the contract has been finalized on Oct. 6.)
+ MMLD sent two line crew members and a truck to Florida as part of the response to hurricane Ian.
+ Tree trimming program is underway with Mayer Tree Services.
+ MMLD and the Town of Marblehead have received a CZM grant for $523K for resiliency and public
+    access improvements to the harbor front.
+ MMLD is a part owner of the 6.9 MW Ludlow solar facility, the largest in the state. Dedication of the
+    facility, named after Master Sergeant Alexander Cotton will take place on October 17. The facility is
+    expected to start production at the beginning of 2023.
+
+Financial / Rates updates
+
+Given the increase in the wholesale energy price (20% of our portfolio), caused by natural gas price
+increases, year-end expenses are on track to exceed revenues by $778K, in spite of the previous
+increases in the PPA charge (currently at 0.056 $/KWh). This is caused by the war in Europe; the stress
+on the international LNG markets is going to be a long term issue. In the short term, as by law we cannot
+have a negative result at the end of the year, we need to increase the PPA charge by an additional
+$0.037 to close the gap. This means that the average residential customer bill will increase by $22.31 per
+month.
+From March 2018 to Feb 2022, the increase in energy cost was limited to 2%.
+From March 2022 to Oct 2022, the increase in energy cost is 27%.
+A compounding factor is that we also have to pay a “reliability-must-run” charge related to the Everett
+Gas terminal, as all other load-serving entities. This unexpected charge started in July at $11K, and went
+up to $47K in August. The evolution of this charge depends on ISO-NE negotiations with Exelon.
+A question on capital expenses led to a discussion of the data network that MMLD maintains. A list of
+capital projects to be undertaken will be reviewed at a further meeting.
+
+
+                                                                                                           2/13
+Strategy Working Group update
+Commissioner Yarmoff presented a proposal to refocus the Strategy Working Group of the Commission:
+slides presented are enclosed from page 10 below. We have many major projects pending and limited
+bandwidth. We need to prioritize the major initiatives of MMLD. New constraints, such as
+Massachusetts HR5060 signed into law by Gov. Baker on August 11, 2022, will significantly increase the
+electric load that MMLD will have to provide in less than 10 years. This will also make it more difficult to
+meet the targets of the 2021 law setting limits on the emissions of MMLD (50% by 2030). The various
+projects need to be prioritized and their respective impact and urgency well understood.
+The Strategy Working group will meet again on October 11 and on subsequent occasions. It will report
+back at the following board meeting. Two commissioners, some members of MMLD and some members
+of the community are anticipated to participate in the SWG meetings.
+
+Sustainability Working Group update
+The General Manager presented the job description for the sustainability manager. Many of the
+initiatives contemplated by MMLD can benefit from grants or tax incentives available in the IRA or in
+other state and federal initiatives. The individual would provide substantial benefits for MMLD and “pay
+for him/herself”. Other needs of MMLD must also be considered and the wider financial impact
+understood: these needs include engineering staff hire and other potential backfills. While hiring staff is
+the General Manager’s prerogative (per MGL Chap 164), there is broad agreement within the board that
+additional position(s) would be welcome additions to the staff of MMLD.
+
+Other business
+Department Goals. Commissioner Wolf distributed a proposal for the timing of the department’s goals,
+attached page 13 below, which will be reviewed at the next board meeting.
+General Glover Restaurant re-development. The supply of electricity to this new development could be
+done by MMLD, or not, as the situation evolves. There are legal issues related to Chapter 164 that need
+to be well understood.
+The proposed Executive Session will be replaced by individual discussions with the General Manager as
+appropriate, and will be rescheduled for a board discussion if necessary.
+
+
+The agenda for the meeting having been exhausted, a motion was made to adjourn and adopted
+unanimously at 7:00 pm.
+
+
+
+
+                                                                                                       3/13
+       Additional documents and slides shown during Light Commission Meeting 9/27
+
+
+MMWEC presentation of Utility Scale Battery Project
+
+
+
+                             Behind the Meter Battery Joint Action Project
+
+
+                                             September 27, 2022
+
+
+
+
+                                             .........,_   -◄
+
+
+
+
+                                         Processto Date
+                •    Collected initial responses from 9 developers for long term contract
+                     and 2 equipment suppliers for MLP ownership
+                •    Selected top three responses to enter second and final round   ~
+
+                •    Due diligence - July 2022
+
+                •    Revised submittals -August 2022
+                •    Inflation Reduction Act Passes
+                •    Presenting results / recommendation
+
+
+                -..
+                                             RFI Finalists
+                     A AGILITAS          CONVE GENT                   DELEBREAN
+                    !"""' ENERGY                                         P8WER
+                 •    Have 3             •   Recent Project       •   Project underway
+                      operating              with Holyoke             in Groton
+                      projects in ISO­
+                                         •   No OEM given         •   BestValue
+                      NE.
+                                         •   Several large        •   Highest Sharing
+                 •    Local presence
+                                             scale projects
+                                             (not in ISO-NE)      •   Locked in supply
+                                                                      chain
+
+
+
+                 -..                                                                        2
+
+
+
+
+                                                                                                4/13
+                           Second Round Results
+                           Agilitas            43.;,;:;4;µ;,;Oelorean
+        Round 1 %Savings 22%                   33%                40.4%
+        Round 2 %Savings   40%                 35.9%              51.2%
+        Increase           82%                 9%                 27%
+        Battery            Powin Centipede     ??                 Trina Storage
+                                                                  Elementa
+        COD                Oct 2023            May 2024           Phase 1- Oct 2023
+                                                                  Phase 2 - Mar 2024
+                                                                  Phase 3 - Jun 2024
+        Layouts            No                  Yes                Yes
+        Bulk Discount      40% for all if at   3% for 160 MWh     No minimum
+                           least 30 MW         2% for 110 MWh
+                                               1%for 60 MWh
+
+
+
+  -..                                                                                  3
+
+
+
+                           Net Present Value of Offers
+                   ■ Agilitas    ■ Convergent          Delorean    ■ Ownership
+~ $10
+! $9
+:. $8
+  $7
+  $6
+  $5
+  $4
+  $3
+  $2
+  $1
+  $0    Ill 111                                1,1 Ill                         11111111
+
+                                                                                       4
+
+
+
+
+              DELEBRE/\N                                   PGWER
+
+        TrinaStorage
+
+
+
+
+                                                                                           5/13
+                                                                                          6
+
+
+
+
+                                              Next Steps
+               •   Our recommendation - Delorean
+               •   Provide details for each MLP
+               •   Get buy in to proceed
+               •   Start contract negotiation
+                                                    coMmon terrrs with MMWEC
+                    •   Site spec1rc hce'lse agreements w•th MLPs - can be added to the
+                        agreement as you decide
+
+
+
+
+                                                                                              7
+
+
+
+General Manager Business Updates
+
+
+                            General Manager quick updates
+
+              • Utility tree trimming program proceeding- Mayer Tree Service
+              • Switchgear Contract - Myers Controlled Power
+              • NEPPA/MMLD response to FL hurricane Ian
+              • APPApublication - Electric Utility Basics, 4 th edition available
+                for Board members
+              • MMLD & Town awarded CZM grant for $523K- Shipyard
+                harborfront resiliency seawall designs & public access
+                improvements
+
+
+
+
+                                                                                                  6/13
+                  MMWEC/MMLD Solar PV Array dedication
+
+                                                          • October 17th @ 10:30 am -
+        MMWEC/MASTERSERGEANT                              • The largest single solar field in
+       ALEXANDERCOTTONMEMORIAL                              Mass
+        SOlAR PROJECT
+                    DEDICATION
+                                                          • The largest municipally-owned
+                                                            solar project in Mass
+                                                          • A 6.9 MW AC array
+                                                          • Named in honor of Master
+                                                            Sergeant Alexander Cotton
+                                                          • On the MMWEC campus Ludlow,
+                                                            Mass
+
+
+
+
+                 Financial Situation - Sept 2022
+
+• With our current $0.056 PPAour year-end expenses will
+  exceed revenue by $778K
+• The gap is due to increased wholesale energy costs in the "day
+  ahead" market, powered by natural gas, representing 20% of
+  our portfolio.
+• To close the~    we need to increase the PPAin October by
+  $0.0337 ...average residential bill increase of 22.31
+• Our operating cash position remains solid - $5.4 million
+
+
+
+                 Residential Rate Changes - Recent History
+                 via Power Cost Adjustments
+
+
+                                                   Mar-18       Feb-20    Mar-22     Aus-22      Oct-22
+   MMLD residential rate                           $0.1425     $0.1425    $0.1425    $0.1425    $0.1425
+   PPA(wholesale power cost adjustment)            SQ.Q.lli    ~          ~          ~          ~
+                   Total energy cost (per kwh),.   $0.1695,.   $0.1735"   $0.1835'   $0.1985'   S0.2322
+
+
+
+          Increase from Mar 2018 to Feb 2020                                                        2%
+          Increase from Mar 2022 to Oct 2022                                                       27%
+
+
+
+
+                                                                                                          7/13
+Battery Energy Storage Systems: Fire Department safety considerations
+
+
+
+      FW:My Cc.>n<;.tTn$
+                       wilh BESS
+      Jason tl GiH!l3nd -:gillil.:nctj~,n-'1blt-·'ll:;.xtur9,,
+      T,,,.f.fi'l,,2GU;.s~ ~1
+      10:Michd t Ml ~nihJl1'1?1flhlld.~"':-
+
+
+
+                                       J~.son R G11i!<1r"1d
+                                       Cl'fl:lefO.~:tm:rr.
+                                       >.~~:teY. Fl~tio:.nn,ei-t
+                                       1 0.:t::i• .\'/XII~
+                                       1.4.r'~llrl:/lo:,t.V, Ql!IL->
+
+                                       C.«~ ?.SU.S)-;.&:n'
+                                       ~"'' 111v:.i~•.~;J!t1
+
+
+                                       ■a
+
+
+      lieod :1fte11v.:c11\,  W-J1.fo1d:
+      Belo\~are rn1ln!tlcll co11cemswith e.rttE't)'~nrre,; ~r,r,--er i;y,'llern, t'h;,i I w:ml t;>:i.lw11::                   •1ri'ilhy,:,1.<1e.rOi1U.
+      satterver:erev S'!(lr.lEQ ~·t~-tem<.       ;-,,n:i fairly ne•.-tei:hnuklsy, 311-:!11-.01411\       the lite Mpartmen1 hash3d
+      sornc-::ur.;orytr-Jinin~rt:luli:d lu 8,f!;S.liki n1ostother fll'E'd1?P<1rtm"'r,1'$                 ;i,•rni.~th~ f".nYl'l1'1)', Dur
+      {e)l;!>er!el'l(-'?v;!tl'I
+                            llt~.!11:·n..icntl.;tt:N)' fir"'~•~w·.rylin-,tc:d. V.1!::t- doks,uw, lw111our liir'oilid e~~ritil(t,
+      i\ 8£!.-'-i.
+                 bt:h:Ne Jirfl."i't:olly d1a!1lv1,1it.:6l  liro, a'1cli:ic.se   a t1nl1:1.1.1e
+                                                                                            tt~urds ,., fm,hghter$
+      The n1a1nconwrn I have ISthat thet..,,cdomin,1nt i:tt1h.1m                     b:rtttry type!: u::!!d ii, rttkl!?i!-lal:-i®IIC3t1~t'IS,
+      !ithm-n nickel ....,r:s,:inc:~!:(;b:ilt oxide !NMC.la:id lithhm1 iror, Ohospllat~(IFP), r!ln 11xpcori1=nr..:i                        th~rm~•
+      ,un,,w1<1'1, eaui!I~ tMm to rete-3~\V!r/hot 1lamm,1ble,7"'fl(;~M. The hat 011mm,1bl~ia:.=,ur, 1011!:in
+      t1neicploslor.,:;t- at ~st averycliffi<:vlt fiM toei«i11guir.1.
+      .:lth.o:igh :hi: iir-e :;c,n:ioc:routim:!y l'\:~plX!d~tu ~IVSi-,"'sc,m~r10f, s...chclStr.(\\\'l ;1$Wlr.intrdwhh
+      ,-.a1ura1gaileaks, star.dard oc:,eratlreprocech;~sdo f1(lt yM ~(;t far r.oe:l'l:lrio~likci, l,;,il\o:r~c:n1:11;v
+       Morate ~~~m Mrwhr.m th:irr ~'Il'X>'N:tft<i,:ut uff th~&,n:.ll"!ll)lv. TliS in two, ;otintl;ill•t<:reqnng q
+      -.ignifii::mt lw,ard lQ lilel:.Ch~f> ~11(1        ~•~ alt@.
+      f(.(m l);l$t in<:!~noo lm-ol•J1ngt11:.»,          th;t hq•~ been sh:ircd by Ullu:1 lite !$1:piftl'l'l@lll$,IW! 1(110\Vth;lt a!!
+      hM,\>eont:i.:i :1iwhle q11:mriti!:':lofhai:.,uluu, r11&l-.:lii!i.Ill tt~ even: of an trn<?rgrr.cyviith :i 1\-FSS,                        :1to1u::
+      1:r111i1um1,i:1,t  1n,1vI,;: uc:-,t-.:dth.JI:~ I\.Ct'llsibk. Mettf'mtofth(I rr ....imnmeot b~ h:1~1duu,.1:1&\,:,ii.lb
+      technl<1an,1snece~:1,y~ i~ til1;1 U$:tEAcifol:pe~or.:31 p.-ot1:eri-;et:1:uipn·1t><,l.                       fllis v.o-.00neces;l~t€ the
+      ;ii:ti~::trional the: \.-tit~ h:i'1n:Jl t<:U!l►• It b imµ,.,1llllll t()Ut'l:lli'fital'l(I tl'lclt«Jtrl'.'1'1tly, m:i,;.,;i\.yqu.111.'ll~C'.~l)f
+      \·,,ne,O'o<er   ;in E'),Wn-::le!Iperod Is t,1eor.l\• 1;rutN1ShOO           ml';in:; nf pr~mnting t:1)(1\im1uu.-'.h~1a!n1naw..-,·
+      in;i lithilr,n.:<tr; b.:rtt<:ry,thrt lieittg theCX11!,,.·«wh•ic-•,~        1u1oonu«:,,i; haurdcus t\lX1tChe-"11ka!                   runoff
+      1•101,,ld a...-:Uto be lmpl!!l':l~r':tedn e\-er, tire S(.tnc 1nv<:!,<ng            t-:~.
+      !n smaller ~s.'den;i;:il smne:;, 11lirtuum ion bctterv .-.u:luh: rri,;iy ut'li.i!:1;0tl·ermal:-1,1n;iwa-,•                     as~ ri?;111t     r.,f
+      i:xpn-;1111: a, a he:11:.ui;iu: 1.mrd.itc:!Jtel.tit: b.ailtt'f. i:-ore,,,ample,;t l>;;ttery mr>ffldPkH:atrdin~ nc:,r a
+      r,a,;i~ is e~~d          to clcar tire un l!lx>r,n~t¢11lt~/'Id fbrnm~-til~_g:i~~::mdpn:sel'lte~tin4l;1.1is1t·11t:M
+      prnb!r.m.~.:!ZSSbilure,G:(I oeo.rr fi>t .a,•;iriet)·ol r~\til!'> indudirr., tul not 11\'l':t~(It◊; 1. 11',crm:il11h1r.l"
+      lti.t~rnal 1eml)!ratur~) 2. Pll\>slc~V'rr~ch<!rJuld<1'l'l;lll'.'             3. t!ei::tri~! :ibn'.'lr(o,.,c1-ct,::r1f    'tG. u, 11::11:.:t~t.'.
+      rxr..:o~:ivl"d!a-eing,:itr~• ~. (n11imn.:ne:r¢.ll          in:p-.11:U (el~1.:t:ic.!lsu1(:e.   li.e.h-:ine,E'lt.) 5, l11te·ni1 ftu.ilt;
+      within lhe b~llerv cell 6, 00€1'@1e>:01UI                1;,i,!t; 1;rs,-rtcrn f:itlure.. In :idift'..:,n, ::tr.mdc,:1,:nci;,· 0t'
+
+
+
+
+                                                                                                                                                             8/13
+remiinine C~l'E\' ,s ;tn import.int foctc,,r n-!!,;t1ding;1BCSS ind1knt. Residu;il&Mrg,,rwithma damaeEd
+!ithh.:m•lonbattEr\' or 6tSSpr,?scntsa $ienific;mt fin::,$ha6, :,nrf/or expkl!Sioa~  haud lo fin::fighters.
+Ad1foicm:i~,,lithiu.'l'l•lonbarterlg canspontan'l¥.)(ISI')' reignite hoursor even d,.!\'$l.llc;r;,he, 11fire ~•:-11tif
+ce!heo into tlltrmal nrnaw;.i.y,  m;,1~in&
+                                         (k"Q'JmmisWning,dr,c:1m-.troc:tins    and st0<ingmore coMplicattd.
+Al a rninirr.u.m,I Y.+Ould r~omrund t\e fo!!cv,irr,,
+
+    • lilhiunl<ion battery BESS~huuld inoorporau! g;lS monitoring that can be acce1-sed            remotdv,
+    • ti'!hiunMon bitter,· 8ESSshould inco1por.:;tc;awmm1mie;;1iiot1SsyMem to help ensu1"!~mote
+       accessto llw battery managementsyst.m1.sensorsand fire alarm rnntml r;inrl n•m~iii-i
+       vn·nt~m;ptC'(t.
+    • Owners and operatorsof BESSshould de•>elopemerg:encv              operations pl,.n in wnjvncti<>r,with th~
+       fir<;defi;utm1~nt;md the :iutlwcity h;wi"a jmisdiclklo 'l1id hold a comprehe~•e 1mderstandlngof
+       the hazardsassociatedwith llthium4on b~tter,i technolo~•,
+    • Sigflagelhal ider'1tifiesthe C:Orltenls  O! a BESSShO•Jld   be (f!CIUl(edOil all tl!:'J>rnst.allatlOMto alert
+       firEfiehterswthe potenti;;I ha.?ardsassoci;.atcd    with the i1i:;t.:1lt.ltion.
+    • Uth.ium-loobattery BESSshould i()C()rporatead!!Quatee)(plosionpre-,,e.ntionprote::tion ~
+       r~qui1e·din N:1tfa11:i) Firt! Pm1ec:1lm1A::i:ol:ia1ion(Nf:PA)855or 1n1ernat10nal      FireCodeChapter 12,
+       where ~pp!subliie,in coor<lm.itionwith the P.mPf2P~•nppr,erl.")r-<,        pl:m.
+    .. New llthtU'l'n•IOrt battery HESS  should be ~ult ,n .lccordancew:th NfM SSS,the most wrrent
+       :;lm1d;uds ;1\·al\1blcfur .-.;-Jfo1y,
+                                         und the ttrn Ocpmlrm:nt ;;mdtht: Elallie Light Depa<lmetitSIM>1;ld
+       ioi.ntlv be ca!linp,on Town Meetin~ to mandate adoption of NFPA8SS;-.~p,;rt qi Iii.;: iy-1:r...,•;     of
+       Marbleheld
+
+Regards,
+J;;~,
+
+
+
+
+                          Jagon R. Gilliland
+                          C:-Cd ~ OC,:,.!rn"!Or.t
+                          1.~c-;,.~       Hre oei:,,.:,t,1:,.1!
+                          10~A\om""
+                          !lw!~'"ttll,     l,IA (H9-i-5
+
+
+                          Oll'<:t: i!l1..C..;m.:;..i.r,
+                          Ceo: ttll-!111:J~
+
+
+
+                           aa
+
+
+
+
+                                                                                                                         9/13
+             Strategy Working Group
+                                          9/27 update
+
+
+
+
+Long list of possible actions
+Action 1
+
+Action 6: Rebuild VIiiage 13
+Action 7: Deterred maintenance
+
+Action 13: Evaluate load with. maximum electrification
+
+Action 16: Utility scale battery
+Action 17: Implement nme of Use
+Action 24: Community solar
+
+Action 33
+
+
+
+
+ List of actions: possible impact
+Action1
+
+Action6: RebuildVIiiage13
+Action7: Deferredmaintenance
+
+Action13: [valuateloadwith maximumelectrification
+
+Action 16: Utility ~ale battery
+Action 17: Implement Time of Use
+
+
+
+
+                                   ..
+Aetion 24: Communitv solar
+
+Action 33
+
+             Investmentneeded.
+                                             •
+                                   Major Minot
+                                                    0
+                                                    NA
+                                                         Good for:
+
+                                                                     ---
+                                                                     Rebabtlttv   Rates   Em,ssions
+
+
+
+
+                                                                                                      10/13
+  List of actions: possible impact
+ Action 1
+
+  Action 6: Rebuild Village 13
+ Action 7: Deferred maintenance
+
+
+
+
+                                                                      .. -­
+ Action 13: Evaluate load with maximum electrification
+
+ Action 16: Utility scale batter
+ Action 17: Implement Time of Use
+ Action 24: ~ommuni\Y_~lar
+
+
+ Action 33
+
+               Investmentneeded:    ..         I      (/)
+                                                                      •
+                                                                         --
+                                                                      (/).
+                                                                               --■
+
+
+                                                                Gooclfor:-Reliability -Rates          -Emissions
+                                    Maio<    Minor   NA
+
+
+
+
+  Action 11: Forecast load with maximal electrification
+• Ban on Non-Zero emission car sales from January 2035 in Massachusetts
+   • Part of HS060, i!g_nedby !,ov. Baker August 11, 70]7
+       Conditioned on California enacti,ng similar restrictions
+   • CA Air Resources Board (CA ARB) <'18,ulationsadopted August 25, 2022.
+   • 17 states and DC foJlow CA Air Resource Board r!?g\/lations, MA codified it Into MA law
+
+
+• Car Industry reactions
+   • General Motors: •committed lo emission reductions that are aligned with the CA ARB's targets•
+   • Ford: •sales curve is aggressive, and cooperative partnerships between vehicle manufacturers and
+     Government will be required to achieve success•
+   • Tesla: "The proposal is both achievable and paves the way for CA to lead in electrifying vehicle sector"
+
+
+• In the rest of the world
+   • EU adopted• Flt for ss • on luty 14, 70}]. S5'6 reduciion of GHG from cars by 2030, 100'6 by 2035
+   • 0,ina, pledged to have80%of its cars be eleciric by 2035
+
+
+
+
+  Implications for Actions 11, 12 and 13
+  • Ban on Non-Zero emissio_ncar sales from Janua.ry_2035.
+  • Anticipate 2000 new EVsevery year In Marblehead by 2033, in ten years
+     • 2,000 cars means additional load of 7,618 MWh
+      • every year, from 2033 and probably before
+      • eq_uivalentto 7 % of our exis~ng load
+      • added every year
+
+
+  • ~ distribution system do wen.~~?
+  • How many c.haa:il'Ulstations?
+                                                               1111111111111
+                                                                          Cllarge Point load data
+  • How much will it cost?                                                 3,809 kWh f'tear per f\J
+
+
+
+
+                                                                                                                   11/13
+Legal Constraints on MMLD
+
+• 2021 Law regulating MMLD emissions
+           Emission tar~ets from 2030
+
+
+• 2022 H5060: « Act drivinB clean enerBY and off-shore wind»
+           W1illlead to an increase in load (up to 70% increase?)
+
+
+• DOERnew building code r~ulations,                          adopted before end of 2022
+           W1illlead to an increase in load
+
+
+
+
+Long list of possible actions
+Aetlon 1
+
+
+
+
+Aetlon33
+
+
+
+
+ Strategy Worlking Group of the Light Commission
+ • lluild Q2]J£fframewor~ for MMLD
+ • launched in 2021, will report results to Commission
+
+ • Composition
+     • Two Commissioners
+     • Two or more membe-rsof MMLO
+     • 3-4 Members of the community
+           • We wlll ,e.1ch out to esP'!fief}Ced lndlvldU.tts
+           • Vok.l~teers w~
+           • Gr9.up'1Y!9!k_.mggy~ to be !a!~~~ by the !i,'22.1~
+                                                              light C.Ommlssktn
+
+
+ • Proposed next meeting: October 11
+     • Maximalloadevaluation: !)y~   owr next 20Y!!_¥S
+     • Framework for group work: plan over the ne><t6 months
+
+
+
+
+                                                                                          12/13
+Proposal regarding Department Goal Setting.
+
+    MEMO
+    TO: MMLO Commis.sionel'$,JO~ Kt.r,·•Ol:k,
+                                           Mall e.orrett
+    From: Commissionc-I'Nolf
+    Re: Tuneframe for MMLD Goal-Setting
+
+    Proposal: Timing of annual Department goal-seting \Yi11
+                                                          coincide with fiscal year (calendar
+    year>.
+
+    Background:
+       • The Commission and General Manager have noi formally defined department g-oalsand
+          ob{ecti'les since the GMs new cont,ac~went into effed:, April 2021.
+
+        •   Goals and obJect,vesror tile rurrent contra-ct~•earha•·e been ,xopose-j separately by the
+            GM and commiSSk>n.but have not been agreed to or adopted as ot this meeting.
+
+        •   The General Mana~ers contra-ctreads:
+               A. The Commission shall revie·11and e•;aluate 1he General Manager's performance
+                  on <.1nannual basis. S<.1id re\'iew and ev<.1lua:ion
+                                                                     shall be based on the gools and
+                  objeciives de·..-elopedjointly by the Commission and the General Manager as set
+                  fo~h in $Ubs.ection8 below. The Commis.,ion s.ha'I orovi(!e the Gene<al Manaoer
+                  with a composite written sta:ement of the oollecti,;e evaluation findings of
+                  Commission Members and shall pro\lide an adequate opponuniiy for the General
+                  MaMge, to dlscu.sshis evruuauon with me comml-SSi:on...
+
+               B. At lbs:be9iOOi09OfMCb COO)@ci
+                                             ¥CSKthe Commis.si:onand the General
+                   Manager shall meet to define tho goals and objectives which they de:crmino
+                   necessary for the proper operation of lhe fv1MLOand the atloinment of the
+                   Commission's policy objeciives, and shall further es1ablisha general priority
+                   <.1mongthose v.:irious goals <.1nd  objectives, ·,;Uh soid gools and objectives to be
+                   reduced ::ow1'itin9. Said goals and objectives shall generally be attainable within
+                   the time limits specified and '-"i;hin the annual operating and capital budg,et5,- and
+                   appropria1ions provided by the MMLD end 1he events that have occurred during
+                   the ;,ear.
+
+        •   The Commission and General Manager nee<Ja pro<iess to ~t goals and prioritie$
+
+        •   There now exists a comprehensive summary (authored by JJY} of near term goals
+            proposed by both tt,e Commission and th.e General Manage,
+
+        •   Go.:il-sett':ngshould be informed by recommend.:itions from \he Suslainabili!y ond
+            Stra1~y committees
+
+        •   This should be accomplished by the end of 1hiscalendar year so formal goals, with key
+            performan~e indicators and reporting targets, ¢an l>eadopted for FY 2023 and be
+            a11gne<1
+                   wth ihe annual l>uC~et.
+
+
+
+
+                                                                                                            13/13
+

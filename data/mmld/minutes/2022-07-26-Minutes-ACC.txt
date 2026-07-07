@@ -1,0 +1,612 @@
+Light Commission 7/26 meeting minutes
+
+To:             Light Commission: Commissioners
+
+                Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+
+From:           Jean-Jacques Yarmoff, Secretary
+
+Date:           July 27, 2022
+
+Re:             Commission Meeting July 26, 2022: minutes
+
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:31 pm, the meeting
+being held both in person and with remote access available to the public.
+
+Participated in meeting:
+        Commissioners: Frechette, Hull, Johnson, Wolf and Yarmoff;
+        Light Department: General Manager Joe Kowalik and Business Manager Matt Barrett.
+        Invited: Mike Barrett, PLM Electric Power Engineering.
+
+Village 13 Substation Upgrade Project
+
+The General Manager explained the necessity of the upgrade to the Village 13 substation, slides below.
+
+The current equipment is well past its rated design life, and critical components (circuit breakers, control
+wiring, CTs and VTs) are in poor condition. The transformers themselves show aging and deterioration
+expected in 50+ year-old units. Further, the current equipment will not be able to meet anticipated
+increased load and does not allow behind-the-meter, utility-scale battery integration to shave the peak.
+The new equipment proposed will: – allow additional feeder lines into the system as well as additional
+circuits downstream from the station; – be safer to maintain and reduce operator exposure to arc
+flashes; – allow a SCADA computer system for control and data acquisition. The new equipment will allow
+to supply 13 kV regulated load to the circuits, potentially enabling 13 kV distribution rather than the
+current 4kV distribution after regulation by the substations and allow to meet expected load increase.
+
+The project completion is anticipated for the summer of 2024, subject to timely delivery of equipment.
+Procurement of the equipment is occurring in two phases: a request for bids for the switchgear
+components was published in June, and the responses were just reviewed; a request for bids for the
+transformers will be issued in September. Switchgear delivery is expected 11/23, transformer delivery
+expected 4/24 and substation upgrade completion expected 8/24. As the installation of the new
+switchgear and transformers are in the same basic footprint as the current equipment, careful phasing
+of each installation is required.
+
+The budget for the upgrade, taking into account the result of the recommended bid was presented.
+
+
+                                                                                                       1/9
+Discussion: It should be noted that the scope of the project is different from that put to bid in 2020: it
+gives more flexibility to handle future growth in load, allows more circuits, with potentially direct
+distribution at a higher voltage: it is not like-for-like replacement. While the bid came in at a higher price
+than anticipated, this is a reflection of market conditions and material price increases for metals and
+freight. Delivery times have also increased substantially compared to the bids received in March 2020
+reflecting long order lists for manufacturers. Putting the switchgear to bid again would probably not lead
+to receiving additional offers (there are very few manufacturers for this type of gear) or more
+competitive offers. It would result in additional delays, especially if manufacturing slots were lost.
+
+The transformers are monitored regularly. Loss of one transformer is not imminent but cannot be
+excluded. In such a situation, the other transformer should be able to carry the normal load needed by
+the town, but may not be able to do so in a situation of high demand: the diesel generator might need
+to be run. The 13 kV switchgear, over 50 years old, is also showing its age, its failure would also have the
+potential to cause significant outages. In a worst case scenario, it might be possible to cobble together
+an emergency replacement system as 23 to 13 kV are fairly standard voltages.
+
+It is important for the project to advance as promptly as appropriate.
+
+Vote # 2022-26
+The General Manager asked the Commission’s approval with a motion to accept the bid from Myers
+Controlled Power for the new Village 13 switchgear for $4,347,292, subject to MMLD receiving
+satisfactory answers to the remaining bid response questions.
+
+Motion moved by Commissioner Wolf, seconded by Commissioner Yarmoff. Unanimous.
+
+Approval of 7/12 meeting minutes
+
+Vote # 2022-27               Motion was moved by Commissioner Wolf, seconded by Commissioner
+                             Frechette to approve the minutes of the June 7, 2022 meeting. Unanimous.
+
+Rate structure change discussion
+
+Low-income residents. Commissioner Yarmoff reviewed the impact of the rate structure change on low-
+income residents. Existing data1 points to a clear correlation between income level and energy
+consumption. If this is also the case in Marblehead (and we have no data that shows otherwise), the
+larger fixed charge will result in larger bills for lower-income residents while higher income residents
+would see their bill decrease. While overall, the proposed change will bring no change to the average
+customer, and the change effect will be small for most customers, it will be largest for people with the
+smallest consumption and not insignificant for people who may already be facing financial hardship.
+
+MMLD does not have a low-income rate. The “Neighbors help neighbors” program was designed for the
+temporary Covid-related job losses that we saw at the beginning of the pandemic, it is not adapted or
+funded to alleviate possible effect of this permanent change. A possible “solidarity program” was
+proposed, where low income residents could be charged only the costs of production related to their
+use, see below page 7.
+
+
+
+
+1
+    “The economics of fixed cost recovery by utilities”, S. Borenstein, The Electricity Journal 29 (2016) 5–12
+                                                                                                                 2/9
+The General Manager mentioned that we are constrained by Chapter 164 of Massachusetts General
+Law, section 58, which states: ”No price in said schedules shall, without the written consent of the
+department, be fixed at less than production cost …” Any scheme that we propose that might need an
+approval will delay implementation and may not be accepted. Changes within the scope of MGL
+Chap. 164.58 are declarations, rather than changes requiring prior authorization.
+
+The General Manager was encouraged to evaluate a possible low-income rate, similar to the “solidarity
+program” proposed or a rate program with any other structure, or any other type of program that might
+alleviate possible impact of the rate structure change for low-income residents, before we communicate
+about the changes to the rate structure.
+
+Base charge determination / solar feed-in tariff
+
+A discussion took place about the impact investment levels may have on the base charge. With the
+planned upgrade to the Village street station, the assumptions used by UFS are now out of date. UFS will
+revise the schedule of slides 10 and 12 of 7/12 in light of the new numbers shown in slide 8 p6 below.
+
+UFS will also study the feed-in tariff for residents with solar installations: since the new base charge
+should now cover all the fixed costs of the infrastructure, is the differential between the feed-in tariff
+and the energy rate still justified, and if so, what should the differential be?
+
+Chairman Hull left the meeting at 6:07. Vice-Chair Wolf continued to moderate the meeting.
+
+It would also be useful to understand the impact of the rate structure change under the scenario where the
+demand increases substantially. Would future energy price increases not be necessary in such a scenario?
+
+Sustainability Working Group
+
+A motion was proposed to create a Sustainability Working Group to develop a formal sustainability
+policy, including a decarbonization timeline, a funding mechanism for possible sustainability initiatives
+and develop recommendations on performance measures for the Department (KPI).
+
+It was noted that J. Kowalik, when he was a Commissioner, participated in a committee of the
+Commission with similar remit.
+
+Vote # 2022-28           Motion was moved by Commissioner Frechette, seconded by Commissioner
+                         Yarmoff to create a Sustainability Committee. Unanimous.
+
+
+Commissioners Frechette and Wolf and General Manager Kowalik will be initial members. They will
+decide about the opportunity to have rotating members from within the Commission, to invite
+additional members, from the Department or from the general public as appropriate and report back to
+the full Commission.
+
+The committee will hold a first meeting on Tuesday August 9, at 4:30 pm, in the MMLD conference
+room, 80 Commercial Street.
+
+With the establishment of this group, there are currently two operational Working Groups of the
+Commission: a Sustainability Working Group and a Strategic Plan Working Group.
+
+
+
+                                                                                                             3/9
+Procedure for filling a vacant Commission seat
+
+MGL Chapter 41, Section 11 defines how a vacant seat on a board will be filled. A detailed process has
+been codified by Amherst and is shown in appendix, p8. A similar written policy was not found for
+Marblehead (which does not mean such a policy does not exist). The Amherst process is very similar to
+the process that was implemented in Marblehead at several occasions in the last few years.
+
+The immediate next step is for the Light Commission to officially notify the Select Board in writing,
+within 30 days of the event, that a position is vacant, i.e. before August 12. The Select Board will
+announce the vacancy and advertise it, presumably by posting in Abbot Hall and on the Town website
+for at least a week, before scheduling a vote to appoint a new Commissioner at a joint meeting of the
+Select Board and the Light Commission.
+
+Vice-Chair Wolf will contact Select Board Chair Grader to verify the process has been initiated, or to
+initiate the process and notify the Select Board in writing as the case may be, confirm that members of
+the Commission or of the Board can participate remotely as per the remote meetings law that has been
+extended to March 31, 2023, and fix a date for a vote, taking into account the fact that members of the
+Commission and of the Select Board might not be available during certain periods of August.
+
+Goals and objectives of the General Manager
+
+Goals and objectives have been proposed at the June meeting. The General Manager will propose
+comments. Goals and objectives should reflect some of the major operational endeavors of the
+Department, including the two major initiatives that have been discussed at the last two meetings, but
+should also consider broader strategic and organizational goals of MMLD.
+
+The Commission will hold a discussion and vote on the finalized Goals and Objectives at the next meeting.
+
+
+Interconnection permits
+
+There is some urgency to address the current ban on interconnection of batteries as – there will be a
+step down in federal subsidies at the end of the calendar year and – several residents are installing solar
+equipment and are anticipating to install a residential battery system.
+
+For a residential battery to be approved, both the utility side and the residential electricity side have to
+work together, which are the purview of MMLD and of the Building Department, respectively. The
+current position is that MMLD will allow the connection of residential batteries that can be part of the
+Connected Home program, after a review by the Building Department, the Fire Department and MMLD
+to ensure all parties are on the same page. The General Manager will update the Commission at the next
+meeting on progress on this issue.
+
+Time of Use
+
+The Department is currently doing a deep-dive to assess whether our meters and systems have the
+capabilities necessary to implement a ToU rate. This should be completed by the next meeting.
+
+
+Motion to adjourn the meeting was moved and unanimously adopted at 7:05 pm.
+
+
+                                                                                                        4/9
+         Slides presented by the General Manager
+
+
+
+
+                      MMLD Board Meeting
+            Village 13 Substation Upgrade Project
+                            July 26, 2022
+
+
+
+                      Joe Kowalik, General Manager
+                      www.marbleheadelectric.com
+                          jkowalik@mhdld.com
+
+
+
+         Outline
+         1. Project Rationale ....Why?
+         2. Operating condition of current substation
+         3. Key Feature Comparison - current vs new
+         4. Project budget review
+         5. MMLD capital improvement fund review (Depreciation
+            Acct)
+         6. Schedule- Switchgear bid status
+         7. Bid status- Request Board approval to award contract
+            to Myers Controlled Power, LLC.(price quote is valid
+            until Aug 12).
+
+
+
+             Why is the Village 13 upgrade needed?
+
+• Current substation is 10 years beyond its rated design life
+• Testing of components show expected wear from long-life use
+• The current substation will not be able to meet the Town's
+  anticipated increased electric load, created by EV charging and
+  home heat pumps.
+• The current substation does not support MMLD's desire to
+  participate in behind-the-meter peak shaving strategies, to
+  lower capacity and transmission expenses. i.e. utility battery
+
+
+             Current Substation Operation Condition
+
+• Switchgear status- UPG has raised concerns with:
+  - Condition of circuit breakers
+  - Poor condition of existing control wiring
+  - Concern with existing relaying and spare parts availability
+• Transformer Status - UPG has raised concerns with:
+  - General condition with rusting and weather damage to control wiring
+  - Oil tests indicate relatively normal for 50+ year old units, with a fair
+    amount of aging and deterioration
+• 23 kV Outdoor Substation Status- UPG has raised concerns with:
+  - Poor condition of 23 kV oil circuit breakers
+  - Poor condition of CTs,VTs and associated wiring on the 23 kV structure
+
+
+
+
+                                                                               5/9
+                                Key Feature Comparison (1 of2)
+
+    Village 13 Substation     Upgrade                                          Existing                                               New
+    Year of Installation                                           1969 (40 year design lifespan)                                     2023
+    substation design redundancy level                                           N-1                                                  N-1
+                                                                2 - from Salem Railyard substation
+    n of 23 kV Supply lines                                                                                         4 possible: 2 from Salem & 2 TBD
+                                                                             (NGrid)
+    Salem 23 kV Supply line - rated capacity (each)                            32MVA                                                32MVA
+    Transformer capacity {each -w/o fan, w/ fan)                            2-15/20    MVA                                   2-18/24/30      MVA
+    Voltage Stepdown                                                        23 kV to 13 kV
+                                                                                                                IEEE Compliant Metalclad Switchgear
+                                                              Outdoor Open Bus Structure                         8 total: 2 incoming lines from Salem;
+    23 kV Substation                                        breakers total: 2-V13 transformers; 2-                  2-for V13 transformers; 2-for VS
+                                                                       VS transfor-mers                             transformers; 2-for Future new
+                                                                                                                             incoming supply
+                                                                                                                    8 circuiu-   5 for supply to difton,
+                                                                    4 circuits - supply to Clifton,                  Commercial, and Beacon; 1 for
+    13 kV Substation
+                                                             C.ommercial, and Beacon substations                    battery connection; 2 for new
+                                                                                                                 dedicated 13 KVdistribution circuits
+
+
+
+
+                                Key Feature Comparison (2of2)
+
+    Village 13 Substation      Upgrade                                         Existing                                               New
+
+                                                                All controls on switchgear cabinets
+                                                                                                                Remote operator        controls and high
+                                                                and slower old protective relaying
+    Switchgear - Employee safety                                                                                 speed protective       relaying reduce
+                                                                requires explosion suits ta protect
+                                                                                                                    ope rotor exposure to arc /Josh
+                                                                   against higher arc flash levels
+
+                                                               Older electro-mechanical circuit
+                                                               breakers - old partially worn out
+                                                              mechanisms; arc chutes in breakers     modern vacuum interrupter circuit
+                                                            absorb moisture and require relatively breakers - modern mechanisms easier
+    Switchgear Breakers - Employee safety                       frequent maintenance       to maintain           :i;~~~~:;~:;::i;;::j::Ca;'~:s
+                                                                 operability; personnel required to
+                                                                  stand in front of breakers while              remote racking topratect   operators
+                                                                racking them in and out, leading to              during switching and maintenance.
+                                                                        ore flash concerns.
+    Supervisory Control and Data Acquistion
+                                                                                  No                                                  Ye,
+    computer system capable? (SCADAsystem)
+
+
+
+
+                                Village 13 Upgrade - Budget review
+
+    Cost category
+    Manufacture New Switchgear
+    Manufacturer New Transformers(2)
+    Site Construction c.ontract
+                                                    Cost$
+
+                                                   51,700,000
+                                                   51,000,000
+                                                                    Vendor
+                                                   $4,347,292 Myerc.ontrolProducts
+                                                                      TBD
+                                                                      TBD
+                                                                                                     Status
+                                                                                                  mostly firm bid
+                                                                                                    Estimate
+                                                                                                    Estimate
+                                                                                                                             2022
+                                                                                                                             2022
+                                                                                                                             2023
+                                                                                                                                 ·~          Expenditures
+                                                                                                                                              2022/2023
+                                                                                                                                              2023/2024
+                                                                                                                                              2023/2024
+    Testing and Commissioning                         S90,000         UPG                           Estimate                 2023             2023/2024
+    Engineering/Site Investigation                   S275,000         PLM                           Estimate                                  2022-2024
+    c.ontingency                                     $125,000                                       Estimate
+    Make Ready Best ROWaccess option                  SS0,000                                       Estimate                 2022                  2022
+    Make Ready Tioga Way storage area                SlS0,000                                       Estimate                 2022                  2022
+                                   subtotal        $7,737,292
+                                                                                               Execute a SOpayment
+                                                                                               shared savings option,
+    UtilityScale battery                                    so                                     not purchase            2024-25               2024-2025
+    Upgrade Oilton substation                                                                    Specificationstbd          2025                 2025-2026
+    Spec & Install substation-level SCADA                                                         Justificationtbd          202S                   2025
+                                       subtotal            $0
+                                         Total:    $7,737,292
+
+
+
+
+                              MMLD Capital Improvement Account
+                              (Depreciation Account)
+                                  2017              2018            2019              2020              2021                2022             2023            2024
+Beginning Balance           $6,949,454      $7,318,649      $6,176,017        $6,671,639          $8,085,153          $9,614,061      $7,157,731       $3,778,231
+Contributions$              $1,519,510      $1.526.383      $1,180,530        $2,043,055          $2,061,473          $1,249,670      $2,102,500       $2,130,000
+YE Transfer                 $1,187.000        $552,000                 $0                 $0               $0                    $0               $0            $0
+     Contribution%                                    5%              3%               5%                  5%                    3%              5%             5%
+Expediture S                        "'
+                            ·$6,572,741    -$3,186.520          -$462,175      -$455,891           -$242,768         -$3,406,000 -$5,182,000 -$3,350,000
+Payroll Transfers             -$281,711      -5249,635          -5318,150      -5208,4-09          -5315,723            -5300,000      -5300,000          -5300,000
+Interest                       $17,137            $36,723         $53,719        $34,758               S"-981                    $0               so            $0
+Building Bond               $4,500.000                 $0              $0                 so               $0                    $0               so            $0
+Ocean Ave Reimb                      $0       $178,417            $30.829                 so               $0                    $0               so            $0
+Fema Reimb                           $0                $0         $10,869                 $0               $0                    $0               $0            $0
+Bell Transformer                     $0                $0              $0                 $0         $15,945                     $0               $0            $0
+Year-End Balance            57,318,649      SG,176,017      56,671,639        S8,085,1S3          $9,614,061          $7,157,731      $3,778,231       S2,2S8,231
+
+
+                                                                        Projected 2022 Balance S                      $7,157,731
+
+
+
+
+                                                                                                                                                                      6/9
+                                    Upgrade Schedule
+
+
+                        • Switchgear Procurement - 7/2022
+                        • Switchgear Delivery - 11/2023
+                        • Transformer Procurement - 9/2022
+                        • Transformer Delivery - 4/2024
+                        • Site Construction - 4/2023 through 7/2024
+                        • Substation Upgrade complete - 8/2024
+
+
+
+                                    Bid status & Motion for Vote Request
+
+
+                        • The Myers bid stated their pricing is subject to change after 30
+                          days, Friday, August 12, 2022
+                        • We would like more clarity on the price-change escalators
+                          included in the bid, for transportation and metals.
+                        • Motion: To accept the bid from Myers Controlled Power for
+                          the new Village 13 switchgear for $4,347,292., subject to
+                          MMLD receiving satisfactory answers to our remaining bid
+                          response questions.
+
+
+
+
+Discussion of Rate Structure Change
+
+Example of a possible Solidarity program.
+
+- Residents under a certain income level (e.g. 3x poverty level) would have the automatic right to
+request a lower base charge than the standard base charge.
+- The lower base charge would cover the resident-specific fixed charge (or about 30% of the proposed
+fixed charge).
+- The remaining 70% of the charge would be covered by a new “solidarity fund” (SF).
+- The SF funds could come from a very small SF surcharge on every resident fixed charge.
+- Rate payers can opt out of the SF surcharge.
+
+Impact - Discussion
+- This mechanism would allow to decrease the electric bills of Marblehead low-income residents from
+their current levels, and avoid increase of the bills of low users with the proposed change.
+- Any resident could opt-out of the solidarity charge, for whatever reason, including financial difficulty.
+- As the price of the electricity for the low-income residents in this program would be at the production
+costs (fixed charge directly attributable to the resident + standard energy costs), the proposed low-
+income rate should not fall under the prior authorization of DPU (MGL 164, Sec. 58) and could be
+implemented under the same time-line as the proposed rate structure changes.
+
+It should be noted that some other Municipal Light Departments already have a low income program.
+
+
+
+
+                                                                                                         7/9
+Appendix: Amherst Select Board policy for Filling Elected Board Vacancies
+
+ Se-le-ctBoard Policy: Filliug Electe-d Board Vacancies
+ Appr,;,v:r,':!-'!()I.'.:
+
+
+
+ 'When dwre 1!<a va.::ancy on an el~•ed b.-»ud C11C\')mminee. dw Selecr Board has an ~)pl)\')mtnity
+ 10 fill 1h:-11
+              ~e11ttW!1'               (i~netal T~'lWCh. 41, § 11. T,)Wn f"onn;.el h:1$coofo•me<l111:it
+                      1•1:'1$..:.aclmseus
+ wbt'lhn: ur 11ullo 6JJ a v;1<.'<U1<.':V
+                                  i,;.ii tltt' St"lt'<.'l
+                                                      Oo,m.l'sdi,;nctiou. wilh pr<.,xiu.Uly
+                                                                                         h> a Tuwu
+ el~crinn beio~ a cnmmnn ,e:i,-,)o ro le:-iw a ~:lT nnrillerl Tiie Select fio.'ltd $h,)nl.-tcnnsider rhe
+ tJJdt't'<:u<.·c
+             <.'flltc affo:tcJ lxxly lo {ill tbc ,;c.1101 lt<<l\•c        l•l•Ithe fowl <lcci,;iou1e,;l~wilh
+                                                                il Vill'<1ul,
+ I.be'S<:l<'l'I
+            ll<.,1ir<l.
+                     If th<.·,;cal is to lx: filkd. il mus! be dow.· iu lllX'<.'txlam:c
+                                                                                     wi1hMGL C:h.41. §J 1:
+
+            MGT. Cl1Qpte1•41, S.ettlon 11: A!<•t~ed i11this ~,:,rino. 1he 1,um •.,,•ac:tnc)·'' iilclude.:.:1
+            foilute 1<.>
+                      dccl, If 11v;,..;au..,;yo..;clit..,,
+                                                       iu atty llmu (.)ffi~e.od1c, 11wulbe offo.:cof .,;elc..;lw:.1u.
+            lowu dt·tk. lt\:llst1r<.·r.
+                                   coJkelor <.'fla.xes<.'raud.i1<.,r.
+                                                                  lll,:$d<.•cluacu
+                                                                                 shall iu \Hiliug appoiul
+            a p.:rson t◊ till such \-Seaney. If th.:-rt " :i va.:-aney m a board ,:,ons1snn.2of two or mor.:
+            membus, .exce1)1a h<,ard wh<,se memheri have been elecre,t h)· pr1-:-pnrtion:eil
+            r.:prescmation m1dcr ehapkr fifiy four A. the remainjn,!?m-tmbcrs sb:tU $(ivcwritt.:-n
+                                                  4
+
+
+
+
+            n,)tic~ thereof, w11hin,)ne month ,)f s:eiid\':'lcancy. m the sele-.:rmen. 'i':ho. with the
+            re1n11ini11;:t
+                         1))<!0ll:>ef
+                                  (W (1)~111bentof ~uch h.)M(l. .~kill, Ml~( one week'.~ 1M)tice, fill i!U<:11
+            \•twmn:yhy 1,,u <.·allvuk. Tltc sdt•clUJ,;,•u                            if ~udt bow:d fails 10 i;i\'e
+                                                           ~lwlJ fill $Udt v.i<.'l;UJ<.')'
+            said notice within the lime herein sp~ifiod. A maj-ority of the \'Ol.:s of the ofti~rs
+            enrnlM to \',)te sh:eillbe necess:l1J· r,) Mtch ele.:-uon. TI1ep,eBon M) appointed ,w elected
+            i;h:111he :11><e£r.i.,1:!.-e<l
+                                   vntet of 1he l(',WO:.nd $h:"11l  11erfom11he dn1iei. of d1<!nflice nn1il 1he
+            uexl u.uuualmt'd~      OJ l•ulil <Ulolhn:
+                                                    i,;<.Jualifit'd.
+
+
+
+ Clur.:-nt practi.:,:,s11cc-.:~1lly used by d1.: Sek.:-t Board entails d1.: followin~ \\'ith any dct:iih,
+                           nt arp1\)Jlfiate (e.~ . .:-h:tn~ine,s~:'lkine, rime,:il11)tmenrs.ere.):
+ r.w;1kerl :'ISne-e<!!<AAI')'
+
+      •     St'k'<.'lUoard aw,ounl't'S v.i<.·ru;i,:.·y
+                                                 atJd plau lo fill it p1x.widing
+                                                                               <•Ilea,;l<.•uc•wecknulio:.·c.
+            but ideally mo:-1\:.
+                              to allow tidcquatc 1im-tfor jX'Opk to co1tsid.:-rapplyiog.
+
+      •     TI1eSelect R11:trdC11:liror C'h:eiir'$rh?$ii1.eewill :wranie rn 11,).~1
+                                                                                 :i Net\'$ irem abnut the
+            \'t1c.m1;.y
+                     <111d
+                        clccliou ou 1h,: Towu wd.>;::.ii,: (Sw1:plt l(~r:I.m·<wi<h·d bdo,v.)
+
+      •     t'lllldidiil~s sut,mil Ltttct'S of Inter-est 10 111::-
+                                                               Scl~l lloard ofti.:-e. by c•mail or r.:-gul:irwml.
+            wluch ate then <lisrribmed 10 all Selec.t Board members and members ofdle oth-tr Roard.
+            Re,;nmi!,;/CV,.:we 01)1t!!(\neMed,:1ndC:ln ,:,ninplic:ue 1he pnhlic fL1<:mnen1      J):lChl posrini.
+
+
+      •     T>-t:eidline
+                       for I .eners oflmere,;t 1s 4:00 p.m. ,-:-nthe Thursday prfrH to the ~•lonrfayS,ele.:-1
+            Board mecti11~:it whfoh the tkc11on will be hdd.
+
+      •     On lhl' 1-ridayprior I<.~  ).•k,ud11y
+                                    111-:.·       Sd~x·1ll<.1<1rd
+                                                              Ul<.'l'ling:.
+                                                                        lhl' Sdetl ll<.'<1rd
+                                                                                          C:11.iir
+                                                                                                 <.'r
+            Clwir's (lt"si~Jet'p1uvidc,;,,JJl:;,mli<laks.<111
+                                                           wcw\x-1,;,1ftht' ulht'I .&1ard.WJ<l
+                                                                                             tdl Sdccl
+            fh1:1rdmembers with the illfnrmarinn in bullet l),.)illl!<
+                                                                     helnw (,)r :is :1m,t11de<l)
+                                                                                              ,-,):'Ill are
+            11w;.1r,:
+                  of lbe how dc.:iiou will l.>,:cuu<.focle<l,
+
+                                                       rmore;
+
+
+
+                                                                                                                        8/9
+     •   F.:11::h
+               Seleer Rn:1rd member :ind memher <.,f1heother R,):'Hdh:i:, ,)pp,'lrtnnity to a$k rlw
+         {)<llldc.•fwU1didalt'$c.•uc<.JU¢.>sl.ic.1u
+                                             ( saw,;;<.Jue:;lic.•u
+                                                                lo .tll -1:<1udiJ.ite:;)
+                                                                                     altenu1li~ helw«-u
+         members ofbotb Boards to tbe de~rc.: possible: no one is required 10 ask a question.
+
+     •   Th,;.•c.1rc.lcr                                                        :;o lht":s.mue
+                      for answ~iu~ qu~l.iOU$ JVlat..,sIUJJOll~ lbe l-.;1mli<lal¢.'S.         (>t"lSOU is
+         not always ''ti1l-l. or "l:lsr:·
+
+
+
+
+    •    Votin~ ;viii be by r,,11~all v,)rc. ·11tcSdcct &:mi Chair altern:ites bctw~cn membersof
+         botb. Bo.'l1J$.,.\Ski.of!.
+                                 e.H;b 1beiL'li.rs1choice.
+
+     •   The winnin~ ctmclid:iterequires a maj,,rity ,-,fv_-,resohhe remamin!2,filled se<'lts,,n b\')th
+         B('<•td->:
+                  .'lln~uce.sdo uOl 110~1 this letJt•Uew,:ul.
+
+
+Sample text for web :,itcNews item announcint clecrion to fill ,·acancy:
+
+A vii:.:ancyon tltc tJ1~1Ne<?fboonl] will be tilled 011L,/oteJat Ajoint meeting of the Select Boordand the
+           mrnili,:is ofllt"' r•.'!1111(o,fbof'.'rdl.l.11•~1~
+Jl;'lUUiuiu~                                               ..1,;;d             :;ulJurilii l..e:tl~rof hll<:1'¢}1
+                                                                 l<IUdi~l(~1Ul15l                              I() I.II(
+Select Bolltdoftkc by •1:00p.nL on Thurscby.(<l1v.-;,J.
+
+U'llm  t 1( lllhtl~'>I utay b~ 'j(tl•uUtt(dby e1u:tlJIQ'><k(tbuai\l(@awlte1,;lnt:.1.~U\'
+                                                                                    Ol \'lil lmrd (QV)' IQS<k(l
+B,1ard.Town Hall. 1 RoliwMd ,\VIZ.Amhcrn MAO 1002.
+
+Pk«~ im:lmk a ,;t,uniooyor your t'C'11,;ou,;   fo1 wi~bw~ll) :;e1w l'll lb( (:um1.it>fb<lard).am.Iyom·
+qualifi.::iticimand c-.:pcri1Zn,:,c. All s.ubmis:,i,m.,
+                                                     will he dir.rribi:r.:dto ~doernoard and (n,~mcof OOA1\t)
+mwll.~'> bt ;1dVU.JK'( of lh<tu<dlug. aud w1Ub<.iv1uJalJkl~\lb< puNk l'Utli< Towu w<b ~it<iu I.I~<       5d«;.·l
+R,,aul':, pack.:-rm:ircrial;,.for rl~ [rlAtc)meeting, \err.a in pcr;.onalinform:11i,1n
+                                                                                     will~ rcda.:r.:da;.
+llt'((5'>-lll)'.
+
+i'hi;,. cltx1k1nwill 1:lk,!place:11r:.11,~l. du,in$,rh~r.:enbrly "'-'h~d1dcd Sd.:ci Bo:1.rd
+                                                                                          m~ctin2,in 1h.:1'<>wo
+Roomou tlt<~toud lkl(.'1"     ofTowu Hull. i1ud\\iJJ \x brood1:asl    liv< by Am!Je1,;l)frdia oo ,;:bulltld17.
+
+v:icand.:.;.i1\ d ...
+                   ~ud Tnwn.widc,nffict ;lfC ~1WC11lC'd         hy r,.,l(;t ( .h:lptCr 41 s.x,it>n 11. ·" f\111call \l(lf~ <>f
+00111  bodks is r<qum:d.and th< 'A'iluting,andidal< mus1r<::dv<a m11jo1i1y                 of vol<Sor th< rc-maioiuJ?     tilkd
+       ◊II hr.1h hMrd;.; :lh$C'11C'tS
+1,.C:'11$                           dt) llnl :lfiC'CI (b:tt 1e,111irc,nc,n1 Ill 1hi$ case. 3 minimnmorr,.:wibwl V◊t~•
+is r<quir<dfor <kctfon.
+
+Tbc J>CfS(n)            rtiate.lwiU .,.;;,vctnJlil 11l,;:
+            <:lcc1.:::c.100                                t\OOllillT◊WU J.:/C<'l.i(lll.
+                                                      11.;:x1                        lO tx:bcl(I ◊ll rJ(fr,~laoc.1b:h
+tlt<'opciouto S<--"kckclioll on tlt<'To,\11ballot tlu-ou~btb<"sl!mdardnomination proc<S.S.
+
+                               r11m11~1 iu llt<:S<k.:• Bwtxltfowu ~fa.uagl;'l Oftko;;.,, 259-3001vr re-mail
+Qll','${i'111'>'' l!kaw -1:vutm:1                                                  05
+
+
+mtdr,"JS).
+
+
+
+
+                                                                                                                                  9/9
+

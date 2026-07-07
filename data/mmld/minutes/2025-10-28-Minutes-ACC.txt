@@ -1,0 +1,515 @@
+Light Commission October 28, 2025, Meeting Minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Blair, General Manager
+From:           Matt Harrington
+Date:           October 28, 2025
+
+
+
+A quorum being present, Chair Yarmoff brought the meeting to order at 4:03 pm. The meeting was held in
+person at MMLD HQ and with remote internet access, both available to public participation. A recording of
+the meeting is made available to the public at the following link.
+
+Participated in meeting:
+     Commissioners:             Commissioners Frechette, Hull, Harrington, Smith, and Yarmoff participated in
+                                person.
+      Light Department:         General Manager, Jon Blair
+
+Comments from the Public
+No Public Comments
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Motion by the Secretary to approve minutes
+Motion to approve minutes from open meetings dated July 14, July 22, July 28, Sept 9; and executive
+session minutes from July 22, July 28. Seconded by Frechette.
+    • VOTE 2025-28: Unanimous Approval
+        *Note by Smith to make sure that attendees know that despite minutes being slow to post
+        video recordings of meetings are usually posted next day.
+
+Chair Yarmoff requested feedback from commissioners on the town charter document that we received
+after our last meeting. If no feedback is received it will be assumed approved.
+
+General Manager Report and Update by GM Jon Blair (JB):
+   • First four weeks JB has seen the entirety of the system and met every member of the
+       organization and a handful of residents. Blair indicated that the department is in good shape to
+       make progress over the next few years. Everything that Blair assumed in advance of taking the
+       job has proved true, strong finances, strong team, strong foundation.
+   • JB would like to set a clear vision with some more structure to measure progress going forward.
+       JB voiced that the department may understand where it is going, but a plan makes it
+       transparent for all stakeholders.
+   • JB’s Safety Spotlight: keep note of daylight savings and short daylight, it is common for traffic
+       accidents to spike, along with weather and leaves. Many streetlight outages reported.
+           o Smith added that the Park and Rec department gave thanks to MMLD for providing the
+               use of the digger derrick to help install the new lights at Gatchell’s
+   • Manager Updates (see slides):
+           o IN PROGRESS
+                                                                                                   1/16
+        ▪  Job Search: Department is searching for a meter technician to prepare for an
+           impending opening.
+       ▪ MASS DEP Compliance- Received a letter indicating a potential issue with the
+           underground fuel storage tank. In response, department will begin monthly
+           inspections, prepare a rapid improvement plan with the help of a consultant,
+           and set up a long-term plan. DPW was also consulted about how they manage
+           their tanks.
+       ▪ Wilkins Plant Testing: Consultants booked to do a 3yr stack test in December.
+           Coordinating with MMWEC to allow testing in coordination of grid.
+       ▪ Village13: Schedule has slipped a bit. Not a single cause, but lots of small
+           moving pieces that add up to longer delays. Weekly meetings are keeping things
+           on track. On pace to get any digging necessary before the ground freezes.
+                • Smith asked about some extra clearing that has been done around the
+                    Village 13 site. Yarmoff mentioned that there are some new poles being
+                    put in to help complete the project. JB confirmed that the yard is not
+                    growing, but some space was needed for additional poles.
+                • JJY asked when the final acceptance of the switchgear will take place. JB
+                    said that this should take place Late February or early March.
+       ▪ Insurance: Full appraisal of our property being completed, as well as other
+           updates to policy.
+       ▪ CEC Grant Contract- It has been going back and forth, we have fulfilled our
+           obligations, and we are waiting for CEC to sign off and announce. The grant is
+           for the transmission resilience project.
+o   Long Term
+       ▪ Strategic and Capital planning- Focus for JB over the next 12+ months. Working
+           with team members to get a pulse on what is needed and seeing what sort of
+           sustainability grants and plans can assist.
+                • JB hypothesized what direction our strategic plan be focused
+                    Affordability? Decarbonization? Hyperfocus on reliability and resilience?
+                         o JB added that this will tie into our vision.
+       ▪ Policy Development- JB opined that it would be helpful if the board could help
+           enact policies that would allow the department to make decisions without
+           needing individual approvals. A recent example would be the Job Applicant
+           travel policy and Public EV Charging
+       ▪ Projects:
+                • Transmission Resilience- Waiting on CEC approvals
+                • Battery Energy Storage (BESS)- Economics are changing substantially at
+                    the federal level. Need to explore if the BESS program will work or if it
+                    needs to change. Might need to act decisively in the next 8-10 weeks to
+                    take advantage of tax credits before the end of the year.
+                         o Yarmoff mentioned that the economic benefits of going forward
+                              could be close to $1m/yr split between LightShift and MMLD.
+                • Distribution System- Lots of work to be done, and the team is
+                    prioritizing. They are working with business manager Matt Barrett to
+                    plan out capitalization plan utilizing the depreciation fund.
+                         o Overhead work- Mostly able to do in house
+                                                                                          2/16
+                                o   Underground work- Trenching and other items outsourced
+•   Yarmoff: Goals for GM
+       o Contract for JB requires the board to provide goals for GM for the next 12 months. See
+           Slides for details on what needs to be provided to GM to complete his job satisfactorily,
+           and earn bonuses
+       o Chair proposes to adopt the current objectives as guidance for the 6-month period Sept
+           2025- March 2026. This will allow board and GM to progress through past due goals and
+           develop new goals for the final 6 months of the contract year.
+       o See slides for the existing objectives being proposed.
+       o Smith mentions that these have been set goals for a few years, and it is good to see that
+           we are making progress.
+       o JB seeking clarification of the difference between the objectives and goals outlined.
+               ▪ Yarmoff clarifies that the longer list of objectives is a performance guideline to
+                    assess overall performance. The 3 bullet shorter list is for bonus assessment.
+               ▪ JB understands explanation and agrees.
+       o Discussion regarding the need to separate the performance and bonus objectives. All
+           understand the idea to separate them into an “Objective and Key Result- OKR” style
+           framework.
+       o Discussion regarding the timing of how the calendar runs for the objectives and
+           performance
+       o Motion by Smith to adopt the GM’s yearly objectives and performance goals seconded
+           by Frechette.
+               ▪ VOTE 2025-29- Unanimous Yes
+
+•   Yarmoff: MassCEC TDA Program
+       o Climate tech testing and demo program from the Mass leads act of 2024
+       o Grants from $1.5-$5m for shared infrastructure (See slides for full details).
+       o Yarmoff on behalf of Innoventure Labs (IVL) of which Yarmoff is a board member) with
+           support of JB submitted an application that was approved.
+               ▪ IVL/MMLD proposal:
+                       • Build pads near our proposed utility scale batteries with
+                            interconnections to allow entrepreneurs to test new and innovative
+                            batteries.
+                       • Similar scale project to V13 and if awarded MassCEC would provide a
+                            $4.5m Grant
+                       • Possible benefits to town:
+                                o MMLD could receive rental revenue from companies using the
+                                    testing site
+                                o Allow a connection during an emergency to plug in a townwide
+                                    generator through this.
+               ▪ Frechette asked if there were any specific types of batteries being proposed.
+                       • Yarmoff said that it would be up to the market to decide
+               ▪ Question from Logan Casey (Town of Marblehead): For this application is there a
+                   specific property defined for the battery system.
+
+
+
+                                                                                               3/16
+                            •  Yarmoff responded that Tioga has been the primary focus, but we are
+                               still needing to finalize a site. Leaving it somewhat generic in the
+                               application is ok and provides flexibility.
+                    ▪   Question from Hull: If the grant is secured is there a penalty for backing out?
+                           • Yarmoff indicated that there is no penalty for backing out
+                    ▪   Question from Hull: Asked Yarmoff if there was a conflict of interest due to
+                        Yarmoff’s affiliation with Innoventure Labs.
+                           • Yarmoff responded that he has no salary or financial interest in any
+                               organization involved in this project.
+                    ▪   Smith pondered if there was a need for IVL to work with a utility company for
+                        them to test the batteries?
+                           • Yarmoff mentioned there is appeal for the battery companies to work
+                               with real world conditions. To go bring the product to market the
+                               potential customers might want to know that it worked in real situation.
+
+Motion by chair to move to Executive session using Exemption 3 to open meeting law to discuss strategy
+with respect to litigation if an open meeting may have a detrimental effect on the litigating position of
+the public body and the chair so declares. The board will not return to open session. Seconded by
+Frechette.
+    • Vote: Unanimous Yes
+
+The executive session started at 5:16 pm.
+
+See Next Page for Appendix with referenced documents:
+
+
+
+
+                                                                                                    4/16
+                     MMLD Board Meeting
+                      October 28, 2025
+
+
+
+
+0           Agenda
+
+4:00 Call to Order
+     Public Comments
+     Previous Meetings: Minutes, Town Charter comments
+     General Manager Report
+     Goals for the General Manager
+     Application to MassCECClimateTech TOA program
+     Executive Session: Not to return to Open Session
+     Adjourn
+
+
+
+
+                                                         5/16
+0           Agenda
+
+4:00 Call to Order
+     Public Comments
+     Previous Meetings: Minutes, Town Charter comments
+     General Manager Report
+     Goals for the General Manager
+     Application to MassCECClimateTech TDA program
+     Executive Session: Not to return to Open Session
+     Adjourn
+
+
+
+
+0           Minutes of Previous Meetings
+
+  The minutes of the following meetings have been distributed:
+    July 14 Public Meeting
+     July 22 Public Meeting
+     July 22 Executive Session
+     July 28 Public Meeting
+     July 28 Executive Session
+     Sept. 9 Public Meeting
+
+Minutes for meetings of 9/16, 9/22 and 9/24 are pending
+
+
+
+
+                                                                 6/16
+0           Agenda
+4:00 Call to Order
+     Public Comments
+     Previous Meetings: Minutes, Town Charter comments
+     General Manager Report
+     Goals for the General Manager
+     Application to MassCECClimateTech TDA program
+     Executive Session: Not to return to Open Session
+     Adjourn
+
+
+
+
+0           Agenda
+4:00 Call to Order
+     Public Comments
+     Previous Meetings: Minutes, Town Charter comments
+     General Manager Report
+     Goals for the General Manager
+     Application to MassCECClimateTech TDA program
+     Executive Session: Not to return to Open Session
+     Adjourn
+
+
+
+
+                                                         7/16
+0                    Goalsfor the General Manager
+
+Per contract General Manager and Board have to agree on:
+• Objectives for the full calendar year;
+• Performance Goals to determine Performance Bonus.
+
+
+
+
+0
+•
+                     Yearly Objectives; PerformanceGoals
+    SectionV. General Manager Evaluation.
+B. The Commission and the General Manager shall meet at least annually to define the goals and objectives which they
+determine necessary for the proper operation of the MMLD and the attainment of the Commission's policy objectives,
+and shall further establish a general priority among those various goals and objectives, with said goals and objectives to
+be reduced to writing. Said goals and objectivesshall be establishedby October 29th of each contractualyear for the
+following contract year period, and shall generally be attainable within the time limits specified and within the annual
+operating and capital budgets and appropriations provided by the MMLD and the events that have occurred during the
+year.
+
+
+•   SectionIV. Salary
+C. At the conclusion of the first and each subsequent year of the contract, the General Manager may also receive, at the
+Board's discretion, a performance bonus of up to five percent (5%) of his salary in effect at the time which will be based
+on performance as measuredagainstagreed upon goalsand the financial condition of MMLD. Said amount will be in
+addition to any merit increase given as part of the annual review process described in Section B above. Paid bonuses
+shall be reported as wages for the purposes of taxation and calculation of pension to the extent permitted by law, but
+will not be added to the General Manager's base salary.
+
+
+
+
+                                                                                                                        8/16
+0                Yearly Objectives Proposal
+
+• Adopt the current objectives as guidance for the period
+  September 2025 - March 2026;
+
+
+• Request the GM to propose a set of new objectives, by
+  3/15/2026 for the period April 2026 - September 2026
+
+
+
+
+0                Objectives {1/3)
+
+    A. Human Resources and Safety
+       1. Define chain of command within organization chart; create succession plan            Essential
+       2.   Expand capacity and de elop robust sustainability and communica ions programs      Essential
+       3.   Expand capacity and develop robust engineering department                          Essential
+
+       4. Continue departme t safety and tralnlne: proe:rams                                   Important
+
+
+    B. Operations & Infrastructure
+       1. Continue Village 13 Substa ion capital improvement project                           Essential
+       2. Create 3-year operational work plan for distribu ion sys em and engineering ap· al
+                  improvements                                                                 Essential
+       3.   Draft a plan to supplement thee ,sting Railyard substation's dual 23kV
+            tran mi ion u ply line an /or o provide emporary em rgen y upply                   Important
+
+
+
+
+                                                                                                           9/16
+0                Objectives {2/3)
+
+C. Ensure Financial Stability & Competitive              Rates
+    1. Continue new      te stru ture d   ign and de elop implementation timeline                      Es enti I
+
+    2. Draft demand mana2ement plan with tar2ets to materially reduce consumption
+       during high consumption hours. including likely peak                                            Essential
+
+    3. Identify and apply to relevant grant programs                                                   Essential
+
+    4.   Prepare three-year Capital investmen plan afi2ned     ith Operation I up    de pl n           Essential
+
+    5. Evaluat options and ev lop a strate21cplan to optimiz th Wilkin Plant value,
+       that include bo h economic, sy m resiliency and carbon em1ss10ncons1dera ions                   Important
+
+
+
+
+0                Objectives {3/3)
+     D. Decarbonlze Power Supply
+         1.   De elop comprehensives ra e ic pan for BES inc din p imal total sto e capac1
+              taree s and a me hodolo to rank pre erred po en a s1es on T m owne land                    Essential
+
+         2. E plore options to procure or install additional cecarbon zed po ~er to reach 70",
+            carbon- ree power b 2028 and 85 by 2033                                                      Important
+
+
+     E. Communicate with Stakeholders,              Improve Customer Service and Education
+         1    launch regular commumc ,ons w h cu om rs (b, Is se /em 1/soc,almed1 )                      Essential
+
+         2    Cre e n mteera ed commumc                                 wsl   er, news     ed1a,
+               ocial media, web site, emer e                                                             Essential
+
+         3. Survey customers to establish b selme f ustomer                                      mer
+            a itudes reeardine MM and customer level stra e                                              Important
+
+              Participate m re vant Town 1nit1a1v that unloc Fe era and S       e   ndin                Important
+
+
+
+
+                                                                                                                     10/16
+0           Yearly Performance Goals Proposal
+
+• Define chain of command within organization chart; create
+  succession plan with clear responsibilities
+
+
+• Create 3-year capital investment plan for distribution and
+  engineering systems improvements
+
+
+• Complete Village 13 Substation Upgrade
+
+
+
+
+0           Proposal to adopt Objectives and Goals
+
+• Motion to adopt the described General Manager's
+  - Yearly Objectives and
+  - Performance Goals
+
+
+
+
+                                                               11/16
+0           Agenda
+
+      all to Order
+     Public Comments
+     Previous Meetings: Minutes, Town Charter comments
+     General Manager Report
+     Goals f r he General            i1er
+     Application to MassCEC ClimateTech TOA program
+     Executive Session: o        ore urn o      pen Session
+     Adjourn
+
+
+
+
+0            MassCEC's TDA Program
+
+MassCEClaunched ClimateTech Testing and Demonstration Program
+under the Mass Leads Act of 2024
+
+• Open to Entrepreneur Support Organizations (ESOs)
+• Grants of between $1.SM to $SM for Shared Infrastructure
+  - Infrastructure must be available for at least 10 years
+  - Capital projects must be completed within 3 years of grant (before 4/29)
+  - Partners must share 20% of cash expenditures
+
+
+
+
+                                                                         12/16
+0           TDA Program
+
+Two phase com petition
+• RFPrelease              22 July 2025
+• Concept Papers due      14 September 2025
+• Invitation to apply     14 October 2025
+• Full Application        14 November 2025
+
+IVL sent a concept paper with MMLD, and has been invited to
+apply. Concept paper was very well received by reviewers.
+
+
+
+
+0            IVL- MMLDproposal
+
+• Build several pads next to Utility Scale Battery
+• Allowing to connect and test innovative batteries
+
+
+• Total project:    estimated at $5.5M
+     of which       MassCEC'sshare: $4.5M
+
+
+• Discussions this week to decide whether to file full application
+
+
+
+
+                                                                     13/16
+0
+4.00_ .   v   .Jrder
+                       Agenda
+
+          Public Comments
+          Previous Meetings: Minutes, Town Charter comments
+          General Manager Report
+          Goals for the General Manager
+           n l,r ~inn ~n JI .,.,rEr rl rn~t ...   ~
+
+
+
+ExecutiveSession.Exemption 3 to Open Meeting Law, to discuss
+strategy with respect to litigation if an open meeting may have a
+detrimental effect on the litigating position of the public body and
+the chair so declares. Not to return to Open Session.
+
+
+
+
+General Manager Update
+Board of Electric Commissioners Meeting
+October 28, 2025
+
+
+
+
+          MMLD
+
+
+
+
+                                                                   14/16
+Safety Minute
+
+
+
+
+Manager Updates
+
+
+ Meter Technician                         Strategic and capital planning
+ MassDEP compliance                       Policy development
+ Wilkins testing                          Projects
+ Village 13 substation                    • DOE/MassCEC Transmission Resilience
+                                          • Battery Energy Storage System
+ Insurance update
+                                          • Distribution System
+ CEC grant contract
+                                             - Overhead
+                                             - Underground
+
+
+
+
+  Marblehead Municipal Light Department
+
+
+
+
+                                                                                  15/16
+Thank you
+
+
+Contact Info:
+                "blair   mhdld.com
+                (781) 584-5472
+
+
+
+
+                                     16/16
+

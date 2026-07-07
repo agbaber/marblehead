@@ -1,0 +1,907 @@
+Light Commission September 10, 2024 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           September 9, 2024
+Re:             Light Commission Public Meeting, September 10, 2024
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:05 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+
+
+Participated in meeting:
+     Commissioners:         Commissioners Frechette, Hull, Smith, Wolf and Yarmoff participated in person.
+     Light Department:      General Manager, J. Kowalik.
+     Invited:               Zoe Eckert, Sustainable Energy Policy & Program Sr. Manager, Massachusetts
+                            Municipal Wholesale Electric Company (MMWEC).
+
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Approval of minutes
+
+Vote #2024-14           Motion to approve the minutes of the August 8, 2024 pubic session was moved
+                        by Commissioner Frechette and seconded by Commissioner Hull.
+                        All commissioners present on August 8: Yes, Smith abstained.
+
+Vote #2024-15           Motion to approve the minutes of the August 8, 2024 executive session was
+                        moved by Commissioner Frechette and seconded by Commissioner Hull.
+                        All commissioners present on August 8: Yes, Smith abstained.
+
+
+Comments from the Public
+There were no comments from the public, whether in person or from remote participants.
+
+Outstanding items from previous meetings
+ToU strategic working group. Commissioner Smith reported that the Kick-off meeting of this group has
+been scheduled for Monday, 9/23. Will participate in the meeting: the General Manager and Chris
+Dunbar, and Commissioners Smith and Yarmoff. This group intends to meet on a monthly basis. It will
+report to the full Commission at its next meeting on October 1st.
+
+Wilkins generator. The General Manager presented options for the future operation of the Wilkins
+diesel plant (see slide bottom of page 9). Options include - Investment in remote start equipment, -
+Ending MMLD participation in the capacity market but using the plant to reduce transmission and
+                                                                                                       1/13
+capacity charges by running at predicted peak times each month; - Ending MMLD participation in
+capacity market and using the plant as a back-up for emergency events. Commissioner Yarmoff
+remarked that these options should be compared to the option: - Continue as existing, without new
+investments.
+Commissioner Yarmoff also requested that a baseline of operating costs, inclusive of all personnel time
+dedicated to Wilkins be presented at a future meeting, either with existing data if MMLD capture all the
+data (expenses and time sheets) or when such a system is in place as appropriate.
+A decision on the future of Wilkins also needs to take into account the new rules for the ISO-NE capacity
+market, that will come into effect in 2028 but will become known earlier, probably in 2026.
+
+MMWEC energy efficiency & efficiency program review
+Zoe Eckert, Sustainable Energy Policy & Program Sr. Manager at MMWEC presented the Energy and
+Efficiency programs (regrouped under the Next Zero brand name) that are available to MMLD
+customers, both Residential and Commercial at the invitation of the Chair.
+Among these programs are incentives for heat pump installation, whether air- or ground-source heat
+pumps, that may not be widely known of Marblehead residents. Interested readers are encouraged to
+review the slides detailing this information (pp 4 - 8) and/or to listen to the presentation online.
+As follow up:
+    - Commissioner Wolf requested a one-page document describing the battery rebate program, to
+        either send to residents with the next billing cycle and/or to distribute at the Sustainability Fair
+        that will take place on 9/28.
+    - Commissioner Smith mentioned that it will be useful to revamp the MMLD website with the
+        pages concerning these programs pointing directly to the dedicated Marblehead page on
+        MMWEC’s NextZero web pages which are clearer than the existing MMLD pages.
+    - Ms Eckert will send the presentation slides.
+
+General Manager Updates
+Village 13 Update. The company manufacturing the switch gear is now telling us that shipment is
+anticipated to be arriving in Marblehead in late December. The bid documents should be published next
+week and we can expect to select an engineering firm for the construction of the base of the switchgear
+by early October.
+
+Tioga Way update. A meeting between Bayside Engineering and LightShift took place last week to
+review possible siting. This will depend on precise layout of the 5 MW / 20 MWh BESS which LightShift
+will provide as a next step. The Holden MLP has invited us to visit their BESS installation.
+
+IIJA block grants, MassCEC administered program for utilities and focusing on disadvantaged
+communites is open for applications, which have to be filed by October 4. To meet this deadline, the
+General Manager is working with Beacon Climate Innovations to write a grant proposal.
+
+Previous application to the DOE GRIP grant (organized by MMWEC on behalf of several municipal light
+plants) was rejected, we do not have a detailed application.
+
+
+
+
+                                                                                                        2/13
+Existing Hydro Québec transmission line. MMLD participates (via MMWEC) in an investment on
+transmission lines from Québec to Massachusetts. Over the period 1985-2024, the previous investments
+of MMLD have returned a 16% IRR. As part of that agreement National Grid is asking for a new capital
+investment from the participants, of $247K over 10 years. Returns over 2034 – 2065 period are expected
+to be $472K, with net dividends of $225K.
+
+Power portfolio update As has been reported at the last Commission meeting, some hedging contracts
+have been changed from unspecified sources (at a fixed price for a certain period) to hydro-generated
+backed agreements with environmental attributes. MMWEC has checked that all these environmental
+attributes meet the definition of the state law regarding decarbonization targets. Each contract comes
+with RECs that MMLD will retire. This will bring the carbon-free part of our portfolio to 58% as described
+previously. Commissioner Yarmoff asked for two sets of information:
+
+    -   The duration of these hedge contracts? Answer: they are laddered over various durations as
+        previous hedges. The board would appreciate receiving that information, as we did previously.
+    -   Would it be possible to update the carbon free portfolio over time (as presented in the May 30,
+        2023 Commission meeting)?
+
+
+Executive Session
+During the Light Commission Meeting of September 10, 2024, Chair Lisa Wolf proposed to vote on a
+motion to meet in Executive Session to discuss trade secrets or confidential, competitively-sensitive or
+other proprietary information when such disclosure will adversely affect our ability to conduct business
+in relation to other entities making, selling or distributing electric power and energy, with no intent to
+return to open session.
+Motion was moved by Commissioner Frechette and seconded by Commissioner Smith.
+Votes: Simon Frechette: Yes; Mike Hull: Yes; Adam Smith, Yes; Lisa Wolf: Yes; Jean-Jacques Yarmoff: Yes.
+
+Executive Session started at 5:40 pm.
+
+The Executive Session concluded at 6:01 pm at which point a motion to adjourn was proposed,
+seconded and, after a roll call of the commissioners voting unanimously in favor, adopted.
+
+
+
+                                               ----****----
+
+
+
+
+                                                                                                     3/13
+Documents presented during the September 10, 2024 Light Commission Meeting
+
+
+                     MMLD NextZero Overview
+                                                                SeptemberI 0, 2024
+
+
+
+
+                                                                        i,11,n11C"VlfTJl   MIINICl~Al
+                                                                        WWOUS,l,lfUtClll(C:OM,ANY
+                                                                        ,ubli(    Enargy Pa,,n~n
+
+
+
+
+                                             Residential Programs
+
+                                        Home Ener,gyAudits & Gold Tier
+    AUO!TS
+    Audoo                                            ,.
+                                                Tot1I QtyZl:24      QtyQl
+                                                                      21
+                                                                                   QtyQ2
+                                                                                     8
+                                                                                      ,.
+                                                                                                QtyQ3
+                                                                                                   0
+                                                                                                            Qty()O
+
+
+    LfDBulbs                                                          63
+    P11·1erifuationYls1ts                            "
+                                                     17               14               3                                    Gold Tier Element
+                                                     133              98              35
+                                                                                                                            Preferred Contractor Lists & Contractor Training
+       Total$2024
+                        '°' ""
+                        ... so"' '"'sososo
+                               $Q1
+         $9,!170              5'.9l0    5'.""'                                                                              Community Outreach Webinar & Social Media
+           w•                  $US
+                                                                                                                            Support
+          ,.,.,,. ._,,.
+           $2.'3S             $2.170
+                                I so
+                                        $65
+                                        $3,153
+                                                           SJ
+                                                           SJ
+                                                                                                                            Air Source Heat Pump Hotline & Consultations
+    I-EATPUW~SULT5                              TotllQtyD24         ()yQl          QtyQ2        ()yQ3       QtyQ,O
+    Jtl'd-f>Conwlt                                                                                                          Expanded Home Energy Audit & Manual J
+    #6:ild~IJ
+    "G:i'dOo:s1a,,eon,..,lt                                                                                                 Calculations
+    # GJtd DeSl!JlRtVleW
+    flt~dVerlfy                                                                                                             ASHP Design Review& Consultation with
+                                                                                                                            Customers
+       TOlal$Z024              $Q1       $Q2
+            $SOD               $3'D
+                                          ., '"'so
+                                         Sm        '"'
+                                                    so                                                                      Approval of Contractor ASHP Design
+
+             ..
+            $7ZO
+
+             .,                '""
+                                $0
+                                so        .,
+                                          $0
+                                              so    so
+                                                         so
+                                                         so
+                                                                       so
+                                                                       so
+                                                                                                                            Post-Installation QA Verification
+
+                                I!!       l!!            so            I!!
+
+
+   2:i:'
+   --- -.
+                              $1.02()    $llO            so            so
+
+                                                                                                                                                                                           2
+
+
+
+
+                               Energy Star Appliance Rebate Program
+                       Qual1fyine: Appliances
+
+    ENERGI/STARAir Purifier/Room Air                       $40
+    Cleaner                                                                  ENERGYSTAR.APPLIANCE                     Totn1Qt:y2024       OyQ1   C>yQ2   TotalS2D2Q       SQl         SQ2
+    ENERGYSTARCloths Washer                                $SO
+                                                                             AlrPu1fltr /Room AlrCl~a-,q,
+                                                                             All1nona W:lchGr&.D,yor
+                                                                                                                           '                '              ""'
+                                                                                                                                                            "'
+                                                                                                                                                                so
+                                                                                                                                                                so
+                                                                                                                                                                                      suo
+                                                                                                                                                                                       so
+    fNfRGY STAR Clothes Dryer                              $50               Oot!HsWo:hcr                                  1S              11
+                                                                                                                                                           ""'
+                                                                                                                                                           "'"' soso
+                                                                                                                                                                          $S5()
+                                                                                                                                                                                      '""
+                                                                                                                                                           ....
+                                                                             Oothc~Drycr                                                                                  $25()       $"1J
+    ENERGVSlAR
+             Dehumidifier                                  $JO
+                                                                                                                                                           s=                         s=
+
+                                                                                                                                                             ..
+                                                                             '-it!atPumpOolhe>Dryer
+    ENERGYSIAR Heat Pump Dryer (Elec1rk)                   $500              All In One HeatPumpWasher&Dryt1                                                                          SlOCO
+
+                                                           s,oo              Dehum1df1er
+                                                                                                                                                           ,.""'          $120         S60
+
+
+                                                                                                                                                            ""' "'"" "'
+    [NERGV STAR Electric lleat Pump Water                                    '-leatPumpWa!E'rHea!i!r
+    Heater                                                                   RoornA/rCond1oorier                                                                          Sl."O        SJ
+    ENERGYSTAR Pool Pump (v=i,i:iblP Speed)
+
+    Heat Pump Pool Heater
+                                                           $100
+                                                           s,so
+                                                                             Vflrleble SpeedPool Pur-ip
+                                                                             Refr1serator
+                                                                             HeatPlr"l1j)Po<:4Heaw
+                                                                                                                           '2              15
+                                                                                                                                            0
+                                                                                                                                                            so
+                                                                                                                                                           sum
+                                                                                                                                                            so
+                                                                                                                                                                           SJ
+                                                                                                                                                                          $750
+                                                                                                                                                                           so
+                                                                                                                                                                                       "'
+                                                                                                                                                                                      $350
+                                                                                                                                                                                       so
+    ENERGYSTAR Refrigera1or                                ,so
+                                                                             riductionR1r1ge
+                                                                             flO.JalonRar@e
+                                                                                           (replec:.~
+                                                                                                    13<1s/prop(rle)
+                                                                                           (replau electr1c:I
+                                                                                                                                      I                    ~
+                                                                                                                                                            $00
+
+                                                                                                                                                                      I
+                                                                                                                                                                          SS>J
+                                                                                                                                                                           $)00        "' I
+                                                                                                                                                                                      $1Jll
+                                                                                                                                                                                      gs;o
+    ENERGYSTAR Wifi Enabled Sm:Jrl
+    Thcrmostat/I-IVAC
+                                                           SO'Youp
+                                                           to$125
+                                                                                                                           72
+                                                                                                                                           "'     24                      g99J
+
+
+    Induction R:;mge (Repl;icing Electric)                 $100
+    Induction Range(ReplacingGas/Propane) $500
+
+
+
+                  ..                                                                                                                                                              l
+
+
+
+                                                                                                                                                                                               4/13
+                 Rechargeable Battery Lawn Equipment
+                               Program
+
+                      Qualifying Lawn Equipment
+  Rechargeable Batte      Ooerated Lawn Mower               $100
+  Rechargeable Batte~ted             Snow Blower            $100
+                                                                                                                                                    TotalkWh     Total
+
+  Rechargeable Battery Hedge Trimmer                        $40                                                                                                Incentives
+                                                                                                                                                                   so
+  Rechargeable Battery Pressure Washer                      $40                                                                                                    so
+                                                                                                                                                                   so
+  Rechargeable Battery Rototiller                           $40                                                                                                    so
+                                                                                                         2024totals                                                so
+  Rechargeable Battery Chain or Pole Saw                    $40
+  Rechargeable Battery Leaf Blower                          $25
+  Rechargeable Battery String Trimmer                       $25
+
+
+
+
+                                                                                                                                                                       4
+
+
+
+
+                                     Home Energy Efficiency
+
+                                                      HE]                                           T0t11CSy2024               Q<yQl    Q<yQ>    Q,yQ3     Q<yQ4
+               Qualifying Measures                    Blo,verDoor/AlrSetll,ng                                  2
+                                                      Heat1nsSystiem                                           2
+Blower Door Test & Air       50%, up to $500          lnsulaoon                                                12               10
+Sealing
+Insulation                   50%, up to $500
+                                                      OuctSeahng
+                                                                                                               ..               "
+                                                            Total $2024         SQl               SQ>           SQ3             SQ4
+Duct Sealing                 50%, up to $500                   5500             $500              so                so           so
+                                                              $1.(IJO           S1000             so                so           $0
+ENERGYSTARCertified                                           $5,500            S.,,oo         Sl.llOJ              $0           $0
+                             50%, up to $500
+                                                                 $0                so             so                $0           jQ
+Heating System                                                $7,IIJO           $5.000         $1000                $0           so
+
+
+
+
+        - ..                                                                                                                                                           5
+
+
+
+
+                                        Heating and Cooling
+
+                                                   COOtHQ\.-tES                                     Total Qty2024               QtyQl    QtyQ2     QtyQ3       QtyQ4
+                                                   Air source Heat Pumps
+                                                   DucdessMiniSplits(SingleZone)
+                                                   Duclless
+                                                          MiniSplits(MultipleZone)
+               Qualifying Measures                 Ground Source Heat Pumps                                                         0
+                                                                                                               17                 w
+Air Source Heat Pump                 $500/ton
+
+
+
+                                                            -
+                                                     Tot11$2024           $QI            So,             $Q3             $Q4
+Ground Source Heat Pump              $750/ton           $4250             S22'<l         S,,000           so             so
+                                                                          sn,            S!IXl            so             so
+                                                        $40!KI
+                                                            so
+                                                                          SlOOO
+                                                                           so            ""''
+                                                                                          so
+                                                                                                          so
+                                                                                                          $0
+                                                                                                                         so
+                                                                                                                         so
+                                                       $13.7«1            $;S50          $8,190           $0             $0
+
+
+
+
+                                                                                                                                                                 6
+
+
+
+
+                                                                                                                                                                            5/13
+                                          Connected Homes
+                                       Smart Oevrces                         Quahfying Brands                       I~:enn~:e
+                                            Battery                      Duracell, Emporia, Sonnen                        $30
+                                                                    Ford 2013+, Hyundai 2017+,Jaguar
+                                      Electric Vehicle            2016+, land Rover2016+, Toyota2017+,                    $10
+                                                                     Tesla 2012+, Volkswagen 2014+
+                                 Electric Vehicle Charger" ChargePoint, Emporia, En.IX JuiceBox                           $10
+                                 Electric Hot Water Heater                      GE, Rheem                                   $5
+
+                                   Mini-SpiltController                        Flalr, Senalbo                               16
+                                                                          Amazon, Google Nesr,
+                                     WI.fl Thermostat                                                                       $5
+                                                                            Honeywel11Resldeo
+
+                                                                  .,
+                                                             ....
+                                                                                                Remote
+                                                         Taul                            EV     Mlnlsplit                                                             Thcnno1to
+                                   Tat1IC:u1toffll!ln   Deviczs
+
+                                                          ,,      ,,,       Cho n    Telemaia   Col'f.roh       RAC              Water Hclten       Thermosuu
+
+                                           "•             110
+
+
+                                                           2
+                                                                     0
+
+                                                                               ·1
+                                                                                         0
+                                                                                          1         1
+                                                                                                    0
+                                                                                                                                       0                31                78
+                                                                                                                                                                          16
+
+
+
+
+         Tatal En-oflment,YTD              ..
+                                           •              22
+                                                          142
+                                                                               0
+                                                                               10                                                                        32
+                                                                                                                                                                          19
+
+
+                                                                                                                                                                          "
+   -...                                                                                                                                                                                7
+
+
+
+
+                                           Ev Scheduled Charging
+
+       Smart Devices                    Quahfyuig Brar-ds
+
+          Battery                Ou~~•H, Emporia, Sonnen
+                                                                                                                                                    lofOmpr1             Tot.I
+                             Ford 20131.,Hyundai 2017+,Jaguar
+                                                                                                ~1WA:1e,RGING                      PROGMM           IJlstnbulcd        1nccnavc1
+      Electric Vehicle     2016+, Land Rover 2016+, Toyota 2017+,
+                               Tesla 2012+, Volkswagen 2014+
+                                                                                                                      en                                 8               Sl.79<
+                                                                                                                      Q2                                                  S>1>
+ Electric Vehicle Charger" ChargePolnt, Emporia, Enel X JuiceBox                                                      Q3                                                   so
+ Electric Hot water Heater                  GE,Rheem
+                                                                                                                      04                                                   so
+                                                                                                                7(l;liltntlll,
+    Mini-Split Controller                  Flair, Senslbo
+                                   Amazon, Google Nest"•,
+     WI-Fl Thermo11tat
+                                    HoneywelVResldeo
+
+
+
+
+                                                                                                                                                                                       8
+
+
+
+
+                                Residential Battery Rebates
+
+     Smart Devices                     Quahfy1ng Brands
+
+         Battery                  Duracell, Emporia, Sonnen
+                                                                                                                                                          Total kWh            Total
+                              Ford 2013+, Hyundai 2017+, Jaguar
+                                                                                        RESIDENTIALBAUERi
+                                                                                                      PROGRAM                           I of Batteries       C.p1dty      Incentives
+    ElectrlcVehlcle         2016+, Land Rover2016+, Toyota2017+,
+                                                                                                        Q1                                      0                 0             $0
+                                Tesla2012+, Volkswagen2014+
+                                                                                                        Q2                                                                      so
+Electric Vehicle Charger" ChargePolnt, Emporia, Enel X JlHceBox                                         m                                                                       so
+Electric Hot Water Heater                   GE, Rheem
+                                                                                                      04                                                                        SO
+                                                                                                   2024totals                                                                   $0
+  Mini-Split Controller                   Flair, Sensibo
+                                   Amazon, Google Nest"',
+   WI-Fl Thermostat
+                                     HoneywelUResldeo
+
+
+
+
+  -...                                                                                                                                                                                     9
+
+
+
+
+                                                                                                                                                                                               6/13
+                              Commercial
+
+Commercial Prescriptive
+Lighting Program
+
+A fast tcacked process for reviewing and implementing lighting projects. Incentives through the NextZero
+
+Prescriptive Lighting Program are based on incentives per unit and dictated by the municipality.
+
+
+
+
+Rebate Cap per Business           $5,000
+Max Annual Rebate Budget          $20,000
+
+
+
+
+Commercial Prescriptive
+HVAC
+
+A fast tcacked process for reviewing and implementing lighting projects. Incentives through the NextZero
+Presc 'ptive Lighting Program are based on incentives per unit and dictated by the municipality.
+
+
+
+
+ Rebate Cap per Business           $5,000
+ Max Annual Rebate Budget          $20,000
+
+
+
+
+                                                                                                           7/13
+Custom Retrofit Program &
+New Project Construction and Major Renovation
+Program
+
+Customers s.u.b.mil:
+                ..<10..<1p_p/i~;l1i_on
+                                 to define project scope, provide recommendations and conduct
+
+thorough audits in..order..to help the customer create the most energy efficient plan for their project.
+
+Incentives available are based on the energy savings estimated to result from project implementation.
+
+
+
+
+Rebate Cap per Business          $5,000
+Audit Co-Pay                     $100
+Rebate per kWh saved             18 cents/kWh
+
+
+
+
+                                             2024 Project
+
+
+                                                $291.25                                 $000
+
+
+
+
+      ....                                                                                                 14
+
+
+
+
+                                                                                                                8/13
+             General Manager updates
+
+• Village 13 update
+• Tioga Way update
+• Possible grant opportunity? - In Mass, the Mass CECis
+  administrating section 40101(d) of the U.S. Infrastructure
+  Investments in Jobs Act (IIJA) grant funds for U.S. DOE.
+• Hydro Quebec transmission line asset ownership rights "cash call"
+• New employee recruiting update
+• MMLD 2024 power portfolio carbon free percentage
+
+
+
+             Project Updates
+
+Village 13
+• Switchgear vendor informed us our delivery is delayed to late
+  December 2024 ...manufacturing moved to a new facility
+• Construction bid docs to be sent out/advertised,   as soon as this
+  week.
+Tioga Way
+• First Bayside-LightShift meeting held to review site drawings;
+  LightShift to layout 5 MW/20 MWh BESS
+• Holden MLP has invited us to visit their completed site 5 MW/20
+  MWh site
+
+
+
+             Wilkins Plant - future path options
+
+
+• Invest in remote start upgrades to minimize impact of ISO Pay for
+  Performance penalties while in the ISO Forward Capacity market.
+  Goal ...30 minutes from start to full 5 MW capacity on line (limits
+  max penalty at $2SK/event)
+• Exit the ISO market; actively operate BTM to shave capacity and
+  transmission peaks (run 2-5 times/month for the full year); remote
+  start upgrade investments tbd
+• Exit the ISO market; operate only in emergencies, in conjunction
+  with BTM battery; only run to shave capacity peaks in summer?
+
+
+
+
+                                                                        9/13
+                                   IIJA 40401(d) Grant opportunity
+
+    • "The funding aims to enhance the resilience of the electric
+      grid, prevent outages, and mitigate the impact of disruptive
+      events through eligible investments in activities, technologies,
+      equipment and other hardening measures."
+    • 5-year award period; first period $9.2 million (2022 & 2023
+      combined)
+    • Includes a "Small Utilities Set-Aside" - retail utilities that sell
+      less than 4 million MWh/year (MMLD is 100K MWh/yr.)
+    • Application deadline October 4, 2024
+
+
+
+                            MMLD assessing our grant award potential
+
+     • Multiple options considered ...
+     • Timeframe is short
+     • $9 million statewide is not a significant amount...need to scale
+       an MMLD grant appropriately?
+     • MMLD US DOE GRIP grant application for community resiliency
+       centers at Mhd schools (solar PV + batteries) was rejected
+     • MassCECstated program objectives include underserved
+       populations as environmental justice communities and
+       disadvantaged communities (EJC'sand DAC's)
+
+
+ISearch for :"n address, city, state or ZIP
+                                                                                                                            Tract demographics
+
+
+                                                                                                                 I
+                                                                                                                            Race/ Ethnicity (Sh2n..,)
+                                                                                                                            Age CSl:1QW
+                                                                                                                                     ..,)
+                                                                            ographically Distributed
+    North Salem
+                                                                            cations of Marblehead's                              ld1ntffiedasdisadv,,nU111d?
+                                                                             Six Public Schools*
+                                                                                                                                           r;:IJ
+                                                                                                                            This tract is considered
+                                                                                 PEACH·s                                    disadvantaged because it meets
+                                                                                  POINT
+                                                                                                                            more than 1 burden thresholdAND
+                                                                                                                            the associatedsocioeconomic
+                                                                                                                            threshold.
+
+
+
+                                              West Town       (;
+                                                                        *   Community Charter School                           Send feedback      0
+
+                                                          *
+ PR                                            Landing         ¾~
+GU                      Village Elementary School                                                                           Climate change                     +
+AS
+
+
+
+                                              * *
+                                                               Marblehead              Mar~:ead
+MP
+                                                                   Veterans Middle School
+                                                                                                                            Energy                             +
+ VI                     Brown Elementary
+
+
+                                            * *
+                                                                                                                            Health                             +
+                                                          Marblehead High School
+                  Glover Elementary
+                                                                                                                            Housing                            +
+                                                                       • Three of the six schools                  I        Legacy pollution                   +
+                                                                    are located in a US Census Tract
+                                                                         contiguous with a DAC
+@ ..•.                        Beach Bluff                                                                                   Transportation                     +
+                                                                               C Mapbox C ()penStreetMap Improve this map
+
+
+
+
+                                                                                                                                                                   10/13
+                                                                                                                                       SreerSwamp
+JI                                                                                                                                     Conservation
+                                                                                                                                           Am
+
+                                                                                                               f Waterside Cemetery
+                                             ..\                                                                     j                         ~-F....-Ct/NewF.,.,ICt
+
+                                                ;                                                                           ~
+
+ Ide Salem Greens                       Salem State                                                                          Oo~"~                 .. a
+ olfCOU(Se                               Uruverslty
+                                                 Q
+
+
+
+
+          ..
+ ores1R1Ver
+ooservat1on
+       ,.,
+
+
+
+        Tedesco Country Club                         ,~•
+
+ \,or'l'9►~·          ~...-.9       '
+
+                                                             Clifton                                                Mass 2020 Environmental Justice Block Grou
+                                                                                                                   •Marblehead Housing Authority Properties
+                             \
+
+                                                                                                                                                                                                 N-INAnOHAt
+
+       @EN.EAGY                                               Energy Community Tax Credit Bonus
+                                                                                                                                                                                             I
+                                                                                                                                                                                                 @:1t:;~~·
+                                  Llllilllil2
+                                                                   +                                                                                               I      Coal Plant Closure----i             Q
+ Coal Closure Energy Communities
+                                                                                                                                                                  LEnergy Community Designation•              ••
+     TractStlltuS
+
+              C.nwol••ctdirtttly.djoining•c.n-
+
+
+      i.i     C.n1U'ltfact   w~h a coal clo,,..•
+
+
+
+
+ MSA/Non-MSAs that an, Energy Communities
+
+     Status
+              MSA..lnon-MSAIlh.i ..-1 bod, the Fo..,.I
+              F.i.iEmpl~(FEE)M1holdandthlo
+                                                                               ~       i,
+                                                                                                                                                    *      Community Charter School
+              111\efTlPlovmem
+                            rlltl req,u,rement
+                                                                                Villagel:lementary School         *
+                                ~
+                                                                       Bro~n ~~~1menta~                 Scllool * *                             Veterans Middle School
+
+       ® Coitl Closure Energy Communities                              Glover Elementary Sch;~j *"'~\' *Li;-Marblehead I l1ghSchool
+                                                                       _,(,i                                        ,,,         ~,                                       ~Four    Marblehead Publicj
+              MSNNon-MSAs th,111
+                               are Energy                                                                                       •                                           Schools are located m a
+              Comm,m,tiel
+                                                                                                ,:t""                  '"...                                              census tract contiguous with
+       <I> MSAsand Non-MSAs that only meet the                           ..,~-~·
+                                                                            ..'  G!.                              .,./·                                                       a coal plant closure.
+           Fossil Fuel Employment Th""shold
+
+
+
+ r:.-:-.
+      •• ............ I li'Bl"'::r."                                                                                                                                                       """"""'
+ WENERGY l!bJ)~,g;::,•                                                 C\202lUSDepa,wcn1<>fEnervN111onolE--.1T..:i.,.,,D~(:.l!Tt.1..ullenloa                                            ~
+                                                                       ~':Jlhll1110&rebornscdund<r1(~•e(ommon,Armt>uum4JJLioen"'                                                   ~
+
+                                                                                                                                                                                       ~=
+
+                                                           Current application strategy
+
+         • Narrower grant scope ... $7S0K to $1M? Less?
+         • Focus on realizing a town-wide benefit, that includes Mass EJC
+           areas and DOE coal plant closure energy community areas
+         • Bias toward "shovel ready" projects, with quantifiable costs
+           and benefits
+         • Proposal writing support from Beacon Climate Innovations, a
+           grant-writing team based at Greentown Labs.
+
+
+
+                                                                                                                                                                                                                   11/13
+                     About Us - Committed to Solutions                                                       BEACON
+                                                                                                              CLIMATE
+
+       Moneer - Principal                   Rohit - Product Lead                   Vanessa - Community Lead
+
+
+
+         ~
+         V
+     Serial Climate Techpreneur and
+                                           Serial entrepreneur and executive
+                                           with 1O+ years of demonstrated           Principal & Founder of
+                                           track record in social innovation and    Sovations, dedicated to
+     founder - 5 th venture                venture _growth track record
+                                           addressing s~temic i$$uesat the          supporting mission-oriented
+     3+ decades in clean energy and        Intersection of sumlnablllty,            organizations with focus on
+     climate-tech                          technology and workforce
+                                           development.                             community and climate change
+     Developed a myriad of on and          Engineerfog and p~duct                   Chair of MIT EnterpriseForum
+     off~grid infrastructure projects.     management experience with AB
+                                           InBev, Forbes Marshall                   Climatetec:hCommittee
+     Servedcustomers directly and
+                                                                                    Strategic marketing consultant
+     through strategic partners of all     ~~t!:a~f,f~'t:3e~PG                      and advisor to for-profit and
+     types and sizes on 6 continents
+                                                 ~~~=         ~~~~ Gti~
+                                                                           I
+                                                                                    nonprofit organizations
+     Part time professor at Tufts                Shapers Community.
+                                                 FOfbes30 Under 30.                 Volunteer to community
+     Derby Entrepreneurship Center
+                                                 Presenter at WEF Davos' 16 and     organizations such
+     Mechanical/Electrical Engineering           Horasis'16 in Liverpod, UK          as Food Link
+                                           Engineer with MBA in Business
+                                           Analytics and                             Marketing/MBA
+                                           Machine learning
+
+
+
+
+                                   About Us - Continued                                                      BEACON
+                                                                                                              CLIMATE
+                                             Sean Becker - BESS
+                                             Project Management
+
+
+
+
+                                         President/Founder Sparkplug Power.
+                                         Energy storage and service company
+                                         for commercial buildings and municipal
+                                         utilities
+                                         General Electric Energy - hydroelectric
+                                         project due diligence and contracts
+                                         Cambridge Energy ResearchAssociates
+                                         Associate Director overseeing Global
+                                         PowerForum product.
+                                         US Navy
+                                         Fletcher School of Law & Diplomacy
+                                         and Cornell University
+
+
+
+
+                  Existing Hydro Quebec transmission line - cash
+                  call for required capital improvements
+
+• MMLD (via MMWEC) participates in a long-term asset rights
+  investment agreement with National Grid on existing
+  transmission lines from Quebec to Mass.
+• The agreement 1985-2024 has provided MMLD positive 16%
+  IRR (internal rate of return on capital investments)
+• New National Grid "cash call" capital investment for MMLD
+  2024-33 totals $247K;
+• MMLD forecast dividends 2034-65 - $472K; net dividends -
+  $225K
+
+
+
+
+                                                                                                                        12/13
+            EvolvingPower Portfolio & RECsin 2024
+
+FY 2023 - 42% carbon free -40,426 RECs
+FY 2024 Changes
+• Move from unspecified bilateral agreements to hydro
+  agreements with environmental attributes
+  - Firstlight Hydro 2024 - estimate +7,567 RECs
+  - (new) Brookfield Hydro 2024 - estimate +7,123 RECs
+• Rebalance the RECsearned with Seabrook Nuclear i.e. swap
+  CES-Esto EFECs - net increase +6,700 EFECRECs
+
+
+
+                             ----****----
+
+
+
+
+                                                             13/13
+

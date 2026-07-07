@@ -1,0 +1,512 @@
+Light Commission May 4, 2023 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           May 24, 2023
+Re:             Commission Meeting May 4, 2023
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:04 pm, the meeting
+being held both in person and with remote access available to the public. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:           Hull, Smith and Yarmoff participated in person;
+                                 Frechette and Wolf participated remotely.
+        Light Department:        General Manager, J. Kowalik; Distribution Manager, Greg Chane and
+                                 Manager of Tech. Operations, C. Coleman
+
+Approval of Minutes:
+A motion to approve the minutes of the Light Commission meetings of March 7 (open session and
+executive session), of March 28 (open session and executive session) and of April 10 (open session and
+executive session) was requested by Chair Hull.
+
+Vote #2023-21 Motion moved by Commissioner Yarmoff, seconded by Commissioner Smith. Unanimous.
+
+Comments from the Public
+While several members of the public participated in the meeting both remotely and in person, there
+were no comments from the public.
+
+Battery storage
+The Light Department has been putting in place a process for interconnection of residential batteries.
+Several documents are in preparation.
+Policy: Colin Coleman has been drafting an interconnection application and agreement, based on
+Concord’s model which is quite similar to what we need. This draft is being reviewed and will be circulated.
+Dematerialization: Joe Kowalik has been reaching out to the town’s wiring inspector to put in place a
+system to ensure that application requests logged into Marblehead’s on-line Viewpoint system trigger
+an automatic e-mail sent to MMLD, when an application request for permit with key words “EV or Solar
+or Battery” is logged. In addition, a one-time search with these key words will give the current status of
+applications in Viewpoint.
+One-pager process explainer: Commissioner Smith asked that, as we are automatizing the process, we
+also review the order of the steps of the overall process and ensure it is as streamlined as possible.
+Currently, in Marblehead, other departments have to weigh in first and MMLD comments come last,
+meaning that there is no clarity on whether or not MMLD is OK with the proposed connection. This
+slows down the process. In some other towns, the Light Department is the first step in the process and
+                                                                                                       1/9
+the process seems smoother. Whatever the final process we chose in Marblehead, it should be
+documented and made available to the public for clarity. Commissioner Adam proposed to help draft
+this document. Eventually, we should have two documents: a policy document, and a one pager, both
+easily accessible by the public.
+
+The Commission will need to re-discuss policy around - Batteries, - Connected Home program and Incentives
+for batteries. The incentive program administered by MMWEC should be considered for batteries
+participating in the Connected Homes program. This will be taken up at a next meeting.
+
+Agenda modification
+The Demand charge discussion, and the Utility scale battery chemistry discussion are tabled for a future
+meeting, instead participants agreed to review updates from MMWEC Annual Meeting held May 3 and 4.
+
+MMWEC’s Annual Meeting
+General Manager Joe Kowalik, Commissioners Wolf and Yarmoff participated in the meeting held in
+Devens. The slides presented are shown below.
+Future grid load: MMWEC made a presentation on the Future of the grid, looking at a 2050 time
+horizon, at which time electrification of transportation and of building heating will be accomplished. This
+will result in a much higher peak consumption in the winter months, and a 236% increase in load on the
+ISO-NE grid (MMWEC’s projections). The projected increase in load from house electrification in the
+winter months is particularly notable.
+Small Modular Nuclear Reactors: NuScale presented its Nuclear Small Modular Reactor technology and
+status, while UAMPS, Utah’s public power cooperative presented the status of their development of
+NuScale’s first commercial reactor in the Carbon Free Power Project. Two points in particular where
+noted as very significant:
+ NuScale reactor’s ability to modulate its output very quickly and to follow grid demand, which
+     standard nuclear reactors are not able to provide. According to NuScale this makes their SMR
+     technology a natural partner and enabler of intermittent renewable technologies (solar and wind).
+ UAMPS explained the projected cost increases for electricity produced by the CFPP from $58/MWh
+     to $89/MWh (taking into account the large subsidies to this first of its kind project – without this
+     government help the project output would be higher than $120/MWh). These large cost increases
+     have been caused by two reasons only: building material cost increases between 25% and 100% and
+     financial costs associated with higher interest rates. It was stressed that this is not a NuScale issue,
+     or even a nuclear project issue, but an issue for any large scale energy project in the country (that
+     we also see reflected in the Offshore Wind projects in Massachusetts.)
+
+MLPs as test beds of innovation
+Commissioner Yarmoff presented actions to organize Municipal Light Plants (MLPs) to serve as test beds
+of innovation in Massachusetts. The General Manager encouraged this approach.
+
+In summary, MLPs:
+       - face the same issues as all utilities do, the world over;
+       - are reactive and can take decisions quickly;
+       - are solvent;
+       - need smaller scale deployment than IOUs.
+
+                                                                                                         2/9
+All of these points should make light plant ideal first deployment of industrial solutions.
+
+MLPs can offer the knowledge of the issues. Commissioner Yarmoff discussed with MassCEC which is
+interested in exchanging with MLPs to better understand the industry problems that need to be solved.
+Incubators like GreentownLabs (hosting over 150 companies) or North Shore InnoVenture, or non-
+profits organizations like LeadingCities.org are also very interested in partnering with MLPs to get that
+real world understanding.
+If MLPs are to test innovative industrial solutions, the MLPs will need financial support, as the first
+commercial units from innovative companies will be expensive. We need to interact with both the
+legislative and the executive branch for Massachusetts to put in place support for these demonstrations.
+Having several MLPs work together, such as MMLD with Reading Light Dept, we can increase “deal
+flow”, innovative solutions will seek us out. And we can do a better due diligence of these solutions by
+pooling our collective resources.
+
+General Manager’s Updates
+Village 13 update: Commissioner Hull explained that to bring equipment from Bessom street to the
+Village 13 substation, a small piece of property owned by the Rockets will have to be crossed. This
+property needs to be upgraded to allow the turn of a heavy truck. The simplest way may be for MMLD
+to purchase this small parcel of land (75 ft x 3 ft) and take on the work. Commissioner Hull will be
+meeting with Rockets tomorrow, to discuss the idea to purchase the parcel.
+
+Introduction of new Distribution Manager: Greg Chane, the newly appointed distribution manager for
+MMLD introduced himself. An employee of MMLD for the past 18 years, he has worked in the industry
+for 33 years, previously with Mass Electric and National Grid. From his work with MMLD, Greg knows
+Marblehead distribution system intimately, every idiosyncrasy, every street. MMLD wants to proactively
+get ahead of infrastructure updates to accommodate increased load, such as EV chargers, and avoid
+disruption of service that can occur now.
+In Greg’s words: “We have a daunting task ahead of us. The long and short of it is: infrastructure
+maintenance has been deferred far too long, with anywhere from 25 to 35 years of non-maintenance. That
+needs to be addressed. And this is just for our everyday, daily needs. This is just to keep our lights on. This
+infrastructure is, I use the word crumbling. It is and does. We’re on it. We know our weak points. We’re
+going to devote the resources, we know what to do. We’re going to make it happen. … We can walk down
+any street in town and there’s a pole that is well past its prime. The poles fall over by themselves on a calm
+day: we know we have a capacity problem. The people who were there at the time had reasons to do what
+they did and the can has got kicked down the road far enough, but it has to stop somewhere.”
+
+To Commissioner Smith question: ”Is your team fully staffed”? Greg answered: “I hope to have the full
+staff within the next month.” Two new staff are expected to be hired, to anticipate one staff member
+retirement and benefit from knowledge and experience transfer.
+
+Brown School Solar PV project update
+We received a quote from vendor. The production numbers were shared with MMWEC as MMLD would
+like to have a comparison to other projects proposals and be able to understand the solidity or softness
+of the vendor’s proposal. Benefits depend on assumptions for energy costs, transmission cost and
+capacity costs avoidance, over a 25 year production period forecast. We need to make sure the
+
+
+                                                                                                         3/9
+assumptions are explicit to understand this proposal. It is possible that the NPV may not be positive, but
+that we accept a project which has a slightly negative NPV.
+Once we have a clear understanding of the project financials, MMLD should have another meeting with
+the School Superintendent and the appropriate School committee members. A review of the Wakefield
+school solar project might be helpful to prepare for this conversation, as a reference point.
+
+On a separate note, the Sloan school project with regards to solar in Marblehead is coming to an end,
+with the students presenting their final papers to MIT in a couple of weeks. We may be able to have
+them participate after that time for them to give us an overview of their work and conclusions.
+
+Next meeting of the Light Board
+Next meeting is scheduled for May 30, the day after Memorial Day.
+
+The Light Commission meeting ended at 5:16 pm after a motion to adjourn was proposed, seconded and
+unanimously adopted.
+
+
+                                               ----****----
+
+
+
+
+                    Documents presented during May 4 Light Commission Meeting
+
+
+
+
+               • Approve minutes of March 28th and April 10th
+               • Public Comments
+               • Battery storage policy discussion
+               • Demand charge discussion
+               • Utility scale battery chemistry discussion
+               • GM quick updates
+
+
+
+
+                                                                                                        4/9
+    Pathways to the Future Grid
+
+
+                                                    «
+ =-=----NWvt_
+
+
+
+
+          Future Grid - Supply Following
+
+              Supply                                                  Demand
+Rcp!;1;c:c
+       c•imng ern1ttiog                                    ElectrifyEnergyCcnsumplion.
+l°e$(11JfC.etwrth "OO•Emimng.                                    • Applur.cu
+Exp:mrlnor.-om1tungcapu:iLyfor            • Tr.iMpor.,man
+an1ic.lflQ1.tid
+            der;trriiait..ion 1mpaccs.    • SpKc Hcu,nz
+Exp:in<:I$t1pply1nterm1u:er,ty         lmplecneot Denimd fbo:ihilfty,
+mili)?l.ion t!!<:hMlot~s.
+
+
+
+
+                                                                                                     '
+               Curn:ot l'..lc~nd\'s. W50 flect1moti1.>·1C>e11,~l'ld
+
+                            100',_S-•I
+                            .. ., ... ,t .......
+                           s.=-
+                             .. ~ ... oe'.l'lt
+                           f)o)U,r,.,i;,,,
+
+
+
+
+             --~- ------~~
+                  I
+                                                                                 ¥,(11<,,_r,o   ..
+
+
+
+
+                                                     ~•'-'-~ffv>M
+                                                    -~    ..... 11...
+                                                    u,...,11=,,;.,,,
+
+
+                _,   .....
+                       ~,,.,
+                         ...,,..,.__ ,......_.~           ... - ..
+                                            ..,,....,..........
+                -•-l!C'.\~IO!~.a               ... '6•< _.,.,l\'~•hw~•~.,,~t,>
+
+
+
+
+                                                                                                         5/9
+                                 -
+                                 Nm
+                                                          ,·1       ...
+                                                                    '''""
+                                                                    ··--,
+                                                                    -·
+                                                                                  ,11.. ,
+                                                                                              ,-··1
+                                                                                                  •
+                                                                                                         w
+
+
+
+
+                                                                    •,·1 .,. •
+                                                                                  M:.d!
+                   11~                                                                                   ·•
+             ! ,""'
+                   i ........
+                                                          j i                     Mou
+
+
+                                 ··~ I I
+                                                                                  SOI.OIi~~
+                 .....u                                                                       I
+             '•:
+             ,•
+                                                                                    r-, I
+                                                                                                         ··~
+                                                                                                         ..
+                                     =
+             I
+             •                     ..
+                                 ,,_~
+                                     ••                 I   .
+                                           I......··-...i·-...' ----
+                                                                El   ' l I LJ I
+                                                                    I •             I !.
+                                                                                    '
+                                                                                      ..                 "
+
+                                                                ....... -
+                                                                    !     ~                              "
+                                                                             ·-- -··
+                                                                                  -....
+                                                          ·-'       :_J                       :..... !
+
+               .- ...
+             .....
+             ····-·~,-...,    .. ""'
+                                           ,
+                                           ,
+                                                ~
+
+
+                                                    ,.,
+                                                          .,~
+                                                          ,_
+                                                                    ,_..,
+                                                                         ·-·
+                                                                          - -·
+                                                                    ........
+                                                                         ·-   N  ·-·   ., ...,
+                ,-.---·~--
+             ....  ............
+                          -
+                  __,, ,.,...
+                .....
+             ,, .. _.,_,r_,
+
+
+
+             . ....-__
+             .,,
+             .,_,..,   ...
+                    ..........
+                                __
+                                               .,
+                                                                                        '
+                                                                                                  •
+..;!:~         -.                                               •
+                                                                                                               '
+
+
+
+             !  "
+             .f "
+              • "
+                        "
+                        "
+                        "
+                                     - ..
+                                     ON">fflh,
+                                      t.l,li,.,w~
+
+                                     ::::..~~...
+                                     ...,._..,_.._
+
+             ~' "
+•:.,w,.~no              ".,
+"'"''"·-·--·
+             --~·
+               ·--►..
+             ··---­
+             ........... ..
+              --~ •
+             ....
+             '""",,.....
+             .....                        ••
+                                                                                                                   •
+
+
+
+
+                                                                                                                       6/9
+     _...........
+NuScalePowr,rTmin
+       ...... ..
+~-
+ ..   ~-,..
+
+
+
+
+                                                           _,..,.,.
+                                                           ..........
+                                                            --· -·~·~
+                                                                                    • Co*n<>h"'""""·•              ~·~,., • ., .. n., 1-..,..$11,.,.,,
+                                                                   .....            • ·~-,          .. ~i--1•0·
+                                                                                    • "''"'h••i'•       :,:u1-.•=J;,..,._     ◊.uw,. l;>tAA•.itr,,1
+                                                                                      ,..,.... ,i-.. ~....... ,.,.,~0,11_.-...
+
+
+
+
+                                                                                       X
+
+
+
+
+      •   ,   •
+                  _..,......_~_..,
+                  -   r   -
+                               ..........
+                                 •
+                                    __.
+                                      __ _
+                                     -•   ,....,   ..   _...,..,...        .---•                      -·--·..
+                                                                                                 -"'1-•~•·•-~•1;_.,,vt           ·-"
+                                                                                                                                           W•&:ur
+
+
+
+                                                                                                                                                         •
+
+
+
+
+ i
+ l
+
+
+
+                              ~ ,~-.I. .,1,.olf'('(C                  v: -~. • • :< H ~I ll ~ l'f"l'""'     .,,, I'.«>"...-      n~
+                                          ~-, r '"'""'""""r •..,. ,,,.,,,.,,,,..
+                                                                              ...,..~,...,,...,..
+
+
+
+
+                                                                                                                                                             7/9
+  i:>J,cjr,ct-1:.,:;::riarg::n~ion     f<1Hnc<I  h 19£0                                                      ,_..,,
+• ::oW;)ICp/;-\',U    l.':.li!b: ill ::e,-er ',\!~'Jt!IJI
+  111:.~t
+• D:'lell:p, r l'Q1'1(;6a1'Jtl Cf,918~ w,}&c~
+                                            ,.,,
+  £,ilrirv;iclr ,;111c:,r.:,r.::r,e::im
+• ~t8"1CC         1;;cilu,!in91m11::::c.:.01lo tre<:I
+  lh: riee(bc ;;f 111«11'"~
+• tJew l,'Cllt,:,'l;,l!Y.w
+  cQ:OOn   n;~-1111,~~
+                         ll:WJl¢!1j 100...Hdor Z8'0
+                         ~
+                                                                                               --
+
+                                                                                                                        '
+
+                                                    Timeline
+                                  Xt.A,S:.l:,.,i'l>II
+                                       ..., «f«:
+                                   (<.:l.~l-'::I
+                                       ~.. ;,,111
+
+
+
+
+                                                                              ....
+                                                                          R-.,1t.lCI~»
+                                                                                ,.~,,
+                                                                          <tl ... , • -.c;;~
+
+
+                                                    <=:            >-                                                  1?
+                                     <•'"~"          r•••    .,~.,..,    "'     , .. '
+
+
+
+
+                                  Why Increased Costs?
+          ~'"".,_~!Clicell'  3 PCC t 11rim:rtfl'l'l\cneed ll>'eooctn" im~l)II!,, "¢1 l;y h., u·~i11t1:•~
+                        M tr/f; C'lil/1:);,,r C\'f!«f!'~li',1:ne~~
+          d:r.'dnf!M/1111
+        • lhf1'     fiiM! 1,__. i:t ce h:f03';C!, :!lit Ill l'fl£1b'W)'9''t'i!Sl.l"~«•h       ec-«;l)'tlll)~lyc~.:ih
+          l'\~I h;,,~ ,-..'l.~fter.      6:r,rore I Mn -'l),:,;r.:, lnt,'li;l~t t"'i>V-1$,
+             • f'l'!ld:.tXf P'kla!~E,(• (\)1 Fd!lri~        Sl«I P,::11:lncn::i:.«I rJ.~
+             • Pt;;.;JJ~ P+.>etrcc-x fcrc.:tllllll ~·          Pl/l~!?il'IC'ff~     10$~
+             • Pr!ld.t.:1;fP,b, ln,;"11r11,EbW c:, 1:.cu11mr.111        het~,.,     7l,,..,.;
+             • Pro:lxcr l':~c •~-t.,x fQrF~•b;~d Sliu:11,i!dSh:elu:e~.:i!.e:I nl*
+             • !'.'r{TJ.n, PriceIndexforCeppat\·•-,$·):ICn'&ife•ht"'J                   32%
+             • Frod..ct,r l\'b:, lm.!l'llfuri'JIC11mm«t:~ N~!.r.t! 4!1¼
+        • 111     t ,;.. ,t~ l('!mnce:I Int~.-..:~
+            ..,.1,1                                u:.ad '« !loo>
+                                                                flfo:;...-i\ tu,i; ,,.,;;ll~n: ~;:is1n:1' :1«11
+          '4:'l)o<t-<m••-1,
+                         l'l;c,i,,~s.;,ctnu~n.~ >.Jlf.(l:l
+
+
+
+
+                                                                                                                            8/9
+MLPs as test beds for innovation 1/2
+
+- As load serving entities, we know the problems that utilities face.
+
+- We are reactive, we do not have many layers of decision making internally.
+
+- Our comparatively small scale makes the deployment of a solution easier for a
+company with an innovative solution: our units of measurement will be in MW
+rather than GW or TW, and hundreds or thousands of customers rather than
+millions.
+
+- We are solvent, close to our customers and are looking for solutions that will
+facilitate our work of delivering clean energy reliably and as cheaply as possible.
+
+
+MLPs as test beds for innovation 2/2
+• Highlight the opportunities State entities like MassCEC are interested in
+  knowing the rear world problems of utilities, as are incubators such as
+  Green Town Labs and NSIV or organizations like Leading Cities.
+• Allow visibility and action on Beacon Hill Both the Legislature and the
+  Administration are interested in positioning the Commonwealth to be at the
+  forefront of the energy transition: we can help develop programs locally that
+  allow early adoption, similar to some of California's programs such as SGIP.
+• Increase "Deal Flow" By being a known organized group, we will get the
+  interest of innovative companies (by possioly building scale or fin cling the best
+  pilot site) and we will get to know the best opportunities; Each of our systems
+  has different possibilities and interests at any given time for introduction of
+  specific technologies.
+• Evaluate the appropriate opportunities By combining reviews of innovative
+  technologies, we can do more in depth due diligence.
+
+
+
+
+                    Quick updates
+
+  • Greg Chane, New MMLD Distribution Manager
+  • Village 13 update
+  • Brown School solar PV project status
+
+
+
+
+                                                                                       9/9
+

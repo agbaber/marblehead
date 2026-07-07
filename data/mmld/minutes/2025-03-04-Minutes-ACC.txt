@@ -1,0 +1,534 @@
+Light Commission March 4, 2025 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           March 19, 2025
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:02 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+Participated in meeting:
+     Commissioners:         Commissioners Frechette, Hull, Smith, Wolf and Yarmoff all participated in person.
+     Light Department:      General Manager, J. Kowalik.
+     Invited:               Tom Barry, Director of Energy Markets, Massachusetts Municipal Wholesale
+                            Electric Company (MMWEC).
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Vote to approve minutes of previous meetings
+The chair noted that according to advice from the town administrator, commissioners can vote to
+approve minutes whether they participated in the meeting or not; they can abstain if they feel more
+comfortable doing so. Chair Wolf mentioned she had proposed some editorial and spelling corrections
+to a few of the minutes, which do not change their substance. In consequence, a motion was proposed
+to approve the following minutes of previous meetings of the Municipal Light Commission:
+        October 1, 2024. Public session,
+        October 29, 2024, Public session and Executive session,
+        December 17, 2024, Public session and Executive session,
+        January 7, 2025, Public session and Executive session,
+        January 15, 2025, Public session and Executive sessions and
+        January 21, Public session and Executive sessions.
+Vote #2025-02           Motion to approve the minutes of the meetings listed above was moved by
+                        Commissioner Yarmoff and seconded by Commissioner Frechette. Unanimous.
+
+Comments from the Public
+There were no comments from the public, whether in person or from remote participants.
+
+Outstanding items from previous meetings
+Polco Employee Survey is launched. The Polco accounts have been activated, MMLD is waiting to
+receive the paper versions of the survey.
+
+Large Building Energy Reporting, DOER. This is a new request from Mass Department of Energy
+Resources (DOER) to report energy consumption of buildings over 20,000 sqft. While this request is
+somewhat controversial (1. It is not clear DOER has the authority to make this request of Municipal Light
+
+                                                                                                    1/13
+Plants which are not Electric Distribution Companies, or EDC; and 2. Information requested is
+confidential information), MMLD has received a list of the buildings that would be subject to this
+information request, which totals 42 buildings in Marblehead. If it is determined that this request must
+be fulfilled, MMLD will be able to reply by the deadline this summer.
+
+2025 Department Goals. Commissioner Wolf distributed a version of the proposed goals, which is very
+similar to the 2024 goals in structure and substance. Goals are for the calendar year. While we are not
+ready for a vote as planned at this meeting, she requested the board to review. The General Manager
+proposed that the battery storage system (BESS) goal be reworded to reflect the need to develop a
+comprehensive strategic plan for BESS best location. This will be taken up again at our next meeting.
+
+
+General Manager updates
+
+Village 13 substation: the work spearheaded by engineering firm Fischbach and Moore (F&M) has
+started. All the work can be done safely within the existing perimeter of the fence, there is no need to
+encroach on the public Right of Way of the path to Swampscott for now. As MMLD connects some
+underground conduits to manholes, there will be work on the path for a few days in the coming weeks,
+which MMLD will make clear to the public ahead of time. As mentioned at our last meeting, the
+switchgear delivery dates has changed from April to May. Installation of the switchgear will be done by
+the manufacturer; commissioning of the installed switchgear will be done by an existing contractor of
+MMLD. Pictures of the on-going work at Village 13 are shown pages 5-7 and of the switchgear, currently
+in Ohio, pages 7-8.
+
+MMLD Power Portfolio: MMWEC’s Tom Barry joined the meeting remotely at this stage. The General
+Manager and Tom Barry reviewed Marblehead’s power portfolio. New short-term contracts have
+replaced some of the previous hedges that did not have any carbon attributes. There were some
+variations in the amount of power MMLD received from some of the hydro contracts due to weather
+fluctuations. Changes in Millstone nuclear power output is due to scheduled outages for refueling: a
+similar downtime for maintenance will take place at Seabrook in 2025. The Ludlow solar plant came on-
+line during the year. In addition, MMWEC was able to work with NextEra Energy and swap some RECs
+linked to Seabrook for certificates Marblehead can use in its carbon free portfolio (see page YY), in a
+three-year deal covering the period 2024-2026. The results are that the carbon free portion of MMLD’s
+electricity went from 42% in 2023 to reach 65.1% in 2024, and we are well on track to exceed our goal of
+70% carbon free electricity by 2028. Remarkably, the wholesale average cost of electricity went down
+from 11.28 c/kWh to 10.9 c/kWh from 2023 to 2024, a decrease of 3.4%. See page 8.
+
+Hydro Quebec: Currently, there is uncertainty as to whether US Administration imposed tariffs on
+Canada’s energy exports will affect us. If Hydro Quebec power is affected, MMWEC will be looking to
+replace this source of energy, but there will be upward pressure on electricity prices if tariffs are
+imposed. MMWEC is in the middle of negotiations with Hydro Quebec to renew a contract expiring in
+October of 2025. MMLD would like to renew or expand its existing participation in this contract. MMWEC
+is negotiating to buy more energy, as it should be able to, given its transmission rights, as well as extend
+the duration of the contract to 10 years. MMWEC does not see a problem in MMLD increasing its position
+in Hydro Quebec if that is a possibility, MMLD is not over-concentrated with one specific provider.
+Diversification of energy sources is a source of stability.
+
+
+
+                                                                                                      2/13
+Education outreach: The General Manager mentioned how MMLD has helped a student share
+information about the Go Green program in the Village School’s 4th Grade class. Photos pages 9-10.
+
+Utility Scale Battery Storage (BESS). Several locations options are being evaluated, including Tioga Way.
+A sound study is being conducted with the Cambridge-based firm Acentech. The sites need sufficient
+space, to be close to the high voltage transmission lines of our system: there are tradeoffs to be studied.
+
+The benefits of BESS systems in terms of resiliency and financial impact are clear and explained on slides
+page 10. In terms of resiliency, if Marblehead was called on by ISO-NE to reduce load, a BESS system
+would allow to do so without having to cause rotating black-outs in town: unlike towns with a large
+industrial base, there are no big customers that MMLD could ask to shed load temporarily. The financial
+benefits are substantial. They depend on being able to predict peak usage on ISO-NE and National Grid
+territories. MMWEC has a good track record of predicting these peak usage times, as shown on page 11.
+
+Commissioner Yarmoff mentioned that the MLCA, the Massachusetts Light Commissioners Association, is
+planning to have its monthly meeting dedicated to long duration BESS in May as this subject is of interest
+to all utilities.
+
+Wilkins Plant update. The General Manager is continuing to evaluate how this diesel generator is going
+to fit into the department going forward.
+
+Fuel tank review (currently a 40,000-gallon tank). Replacing this tank with one or several smaller tanks
+less than 10,000 gallons is simpler operationally, with simpler permitting and inspections. One single
+10,000 tank would give us a 24 hour of operation runway, when ISO-NE capacity market asks us to
+guarantee 48 hours of operation. A contract with a firm able to provide guaranteed supply within 24
+hours might be a cheaper option than having two tanks on-site. One single tanker truck would be enough
+to resupply.
+
+Controls. MMLD is preparing specifications for an update in the control systems: this would include
+updated communications and monitoring of equipment, remote start-up and automatic running, power
+quality monitoring. This would allow to get bids and evaluate the costs of this upgrade.
+
+Human Resources: the General Manager reviewed the six open positions in MMLD, see page 12.
+Commissioner Yarmoff asked if a change in approach was possible to fill the open positions which are
+accumulating: filling them is a lot of work for the General Manager, who has to also run the department.
+
+Distribution system work: Replacing the damaged pole at the intersection of Lee and Union streets will
+necessitate to de-energize lines which will affect 36 customers. MMLD will communicate with these
+customers prior to the repair. Staff also responded to an emergency over the recent weekend, when a
+tree fell over the feeder lines. Line crews were able to repair the lines without having to cut power to the
+town. This incident highlights the vulnerability of our supply system which still needs to be addressed.
+
+
+Executive Session
+
+During the public meeting of the Light Commission held on March 4, 2025, Chair Wolf requested a
+motion to meet in Executive Session with no plan to return to open session, first to
+1) protect confidential, competitively sensitive or other proprietary information in the course of the
+proceedings that, if disclosed, will adversely affect our ability to conduct business in relation to other
+entities making, selling, or distributing electric power and energy, and
+
+                                                                                                         3/13
+2) for strategy sessions in preparation for negotiations with nonunion personnel or to conduct collective
+bargaining sessions or contract negotiations with nonunion personnel.
+
+The motion was moved by Commissioner Yarmoff, seconded by Commissioner Frechette.
+Votes: Simon Frechette: Yes; Mike Hull: Yes; Adam Smith, Yes; Lisa Wolf, Yes; Jean-Jacques Yarmoff: Yes.
+
+The Executive Session One started at 5:45 pm, with MMWEC’s Director of Energy Markets, Tom Barry,
+invited to participate in the meeting with the General Manager and the Commission. Executive Session
+One concluded at 6:43 pm.
+
+Executive Session Two started at 6:43 pm, with Vice Chair Frechette leading the meeting and
+Commissioners Hull, Smith and Yarmoff participating. Commissioner Wolf had recused herself from the
+discussions and did not participate in Executive Session Two.
+
+Executive Session Two concluded at 7:05 pm at which point a motion to adjourn was proposed,
+seconded and, after a roll call of the commissioners voting unanimously in favor, adopted.
+
+
+                                               ----****----
+
+                Documents shown during the March 4, 2025 Light Commission Meeting
+
+
+                             Agenda
+
+               4:00 Call to Order, Land Acknowledgement, and Public Comments
+               4:15 Outstanding items and requests from last meeting
+                     - Employee satisfaction survey
+                     - Mass DOERimplementation of Large Building Energy
+                        Reporting
+               4:30 2025 Dept. Goals
+               4:45 General Manager Updates
+               5:30 Meet in Executive Session, not to return to open session
+
+
+
+
+                             General Manager updates
+
+               • Village 13 update
+               • 2024 Carbon-Free power portfolio results
+               • Utility scale Battery Energy Storage Siting update
+               • Open positions
+               • Wilkins Plant upgrade
+               • Damaged pole replacement on Union & Lee Streets- March 18-19
+                 - outage required - 36 customers
+
+                                                                                                    4/13
+            Village 13 Update -
+            Substation Construction Contract
+
+• Fischbach & Moore project schedule vl published
+  - Nov 20, 2025 completion date
+  - Assumes MCP switchgear arrival April 19 - 3-week installation process
+• Detailed Schedule available
+• Village 13 site prep photos
+• MCP switchgear photos- construction is well underway in MCP
+  factory
+• No need to extend the fence line into the Swampscott ROW
+
+
+
+
+                                                                  MMLD Village 13
+                                                                    Substation
+
+
+
+
+            60
+                       E
+                        90           120
+                                              SE     I,0
+                                                                 s
+                                                                 180         210
+                                                                                    SW
+                                                                                         240
+          • I • I • I • I • I • I   • I • I   • I   • I • I • I • I • I • I • I • I • I • I
+
+                  0149°SE (T) @42°29'56"N, 70°51'52"W ±85ft & 52ft
+
+
+
+
+                                                                                               5/13
+                    210
+                                  SW
+                                               240
+                                                                         WI
+                                                                         270                       300
+                                                                                                             NW
+                                                                                                                             330
+                                                                                                                                                       N
+                                                                                                                                                       0
+•   I   •   I   •    I    •   I   •    I   •    I    •   I   •   I   •    I    •   I   •   I   •    I    •   I   •   I   •    I    •   I   •   I   •   I   •   I
+
+                0 276°W (T) @42°29'57"N, 70°51'52"W ±42ft • 54ft
+
+
+
+
+                                                                                                                                                                   6/13
+7/13
+2024 MMLD Carbon-Free Power Portfolio
+                                                                                Energy
+    MMLDCarbon-Free                                                          Purchases
+     Wholesale Power                  Eneriv            RECs                   without
+             Sources
+          Hltl$tone3Nuciear
+                                        MWh
+                                       15,616
+                                                       Retired RECs Sold
+                                                            15,616
+                                                                                  RECs
+                                                                                          • 65.1% carbon-free
+            St'abrookNuctear
+   NY Power Authority Hydro
+                                       13.074
+                                        8,626
+                                                            13,074
+                                                             8,626
+                                                                                            power in 2024 ... an
+                Hydro Quebec
+             FHrLfl'htHytiro
+                                        6,S88
+                                        6,707
+                                                             6,588
+                                                             6,707                          increase of 55%
+             Brool:field Hydro
+          MSGfCononSolar
+                                        7, 123
+                                        1,217
+                                                             7,123
+                                                                     1.217                  from 42% in 2023!
+             8erkshireWind 1               953                        &53
+             8erkshlreWlnd2
+               Ha,cock Wind
+                                        1,739
+                                        2, 186
+                                                                     1,739
+                                                                                  2,188
+                                                                                          • The average
+           ElllleQHkHydro
+  C111>on-F1111
+              Supply Total
+                                 __      ,~•"-'---------
+                                       65,631               57,735   ,....
+                                                                                  1,801
+                                                                                  3,987
+                                                                                            wholesale power
+MMLD O.momer Sol111Rebate
+             RECsRetrrecl
+                                                                                            cost decreased 3.4%
+     MMLD CU5tomer Opl-ln
+    Go Gree-nNow I Proar am                                    346
+                                                                                            from 2023: 10.9
+          S-eabr00kEFECs
+ Total RECs& EFEC'sRetired
+                                                            6,752
+                                                           64,950
+                                                                                            cents/kwh in 2024
+MHLDToUll2O2.4AetailSatn
+                        (MWfl)                             99,811
+                                                                                            vs 11.28 cents/kwh
+ HHLO Carbon-Free 11'1
+ per Hass Climate Law                                      65.1'Ko
+                                                                                            in 2023
+        inaeneol     1O'4.ormoreffom 2023
+          deaeauo11o'Moormo11from        2023
+ ltillk:5 - new res;ource in the 2024 porttoliO
+
+
+
+
+                                                                                                                   8/13
+                                                                                           2023              2024
+                 2024 vs 2023                                                            Actual             Actual
+                                                                                         Energy         Energy Percent
+                 MMLD Power                                    PowerGenerator            (MWh)          (MWh) Change
+                 Portfolio                                         MillstoneNuclear       12,704             15,616     22.9%
+                                                                  Seabrook Nuclear        12,882             13,074      1.5%
+                                                         NY Power Authority Hydro          7,858              8,626      9.8%
+                                                                      Hydro Quebec         6,570              6,588      0.3%
+                                                                   Berkshire Wind 1        1,464               953     -34.9%
+                                                                   Berkshire Wind 2        1,272              1,739     36.7%
+              The average wholesale
+                                                                      Hancock Wind         2,076              2,186      5.3%
+                                                                  Eagle Creek Hydro        2,542              1,801    -29.2%
+                                                                    First Light Hydro          0              6,707       N/A
+                                                                   Brookfield Hydro            0              7,123       N/A
+                                                                 MSGT Cotton Solar             0              1,217       N/A
+                                                                NE Reliability Project         0                766       N/A
+                                                          Stony Brook Intermediate           446              1,103    147.3%
+                                                                Stony Brook Peaking           85                106     24.4%
+                                                          Marblehead Wilkins Plant            62                 95     53.6%
+                                                          Hedged PowerContracts           33,988             16,456    -51.6%
+                                                       ISO Interchange Spot Market        21,012             22,716      8.1%
+                                                     Total Wholesale EneriwSupply        102,961            106,873      3.8%
+
+
+
+
+                    MM LD-NextEra Certificate trade
+
+MMLD-NextEratrade of earned2024 SeabrookClean EnergyCertificates
+
+                                                     MWH          CES-Es*earned          EFECs*earned Total CertificatesI
+INITIAL MMLD Seabrook 2024 y/e results              13,074                   3,377                  9,697             13,0741
+
+
+Clean Energy Certificate Trade with NextEra
+             MMLD surrendered these Certificates                             3,377
+                 MMLD received these Certificates                                                  10,131
+
+
+FINALMMLDSeabrook 2024 y/e results                                               0            19,828
+
+                                                             Certificate Increase                   6,754
+
+
+*CES-E: Clean Energy Standard - Existing
+*EFEC: Emission Free Energy Certificate
+
+
+
+
+                               MMLD in the classroom- Ray Gauley
+                                                    Village School - 4 th Graders
+
+
+
+
+                                                                                                                                9/13
+                MMLD in the classroom - Ray Gauley
+                           Village School - 4th Graders
+
+
+
+
+             Utility Battery update
+
+• MMLD BESSsiting article is not on the Town Warrant
+• Now scheduling noise level testing with Acentech at Tioga Way
+• A Preliminary alternative site list is being compiled- 9 sites
+
+
+
+             What is the value of BESSin Marblehead?
+
+1. Enables us to lower our wholesale power costs by reducing our
+capacity & transmission peaks
+  - A 1 kwh energy reduction during the annual capacity peak hour will reduce
+    our annual capacity cost by $76.32, (using 2023 peak data).
+  - A 5 MWh reduction= $382,000 energy cost reduction
+  - A 1 kwh energy reduction during a monthly transmission peak hour will
+    reduce a month's transmission cost by $13.04 (using 2023 peak data).
+    Reducing 12 monthly transmission peaks by 1 kwh will reduce the annual
+    transmission cost by $156.48.
+  - A 5 MWh reduction in 11 of 12 monthly transmission peaks will reduce
+    annual transmission costs by $717,200
+  - Combinedcapacityand transmissioncostsavingsabove= $1,099,200.
+
+
+
+
+                                                                                10/13
+                 What is the value of BESSin Marblehead?
+
+2. Provides us with improved resiliency, in response to an ISO-
+   NE load shed instruction or unplanned power outage.
+     As a microgrid power source, providing power to a designated
+     emergency community center as MHS or the Veteran's Middle
+     School.
+
+
+
+
+                  MMWEC Peak Forecasting Accuracy 2017-24
+
+                                            # Peaks      National Grid Transmission ISO-NECapacity
+                                            Called                  Peaks Hit?                         Peak Hit?
+                          2017Total            38                         12                                 Yes
+                         2018Total             46                         12                                 Yes
+                         2019Total             36                         12                                 Yes
+                          2020Total            48                         12                                 Yes
+                         2021 Total            40                         11                                 NO
+                         2022Total             46                         9                                  Yes
+                         2023Total             54                         10                                 Yes
+                          2024 Total           84                         11                                 (tbd)
+        Avg. Annual Peaks/Yr                   49                        11.1
+               Average Annual o/o                                       93%                                  86%
+
+
+
+
+                 MMWEC Peak Forecasting Accuracy 2024
+                             NationalGridTransmissionPeak                       ISO-NECapacityPeak             ~
+                # Peaks                     Hour     Forecast                       Hour     Forecast
+    Month-Yr    Called               Date   Ending     Hit?                 Date   ending       Hit?          Peak Load
+      Jan-24      9              1117124     19         Yes              1117124     18                         17,971
+     Feb-24       6              2114124     19         Yes              2114124     19                         16,807
+     Mar-24       7              3111124     20        Yes               3111124     20                         15,287
+      Apr-24      3               414124     11         NO                413124     19                         15,319
+     May-24       4              5/22124     19         Yes              5/22124     19                         17,023
+      Jun-24      4              6120/24     17        Yes               6/20/24     17                         23,730
+      Jul-24      7              7/16/24     18         Yes              7/16/24     18      Pretlmlnari.y      24,461
+     Aug-24       3                811124    18         Yes               811124     18                         23,294
+     Sep-24       2                911/24    18         Yes               911/24     19                         16,668
+     Oct-24       22            10/29/24     19         Yes             10/28/24     19                         14,382
+     Nov-24       6             11/26/24     18        Yes              11/26/24     18                         15,453
+     Dec-24       11            12123/24     18         Yes             12123/24     18                         18,717
+       Total      84
+                           '-----'INGrtd       transmission peak with a different date or time than the ISOCapacity Peak
+
+
+
+
+                                                                                                                           11/13
+            Wilkins Plant update
+
+• Evaluating the installation of new, smaller tank(s):
+  - Under 10,000 gallon tank means simpler permitting, regulation &
+    inspections
+  - Do we need one or two 10,000 gallon tanks to meet the ISO 48-hour
+    runtime commitment?
+• Update the generator controls:
+  - For automated, remote-dispatch power generator and power meter
+    controls.
+  - We're reviewing a detailed proposal from a local power engineer/P.E.
+    to write the generator controls bid spec.
+
+
+
+             Wilkins Plant controls - functional areas for
+             potential updating
+
+• Metering communications with MMLD-80Comm, MMWEC,
+  Ngrid/1SO.
+• Run-time equipment monitoring
+• Power quality monitoring
+• Start-up controls modernization/upgrading
+• Remote start-up controls
+
+
+
+
+             Open positions - March
+
+• AGM/Engineering Project Mgr.- continuing expanded search with
+  new recruiting team.
+• Energy Efficiency Marketing Program Mgr. - interviewing
+  candidates now
+• Dept. Mechanic- offer out now
+• Sr Substation Specialist (3/28 retirement)- job posted, interviewing,
+  internal candidate exists
+• Working Foreman (March retirement)- posting
+• 2nd Class lineman (unplanned resignation) - posting, internal
+  recruiting of outside candidates
+
+
+
+
+                                                                           12/13
+             General Manager updates
+
+      "' 13 update
+• 2024 Carbon-Free power portfolio results
+• Utility scale Battery Energy Storage Siting update
+• Open positions
+         P'
+• Replace the damaged pole replacement on Union & Lee Streets­
+  March 18-19 - an outage is required - 36 customers
+• Sunday March 2 emergency response to trees falling on the 23 KV
+  feeder lines on the ROW
+
+
+
+
+                              ----****----
+
+
+
+
+                                                                    13/13
+

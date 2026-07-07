@@ -1,0 +1,784 @@
+Light Commission April 30, 2024 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           May 31, 2024
+Re:             Light Commission Meeting, April 30, 2024
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:04 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+Participated in meeting:
+     Commissioners:          Commissioners Frechette, Smith, Wolf and Yarmoff participated in person.
+                             Commissioner Hull was excused.
+      Light Department:      General Manager, J. Kowalik.
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Comments from the Public
+Albert Jordan, Roosevelt Ave, commented on
+        - pole replacement: the fact that there is a double pole at a busy intersection is a hazard as it
+        prevents clean light of sight, and
+        - lights remain on in the Public Library: can somebody do something about it?
+        General Manager response: there is a sequence to moving wires, and MMLD seems to have done
+        its part with regards to the pole in question.
+        Post Meeting Note: The General Manager exchanged with the director of the Public Library, who
+        explained that, as it is still a work site, lights have to remain on; the status of the building will
+        change shortly.
+Sue Wigglesworth and other abutters on Lincoln Ave were interested in understanding better the
+situation of the planned work on the Tioga way parcel. See below.
+
+Approval of minutes of previous meetings
+The minutes of the executive meetings of September 5, 2023 and October 24, 2023 have been approved
+by e-mail exchanges since the last board meeting.
+The minutes for the January 30, 2024 public session, January 30, executive session and February 27
+public session have been sent to the commissioners for review prior to this meeting.
+Vote #2024-08             Motion to approve the minutes of the January 30, public session, January 30,
+                          executive session and February 27 public session was moved by Commissioner
+                          Frechette and seconded by Commissioner Smith. Unanimous.
+
+
+
+
+                                                                                                       1/12
+Outstanding items from previous meetings
+Tioga way schedule. This will be part of the General Manager updates later in the meeting.
+Monthly Financial Reports. The Business Manager, Matt Barrett proposed a new format for the monthly
+financial reports that takes into account the previous request of commissioners: it now shows both the
+actuals and the yearly forecast. This is very helpful to follow the financials of the Light Department month
+to month as business evolves during the year.
+
+
+MIT Sloan School presentation - Time of Use study
+Firanza Fadilla is an MBA student at the MIT Sloan School, working with the Sustainability Lab, who has
+been focusing on strategies to encourage Marblehead residents to shift consumption: he is presenting his
+work, a few days before graduation. The enclosed slides explain: a) the Problem statement; b) Proposed
+Improvements; c) Results from data analysis; d) results from an online survey of Marblehead residents.
+Key takeaways from the work are shown on slide page 9:
+    1. Communication is key. Having multiple channels of communication to promote programs,
+       changes, alerts and provide clear, understandable explanations is essential to educate people and
+       prevent misinformation;
+    2. Implementation of dynamic pricing involves several considerations: fitting the wholesale price
+       pattern to better incentivize customers to shift and managing complexity. As the goal is to induce
+       behavior change, preparation for implementation could take years, involving data exploration and
+       pilot projects before launching the program;
+    3. Customers emphasize the publication and advertisement of programs, especially for home
+       batteries and solar systems as part of the solution. They also highlight the importance of usage
+       monitoring and advocate for adjusting the rate structure based on survey results.
+Commissioners and MMLD staff were invited to participate in the poster review session that will take
+place at the MIT Sloan School on May 8: the General Manager and Commissioner Yarmoff indicated that
+they would like to participate.
+
+
+DOE Prize - Application for geothermal network project
+The Marblehead Housing Authority is working on a project to build about 100 new units at Broughton Rd.
+There are efficiency goals but geothermal is not mandated, even though it might be the most energy
+efficient way to heat and cool the building. Logan Casey found out that a DOE prize could help finance the
+study of such a project: as MMLD does not have the bandwidth to organize such a project currently (with
+high priority projects of rebuilding Village 13 substation and the Tioga way Utility Scale battery) a group of
+residents organized to apply to this DOE prize, highlighting innovative technologies to store energy,
+studying MMLD potentially selling energy, and possibly controlling the geothermal loop as an energy
+storage system and a way to continue to lower rates.
+If such a project were possible at Broughton road, it could become a blueprint on how to run geothermal
+projects in town. To our knowledge, there is one electric utility in Oklahoma that has incentivized many
+(thousands!) geothermal projects, while in MA, Eversource and National Grid are each studying one pilot
+(in Framingham and Lowell).
+If we win the DOE prize, the Housing Authority would be the recipient of the money for the project
+highlighted (see slide page 9). Answer after May 16.
+
+
+                                                                                                       2/12
+General Manager Updates
+
+Village 13 update The landbridge components (to protect the sewer pipe) have been delivered. During
+installation, large rocks were found that could have affected the sewer pipes if moved. Concrete was
+poured in situ in two trenches and the bridge installed on this foundation. The distribution manager
+Greg Chane organized to get help from line crews from Danvers, Brooklyn and Middleton to relocate the
+high-tension wires. It is now possible to receive the transformers at any time. The date to receive the
+transformers has shifted from May 6 and we do not have a definite date for delivery. Testing will take
+place at Virginia Transformer’s facility and is not yet scheduled.
+
+Tioga Way. Surveyors started working last week to create a detailed survey of the plot, mapping the parts
+that are wetland. We will receive this detailed survey from Bayside Engineering in the next few weeks.
+From this, MMLD will be able to determine areas to accommodate the utility scale battery contemplated,
+as well as the department’s storage areas (for poles, …). Details of how to prepare the site for the battery
+have yet to be worked out (stilts / slab, …) Drainage of the site is also an issue that could be mitigated with
+this project. Next steps will be:
+- receiving a detailed survey; - evaluating possible battery locations; - studying access to the site.
+Residents who are abutters are encouraging MMLD to discuss the plan for the development of the site
+earlier rather than later. The Light Department has organized public meetings in the past for other issues
+and will plan one to hold such a meeting to inform abutters and residents.
+
+Grants. Massachusetts did not meet the threshold for FEMA grant disaster relief after the January 2024
+storms. CZM Grant, see next paragraph. Separately, MMLD is participating in a DOE Grid Resilience and
+Innovation Partnership (GRIP) grant, in a project involving several other municipal light plants, Taunton,
+Hingham, Braintree, Concord and Middletown (ENE communities) and Wakefield, Peabody and Marblehead
+(MMWEC coordination). A further coordination meeting regarding this grant request will take place on May
+14th, at which point next steps will become clear. MMLD is currently requesting over $16M for projects
+shown on slide page 11, (solar rooftop, solar canopy and level 3 bus EV charging).
+
+Fence at 80 Commercial street. The project is on-going. As the fence area along the sidewalk was
+cleared, it became obvious that there is no retaining wall or other structures to mark the property side
+of the sidewalk, see pictures on page 12. This will have to be rebuilt, using the precast supports for the
+land bridge that were not used at Village 13. In addition, a monopole will be given to the project to hold
+up the gangway to the commercial dock, freeing up the sidewalk completely. While timing is tight, the
+project is on track to be completed by June 30.
+
+National Grid forecasts. The General Manager participated in a meeting with National Grid to update
+the load projections in our geographic area (which includes Salem and Swampscott), see slide page 12.
+Unlike prior meetings where the update to forecasts largely caused by new developments, the changes
+are now caused by the on-going electrification of transportation and building heating and cooling. While
+Marblehead would have liked to understand the 15 year planning methodology used by NG for
+Swampscott (which would likely be applicable to Marblehead), the forecasting team was not part of this
+meeting. National Grid, while well aware that all of Marblehead electricity comes from a Salem
+substation, had no comment with regards to resiliency or battery storage plans.
+
+Hiring updates. MMLD made an offer to fill the IT position to Chris Dunbar, offer which was accepted.
+Chris will start in his position on July 1st. The General Manager is now looking at the Engineering position
+for which a job position description has been drafted and shared with the commission.
+                                                                                                        3/12
+Executive Session Chair Lisa Wolf proposed to enter Executive Session Motion to conduct strategy
+sessions in preparation for negotiations with nonunion personnel or to conduct collective bargaining
+sessions or contract negotiations with nonunion personnel. Not to return to Open Session.
+Motion was moved by Commissioner Yarmoff and seconded by Commissioner Frechette.
+Votes: Simon Frechette: Yes; Adam Smith: Yes; Lisa Wolf: Yes; Jean-Jacques Yarmoff: Yes.
+Executive Session started at 6:04 pm.
+The Executive Session concluded at 7:01 pm at which point a motion to adjourn was proposed,
+seconded and, after a roll call of the four commissioners present voting unanimously in favor, adopted.
+
+                                                     ----****----
+
+
+                Documents presented during the April 30, 2024 Light Commission Meeting
+
+
+
+
+                                   MIT SustainableBusinessLab
+                                Marblehead LightCommissionProject
+                                              MMLD
+                                         April 30 th , 2024
+                                                                                 _J
+              Firanza Fadilla
+              SCM2024
+                                                                    MIT
+                                                                    MANAGEMENT
+                                                                                 O   MITSLOA,.
+                                                                                     Sustainability
+                                                                                     Initiative
+            '""v?,f.iieir">
+
+
+
+
+                     Outline
+                     1. Problem Statement
+
+                     2. Hypothesis for Improvement
+
+                     3. Data Analysis
+
+                    4. Survey Results
+
+                     5. Key Takeways
+
+
+
+
+                                                                                                      4/12
+    Problem statement
+    MMLD identifies lowering the current peak demand up to 10% as a critical issue to lower GHG
+    emissions, and to cut reliance on high-priced electricity (energy, transmission, and capacity).
+
+    Why?
+
+         lower the overall price
+
+         prevent additional GHG-generating peaking electricity generation
+
+         limit infrastructure upgrades in Marblehead
+
+         contribute to reduced GHG emissions
+
+         achieve goal to reach 85% GHG-free electricity by 2033
+
+
+
+                                                                                                                       , 0   Sustolnobility
+                                                                                                                             11\ltkrtlve
+
+
+
+
+    Go, see, and assess
+    • Through interviews, literature reviews, and site visit, it has been revealed that there is an opportunity to move towards the
+     implementation of dynamic pricing as a solution to shift peak electricity consumption.
+
+    • Time of Use pricing has been implemented in Groton and has successfully shifted their peak consumption.
+
+    Identify Root Causes
+
+    • MMLD has infrastructure for implementing dynamic pricing (AMI meters, data), but data at a more granular level has not been
+     explored yet; data is currently retrieved for billing as monthly consumption data. On the other side, MMLD lacks the labor
+     specializing particularly in preparation to implement, including roles such as project manager, IT,and communication.
+
+    • MMLD has programs to shift consumers' behavior: e.g. WiFi thermostat and EV fast charger incentives, but with a low adoption
+     rate.
+
+    • MMLD has not identified customers' perspectives and acceptance towards dynamic pricing (specifically, Time of Use pricing to
+     replace their current fixed rate scenario).
+
+
+
+
+..m.,
+~·,v,·,•                                                                                                               , 0   Sustainability
+                                                                                                                             lnltkrt"'9
+
+
+
+
+    Proposed improvement
+
+                                                                                                       TECHNOLOGY
+                PRICING                                   BEHAVIORAL
+
+
+
+
+                 Interviews                                 Interviews
+               Data Analysis                             CustomersSurvey
+
+
+
+
+                                                                                                                             ~tolnabillty
+                                                                                                                             lnlUotl'ff
+
+
+
+
+                                                                                                                                              5/12
+    Key takeaways from interviews
+    Interviews with MMWEC, Groton/GELD, Qilowatt, and MIT Sloan Instructors ...
+    What?
+    • Town that has high adoption in incentive programs tends to have higher acceptance in dynamic pricing.
+    • The challenge for a town in dynamic pricing: installing AMI meters (expensive) while maintaining low rates.
+    • Groton is a town in Massachusetts that has already implemented exclusive dynamic pricing (Time-of-Use) of
+      electricity by far and spent six years to prepare for implementation.
+    Haw?
+    • Dynamic pricing scenarios in electricity could be determined by the one that is closer to wholesale price.
+    • Method to formulate dynamic pricing: (1) analyzing energy market data; (2) easy rate to understand but
+      shows the market prices change effectively; (3) utilize smart meters data; (4) analyze demographics
+    • In determining compulsory/opt-in/opt-out:                (1) acceptability, (2) consumers responsiveness, (3) equity and
+      fairness
+    • Compulsory; if it is regulated by the state, for example in California and Colorado. Opt-in for bigger cities,
+     e.g. Chicago.
+..•~~
+,
+
+
+
+
+    Why dynamic pricing?
+    Learn from Groton ...                                                              • GELD is one of the first utilities in
+                                                                                         New England to implement exclusive
+                                                                                         dynamic pricing.
+                                                                                       • The implementation took six years,
+                                                                                         including three years of data analysis
+                                                                                         with a consultant, a three-year pilot
+
+         ~-
+                         .            .
+        Welcometo the GrotonElectricUsagePortal!
+
+               - ..... c"".· ··-:· •··:.:                    ~
+                                                      tre OOWff
+                                                                                         project, and full implementation
+                                                                                         over the past eight months.
+                                                                                       • The pilot project involved the
+                                                                                         division of the community into six
+                       11l11=-=~tt­
+            111111111111111                                                              control groups. There was pushback
+                                                                                         from customers with high usage.
+                             ____________           :-==---        ==--= - __,;:;;_    • Effective communication through
+                                                                                         multiple channels is key. This
+                                                                                         includes electricity usage monitoring
+                             -•&i'MEtiiM
+                                 BPM- 4PM Off-Puk      SO.OS             $0.07
+                                                                                         and a newsletter         with   clear
+                                                                                         explanations.
+        -                         4PM - 8PM Peak       $0.50             $0.43
+                                                                                                                              Sust~noblllty
+                                                                                                                              lnltlat.lv•
+
+
+
+
+                                                                                        Mir
+                                                                                        MANAGEMENT
+                                                                                                        O    MITSLO~N
+                                                                                                             Sustainability
+                                                                                                              Initiative
+
+
+
+
+            Data Analysis
+
+
+
+
+                                                                                                                                              6/12
+    Why data analysis?
+    Dynamic Pricing Types
+        Real-Time Pricing (RTP): electricity rates fluctuate throughout the day based on actual market conditions
+    •   Time-of-Use (TOU): varies the cost depending on the time of day
+    •    Critical Peak Pricing (CPP): significantly increases rates during periods of exceptionally high demand
+    ... and many morel (mix, Critical Peak Rebates, Variable Peak Pricing, Hourly Pricing, Demand Charges, etc.)
+
+    Data Analysis
+    Objective:
+       to determine whether the hourly Time-of-Use pricing scenario throughout the day accurately replicates the
+        shape of the wholesale price pattern as determined by ISO·NEusing Spearman coefficient metric
+        to provide a qualitative description of three key aspects: the suitability of real-time pricing, the variety of
+        dynamic pricing types, and the complexity of scenarios related to the implementation of dynamic pricing.
+    Input Data: ISO-NEDay Ahead Pricing 2011·2022, Groton Pricing Data
+    Literature: (1) Electricity Retail Rate Design in Decarbonizing Power Systems: A Cross-country Analysis of Time-of-use
+    Rates (Reboul, 2023) (2) Electricity Retail Rate Design in a Decarbonizing Economy: An Analysis of Time-of-Use and
+    Critical Peak Pricing (Schittekatte, et. al., 2022)
+
+
+Ml!..                                                                                                                                                                      ,. 0   Svstolnobillty
+                                                                                                                                                                                  lnltlotlve
+
+
+
+
+    What the literature says...
+    ISO-NEutilizes22% of its resourcemix from renewablesand hydro,with hydro itself accountingfor 10% of the total resourcemixlaJ.
+
+                      Hydro•domlnated syst~
+                   YearlySpearmanCOITf:lationlW                            Dally~~:-:,,~,!!;!;!_.                         •IIyears•   g
+                                                                                                                                      10.70
+
+
+
+                                                                                                                                      lot,
+
+
+
+i                                                                                                                                     }uo
+                                                                                                                                      tJon
+                                                                                                                                               •
+
+
+
+
+L                             the 3-period optimized
+                                   ToUmodel VSRTP
+                                                                                                the 3-period optimized
+                                                                                                     ToUmodel 11S RTP
+                                                                                                                                      ~
+                                                                                                                                      &•~
+                                                                                                                                      I       ~-----~,------,--,
+                                                                                                                                                         -~lnteNIIUpdatH
+             -         FR    -        ISONE                                     -       FR      -           ISONE     -        SE3
+                                                                 ... ,i...,.-,---,.,-,-.,,.,-,..,.,,--,,.--,.,---,,,..,.....,1
+                                                                                              DayolU..¥9¥
+
+
+
+                                                                                                    TOU design with three within-day periods, two day-types,
+                                                                                                    and twa seasons strikes a balance between design
+                                                                                                    simplicity and accuracy in reflecting wholesale price
+                                                                                                    patterns<•!.
+
+        (a) ISO ~ EnJland,2023                                                                                                                                                    S...,stolnobility
+        (b) Reboul,2023                                                                                                                                                           lnltkrthl•
+
+
+
+
+    What the data says...
+    Spearman correlation between ISO-NEday-ahead hourly pricingvs Groton Time-of-Use pricing
+
+
+                                                                                                    j
+         C
+
+         ~       0.4
+                                                                                                    I   0.46
+
+
+
+
+         ii      02
+                                                                                                    I
+                                                                                                    1
+                                                                                                        0.44
+
+
+
+
+         u
+         ~ -0.2
+                 0.0
+
+                                       GrotonToUPridnc
+                                       Dff•PeX
+                                                                                                    l°"
+                                                                                                    10.40
+
+
+
+         l-a.4
+                                       ....
+                                       8PM- 4PM • SO.OS
+                                                 (Dl!cember-M.chj = S0.07
+                                       WinterR.111!
+                                       4PM-8PM•S0.SO
+                                       WinterR.ltl!IDl!cembl!r
+                                                            - M¥chl • S0.43
+                                                                                                    t   0.38
+                                                                                                    i
+                                 SO     100    150     200    250          300        3S0                      20112012 2013201-( 2015 20162017 2018 2019202020212022      2023
+                                              Day of the Year
+                                                                                                                                              "'"
+         Key Takeaways:
+            The efficient TOUschemereflects the dynamicsof wholesaleelectricitymarketsand providesconsumerswith the
+           right incentivesto shift their demand.
+           A simplerTOUscenariodoesnot accuratelycapture the pattern of wholesaleprices,as evidencedby a lower
+           Spearmancorrelationcoefficient,indicatinga trade-off between simplicityand precision.
+                                                                                                                                                                                   Sustainability
+                                                                                                                                                                                   Initiative
+
+
+
+
+                                                                                                                                                                                                      7/12
+Online survey overview
+                                                                           Divided into five sections:
+                                                                           1. Customer Participation in Electricity
+
+                                                                                Incentive Programs
+                                                                           2. Electricity Consumption Awareness
+                                -1,300 contacts                            3. Electricity Consumption Behavior
+                                69 respondents (5.3%)
+                                6 days (Apr 23rd-28th, 2024)               4. UnderstandingPricingScenarios:Fixed vs.
+                                                                                Dynamic Electricity Rates
+
+                                                                           5. Customer Participation Preferencesin
+
+                                                                                Dynamic ElectricityPricingPrograms
+
+
+
+
+                                                                                                                                    ~talnabitity
+                                                                                                                                    lnltlotlvfl
+
+
+
+
+Incentive programs
+12 programs being offered In           Keyresults
+Marblehead
+1. Connected homes:                    • Top 3 programswith the highestawareness:energy audit services (46% are aware),
+   incentive for home battery            appliance rebates (42%), and heat pump rebates (26%)
+2. Connectedhomes:electric
+   hot water heater incentive          • Programswith the lowest awareness:electric yard equipment rebates (68% not
+3. Connected homes: monthly              aware), EV and PHEVcharger incentives (61%), and connected homes: monthly Wi­
+   EVincentives
+4. Connected homes: mini­                Fi thermostat incentive (58%)
+   split controller incentive          • Top 3 most participated programs:energy audit services (57%), appliance rebates
+5. Connected homes: monthly
+   Wi-Fi thermostat incentive            (52%), and heat pump rebates (21%)
+6. Connected homes: monthly
+   EVlevel 2 fast charging             Reasons for not participating            What they said...
+   incentives                          • not aware of these programs (35%)      • "There has been little effort to publicize these programs.H
+7. EV new car incentivesfor
+   trade-in from ICEcar                • did not understand how to              • "Marblehead Light...Whydon't you advertise these?"
+8. EV and PHEV charger                   participate (21%)                      • "I am not convinced all of these suggestionsare better for
+    incentives                         • did not think they would benefit         the environment."
+9. Appliance rebates on                                                         • "Marblehead actively discourages alternative energy
+    ENERGY    STAR•-certified            (8%)
+                                                                                  sources by virtue of their highly imbalanced energy rate
+    appliances                         • and many more...
+10. Energy audit services                                                         structure (they buy at half the rate at which they selll."
+                                         o home ownership
+11. Heat pump rebates                                                           • "I wish solar roof tiles were allowed and storage battery
+12. Electric yard equipment              o high cost to replace car or
+                                                                                  had a monetary incentive."
+   rebates                                 heating system
+
+                                                                                                                            " 0      Sustolnobillty
+                                                                                                                                     lnltlatkl•
+
+
+
+
+Consumption awareness and behavior
+                                          Awareness: key results
+                                          Would usage monitoring change habits?:
+                                          (1) yes, would use it strategically (46%)
+                                          (2) yes, would use less (32%)
+
+
+
+
+                                              I
+                                                      -       Preferred media to receive high demand alert: text message {SMS)
+                                                              (70%), email (38%), and mobile app notification (29%)
+                                                              Behavioral perception: key results
+                                                                peak consumption
+                                                                       4PM
+                                                                                                            • What motivates
+                                                                   max. atSPM                                 consumption shift: cost
+                                                                                                              (61%), environment (30%)
+                                                                                                            • Would you respond ta
+                                                      -0
+                                                        ..    n_.;,,,:;;
+                                                              What they said...
+                                                                                                              high demand alert? likely
+                                                                                                              & very likely (81%)
+
+
+                                •-1\           • "Love the idea of monitoring my home electrical usage from my phone."
+                                        o-.··-:11·,
+                                               • "The most useful things ... (a) approve batteries for home use and (b)
+                                                 correct the unfavorable rate structure ..."
+                           -==11=111="1=1,1=11,=1
+                                       !..-a     ,,Increase rates during peak periods, consumers will respond."
+                                                                                                                                    Suttalnoblllty
+                                                                                                                                    l"ltlotlw
+
+
+
+
+                                                                                                                                                      8/12
+             Dynamic pricing
+             Scope: RTP,ToU, CPP,and ToU+CPP
+            Key results                                                                            What they said...
+            • 25% of respondents somewhat understand dynamic                                        • "I think if whatever dynamic model is used... simpler is
+              pricing or do not understand it at all.                                                 better ... if too complex then userswon't understand and
+            • The highest preference is for Time-of-Use (43%).                                        probably will not even try."
+            • 59% of respondents strongly prefer or prefer dynamic                                  • "Why do I have to pay for the peak use caused by large
+               pricing over a fixed rate, due to:                                                     users." - "My fear is that costs will go up."
+                   o environmental impact (52%)                                                     • "Either the Town requires the scheme,or it doesn't work."
+                   o cost (17%)                                                                     • "I think that an opt-out program gives consumers a
+            • Only 28% of respondents have participated in dynamic                                   choice but helps more consumers participate."
+               pricing before.
+            • For 64% of respondents, a mix of ToU and CPP is the most
+               complex scenario, with none selecting ToU alone.
+               Preference in participation (strongly prefer and somewhat
+               prefer):
+                      Compuls'ory (58%)
+                      Opt-in (57%)
+      MIT          • Opt-out (41%)                                                                                                                   11   0     E:i~i:bility
+  i.•~""'
+
+
+
+
+             Key takeaways
+             1. Communication is key. Having multiple channels of communication to promote programs, changes,
+                   alerts, and provide clear, understandable explanations is essential to educate people and prevent
+                   misinformation.
+
+             2. The implementation of dynamic pricing involves various considerations: fitting the wholesale price
+                   pattern to better incentivize customers to shift and managing complexity. As the goal is to induce
+                   behavior change, preparation for implementation could take years, involving data exploration to
+                   determine pricing scenarios, pilot projects, and then launching the program live.
+
+             3. Customers emphasize and urge the publication and advertisement of programs, especially for home
+                   batteries and solar systems, as part of the solution. They also highlight the importance of usage
+                   monitoring and advocate for adjusting the rate structure based on survey results.
+
+
+
+      m..                                                                                                                                        '        OSustolr,obiUty
+                                                                                                                                                               lnltkrttve
+
+
+
+
+            Decarbonize Massachusetts Municipalities by enabling public electric
+                           utilities to run geothermal networks
+       TeamENERGIZING
+                    PUBLICPOWER:NETWORKED
+                                        GEOTHERMAL
+        Members are: Jean-Jacques Yarmoff, Encineer and elected Liaht Commission member;
+        Eileen Methieu, Member of the Green M1rblehead lmplemenUltion Committee;
+        Kurt J•mes, Member of M1rblehe1d Housin1 Production lmplementilltion Committee;
+        Kevin Colcord, M1n11ement Consult1nt ind member of the li&ht Commission Stnitecv Workln1 Group;
+        Michele Bell, Member of Sustltin1ble Mublehe1d;
+        C•thy Hooe, Exe<utive Director, M1rblehe1d Housin1 Authority illnd S1lem Housin& Authority
+
+
+            Marblehead is a small seaside community in Massachusetts, trying to lower its
+            emission of Greenhouse Gases in both municipal and prjyate buildings. The town is
+            located on a peninsula and subject to increasingly severe storms. This relative
+            isolation is causing the town to explore disaster recovery options. An opportunity
+            arises with the planned construction of a large housing development dedicated to
+            handicapped and low-income families.
+            The challenges are to provide this development with cheap, decarbonized energy for
+            heating and cooling, while also increasing the resiliency of the community.
+            The project will study the feasibility of a Networked Geothermal system to
+                  Serve as an Energy Storage facility over - hours, - weeks. and - months;
+                  Provide Energy, sold as a Utility Service to ensure a cost as low as possible;
+                  Help Regulate the electric Distribution Grid and Stabilize Consumption.
+
+
+            Marblehead Light Commission: Marblehead Municipal Light Department (MMLD)
+
+            Sustainable Marblehead: Marblehead Fair Housing Committee: Marblehead Housing
+            Authority
+
+A•ERCIAJII MADE SOLVE If PIUZE I U.S. DEPARTMENT OF EIIERGT                                                                                                                    1
+
+
+
+
+                                                                                                                                                                                   9/12
+            Village 13 update
+
+• Precast concrete land bridge sections delivered early-April   12;
+  installation started 4/15
+• Large, shallow ledge precluded the installation of precast footing
+  sections; poured-in-place concrete footings installed instead
+• Excellent cooperation among all involved local parties: MMLD, Mhd
+  DPW & W&S, SESD,Bayside Engineering, & Cairns Construction
+• Virginia Transformer 4/16 delivery schedule delay: 5/6 to 5/20 (in
+  production) and 5/6 to 6/3 (production not started)
+• Two minor VT contract issues identified ...resolution in process
+• 26 Heritage Way - easement signed
+
+
+
+
+            Tioga Way update
+
+
+• Completed the wetlands flagging of the full parcel by wetlands
+  scientist John Dick
+• Completed topo survey field work of the entire parcel by
+  Bayside Engineering survey team
+• Bayside survey will indicate the size of developable sections of
+  the parcel, within 100 feet and 50 feet of wetlands
+
+
+
+
+            Federal & State grant applications & use
+
+
+• FEMA- storm-related damage reimbursement claim Jan 10-13,
+  2024. Mass did not meet the FEMA minimum-level storm
+  damage threshold
+• Mass CZM grant 2022-2024. Grant funds include Hammond
+  Park child-safe park railings, Commercial St extension sidewalk
+  installation, boat ramp hoist monopole installation, and ledge
+  removal from the Commercial St extension. All improvements
+  must be completed by June 30.
+
+
+
+
+                                                                       10/12
+                     Marblehead Proposed Projects
+                          -
+              Proposed Projects                      •""""-        I    Estimated Cost
+                 u    IC c oo s - e ghborhood ResiliencyCenters­
+                     Rooftop Solar PV (6 schools}                         $12,631,610
+                     Battery Electric Storage System (4 schools)
+              2. MHS Parking Lot Solar PVCanopy- Clean
+              Transportation Center                                        $2,996,84?
+                   Level 2 & 3 EV charging incl bus charging
+
+              3. Brown School- CommunityShelterandClean
+                                                                            $595,000
+              Energy Service (CES)Center                   .
+                    Level 2 & 3 EV charging Incl. bus charging
+                                                               Total:
+
+
+
+
+                              E G RIp Grant - Financial Impact
+
+
+
+          -~~
+        ·~i
+  -
+      Retail Price (no discount)
+            •   ' '
+              100%
+      IRA Investment Tax Credi (IRA ITC)                                70%
+      I RA ITC Coal Closure - nergy Community Tax                       60%
+      Cr dit (ECTC) - based on loca ion
+      IRA ITC DO GRIP Grant                                             35%
+      IRA ITC+ CTC+ DOEGRIP                                             30½
+
+
+
+
+               80 Commercial Fence & Gates
+
+• Site prep has begun
+• Trench dug for UG electric conduit for electric gate
+• Premier Fence has been a very responsive vendor
+• Removal of the old fence from the lower driveway to the
+  Hammond Park entrance has exposed a varying (not straight)
+  roadway edge and uneven roadway and sidewalk
+  elevation ...making the the sidewalk edge and elevation more
+  critical. ..and requiring a solid fence line footing
+
+
+
+
+                                                                                         11/12
+              210
+                    SW
+                            240
+                                          w
+                                          270
+                                                       I
+                                                       00
+                                                               NW
+                                                                     330
+                                                                                    N
+                                                                                        0           30
+             •I•    I • I •I•     I•   I • I • I •I•   I •I•    I•    I•   I•   I •I•       I •I•   I
+                      0 298°NW (T) @42°29'49"N, 70°51'8"W ±45ft A 11ft
+
+
+
+
+           System Planning MMLD's future power needs
+
+• April 11 technical meeting held with National Grid (NGrid}, MMLD, and
+  MMWEC participating.
+• NGrid plans by geographic area. Mhd is in the Salem Swampscott area.
+  Future area system load and power quality needs are based on an
+  internally generated 15-year load forecast.
+• MMLD & MMWEC discussed our 5-year load forecast methodology.
+• MMLD proposed working with NGrid forecasting team to apply their 15-
+  year methodology, comparable to their Swampscott forecast.
+• MMLD also identified the need for increasing resiliency in future grid
+  infrastructure planning.
+• Ngrid did not share any specific plans for planned Salem/Swampscott area
+  grid upgrades. No comments on battery storage plans in the area
+
+
+                                         ----****----
+
+
+
+
+                                                                                                         12/12
+
