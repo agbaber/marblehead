@@ -1,0 +1,992 @@
+Light Commission January 31, 2023 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           February 28, 2023
+Re:             Commission Meeting January 31, 2022
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:00 pm, the meeting
+being held both in person and with remote access available to the public. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:          Hull, Frechette, Smith, Wolf and Yarmoff participated in person.
+        Light Department:       General Manager Joe Kowalik and Business Manager Matt Barett.
+        Invited:                Chris Lund, Consultant, Utility Financial Solutions (UFS)
+
+Approval of minutes of January 10, 2023 meeting.
+Vote #2023-03 Motion to approve minutes moved by Commissioner Wolf and seconded by
+               Commissioner Yarmoff. Unanimous.
+Vote #2023-04 Motion to amend the Agenda to include a review of 2023 Goals for the GM of the
+              Department and for an update of the Strategy Working Group work. Moved by
+              Commissioner Yarmoff, seconded by Commissioner Smith. Four in favor, Hull opposed.
+
+
+Discussion of selected rates
+The General Manager proposed to review successively: the Residential and Commercial Solar PV credit;
+a proposed Distribution Demand Charge for Residential and Small Commercial; the MMLD-owned Public
+Level-2 Chargers rate; a qualified Low-Income Household Residential rate; the proposed retirement of
+the dedicated meter residential EV charger rate; and Time-of-Use rate for Residential, Small Commercial
+& Commercial rates.
+Commissioners Frechette and Wolf will recuse themselves of voting on solar PV credit rates as they both
+have solar arrays on their residences.
+
+Solar PV Credit
+The current residential solar PV credit for energy injected into the distribution system has been fixed for
+a long time at 9.99 cent and there is no mechanism to update it, although the PPA has been applied, but
+not changed on 2022. The current commercial PV credit is based on the prior year real time NEMA data.
+To ensure financial stability over the long term, rates may have to change.
+Rate setting should be - data driven, transparent and based on public data sources and support adoption
+of energy efficiency and clean energy best practices.
+Rate setting should also support overall energy procurement policies of MMLD.
+The proposal is to have one rate, whether the customer is residential or commercial. This rate may be
+adjusted over time as data changes. Data sources used for calculation of the proposed rate include:
+- NREL PV data, which provides hourly solar PV production for any place in the US, including Marblehead;
+and - ISO-NE real-time location marginal price (LMP) for NEMA, North East Massachusetts (grid node where
+Marblehead gets electricity from).
+                                                                                                   1/17
+The rates proposed are shown on slide 3 on page 12. The calculation as proposed would lead to a
+decrease in feed-in tariff for energy which is not directly consumed but is instead fed into the
+distribution system. The in-depth discussion is reported on page 6 below. The Chief of the Fire
+Department will be invited to the next meeting to review the situation with regards to regulations for
+battery installs in Marblehead.
+
+While the General Manager presented the new rates as a recommendation for a vote, a decision was
+postponed as many questions remain unresolved among which:
+        - Valuation of transmission and capacity charges avoided;
+        - Impact of batteries;
+        - Impact of ToU rates on solar credits policy;
+        - Appropriate frequency to update the rates; period of reference to set the rates;
+        - Grandfathering existing installs: Impact on existing solar arrays;
+        - Incentives on installation – transfer of RECs;
+        - Fire Department position on residential batteries;
+        - Comparison of solar credit to cost of energy in other MMLD contracts;
+        - Appropriate proportion of solar within MMLD energy portfolio;
+        - Timing of change implementation in view of other changes.
+
+Considering a distribution demand charge
+MMLD is trying to decrease its reliance on variable energy revenue (the kWh sold) to cover its fixed costs.
+Fixed expenses represented some 35% of our expenses in 2022, while base rate paid by customers only
+represented 3% of revenues. Ideally, these two numbers would be much closer. With the rate restructure
+that the Light Commission approved (Vote #2022-36) the new ratio will be about 7% in 2023 and 11% in
+2024, still in imbalance from the 35% fixed expenses.
+
+Capital investments will grow as the distribution systems need to carry a higher load, which could be two
+or three times as large as the existing load today. Particularly stressful to the distribution system is when
+all the extra energy is requested at the same time: the system must be able to provide the highest
+demand from users. MMLD must upgrade the system in anticipation of this dual evolution: higher energy
+load and likely higher demand.
+
+A technical measure of demand is the “Load Factor” described on slide 1 page 14. A charge linked to the
+Load Factor, compensated by a lower energy rate (revenue neutral for MMLD), would allow to better align
+the revenues MMLD collects to cover its fixed costs. The discussion is reported on page 8.
+
+Public EV Charger Rates
+MMLD installed 6 public EV charging stations. The rate of electricity provided was set based on residential
+electric rate, adding a 10% processing charge, which comes to a total of $0.20 per kWh. The General
+Manager proposed to increase the rate to $0.36 kWh based on a Load Factor analysis. However, the
+implication of higher rates on public charger when many residents do not have the option of charging
+privately, the disparity this brings is also a fairness issue that the current proposal does not address. No
+discussion has taken place with current users of the charging station. Conversations with town officials
+have not taken place either. The in-depth discussion is presented on page 9.
+
+A decision was postponed as several points remain unanswered of which:
+        - comparison to practice in neighboring towns;
+        - off peak / on peak rate setting possibility;
+        - possibility of start of parking fee from idle time.
+
+                                                                                                       2/17
+Low income household rate.
+ MMLD has put in place during the Covid pandemic a program “Neighbors Helping Neighbors”. MMLD has
+established a relationship with the non-profit North Shore Community Action Program (NSCAP) which
+administers other state programs such as help for heating. NSCAP already serves other households in
+Marblehead with the federally funded fuel assistance program. In NHN, MMLD works with NSCAP to define
+eligibility criteria and provides funds to NSCAP to help Marblehead residents. NASCAP then provides
+benefits check to MMLD to credit beneficiary accounts. NSCAP charges a 10% processing fee. This program
+had been founded by a $5,000 contribution from MMLD supplemented by $3,000 donations from the
+community. How can we communicate about this program to encourage donations? Residents who want to
+benefit from this program have to apply every year. Our program has helped 27 households and 52 people.
+Half of these households live below the federal poverty level, which is $18,310 for a family of two. It is likely
+that other residents would be helped with an extension of the program, which we will organize with NSCAP.
+The question to the board is whether MMLD should fund a successor program and at what level.
+
+Commissioner Yarmoff remarked that this has been discussed several times already (see meetings
+minutes of August 30, 2022; November 29, 2022; December 15, 2022). The Light Board approved the
+change of rate structures that has now been implemented with the understanding that this program
+would be put in place at the same time, as the rate structure changes puts an additional financial strain
+on some low income residents. We discussed that it would be funded with $50,000 initially, and that the
+moneys unused would be rolled-over to continue funding the program in following years. It was
+mentioned publicly during the meeting of December 15 - when the rate structure changes were
+presented to the public - that this program was going to be implemented at the same time.
+
+Vote #2023-05 Motion to fund the Low Income Household program with $50,000, program to be
+              administered with NSCAP moved by Commissioner Yarmoff, seconded by Commissioner
+              Wolf. Unanimous.
+
+Retiring EV specific rate
+The current EV rate that we have on the books, 10 cents, was set up 10 years ago. It requires a second
+meter. There is only one resident enrolled in that rate, who is not using the meter. MMLD proposes to
+discontinue this rate and notify DPU.
+Vote #2023-06 Motion to discontinue the EV specific rate was moved by Commissioner Wolf, seconded
+                 by Commissioner Smith. Unanimous.
+
+Second meter residential rate
+Some people in residential properties have two meters on their properties. Some of these second meters
+were used for “commercial applications”.
+If a resident has two meters on one property, and one meter has been historically registered as a small
+commercial but is not used as such, at the resident’s request MMLD will convert the second meter to a
+residential rate, if the resident agrees to have both meters on one single bill to facilitate customer service.
+The resident will then only be charged with residential base rate charges which are lower than the small
+commercial base rate charges.
+Vote #2023-07 Motion “to allow MMLD to combine two meters at residential rates on one bill, possibly
+                  changing the status of one meter from small commercial to residential at the request of
+                  the resident, following MMLD policies” was moved by Commissioner Hull, seconded by
+                  Commissioner Smith. Three votes in favor, Smith and Yarmoff abstain as they both
+                  have second meters on their properties.
+
+                                                                                                        3/17
+Time of Use Rates
+
+Engineering issues to implement Time of Use rates. We have components on the system which are not
+compatible with version 3 of NexGrid software, we need to go to version 4.0. With the configuration of
+the new server, NexGrid can implement demand charges or time of use charges, with at least two
+different classes of rates (peak and non-peak) for ToU. Question for discussion: we may want to have
+two classes or potentially three (off-peak, on-peak, critical peak). Later in the year, we will be able to
+look in detail at the data. A question is “are we aiming to have rates change at fixed times” or “event
+dependent”?
+
+Implementation of a Time of Use policy, or experimenting with a Pilot has two components. One is
+engineering, to ensure that the systems allow implementation and appropriate billing. Another is
+behavior change, which means an important and thoughtful communication campaign. There is no
+point in instituting a Time of Use policy that is not changing behavior. If the question is: “should we
+encouraging NexGrid to put in place a system that allows three rates (that would include critical rate)”
+then “Yes, this is be a good idea”. We may first implement a ToU policy with only two rates, but decide a
+few years down the road that is important to reinforce the message about the critical peak. It would be
+good to have that option. As we design these rates, we will also have to think about adoption: which
+design gives the best adoption if it is opt-in?
+
+UFS’ Chris Lund reinforced this comment in stating that utilities that implement Time of Use usually start
+by having as simple a system as possible: fixed hours throughout the year. In a second step, the utility
+may then want to add the critical peak and potentially the seasonality into the mix. Setting the duration
+of the On-peak vs Off-peak is linked to the differential between rates: the period must be long enough
+to recover the differential in rates. Typically, On-Peak may be for a duration of some 6 hours, and the
+differential would be 50-100%.
+
+Financial operations See Year-end 2022 Operating Statement slide 3 page 16.
+
+We are still waiting for the final OPEB and Pension contribution charges from the town. We have used
+less than $100K from the rate stabilization fund. So assuming the charges we are waiting for end up
+being reasonably in line with our expectations, we will close the year with projected total expenses of
+$19,959,000 and adjusted net income of 0, as we are supposed to.
+
+Operations update
+Village 13 update. See slide 1 page 17. Switchgear and transformers will be delivered to the site of
+Village 13 substation via the right of way (RoW) from Westshore Drive. The RoW is 8 foot wide. The
+axles of the delivery flatbeds will be 8’6” and will not move in a straight line. Adjacent to the RoW are
+some wetlands, and the side of the RoW may not be firm enough to carry the weight of the loaded
+trucks. We need to upgrade this section of the RoW. The General Manager has contacted 7 engineering
+firms hoping they respond to an RFP with the expectations that they will be able to:
+- survey the work that needs to be done, including the surveying the wetlands affected;
+- prepare the bid for the contractors who will do the work;
+- review the incoming bids and with MMLD chose the contractors;
+- manage the contractors to the completion of the upgrade.
+Some replies are already starting to come in. Joe has discussed with the town planner to see if we could
+get an ECF grant, but the timing will not work for us. The grant would be to ensure that the work done
+for the utility corridor would still guarantee the use as a footpath and recreational corridor.
+                                                                                                       4/17
+The budget for the Village 13 project was updated. At this stage, without the cost of the improvement to
+the RoW but including the possible engineering contract price, the total budget is now at $8.8 million.
+
+Vote #2023-08 Motion to allow the General Manager of MMLD to enter into a contract with an
+              Engineering firm for the upgrade of the Right of Way, not to exceed $90,000 was moved
+              by Hull, seconded by Yarmoff. Unanimous.
+
+General Manager proposed committee
+1. Utility Scale Battery Electric Storage – MMWEC project underway. We can form a committee, with
+board member participation, looking at PPA deal structure and terms, siting and safety. Commissioner
+Yarmoff volunteered to help the General Manager on this subject.
+2. US Inflation Reduction Act. What grant opportunities exist? The board’s view is that this is a core
+function of the department, and the role of a sustainability manager is to do this work. The position has
+been approved and budgeted. A job description exists. If board members happen to know about grant
+opportunities, they will speak up. Should this committee be set up and find an opportunity, who will
+apply, who will follow up on the grant? This needs to be covered by a position of the department.
+
+Chair Hull leaves the meeting at 7:33 pm, Commissioner Wolf assumes the chair of the meeting.
+
+General Manager expresses surprise that board members might be aware of grant opportunities and
+have not communicated these opportunities to the Department. Commissioner Wolf mentions that she
+comes across funding opportunities on a quasi-daily basis as part of her job. Commissioner Yarmoff
+mentions that he has already reported at a previous board meeting that we had passed a deadline for
+the IIJA on December 16 which he learned by participating in a DOE webinar. This was reported at the
+December 19 Commission meeting. Another example of a grant opportunity that has been sent to
+MMLD is a MassCEC administered program designed for Munis that will become available this spring.
+Looking for grants and acting upon the opportunities is too critical a function to be delegated to a
+committee of volunteers.
+Moving forward, board members will forward opportunities to the General Manager.
+The General Manager will post the position of Sustainability Manager that the Department aims to fill.
+
+Adjourn
+A motion to adjourn was approved unanimously at 7:35, even though the agenda was not exhausted.
+
+
+                                               ----****----
+
+
+
+Detailed Discussions on the Agenda topics
+
+A presentation of the detailed description of the various agenda topics is shown in the following pages.
+
+
+Discussion on PV Solar credit
+
+
+
+                                                                                                     5/17
+Transmission, Capacity charges. Q: Other Munis use the LMP system as well as other approaches. Does
+this calculation take into account the avoided distribution and capacity charges? Answer from UFS: we
+usually take into account this effect only for dispatchable systems, where solar is paired with a storage
+system, but here these calculations do not take into account this point. We will take this into account
+when looking at ToU rates. Transmission charges are calculated monthly, based on the peak transmission
+during a one hour interval in that month. Over time, the peaks have moved later in the afternoon, at hours
+when solar production is lower, and the transmission benefit that might have existed 10 years ago does
+not exist today. With storage, it would be useful to target the feed-in at “on peak hours”. Capacity charges
+are calculated similarly but yearly, instead of monthly.
+The current proposal does not take into account any avoided capacity or transmission charges.
+Batteries/storage. Q: The possibility to use storage systems would alleviate some of these issues. What is
+the current situation? A: The Chief of the Fire Department has talked with the MA Fire Marshall: the
+regulations which are in place have to be followed for the installation of batteries, and while there may be
+some specific considerations with regards to safety, there can be no blanket ban to installing batteries in
+Marblehead.
+AS: It would be useful to have this clearly explained in one single policy document that explains in detail
+what is allowed in Marblehead, as we are still currently under the impression that batteries cannot be
+installed in town.
+JK: The proposed rate system has been designed with the understanding that people would have access
+to storage systems.
+Policy goals. Q: What are we trying to accomplish with this rate?
+A1: We are trying to get economically viable rates preparing for the future.
+A2: Another policy goal that we have to consider is: “Do we want to encourage solar in Marblehead”, a
+question that we should be able to answer in a clear Yes/No fashion. Encouraging solar in town will help us
+towards meeting the non-emitting legal goal that we have that comes with a compliance fine.
+Q: There is a concern that the signal sent to rate payers with this proposal is a dis-incentive to installing
+solar. Several residents present during the meeting mentioned that they strongly feel this way. The
+residents who already have installed solar play a role of advocate in the community. This proposed policy
+would go against the idea of encouraging more solar in town. A: This is why we have this discussion.
+JK: IOUs and DPU have set rates which are not economically viable and we want to be careful and not
+have the same issues. AS: This is in a situation where there is full real net-metering, but we are 7 cents
+short of that in Marblehead. This concern really does not apply in Marblehead.
+Comparison to other energy sources. Place of solar in MMLD’s energy portfolio?
+Q: The levelized cost of energy that was predicted for the Ludlow solar array of which MMLD owns 10%
+is 0.0875, which is higher than the proposed feed-in tariff to residents, when this electricity is produced
+in town. How does the energy produced in town compare to other contracts that we have or may have
+in the future?
+Q. We need to answer the question of what we are trying to accomplish in terms of solar in Marblehead.
+We have a gap of non-emitting energy we need to procure. Can solar in town be part of the solution and
+to which extent? A. Part of the motivation for aligning commercial PV credit rate and residential PV
+credit rate is that if a larger array is installed privately and produces more electricity than the resident or
+business can use, there should be appropriate compensation, in a similar and fair way for all.
+Grandfathering JK: We understand that customers have put solar arrays based on an economic
+calculation, but is MMLD responsible to maintain this economic calculation whatever the environment
+                                                                                                 6/17
+may be? The customers are keeping the full retail value of all the electricity they produce and consume
+behind the meter. This new rate only applies to excess electricity fed back into the distribution system.
+A: The question remains whether the residents that invested with the expectation of a fixed specific rate
+for feed-in should be grandfathered in, in some way. As the rates have not changed for a long time, it was
+a reasonable expectation that they should remain constant, even though the details of MMLD’s supply
+contracts clearly state that rates are subject to change. This last point may not have been highlighted
+when residents sought a solar connection permit.
+Several residents who participated in the meeting mentioned that of course, they would benefit from a
+grandfathered rate, but that besides their particular situation they felt it was a question of fairness.
+UFS agreed that it is not uncommon, upon such a change of policy, to introduce a grandfathering clause
+which may last several years.
+Timing of new rates. Impact of ToU. We are considering lowering the feed-in tariff now, changing the
+rates every year and again when we introduce ToU rates. This is complicated and this variability and
+unpredictability is not facilitating the life of residents interested in installing solar.
+Q: While we understand the economic argument for eventually transitioning to new rates, what is the
+argument for doing it now?
+Q: We hear that we are going to be allowing batteries and transitioning to ToU, why do we have to
+implement the new rates now?
+The timing of the proposed lowering of the feed-in tariff comes at a time when the electricity price has
+increased significantly because of gas prices. It is difficult to justify on economic grounds lowering the
+feed-in tariff when the price of fossil-fuel-generated electricity is so high.
+There is no question that we can design different systems, and we will have to as we are about to
+implement ToU and approve batteries. To avoid complicating the issues for residents, it may make more
+sense to implement new solar feed-in tariffs rates once the impact of these other changes is understood
+and explained to residents.
+Frequency of update. Frequency of update on the rate is proposed to be annual.
+An alternative could be a true monthly-following value. MMLD could pay these with one month lag. If
+we could streamline this process we could have a nearly real time benefit. We need to consider MMLDs
+ability to do this vs the benefit of such an approach, however.
+Incentives. AS: Another issue that we need to address is the possibility of introducing incentives. Other
+MLPs that have gone to a LMP-based rate also have introduce incentives: this has the merit of making
+the financial equation palatable and very clear for the resident. It dissociates a clear economic incentive
+from the economic benefits from uncertain rates, and the rate decisions can then be made closely on
+economic criteria. This is a way of solving the two main policy objectives. The MLPs that have
+implemented incentives keep the right to adjust their incentive policy.
+This can come with additional benefits to the Light department, linked to solar RECs. An upfront
+financial incentive can be the counterpart for future RECs that the installing party may transfer to
+MMLD. This would simplify the process for residents, and would have both clear economic, as well as
+compliance value to the department. This was the practice under the MMWEC/DOER program that has
+expired but that individual MLPs have continued to implement because of its benefits.
+We should review the possibility to introduce such incentives at the same time as we approve a new
+feed-in tariff policy.
+
+
+                                                                                                       7/17
+Distribution demand charge discussion
+We need to be mindful of the capital investments MMLD needs to make to maintain the distribution
+system. A demand charge is a different category of charges designed to recover the capital costs that
+MMLD incurs to grow and maintain the capacity of our electric distribution system. We need to update
+our capital plan going forward, but the level of our fixed costs are not coming down. See slides page 13.
+One of the issues we need to address is that we expect some of the residents and small commercial rate
+payers to have their energy consumption be high during short time intervals. (We can measure energy
+consumption at 15 mn intervals). This use of energy over a concentrated time period, this high demand,
+puts strains on the distribution system that MMLD builds and maintain.
+
+Changes that are underway will have MMLD supply two or three times as much energy to the town as we
+used to. If in addition to consuming more energy during the day, the timing of use is concentrated, if the
+“demand” goes up, that will bring a lot of issues. There could be spikes in uses of energy, and we need to
+discourage these spikes. Ideally, the demand would be smoothed out. Time of Use rates, with lower rates
+at a time of low demand are one type of incentive.
+
+A charge tied to the demand is another one. By tying the charge directly to peak demand, this charge
+would generate revenues that are in line with the capital requirements to update the system to meet the
+demand, which is the reason why this is proposed for consideration. This can be done in a revenue neutral
+manner for MMLD and for the average customer (an introduced demand charge would be compensated
+by a lower energy rate). There are customers who have very low demand, no peak. We are trying to be fair
+within a class of customers and make sure that customers are charged appropriately for the “asks” they
+put on the system: one “ask” is energy, another one is demand. A user which both uses a high amount of
+energy and has a low demand will save on their bill. The goal is to fairly recoup costs among various
+customers within the same rate class.
+
+A technical measure of the demand, the Load Factor is shown on slide 1 page 14. The higher the demand
+at a given time, compared to overall energy use, the lower the Load Factor.
+
+With changes expected, it is possible that strain on the grid is going to increase, that load factors are going
+to go down. Where we have a lot of DERs and flexible loads (PV, batteries, heat pumps, EVs) we need to
+make sure the incentives are in place that encourage residents to use them in a way that does not
+increase stress on the distribution system. Currently, they are not. While a residential customer currently
+has a demand in the 1 – 10 kW range and a small commercial may have a demand of 10-30 kW, new loads
+can represent about 7.2 kW for a level 2 charger or between 60 and 350 kW for a level 3 charger. If the
+demands add up on top of each other, that means the Light department must upgrade the systems. If the
+residents can stagger the demand, then such an upgrade may not be necessary.
+
+The notion of demand is not well understood by residents now, but it is very important for MMLD and we
+need to educate our customers. It is important that customers understand this issue. As an example, the
+first customer on a given circuit that installs a level 2 EV charger introduces will probably not cause any
+problem on the local distribution transformer. This is probably the same for the second or third. But there
+is a level, may be the 4th or 5th customer when the transformer will not be sized adequately. The local
+transformer on top of the pole needs to be upgraded.
+
+JJY: Depending on how they are structured, demand charges can be a disincentive to the electrification
+that we are trying to encourage. The extreme cases where very strong demand is putting a strain on the
+distribution system, for example because a resident installs a level 3 charger, makes the case for a demand
+charge obvious. But in the same way, a “normal usage” case should not trigger additional charges. The
+
+                                                                                                        8/17
+question is what is “normal”, in other words when do we start to charge somebody for the extra demand
+that they are creating. A normal use should be a house that is being heated with a heat pump, where the
+EV is charging at night (certainly not at peak times). Residents who have electrified their houses and are
+trying to do the right thing and use electricity when general demand is low should not get penalized with
+an additional charge. From a policy perspective, we want to encourage electrification, but at the same
+time, spread the demand. We should be careful in how the demand charge would be structured to avoid
+these issues.
+
+LW: Are there any studies that show that demand charge help shift demand? UFS: I am not aware of any
+studies.
+
+SF: We have the Connected Homes program to help control devices. If you have a level 2 charger, must
+you join the program?
+Q: How much control does one customer or the utility have over the charging pattern? The Smart chargers
+that MMLD provides can modulate the charging pattern. Can they be used to avoid or lower a demand
+charge? A: Currently, they can go from Level 2 (standard) to level 1 during peak load periods. Whether a
+resident can modulate at a different time should be technically possible but whether it can be done in
+practice needs to be checked.
+
+LW: Where are current customers located that have EV level 2 chargers? JK: They do not have to register
+and we do not know currently. But we can potentially analyze the data pattern. At this stage, the issue is
+getting the data in our system; this is the discussion the Nexgrid system.
+
+
+Public EV Charging rate discussion
+Three sites in town have been equipped with public EV chargers (MMLD at Commercial street, Mary Alley
+parking lot and Round House road) since May of 2021; we now have data on 2500 charging sessions.
+The load factor is 3% range. To be strictly economical, one would fix the rates at $1.00 based on
+utilization. Based on residential EV charging LF, we are proposing to target a load factor of 20%, which
+would set the rate at $0.36, and we propose to apply that at all three sites, without differentiation (even
+though the three sites are not equal, Round House site has more users).
+
+Q: Is it possible to keep charging longer than 4 hours without a parking fee? Some cars need to be able to
+be there longer, and it may be possible to have the charger send a signal to the owner when the charge is
+done. UFS Chris Lund: If ChargePoint can assess charging fee after Idle time (time when the car is done
+charging, and just sitting in the charging parking lot). It is something we can look at with ChargePoint to
+see if the interface rules allow us to set these parameters.
+Q: Do we know anything about the residents that use the public chargers? A: We tried, but we don’t.
+
+JJY: There are some residents of Marblehead who do not have an option to charge at home. Because they
+have no dedicated parking spot or because they live in a condo association. We do not have in
+Marblehead a “right to charge” rule that other municipalities have, and some condo associations have
+refused to put in a level 2 charger. There is a need for a town wide conversation on public electric
+charging, where spots might be located, and fairness for these residents.
+
+LW: This rate is designed for to address the Load Factor issue, but is not looking at time of charging during
+the day. We want to encourage off peak charging. Can we have peak / off peak charging rates?
+
+
+
+                                                                                                       9/17
+Q: What data do we have on the current use? A UFS Chris Lund: We analyzed the 2500 charging sessions
+across the public chargers. Each port provided 160 kWh per month. The cost of service at that usage rate
+would be $1.00 per kWh. If the ports were used 100% of the time, based on a load factor analysis the
+appropriate $/kWh would be $0.27, still higher than the current rate. We are trying to find a happy
+medium between where we are and where we should be, to not discourage usage, but also be
+economical. 25% Load Factor is a target, which comes from residential charger utilization. We set this as a
+target by analogy with the residential charger load factor.
+On average, a session represents 14 kWh, for a total of 35,000 kWh sold, each session is an average of
+$4.50. $11,200 over the course of all of the sessions.
+
+AS: Given the amount of money we are talking about, we could say like Brookline: “all EV charging stations
+in town are free”. A: Some municipalities do offer free charging, but setting an artificially low rate can put
+a utility at risk over the long term. We are trying to catch it early on, when the adoption is still low, to set
+the right expectations to set the right pricing signals. So that the rates are fair to all the ratepayers.
+
+JK: There are quite a few residents who do not have the ability to charge at home. The town needs to have
+a discussion on how to address their needs. Round House road maybe one of the best place to create
+more EV charging in town. The transformer has been sized to be able to increase to 10 charging spaces
+(rather than the current 4). We built the station expecting growth there. We would like to fix the rates so
+that this growth is economical.
+
+JJY: I am concerned by the disparity we are introducing for the residents who are forced to charge on
+public charging, because they live in an apartment, a condo or in old town and do not have off the street
+parking, compared to people who are able to afford a house with off street parking, and will have access
+to cheaper residential rates. We would be making it more expensive to live in Marblehead. This is an issue
+that the Light Department cannot solve by itself, but we need to have a conversation with the town on
+this point. We need to get this right, not for the current 100 EVs we have in town where public charging is
+an exception, but for the thousands of people who will not have access to residential charging. This is a
+bigger conversation than the rate for 6 chargers.
+
+LW: Charging for parking when the charger is idle, when the car has finished charging, is more appropriate
+that a straight parking charge 4h after the start of the session. PHEV are going to be sitting longer, they
+charge at a lower rate. We do not want to discourage PHEV to stay the appropriate time to charge. So the
+charging may need to be longer than 4 hours. We should also introduce off-peak / on-peak rates if this is
+possible. A: These are questions that we can ask from Charge Point.
+
+AS: I wish we could talk to the people who are going to suddenly have to pay twice as much.
+
+SF: Another question is when the time of parking finishes. If somebody charges and the charging ends at
+10 pm or midnight, should they really have to move their car at that time to avoid the parking charge? And
+we are not likely to need the charging space at midnight for another vehicle: it may not be appropriate to
+charge parking then. A: Experience of a town in Michigan, where there was no parking fee at night. It
+became a problem when cars came and started to park overnight, first come first serve and it became an
+unofficial “reserved parking space”. In the end very few people were able to use the spaces. While this is
+not a problem in Marblehead yet, one should be aware of the possibility. There is a balance to be found.
+Q: ChargePoint recommended the 4 hours from their experience. This might make sense in a public garage
+type of setting, but less so in Marblehead?
+
+
+
+                                                                                                       10/17
+When the perimeter of MMLD is secured, will the public chargers still be available? They will be during the
+day, while MMLD is open, but not after hours: until 5 pm Monday thru Friday. We need an update from
+CZM to see how the space is going to be organized: can public chargers be installed outside of the
+perimeters where fishermen come and park during the day.
+
+
+
+
+                                               ----****----
+
+
+
+
+                                 Documents shown during meeting
+
+
+
+
+                        Agenda
+                         1. Approve Minutes of January 10th meeting
+                         2. Discussion & vote on selected rates & credits
+                        3. 2022 Operating Results
+                        4. Village 13 update
+                        5. Nexgrid ecoOne (metering system) update
+                         6. Utility-scale Battery Update - MMWEC Joint Action
+                         7. ISO-NE winter reliability- rolling blackout plans
+                        8. Distribution Manager Hiring update
+                        9. Committee reports
+
+
+
+                            Selected Rate & Credit reviews
+
+             • Residential & Commercial - Solar PV credit           Discussion & Vote
+             • Distribution Demand Charge - Residential and Small Commercial             D
+             • MMLD-owned Public Level-2 Chargers             D&V
+             • Qualified Low-Income Household Residential credit or rate           D
+             • Second-meter Residential rate        D&V
+             • (retire existing) Dedicated meter Residential EV charger rate -         D&V
+             • Time-of-use rate for Residential, Small Commercial & Commercial - D
+
+                                                                                                   11/17
+                      Rate-setting policy considerations
+
+• Data driven, based on the actual costs of delivering electric
+  service
+• Transparent, use available public/objective          data sources
+• Leverage the expertise and broad US and international
+  perspective of UFS
+• Align rates in support and adoption of energy efficiency and
+  clean energy best practices
+
+
+
+
+                      Solar PV rate - Residential & Commercial
+
+• Based on published sources
+     - NREL PV data - hourly solar PV production profiles for Marblehead
+     - ISO-NE Real-time Localized Marginal Price (LMP) for NEMA (node
+       where Marblehead is located)
+     - Same rate for residential and commercial owners
+
+
+
+
+                      Proposed Solar PV rates
+
+
+Residential    .099        .025    .124     .0785     NA        .0785
+Commercial     .08438      .025    .10938   ,0785     NA        .0785
+
+
+
+              Rate Notes:
+              - Based on annual prior year averages
+              - Rate to be updated annually
+              - No need to apply PPA, built into hourly rate calcs.
+
+
+
+
+                                                                           12/17
+               Why a Distribution Demand Charge?
+
+• It's another method to move away from our high reliance on
+  variable energy revenue (kwh) to recover our fixed costs
+           Comparing Fixed vs Variable Revenue & Expenses
+        100%
+        80%
+        60%
+        40%
+        20%
+         0%
+                2022 Expense 2022 Revenue 2023 Revenue 2024 Revenue
+                   ■ Energy-kwh (Variable)   ■ All Other (Fixed)
+
+
+
+
+               Why a Distribution Demand (kw) Charge?
+
+• To recover the capital costs needed to grow and maintain the
+  capacity of MMLD's electric distribution system
+• Ensure equity across customers within each rate class
+  - Anticipate higher kw demand with lower load factors from level 2
+    and 3 EV residential and commercial chargers
+  - Continued demand with lower load factors at solar PV accounts
+  - Customer financial incentive to co-operatively manage solar PV,
+    battery storage, EV charging and heat pumps with MMLD
+
+
+
+               Historic and New KW Demand Ranges
+
+          Customer Category             KW Demand Range
+          Residential                   1-10 KW
+          Small Commercial              10-30 KW
+          Large Commercial/Ind.         30+ KW
+
+          New Electrification Measures
+          Level 2 EV Charger            7.2KW
+          Level 3 EV Charger            60-350 KW
+
+
+
+
+                                                                       13/17
+                    Load Factor
+
+      Load Factor=              Energy usage (monthly kwh/hours in a month)
+                     Highest momentary peak (15 minute) load (kw) in a month
+
+
+• Average MMLD residential customer uses 662 kwh/mo
+• Average month 30 days x 24 hours= 720 hours month
+• Compare impacts of peak loads of 3 kw, then 10 kw
+• LF = (662/720)/3                                 LF = (662/720)/10
+     = 31%                                             =9%
+
+
+                  Increased kw Demand Requires Increased
+                  Distribution System Capacity
+
+  • Village 13 upgrade - 50% increase in capacity. $8.8 million cost
+  • 22 circuits, ~1,000 transformers,
+  • Primary conductor wire - provides distribution throughout town
+  • Secondary conductor-                 distributes electricity from a transformer to a
+    customer's home
+  • Supply Chain Problems Exist Today - Transformers ("cans on poles"),
+    are built to order not inventoried. Lead times is now a major
+    problem. 4-6 weeks lead times are now 1-2 years.
+  • Major supplier GE is not accepting quotes in 2023, building for 2024
+    delivery.
+
+
+
+                 MMLD owned Public EV Chargers
+
+               ChargePoint Rate for Utility Owned 7.3 kW, level 2
+                           electricvehiclecharger
+                                                                     Rate
+                                                                     - Project current 3% Load
+             Monthly kWh           LF               $ per kWh
+                     160                  3% $                1.00
+                                                                       Factor to a future target LF
+                     533                 10% $                0.47     of 20%
+                     799                 15% $                0.40   - $.036 per kwh all hours, on
+                   1,066                 20% $                0.36
+                   1,599                 30% $                0.32     all three sites
+                   2,132                 40% $                0.30   - After 4 hours add $5.00
+                   2,665                 50% $                0.29
+                                                                       parking
+                   3,197                 60% $                0.28
+                   3,730                 70% $                0.28
+                   4,263                 80% $                0.27
+                   4,796                 90% $                0.27
+                   5,329                100% $                0.27
+                                         20% $                0.36
+
+
+
+
+                                                                                                      14/17
+             Low Income Household Rate
+
+• Leverage existing Neighbors Helping Neighbors program and
+  relationship with North Shore Community Action Programs
+  (NSCAP)
+• Provide funds to NSCAP for a 10% processing fee
+• NSCAP defines eligibility criteria, with our input:
+  - Household income, family size, household structure, public housing,
+    hhld member ages
+• NSCAP allocates funds, provides benefits check to MMLD to
+  credit beneficiary accounts
+
+
+
+
+             NeighborsHelping NeighborsResults
+
+• MMLP Fund $5000 from the MMLD
+• $3092 raised through donations
+
+• NSCAPused $500 for admin
+• We have paid out $7483.88 in benefits, leaving $45.12 .
+•
+• We helped 27 households/52 people. Half of those households live
+below the federal poverty level.
+
+• Fuel Assistance for FY22 (ending September 2022)
+• NSCAPserved 506 households/10263 people.
+
+
+
+              Unique Household Income Distribution
+             40%
+
+                             Household   Income    - US Census        2018 ACS data
+             35%
+
+                                         ■ Mass        ■ Marblehead
+                                                                                  ,.,.
+              5%
+
+
+
+             20%
+
+
+
+             15%
+
+                                                                            ""
+
+
+
+
+                                                          II I
+             10%
+
+
+
+              5%
+
+
+
+              0%
+                    $0-SOK   $50-lOOK     s100-i1soK      $150-200K          $200+K
+
+
+
+
+                                                                                         15/17
+                                                                       Hou,        kWh         Hourly$  AveracecenbperrtWh      MarketHourly$ per kWh         ...,
+                                                                                                                                                           .....
+                                                           OffPuk
+                                                           OffPuk
+                                                           OffPHk
+                                                                                               $
+                                                                                               $
+                                                                                               $
+                                                                                                                        0.0000 $
+                                                                                                                        0.0000 $
+                                                                                                                        0.0000 $
+                                                                                                                                                0.0751
+                                                                                                                                                0.07•6
+                                                                                                                                                0.071!il
+                                                                                                                                                           TOUPll!flod
+                                                                                                                                                           IOffPuk
+                                                                                                                                                            on,, ..
+                                                                                                                                                                         '"",.,
+                                                                                                                                                                            I
+                                                           OffPuk
+                                                           OffPuk
+                                                           Off Pe-                         .
+                                                                                           0
+                                                                                               $
+                                                                                               $
+                                                                                               $
+                                                                                                   0.01
+                                                                                                   0.)4
+                                                                                                                        0.0000 $
+                                                                                                                        0.068a $
+                                                                                                                        0.0761 $
+                                                                                                                                                0.0714
+                                                                                                                                                0.0711
+                                                                                                                                                0.0792
+                                                                                                                                                           5tor1te
+                                                                                                                                                           TOUPerlod
+             lOS.40
+
+MonthlyNOAARTu.1P $
+              12.15
+                                               o.011sl
+
+                               Ave-.. ecentsperrkWh
+                                               0.1574
+                                                           OffPHk
+
+                                                           Off-
+                                                           OffPuk
+                                                                                          ..
+                                                                                          25
+
+
+                                                                                         117 $
+                                                                                               $
+
+                                                                                               $
+                                                                                                   1.15
+
+                                                                                                    5.21
+                                                                                                    9.16
+                                                                                                                        0.0746$
+
+                                                                                                                         0.0804 $
+                                                                                                                         0.01« S
+                                                                                                                                           ◊
+                                                                                                                                                0.0869
+
+                                                                                                                                                 0.0942
+                                                                                                                                                 0.0115
+                                                                                                                                                           I
+                                                                                                                                                           OffP ...
+
+                                                                                                                                                           OnPo•
+
+              10.D                             0.1159      OffPuk             10         153 $     11.97                 0.07&4 $                0.0791
+               7.96                            0.0615      OffPuk                        Ill   $   14.07                 0.0777$                 0.0790                     (
+               6.73                            0.0514      OffPuk
+                                                                                         '"                              0.0765$                 0.0766
+
+                                                                              ..
+                                                                              12               $   13.94
+                                                                                                                                                 0.0749
+               9.91
+               9.13
+              12.13
+                                               0.0671
+                                               0.0619
+                                               0.0145
+                                                           OffPult
+                                                           OffPHlt
+                                                           OffPuk
+                                                                              13
+
+
+                                                                              15
+                                                                                         "'
+                                                                                         ,,.
+                                                                                         "'
+                                                                                               $
+                                                                                               $
+                                                                                               $
+                                                                                                   13.S6
+                                                                                                   12.46
+                                                                                                   10.26
+                                                                                                                         0.0751$
+                                                                                                                         0.077] S
+                                                                                                                         0.0766$
+                                                                                                                                                 0.0761
+                                                                                                                                                 0.0711
+              ll.ll
+               6.77
+                                               0.096]
+                                               0.0512
+                                                           onPe.tl
+
+                                                           °"'""
+                                                                              16
+                                                                                          .,
+                                                                                           17 $
+                                                                                               $
+                                                                                                    6.12
+
+                                                                                                   '·"
+                                                                                                                         0.0781$
+                                                                                                                         0.0&45$
+                                                                                                                                                 0.01]7
+                                                                                                                                                 0.0980
+               4.76                            0.0510                         II                                         0.1112 $                0.1201
+
+               '·"                             0.0S-ta     °"'""
+                                                           OnPeak                         "    $
+                                                                                                   0.16
+               7.13                            0.1073      on,,a
+                                                           0n, ...
+                                                                              "
+                                                                              20
+                                                                              21
+                                                                                             I $
+                                                                                               $
+                                                                                               $
+                                                                                                                         0.1239$
+                                                                                                                         0.0000 $
+                                                                                                                         0.0000 S
+                                                                                                                                                 0.1162
+                                                                                                                                                 0.1069
+                                                                                                                                                 0.0916
+                      HEMA2012 IIIT_LMP                    OnP1ak             n                                          0.0000 $
+                                                                                                                                                 '·""'
+                                               0.0715      OffPNlc
+                                                           Off Pe~k           ,.
+                                                                              "                                          0.0000 $
+                                                                                                                         0.0000 $
+                                                                                                                                                 0.0111
+                                                                                                                                                 0.0752
+
+
+
+
+                                    Financial Operations- Jan 2023
+
+  • New residential, small commercial and large commercial rates
+    being rolled out in January
+  • Mild December temps - positive impact on Dec net operating
+    income
+  • Still waiting on final 2022 OPEB ($300K in budget) and Pension
+    contribution ($816 in budget) charges ...typically provided in
+    Nov
+  • 2022 results includes the $330 Pilot Payment
+  • Our operating cash position remains solid $5.867 MM
+
+
+
+                                     Year-end* 2022 Operating Statement
+                                                                                                                                             (S000'sl
+                                                   Total Projected kwh Revenue                                                               $19,658
+                                                   Street Lighting                                                                              $125
+                                                   Misc Revenue                                                                                     ill
+                                                                                   Total Revenue                                             $19,811
+
+                                                   Total Projected Expenses•                                        $19,629
+                                                   PILOT Payment to Town                                               $330
+                                                                               Total Expenses                                                $19,959
+                                                                                  Net Income                                                   -$148
+                                                   Adjustments:
+                                                   Rate Stabilization Fund Transfer                                        $98
+                                                   APPA DEEDGrant Proceeds                                                 $.2ll
+                                                               Total Adjustments                                                                  $148
+                                                                      Adjusted Net Income                                                           $0
+
+                                                   • Does Not Include final Pension and OPEB expenses
+
+
+
+
+                                                                                                                                                                                  16/17
+                         Village 13 update - Jan 2023
+
+• Virginia Transformer's internal bid review is now complete
+• Contract negotiations with Virginia Transformer are underway
+• Switchgear vendor MCP - all three factories are currently a
+  cyberattack target- computer-controlled mfg operations have
+  stopped
+• Request Board vote on contract for Salem ROW improvements
+  engineering design, not to exceed $90,000.
+
+
+
+
+                        Village 13 Upgrade - Budget review
+
+                                                   July 2022     Dec 2022     Jan 2023
+      Cost Category                                  Cost$        Cost$        Cost$      Vendor         Status               Bid
+      Manufacture New Switchgear                    $4,347,292   $4,347,292               MyerCP      mostly firm bid        2022
+      Manufacturer New Transformers (2)             $1,700,000   $2,632,446                TBD           Estimate            2022
+      Site Construction Contract                    $1,000,000   $1,000,000                TBD           Estimate            2023
+      Testing and Commissioning                        $90,000      $90,000                UPG           Estimate            2023
+      Engineering/Site Investigation                  $275,000     $275,000                PLM           Estimate
+      COntingency                                     $125,000     $125,000                              Estimate
+      Make Ready ROW access -design                    $50,000      $50,000     $90,000                  Estimate            2022
+      Make Ready ROW access - construction
+      Make Ready Tioga Way storage area              $250,000      $250,000                              Estimate            2022
+                                        subtotal   $7,837,292    $8,769,738
+                                                                                                   Execute a $0 payment
+                                                                                                   shared savings option,
+      Utility Scale battery                                so                                           not purchase        2024-25
+      Upgrade Clifton substation                                                                     Specifications tbd      2025
+      Spec & Install substation-level SCA.DA                                                          Justification tbd      2025
+                                        subtotal           $0
+                                          Total:   $7,837,292
+
+
+
+
+                          Board & public participation on GM committees
+
+
+• Utility-Scale Battery Electric Storage- MMWEC Joint action
+  - PPAdeal structure, deal terms, siting & safety, China sourcing
+  considerations
+• US Inflation Reduction Act- Implications and Opportunities for
+  MMLD
+  -      What grant opportunities exist? Timetables and deadlines
+
+
+
+
+                                                                                                                                      17/17
+

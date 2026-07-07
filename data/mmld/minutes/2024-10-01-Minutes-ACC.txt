@@ -1,0 +1,925 @@
+Light Commission October 1st, 2024 meeting minutes
+To:              Light Commission: Commissioners
+                 Light Department: J. Kowalik, General Manager
+From:            Jean-Jacques Yarmoff, Secretary
+Date:            December 16, 2024
+Re:              Light Commission Public Meeting, October 1st, 2024
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:02 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+Participated in meeting:
+     Commissioners:         Commissioners Frechette, Hull, Smith, Wolf and Yarmoff participated in person.
+     Light Department:      General Manager, J. Kowalik; Finance Manager, M. Barrett, Manager of Technical
+                            Operations, C. Coleman;
+      Invited:              Tom Barry, Director of Energy Markets, Massachusetts Municipal Wholesale
+                            Electric Company (MMWEC).
+
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Approval of minutes
+
+Vote #2024-16           Motion to approve the minutes of the September 10, 2024 public session was moved
+                        by Commissioner Frechette and seconded by Commissioner Hull. Unanimous.
+
+Vote #2024-17           Motion to approve the minutes of September 10, 2024 executive session was moved
+                        by Commissioner Frechette and seconded by Commissioner Hull. Unanimous.
+
+Comments from the Public
+Commissioner Yarmoff reported the request of Ocean Avenue residents, related to the work that MMLD
+did in 2019 to bury electric lines. Their attorney, Robert C. McCann, has set an escrow fund for the
+residents to pay for this service. Work has been completed, the attorney is retiring and would like to
+close the account and return the remainder of the money to the residents. The General Manager
+commented that while the work has been completed, some legal documents have not been finalized:
+MMLD must have an easement to the material (transformers) that are on the private properties.
+
+
+Outstanding items from previous meetings
+National Grid capital expense call. The General Manager reminded the board that this call for capital
+investment in a Hydro Quebec transmission line is part of prior agreements that MMLD and MMWEC
+entered into in prior years: it is not discretionary. Commissioner Yarmoff remarked that the agreement
+has other benefits besides the straight financial returns. This expenditure is not discretionary on the one
+hand, and is good for MMLD on the other. Further details will be discussed in executive session.
+
+                                                                                                      1/13
+Like every contract we have, we must decide whether these are still important to MMLD, and if not,
+possibly find acquirers for our positions or otherwise have our positions evolve.
+In the case where Capital Expenses are involved, it is necessary for us to compare where we invest our
+scarce CapEx dollars: a plan for capital expenses is needed.
+
+MMWEC Energy Market and Carbon Free projects review
+Load forecasts and hedge contracts. Tom Barry, Director of Energy Markets at MMWEC presented the
+5-year load forecasts, hedged contracts and the evolution of carbon-free supply contracts to 2050 for
+MMLD. See slides pp 5 - 8.
+Hedging that is done on behalf of MMLD to guarantee the best possible supply contracts, in terms of
+price but also in term of environmental attributes. Hedges allow MMLD to manage pricing risk. Every
+system has a different appreciation of risk and how to handle it: some systems want no open position
+and are fully hedged. In the case of MMLD, hedged contracts represent ~ 25% of power contracts, while
+open positions represent less than 19%. The rest of the power is provided to MMLD under fixed
+contracts. One can also look at hedges during time of day: MMLD has less hedges during on-peak than
+during off-peak periods. The interested reader is encouraged to refer to the slides below and listen to
+the presentation available on-line.
+The slide presenting the Carbon-Free forecast 2023-2050 shows that the NextEra contract starting in
+2028 will allow Marblehead to meet its goals of 70% carbon free electricity by 2028. The goal of 85%
+carbon-free electricity by 2033 will require the completion of many projects that have been initiated.
+There are many ways to get there, even though this will take significant work. These intermediate
+targets for 2028 and 2033 were adopted in 2023, anticipating a 1.7% load growth rate (rather than 2% in
+this slide), aiming to get the Department to zero net emissions by 2040.
+Currently Marblehead is also well placed to exceed the state-mandated emission targets until 2039.
+Off-shore wind. MMWEC participated in the solicitation organized by the Commonwealth in March of
+2024, and is now approved for a 50 MW power allocation option for its members, in a permitted
+800 MW project. Further action depends on the State’s decisions. MMWEC is putting in place Non-
+Disclosure Agreements as there are on-going negotiations, but price is still not known at this stage.
+Berkshire Wind. The Berkshire Wind project is owned by a separate entity called Berkshire Wind Power
+Cooperative, with MMWEC and 16 member utilities participants. It started commercial operation with
+Berkshire I in 2011, with 10 turbines / 15 MW and a 25% capacity factor, while Berkshire II started
+operation in 2019 with an additional 2 turbines of 2.3 MW each, and a capacity factor of 35%. Total
+power capacity is 19.6 MW.
+
+General Manager Updates
+Village 13 Update. The company manufacturing the switch gear is now telling us that shipment is
+anticipated to be arriving in Marblehead in late December. The bid documents should be published next
+week and we can expect to select an engineering firm for the construction of the base of the switchgear
+by November.
+
+Tioga Way update. LightShift will propose a drawing of the expected configuration of the 5 MW / 20
+MWh battery configuration at the site. The Holden Municipal Light Plant is inviting us to visit their
+facility. Tom Barry stated it was an impressive, compact facility. Two Commissioners at least expressed
+interest in participating in such a visit, which the General Manager is going to organize.
+                                                                                                    2/13
+80 Commercial Street Building: Bids for repairs of the 80 Commercial Street Building roof and North
+wall windows have been received, and the work attributed to Campbell Construction Group LLC of
+Peabody. Windows on the East wall, facing the harbor, also leak, but are not included in this bid.
+
+Vote #2024-18            Motion to approve the expenditure of $283,839 to repair the 80 Commercial St
+                         building roof and walls, and award the contract for the repairs to the winning bidder
+                         Campbell Construction Group LLC of Peabody was moved by Commissioner Yarmoff,
+                         seconded by Commissioner Frechette. Unanimous.
+
+
+DOE block grants: MassCEC is administering a DOE program stemming from the infrastructure bill (IIJA)
+to enhance the resilience of the electric grid. Applications for these grants have to be filed by October 4.
+MMLD will propose a project to enhance the reliability of the 23 kV feeder lines into Marblehead:
+replace some wood poles on the Salem Right of Way by metal or composite poles, and in a second
+phase underground the lines from the Lead Mills 1,800 feet toward West Shore Drive. MassCEC will
+request that the local utility pay a share of the project. The application needs to include a commitment
+to that effect. The General Manager is asking for a board vote to confirm this commitment.
+
+Vote #2024-19            Motion to approve MMLD’s funding its share of project Phase I, or project Phases I
+                         and II, if approved by MassCEC to receive a federal grant was moved by
+                         Commissioner Yarmoff, seconded by Commissioner Frechette. Unanimous.
+
+ToU subcommittee: IT Manager Chris Dumbar, the General Manager have been working with NexGrid
+to extract data on a semi-production basis into an AWS database. We are confident that we are getting
+good data reads from the meters, that the data are transferred to the Northern data customer
+information system which translates that to bills and addresses. But we do not want to touch that
+production system which is working well. Hence the new database, a development environment that
+has similar data that will allow us to conduct analyses to look at historical data and model different
+scenarii. Next meeting of the Subcommittee is in two weeks.
+
+Bilateral agreements, hedge targets and current status: Further to Tom Barry’s presentation, the
+General Manager presented the slide enclosed p 13 to highlight the targets and current status of the
+bilateral hedging contracts, showing prices, month by month, and differentiating between peak and off-
+peak prices. While the difference between the peak and off-peak is highest in winter and summer, this
+difference is historically low. It is also noteworthy that the highest prices are now in the winter months.
+There are price/risk balances to strike which incorporate both climate uncertainties (are we going to
+have a cold winter?) and geopolitical uncertainties (is the global demand / supply for gas going to
+change drastically?) The market supposedly incorporates all these risks. Rather than try to second guess
+the markets, MMLD’s policy is to aim for 80% hedges.
+
+Recruiting update: MMLD has two open positions and is actively recruiting an Engineering Project
+Manager and an Energy Efficiency Marketing Program Manager. The lead candidate for the Engineering
+Project Manager position has declined our offer. MMLD is resuming interactions with the executive
+search firm. MMLD has received nearly one hundred responses to the Energy Efficiency Marketing
+position and is working with the town’s HR director to sift through the resumes. Lisa Wolf mentioned
+that she is one of the applicants for this position.
+
+
+                                                                                                       3/13
+Executive Session
+During the Light Commission Meeting of October 1st, 2024, Chair Lisa Wolf proposed to vote on a motion
+to meet in Executive Session to discuss trade secrets or confidential, competitively-sensitive or other
+proprietary information when such disclosure will adversely affect our ability to conduct business in
+relation to other entities making, selling or distributing electric power and energy, and to conduct
+strategy sessions in preparation for negotiations with nonunion personnel or to conduct collective
+bargaining sessions or contract negotiations with nonunion personnel, with the intent not to return to
+open session.
+
+Motion was moved by Commissioner Yarmoff and seconded by Commissioner Frechette.
+Votes: Simon Frechette: Yes; Mike Hull: Yes; Adam Smith, Yes; Lisa Wolf: Yes; Jean-Jacques Yarmoff: Yes.
+
+Executive Session started at 5:32 pm.
+
+The Executive Session concluded at 7:05 pm at which point a motion to adjourn was proposed,
+seconded and, after a roll call of the commissioners voting unanimously in favor, adopted.
+
+
+
+                                              ----****----
+
+
+
+
+                                                                                                   4/13
+Documents presented during the October 1st, 2024 Light Commission Meeting
+
+
+              Agenda
+
+ 4:00 Call to Order, Land Acknowledgement,        Minutes, and Public
+ Comments
+ 4:10 Outstanding items and requests from last meeting
+ 4:30 Tom Barry, Energy Markets Director, MMWEC
+ 4:45 General Manager updates
+  5:15 Executive Session. Not to return to Open Session
+ Adjourn
+
+
+
+
+   Who am I?
+   Why am I here?
+
+
+
+
+    Why am I hereTODAY?
+             • Power Supply
+                • Hedged Positions
+                • Carbon Diversification
+             • Offshore Wind
+                • Basic Terms
+                • Participation Opportunities
+             • Berkshire
+                • Frustrations
+                • Economics
+                • Future
+             • Wilkins Diesel Unit
+                • Basics
+                • More To Come
+             • Hydro Quebec Capital Calls & Dividends
+
+
+
+
+                                                                            5/13
+                                                                         S Year Load Forecast
+                           ,_....                                   -202,t-2025         202,-202.,
+
+
+
+
+                                                     Month
+                                                    -ry
+                                                    f ...........
+                                                     March
+                                                       Aptil
+                                                       Mn
+                                                                        5 Year Load Forecast
+
+
+                                                                       8,880
+                                                                       8,60
+                                                                       7,206
+                                                                       7,439
+                                                                               8,103
+                                                                               8,755
+                                                                               7,285
+                                                                               7,486
+                                                                                        2026
+                                                                       10.163 10.335 10.502
+                                                                                       S.831
+                                                                                       s.sn
+                                                                                       7,365
+                                                                                       7,ill
+                                                                                                      -
+                                                                                                     10.669
+                                                                                                     8,960
+                                                                                                      8.998
+                                                                                                      7,.w.i
+                                                                                                      U76
+                                                                                                               2928
+                                                                                                              10.848
+                                                                                                              9,413
+                                                                                                              9.111
+                                                                                                              7,513
+                                                                                                              7,618
+                                                       June            11,210     a.m  S.345          8,410   8,476
+                                                        Julw           11,442 11,Sll   11,633         11,682  11,700
+                                                     Ao~usl            10.741 10,8A1 10,959           11,095  11,233
+                                                   Septembe<           8,268   S.360   8,44)          S.525   8,599
+                                                    O<tobe,            7,578   7,662   7.736          7,811   7,903
+                                                   November            8,249   8,.379  8,512          8,646   a.ns
+                                                   December            9.634   9,816   9,990          10,172 10.319
+                                                     Tot.I            106,454 107,421 108,724        109.990 111.510
+
+
+
+
+                                                   5 Year Forecasted Hedge Portfolio
+               -ResoeceGt1'1e'abon   H«JoedPoom'    -AcklbonalMWi>Hedge            -~openPosbon
+      12,500
+
+      11,250
+                                                                                                                       "'"'
+      10.000
+
+      ..,,.
+i
+~
+      1;<)0
+
+g     6,250
+
+§
+iii
+      s,m
+!2 3.7SO
+      2,500
+
+       1,250
+
+
+
+
+                                                                                                                         6/13
+                                                                       C.E.T. Cost Forecast by Asset
+                                       R~o,uce                        Ill                                    up,Kity S                        Enn-gyS            Tro11Mmiwon
+                                                                                                                                                                           S                          OthN S                     Tot.a S              Tot.tJS/Mwh
+                      - Resources in front of Meter
+                           20l1lA                                                  1,53.1.063                    116,4(,().00                    1,559.89                                                                          118-019.89                  n.03
+                            Brricshire
+                                     Wind                                          Z,560.598                     602.376.36                      z.=                                                                              604,608.76                  236.12
+                            BerkshireWindPhase:2                                   2.064.257                     252.38352                        1,745.18                                                                        254,128.70                  123.11
+                            EagleCreek                                             Z,184.696                                                    135,451.12                                                                         135,451.12                  62.00
+                            Fiml19htHydro                                          7,566.512                                                   619,601.01                                                                         619,601.01                   81.89
+                            HfflCoclcWind                                          2.366.557                                                    129,894.20                                                                         129,894.20                  54.89
+                            Hedged Pow.<                                          25,411.000                                                  1,n4,225.62                                                                        1,714,225.62                  67.46
+                            HydroQuebecI and II                                                                                                                              (33,645.24)                                           (33,645.24)
+                            MarbleheadDiesel                                                                      37.2(10.00                                                                                                        37,200.00
+                            Millstone:                                            16,996.607                     54().747.09                    145,279.05                   ZZ,049.04                                            708,075.18                   41.66
+                            NYPA                                                   S.344.127                      61,434.84                      41,053.10                  175,347.14                                            277,835.08                   33.30
+                            OpenPositionPower                                     23,124.593                                                  1,280,287.40                                                                       1,2!0,287.40                  55.36
+                            Project 2015A                                                     1i1,•51.n                                                                                                                            131,451.72
+                         Seabrook                                                  14,302.530 367,296.11       75,618.87                                                     1,119.03                                             444,034.01                   31.05
+                         StonyBrooklntennediatt                                               391,535.42                                                                    17,281.77                                             408,817.19
+                         StonyBrookPHking                                                      73,931.05                                                                     S,103.n                                                79,034.77 5
+                     Resources in front of Meter Tobi                        106.453.539 S 2,57',816.11 S ,.1,6.947.85                                                    187.255.,6                                           6.909,019-'2 s                 64.90
+
+                      =upocity
+                            Hedged Capacity                                                                    209,250.00                                                                                                         209,250.DO
+                            ISOCapacityNd Charge                                                               537,173.95                                                                                                         537,173.95
+                            ISONd ForwardReserve                                                                 9,969.28                                                                                                           9,969.28
+                     CapadtyTo..,                                                                       s     7S6.393.23                                         s                                                               7S6.393.23 s
+
+                      -Trvismis.sion
+                            ISO OATTCharg• (RNS)                                                                                                                 s   3,0Bl,457.58                                                3,0Bl,457.58
+                            Local Ndwork S.once (LNS)                                                   s                                                        s     176,085.96                                        s         176,085.96 s
+                     Tr.ansmiuion
+                                To~                                                                     s                                                        S 3,258,SO.5' s                                         s 3.2SS.5O.5'            s
+                      -Othe<
+                         ISOExpenses                                                                                                                                                              s 473,957.88                    473,957.88
+                         MMWEC  ServiceCharges                                                                                                                   s                                s  150,213.13                   150,213.13 s
+                     Other Tobi                                                                                                                                  s                                S 62.. 171.01                  624,171.01 s
+
+                     Gr-.ndTotal                                             106.453.539 S 3,331,209.34                                 S 4,146,947.85           S 3.445.799.00 S 62,, 171.01                                  11,S48.127.20      s           108.48
+
+
+
+
+ MU'ID3ot1                                                      ....
+                                                                  ,.
+                                                                 ....                  ...
+                                                                                   Oct•ll  _,.
+                                                                                           .,. ...                             oec-z•
+..,_,,,.,               W6HfoCe"
+                                                                                               ,.,.
+   ""
+                     7118• M6 Hedge"
+                      TMJetedHedge9'
+                                                                 81%
+
+                                                                 ""'
+                                                                                       ,..
+                                                                                       ""' ...
+                                                                                            ,. ..
+                                                                                               ""'
+                                                                                                           76%
+
+
+
+                                                                                                             ... ...
+  -                                                                                    ....
+                        Sd6Varl1na:
+
+   ""'                h:8•hl6V¥ianct                             "'
+                                                                 1%                    "'
+                  RK.PHkPutthaseVolume
+
+
+                                                                        ....
+                                                                                                                                         .. -
+                 Rec.OffPeak PurchaseVolume
+                                                                          ,.
+                                                                                        0""                   0...
+                                                                                                                 __,.
+                                                                                                                                       0.40
+                                                                                                                                                   ,_,.                   ,.._,.                 ....,. .....
+                                                                                                                                                                                                         ...
+                                                                                                                                                                                                          ,.
+
+                                                                                                                                                                                                                  .. -
+MIP
+..........,
+                                                      ,.._25                              Mar-ZS
+                                                                                                                                       "'~"                                                                                       Od-2S         -25
+                                                                                                                                                                                                                                                                .,,.
+                                                                                                                                                                                                                                                               -25
+
+                                                       .,,.                 ""'
+                                                                                              ...                ""'                                                                                                                             85%
+                    S..:16Hedp"
+                                                       ""                                     '"'                                       ""                                  ""                    ""                               ""
+                  Mt2rt6Hed&e"
+                                                                            ""                ""                 .,,.
+                                                                                                                 ""                     81%
+                                                                                                                                                    ""                      ""                    81%
+                                                                                                                                                                                                                  ""                              ""            ""
+  m                T¥ptedH~e"
+                    S..-16V•ial'lal                    ""'
+                                                       .,.                  ""'
+                                                                                               "'
+                                                                                                                                        ""'         ""'                     ""'                   ""'            ""'               ""'
+                                                                                                                                                                                                                                   .,.           ""'            ""'
+  ""'              M•h16Vari¥1ai                       "'                   "'
+                                                                            ...               -1%                 "'
+                                                                                                                  -••                    1%         "'
+                                                                                                                                                    ·1%                     "'                    "'
+                                                                                                                                                                                                  11'             ...              "'            '"
+                                                                                                                                                                                                                                                 ...             "'
+                                                                                                                                                                                                                                                                ·1%
+
+  ""'          Rec.l'Qk Pun:h.iseVol1,M11t                                                                                                                                  "'
+                                                                                                                                                                                                   ....
+                                                                                                                         .. ... - . :..
+  '°"                             ,_...,
+              Rec.Off Pe~ PurCNseVolume                        0.10           010                     0.10               010                              0.10
+                                                                                                                                                            ,_,.                                     ,.                 0.10                           0.10          010
+
+
+
+
+                                                                                                          . -..... .. ...
+                                                                                                                        .... ...
+  ML11na11
+ ..._,,,,,                     S.-16Hed&e"
+                                                                        Jan-26
+                                                                                 ,..        feb,.26
+
+                                                                                              ""  76%
+                                                                                                             Mat•2fi            --2,
+                                                                                                                                         ,.. ,,.   26                              Jul-2'
+
+                                                                                                                                                                                            .,.           ""
+                                                                                                                                                                                                                 -20
+                                                                                                                                                                                                                         ,,.     Oct-26
+
+                                                                                                                                                                                                                                       ""
+                                                                                                                                                                                                                                                NOY-26
+                                                                                                                                                                                                                                                       ,,.     0K·26
+                                                                                                                                                                                                                                                                        76
+
+                                                                                 ....                                                    ....                         '"'                   '"'
+      w
+                           7x8•2x16Hedge"
+                            Targeted Hedge"
+                                                                                 ... """"'... ....
+                                                                                 '"'          ....
+                                                                                                                       81%
+                                                                                                                                         ""'
+                                                                                                                                         ..,. """"'
+                                                                                                                                              .,.                     ""'                    ,.
+                                                                                                                                                                                            ""'            .,.           .,
+                                                                                                                                                                                                                         ""'
+                                                                                                                                                                                                                                       .,,.            ""
+                                                                                                                                                                                                                                                       .,
+                                                                                                                                                                                                                                                       ""'                  ,
+      -
+                               Sitl6V•mnce                                                                                                                                                                                                ...
+                            h8+-2.r.16Varlance
+      ""'               Rec..l'N•PurchaseVolUfflll!                             "'                "'                 '"                              "'                                     '"                                            "'            "'                "
+      '°"                         .......
+                       R«.Off~PurchaseVolume                                010
+                                                                                            _,,
+                                                                                             0.10
+                                                                                                            .... 0.10
+                                                                                                                     ....              010        0.10
+                                                                                                                                                                     ,,                                 ,,       ...,,
+                                                                                                                                                                                                                                                  0.10
+
+                                                                                                                                                                                                                                       ,.,. ,.,,.,,
+                                                                                                      ...
+                                                                                                           - ......- .... ......... -... ...::
+  MLI Datl                                                              Jan-27
+                                                                                 ..,.             ,.,.
+                                                                                                             Mar-27             Al:K•l7        Mav-27
+                                                                                                                                                                      ..,.         Jul•Z7
+                                                                                                                                                                                                  ,.. ""                         Oct-27                        Dec-27
+                                                                                                                                                                                                                                                                        .,,
+ ~rblthHd                      5.-16~"
+                            7x! + 2.116Hedct"
+                                                                                '"'               ...
+                                                                                                  ""'                  ""                ""
+                                                                                                                                         ""         '"'
+                                                                                                                                                    ""                ....
+                                                                                                                                                                      ""
+                                                                                                                                                                      .,..
+                                                                                                                                                                                            ""
+                                                                                                                                                                                            .,,. '"'                                   .,,. ""
+                                                                                                                                                                                                                                       ""       '"'
+
+      -
+      ""                                                                        ""'                                    ""'                .,,. .,.,.
+                                                                                                                                         ""'                                                      ""' .,,,.
+                                                                                                                                                                                             ,,. .,,,.   ""'                                    .,,,.
+                             TartttedHed&e"
+                                                                               _,.,.              .,.,,.              _,,,.
+                               sx1,v,r1,nc1
+                             h8•2xl6V,rlance
+                                                                                                                                        ·1"'
+                                                                                                                                                ..,.                                                    -2•"
+                                                                                                                                                                                                                                      -24"
+                                                                                                                                                                                                                                                      .,              -31'
+                                                                                                                                                                                                                                                                      .u,
+      ""'               Rec.PeH Purchase  Volume                                ""
+                                                                             ,.so
+                                                                                   '·'°
+                                                                                                  -2•"                 -16"
+                                                                                                                     3.00              1...       2.00
+                                                                                                                                                                      ·2S"
+                                                                                                                                                                     ,.so             8.70
+                                                                                                                                                                                                       ,7.70
+                                                                                                                                                                                                                                      •ll"
+                                                                                                                                                                                                                                    2.90          3.70
+
+
+                                                                                                                                                                                                                   .,,. ,..
+                                                                                                ,_.,
+      '°"              Rec. Off PHk PurcNse Volume                           3.70
+
+
+                                                                                 ...
+                                                                                  _,. Mar-21      ,. M-28 ..,. ....
+                                                                                                                 2.SO1.70
+                                                                                                                                ....   020        0.80                                S.30
+                                                                                                                                                                                                   .... 4.70
+                                                                                                                                                                                                 ,. ...,.
+                                                                                                                                                                                                                                    LlO           L.,
+                                                                                                                                                                                                                                                ,.,,.,.
+                                                                                                                                                                                                                                                                     ,so
+
+ ..._,,,.,
+  MLPID.a1t
+
+
+
+
+      ""
+      ""'
+      ,.,.
+      '°"
+                                  .,.ffld
+                               S.16Hed&t"
+                            7x8+2ll.16Htdgt"
+                             n,rgetedHedae"
+                               Slcl6Variance
+                            71C8•b16Vilrlance
+                        Rec..Ptak.Purchase:Volume
+                                                                        Jan-21
+
+                                                                              ,..
+                                                                                 l"'
+                                                                                     ""
+                                                                                     ""
+                                                                              ""' ·11"
+                                                                           ,...·•• LOO
+                                                                                      ·1%
+                                                                                            .,,.
+                                                                                            ""'
+                                                                                            .,,.
+                                                                                             11%
+                                                                                          0.10
+                                                                                                  - ""
+                                                                                                   11"'
+
+                                                                                              .,. ""'
+                                                                                                    1S%
+
+                                                                                                    ""'
+                                                                                                         10,%
+
+                                                                                                          ""'
+                                                                                                          ,,.
+                                                                                                           "'
+                                                                                                                 ,. Jul-28
+                                                                                                                    ""
+                                                                                                                    .,.
+                                                                                                                   ·12,C,
+
+                                                                                                                 L70
+                                                                                                                     3.
+                                                                                                                            '"'
+                                                                                                                    .,,. .,,.
+                                                                                                                            ""
+                                                                                                                            ""
+                                                                                                                           .,
+                                                                                                                           •2.1,C,
+                                                                                                                                                                                      . -
+                                                                                                                                                                                                         ...
+                                                                                                                                                                                                         '"'
+                                                                                                                                                                                                         ·l"'
+                                                                                                                                                                                                        SJ0
+                                                                                                                                                                                                               ""
+                                                                                                                                                                                                               ""  ...
+                                                                                                                                                                                                         .,.,. ""' .,. ""
+                                                                                                                                                                                                                            "'
+                                                                                                                                                                                                                            ""
+                                                                                                                                                                                                                        ""' ""
+                                                                                                                                                                                                                        ·l"'
+
+                                                                                                                                                                                                                       C70 "'
+                                                                                                                                                                                                                                 Od-28
+
+
+
+                                                                                                                                                                                                                                       -- ..
+                                                                                                                                                                                                                                    0.10          0.80
+                                                                                                                                                                                                                                                       ....
+                                                                                                                                                                                                                                                               Dec•ll
+
+
+
+
+                                                                                                                                                                                                                                                                      .u,
+
+                                                                                                                                                                                                                                                                     uo
+                                                                                                                                                                                                                                                                        .,
+                       Rec..OffPtakPutchastVolume                          0.70    0.10                                   ,...                                                                          1..,
+
+
+
+
+                                                                                                                                                                                                                                                               7/13
+                                                                 Marblehead- Carbon-Free Forecast 2023-2050
+       200,000                                                   Assuming 2% Compound Annual Load Growth
+                                                                               October 2024
+       180,000
+
+       160.000
+
+       140.000
+
+
+      .C,QOOO
+      ~
+      ~000
+      ]
+      ~.000
+      ~
+      ...
+      ()Ei0,000
+
+          40,000
+
+
+          20,000
+
+
+
+
+                    ~ l,i:..           ,l -&❖ -&,e,-&~ -&-.,'-&'}, -&..,-.,
+                                                                       i-:.t':-&~            -&~ -&,//>    i' ff#'    £t:.{J             ,I'   ,I -6'#°' -&<!>
+                         tlVP'- E,11
+                                   .. 11;111                           r,nt l•S,. Hydro                                   RECOphltNICy
+                   -C.wborl                                       -    GGBNon-Cwbonlm,tt,ng(""'tl)'ll.itq,.,,rtm-,C
+
+
+
+
+   OFFSHOREWIND
+
+Counterpart: Avangrid
+Timeline Milestones:
+      MOU signing: February 2024
+  •   Initial Bid Solicitation: March 2024
+  •   Approved Allocations: September 2024
+
+Anticipated Start Date: 2029
+MMWEC Allocation: SOMW [Permitted]
+  •   MMLD Preference Rights: 3.5087% or greater
+
+Expected Duration: 25+ year project
+Pricing: Released when Appropriate
+
+
+
+
+                                                                                                                                     i
+
+
+ Berkshire Wind Phase I and Phase II
+ • Operated & Maintained by MMWEC
+          • Owned by Berkshire Wind Power Cooperative
+                   • MMWEC & 16 of its Member utilities
+
+
+ • 12-turbines
+          • Phase I: 10 structures - commercial operation in 2011
+          • Phase II: 2 structures - commercial operation in 2019
+
+ • 19.6 MW
+          • Phase I: each unit 1 .5 MW w/ approx. 25% capacity factor
+          • Phase II: each unit 2.3 MW w/ approx. 35% capacity factor
+
+
+
+
+                                                                                                                                                                 8/13
+             Project Updates
+
+Village 13
+• Switchgear vendor informed us our delivery is delayed to late
+   December 2024 ...manufacturing moved to a new facility
+• Construction bid docs in review now
+Tioga Way Battery Storage
+• LightShift reviewing site drawings; J..jghtShiftto layout 5
+   MW /20 MWh BESS
+• Holden MLP has invited us to visit their operational 5 MW/20
+   MWh site
+
+
+
+
+            80 Commercial St repairs
+
+• Roof leak repair and north wall window lentil replacements
+• Competitive bid process completed - 6 bidders
+• Winning bidder Campbell Construction Group, LLC.,Peabody
+  $283,829
+• Do not proceed with bid alternatives for east wall window
+  replacements and upper garage masonry repairs
+
+
+
+
+             80 Commercial St
+        Install new lentils on nine windows to replace rusting metal lentils
+        to stop the expanding cracks in the brick wall mortar
+
+                                        G, -      -
+                   §
+                     TI~~
+                        r:rIT~
+                   g §     ggg
+
+                                                                               9/13
+          80 Commercial St roof leak repairs
+
+
+
+
+                                                            SIU.
+
+
+
+
+           80 Commercial St roof leak repairs
+
+
+
+
+           Requested Board Vote
+
+• Motion: Approve the expenditure of $283,839 to repair 80
+  Commercial St roof and walls, and award the contract for the
+  repairs to winning bidder Campbell Construction Group, LLCof
+  Peabody, MA
+
+
+
+
+                                                                   10/13
+               MassCEC-IIJA40101(d) Grant opportunity
+
+ • "The funding aims to enhance the resilience of the electric
+   grid, prevent outages, and mitigate the impact of disruptive
+   events through eligible investments in activities, technologies,
+   equipment and other hardening measures."
+ • 5-year award period; first period $9.2 million (2022 & 2023
+   combined)
+ • Includes a "Small Utilities Set-Aside" - retail utilities that sell
+   less than 4 million MWh/year (MMLD is l00K MWh/yr.)
+ • Application deadline October 4, 2024
+
+
+
+
+           MMLD grant application
+
+• Directly target the "enhance resiliency" grant goal, that benefits all
+  10,000 MMLD customers/20,000 residents
+• Three Phaseapproach:
+   1. Replace 8 wood MMLD poles in Salem with stronger galvanized steel or
+      composite poles; eliminate the need for guy lines
+   2. Put the "highest risk" section of Mhd ROW OH lines underground - 1,800
+      feet from Lead Mills toward West Shore Drive (Four 450-foot manhole­
+      to-manhole UG sections)
+   3. Underground the remaining Mhd ROW OH lines to Village 13: 3,700 feet
+      (8-9 UG sections)
+
+
+
+                 MMLD OH poles in Salem
+
+
+
+
+                                                                               11/13
+           MMLD OH poles adjacent to Broadway in Salem
+
+
+
+
+           MMLD ROW-Phase 2 area for UG
+
+
+
+
+           Existing Hydro Quebec transmission line - cash
+           call for required capital improvements
+
+• MMLD (via MMWEC) participates in a long-term asset rights
+  investment agreement with National Grid on existing
+  transmission lines from Quebec to Mass.
+• The agreement 1985-2024 has provided MMLD positive 16%
+  IRR(internal rate of return on capital investments)
+• New National Grid "cash call" capital investment for MMLD
+  2024-33 totals $247K;
+• MMLD forecast dividends 2034-65 - $472K; net dividends -
+  $225K
+
+
+                                                              12/13
+                                                                General Manager updates
+
+                                     ..r 13 update
+                               • Tioga Way update
+                               • Board Vote: to Proceed with needed roof and window repairs at 80
+                                 Commercial St
+                               • MMLD grant application for MassCEC40101(d) funds to focus on
+                                                         .,.
+
+                               • Power portfolio bilateral agreement targets and current status
+                               • Employee recruiting update
+                               • Wilkins Plant
+
+
+
+
+                                               Bilateral agreements: targets & current status
+
+
+                  Legend                  Sep-24                Oct-24    Nov-24       Oec:-24     Jan-25        Ft'b-1S   Mar-25       Apr-25       May-25   Jun-25    Jul-25   Auc-25   Sep-25    Oct-25   Nov-25    o«-25
+             Targeted Hedge"
+                                           "°"                   "°" "°" "°" "°" "°" "°"
+                                                                                     ,,,,. "°" "°" "°" "°" "°" "°" "°" "°" "°"
+               PeakHedge"                  86"                   84" 85" 84" 83" 83"       83" 84" 84"
+                                                                                                       "'" 83" 84"4" 83" 85"5" 83"
+               PeakVariance
+       Additional Peak MW Needed
+      Additional Peak MWh Needed
+                                               6"                 4%  5" 4"  3"
+                                                                                  '" '" '"     4"   4"
+                                                                                                       '" '"          '"        "'
+             Off-Peak Hedge"
+             Off-Peak Variance
+     Additional Off-Peak MW Needed
+                                           .... .... ..,. .... "°"
+                                           76"
+
+                                                     0.40      ""
+                                                                 76"
+
+                                                                   0.40
+                                                                              76"
+
+                                                                                0.40
+                                                                                           76"
+
+                                                                                             0.40
+                                                                                                                  79"
+                                                                                                                  _,,.
+                                                                                                                    0.10
+                                                                                                                               79"
+                                                                                                                               .,,.
+                                                                                                                                 0.10
+                                                                                                                                            79"
+                                                                                                                                            .,,.
+                                                                                                                                              0.10
+                                                                                                                                                      81"
+
+                                                                                                                                                       '"
+                                                                                                                                                               _,,.
+                                                                                                                                                               79"
+
+                                                                                                                                                                 0.10
+                                                                                                                                                                        82"
+
+                                                                                                                                                                         '"
+                                                                                                                                                                                  81"
+
+                                                                                                                                                                                  '"
+                                                                                                                                                                                           .,,. "°" _,,.
+                                                                                                                                                                                           79"
+
+                                                                                                                                                                                             0.10    ""
+                                                                                                                                                                                                              79"
+
+                                                                                                                                                                                                                0.10
+                                                                                                                                                                                                                        79"
+                                                                                                                                                                                                                        ·1"
+                                                                                                                                                                                                                          0.10
+     Additional Off-Peak MW'h Needed                166.2         148.4        171.2        176.2                   44.9         25.9         46.2               41.S                        44.3               23.5      25.9
+PeakPrices                                      37.34       s     39.15   s    48.54   s    77.42 $ 11S.S6   s     97.87   s    59.34   s    45.79   s 39.94 s 47.98 s 69.89 s 56.31 s 45.85 s 41.81 s       s 57.79     89.34
+Off-Peak Prices                                 28.72       s     31.50   s    41.78   s    69.S0 $ 107.81   s     88.04   s    53.17   s    37.71   s 32.51 s 35.02 s 43.11 s 35.64 s 33.39 s 33.61 s 49.57 s           80.72
+Updated as of Date                             9/18/24
+
+
+
+               Sx16 Hede;e"            1«~ak                5x16 • Weekday Peak hours, typically from Sam to 11:59pm
+             7k8 + 2d6 Hedge "         «Otf.Peak            7x8 • Weekdays Hours, typically 12am to 7:59 am and2x16 • Weekend Hours. typically 8am to 11:59pm
+
+
+
+
+                                                                  New employee recruiting
+
+                              • Engineering Project Manager-
+                                  - Leading applicant declined our final offer
+                                  - Resuming search
+                              • Energy Efficiency Marketing Program Manager -
+                                  - 96+ applicants to date; paused advertising on Indeed
+                                  - To begin screening and interviews next week
+
+
+
+
+                                                                                                            ----****----
+
+
+                                                                                                                                                                                                                      13/13
+

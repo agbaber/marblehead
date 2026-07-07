@@ -1,0 +1,158 @@
+Light Commission May 19, 2025 meeting minutes
+To:            Light Commission: Commissioners
+               Light Department: J. Kowalik, General Manager
+From:          Adam Smith
+Date:          June 2, 2025
+
+
+A quorum being present, Chair Yarmoff brought the meeting to order at 4 pm. The meeting was
+held in person and with remote internet access, both available to public participation. A
+recording of the meeting is made available to the public at the following link.
+Participated in meeting:
+Commissioners:       Commissioners Frechette, Hull, Smith, and Yarmoff all participated in person.
+Light Department:    General Manager, J. Kowalik. Chris Dunbar IS&T Manager
+
+The Land Acknowledgement was read by Commissioner Frechette.
+
+
+Comments from the Public
+There were no comments from the public, whether in person or from remote participants.
+
+Process for the selection of the next General Manager
+
+The Job Description has been posted with application instructions on six different sites since
+May 2nd and will remain open until May 26, 5 pm. Eventually, the Commission will interview
+three leading candidates in a public meeting.
+
+The Open Meeting Law (OML) specifies critical steps of this process. KP Law attorney Joe Fair
+also clarified the process that must be followed, as follows
+        - any action taken by the full Commission needs to be in open session;
+        - a subcommittee of the commission created to select candidates can meet in
+             executive session to screen resumes and interview candidates, as long as
+             commissioners do not represent a quorum of that subcommittee. If the subcommittee
+             is composed of 5 members, only two commissioners can participate;
+        - the subcommittee can only recommend candidates for the commission to interview, it
+             cannot make a choice itself.
+While the subcommittee of the commission can meet in executive session, that executive
+session of the commission, as usual, needs to start as a posted meeting open to the public
+during which the chair specifically invokes exemption 8 to the Open Meeting Law.
+
+Having received a large number of applications (well over 50), it is necessary to narrow down
+the number of applicants to be interviewed in public sessions, and for the Marblehead Light
+Commission to create a selection subcommittee: see slides pages 4-5.
+
+
+
+
+                                                                                                 1/8
+The chair proposed that the Selection Subcommittee of the Light Commission be composed of:
+      Simon Frechette, Commissioner
+      Adam Smith, Commissioner
+      Alexa Singer, Marblehead Select Board Member
+      Greg Chane, MMLD Distribution Manager
+      Tom Howard, Marblehead HR Director
+
+Vote #2025-13         A motion to create a Selection Sub-Committee of the Light Commission,
+                      as described above, charged with selecting three candidates for interview
+                      by the Light Commission, was moved by Commissioner Frechette and
+                      seconded by Commissioner Hull.                     Unanimous.
+
+
+Process for Evaluation of the General Manager
+
+Chair Yarmoff proposed a process for the evaluation of the General Manager, which is a slightly
+streamlined version of the process previously approved. Some key changes are:
+            ○ Clarified timeline and procedures,
+            ○ Evaluations are anonymized and compiled into a summary for public discussion.
+The version appended to these notes (page 8) was edited after the meeting to show “approved”
+following the vote #2025-14 below.
+
+Vote #2025-14         Motion to amend General Manager Evaluation process as presented was
+                      moved by Commissioner Smith and seconded by Commissioner
+                      Frechette.                                     Unanimous.
+
+
+MIT Sloan Sustainability Lab Presentation
+
+As in previous years, the Commission has worked with the MIT Sloan School and proposed a
+project for them to work on. The focus this year was on developing a simple methodology to
+evaluate and prioritize different projects on key metrics beyond financials and including metrics
+such as reliability, equity for low-income residents or the project impact on emissions.
+
+Presenter Solangel Fernandez (MIT Sloan Fellow) was invited to the meeting and presented the
+results of her project. Interested readers are invited to refer to the recording of this meeting.
+
+   ●   Tool introduced: GreenBridge, an AI-based policy evaluation model
+   ●   Use case: Comparing Time-of-Use (TOU) rates vs Solar Feed-in Tariff (FIT)
+   ●   Key features:
+          ○ Multi-criteria analysis (cost, emissions, equity, adoption)
+          ○ Scenario modeling, stakeholder mapping, implementation guidance
+          ○ Results suggested a hybrid approach (start with TOU, evolve to FIT)
+
+
+
+
+                                                                                               2/8
+General Manager Updates
+
+Village 13 Project
+
+   ●   Switchgear arrival targeted for week of July 15
+   ●   Final testing of the switchgear will take place at manufacturer’s, with MMLD team to
+       observe the final release
+   ●   Energization goal: December 2025
+   ●   Construction sequencing was updated (Schedule 6)
+   ●   Right-of-way access and July 4 holiday constraints discussed
+
+
+IT & Infrastructure Updates
+
+Presented by Chris Dunbar IS&T Manager, see slides pages 6-7.
+
+   ●   AMI fiber and SEL switch upgrades
+   ●   GIS system redevelopment using SQL-based alternative to ESRI
+   ●   Substation monitoring pilot at 80 Commercial Street
+   ●   Engineering control upgrades for Wilkins
+   ●   Risk modeling for diesel tank replacement
+
+
+Internship & Staffing
+    ● Staff additions (see page 7):
+          ○ Jose Acosta (Fleet Maintenance Specialist)
+          ○ New substation/operations hire with USCG background
+          ○ Michael Hall (Energy Efficiency & Marketing Manager)
+    ● Engineering Project Manager position under consideration
+
+Commissioner Hull left before the Cybersecurity discussion at approximately 5:30
+
+Cybersecurity Discussion
+   ● Discussion of upcoming cybersecurity concerns and relevant Open Meeting Law
+      exemptions
+   ● Reference to Littleton Electric’s experience with Volt Typhoon cyberattack
+   ● Plans to discuss cybersecurity further at a later date (possible June Executive Session)
+
+
+It was decided not to enter into Executive Session in view of the absence of one commissioner.
+
+
+Motion to adjourn at 5:57 seconded by Smith, unanimous.
+
+
+                                           ----****----
+
+
+
+
+                                                                                              3/8
+Documents shown during the May 19, 2025 Light Commission Meeting
+
+
+
+
+                                                                   4/8
+5/8
+6/8
+7/8
+----****----
+               8/8
+

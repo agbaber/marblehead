@@ -1,0 +1,597 @@
+Light Commission May 30, 2023 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           June 1, 2023
+Re:             Commission Meeting May 30, 2023
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:00 pm, the meeting
+being held both in person and with remote access available to the public. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:          Frechette, Hull, Smith, Wolf and Yarmoff participated in person;
+        Light Department:       General Manager, J. Kowalik; Distribution Manager, Greg Chane and
+                                Manager of Tech. Operations, C. Coleman
+        Invitees:               Zoe Eckert, Sustainable Energy Policy & Program Senior Manager, and
+                                Justin Connell, Director of Energy Markets, both with MMWEC.
+
+Approval of Minutes of previous meeting.
+Vote #2023-22 A motion to approve the minutes of the Light Commission meetings of May 4 was
+               moved by Commissioner Wolf and seconded by Commissioner Frechette. Unanimous.
+
+Comments from the Public
+Questions from Michael Rosenberg, 23 Lincoln Ave in Marblehead: Is it possible to have information about
+the meetings posted earlier? And it can be difficult for working people to participate to a 4 pm meeting.
+Answer: Agenda is posted a week before the meeting. Meetings are generally held the last Tuesday of the
+month. Please note that you can also participate remotely with the GoToMeeting link given in the agenda.
+Q: Our concern is what will happen to the green space behind our house, and what may happen over the
+next couple of years in view of the Light Department using the Tioga Way site. A: See discussion below.
+
+MMLD Power Portfolio Roadmap
+General Manager Joe Kowalik presented a graph, showed page 7, forecasting the total amount of energy
+that Marblehead between now (about 100,000 MWh per year) and 2050, taking into account a 2.4%
+growth rate (ISO-NE CELT forecast). This forecast predicts a near doubling of the total electric energy
+consumed by Marblehead by 2050. The graph also shows the portfolio of contracts that MMLD has
+entered into, as well as the state and the town’s Green House Gas (GHG) emission constraints. The next
+table shows the cost of energy for each of the sources. The cheapest electricity that Marblehead
+purchases is non-GHG emitting. Distribution Manager Greg Chase reiterated his concern that the
+distribution system might not be ready for such a large increase, as it has not been upgraded for a long
+time. For a detailed discussion of the graph and of Marblehead power portfolio and its evolution, the
+impact on distribution, please refer to the discussion section below, page 4.
+Commissioner Smith mentioned that MMWEC has asked repeatedly to have an understanding of the
+goal that Marblehead might have for non-GHG emitting contracts, and that we owe them an answer.
+
+
+                                                                                                   1/11
+Commissioner Yarmoff moved the following motion, seconded by Commissioner Frechette:
+“The Marblehead Light Commission is setting for MMLD the goal of reaching 70% carbon-free electricity
+in 5 years (2028) and 85% carbon-free electricity in 10 years (2033). This will reduce our dependence on
+costly fossil fuels and ensure energy portfolio diversification, both of energy sources and prices.
+The definition of carbon free electricity shall be as described in the 2021 Act, Chapter 8, Creating a Next-
+Generation Roadmap for Massachusetts.”
+
+Vote #2023-23 Motion was approved 4-1, Commissioner Hull voting against.
+
+Solar Projects on School buildings
+General Manager Kowalik presented the possibility of installing solar arrays on school buildings,
+following receipt of a proposal from a vendor. This proposal has been evaluated by MMLD and by
+MMWEC, to ensure the validity of the financial assumptions. The presentation of today is not intended
+for a decision. Rather, it is to present data and a methodology to evaluate all the projects, so that the
+board can make appropriate portfolio decisions. Shared understanding of the assumptions, the
+uncertainties in the project, and the sensitivity of the financials with regards to these uncertainties is
+important, as will be a better understanding of the business equation. For more details, please refer to
+the discussion section page 6 and to slides page 7 to 9.
+
+Sea Level increase: Resiliency Planning
+General Manager Kowalik updated the commission on the status of the work of the town to obtain a
+state resiliency grant with CZM, the Mass Coastal Zone Management resiliency grant, which has been
+submitted to the Massachusetts EPA for approval. Extracts from the dossier are shown in slides page 10.
+Main changes proposed in this application are installation of:
+ - Wave attenuating docks in front of Hammond Park;
+ - Granite seawalls to be elevated from current 8.27 feet to 11 feet, and option of 13 feet;
+ - Footbridge over water between Hammond Park and Parker’s Boatyard.
+This will facilitate access to the public to town properties.
+
+Security Fence
+An initial proposal from a vendor for the building of the security fence around 80 Commercial Street
+seemed too high and MMLD is asking for a rebid. This will be presented to the Commission at a future
+meeting. A state grant of $70K may offset some of the costs.
+Commissioner Wolf mentioned that a different design was proposed by Commissioner Yarmoff, which
+should be cheaper as it has a shorter perimeter, will this design be considered? Yes, several design will
+be reviewed. Also, if the footbridge proposed in the CZM grant application becomes a reality, there will
+be no need for fencing on the back of the building.
+
+General Manager updates                    (See last slide, page 11)
+Financial operations: Given a lower price of energy, MMLD will start reducing the PPA starting June.
+Commissioner Yarmoff asked that MMLD make sure that the depreciation account of MMLD be one that
+is interest bearing at the best available rates. Some of the accounts that MMLD has are restricted in
+terms of where the money can be held, but this is not the case for the depreciation account, and MMLD
+can chose the financial institution and the type of account (interest bearing) in this case.
+
+
+                                                                                                       2/11
+Village 13 substation upgrade: Commissioner Hull met with the abutters at Bessom Street to discuss
+getting an easement to allow passage of the transformer. There are several other improvements along
+the right of way from Bessom Street to Village 13 substation that will be necessary to allow transformer
+delivery, including a weight-diffusing concrete structure (bridge at grade level) over the sewer pipe. This
+is still seen as easier than accessing from Westshore Drive.
+Utility battery site: The town-owned site (controlled by Park and Rec.) at Vine street is apparently not
+an option. On the Tioga way site, it is possible to locate two 15,000 sq. ft. parcels, one for the battery
+location, one for storage of equipment. The two parcels would be organized so as to minimize truck
+movement: batteries, once installed, do not need to be accessed very often if at all. Water on the site
+may not be natural flowing water, rather it may be draining from Tioga way abutters. Noise generated
+by the batteries would only be the cooling fans of the utility scale battery and be very low.
+A public meeting with abutters (some of whom are present at this meeting) will be organized to share
+information about the project.
+Union contract: A new three year contract was signed with the union, running from July 1st, 2023.
+Capital expenses: The General Manager is working with MMLD staff to put in place a revised
+maintenance plan for the remainder of 2023 and 2024, beyond Village 13. A review was done three
+years ago that listed all the projects that need to be worked on. Since Joe Kowalik has been the General
+Manager, work on the distribution system has been on a project basis, rather than a comprehensive
+review of the system need and evolution. This needs to be updated.
+Commissioner Wolf requested that we have a review by an engineering firm to give us a comprehensive
+view of the work that needs to be done.
+The General Manager pointed out the importance of the GIS system to be able to inventory and map all
+the assets of the department. When we have that data, we can correlate it to the outage data that we
+have. While a system was in place 10 years ago, it has not been maintained since. Any engineering
+review of the existing system will need that data. Getting load data every 15 mn will also help in
+understanding the evolution of EV and heat pumps use at the circuit level.
+Commissioner Wolf re-iterated that we should have a long term capital plan and a whole system review.
+Commissioner Yarmoff pointed out that by 2050, when the load we serve will have doubled, we know
+that the distribution system will have been completely rebuilt. Existing transformers will have been
+replaced, either because they will have become obsolete, or because they cannot serve the new load.
+How much will that cost? We can have that information at the macro level and use it to develop a long
+term capital plan. The fear is that we are largely underinvesting and not preparing for the future grid
+that we need to have.
+Commissioner Smith asked that the department present the maintenance investment proposal at the
+next month board meeting so that we can make progress on this important subject.
+
+
+The Light Commission meeting ended at 6:53 pm after a motion to adjourn was proposed, seconded and
+unanimously adopted.
+
+                                                ----****----
+
+
+
+
+                                                                                                      3/11
+Discussion section
+
+MMLD Power Portfolio Roadmap
+The graph on page 7 presents the evolution of energy consumption in Marblehead, the GHG emission
+limits imposed by the State or proposed by the Town of Marblehead, as well as current and future
+MMLD Power Portfolio composition to 2050, and the contracts, existing or possible, and their extension
+in the future.
+
+Evolution of the load. In the past years, Marblehead used about 100,000 MWh of power every year.
+Given the changes at the State and Federal level, it is clear that our energy use is going to increase. By
+how much? We use here the growth forecast by ISO-NE for the next decade, the CELT forecast they
+publish every year: in their latest forecast, this number is 2.4% growth per year (which does not take
+into account behind the meter solar installations). This 2.4% growth is the number we are applying from
+today until 2050 in this graph.
+By 2050, our load will nearly double. This is consistent with the other estimates that we have.
+
+Emission targets. The black dots on the graph identify the MA Climate Law’s targets, which start in
+2030: our electricity has to be at least 50% non-emitting by that time. By 2040, the target for Municipal
+Light Plants is 75% non-emitting, and by 2050, the target is to have 100% non-emitting electricity. The
+red dotted line at the top of the graph corresponds to the Town of Marblehead target for
+decarbonization which has been approved by the Select Board, a target of Net-Zero by 2040. For MMLD,
+options for energy sources include wind, solar, nuclear and large hydro as possible sources of non-
+emitting electricity, all of which are appropriate as per the Climate law.
+
+Portfolio of energy supply sources. In this graph, the grey area corresponds to what MMLD buys on the
+markets (electricity largely from gas-fired plants), and the colored areas correspond to contracts we
+currently have, or are likely to have.
+    - The dark green represents existing contracts. On top of the dark green, the small light green area
+    corresponds to the Berkshire Wind Farm: we have been selling RECs and as such, this part of our
+    portfolio does not count toward non-emitting electricity. But we can stop selling the RECs at any
+    time, and this gives us some leeway in meeting our obligations.
+    The light blue represents a likely extension of our contract with Hydro Quebec. The area where the
+    dark green turns to dark blue around 2032, represents the contract term for hydro power from
+    NYPA, which we have every reason to believe will be extended. In the same way, the dark purple
+    represents the anticipated extension of operation of the Millstone Nuclear power plant.
+    - The light purple starting 2030 corresponds to the new Power Purchase Agreement 2023A, being
+    negotiated by MMWEC on our behalf, for additional power with NextEra Energy. The amount we
+    requested is larger than what was initially allocated to Marblehead.
+    - The green area in the 2030s represents expected off-shore wind availability and hypothetical
+    contracts.
+Commissioner Yarmoff stressed that besides what is represented on the graph, there are a number of
+other opportunities from which MMLD can hope to obtain energy in the future, at very attractive prices.
+These include Hydro-Quebec electricity (the Maine Connector cleared legal hurdles recently), on-shore
+and off-shore wind.
+
+
+                                                                                                      4/11
+Targets for non-emitting energy in the portfolio. . Commissioner Frechette reiterated that MMWEC has
+requested that MMLD provide them with targets to shoot for: the work MMWEC does is dependent on
+their members’ requests. Recently, Light Plants in other towns were able to get more solar electricity
+from Ludlow than MMLD did: as we did not have any target, we did not ask for more, even though the
+supply was at an attractive price. We should not be complacent in thinking that 2040 is a long way away
+and will take care of itself. We must have 5 and 10 year targets that will put us on the path to where the
+town wants to be in 2040 Commissioner Wolf: Having some interim goals between now and 2030
+motivates us and MMWEC – on our behalf – to be looking for contracts for clean energy, as they are in
+the market.
+Commissioner Yarmoff introduced 5- and 10-year goals as follow: 70% carbon-free electricity by 2028 and
+85% carbon-free electricity by 2033. Commissioner Hull asked if there was a cost analysis of this proposal.
+Commissioner Adam explained that the goals are encouraging us to look at opportunities, and that given
+the cost of gas-generated electricity, they encourage us to diversify where it makes sense. The
+benchmark of gas fired electricity will be an important consideration as we approve new contracts.
+Commissioner Wolf gave the example of the Commission voting unanimously to recommend entering
+into a contract for a Seabrook PPA, and the commission requesting a volume 50% higher than what
+initially was proposed to us: we already anticipated that we would need a large amount of carbon free
+electricity, larger than what was allocated to us absent any MMLD target. Diversification of sources is also
+key to balanced prices. The price increases that have been forced on rate payers show that depending on
+gas for a very large part of our portfolio carries its own risks. The towns that had the largest cost increase
+this last year where the ones where gas represented the largest piece of their portfolio. Commissioner
+Hull reiterated his concern about high cost of energy, stating that the General Manager was already
+trying to get more energy. Commissioner Smith mentioned that MMWEC had asked to have an
+understanding of the goal that Marblehead might have, and that we owe them an answer. As we know
+that more opportunities are going to be coming our way, we need a framework to make these decisions.
+This is what this proposal is about: to put in place a framework in which we can take the future decisions.
+
+LCOE of energy in portfolio. The General Manager showed the Levelized Cost Of Energy (LCOE) for each
+component of the MMLD portfolio (see slide pages 7 and 8). Selling the RECs of the Berkshire Wind
+contracts diminishes the LCOE by nearly 4 cents currently. The Ludlow Solar project price is shown on the
+following slide with a favorable projected LCOE of 8.7 c/kWh. When the Maine Connector is actually built,
+one can anticipate that electricity cheaper than Spot Market will be available. This list shows that it is
+possible to have contracts with non-emitting sources that are economically sound. The targets that are
+proposed at not “aspirational”, they are achievable, with existing technologies and projects that will
+come on the markets in the coming years, and with the type of contracts that MMLD has entered into to
+date.
+
+Impact on Distribution System
+Distribution Manager Greg Chane remarked that the discussions about energy purchase are quite
+separate from the needs of our distribution system. And yet, if we do not have a distribution system that
+works, we will not be able to deliver any electricity. We do not seem to be talking about this urgent
+need. Commissioner Yarmoff reminded Distribution Manager Chase that the Commission had been
+asking to see a capital budget plan for many months and that this has not been forthcoming. He stated
+that he had been on the job for two months and that he did not have a budget yet. Commissioner
+Adams reminded the audience that the role of the board is to set policy and evaluate the General
+
+                                                                                                        5/11
+Manager. The Commission tries to lean on other aspects, but Operations –as per Chapter 164 of the
+Mass General Law- remains the sole responsibility of the General Manager.
+Commissioner Smith asked that a Capital Needs Assessment be presented at the next board meeting.
+Comparing the needs to our existing Capital Funds, the board can evaluate how to fund the additional
+capital needs that we know exist. Commissioner Wolf remarked that at the previous meeting, when
+Distribution Manager first addressed the board, this was the first time that the board had been made
+aware by MMLD of the dire state of the distribution system. While the board has been asking for it,
+there is no capital plan in place. Commissioner Yarmoff noted that since he has been on this board, for
+the last year, while the board has prioritized the replacement of Village 13 substation, the board has
+repeatedly asked what else needed to be replaced. Because we know that if the most important
+distribution asset in the town has been left to decay for 56 years, it is probably not the only one, and
+other important assets also have to be replaced. This has been introduced as a key goal for the General
+Manager from the start of the conversations on Goals last year. Commissioner Frechette reminded the
+audience that working on goals has been a long process. So today represents the result of a lot of work.
+At the same time, we need to be both strategic and tend to the daily needs. And if MMLD can tell us at
+the next board meeting what the investments should be, we would like to hear.
+
+Solar Projects on School buildings
+MMLD has received a proposal from a vendor for projects on school roofs shown on the slides page 8 and
+on. These results take into account the tax credits benefits from the IRA for these installations. The IRA
+gives tax credits to entities like MMLD, and these tax credits will have a big importance on the financial
+viability of the projects. Depending on the census track where the projects are located, and their
+adjacency to the Salem decommissioned coal plant, the IRA credits are different: the 30% is increased by
+an extra 10%. Marblehead High School and Glover School are in a census track that does not benefit from
+this extra tax credit, the others are (See slide at the top of page 9.) With these assumptions, and the
+vendor proposal, we can calculate the levelized cost of energy to be 14c per kWh and the total energy
+that might be produced to be 2500 MWh per year, if all the roofs are converted to solar.
+
+The General Manager presented the pro-forma model developed by MMWEC to evaluate solar projects
+and the assumptions made by the vendor, Solect, and by MMWEC where they might differ. An
+important variable is the future price of Class I RECs. Where the vendor keeps the RECs at a stable $40
+per unit, MMWEC’s assumption (based on S&P Global forecast) is that the price of the RECs will
+decrease from 2026 to reach a low $5 per unit, decrease caused by the arrival on-line of off-shore wind
+projects. The predicted evolution of the REC spot prices is shown on page 9. The revenues the project
+generates will come from both the RECs, as well as the avoided energy not bought, the avoided
+transmission and capacity costs. On the expenses side, we consider the Operations and Maintenance
+work, insurance and cost of financing the project.
+
+The business model needs to be refined. Some options are: MMLD owns the arrays, or the School own
+the arrays. Other hybrid options such as that put in place in Wakefield should also be considered, where
+both the school and the Light Plant benefit from the solar installs on the school roofs.. MMLD has had
+discussions with many school superintendents over the years. It may be easier for MMLD to raise the
+capital necessary for such a project than it would be for the schools, given the current situation. Having a
+way for the community to participate into this project, whether through a community solar, or an
+extension of the go-green rate may be a way to make the project financially very sound.
+
+                                                                                                       6/11
+If the schools were considering to build this array, the electricity they would produce would be
+considerably cheaper than the commercial electricity they buy, and the project would be largely in the
+black. For MMLD, when we compare the electricity generated to the wholesale energy we buy, we
+struggle to make it work. This is also because the non-emitting aspects are not well recognized: if a price
+of Carbon replaced were incorporated, presumably the financials would look very different.
+
+The presentation of today is not intended for a decision. Rather, it is to present data and a methodology
+to evaluate all the projects, so that we can make an appropriate portfolio decision. We need to
+understand the assumptions, the uncertainties in the project, and the sensitivity with regards to these
+uncertainties. Next steps are further meetings with the vendor and refining of the assumptions, and
+comparing various business models.
+
+                                                                                          ----****----
+
+                        Documents presented during May 30 Light Commission Meeting
+
+                                                                                 Marblehead Power Portfolio• cart>on-Free Forecast 2023-2050
+                                                                                 AssumlnK 150-NE2.4" C<>mpoundAnnual Enef'KYlood Growth
+                                       200,000
+                                       190,000                                                                                   ""'"       2023
+                                       180,000
+                                       170,000
+                                       160,000
+                                       150,000
+                                       140,000
+                                       130,000
+
+                                   im.ooo
+                                   ~110,000
+                                  1100,000
+                                    ~ 90.000
+                                   .i! 80,000
+                                       70,000
+                                       60,000
+
+                                       50,000
+
+                                       40,000
+
+                                       30,000
+                                        20,000
+                                        10,000
+
+
+                                                  ✓$$~~~~#~~~~~~~~#~#~~~~~✓ ~~4~4~
+                                                 •W~C.<OOntrd                                          •MlJIOl!olEIC..,>-                                        •lt(PAt.oil..,.;;n
+                                                 ■ l'fyd,-O(laoe,Utm,01                                ~tll'OOkP'~'-                                             ■ Ottlhor~\o\'Wld
+                                                   A-..ilbwfl!"CS                                       ..c.wbon&Jo,O,.,,                                       ·••MM&Cl,mteSm\'t•·S0'4CMIO'l-ffff..,2CJCI
+                                                 -M-CIIINl•Sut~t•·7S'lloc.t.o,     r.-cc...,10-0       -Ci!t9'tMJf!\kt,-6CIIII          NltZ: ..   8"?'40
+
+
+
+
+                                             MMLD 2022 Power Portfolio
+
+                                                                            Z022Actual                                                             20221CO£                ZOlllCOE
+                           PowerGenerator                                                                      Total$
+                                                                          EMIIIV (MWhl                                                              ($/MWh)                 ($/l(WII)
+                                                                                                                                                                                                lndudadln
+             illrtone Nuclear                                                     13,952           $               610,373.98                                $43.75                   $0.044          YES
+             eabrookNuclear                                                       14,751           s               427,620.50                                $28.99                   $0.029          YES
+                                                                                   8,093           $               152,141.38                                $18.80                   $0.019          YES
+             ydro-Quebec                                                           6,S70           $               252,94S.00                                $38.50                   $0.039          YES
+             erkshireWind 1                                                        2,180           $               400,138.72                               $183.51                   $0.184          YES
+             erkshire Wind 2                                                       1,328           $               231,06S.45                               $174.02                   $0.174          YES
+             ancockWind                                                            2,341           s               163,571.65                                $69.88                   $0.070          No
+             agle Creek Hydro                                                      1,789           $               103,987.34                                $58.13                   $0.058           No
+             tony Brook Intermediate                                               2,793           s               681,619.23                               $244.01                   $0.244           No
+             edged Power Contracts                                                21,769           $           1,958,079.39                                  $89.95                   $0.090           No
+            50 Interchange Spot Market                                            30,838           $           3,200,453.43                              $103.78                       $0.104          No
+             arblehead Wilkins Plant                                                  109          $              (55,648.29)                           -$509.70                      -$0.510          No
+             tony Brook Peaking                                                       97           $              77,611.62                                 $803.28                   $0.803           No
+             otal Wholesale Enerry Supply                                        106,610           $           8,203,959.42                                  $76.95                   $0.077
+
+
+                                                                                                                                                                                                             7/11
+                                MMLD 2022 Power Portfolio
+
+                                                   2022Actual                         20221.COE     20221.COE
+             PawllrGenerator                                          Taul$
+                                                  Eneray(MWh)                          ($/MWh)       ($/KWh)
+                                                                                                                   lndudedln
+                                                       13,952     $     610,373.98         $43.75        $0.044          YES
+                                                       14,751     s     427,620.50         $28.99        S0.029          YES
+   A                                                    8,093     $     1S2,141.38         $18.80        $0.019          YES
+                                                        6,S70     $     252,945.00         $38.50        $0.039          YES
+                                                        2,180     $     400,138.72        $183.51        $0.184          YES
+                                                        1,328     $     231,065.45        $174.02        $0.174          YES
+                                                        2,341     s     163,571.65         $69.88        S0.070          No
+                                                        1,789     $     103,987.34         $58.13        $0.058          No
+                                                        2,793     s     681,619.23        $244.01        S0.244          No
+ edged Power Contracts                                 21,769     $   1,958,079.39         $89.95        $0.090          No
+SO Interchange Spot Market                             30,831     $   3,200,453.43        $103.71        $0.104          No
+ arblehead Wilkins Plant                                  109     $     (55,648.29)      -$509.70       -$0.510          No
+                                                             97   $      77,611.62        $803.28        $0.803          No
+ otal Wholesale Enerrv Supply                         106,610     $   8,203,959.42         $76.95        $0.077
+
+
+
+
+                              New & Proposed Projects vs School Solar
+
+                                                                                                                    Envl-.1
+                                                   PrapoHd                            2022 I.COE    2022 I.COE
+                                                                      Total$                                          Anrtbut•s
+                                                  EMray(MWh)                          ($/MWh)       ($/KWh)
+New and Proposed Projects                                                                                          lnclude<I
+                                                                                                                           In I.COE?
+Cotton Memorial Solar PV Array (Ludlow)                  1,457                             $87.00        $0.087          YES
+Project 2021A (original) Mayflower OSW PPA                                                 $77.65        $0.078          YES
+Revised Olfshore Wind PPA (est.)                                                          $100.00        $0.100          YES
+Offshore Wind PSA                                                                          $92.80        $0.093          YES
+Prioject 2023A Seabrook PPA                                                                $83.00        $0.083          YES
+
+
+Brown School Solar PV                                     279                                $140        $0.140          YES
+Marblehead HS                                             838                                $130        $0.130          YES
+Vllage                                                    540                                $150        $0.150          YES
+Veterans                                                  432                                $1S0        $0.lSO          YES
+Glover                                                    135                                $150        $0.150          YES
+MhdCharter                                                ill                               iill         Sl!.ill         YES
+                                          Total         2,4!14                               $142        $0.142
+
+
+
+
+                                                                                                                                       8/11
+                 MMLD Solar Rooftop Project Financial Analys!s (Brown Elementary)
+             Year                   2024         2025       2026       2027          2028         2045          2046          2047           2048           Total
+SystemDetails
+Nam@plat@Capacity (kWdc)               247.2        247.2      247.2     247.2         247.2            247.2      247.2         247.2          247-2
+Yea,tyCapacityFactor                  12.87%       12.79%     12.72%    12.65%        12.58%           11.46%     11.40%        11.33%         11.27%
+
+Yearly Generation {l<Wh)            278,594      277,062    275,538    274,022      272.515      248,126        246,761      245,404         244,054      6,523,980
+            MMLOretail customersO
+# of c1vera9e
+662KWH                                     421
+Revenue / Cost Avoidance
+
+Avoided Energy Costs                 113,111      112,575    113,567    $13,918       S13,145      Sl0,4110      $10,887       $11,461        Sll,660      $275,130
+
+AvoidHI Capacity Costs                12.665       12.551     12.368     12.046        11,730          15,633      17,665        18,603        18.◄ 33      S95,607
+
+
+AvoidHITransmissionCosts               11,094      11,088     11,082     11,076        11,070        1974          1969          1964            1958       US,618
+Total "voided Cosu                   116,870     $16,214    $17,017    $17,040      $15,945       S17,087       S19,521       S21,027        121,052       1396,355
+
+RECRevenue                           111,144      111,082    111,022    110,961       110,901       19,925        19,870        19,816   19,762            $260,959
+Totat Revenue/ Avotde<ICost$         128,013      127,297    128,039    128,001       126,846      127,012       129,392       130,8>13 $30,814            $657,314
+
+Operating & FinancingExpenses
+O&M                                         so     15,344     SS,504     55,669        15,8>10 19,652             19,941       510,240        510,547      $183,975
+ll'lsurance                           51,902       51,902     51,902     Sl,902        11,902  11,902             11,902        11,902         11,902       $47,550
+Total Debt Service Net ITC           S27,320      127,320    127,320    127,320       127,320 127,320            127,320       127,320        527,320      $683,000
+Total bpens.e5                       S29,222      S34,566    134,726    134,891       135,062 138,874            139,163       $39,462        $39,769      $914,525
+
+
+
+
+        Tier 1 spot REC price outlook
+
+                                                                             New England rie, 1 compliance REC spot pou, .,.. pols~ 10 remain •t
+                                                                             cunanl levels umll new supply comn onhne.
+                                                                                ~ 2019-22..hted 9hortagl!'s.,,,c,ngsorre oorT'Plnce emitedrrte spo1 ~••
+                                                                               'M'wh~mautil~bAnced,afww~
+                                                                               -AEC            ___               IOd__               ~     ...,_......,
+
+
+
+
+                                                                                 -Spot pnon will phiw cb,,i,n., 2022-23 n ~~Ill
+                                                                                  ecm.c:.a.c,
+
+
+
+                                                                                  Nia MW~
+                                                                                  modllla......,
+                                                                                                lhet...0M11nc:oni)ined,...W:~~82'lftcltier
+
+                                                                                  ln202l-27 lwrNfbc~ll:)'OL.9'bala1Ce....
+                                                                                                     SUl8-.h
+                                                                                                 apocrnabl ~
+                                                                                                                          RECnNdl rnaun ~
+                                                                                                                 IOCHfT1lfGI
+
+                                                                                 Spot pnces~ ~ beyond 20'21• rft0W0H pn:cuted under k:ln;-term
+                                                                                 c:onncbcorrwonllNaldmarkmbeoamepeB11                  long(lbHrtMher"
+                                                                                                                                                        la' ""1th
+
+
+                                                                                                                              10m1c;,flheUrTWCIClnl:iilora
+                                                                                                                                                              1 REC
+
+
+
+
+                                                                                 •xtenlir:Jnor•xp,w,siond •)J1Wlg POicinl IHS ~~IM: •~pncn         ct.nig 1M
+                                                                                 ptfiod d market ..-plus lbe)ffld 2027)IObe belo,,i, SMNtb
+                                                                             Th...-e Ls upside risk to the spot REC prtct1 outlook owing to offshon
+                                                                             wlnd construcdon uncertainties,
+                                                                                 Offlhcn M1CI,.._...      75, ol ar111Cipa,1ed grc,,,.'fl.-. Mt 1 REC ~ lhlough
+              •--=-=---
+              flllilllllllllllllillll                                             -REC,._.,.,_.....,
+                                                                                                                    or1int btt' _, 20'ZJand 20215«ud inetUM
+                                                                                 2030 A delly to ptO,te:ISel'.J)ICM'CI
+
+                                                                                 Noably ifhfe la• dlilayst !he 700 WNf Rftdutlon Wnct.••peaadonlne fat
+                                                                                 202'-25 hi~               ~tanoe OOIACI
+                                                                                                                      ~ tefO_ WilhNI prqed OCl'hded
+                                                                                 wilt'lbolt'IConnec:llcutandRhocll-~Rhod•blancl       • ccudfwld
+                                                                                 ~ Wlf1 REC. end Mff'9 REC~                  ruch nu, lb hiltl t.er 1 N:;P ralil
+                                                                                 l_.,          .. ,_seo,...,..,,)
+
+
+
+
+--
+REC Revenue
+
+
+
+
+                                                                                                                                                                      9/11
+Mhd Application to Mass EPA
+                                                               "\   '
+                                                                    ''  '
+
+
+
+
+       Mhd Application to Mass EPA
+C).IFF.:S
+                        r.=-~ . .~,,,,...
+                               ,
+                            ,,,:·
+                                    A
+                                  ~·-   ~~
+                                             'I
+                                                  '
+                                          _.........
+1_-
+!!!!!"-!"'-_     ...
+                                                      'I
+                                                           '
+... ._._:-i...                                                                   ,
+                                                                                I
+
+               ' ', '                                                           ','
+                                                       --:..~~
+                                                       -•-Q
+                                                           awt'll    It')   I
+                                                           \
+                                                               ..
+                                                       Mi
+
+                                                                            ---
+
+
+
+
+                                                                                      10/11
+                  Mhd Application to Mass EPA
+                                     OIS1'ltCc,J,,S'S/Cf>,~Q.
+                                                                """"'""-""
+                                                                                                Wall Top
+                                     ""'
+                                                                                                Elevation
+                       GOfJN.ru
+                                                                                                8.27 feet
+
+
+
+
+                  Mhd Application to Mass EPA
+         ~T[LOO,f(lN
+
+
+         '"""""""""""'
+       11£St(II£ CRCl.N) St.RFliC£
+                                                                                                 Wall Top
+       .,.,""""'°                                                                                Elevation
+                                                                                                 11.0 feet
+                                                                                                 w/ option
+                                                                        REstla.ootSnot.l l,U     to 13.0feet
+                                                                        TOiUVm:H        110'
+                                                                            q_      II•~ 4
+
+
+
+
+                                                                                 Nl.\otlfO.O'
+
+
+
+
+                                                                     la,Q,,M&.~ro.J'i
+                                                                     [OIUUJ5QIICloC)
+
+
+
+
+                       GM Quick Updates
+
+• Anticipate a PPArate reduction starting in June
+• Bessom St. entry to Village 13 update - abutter easement OK
+• Utility Battery siting- Vine St/Rec & Parks space not an option
+• Union Contract update 2023-26 - completed negotiations
+• APPA2022 Certificate of Excellence in Reliability recipient
+  - SAIDI - the average duration (in minutes) of an interruption per
+    customer served by the utility in 2022
+
+
+
+                                                                                                               11/11
+

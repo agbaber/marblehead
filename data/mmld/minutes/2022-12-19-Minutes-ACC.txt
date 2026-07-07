@@ -1,0 +1,439 @@
+Light Commission December 19, 2022 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           January 11, 2023
+Re:             Commission Meeting December 19, 2022
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:10 pm, the meeting
+being held both in person and with remote access available to the public. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:          Hull, Frechette, Smith, Wolf and Yarmoff participated in person.
+        Light Department:       General Manager Joe Kowalik.
+
+Approval of minutes:
+Vote #2022-37 Motion to approve the minutes of the Light Commission of October 25, 2022 moved by
+               Commissioner Wolf, seconded by Commissioner Frechette. Unanimous.
+Vote #2022-38 Motion to approve the minutes of the Light Commission of November 29, 2022 moved by
+               Commissioner Wolf, seconded by Commissioner Frechette. Unanimous.
+Vote #2022-39 Motion to approve the minutes of the Light Commission of December 15, 2022 moved by
+               Commissioner Wolf, seconded by Commissioner Frechette. Unanimous.
+
+
+Village 13 substation rebuild
+Ordering transformers, review of bids: MMLD received three qualified bids by the deadline of Thursday
+December 15, 1:30 pm. Based on product quality, reputation of vendor, price and delivery time, the 5-
+member technical team unanimously recommended selection of the bid by Virginia Transformer. MMLD
+has experience with Virginia Transformer, which has equipped our Beacon substation. Virginia is the only
+company that meets our timelines. Its bid, the lowest received at $2,632,446 exceeds our previous
+expectations of $1.7M. While the bids are much more expensive than we would have expected as much as
+a year ago, they reflect the current market conditions.
+The slide presenting the budget review does not include the cost of the performance bond for the Myers
+$4.3M contract decided before, it will be further updated to make sure all the costs are well captured. A
+performance bond may not be necessary to conclude the negotiation with Virginia, but the General
+Manager may benefit from having the latitude of entering into such an arrangement. Commissioner
+Yarmoff mentioned that the site construction should plan appropriate “hardening” of the substation by
+including plans for a concrete wall (rather than chain-link fence) and video monitoring, as per the FERC
+order to the NA Electric Reliability Corporation, to deter incidents like the ones that took place in North
+Carolina and in the North West recently. The $1M estimate for Site Construction cost may need to be
+updated to reflect this need. In the future, we should also think of protecting the Beacon substation.
+
+
+
+                                                                                                    1/10
+Vote #2022-40 Based on the result of the competitive bid process, and the recommendation of the
+              Village 13 technical team, the Light Commission authorizes the General Manager of MMLD
+              to finalize contract negotiations with Virginia Transformer, for the purchase of two 23kV-
+              13kV transformers, in the amount of $2,632,446. Moved by Commissioner Yarmoff,
+              seconded by Commissioner Frechette. Unanimous.
+Vote #2022-41 Motion to authorize the General Manager to purchase a performance bond if necessary to
+              finalize the contract with Virginia Transformer. Moved by Commissioner Frechette,
+              seconded by Commissioner Yarmoff. Unanimous.
+
+Financial implication of the bid. The general manager presented the projected depreciation account
+(which needs to be updated to take into account the new numbers). A discussion of the depreciation
+account replenishment (request sent by MMLD to DPU to raise the percentage to 5% on July 25, 2022) led
+to a conversation about the PILOT payment, and whether the Light Commission can decide to not pay it,
+punctually or for several years. In order to make a decision we need to understand:
+- legality: is chapter 164 silent on the issue?
+- custom: do other MLPs pay PILOT to town? Ipswich, Hingham, Belmont do.
+- historical and precedent: why did MMLD decide to make this payment?
+If we decide not to pay, the rationale for not paying and the duration over which we do not pay need to
+match. In addition, the town must be given fair warning. At this stage, we have not officially contacted the
+town about the possibility of not paying. This will be further discussed at a later meeting.
+
+Timing of the substation build out. The timeline is presented in the slide on page XX. The Switch Gear
+delivery is now targeted for spring 2024. We anticipate transformers to be delivered in April 2024.
+Construction is scheduled to take place between April 2023 and July 2024. Current financial buffer of
+$125K does not leave a lot of room for any delay, which would presumably increase costs. Completion of
+the substation upgrade is targeted for August 2024.
+
+Preparation for construction. Next steps are:
+- to file a Notice of Intent with the Mass DEP and the Marblehead Conservation Commission because we
+are going to change the perimeter of the substation, by less than 5000 sqft of wetlands tbd, close to the
+substation as shown in the attached slides;
+- to engage a Civil Engineering design firm with utility experience to survey and develop a plan to use the
+right of way from West Shore Drive to the substation, and move the heavy equipment (110 000 lbs);
+- create a new entrance to the substation so that cranes and delivery equipment can access the site.
+
+
+General manager’s updates
+MMLD filed the new rates resulting from the restructure with DPU, and DPU acknowledged receipt.
+Circuit numbers are being added to the resident’s bills, as discussed previously.
+MMLD was one of the utilities sending a crew to help New Hampshire recover from the latest storm.
+The General Manager explained the situation with regards to the Distribution Manager who left MMLD
+on December 15. The open position was posted on December 8, and could be filled by outside
+applicants or internal moves. Position will be posted until end of December.
+
+
+
+                                                                                                      2/10
+Reliability: 23 kV lines. The double 23kV supply line is a vulnerability for Marblehead: the two lines are
+co-located, and an incident on one can easily be an incident on both. Commissioner Yarmoff circulated a
+memo on options to alleviate possible reliability issue linked to the power supply, attached.
+Some years ago, there were two different sets of lines into Marblehead, from Salem and from
+Swampscott. National Grid proposed to upgrade this last line and asked Marblehead to participate
+financially. At the time (1995?), MMLD chose not to do so. As a result this line was cut off: it still exists,
+but is currently not used. This makes MMLD dependent on a single source of electricity, the double 23kV
+line from Salem coming into Marblehead at the Leads Mills and using the right of way to the Village 13
+substation.
+A connection to the Swampscott grid may be a good solution for Marblehead. Alternative options
+maybe more complex. Connecting at two different places in the National Grid network would be better
+than connecting to the same Salem source. The connection from Swampscott to Village 13 is on the right
+of way and would be straightforward. Additionally, if in the future there were a higher load demand that
+the new Village 13 can accommodate, the Clifton substation could be updated to a 23 kV substation.
+Another option to harden the distribution would be to bury a line, either on the right of way, or along
+Lafayette to connect with Village 13. There are other alternatives that have not been assessed but are
+either likely complicated technically or expensive.
+Bob Jolly could help with the discussions with National Grid for Swampscott. We can ask a contractor for
+the cost of burying conduits to our specifications for the other option. We will have to be clear on what
+we want: 24/7 load, or emergency supply.
+Measuring Reliability. Marblehead participates in the APPA program and inputs data in the national
+database. For these data to make sense, we need to establish a baseline: we have only been
+participating for about three years. We have to be careful that publishing reliability statistics does not
+impact safe operations by MMLD crew. One of the use of the data in the future will be to ask “which
+circuits has more outages, and why”. Another is to have data to evaluate the cost of not taking some
+reliability enhancing measures. The data is being gathered and we can focus on it at another meeting.
+Sustainability Working Group. The Meeting of the group is tomorrow and we have not met in a while.
+We are making progress to put in place a customer survey. MMWEC has been working with Great Blue
+and we can piggy-back on that work. We are waiting for Great Blue to propose a set of questions for our
+further input. The survey might start in January.
+On the agenda for the group’s discussions: web site and communication strategies, and a review of the
+incentives that we offer to residents, for heat pumps and other items.
+Strategy Working Group. The group met last Friday and reviewed data about registered cars in
+Marblehead, obtained from the DMV under FOI. This will help us build a model for future EV load.
+Executive Session. Chair Mike Hull proposed a motion to go to Executive Session to conduct strategy
+sessions in preparation for negotiations with non-union personnel or to conduct collective bargaining
+sessions or contract negotiations with non-union personnel, General Manager Joe Kowalik. Not to return
+to Open Session. Seconded by Commissioner Yarmoff. Lisa Wolf: Yes, Simon Frechette: Yes, Adam Smith:
+Yes, Jean-Jacques Yarmoff: Yes, Mike Hull: Yes. Executive Session starts at 6:34 pm.
+
+
+                                                 ----****----
+
+                                                                                                         3/10
+Documents and slides shown during Light Commission Meeting 12/19
+
+
+
+          Agenda
+         1. Approve Minutes of October 25th and November 29th
+            meetings
+         2. Review bids for Village 13 transformers and vote to
+            appropriate funding
+         3. Village 13 - New Access Road next steps
+         4. GM updates
+         5. Sustainable Committee updates
+         6. Strategy Committee updates
+         7. Public Comments
+         8. Executive Session - conduct contract negotiations with GM
+            Joseph Kowalik. Not to return to open session
+
+
+
+
+             Village 13 Transformer Bids
+
+ • Opened in open meeting Thursday, Dec 15, 2022 @ 1:30 pm
+ • Three (3) qualified bids were received and opened.
+ • The 3 bids were emailed to the Village 13 technical team. The
+   bids were reviewed at the Technical Team meeting today,
+   Monday, Dec 19.
+ • Based on product quality, lowest price, and fastest delivery
+   time, the Technical Team unanimously agreed Virginia
+   Transformer submitted the most competitive bid.
+
+
+
+
+             Village 13 Technical Team
+
+  • Mike Barrett, Principal, PLM Electric Power Engineering
+  • Bob Jolly- retired MMLD GM
+  • Colin Coleman, MMLD Tech Services Manager
+  • Jack Ravagno, MMLD Senior Substation Specialist
+  • Joe Kowalik, MMLD GM
+
+
+
+
+                                                                        4/10
+                         Village 13 Transformer (2) bid summary
+
+
+                                                                      Price-Two
+Vendor                                                           Transformers                      Delivery Time
+Hitachi                                                                  $3,908,600                 122-128 weeks
+Niagra Power Transformer                                                 $2,663,782                     108 weeks
+Virginia Transformer                                                     $2,632,446                   60-65 weeks
+
+
+
+
+                          Board Approval & Vote
+
+• Based on the results of the competitive bid process, and the
+  recommendation of the Village 13 technical team, the MMLD
+  Board authorizes the General Manager to finalize contract
+  negotiations with Virginia Transformer, for the purchase of two
+  23kv- 13kv transformers, in the amount of $2,632,446.
+
+
+
+
+                         Village 13 Upgrade - Budget review
+
+                                             July 2022     Dec 2022
+ Cost catqory                                  Cost$        Cost$       Vendor            Status            Bid      Expendlturfl
+ Manufacture New Switchgear                   $4,347,292   $4,347,292   MyerCP       mostly firm bid        2022      2022/2023
+ Manufacturer New Transformers (2)            $1,700,000   $2,632,446    TBD           Estimate             2022      2023/2024
+ Site construction Contract                   $1,000,000   $1,000,000    TBD           Estimate             2023      2023/2024
+ Testing and Commissioning                       $90,000      $90,000    UPG           Estimate             2023      2023/2024
+ Englneering/Site Investigation                $275,000      $275,000    PLM           Estimate                       2022 • 2024
+ Contingency                                   $125,000      $125,000                  Estimate
+ Make ReadyBest ROWaccessoption                  $50,000      $50,000                  Estimate             2022         2022
+ Make ReadyTiogaWay storage area               $250,000      $250,000                  Estimate             2022         2023
+                                 subtotal    $7,837,292    $8,769,738
+                                                                                  Execute a SOpayment
+                                                                                  shared savings option,
+ Utility Scale battery                               so                               not purchase         2024-25    2024-2025
+ Upgrade Oifton substation                                                          Specifications tbd      2025      2025-2026
+ Spec& Instati substation-levelSCADA                                                 Justification tbd      2025        2025
+                                  subtotal           so
+                                    Total:   $7,837,292
+
+
+
+
+                                                                                                                                    5/10
+                       MMLD Capital Improvement Account
+                       (Depreciation Account)
+
+                              2017         2018          2019        2020          2021          2022        2023        2024
+   Beginning Balance    S6,949,454    S7,318,649    S6,176,017   S6,671,639    S8,085,153   S9,614,061 S7,157,731 S3,778,231
+  Contributions$        Sl,519,510    Sl,526,383    Sl,180,530   S2,043,055    $2,061,473   Sl,249,670   S2,102,500 S2,130,000
+  YE Transfer           Sl,187,000      S552,000            $0          so            $0            so          so          so
+      Contribution %            5%            5%           3%           5%           5%            3%           5%          5%
+  Expediture $          -S6,572,741   -$3,186,520    -S462,175   -$455,891     -S242,768    -S3,406,000 -S5,182,000 -S3,350,000
+  Payroll Transfers      -S281,711     -S249,635     -S318,150   -$208,409     -S315,723     -S300,000   -S300,000   -S300,000
+   Interest                Sl7,137       S36,723      S53,719      S34,758        S9,981            $0          so          so
+   Building Bond        S4,500,000            $0            $0          $0            $0            $0          $0          $0
+  Ocean Ave Reimb               $0      $178,417      $30,829           $0            $0            $0          $0          $0
+  Fema Reimb                    $0            $0      $10,869           $0            $0            $0          $0          $0
+  Bell Transformer              $0            $0            $0          $0       $15,945            $0          $0          $0
+  Year-End Balance      S7,318,649    $6,176,017    $6,671,639   $8,085,153    S9,614,061   $7,157,731 $3,778,231 S2,258,231
+
+
+                                                             Projected 2022 Balance $       $7,157,731
+
+
+
+
+                       Upgrade Schedule                                       ...being updated now
+
+• Switchgear Procurement - 7/2022
+• Switchgear Delivery-11/2023                                                   ... now spring 2024
+• Transformer Procurement- 9/2022                                               ... now Jan 2023
+• Transformer Delivery- 4/2024                                                 ... may not slip
+• Site Construction - 4/2023 through 7/2024
+• Substation Upgrade complete - 8/2024
+
+
+
+
+                   Village 13 substation next steps
+
+• File Notice of Intent with MA DEPand Mhd Conservation
+  Commission
+• Engagea civil engineering design firm with utility experience to
+  survey and develop a plan for the full ROW from West Shore
+  Drive to Village 13 (0.6 mile).
+
+
+
+
+                                                                                                                                  6/10
+Village 13 New Access Road
+
+
+
+
+           MAP 98 LOT 7
+        AREA • 99,592 ± S.F.
+          2.286 ± ACRES
+
+
+
+
+File Notice of Intent w/ MA DEPand Mhd
+Conservation Commission
+
+
+
+
+                                         7/10
+                  Updates
+
+• Five new electricity rates filed with DPU
+• Cir uit numbers on MMLD monthly bills by
+• MMLD was one of nine MLPs sending a crew to NH to support
+  NH Electric Coop- lakes region
+• MMLD Distribution Manager posting- on MMLD and NEPPA
+  website
+  - Exempt position
+  - Salary $130,000-150,000 depending on experience
+  - Posted Dec 8 open until Dec 30, 2022.
+
+
+
+
+                                                              8/10
+MEMO
+
+To:                light (ommi~ion: Commi)~Oltt:t~
+                   liJ;►1t 011:e;n,utrn,ornt:J,
+                                           Kow,,:lil\,Gt.,r,i:1111
+                                                                Mi,t111~11:e1
+                   JNn Jil:cquc:aY~
+                   Oe<1ormb~19,2022
+                   Mitit<lti(11\(Jfl)(Jwe( SU!)l/ly/ (@liability issues inM.:i,blehe.:id
+
+
+
+Tho a~• cd thii Memo tolnltli>tc ,l convcr.;.::idonrc.g.::irdingtho rell,>bltltyof power ~pplyln M:irbloho.::id,
+for dkt:u<<IClnAl thP ('.amml«ICln nw>~l'lf. 1) /1 ~.
+
+Oi)luptiun tudu:•V(JW,ir)upvly wulJ tum"' f,um Wl.a'W~ll:'Xtor1ni,I..,, within Ml111Adlt!.l,               A) ti~ t._U)t!)
+c.:1n ttff...-, WP (An 11ntlrS(IAIP
+                                 th;ir fhp m1t'f.iitlnn<ttllt"Cll><ttuAtl >il<Qdlff ..,.
+
+
+Cause of pot dbl• relbbllltycon-c•N'l.t outtlde of MMLO't control
+      1.   ISO-Nt SVPr'Y'<~l'l<'(ltyllmlt;Hl()l'IS                     ➔ M1tl,e$1i()n:L{)tl(l-shedc:tone
+                                                                                                       ,ii~
+   2. Nl!tiunc,11
+               G,iJ Ull~'t! lit wb)Uitiun
+MubNhud    tpeclflc poulbl• ull•billty conc..-w11:
+   i. Vl~o 13 fr,lnr;tormer l~::uo
+   4. 23kVlino i~\j,r:
+
+
+
+
+1. 15C>Nt:::upplyc.::,p,l(lty llmit.::idcwi::
+   ➔ Mitig.1=tt.iun:
+                 01gani,i1t~ lu«J,)1-,~dingplao,          ,:;o.,:1~0      v,ith tl10: toy,T,, On-gting..
+
+2. National Grid Ollt3(0
+W@depend on (ln@Slnel@n(l(\l@()l'l    th@ N<1t1Q~lfjrt(Isyst~ t(l Slll)l'lly... ¢1 M¥bl@hea(I ~nerev. 6','their
+own .idml~ion, tho uld I:: old .:indnc-c~ to bo up,er.idcd. Wh!I~I do not know tho ~Uh.e of th~ trid th.it
+)Uppli~ M.-blo:ltc:ad, o foilus,: 111t
+                                    the :.ubi.Ution up:.Vo:omcuuld aiuc.i: 111  lol'lS i:me1gcncy ~tuotionif, tuwn.
+   ➔ MltleatoOl'I inso,fl@ •Vl}'f->Sim'l<1rto .1, 23 kV line issue. discvssedbefow,
+
+3, Tnonlfo,merhwe
+I lopofu!ly, W<: woolc! h.wc e1nlyDl'I~ cf die two tr,l,nrla~r~ ,lt ,l ~ ,:,,xpo.ricndng ,l,nl:;~uc-.I lov,11-,
+~n i~wc wilh one: t1on,forme, i~ lil;,:ly111   long ti:1m ~itwtiun .-itil Vi1b.gc~tccC'I.rebuild i~compl,:t,:,
+Most days. ¢1'1@ tr.:t<'l~o,mer ol'lv miJlht be abl--eto urty th@ k:«I, HOwever. the load @>l(:@@dSC.:ti.);ICity()(
+e1notr.indormu e1n~k ~;             ,:,t ~udl ,1tfnw, WUkin<.might bo dl~p.itd'tod by 1SO.r.[ (.II.It
+                                                                                                    of thccontml
+of t,fatblcho:id.
+     ➔ Mitii&tiOn Slllil~ies toe,lll)lore:
+     I) Wllklru ftnentlon,   UndPt W~f tJl'(.umu.1neP<t..1n- drap ()tit bf ~).Nf dlq)illCh l() ...,<ur»
+      Marblehe.:id <WIiydisvetdi dv(it'lf\\ Mart:leheed@1)\@(C@n<.y?Whet
+                                                                      $(@>the l),@t'l\\!lieSaSS(J(ililted
+                                                                                                       "~th
+      Mt prcwtdll'lgp.,c,11:or~~1.-.o,wh.;n ('.(11'117.lctod
+                                                         t() do <O?
+
+      ii) Lc»d ,hcddi"'I:, ru per 1J:ibovc, May be ~cc:~,yd-..ing        ,ummor p~kb:ld'! Lc:,s:o during
+      ..,;r,tei'? Nwd; tobe tho\j11,htor as .:it@mp(l11H)'Solutiol'\.while a transro,rne, 1@1,)<1i1
+                                                                                               may b\-a se-ve111I
+      lby~/V,... I:<.l<:<uP,
+      iii) 8ypn1 .ffKt.d tmuformer?         IS it l)(JSSibleto (eetive 13 lV fron1 N<1liOll8'Crid ¢r1 the @MStilll!l
+
+
+
+
+                                                                                                                             9/10
+     2lkV linC!~'?C:lntho<;ub,:u,tkln ~uppfyine u~ v,,ith 2.l kV nap down 1c:,13 kV? tt ,:o, do th" N.ition;al
+    (;rid ,m11ltt .it ttl.'11<.-11tKt.1tlnn
+                                         h-    1>Mi11eh  ,_.,.p;icltyto<:upply IK with U'll'l'W' 1:l kV 10.'llf?llow
+    ml)(:ti?lt?<hnlt<1lty, (.ln we l:>yP-:'SSthl!-;tffe«ed tr,ln$f0tmet todlrW!y feed Qther M.Jrtle~
+    substatl<>nsw!th 13 kVl Work and tlmetlne?
+    iv) EXp4,dit• Utility BESS?Ho.vain the UU\;ty scele betteryv,ofk.be expedited in C8S@                   of
+    e11u:,g1:1·n:y?sav1.hee11i,e,gi:,1tvOl.'tU•s du, iug die winler of 23· 24. 1111:"  Silt wo1k nif;hl be fl,•,is.hE:d.
+    Mlfht It b@oosslble to 8((tl,erate the b<1tterv?
+    v) R•n1 • BESSl ltiere are pr()Rramsv.ith tltSS on traill"IS,tru<ksand b81'Jles.Rent a utillt'(sc:81@l:JtsS?
+    vi) Mid-tension relief? Mbhd abuts Swampsoon e,1d'Sale-1,1,             Howme«v of OIB 22 ci,-cuilS oould
+                 bt f,:,J f1um S11l1:m/5'wniv.,wll du1i,ig un ,:mt,g,:,1)(.y? 11th would imply mid-vulttig,:,
+    pul.0:111.ially
+    coni,,:ctiun). r.,th,.,, lh:in 2! kV cor.iei:liuiu.Ate ;,bulling towra u~ing lhe -e              mid•11uhage?Hcw,
+    c.,nweC!:;tirn.:itec:o~ .:ind tirnclinC!? Ol co~ . .i,buttittg town:; will h:aw their own lo.:id conw-.i,int,:;..
+    Thoy might .:ii~ .:id: .:iboot ~ciprodty. '°"Id our .abutting drculu e.:irry inCl'<!.a,;c-d       k).id?
+
+4) 23 kV line inue.
+A:; lhC!l3 kV Ii~ o11"C!   co l«.:i1C'd.-:ind,1boveground from the $,,1,IC'ffl
+                                                                            <;utY.,t,1tionto the Vill~C! 1:3
+              1horo I,:;,1rkk t.h.:ittho If~ betlo-;1.it tho Qrno timo, lhk h,1,:;h.ipponod boforo .:ind \\i.11 libly
+<;ub-.t,1tlc:,n,
+h.:ipp1>n;i~!n If WI> tio M'f do ;inythlne t<>Pl'l>Wnt th1><\ll\1.'ltl<>n
+                                                                       fr<lm tP(.urrir,e.
+
+     ➔ Mit.i£;mM l:"U~ce~ to ~xple)I"(!:
+    I) Now tlllrd lino .ibovo cround ?lkV .ilnna l.1f~P'ff1>,Pl1>,:io;,1m     St, toatp;ith tc:,Vil!;ie1>St or.11b<:1.,.tlon;
+    ti) Now third lh,e und•rerou.,d ~Ion: L<1f.l)•~·t.?,      Plec1sc1ntfoott!Nth to VllJ.~eeSt. (mft:ht be ec1sler
+    thsn vi below, bee:auseof wetle,nd aloo~ the footpeth mee,nsessentially bu!ldl11: 3'I underwater
+    line? AIS<>i.it WO\lld be good for the @ll.tra lit'!e not to be i« th@S8me l)hvslcal foot,:irlnt itl ceseof
+    ph~lr.:il P1'<lhl1>m?•;
+    m) N.w 23 kV lll'I• from Sw1mpuott?
+    fv) N.w 23 kV lln• from «h ... pl1c:e?Salem lhomson ~ substation?
+    v) Vrwi..-w.ter Z.Sk.Vline from s.1._m footprint substatiOrl? (Next to the SE!wetli<>ewhe<e ~isti,1g
+    JlishlofWuv?I
+    vi) Bury 1)(11t1nclw!u. ~ryooe or two fines ~I-? mt1n1,t path. Wetlend: does this meen beslcelty
+    .i,n oodcn.v.:ittt' line? Thi:; ~Uti<ll'I dotti not .:iddr~, pos,ible iu.~ on the S;,i.lcmp.,th, or with the
+    Ofigin&ting substalion.
+
+5) Lore term, h the: Vill;,ge Sttcct the bc:.t ,ub:.~tion for critiul idn1:.:tiucturc? We h.:ivc :;iic
+con,:;1T,1int~wet bnd nC!Ktto the ,:;itC!.    \'/h.;:it h.ippcn~ it we:h.:ivc ut.;i~tTophlc prccipit,11ion ,1nd 10indie~
+af r.:ill'l,/haur fn, ,1fm, houn: I,:;tho ,:;ub-:to1tlc:,n ro.:illy <;,1m?A.<:wo d~•olq:i tho Utility Sr,;ilo ~tt°')' ,:;ito,
+,hou&d we lhinl ;,bovt 0U1e1c1itic:tl inf1;,asttuctu1c,'tl: co.Jd / :.huu!d h;,•,c un ~ 11ewfydt:11¥:lupcd:;iti:-?
+Could the Tios:.:ivr.,y :itc: be :a:;tt:ategK :;ite fOf the: future?
+
+
+
+6) How do we meuure nili,bilitv?
+Sooth H,l(lley m;slnUl:tlSfive 'Y~f IW@f'~fesoore of$AIOI, c,,.101,SAJFI,
+                                                                       ,;,n(I 00ffll)¥@S Itself to other
+utililies.
+Could we rn.:ikc the~ ,nc,.:,t;un::;p.1blic?
+
+
+
+
+                                                                                                                                10/10
+

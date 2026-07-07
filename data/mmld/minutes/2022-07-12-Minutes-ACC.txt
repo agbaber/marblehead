@@ -1,0 +1,698 @@
+Light Commission meeting minutes
+
+To:             Light Commission: Commissioners
+
+                Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+
+From:           Jean-Jacques Yarmoff, Secretary
+
+CC:
+
+Date:           July 19, 2022
+
+Re:             Commission Meeting July 12, 2022
+
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:30 pm, the meeting
+being held both in person and with remote access available to the public.
+
+Participated in meeting:
+        Commissioners: Frechette, Hull, Johnson, Wolf and Yarmoff;
+        Light Department: General Manager Joe Kowalik and Business Manager Matt Barrett.
+        Invited: Utility Financial Solutions: VP Dawn Lund and Financial Consultant Chris Lund.
+
+Election of officers of the Commission
+
+Vote #2022-20           Moved by Commissioner Wolf and seconded by Commissioner Frechette to
+                        reelect Commissioner Hull to the chair. Unanimous.
+Vote #2022-21           Moved by Commissioner Johnson and seconded by Commissioner Frechette to
+                        elect Commissioner Wolf to Vice-Chair. Unanimous.
+
+Commissioner Yarmoff proposed to create the position of Secretary to be held by a member of the
+Commission. The Secretary will - take notes during Commission meetings and prepare the minutes in a
+timely manner for review by the Commission; - Assist the Chair, the Vice-Chair, and as appropriate the
+Light Department General Manager in gathering documents and otherwise prepare the next meeting of
+the Commission.
+
+Vote #2022-22 and -23           Moved by Commissioner Wolf and seconded by Commissioner
+                                Frechette to create the position of Secretary and to elect Yarmoff to the
+                                position. Unanimous.
+
+The Commission also discussed nominating Commissioner Wolf to represent the Light Commission on Green
+Marblehead Committee, subject to the appropriate wording of the charter of the Green Marblehead
+Committee.
+
+
+
+                                                                                                    1/13
+Rate adjustment
+The General Manager explained that the increase in fossil fuel prices have led to an increase in the dollar
+charge of energy MMLD purchases (the year to date is otherwise unremarkable in terms of amount of
+energy purchased). This would result in a projected deficit of around $650K to $700K for the current
+exercise if no corrective action were taken. Per law, MMLD cannot have a negative exercise. MMLD will
+use its “Power charge adjustment” mechanism (PPA line on customers’ bills) to offset this increase in
+procurement costs. The General Manager announced he planned to increase the PPA by 1.5 cents to
+5.6 c/kWh starting at the next billing cycle on August 1. This will result in a $635K increase in net
+income, bringing the projected end of year result close to neutral. Depending on wholesale electricity
+prices evolution going forward and consumption later in the year, this may have to be revised.
+
+This change is under the control of the Light Department and no vote of the Commission is required.
+
+Rate Structure: Base Charge
+The General Manager explained a proposed change to the rate structure. The intent of the change is to
+more closely match the fixed base rate paid by rate payers to the fixed costs of the Light Department.
+The intent is to be revenue neutral for MMLD, and a resident consuming the “average amount of
+energy” will see no change to their total bills. See also the detailed discussion by UFS page 4 below.
+
+Under the proposal, which would be implemented over a two-year period, the fixed base charge would
+increase from $4.25 to $11.36 in a first phase in late 2022 and to $18.47 in a second phase in late 2023,
+while at the same time the total energy rate paid by residents (energy charge + PPA charge) would
+decrease by a cent a year. There would be no change to the bill of a customer with an average usage of
+663 kWh/month.
+
+Rate Structure: Time of Use
+The General Manager explained a proposed introduction of a Time of Use change to the rates. Again,
+the intended change would be neutral for MMLD. The introduction of rate changes at different time of
+day will more closely match the price that MMLD pays for energy. See also UFS comments, page 6.
+
+The detailed rate levels need to be confirmed by the detailed study which will be conducted by UFS. The
+new rate structure could be introduced by March/April 2023 and depends on an upgrade to the Nexgrid
+server, its software, the resolution of possible data collection and billing issues before roll-out.
+
+Vote # 2022-24
+The General Manager asked the Commission’s approval to initiate the process of changing the rate
+structure. A motion was proposed to increase base rates and lower energy rates as indicated in the
+schedule presented on page 6, first slide, on a two year timetable, with the first increase to take effect
+on November 1, 2022 and the second increase to take effect November 1, 2023. Also effective on
+November 1, reset the PPA to $0.00 and modify the rates accordingly. This is contingent on the General
+Manager proposing and executing a communication strategy including at least both written documents
+sent with the monthly bills and a public information session before the changes are put into effect.
+
+Motion moved by Commissioner Frechette, seconded by Commissioner Wolf. Unanimous.
+
+Several issues having surfaced after the meeting, the motion adopted in Vote 2022-24 will be re-
+discussed at the next Commission meeting.
+                                                                                                      2/13
+General Manager Updates
+
+Update of Village 13 substation / Behind the meter battery
+
+MMLD anticipates receiving several bids for the Switchgear the week of July 14.
+
+Three vendors for batteries have been selected, site visits will take place July 26, earliest installation
+target date 2025.
+
+
+Tree trimming
+
+Mayer Tree Services started clearing the brush under the main 23 kV lines: this will allow assessment of
+and access to the trees that need to be trimmed. This process will start after August 1st. It is important
+to communicate about this before we trim trees. As MMLD protects the main power lines in town and
+cuts a few trees, MMLD may consider helping the Tree Warden plant new trees in appropriate places in
+town by making a financial contribution to the fund dedicated to that effect.
+
+
+
+Vote # 2022-25           Motion was moved by Commissioner Frechette, seconded by Commissioner
+                         Wolf to approve the minutes of the June 7, 2022 meeting. Frechette, Hull, Wolf
+                         in favor; Yarmoff abstained.
+
+
+
+Other Agenda Items
+
+The other agenda items were not discussed for lack of time, and will be discussed at the next meeting of
+the Commission, set for July 26, 2022.
+
+- Goals and objectives of the General Manager. The General Manager will provide comments on the
+objectives proposed at the June 7 Commission meeting before the next meeting.
+
+- Interconnection permits. The General Manager will provide in writing the reasons behind an
+interconnection ban on batteries.
+
+- Decarbonization timeline 2040-2050. The General Manager will provide an update based on
+MMWEC’s input.
+
+
+
+
+The Meeting adjourned at 7:30 pm, after termination of the GoToMeeting remote meeting session.
+
+
+
+
+                                                                                                             3/13
+Details of the rate structure proposals and discussion
+
+UFS VP Dawn Lund and Financial Consultant Chris Lund explained the details of the rate study they
+conducted which led to the current proposal. These results were already shown to the Board in January
+2022 after the study was launched in June of 2021. There are no changes to the proposal since the
+January presentation. The slides showed are referenced from page 8 of these minutes.
+
+The rates changes proposed in the motion have no link with a newly elected board: nothing has changed
+since the first presentation of this data in January. Instead, the changes are aimed at assuring the
+financial stability of MMLD. By law, MMLD needs to have positive income, and this change in the rate
+structure will help stabilize income over time. It is important to note that the recommendation
+proposed by the General Manager does not include the two proposed rate increases the Consultants
+used as assumptions in their study, which UFS sees as necessary to stabilize the income over the time
+period of the study.
+
+Ms Lund explained that in the models they develop for utilities when conducting rate structure studies,
+UFS focuses on three important measure of financial strength of utilities: Projected Adjusted Operating
+Income; Projected Cash Balances and Projected Debt Coverage Ratio.
+
+According to UFS, Marblehead is in a reasonable financial position currently. The Adjusted Operating
+Income, while lower than the recommended amount, allows Marblehead to service its debt
+appropriately. Also, the cash reserves are higher than the minimum recommended. These cash reserves
+mean that the adjustment of rates to bolster Operating Income can be minimum, and phased over time.
+
+The projections show that Operating Income declines over time for several reasons: increases in power
+supply prices, inflation (salaries, healthcare), and capital investment depreciation. The target Operating
+Income increases over the period of the study mainly because of the inflationary effect on replacement
+cost of the existing network.
+
+Meanwhile the cash balance is high: why? Because Marblehead network is 56% depreciated. This is not
+alarming, Marblehead is in a reasonable range, but has over-depreciated compared to its peers. MMLD
+has not invested into the system at the rate it has depreciated. Most systems are below 50% but
+Marblehead’s situation is not unique. But MMLD should not think that, because it has a high cash
+balance, it is over-charging the customers. Instead this is a reflection of the fact that Marblehead has
+underinvested over a significant number of years.
+
+The projected income is lower than recommended and decreasing to uncomfortable levels over the
+study period: this is why UFS is introducing these two possible rate increases of 1.5% in each of 2023
+and 2026. The rate payers are otherwise not fully funding the system.
+
+The assumption for investments taken in this study is: $2.6M in 2022 then 2023-26 ~$1.8M per year. If
+we were to invest more in the system, then projected expenses would increase by the additional
+depreciation. If we invest aggressively in the network, targeted minimum Operating Income would
+decrease (age of system will become newer). It would also change the cash balance. As an example, if
+we were to assume the capital investments were fixed at $2.6M? Cash would decrease by ~$4M. And
+expenses would increase by the additional depreciation ($4M depreciated over 25 years.) It would
+change the Operating Income target slightly.
+
+
+
+
+                                                                                                      4/13
+Another assumption of this analysis is that load is stable with increases in both 2024 and in 2026 by 0.3%
+only. In other words, this analysis does not take into account potential increases in electricity
+consumption due to strategic electrification for housing heating and transportation.
+
+The study assumes that a structural change takes place adjusting the base rates to the fixed charge of
+MMLD, as per the recommendation of the General Manager.
+
+One of the most important conclusion of the rate study is that additional rate increases will be necessary
+to take into account inflation, increases in energy charges, etc. “The worst thing you can do is train your
+rate payers to think you can continue on without rate adjustments, when in reality expenses increase
+every year.” The projected increases would be largely under inflationary increases and MMLD is doing a
+great job of mitigating these increases. MMLD is not even passing through inflationary rate adjustments,
+which should happen yearly. It is also important to note that utilities that do not have a PPA charge
+adjustment system are not in good position. “MMLD is in the minority of utilities to be able to stabilize
+the Operating Income with these minor rate increases over the study period.”
+
+Yet, it is important to keep these rate increases in mind as we will communicate about changes to the
+structure, which are not rate increases, but cover the same time period when UFS assumes rate
+increases will take place.
+
+When doing an analysis of the different customer classes, UFS finds no major unbalances. However, the
+issue of fixed cost recovery is found across customer classes.
+
+What constitutes the fixed costs that should be covered by the monthly fixed charges? These include
+Meter costs, Meter Reading costs, Billing and Customer Service costs, and a portion of the Distribution
+System that can be attributed to the minimum service to one specific customer. If these are not
+appropriately charged, then one type of customer subsidizes another by not paying their fair share of
+the services. Typically, 30% of the distribution system costs should fall into the individual customer base
+charge.
+
+Financial Consultant Chris Lund then explained the details of the structural changes that are proposed,
+while at the same time the PPA is reset to 0 (or as in their simulations to $0.01, which may have
+separate benefits). Fixed Monthly charge would change from $4.25 to $11.25 then to $18.50, while at
+the same time, total kWh charge (energy +PPA) would decrease from $0.19850 per kWh to $0.18872
+and then $0.17859, a two cent reduction over the two year-period.
+
+The impact on different classes of customer usage was then discussed. Customer with lower usage
+would see their bills increase slightly, while customers using large amounts of electricity would see their
+bills decrease slightly. For a customer using the average 663 kWh per month, there would be no change
+to the bill at all. The median kWh consumption was not immediately available during the meeting.
+
+The structural rate change is proposed to be adjusted over two years to minimize the changes to
+customers. A 350 kWh customer would see an 8 or 9 % total change if the change were implemented in
+one year. The increase in the first year would represent an increase of $3.58 per month which is the
+worst case scenario. These customers’ rates are currently subsidized by customers who use more
+electricity. Spreading rates over two years as proposed limits the impact. On the other hand, in view of
+the investment decisions that rate payers are making in terms of heating with heat pumps and houses
+electrification, it is important that the price signals are appropriately structured, and the rates reflect
+
+
+                                                                                                       5/13
+appropriately fixed and variable costs. This is why this structural change should be implemented as
+promptly as reasonable, and why two years is proposed.
+
+Another issue with the implementation of this structural change is found for customers with solar
+panels. For these customers, the feed-in tariff, at 10 c/kWh, is less than the rate at which they buy
+electricity from MMLD. The justification for this lesser rate is that they have to pay the share of the fixed
+costs even if their consumption is diminished by their production. They now have to both pay their share
+of the full fixed cost while also receiving less in their feed-in rate. In essence, they are paying the fixed
+costs twice.
+
+UFS states that low income users tend to be higher than average users of electricity. This varies
+tremendously city by city, and even within a city. It is difficult to identify a low income user and the
+relevant user data. Where UFS has been able to get data, it is often higher. This could be caused by the
+fact that places where low income people live are less well insulated, the appliances are less efficient: as
+a result, they tend to be higher usage customers. If a low income user uses more than 663 kWh, the
+change proposed will help a low income customer. This brings up a problem that many utilities have,
+should we have a “Low income program”. The difficulty is that it is often problematic to identify these
+customers. The solution is often to have a program to which low income customers can apply, and that
+is funded by voluntary contributions (“opt-in”). UFS will follow up and provide MMLD with some utilities
+having such programs. MMLD has put in place such a program: “Neighbors helping neighbors”.
+
+Time of Use charge discussion
+Slide 12 presented by UFS shows a “Distribution demand charge” and a Time of Use energy charge can
+be implemented. To simplify, the change is shown here sequentially to the structural change described
+earlier, but this is arbitrary. In theory, the two could overlap. In practice, to have a good confidence in
+the ability of MMLD’s system to both have accurate measurements and bill appropriately, some testing
+time will be necessary.
+A peak demand charge could be introduced, as shown in this example. The proposed ToU final rates are
+recommended to show a progression of 1/2/3 for the Off Peak / On Peak / Critical Peak. This is easier to
+achieve with the demand charges proposed. The result would be a potential significant decrease in rates
+at night from 16c to half of that rate: 8c.
+What does the Distribution Demand Charge correspond to, does it affect customer behavior? This
+comes from the minimum system analysis. It is a way to push system charges away from the kWh
+charges. This is fair, because the system is designed for the highest possible load, peak demand. There is
+a direct relationship between the peak demand of a customer puts on the system to the overall system
+infrastructure. Transformer sizing will depend on the maximum demand of a customer or a group of
+customer.
+How long does it take to introduce a ToU charge for it to be accepted by the customers. The
+introduction can stat as soon as you are confident in the system. How long should the transition be?
+Usually a three to five year transition?
+
+Utility in Michigan introduced a ToU, they are in the third year, getting into year 4. They are using
+demand charges for their customers. They had great success with no complaints. Can you share the
+name of the utility in Michigan?
+
+A ToU study would take about 6 weeks to complete. MMLD has an engagement and budget proposal.
+
+
+
+                                                                                                        6/13
+Discussion about the introduction of structural changes
+
+While one could think of the rate stabilization fund as a funding mechanism, it would not be appropriate to
+use this fund of MMLD for this purpose. The goal of that $900K fund is to be used in cases of emergencies.
+The change proposed is structural and not an emergency.
+
+Commissioner Hull agreed that if the changes are explained, people get it. The explanation needs to be
+simple. The General Manager proposed that a communication strategy should include a public
+information session, in the fall where these changes are explained. This could be at the High School
+auditorium. Commissioner Yarmoff reported how customers appreciate a written information page
+together with their bills. They receive such communication with their Water bills, and would appreciate
+receiving similar information in their electric bill.
+
+Discussion of the timing of these communication actions lead to the conclusion that the initially
+proposed implementation timeline might be too optimistic, and the change may need to be
+implemented from November 1st rather than the initially proposed October 1st billing cycle.
+
+This is reflected in the motion presented to a vote.
+
+
+
+
+                                                                                                    7/13
+                                   Slides presented during the meeting
+Slides presented by MMLD’s General Manager, Joe Kowalik, Rate structure discussion
+
+
+                                       Proposed Rate Change Plan
+
+                  Date                                     Action
+
+                  July 12, 2022 - Current Condition        Energy costs continue to run higher than planned; Current net income
+                                                           loss for the year is $6S0-700K (including $330K Pilot)
+
+                  August 1, 2022 - Step O                  Implement 1.5 cent increase to PPA; new PPAwill be$ 0.056. Forecast
+                                                           $635K increase in net income
+
+                  October 1, 2022 - Step 1                 Intent is to be revenue neutral; begin residential base rate increase to
+                                                           $18.47 on 2-year timetable: increase residential base rate to $11.36
+                                                           from $4.25; New kwh rate calculated by reducing PPAfrom $0.056 to
+                                                           $0.00
+                  Mar/April 1, 2023 - Step 2               implement demand and/or TOU rate based on MMLD determination of
+                                                           current MMLD system capabilities
+
+                  October 1, 2023 - Step 3                 Implement second year increase of residential base rate to $18.47 from
+                                                           $11.36
+
+
+
+
+                                       Rate setting statutory requirements -
+                                       MGL Chapter 164, Section 58
+
+                  1. The rate schedule must be fixed.
+                  2. 3-month minimum duration between rate changes
+                  3. New rates shall take effect on the first day of the month
+                  4. New rates must be advertised in local newspaper 15 days prior to taking
+                     effect
+                  5. Comply with Pricing provisions
+                           No rate price can be fixed less than production costs w/o DPU approval
+                           Price schedule can not generate more than 8% operating profit after expenses,
+                           depreciation and losses.
+                           Prior year losses exceeding 3% can only be recovered at 3% per yr
+                  6. File rates at DPU
+
+
+
+
+                                       Residential Customer kWh/mo usage
+
+                                                      2019 MMLD - 8,815 Residential Customers
+                                                       663 kWh/month - average monthly usage
+
+
+
+
+                                                                     - ------ -----
+                                                                     """•tWhJmonthusce
+
+
+
+
+Slides presented by Consulting firm Utility Financial Solutions, Rate Structure Discussion
+
+                                                                                                                                      8/13
+     Marblehead Municipal
+     Light Departrnent
+    Flectric Financial Projection and Cost of SPrvicP Study
+
+
+    oawn Lund• v,ce President, Ut1l1ty~,nanc,al Solutions, Lll
+    Chris Lund• Financial Consultant, Utility Financial Solutions, LLC
+
+
+
+
+       Utility       Fin..1ncic1l Solutions.                      LLC
+
+• International consulting firm providing cost of service and financial
+  plans and services to utilities across the country, Canada, Guam and the
+  Caribbean
+
+• Instructors for cost of service and financial planning for APPA. speakers
+  for organizations across the country.
+
+• Hometown Connections preferred Vendor for Financial and rate
+  services
+
+
+                                                                            ....
+                                                                         lJFS vn_,n -.-...c•~
+                                                                              •oumon.uc
+
+
+
+
+    Review Step One for Electric Department:
+    • Financial Projection & Targets
+        • Debt Coverage Ratios
+        • Minimum Cash Reserves
+        • Target Operating Income
+    • Review Cost of Service Results
+       • Cost to service each class of customers
+       • Monthly Customer Charges
+    • Review Additional Steps
+    • Sample Rate Design
+
+
+                                                                           --
+                                                                         UFS   Ul'llnY Fll'lo\1,1(:JAI,.
+                                                                               ,ou.lTIONll,UC
+
+
+
+
+                                                                                                           9/13
+         r r 1,   , ,    1    • ,   • ,,   , • 1 1 1
+
+        Current Rates
+
+
+         Projected                                                   Adjusted                              Debt
+  Fiscal   Rate                   Projected       Projected          Operating      Projected Cash       Coverage
+  Year Adjustments                Expenses        Revenues            Income           Balances           Ratio
+    2022   0.0%               s
+                       17,946,464                $ 18,899,185    s       622,721    s 13,558,128              5.69
+    2023   0.0%        17,474,195                  18,271,678            467,483       13,566,053             5.45
+    2024   0.0%        17,316,725                  17,985,586            338,861       13,649,701             5.27
+    2025   0.0%        17,338,451                  17,848,609            180,157       13,627,369             5.02
+    2026   0.0%        17,706,731                  18,083,080             46,349       13,523,422             4.83
+  Recommended Minimum Target 2022                                s           s
+                                                                       1,320,462        7,705,453             1.45
+  Recommended Minimum Target 2026                                s 1,567,721 s          8,148,361             1.45
+
+                                                                                                --
+                                                                                            UFS ~~Uo~r~"L
+
+
+
+
+        ~ 117cmCI ZlI p rnJC Ct IO 17
+        Projected Rate Track
+
+
+            Projected                                               Adjusted                               Debt
+Fiscal         Rate            Projected         Projected          Operating      Projected Cash        Coverage
+ Year      Adjustments         Expenses          Revenues            Income          Balances             Ratio
+ 2022         0.0%           s 17,946,464      $ 18,899,1851    s      622,721     s 13,558,128              5.69
+ 2023         1.5%             17,474,195        18,555,166            750,971        13,849,541             6.11
+ 2024         0.0%             17,316,725        18,270,023            623,297        14,219,043             5.94
+ 2025         0.0%             17,338,451        18,132,968            464,516        14,483,916             5.70
+ 2026         1.5%             17,706,731        18,658,050            621,319        14,959,222             6.19
+Recommended Minimum Target 2022                                 s 1,320,462 s          7,705,453             1.45
+Recommended Minimum Target 2026                                 s 1,567,721 $          8,148,361             1.45
+
+                                                                                                --
+                                                                                            UFS ~ tlH,'~;.•~{JAL
+                                                                                                     1
+
+
+
+
+     • 2022 Revenue neutral rate adjustment for the system
+         • Phasein customer chargesover 3·5 years
+     • 2022 Revised PCA Model
+     • Additional studies (Chris Lund): Time of Use & Demand
+       charges
+         • Thesestudies will help us refine the rate structure over time
+
+
+
+
+                                                                                                                     10/13
+EIe ct rn CcY, t of Sc,r v I cc Rcc, u Ih
+
+
+                                                                          Projected
+       CustomerClass                                     Costof Service   Revenues     % Change
+       Residential (A)                               $       13,877,371   13,398,166          3.6%
+       Small Commercial (B)                                   2,268,088    2,228,401          1.8%
+       Off-Peak Water-Heating (G - Grandfathered)                53,778       42,066         27.8%
+       DomesticStorageHeating(S - Grandfathered)                 22,016       16,153         36.3%
+       Private Area Lighting(F)                                  23,885       32,734        -27.0%
+       Street Lighting                                          150,238      176,667        -15.0%
+       Large Commercial (C)                                   3,124,206    2,927,653          6.7%
+       Total                                         $       19,519,582   18,821,841          3.7%
+
+
+
+
+Monthly                  cu,,tonll'r            Chcirgc'
+❖   Designed to recover a portion of the fixed distribution costs of the utility such as:
+       Meter Costs
+       Meter Reading Costs
+       Billing Costs
+       Customer Service
+       Service Drop
+       Portion of Distribution System
+
+❖   Movement toward cost-based customer charges to help stabilize revenues
+❖   Helps to reduce subsidy between year-round customers and seasonal customers
+
+
+
+
+                                                                                            UFS
+                                                                                             -- """" "~···~
+                                                                                                  SOLUtlONS,LLC
+
+
+
+
+                                                                                                                  11/13
+         Monthly                    Charge
+         Movement toward COSover time
+
+                                                                                                                        Current
+                                                                                                         cos           Average
+                                                                                                     Customer          Customer
+                             Customer Class                                                           Charge I             Charge
+                             Residential {A)                                                         s     18.47       s       4.25
+                             Small Commercial {Bl                                                          32.13                     5.00
+                             Off-Peak Water-Heating {G - Grandfathered)                                    11.99                     4.25
+                              Domestic Storage Heating (5 - Grandfathered)                                17.68                      4.25
+                              Private Area Lighting {F)                                                    1.32
+                             Street Lighting                                                               2.23
+                              Large Commercial {C)                                                       113.04                    10.00
+
+
+
+
+         Sc1111p Ic • RL' ':>idc n t I c1I Rc1t c Dc ':i ip;11
+         Gradual movement                      toward COS Customer Charge
+
+                                                        cents per kWh Energy Charge +­                   ChangebvMonthly Energy(kWh) Uug• (")
+                                                        PowercostAdJustment
+                                                                         Chanae
+Residential {A}                                                 from Current
+
+
+EnergyCharge+-Power Cost Adjustment           0.19850
+                                                                  (1.0) $
+                                                             0.18872      $
+                                                                                    (2.0)
+                                                                                0.17859     ·:.:~
+                                                                                             !OIi
+                                                                                                 _
+
+
+~"~"~"~~~~------~c="~"~'"~'--~'~"~'~'--~''~"~'~-                                            .: ~                           110      .i6
+Monthly Fadlitif:S Charge:                                                                   •°"'
+ Monthly Charge                                  4.25           11.25              18.50    .-,
+Eneravcharae:
+ AIIEneriiv                                   0.14250        0.17872            0.16859     ·-
+Hydro Credit
+ Annual Credit                               (360,787) $     (360,787) $       (360,787}
+                                                                                            kWh Use                        Yearl
+Power Cost Adjustment:
+ All Energy                                   0.05600
+                       Revenue from Rate $ 15,229,022
+                                                             0.01000
+                                                        $ 15,229,022
+                                                                          $    0.01000
+                                                                          $ 15,229,022
+                                                                                                                3SO
+                                                                                                                450                '""
+                                                                                                                                   '·""
+                                                                                                                550                1.4"
+                    Change from Previous                         0,.,,.            0,.,,.                       650                05~
+                                                                                                                750              -0.2"6
+                                                                                                                850              -0.8"
+                                                                                                                950              •l.2"
+                                                                                                               1.050             ·1.5"
+                                                                                                               1,150             •1,8"       __,.
+                                                                                            -----"'"-~'"''----~'·=1"                        UFS ~~1Jo"~tlfl•~
+
+
+
+
+                                                                                                                                                                12/13
+                                      f\cltc Design (Dernand & TOU)
+                  Sample: f-=(es1dent1al
+                  Gradual movement toward COS Customer Charge
+
+
+                   Resldentlal {A}                                                         cents per kWhEner1yOi.u1e .. Power Coil Adju5tmentChange from Current
+
+
+                   ..,..
+                   Entrn: Ch•!i•   ~ Powtr COUAdju,tment
+
+
+                   Monthly hcll!tin CNrge;
+                                                                  s     0.19850
+                                                                      Curren!
+                                                                                  s
+                                                                                            11.01 $
+                                                                                       0.18872
+                                                                                      Ye.ul
+                                                                                                  s
+                                                                                                           (2.0)5
+                                                                                                       0.17859
+                                                                                                      Ye•Z
+                                                                                                                 s
+                                                                                                                        (2.8)$
+                                                                                                                   0.17090
+                                                                                                                  YHr3
+                                                                                                                                s
+                                                                                                                                     (3.7) 5
+                                                                                                                                 0.16182
+                                                                                                                                Year4
+                                                                                                                                               s
+                                                                                                                                                  (4.4} $
+                                                                                                                                              0.1S414
+                                                                                                                                             Ye.us
+                                                                                                                                                             s
+                                                                                                                                                                     (2.2)
+                                                                                                                                                                 0.17649
+                                                                                                                                                        YearSjnoOemuv:I!
+
+                    Monthly Ch,rge                                         4.25   s       11.25   s      18.SO   s      19.00   s      19.SO         20.00   s        20.00
+                   Ener,vCharge·                                                                                 s   0.16090    s   0.15182        014414    s     0.16649
+                    AIIEnerlY                                     s     0.14ZSO   s     0.17872   s   0.16859
+                    TOUEnergyCharge;
+                    k......,.Off Pe~ (margiJlill powirr supply)                                                      0.15000    s   0.11000    s 0.08000 s         0.14042
+                    k\NhOn Peak I+ someCP Power Supply)                                                              0.1£000    s   0.16000    s 0.16000 s         0.16000
+                    kW'hCrltlul Peak(+ CP Power Supply)                                                              0.13193    $   0.20916    $ 0.22542 s         0.22542
+                   Oistnbution Demand Ch.orge
+                    All Demand                                                    s               s                      1.25 $                s      400    s
+                   Hydro Credit                                                                                                        '"
+                    Annual Cred,t                                 $    (360,7871 $     (360,787) 5    (360,787) 5    (360,787) $    (360,787) $    1360,787) $     (360,787)
+                   PowM C!Kt Adjustment:
+                    AIIEnerRV                                     s
+                                                                  0.05600         s
+                                                                              0.01000             s
+                                                                                          0.01000 $ 0.01000 $ 0.01000                          s   0.01000   s      0.01000
+                                                                                                                                                             s
+                                                                                           ._,,. ._,,.
+                                           Revenuefromllate $ 15,229,022 $ 15,229,022 $15,229,022 $15,229,022 $15,229,022
+                                                                                                                                                       .....
+                                                                                                                                               $15,229,022       15,229,022
+                                         Chio!Sit from Pritlllou,                                         0-"'        ._.,.
+
+
+                                                                                                                                                                 --    •-"'I
+                                                                                                                                                             UFS ~tJHoS,:;.•~l   12
+
+
+
+
+General Manager Updates Slides presentation
+
+
+                                               GM Updates
+
+               • Village 13 Switchgear bid opening Thurs, 7/14: 2-3 bids
+                 expected
+               • Utility Tree Trimming started with Mayer Tree Services
+                  - Ground cover clearing on ROWsdone
+                  - Tree trimming on1ROWbegun
+                  - Independent tree removal on ROW assessment - Aug 1 start
+                  - MMLD to file Notice of Intent with Conservation Commission -
+                    ConComm mtg
+
+
+
+
+                                                  GM Updates
+
+                • MMWEC Behind-the-meter Battery
+                   - MMWEC selected the 3 finalist vendors
+                   - Vendor meetings at MLD sites July 26
+                   - Earliest target installation date 2025
+
+
+
+
+                                                                                                                                                                                      13/13
+

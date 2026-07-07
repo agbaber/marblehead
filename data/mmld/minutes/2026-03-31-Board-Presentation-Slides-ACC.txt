@@ -1,0 +1,409 @@
+Marblehead Municipal
+ Light Board Meeting
+      March 31, 2026
+Agenda Board meeting January 27, 2026
+4:00    Call to Order
+       • Public Comments
+       • Board Meetings: Minutes of previous meetings / Calendar next meetings
+       • Follow up from previous meetings
+          • Legal Complaint Defense Organization, Vote
+          • Voluntary payment to town, Vote
+          • Updated Public Charging EV Policy / Rates, Vote
+       • Go Green rate review, Vote
+       • General Manager goals update
+       • General Manager Report
+       • Agenda items or updates to be discussed at next meeting (if any)
+       • Motion to meet in Executive Session, not to return to open session
+       • Adjourn
+Board Public Meetings
+
+• March Board meeting             Tuesday 3/31     4:00 pm
+• April Board meeting             Tuesday 4/28     4:00 pm
+• May Board meeting               Tuesday 5/26     4:00 pm
+
+     Board meetings: usually last Tuesday of the month at 4:00 pm
+Legal Complaint: Defense Organization
+• Board and General Manager met in Executive Session March 9
+• Retained KP Law’s Deborah Ecker to defend MMLD
+
+• Next step:
+   • Response to complaint
+
+• Motion to empower the Light Board Chair or Vice-Chair, and/or
+  the General Manager, to interact with KP Law’s attorneys to
+  respond to complaint
+Voluntary Payment to the Town
+• Board approved the policy to determine Voluntary Payment to the town of
+  Marblehead, on December 16, 2025
+
+   MMLD sales of power were 102,469 MWh in CY2025
+   Payment based on $3.60/MWh of retail power sales
+   Payment subject to available surplus
+
+
+• This leads to a Voluntary Payment of $368,888
+
+• Motion to have MMLD make a Voluntary Payment of $368,888 to the town of
+  Marblehead
+EV Charging Policy Update
+Aligning Grid Reliability, Cost Recovery, and Sustainable Growth
+                   Current Rate Structure
+• Current Rate Structure (All Vehicles)
+   • $.0.20 per kWh - All Hours
+   • $5.00 per Hour After 6 Hours
+    Changes Presented At The Last Meeting
+• Public
+   • $0.25 per kWh (Off-Peak)
+   • $0.50 per kWh (4 – 9 PM Weekdays)
+   • Overstay Fees: $5 per Hour After 5 Hours
+• Municipal
+   • $0.10 per kWh (Off-Peak)
+   • $0.50 per kWh (4 – 9 PM Weekdays)
+   • No Overstay Fees
+           Questions Posed About Changes
+• Can we differentiate rates between residents and nonresidents?
+   o Not easily. Residents would need to be individually verified, authorized,
+     and added to the system, which would be administratively burdensome.
+• Can we implement a tiered overstay fee structure, such as $2 after
+  the first hour, $4 after the second hour, and so on?
+   o No. ChargePoint can only implement a flat fee structure for overstay
+     charges. We can, however, include a one-hour grace period before
+     charges begin.
+• Can we adjust overstay fees for overnight charging?
+   o Yes, this can be configured.
+      Adjusted Changes Based on Feedback
+• Public
+   • $0.25 per kWh (Off-Peak)
+   • $0.50 per kWh (4 – 9 PM)
+   • Overstay Fees: $5 per Hour After 5 Hours
+   • No Overstay Fees 11 PM – 7 AM
+• Municipal
+   • $0.10 per kWh (Off-Peak)
+   • $0.50 per kWh (4 – 9 PM)
+   • No Overstay Fees
+                         Conclusion
+• Proposed adjustments to rate structure aligns pricing with
+  peak demand
+• Encourages charger turnover and improved access
+• Maintains fairness and transparency for all users
+• Supports long-term sustainability
+EV Charging Policy
+
+Motion to adopt the EV Public Charger rates and fees as presented
+Agenda Board meeting January 27, 2026
+4:00    Call to Order
+       • Public Comments
+       • Board Meetings: Minutes of previous meetings / Calendar next meetings
+       • Follow up from previous meetings
+          • Legal Complaint Defense Organization, Vote
+          • Voluntary payment to town, Vote
+          • Updated Public Charging EV Policy / Rates, Vote
+       • Go Green rate review, Vote
+       • General Manager goals update
+       • General Manager Report
+       • Agenda items or updates to be discussed at next meeting (if any)
+       • Motion to meet in Executive Session, not to return to open session
+       • Adjourn
+   Go Green Rate Revision
+                                             G~GREEN NOW!
+                                                100% Carbon-Free     Electricity   for MMLD Customers
+
+• MMLD’s power portfolio was ~75% non-carbon in 2025
+• For customers who wish to fully offset the carbon footprint of their electric consumption, MMLD
+  offers a “Go Green Now” rate rider, which uses Massachusetts Class I Renewable Energy
+  Certificates (RECs) to account for the remaining ~25% of their consumption
+• MA Class I RECs fluctuate quarterly, but generally are priced around $40/MWh ($0.04/kWh)
+
+     Go Green Now Rate = Consumption (kWh) x MA Class I REC price ($/kWh) x Carbon Intensity (%)
+
+     Go Green Now Rate = Consumption (kWh) x $0.04/kWh) x 25% = Consumption (kWh) x $0.01/kWh
+
+     The current Go Green Now rider is set at $0.022/kWh; the new rate will be priced at $0.01/kWh
+Go Green Rate
+
+Motion to set the Go Green Now rate rider at 1 cent per kWh
+Updated Goals for the General Manager
+• Goals for the General Manager for the period October 2025 – September 2026
+  were approved10/28/2025
+   • rolling over previous year’s goals of previous General Manager as direction for first six months
+   • Reviewing the goals in view of short term strategy exercise, concluded in February
+
+
+
+Updated goals are drafted, the General Manager has reviewed them, but the board
+has not yet had a chance to review → will be publicly discussed at April meeting.
+Agenda Board meeting January 27, 2026
+4:00    Call to Order
+       • Public Comments
+       • Board Meetings: Minutes of previous meetings / Calendar next meetings
+       • Follow up from previous meetings
+          • Legal Complaint Defense Organization, Vote
+          • Voluntary payment to town, Vote
+          • Updated Public Charging EV Policy / Rates, Vote
+       • Go Green rate review, Vote
+       • General Manager goals update
+       • General Manager Report
+       • Agenda items or updates to be discussed at next meeting (if any)
+       • Motion to meet in Executive Session, not to return to open session
+       • Adjourn
+General Manager Update
+Board of Electric Commissioners Meeting
+March 31, 2026
+
+
+
+
+       MMLD
+    Safety Minute
+                                       Know what’s below—call before you dig!
+• Calling Dig Safe System before digging is a legal requirement in Massachusetts. It’s an important first step for many spring
+  projects and it’s free to use!
+• Underground infrastructure—electric, gas, water, sewer, and telecommunications lines—can be just inches below grade;
+  striking a buried utility line can result in serious injury, service outages, environmental damage, and costly repairs to utility
+  infrastructure. Even small projects like planting trees or installing a fence have potential to cause damage and require a Dig
+  Safe!
+• Before calling 811, the intended digging area should be marked with white flags.
+  Utilities will apply temporary markings in the area within several days to indicate
+  where underground lines are located.
+• Failure to call 811 can lead to fines, liability for damages, and project delays.
+• When digging, always respect the marked lines and maintain safe clearance
+  distances when excavating.
+
+
+
+
+     Marblehead Municipal Light Department
+   Surface Paving of the Utility Corridor
+• The utility corridor is jointly owned by the Marblehead Sewer Department and the MMLD
+• In 2018, Town Meeting approved Article 33 – Public Access to Railroad Right of Way, which
+  stated that “the Town will change the purpose of the use of the top twelve inches to the
+  surface of the [Rail Trail] by adding an additional use, that is the purpose of multi-model bike
+  and walking path to be under the care custody and control of the Board of Selectmen”
+• Access, use, and maintenance of the corridor remain a priority and concern
+• Ongoing coordination between Community Development, Water/Sewer, and MMLD
+  • As MMLD’s project to underground the 23kV supply lines advances, we anticipate manholes will be installed
+    approximately every 200-300 feet along Salem-Marblehead branch from town line to Village Substation
+  • Community Development has concerns about grading around the anticipated manholes, specifically, related to
+    exposed covers creating a potential trip hazard for recreational users
+      • Community Development’s design for improvements now recommends paving applicable section(s) of the utility corridor
+        following the installation of manholes
+
+• In anticipation of the utility-scale battery at the Village Substation, the Marblehead Fire
+  Department has requested the utility corridor paved from Bessom Street, under Village Street,
+  to the substation to ensure reliable access by any necessary apparatus
+
+   Marblehead Municipal Light Department                         https://marbleheadma.gov/wp-content/uploads/2025/04/Annual-Report-2018.pdf
+Surface Paving of the Utility Corridor
+                                            Pl..A.N!:n.-r.1D  O9K8'_:!..:::~A,i-,N{.
+                                                           ~;~- ~'~':E:>i.,
+                                                                            ~ ::::.
+                                                                                     :f      '.::__             -- - - - - - -
+                                                                    :
+                                            c.sr..;x,:i~:;;.-
+
+
+
+                                                                f :
+                                        -
+
+
+
+
+                                            : : - 1 t J i f 1 !                                             l
+                                                                      _;j~t"'~,l;
+                                                                 !\,:...                                    l
+                                                                   J,\,,:l.°i.tr,,r.,:.
+                                                                                       f~;            ,,l
+
+
+
+
+                                                                                                                                                   T
+                                                                                                                                       Di;:PARTMEN
+                                                                                                                         SEWER                       0s1:s
+                                                                                                                                     WER PORP
+                                                                                                                           NG FOR SE
+                                                                                                                 LANO TAKI           E RA /t. R0 <1 10
+                                                                                                                                      O MAIN
+                                                                                                                        ilOST0/11 AN          BRANCHfS-
+                                                                                                                                                       RJGHT or
+                                                                                                                                                                      WAY
+                                                                                                                                        con
+                                                                                                                                a SW•MPS
+                                                                                                                 MAAAl,.fME•o                                            2
+                                                                                                                                                          "'"Y f'f, 19'6
+
+
+
+
+Marblehead Municipal Light Department
+   Surface Paving of the Utility Corridor
+                                                                                                                              FlAN c!-OOKc;s' ?LAN 7,~
+                                                                                                                              't:S!',;;;( "i!";<i;::;'~{   'F   ~-~~:i,;_,,:.:::. :.,:,·.-,-,
+
+
+                                            \,:',
+                                            \~'1
+                                             \...\',
+
+                                             \,:i\
+                                                 ·-~   \
+                                             /          \
+                                             \.._j
+
+
+Phase II Undergrounding                                                                                          -,,                                                                            Fire Dept Access
+
+                                                                                                                                                                                                                                                              No.       6
+
+
+                                                                                                                                                                                                                                                                   ~-~'.--   2i$'
+                                                                                                                                                                                                                                                               --·•·M:,--·~.Q.Ql
+
+
+
+
+                            Phase III Undergrounding
+                                                                                                                                                                                                                        TOW!i    CF   MAn'f}Lf..'.flEl\D
+
+
+                                                                                                                                                                                                               SEWER            DC:PARTMENT
+
+                                                                                       PA-!l!tCEL          No,
+                                                                                                     1a.aoa,
+                                                                                                                       Utility-Scale Battery                                                           LAND TAKING
+                                                                                                                                                                                                               BOSTON AND
+                                                                                                                                                                                                                             FOR SEWER
+                                                                                                                                                                                                                                  MAINE fiAll.
+                                                                                                                                                                                                                                                       PURPOSES
+                                                                                                                                                                                                                                                           RO.\D
+                                                                                                                                                                                                       MA«RI ..EHE:lliO a SW~MPSCOl'T l:IRANCttE5-R161iT              Of WA.Y
+                                                            ~ee r'll.,.ri of ,~orbi,e-h"o:J "Toking ~fon
+                                                                   Clct~I.I D•c--!:~.Z:.N .a, 1961
+
+
+                    Proposed Paving
+-------             Transmission Lines
+    Marblehead Municipal Light Department
+Laydown Area on Tioga Way
+                                  /     • MMLD currently maintains a utility
+                                          pole pile at its Clifton Substation
+                              /
+
+
+
+
+                                        • Transformers are stored across four
+          ).            SW
+               •      • &
+                     ' , ,.
+                   -,;.
+
+
+                                          different substations and the Wilkins
+                                          Power Plant
+                                        • To support improved inventory
+                                          management and more efficient
+                                          operations, MMLD intends to develop
+                                          a warehouse at its parcel on Tioga Way
+                                          in the next three-to-five years
+                                        • In the near term, MMLD plans to clear
+                                          the highlighted section of land to
+                                          facilitate a basic laydown yard for
+                                          consolidated, outdoor storage
+Marblehead Municipal Light Department
+   Upcoming Aerial Thermal Efficiency Survey
+• As part of its effort to better understand energy savings potential for the local housing stock, the
+  Marblehead Municipal Light Department (MMLD) is sponsoring a drone survey to assess thermal
+  insulation efficiency of building envelopes in the neighborhoods of the Old Town district.
+• External thermal imaging will be
+  conducted via drone from an
+  altitude of approximately 150 feet to
+  identify patterns where insulation or
+  weatherization improvements may
+  improve energy efficiency, comfort,
+  and utility bills. No property access
+  is required and no personal images
+  are collected.
+
+
+ Contracted drone operators will be clearly identified and are fully licensed and insured
+ Surveys will commence the week of April 6th and are expected to take 2-3 weeks.
+
+
+    Marblehead Municipal Light Department
+  Overdue Customer Bill Collections
+• MMLD complies with a winter moratorium on customer shutoffs for nonpayment,
+  as directed by the Massachusetts Department of Public Utilities (DPU), from
+  November to April each year
+• Several hundred customer accounts are currently aged greater than 60 days
+• As advised by our auditors and in accordance with good industry practice, MMLD
+  will commence enforcement of overdue electric bills next month, in accordance
+  with our established policies and procedures
+• While customer shutoffs are a last resort, it is important that MMLD recovers
+  payment to ensure fairness among all ratepayers
+• Customers are encouraged to be proactive in arranging for financial support and/or
+  payment plans by calling MMLD customer service team at (781) 631-5600
+
+
+   Marblehead Municipal Light Department
+   Go Green Rate Revision
+                                             G~GREEN NOW!
+                                                100% Carbon-Free     Electricity   for MMLD Customers
+
+• MMLD’s power portfolio was ~75% non-carbon in 2025
+• For customers who wish to fully offset the carbon footprint of their electric consumption, MMLD
+  offers a “Go Green Now” rate rider, which uses Massachusetts Class I Renewable Energy
+  Certificates (RECs) to account for the remaining ~25% of their consumption
+• MA Class I RECs fluctuate quarterly, but generally are priced around $40/MWh ($0.04/kWh)
+
+     Go Green Now Rate = Consumption (kWh) x MA Class I REC price ($/kWh) x Carbon Intensity (%)
+
+     Go Green Now Rate = Consumption (kWh) x $0.04/kWh) x 25% = Consumption (kWh) x $0.01/kWh
+
+     The current Go Green Now rider is set at $0.022/kWh; the new rate will be priced at $0.01/kWh
+
+
+   Marblehead Municipal Light Department
+Library of Things
+     Generously   donated by
+                                        • Marblehead Municipal Light
+                                          Department recently donated two Kill-
+                                          A-Watt devices to the Abbot Public
+                                          Library for inclusion in its “Library of
+                                          Things” collection
+                                        • These items can be borrowed by
+                                          library users, just like books; Kill-A-
+                                          Watt meters allow users to
+                                          understand and monitor how much
+                           I I            electricity is consumed by plug-in
+                            •             devices
+
+
+Marblehead Municipal Light Department
+   Additional Updates
+• Continued progress with the Village 13 substation and battery energy storage system
+• Coordinating with City of Salem for Phase I of the transmission resiliency project (replacement of
+  utility poles adjacent to Railyard substation)
+• Union dissolved relationship with IUE-CWA Local 81214
+• Working with Recreation and Parks Department to support strategic insight and potential
+  partnerships for the ongoing Reynolds Rink project
+    • Network geothermal or other applications of ground source heat pumps and waste heat reclamation
+    • Integration of solar array or solar-ready pavilion roof
+• Recertified elevator at 80 Commercial Street
+• Conducted updated employee satisfaction survey with Polco; results due by end of April
+• Watching political developments
+    • Federal Energy Regulatory Commission’s (FERC) order to cut New England transmission owners’ allowed return
+      on equity (ROE)
+    • Governor Healey’s Executive Order To Secure Massachusetts’ Energy Future by Establishing an Energy Supply
+      Plan that Drives Affordability and Reliability
+
+   Marblehead Municipal Light Department
+Thank You
+
+
+
+                Contact Info:
+      jblair@mhdld.com
+      (781) 584-5472
+

@@ -1,0 +1,542 @@
+Light Commission March 1st, 2023 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           March 3, 2023
+Re:             Commission Meeting March 1, 2022
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:03 pm, the meeting
+being held both in person and with remote access available to the public. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:          Hull, Frechette, Smith, Wolf and Yarmoff participated in person.
+        Light Department:       General Manager Joe Kowalik and Business Manager Matt Barett.
+        Fire Department:        Department Chief Jason Gilliland
+        Invited:                Chris Lund, Consultant, Utility Financial Solutions (UFS)
+                                Justin Connell, MMWEC, Director of Energy Markets
+
+Meeting Guidelines
+Commissioner Wolf distributed a document describing proposed guidelines to make the Commission
+meetings more effective and productive, while providing time for public comments. Such a document
+could become part of the by-laws of the Commission, when they are established. See page 4.
+Vote #2023-09 Motion to approve guidelines, as amended during the discussion, was moved by
+              Commissioner Wolf and seconded by Commissioner Yarmoff. Unanimous.
+
+Strategy Working Group Report
+Commissioner Yarmoff presented the work of the Strategy Working Group, already explained in more
+details during the public meeting of February 24. The group has only modeled the Town-wide effect of
+transportation electrification to date. Other sectors will also have an impact but transportation
+electrification is likely the most important single factor. Various assumptions were used in the model to
+cover a range of possible scenarios. The additional load is presented in the slides on pages 6 and 7: by
+2030, the existing load will increase by around 60%. The increase corresponds to a 1.7% compound
+annual growth rate over the period. The observed increase in load from 2020 to 2021 was actually 1.7%:
+we may already be observing this growth in Marblehead.
+The number of electric cars projected in town was also shown (2nd slide page 7). Depending on the
+penetration speed, one can assume that there will be 2,000 to 3,000 electric cars in town within 5 years.
+This will have implications for the town, beyond just the electricity supply. Another consequence: car
+batteries will reach a total of over 100 MWh in Marblehead by 2027. We need to be able to manage
+these batteries which are 5 times bigger in aggregate than the utility scale battery we are planning to
+install.
+In the next part of its work, the group will explore the temporality of this extra load.
+
+Separately, we are working with the MIT Sloan School of Management to assess solar capabilities /
+policy in Marblehead.
+
+                                                                                                    1/11
+Update on battery regulations
+Fire Chief Gilliland explained the standards and new codes relevant to Battery Energy Storage Systems
+(BESS). NFPA 855 is the National Fire Protection Association standard which covers the installation and
+operation of Energy Storage Systems, including Li-Ion batteries. These standards are incorporated in the
+Massachusetts building code (and stretch code) which was updated at the beginning of the year, and in
+the Massachusetts Fire Code 527 CMR 1 under Chapter 52, which applies to the installation of battery
+storage systems: these BESS can be installed within new or existing buildings. Yet, these systems can
+present a number of hazards which need to be understood before installation. Precautions mandated by
+the codes must be followed, such as proper fire-proofing, venting, location (explained in Chapter 52).
+But now, the building code and the fire code are in place. A resident that wants to install a battery
+system would have to apply to the building department. In Marblehead, this Commission supports the
+use of batteries, the Building Inspector will review the installation is made according to code, and the
+Fire Department will do the same. We are trying to make sure things are safe.
+While the codes allow for the batteries to be inside a structure, from the personal perspective of a
+safety professional, the Fire Chief would prefer that they be installed outside; if they have to be inside, it
+is better if they are in a detached garage than in a house. The fire department will keep a record of the
+battery storage systems: in case of incident in a house, firefighters need to know “there is a BESS here”.
+Some municipalities, like Swampscott, require that houses have a placard outside the house to indicate
+the presence of a battery. There has been a case, recently in Massachusetts where a residential battery
+caught fire.
+This would be a good moment for MMLD to participate in the MMWEC-facilitated subsidy program for
+batteries: MMWEC recommends a financial subsidy, as batteries benefit the Light Department overall.
+
+General Manager Update
+
+Financial Updates. The new rate structure has been rolled out in January. We are still waiting for
+numbers with regards to OPEB and Pension contributions: the new town finance manager starts next
+week. The Operating Statement for the year-end 2022 shows provisions for these expenses. The actuals
+at the end of the year came out a little more favorably, with no need to transfer funds from the Rate
+Stabilization fund.
+
+Village 13 update. Contract negotiations with Virginia Transformer are still on-going. The points
+discussed are minor and we hope to finalize very soon. Switchgear vendor MCP is back in operations.
+We have received 4 bids from qualified vendors to work on the right of way (necessary to install the
+switchgear and transformer). In essence, we have to build a road 6/10th of a mile in length.
+
+Solar PV rate. Commissioners Frechette and Wolf will recuse themselves of voting on solar rates as they
+are both have solar arrays on their residences.
+
+During the last meeting, the question was asked about capacity and transmission avoidance possible
+impact on feed-in tariff. Doing this analysis, based on data from 2022, leads us to the value of the excess
+kWh returned to the distribution system by the owner of the solar array. It is shown in slide 2 page 10.
+The question was asked whether one should look at an average value over time, or a real time value.
+The capacity charge chosen of $2.00 is based on the cleared values for August 2022. They are now
+higher for 2023 or future years. We are trying to use a certain methodology that is based on existing
+data and correlates with the value created.
+
+
+
+                                                                                                         2/11
+To compare the scale of solar in Marblehead’s portfolio, the NREL calculated power production per year
+from a putative Brown School array (273,000 kWh) is of the same order of magnitude as the power fed
+into the distribution system by 65-odd residential solar arrays in 2022 (286,000 kWh).
+Had this methodology been applied in 2022, these rates would have resulted in about $2,000 less paid
+by MMLD to the customers. These are small amounts, and we need to get both the methodology right
+but also the various aspects of a solar policy right: we have not discussed incentives, implementation
+hurdles or timing of implementation. It would be beneficial to the Department to receive RECs in
+exchange for incentives. We also need to consider the timing of solar policy changes in view of the other
+changes that we want to implement, including time of use. All of these are important for the customers
+who want to install solar: we need to have this discussed before we vote.
+The methodology for feed-in tariff for batteries was presented.
+
+EV charger utilization. If we install new chargers, we would want their utilization to be higher than the
+current 3% utilization rates. A possible load factor of 20% would give us an energy rate of 36 cents per
+kWh. Currently, some sites do better than others, but the maintenance fees are more than the
+revenues. The question for the board is do we want to take responsibility for a meaningful share of
+electric vehicle charging? That’s an open question, but the recommendation is to manage this issue. In
+view of the large fraction of residents who do not have the possibility to charge at home, we have to
+work with the town.
+
+A motion to adjourn was proposed, seconded and unanimously adopted at 5:35 pm.
+
+                                                ----****----
+
+
+
+
+                                                                                                      3/11
+                                     Documents shown during meeting
+
+Meeting Guidelines as amended during meeting.
+
+
+                         Marblehtad Muril(il)al Light COrlll'lliSSl<>r'l
+                                                                    Meeting Guidelirl@S
+
+          ordH for the r...1arblel'leadMUl\l(l,Pa1Lll:ht ComrrtlHIOnt◊ 01)er<1te
+       11'1                                                                   efflOMtl'{ and .;ffectt.·el'{
+       tow,rd fulfi!hne 1u MIS$t0nto Marblehead resident; and ratePa't'er.s,8\'er,• effort will be made
+       to .idhere to the follow,n:: eui<lv'ines,
+
+           1. Adhetil\g to an egenda:
+              Postedaaendawlll stue the time at •,;hkh each 1am '11111   be cllscussed.Meeun1,;aienda
+              Will follow posted a1:enda.Coom11ss1onerswill collernvet" ho11Cr   the allotted time ¥)er
+              aeend.. item. Items requ1r1n1;
+                                           so,rd foedb.;d:.or ,;ote will be noted on the ,·:end«,
+
+           2. Timt-lydist1ibutk>oor tig.~f!d~msle1ials:
+              Documentsthat 'Iii I be diswssed should be clrculeted to the\vhole bosrd al',d&re due
+              the F11davbefore a Twsdav meHln1,;or the Moncl,v before a w~nesdav meettni.
+
+          3, PubhcCommem:
+             .:.ft,;t ;ppro•;,11of minute; th,,;-pi;bli~ will b-l m\•it..t<Ito m.1lc8.;omm,;nts or $t.lt..tment$
+             limited to 2 minute:: e;,ch Md·..:: ~tart of the mciering. Puh!fe comment will not exceed 15
+             minute~: ;:,n•rrernair:int corn men~ will be in11ited :t the end c,f the meetint, Pub!ic
+              tomm=nc     ITllt'/ be mitdc duri"!   the meeting onl'( ::Hthe di:.cr,:tion ,1nd in\•iatOn   of th=
+              Chei1.
+
+          ~. St.,nd;1rd~ of Condu.;.;:
+             Commiu.t:>r.en will tre:.t ca.::l'Iother with co1Jrtc~•r:ind re~pect :ind eomk::t lh:em~el'•e~
+             in o rnanrter which in no wo•/di~crediu the MMLD ~t:ffor icllowcommia<Oner~.
+             Bche,•ior thet i~ l1bu~i•1=or ho:.:i!c i:. in.ippropri.:i~c,
+
+
+
+
+                                                                                                                    4/11
+Strategy Working Group updates slides
+
+
+                            Strategy Working Group
+                           MMLD Load data and model
+
+
+                 Update to Light Commission
+                                             March 1, 2023
+
+
+
+            Points presented today
+
+            • Forecast future Load in Marblehead: discovery path
+
+
+            • Transportation electrification forecast: model assumptions
+            • Load forecast results, transportation   only
+            • Discussion
+            • Next steps
+
+
+
+
+              Discovery path
+
+                    --+ • Top Level Load Projection
+                               • Specific sectors
+                                  ✓ Transportation    Only sector assessed so far
+                                  • Home Heating               Likely increase of load, tbd
+                                  • Cooling                    Likely increase of load, tbd
+                                  • Hot Water                  tbd
+                           • Impacts
+                               ✓ overall Demand
+                               • Impact on Distribution System in Marblehead
+                                  • Capacity
+                                  • Topography
+
+
+
+
+                                                                                              5/11
+       Model assumptions: transportation
+
+      • Miles driven: US average is 1123 miles per month of which
+              •      One-way commute/trip: 20 miles
+                     20 commutes per month
+                     4 long trips per month, 150 miles
+
+                     BEV and PHEV charge at home, BEV for whole trips, PHEVfor 20 miles of each trip
+
+
+      • Car efficiency:                      BEV: 3 miles per kWh                             PHEV:2 miles per kWh
+
+
+      • Average car consumption:                                  EV: 374 kWh/month                                  PHEV:305 kWh/month
+
+
+
+
+      Model tested with different assumptions
+
+      • Effect of
+         • Different proportions of BEV/ PHEV
+         • Constant number of car in Marblehead, or increasing
+         • Car efficiency variations
+         • Miles driven
+         • Rapidity of transition
+
+
+
+
+        Additional load from transportation
+kWh/month
+                                                                  Additional load per resident (kWh/mth)
+
+
+
+
+        ""'
+
+
+~---------
+600     ..
+
+400     ..
+
+
+200     200
+
+
+
+
+                  -senei   -Sene2   -Sene3   -Sme-4   -Series     -Sene7   -.senee   -Senei   -Seneu   -Sene12    -SerieJ.3   -Seneis   Seriet6-Some17
+
+
+
+                                                                2030                                       2040
+
+
+
+
+                                                                                                                                                         6/11
+Likely Additional                                         Load (transportation                         only)
+
+        Additional load per resident (kWh/mth)                    Likely scenario: addition of ...
+                                                                                      Per resident      For Marblehead
+
+                                                                  By 2030         129 kWh            13,800 MWh/Yr
+                                                                  By 2040         576 kWh            61,620 MWh/Yr
+                                                                  By 2050         603 kWh            64,509 MWh/Yr
+                                                                  ... to existing load of
+                                                                       2021 662 kWh 102,374 MWh/Yr
+
+                                                                  Calculated annual growth CAGR= 1.7%
+     -seiel       -Serie2   -serie.3    -seoe4   -seoes
+     -sene1       -senes    -seneJ      -seoeu-sene12             Observed growth 2021/2020 = 1.7%
+     -serieJ.3-Serie15           Serie.16-seriel7
+
+
+
+
+ Penetration of Electric Cars                                                       Batteries
+                                          # of Electric Cars                       • In 5 years, 2 to 3,000 cars ...
+                                                                                   • In 10 years,~ 6,000 cars ...
+                                                                                   will be electric vehicles
+
+
+
+
+                                                                                      Over 100 MWh of battery
+                                                                                           installed by 2027
+                                                                                   (average battery size taken as 80 kWh)
+
+
+
+
+ Next Steps
+• Estimate intra-day variation of EV load                                  ....
+    • Model Worst Case
+    • Model « Successful behavior management » Case
+  Review Marblehead data                                                   ....
+    • Public Charger data
+    • Private charging patterns
+
+
+  Estimate other additional load components
+      House electrification load
+    • Electric Hot Water heaters
+    • Air Conditioning
+
+• Compare to other forecasts
+  Review impact on procurement of energy
+  Review impact on critical infrastructure                     and substation/    circuit load
+
+
+
+
+                                                                                                                            7/11
+                                 MT
+                                 MANAGEMENT
+                                                       Sustainability
+                                                       Initiative
+
+                                        S-Lab Project Descriptions
+
+                    Table of Contents
+                             ~alMotors                                  ~
+                         1-.n111.zonGrocl!M)'                               1Q
+
+                         l~P-les US "etail                                  11
+                             Fldtlltv lnvutmtntl                            12
+                         1   ~01L.IDI
+
+                         l~lglte.Palmollve
+                                                                        =   16
+
+                         INenkel                                            18
+                                  llhffdUaht                            2~
+                         i!!!M, Inc.                                    23
+                         llJOW                                          25
+                              .......                                   28
+                             Thermo Fisher Sclenttnc                    2~
+                             ~Robotics                                      29
+                             Boston Red Sox.                            ...
+                                                                                 r
+General Manager Update Slides
+
+
+
+                             General Manager Topics
+
+                  2022 Financial Update
+                  Village 13 Updates
+                  Utility Rates discussion and vote - Solar PV credit & Public EV
+                  Charging
+                  Nexgrid server and software interface upgrades
+                  Transformer Updates
+                  Hiring Updates
+                  Solar on School Updates
+                  2nd Feeder from Swampscott
+
+
+
+
+                                                                                     8/11
+             Financial Operations- Feb 2023
+
+• New residential, small commercial and large commercial rates
+  rolled out in January
+• Mild December temps - positive impact on Dec net operating
+  income
+• Still waiting on final 2022 OPEB($300K in budget) and Pension
+  contribution ($816 in budget) charges...typically provided in
+  Nov
+• 2022 results includes the $330 Pilot Payment
+• Our operating cash position remains solid $5.864 MM
+
+
+
+
+               Year-end* 2022 Operating Statement
+                                               Reported January 2023      as of February 2023
+
+                                                              ~                        ~
+          Total Projected kwh Revenue                          $19,658                 $19,649
+          Street Lighting                                        $125                    $141
+          Misc Revenue                                             ill.                    ill.
+                             Total Revenue                    $19,811                  $19,818
+
+          Total Projected Expenses•            $19,629                    $19,331
+          PILOT Payment to Town                   SllQ                       sno
+                              Total Expenses                  $19,959                  $19,661
+                                 Net Income                     -$148                    $157
+          Adjustments:
+          Rate Stabilization Fund Transfer         $98                          $0
+          APPA DEEDGrant Proceeds                  ~                          ~
+                      Total Adjustments                           $148                     $50
+                    Adjusted Net Income                             $0                    $207
+
+
+          • Does Not Include final Pension and OPEBexpenses
+
+
+
+
+            Village 13 update - Feb 2023
+
+• Contract negotiations with Virginia Transformer are nearing
+  completion
+• Switchgear vendor MCP- informed us the cyberattack is being
+  managed
+• Village 13 tech team is reviewing 4 bids submitted. Range of
+  quotes with varying services included.
+
+
+
+
+                                                                                                  9/11
+                         Rate-setting: Policy Considerations
+
+• Data driven rates, based on the actual costs of delivering
+  electric service
+• Transparent, use available public/objective data sources
+• Leverage the expertise and broad US and international
+  perspective of UFS
+• Align rates to support adoption of energy efficiency and clean
+  energy best practices
+
+
+
+
+                        Proposed Solar PV credit rates - updated
+
+
+
+                                                          ■                                                 ■
+Customer        Current                   I TOTALCredit                    2023 Capacity     2023
+class           Rate/kwh
+                               PPA
+                                           /kwh                            Avoidance         Transmission      .
+                                                                           credit/kwh        Avoidance
+                                                                                             Credit/kwh
+
+Residential     .099           .025         .124          .0785            .0075             .0059          .0918
+Commercial      .08438         .025         .10938        .0785            .0075             .0059          .0918
+
+
+
+              Rate Notes:
+              - Based on annual prior year averages
+              - Rate to be updated annually
+              - No need to apply PPA,built into hourly rate calcs.
+
+
+
+
+                         Solar PV in the MMLD Portfolio Plans
+
+
+                                                    Project          Mass               Clean MACiean
+                                      Projected   Levelized    Net Class 1     Mass Peak          Peak
+                                        Annual      Cost of Energy RECS       Class 1 Credit    Credit
+                                         MMLD       Energy    cost included REC Price Included   Value
+         Solar PV Site                     kwh (LCOE/kwh} $/kwh        ?      $/kwh       ?     $/kwh
+  Cotton Memorial Array, Ludlow,
+  MA                                    1.soo.000         0.088   $0.042    YES            $0.038    YES       $0.008
+
+
+  Mhd Brown Elementary School            273,000                            YES                      NO        $0.000
+
+
+  Residentlal Solar - MMLD
+  Customers                              286,~                    $0.091    NO                       NO        $0.000
+
+
+
+
+                                                                                                                        10/11
+                   Solar PV and Battery
+
+• Proposed Approach: Address all battery storage peak reduction
+  credits as demand response, based on MMWEC peak forecasts
+  with battery dispatch by MMWEC/Connected Homes program
+• MMLD is indifferent to the source of energy from a customer's
+  battery ...solar PV-generated or energy provided from the
+  MMLD distribution system.
+• Battery charging during a peak, aka the Storm Mode issue- still
+  an issue, until TOU pricing is implemented.
+
+
+
+
+                   MMLD Public EV Charger Port Utilization
+                    December2022                                                                     Q4 20222
+                                                                                                            , ....
+     Port Utilization: 24 Hours                                                Port Utilization: 24 Hours
+
+
+
+
+     ■e   k"      ■
+                              ......
+                                  D
+
+
+
+
+                   MMLD owned Public EV Chargers
+                                                                                         Rate
+                 ChargePoint Rate for Utility Owned 7.3 kW, level 2                      - Project current 3% Load
+                                  electric vehicle charger
+                                                                                            Factor to a future target LF
+                                                                                           of 20%
+               Monthly kWh               LF                  $per kWh                    - $.036 per kwh all hours, on
+                       160                      3% $                    1.00
+                       533                     10% $                    0.47
+                                                                                           all three sites
+                        799                    15% $                    0.40             - After 4 hours add $5.00
+                      1,066                    20% $                    0.36               parking
+                      1,599                    30% $
+                      2,132                    40% $                    0.30             - Annual maintenance fees
+                      2,665                    50% $                    0.29               average $850 per port or
+                      3,197                    60% $                    0.28
+                                                                                           $8500 total;
+                      3,730                    70% $                    0.28
+                      4,263                    80% $                    0.27             - 2022 revenue was $5000.
+                      4,796                    90% $                    0.27
+                      5,329                   100% $                    0.27
+                                               20% $                    0.36
+
+
+
+
+                                                                                                                           11/11
+

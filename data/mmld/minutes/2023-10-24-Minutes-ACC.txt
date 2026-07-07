@@ -1,0 +1,1183 @@
+Light Commission October 24, 2023 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           November 17, 2023
+Re:             Commission Meeting October 24, 2023: Public Session
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:08 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:          Frechette, Hull, Smith, Wolf and Yarmoff participated in person.
+        Light Department:       General Manager, J. Kowalik; Distribution Manager, Greg Chane and
+                                Manager of Technical Operations, C. Coleman. Financial Manager, Matt
+                                Barrett participated remotely.
+
+Marblehead Land Acknowledgment declaration was read prior to the start of business.
+
+Comments from the Public
+No public comments or questions were made or asked, either by the public present at the meeting or
+participating remotely.
+
+Outstanding items from previous meetings
+Review of the EV charging program
+New customers in MMLD EV charging program will receive a free ChargePoint charger and be enrolled into
+Virtual Peaker’s program, no end date specified, but with a minimum participation commitment of 36
+months. The program is administered by MMWEC. Customers have an option to buy the charger if their
+participation is shorter. As part of the program, charging level is curtailed to level 1 between the hours of
+5 pm and 9 pm. See slides page 10.
+Existing customers who were originally enrolled in a three year contract are being switched over into the
+Virtual Peaker program by MMWEC. As these changes are implemented, some issues with curtailment to
+Zero instead of to Level 1 have appeared. This may be true for some customers with JuiceBox chargers or
+with ChargePoint chargers. These issues are being resolved by MMWEC.
+
+Peak demand reduction
+When purchasing electricity, capacity charges account for about a third of MMLD’s total power charges.
+Shifting demand away from the peak will lower the capacity charge MMLD has to pay. One of the cheapest
+way to accomplish this is by communicating to customers and get their willing participation to change and
+shift their electricity use during the day. The General Manager has sent Code Red messages immediately
+preceding times of peak usage. How effective have these been?
+
+
+
+
+                                                                                                      1/17
+The General Manager looked at the impact of Code Red communication, as shown in the spreadsheet
+captures on page 11. During the month of July 2023, the four Code Red communications correlate with a
+reduction in demand of about 2,200 kWh over the peak consumption period. This means savings for the
+department, and for every resident. Following a discussion on communications channel, the General
+Manager was encouraged to develop a community-based education and communication program (besides
+Code Red) to further diminish peak demand.
+
+Appropriation for Professional Development and for Legal Counsel
+Discussions regarding expenses incurred by Commissioners in the course of their work or for professional
+development took place in December 2022 and September 2023. There is a lack of transparency with
+regards to the moneys spent by MMLD on behalf of professional development for Commissioners. In the
+same way, Commissioners may need help with legal advice while discharging their duty, for which there is
+no current process or transparency. To facilitate the work of the Commission but also improve on
+transparency, Commissioner Yarmoff proposed the following texts and motions.
+
+Professional Development funds: Given the complexity and the rapid evolution of the energy landscape,
+it is important for both staff of MMLD and for Commission Members to continue their Professional
+Development and participate as appropriate in short courses, institutes, conferences and seminars or
+become members of associations or subscribe to publications relevant to the energy business.
+
+Motion 1: MMLD will - reserve a budget every year to pay for the expenses for professional dues and
+subscriptions, and registration, travel and subsistence expenses of Commissioners participating in
+Professional Development activities, and - make a public disclosure of the amounts spent by Commissioners
+for Professional Development activities over the course of the year. For 2023, this budget is set at $10,000.
+
+Legal Advice funds: Given the complexity and rapid evolution of the legal and regulatory framework, it is
+important for Commission Members to have the possibility to receive legal advice from reputable firms
+well versed in the energy business, including knowledge of MGL Chapter 164, Open Meeting laws, FERC
+regulations and other legal and regulatory issues that the Commission has to deal with, as needed.
+
+Motion 2: MMLD will – reserve a budget every year to pay for legal advice that Commissioners may need
+in the course of their work for the Commission, and – make a public disclosure of the amounts spent by
+Commissioners on legal advice over the course of the year. For 2023, this budget is set at $10,000.
+
+Vote #2023-39 Commissioner Yarmoff moved motion 1 above, seconded by Commissioner Frechette.
+              Unanimous.
+
+Vote #2023-40 Commissioner Yarmoff moved motion 2 above, seconded by Commissioner Frechette.
+              Three votes in favor, one abstention, one against. Motion approved.
+
+In response to a question with regard to the process to follow, it is proposed that Commissioners respect
+the following rules, to be made part of the Commission Code of Conduct being drafted: Commissioners
+seeking Professional Development funds or Legal Advice funds should make a request in writing to either
+the Chair or the Vice-Chair of the Commission for validation of the proposed activity or advice sought,
+prior to engaging into such activity or hiring Counsel.
+
+
+                                                                                                     2/17
+This review will make sure that advice or activity are not engaged in for the benefit of a single person, but
+rather are important actions of the board. This review and the limits set on the moneys that can be spent
+on these activities are guardrails to ensure appropriate use of funds of MMLD for the Commission’s work.
+Commissioner Hull reminded the board that individual Commissioners or the Commission as a whole is not
+able to hire a law firm or consultants. This has to be done by MMLD, on behalf of the Commission: there is
+jurisprudence on this point by which we must abide. The code of conduct should reflect this point.
+
+Mutual Aid
+Chair Wolf acknowledged and thanked both Greg Chane and his team for their response to a Mutual Aid
+request. In September, Eastern Maine Electric Cooperative was affected by Hurricane Lee: the storm
+caused a lot of tree damage causing over 1,500 customers to lose power. A Mutual aid request was sent at
+4 am Saturday, and Marblehead responded by sending one crew, one bucket truck, and MMLD’s
+distribution manager as supervisor for the mutual aid effort: four public utilities responded to the request
+(Merrimack, Groveland and Ipswich each sent a crew). Greg supervised and helped coordinate the mutual
+aid response. The crews worked from Sunday morning until late Sunday, by which time they had helped
+EMEC restore power to all customers.
+
+Distribution Manager Report
+Update on Distribution system repairs. The list of priority repairs shared previously had a preliminary
+timeline of 2023 to 2025. This timing is probably optimistic and the repairs will probably stretch further. As
+further review of the work takes place, the timeline will be updated. See slides on page 11 and 12.
+High voltage line from the Village Street to the Beacon Street Substations (line 1304) is 50+ year old, and
+needs to be replaced as are the 50-some poles. Several large trees have grown since the line was installed.
+Discussion with the select board is needed to remove the trees as appropriate. Installing several thousand
+feet of wire mean scheduling 8 or 9 people, which becomes a scheduling issue in view of all the
+constraints. A “mutual aid” equivalent exists for this kind of work as well and MMLD can ask for support
+from other municipal light plants if necessary. (In the same way, Munis help each other with equipment
+when needed as we just did with a transformer. The backlog to order transformers has not eased. Greg
+was able to procure a couple of dozen of transformers from another Muni which was upgrading from 4 kV
+to 13 kV, by networking during a NEPPA training session showing the multiple benefits of professional
+development.)
+Verizon Poles. Osmose, is a company testing all the Verizon poles in town. A preliminary estimate is that
+400 poles (out of a fraction of the total 2000 Verizon poles) have to be replaced. This is a large fraction of
+the Verizon poles, and the work to install new poles may stretch well over a year. Verizon is looking to set
+up a lay-down yard where they can store 50-80 poles ahead of the replacement work, possibly at the
+transfer station, as well as a coordination site. MMLD crews will transfer the electrical equipment onto the
+new poles once installed. Equipment and lines are upgraded as necessary during this transfer. At this
+stage, we have no knowledge of the timeline at which Verizon will set the new poles.
+MMLD Poles. MMLD is also contracting with Osmose to inspect MMLD-owned poles: we can only expect a
+similar amount of replacement, 20% or more. We are trying to catch up after 25 years of no maintenance,
+and this catch up will not happen overnight.
+Village 13 upgrade is the priority, equipment will arrive soon and the site needs to be prepared. This work
+will be prioritized over other maintenance.
+Scope of work and resources. As the distribution team puts in place the plan to catch-up on 25 years of no
+maintenance, what was initially thought might be covered in a couple of years might stretch into much
+longer. At this stage, there is so much work that the team has to look for options: creating more hours
+                                                                                                       3/17
+(overtime), hiring more people or sub-contracting out some work. While there is no history of sub-
+contracting line work, MMLD has to think creatively for solutions. Hiring new staff is a must: we know that
+some crew members will retire soon. Meanwhile, it takes 5 years from time of hire for an apprentice to
+become rated to work independently. We recently hired a person already rated: this was the first time in
+18 years this happened in Marblehead. There is competition for talent and the distribution manager is
+trying to position Marblehead as “the place to work” to be able to attract good staff members: our
+reputation is excellent, the pay is excellent. We ask that staff members be able to respond in 30 minutes
+time from their residence, price of housing is an issue. Would it make sense for MMLD to own or rent long
+term some apartments for staff members and make this part of the benefit package?
+Underground lines. There are two areas in town with very old buried lines, in crumbling clay pipes that
+need to be dealt with. They are not the only ones, Schooner Ridge is another example where the service
+has always been underground from the time the houses were built. Where service is underground, it is
+mainly for esthetics reasons. A case in point is Ocean Ave, where residents organized to pay for burying
+the service purely for esthetic reasons.
+The General Manager pointed out that how we deal with replacing these lines, and buried lines generally,
+is a question of policy, economics and equity. If only for esthetic reasons, it seems logical that beneficiaries
+should pay more for underground service, which may cost 10x more to install than overhead service. But
+there is no record that this has been the case in the past. Massachusetts General Law Chapter 23L covers
+Local Infrastructure Development Programs. MMLD is exploring using the provisions of this law to deal
+with this issue. Commissioner Yarmoff encouraged MMLD to keep the option of burying some lines at its
+own initiative for reasons (which can include reliability, safety, etc.) to be defined as part of its policy.
+
+Improving Distribution System Resiliency
+The General Manager reviewed the overall plan for the distribution system maintenance and upgrade, see
+slide page 12. The actions taken and needed are as follows:
+    - Tree and vegetation control. MMLD has contracted with Mayer Tree Service.
+    - Utility poles inspection. Proposing to use Osmose Utility Services, see below.
+    - Distribution transformers, load analysis: MMLD could use Nexgrid, or other software/vendor, tbd.
+    - Conductors and distribution assets: MMLD evaluation and work on-going, to be documented in GIS.
+    - Meter data management: MMLD is working with Nexgrid to optimize communication with the
+       meters. We may be asking Nexgrid and our staff to do too much, and we may need a Network
+       Monitoring and Management company to take over and manage the communication system.
+
+Contract for MMLD Poles inspection. With regards to the inspection of poles, the General Manager would
+like to contract with Osmose to evaluate the poles owned by MMLD. Commissioner Smith moved the
+following motion:
+Motion 3: MMLD will proceed to enter into a contract with Osmose Utility Services to inspect and treat
+the 2,000 utility poles owned by MMLD in 2024. The estimate expense is not to exceed $145,000. The
+work is expected to take 10-12 weeks to complete.
+Vote #2023-41 Motion 3 was seconded by Commissioner by Commissioner Frechette. Unanimous.
+
+Goals of the department
+When reviewing the goals of the department, it is clear that a number of actions depend on MMLD
+recruiting new hires as authorized in the 2023 budget. About a third of MMLD goals could fall under the
+purview of new hires. In a previous meeting of March 2022 (19 months ago), the Commission voted to
+                                                                                                         4/17
+approve a proposal to have MMLD retain a recruiting firm “to help create the job descriptions and guide
+MMLD through the process of hiring for the new positions” as stated in the minutes. Given the amount of
+work on the plate of MMLD it is really important that the empty positions be filled as promptly and as best
+as possible, and the services of a recruiting firm specialized in these matters will help expedite the hiring
+of the three open positions. Commissioner Frechette remarked that the money to pay for the services of
+the recruiting firm is in the existing 2023 budget. Commissioner Hull thought that MMLD had other
+priorities than hiring a recruiting firm. Commissioner Wolf reminded us that many of the priority goals of
+MMLD are dependent on staff being hired and the work load is increasing, not diminishing. The General
+Manager stated that he was very much in favor of this proposal. Commissioner Wolf remarked that the
+firm Stanton Chase has recent experience recruiting and already a qualified pools of candidate for some of
+MMLD’s positions which would accelerate the search. The goas is to have the positions filled in 2023.
+Motion 4: In view of the recruiting needs of MMLD, the Commission encourages and expressely
+authorizes the General Manager to use the services of a recruiting firm to fill the open staff positions of
+MMLD and to pay the firm the customary fees. The General Manager could use the services of the firm
+Stanton Chase which has experience in the utility field or other similarly qualified recruiting firm.
+Vote #2023-42 Motion 4 was moved by Commissioner Yarmoff, seconded by Commissioner Frechette.
+              Four votes in favor, one against. Motion approved.
+Commissioner Yarmoff suggested that we should invite the retained firm to the next board meeting to
+discuss their approach and progress.
+
+
+Time of Use implementation strategy
+[Post meeting note: The following paragraphs memorialize the subjects that the Light Commission discussed
+during the meeting. They have been re-organized to facilitate understanding of the conversation. Headings
+have been added for clarity, they were not part of the discussion. Readers interested in the actual discussions
+are invited to refer to the recording from recording time 1h33, to listen to the actual interventions of
+participants in the meeting.]
+The design and implementation of Time of Use charges is complex. See slides page 13. A discussion
+showed that the Department has (or will soon have) the Capability to introduce consumption and time-
+based billing, but that Goals have to be clarified, Design has to be well thought through as well as
+Implementation and Communication Planning. Not all designs will support all goals, and some will be more
+effective than others. Some of the ongoing activities of MMLD will also interact with these goals. How they
+reinforce each other needs to be assessed.
+As Next Step, the Commission and MMLD will need external help to work through the options and benefit
+from studying on-going work in other places.
+Capability. The Department has worked with Nexgrid and updated its systems to allow time-based load
+measurements which now allows MMLD to reach 99.97% accurate meter reads, a high number. Having
+the capability to measure consumption at 15-minute intervals during the day will allow MMLD to
+implement time-based as well as energy-based billing. This can be differential Energy charges at different
+times, or it can be Demand Charges when energy consumption exceed a certain threshold over a set time
+period.
+Goals. A discussion showed that multiple goals can be sought which can include:
+   - Savings for MMLD and residents from demand management;
+   - Accurate recovery of MMLD’s energy costs;
+                                                                                                       5/17
+    - Changing customer’s habits with regards to electricity consumption;
+    - Equity with regards to bill burden.
+    - Minimizing stress on distribution system;
+    - Lower peak consumption and transmission and capacity charges.
+Rate design means considering many possible variables:
+   - Hours of day with different energy rates; Differential in energy rates between low and high rates;
+      Does the differential rate apply at the first kWh consumed or above a threshold?
+   - Numbers of periods with different rates and evolution during the year: two periods, three periods?
+      Do period differ in winter and in summer?
+   - Do variable rates apply for residential rates only or all rate classes? Marblehead’s electricity
+      consumption is largely driven by residents, as opposed to commercial or industrial customers.
+   - Impact of ToU is largely dependent on customer behavior modification. Simplicity is key for adoption.
+      Which design will facilitate changes in behavior of residents?
+   - Which design ensures equity for residents?
+   - Is a Distribution Charge part of the new system? Under what conditions (what energy threshold,
+      what duration), how large would the charge have to be for it to be effective? All customer classes?
+   - How can a possible Distribution Charge be structured to encourage the transition to electric
+      heating/transportation?
+Implementation and Communication Planning also means reviewing a range of options.
+   - Should there be a pilot program before town-wide implementation? How long, how broad?
+   - Will shadow billing be available before implementation, for how long?
+   - Is the program Opt-in, Opt-out, or no option?
+   - Communication will be critical: how do we communicate? Is it limited to Code Red messages?
+   - What are neighboring communities doing and will their communications reinforce or distract from
+      our own efforts?
+   - What action can residents take to lower their energy bills under a new billing system?
+
+ToU rates interaction with other on-going efforts of MMLD
+EV Charging program. The large electric loads of residential customers are AC cooling, EV charging, electric
+hot water heaters and electric dryers. These are relatively easy to shift during the day. Electric heating of
+houses is weather dependent and more difficult to shift. Given its impact on MMLD, EV charging is the
+load that should be managed most actively. MMLD’s EV charging program and the curtailment period (5
+pm to 9 pm) was discussed above (page 1). This time period should be aligned with a two-tiered rate
+period system for consistency and reinforcement, if ToU is introduced: only a few car chargers participate
+in the EV Charging Program.
+BESS. The price at which Marblehead buys electricity is variable during the day; the electricity produced in
+town or in the Commonwealth from solar arrays of wind farms is intermittent. Batteries would help
+manage these issues and lower residents’ and MMLD’s energy bills. BESS can be residential batteries
+(individually owned or utility-owned or facilitated) or Utility-scale. MMLD is working on implementing and
+facilitating both aspects.
+Peak demand reduction. There are about 20 days during the year when maximal consumption translates
+into higher bills for Marblehead, either through the transmission charge (one peak per month) or the
+capacity charge (one peak per year). Getting residents to modify their consumption during these peak
+events (“muscle memory”) is the goal of the Red Alerts communications. This can be reinforced by a
+differential energy rate coinciding with peak consumption times.
+                                                                                                      6/17
+Discussion and Next steps
+Over decades, utilities have let electricity users believe that “flat rates are good”. However, they do not
+reflect the real cost of electricity, this is a problem that all utilities have. Marblehead is better placed than
+many as our meters allow frequent measurements. Several Municipal Light Plants have implemented ToU
+rates: all are different, and have had varying degrees of success. Commission members have experience in
+other geographies: Europe, Australia and California. What has worked or not worked elsewhere?
+
+UFS. MMLD has worked with UFS to review the rates in Marblehead. They are familiar with our operations
+and our data sets. Their work has given them visibility of other ToU rates nation-wide. They have already
+made preliminary recommendations about ToU and Demand Charge rate possibilities in Marblehead. The
+General Manager intends to work with UFS to have a more up-to-date proposal on ToU rate design.
+
+MMWEC. Given the universal nature of the problem, MMWEC is launching a program for its members to
+study the implementation of time-based rates, working with the firm RenwAI. General Manager Kowalik
+suggested that MMLD should participate in the program when it becomes available to its members.
+MMWEC has intimate experience of Massachusetts stakeholders (including relationships with DOER and
+DPU) and ISO-NE.
+
+Information: Load variation in Marblehead
+The slide on page 14 shows the electric load (measured MWh) for each hour of the day in July of 2023. The
+three values plotted represent the highest consumption at that hour (for a day in July), the average for
+that hour period, or the lowest consumption.
+The highest load was reached for the period 3:00 to 4:00 pm with 26.6 MWh. This is also the hourly period
+with the widest range: the lowest load from 3 to 4 during that month was half that amount, at 13.7 MWh.
+The lowest usage is for the period 3:00 am to 5:00 am in July. At that period, the lowest load is only one
+third of the highest load, all in the same month. This illustrates why tools to manage the load, including
+Time of Use rates would be particularly important.
+
+Rate adjustment
+On January 1st 2023, MMLD implemented a rate adjustment where lowered the variable energy rate,
+while increased the fixed base rate, to better match the fixed and variable charges of MMLD. This was part
+of a two-step adjustment at constant revenue for MMLD, with the second adjustment to take place at the
+beginning of 2024. The question is whether the Commission definitively voted in favor of the 2024 rate
+increase?
+Answer: At the Commission meeting of September 8, 2022, the Board clarified whether the Commission
+had voted for just one rate increase, or for the two adjustments. We referred back to the August 20, 2022
+meeting, where we had agreed to this two-step rate adjustment, approving then the base rate adjustments
+mentioned in the slides on pages 14 and 15, the base rates increasing to $11.25 as of 1/1/2023, and to
+$18.50 as of 1/1/2024, while simultaneously decreasing the kWh rate. At the time, we voted for the energy
+rate to go down by 8 mils. The General Manager is currently proposing for the energy rate to go down by
+7.4 mils, from $0.1969 to $0.1895 per kWh. However, MMLD publicly disclosed the 7.4 mils decrease at the
+December 15, 2022 public meeting dedicated to an explanation of this rate adjustment.
+
+Should January 1st be the timing of the adjustment? This is what has been publicly stated in the past, there
+is no reason not to stick with the changes as planned. Communication about the second phase of this rate
+adjustment could be done in a specific public meeting, or by a communication through the local press.
+                                                                                                          7/17
+The General Manager will review the proposed energy rate with UFS in view of the current forecast for
+energy costs, the proposed PPA level. This final determination of the rate will be reviewed at next board’s
+meeting before filing with DPU before implementation.
+
+Commissioner Smith left the meeting physically but continued to participate remotely from 6:03 to 6:15
+at which point he definitively left the meeting.
+
+General Manager Items
+Aid to Navajo Nation. MMLD is planning to accede in 2024 to a request from the Navajo Territory Utility
+Authority covering AZ/NM/UT, where the Navajo nation has very little access to electricity. While it is
+under the same spirit as the Mutual Aid program, it differs in that MMLD would not be reimbursed for the
+time, which would be a donation to help Native Americans get access to electricity. An insurance issue
+prevented MMLD to participate in previous years. This has now been resolved. The question is: is the
+board in favor of spending the fudns related to travel and insurance of MMLD crew (MMLD anticipates 2
+people to participate). A further, later question will be to ask staff members whether they want to
+participate in the program. Commissioner Yarmoff remarked that the participants at the NEPPA meeting
+(Chair Wolf, GM Kowalik and Commissioner Yarmoff) were able to hear the GM of the NTUA and see the
+film depicting the impact this donation has on people’s life (ability to light the house at night, to have
+refrigerators), but also to hear the testimony from crews who had gone in previous years. Participation is
+transformative, and not just for the donation of time and impact for the Navajo Nation, but also in terms
+of personal professional development of the crews who participate. Clearly, participating Munis in
+previous years thought this was a very worthwhile investment.
+The proposed amount of $12K to $15K for travel and insurance would cover also pre-shipment of
+equipment, travel and hotel to arrive potentially a day earlier and/or leave a day after completion of the
+assignment, given the travel duration. Commissioner Hull agreed that the program was a great idea but in
+view of the workload that Greg Chane has described, can MMLD afford to send a crew away for a week?
+The General Manager explained that in the long run, we want to be an attractive place to work. A
+transformative experience such as this will contribute to setting the tone for MMLD staff.
+Motion 5: to authorize MMLD to spend up to $15,000 to send a 2-person crew to support the NTUA.
+Vote #2023-42 Motion 5 was moved by Commissioner Yarmoff, seconded by Commissioner Frechette.
+              Four votes in favor. (Commissioner Smith had left the meeting). Motion approved.
+
+
+Monthly Financial Statement review – August 2023
+The monthly financial statement for August is shown on page 15: MMLD is in a healthy financial situation
+with an Operational Cash balance of $6.7M and a Capital Account balance of $7.1M.
+The General Manager pointed out that Energy Usage is down, as we have had a mild summer to date. We
+had budgeted a 2.5% increase, but we are actually down Year on year by 4.6%. This is driving the financial
+statements. There is still plenty of time to have a harsh winter, which might change the situation.
+
+Village 13 update. The General Manager reviewed the map shown on page 16, showing the location of the
+forced sewer pipe and of the buried electrical conduits, located using Ground Penetrating Radar and
+positioned on this chart. The concrete box that needs to be built to protect this infrastructure during the
+transportation of the loads is bigger than thought (and therefore more expensive), as it needs to cover
+both utilities, but it is doable and is one of the next steps to prepare for the arrival of the equipment
+                                                                                                     8/17
+(100,000 lbs loads). A construction proposal should be received by MMLD by Thanksgiving, which will be
+followed by requests for bids. Completion is needed by 2Q24 given the project schedule.
+
+The next slide shows the Revised project Schedule, as of 10/23. See page 16. Switchgear manufacturing is
+three months behind schedule, and delivery is now planned for September 2024. Transformers are likely
+to be delivered earlier and must be stored until the switchgear is delivered and installed. The transformers
+will be stored on temporary pads within the Village 13 substation footprint. Once the switchgear is
+installed, the existing 23 kV lines will be moved over to the new switchgear, in October. If, as is quite
+possible, the conditions in the winter of 2024-25 are harsh and force site work to be put on hold, it is
+possible that the final installation of the new Village 13 substation only take place in the summer of 2025.
+That is later than the August 2024 completion date anticipated when we started planning the project. The
+slippage comes from the 3 months delay of the Switchgear delivery, and the possible impact of winter.
+
+Solar on schools
+See slides on page 17. Incorporating batteries in the design of the project significantly improves the
+economic benefit. Initially, the project might plan for, but not implement, a battery install. The solar
+project may then be launched as a PPA with Solect building, managing and operating the array. At a later
+stage, MMLD can add (and own) a battery to the project. The interconnection design would allow for a
+battery to be installed. MMLD will move forward with this vendor-relationship proposal and present this
+to the school.
+
+Technical assistance for grants for Village 13.
+The firm Baker Tilly can help MMLD determine how Village 13 may qualify for any assistance from grants
+from either the IRA or the IIJA. These grants may be available to us and represent a significant part of the
+expense to rebuild Village 13. The first phase of the Baker Tilly project will help us figure out if this is
+possible or not. Commissioner Yarmoff remarked that the board has approved the Village 13 project, and
+the project is on-going. In other legal environments, this might preclude any state or federal support as
+the decisions to move forward have been taken and are not dependent on grant support. Do we know
+that the situation is different here, and that there is a good reason to even proceed with the first stage of
+this Baker Tilly proposal? Answer: part of the complexity is that the answer depends on the specific
+program within the IRA and the IIJA, each of which has slightly different conditions. The perimeter of the
+project might also evolve to include a BESS or line 1304, adding to the complexity of the evaluation. The
+first phase of the Baker Tilly proposal will help address what in the Village 13 proposal may be eligible for
+grants or support, if any.
+Motion 6: to authorize MMLD to spend up to $30,000 to engage Baker Tilly consulting firm to assist
+MMMLD determine the eligibility of the Village 13 project to grants under the IRA or the IIJA.
+Vote #2023-43.           Motion 6 was moved by Commissioner Yarmoff, seconded by Commissioner Hull.
+                         Four votes in favor. Motion approved.
+
+Executive Session – Off-shore wind
+
+During the October 24, 2023 Light Commission meeting, Chair Lisa Wolf proposed a motion to enter
+Executive Session Motion to discuss trade secrets or confidential or proprietary information regarding
+activities of a governmental body as energy supplier, municipal aggregator or energy cooperative, if an
+Open Session will adversely affect conducting business relative to other entities making, selling or
+
+                                                                                                       9/17
+distributing energy. Not to return to Open Session. Seconded by Commissioner Frechette. Votes: Simon
+Frechette: Yes; Mike Hull: Yes; Lisa Wolf: Yes; Jean-Jacques Yarmoff: Yes.
+Executive Session started at 6:49 pm.
+The Executive Session concluded at 7:08 pm at which point a motion to adjourn was proposed,
+seconded and after a roll call of the four commissioners present voting unanimously in favor, adopted.
+
+
+                                               ----****----
+
+                 Documents presented during October 24 Light Commission Meeting
+
+
+
+                             MMLD Scheduled EV Charging Program Changes
+                             (MMLD Free EV Charger Program)
+
+              For New Customers
+                 1. Receive a Free ChargePoint Flex EV Charger ($550 value) - No termination
+                    of enrollment period.
+                 2. During 5-9 pm peak hours the charger drops to level 1 charging, not 0.
+                 3. Minimum participation commitment is for 36 months, with option to buy
+                    the unit if participation is shorter.
+              Existing Customers
+                 1. After 3 years can continue or ask to switch to Connected Homes program
+                 2. Case-by-casereview of Juicebox customers unwilling to accept EV charging
+                    power-off during peak hours.
+
+
+
+
+                              CP Flex Power Drop During Peak Hours
+
+                                                                                          .. . .. ..
+                 : . .. .                                                                   • .       11
+                 .     .                                                                          :   :
+                      •S/    1c1mps1    Amps       \ vu1LS/   I rower   \KW/ 1nuur 1rr111es11 \KW/
+                 70/80         so        so         240            12.0           37          10.1
+                   60           48       48         240            11.5           36          9.6
+                   so           40       40         240            9.6            30          7.7
+                   40           32       32         240            7.7            25          5.8
+                   30           24       24         240            5.8            18          3.9
+                   20           16       16         240            3.8            12          2.0
+                   Level1 charging:                               1.875          6 (?)        0.0
+
+
+
+
+                                                                                                           10/17
+Nd Net System lotd lt'MI-~2023
+
+                              ....                       ,,,...
+                                                           6-MHoulwtNI~•          ,...
+                                                                                 ,,_                       11-Jul
+                                                                                                                                    ,,..,.
+                                                                                                                                     ll•M                                13-M                   14-M                    ......
+ 13llll00rl•lpm
+                            .....
+                              ,
+                            19.125
+
+                                                     ... ,,_                     ,....,                   17,SCl
+
+                                                                                                                                                         ...
+                                                                                                                                                                        22,050
+                                                                                                                                                                                               ,,..,,
+                                                                                                                                                                                               17.6U
+
+                                                                                                                                                                                                                 ..
+                                                                                                                                                                                                                       "1.100
+
+
+                                                                               ,...., .,,. ...... ,,. ,,.,., "" ,,,...                                                                         ,,...,
+ 14 l•Jpm                                                23,Ul                                            11.5<1                    23.1'0                              23.202                                         2U1S
+
+
+                               .. "'"',.,"' ...... ·'·"'
+                                                                                                _,..
+ 152-Jpm
+ 16:Mpm
+                            20,601
+                            ,..,.
+                            ,,.,
+                                                   ,..,, n.no                    21..,.                   19,7'6
+                                                                                                                            ,,,..
+                                                                                                                            ,,....
+                                                                                                                        1..10
+                                                                                                                                    2•.2~
+                                                                                                                                                                                               11,D63           162
+                                                                                                                                                                                                                       22,0U
+
+
+                                                                                                 ,.,'
+                                                                                                                                                                        241.111
+ 174-Spm
+ 115-6pm
+ 196-7pm
+ 20 7-lpm
+                            2LSIO
+                            21)111
+                            20JIO
+                                                 ...
+                                                ....
+                                                    .... 24,425
+                                                         23.9'1
+                                                         23.26"1
+
+
+                                                ..,, ,...,, ,o;:=
+                                              ·1.251     20,357
+                                                                   '""'
+                                                                   ......
+                                                                   "-""
+                                                              .,,. .....
+                                                                          ,n
+                                                                         .717
+                                                                                 22.1'0
+                                                                               22.023
+                                                                               ,,.,..  ,,.
+                                                                                      ....
+                                                                                       m
+                                                                          .... 21.a,, ....
+                                                                          -m
+                                                                                           2l.1Sl
+                                                                                                  ,a
+                                                                                                     "
+                                                                                                   .,,,
+                                                                                                   ....
+                                                                                                          22.151
+
+                                                                                                        "~"
+                                                                                                                "'
+                                                                                                                "'
+                                                                                                               ...,
+                                                                                                               ....
+                                                                                                             -1.m
+                                                                                                          22.401
+                                                                                                                       .,,,
+                                                                                                                        "'
+                                                                                                                            ,,...,
+                                                                                                                        1.134
+
+
+                                                                                                                                    ·-
+                                                                                                                                    14,,1)1
+
+
+
+                                                                                                                                    23.256
+                                                                                                                                                        -001
+                                                                                                                                                                        24,617
+                                                                                                                                                                        24,D57
+
+                                                                                                                                                                        2US1
+                                                                                                                                                                                   -630        20.JU
+                                                                                                                                                                                               20,016
+                                                                                                                                                                                               lU,O
+                                                                                                                                                                                                              1,4ll
+
+
+
+                                                                                                                                                                                                             ·1.026
+                                                                                                                                                                                                                       22.302
+                                                                                                                                                                                                                       21.lM
+
+
+                                                                                  ,. ...                       ....    .... "1.m
+                                                                                                    _,,                .,u
+
+                                                                   ,,.,., ..., ,..,.,      ,,.,.. ...,
+                                                                                         , 21.m
+                                                                                                                                                                        ....
+ 21Mpm                      19,611                       22.)<1                                                                                                         21.lO]                 11.•n
+
+ ""                         11,.911
+                            17,310
+                            u.m
+                                                         21,nl
+
+                                                          17.1)37
+                                                                               ....
+                                                                                 1...,,
+
+                                                                                 lS.201
+                                                                                                  ·'·"'
+                                                                                               ·1,242
+                                                                                                          16,272
+                                                                                                                       •l,376       .....
+                                                                                                                                    17,271
+                                                                                                                                                                        20,619
+                                                                                                                                                                          ~
+                                                                                                                                                                        16,272
+                                                                                                                                                                                  ·2,124
+                                                                                                                                                                                               1...,,
+                                                                                                                                                                                               16,<107
+                                                                                                                                                                                               14,106
+                                                                                                                                                                                                             ·1,620
+                                                                                                                                                                                                                       20,205
+                                                                                                                                                                                                                       11,.5lt
+                                                                                                                                                                                                                       16,623
+  "
+nsatpulr.hoU'
+                         ,,,.,..
+                                              .z.s,z
+                                                        ......
+                                                           ,                    420,lll
+                                                                                               ·2,511
+                                                                                                         311,116
+                                                                                                                       ◄,410
+                                                                                                                                   '5U'5
+                                                                                                                                                       ·1,674
+                                                                                                                                                                       '42,147
+                                                                                                                                                                                  -3,]14
+                                                                                                                                                                                              ....,,,        -2,216
+                                                                                                                                                                                                                       .......
+ bnhounpostpHk                                                          ...m
+
+
+
+   ,,...
+  ,,.,..,                             ,....
+                                     20,A03
+                                                                      27•M
+                                                                     19,7'6
+                                                                                         ,..
+                                                                                        "·"'
+                                                                                                   ..  ...                      ..
+                                                                                                                           22.718
+  21,27S
+  22.743            ... ™"           2.1,SSS
+                                                       1.062
+                                                                     21,006
+                                                                     22,230
+                                                                                   ...
+                                                                                 1.m
+                                                                                               23,103
+                                                                                               23,742
+                                                                                                         ,, ..,,
+                                                                                                      ....
+                                                                                                ,..,. >USO      ...        U,239
+                                                                                                                                              ·U>I•
+
+
+                      ..             u.an
+                                                                                        ,...,.,
+  21.996             .747                                            23,220
+
+                                                         ...
+                                                       1.260
+  20,.C75
+  19.181
+                  ·l,S21
+                    .,               14,723
+                                     2S,263              ""          24,822
+                                                                     24,771         ...
+                                                                                 1,602
+                                                                                               23,610 ~~◊
+                                                                                                             -2,786
+
+                                                                                                      ,.., ..,.·170
+                                                                                                                                ..              615
+                                                                                                                                                ·36
+  19.lOS
+  18,23<
+  17,676
+                    .570
+
+
+                    ....
+                  •l.071
+                                     24,750
+                                     ll.114
+                                     22.995
+                                                        ......
+                                                        .513
+                                                           ,.        2•.1n
+                                                                     23,20
+                                                                     21.55S
+                                                                                ·l.SJO
+                                                                                -1,692
+                                                                                          0    21.6-11
+                                                                                               18,971
+                                                                                               20,010
+                                                                                                             ·1,059
+                                                                                                             ·3.650
+                                                                                                              1,D99
+                                                                                                                           19.U,
+                                                                                                                           11,270              ....
+                                                                                                                                              ·l.152
+
+  16,632          ·1-                21,933            ·1,D62        20,351     ·1,197         20..C12          342        17,012             ·1,lU
+  14,913
+  12.987
+                  -1.719
+                                     ,..,..
+                                     19,3]2            -2.601        111,396
+                                                                     16.326
+                                                                                ·1,962         u ... ,
+                                                                                               17.253
+                                                                                                             ·1.43l        1.c.an
+                                                                                                                           13,0,1
+                                                                                                                                              ·2.205
+
+
+
+
+                                                                                                                                                                                           -
+                                                                                                                                                                                       A-•
+                                                                                                                                                                                     kWh 4 hour N\lmberof
+39S,86S                          ,U,D56                             433,629                   448.110                     4U,129
+                                                                                                                                              .,....                                         .,..,.   Clccur.1nc:e.1
+                  -3,762                               -1.330
+                                                                                -3,267                       •7.665
+                                                                                                                                                        ..........,_
+                                                                                                                                                                                         ......
+                                                                                                                                                                                    ----,.;;;;
+                                                                                                                                                                                                                 15
+
+
+
+                                                                                                                      AVl!f"ill~ NEMA July 2013 Mont~              LMP price/kwh           S0.04974
+                                                                                                                                                                                            SlO!U5
+
+
+
+
+                                                       Distribution Manager - 2023-25 Priority Projects
+
+         1. Continue replacing the 1304 line from Village substation to the Beacon
+            substation.
+        2. Transfer MMLD equipment on ~400 Verizon pole replacements.
+        3. Move poles and wires at Village 13 substation
+        4. Replace poles, transformers and open wire on Jersey St. from Guernsey St. to
+           West Shore Drive.
+        5. Replace poles, transformers and open wire on Gregory St, Lee St. and Front
+           St.
+        6. Replace poles, transformers and wire on Dodge Rd. from West Shore Drive.
+
+
+
+
+                                                                                                                                                                                                                                 11/17
+             Distribution Manager - 2023-25 Priority Projects
+
+7. Replace underground lines on Crowninshield Rd.
+8. Replace underground lines on Foster St.
+9. Replace poles, transformers and open wire on Bradlee Rd. Renew the
+   underground section.
+10. Replace known/reported poles, transformers and wire that have aged
+  out.
+11. Replace rotted padmount transformers.
+
+
+
+
+          Plan for Improving Distribution System Resiliency
+
+
+• Wires and Poles -Tree Trimming - Mayer Tree Service
+• Utility Poles - Pole Inspections - Osmose Utility Services
+• Distribution Transformers - Load Analysis - Nexgrid and/or GIS
+• Electric Conductors (wire)- MMLD & GIS
+• Other Distribution Assets- closers, capacitors, fuses - MMLD &
+  GIS
+• Meter Data Management & Communications - Nexgrid, MMLD
+  & Network Monitoring & Management Co.
+
+
+
+
+          Board Vote: Proceed with Osmose Pole Inspections
+
+
+• Motion: Proceed to enter into a contract with Osmose Utility
+  Services to inspect and treat the 2,000 utility poles owned by
+  MMLD in 2024. The estimate expense is not to exceed
+  $145,000. and take 10-12 weeks to complete.
+
+
+
+
+                                                                         12/17
+            Osmose Utility Services - per pole prices
+           Line               Item                      Price
+             1    VISUAL                          $     13.34
+             2    SOUND AND BORE                  $     19.84
+             3    PARTIAL EXCAVATE                $     26.34
+             4    EXTERNAL TREAT                  $     64.00
+             5    REJECT WITH EXTERNAL TREAT      $     65.15
+
+             6    EXCAVATED REJECT                $     60.20
+             7    OSMOFUME - PER POLE             $     42.08
+
+             8    INTERNAL TREAT                  $     21.62
+             9    GPS READING 1-10 METER          $      N/C
+
+            10    DIGITAL IMAGE - EACH            $      2.02
+            11    HOURLY RATE - FOREMAN & TRUCK   $     135.70
+
+            12    HOURLY RATE - EACH CREW         $     63.83
+                  MEMBER
+
+
+
+
+            New Rates Discussion
+
+• TOU Goal: electric rates that accurately reflect actual our
+  wholesale power costs, based on reliably recorded and
+  communicated data, that is reliably processed in our billing
+  system, and easily communicated to and understood by our
+  customers
+• Time of Use- Design considerations
+  - Fixed hours, per weekday- track to ISO or MMLD peak hours (e.g.3-7
+    pm)
+  - Or Critical peak days only, based on 1SO/MMWEC/MAPC forecasts, and
+    communicated to customers in advance
+
+
+
+
+            New Rates Discussion
+
+Implementation Considerations
+• Begin sending shadow bills when ready
+• Decide if customers will opt-in or opt out
+• Determine the peak/non-peak price differential (a Groton l0X
+  or something less dramatic)
+• For consideration? a peak rate that does not start at the first
+  kwh used during peak hours, but only the difference between
+  an average use and higher than average use.
+
+
+
+                                                                         13/17
+                                                        MMLD Hourly Electric Load (MWh) - July 2023
+
+                                                                                                                                  26.6
+                                                                                                                                            25.7 25.4 25.0
+        f                                                                                                          23.8 24.3
+
+
+
+
+                                                                                                                                                                                           I
+50
+
+                                                                                                                                                                 24 0 23 6
+
+
+0.0
+    !
+                                                                                                                             1 .5 2 .0 2 .2
+                                                                                                                                                   2 .4 2 1
+                                                                                                                                                           1      1· , • 212.6 20.2
+                                                                                                                                                                 1 1 1 .7                       ll7.6
+                   14 9
+
+
+
+
+                          !t f f t
+                                                                                                                                                   14.7   14.9                 l .l    l    3
+
+                                      12         12 3                           4                                                                                14.1 13.7 13.1 12.8 1 .4
+                                           .4                           l                   13 l    13 4 13 7 13 7 13. 7 13.7 14.1
+        r1   9                                                  1 .7                12 4
+                                                                                                                                                                                                11.3
+0.0       10 1 1 8 1 1 1 6 1 .3 1 4 1 2 10.0 11.3
+                   9•2    a.7   8_4   8_2        s.s    9.0                                                                                     • Min • Max ■ Average
+
+
+                                                                            9       W        11      12   13       M         U        ~      IT     IB     ~      W       ll   n           13       ~
+
+                                                                                                   Hour Endin
+
+
+
+
+                                      Board Ratification of Jan 2024 rate changes
+
+
+       • Is the Board's intent to implement the Jan 2024 base rate
+         increases, as discussed in Dec 2022, with a corresponding
+         decrease in electric rate.
+       • Question: was a definitive vote for 2024 rate increase approved
+         in late 2022?
+       • Residential base rate to increase from $11.25 to $18.50 and
+         electric kwh rate reduction from $0.1969 to $.1895
+
+
+
+
+             Residential Rate Design
+
+
+
+
+                                                                                                                    ~b:-·
+                                                                                cents per kWh Energy Charge+                              Change by Monthly Energy (kWh) Usage("}
+                                                                                Power Cost Adjustment Change
+  Resid,mtlal (A}                                                                      from Current
+                                                                                            (1.1) $        (1.8)
+  Energy Charge+ Power Cost Adjustment S                          0.23250       s     0.22190      $    0.21450
+                                                        Current                     Yearl              YearZ
+  Monthly facilities Charge:
+                                                                                                                     LOIIJ       •~         ~      •w      no      :so           IIM        11ii6       l;!X'
+   Monthly Charge                                                    4.25       s          11.25 $        1850
+                                                                                                                    4"
+  Energy Charge:
+   All Energy                                                      0.1425 $             0.1969     $     0.1895     ·"
+                                                                                                                    4"
+  Hydro Credit                                                                                                      .ft
+   Annual Credit                                                (360,787) S          (360,787} $       (360,787)                                           £Mf1Yflo:Whl
+  Power Cost Adjustment:
+      All Energy                                rs::               0.0900 $             0.0250 $    o.o,sol
+                                                              16,492,822        s   16,490,924 $16,741,393
+                                                                                                                                                             662
+         ch:;;~:;r;:v~;:: S                                                                 o.°"           l.S"     AverageUsage
+ ---~~=~~-------~-~~                                                                                                MonthlyCustomers                       8,879
+                                                                                                                    Current Average Bill                  154.79
+                                                                                                                    Year 1 Average Bill                   154.77
+                                                                                                                    Average % Change                         0.0%
+                                                                                                                    Monthly Change                          (0.02)
+
+                                                                                                                                                                                                                12
+
+
+
+
+                                                                                                                                                                                                                     14/17
+         Residential Rate Design
+
+                                                                       cents per kWh Energy Charge+                          Oiange by Monthly Enersv (kWh) Usage ("l
+                                                                       Power CostAdjustment Change
+Residential (A}
+
+Energy Charge + Power Cost Adjustment S
+                                                  Current
+                                                            0.23250
+                                                                                from Current
+
+                                                                             0.22190
+                                                                           Year l
+                                                                                    11.11$
+                                                                                           $
+                                                                                                    (1.8)
+                                                                                                0.214SO
+                                                                                               Year 2
+                                                                                                            §b::'-~'
+Monthly Facilities Charge:
+ Monthly Charge                                                4.25             11.25             18.50
+                                                                                                                ..
+                                                                                                             u..,l     tSO     sso     m        750      ISO               ICM
+
+EnergyCharge:
+ All Energy
+Hydro Credit
+ Annual Credit
+                                                             0.1425
+
+                                                         (360,787) S
+                                                                              0.1969
+
+                                                                            (360,787) S
+                                                                                                 0.1895
+
+                                                                                               {360,787)
+                                                                                                            -..
+                                                                                                            ,
+
+                                                                                                            '"'
+                                                                                                            ~
+
+
+
+Power Cost Adjustment:
+ AJIEnergy                                                   0.0900           o.02soS            o.oEol '---------------------'
+~==---.,.....,-,-,ue---,-fr-om--,-Ra-te~S---,-,6,-49~2=,8=22~$-16-,4~90        2
+                                                                                    ,=92~4~Sl-,6"",1•=1=,3=93~
+                                                                                                            Average Usage                         662
+                  CNnae from Previous                                               0.0%             1.5"
+                                                                                                            Monthly Customers                   8,879
+                                                                                                            Current Average Bill S             154.79
+                                                                                                            Year 1 Average Bill  $             154.77
+                                                                                                            Average % Change                     0.0%
+                                                                                                            Monthly Change                      (0.02)
+
+
+
+
+                                   Agenda - General Manager Items
+
+    5:40 General Manager Items
+    1. Mutual Aid
+                   Sept 2023- MMLD to Eastern Maine Electric Co-op - Calais, Maine
+                   Plan 4/2024 - MMLD to Navajo Territory Utility Authority-AZ/NM/UT
+                  • Board vote - $12,000-15,000 travel and insurance expense - 2 people
+    2. Monthly financial statement review - August
+    3. Village 13 substation update
+    4. Solar on Schools
+                   Alternative financing models: Power Purchase or Solar PV array ownership?
+                   Memo of Understanding with School Committee/Select Board
+
+
+
+                                                                              Marblehead Municipal Ught Department
+                                                                               Operating Statement AUGUST 2023
+
+                                                Current Month                                              (000's)                          Year To Date
+                                           Actual    Budget Variance                                         Item                 Actual        Budget Variance
+                                             10.2            .!.!.1.        ~                   K~      Sales-Mllons                 65.3        68.9       @&)
+
+                                         2,158.0       2,552.4           (394.4)                Sales Revenue                 14,784.0        15,919.0         (1,135.0)
+                                           945.0       1,220.0           (275.0)                Power costs                    8,220.0        10,403.0         (2,183.0)
+                                         1,213.0       1,332.,           (119,4)                            Net                6 156-'.0       5,516.0         1,048.0
+
+                                                                                                    Operating Costs
+                                           213.0            244,0          (31.0)               Payrol                          1,374.0        1,649,0           (275.0)
+                                           176.0            175.7             0.3               Depreciation                    1,406.0        1,405.4              0.6
+                                            51.0             52.0            (1.0)              Benefits                          387.0          416.0            (29.0)
+                                            25.0             25.0             0.0               OPEB                              200.0          200.0              0.0
+                                            68.0             68,0             0,0               Pensions                          544.0          544,0              0,0
+                                            28.0             64.5          (36.5)               Maint. Supplies                   297.0          516.0           (219.0)
+                                            23.0             23.0             0.0               Office Supplies                   202.0          184.0             18.0
+                                            25.0             21.0             4.0               Outside Servk:es                  128.0          168.0            (40.0)
+                                             0.0              2.5            (2.5)              Fuel                               31.0           20.0             11.0
+                                             0.0              5.0            (5.0)              Insurance                          28.0           40.0            (12.0)
+                                             3.0              3.0             0.0               Bad Debts                          24.0           24.0              0.0
+                                            68.0             25.0           43.0                Al Other                          200.0          200.0              0.0
+                                             ~               35.7           lQLl                Bonds Payable Interest            ~              285.3             ~
+                                           715,0            744,4          ~                    Total Operal Costs              5,106.0        5,651.7           (545.7)
+
+                                           498.0            588.0          (90.0)               Operating Income                1,458.0         (135.7)        1,593.7
+                                             53.0             ~             49.0                lnt.lnc./(Exp.)                   208.0           32.0           176.0
+
+                                           551.0            592.0          ~                    Net lncome/(Loss}               1,666.0         (103.7)        1,769.7
+
+
+
+
+                                                                                                                                                                                 15/17
+                  YTD 2023- Energy Usage is Down
+
+
+
+    MMLD Retail Sales (000's MWH)
+        2023 Plan    2023 Actual                                                                   2022 Actual
+        SeptYTD             SeptYTD                                             Delta                    SeptYTD                      Delta
+             78.1                                74.3                              -3.8                                 78.9              -4.6
+
+
+
+
+        Force sewer main pipe and MMLD underground
+        duct bank on ROW now located and surveyed .(
+             ~;                                                                                                                           .//
+                                                                 -- --y-                                                            .//
+                                                                 _/•,i·
+                                                                             --1   ..?~
+                                                                                     I J.                          /
+                                                                                                                             ·/· "".:.:
+                            -     .......   ......_        --           ~·          ...     -       1        ...        .,
+
+                      r         ":":-.. _,/                             ;;r             j          ..                  _...,._,..
+                                                                                                ~
+
+                            \~;
+                                                      ••
+                                                                 /
+                                                                ;~-:-
+                                                                       I.:.-'
+                                                                     ·.--           -
+                                                                                            ~           --
+                                                                                                ,ii: ll,.-, ,
+                                                                                                    -         .;.:.          -
+                     ·- -                   ~\/j.                                                        -
+                                                ·.;;-_;_-- -
+                                            . t-                             ..
+                                                  i· I                              \
+                                            J                   -_ •.
+                                     /
+
+
+
+
+           Village 13 Upgrade - RevisedProject schedule as
+           of 10/23
+
+• Switchgear manufacturing completion delay - 3 months
+• March 2024 - Construction Contract out to bid
+• May 2024 - Site construction starts
+• May/June 2024 - Transformers delivered to temp pads
+• Sept 2024 - Switchgear delivered
+• Oct 2024 - Existing 23 kV feeders moved to the new 23 kV
+  Switchgear
+• Possible site work hold to Mar 25 due to harsh winter weather
+• May/June 2025 - Existing 13 kV feeders cut over to new 13
+  kV Switchgear
+
+
+
+
+                                                                                                                                                 16/17
+                    Solar on Schools
+
+• 6 Schools under evaluation for solar PV-only, and solar PV plus on­
+  site battery
+• Solar PV plus on-site battery option significantly increases cost per
+  site, but also increases the economic benefits generated at the
+  site ...carbon-free energy plus the potential to lower the MMLD
+  monthly ISO-NEtransmission bill and lower the monthly charge for
+  capacity payments for a year. All such cost savings are directly
+      passed on to all Marblehead customers.
+• Continuing due diligence on analyzing the model assumptions and
+  financial forecasts ...
+
+
+
+
+                    Solar on Schools -
+
+                                                                             Presented by    Vetted by    Who owns
+Option   Con~uration           Deal Type                 Financing           Solect Energy? MMWEC?        the RECS?
+                                                  4% green bond - monthly
+  1      Solar PV only          PSA- Ownership           payments                yes            yes        MMLD
+  2      Solar PV only          PSA- Ownership     MMLD cash purchase             no            no         MMLD
+                                                  monthly power purchase
+  3      Solar PV only               PPA                 payments                yes            no         Solect
+                                                  4% green bond - monthly
+  4      Solar PV and BESS      PSA- Ownership           payments                yes            yes        MMLD
+                                                  solar PV -cash; BESS-4%
+  5      Solar PV and BESS      PSA- Ownership          green bond                no            no         MMLD
+                                                 Solar - PPA monthly power
+                                PPA-solar; BESS purchase payments; BESS-
+  6      Solar PV and BESS        ownership           4% green bond               no            no         Solect
+
+
+
+
+                    Technical assistance on IRA/IIJA grants
+
+ • Determine grant status of Village 13 upgrade
+ • Utilize Baker Tilly consulting firm to assist not to exceed $30,000
+
+                         IRA 2022 Tax Credit Servic!s Phases                                  Fee Estimate
+
+ 1. Determine Project Eligibility                                                           $15,000 - $30,000
+
+ 2. Preserve the Tax Credits - Begun Construction                                           $20.000 - $35,000
+
+ 3. Maximizing the Tax Credit Earned - Post Construction                                    $35,000 - $55,000
+
+ 4. Workpaper File Generation to Support Investment Tax Credit Claim                            $15,000
+
+ IRA 2022 Tax Credit Services Total                                                     $85,000 to $135,000
+
+
+
+
+                                                 ----****----
+
+                                                                                                                      17/17
+

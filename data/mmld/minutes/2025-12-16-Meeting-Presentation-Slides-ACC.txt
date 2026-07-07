@@ -1,0 +1,501 @@
+General Manager Update
+Board of Electric Commissioners Meeting
+December 16, 2025
+
+
+
+
+       MMLD
+Updates Overview
+
+ Holiday hours
+   • Thursday, 12/18, 7:30am-12:30pm
+   • Wednesday, 12/24 & 12/31, 7:30am-12:30pm
+   • Thursday, 12/25 & 1/1, closed
+                                                                          Topic                            Date
+   • Friday, 12/26 & 1/2, closed
+                                                FY 2026 Budget Review                                     12/16/25
+                                                Strategic Planning Workshop I                             1/22/26
+ Upcoming meeting topics →                     Rate Planning and Adjustment (EV charging, Go Green, etc.) 1/27/26
+                                                Strategic Planning Workshop II                            2/10/26
+ Safety minute                                 Strategic Planning Discussion                             2/24/26
+
+ Customer survey results                       Peak Demand Management (Wilkins & BESS)                   3/31/26
+                                                GM Goals Review                                           4/28/26
+ 2026 Budget & Capital Plan
+                                                Cyber/Tech Discussion; Audit & DPU Report Review          5/26/26
+ Transmission Resiliency Project
+ Lightshift battery energy storage system (BESS)
+
+   Marblehead Municipal Light Department                                                                             2
+Safety Minute
+
+
+     TRIPPINGHAZARD
+& OVERLOADING
+            ELECTRIC
+                                          DON'TLEAVE     AVOIDDRUNK
+      OUTLETS                             SPACEHEATERS     DRIVING
+                                           UNATTENDED
+
+
+
+
+  Marblehead Municipal Light Department                           3
+Customer Survey Results
+
+ In October 2025, MMLD conducted a customer survey in cooperation with the Municipal Electric
+  Association of Massachusetts (MEAM) and Great Blue Research
+ Results are overwhelmingly favorable and align well with expectations
+ Responding customers’ demographics suggest reporting bias favoring established homeowners with
+  relatively high income
+ Curious reporting on customers’ intent to adopt EVs and/or rooftop solar arrays, may suggest that these
+  are polarizing feelings or that early adopters have already purchased EVs and/or solar arrays
+ MMLD could improve its outreach and programming and incentives, especially those related to helping
+  customers conserve electricity
+ Useful insights were gained regarding customers’ preferred methods of payment and communication;
+  this feedback will enable MMLD to serve our customers more effectively
+
+
+
+
+   Marblehead Municipal Light Department                                                                    4
+Respondent Profile I Demographics
+                             Age                                                      Gender                                                       Income
+                                                                                                                                              Under $25,000        1.4%
+              25 to 34           1.1%
+                                                                                                                                $25,000 to less than $50,000
+                                                                                                                                $50,000 to less than $75,000
+                                                                                                                               $75,000 to less than $100,000
+                                                                                                                              $100,000 to less than $125,000
+                                                                                                         48.6%
+                                                                                                                              $125,000 to less than $150,000
+                                                                                                                              $150,000 to less than $175,000
+            65 or older                         52.0%                                                                         $175,000 to less than $200,000
+                                                                      Prefer not to say                                                     $200,000 or more
+      Prefer not to say                                                                                                                      Prefer not to say
+                                                                                                                                                              -----====-------
+                            0%                50%          100%                             0%          50%            100%                                      0%         50%    100%
+
+
+
+
+                  Rent or Own                                       # of Children in Household                                           Time as a Customer
+                                                                                                                                        Less than 1 year         1.4%
+                                                                          None (0)                            78.3%
+              Rent          8.6%                                                                                                   1 to less than 5 years
+                                                                                                                                 5 to less than 10 years
+                                                                                                                                10 to less than 15 years
+                                                    90.0%                                                                       15 to less than 20 years
+                                                                                                                                20 to less than 25 years
+                                                                                                                                25 to less than 30 years
+  Prefer not to say        1.4%                                                                                                         30 years or more                   42.9%
+                                                                  Prefer not to say        2.3%
+                                                                                                                                        Prefer not to say
+                                                                                                                                                           ~--------
+                      0%                50%         100%                              0%          50%           100%                                        0%            50%      100%
+
+
+
+
+                                                                                                                                                                                          5
+Satisfaction I Organizational Characteristics
+In 2025, MMLD customers provided significantly higher average positive ratings across most organizational characteristics compared to Massachusetts
+(MA) Public Power and MA IOU customers overall. On average, 82.5% of MMLD customers rated their utility positively, driven primarily by positive ratings
+among customers for the utility "providing consistent and reliable electric service," "restoring power after an outage in a reasonable amount of time," and
+their "honesty/integrity."
+
+                                                                                                                                                                                                              2025 YTD PPDS
+               Aggregate of ratings 7-10 shown, wlo "don't know" responses                                            MMLD 2025                     MA Public Power                 MAIOU
+                                                                                                                                                                                                              National Averaae
+                Customer interactions and communication                                                                  86.6%                              79.3%                   64.8%                              63.5%
+
+                 Providing good service and value for the cost of electricity                                            84.6%                              78.3%                   59.1%                              62.7%
+
+                 Helping customers conserve electricity                                                                  68.9%                              69.1%                   59.0%                              54.5%
+
+                 Honesty/ Integrity                                                                                      89.8%                              81.2%                   63.8%                              61.8%
+
+                Providing consistent and reliable electric service to                                                                                                                                                  74.7%
+                                                                                                                         96.2%                              84.2%                   73.9%
+                customers
+
+                Restoring power after an outage in a reasonable amount of                                                                                                                                              71.2%
+                                                                                                                         95.7%                              82.7%                   70.4%
+                time
+
+                Offering innovative programs and services                                                                61.8%                              68.4%                   59.1%                              55.4%
+
+                Rates                                                                                                    73.2%                              75.6%                   46.3%                                 -
+                Community service                                                                                        78.9%                              75.7%                   57.8%                              60.1%
+
+                Overall Satisfaction with MMLD                                                                           89.7%                              79.4%                   66.8%                              70.3%
+
+                Average                                                                                                  82.5%                              77.4%                   62.1%                              63.8%
+               -                                                                                            I                                   I                               I                        I
+n= 350 (MMLD 2025), 400 (MA Public Power), 400 (MA IOU), 9,000 (PPDS)                                                                                                                Color indicates statistical significance at a 95% confidence level, denoting
+Q: For each organizational characteristic, please rate MMLD's electric service using a scale of one (1) to ten (10) where one (1) is "very poor" and ten (10) is "very good."           whether the data point is higher or lower than the MMLD 2025 findings
+                                                                                                                                                                                                                                                      6
+Key Financial Metrics
+
+ Projected revenue: $500k more than original budget
+ Projected expense: $1M more than original budget,              Projected Sales By Customer Class
+  due mostly to higher power costs
+                                                                               Municipal
+                                                                                 6%
+ Projected operating income: ~$55k
+ Projected net income: $725k, mostly due to interest earnings
+                                                                        Large
+ Pending adjustments to net income include and yearend               Commercial
+                                                                         11%
+  adjustments (e.g., pension and OPEB)
+                                                                    Small
+                                                                  Commercial
+                                                                     10%
+
+
+
+                                                                                           Residential
+                                                                                              73%
+
+
+
+
+   Marblehead Municipal Light Department                                                                 7
+Summary of Revenues and Expenses (2026 Budget)
+
+ Revenues are estimated based on sales of
+  101,000MWh with an average, effective rate of                              Budget Breakdown by Cost Category
+  ~$209/MWh, to yield ~$21.1M in 2026                                                        Admin & General
+                                                                                                   5%
+ MMLD’s operating budget is level funded; if power
+  costs exceed projections, additional funds can be
+  recovered by increasing the purchase power fuel                                        Benefits
+                                                                                           8%
+  adjustment (not anticipated)
+ Wholesale power, labor, and benefits account for                               Labor
+  >80% of MMLD’s annual expenses                                                  13%
+
+                                                          Outside Services
+                                                                             (
+ MMLD aims to end each year with a modest                      1%
+  operating income, which is further modified by the          Bond & Interest                                  Wholesale Power
+                                                                   2%                                               61%
+  payment-in-lieu-of-taxes paid to the town, as well as
+                                                                  Maintenance
+  interest earnings and adjustment due to actuarial                   4%
+  reporting on pension and other public employee
+  benefits projections to yield final net income                            Capital
+                                                                         Investments
+                                                                              6%
+
+
+
+   Marblehead Municipal Light Department                                                                                         8
+Financial Health Snapshot - Rates
+
+ Marblehead continues to provide competitive rates, as compared to neighboring utilities
+ Relatively low commercial and industrial loads limit opportunities to achieve more significant savings
+ Prudent financial management is our goal and is essential for avoiding rate increases
+
+
+                                     Typical Monthly Electric Cost (750 kWh/month)
+$300
+                                                                                                          $264        $257
+$250
+
+$200                                                                                         $183
+                                    $142        $149       $151       $158         $171
+$150                    $120
+            $111
+$100
+
+$50
+
+ $-
+          Danvers     Peabody     Ipswich      Reading   Wakefield   Marblehead   Concord   Belmont   National Grid Eversource
+
+
+       Marblehead Municipal Light Department                                                                                     9
+Financial Health Snapshot - Sales
+
+ Marblehead has relatively consistent electric           Electric Sales & System Demand Trends
+  sales, though increased consumption due to
+                                                  Electric Sales                                     System Demand
+  electrification of heat and vehicles is         (000 MWh)                                                   (MW)
+  anticipated in the coming decade                120                                                            40
+ While consumption is relatively flat, peak
+  demand has increased dramatically               100        - - - - -- - - - -- - - - -- - - - -34                35
+                                                            33                                                     30
+                                                                                              31
+ Managing peak demand and preparing for          80                 30
+                                                                                  27                               25
+  anticipated electrification are critical
+  strategic goals                                 60                                                               20
+
+                                                                                                                   15
+                                                  40
+                                                                                                                   10
+                                                  20
+                                                                                                                   5
+
+                                                   0                                                               0
+                                                          2021      2022         2023       2024        2025
+
+
+
+
+   Marblehead Municipal Light Department
+                                                        -   System Demand (MW)          Electric Sales (000 MWh)
+
+
+                                                                                                                   10
+Key capital projects in 2026
+
+ Final phase of Village 13 substation project
+ Reconductor 13kV line between Beacon and Village substations
+ Communication improvements, including fiber switches and
+  metering upgrades for Wilkins plant and Village substation
+ Underground residential distribution rebuilds    TemporaryStructures
+                                                   -  3 PhaseTemporaryLines
+
+
+ Overhead utility pole replacements
+                                                   TemporaryPoles
+                                                   ♦ TemporaryPoles
+
+                                                   Power Lines
+
+ EV charging station installation
+                                                        3 PhaseUG LinesCrowninshield
+                                                   -    PrimaryOverheadLines
+                                                   -    PrimaryUndergroundLines
+
+
+ Capacitor bank installations
+                                                   -    SecondaryOverheadLines
+                                                   •• • SecondaryUndergroundLines
+                                                   Transformers
+                                                    ♦ Pad Mount
+
+ Targeted transformer replacements
+ Vehicle replacements (1 HDV; 1 LDV)
+
+
+
+
+   Marblehead Municipal Light Department                                               11
+  Capital Funding and Expenditures (Depreciation Rate = 3%)
+
+Nominal
+$Millions
+                                                                                      -
+
+                                                                                      I
+                                                                                                  Planned expenditures for capital
+                                                                                                                                        -.
+$8
+
+  $6
+               Depreciation fund balance (projected)                                  ~
+                                                                                          A       projects exceed anticipated funding
+                                                                                                  at 3% depreciation rate by 2027
+                                                                                                                                        ...!
+
+
+
+  $4
+Axis Title
+
+
+
+
+  $2                                        .....                                             I   -1                             -
+               Anticipated funding                   ........
+                                                            ........
+  $0                                                                   ......._                                              -
+                                                                                  - - - "- - - ------- --------
+                                                                                          -            '   -
+
+
+
+
+               Planned expenditures
+-$2
+
+-$4
+
+-$6
+                    2025                 2026                          2027                   2028             2029         2030
+
+             Marblehead Municipal Light Department                                                                                      12
+Capital Funding and Expenditures (Depreciation Rate = 3%)
+
+Nominal
+$Millions                                                                                                       Additional transfers from operating
+$8                                                                                                      (       account augment depreciation
+                                                                                                            )   funding to maintain positive balance
+        Depreciation fund balance (projected)
+$6               ........
+                        ........
+                               ........
+$4                                    ........
+                                             ......._
+$2
+        Anticipated funding
+                                                    - - - - - '1:::~:]~:W~:i
+                                                                ::•:•:•········
+                                                                ,•,•=····=·······················=···
+
+                                                                        -                                          -------- -------
+$0
+        Planned expenditures
+-$2
+
+-$4
+
+-$6
+             2025                          2026                    2027                                     2028           2029           2030
+
+      Marblehead Municipal Light Department                                                                                                        13
+Capital Funding and Expenditures (Depreciation Rate = 3%)
+
+                           2025
+                           2025                2026
+                                               2026          2027
+                                                             2027            2028
+                                                                             2028            2029
+                                                                                             2029           2030
+                                                                                                            2030
+SOY Balance                             $    5,500,000   $ 2,990,526     $ 1,874,026     $ 1,868,421    $ 2,435,411
+
+Depreciation                            $    1,305,000   $ 1,605,000     $ 1,715,895     $ 1,789,290    $ 1,817,709
+
+Operating Transfer                      $    1,250,000   $ 1,250,000     $ 1,000,000
+
+Expenditures                            $ (5,066,500)    $ (3,971,500)   $ (2,721,500)   $(1,222,300)   $ (958,500)
+
+EOY Balance          $   5,500,000      $    2,990,526   $ 1,874,026     $ 1,868,421     $ 2,435,411    $ 3,294,620
+
+
+
+
+ Operating transfers are anticipated to maintain acceptable balance in both Depreciation and Operating
+  accounts, while enabling ambitious capital project plan
+
+
+
+
+     Marblehead Municipal Light Department                                                                            14
+Key Financial Takeaways
+
+ The operating budget of MMLD is very lean; net income has risk due to influence of below-the-line
+  influences
+ Rates do not need to be increased to support operating budget; we do not anticipate making changes to
+  the power purchase adjustment, but that is subject to our (limited) exposure to energy market volatility
+ Maintaining a depreciation rate of 3% with augments from operating reserves is sufficient to fund
+  MMLD’s ambitious capital plan
+
+
+
+
+    Marblehead Municipal Light Department                                                                    15
+Transmission Resiliency Project Summary
+
+Fortification of Marblehead’s power supply will be conducted in three distinct project phases:
+ Phase 1: Converting several of MMLD’s wooden poles to galvanized steel near the National
+  Grid substation in Salem
+ Phase 2: Undergrounding 1,800 feet of the sub-transmission lines along the most rural span of
+  the utility corridor in Marblehead
+ Phase 3: Undergrounding the remaining 3,900 feet of lines along the utility corridor
+
+
+
+                      Project Estimates     MMLD Funds          Schedule
+Phase 1               $318,593              33%                 December 2025 – October 2026
+Phase 2               $1,663,874            33%                 August 2026 – June 2027
+Phase 3               $1,982,467            100%                August 2026 – TBD
+
+
+
+   Marblehead Municipal Light Department                                                         16
+Overview             Project Phases               FeederLine
+                                 MMLDSubtransmission
+Marblehead                                Resiliency         Project
+                                                   Improvement
+MunicipalLight                                     7 woodpoleswithsteelpoles.
+                                     Phase1- Replace
+                                                                 wireunderground.
+                                                    ft of overhead
+                                     Phase2- Put1800
+Department                                                       wireunderground.
+                                     Phase3- Put3900ft of overhead
+
+
+
+Extent of Work
+D Phase1-3
+
+
+
+
+                 0                3,000                           6,000 ft
+                                                                                    17
+18
+19
+Anticipated Outcomes
+
+                                           Reduce or eliminate key vulnerability of critical
+                                            infrastructure with directly impacts on reliability and
+                                            resiliency
+                                           Project plans include accommodations for future
+                                            load growth in Marblehead
+                                           Following completion of the project, removal of
+                                            obsolete utility poles along the right-of-way will be
+                                            possible
+                                           MMLD will work with community stakeholders to
+                                            ensure a positive outcome for our customers and
+                                            those who use the right-of-way for recreation
+
+
+
+
+  Marblehead Municipal Light Department                                                             20
+Utility-Scale Battery Energy Storage System (BESS) Proposal
+
+ Developer: Lightshift (via MMWEC)
+ Size: 5MW/20MWh
+ Location: Village Substation
+ Anticipated value for MMLD customers: ~$500k/year (~45% of total savings
+  from avoided transmission and capacity costs)
+ Governed by three main documents:
+  • Land use agreement (site terms)
+  • Interconnection agreement (electrical terms)
+  • Energy storage service agreement (financial terms)
+
+
+
+
+  Marblehead Municipal Light Department                                      21
+  Marble ea
+Vet.erensM dd e
+    School
+
+
+
+
+             -
+             ..J
+                  22
+Thank you
+
+
+Contact Info:
+                           jblair@mhdld.com
+                           (781) 584-5472
+
+
+
+
+  Marblehead Municipal Light Department       23
+

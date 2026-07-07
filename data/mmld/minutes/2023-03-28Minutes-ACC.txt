@@ -1,0 +1,715 @@
+Light Commission March 28, 2023 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           May 4, 2023
+Re:             Commission Meeting March 28, 2022
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:04 pm, the meeting
+being held both in person and with remote access available to the public. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:          Hull, Frechette, Smith, Wolf and Yarmoff participated in person.
+        Light Department:       General Manager, J. Kowalik and Manager of Tech. Operations, C. Coleman
+        Invited:                Brooks Winner, MAPC, presenting for Green Marblehead Committee
+
+Approval of March 1, 2023 minutes.
+Vote #2023-13 Commissioner Wolf moved to approve the minutes of the March 1st, commission
+              meeting, as amended. Seconded by Commissioner Frechette.
+              Four in favor, Hull voted against approving the minutes because of concerns of possible
+              open meeting law violations and possible Chapter 164 violations.
+
+Public Comments
+No comments from the public.
+
+Village 13 upgrade: update
+The contracts for procurement of Switch Gear and for Transformers are signed. The site needs to be
+prepared later this year for installation of the equipment in early 2024, and a contract with the
+appropriate civil engineering firm needs to be put in place. The team is revisiting the best access to the
+site by organizing a meeting of the transportation company who know the equipment they need to
+move a 100,000 lbs piece of equipment, and local engineering firms. So far, access from Westshore drive
+has been privileged, but the team is revisiting access from Bessom Street. If it were possible, this would
+avoid widening the right of way and encroaching on wetlands. This might end up being more expeditious
+and cheaper way to bring the equipment to the site.
+Slide 1 on page 6 describes the timeline for installation of switchgear, transformer and connections.
+Depending on weather in winter of 2024, final work may only be completed in the spring of 2025.
+
+
+Go Green Now Commercial Rate
+The Go Green Rate has been available to residential customers. The General Manager is proposing to
+extend the program to small commercial and to large commercial customers, under the same terms as
+the existing residential Go Green Rate. In 2022, 47 participating residential customers will contribute to
+retire 156 RECs. A commercial customer would like to lower their carbon footprint by accessing a similar
+                                                                                                        1/15
+mechanism: if they do participate, in view of the current electricity consumption, they would retire 74
+RECs, which would increase the RECs retirement by 50%.
+
+Vote #2023-14 Commissioner Wolf moved to expand the definition of the existing Go Green Now
+              program for residential customers to include customers in the Small Commercial and
+              Large Commercial rate classes, motion seconded by Commissioner Smith. Unanimous.
+
+Electric and Building Code changes
+
+Commissioner Hull explained the new Building Code that came into force at the beginning of the year
+(225 CMR 22.00) at the same time as the Electrical Code was updated. New buildings over 1,500 square
+feet or renovations of more than 50% of the building are concerned. The building must be prewired for
+electric heating, EV charger level 2 and possible solar installation. The additional load must be
+calculated, and in many situations the existing 200 Amps panel will not suffice and a new 400 Amps
+service will be necessary. Residents should plan in advance as these new code requirements mean
+upfront calculation of load, and possibly dealing with supply chain constraints that they might not
+anticipate. For the Light Department, upgrades to the service lines to the buildings or to the pole
+transformers might be necessary.
+
+Energy Efficiency and Vulnerable Populations
+
+The General Manager presented information on the population of Marblehead, in the slides attached
+from page7, making the point that the programs the Light Department supports should be available to
+all residents, irrespective of income level. Commissioner Wolf emphasized the necessity of
+communication around these programs. By benefitting the department financially, they help the whole
+town and every resident by keeping the rates low at the expense of people who want to take advantage
+of these technologies; however, this must be better communicated. Commissioner Adam noted that the
+latest census data show that the distribution of Marblehead residents by income is very different from
+that presented by the General Manager. Nevertheless, it is clear that there are hundreds of vulnerable
+households in Marblehead (slide 3 page 7). DOER has programs specifically dedicated to energy
+efficiency and electrification, with a special focus on low and moderate income. The department is
+communicating with MMWEC to provide data so that MMWEC can apply for block grants. Details will
+become clear in the future, but the moneys are substantial (slide 1 page 9).
+
+Light Commissioners’ Association
+
+Commissioner Yarmoff reported that a number of Light Commissions are organizing a network of
+commissioners to exchange information. Commissioners, with elected terms of a few years change
+frequently, will more efficiently be able to learn their job. Currently 17 of the 41 systems are
+participating, and there is an outreach effort so that all light commissioners in the State are aware that
+they can participate. The Massachusetts Municipal Association has been approached and may recognize
+this group, as it recognizes the Select Board Association. Open Meeting Law applies, and if a majority of
+the commissioners of one system participate in a meeting, then some must remain “silent participants”.
+Marblehead Commissioners are aware and have been invited to the meetings (the next one taking place
+on May 11). The proposal is for the Marblehead Light Commission to support the effort of a group of
+commissioners to create a state-wide association of commissioners of Municipal Light Plants. The goal of
+this association is to support and assist commissioners in their task.
+
+                                                                                                     2/15
+Vote #2023-15 Commissioner Yarmoff proposed a motion: that the Marblehead Light Commission
+              support the effort of a group of commissioners to create a state-wide association of
+              commissioners of Municipal Light Plants. The goal of this association is to support and
+              assist commissioners in their task. Motion seconded by Commissioner Frechette.
+              Unanimous.
+
+Green Marblehead Committee
+
+Brooks Winner of MAPC presented the Marblehead Green Committee Road Map (Slides from page 9:
+the town adopted a document “Climate Vision” in 2020, which established 2040 as a target date for the
+town to reach Net Zero emissions, and the Marblehead Green Committee was established by the Select
+Board to implement that vision. This work was supported by a grant from the State, to put in place the
+planning process and the Road Map itself. The latest IPCC report published this March highlights the
+need for urgency on these actions: while the Commonwealth is working under legal requirements to
+reach Net Zero by 2050, the IPCC report highlights the fact that developed nations need to reach that
+goal as early as possible and as close to 2040 as possible; hence Marblehead’s goal.
+The road map highlights that electrification is the key to reaching the goals: electrification of heating, of
+transportation. And the cleaner the electric portfolio of MMLD, the more reductions from electrification
+we achieve. The Marblehead Green Committee made the point that Marblehead cannot reach its goal
+without a carbon-free MMLD portfolio by 2040.
+There are many actions that MMLD can take to help Marblehead meet its climate goals but the key
+action that the Marblehead Green Committee would like the Commission to consider is:
+         Transition MMLD electricity supply to 100% clean energy by 2040.
+The general manager made the point that whatever the target is, from a practical perspective, to
+increase the ratio of clean energy in our portfolio, we need to consider both the technologies, and the
+projects. There are some proven technologies, developed at scale, that are or will be available in
+principle: the question is both the timing and the projects availability for Marblehead. Some projects are
+a bird in the hand, like 2023A, others are more elusive.
+
+Commissioner Yarmoff reviewed the likely major projects and technologies that may become available
+in the next 5 years.
+      Off-shore wind:
+             o One 800 MW project is coming on-line at the end of the year. However, MMWEC and
+                 Marblehead have not been able to get a supply contract from this project.
+             o There are 4,800 MW of additional off-shore wind projects at various stages of
+                 permitting, contract negotiations and development: the earliest project MMLD could
+                 have participated in would have provided electricity by 2028, but this project is now
+                 delayed and we may not get any until 2030.
+      Hydroelectricity:
+             o The New England Clean Energy Connect, the transmission line to bring 1,200 MW of
+                 hydroelectricity from Quebec to Massachusetts through Maine, is uncertain, wrapped
+                 up in a legal battle in the Maine courts.
+Which leaves us, in terms of opportunities for proven technologies and available projects, with
+MMWEC’s project 2023A with non-emitting electricity proposed by NextEra, based on the Seabrook
+nuclear power plant.
+
+                                                                                                        3/15
+Project 2023A (See slides on page 11) MMWEC has been discussing with NextEra Energy a long term
+bilateral contract (Power Purchase Agreement between MMLD and NextEra Energy) for firm delivery of
+non-intermittent carbon-free energy, sourced from the Seabrook Nuclear Station. This energy comes
+with associated environmental credits that MMLD needs from a regulatory perspective. Should energy
+from Seabrook not be available during the firm contract, NextEra will make best efforts to replace the
+electricity from one of its many non-emitting generating facilities. The contract is long term, 20 years
+from 2030, with an early option to start, which MMLD would like to adopt (2028). Delivery point is at
+Mass Hub, and the price is competitive.
+
+MMWEC is negotiating on behalf of its members and does not know exactly how much power MMLD
+can get under this contract: MMWEC has proposed an allocation for each member interested in
+participating, which MMLD has pushed to increase up to 3 MW of power capacity. If MMLD were able to
+get its full request, the chart on page 11 shows the evolution of carbon free power in MMLD’s portfolio,
+with MMWEC’s assumptions of growth and state level legal constraints. The graph shows visually that
+Project 2023A would allow us to meet our 2030 obligations. Comments on this chart:
+- The cliff decreases on this chart show contracts expiring, which can be extended: the cliff decreases are
+not a cause of concern.
+- MMWEC is using ISO-NE projection for load growth of 1.3% per year, while our projections for load
+increase with transportation electrification alone is 1.7%. This does not take into account the building
+electrification mandated by the new building codes. Marblehead load growth over time will likely be
+higher than that shown on this graph.
+In the General Manager’s opinion, any attempt to meet the Marblehead Green Committee’s goal of Net
+Zero by 2040 means that we cannot pass on project 2023A.
+
+The Commission discussed the appropriate amount of energy to request (asking for a higher amount of
+energy is not guaranteed to succeed in any case; there could be a risk of having too much power in the
+night-time trough consumption that can be mitigated by increased load of EV charging – not yet modeled).
+It was also discussed that this contract does not increase “nuclear production” or “nuclear waste” in any
+way. This is about optimizing an existing asset and Marblehead benefitting from this optimization.
+
+The General Manager distributed a motion that states that the Light Commission:
+- intends to have MMLD participate in project 2023A and pay its share of the budget in order to get an
+agreement with NextEra Energy;
+- directs the General Manager to execute a Participation Acknowledgement.
+
+Vote #2023-16 The above motion was moved by Commissioner Hull, seconded by Commissioner Smith.
+              Unanimous.
+Vote #2023-17 A motion to have MMLD participation in project 2023A start in 2028 rather than 2030
+              was moved by Commissioner Wolf, seconded by Commissioner Frechette. Unanimous.
+
+The Secretary of the Commission will send to MMWEC a Certificate of Vote to memorialize the Light
+Commission intent with regards to project 2023A, and the General Manager will send to MMWEC a
+Participation Acknowledgement stating the power level and the start date expected.
+                                                                                                      4/15
+Resiliency of Supply
+
+The General Manager reviewed actions taken to have a more secure supply of electricity. As our
+electricity comes into town through one single point (double connector) 23 kV line, there is an inherent
+risk associated with that single line. But actions have been taken to minimize the risk, described on the
+slide page 12. Hardening our existing line is important work that the Department is doing. The Village 13
+substation upgrade will also be a critical equipment with new capabilities that will add to our resiliency.
+
+Commissioner Yarmoff explained that the reason this subject is regularly put on the agenda of the board
+is that a well-known vulnerability for MMLD is having a single line for sourcing power into Marblehead.
+At this stage we have no plan to address this vulnerability. The longer we wait to start on this project,
+the longer it will take to complete. From an engineering perspective, any system with a critical piece – in
+our case, one single line bringing energy into the town – without redundancies built in, is an accident
+waiting to happen.
+
+One way to address this vulnerability would be to have a second line provide power to the town. To put
+in place a plan, we need to know the cost for a new line connecting to the New England grid, a line going
+through Swampscott being one option. Conversations with National Grid are a necessary first step to
+generate options for the board to consider, the last discussions took place in 2020. Even if a second line
+goes to the Swampscott grid, it eventually links back to the same National Grid substation “Railyard #49”
+located 97 Margin Street in Salem. Other options will need to be evaluated to remedy this vulnerability.
+One such option is having the supply line buried along the Right of Way. Commissioner Adams reminded
+the board that grants are available to increase the resiliency of the distribution system. Among the
+issues we need to consider is whether an additional supply line is for emergency use only, or for regular
+use. The General Manager mentioned that we can engage with the National Grid team but we need to
+be ready with some answers to the questions that National Grid is going to ask us.
+
+Rates discussions
+
+The commission decided to postpone this discussion in view of time and the upcoming executive
+session. The document prepared by Commissioner Smith “MMLD Distributed Generation Policy” was
+distributed to Commissioners ahead of time. While the document has not been reviewed by the
+Commission at this time, it was discussed and agreed that this document be made part of this meeting
+and included in the minutes for possible public comments. This proposed policy document can be found
+from page 13.
+
+Executive session
+
+Chair Mike Hull proposed a motion to go into Executive Session in order to conduct strategy sessions in
+preparation for negotiations with non-union personnel General Manager Joe Kowalik.
+Vote #2023-18 Motion proposed by Chair Hull. Frechette: yes; Hull: yes; Smith: yes; Wolf: yes; Yarmoff: yes.
+
+The Light Commission entered into Executive Session at 5:48 pm. The Executive Session concluded at
+6:15 pm after a roll call of commissioners voted to return to open session at which point a motion to
+adjourn was proposed, seconded and unanimously adopted.
+
+                                                ----****----
+
+
+                                                                                                      5/15
+Documents shown during the March 28 Light Commission meeting
+
+
+                    Village 13 upgrade schedule
+
+       • Late 2023- Award contract for site construction
+       • Early 2024 -Village 13 Site construction begins with frost breaks.
+       • By April 2024 - Widened Salem ROW access must be ready for use.
+       • April 2024 -Switchgear current planned delivery
+       • June 2024 - Transformers current planned delivery
+       • Fall 2024- Existing 13 kV feeders will move over to the new switchgear
+       • Fall/Winter 2024- Move 23 kV feeders to new transformers
+       • Fall/Winter - Make all remaining connections
+       • Depending on weather, final work may move into spring 2025.
+
+
+
+
+                    Go Green Now for Commercial Customers
+
+       • Design and implement the rate exactly the same as Residential
+         customers.
+       • 47 participating Residential Customers in 2022 - 156 Recs
+         retired Avg customer, full year =4.8 RECs/yr
+       • First Commercial Enrollment is QBE (Queensland Bank &
+         Equitable, Australia) - insurance company with office on
+         Pleasant St.
+       • QBE 2022 annual electric consumption yield 74 RECs
+
+
+
+
+                     Expand Go Green Now rate
+
+       Go Green Now for Small Commercialand LargeCommercialrate
+       customers
+
+       Motion: ...to expand the definition of the existing Go Green Now program
+       for residential customers to include customers in the Small Commercial
+       and Large Commercial rate classes.
+
+
+
+
+                                                                                  6/15
+            Energy Efficiency & Decarbonization Programs
+            for the Marblehead's Vulnerable Populations
+
+• Why?
+  - Recognize the unique distribution of household incomes in
+    Marblehead
+  - Ensure fill households have access to all MMLD programs for all
+    households, regardless of HHLD income levels
+  - Put a special emphasis on programs and grants that focus on
+    vulnerable households
+
+
+
+
+                      Household Income US Census 2018 ACS data
+           40%
+                                     ■ Mass       ■ Marblehead
+
+           35%
+                 ""
+           30%                                                        28%
+                           27"
+
+           25%
+
+
+           20%
+                                       ""   17%
+           15%
+
+
+
+
+                                      II II I
+           10%                                        ""' 10%    ""
+            5%
+
+
+            0%
+
+                 $0-S0K   $50-lO0K   $100-lS0K      $150-200K    $200+K
+                                        Household income
+
+
+
+
+            Who are Vulnerable Households?
+
+• 500+ Mhd households in the Federal Low Income Heating
+  Assistance Program (LIHEAP)managed by the North Shore
+  Community Action Program
+• 307 household units: elderly, veterans and families in
+  Marblehead Housing Authority units
+• 200+ households in the two Comm of Mass Environmental
+  Justice Census Block groups with incomes
+
+
+
+
+                                                                            7/15
+                                                                                                                      ,..,s.,s t,z,c.rz.y. 01
+                                                                                                                      11,0«,- ~ .. Ill' •
+                                                                                                               •tAIUOo'-lf'-) ~t'          11\J I&.,
+
+                                                                                                            • Mtb<-.J l+J..,,              """°
+                                                                                                                 ..~.;~
+                                                                                                                !1,B•/•
+                                                                                                                           1,J
+
+                                                                                                                                 0,:,,-.Ai;{
+
+                                                                                                       • Pol~        ?~> - 'i•l
+                                                             I   ----.i                  ,rA><..('"
+                                                                                  ('..t!Nt\       "t,o~-Z..
+                                                                                  B~<,U~f
+                                                                              , l~.1,,,.        uVd'V-                     (
+                                                                              .... ~,._,,f,W,                                  "'IHt;:.
+                                                                                         •·n,...._-,
+                                                                              4\;'\ •u         ""      M•     S. MJ-4,H;!
+                                                                                                              )\v, ,1.,,,,...c..
+                                                                                                               ,:;     /~f:~\          ,,.. MA M -N.;.
+
+
+
+
+                                                                                                                                          1:18,056
+                                                                                                                       0        !JOO 1.000             2.00011
+
+
+
+
+              .....
+
+                                                                                           ~-,-Clfl_,_Ct
+
+
+
+
+                                                    w,,...
+                                                    Wood     •
+
+
+
+
+                                      J
+                                      !
+                                                \   .
+                              '
+               TflCMKO
+                     CoulllryCll,t>   ,_,,-•
+
+
+             ~·'          ..
+                      ..,......
+                                                                           Mass 2020 Environmental Justice Block Grau
+                                               Chl1on
+                                                                          •Marblehead Housing Authority Properties
+
+
+
+
+                      What Programsare available?
+
+DOER Low and Moderate Income Housing Decarbonization Grant Program
+
+• Energy efficiency including building envelope improvements and other measures
+  resulting in electric load reduction, peak demand reduction, and demand
+  management.
+• Electrification (e.g. air or ground source heat pumps for space beating, air source heat
+  pumps for water heating, induction cooking equipment).
+• On-site renewable energy generation technologies (i.e., solar pv).
+• The removal or mitigation of barriers (e.g., roofrepairs, electrical upgrades, knob and
+  tube remediation, and vermiculite and asbestos removal) that result in installation of
+  energy efficiency, electrification, and/or on-site renewable energy generation
+  technologies.
+
+
+
+
+                                                                                                                                                                 8/15
+             What Programsare available?
+
+DOERLow and Moderate Income HousingDecarbonizationGrant
+Program
+• Expects applicants' requests to be for grant funds of not less than
+  two hundred and forty thousand dollars ($240,000)
+• Buildings with 6+ units - maximum grant not to exceed $40,000
+• Buildings with 5 and under units - max grant not to exceed $50,000
+
+
+
+
+                                      Marblehead
+                                       Net Zero
+                                       Roadmap
+                                           Marblehead
+                                          Municipal Light
+                                          Board Update
+                                          March 28, 2023
+
+
+
+
+  • Builds on the Marblehead Climate Vision adopted in 2020
+    which identified 2040 as the target date for net zero emissions
+  • Grant funding from the MA Executive Office of Energy and
+    Environmental Affairs
+  • Cohort of four MLP communities - Marblehead, Peabody,
+    Ipswich, Belmont
+  • Products: GfiG inventory, net zero planning process, and net
+    zero roadmap
+  • MAPC leading community engagement and roadmap
+    development
+
+
+
+
+                                                                        9/15
+[he ~oston<!5lobc
+               Followinga dismalglobalclimatereport,could
+                                                      Massachusetts
+                                                                 pushupitsnet-zerogoal?
+                                                      a,w-       .........         c.-PIMllt                                                        [::J •   f - ijl ·-
+   "On Monday, as he announced the
+   release of the most recent UN
+   report on climate change, Secretary
+   General Antonio Guterres called on
+   developed nations to achieve net­
+   zero emissions by as close to 2040
+   as possible. Like many states and
+   countries, Massachusetts for years
+   has been working toward a
+   deadline of 2050, a date that grew
+   out of international agreements to
+   limit warming to 1.5·degrees."
+
+
+
+                                                      r.,.. ■ _,.INllllll__,.""'_._. ....      .__,._111"1ml)•--.r• ........ Pf'IIP"l.ii,r~XM(l_..111          ___   IIOl(ITf
+                                                      lt;l(ATY/AS$0ClAt{01'11l$$
+
+
+
+
+Electrification is key to achieving net
+          •  •
+zero em1ss1ons
+• From heating to cooking to transportation, electrifying end uses
+  is a core strategy in the net zero roadmap
+• The cleaner MMLD's portfolio is, the more emissions reductions
+  we get from electrification
+• Simply put, Marblehead can't meet its goals without a carbon­
+  free MMLD portfolio by 2040
+
+
+
+
+  Key Actions for Consideration
+ T•ansition MMLDeledricity supply to 100% clean energy
+ MMLD is working with MMWEC to develop o pion for transitioning to 100% carbon-free electricity by 2050 in
+ compliance with An Act Creating a Next Generation Roadmap for Massachusetts Climate Policy, the climate low
+ passed in Morch 2021. This plan will outline MMLD's plans for procuring power from renewable energy projects and
+ other non-emitting sources. MMLD will also evaluate its current supply contracts to identify ways to reduce emissions
+ and reduce exposure to price volatility from natural gos and other sources.
+
+ Implement public housing solar program
+ The town and MMLO will work with the Marblehead Housing Authority to explore the potential for installing solar PV
+ at its properties to benefit residents. Housing authority residents could also participate in the community solar
+ program referenced above, especially if solar is not feasible at some properties.
+
+ Encourage residential batteries by allowing interconnectivity permits
+ Battery storage for homes con help increase climate resiliency, and residential batteries can also be used as demand
+ response resources to help reduce emissions by reducing the need for fossil fuel power generation during peak
+ demand events. MMLO will work to enable residents to install residential-scale battery storage systems by creating a
+ streamlined process for connecting such systems to the grid. MMLO will also encourage residents with battery systems
+ to participate in its Connected Homes program.
+
+
+
+
+                                                                                                                                                                                10/15
+Executive Summary
+
+• Special Project 2023A is long term Bilateral Contract that delivers firm
+  (non-intermittent) carbon-free energy and associated environmental
+  attributes ultimately sourced from the Seabrook Nuclear Generating
+  Station.
+
+
+
+
+Commercial Terms
+
+Product          Firm ATCCarbon Free Energy and Emission Free Energy Credit
+Term             2030 - 2050, with earlier start option beginning 2028
+Volume           10% of Expected Annual Portfolio Needs (Up to 3MW capacity)
+Delivery Point   Mass Hub
+Price            Commercially Sensitive
+
+
+
+
+                                          forec-a.stedPower Portfolio
+                                                                               l
+
+
+
+
+                                                                                   11/15
+                     Resiliency Measures
+
+Recognizing MMLD's electric supply is from a single source ...
+• Hardened the Lead Mills berm with rip-rap
+• Removed trees and trimmed others on Mhd ROWsfrom Lead
+  Mills (Salem line) to Swampscott line
+• Pre-stage Mayer Tree Service tree crew(s) and equipment, to
+  shorten our response time to any threat from vegetation on
+  our distribution system
+
+
+
+
+                           ----****----
+
+
+
+
+                                                                 12/15
+Proposed Policy for Distributed Generation
+
+
+ Marblehead Municipal Light Department
+ Distributed Generation Policy
+ MMLD'sDishibutedGeneiatlonPolicyallns to facilitatetile g,o\,•thof localfenew~bleene<gy
+ sources, Thiswill improvepricestability.enhancesystemresiliencyand increaselocaloontrol
+ wll le supportingU)etest 11ueres1
+                                o.1r+,1MLD's
+                                          e-ng1ne,wng,
+                                                    econo1rncand environmen!al
+ requireme-ms.
+
+
+ Distributed Generation Customer Definition
+ A distribulF!d oeneralinn r,ustnmer is a MMI O tP.lrlil c:us!omerin o:;iort,;tandina It.al uses onsit?.
+ $Olaror solar+ batter.,- to f)enerateelectricIX)werfor a buildingalre<'idY    connectedto the1VJ.il.O
+ distr;:bution
+             system.
+
+ The 11,;newiib!eDG syshmi, which mus! be us1=dfor the ruslomer's own consumplion, .inti
+ which must operate in p.."lrallel'.'lilh MLP's P.lc°slingtransmission and distribution f~c:'lilia.. mus1
+ be locatedon the customer'spror,ert\•.
+
+ The customermusto·,inor leasetheirrenewa'OleOGS)'St~'llwith theprimaryintentof the
+ systembeingusedto offsetanor pa11cf thenet meterngo.1stomersawnon-siteelectricpo\\'·er
+ requirements.
+
+ Leaseor financialarrangementsinvolvingIX)',•,rerpurchaseand salestransac:tions
+                                                                              or k\+i/hsales
+ betweenthe customeranda thirdpartyare not permitted. The use of a renewableD:3system
+ for provJCling
+             serviceto a thirdpan)'is strictlyprohibited.Undernocircumstances shall cutput
+ fromtho rcncwi:ib!cDGsystem be providedor crC'd1tcd   to any tllltd l)Drty.
+
+
+ Power Purchase Agreements
+ Customersinterestedin developinga largersystemmustsubmita ~roposalfor a power
+ purchaseagreement(PPA). The MMLDGenerc1I     Manatierhas the discretionto acceptor deny
+ an·, PPA Pn:>POSfll$
+                  and fo negotia:elheir lerms Ea-ohPPA p(()[.()S;,11
+                                                                  will be F.!Vallmted
+                                                                                   00 a
+ c.a~-by-casebasis.
+
+
+ System Capacity
+ Exp.ic!e:J production cann:Jt exc:ei.d 90% of avemge load de!errrnned by most 1.ioenl 12 months
+                                                        of bi11inghistory does not reflect avetf!r,e
+ of billing hist.ory V.'here the mos! re-oent12 monih'l:>
+
+
+
+
+                                                                                                            13/15
+load becausebuildingwas unoccupiedor becauseload is expecte<I
+                                                           to increase(i.e.due to
+purchase of EV or installation or heat pump). a proforma load estimate oof'fl)teted by a oerbfied
+electrician may be submitted.
+
+
+
+Solar Credits & Billing
+MMLO will compensate for ar1yexcess electricity that is fed into the grid at a rate based on the
+actualoostsof <lelivenngthe electncselVice.The currentcreditis S.09t7 kw/handwill be
+revisited annually based on the previous year's data derived from ISO New England and the
+National Renewable Energy Lab.
+
+Al me endor the monthlybillingpe1iod.Olecus1ornerijenera10,
+                                                         will be billedro, the elecln<:ity
+consumed at the designated service rate. At the end of the monthly billil)Q period, the customer­
+generator's account "~II be credited for the electricity provided into the MMLO's system at an
+amount equal to the then current annual rate.
+
+For the billing period endi1)gin March of each year (or at the termination of seivice).any
+remaining aedit balance m a customer-generator's aocounl ·Nillbe returned to Ule tvll\•lLD's
+Sustainability
+             Fund.
+
+Custorner-generators   v,-illootreceiveanycashpaymentsforunusedcreditbalances,emaining
+at the end of this annual cycle. Anycustomer charge or minimum ctiarge assoc:iatedwith a
+customer-oenerator'$   Classof seivioewill still apply
+
+
+Existing Net Metering Customers
+Customer generators with net metering ag,eements authorized b~rthe t.•U\+ILD
+                                                                           will retain their
+legacyrates111)(Jer
+                Ule previouscreditingstructureuntilApril 1. 2025. If <lesired.existing
+customer-generators may elect to preemptively transibon to the ne•Nstructure. ahead of the
+April 1. 2025 deadline
+
+
+
+Interconnection
+Custo,ners must sign the interconnection ag,eement.
+The <>-rstomer-generator
+                    mustcompletea,)(Jsigntile MMLD'sInterconnection
+                                                                  APl)lication&
+Agreement. The customer generator will be required to pay all applicable application fees and
+electrical permittilg fees.
+The customer-generator
+                    shall build.operate.andmaintaintlle ne1meteringfacil~yso thatit
+meets or exceeds all applicable safety and performance standards established by the
+
+
+
+
+                                                                                            14/15
+MassachusettsStltc BuildingCodes,the lv1assachusetts  DTE,th~ NationalElectricCod~,the
+Instituteof Electricaland ElectronicsEngineers.and UnderwritersLaboratories.
+
+Thenet meteringracilllym1..1st operatein parallelwith the MMLO'sexistingtransmissionand
+distributionfacilities.The customer.generatorshallprovidea safetydisoconectdevice located
+adjacentto the ELO'smeteringequipmentand shallbe accessibleto the fv1MLO"s    personnelat
+a:1times.
+
+The lvlMLOsh.a'.Ihavethe optionof requiringongoingtestingof the disconneciequipment.The
+t,1\M.LD
+       maydisconnectthe customer-generator's      net meteringfacilityfrom the fv1MLD's
+<hsbi!)\1llO()
+            system at any 11me,r •l da,amsu-ie-s.afet;•
+                                                     and slabihly of the system 00t.1ld be
+oompromised.Thi:!MMLDre::;ervesU1enuht to 1m;.pect      net mele1inglc.1c1llh.:ls
+                                                                              al (tny lime with
+proper noticeto the customer
+
+
+Batteries
+Mf•l-LDsupportsthe installationof in homebatteriesin line\vith currentStateof MA safety
+regulationsant1via applicabletov1npermits.
+
+Customersmaychooseto enrollthe batteryin the MMLONextZerodemandresponseprogram
+that con-pensatesbillingcreditswhendispatched.All batterystoragedischarge.•11flen
+drspatclled1s<'.OOS1derea
+                        <Jama.ndra~lO()SeTtl!:!NextZem pmn,am1smaoa{Jeaser>-aralalv
+                                                                                  as
+an overallmonlhlyim::enlwelor a11ovm10
+                                     rernoledemandmcmagernent     du1int1
+                                                                        peakdemand.
+
+
+
+
+                                                                                              15/15
+

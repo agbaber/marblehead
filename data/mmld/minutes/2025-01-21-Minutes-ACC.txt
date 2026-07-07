@@ -1,0 +1,383 @@
+Light Commission January 21, 2025 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           January 16, 2025
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:06 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+Participated in meeting:
+     Commissioners:         Commissioners Frechette, Hull, Smith, Wolf and Yarmoff all participated in person.
+                            Commissioner Hull joined the meeting at 4:26 pm.
+      Light Department:     General Manager, J. Kowalik.
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Comments from the Public
+There were no comments from the public, whether in person or from remote participants.
+
+Outstanding items from previous meetings
+Polco Employee Survey. MMLD managers will look at the survey prior to its launch. Following last
+adjustments, it is anticipated that the survey could launch in the coming week or so.
+
+MIT Sloan School Sustainability Lab: as in the last previous two years, it is proposed that the
+Commission work with Sloan School students and propose them to study real world problems: this year
+we are proposing that they “Develop a methodology to systematically evaluate and prioritize projects”.
+
+Distribution system projects: a list of 22 projects was distributed in 2023, and an update on the
+progression of work was requested. The General Manager commented that the Crowningshield buried
+wires project is getting a lot of attention as there have been multiple failures. A temporary overhead line
+will be installed as work progresses to increase reliability of service. Commissioner Yarmoff asked
+whether, in view of the fires caused by utility wires, MMLD could prioritize the work on the open (non-
+insulated) wires which are more dangerous should any line/pole fall to the ground.
+Commissioner Wolf requested a new version of the spreadsheet shared in June 2023 at a future
+meeting, with an update on completed work and timelines for outstanding work.
+
+
+General Manager updates
+
+Village 13 substation: the contract with the engineering firm Fischbach and Moore (F&M) has been
+signed. A kick-off meeting with all participants will take place on January 31. The switchgear
+manufacturer has updated their delivery schedule to late April/early May. Incorporating both civil
+engineering F&M and switchgear installation, the new completion date is now November 2025. Total
+project will cost around $10M, it is the most capital-intensive project MMLD has ever undertaken.
+                                                                                                       1/8
+Ludlow Solar array: Sergeant Cotton Solar Photovoltaic Array. MMWEC applied for IRA credit: $2.3M
+has been received. This will significantly and favorably affect the cost of capital for this project, resulting
+in a lowering of the projected Levelized Cost of Energy (LCOE) from $0.076/kWh to $0.057/kWh. If the
+RECs are sold (with a Mass Class 1 REC value taken as $0.036), the net energy cost would be effectively
+$0.021/kWh, making it one of the cheapest energy sources in MMLD’s portfolio, well under our average
+total cost per kWh of $0.107.
+
+Other sources of energy: MMWEC is investigating whether additional solar farms can be built. The Maine
+Connector, which will bring hydroelectricity to New England, should also be commissioned shortly, and it
+is hoped that MMWEC can negotiate some supply contracts for its members. While fusion is getting a lot
+of attention at the research level, availability for commercial production is not in our planning horizon.
+Solar: Commissioner Yarmoff remarked that with respect to the REC market, the assumption last year
+was that the value of RECs was going to decrease when abundant offshore wind RECs became available.
+This assumption was penalizing the “Solar on school” project. With Off-shore wind uncertain at this point,
+we should revisit the economics of this project which may be more favorable.
+
+Budget: The General Manager presented the slide page 8 for confirmation of MMLD 2025 Operating
+Budget, with bulk power purchases representing 58% of MMLD expenses.
+
+Wilkins Plant. MMLD operates a 5 MW diesel generator, currently used and qualified for ISO-NE
+Capacity market.
+Tank update: A 40,000 gallon diesel tank on-site is the source of fuel. We routinely store 12 to 15,000
+gallons on site, have no record of keeping 20,000 or more gallons. Tank inspection by specialized firm
+CommTank shows that the tank is in good conditions where it can be inspected. To check for possible
+corrosion at the bottom of the tank, it needs to be emptied, for which a plan is being designed.
+Depending on the findings, a protective coating might be applied to further protect the tank, or the tank
+could be replaced by two smaller 10,000 gallon tanks. There is no ISO-NE requirement that would lead
+us to have to store more than 20,000 gallons, which gives us 48 hours of operations at full production.
+Controls upgrade: MMLD is discussing with vendors a plan for updating the 1970s era Wilkins plant
+control systems, potentially to allow for remote operations and islanding modes, as may be needed. If a
+decision were made to update the controls, multiple vendors will be contacted. A decision will also need
+better clarity on the evolution of the forward capacity markets that is not expected from ISO-NE for
+several years. Currently Wilkins is a “before-the-meter” asset, operating when dispatched by ISO-NE. It
+could become a “behind-the-meter” asset with operational control by MMLD. It could become a peak-
+shaving tool, which would likely mean running it more frequently. This has to be evaluated and
+compared with the potential of other peak-shaving tools, including utility scale batteries and VPPs. In
+order to evaluate the different options open to us, we need to have an estimate of the price of each of
+these options, which will be presented at future meetings.
+
+Human Resources: Open positions: Engineering project manager position: no news, picking up the
+conversation after the holiday season. Interviews have started for the Energy Efficiency position and the
+town HR manager is facilitating these interviews. MMLD has two senior positions open following
+retirements of a senior lineman and senior substation person and filling these positions is urgent. Both
+positions are Union positions. The Union Contract is up on June 30 of this year.
+
+Gerry Playground EV Charger request. The plans for the Gerry playground (p 8) and the request to work
+with MMLD to plan for electric interconnection for future EV charging infrastructure were discussed.
+Conversations are on-going. Interested parties are encouraged to refer to the recording for details.
+                                                                                                            2/8
+Utility and Residential battery programs. The General Manager discussed with Lightshift the inverter
+noise level and the possibility for noise reduction. Installing protective walls would also help abate noise.
+Separately the residential Duracell battery program that was discussed previously is no longer on the
+table. This means that utility-scale batteries are important, and we need to consider the possibility of
+using additional sites and land parcels for the siting of these batteries. The General Manager asked
+whether the board supports proposing a warrant article to be considered for Town Meeting. Since the
+wording of the proposed warrant is not yet known, this discussion is about reserving a space on the
+warrant lists. Commissioner Yarmoff wondered whether town meeting is the best forum for these
+conversations, but agreed that keeping the option of a warrant open is a good idea.
+
+Vote #2025-01            Motion to have the General Manager file a preliminary warrant proposal before
+                         the deadline, to be reviewed at a later date by the Commission was moved by
+                         Commissioner Yarmoff, seconded by Commissioner Frechette. Unanimous.
+
+Chair Wolf recused herself from the proposed Executive Session to follow, ceded the chair of the
+meeting to Commissioner Frechette and left the meeting at 5:59.
+
+
+Executive Session
+Vice-Chair Frechette requested a motion to meet in Executive Session to conduct strategy sessions in
+preparation for negotiations with nonunion personnel or to conduct collective bargaining sessions or
+contract negotiations with nonunion personnel, not to return to open session.
+
+The motion was moved by Commissioner Yarmoff, seconded by Commissioner Hull. Votes: Simon
+Frechette: Yes; Mike Hull: Yes; Adam Smith, Yes; Jean-Jacques Yarmoff: Yes.
+
+The Executive Session started at 6:00 pm, with Vice Chair Frechette leading the meeting and
+Commissioners Hull, Smith and Yarmoff participating.
+
+The Executive Session concluded at 6:57 pm at which point a motion to adjourn was proposed,
+seconded and, after a roll call of the commissioners voting unanimously in favor, adopted.
+
+                                                ----****----
+
+
+
+
+                                                                                                         3/8
+Documents shown during the January 21, 2025 Light Commission Meeting
+
+
+
+
+                       MMLD Board Meeting
+                        January 21, 2025
+
+
+                        Joe Kowalik, General Manager
+                        www.marbleheadelectric.com
+                            ikowalik@mhdld.com
+
+
+
+
+             Agenda
+
+ 4:00 Call to Order, Land Acknowledgement, and Public Comments
+ 4:15 Outstanding items and requests from last meeting
+      - Employee survey
+ 4:20: Distribution Manager updates
+ 4:45 General Manager Updates
+ 5:30 Meet in Executive Session - To conduct strategy discussion in
+ preparation for negotiation with nonunion personnel. Not to return to
+ open session
+
+
+
+
+             General Manager updates
+
+• Village 13 update
+ • MassCEC-DOE40101{d) resiliency grant update
+• Project 2020A- Master Sergeant Cotton Memorial Solar Project
+  update
+• Wilkins Plant update
+• Open positions
+• Gerry Playground EV Charger request
+ • Utility & residential battery programs
+
+
+
+
+                                                                         4/8
+            Village 13 Update -
+            Substation Construction Contract
+
+• Fischbach & Moore (F&M) contract signed
+• F&M submittals and Requests For Info - in process
+  - Balancing conductor cable trade-offs: cable specs vs delivery times vs
+    order minimums and costs
+• F&M - in person kickoff meeting Jan 31
+• F&M prelim schedule created - Nov 2025 completion
+• Switchgear mfr. Myer Controlled Power Jan 9 mtg - delivery
+  eta- late April/May. Their ETAis incorporated in the schedule
+
+
+
+
+                                                        MMLD Village 13
+                                                          Substation
+                                                        Existing layout
+
+
+
+
+                                                     ....
+
+                                                              ..
+                                                             ...
+
+
+
+
+                                                Construction Project Steps
+                                                1. Deliver new transformers to
+                                                temporary location
+
+                                                 2. Remove ledge & grad open
+                                                 area
+
+                                                3. Construct new switchgear
+                                                foundation & lay UG conduits
+
+                                                4. Deliver, assemble /1-·-a ♦ sll
+                                                new switchgear on n,       =' _ ..
+                                                foundaUon; make all ~\- i---:nrt:i
+                                                connections            ~;• ~::-! □ LI□
+
+                                                 5. Cutover & energiz
+                                                                        F -- S1-2
+                                                 switchgear & de-ene          --
+                                                 switchgear
+
+
+
+
+                                                                                         5/8
+                                                                         Construction Project Steps
+      New Village 13         Village 13
+       Swltchg'i!lll"" - - - - - - - - - - -                          6. Disconnect, remove, & scrap OH 23KV
+       fiM~ized        • New Transformers~                            lattice structure & feeder lines
+                       : Final location
+
+                       :CJ                                            7. Construct new transformer foundations
+                                                                      in old switchgear area
+
+           - !CJ       I
+                                                                      8. Position crane to lift & place new
+                                                                      transformers onto new foundations. Make
+                  "    I
+                       I
+                                                                      all electrical connections
+                  r    L---------~--                                  9. Energize & cutover to new transformers
+                                                                      and de-energize old transformers
+
+
+
+
+                                                                      11. Reinstall & replace perimeter fencing.
+
+                                                                        Substation upgrade complete
+
+
+
+
+                      Cotton Solar PV array - IRA credit Impact
+
+The impact is significant:                                       Wholesale Power Cost Components
+                                                                     January- November 2024
+• A $2.3 Million check from the IRS                               Average Total Cost Per kWh - $0.107
+  to reduce the capital cost of the
+                                                            Other (Admin)
+  project.                                                                                          Energy
+                                                                0.006
+• The MMLD levelized cost of                                                                        0.039
+  energy (LCOE)is reduced from
+  $0.076/kWh to $0.057 /kWh
+• Assuming a Mass Class 1 REC                              Capacity
+                                                            0.033
+  value of $0.036, the net energy
+  cost is effectively $0.021/kWh
+                                                                                                    0.03
+
+
+
+
+                      MMLD 2025 Operating Budget $21,681,000
+
+                                               All other OpEx,
+                                                  2.647, 12%
+
+              Employee Benefits &
+               OPEB*, 1.770, 8%
+                                                                                Bulk Power,
+                                                                                12.491, 58%
+                           Depreciation,
+                            2.175, 10%
+
+
+
+
+                              Payroll, 2.598,
+                                  12%
+
+
+
+
+                                                                                                                   6/8
+                     Wilkins Plant update
+
+• Storage tank specialist CommTank externally inspected the tank in
+  December and is preparing two update options now:
+  - Apply new coating seal system on existing tank & update the tank controls
+  - Replace our 40,000 gal. tank with a smaller, new 10,000 gal. tank(s)
+• Multiple meetings with power and electronics controls vendor SEL
+  in Jan. to develop a plan for updating the plant control panel.
+• Initial Jan meeting with a power engineering vendor to outline an
+  island mode microgrid plan including Wilkins Plant and a Battery
+  Storage System, .
+
+
+                     Wilkins Plant controls -functional      areas for
+                     potential updating
+
+• Metering communications with MMLD-80Comm, MMWEC,
+  Ngrid/lSO.
+• Run-time equipment monitoring
+• Power quality monitoring
+• Start-up controls modernization/upgrading
+• Remote start-up controls
+
+
+
+
+                     General Manager updates
+
+       13 update
+         o
+• MassCEC-DOE40101(d) resiliency grant update
+• Project 2020A- Master Sergeant Cotton Memorial Solar ProJect
+  update
+    ••       r   '         ,.J1te
+
+• Open positions
+• Gerry Playground EV Charger request
+• Utility & residential battery programs
+
+
+
+
+                                                                                7/8
+                                                                    I
+
+
+
+
+            Gerry Playground EV Charger
+
+• MassEVIPLevel 2 EV charger grants are available.
+• Up to $50,000 reimbursable for qualifying projects ...should be
+  sufficient.
+• Expenses incurred in advance of grant award are not eligible
+
+
+
+
+            Utility Battery update
+
+• .Ligbtshif1to share data dn the source of inverter noise
+  emissions and determine options for further reducing noise.
+• MMLD has the option of installing fireproof walls, not fencing
+  as a further guard against thermal runaway concerns.
+• Use lower risk LFP(lithium iron phosphate) batteries, not LMC
+  (lithium manganese cobalt, the batteries installed at Moss
+  Landing Power Plant 930 MW/3,700 MWh).
+
+
+
+
+                            ----****----
+
+
+
+
+                                                                        8/8
+

@@ -1,0 +1,422 @@
+Light Commission June 25, 2024 meeting minutes
+To:              Light Commission: Commissioners
+                 Light Department: J. Kowalik, General Manager,
+From:            Jean-Jacques Yarmoff, Secretary
+Date:            July 31, 2024
+Re:              Commission Meeting Public Session, June 25, 2024
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:00 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+     Commissioners:         Commissioners Frechette, Hull, Smith, Wolf and Yarmoff participated in person.
+     Light Department:      General Manager, J. Kowalik; Distribution Manager, Greg Chane; Business Manager,
+                            Matt Barrett
+      Invited:              Massachusetts Municipal Wholesale Electric Company (MMWEC) Sustainable Energy
+                            Policy & Program Senior Manager, Zoe Eckert.
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Election of officers of the Commission
+Chair Wolf complimented Commissioner Frechette and Smith on their reelection. As customary after each
+election, the commission decided to elect its slate of officers.
+Vote #2024-09           Motion to re-elect Commissioner Wolf as chair, Commissioner Frechette as Vice-
+                        Chair, and Commissioner Yarmoff as Secretary was moved by Commissioner Yarmoff,
+                        seconded by Commissioner Smith. Four in favor, one abstention.
+
+Approval of minutes
+Vote #2024-10           Motion to approve the combined minutes of March 26, 2024 Public session and
+                        Executive session was moved by Commissioner Frechette, seconded by Commissioner
+                        Yarmoff. Unanimous
+Vote #2024-11           Motion to approve the April 30, 2024 public session minutes; and the April 30,
+                        executive session minutes was moved by Commissioner Yarmoff, seconded by
+                        Commissioner Frechette. Four in favor. Commissioner Hull, absent at the meeting,
+                        abstained.
+Vote #2024-12           Motion to approve the minutes of the May 28, 2024 meeting was moved by
+                        Commissioner Frechette, seconded by Commissioner Yarmoff. Four in favor.
+                        Commissioner Smith, absent at the meeting, abstained.
+
+Comments from the Public
+Electric Bus. Eileen Mathieu, Longview Drive, mentioned that Marblehead had received a $200,000 grant to
+purchase an electric bus. A MassCEC grant might help - study the design for and - purchase the corresponding
+
+                                                                                                          1/9
+electric charger: this is work the school will take on. The deadline for this application is July 10. It will be
+useful to have the Light Department and the Light Commission sign a letter of support, as stakeholders in this
+process. After discussion, it was proposed that Eileen Mathieu could work with Lisa Wolf to come up with an
+appropriate letter for signature by the Light Department’s General Manager and the Light Commission.
+Solar Rate. Jeffry Foley, Cherry Street, made comments regarding the Light Department’s solar rates. This is
+an agenda item of the meeting and M. Fowley was invited to bring his remarks at that time.
+
+Cliff Street work. The town is facilitating access to the seaside park on Cliff Street, between Commercial
+Street and the entrance to the Marblehead Yacht club: some ledge has been removed and boulders will be
+installed to delineate pedestrian access.
+
+Outstanding items from previous meetings
+Process for battery Interconnection Application. The document highlighting the process for a resident to
+apply to connect a residential battery has been published on the MMLD web site, after confirmation by the
+Building Inspector and the Fire Chief that this process was adequate. MMLD is accepting applications. While
+MMLD has not reached out to residents that showed interest in a residential battery previously, it is
+anticipated that the local press will cover this subject and let the public know.
+23 kV Feeder line. Commissioner Yarmoff introduced a document, shared with MMLD in March, assessing risk
+to electricity supply in Marblehead, with the goal to improve resiliency for the town. This will be discussed at
+the next board meeting. See p 6 for an excerpt.
+Employee Survey. The General Manager and Commissioner Yarmoff participated in a meeting with Polco’s
+representative Brandon Barnett, highlighting the next steps to set up a study. The questions need to be
+finalized and a timeline put in place for execution of the survey.
+Solar rates review
+Current Policy: The General Manager explained the economic basis for the current proposed Solar Feed-In
+Tariff policy, starting with the components of the wholesale electricity cost that Marblehead pays: energy,
+capacity and transmission charges. This gets the electrons to our substation. To get them to the customers,
+MMLD maintains distribution wires, poles and a team of people, which brings the wholesale rate to the
+current rate that residents pay, about 19 cents per kWh. When MMLD buys back energy from residents, it is
+only buying back energy (not capacity, transmission or distribution). In order to make this transparent, the
+proposed policy has been to use publicly available numbers: the ISO-NE Locational Marginal Price for the
+North East of Massachusetts (NEMA-LMP), averaged over the previous year to fix the Feed-in Tariff.
+According to the General Manager, this is the only economically valid reasoning.
+Commercial customers feed-in tariff rate are set at this NEMA-LMP rate and updated every year. This
+explains the 3.3 cents per kWh as described on the slide p 6. A discussion ensued as to whether this number
+was the actual average 2023 NEPA-LMP, which - if 5.6 c/kWh as found on the ISO-NE web site - would mean
+Marblehead significantly underpays its commercial customers.
+For Residential Solar rates, the Commission previously decided (Vote #2023-45) not to change the previous
+feed-in tariff of 9.9 c per kWh, as the proposed policy does not take into account the benefits of a lower
+capacity and transmission charge coming from local production. The General Manager agreed that it is
+necessary to take into account the avoided capacity and transmission charges, which complicates the
+calculation: a simplistic evaluation yields a result very close to the previous number, which explains why the
+Commission decided to not change the feed-in tariff from the previously set rate, pending in depth review. As
+
+                                                                                                            2/9
+a result, there are two different rates (commercial and residential) right now, because initially the proposed
+policy was supposed to only take into account the NEMA-LMP. If it is appropriate to take into account the
+transmission and capacity charge, on top of the NEMA-LMP to get a rate which is close to 9.9 cent, it does not
+seem that the 3.3 cent Commercial rate is fair to these customers. Commissioner Yarmoff also reported that
+commercial customers who have a choice will set up solar arrays in buildings they own in different parts of
+Massachusetts rather than in Marblehead, which directly hurts Marblehead.
+Portfolio considerations: the General Manager is charged with increasing MMLD carbon-free portfolio in line
+with the constraints of the state and the town, as economically as possible. Faced with the two choices
+described in the slide p 6, he recommends prioritizing the second scenario. Commissioner Yarmoff pointed
+out that we should also consider the portfolio of sources of energy when setting the policy for Feed-In Tariff.
+If solar rates in Marblehead were about the same as the LCOE (Levelized Cost of Energy) of our Berkshire
+windfarms, we would be ahead, as solar in town helps with lower transmission and capacity charges, as well
+as resiliency.
+Net-Metering: Commissioner Wolf commented that presenting MMLD as implementing Net-Metering is
+deceptive: a real Net-Metering calculation would have the meter run forward when the residents consume
+electricity and backwards when electricity is exported back to MMLD. But what we do is different: we buy
+back the exported electricity at a low rate. Commissioner Frechette reported that residents have complained,
+after installing solar panels, that their bills were very different from what they expected to see.
+Installation subsidies. While some other MLPs calculate the solar feed-in tariff in the same way as MMLD
+does, they have substantial solar installation subsidies. Marblehead residents do not turn over the RECs to
+the Light Department. What would be the net present value of the RECs to MMLD if they were transferred
+from the residents to MMLD? Could that value be used to subsidize the upfront cost of the solar panels? This
+would be of interest to both the residents who would be able to more easily install solar, and to MMLD as it
+would at the same time increase the clean energy in Marblehead.
+Batteries: A further issue to consider will be tariff for electricity exported from residential batteries. We
+cannot differentiate from solar installations and batteries will make economic sense to residents if installed
+together with a solar array. The Feed-In Tariff policy will apply to both solar and batteries.
+Conflict of Interest: Commissioner Wolf added that she, like Commissioner Frechette, have solar panels on
+their houses and will abstain from any vote on Solar Feed-In Tariff policy, if this comes up to a vote.
+Resident comments: Jeffry Foley agreed that the way Net Metering is described is causing confusion to
+residents interested in installing residential solar. He also stated that it seemed to him appropriate that the
+Feed-In Tarif of residents that can install solar should be subsidized to increase the penetration of solar.
+Next Steps: The Chair requested that two points be investigated, possibly with the help of MMWEC: - an
+evaluation of the net present value of the RECs to consider if it would be worthwhile to take these into
+account into a subsidy for installation; and the impact on MMLD’s revenues if MMLD implemented full net
+metering versus the current approach.
+With this information, the Commission should be able to establish a Solar Feed-In Tariff policy.
+
+
+Heat Emergency and Peak Alert
+Late in the week of June 10, 2024 forecasts were published for the week of June 17 that indicated that a heat
+wave would reach New England and utilities could expect very high electricity consumption. Hourly
+
+                                                                                                             3/9
+consumption in Marblehead for the days of Tuesday June 18 through Friday June 21 is shown on slide page 7.
+The General Manager sent a CodeRed message to Marblehead residents on Wednesday June 19 at 4:30 pm to
+voluntarily curtail electric consumption if possible from 4:30 pm to 8 pm, and again the following day. This
+communication raised several questions from the Commission:
+  - On Tuesday, ISO-NE issued a warning that the system was in Capacity Scarcity Condition OP-4. OP-4 means
+    the grid is under serious stress that could possibly escalate to load shedding orders. Yet, the CodeRed
+    message was sent nearly 24 hours later, when stress conditions on the grid had normalized.
+  - The concomitant heat wave and the failure of a large electricity generator meant that electricity prices
+    reached an LMP of 758 $/MWh for hour 18, 25 times higher than normal (and 25 times higher than the day
+    before or the day after the scarcity event). While the failure of a generator could not have been
+    anticipated, the high energy consumption could have been, in view of the heatwave that was forecast.
+  - While the heat wave had been forecast and started on Tuesday, the message from the Light Department
+    was sent on Wednesday, requesting immediate action and focusing on a generator issue. Other Munis
+    communicated the week prior to the heat wave, warning residents and enlisting their help ahead of the
+    critical period. In Marblehead, no message was sent ahead of the heat wave, and no repeat happened on
+    Thursday, when the heat conditions were forecast to be the worst of the week.
+  - The message focused on abnormal operating conditions outside of Marblehead and not on lowering
+    consumption and the capacity charges (unlike the messages sent by the Department in July).
+The General Manager pointed out that he limits himself to one CodeRed message a week to avoid overloading
+residents with information. The situation that week was different from that of other heat waves in that there
+was an operational issue.
+The Commission pointed out that the Light Department has other communication methods and relays available
+to get the message to the community. The Department’s Facebook page, town sent e-mail messages, local
+media, local associations can all be used to communicate ahead of a heat wave that reducing electric
+consumption is saving money for everybody. We do not prepare residents by explaining the context of the
+CodeRed messages, and yet this is something that we need to do to be effective. Clearly when there is an
+emergency, CodeRed is important; CodeRed communications should not be abused. But other methods of
+communication should be mobilized ahead of heat waves. The Connected Homes program sends daily
+communications to participants.
+The Chair summarized the debate: the Light Department would appreciate the Commission to set a clear
+policy of what is expected in terms of communications ahead of heat waves and for peak alerts and
+requested Commissioners to submit proposals to the chair regarding this Peak alert policy for MMLD.
+
+Duracell program update
+During the previous Commission meeting, MMWEC’s Zoe Eckert introduced several possible pilot schemes and
+highlighted one that could be possible in the Crowninshield area, where service interruption due to weather-
+related events have been frequent. As there is a possibility to organize different types of pilots, Commissioner
+Yarmoff proposed several other options that MMLD could consider, see pp 8. These pilot programs, if they
+were implemented, would have a positive NPV to MMLD, but raise questions that MMWEC is currently
+discussing with MMLD and other municipal light plants. More information may be shared by MMWEC at the
+next Commission meeting on possible pilots.
+
+
+Distribution Department Update
+
+                                                                                                          4/9
+This update will be rescheduled for the next Commission meeting.
+General Manager Updates
+
+Village 13 update: MMLD is expecting to receive shipment on the transformers this week. A lot of planning
+is going on to ensure smooth delivery. First a crane is coming into position. Half of the substation is going to
+be de-energized to ensure safety. So MMLD is carefully looking at the weather to ensure that only one
+line/transformer can carry the load of the town during that period. If necessary, MMLD will run the Wilkins
+plant to guarantee appropriate supply. The Police Department will help by escorting the trucks, and
+organizing parking along the delivery path. The Commission voiced appreciation for all the planning work
+that is going on in ensuring smooth delivery of these exceptional loads.
+
+Shipyard Area resiliency grant. Work is progressing and will be completed before the end of the month as
+per plan. A monopole has been installed to facilitate gangway operation of the commercial dock. The
+sidewalk is being reconstructed. The fence installation is nearly complete. During this work, a contractor
+pierced a pipe of the geothermal loop that serves MMLD headquarter building and whose location had not
+been appropriately documented. This incident was quickly resolved, with no environmental consequences.
+
+Tioga Way update. The structural engineering firm is going to give us a preliminary estimate of the cost of
+leveling the potential sites identified in the parcel, so that the Department can make a determination as to
+where to focus its efforts.
+
+New employee recruitment update. See page 7. The information systems technology manager, Chris
+Dunbar starts at the beginning of July, next week. The General Manager is interviewing several candidates
+for the engineering project manager position. For the Energy Services Manager position, discussions are on-
+going with one person in the industry but there is currently no active search on-going with the recruiter.
+
+The meeting concluded at 5:58 pm at which point a motion to adjourn was proposed, seconded and
+adopted.
+
+                                                  ----****----
+
+
+
+
+                                                                                                             5/9
+Documents presented during the June 25, 2024 Light Commission Meeting
+
+Trying to analyze risk separately for each of the subcomponents gives the following table:
+
+
+          Location of possible      What kind of failure?                            Probability      Who is
+                 failure                                         What Hazards?        of failure   responsible?
+
+       Upstream of Salem
+ 1                                 Transmission failure to substation                Low           National Grid
+       Railway substation
+
+ 2     Railway substation           Equipment failure at substation                  Low           National Grid
+
+                                    Pole failure; Line failure
+ 3     Overhead line Salem RoW                                     High wind         Low           MMLD? NG?
+                                          Malevolence; Accident; Public Work         Low
+                                    Line failure
+ 4     Underground Salem Row                                        Flooding         Low           MMLD?
+                                            Uninformed digging/ public works         Low
+                                    Line failure
+       Under bridges/
+ 5                                                                 Bridge failure    Low           ?
+       underground berm
+                                                                    Berm failure     Medium        ?
+                                    Pole failure; Line failure
+ 6     Overhead line Mbhd Row                     High wind: Tree falling on line    High          MMLD
+                                                                        Brush fire   Low
+                                    Equipment failure at substation                  Low
+ 7     Village 13 substation                                                                       MMLD
+                                    End-of-life of equipment                         Addressed
+
+
+
+
+                       Current MMLD Solar rates
+
+     • Residential- 9.9 cents per kwh
+       - based on a prior year average, publicly available NEMA LMP price
+         (Northeast Mass ISO-NE zone, localized marginal price)
+       - Set multiple years ago.
+       - Board discussion in 2023 but no vote to change
+
+
+     • Commercial - 3.3 cents per kwh
+       - Based on the prior year (2023) average NEMA LMP
+
+
+
+                      Adding New Carbon-Free Resources to
+                      Power Portfolio - Prioritizing Options
+
+ Power Attributes                     Option A                                 Option B
+ Carbon Intensity                     100% clean                               100% clean
+ Supply Predictability                Intermittent; 1 in 7 hours at Firm Power, By month &
+                                      best                          hour of the day
+ RECSto MMLD                          No*                                     Yes
+ MMLD cost - $/kwh                    9.9 cents                                7.5 cents
+ Energy Delivered to MMLD             342 MWH {2023 actual)                    19,627 MWH {2024-26
+                                                                               average)
+
+
+
+                                                                                                                   6/9
+                               Heat Wave and CodeRED response
+
+              Tuesday                        Wednesday                        Thursday                       Friday
+       Hour      6/18 Hrly Delta   Delta"         6/19 Hrly Delta   Delta"        6/20 Hrly Delta   Delta%    6/21 Hrly Delta   Delta"
+         10      15.4                              18.4                                                        19.2
+         11
+         12                  1.6      8.9"         22.2       1.8     8.0%        24.6        1.6     6.6%    20.6        0.3      1.4%
+         13      20.0        1.4      7.0%         24.1       1.9     7.9"        26.6        2.0     7.5%    20.4       -0.2     -1.1%
+         14      20.5        0.5      2.5%         25.6       1.5     5.7%        27.8        1.3     4.6%    20.2       -0.2     -0.9%
+         15      21.2        0.6      3.0%         26.7       1.1     4.1"        29.0        1.1     3.9"    20.1       -0.1     -0.4%
+         16      22.3        1.1      5.1%         26.6       0.0     -0.1%       29.6        0.6     2.0%    20.1       -0.1     -0.4%
+         17      23.1        0.8     3.6%          27.1       0.5      1.7%       29.9        0.3     0.9"    19.7       -0.4     -2.0%
+         18      23.7        0.6     2.6%          26.4      -0.7     -2.6%       29.7       -0.2    -0.6%    18.8       -0.9     -4.7%
+         19      24.4        0.7     2.7%          25.6      -0.9     -3.4%       29.5       -0.2    -0.7"    17.1       -1.7     -9.9%
+         20      25.9        1.5     5.9"          24.3      ·1.2     ·5.0%       28.9       -0.6    ·2.0%    16.3       -0.8     -4.8%
+         21      20.1       -5.8   ·28.9"          23.5      -0.8     -3.6%       27.1       ·1.8    -6.5%    15.8       -0.5     -3.5%
+         22      21.1        1.0     4.7%          22.4      -1.0     -4.7%       23.6       -3.5   -15.0%    14.9       -0.8     -5.4%
+         23      19.3                              20.4                           21.2                         13.S
+         24      17.0                              18.3                           18.3                        12.1
+otal            401.8                             471.0                          525.0                       398.9
+
+
+
+
+                                   General Manager updates
+
+         • Village 13 update
+         • Shipyard Area Resiliency ( CZM) Grant
+         • May monthly financials available late this week
+         • Tioga Way update
+         • New employee recruiting update
+
+
+
+
+                               New MMLD employee hiring
+
+       • Information Systems & Tech Manager - starts next week
+       • Engineering Project Manager (EPM) - leading candidate took a
+         job with another Mass MLD closer to home. Continuing to
+         interview candidates
+       • Energy Services Manager- in discussion with one candidate
+
+
+
+
+                                                                                                                                          7/9
+                 Light Commission: Commissioners
+                 Light Department: J. Kowalik, General Manager
+                 MMWEC: Z. Eckert, Sustainable Energy Policy & Program Senior Manager
+From:            Jean-Jacques Yarmoff
+Date:            June 21, 2024
+Re:              Residential battery pilot program
+
+
+
+
+                       Pilot programs for Duracell residential batteries
+
+
+MMWEC's Sustainable Energy Policy and Program Senior Manager, Zoe Eckert, presented the elements
+of possible pilot programs with residential batteries to be discussed and implemented with Duracell. This
+document is proposed to stimulate conversation about pilot program(s) in Marblehead.
+
+Several use cases have been proposed, to combine batteries with solar production, for resiliency and in
+other situations. The analysis below show that a reasonable pilot program could result in potentially
+around 50 batteries installed in town, resulting in 150 kW of installed capacity, with a positive contribution
+to MMLD' finance of about $175K with the current MMWEC's assumptions.
+
+While the number of batteries is an estimate and other reasonable assumptions could be made resulting
+in different numbers. it remains that a pilot introducing residential batteries will have a positive
+impact on MMLD's finances.
+
+
+
+Crowninshield resiliency
+Why, and who The Crowninshield area distribution system is via underground service, which has
+suffered some repeated disruption in recent storms. 23 Residences might benefit from back-up power.
+How many? A handful at most (taken as 5 in this analysis). Some of the large residences in this
+exclusive neighborhood might need two battery systems to cover load in case of failure. Some probably
+already have a back-up system.
+
+In conjunction with Solar
+Why, and who The economic case for extending solar electricity production for the residents and for
+MMLD is clear: this is best use case for batteries and will incentivize local solar production as well.
+How many? Around 20 - 30? There are 83 solar roofs in Marblehead, all of which might benefit from
+battery installations. Some residents have been waiting for years: a fraction of these 83 solar installations
+have already expressed interest. In addition, we accrue solar installations at the rhythm of about 10 a
+year. With the financial incentive of a faster pay-back with battery, it is likely that this number will both
+increase and that a large portion of new installs will be in conjunction with batteries.
+
+Water and Sewer Department resiliency
+Why, and who Water and Sewer operates 30 pumping stations (two drinking water, 28 sewer pumping
+stations), most of which are not equipped with back-up power generation. The sewer department has
+some portable generators, but not enough to cover all pumping stations. All stations which are not at risk
+of flooding could be equipped. other town departments might be interested as well.
+How many? Five to 10?
+
+                                                                                                            1/2
+
+
+
+
+                                                                                                                  8/9
+Life saving medical equipment/ resiliency
+Why, and who Residents who depend on life saving medical equipment are a particular concern of the
+Light Department, as was discussed during the public meeting of December 15, 2022. Residents might
+depend on oxygen pumps, monitoring devices, or medication that must be kept frozen or refrigerated at
+all times. Backup power in case of supply disruption is critical.
+How many? Possibly 10 - 20?
+We can work with the Disability Commission, the Health Department, the COA and other organizations to
+get the word out, in addition to the residents already identified by the Light Department in the December
+2022 work preparing for possible load shedding events.
+
+Low income residents / resiliency
+Why, and who MMLD has been working with the North Shore Community Action Program to provide
+help to low-income residents who have difficulty in paying their electricity bills. Unlike the Crowninshield
+residents, these residents are unlikely to be able to afford installation of a residential battery, even if they
+wanted to. MMLD proposing a pilot program for these residents, where MMLD carries the whole cost of
+the batteries, would help them, would help the whole town and still have a positive financial impact for
+MMLD even though the ROI is longer than in other use cases.
+How many? Tbd, taken as 5 in this analysis.
+
+
+
+
+Program projections: a positive financial contribution
+These projects together could possibly lead to the installation of 45 - 70 batteries representing 135 - 210
+kW and 345 - 540 kWh of installed capacity in town.
+Using MMWEC's numbers presented during the May commission meeting, the program might cost the
+Light Department between $214K to $335K to implement and result in avoided costs of $367K - $571 K:
+a net financial positive contribution of $153 - $236K while adding to the resiliency of the town.
+
+
+
+
+                                                                                                              2/2
+
+
+                                               ----****----
+                                                                                                                    9/9
+

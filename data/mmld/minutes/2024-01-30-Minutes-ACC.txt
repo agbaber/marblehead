@@ -1,0 +1,738 @@
+Light Commission January 30, 2024 meeting minutes
+To:              Light Commission: Commissioners
+                 Light Department: J. Kowalik, General Manager
+From:            Jean-Jacques Yarmoff, Secretary
+Date:            April 22, 2024
+Re:              Commission Meeting January 30, 2024: Public Session
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:03 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+Participated in meeting:
+     Commissioners:         Commissioners Frechette, Hull, Smith, Wolf and Yarmoff participated in person.
+     Light Department:      General Manager, Joe Kowalik; Matt Barrett, Business Manager; Greg Chane,
+                            Distribution Manager. Bob Jolly, advisor.
+      Invited:              AEGIS, Mark Boone, National Property Manager, BESS Loss Control Expert;
+                            Mike Barrett, PLM;
+                            MMWEC, Jason Viadero, Director Engineering and Generation Assets;
+                            Marblehead Fire Chief, Jason Gilliland;
+                            Delorean: Joseph Leavitt, Matthew Rariden and team.
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Approval of minutes from previous meetings
+Vote #2024-01           Motion to approve the minutes of the 12/12/23 meeting (public session and
+                        executive session) and the minutes of the 12/19 public meeting was moved by
+                        Commissioner Smith, seconded by Commissioner Frechette. Unanimous.
+
+Comments from the Public No comments were made by members of the public.
+
+Outstanding items
+Employee survey. The General Manager commented that after meetings with the company, this is
+something that will bring useful information and should move forward. This is a longitudinal study, and
+information over time will be particularly interesting, as will be comparing to benchmarks. While we
+have seen some of the questions that would be asked to municipal employees, the questionnaire still
+needs to be adapted to the MMLD framework. The company has worked with municipal utilities before.
+While the board is in general agreement, there is no need for a formal vote to engage the company, the
+General Manager will move forward.
+
+Duracell battery proposal. No update.
+
+Village 13 project plans. Mike Barrett of PLM prepared the Gantt chart that is enclosed page 5-7. Since
+the last update, all major equipment is on order, transformers are scheduled to be delivered in early
+May; they will be stored on site. In order to access the site, a land bridge will be installed (pre-cast
+
+                                                                                                    1/16
+concrete) under grade to protect sewer pipes underneath the Right of Way. Contracts for this step need
+to go out to bid. MMLD is streamlining these steps to be ready to receive the transformers.
+The switchgear is now confirmed for delivery August 2024 after about a three months delay. Bids for
+general contractor should take place early April, for site construction to start in June, working through
+most of 2024, with the new switchgear put in place, and energized. Because the site is very compact,
+work needs to be staggered. Depending on weather conditions, work may continue through the winter.
+At this stage, completion is expected around June 2025. This schedule should have enough buffer time
+in various steps to absorb delays/late shipment of some components, without changing the expected
+completion date. Had the switchgear been delivered on the initial schedule, we might have been able to
+complete the site work by the end of 2024.
+
+Utility-scale Battery Electric Storage
+MMLD invited Aegis to present a current view of risk management strategies associated with utility-scale
+Battery Electric Storage Systems (BESS). Aegis is a mutual insurance company, focusing on the electric
+utility market and provide risk management service to their customers. Mark Boone’s expertise in the field
+is well recognized. He is a registered fire protection engineer in multiple states in the US, and a member of
+the National Fire Protection Association, where he chairs multiple committees on safety of BESS.
+Interested readers are encouraged to listen to the whole discussion, from minute 34 to 1 hour 32 in the
+recording, with only highlights summarized here.
+Failure rates maybe one in 10 million, but some failures are not caught by battery management systems.
+Mitigation of possible events is important: ventilation of the BESS, but also, importantly separation of
+modules from one another (see slide on bottom of page 10). For each system, a Hazard Mitigation Analysis
+needs to be performed and put in place, as each BESS and site are different. A goal of the meeting is to
+introduce the Delorean team to Mark Boone, and make sure that the planned system is designed, tested
+and built in accordance with best practices.
+Reviewing the siting options of a BESS at the Tioga way site, MMLD needs to establish an access to the
+site, possibly from Tioga Way and grade the section where the BESS would be installed and operated by
+Delorean. Delorean’s Joseph Leavitt noted that the site plan has evolved from the preliminary drawing
+shown and needs to be updated; there is enough room to ensure adequate separation. Delorean is
+committed to ensuring safety of the installation, and of first responders should an event occur. Delorean
+will also provide training to the fire department for this particular unit once the final design is determined.
+
+Residential base rate adjustments
+The General Manager presented the recent Base Rate change history as shown on slide page 12, having
+previously distributed a document proposing that when residents have two meters on their property,
+the base rate for the second meter should go to $5.00, rather than the new base rates that have been
+introduced since 2023. See pages 13 and 14 the new rates proposed. About 30 residents have been
+identified to date that have two meters on their property for historical reasons. Raising the base rate
+affects them, doubly. In some cases, the service for the second structure / garage was registered as a
+small commercial rate, where the base rates has gone from $5 to $32.25. The General Manager will edit
+the document to have a simpler version for communication with the public.
+
+Vote #2024-02            Motion to approve the rates as they are described in the attached document for
+                         residents with second meters was moved by Commissioner Wolf, seconded by
+                         Commissioner Frechette. Commissioners Smith and Yarmoff, who both have
+                         second meters on their properties, recused themselves from this vote. Three
+                         votes in favor, motion carries.
+
+
+                                                                                                        2/16
+MMLD 2024 Budget
+The General Manager had previously distributed a budget document, on which several questions were
+raised. It would be appreciated to have a document that shows evolution compared to the previous
+year, as it is not so much the absolute values, but the changes that are meaningful when evaluating the
+budget. Regarding power purchases, what is the situation with hedging? Lastly, the depreciation number
+shows a change of 1% from the previous year, when assets have increased in value at double digit rates.
+Also, while the board has a comprehensive list of projects from the distribution manager, we do not
+have a budget to go with it. It would be appreciated to receive this information.
+The budget will be revisited at a subsequent meeting.
+
+
+General Manager updates
+Grant activities. Following the recent storm, we had some emergencies to deal with. We have
+submitted the emergency response expenditures, as did the Town of Marblehead. If for the State, the
+damages exceed $13M, then we may eligible for a FEMA relief grant. The two areas where we are most
+impacted are Hammond Park and Crowningshield. We have an estimate that has been provided to the
+town and will be part of the overall state request.
+Separately, MMLD participated in a joint effort with Ipswich and Shrewsbury to apply to Mass DOER Low
+and Moderate-income housing. This is a total $8.5M application, of which Marblehead’s share is about
+$5.5M. The grant would cover the purchase of heat pumps.
+In addition, Marblehead participated in an application to a DOE Grid Innovation Program, with 7 other
+MLPs (see slide page 15). The General Manager also explained the block grant that DOE is distributing to
+state entities to distribute, which is run in Massachusetts by DOER and MassCEC. MMWEC is organizing
+a meeting on the subject. MMLD did provide support to an application for a grant for electrification of
+school buses, as discussed at the previous meeting. A site for possible charging at the High School has
+been identified.
+
+Village 13 update. With the design of the land bridge over the sewer pipe complete, we also have an
+estimate for precast concrete: around $75K, which means that the project needs to be put to a
+competitive bidding process. Installation of the land bridge is estimated to cost another $45-65K.
+
+Hiring update. The General Manager interviewed two people for the IT position. Separately, the Town
+Manager has now hired a Sustainability Manager, and additional resumes will be sent to Joe for his
+review. Commissioner Yarmoff requested a position description to post with the MIT Sloan school, the
+offer of which had previously been reported. Recruiting for the engineering manager position is going to
+be the next project for the search firm we are currently using for the IT position, this will be done
+sequentially.
+
+ISO-NE Inventoried Energy Program: MMLD is going to participate in this ISO-NE program and getting
+paid for doing so. This will be a very small amount.
+
+Contracts update: there are some elements in the Upnine contract that need to be reviewed, it will
+hopefully be signed soon; the agreement with Premiere Fence is signed, and work will start by mid-April.
+
+
+
+
+                                                                                                   3/16
+Executive Session During the January 30, 2024 Light Commission meeting, Chair Lisa Wolf proposed a
+motion to enter Executive Session Motion to discuss trade secrets or confidential or proprietary
+information regarding activities of a governmental body as energy supplier, municipal aggregator or
+energy cooperative, if an Open Session will adversely affect conducting business relative to other
+entities making, selling or distributing energy. Part two of Executive session is to conduct contract
+negotiations with General Manager Joe Kowalik. Not to return to Open Session.
+Motion was seconded by Commissioner Frechette.
+Votes: Simon Frechette: Yes; Mike Hull: Yes; Lisa Wolf: Yes; Jean-Jacques Yarmoff: Yes.
+Executive Session started at 6:45 pm.
+The Executive Session concluded at 7:14 pm at which point a motion to adjourn was proposed,
+seconded and, after a roll call of the five commissioners present voting unanimously in favor, adopted.
+
+
+                                                ----****----
+
+                 Documents shown during the January 30 Light Commission meeting
+
+
+
+
+                   .          Agenda
+                   ,
+
+
+              4:00 Call to Order, Approve Minutes & Public Comments
+              4:15 Board request item
+                       • Village 13 project plan update - Mike Barrett, PLM
+              4:30 Utility-scale Battery Electric Storage -safety and siting
+                       • AEGISLoss Control Report discussion - Mark Boone, AEGIS
+                       • Tioga Way site review -MMLD Joe/Colin/Greg; Matt Rariden­
+                         Delorean; Capt. Greg McLaughlin- MFD
+              5:15 Specific Residential Property Rate Adjustments - review & VOTE
+              5:45 2024 MMLD Operating Budget with updated energy forecasts -
+                   Matt Barrett, Joe
+
+
+
+
+                                                                                                    4/16
+  if         •
+  ~
+        {, ; f IF •                              '•
+                                                 f
+  ~
+           I •f t • , r lf   2( •   ir 11[
+        it 1{ 1
+                        If 1
+                              ,,~~
+                                 i: )f       I
+
+
+fj •[ r
+'i I,
+        Ii       1,11~
+                 •
+                       . r II       l·
+                                       f
+
+
+
+
+                                                      5/16
+6/16
+          ~              •• ••                      •                         '4 tHt   ~
+                                                                                           ••                                                     ••           -~~          ••          i'l~~~ld'
+
+
+          ij                                                                                                                                                                                                      l
+
+                                            ft~jl'~·,,,. I! ri 'l.-
+                         ll                             •• ~, ••
+                                                                                           if
+                                                                                                                                                               ! f ;,,
+                                                                                                                                                                  f"
+                                                                                                                                               l [ I                                    Ifi I~f ~
+                                             . 11 I                                                                              r ' f f·..
+                                                                                                                                               ri                 It I f                 J I~'f•'i
+                                                                                                                                                                                             I I i
+
+   !II~'                                    ! i,. {,    1               ,       l                                                                                 Ji ; ~                            ~
+   i  '
+
+
+
+   11·1
+          . !{~
+                        -
+
+                         {f
+                            i.
+                                            r+          --,
+                                                        ..J;~
+                                                           ~
+                                                              . -•. .[ - +-
+                                                              -~
+                                                              ! ~ !    !!!!!~"
+                                                                                 .         I{-
+                                                                                                   ~-
+
+
+                                                                                                                                                  !!
+                                                                                                                                                                   '. i
+                                                                                                                                                                                        I
+
+                                                                                                                                                                                            ..• I.. >- >--
+
+                                                                                           .
+                                                                    f           f
+   iK!!f a I
+                       •   1J  ~:.tit.1:t~
+                                               fB~ ti « !J ti t? ···••§h.
+                                                    , \!\!~;··      v, tY~ Ill                                                                    "   !(          '.   ,,
+
+
+
+
+   I f Ii;               ''j               :.:  '                       ~~!•r'
+                                                                    ... ~-.,: ••.
+                                                        ::,                                                                                    .. ~:,,         !l!;t        1,. :,;:I
+                                                         . .. i ~t
+                         i ~ . ii,.j•. ,,. •'•' ~-i- . lS~~t-,•~"
+                                                                                                                                                                                 ..
+   Ii·1                                                                                    J.' ..                                                                                       .. J
+                                                                                                                                                                                 ~
+                            ~ fl             * l •• * :,I :,I                                      •                                                       '   l'I 1: $     1    i          ' '     l l.,i-
+
+
+
+   ili!f                    ii~                         ii
+                                                                              ,_J f i
+                                                                              ),; i            ,,                                I                             '.'.ii       it          i i i -i               Jii
+                                                                                                                                                                                                                  'I         '1 -
+                                                                                                                                                                                                                             'l>se
+                                                                                                                                                                                                        ~'   ? i ::m
+! II II I- ··-----···------···----·······-·····---·····-----···----·······-·····---···                                                                                                                  ;:..
+                                                                                                                                                                                                        ~     ......
+                                                                                                                                                                                                             o-< ,.
+                                                                                                                                                                                                                 ......--.
+                                                                                                                                                                                                                       2s<~
+                                                                                                                                                                                                        ~l
+                                                                                                                                                                                                        _;.. ~lf~
+
+   •~ I•I
+                   I-       ................................                                 ,_., ................................................
+                                                                                                                                                                                                        !,             i>,[3••
+                                                                                              ~ ~·-                                                                                                     ~                     -•
+                                                                                                                                                                                                                              .,
+         ::                                                                              -~ "
+            ................................ ................................................,_.,
+
+   !!'!!                                                                                  ~
+   JII'I           I        .... _, .............                              _ .. _ ....... - ....... _ ........ ,_ .. ,_ .. - ....... _,...........                                                  ~
+
+
+
+
+      f                                                       !                                                                                                                                         ~
+   lJi11I
+                   ~        ··-----···--,                     .............                  ·-·····---·····-----···----·······-·····----···                                                            h     .
+
+
+
+
+                   .......
+                        ,_, ...... ,. ·;-!·!J.·-.,.._...........
+                                                             _..i··•,...-.............
+                          . II .f ....  . ..
+                             'l ;• i !{' l' f"
+                                                                                   'f.il
+                                                                                "i'i'I
+                                                                          , , f 1·!ii''
+                                                                   I I ·.f_
+                                                                                                                                                                                 ~                 .~
+
+
+                         •r tf·-·        · ·1·___                      r.~
+               j
+                                                ,.....
+                                                    -.........
+                                                          _..___......             .
+      I            ........
+                                        .. ! 1 ..
+                                                                  ~•11,,•m·
+                                                                             ..-•·ff-
+                                                                                 • •
+                                                                                      "                                          J                                               ~          t:iv
+      • •"
+                                                         ~r-···..11
+                   • · · ..-·ll ... ·· .I:· ·-f·..-.........
+                                     1                             ·t·f-l..£                                                                                                                11
+
+                             J               i      •··•i r
+                   "fri-..-·..·-·r-..-...·11·:·ltt·ltt
+                                                                                                                                                                                                        J•
+                                                              -...~
+                                               11•;····..t.......
+                   .!1                      l.
+                                f .ll •!!Iltll'·t.. f ........
+                       1...... - ...... ,_ J..._.._..,...,_..J .. _,                                                                                     .J_.,_
+                                                                                                                                                             ..,_.~
+                                                                                                                                                                  ......
+                                                                                                                                                                     ,_..,...,_,...y
+                                                                                                                                                                                                        ·!
+                                                                                                                                                                                                                                     7/16
+              AEGIS-Associated              Electric & Gas Insurance
+              Services Ltd
+
+• A leading mutual insurance company that provides liability,
+  property and Directors & Officers insurance coverage to the
+  energy industry
+• Also provides specialized risk management services                        r
+• Founded by policyholder members (energy companies) in 1975
+• $2.1 billion premium revenue
+• $9.4 billion total assets
+
+
+
+               Mark Boone, P.E.
+• National Property Manager, AEGISLoss Control, Co-author of the Dec 2023
+  BESSLoss Control White Paper
+• Registered Fire Protection Engineer in multiple states; 37 yr. career in Loss
+  Control Risk engineering
+• Dominion Energy- Manager, Corporate Risk Engineering {CRE)group
+• Safe Shutdown/Fire Protection Design Engineer at nuclear power plants
+• National Fire Protection Association member,
+   - Chair of NFPA850- Recommended Practice for Fire Protection for Electric
+     Generating Plants and High Voltage DC Converter Stations
+   - Chair of NFPA853 - Standard for Installation of Stationary Fuel Cell Power
+     Systems                                                                    I
+   - NFPA72 Principal Member - National Fire Alarm and Signaling Code
+
+
+
+
+                                                                                    8/16
+                 AEGIS Lithium Ion BESS White Paper
+   Table of Contents
+   1.0 EXECUTrYE SUMMARY
+   2.0 LI-ION BESS FIRE AND DEFLAGRA TION HAZARDS
+   3.0 LI-JQl',~BATTERY CELL CHEMISTRY
+   4.0 LI-ION BESS FIRE TESTrNG
+   5.0 HAZARD MITIGATION ANALYSIS (HMA, a.k.a. FIRE PROTECTION DESIGN BASIS)
+   6.0 MITIGATING FEATURES & SYSTEMS
+        Battery Management System (BMS)
+        Separation
+        Li-ion BESS Enclosure and Component Construction
+        Emergency Monitoring Systems (Gas, Smoke, other Fire Detection, etc.)
+        Emergency Ventilation Systems
+        Deflagration Venting
+        Fire Suppression/Extinguishing Systems
+       Miscellaneous Loss Prevention
+   7.0 EMERGENCY RESPONSE AND CONTI GENCY PLANNING
+        Emergency Response Planning
+        Contingency Planning
+   8.0 REFERENCES                                                               Rev. 1 Is Available
+   9.0 CONTRIBUTORS
+
+
+
+
+What we are seeing
+
+
+ New Project Reviews are Increasing
+
+ Prototypical
+
+ Lithium Ion remains the dominant technology
+
+ Newer BMS systems are fairly comprehensive and granular
+
+ A few non LI chemistries are being explored
+
+ NDAs
+
+
+
+
+What we aren't seeing
+
+HMAs
+
+Sound Basis for:
+
+             Deflagration Vents
+
+             Emergency Ventilation
+
+             Separation
+
+Full Scale Installation Level Fire Testing
+
+
+
+
+                                                                                                      9/16
+                Separation
+                                Fire vs Explosion
+
+              How much separation is enough?
+
+
+
+
+PML/MFL
+
+PML - Probable Maximum Loss
+
+• Maximum loss that an insurer would expect to incur on a policy.
+
+MFL- Maximum Foreseeable Loss
+
+• Worst-case situation - no active mitigation features work.
+
+
+
+Property Loss & Business Interruption
+
+
+
+
+                                                     25' Separation
+
+
+
+        --                                             --- ---                                               -- --
+                  Site 1                                         Site 2                                               Site 3
+  r--------------------------
+
+
+
+
+        --
+                    10'                                             25'                                                25'
+
+
+
+
+                                                                                                            --
+                                                                                                                10'
+
+
+
+
+        --
+            10'                                           10'
+
+
+
+
+        --
+        --                                               --- --
+                                                                                                            -- --
+                                                                                                                25'
+
+
+
+
+        -- =MFL =All Containers•                       PML   =MFL =6 Containers                             --
+   PML                                                                                                     PML    =MFL =3 Containers
+   • Unless explosionpotentialis propertymanaged and a specificseparationdistanceIs validatedby fire testing.
+
+
+
+
+                                                                                                                                       10/16
+ Concerns/Challenges
+•   Almost every site is "prototypical"
+•   Inadequate HMAs = Incoherent Mitigation Features
+•   Lack of Full Scale Testing for Mitigation Systems/Separation
+•   Large Values at Risk • 1/IJaFSheuseStyle or Tight Spacing
+•   Foreign Lab Testing
+• NDAs
+
+•   LI BESS UPS in Occupied Buildings
+•   LI BESS UPS Exposure to Business Critical Systems
+
+    AEGIS will continue to monitor the industry, loss events, and technical papers to
+                         provide our best advice to members.
+
+
+
+
+               ProposedBESSsite layout Tioga Way
+
+• 10 Battery Cabinets
+  to hold 20 MWH of
+  battery storage
+  capacity
+• 80' x 140' site
+  proposed
+• MMLD/MFD/Dolpr
+  ean Power/AEGIS
+  to evaluate site
+  expansion &
+  security options
+
+                                                                                        11/16
+              Specific Residential Property Rate Adjustments
+
+
+• Proposal 2 gage doc to be distributed
+• Discussion, then VOTE on each Proposal separately
+
+
+
+
+              Base Rate Recent History
+
+                                               ~
+
+Rate Class                   2022         2023         2024
+Residential                  $4.25        $11.25       $18.50
+Small Commercial             $5.00        $18.50       $32.25
+Large Commercial            $10.00        $61.75      $113.50
+
+
+
+
+                                                                12/16
+                              Re.Sidendal Proputy Electrie Rtite Adjurunents
+Under spedftc conditions, resldenual customers may quality fOr an adjustfflet1t (redutCOtl) to the
+MMLD eklctric nt.s  in effKt.
+Situ•tion Ill ASinck.f•mily   residen-u, with ONE singte•phase electtic•I servic.e drop and two
+re:S'Jdenl»I i.te meters.
+ToQuality:
+A single-himlv residential cwtomer mu.st have- one, single•phau electriail HfVice drop to the home,
+with two MMLDResidecntialService meters connected (known u R.iteA (W Rate 4) to the sif'lile
+service .. If the customff ,.ceivu separate monthly bilb for eaeh meter, s/h,e agrees to combine the
+two meters into a sinele MMU> account and receive one monthly bil that combines the two meters.
+Rate Adju.nment:
+The Ruidentiat 5er./ke meter ba:se rate fOr the secOt\d meter iS reduced to S 5.00/rnonth. All
+Residential Ener&Yr.ttff, d.i•rmined by the KtUal kwtr's consumed by the resid•ntial customer each
+month, remain the same..
+
+Situation 12: A Slng1e•fam.ityresidence, with ONE s~le-9ha.se     e:Jectriat se.rvice drop and two
+meters. includin1 a Sr-r.a.11
+                           Commercial meter.
+ToQualify:
+A si,cle-tam.Jy residendat customer With 2Di, sll\Cle..,tlase electrical service d.rop to the home. has
+two MMLD meten connectKI: one Ruidential S.rvic• met•r (Rat• AM Rat• 4) and th• second 1
+Smal Commettlal Service metecr (Rate B or S)that provides electrical service to a garage. stied Of
+otMr aruct1K• on th• same ptoperty. To qualify th• use of th• g11nige,sh•d,ot other mete.-.d
+structure must be lmited to domestic resldenaal ustt, no commercial use. Further, the cara::e. shed
+or other strucn,,- must be wed by th• property owner/.-.sident, 1.nd not .-.nted to 11notherparty. ff
+the customer currently receives a separate monthly bil tor each meter. s/he agrees to combnE' both
+meters onto• single MMlD account, for I singfe monthly bill.
+R11teAdju.stment:
+The Small Commercial meter base r.ite is reduced 10 a Reduced Residential rate S S.00/month and the
+Sn\11 C.ommen:ial energy use rate {lcWh)is converted to the: Residf:ntfal ener&Yuse rate {kWh).
+
+Situation 13; Single family Ruidence, with TWO, singk-•phase ele-cttical servic.e drops and two
+meters.
+ToQualify:
+A sing le-tam.Iv ruidendll customer with two, s~le-pfla.se ~ectrical service drops to the hOMe, ls
+connectfllto two MMLD meters: OM, 11R.-sidential Servi:• met« (Rate A or Rate 4) and a Hcond,
+Smail C«nmettial Set'Vicemeter (Rate 8 or SJ ro, a garage, shed or other structure on the same
+property, Tht 1.iraa:•. she,d, or oth,r metered structurt1 un only be used for domtstk residential
+usu, no commerdal use. further, the garage, shed « odter strvcture must be used by the property
+ownu/ruident,      and not rented to 11nothet pa,rty, If the cunomer currt1ntly rt!Cllliwsa separate
+monthly blll lOr uch l'fteter, s/he agre~ to combine both mectersonto a sin~ MMLD account, fOf a
+sine le monthly bill.
+Rate Adjustment:
+
+
+
+
+                                                                                                          13/16
+The Small Commercial bu• rate is converted to .a Reduced Residential baa r.ate ofS.00/month. The
+Smal CommercialService ener:v use rate (kWh) b: converted to the ResklenoalServke enerrv us.e
+rate (kWh).
+
+
+Sinu1tion id: Two- .ind Thre-e◄ nit Residenc.:es
+ToQualify:
+A two• or three~nit, ownff-occupie-d re.sidential building with one single--phue electric.al service
+drop to the buildine:,and .i common are.i meter ri add:ioonto a Resic:ientialServicemeter for exh
+unit. Mi,:ed"\IU bu:lldings art: not eligible.
+Rate Adjustment:
+The common area meter bu~ rate is converted to .i Re<t1Ked    Resident»I b.se me of SS.00/month.
+The enffgy use rate (kWh) will be the RIMidentfal Service eMtgY use rate (kWh).
+
+
+Situ.ationtS: Two- and Thr....Unit Condominium Ass.oci.ation,
+To Qualify:
+A two- o, d'lree~nlt, OWNER-OCCUPIEDresldenoatcondomi'llum b!Aldlng With one, slntle-pl\a.se
+elea-ric.aJ service drop to the building, and .acomm°" area meter in .addition to .a Residential Service
+meter tor eachunit. Mlxed-use buildln:s are not edg~le.
+RateAdjustment:
+The conwnon are.a m•t•r b.a.s. nit• is convett•d to the Reduced R•s.id•.nti.aJServic• bu• rat• of
+SS.00/month. The e11e-rcvuse rate (kWh) will be the ResidentialService enercv use rate (t:'Wh).
+
+Situation i6: Histork Marine Use Struc-tures
+ToQualify:
+A s.mall watfffront wood stn1cture, widely known u • shanty, with an interior aru o( 400 ~uue f-eet
+or less,that is separatelymetered with a sin&le-phaseelKvical se-rvkedrop, .ind mainr.irled for
+commercial m1.ritime use.
+Rate Adjustment:
+The Historic:Marine Us;eStructure base rate i; SS.00/month. The e,nerty us;eme (kWh) is the same u
+the Residtt1tfll Service Mergy use rate (kWh).
+
+
+PROGRAMADMINISTRATION:
+    1. These ruidential    me .adjustments are not .automatic. Curtomen must apply byc.omplerin,g
+       and slg:nlrl: an etlg:lbilltyfor that Is approved t,vMMLO.
+    2. The Proerameoes a\to effect in January2024.
+    3. Approved applic.tions received fromJ.invary 1 throu5h Man::h31, 2024,wll ro into effeet
+       with the c:ustomff's Janu,a,ry 2024 bill. Approved applications received after March 31st will go
+       .-ito effect upon the fim biline: c:yc:leafter the approval date.
+    4, Appric:anuarree to provide MMLO acceu meter locations and elec:tricals;ervic:ep.ntl$.
+    S. Thue r.ate s.tting re.gu!atiorn are subject to c:h.ana• by majority vote of the Marblehead
+       Municiptil Li:,tt c,e.panment Board.
+
+
+
+
+                                                                                                           14/16
+              2024 Budget Review
+
+• VOTE:to approve operating budget of $21.240 million
+
+
+• (See financial spreadsheet with latest wholesale power cost
+  estimates - attached separately)
+
+
+
+
+             Grant Application Activity
+
+• Mass DOERLow & Moderate-Income Housing Decarbonization
+  Program - (heat pumps and energy efficiency) - appl'n filed
+  - Co-applicant with Ipswich and Shrewsbury MLDs
+  - $8.5 Million total grant application; MMLD portion ~$5.5 million
+• US DOE Grid Innovation Program - Mass MLP Green Grid
+  Resilient Energy and Economic Neighborhoods -
+  - Concept paper phase submitted with7 other MLPsTaunton,
+    Peabody, Wakefield, Wellesley, Hingham, Concord, Westfield, plus
+    Beacon Climate/Greentown Labs in Somerville
+
+
+
+
+             Grant Application Activity
+
+• US EPA2023 Clean School Bus (CSB) Rebate Program-
+  - Filed with Marblehead Public Schools and Highland Electric Fleets
+  - Exact bus size(s) tbd ...$200,000 rebate eligibility
+• FEMA storm emergency response and permanent
+  improvements
+  - Marblehead has submitted its emergency response expenditures
+  - Waiting to see if the Comm of Mass qualifies ~$13 million qualifying
+    threshold
+
+
+
+
+                                                                           15/16
+                Village 13 update
+
+• Sewer pipe bridge design is complete
+• Built with 100% precast concrete ...
+   - $75,000 manufacturing estimate requires competitive bid process...
+   - slow vendor response is a schedule concern
+• Installation estimated at $45-65,000
+
+
+
+
+                Agenda
+
+6:00 General Manager update - Joe Kowalik
+       Grant Application Updates
+       January storms 1/11-12 and 1/13-15 - Crowninshield Way
+       Village 13 updates
+       Open position updates ~
+       ISO-NE Inventoried Energy Program (IEP)-Wilkins Plant accepted
+       Contracts: Upnine - Fiber Backhaul system monitoring,
+  •    Contracts: Premiere Fence - 80 Commercial St. ---includes CZM grant dollars
+6:30 Executive session
+   •   Conduct strategy sessions in preparation for negotiations with nonunion personnel
+7:00 Adjourn
+
+
+
+
+                                     ----****----
+
+
+
+                                                                                           16/16
+

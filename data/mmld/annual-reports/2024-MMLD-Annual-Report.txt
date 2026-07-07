@@ -1,0 +1,553 @@
+     MARBLEHEAD MUNICIPAL LIGHT DEPARTMENT
+To the citizens of Marblehead,
+
+The Marblehead Municipal Light Department (MMLD) is pleased to share its 130th
+annual report and financial statements for the calendar year ending December 31,
+2024.
+
+Top-line Results:
+
+                                                                  2024-23
+                             2024                2023
+                                                                  % Change
+
+  MMLD Energy
+                            98,811              96,828              3.1%
+  Sales (MWh)
+
+
+   Energy Sales
+                         $21,519,213          $21,452,243           0.3%
+    Revenue $
+
+
+                                                                  2024-23
+                             2024                2023
+                                                                  % Change
+
+  MMLD Summer         July 16th 2-3 PM     July 28th 3-4 PM
+                                                                    16.9%
+     Peak                 31.1 MW              26.6 MW
+
+  MMLD Winter          Dec 22nd 5-6 PM      Feb 4th 5-6 PM
+                                                                    1.0%
+  Peak Demand             21.0 MW              20.8 MW
+  Highest Monthly            July                July
+                                                                    1.5%
+    Energy Use           11,957 MWh          11,780 MWh
+  ISO-NE System        July 16th 5-6 PM     Sept 7th 5-6 PM
+                                                                    1.9%
+   Peak Demand           24,461 MW           24,016 MW
+ MMLD Demand
+ Co-incident with         29.85 MW             24.5 MW              21.8%
+ the ISO-NE Peak
+2024 – Significant Changes in Our Electric Power Portfolio
+In 2024 MMLD worked closely with MMWEC, our state’s municipal power joint
+action agency, to change the hedged power portion (~30%) of our power portfolio.
+We systematically replaced commodity energy contracts with carbon-free energy
+sources that also generated Renewable Energy Certificates (RECs). The two new
+hydropower-based hedged contracts in italics below, delivered 13% of our electricity.
+
+                           2024Actual         2023 Actual          Percent
+   Power Generator
+                          Energy (MWh)       Energy (MWh)          Change
+  Millstone Nuclear          15,616             12,704              22.9%
+  Seabrook Nuclear           13,074             12,882               1.5%
+ NY Power Authority
+                               8,626              7,858              9.8%
+        Hydro
+   Hydro-Quebec                6,588              6,570              0.3%
+  Berkshire Wind 1              953               1,464             -34.9%
+   Berkshire Wind 2            1,739              1,272             36.7%
+    Hancock Wind               2,186              2,076              5.3%
+  Eagle Creek Hydro            1,801              2,542             -29.2%
+   First Light Hydro           6,707                 0               N/A
+  Brookfield Hydro             7,123                 0               N/A
+  Master Sgt Cotton
+                               1.217                 0               N/A
+      Solar PV
+    Stony Brook
+                               1,103               446             147.3%
+    Intermediate
+ Northeast Reliability
+                                766                  0               N/A
+       Center
+ Stony Brook Peaking            106                 85              24.4%
+ Marblehead Wilkins
+                                 95                 62              53.6%
+         Plant
+    Hedged Power
+                               16,456             33.988            -51.6%
+      Contracts
+   ISO Interchange
+                               22,716             21,012             8.1%
+     Spot Market
+   Total Wholesale
+                              106,873            102,961            3.8%
+    Energy Supply
+A 65% Carbon-Free Power Portfolio in 2024 – A Dramatic 55%
+increase from 42% in 2023.
+
+In 2021 a new Massachusetts climate law established clear clean energy goals for
+municipal utilities: 50% carbon-free energy by 2030, 75% by 2040, and net-zero
+emissions by 2050. In May 2023, the MMLD Board voted to adopt more aggressive
+goals: 70% carbon-free energy sales by 2028, 85% by 2033, and net zero by 2040, in
+alignment with the Town’s goal of reaching Net Zero by 2040.
+Eligible carbon-free power sources generate Renewable Energy Certificates (RECs),
+or Emission Free Energy Certificates (EFECs) for each MWh generated. Certificates
+must be retired (held), not sold, to be counted as carbon-free. MMLD’s 2024 carbon-
+free percentage is 65%, a dramatic 55% increase from 42% in 2023.
+
+                                                                        Energy
+ 2024 MMLD Carbon-Free                           RECs/                purchases
+ Wholesale Power Sources              Energy     EFECs      RECs        without
+                                      (MWh)      retired     sold        RECs
+ Millstone 3 Nuclear                   15,616     15,616
+ Seabrook Nuclear                      13.074     19,826
+ NY Power Authority Hydro               8,626      8,626
+ Hydro-Quebec                           6,588      6,588
+ First Light Hydro                      6,707      6,707
+ Brookfield Hydro                       7,123      7,123
+ Master Sgt Cotton Solar PV             1,217               1,217
+ Berkshire Wind 1                         953                 953
+ Berkshire Wind 2                       1,739               1,739
+ Hancock Wind                           2,186                              2,186
+ Eagle Creek Hydro                      1,801                              1,801
+ Carbon-Free Supply Total              65,631     64,487    3,909          3,987
+ MMLD Solar Rebate Program                           117
+ MMLD Go Green Now! Program                          346
+ Total RECs & EFECs retired                       65,950
+ MMLD Total Retail Sales (MWh)                    99,811
+ MMLD Carbon-Free %                    65 %
+It is also noteworthy that this change was implemented while keeping track of the
+bottom line. Over the same period, the average wholesale power cost decreased
+3.4%, from 11.28 cents/kwh in 2023 to 10.9 cents/kwh in 2024. This reduction in
+the wholesale power costs allows MMLD to keep the rates as low as possible, in the
+face of increasing costs, including procurement costs and health care costs.
+
+
+
+
+2024 Department Actions and Initiatives
+January
+• The Department implemented the second phase of an electric rate restructuring
+    plan approved by the MMLD Board in 2022. The goal of this restructuring was
+    to match more closely the department’s fixed revenues to the department’s fixed
+    expenses. The increase in base rates allowed us to lower the electric rates, the
+    variable part of residents’ bill. The new residential monthly base rate was
+    increased to $18.50 from $11.25 and the residential energy (kwh) rate was
+    reduced from $0.1969 to $0.1895 per kwh.
+• The MMLD Board voted to approve a reduced residential base rate for a second
+    residential meter and a reduced base rate for seasonal-use fishing shanties
+    located in Town-permitted areas. Full details are on the MMLD website.
+• Two January storms, 1/11-12 and 1/13-15 resulted in extreme high tides and
+    coastal flooding on multiple coastal roads in Marblehead. The longest electrical
+    outages to residential customers were in the Crowninshield Road area.
+• The MMLD Board voted to approve a $21.24 million operating budget for 2024.
+• MMLD vendor Bayside Engineering, Woburn, MA., completed a design for a
+    concrete land bridge to be installed at the entrance of the Village 13 substation.
+    The below-grade land bridge will enable the tractor trailer delivery of two new
+    transformers, weighing ~120,000 pounds each, into the substation without
+    damaging the Town’s force sewer main pipe buried across the entrance to the
+    substation.
+
+February
+• A contract with Concrete Systems Inc. (CSI) of Hudson, NH, for the construction
+    of precast concrete sections for the Village 13 land bridge, was signed for
+    $82,800.
+• Sealed bids were opened for the construction of the concrete land bridge. The
+    winning bidder was George Cairns Construction Company of Windham, NH,
+    with a winning bid of $38,050.
+March
+• The MMLD Board voted to approve a payment in lieu of taxes (PILOT payment)
+   to the Town of Marblehead for $330,000.
+• A municipal utility’s chart of accounts includes a rate stabilization fund: a
+   reserve account established to stabilize customer energy rates in response to
+   unforeseen major disruptions in operations, as extended power outages, or
+   significant increases in fuel or transmission costs. For many years the MMLD
+   rate stabilization balance has been in the $900,000 range, roughly equal to one
+   month of MMLD wholesale energy costs. The American Public Power
+   Association (APPA) and our auditors recommend an account balance equal to
+   three months of wholesale energy costs. As a result, the MMLD Board voted to
+   approve the transfer of $1.5 million dollars from year end 2023 net income funds
+   into the rate stabilization fund.
+
+April
+• Michael Rockett, owner of 26 Heritage Way, Marblehead, granted MMLD an
+    easement that permitted the driving of oversized trucks transporting Village 13
+    substation transformers and related equipment across the Bessom Street end of
+    his parcel.
+• Construction work started on the Village 13 substation land bridge.
+• The American Public Power Association (APPA), the leading public power
+    association in the U.S. with over 2,000 not-for-profit, community-owned electric
+    utilities recognized MMLD with a 2023 Certificate of Excellence in Reliability,
+    for “achieving exceptional electric reliability in 2023.” The award is based on
+    national reliability data collected from 526 public power utilities. APPA applies
+    industry standard metrics developed by the Institute for Electrical and
+    Electronics Engineers (IEEE 1366). MMLD was recognized for a System
+    Average Interruption Duration Index (SAIDI) of under 17 minutes for all outages
+    in 2023. The MMLD 2023 SAIDI figure is 69% lower (meaning outages of
+    shorter duration) versus the average SAIDI of the 55 Northeast US-based
+    utilities participating in the survey and 76% shorter duration outages than at the
+    100+ similar-sized municipal utilities participating in the survey nationwide.
+    MMLD provides electrical service to 10,300 meters, which puts us in APPA’s
+    7,300-14,000 meter count category.
+
+May
+• A topographic survey of the MMLD-owned Tioga Way parcel was completed,
+   in order to locate a potential Battery Electric Storage System (BESS) site.
+• The Village 13 land bridge installation is completed, buried below grade at the
+   front gate entrance of the Village 13 substation.
+•   The installation of a new perimeter fence and gates at 80 Commercial Street is
+    begun. The project includes new child safe railings at Hammond Park, funded as
+    part a Mass Office of Coastal Zone Management (CZM) Resiliency grant to the
+    Town of Marblehead. The 80 Commercial St. fence and gate project scope is
+    expanded, in conjunction with the adjacent Town DPW project to install new
+    sidewalks along 80 Commercial St. The DPW improvements include: (1)
+    improving public access to Hammond Park, (2) removing ledge rock to improve
+    walking access to the waterfront pocket park located between the Commercial St
+    docks and the Marblehead Yacht Club, and (3) pave Commercial St and
+    sidewalks. A portion of the expanded scope is also funded by a Mass CZM grant
+    to the Town of Marblehead, consistent with the Mass CZM mission to maintain
+    and improve public access to the Massachusetts coastal waterfront.
+
+June
+• The two new Village 13 transformers were delivered to the Village 13 substation
+    site over two days, June 27th and 28th . The transformers we delivered via the
+    Bessom Street entrance to the ROW. The loaded trailer-trucks were oversized
+    and overweight loads, at ~180,000 pounds each. A 450-ton crane was set up
+    onsite to move the transformers from the trailer-trucks to their temporary storage
+    locations in the substation. The successful delivery of the transformers through
+    Marblehead streets to the Village 13 substation was possible due to the high
+    degree of cooperation among multiple Town departments including the
+    Marblehead Police Dept., the Public Works Dept., the Water & Sewer Dept, and
+    MMLD, plus property abutters Mike Rockett and Gilbert & Cole, and the
+    Tedesco Country Club for providing a truck staging area.
+
+July
+• Chris Dunbar began employment, as the first Information Systems and
+     Technology Manager at MMLD.
+• MMWEC presented MMLD with the NextZero Innovation Award at their annual
+     participants meeting. MMWEC recognized MMLD for working with MMWEC
+     to develop Next Zero program plans for residential batteries and diligence in
+     “pursing innovative methods to reach our goals.”
+
+September
+• MMLD GM Joe Kowalik informed the MMLD Board of the Department’s
+    intention to apply for a Federal Infrastructure Investment and Jobs Act (IIJA)
+    grant, also known as a Grid Resilience and Innovation Partnership (GRIP) Grant.
+    The stated program objective is to “enhance the resilience of the electric grid,
+    prevent outages and mitigate the impact of disruptive events through investments
+    in activities, technologies, equipment and other hardening measures.” The funds
+    are distributed by the Federal Department of Energy to the states, with each state
+    receiving an allocation. The Massachusetts Clean Energy Center (CEC) is the
+    state agency responsible for evaluating the Mass-based applications. The
+    MMLD grant application was focused squarely on hardening the subtransmission
+    supply lines that run from the National Grid Railyard substation in Salem to the
+    Village 13 substation in Marblehead. Proposed hardening improvements
+    included: (1) replacing wooden poles with stronger steel poles in Salem and (2)
+    replacing overhead lines along the right of way in Marblehead with a new
+    underground service, beginning in the Lead Mills area and running toward West
+    Shore Drive. Beacon Climate Innovations, of Somerville, Mass assisted MMLD
+    in completing the application, due to the short deadline of early October 2024.
+    The estimated project cost was $1.98 million, and the grant request was for $1.33
+    million (67%), with an MMLD contribution of $654,000 (33%).
+•   MMLD has a long-term asset rights investment in National Grid transmission
+    lines running from Quebec, Canada to Massachusetts. Recognizing the need to
+    increase the future investment dollars to maintain the lines, National Grid has
+    informed MMLD that we will be required to make additional investment of
+    $247,000 from 2024 to 2033. This investment is estimated to reduce our 2034-
+    2065 investment dividend forecast from $472,000 to $225,000.
+•   Myers Controlled Power LLC., of North Canton, Ohio, the manufacturer of the
+    new Village 13 switchgear equipment, informed us of a second three-month
+    delay in the delivery of switchgear, to late December 2024.
+
+October
+• A construction repair request for quote for the 80 Commercial Street main office,
+    needed to address roof and downspout drainage issues not adequately addressed
+    in 2016-18 renovation contract, was issued for competitive bidding. The winning
+    bidder was the Campbell Construction Group, LLC., Peabody, Mass., with a bid
+    of $283,829.
+
+November
+• MMLD Finance Manager Matt Barrett proposed a 2025 operating budget of
+   $21,681,000 to the MMLD Board.
+• A request for bid was issued to complete the extensive site construction work in
+   support of the Village 13 substation upgrade, with a December 11, 2024 bid
+   opening date.
+• Twelve contractors attended a mandatory site meeting to review the Village 13
+   substation site construction bid package.
+•   Improvements in the MMLD server room at 80 Commercial Street were
+    completed, included new switches to route MMLD meter data, and an improved
+    internet connection. New switches in the field are now planned for 2025.
+
+December
+• The MMLD Board voted to approve $2,719,860 in capital funding to the lowest
+   bid qualified vendor, Fischbach & Moore, of Boston, Mass., for the Village 13
+   substation site construction work.
+• The Board voted to approve $654,000 in capital funding to harden the
+   subtransmission supply lines that run from Salem to Marblehead. The vote
+   confirmed the local utility commitment as required in the $1.98 million DOE
+   GRIP grant application submitted to the Mass CEC.
+• The Board voted to approve the 2025 department operating and maintenance
+   budget of $21,681,000.
+• The MMLD Board voted to approve a bad debt write-off of $38,800, representing
+   inactive accounts with no payment activity between November 1, 2022 and
+   October 31, 2023. While this debt is written off, collection efforts continue
+   unabated.
+
+Year-long Key Activity Summaries
+•   Preventive maintenance of our distribution system by MMLD line crews is a
+    year-round responsibility. In 2024 27 new electric utility or light poles were
+    replaced or added town wide. 21 pole installations were pole replacements,
+    including preventive maintenance, poles damaged in auto accidents, storm
+    damage, and old pole replacements. Six poles were installed in new locations,
+    including three in the Crowninshield Road area to replace an unreliable
+    underground service and three new poles installed in support of the Village 13
+    substation upgrade.
+
+                                                                 Year-on-Year
+     Public EV Charging @ 10            2024          2023
+                                                                   Percent
+     stations Annual Summary           Actual        Actual
+                                                                   Change
+           Unique Drivers                296          384           -23%
+         Charging Sessions              3,493        2,041           71%
+    Charging Energy Used (MWh)           56.7         32.2           76%
+     Greenhouse Gas Reduction
+              (US tons)                  47.3         25.4            86%
+      Electricity Sales Revenue        $14,562       $9,924           47%
+•   In 2024 MMLD continued to operate and maintain 10 public Level 2 EV
+    charging ports in three locations: two charging ports at the 80 Commercial St
+    MMLD main office, four ports at the Mary Alley Building main parking lot on
+    Widger Road, and four ports at the Anderson Street end of the Round House
+    Road public parking lot. 2024 was the third full year of 10-port operations.
+
+•   MMLD’s Residential Scheduled EV Charging Program, gives Marblehead EV
+    owners a ChargePoint® Home Flex residential EV Charger for free when they
+    agree to enroll in MMLD’s scheduled charging program. Its goal is simple:
+    provide EV owners with an incentive not to charge their EV during the peak
+    hours, 5-9 pm, on weekdays. Customers can continue to plug their EV into the
+    charger when they arrive at home in the early evenings. The Scheduled Charging
+    program software will automatically begin to curtail EV charging at 5 pm on
+    weekdays and automatically resume EV charging after 9 pm. The program
+    simply blocks EV charging until after the 5-9 PM peak hours have passed. Your
+    new ChargePoint EV charger will still have plenty of night-time hours to
+    recharge your EV for your use the next day. ChargePoint estimates that the Home
+    Flex EV Charger provides an additional 25 miles of driving range per hour of
+    charging, when the charger is connected to a 40-amp circuit on your electric
+    service panel at home. A four-hour Level 2 charge on average provides an
+    additional 100 miles of driving range, giving the Marblehead EV driver
+    significantly more range than the 30 miles actually traveled per day, based on
+    average vehicle miles traveled daily by the 708 plug-in hybrid and electric
+    vehicles registered in Marblehead (Mass DOT vehicle data).
+
+    Here’s how Program’s participation has grown in the past year.
+
+       Scheduled EV Charging
+       Program Enrollments by              Annual               Cumulative
+               Year                      Enrollments            Enrollments
+                2017                          3                      3
+                2018                          5                      8
+                2019                          5                     13
+                2020                         14                     27
+                2021                         15                     42
+                2022                         34                     76
+                2023                         25                    101
+                2024                         27                    128
+    NOTE: The Mass Dept. of Transportation website reports that as of January 1,
+    2025, there were at total of 708 chargeable EV vehicles registered in Marblehead,
+    including 440 EVs and 268 plug-in hybrid vehicles. As such, only 18% of
+    chargeable EVs registered in Marblehead are enrolled in our Scheduled
+    Charging Program. It’s in everyone’s financial interest to avoid EV charging
+    during peak hours, so we urge you to call our office at 781-631-5600 to join this
+    important     townwide        initiative.  Details   on      our     website   at
+    www.marbleheadelectric.com
+•   MMLD participates in the MMWEC-sponsored NextZero Program, an
+    expansion of the earlier Home Energy Loss Prevention Services (HELPS)
+    Program. In 2024, 79 homeowners received free home energy efficiency audits,
+    an 18% decrease from 93 in 2023. The three-year audit average is 77 audits/year.
+•   In 2024 the MMLD NextZero Program offered Marblehead residents a variety
+    of cash rebates of up to $2,250 and encouraged natural gas customers in
+    Marblehead to apply for National Grid Mass Save® rebates in addition to
+    MMLD NextZero rebates. Rebate dollars to Marblehead customers increased
+    73% in 2024, from $39,031 in 2023 to $67,702 in 2024.
+
+                                                                              2024
+                                                         2024
+       Next Zero Program Customer Rebates                                   Rebate
+                                                      Participants
+                                                                           Dollars
+               Energy Star Appliances                      124             $12,120
+         Cool Homes Program (Heat Pumps)                    38             $37,220
+          Home Efficiency Incentives (HEI)                  26             $11,668
+                 WiFi Thermostats                           16              $1,389
+      Battery Operated Lawn & Yard Equipment                76              $5,305
+                  Program Totals                           280             $67,702
+
+    For details on available rebates, visit www.marbleheadelectric.com.
+
+•   In 2022 MMLD added an Air Source Heat Pump consultation service, which
+    provides customers with relevant, practical information about heat pumps and
+    their applicability in Marblehead homes. Participating customers receive heat
+    pump sizing and contractor design review services. In 2024, 20 MMLD
+    customers took advantage of this program.
+MMLD Employee Recognition
+MMLD’s most important asset remains our highly skilled workforce. The dedication
+of our employees is essential to the success of our mission:
+
+…to deliver reliable, cost competitive electric power to our customers, while
+increasing the carbon-free power in our portfolio and maintaining a safe and healthy
+work environment for employees and customers alike.
+
+We’re pleased to recognize the following employee milestones in 2024:
+
+Employee work anniversaries:
+   • Working Foreman Paul Camarda celebrated his 25th year anniversary.
+   • Technical Services Manager Colin Coleman celebrated his 10th year
+       anniversary.
+
+New employee hires:
+   • Information Systems & Technology Manager Chris Dunbar
+
+Employee retirements:
+   • Senior Facilities and Maintenance Specialist Paul Surette
+
+
+
+
+Respectfully submitted,
+
+Joseph T. Kowalik, General Manager
+Lisa Wolf, Commission Chair
+Simon Frechette, Commission Vice Chair
+Jean-Jacques Yarmoff, Secretary
+Michael A. Hull, Commissioner
+Adam Smith, Commissioner
+                               BALANCE SHEET
+                     For the year ending December 31, 2024
+                                     Assets
+Plant Investments                                              $   19,724,219.55
+Current Assets:
+   Cash - Operating                             8,158,091.19
+        Petty Cash                                    500.00
+        Construction                                     -
+   Accounts Receivable                          3,618,043.04
+   Materials & Supplies                           246,648.07
+     Total Current Assets                                      $   12,023,282.30
+Depreciation Fund                                                   7,095,396.38
+Insurance Escrow Account                                            1,089,552.70
+Hydro Savings Reserve                                                        -
+MMWEC - NEPEX Reserve Trust                                           558,265.37
+Rate Stabilization Reserve                                          2,541,482.74
+Consumer Deposits                                                     245,280.50
+Prepayments                                                         1,680,873.87
+Pooled Financing Reserve-MMWEC                                        462,193.64
+MMWEC 2015A Peabody Project                                           379,435.47
+Deferred Outflows-Pensions                                          1,796,639.00
+Deferred Outflows-OPEB                                                558,102.00
+     Total Assets                                              $   48,154,723.52
+                               Liabilities And Surplus
+Accounts Payable:
+   Depreciation                              $     46,691.93
+   Operating                                    1,916,162.43
+   Consumer Deposits                                5,100.00
+     Total Accounts Payable                                    $    1,967,954.36
+Consumer Deposits                                                     240,180.50
+Bonds Payable                                                       3,388,957.96
+Accumulated Provision For Rate Stabilization                        3,341,482.74
+Reserve-MMWEC Reserve Trust                                           558,265.37
+Net Pension Liability                                               7,079,400.00
+Deferred Inflows-Pensions                                             388,056.00
+Deferred Inflows-Opeb                                               3,366,947.00
+Reserve for Uncollectible Accounts                                    517,828.66
+Reserve for Future Compensated Absences                               126,781.77
+Opeb Liability                                                      3,340,487.00
+Contribution In Aid For Construction                                  200,582.09
+Unappropriated Earned Surplus                                      23,637,800.07
+     Total Liabilities And Surplus                             $   48,154,723.52
+
+NOTE: Financials are calendar year based and subject to MMLD independent audit
+                        STATEMENT OF INCOME
+                    For the year ending December 31, 2024
+
+
+Operating Revenue                                       $    21,519,213.73
+
+Less Expenses:
+  Operating                             15,768,068.11
+  Maintenance                            1,983,007.86
+  Depreciation                           2,126,907.44
+     Total Expenses                                          19,877,983.41
+Operating Income                                              1,641,230.32
+Investment & Interest Income                                    912,568.36
+Less Interest on Long Term Debt                                 115,210.07
+Net Income Transferred to Surplus                       $     2,438,588.61
+
+                                                         $    2,438,588.61
+                          STATEMENT OF SURPLUS
+                    For the year ending December 31, 2024
+
+
+Balance December 31, 2023                               $    20,149,744.82
+Add: Credit balance transferred from income                   2,438,588.61
+Subtotal                                                     22,588,333.43
+
+Deduct: Amount transferred to Town Treasurer
+     Strategic electrification fund                                    -
+     Payment in Lieu of Taxes (PILOT)                          (330,000.00)
+     Yearend 2023 Auditor Adjustment                          1,379,466.64
+Balance December 31, 2024                               $    23,637,800.07
+
+
+NOTE: Financials are calendar year based and subject to MMLD independent audit
+                              OPERATING EXPENSES
+                            For the year ending December 31, 2024
+
+Power Generation Expenses:
+   Fuel                                               $     22,495.08
+   Misc. Other Power Generating Expense                     18,457.90
+   Maint. of Other Power Generation                        107,325.50
+      Total Power Generation Expense                                     $       148,278.48
+Power Supply Expenses:
+   Electric Energy Purchased                              9,405,889.23
+   Misc. Purchased Power Expense                          3,099,922.55
+      Total Power Supply Expenses                                            12,505,811.78
+Distribution Expenses:
+   Information Systems                                       73,630.51
+   Station Expense - Labor & Other                           20,305.15
+   Station Expense - Heat & Electricity                      70,080.27
+   Street Lighting                                           21,681.28
+   Meter Expense - Inspection, Testing, Resetting           108,078.61
+   Customer Installation Expense                             51,815.55
+   Misc. Distribution Expense                               143,920.68
+   Maintenance of Structures                                135,314.14
+   Maintenance of Station Equipment                          72,466.76
+   Maint. of Overhead & Underground Lines                 1,495,610.89
+   Maintenance of Line Transformers                                -
+   Maintenance of Meters                                     54,906.77
+      Total Distribution Expenses                                             2,247,810.61
+Customer Account Expenses:
+   Supervision of Customer Accounting                      146,687.86
+   Meter Reading - Labor & Expenses                         51,815.44
+   Customer Records & Collections                          134,065.56
+   Uncollectible Accounts                                  115,862.87
+   Interest Paid on Consumer Deposits                       11,195.59
+      Total Customer Account Expenses                                            459,627.32
+Advertising, Conservation, Energy Audits                                         357,269.31
+Administrative & General Expenses:
+   Administrative Salaries                                 218,538.67
+   Office Supplies & Expenses                              322,284.92
+   Outside Services Employed                               340,176.34
+   Property Insurance                                       39,987.86
+   Injuries & Damages                                        1,234.00
+   Rents                                                     2,145.00
+   Employee's Pensions & Benefits                          935,412.42
+   Maintenance of General Plant                             76,992.16
+   Transportation                                           40,391.64
+   Miscellaneous General Expense                            55,115.46
+      Total Administrative & Gen. Expenses                                    2,032,278.47
+Total Operating & Maintenance Expenses                                   $   17,751,075.97
+
+NOTE: Financials are calendar year based and subject to MMLD independent audit
+

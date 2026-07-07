@@ -1,0 +1,96 @@
+Light Commission 09/08/22 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           September 23, 2022
+Re:             Commission Meeting September 8, 2022
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 5:12 pm, the meeting
+being held both in person and with remote access available to the public.
+
+Participated in meeting:
+        Commissioners:           Hull and Yarmoff in person
+                                 Frechette, and Wolf through remote link
+        Light Department:        General Manager Joe Kowalik.
+
+Village 13 Substation Upgrade Project
+
+On July 26, 2022, the Light Commission approved the bid from Myers Controlled Power for the new
+Village 13 switchgear for $4,347,292 subject to MMLD receiving satisfactory answers to our remaining
+bid response questions (vote 2022-26). The General Manager reported that an agreement has been
+reached with Myers on all open questions, the most important of which was to remove switchgear
+construction price escalators from the agreement. This has caused adjustments to the project’s interim
+milestone payments. These payment schedule adjustments enables Myers to purchase more materials
+and components earlier in the contract. To manage the risk associated with the payment schedule, we
+wish to require Myers purchase a performance bond that protects MMLD in the event Myers is not able
+to deliver us the completed product. They have received a quote for $49,191 for a 100% performance
+bond on the project cost. By agreement Myers will directly pass this cost on to MMLD. The General
+Manager requested the board to authorize this additional expense that will secure MMLD’s early
+payments and are tied to a 60 week performance.
+A question was asked as to the trigger of the bond: While the 60 week time-frame is mentioned, the
+trigger will not be a delay of a few days or a few weeks, rather it will be the non-performance of MCP
+and their inability to deliver the switch gear that will be the trigger.
+Motion: to have MMLD purchase a performance bond on the construction of new Village 13 switchgear
+equipment by Myers Controlled Power LLC at a cost not to exceed $50,000.
+Vote #2022-31 Moved by Commissioner Yarmoff and seconded by Commissioner Wolf. Unanimous.
+
+
+Modification of rate structure
+
+On August 30, 2022, the Light Commission reviewed the rate structure change proposed by UFS. The
+General Manager requested the Commission formal approval to implement the rate structure changes
+presented across the 6 customer classes. Residential rate changes were presented in Table 1 of the
+minutes of that meeting, other customer classes proposed changes are detailed in the slides.
+
+                                                                                                         1/2
+A clarification was requested as the presentation by UFS included projection of rates several years in
+advance, in 2025 and 2026. The General Manager explained that energy charges in the future will have
+to be evaluated in view of the then existing conditions in the energy markets, and the approval
+requested concerns the residential rate changes proposed in Table 1 of the minutes of the 8/30
+meeting, and the similar changes for other classes described in the slides presented during the meeting.
+The General Manager proposed the following motion: Move to implement the new utility rates
+proposed for the six rate classes reviewed by UFS on August 30, 2022, for implementation beginning in
+January 2023. The rate classes include: residential, small commercial, large commercial, off-peak water
+heating, domestic storage heating and private area lighting. MMLD will coordinate multiple marketing
+methods to communicate these rates to our customers, including inserts in monthly invoice mailings,
+MMLD website, MMLD Facebook page, town newspaper legal notice, and public information meeting(s).
+Vote #2022-32 Moved by Commissioner Wolf and seconded by Commissioner Frechette. Unanimous.
+
+
+Metering Software update / migration to the cloud
+
+MMLD purchases both meters and associated metering software and wireless data communications from
+Nexgrid. The company has introduced a new upgrade, v 4, available to MMLD at no charge as part of the
+existing contract, where MMLD uses the Nexgrid software in a SaaS agreement. (MMLD pays an annual
+software license fee per meter that includes upgrades.) Support for Version 3 will be discontinued in the
+future. MMLD has met with Nexgrid several times in the past few weeks to make plans for this upgrade.
+
+Historically their software has run on MMLD servers located 80 Commercial Street. For the first time
+Nexgrid is offering a cloud-based version of their software, and is strongly encouraging all customers to
+make the move for increased reliability and cybersecurity. Nexgrid mentioned to MMLD that the great
+majority of their ~40 customers have moved to the cloud, and that the Google cloud service costs are
+passed through to their clients with low/no added margin. A cloud configuration for MMLD is estimated
+to cost $8,700 annually. If we stay with the current SaaS service, we would need to upgrade one server,
+rough estimate of $4-5K.
+
+A discussion occurred on the merits of migrating to the cloud vs implementing the SaaS v4 version. How
+long does the existing contract last, can it cover a cloud option? Can the requested modifications to
+implement ToU-enabling measurements be part of the v4, and if so, what is the timing and the cost for
+these modifications? The IT director of NexGrid has indicated that the modifications should be
+technically possible.
+
+The discussion was tabled until a review of the existing contract, which the General Manager and
+Commissioner Yarmoff proposed to do after the meeting.
+
+
+
+The agenda for the meeting having been exhausted, a motion was made to adjourn and adopted
+unanimously at 6:05 pm.
+
+
+
+
+                                                                                                      2/2
+
