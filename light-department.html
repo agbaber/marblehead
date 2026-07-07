@@ -281,6 +281,20 @@ og_url: https://marbleheaddata.org/light-department.html
   .ld-bars .fill { display: block; background: var(--c-navy); height: 100%; border-radius: 3px; }
   .ld-bars .fill.is-lo { background: var(--c-brass); }
   .ld-bars .pct { color: var(--text-muted); text-align: right; }
+
+  .ld-short-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 8px 14px;
+    margin: 2px 0 14px;
+    background: color-mix(in srgb, var(--c-teal) 8%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c-teal) 30%, var(--border));
+    border-radius: 99px;
+    text-decoration: none;
+  }
   @media (max-width: 560px) {
     .ld-bars { grid-template-columns: minmax(104px, 36%) 1fr 46px; font-size: 12.5px; gap: 8px 8px; }
   }
@@ -289,6 +303,8 @@ og_url: https://marbleheaddata.org/light-department.html
 <h1>Is the light department well run?</h1>
 
 <p class="page-lead">Marblehead has owned its own electric utility since 1894. The Marblehead Municipal Light Department (<abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr>) publishes an annual report to the Town every year. Those fifteen reports (2010 through 2024), filled out with the town's printed Annual Reports, the light board's own minutes, state enforcement records, local news coverage, and an independent 2025 customer survey, are the public record of what the department spent, what broke, and what it told residents.</p>
+
+<a class="ld-short-link" href="light-department-summary.html">Short on time? The 60-second version &rarr;</a>
 
 <div class="ld-tldr">
   <p class="ld-tldr-eyebrow">The short version</p>

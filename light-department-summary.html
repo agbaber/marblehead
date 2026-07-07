@@ -1,0 +1,259 @@
+---
+title: "The light department in 60 seconds"
+og_title: "The light department in 60 seconds"
+og_description: "Marblehead's electric utility in under a minute: reliable and solvent, a shutdown the annual reports never mentioned, a 34% rate spike in 2022, and a manager exit now in court."
+og_url: https://marbleheaddata.org/light-department-summary.html
+hide_read_time: true
+---
+<style>
+  .ss-header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .ss-block {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    margin: 16px 0;
+    box-shadow: var(--shadow-sm);
+  }
+  .ss-block h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+    margin: 0 0 12px;
+  }
+  .ss-block p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 10px;
+  }
+  .ss-block p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ss-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ss-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.15s;
+    border-left: 4px solid var(--border);
+  }
+  a.ss-row:hover {
+    background: color-mix(in srgb, var(--link) 6%, var(--bg));
+  }
+  .ss-row-name {
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .ss-row-amt {
+    font-weight: 700;
+    font-size: 18px;
+    font-variant-numeric: tabular-nums;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+  .ss-row-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    flex: 1;
+    min-width: 0;
+  }
+  .ss-row--good { border-left-color: var(--c-teal); }
+  .ss-row--bad  { border-left-color: var(--c-brass); }
+  .ss-row--hot  { border-left-color: var(--c-buoy); }
+  .ss-row--neutral { border-left-color: var(--c-navy); }
+
+  .ss-cost-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+  .ss-cost-item {
+    padding: 10px 6px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+  }
+  .ss-cost-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-subtle);
+    margin-bottom: 4px;
+  }
+  .ss-cost-value {
+    font-size: 20px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+  }
+  .ss-cost-unit {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-subtle);
+  }
+
+  .ss-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .ss-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--link);
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.15s;
+  }
+  .ss-links a:hover {
+    background: color-mix(in srgb, var(--link) 8%, var(--bg));
+  }
+  .ss-links a::after {
+    content: "\2192";
+    color: var(--text-faint);
+    font-size: 16px;
+  }
+
+  .ss-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 480px) {
+    .ss-row { flex-wrap: wrap; gap: 4px 10px; }
+    .ss-row-desc { flex-basis: 100%; order: 3; padding-left: 0; }
+    .ss-cost-grid { grid-template-columns: 1fr; }
+    .ss-cost-value { font-size: 18px; }
+  }
+</style>
+
+<h1 class="ss-header">The light department in 60 seconds</h1>
+
+<div class="ss-block">
+  <h2>The short answer</h2>
+  <p>Marblehead's electric utility is <strong>solvent and reliable</strong>: no losing year in fifteen years of reports, national reliability awards three years running, and maintenance spending up, not deferred.</p>
+  <p>The sore spots are real too: the annual reports <a href="light-department.html#wilkins">hid a 3.5-year plant shutdown</a> until a management change, bills <a href="light-department.html#rates">jumped 34% in nine months</a> in 2022, and the board's 2025 replacement of its manager <a href="light-department.html#leadership">ended up in court</a>.</p>
+</div>
+
+<div class="ss-block">
+  <h2>Keeping the lights on</h2>
+  <div class="ss-cost-grid">
+    <div class="ss-cost-item">
+      <div class="ss-cost-label">Avg outage, 2023</div>
+      <div class="ss-cost-value">17<span class="ss-cost-unit"> min/customer</span></div>
+    </div>
+    <div class="ss-cost-item">
+      <div class="ss-cost-label">vs Northeast peers</div>
+      <div class="ss-cost-value">69%<span class="ss-cost-unit"> shorter</span></div>
+    </div>
+    <div class="ss-cost-item">
+      <div class="ss-cost-label">Happy with restoration speed</div>
+      <div class="ss-cost-value">95.7%</div>
+    </div>
+  </div>
+  <p style="margin-top: 14px;">Big storms still hurt: an October 2019 storm knocked out <strong>20% of the town</strong>, some for three days, and falling trees on the Salem supply lines blacked out the whole town for a morning in 2021. The <a href="light-department.html#outages">$9.7M substation rebuild</a> now underway targets exactly that weak point.</p>
+</div>
+
+<div class="ss-block">
+  <h2>The Wilkins shutdown</h2>
+  <p>State regulators ordered the town's only emergency generators <strong>offline from 2015 to 2019</strong> over emissions and noise. The fix cost $1.2M and failed twice before passing.</p>
+  <div class="ss-rows">
+    <div class="ss-row ss-row--hot">
+      <span class="ss-row-name">2015&ndash;2017</span>
+      <span class="ss-row-desc">Annual reports call it "upgrades," never mention the shutdown</span>
+    </div>
+    <div class="ss-row ss-row--good">
+      <span class="ss-row-name">2018</span>
+      <span class="ss-row-desc">New manager discloses it; plant cleared to run in 2019</span>
+    </div>
+  </div>
+  <p style="margin-top: 14px;">No newspaper ever covered it. <a href="light-department.html#wilkins">The full paper trail &rarr;</a></p>
+</div>
+
+<div class="ss-block">
+  <h2>Your bill</h2>
+  <div class="ss-cost-grid">
+    <div class="ss-cost-item">
+      <div class="ss-cost-label">2010</div>
+      <div class="ss-cost-value">14.3&cent;<span class="ss-cost-unit">/kWh</span></div>
+    </div>
+    <div class="ss-cost-item">
+      <div class="ss-cost-label">2021</div>
+      <div class="ss-cost-value">17.5&cent;<span class="ss-cost-unit">/kWh</span></div>
+    </div>
+    <div class="ss-cost-item">
+      <div class="ss-cost-label">2024</div>
+      <div class="ss-cost-value">21.8&cent;<span class="ss-cost-unit">/kWh</span></div>
+    </div>
+  </div>
+  <p style="margin-top: 14px;">A decade of slow drift, then <strong>2022: up 34% in nine months</strong> as gas prices spiked after Russia invaded Ukraine. The rainy-day fund held only one month of power costs during the spike; the board tripled it afterward. The monthly fixed charge also rose from <strong>$4.25 to $18.50</strong> in two years, which hits small users hardest. <a href="light-department.html#rates">The rate story &rarr;</a></p>
+</div>
+
+<div class="ss-block">
+  <h2>Going green</h2>
+  <p>Carbon-free share jumped <strong>42% &rarr; 65% in 2024</strong> while wholesale power cost <em>fell</em> 3.4%. Where green had a payback (LED streetlights, cheap hydro), they took it; where it didn't (local solar at twice the going rate), they passed.</p>
+  <p>The gaps: Berkshire Wind's cost has never been published, and the <a href="light-department.html#green">contested Peabody peaker</a> went online in 2024 without its promised green hydrogen. <a href="light-department.html#green">The full ledger &rarr;</a></p>
+</div>
+
+<div class="ss-block">
+  <h2>The 2025 manager change</h2>
+  <div class="ss-rows">
+    <div class="ss-row ss-row--neutral">
+      <span class="ss-row-name">Apr 2025</span>
+      <span class="ss-row-desc">Board offers outgoing GM a retention deal to stay through April 2026</span>
+      <span class="ss-row-amt">$150K+</span>
+    </div>
+    <div class="ss-row ss-row--bad">
+      <span class="ss-row-name">Sep 2025</span>
+      <span class="ss-row-desc">Board terminates him seven months early anyway, 4-1</span>
+    </div>
+    <div class="ss-row ss-row--hot">
+      <span class="ss-row-name">Feb 2026</span>
+      <span class="ss-row-desc">He sues, alleging broken contract and age discrimination</span>
+      <span class="ss-row-amt">$320K+</span>
+    </div>
+  </div>
+  <p style="margin-top: 14px;">The suit is pending. A new manager, from Ipswich's utility, started September 29. <a href="light-department.html#leadership">The whole saga &rarr;</a></p>
+</div>
+
+<div class="ss-block">
+  <h2>What the town gets</h2>
+  <p>The department's voluntary payment to the town was <strong>$330,000 every single year from 2010 through 2024</strong>, while its reserves grew past $23M. The first raise, to $360,000, came in 2025, now set by a formula tied to electricity sales. <a href="light-department.html#rates">Why it stayed flat &rarr;</a></p>
+</div>
+
+<div class="ss-block">
+  <h2>Go deeper</h2>
+  <div class="ss-links">
+    <a href="light-department.html">The full story, with every source</a>
+    <a href="light-department.html#the-reports">How the annual reports changed in 2018</a>
+    <a href="light-department.html#maintenance">Maintenance spending, charted</a>
+    <a href="light-department.html#trust">What the 2025 survey found</a>
+    <a href="/data/mmld/ANALYSIS.html">The working notes and source archive</a>
+  </div>
+</div>
+
+<p class="ss-note">Every number above is footnoted on <a href="light-department.html">the full page</a>. Sources: MMLD annual reports to the Town (2010&ndash;2024), Marblehead Annual Town Reports, MMLD board minutes, MassDEP enforcement records, the 2025 GreatBlue customer survey, and local news coverage.</p>
