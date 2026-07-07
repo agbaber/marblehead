@@ -6,8 +6,8 @@ og_description: "Fifteen years of Marblehead Municipal Light Department annual r
 og_url: https://marbleheaddata.org/light-department.html
 ---
 <style>
-  /* Page-scoped: bare bullet lists (same rationale as town-debt.html:
-     global padding reset zeroes list padding under .page). */
+  /* Page-scoped: bare bullet lists (global padding reset zeroes list
+     padding under .page). */
   .page > ul:not([class]),
   .page > ol:not([class]) {
     margin: 0 0 16px;
@@ -54,11 +54,266 @@ og_url: https://marbleheaddata.org/light-department.html
   }
   details.more-detail[open] > summary::before { transform: rotate(90deg); }
   details.more-detail[open] > summary { padding-bottom: 8px; }
+
+  /* ---- TL;DR promo box (pattern from the pre-override debate page) ---- */
+  .ld-tldr {
+    background: color-mix(in srgb, var(--c-navy) 3%, var(--surface));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 22px 22px;
+    margin: 20px 0 28px;
+  }
+  .ld-tldr-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--c-buoy);
+    margin-bottom: 12px;
+  }
+  .ld-side {
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px 14px;
+    margin: 12px 0;
+    background: var(--surface);
+    border-left: 4px solid var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+  .ld-side--for {
+    border-left-color: var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 5%, var(--surface));
+  }
+  .ld-side--against {
+    border-left-color: var(--c-brass);
+    background: color-mix(in srgb, var(--c-brass) 5%, var(--surface));
+  }
+  .ld-side-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--text-subtle);
+    margin-bottom: 8px;
+  }
+  .ld-side ul { margin: 0; padding-left: 20px; list-style: disc; }
+  .ld-side li { font-size: 14.5px; line-height: 1.55; color: var(--text); margin: 5px 0; }
+  .ld-side li strong { color: var(--text); }
+  .ld-synthesis {
+    margin: 16px 0 0;
+    padding: 12px 0 0;
+    border-top: 1px solid var(--divider);
+    text-align: center;
+  }
+  .ld-synthesis p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0 auto;
+    font-style: italic;
+    max-width: 540px;
+  }
+  .ld-synthesis strong { color: var(--text); font-style: normal; font-weight: 700; }
+
+  /* ---- Two-era comparison cards ---- */
+  .ld-eras { display: grid; gap: 14px; margin: 16px 0 20px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .ld-eras { grid-template-columns: 1fr 1fr; } }
+  .ld-era {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px 12px;
+  }
+  .ld-era--after { border-color: color-mix(in srgb, var(--c-teal) 40%, var(--border)); }
+  .ld-era-head {
+    font-size: 15px; font-weight: 700; color: var(--text); margin: 0 0 2px;
+  }
+  .ld-era-sub {
+    font-size: 12px; color: var(--text-subtle); margin: 0 0 10px;
+  }
+  .ld-era ul { margin: 0; padding-left: 18px; list-style: disc; }
+  .ld-era li { font-size: 13.5px; line-height: 1.5; color: var(--text-muted); margin: 4px 0; }
+
+  /* ---- Storm/event timeline ---- */
+  .ld-timeline { margin: 18px 0 20px; padding-left: 0; }
+  .ld-tl-item {
+    position: relative;
+    padding: 0 0 18px 26px;
+    border-left: 2px solid color-mix(in srgb, var(--c-navy) 25%, transparent);
+    margin-left: 8px;
+  }
+  .ld-tl-item:last-child { padding-bottom: 4px; }
+  .ld-tl-item::before {
+    content: "";
+    position: absolute;
+    left: -7px; top: 3px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--c-navy);
+    border: 2px solid var(--surface);
+  }
+  .ld-tl-item--flag::before { background: var(--c-buoy); }
+  .ld-tl-when {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-subtle); margin: 0 0 2px;
+  }
+  .ld-tl-head {
+    font-size: 15px; font-weight: 700; color: var(--text); margin: 0 0 4px; line-height: 1.35;
+  }
+  .ld-tl-stat {
+    display: inline-block;
+    font-size: 11.5px; font-weight: 700;
+    color: var(--c-navy);
+    background: color-mix(in srgb, var(--c-navy) 8%, transparent);
+    border-radius: 99px;
+    padding: 2px 10px;
+    margin-left: 6px;
+    vertical-align: 1px;
+    white-space: nowrap;
+  }
+  .ld-tl-item--flag .ld-tl-stat { color: var(--c-buoy); background: color-mix(in srgb, var(--c-buoy) 10%, transparent); }
+  .ld-tl-item p { font-size: 14px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+
+  /* ---- Figure strips (mini stat rows inside sections) ---- */
+  .ld-figs {
+    display: grid; gap: 10px; margin: 16px 0 18px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .ld-fig {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px 10px;
+    text-align: center;
+  }
+  .ld-fig-value {
+    font-family: 'Libre Franklin', system-ui, sans-serif;
+    font-size: 22px; font-weight: 800; color: var(--text); line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+  .ld-fig-label { font-size: 11.5px; color: var(--text-muted); line-height: 1.4; margin-top: 4px; }
+
+  /* ---- Step strip (2022 PPA hikes, base-rate steps) ---- */
+  .ld-steps {
+    display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px;
+    margin: 14px 0 6px;
+  }
+  .ld-step {
+    flex: 1 1 100px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px 8px;
+    text-align: center;
+    position: relative;
+  }
+  .ld-step-when { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-subtle); }
+  .ld-step-value {
+    font-family: 'Libre Franklin', system-ui, sans-serif;
+    font-size: 20px; font-weight: 800; color: var(--text);
+    font-variant-numeric: tabular-nums; line-height: 1.2;
+  }
+  .ld-step--hot .ld-step-value { color: var(--c-buoy); }
+  .ld-step--hot { border-color: color-mix(in srgb, var(--c-buoy) 45%, var(--border)); }
+  .ld-steps-caption { font-size: 12.5px; color: var(--text-subtle); margin: 4px 0 14px; }
+
+  /* ---- Quote-contrast panels (Wilkins) ---- */
+  .ld-contrast { display: grid; gap: 14px; margin: 16px 0 18px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .ld-contrast { grid-template-columns: 1fr 1fr; } }
+  .ld-quote-panel {
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px 12px;
+    border-left: 4px solid var(--border);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .ld-quote-panel--said {
+    border-left-color: var(--c-brass);
+    background: color-mix(in srgb, var(--c-brass) 5%, var(--surface));
+  }
+  .ld-quote-panel--true {
+    border-left-color: var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 5%, var(--surface));
+  }
+  .ld-quote-label {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.4px; color: var(--text-subtle); margin-bottom: 8px;
+  }
+  .ld-quote-panel blockquote {
+    margin: 0; padding: 0; border: none;
+    font-size: 14.5px; line-height: 1.6; color: var(--text); font-style: italic;
+  }
+  .ld-quote-panel .ld-quote-src { font-size: 12px; color: var(--text-subtle); font-style: normal; margin-top: 8px; }
+
+  /* ---- Green ledger cards ---- */
+  .ld-ledger { display: grid; gap: 14px; margin: 16px 0 20px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .ld-ledger { grid-template-columns: 1fr 1fr; } }
+  .ld-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 13px 15px 11px;
+    display: flex; flex-direction: column;
+  }
+  .ld-chip {
+    align-self: flex-start;
+    font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+    border-radius: 99px; padding: 3px 10px; margin-bottom: 8px;
+  }
+  .ld-chip--documented { color: var(--c-teal); background: color-mix(in srgb, var(--c-teal) 12%, transparent); }
+  .ld-chip--declined   { color: var(--c-navy); background: color-mix(in srgb, var(--c-navy) 10%, transparent); }
+  .ld-chip--undisclosed{ color: var(--c-brass); background: color-mix(in srgb, var(--c-brass) 14%, transparent); }
+  .ld-chip--contested  { color: var(--c-plum); background: color-mix(in srgb, var(--c-plum) 12%, transparent); }
+  .ld-card h3 { font-size: 15px; font-weight: 700; color: var(--text); margin: 0 0 6px; line-height: 1.3; }
+  .ld-card p { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0 0 6px; }
+  .ld-card p:last-child { margin-bottom: 0; }
+  .ld-card p strong { color: var(--text); }
+
+  /* ---- Survey rating bars ---- */
+  .ld-bars {
+    display: grid; grid-template-columns: minmax(150px, max-content) 1fr 56px;
+    gap: 7px 12px; align-items: center; margin: 16px 0 6px;
+    font-variant-numeric: tabular-nums; font-size: 13.5px;
+  }
+  .ld-bars .lbl { color: var(--text); line-height: 1.3; }
+  .ld-bars .lbl.is-hi { font-weight: 700; }
+  .ld-bars .lbl.is-lo { font-weight: 700; }
+  .ld-bars .track { display: block; background: color-mix(in srgb, var(--text-subtle) 16%, transparent); border-radius: 3px; height: 15px; overflow: hidden; }
+  .ld-bars .fill { display: block; background: var(--c-navy); height: 100%; border-radius: 3px; }
+  .ld-bars .fill.is-lo { background: var(--c-brass); }
+  .ld-bars .pct { color: var(--text-muted); text-align: right; }
+  @media (max-width: 560px) {
+    .ld-bars { grid-template-columns: minmax(104px, 36%) 1fr 46px; font-size: 12.5px; gap: 8px 8px; }
+  }
 </style>
 
 <h1>Is the light department well run?</h1>
 
-<p class="page-lead">Marblehead has owned its own electric utility since 1894. The Marblehead Municipal Light Department (<abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr>) publishes an annual report to the Town every year; the fifteen reports covering 2010 through 2024 are the department's own public record of what it spent, what broke, and what it told residents. That record shows a utility with strong finances, third-party reliability awards, and rising maintenance spending. It also documents the things residents are sore about: a 34% rate increase over nine months in 2022, a regulatory shutdown of the town's emergency generators that the reports never mentioned while it was happening, and a building renovation that needed half a million dollars of follow-up fixes.</p>
+<p class="page-lead">Marblehead has owned its own electric utility since 1894. The Marblehead Municipal Light Department (<abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr>) publishes an annual report to the Town every year; the fifteen reports covering 2010 through 2024, plus an independent 2025 customer survey, are the public record of what it spent, what broke, and what it told residents.</p>
+
+<div class="ld-tldr">
+  <p class="ld-tldr-eyebrow">The short version</p>
+  <div class="ld-side ld-side--for">
+    <p class="ld-side-label">What looks well run</p>
+    <ul>
+      <li><strong>No operating losses</strong> in any reported year; reserves grew while debt stayed limited to one building loan</li>
+      <li><strong>17-minute average outage time</strong> in 2023, with national reliability awards three years running</li>
+      <li><strong>Line-maintenance spending up ~120%</strong> since 2016, not deferred</li>
+      <li><strong>65% carbon-free power in 2024</strong> (up from 42%) while wholesale cost <em>fell</em> 3.4%</li>
+    </ul>
+  </div>
+  <div class="ld-side ld-side--against">
+    <p class="ld-side-label">What feeds the distrust</p>
+    <ul>
+      <li><strong>Bills rose 34% in nine months in 2022</strong>, with a rainy-day fund holding only one month of power costs</li>
+      <li><strong>A 3.5-year regulatory shutdown</strong> of the town's emergency generators went unmentioned in three annual reports</li>
+      <li><strong>~$519K of rework</strong> on the $8.7M headquarters renovation, plus one renovation-caused outage</li>
+      <li><strong>The town's dividend is frozen at $330K</strong>, unchanged for fifteen years while reserves grew</li>
+    </ul>
+  </div>
+  <div class="ld-synthesis">
+    <p><strong>The finances say yes. The grievances are about disclosure and rates,</strong> not money going missing, and most of the disclosure problems predate the 2018 management change.</p>
+  </div>
+</div>
 
 <div class="key-stats">
   <div class="key-stat">
@@ -92,31 +347,91 @@ og_url: https://marbleheaddata.org/light-department.html
   <a href="#gaps">What this record can't show</a>
 </nav>
 
-<div class="takeaway takeaway--neutral">
-  Nothing in fifteen years of the department's own reports documents financial trouble: no operating losses, growing reserves, debt only for one building project. The documented grievances are about disclosure and rates, not money going missing. Both halves of that sentence matter.
-</div>
-
 <h2 id="the-reports">The reports changed in 2018</h2>
 
-<p>The annual reports come in two eras. Through 2017 they run one to two thousand words of narrative, mostly weather recaps and renewable-energy news, with no outage counts, no reliability numbers, and no project budgets. From 2018 on, under a new general manager, they roughly double in length and start disclosing outage events with customer counts and restoration times, competitive bid results with vendor names and dollar amounts, equipment delivery delays, and month-by-month board decisions.<sup class="cite" data-href="https://marbleheadelectric.com/meetings-annual-reports.html" data-source="MMLD Annual Reports to the Town, 2010-2024 (all fifteen; the shift in disclosure begins with the 2018 report, the first signed by General Manager Joseph Kowalik)"></sup></p>
+<p>The annual reports come in two eras, split by the arrival of general manager Joseph Kowalik in 2018.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, Employee Recognition (&quot;New employees in 2018: Joe Kowalik, General Manager&quot;; acknowledgment of Andrew Hadden's 2014-2018 service)"></sup></p>
 
-<p>Joseph Kowalik became general manager in 2018, succeeding Andrew Hadden (2014&ndash;2018), who had succeeded Jay Anderson and, before him, Robert Jolly.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, Employee Recognition (&quot;New employees in 2018: Joe Kowalik, General Manager&quot;; acknowledgment of Andrew Hadden's 2014-2018 service)"></sup> The disclosure gap between the two eras matters for everything below: the thin years are thin because the reports said little, not necessarily because little happened.</p>
+<div class="ld-eras">
+  <div class="ld-era">
+    <p class="ld-era-head">2010&ndash;2017</p>
+    <p class="ld-era-sub">~1,100&ndash;2,100 words a year</p>
+    <ul>
+      <li>Weather recaps and renewable-energy news</li>
+      <li>No outage counts or restoration times</li>
+      <li>No reliability metrics</li>
+      <li>No project budgets or bid results</li>
+    </ul>
+  </div>
+  <div class="ld-era ld-era--after">
+    <p class="ld-era-head">2018&ndash;2024</p>
+    <p class="ld-era-sub">~2,900&ndash;4,400 words a year</p>
+    <ul>
+      <li>Every major outage, with customer counts and restoration timelines</li>
+      <li>Competitive bids with vendor names and dollar amounts</li>
+      <li>Equipment delays and project defects disclosed unprompted</li>
+      <li>Month-by-month board decisions</li>
+    </ul>
+  </div>
+</div>
+
+<p>The gap matters for everything below: the thin years are thin because the reports said little, not necessarily because little happened.<sup class="cite" data-href="https://marbleheadelectric.com/meetings-annual-reports.html" data-source="MMLD Annual Reports to the Town, 2010-2024 (all fifteen; the shift in disclosure begins with the 2018 report, the first signed by General Manager Joseph Kowalik)"></sup></p>
 
 <h2 id="outages">Outages and storm response</h2>
 
 <p>The post-2018 reports disclose every major outage event. The record, in the department's own numbers:</p>
 
-<ul>
-  <li><strong>March 2&ndash;3, 2018 nor'easter</strong> (a federally declared disaster): 11 outage events, 265 customers, average restoration 13.1 hours, which the report calls "much longer than MMLD's typical response time." The storm also eroded the Lead Mills berm carrying the supply lines from Salem; MMLD paid $135,240 to repair it and filed over $200,000 in federal disaster-reimbursement claims.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, 2018 Weather Conditions section (March storm outage counts, berm repair, FEMA-4372-DR)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2019-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2019 MMLD Annual Report to the Town, Accomplishments (FEMA-eligible expenses &quot;totaled over $200,000&quot;)"></sup></li>
-  <li><strong>August 24, 2018, the self-inflicted one:</strong> three rapid outages at the Commercial Street substation knocked out 1,462 customers, about 14% of the town, for 90 to 150 minutes. An outside vendor's diagnosis: dust from MMLD's own building renovation, plus rainwater moisture, caused an electro-mechanical component to fail.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, 2018 Weather Conditions section (Aug 24 substation outage; vendor diagnosis of renovation dust plus moisture)"></sup></li>
-  <li><strong>July 17, 2019 microburst:</strong> 20 outages, 1,670 customers (16% of town), last customers restored 24 to 30 hours in, with mutual-aid line crews from four other towns.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2019-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2019 MMLD Annual Report to the Town, Marblehead Specific weather section (July 17 storm: 20 outages, 1,670 customers, restoration timeline)"></sup></li>
-  <li><strong>October 17, 2019 "bomb cyclone":</strong> 64 outages, 2,124 customers (20% of town), the last 18 customers out for 48 to 72 hours.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2019-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2019 MMLD Annual Report to the Town, Marblehead Specific weather section (Oct 17 storm: 64 outages, 2,124 customers, hour-by-hour restoration counts)"></sup></li>
-  <li><strong>October 27, 2021 nor'easter:</strong> trees fell on the main supply lines from Salem at 2:30 a.m. and the department deliberately de-energized the whole town to clear them safely. Everyone had power back by 4 p.m. Direct cost, including overtime, mutual aid, tree crews, and lost sales: about $90,000.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2021-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2021 MMLD Annual Report to the Town, October section (townwide de-energization and restoration timeline; ~$90,000 direct cost)"></sup></li>
-</ul>
+<div class="ld-timeline">
+  <div class="ld-tl-item">
+    <p class="ld-tl-when">March 2&ndash;3, 2018</p>
+    <p class="ld-tl-head">Back-to-back nor'easters, a federal disaster declaration <span class="ld-tl-stat">265 customers &middot; 13.1 hr avg</span></p>
+    <p>11 outage events; average restoration "much longer than MMLD's typical response time." The storm also eroded the Lead Mills berm carrying the supply lines from Salem; MMLD paid $135,240 to repair it and filed over $200,000 in federal disaster claims.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, 2018 Weather Conditions section (March storm outage counts, berm repair, FEMA-4372-DR)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2019-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2019 MMLD Annual Report to the Town, Accomplishments (FEMA-eligible expenses &quot;totaled over $200,000&quot;)"></sup></p>
+  </div>
+  <div class="ld-tl-item ld-tl-item--flag">
+    <p class="ld-tl-when">August 24, 2018</p>
+    <p class="ld-tl-head">The self-inflicted one <span class="ld-tl-stat">1,462 customers &middot; 90&ndash;150 min</span></p>
+    <p>Three rapid outages at the Commercial Street substation hit 14% of the town. An outside vendor's diagnosis: dust from MMLD's own building renovation, plus rainwater moisture, caused an electro-mechanical component to fail.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, 2018 Weather Conditions section (Aug 24 substation outage; vendor diagnosis of renovation dust plus moisture)"></sup></p>
+  </div>
+  <div class="ld-tl-item">
+    <p class="ld-tl-when">July 17, 2019</p>
+    <p class="ld-tl-head">Microburst <span class="ld-tl-stat">1,670 customers (16%) &middot; up to 30 hrs</span></p>
+    <p>20 distinct outages; mutual-aid line crews from four other towns helped restore power.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2019-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2019 MMLD Annual Report to the Town, Marblehead Specific weather section (July 17 storm: 20 outages, 1,670 customers, restoration timeline)"></sup></p>
+  </div>
+  <div class="ld-tl-item">
+    <p class="ld-tl-when">October 17, 2019</p>
+    <p class="ld-tl-head">"Bomb cyclone" <span class="ld-tl-stat">2,124 customers (20%) &middot; up to 72 hrs</span></p>
+    <p>64 distinct outages, 37 of them logged in one 15-minute window at 2:30 a.m. The last 18 customers were out two to three days.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2019-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2019 MMLD Annual Report to the Town, Marblehead Specific weather section (Oct 17 storm: 64 outages, 2,124 customers, hour-by-hour restoration counts)"></sup></p>
+  </div>
+  <div class="ld-tl-item">
+    <p class="ld-tl-when">October 27, 2021</p>
+    <p class="ld-tl-head">Deliberate townwide shutoff <span class="ld-tl-stat">whole town &middot; ~$90,000</span></p>
+    <p>Trees fell on the main supply lines from Salem at 2:30 a.m.; the department de-energized the whole town to clear them safely. Everyone had power back by 4 p.m.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2021-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2021 MMLD Annual Report to the Town, October section (townwide de-energization and restoration timeline; ~$90,000 direct cost)"></sup></p>
+  </div>
+  <div class="ld-tl-item">
+    <p class="ld-tl-when">January 2024</p>
+    <p class="ld-tl-head">Coastal-flooding storms <span class="ld-tl-stat">Crowninshield Rd area</span></p>
+    <p>The longest outages hit one neighborhood; MMLD later set three poles there to replace "an unreliable underground service."<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, January section (coastal flooding outages) and Year-long Key Activity Summaries (three Crowninshield Road poles replacing an unreliable underground service)"></sup></p>
+  </div>
+</div>
 
-<p>Against that storm record sit third-party reliability numbers. The American Public Power Association (<abbr class="g" title="American Public Power Association">APPA</abbr>), the national association of municipal utilities, gave MMLD a Certificate of Excellence in Reliability for 2021, 2022, and 2023. The metric is <abbr class="g" title="System Average Interruption Duration Index: total customer outage minutes divided by total customers, i.e. the average minutes of outage per customer per year">SAIDI</abbr>, the average minutes of outage per customer per year. MMLD's 2022 figure was under 38 minutes, 19% better than the average of 66 New England municipal utilities surveyed; its 2023 figure was under 17 minutes, 69% better than Northeast peers and 76% better than similar-sized municipal utilities nationwide.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, March section (APPA 2021 Certificate of Excellence, top-quartile SAIDI)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2023-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2023 MMLD Annual Report to the Town, March section (2022 SAIDI under 38 minutes; comparison to 66 New England and 100+ national municipal utilities)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, April section (2023 SAIDI under 17 minutes; 69% and 76% comparisons)"></sup></p>
+<p>Against that storm record sit third-party reliability numbers. The American Public Power Association (<abbr class="g" title="American Public Power Association">APPA</abbr>), the national association of municipal utilities, gave MMLD a Certificate of Excellence in Reliability for 2021, 2022, and 2023. The metric is <abbr class="g" title="System Average Interruption Duration Index: total customer outage minutes divided by total customers, i.e. the average minutes of outage per customer per year">SAIDI</abbr>, the average minutes of outage per customer per year.</p>
 
-<p>The structural weak point the reports keep returning to is not the poles in town. It is the supply path: every grid-delivered electron enters Marblehead through the Village 13 substation, fed by overhead lines along the old Salem railroad right-of-way. That is what failed in October 2021 and what eroded at Lead Mills in 2018. The department's current capital program targets exactly this: a Village 13 rebuild with 50% more transformer capacity (roughly $9.7 million committed across switchgear, transformers, and site work in 2022&ndash;2024) and a $1.98 million federal grant application to put steel poles on the Salem end and bury the Marblehead end of the supply lines.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, July and December sections ($4,347,292 switchgear award to Myers Controlled Power; $2,632,446 transformer award to Virginia Transformer)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, September and December sections ($2,719,860 site-construction award to Fischbach &amp; Moore; $1.98M GRIP grant application with $654,000 MMLD match)"></sup></p>
+<div class="ld-figs">
+  <div class="ld-fig">
+    <div class="ld-fig-value">3 yrs</div>
+    <div class="ld-fig-label">APPA reliability awards in a row (2021&ndash;2023)</div>
+  </div>
+  <div class="ld-fig">
+    <div class="ld-fig-value">&lt;38 min</div>
+    <div class="ld-fig-label">2022 outage minutes per customer, 19% better than New England municipal peers</div>
+  </div>
+  <div class="ld-fig">
+    <div class="ld-fig-value">&lt;17 min</div>
+    <div class="ld-fig-label">2023 outage minutes per customer, 69% better than Northeast peers</div>
+  </div>
+</div>
+<p class="caption">SAIDI figures and peer comparisons as reported by MMLD from APPA's national reliability survey.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, March section (APPA 2021 Certificate of Excellence, top-quartile SAIDI)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2023-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2023 MMLD Annual Report to the Town, March section (2022 SAIDI under 38 minutes; comparison to 66 New England and 100+ national municipal utilities)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, April section (2023 SAIDI under 17 minutes; 69% and 76% comparisons)"></sup></p>
+
+<p>The structural weak point the reports keep returning to is not the poles in town. It is the supply path: every grid-delivered electron enters Marblehead through the Village 13 substation, fed by overhead lines along the old Salem railroad right-of-way. That is what failed in October 2021 and what eroded at Lead Mills in 2018. The current capital program targets exactly this: a Village 13 rebuild with 50% more transformer capacity (roughly $9.7 million committed across switchgear, transformers, and site work in 2022&ndash;2024) and a $1.98 million federal grant application to put steel poles on the Salem end and bury the Marblehead end of the supply lines.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, July and December sections ($4,347,292 switchgear award to Myers Controlled Power; $2,632,446 transformer award to Virginia Transformer)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, September and December sections ($2,719,860 site-construction award to Fischbach &amp; Moore; $1.98M GRIP grant application with $654,000 MMLD match)"></sup></p>
 
 <h2 id="maintenance">Maintenance spending: flat, then a sustained ramp</h2>
 
@@ -158,7 +473,11 @@ og_url: https://marbleheaddata.org/light-department.html
 </svg>
 <p class="caption">Maintenance of Overhead &amp; Underground Lines, from the Operating Expenses statement in each year's annual report. The posted PDFs for 2011 and 2013&ndash;2015 contain the narrative letter only, no financial statements; those years are shown as dashed gaps, not zeros.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2010-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="MMLD Annual Reports to the Town, Operating Expenses statements: 2010 ($701,597), 2012 ($781,646), 2016 ($674,080), 2017 ($767,619), 2018 ($942,547), 2019 ($1,084,268), 2020 ($1,068,475), 2021 ($1,135,180), 2022 ($1,346,596), 2023 ($1,348,602), 2024 ($1,495,611)"></sup></p>
 
-<p>What sits behind the ramp, per the reports themselves: the 2018&ndash;2019 storm damage, a general step-up in preventive replacement (68 poles set in 2019 against 23 in 2018, a jump the 2019 report itself points out), and the department's first dedicated tree-trimming contract, signed in June 2022 with Mayer Tree Service at up to $300,000 a year.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2019-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2019 MMLD Annual Report to the Town, Accomplishments (68 poles set, &quot;a significant increase from 23 set in 2018&quot;)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, June section (three-year Mayer Tree Service agreement, not to exceed $300,000/year)"></sup> A resident can read the timing two ways: spending rose when it needed to, or a town of overhead lines and mature trees did not have a systematic tree-trimming program until 2022, the year after falling trees blacked out the whole town. Both readings are consistent with the record.</p>
+<p>What sits behind the ramp, per the reports themselves: the 2018&ndash;2019 storm damage, a general step-up in preventive replacement (68 poles set in 2019 against 23 in 2018, a jump the 2019 report itself points out), and the department's first dedicated tree-trimming contract, signed in June 2022 with Mayer Tree Service at up to $300,000 a year.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2019-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2019 MMLD Annual Report to the Town, Accomplishments (68 poles set, &quot;a significant increase from 23 set in 2018&quot;)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, June section (three-year Mayer Tree Service agreement, not to exceed $300,000/year)"></sup></p>
+
+<div class="takeaway takeaway--neutral">
+  A resident can read the timing two ways: spending rose when it needed to, or a town of overhead lines and mature trees did not have a systematic tree-trimming program until 2022, the year after falling trees blacked out the whole town. Both readings are consistent with the record.
+</div>
 
 <details class="more-detail">
   <summary>Total maintenance expense by year</summary>
@@ -184,27 +503,58 @@ og_url: https://marbleheaddata.org/light-department.html
 
 <p>MMLD owns two 2.5-megawatt diesel generators at the transfer station, the Wilkins Plant. They earn money supporting the regional grid on peak days, and they are the only generation in town capable of powering residents in an emergency.</p>
 
-<p>The Massachusetts Department of Environmental Protection (<abbr class="g" title="Massachusetts Department of Environmental Protection">DEP</abbr>) <strong>prohibited the plant from operating starting in November 2015</strong>, pending compliance with air-emissions and noise regulations. That prohibition is disclosed for the first time in the 2018 annual report, the first one signed by the new general manager.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, Accomplishments (&quot;Since November 2015, the DEP has prohibited the Plant from operating, pending MMLD compliance with applicable EPA and DEP regulations&quot;)"></sup> DEP cleared the plant to resume normal operation in March 2019.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2019-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2019 MMLD Annual Report to the Town, Accomplishments (March 2019: DEP approval to resume normal operations after sound-dampening measures)"></sup></p>
+<p>The Massachusetts Department of Environmental Protection (<abbr class="g" title="Massachusetts Department of Environmental Protection">DEP</abbr>) <strong>prohibited the plant from operating starting in November 2015</strong>, pending compliance with air-emissions and noise regulations. DEP cleared it to run again in March 2019.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2019-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2019 MMLD Annual Report to the Town, Accomplishments (March 2019: DEP approval to resume normal operations after sound-dampening measures)"></sup> Here is how the annual reports handled those years:</p>
 
-<p>The 2015, 2016, and 2017 reports, covering the years the prohibition was actually in force, say only this: "we are currently performing upgrades to the system, allowing these units to run as clean, quiet, and efficiently as possible," while continuing to describe the diesels as "a proven resource for the town... supplying the town with emergency power if necessary."<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2015-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2015 MMLD Annual Report to the Town (the &quot;upgrades&quot; and &quot;proven resource&quot; passages; no mention of the DEP prohibition)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2016-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2016 MMLD Annual Report to the Town (same passages repeated; no mention of the DEP prohibition)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2017-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2017 MMLD Annual Report to the Town (same passages repeated; no mention of the DEP prohibition)"></sup> A regulator had ordered the town's only emergency generation offline for three and a half years, and the annual reports to the Town described it as routine upgrades until after a management change.</p>
+<div class="ld-contrast">
+  <div class="ld-quote-panel ld-quote-panel--said">
+    <p class="ld-quote-label">What the 2015, 2016, and 2017 reports said</p>
+    <blockquote>"We are currently performing upgrades to the system, allowing these units to run as clean, quiet, and efficiently as possible... The units are a proven resource for the town... supplying the town with emergency power if necessary."</blockquote>
+    <p class="ld-quote-src">Repeated in all three reports, while the prohibition was in force. The prohibition itself is never mentioned.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2015-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2015 MMLD Annual Report to the Town (the &quot;upgrades&quot; and &quot;proven resource&quot; passages; no mention of the DEP prohibition)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2016-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2016 MMLD Annual Report to the Town (same passages repeated; no mention of the DEP prohibition)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2017-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2017 MMLD Annual Report to the Town (same passages repeated; no mention of the DEP prohibition)"></sup></p>
+  </div>
+  <div class="ld-quote-panel ld-quote-panel--true">
+    <p class="ld-quote-label">What the 2018 report disclosed</p>
+    <blockquote>"Since November 2015, the DEP has prohibited the Plant from operating, pending MMLD compliance with applicable EPA and DEP regulations."</blockquote>
+    <p class="ld-quote-src">First disclosure of the shutdown, in the first report signed by the new general manager.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, Accomplishments (&quot;Since November 2015, the DEP has prohibited the Plant from operating, pending MMLD compliance with applicable EPA and DEP regulations&quot;)"></sup></p>
+  </div>
+</div>
 
 <div class="takeaway takeaway--neutral">
-  For anyone asking "do they tell us when something is wrong," this is the concrete before-and-after case. The same reports that hid the Wilkins prohibition era also carried no outage data; the reports since 2018 disclose a self-caused substation failure, vendor delivery delays, and renovation defects on their own.
+  For anyone asking "do they tell us when something is wrong," this is the concrete before-and-after case. A regulator ordered the town's only emergency generation offline for three and a half years, and the annual reports described it as routine upgrades until after a management change. The reports since 2018 disclose failures, delays, and defects on their own.
 </div>
 
 <h2 id="renovation">The $8.7 million building renovation, and its rework</h2>
 
-<p>MMLD renovated its 1894 headquarters at 80 Commercial Street between 2016 and 2018. The 2013 through 2016 reports describe the design process, the architect, and the bidding. None of them state a project budget. The total appears for the first time in the 2018 report, after completion: <strong>$8.7 million</strong>, paid with $4.2 million from reserves and a $4.5 million, 15-year loan at 3.31% interest.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, Accomplishments (renovation completion; &quot;final estimated total project cost is $8.7 million, with $4.2 million paid from an existing reserve account... and $4.5 million in the form of a 15 year loan at 3.31% interest&quot;)"></sup> The loan was also the department's first debt in decades; the 2010 through 2014 reports had each noted that plant investment had been achieved "without the need to issue debt."<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2010-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2010 MMLD Annual Report to the Town (&quot;This increased investment in electric plant has been accomplished without the need to issue debt&quot;; the same sentence recurs through the 2014 report)"></sup></p>
+<p>MMLD renovated its 1894 headquarters at 80 Commercial Street between 2016 and 2018. The 2013 through 2016 reports describe the design process, the architect, and the bidding. None of them state a project budget. The numbers arrived after completion:</p>
 
-<p>What the later reports disclose about the renovation's quality:</p>
+<div class="ld-figs">
+  <div class="ld-fig">
+    <div class="ld-fig-value">$8.7M</div>
+    <div class="ld-fig-label">Final cost, first stated in the 2018 report, after completion</div>
+  </div>
+  <div class="ld-fig">
+    <div class="ld-fig-value">$4.5M</div>
+    <div class="ld-fig-label">Borrowed over 15 years, the department's first debt in decades</div>
+  </div>
+  <div class="ld-fig">
+    <div class="ld-fig-value">~$519K</div>
+    <div class="ld-fig-label">Follow-up fixes disclosed in 2023 and 2024</div>
+  </div>
+  <div class="ld-fig">
+    <div class="ld-fig-value">1,462</div>
+    <div class="ld-fig-label">Customers blacked out by renovation dust, Aug 2018</div>
+  </div>
+</div>
+
+<p>The $8.7 million total was paid with $4.2 million from reserves and a $4.5 million, 15-year loan at 3.31% interest.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, Accomplishments (renovation completion; &quot;final estimated total project cost is $8.7 million, with $4.2 million paid from an existing reserve account... and $4.5 million in the form of a 15 year loan at 3.31% interest&quot;)"></sup> The loan was the department's first debt in decades; the 2010 through 2014 reports had each noted that plant investment had been achieved "without the need to issue debt."<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2010-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2010 MMLD Annual Report to the Town (&quot;This increased investment in electric plant has been accomplished without the need to issue debt&quot;; the same sentence recurs through the 2014 report)"></sup></p>
+
+<p>The rework, in the department's own words:</p>
 
 <ul>
-  <li><strong>August 2018:</strong> renovation dust contributed to the substation failure that blacked out 1,462 customers (above).</li>
   <li><strong>2023:</strong> $235,000 approved for exterior capital improvements "not included in the 2016-18 renovation."<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2023-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2023 MMLD Annual Report to the Town, July section ($235,000 for exterior capital improvements not included in the 2016-18 renovation)"></sup></li>
   <li><strong>2024:</strong> $283,829 contract to fix "roof and downspout drainage issues not adequately addressed in 2016-18 renovation contract."<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, October section (Campbell Construction Group bid of $283,829 for roof and downspout drainage issues)"></sup></li>
 </ul>
 
-<p>That is roughly $519,000 of follow-up work on an $8.7 million project, in the department's own words, plus one sizable outage. Not scandal-scale, and disclosed voluntarily, but it is the documented file for "the building project had real problems."</p>
+<p>Not scandal-scale, and disclosed voluntarily, but it is the documented file for "the building project had real problems."</p>
 
 <h2 id="rates">Rates: a decade of stability, then the 2022 spike</h2>
 
@@ -244,11 +594,53 @@ og_url: https://marbleheaddata.org/light-department.html
 </svg>
 <p class="caption">Operating revenue from each year's Statement of Income divided by retail electricity sales (kWh) from the same report's narrative. Derived figure; it averages all rate classes and includes non-energy revenue. 2011&ndash;2015 financial statements are not in the posted PDFs (dashed gap). The 2016 point uses the 2016 report's own consumption figure; the 2017 report states a different, lower figure for 2016, one of several small inconsistencies in the pre-2018 reports.<sup class="cite" data-href="https://marbleheadelectric.com/meetings-annual-reports.html" data-source="MMLD Annual Reports to the Town, Statements of Income and top-line/narrative kWh figures, 2010 and 2016-2024. Revenue: $15.08M (2010), $16.35M (2016), $16.12M (2017), $17.34M (2018), $17.02M (2019), $17.54M (2020), $17.94M (2021), $20.18M (2022), $21.43M (2023), $21.52M (2024). Sales (MWh): 105,826 / 104,766 / 100,799 / 104,440 / 99,658 / 100,625 / 102,374 / 100,689 / 96,828 / 98,811"></sup></p>
 
-<p>The 2022 jump is the story. Wholesale power costs are passed to customers through a line on the bill called the purchased power adjustment (the "<abbr class="g" title="Purchased Power Adjustment: the per-kWh line on MMLD bills that passes wholesale power cost changes through to customers">PPA</abbr>" line). In 2022, as natural gas prices spiked after Russia invaded Ukraine, MMLD raised that adjustment three times: 3.1 to 4.1 cents per kWh in March, to 5.6 cents in August, to 9.0 cents in October. The department's own report calls the result "a 34% residential rate increase from January to October."<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, March, August, and October sections (the three PPA increases and the &quot;34% residential rate increase from January to October&quot; language)"></sup> By June 2023 the adjustment had fallen back to 0.5 cents.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2023-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2023 MMLD Annual Report to the Town, June section (power cost adjustment dropped from 2.5 to 0.5 cents/kWh)"></sup></p>
+<p>The 2022 jump is the story. Wholesale power costs are passed to customers through a line on the bill called the purchased power adjustment (the "<abbr class="g" title="Purchased Power Adjustment: the per-kWh line on MMLD bills that passes wholesale power cost changes through to customers">PPA</abbr>" line). In 2022, as natural gas prices spiked after Russia invaded Ukraine, MMLD raised that adjustment three times:</p>
+
+<div class="ld-steps">
+  <div class="ld-step">
+    <div class="ld-step-when">Jan 2022</div>
+    <div class="ld-step-value">3.1&cent;</div>
+  </div>
+  <div class="ld-step">
+    <div class="ld-step-when">March</div>
+    <div class="ld-step-value">4.1&cent;</div>
+  </div>
+  <div class="ld-step">
+    <div class="ld-step-when">August</div>
+    <div class="ld-step-value">5.6&cent;</div>
+  </div>
+  <div class="ld-step ld-step--hot">
+    <div class="ld-step-when">October</div>
+    <div class="ld-step-value">9.0&cent;</div>
+  </div>
+  <div class="ld-step">
+    <div class="ld-step-when">June 2023</div>
+    <div class="ld-step-value">0.5&cent;</div>
+  </div>
+</div>
+<p class="ld-steps-caption">The purchased power adjustment, per kWh, on every metered bill. The department's own report calls the 2022 climb "a 34% residential rate increase from January to October."<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, March, August, and October sections (the three PPA increases and the &quot;34% residential rate increase from January to October&quot; language)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2023-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2023 MMLD Annual Report to the Town, June section (power cost adjustment dropped from 2.5 to 0.5 cents/kWh)"></sup></p>
 
 <p>The driver was the regional wholesale market, not MMLD operations: purchased power cost the department $10.5 million in 2021 and $12.7 million in 2022 while sales fell slightly.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2021 and 2022 MMLD Annual Reports to the Town, Operating Expenses statements (Total Power Supply Expenses: $10,488,613 in 2021; $12,722,757 in 2022)"></sup> But the pass-through mechanism gave customers no cushioning, and the fund built for exactly this purpose, the rate stabilization reserve, sat at about $900,000, roughly one month of wholesale costs, through the entire spike. The board tripled it to $3.3 million in 2024, on the advice of the department's auditors and APPA, after the shock had passed.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, March section (rate stabilization fund held ~$900,000 &quot;for many years,&quot; equal to one month of wholesale costs; APPA and auditors recommend three months; board transfers $1.5M); balance sheet (Accumulated Provision for Rate Stabilization: $3,341,483)"></sup></p>
 
-<p>Two other rate changes land on top of that. In January 2023 and again in January 2024, following a consultant's cost-of-service study, the monthly fixed charge on a residential bill rose from $4.25 to $11.25 and then to $18.50, with the per-kWh rate trimmed to hold total revenue in each class constant.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, January and August sections (UFS cost-of-service study conclusions; base rate $4.25 to $11.25 approved for January 2023)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2023-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2023 MMLD Annual Report to the Town, November section (second phase: base rate to $18.50, energy rate from $0.1969 to $0.1895/kWh, effective January 2024)"></sup> Revenue-neutral in total, but not per household: a fixed charge that quadruples in two years falls hardest on low-usage customers, and it lengthens the payback on rooftop solar. The study's rationale, that fixed costs should be covered by fixed charges, is standard utility economics. The resentment it generates is also standard.</p>
+<p>Two other rate changes land on top of that. Following a consultant's cost-of-service study, the monthly fixed charge on a residential bill stepped up twice, with the per-kWh rate trimmed to hold total revenue in each class constant:</p>
+
+<div class="ld-steps">
+  <div class="ld-step">
+    <div class="ld-step-when">Through 2022</div>
+    <div class="ld-step-value">$4.25</div>
+  </div>
+  <div class="ld-step">
+    <div class="ld-step-when">Jan 2023</div>
+    <div class="ld-step-value">$11.25</div>
+  </div>
+  <div class="ld-step ld-step--hot">
+    <div class="ld-step-when">Jan 2024</div>
+    <div class="ld-step-value">$18.50</div>
+  </div>
+</div>
+<p class="ld-steps-caption">Residential monthly base charge. The energy rate fell from $0.1969 to $0.1895 per kWh alongside the second step.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, January and August sections (UFS cost-of-service study conclusions; base rate $4.25 to $11.25 approved for January 2023)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2023-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2023 MMLD Annual Report to the Town, November section (second phase: base rate to $18.50, energy rate from $0.1969 to $0.1895/kWh, effective January 2024)"></sup></p>
+
+<p>Revenue-neutral in total, but not per household: a fixed charge that quadruples in two years falls hardest on low-usage customers, and it lengthens the payback on rooftop solar. The study's rationale, that fixed costs should be covered by fixed charges, is standard utility economics. The resentment it generates is also standard.</p>
 
 <h3>What the town gets: $330,000, every year, for fifteen years</h3>
 
@@ -260,80 +652,117 @@ og_url: https://marbleheaddata.org/light-department.html
 
 <p>The department's stated strategy since 2020 is "Go Green without Going in the Red."<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2020-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2020 MMLD Annual Report to the Town, fuel-mix section (first use of the &quot;Go Green without Going in the Red&quot; phrase)"></sup> Item by item, what the reports disclose:</p>
 
-<table class="mmld-table">
-  <thead>
-    <tr><th>Program</th><th>Cost</th><th>Return</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>LED streetlights</strong> (2018)</td>
-      <td>$230,000, half covered by a state grant</td>
-      <td>Estimated $63,000/year savings; net cost paid back in under two years<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, Accomplishments (1,900 LED street lights; $230,000 purchase, $115,000 Mass DOER grant, estimated $63,000/year savings)"></sup></td>
-    </tr>
-    <tr>
-      <td><strong>Smart meters</strong> (2010&ndash;2014)</td>
-      <td>~$2.7M project, half covered by a federal grant</td>
-      <td>Reports credit it with ending heat-overload transformer outages (zero in 2013&ndash;2014), faster outage location, and repairs moved from overtime to scheduled days<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2010-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2010 MMLD Annual Report to the Town ($1,346,175 50% matching DOE grant awarded March 12, 2010)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2013-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2013 MMLD Annual Report to the Town (no heat-related transformer outages; overtime avoidance; minute-by-minute monitoring)"></sup></td>
-    </tr>
-    <tr>
-      <td><strong>Hydro-Qu&eacute;bec contract</strong> (2020)</td>
-      <td>3.85&cent;/kWh for 0.75 MW of firm hydropower</td>
-      <td>Below the ~4&cent; average portfolio cost the department cited the same year; carbon-free at a discount<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2020-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2020 MMLD Annual Report to the Town, October section ($0.0385/kWh Hydro-Quebec agreement) and May section (~$0.04/kWh average portfolio energy cost)"></sup></td>
-    </tr>
-    <tr>
-      <td><strong>2024 portfolio swap</strong></td>
-      <td>Replaced commodity contracts with hydro contracts that include renewable-energy certificates</td>
-      <td>Carbon-free share rose from 42% to 65% while average wholesale cost <em>fell</em> 3.4%, from 11.28 to 10.9&cent;/kWh<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, portfolio section (65% carbon-free vs 42% in 2023; average wholesale power cost 11.28 to 10.9 cents/kWh)"></sup></td>
-    </tr>
-    <tr>
-      <td><strong>Local community solar</strong> (studied 2019&ndash;2020, not built)</td>
-      <td>Federal lab study, funded by a $57,500 grant, priced local solar at ~8&cent;/kWh vs ~4&cent; portfolio average</td>
-      <td>Department declined to build at twice its average cost; floated an opt-in solar rate instead<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2020-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2020 MMLD Annual Report to the Town, May section (NREL analysis: school roofs most feasible; ~$0.08/kWh solar vs ~$0.04/kWh portfolio; possible separate community solar rate)"></sup></td>
-    </tr>
-    <tr>
-      <td><strong>Go Green Now</strong> (2022)</td>
-      <td>Opt-in premium of 2.2&cent;/kWh (later 2.0&cent;) buys 100% carbon-free accounting for that customer</td>
-      <td>Volunteers pay; ratepayers at large don't<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, February section (opt-in Go Green Now rate at 2.2 cents/kWh)"></sup></td>
-    </tr>
-    <tr>
-      <td><strong>Rebates and audits</strong></td>
-      <td>The conservation expense line grew from ~$70K&ndash;$170K/year in the 2010s to $357,269 in 2024; cash rebates paid were $39,031 (2023) and $67,702 (2024)</td>
-      <td>Energy savings claimed only sporadically; no annual savings accounting<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, Operating Expenses (Advertising, Conservation, Energy Audits: $357,269) and NextZero summary ($67,702 rebates to 280 participants; $39,031 in 2023)"></sup></td>
-    </tr>
-    <tr>
-      <td><strong>Free residential EV chargers</strong> (2017&ndash;)</td>
-      <td>Unit and program costs never disclosed</td>
-      <td>Peak-avoiding charging; enrollment chronically low, 128 of 708 plug-in vehicles in town (18%) by end of 2024, a shortfall the reports themselves flag every year<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, Scheduled EV Charging summary (128 cumulative enrollments; 708 registered plug-in vehicles per Mass DOT; 18%)"></sup></td>
-    </tr>
-    <tr>
-      <td><strong>Berkshire Wind</strong> (2011&ndash;)</td>
-      <td>Never disclosed in the reports</td>
-      <td>Output reported annually; the renewable-energy certificates were sold, not kept, until a 2021 state law changed the accounting, a practice the 2022 report acknowledges was used "to help lower the cost of paying for these projects"<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, carbon-free tracking section (RECs historically sold to lower Berkshire Wind's cost; retired going forward under the 2021 climate law)"></sup></td>
-    </tr>
-    <tr>
-      <td><strong>Peabody peaker plant</strong> (ratified 2021)</td>
-      <td>Share of a 55 MW gas/oil peaker; regionally controversial on climate grounds</td>
-      <td>The 2021 report devotes eight numbered paragraphs to defending the board's 4-0-1 vote, including the point that the multi-year obligation is legally binding regardless of later second thoughts<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2021-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2021 MMLD Annual Report to the Town, June section (Project 2015A ratification, eight-point rationale, public information session, MMWEC vs Danvers enforceability citation)"></sup></td>
-    </tr>
-  </tbody>
-</table>
+<div class="ld-ledger">
+  <div class="ld-card">
+    <span class="ld-chip ld-chip--documented">Payback documented</span>
+    <h3>LED streetlights (2018)</h3>
+    <p>$230,000 purchase, half covered by a state grant; estimated $63,000/year savings. Net cost paid back in under two years.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2018-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2018 MMLD Annual Report to the Town, Accomplishments (1,900 LED street lights; $230,000 purchase, $115,000 Mass DOER grant, estimated $63,000/year savings)"></sup></p>
+  </div>
+  <div class="ld-card">
+    <span class="ld-chip ld-chip--documented">Payback documented</span>
+    <h3>Smart meters (2010&ndash;2014)</h3>
+    <p>~$2.7M project, half covered by a federal grant. Reports credit it with ending heat-overload transformer outages (zero in 2013&ndash;2014), faster outage location, and repairs moved from overtime to scheduled days.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2010-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2010 MMLD Annual Report to the Town ($1,346,175 50% matching DOE grant awarded March 12, 2010)"></sup><sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2013-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2013 MMLD Annual Report to the Town (no heat-related transformer outages; overtime avoidance; minute-by-minute monitoring)"></sup></p>
+  </div>
+  <div class="ld-card">
+    <span class="ld-chip ld-chip--documented">Cheap and carbon-free</span>
+    <h3>Hydro-Qu&eacute;bec contract (2020)</h3>
+    <p>3.85&cent;/kWh for 0.75 MW of firm hydropower, below the ~4&cent; average portfolio cost the department cited the same year.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2020-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2020 MMLD Annual Report to the Town, October section ($0.0385/kWh Hydro-Quebec agreement) and May section (~$0.04/kWh average portfolio energy cost)"></sup></p>
+  </div>
+  <div class="ld-card">
+    <span class="ld-chip ld-chip--documented">Greener and cheaper</span>
+    <h3>2024 portfolio swap</h3>
+    <p>Replaced commodity contracts with hydro contracts that include renewable-energy certificates. Carbon-free share rose from 42% to 65% while average wholesale cost <strong>fell</strong> 3.4%, from 11.28 to 10.9&cent;/kWh.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, portfolio section (65% carbon-free vs 42% in 2023; average wholesale power cost 11.28 to 10.9 cents/kWh)"></sup></p>
+  </div>
+  <div class="ld-card">
+    <span class="ld-chip ld-chip--declined">Declined on cost</span>
+    <h3>Local community solar (studied, not built)</h3>
+    <p>A federal lab study, funded by a $57,500 grant, priced local solar at ~8&cent;/kWh against a ~4&cent; portfolio average. The department declined to build at twice its average cost and floated an opt-in solar rate instead.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2020-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2020 MMLD Annual Report to the Town, May section (NREL analysis: school roofs most feasible; ~$0.08/kWh solar vs ~$0.04/kWh portfolio; possible separate community solar rate)"></sup></p>
+  </div>
+  <div class="ld-card">
+    <span class="ld-chip ld-chip--declined">Opt-in only</span>
+    <h3>Go Green Now (2022)</h3>
+    <p>A premium of 2.2&cent;/kWh (later 2.0&cent;) buys 100% carbon-free accounting for that customer. Volunteers pay; ratepayers at large don't.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, February section (opt-in Go Green Now rate at 2.2 cents/kWh)"></sup></p>
+  </div>
+  <div class="ld-card">
+    <span class="ld-chip ld-chip--undisclosed">Benefits unquantified</span>
+    <h3>Rebates and audits</h3>
+    <p>The conservation expense line grew from ~$70K&ndash;$170K/year in the 2010s to $357,269 in 2024; cash rebates paid were $39,031 (2023) and $67,702 (2024). Energy savings claimed only sporadically; no annual savings accounting.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, Operating Expenses (Advertising, Conservation, Energy Audits: $357,269) and NextZero summary ($67,702 rebates to 280 participants; $39,031 in 2023)"></sup></p>
+  </div>
+  <div class="ld-card">
+    <span class="ld-chip ld-chip--undisclosed">Costs not disclosed</span>
+    <h3>Free residential EV chargers (2017&ndash;)</h3>
+    <p>Unit and program costs never appear in the reports. Enrollment is chronically low: 128 of 708 plug-in vehicles in town (18%) by end of 2024, a shortfall the reports themselves flag every year.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2024 MMLD Annual Report to the Town, Scheduled EV Charging summary (128 cumulative enrollments; 708 registered plug-in vehicles per Mass DOT; 18%)"></sup></p>
+  </div>
+  <div class="ld-card">
+    <span class="ld-chip ld-chip--undisclosed">Costs not disclosed</span>
+    <h3>Berkshire Wind (2011&ndash;)</h3>
+    <p>Output is reported annually, but the contract cost has never appeared in an annual report. Its renewable-energy certificates were sold, not kept, until a 2021 state law changed the accounting, a practice the 2022 report acknowledges was used "to help lower the cost of paying for these projects."<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2022-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2022 MMLD Annual Report to the Town, carbon-free tracking section (RECs historically sold to lower Berkshire Wind's cost; retired going forward under the 2021 climate law)"></sup></p>
+  </div>
+  <div class="ld-card">
+    <span class="ld-chip ld-chip--contested">Contested</span>
+    <h3>Peabody peaker plant (ratified 2021)</h3>
+    <p>A share of a 55 MW gas/oil peaker, regionally controversial on climate grounds. The 2021 report devotes eight numbered paragraphs to defending the board's 4-0-1 vote, including the point that the multi-year obligation is legally binding regardless of later second thoughts.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/annual-reports/2021-MMLD-Annual-Report-to-Town-ACC.pdf" data-source="2021 MMLD Annual Report to the Town, June section (Project 2015A ratification, eight-point rationale, public information session, MMWEC vs Danvers enforceability citation)"></sup></p>
+  </div>
+</div>
 
-<p>The pattern: where a green investment had a clear payback (LEDs, smart meters, cheap hydro), the department took it and published the numbers. Where it didn't (local solar at twice the portfolio cost), the department declined and said why. The gaps are on the smaller programs, where costs (EV chargers) or benefits (rebates) go unquantified, and on Berkshire Wind, whose contract cost has never appeared in an annual report.</p>
+<p>The pattern: where a green investment had a clear payback (LEDs, smart meters, cheap hydro), the department took it and published the numbers. Where it didn't (local solar at twice the portfolio cost), the department declined and said why. The gaps are on the smaller programs, where costs or benefits go unquantified, and on Berkshire Wind, whose contract cost has never appeared in an annual report.</p>
 
 <h2 id="trust">What residents actually think, measured</h2>
 
-<p>In late 2025 MMLD commissioned an independent survey of 350 residential customers (margin of error &plusmn;5.1%) as part of a statewide study that also surveyed customers of other municipal utilities and of investor-owned utilities like National Grid and Eversource.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/2025-Marblehead-Municipal-Light-Department-Residential-Customer-Satisfaction-Report-ACC.pdf" data-source="2025 MEAM Residential Customer Satisfaction Report for MMLD, GreatBlue Research (methodology: 350 digital completes, Oct 8-Nov 17 2025, +/-5.1% at 95% confidence)"></sup> The results are not close: 89.7% overall satisfaction, 68.3% saying they trust the utility "completely," and a net promoter score of +67.4, far above both the Massachusetts municipal-utility average and the investor-owned utilities on nearly every measure.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/2025-Marblehead-Municipal-Light-Department-Residential-Customer-Satisfaction-Report-ACC.pdf" data-source="2025 MEAM Residential Customer Satisfaction Report for MMLD, Key Study Findings and Satisfaction sections (89.7% overall satisfaction; 68.3% complete trust; NPS +67.4 vs MA Public Power and MA IOU)"></sup></p>
+<p>In late 2025 MMLD commissioned an independent survey of 350 residential customers (margin of error &plusmn;5.1%) as part of a statewide study that also surveyed customers of other municipal utilities and of investor-owned utilities like National Grid and Eversource.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/2025-Marblehead-Municipal-Light-Department-Residential-Customer-Satisfaction-Report-ACC.pdf" data-source="2025 MEAM Residential Customer Satisfaction Report for MMLD, GreatBlue Research (methodology: 350 digital completes, Oct 8-Nov 17 2025, +/-5.1% at 95% confidence)"></sup> The results are not close:</p>
 
-<p>The texture under the headline matches the folk impression that residents love the trucks and grumble about everything else:</p>
+<div class="ld-figs">
+  <div class="ld-fig">
+    <div class="ld-fig-value">89.7%</div>
+    <div class="ld-fig-label">Overall satisfaction</div>
+  </div>
+  <div class="ld-fig">
+    <div class="ld-fig-value">68.3%</div>
+    <div class="ld-fig-label">Trust the utility "completely"</div>
+  </div>
+  <div class="ld-fig">
+    <div class="ld-fig-value">+67.4</div>
+    <div class="ld-fig-label">Net promoter score (78.2% promoters, 10.8% detractors)</div>
+  </div>
+  <div class="ld-fig">
+    <div class="ld-fig-value">69.4%</div>
+    <div class="ld-fig-label">Call their rates reasonable</div>
+  </div>
+</div>
+<p class="caption">All figures far above the Massachusetts investor-owned utilities and above the municipal-utility average on most measures.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/2025-Marblehead-Municipal-Light-Department-Residential-Customer-Satisfaction-Report-ACC.pdf" data-source="2025 MEAM Residential Customer Satisfaction Report for MMLD, Key Study Findings and Satisfaction sections (89.7% overall satisfaction; 68.3% complete trust; NPS +67.4 vs MA Public Power and MA IOU)"></sup></p>
 
-<ul>
-  <li>The <strong>highest-rated</strong> attributes are exactly the storm ones: 96.2% positive on "providing consistent and reliable electric service" and 95.7% on "restoring power after an outage in a reasonable amount of time."</li>
-  <li>The <strong>lowest-rated</strong> attribute is "offering innovative programs and services" at 61.8%, the only category where MMLD scores <em>below</em> the Massachusetts municipal-utility average.</li>
-  <li>On rates, 69.4% call them reasonable, but the largest single block (39.4%) picks "somewhat reasonable," the lukewarm option.</li>
-  <li>On the green transition, 54.9% say MMLD is doing enough to curb carbon emissions, and a large 38.9% say they don't know. Only 35.1% had heard of the rebate programs.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/2025-Marblehead-Municipal-Light-Department-Residential-Customer-Satisfaction-Report-ACC.pdf" data-source="2025 MEAM Residential Customer Satisfaction Report for MMLD (organizational characteristic ratings incl. 96.2%/95.7% reliability and 61.8% innovative programs; 69.4%/39.4% rate perception; 54.9%/38.9% carbon question; 35.1% NextZero familiarity)"></sup></li>
-</ul>
+<p>The texture under the headline matches the folk impression that residents love the trucks and grumble about everything else. Positive ratings by category:</p>
 
-<p>Fast restoration is visible from a kitchen window. Portfolio strategy, rate design, and reserve policy are visible only in documents most residents never read. The satisfaction gap between those two categories is the trust gap.</p>
+<div class="ld-bars">
+  <span class="lbl is-hi">Reliable electric service</span>
+  <span class="track"><span class="fill" style="width: 96.2%"></span></span>
+  <span class="pct">96.2%</span>
+  <span class="lbl is-hi">Restoring power quickly</span>
+  <span class="track"><span class="fill" style="width: 95.7%"></span></span>
+  <span class="pct">95.7%</span>
+  <span class="lbl">Honesty / integrity</span>
+  <span class="track"><span class="fill" style="width: 89.8%"></span></span>
+  <span class="pct">89.8%</span>
+  <span class="lbl">Value for the cost</span>
+  <span class="track"><span class="fill" style="width: 84.6%"></span></span>
+  <span class="pct">84.6%</span>
+  <span class="lbl">Rates</span>
+  <span class="track"><span class="fill" style="width: 73.2%"></span></span>
+  <span class="pct">73.2%</span>
+  <span class="lbl">Helping customers conserve</span>
+  <span class="track"><span class="fill" style="width: 68.9%"></span></span>
+  <span class="pct">68.9%</span>
+  <span class="lbl is-lo">Innovative programs and services</span>
+  <span class="track"><span class="fill is-lo" style="width: 61.8%"></span></span>
+  <span class="pct">61.8%</span>
+</div>
+<p class="caption">Share of MMLD customers rating each characteristic 7&ndash;10 on a 10-point scale, 2025. "Innovative programs and services" is the only category where MMLD scores below the Massachusetts municipal-utility average.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/2025-Marblehead-Municipal-Light-Department-Residential-Customer-Satisfaction-Report-ACC.pdf" data-source="2025 MEAM Residential Customer Satisfaction Report for MMLD, Satisfaction / Organizational Characteristics (ratings 7-10 shown; MMLD 61.8% vs MA Public Power 68.4% on innovative programs)"></sup></p>
+
+<p>Two more numbers fill out the picture: on rates, the largest single block of customers (39.4%) picks "somewhat reasonable," the lukewarm option; and on the green transition, 54.9% say MMLD is doing enough to curb carbon emissions while a large 38.9% say they don't know. Only 35.1% had heard of the rebate programs.<sup class="cite" data-href="https://marbleheadelectric.com/pdfs/2025-Marblehead-Municipal-Light-Department-Residential-Customer-Satisfaction-Report-ACC.pdf" data-source="2025 MEAM Residential Customer Satisfaction Report for MMLD (69.4%/39.4% rate perception; 54.9%/38.9% carbon question; 35.1% NextZero familiarity)"></sup></p>
+
+<div class="takeaway takeaway--neutral">
+  Fast restoration is visible from a kitchen window. Portfolio strategy, rate design, and reserve policy are visible only in documents most residents never read. The satisfaction gap between those two categories is the trust gap.
+</div>
 
 <h2 id="gaps">What this record can't show</h2>
 
