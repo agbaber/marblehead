@@ -180,8 +180,13 @@ Key cost facts:
   added tree trimming, cybersecurity, an IT manager, and fiber-network
   monitoring. Pension/benefits expense is the most volatile line
   ($549K-$1.76M year to year) due to GASB actuarial swings, not headcount.
-- **PILOT to the Town: $330,000 every single year, 2010-2024, never
-  increased.** Cumulative statements in the reports: $3.53M through 2010,
+- **PILOT to the Town: $330,000 every single year, 2010-2024.** UPDATE
+  (2026-07-07): the streak ended after the reports covered here. The 2025
+  Actual PILOT was $360,000, and a board policy drafted 11/21/2025
+  (`2025-11-21-Voluntary-PILOT-policy-draft.pdf` in this folder, from the
+  MMLD minutes archive) formalizes the PILOT at $3.60/MWh of prior-year
+  sales with a $360,000 minimum, while making explicit it is voluntary
+  under DPU precedent and payable only from below-the-line surplus. Cumulative statements in the reports: $3.53M through 2010,
   $5.76M through 2017. Meanwhile unappropriated earned surplus went from
   $21.1M (2010) to $23.6M (2024), cash+depreciation fund from ~$5.9M to
   ~$15.3M, and the rate stabilization fund was tripled to $3.34M in 2024 on
