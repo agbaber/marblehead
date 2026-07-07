@@ -352,6 +352,44 @@ people; Sen. Lovely + Reps. Ehrlich and Kerans demanded environmental
 review (Itemlive 7/28/2021). Plant entered service mid-2024, without
 green hydrogen (GBH News 7/5/2024).
 
+## Minutes mine 2026-07-07 (all 186 meetings, 2015-2026)
+
+Full extraction in `minutes/MINUTES_DIGEST.md` + four CSVs (98 money
+votes, 32 rate actions, 34 priced supply items, 79 executive sessions).
+Findings that changed the page:
+
+- **Deferred maintenance admitted on the record.** Distribution Manager
+  5/4/2023: "25 to 35 years of non-maintenance... crumbling." GM
+  6/27/2023, asked if ratepayers enjoyed artificially low rates while
+  maintenance was skipped: "unequivocal: 'Yes, there is no way around
+  it.'" The post-2016 spending ramp is catch-up. Page reframed.
+- **Berkshire Wind priced at last**: 2022 LCOE table (5/30/2023 minutes):
+  BW1 $183.51/MWh, BW2 $174.02 vs Seabrook $28.99, Millstone $43.75,
+  portfolio $76.95. Also: offshore wind PPA <= $77.40/MWh (2022);
+  Seabrook 2028-49 PPA "Commercially Sensitive," listed $83/MWh in a
+  comparison table; Cotton solar LCOE $0.057/kWh after $2.3M IRA credit.
+- **Village 13 cost arc**: first awards 3/5/2020 ($891,754 transformers
+  + $1,174,787 switchgear = $2.07M), cancelled 6/30/2020 (sewer main),
+  re-bid 2022 at $6.98M; site work $2.72M vs $1.5M anticipated;
+  "most capital-intensive project MMLD has ever undertaken" (~$10M).
+- **2022 spike, sharper numbers**: avg residential bill $116.61 (Jan) to
+  $179.50 (Nov) = +54% (dept's own 10/25/2022 slide); planned fourth
+  hike cancelled by spending $450K = half the Rate Stabilization Fund
+  (11/29/2022); projected year-end gaps $778K then $573K.
+- **Hadden's exit explained**: 10/24/2017 vote to "decline another three
+  year contract," month-to-month to 3/31/2018; sitting commissioner
+  Kowalik hired at $160K (4/2018). Same non-renewal script as 2025.
+- **2025-26**: Blair contract 5 yrs at $216K + $5K vehicle; Kowalik
+  severance = 6 months salary, payable by 1/16/2026; CY2025 PILOT
+  under the new formula = $368,888 (4-1, Hull no); union dissolved
+  (IUE-CWA Local 81214, 3/2026); Wilkins "numerous fines this year for
+  non-performance" (11/2025); Lightshift 5MW/20MWh battery ~$500K/yr
+  value to MMLD, target June 2027.
+- **Other**: residential battery-storage ban (only town in New England)
+  ended 3-1 on 8/30/2022, Hull opposed; AG found an Open Meeting Law
+  violation re the 11/14/2018 meeting; manual-read meter fee $15/mo
+  (2016); 2020-10-27 executive session has no stated purpose in minutes.
+
 ## Gaps / next steps if this becomes a page
 
 - Reports lack: any SAIDI/SAIFI time series before 2021, wholesale cost per
