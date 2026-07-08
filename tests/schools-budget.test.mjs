@@ -33,19 +33,25 @@ await page.waitForTimeout(200);
 const perPupilAnomalies = await page.$$eval('#panel1-svg circle.chart-anomaly', els => els.length);
 assert.equal(perPupilAnomalies, 0, `expected 0 anomaly circles in per-pupil view, got ${perPupilAnomalies}`);
 
-// Panel 2 renders 12 rects (2 FYs * 6 buckets)
-await page.waitForSelector('#panel2-svg rect', { timeout: 5000 });
-const rects = await page.$$eval('#panel2-svg rect', els => els.length);
-assert.equal(rects, 12, `expected 12 stacked segments in Panel 2, got ${rects}`);
+// Panel 2 is a table now: 6 bucket rows in tbody, 1 total row in tfoot.
+await page.waitForSelector('#panel2-body tr', { timeout: 5000 });
+const panel2Rows = await page.$$eval('#panel2-body tr', els => els.length);
+assert.equal(panel2Rows, 6, `expected 6 bucket rows in Panel 2 table, got ${panel2Rows}`);
 
-// Legend has 6 items
-const legendItems = await page.$$eval('#panel2 .stack-legend-item', els => els.length);
-assert.equal(legendItems, 6, `expected 6 legend items, got ${legendItems}`);
+const panel2Total = await page.$$eval('#panel2-foot tr', els => els.length);
+assert.equal(panel2Total, 1, `expected 1 total row in Panel 2 tfoot, got ${panel2Total}`);
 
-// Peer block has 17 rows (all towns present in FY24)
+// Bucket names present in first column.
+const buckets = await page.$$eval('#panel2-body td:first-child', els => els.map(e => e.textContent.trim()));
+assert.deepEqual(buckets, ['Regular instruction', 'Special education', 'Student services', 'Operations', 'Administration', 'Capital']);
+
+// Peer block: all 17 towns now have a per-student value (no dashes in that column).
 await page.waitForSelector('#peer-block-body tr', { timeout: 5000 });
 const peerRows = await page.$$eval('#peer-block-body tr', els => els.length);
-assert.ok(peerRows >= 15 && peerRows <= 20, `expected 15-20 peer rows, got ${peerRows}`);
+assert.equal(peerRows, 17, `expected 17 peer rows, got ${peerRows}`);
+
+const dashesInPerStudent = await page.$$eval('#peer-block-body tr td:nth-child(5)', els => els.filter(e => e.textContent.trim() === '–' || e.textContent.trim() === '').length);
+assert.equal(dashesInPerStudent, 0, `expected 0 dashes in per-student column (all 17 towns have enrollment now), got ${dashesInPerStudent}`);
 
 const highlighted = await page.$$eval('#peer-block-body tr.peer-highlight td:first-child', els => els.map(e => e.textContent.trim()));
 assert.deepEqual(highlighted, ['Marblehead'], `expected Marblehead highlighted, got ${JSON.stringify(highlighted)}`);

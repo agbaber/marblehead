@@ -71,57 +71,50 @@ og_url: https://marbleheaddata.org/schools-budget.html
     stroke: var(--surface);
     stroke-width: 1.5;
   }
-  .chart-stack-panel {
-    margin: 1rem 0 2rem;
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 12px 0 8px;
   }
-  .stack-col-label {
-    fill: var(--text);
+  .budget-table th, .budget-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .budget-table th {
+    text-align: left;
     font-size: 12px;
-    font-weight: 600;
-    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--text);
   }
-  .stack-segment-label {
-    fill: var(--surface);
-    font-size: 10px;
-    font-family: inherit;
-    pointer-events: none;
+  .budget-table .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
   }
-  .stack-segment-label-outside {
-    fill: var(--text-muted);
-    font-size: 10px;
-    font-family: inherit;
+  .budget-table tfoot th, .budget-table tfoot td {
+    font-weight: 700;
+    border-top: 2px solid var(--text);
+    border-bottom: none;
   }
-  .stack-legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 20px;
-    margin-top: 12px;
-    font-size: 13px;
+  .budget-table .bar-col {
+    width: 30%;
+    padding-left: 12px;
   }
-  .stack-legend-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .stack-legend-swatch {
-    width: 14px;
+  .budget-table .bar {
+    display: block;
     height: 14px;
+    background: var(--c-buoy);
     border-radius: 2px;
-    flex-shrink: 0;
   }
-  /* Bucket colors -- coastal palette, distinct but harmonizing */
-  .stack-regular      { fill: var(--c-navy);  }
-  .stack-sped         { fill: var(--c-brass); }
-  .stack-services     { fill: var(--c-teal);  }
-  .stack-operations   { fill: var(--c-buoy);  }
-  .stack-admin        { fill: color-mix(in srgb, var(--c-navy) 60%, var(--c-buoy) 40%); }
-  .stack-capital      { fill: color-mix(in srgb, var(--c-brass) 60%, var(--text-muted) 40%); }
-  .stack-swatch-regular    { background: var(--c-navy);  }
-  .stack-swatch-sped       { background: var(--c-brass); }
-  .stack-swatch-services   { background: var(--c-teal);  }
-  .stack-swatch-operations { background: var(--c-buoy);  }
-  .stack-swatch-admin      { background: color-mix(in srgb, var(--c-navy) 60%, var(--c-buoy) 40%); }
-  .stack-swatch-capital    { background: color-mix(in srgb, var(--c-brass) 60%, var(--text-muted) 40%); }
+  .budget-table .delta-up,
+  .budget-table .delta-down { font-weight: 600; }
+  .budget-table .delta-flat { color: var(--text-muted); }
+  @media (max-width: 600px) {
+    .budget-table { font-size: 13px; }
+    .budget-table th, .budget-table td { padding: 6px 6px; }
+    .budget-table .bar-col { display: none; }
+  }
   .peer-block table {
     width: 100%;
     border-collapse: collapse;
@@ -177,51 +170,34 @@ og_url: https://marbleheaddata.org/schools-budget.html
   </figcaption>
 </figure>
 
-<h2 id="proposed-by-category">What the schools proposed, by category (fiscal year 2026 and fiscal year 2027)</h2>
+<h2 id="proposed-by-category">Superintendent's proposed budget by category, fiscal year 2026 and fiscal year 2027</h2>
 
-<p>
-  These amounts are the superintendent's level-funded proposed budget for each fiscal
-  year, taken from the February 2026 School Committee meeting packet. They are
-  <em>before</em> the end-of-cycle reductions the packet lists on pages 14 through 30
-  (roughly $1.6 million cut from fiscal year 2027 to land on the level-funded target),
-  so the totals here run higher than the packet's adopted-budget grand total.
-  Fixed Charges (health insurance and retirement) are not shown because Marblehead
-  budgets these at the town level, not the school side.
-</p>
-
-<figure class="chart-panel chart-stack-panel" id="panel2">
-  <svg id="panel2-svg" viewBox="0 0 800 460" preserveAspectRatio="xMidYMid meet" aria-label="Marblehead schools proposed budget by category, fiscal year 2026 and fiscal year 2027"></svg>
-  <div class="stack-legend" id="panel2-legend" aria-label="Category legend">
-    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-regular"></span>Regular instruction</div>
-    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-sped"></span>Special education</div>
-    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-services"></span>Student services</div>
-    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-operations"></span>Operations</div>
-    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-admin"></span>Administration</div>
-    <div class="stack-legend-item"><span class="stack-legend-swatch stack-swatch-capital"></span>Capital</div>
-  </div>
+<figure class="chart-panel" id="panel2">
+  <table class="budget-table" aria-label="Proposed schools budget by category">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th class="num">FY26</th>
+        <th class="num">FY27</th>
+        <th class="num">Change</th>
+        <th class="bar-col" aria-hidden="true"></th>
+      </tr>
+    </thead>
+    <tbody id="panel2-body"></tbody>
+    <tfoot id="panel2-foot"></tfoot>
+  </table>
   <figcaption>
-    Source: February 5, 2026 School Committee meeting packet, superintendent's proposed
-    fiscal year 2027 budget.
-    <sup class="cite" data-src="mps-fy27-packet" data-page="various">2</sup>
-    Values are level-funded, pre-reduction, and exclude Fixed Charges. Full per-row
-    citations in
-    <a href="/data/mps_proposed_budget_by_category.csv"><code>data/mps_proposed_budget_by_category.csv</code></a>.
-    Earlier years (fiscal year 2018 through fiscal year 2025) will land in follow-up updates as
-    each packet's summary is extracted.
+    Level-funded, pre-reduction. February 5, 2026 School Committee packet.<sup class="cite" data-src="mps-fy27-packet" data-page="9-40">2</sup>
+    Fixed Charges (health insurance, retirement) are budgeted town-side and excluded.
   </figcaption>
 </figure>
 
 <h2 id="peers">How Marblehead compares to peers, fiscal year 2024</h2>
 
 <p>
-  Fiscal year 2024 education spending across a peer set, sorted highest to lowest per
-  capita. Marblehead is highlighted. Sourced from the town's DOR Schedule A returns
+  Fiscal year 2024 education spending across 17 Massachusetts municipalities, sorted by
+  per capita. Marblehead is highlighted.
   <sup class="cite" data-src="dor-schedule-a" data-page="fy24">3</sup>
-  and DOR fiscal year 2027 income, equalized valuation, and population data.
-  <sup class="cite" data-src="dor-income-eqv-pop" data-page="fy27">4</sup>
-  Per-student is shown where DESE reports it; four of the seventeen towns have
-  fiscal year 2024 enrollment on file.
-  <sup class="cite" data-src="dese-peer-enrollment" data-page="fy24">5</sup>
 </p>
 
 <figure class="peer-block" id="peer-block">
@@ -239,140 +215,30 @@ og_url: https://marbleheaddata.org/schools-budget.html
   </table>
 </figure>
 
-<h2 id="methodology">Methodology</h2>
-
-<h3>Panel 1: audited actuals, fiscal year 2001 to fiscal year 2024</h3>
-<p>
-  Numbers in Panel 1 come from
-  <a href="/data/education_expenditure_FY01-24.csv"><code>data/education_expenditure_FY01-24.csv</code></a>,
-  which was compiled from twenty-four consecutive Marblehead Annual Comprehensive
-  Financial Reports (ACFRs). For each fiscal year, the value is the Education line
-  from that year's Schedule of Expenditures by Function. Source pages per ACFR are
-  documented in
-  <a href="/data/SOURCE_LOOKUP.md"><code>data/SOURCE_LOOKUP.md</code></a>.
-</p>
-<p>
-  Two years get inline annotations rather than being treated as trend points. Fiscal
-  year 2022 reflects a likely Governmental Accounting Standards Board pension or OPEB
-  liability adjustment. Fiscal year 2023 includes prior-year adjustments per the
-  auditor's note in the source CSV. Both are one-time reporting effects. Excluding
-  them, the underlying trend fiscal year 2015 to fiscal year 2024 is broadly linear.
-</p>
-
-<h3>Panel 2: superintendent's proposed budget by category, fiscal year 2026 and fiscal year 2027</h3>
-<p>
-  Panel 2 uses
-  <a href="/data/mps_proposed_budget_by_category.csv"><code>data/mps_proposed_budget_by_category.csv</code></a>,
-  extracted by
-  <a href="https://github.com/agbaber/marblehead/blob/main/scripts/extract_mps_proposed_budget.mjs"><code>scripts/extract_mps_proposed_budget.mjs</code></a>
-  from the February 5, 2026 School Committee meeting packet
-  <sup class="cite" data-src="mps-fy27-packet" data-page="9-40">2</sup>
-  (the only Feb packet used in this v1). Each of the twelve rows carries the source
-  packet slug and the packet line numbers where each section subtotal appears, along
-  with an <code>extraction_confidence</code> field. All twelve rows in v1 are marked
-  <code>high</code> confidence because they come from a native (non-scanned) PDF whose
-  section subtotals are legible without OCR.
-</p>
-<p>
-  The six buckets are DESE-Chart-of-Accounts-inspired but pragmatic for what the packet
-  actually breaks out:
-</p>
-<ul>
-  <li><strong>Regular instruction</strong>: teachers, aides, textbooks, classroom supplies. Broken out per school in the packet.</li>
-  <li><strong>Special education</strong>: SPED specialists, BCBAs, and out-of-district tuitions. Managed at the district level.</li>
-  <li><strong>Student services</strong>: nurses, counselors, guidance, library, athletics, cocurricular.</li>
-  <li><strong>Operations</strong>: facilities, transportation, technology infrastructure.</li>
-  <li><strong>Administration</strong>: central office and business office.</li>
-  <li><strong>Capital</strong>: equipment purchases. Small in this budget.</li>
-</ul>
-<p>
-  Bucket names loosely track the DESE Chart of Accounts function codes
-  (1000 through 9000, minus Fixed Charges); the exact mapping per packet
-  line is in the extractor script.
-</p>
-<p>
-  <strong>Fixed Charges (DESE 5000) is not included.</strong> Health insurance,
-  retirement contributions, and Medicare are budgeted at the town level in Marblehead,
-  not on the school side. See
-  <a href="/how-we-got-here.html#group-insurance-pad">the Group Insurance pad finding</a>
-  for the operational reason this matters, and for why proposed and actual education
-  totals will differ by more than a straight comparison would suggest.
-</p>
-
-<h3>Why the Panel 2 total does not equal the packet's headline</h3>
-<p>
-  The February 5, 2026 packet reports a fiscal year 2027 grand total of $49,120,285,
-  the level-funded target set by the town. Panel 2's bucket sums are higher: about
-  $48.6 million for fiscal year 2026 and $50.0 million for fiscal year 2027. Two
-  separate effects account for the gap.
-</p>
-<ol>
-  <li>
-    Fixed Charges are in the packet's grand total but excluded from the six buckets.
-    That accounts for roughly $883,000 in fiscal year 2026 and $901,000 in fiscal
-    year 2027.
-  </li>
-  <li>
-    The bucket sums here are the level-funded gross before end-of-cycle reductions.
-    The packet's grand total is the adopted budget after roughly $1.6 million in cuts
-    were applied entity-by-entity (pages 14 through 30 of the packet). Because the
-    cuts are listed at the entity level, not the DESE-function level, they cannot be
-    cleanly attributed to individual buckets without reconstructing every position
-    line. Follow-up work may add a post-reduction view.
-  </li>
-</ol>
-
-<h3>Why proposed budgets never match audited actuals</h3>
-<p>
-  When more historical proposed budgets land in a follow-up PR, the gap between
-  Panel 1 and Panel 2 for a given fiscal year will be visible. Three structural
-  reasons that gap exists in every district:
-</p>
-<ul>
-  <li>Positions budgeted but unfilled for part of the year.</li>
-  <li>Group insurance premiums coming in under the budgeted rate.</li>
-  <li>Encumbrance rollovers and end-of-year free cash reclassification.</li>
-</ul>
-<p>
-  Marblehead's group insurance pattern is the largest of the three: an average
-  18.7 percent under-budget from fiscal year 2014 to fiscal year 2024, with the
-  surplus recycled through free cash to balance the next year's operating budget.
-  <a href="/how-we-got-here.html#group-insurance-pad">The pad finding</a> has the
-  full arithmetic. None of these three effects are unique to Marblehead; every
-  district budget shows some version of them.
-</p>
-
-<h3>Peer block: fiscal year 2024 Schedule A</h3>
-<p>
-  Peer education totals come from
-  <a href="/data/peer_schedule_a_expenditures.csv"><code>data/peer_schedule_a_expenditures.csv</code></a>,
-  a DOR Schedule A extract for a peer set of Massachusetts municipalities used
-  elsewhere on this site. Population figures come from
-  <a href="/data/dor_income_eqv_pop_FY27.csv"><code>data/dor_income_eqv_pop_FY27.csv</code></a>,
-  the DOR fiscal year 2027 income, equalized valuation, and population release.
-  Per-capita is the education total divided by that population; every peer town in
-  the block has a value.
-</p>
-<p>
-  Per-student uses DESE enrollment from
-  <a href="/data/dese_peer_teachers_enrollment.csv"><code>data/dese_peer_teachers_enrollment.csv</code></a>.
-  Only four peer towns (Marblehead, Melrose, Stoneham, Swampscott) are on file
-  for fiscal year 2024, so the other thirteen rows show a dash rather than a
-  fabricated value. Pulling the missing enrollment for the rest of the peer set
-  is follow-up work.
-</p>
-<p>
-  The table sorts on per-capita rather than raw total. Sorting by total dollars
-  puts Newton and Framingham on top because they are big; sorting by per-capita
-  compares fiscal effort at similar scale.
-</p>
-
-<h3>What is coming in follow-up updates</h3>
-<ul>
-  <li>Panel 2 extended back to fiscal year 2018 as each February packet's summary is extracted.</li>
-  <li>A proposed-versus-actual gap table for each year where the proposal, the adopted budget, and the audited actual are all available.</li>
-  <li>Per-student for the thirteen peer towns that currently show a dash, once DESE enrollment for the rest of the set is loaded.</li>
-</ul>
+<details class="notes">
+  <summary>Sources and notes</summary>
+  <p>
+    Panel 1 comes from
+    <a href="/data/education_expenditure_FY01-24.csv"><code>education_expenditure_FY01-24.csv</code></a>
+    (each year's Education line from that fiscal year's ACFR). FY22 and FY23 are one-time reporting anomalies (GASB liability adjustment and prior-year adjustments); excluding them the underlying trend 2015 to 2024 is broadly linear.
+  </p>
+  <p>
+    Panel 2 comes from
+    <a href="/data/mps_proposed_budget_by_category.csv"><code>mps_proposed_budget_by_category.csv</code></a>,
+    extracted by
+    <a href="https://github.com/agbaber/marblehead/blob/main/scripts/extract_mps_proposed_budget.mjs"><code>extract_mps_proposed_budget.mjs</code></a>
+    from the February 5, 2026 packet. Bucket sums total $48.6M in FY26 and $50.0M in FY27; the packet's headline of $49.1M for both years reflects town-side Fixed Charges (about $883K, not shown here) plus roughly $1.6M in entity-level reductions taken to hit the level-funded target. FY18 through FY25 land in follow-up updates.
+  </p>
+  <p>
+    Peer block totals from
+    <a href="/data/peer_schedule_a_expenditures.csv"><code>peer_schedule_a_expenditures.csv</code></a>
+    (DOR Schedule A). Population from
+    <a href="/data/dor_income_eqv_pop_FY27.csv"><code>dor_income_eqv_pop_FY27.csv</code></a>.
+    Enrollment from
+    <a href="/data/dese_peer_enrollment_FY24.csv"><code>dese_peer_enrollment_FY24.csv</code></a>
+    (DESE E2C Hub). Sorted by per-capita because sorting by raw dollars just ranks by town size.
+  </p>
+</details>
 
 <script>
 (function () {
@@ -701,29 +567,13 @@ og_url: https://marbleheaddata.org/schools-budget.html
 (function () {
   'use strict';
 
-  var NS = 'http://www.w3.org/2000/svg';
-  function svgEl(tag, attrs) {
-    var el = document.createElementNS(NS, tag);
-    Object.keys(attrs).forEach(function (k) { el.setAttribute(k, attrs[k]); });
-    return el;
-  }
-
   var BUCKET_ORDER = ['Regular instruction', 'Special education', 'Student services',
                       'Operations', 'Administration', 'Capital'];
-  var BUCKET_CLASS = {
-    'Regular instruction': 'stack-regular',
-    'Special education':   'stack-sped',
-    'Student services':    'stack-services',
-    'Operations':          'stack-operations',
-    'Administration':      'stack-admin',
-    'Capital':             'stack-capital'
-  };
 
   function parseCsv(text) {
     var lines = text.trim().split('\n');
     var headers = lines[0].split(',');
     return lines.slice(1).map(function (line) {
-      // handle quoted fields (simple CSV parser sufficient for this file)
       var out = [];
       var cur = '';
       var inQuote = false;
@@ -741,123 +591,71 @@ og_url: https://marbleheaddata.org/schools-budget.html
   }
 
   function fmtDollar(v) {
-    if (v >= 1e6) return '$' + (v / 1e6).toFixed(1) + 'M';
-    return '$' + Math.round(v / 1000) + 'k';
+    if (Math.abs(v) >= 1e6) return '$' + (v / 1e6).toFixed(1) + 'M';
+    return '$' + Math.round(v / 1000).toLocaleString() + 'k';
+  }
+
+  function fmtDelta(v) {
+    var sign = v > 0 ? '+' : (v < 0 ? '−' : '');
+    var abs = Math.abs(v);
+    var mag = abs >= 1e6 ? '$' + (abs / 1e6).toFixed(1) + 'M'
+                          : '$' + Math.round(abs / 1000).toLocaleString() + 'k';
+    return sign + mag;
+  }
+
+  function deltaClass(v) {
+    if (v > 0) return 'delta-up';
+    if (v < 0) return 'delta-down';
+    return 'delta-flat';
   }
 
   function render(rows) {
-    var svg = document.getElementById('panel2-svg');
-    if (!svg) return;
-    while (svg.firstChild) { svg.removeChild(svg.firstChild); }
+    var body = document.getElementById('panel2-body');
+    var foot = document.getElementById('panel2-foot');
+    if (!body || !foot) return;
 
-    // Group by FY
-    var byFy = {};
+    // Group by FY x bucket.
+    var byFy = { 2026: {}, 2027: {} };
     rows.forEach(function (r) {
-      var fy = r.FY;
-      byFy[fy] = byFy[fy] || {};
+      var fy = Number(r.FY);
+      if (!byFy[fy]) return;
       byFy[fy][r.bucket] = Number(r.amount);
     });
 
-    var fys = Object.keys(byFy).sort();
-    if (fys.length === 0) return;
-
-    var VW = 800, VH = 460;
-    var PAD = { top: 28, right: 28, bottom: 60, left: 68 };
-    var PLOT_W = VW - PAD.left - PAD.right;
-    var PLOT_H = VH - PAD.top - PAD.bottom;
-
-    // Y max: the taller stack (with a bit of headroom)
-    var maxTotal = 0;
-    fys.forEach(function (fy) {
-      var t = BUCKET_ORDER.reduce(function (s, b) { return s + (byFy[fy][b] || 0); }, 0);
-      if (t > maxTotal) maxTotal = t;
+    // Max bucket value across both FYs for the inline bar scale.
+    var maxBucket = 0;
+    BUCKET_ORDER.forEach(function (b) {
+      maxBucket = Math.max(maxBucket, byFy[2026][b] || 0, byFy[2027][b] || 0);
     });
-    maxTotal = maxTotal * 1.05;
 
-    // Column geometry
-    var colGap = PLOT_W * 0.08;
-    var colWidth = (PLOT_W - colGap * (fys.length + 1)) / fys.length;
+    body.innerHTML = BUCKET_ORDER.map(function (bucket) {
+      var v26 = byFy[2026][bucket] || 0;
+      var v27 = byFy[2027][bucket] || 0;
+      var delta = v27 - v26;
+      var pct = v26 ? Math.round(delta / v26 * 100) : 0;
+      var barW = maxBucket ? (v27 / maxBucket * 100) : 0;
+      var pctStr = (pct > 0 ? '+' : (pct < 0 ? '−' : '')) + Math.abs(pct) + '%';
+      return '<tr>' +
+        '<td>' + bucket + '</td>' +
+        '<td class="num">' + fmtDollar(v26) + '</td>' +
+        '<td class="num">' + fmtDollar(v27) + '</td>' +
+        '<td class="num ' + deltaClass(delta) + '">' + fmtDelta(delta) + ' (' + pctStr + ')</td>' +
+        '<td class="bar-col"><span class="bar" style="width:' + barW.toFixed(1) + '%" aria-hidden="true"></span></td>' +
+      '</tr>';
+    }).join('');
 
-    function xFor(colIdx) {
-      return PAD.left + colGap + colIdx * (colWidth + colGap);
-    }
-    function yScale(v) {
-      return PAD.top + PLOT_H - (v / maxTotal) * PLOT_H;
-    }
-
-    // Y axis + gridlines
-    for (var i = 0; i <= 4; i++) {
-      var v = (maxTotal / 4) * i;
-      var y = yScale(v);
-      if (i > 0) {
-        var grid = svgEl('line', {
-          x1: PAD.left, y1: y, x2: PAD.left + PLOT_W, y2: y,
-          stroke: 'var(--border)', 'stroke-width': '0.5', 'stroke-dasharray': '3 3'
-        });
-        svg.appendChild(grid);
-      }
-      var lbl = svgEl('text', {
-        x: PAD.left - 8, y: y + 4, 'text-anchor': 'end', 'class': 'chart-tick'
-      });
-      lbl.textContent = fmtDollar(v);
-      svg.appendChild(lbl);
-    }
-
-    var yLbl = svgEl('text', {
-      x: -(PAD.top + PLOT_H / 2), y: 14, transform: 'rotate(-90)',
-      'text-anchor': 'middle', 'class': 'chart-ylabel'
-    });
-    yLbl.textContent = 'Millions of dollars';
-    svg.appendChild(yLbl);
-
-    // Draw stacked columns
-    fys.forEach(function (fy, colIdx) {
-      var x = xFor(colIdx);
-      var yCursor = PAD.top + PLOT_H;
-      var runningTotal = 0;
-
-      BUCKET_ORDER.forEach(function (bucket) {
-        var amount = byFy[fy][bucket] || 0;
-        if (amount === 0) return;
-        var segHeight = (amount / maxTotal) * PLOT_H;
-        var segY = yCursor - segHeight;
-
-        var rect = svgEl('rect', {
-          x: x, y: segY, width: colWidth, height: segHeight,
-          'class': BUCKET_CLASS[bucket]
-        });
-        svg.appendChild(rect);
-
-        // Segment inline label if the segment is tall enough (>= 22px)
-        if (segHeight >= 22) {
-          var segLbl = svgEl('text', {
-            x: x + colWidth / 2, y: segY + segHeight / 2 + 3,
-            'text-anchor': 'middle', 'class': 'stack-segment-label'
-          });
-          segLbl.textContent = fmtDollar(amount);
-          svg.appendChild(segLbl);
-        }
-
-        runningTotal += amount;
-        yCursor = segY;
-      });
-
-      // Column total below column
-      var total = BUCKET_ORDER.reduce(function (s, b) { return s + (byFy[fy][b] || 0); }, 0);
-      var colTotalLbl = svgEl('text', {
-        x: x + colWidth / 2, y: PAD.top + PLOT_H + 18,
-        'text-anchor': 'middle', 'class': 'chart-tick'
-      });
-      colTotalLbl.textContent = 'FY' + String(fy).slice(2);
-      svg.appendChild(colTotalLbl);
-
-      var colTotalDollar = svgEl('text', {
-        x: x + colWidth / 2, y: PAD.top + PLOT_H + 34,
-        'text-anchor': 'middle', 'class': 'stack-col-label'
-      });
-      colTotalDollar.textContent = fmtDollar(total);
-      svg.appendChild(colTotalDollar);
-    });
+    var t26 = BUCKET_ORDER.reduce(function (s, b) { return s + (byFy[2026][b] || 0); }, 0);
+    var t27 = BUCKET_ORDER.reduce(function (s, b) { return s + (byFy[2027][b] || 0); }, 0);
+    var tDelta = t27 - t26;
+    var tPct = t26 ? Math.round(tDelta / t26 * 100) : 0;
+    var tPctStr = (tPct > 0 ? '+' : (tPct < 0 ? '−' : '')) + Math.abs(tPct) + '%';
+    foot.innerHTML = '<tr>' +
+      '<th>Total</th>' +
+      '<td class="num">' + fmtDollar(t26) + '</td>' +
+      '<td class="num">' + fmtDollar(t27) + '</td>' +
+      '<td class="num ' + deltaClass(tDelta) + '">' + fmtDelta(tDelta) + ' (' + tPctStr + ')</td>' +
+      '<td class="bar-col"></td>' +
+    '</tr>';
   }
 
   function loadAndRender() {
@@ -947,7 +745,7 @@ og_url: https://marbleheaddata.org/schools-budget.html
     Promise.all([
       fetch('/data/peer_schedule_a_expenditures.csv').then(function (r) { return r.text(); }).then(parseCsv),
       fetch('/data/dor_income_eqv_pop_FY27.csv').then(function (r) { return r.text(); }).then(parseCsv),
-      fetch('/data/dese_peer_teachers_enrollment.csv').then(function (r) { return r.text(); }).then(parseCsv)
+      fetch('/data/dese_peer_enrollment_FY24.csv').then(function (r) { return r.text(); }).then(parseCsv)
     ]).then(function (results) {
       render(results[0], results[1], results[2]);
     });
