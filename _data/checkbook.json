@@ -11,5 +11,6 @@
  "row_count": 49,
  "row_count_human": "49",
  "csv_filename": "checkbook_FY27_2026-07-01.csv",
+ "performance_filename": "checkbook_performance.json",
  "generated_by": "scripts/build_checkbook_csv.py"
 }
