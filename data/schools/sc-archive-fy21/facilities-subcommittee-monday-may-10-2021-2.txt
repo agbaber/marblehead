@@ -1,0 +1,41 @@
+                                               Critical repair
+School   Status   Item                           estimate        Condition / Issue                                         Age   Expected Life Span        2022         2023         2024         2025     2026         2027        2028        2029       2030    2031
+                                                                Numerous roof leaks reported and observed. Several
+                                                                locations of loose and hanging lightning protection
+MHS      CRITICAL Roof                              $768,029.00 along perimeter, especially at gym.                              20 years             768,029.00
+MHS               Roof                                          PMP ongoning roof maintenance                                    20 years               7,343.00     7,343.00     7,343.00     7,343.00 7,343.00     7,343.00 7,343.00       7,343.00 7,343.00 7,343.00
+MHS               Facades                                       renew / recaulk expansion and control joints                     15 years                                                                                                                      8,447.00
+                                                                Signs of water infiltration at glass block windows at
+MHS      CRITICAL Windows & Doors                     $3,600.00 east gym area.                                                                          3,600.00
+                                                                Repair insulated windows and failed seals. Prepare,
+MHS               Windows & Doors                               prime, and paint gymnasium doors                                                                     3,760.32
+MHS               Windows & Doors                               Replace exterior metal insulated common doors                    30 years                                                                            4,632.00
+MHS               Windows & Doors                               Overhead service door replacement 12' x 16'                      30 years                                                     11,707.00
+MHS               Windows & Doors                               renew / recaulk windows and doors                                15 years                                                                                                   28,156.00
+MHS               Windows & Doors                               Commercial window replacement                                    25 years                                                                          512,550.00
+MHS               Landscaping / improvements                    Signage / entrance monument                                                                                                                         23,782.00
+MHS               Landscaping / improvements                    routine concrete and asphalt sidewalk repairs                    5 years                                         28,190.00                                                  28,190.00
+MHS               Landscaping / improvements                    replacement of exterior light fixtures                           15 years                                                                                                  120,000.00
+MHS               Landscaping / improvements                    replace interlocking block retaining wall                        25 years                                                                           14,171.00
+MHS               Pavement / parking                            New asphalt overlay, repair, and restriping.                     25 years                                                                          208,232.00
+                                                                routine patching, crack sealing, sealing and striping of
+MHS               Pavement / parking                            asphalt pavement                                                 6 years                                                                            66,634.00
+MHS               Building Interiors                            Corridor finish and kitchrn refurbishment                        8 years                                                     836,736.00
+MHS               Plumbing                                      Replace commercial gas-fired hot water heater                    15 years                           57,731.00 57,731.00
+                                                                Through wall packaged or split unity replacement 2
+MHS               HVAC                                          ton                                                              12 years                                                      7,099.00
+                                                                Replace R-410a air cooled condensing unit and
+MHS               HVAC                                          rooftop units                                                    18 years                                       465,493.00
+MHS               HVAC                                          Replace AHU - built up indoor unit                               20 years                           16,361.00
+MHS               HVAC                                          Heat recovery ventilater                                         25 years                                                                          444,000.00
+MHS               HVAC                                          Replace MAU- Heating only, gas fired                             20 years                                                     32,919.00
+MHS               HVAC                                          Replace compressor / condenser unit - air cooled                 25 years                                                                           68,263.00
+MHS               HVAC                                          Replace VAV boxes                                                25 years                                                                                       18,000.00 18,000.00 18,000.00 18,000.00
+MHS               HVAC                                          Replace VFD                                                                                                                                         17,834.00
+MHS               Electric                                      Diesel-fired emergency generator                                                                                                                    76,097.00
+MHS               Electric                                      Perform IR survey                                                5 years                                                       3,000.00                                                 3,000.00
+                                                                Replace fire alarm control panel with addressable w/o
+MHS               Safety                                        voice                                                            20 years                           30,000.00
+MHS               Elevators                                     Renovations to elevator cab                                      20 years                           54,672.00
+MHS               Elevators                                     Elevator modernizations 3-story hydraulic                        20 years                          601,392.00
+
