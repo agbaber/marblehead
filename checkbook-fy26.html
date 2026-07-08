@@ -1,0 +1,29 @@
+---
+title: "Town checkbook: FY26"
+permalink: /checkbook/fy26/
+scripts: [citations]
+og_title: "FY26: every check the town wrote"
+og_description: "The full FY26 spending and pacing explorer for Marblehead, archived. Budget vs actual by Fund, Department, Category, Division, and Object. Refreshed until the town closes its FY26 books."
+og_image: /assets/og/checkbook.png
+og_url: https://marbleheaddata.org/checkbook/fy26/
+---
+<style>
+  .archive-banner {
+    background: var(--c-surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--c-text-mid);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--c-text-mid);
+    margin: 0 0 20px;
+    max-width: var(--chart-max);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .archive-banner a { color: inherit; text-decoration: underline; }
+</style>
+<div class="archive-banner">
+  Archived fiscal year. FY26 closed June 30, 2026; this page still refreshes as late payments and year-end corrections post. For the current year, see <a href="{{ '/checkbook/' | relative_url }}">the FY27 checkbook</a>.
+</div>
+{% include checkbook-explorer.html cb=site.data.checkbook_fy26 bud=site.data.budget_fy26 %}
