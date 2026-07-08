@@ -281,7 +281,7 @@ def main() -> None:
     dashboard_name = "checkbook.json" if is_current else f"checkbook_fy{yy}.json"
     dashboard_path = REPO_ROOT / "_data" / dashboard_name
     perf_name = ("checkbook_performance.json" if is_current
-                 else f"checkbook_performance_FY{year % 100}.json")
+                 else f"checkbook_performance_FY{yy}.json")
     dashboard = {
         "as_of": as_of,
         "as_of_human": as_of_dt.strftime("%b ") + str(as_of_dt.day),
@@ -300,7 +300,6 @@ def main() -> None:
     }
     dashboard_path.parent.mkdir(parents=True, exist_ok=True)
     dashboard_path.write_text(json.dumps(dashboard, indent=1) + "\n")
-    wrote_dashboard = True
 
     print(f"input rows:      {len(raw_rows):,}")
     print(f"dropped rows:    {sum(ex['row_count'] for ex in excluded.values()):,} "
