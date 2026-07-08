@@ -14,7 +14,7 @@ assert.equal(paths, 1, `expected 1 chart-line path in Panel 1, got ${paths}`);
 
 // Three toggle buttons present with the right labels.
 const toggles = await page.$$eval('#panel1 .chart-toggle button', els => els.map(e => e.textContent.trim()));
-assert.deepEqual(toggles, ['Nominal dollars', 'Per pupil', 'Real dollars (fiscal year 2024 basis)']);
+assert.deepEqual(toggles, ['Nominal dollars', 'Per pupil', 'Inflation-adjusted']);
 
 // Clicking "Per pupil" changes the aria-selected state.
 await page.click('#panel1 .chart-toggle button[data-view="per-pupil"]');
