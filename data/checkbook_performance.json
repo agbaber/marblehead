@@ -9,8 +9,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 838251.0,
-        "delta": 838251.0,
+        "actual": 839526.6,
+        "delta": 839526.6,
         "pct": null
       },
       {
@@ -177,9 +177,9 @@
       {
         "name": "SELECT BOARD",
         "revised": 723176.0,
-        "actual": 0,
-        "delta": -723176.0,
-        "pct": 0.0
+        "actual": 3082.04,
+        "delta": -720093.96,
+        "pct": 0.43
       },
       {
         "name": "INTERFUND TRANSFERS",
@@ -268,9 +268,9 @@
       {
         "name": "POLICE",
         "revised": 5415360.0,
-        "actual": 0,
-        "delta": -5415360.0,
-        "pct": 0.0
+        "actual": 84957.0,
+        "delta": -5330403.0,
+        "pct": 1.57
       },
       {
         "name": "BROWN SCHOOL",
@@ -289,9 +289,9 @@
       {
         "name": "FIRE",
         "revised": 6312967.0,
-        "actual": 49400.0,
-        "delta": -6263567.0,
-        "pct": 0.78
+        "actual": 112249.01,
+        "delta": -6200717.99,
+        "pct": 1.78
       },
       {
         "name": "WATER",
@@ -331,18 +331,18 @@
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 5843360.0,
-        "delta": -18229033.0,
-        "pct": 24.27
+        "actual": 5845743.8,
+        "delta": -18226649.2,
+        "pct": 24.28
       }
     ],
     "all_departments": [
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 5843360.0,
-        "delta": -18229033.0,
-        "pct": 24.27
+        "actual": 5845743.8,
+        "delta": -18226649.2,
+        "pct": 24.28
       },
       {
         "name": "DISTRICTWIDE",
@@ -382,9 +382,9 @@
       {
         "name": "FIRE",
         "revised": 6312967.0,
-        "actual": 49400.0,
-        "delta": -6263567.0,
-        "pct": 0.78
+        "actual": 112249.01,
+        "delta": -6200717.99,
+        "pct": 1.78
       },
       {
         "name": "MIDDLE SCHOOL",
@@ -403,9 +403,9 @@
       {
         "name": "POLICE",
         "revised": 5415360.0,
-        "actual": 0,
-        "delta": -5415360.0,
-        "pct": 0.0
+        "actual": 84957.0,
+        "delta": -5330403.0,
+        "pct": 1.57
       },
       {
         "name": "SEWER",
@@ -494,9 +494,9 @@
       {
         "name": "SELECT BOARD",
         "revised": 723176.0,
-        "actual": 0,
-        "delta": -723176.0,
-        "pct": 0.0
+        "actual": 3082.04,
+        "delta": -720093.96,
+        "pct": 0.43
       },
       {
         "name": "BUILDING INSPECTION",
@@ -662,8 +662,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 838251.0,
-        "delta": 838251.0,
+        "actual": 839526.6,
+        "delta": 839526.6,
         "pct": null
       }
     ]
