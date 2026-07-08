@@ -1,8 +1,14 @@
 <h1 class="h-center">Town checkbook</h1>
 <p class="subtitle h-center">{{ include.cb.fiscal_year }} spending, budget, and pacing &ndash; from the town's own portals.</p>
+{% if include.cb.fiscal_year == site.data.checkbook.fiscal_year %}
 <p class="h-center" style="font-size: 13px; color: var(--c-text-mid); margin: -8px 0 24px;">
-  Also see: <a href="/spending-by-vote/">What we paid, and the choices we made</a> &mdash; the FY26 year in review, organized by who voted on each fund.
+  Also see: <a href="{{ '/checkbook/fy26/' | relative_url }}">last year's checkbook (FY26)</a> and <a href="{{ '/spending-by-vote/' | relative_url }}">the FY26 year in review</a>.
 </p>
+{% else %}
+<p class="h-center" style="font-size: 13px; color: var(--c-text-mid); margin: -8px 0 24px;">
+  Also see: <a href="{{ '/spending-by-vote/' | relative_url }}">what we paid, and the choices we made</a>, the FY26 year in review organized by who voted on each fund.
+</p>
+{% endif %}
 
 <style>
   /* The default .page container caps at 760px (--page-max); the
