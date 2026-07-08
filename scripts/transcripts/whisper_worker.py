@@ -18,14 +18,22 @@ under `nice` so it can share a small box with other workloads.
 """
 import argparse
 import os
+import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
 YT_DLP = os.environ.get("YT_DLP", str(Path.home() / ".local/bin/yt-dlp"))
 MODEL_NAME = "small.en"
 CPU_THREADS = 2
+
+# faster-whisper computes the mel spectrogram for the whole file in one
+# numpy FFT; past ~1.5h of audio that single allocation reaches multiple GB
+# and OOMs a small box. Split longer recordings into fixed windows and
+# offset the cue timestamps when merging.
+CHUNK_SECONDS = 1800
 
 # Bias the decoder toward local proper nouns it otherwise mangles
 # ("Marvel head" for Marblehead was the top offender in benchmarking).
@@ -75,6 +83,44 @@ def download_audio(vimeo_id: str, audio_dir: Path) -> Path | None:
     return out
 
 
+class OffsetSegment:
+    __slots__ = ("start", "end", "text")
+
+    def __init__(self, seg, offset: float):
+        self.start = seg.start + offset
+        self.end = seg.end + offset
+        self.text = seg.text
+
+
+def transcribe_chunked(model, audio: Path, duration: float):
+    """Yield transcript segments, splitting long audio into CHUNK_SECONDS
+    windows so feature extraction stays within a bounded allocation."""
+    if duration <= CHUNK_SECONDS * 1.2:
+        segments, _ = model.transcribe(
+            str(audio), vad_filter=True, beam_size=1,
+            initial_prompt=INITIAL_PROMPT,
+        )
+        yield from segments
+        return
+
+    with tempfile.TemporaryDirectory(prefix="whisper-chunks-") as tmp:
+        subprocess.run(
+            ["ffmpeg", "-v", "error", "-i", str(audio), "-f", "segment",
+             "-segment_time", str(CHUNK_SECONDS), "-ar", "16000", "-ac", "1",
+             os.path.join(tmp, "chunk-%04d.wav")],
+            check=True, capture_output=True,
+        )
+        for i, chunk in enumerate(sorted(Path(tmp).glob("chunk-*.wav"))):
+            segments, _ = model.transcribe(
+                str(chunk), vad_filter=True, beam_size=1,
+                initial_prompt=INITIAL_PROMPT,
+            )
+            offset = i * CHUNK_SECONDS
+            for seg in segments:
+                yield OffsetSegment(seg, offset)
+            chunk.unlink()
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--queue", default=str(Path.home() / ".cache/whisper-backfill/queue.tsv"))
@@ -114,10 +160,7 @@ def main() -> None:
             continue
         t0 = time.time()
         try:
-            segments, info = model.transcribe(
-                str(audio), vad_filter=True, beam_size=1,
-                initial_prompt=INITIAL_PROMPT,
-            )
+            segments = transcribe_chunked(model, audio, duration)
             n = write_vtt(segments, vtt_dir / f"{vimeo_id}.vtt")
         except Exception as e:  # keep the queue moving past one bad file
             print(f"FAIL transcribe {slug} ({vimeo_id}): {e}", flush=True)
