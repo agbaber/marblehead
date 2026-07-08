@@ -1,0 +1,1387 @@
+Open Meeting Law, Public Records
+ and Conflict of Interest Laws for
+   School Committee Members
+
+    Marblehead Public Schools
+          July 19, 2022
+
+   Presented by Colby C. Brunt
+
+
+
+
+               Page 1
+                                I. OPEN MEETING LAW
+
+                                          Overview
+
+      The Massachusetts Open Meeting, or “OML” applies to public bodies at the state,
+county, and local levels. In general, the Law requires that all meetings of such entities
+be open to the public, that notice of such meetings be publicly posted, and that accurate
+records of the meetings be maintained and made available to the public. (See attached
+Open Meeting Law Guide and Educational Materials).
+
+        The overriding intent of the Law is to foster and, in fact, require open discussion
+of governmental action. However, the Law does recognize that public officials might be
+"unduly hampered" if all discussions by public officials were required to take place in
+public. As a result, it identifies specific circumstances, often referred to as
+"exemptions," in which the governmental body may meet in a closed or “executive”
+session. These exemptions are limited in number and narrow in scope. Indeed, the
+Supreme Judicial Court has held that the exemptions to the Open Meeting Law must be
+strictly construed and narrowly applied in order not to frustrate the “legislative purpose"
+of openness.
+
+        Within two weeks of a member’s election or appointment to a public body or the taking
+of the oath of office, whichever occurs later, the member must complete a Certificate of
+Receipt of Open Meeting Law Materials certifying that he/she has received the materials, and
+that they understand the requirements of the Open Meeting Law and the consequences for
+violating it. The certification must be retained where the body maintains its official record.
+
+                                 What Entities Are Covered?
+
+        Public body: Includes essentially every multiple member board, commission, and
+committee of state government or any county, district, city, region or town. (Exceptions
+include but are not limited to the legislature and its committees and bodies of the
+judicial branch.)
+
+        Subcommittees: The Law also covers subcommittees appointed by a public
+body. This includes not only subcommittees comprised of the parent public
+body's members, but also subcommittees or special purpose committees that may include
+individuals who are not members of the parent body, so long as the subcommittee or
+special purpose committee is carrying out delegated functions or responsibilities of the
+parent body, including simply serving in an advisory role.
+
+      Single members: A single member of a governmental body cannot comprise a
+"subcommittee" of the same governmental body. Pearson v. Board of Selectmen of
+Longmeadow, 49 Mass. App. Ct. 119, 124 (2000).
+
+
+
+                                            Page 2
+        Administrative meetings: Staff meetings called by administrative personnel are not
+"public bodies." Where an administrator appoints a group of administrators or citizens to
+provide advice on a matter within that individual administrator's own responsibilities, the group
+is generally not a public body.
+
+                                What Constitutes a Meeting?
+
+       A meeting for the purposes of the OML is defined as a “deliberation by a public
+body with respect to any matter within its jurisdiction.” A deliberation is “an oral or
+written communication through any medium, including electronic mail, between or among a
+quorum of a public body on any public business within its jurisdiction.”
+
+       Quorum: A quorum is defined as a simple majority of the body unless otherwise
+defined by applicable constitution, charter, rule, or law.
+
+       Subcommittees: Deliberation by a public body’s subcommittee, which is itself a
+public body, is subject to the Law if a quorum of the subcommittee is present, even if that
+quorum is not sufficient to constitute a quorum of the parent public body.
+
+        Remote Participation: The OML was silent on the matter of remote participation
+until July 1, 2010. It now states as follows:
+
+       The attorney general may by regulation or letter ruling, authorize remote
+       participation by members of a public body not present at the meeting
+       location; provided, however, that the absent members and all persons
+       present at the meeting location are clearly audible to each other; and
+       provided, further, that a quorum of the body, including the chair, are
+       present at the meeting location...
+
+        Serial Discussions: District Attorneys and the Attorney General have long
+opined that even individual communications involving a quorum that occur in serial
+fashion may be considered to constitute a “deliberation” and thus a meeting.
+Similarly, "revolving door" meetings, in which a quorum of members participate in
+serial fashion, are meetings under the Open Meeting Law and must comply with all the
+Law's requirements. Private communications regarding public business involving a
+quorum can violate the Law regardless of the knowledge or intent of the parties.
+
+       Exception for housekeeping matters: The Open Meeting Law specifically
+excludes certain housekeeping matters from the definition of “deliberation,”
+including the distribution of a meeting agenda, scheduling or procedural
+information or reports or documents that may be discussed at a meeting, provided
+that no opinion of a member is expressed.
+
+
+
+
+                                             Page 3
+        Other Exceptions: The Open Meeting Law specifically excludes the following from the
+definition of meeting:
+
+       (a)   an on-site inspection of a project or program, so long as the members do not
+             deliberate;
+
+       (b)   attendance by a quorum of a public body at a public or private gathering, including
+             a conference or training program or a media, social or other event, so long as the
+             members do not deliberate;
+
+       (c)   attendance by a quorum of a public body at a meeting of another public body that
+             has complied with the notice requirements of the open meeting law, so long as the
+             visiting members communicate only by open participation in the meeting on those
+             matters under discussion by the host body and do not deliberate;
+
+       (d)   a meeting of a quasi-judicial board or commission held for the sole purpose of
+             making a decision required in an adjudicatory proceeding brought before it
+             (limited state agencies or others subject to M.G.L. c. 30A); or
+
+       (e)   a session of a town meeting convened under section 10 of chapter 39 which would
+             include the attendance by a quorum of a public body at any such session.
+
+                                      Posting of Meetings
+
+      When: The meeting must be posted at least 48 hours in advance, excluding Saturdays,
+Sundays and legal holidays. (Prior to 7/1/10, Saturdays were included.)
+
+        Contents: The meeting notice must be printed in easily readable type, and contain the
+date, time, and place of the meeting and a listing of the topics the chair reasonably anticipates
+will be discussed at the meeting. In the event the body intends to discuss topics that come up
+within the 48-hour period before the posting, the Attorney General’s Office has encouraged public
+bodies to make a revised list of such topics available to the public in advance, even though not
+specifically required by the OML.
+
+       Where: For meetings of a local public body, notice must be filed with the
+municipal clerk and “posted in a manner conspicuously visible to the public at all
+hours in or on the municipal building in which the clerk’s office is located.” (The “all
+hours” requirement is new, effective 2010).
+
+       Emergency Meetings: When there is a need for an emergency meeting making
+the 48-hour posting impossible, the public body must post as soon as reasonably
+possible prior to such meeting. The courts have generally viewed “emergencies” for the
+purpose of the OML as dire circumstances such as the imminent collapse of a building.
+
+
+
+                                             Page 4
+                                           Executive Sessions
+
+      The OML recognizes ten grounds upon which a public body may enter an
+executive session. They are:
+
+        1.      To discuss the reputation, character, physical condition or mental health,
+                rather than professional competence, of an individual, or to discuss the
+                discipline or dismissal of, or complaints or charges brought against, a
+                public officer, employee, staff member or individual. (Emphasis added)1/
+
+        2.      To conduct strategy sessions in preparation for negotiations with
+                nonunion personnel or to conduct collective bargaining sessions or
+                contract negotiations with nonunion personnel;2/
+
+        3.      To discuss strategy with respect to collective bargaining or litigation if an
+                open meeting may have a detrimental effect on the bargaining or litigating
+                position of the public body and the chair so declares (emphasis added)3/;
+
+        4.      To discuss the deployment of security personnel or devices, or strategies with
+                respect thereto;
+
+
+
+
+        1/
+            When a public body holds an executive session under exemption (1), i.e., to discuss an
+individual's reputation, character, physical condition or mental health, or to consider disciplinary
+sanctions against an individual, the Open Meeting Law affords the individual concerned rights: 1. to
+receive written notice at least forty-eight hours in advance of the proposed executive session; and 2. to
+request that the meeting be open rather than closed, a request that must be granted. If held in
+executive session the individual has the following rights:1.to be present during deliberations which
+involve that individual; 2. to have counsel or a representative of his own choosing present and attending
+for the purpose of advising the individual and not for the purpose of active participation in the executive
+session; 3. to speak on his own behalf; and 4. to cause an independent record to be created of the
+executive session by audio-recording or transcription, at the individual’s expense.
+         2/
+            Note that while a public body is permitted to conduct contract negotiations in executive
+session and even reach agreement on the terms, the public body must then ratify any terms agreed
+upon in open session, particularly for contracts with nonunion personnel. (See, e.g., Attorney General
+Ruling OML - 2011-15 (May 4, 2011) and Gelinas v. Town of South Hadley (Superior Ct. #10-129 (May 2011)
+and Attorney General FAQ.)
+         3/
+            The District Attorneys and Attorney General have previously advised that discussions relating
+to proposed litigation are not covered by this exemption unless that litigation is clearly and imminently
+threatened. Litigation is not necessarily "imminently threatened" simply because a person is
+represented by counsel and supports a position adverse to the governmental body's position. Nor does
+the fact that a newspaper reports that a party has threatened to sue mean imminent litigation.
+
+
+                                                  Page 5
+       5.     To investigate charges of criminal misconduct or to consider the filing of
+              criminal complaints;
+
+       6.     To consider the purchase, exchange, lease or value of real property if the
+              chair declares that an open meeting may have a detrimental effect on the
+              negotiating position of the public body;
+
+       7.     To comply with, or act under the authority of, any general or special law
+              or federal grant-in-aid requirements;
+
+       8.     To consider or interview applicants for employment or appointment by a
+              preliminary screening committee if the chair declares that an open
+              meeting will have a detrimental effect in obtaining qualified applicants;
+              provided, however, that this clause shall not apply to any meeting,
+              including meetings of a preliminary screening committee, to consider and
+              interview applicants who have passed a prior preliminary screening;
+              (emphasis added)
+
+       9.     To meet or confer with a mediator, as defined in section 23C of chapter
+              233, with respect to any litigation or decision on any public business
+              within its jurisdiction involving another party, group or entity, provided
+              that: (i) any decision to participate in mediation shall be made in an open
+              session and the parties, issues involved and purpose of the mediation
+              shall be disclosed; and (ii) no action shall be taken by any public body
+              with respect to those issues which are the subject of the mediation
+              without deliberation and approval for such action at an open session; or
+
+       10.    To discuss trade secrets or confidential, competitively-sensitive or other
+              proprietary information provided in the course of activities conducted by a
+              governmental body as an energy supplier. . .
+
+                       Procedures for Convening an Executive Session
+
+       Notice: No executive session may be held unless and until an open meeting of the
+governmental body, for which a proper posting was made, has first convened. (When an
+executive session is reasonably anticipated, the meeting agenda should list the executive
+session, including as much information as may be revealed without compromising the purpose
+for which the executive session is to be called.)
+
+        Convening: Once an open meeting has been duly convened, a proper executive session
+may then convene only after a majority of the members of the governmental body vote to go
+into the session. The vote of each member must be recorded on a roll call vote and entered in
+the minutes of the meeting. Prior to the vote, the presiding officer:
+
+
+
+                                            Page 6
+        (1)   must cite for the record the purpose (or purposes if there are more
+              than one) of the executive session, stating all subjects that may be
+              revealed without compromising the purpose for which the executive
+              session was called. (If proceeding under exemptions 3
+              (bargaining/litigation) or 8 (candidate interviews), the chair must also
+              declare the detrimental effect.)4/
+
+        (2)     must state whether the governmental body will reconvene in an
+                open meeting after the executive session is over.
+
+       Minutes of Executive Sessions: As with all meetings, minutes or an equivalent
+record of every executive session must be kept. All votes must be recorded roll call
+votes.
+
+                                 Records and Minutes of Meetings
+
+      The Open Meeting Law (as well as the Public Records Law, G. L. c. 66, §§ 5A )
+requires every public body to maintain accurate minutes of all its meetings.
+
+        Content: At a minimum, minutes must set forth the following:
+
+        The date, time and place, the members present or absent,
+
+        A summary of the discussions on each subject. A verbatim record of discussions is
+        not required.
+
+        A list of documents and other exhibits used at the meeting. (NEW as of July
+        1, 2010.) 5/
+
+
+
+
+        4/ See District Attorney for Northern Dist. v. School Committee of Wayland, 455 Mass. 561, 567
+(Mass. 2009) (“[a] precise statement of the reason for convening in executive session is necessary under
+the open meeting law because that is the only notification given to the public that the school committee
+would conduct business in private, and the only way the public would know if the reason for doing so
+was proper or improper”).
+        5/
+           Documents and other exhibits, such as photographs, recordings or maps, used by the body at
+an open or executive session must, along with the minutes are to be considered part of the official
+record of the session. However, under a provision in the 2010 amendments intended to blend Open
+Meeting Law and personnel file exemption of Public Records Law, the following materials are exempt
+from disclosure to the public as personnel information: (1) materials used in a performance evaluation
+of an individual bearing on his professional competence, provided they were not created by the
+members of the body for the purposes of the evaluation; and (2) materials used in deliberations about
+employment or appointment of individuals, including applications and supporting materials; provided,
+however, that any resume submitted by an applicant shall not be exempt.
+
+
+                                                Page 7
+       The decisions made and the actions taken at each meeting, including the
+       record of all votes. (Votes in an executive session must be by roll call a nd
+       recorded as such.)
+
+       Release: Both the Open Meeting Law and the Public Records Law include
+provisions that pertain to the release of minutes of meetings convened by
+governmental bodies. In general, the minutes of a meeting become public records from
+the moment they are created. This is true regardless of the form in which they may first
+appear. T h e governmental body may not require that it vote to adopt or approve for
+release open session minutes before they may be released to the public, even though
+the minutes may be only in draft form at the time of the request. The Public Agency
+must provide access to the minutes within ten (10) days of a request.
+
+       Release of Executive Session Minutes: The minutes or record of every executive
+session become public records from the moment they are created; however, such
+minutes "may remain secret as long as publication may defeat the lawful purposes of the
+executive session, but no longer." Public bodies are required to periodically review their
+executive session minutes to determine whether continued non-disclosure is warranted.
+
+                                     Public Participation
+
+        Recordings: Except when a meeting is held in executive session, any person in
+attendance may record the meeting so long as no active interference with the conduct of
+the meeting arises as a result of the recording. The Law also allows any person attending
+an open meeting of a municipal or district governmental body to videotape the meeting from
+one or more fixed locations as determined by the governmental body, so long as there is no
+active interference with the meeting.
+
+        Because secret recordings of oral communications may violate the wiretap law, G.L. c.
+272, § 99, it has long been reasonable to expect that a person recording a public meeting
+should advise the chairperson in advance that he or she will be electronically recording the
+meeting. However, effective 7/1/10, the Open Meeting Law specifically requires the recorder
+to notify the chair, who is then responsible for notifying the participants and attendees.
+
+        Participation: Although any member of the public may attend an open meeting, the
+individual is permitted to address the public body only with the permission of the chair. If a
+person becomes disruptive and remains so even after clear warning, the chair may direct the
+
+
+
+
+                                             Page 8
+person to leave the meeting and may authorize a constable or other officer to remove the
+person if needed.6/
+                                       Enforcement
+
+         The Attorney General is responsible for enforcement and interpretation of the OML for
+all public bodies. The process for filing and responding to a complaint is as follows:
+
+        Step 1. Filing a Complaint with the Public Body
+
+        Individuals who allege a violation of the Open Meeting Law must first file a
+complaint with the public body within 30 days of the date of the violation, or the date the
+complainant could reasonably have known of the violation. The complaint must be filed on a
+complaint form available on the Attorney General’s website. When filing a complaint with a
+local public body, the complainant must also file a copy of the complaint with the municipal
+clerk.
+
+        Step 2. The Public Body's Response
+
+        Upon receipt, the chair of the public body should distribute copies of the complaint to
+the members of the public body for their review. The public body has 14 business days from
+the date of receipt to review the complainant’s allegations, take remedial action if appropriate,
+notify the complainant of the remedial action, and forward a copy of the complaint and
+description of the remedial action taken to the Attorney General. While the public body may
+delegate responsibility for responding to the complaint to counsel or another individual, it must
+first meet to do so.
+
+       The public body may request additional information from the complainant. The public
+body may also request an extension of time to respond to the complaint. A request for an
+extension should be made within 14 business days of receipt of the complaint by the public
+body. The request for an extension should be made in writing to the Attorney General’s office
+and should include a copy of the complaint and state the reason for the requested extension.
+
+        Step 3. Filing a Complaint with the Attorney General's Office
+
+        A complaint is ripe for review by the Attorney General 30 days after the complaint is
+filed with the public body. This 30-day period is intended to provide a reasonable opportunity
+for the complainant and the public body to resolve the initial complaint. Complaints are not
+automatically treated as filed for review by the Attorney General upon filing with the public
+
+
+        6/
+           School committees are not obligated to provide a public comment period. However, if such
+period is provided, any restrictions must be narrowly tailored to serve a legitimate public interest if they
+are to survive a First Amendment challenge. (See Corey Spaulding & Another v. Town of Natick School
+Committee and Others (MA Superior Court November 21, 2018) holding that a school committee policy
+prohibiting “improper conduct and remarks. . .defamatory or abusive remarks. . . and personal
+complaints” during the public comment period violated the First Amendment.)
+
+
+                                                  Page 9
+body. A complainant who has filed a complaint with a public body and seeks further review by
+the Division of Open Government must file the complaint with the Attorney General after the
+30-day local review period has elapsed but before 90 days have passed since the date of the
+violation or the date that the violation was reasonably discoverable.
+
+If a violation has occurred, the Attorney General has wide latitude in enforcement of the law
+including imposing any of the following:
+
+       1.      Require immediate and future compliance with the law;
+       2.      Require training;
+       3.      Nullify an action taken by the Board in an unlawful meeting;
+       4.      Impose a civil penalty of $1000 (or less) against the Board for intentional
+               violations;
+       5.      Reinstate an employee without loss of compensation, seniority, tenure or
+               benefits;
+       6.      Require minutes and other materials to be available for public review;
+       7.      Prescribe any other appropriate action.
+
+                         Examples of Attorney General Determinations
+
+        Since July 2010, the Division of Open Government, office of the Attorney General (AG)
+has issued many determinations arising from complaints filed against various governmental
+agencies in Massachusetts. These may be found at the Attorney General’s website,
+www.mass.gov/ago/openmeeting. The following are examples that illustrate the AG’s
+application of the OML that should be of interest to school committee members.
+
+        OML 2012-93. Even a way-one email can constitute a prohibited “deliberation”: The AG
+noted that “deliberation” is defined as “an oral or written communication through any medium,
+including electronic mail, between or among a quorum of a public body on any public business
+within its jurisdiction; provided, however, that ‘deliberation’ shall not include the distribution of
+a meeting agenda, scheduling information or distribution of other procedural meeting or the
+distribution of reports or documents that may be discussed at a meeting, provided that no
+opinion of a member is expressed.” The AG further stated that expression of an opinion on
+matters within the body’s jurisdiction to a quorum of a public body is deliberation, even if no
+other public body member responds.
+
+       In this case, the Co-Chair of the Building Committee sent an email to 10 of the 11
+members of the Committee, attaching a presentation and requesting comments. The email
+was sent to a quorum of the Committee, and the subject matter - opposition to a Town
+Meeting article - was clearly public business within the Committee’s jurisdiction, as the
+Committee had been charged with overseeing the construction of the school building at issue in
+the petitions. Thus, the email constituted unlawful deliberation and the Co-Chair’s actions
+constituted an individual violation of the Open Meeting Law. Notably, the AG declined to find a
+
+
+
+                                              Page 10
+violation by the Committee as a whole because there was no evidence that any Committee
+member responded to a quorum of the Committee.
+
+        OML 2012-41. Subcommittees must keep adequate minutes: In this case, a School
+Committee’s negotiations subcommittee (NSC) properly met in executive session for more than
+three hours. The AG described that the OML requires minutes to contain a summary of the
+discussion of each subject. However, they do not need to be a transcript of the meeting nor
+identify each speaker, “so long as a member of the public can read the minutes and understand
+from the summary the nature of the discussion and how the public body arrived at its
+decisions.” The AG found that the minutes from the NSC’s meeting, stating as follows, clearly
+fell short of this standard:
+
+       The [Union] presented the NSC with a proposal. The NSC discussed the elements
+       of the proposal and made a counter-offer to the Union. The [Union] was
+       disappointed in the counter-offer. The NSC continued to discuss the strategy of
+       the counter-offer.
+
+       The AG found that a member of the public “cannot read those few sentences and
+understand what occurred over the course of the three- and one-half-hour meeting. The
+minutes should include details of the NTSC’s proposal, the counter-offer, the Union’s concerns,
+and the discussion of strategy.”
+
+        OML 2012-66. The posted agenda must be specific and contracts must be ratified in
+open session: Here the AG found that a School Committee’s information included about an
+executive session listed on the posted agenda was insufficient. The AG stated that a topic is
+generally determined to include sufficient specificity “when a reasonable member of the public
+could read the topic and understand the anticipated nature of the public body’s discussion.”
+The AG further noted that for an executive session notice, the chair must “state the purpose for
+the executive session, stating all subjects that may be revealed without compromising the
+purpose for which the executive session was called.” In this instance the School Committee
+notice indicated that there would be an executive session “for the purpose of discussing
+contract negotiations with non-union personnel,” but did to specify that the contract being
+discussed was that of the Superintendent. These meeting notices therefore fell short of the
+requirement that the Committee state “all subjects that may be revealed without
+compromising the purpose for which the executive session” will be called.
+
+       The AG further found that although negotiation of the Superintendent’s contract was an
+appropriate subject for executive session, once the negotiations concluded, the Committee
+violated the OML by then failing to return to open session to vote on the contract
+
+       OML 2012-111. Only topics reasonably anticipated must be posted: In this case, the
+complaint alleged that the School Committee had violated the OML by considering a motion
+that had not been posted on the agenda. The AG noted that a meeting notice must be posted
+48 hours before a meeting and contain “the date, time and place of such meeting and a listing
+
+
+                                            Page 11
+of topics that the chair reasonably anticipates will be discussed at the meeting.” Here, the
+Chair spoke with a School Committee member an hour before the School Committee’s meeting,
+and after that conversation, decided to introduce a motion under the “New Business” section
+of the meeting. The AG found that the Chair did not reasonably anticipate this motion 48 hours
+before the meeting and, therefore, it was not unlawful to consider the motion, even though it
+had not been listed in a meeting notice. (See attached OML Checklists).
+
+                    II. THE MASSACHUSETTS PUBLIC RECORDS LAW
+
+        The Massachusetts Public Records Law provides that every person has a right to access
+public records, unless such records fall within 16 statutory exemptions. (See attached Guide to
+Massachusetts Public Records Law). Massachusetts defines public records broadly, to include
+“all documentary material or data, regardless of physical form or characteristics, made or
+received by any officer or employee” of any town of the Commonwealth. M.G.L. c. 4, §7(26).
+The statutory exemptions are strictly and narrowly construed. Globe Newspaper Co. v. DA of
+the Middle Dist., 439 374, 3890 (2003). Examples of exemptions are as follows:
+
+       Exemption A: those records that are “specifically or by necessary implication
+       exempted from disclosure by statute.” One statute that exempts disclosure
+       under the public records law is the Federal Education Rights and Privacy Act
+       (“FERPA”) and related Massachusetts Student Records Regulations that govern
+       maintenance, confidentiality and access to Student Records.
+
+       Exemption C: personnel and medical files or information; also, any other
+       materials or data relating to a specifically named individual, the disclosure of
+       which may constitute an unwarranted invasion of personal privacy.
+
+        A caution about email and text messages: Emails made and received by public
+officials are subject to disclosure unless one of the statutory exemptions applies. As with any
+effective communication, content and choice of words in emails must be tailored to the
+anticipated audience, which could include the general public.
+
+                                Additional Compliance Obligations
+
+        On June 3, 2016, Governor Baker signed An Act to Improve Public Records into law,
+which took effect on January 1, 2017. The new law sets limits on fees, provides deadlines for
+the provision of records, requires the designation of a “Records Access Officer,” and provides
+for an appeals process in respect to assessing fees and extensions of time to respond to records
+requests. The new law also distinguishes between “agencies” and “municipalities,” assigning
+certain responsibilities to each. School districts fall within the definition of “municipalities” for
+the purposes of the new law. In addition, the Secretary of State’s office is expected to create
+educational materials, make training available to agencies/towns, and prepare forms,
+guidelines, and reference materials to use and give to the public. The Secretary of State’s
+
+
+
+                                              Page 12
+Division of Public Records has approved revised regulations implementing the new law which
+are found at 950 CMR 32.00. (See attached Summary of Changes to the Public Records Law).
+
+Records Access Officer
+        Each “municipality” must designate one or more employees to serve as a Records
+Access Officer (RAO). Thus, every city and town are required to identify at least one employee
+who will serve in this role. Regional school districts also fall within the regulations’ definition of
+municipality and therefore must designate an RAO. However, non-regional school districts may
+choose to either coordinate responses to public records requests through the municipal RAO or
+may choose to designate a district RAO. The RAO must coordinate the district’s response to
+public records requests and facilitate a timely resolution. Each RAO must (1) assist persons
+seeking public records to identify the records sought; (2) assist the custodian of records in
+preserving public records in accordance with the law; and (3) prepare guidelines that assist
+persons seeking public records to make informed requests. These guidelines must include a list
+of categories of public records maintained by the district and must be posted on the district’s
+website. The RAO shall also, to the extent feasible, post commonly available public records
+documents on the district’s website.
+
+       Contact information, including the RAO’s name, title, business address, business
+telephone number, and business email address, must also be posted in a conspicuous location
+and on the district’s website.
+
+Electronic Records
+        The RAO must provide the public records by electronic means unless the record is
+unavailable electronically or the requester is unable to receive or access the records
+electronically. The record should be provided in the requester’s preferred format when
+feasible. If the public record is otherwise available on a public website, the RAO may furnish
+the record by assisting the requester in locating it on the website.
+
+Response to Requests for Records
+        The RAO must generally provide a written response to a request for public records no
+later than ten (1) business days following receipt of a request. Requests may be made orally or
+in writing and delivered by hand, by mail, by email, or by facsimile. A request is considered
+“received” on (1) the first business day following receipt of a written request or (2) the day of
+an oral request.
+
+       An RAO may not charge a fee for a public record unless the RAO responds to the
+requester within ten (10) business days. (See “Fees” below).
+
+       The RAO may not require the requester to specify his/her reason for the request other
+than to determine if the request is for commercial purposes or whether to grant a fee waiver.
+
+      If the RAO is unable to permit inspection or furnish a copy of a requested record
+because the magnitude or difficulty of the request, or multiple requests from the same
+
+
+                                               Page 13
+requester, unduly burdens the district, the district must still respond in writing, within ten (10)
+business days of initial receipt of the request. The response, sent via email or first-class mail,
+must identify a reasonable timeframe in which the district shall produce the public records
+sought. Such timeframe may not exceed twenty-five (25) business days following the initial
+receipt of the request for public records. A date beyond the twenty-five (25) business days is
+acceptable if voluntarily agreed upon by the requestor.
+
+       If the RAO intends to deny the access to requested records, the district must provide
+written notice of the denial within ten (10) business days of receipt of the request. The
+response, sent via email or first-class mail, must:
+     Include the date of the request
+     Identify any public records sought that aren’t in the possession, custody, or control of
+       the district
+     Identify the agency or municipality that may be in possession, custody, or control of the
+       record, if known
+     Identify any records or portions of records withheld and provide the reason (e.g.,
+       exemption)
+     Identify any portions of the responsive records that the district intends to produce
+     Identify a reasonable timeframe in which the district will produce the public records, but
+       no longer than 15 business days after initial receipt of request (or 25 business days for
+       municipalities), unless the requester agrees to a date beyond this
+     Inform the requester of his/her right to appeal to the Supervisor of Records or to seek
+       judicial review.
+     The RAO may petition the Supervisor of Records to request (1) an extension of time to
+       provide requested records or (2) a waiver of fee limits.
+
+Fees
+        Districts can assess reasonable fees for the production of public records, unless those
+records are freely available for public inspection. If fees are assessed, the district must provide
+a written, itemized, good faith estimate of the amount to be charged prior to complying with
+the request. The district may charge the following:
+     The actual cost of any storage device (e.g., thumb drive)
+     5 cents per page for black and white copies or printouts (single and double-sided)
+     The actual cost of postage if the requester specifically asks that the records be mailed
+     An hourly rate equal to the lowest paid employee with the required skills to respond to
+        the request, not to exceed $25 per hour, for time spent searching, compiling,
+        segregating, redacting and reproducing a requested record. If the municipality has a
+        population of greater than 20,000, then the RAO may not assess such a fee for the first
+        two hours of time spent responding to the request. If the municipality has a population
+        of 20,000 or less, it may assess a fee for the first two hours spent responding to the
+        request.
+
+
+
+
+                                              Page 14
+       To the extent feasible and at reasonable times, a requester is entitled to view and
+inspect records prior to obtaining copies or use a personal device such as a camera or portable
+scanner to copy records.
+
+        The RAO may also waive or reduce any fee if the requester shows that the disclosure of
+the public records is in the public interest because the records contribute significantly to the
+public’s understanding of district operations and is not primarily in the commercial interest of
+the requester, or if the requester has shown a lack of financial ability to pay. The
+
+       If a requester has failed to pay for previously produced records, the RAO may deny
+further requests, provided that written notification and an itemized bill of past due amounts is
+provided to the requester. The RAO may also delay provision of requested records until all fees
+related to the request are paid in full by the requester.
+
+Appeal
+         If a requester believes the district has failed to comply with the law, he/she may petition
+the Supervisor of Records to determine whether a violation has occurred. Such petitions for
+appeal must be filed within ninety (90) calendar days of the RAO’s response. The Supervisor of
+Records will issue a decision within ten (10) business days and will order any appropriate relief.
+If the district fails to comply with any issued order, the Attorney General may be notified and
+may take action. A requester may also seek enforcement in court with the burden on the
+district to prove that the record was withheld in accordance with state or federal law.
+
+          III. The Massachusetts Conflict of Interest Statute M.G.L. c 268A
+
+       The actions of committee members, as municipal employees, are also governed by the
+Massachusetts Conflict of Interest Statute (M.G.L. Chapter 268A), as members are deemed to
+be “special state employees” within the meaning of that statute. The purpose of the law is to
+prevent conflict between private interests and public duties, foster integrity in public service,
+and promote the public’s trust and confidence.
+
+      The statute spells out several on-the job restrictions directly relevant to school
+committee members:
+
+   1. Bribes - You are prohibited from asking for, giving, offering, or receiving a bribe. Bribes
+      are defined as taking anything of value corruptly received in exchange in order to
+      influence your official actions. Bribes are illegal no matter what the value because they
+      are motivated by corrupt intent.
+
+   2. Gifts and gratuities - You are prohibited from asking for or accepting a gift or gratuity of
+      $50 or more because of your official position, or because of something you can do or
+      have done in your official position. Notably, this prohibition covers meals,
+      entertainment, event tickets, golf, gift baskets and payment for travel expenses even if
+
+
+
+                                              Page 15
+        they are given in connection with official actions. A number of small gifts together
+        worth $50 or more may also violate this section.
+
+   3. Misuse of position - You may not use your official position to get something worth $50
+      or more that you are not entitled to, or to get something for someone else that they are
+      not entitled to.
+
+   4. Self-dealing and nepotism - You may not participate as a school committee member in a
+      matter in which you, your immediate family, your business organization, or your future
+      employer as a financial interest. Immediate family includes parents, siblings, spouse,
+      spouse’s parents, children and siblings. Participation includes discussing as well as
+      voting on a matter, and delegating a matter to someone else. The amount of money is
+      irrelevant in this prohibition. However, the financial interest must be direct, immediate
+      or reasonably foreseeable. The statute includes some exemptions specific to other
+      particular public offices. For example, school committee members may participate in
+      setting school fees that will affect their own children if they make prior written
+      disclosure.
+
+   5. Making false claims - It goes without saying that you are prohibited from presenting
+      false claims for payment or benefits of $50 or more or causing someone else to do so.
+
+   6. Appearance of conflict - You may not act in a manner that would make a reasonable
+      person think you can be improperly influenced or show favor toward someone. This
+      prohibition requires you to consider those relationships and affiliations that may
+      prevent you from acting fairly and objectively as a school committee member. If you
+      doubt that you can do so, you should abstain. However, you can avoid violating this
+      provision by making a public disclosure of the facts prior to acting.
+
+   7. Confidential information - School committee members may not improperly disclose
+      confidential information that they have as a result of their positions or make personal
+      use of such non-public information to further their personal interest.
+
+        Your obligations under the Conflict of Interest Law extends to after-hours activities as
+well.
+
+   1. Employment conflicts - You may not take a second job that conflicts with your duties. In
+      other words, you cannot receive pay for employment for a position that is incompatible
+      with being a school committee member. This prohibition includes private or public
+      employment.
+
+   2. Divided loyalties - School committee members are prohibited from receiving pay to
+      work on a matter involving the committee. You may not act as an agent for anyone else
+      in such a manner even though you are not paid to be school committee members.
+
+
+
+                                             Page 16
+   3. Inside track - Likewise, you may not take a paid position or receive pay from any
+      department of Dover or Sherborn for work other than school committee work.
+
+     Finally, the statute reaches beyond the term of your service as school committee
+members.
+
+   1. Forever ban - Once your service has ended, you may not work for anyone else on
+      matters that you worked on while you were on the school committee. This prohibition
+      serves to bar former employees from selling to private interests their familiarity with
+      the facts of particular matters that are of continuing concern to their former employer.
+      However, you may use the expertise you gain on the school committee in subsequent
+      private service.
+
+   2. One-year cooling off period - As former school committee member, you are barred for
+      one year from personally appearing before any agency of the municipality in connection
+      with matters under your authority in your prior position.
+
+   3. Partners - Your business partners are subject to the same restrictions as you are while
+      you are as a school committee member.
+
+        When the Ethics Commission determines that the conflict of interest law has been
+violated, it can impose a civil penalty of up to $10,000 ($25,00 for bribery cases) for each
+violation. In addition, the Commission can order the violator to repay any economic advantage
+gained by the violation and make restitution to injured third parties. Violations of the conflict
+of interest law can also be prosecuted criminally.
+
+       The Massachusetts legislature amended Chapter 268A effective July 2009 to include
+mandatory education and training requirements for all public employees, as defined by the
+statute. Thus, members of school committees in Massachusetts must receive a summary of
+Chapter 268A annually and sign a written acknowledgement that they have been provided a
+copy of the summary. In addition, they are required to complete an online training program.
+New committee members must complete the training within 30 days of appointment and every
+two years thereafter. (See attached Conflict of Interest Memorandum-Town of Dover). You
+can also access additional information regarding your rights and obligations in particular
+circumstances by contacting https://www.mass.gov/orgs/state-ethics-commission.
+
+
+
+
+                                             Page 17
+                                                                             Business Office
+                                                                             9 Widger Road,
+               MARBLEHEAD                                                    Marblehead, MA 01945
+                                                                             phone: 781.639.3140
+               PUBLIC SCHOOLS                                                fax: 781.639.3149
+
+
+                                       MEMORANDUM
+
+TO:            Marblehead School Committee
+FROM:          Michelle Cresta
+DATE:          July 14, 2022
+RE:            Schedule of Bills for Approval
+Included in this packet is the following Schedules of Bills for your consideration. The schedules
+and invoices have been uploaded to the shared drive and the required signatures have been
+obtained for each schedule.
+
+                                  22263         $        4,379.25
+                                  22291         $        6,303.00
+                                  22292         $       21,743.58
+                                  22321         $       57,147.04
+                                  22326         $       20,699.86
+                                  22329         $      153,292.44
+                                  22333         $        5,320.74
+                                  22347         $       78,004.25
+                                  22352         $       11,174.96
+                                  22353         $       16,597.35
+                                  22354         $          300.00
+                                  22355         $      151,625.64
+                                  22356         $       10,484.66
+                                  22379         $       25,390.36
+                                  22384         $       23,379.60
+                                  22390         $      250,000.00
+                                  22391         $          963.00
+                                  22392         $        7,950.00
+                                  22397         $       21,433.09
+                                  22403         $        7,494.93
+
+                                 TOTAL          $      873,683.75
+
+
+Suggested Motion:
+Motion to approve the identified schedules of bills totaling $873,683.75.
+                                                                               Business Office
+                                                                               9 Widger Road
+               MARBLEHEAD                                                      Marblehead, MA 01945
+                                                                               phone: 781.639.3140
+               PUBLIC SCHOOLS                                                  fax: 781.639.3149
+
+
+
+
+                                                    MEMO
+
+ TO:            Marblehead School Committee
+ FROM:          Michelle Cresta, Assistant Superintendent for Finance & Operations
+ CC:            John Costantino, Food Service Director
+ DATE:          July 14, 2022
+ RE:            School Meal Prices 2022-2023
+During the past school year our school meal program was universally funded by the federal and state
+governments. This program provided funding for breakfast and lunch for all students all year long. This
+program was great in terms of having our students fed, but is quite expensive for the government to sustain.
+The participation rate during the past year was just over 50%. Normally our participation rate runs between
+25% and 30%.
+
+The funding and reimbursement rates for the upcoming school year has not yet been determined by the
+government. For planning purposes, we need to assume that we will be returning to a three-tiered paid
+lunch program in which we have separates rates for free, reduced and paid meals. The current time we are
+anticipating that we will need to increase all paid meal prices due to increased operating costs. The
+increase for most paid student meals will be $ .25 with a couple of exceptions due to pricing alignment. The
+current and proposed prices are shown below.
+
+                                        Current Set      Proposed
+                                                                                         Proposed
+                                         Breakfast       Breakfast       Current Set
+                                                                                        Lunch Price
+                                           Price           Price         Lunch Price
+
+                    Brown/Glover              $2.00           $2.25             $3.00          $3.50
+                          Village             $2.00           $2.25             $3.25          $3.50
+                        Veterans              $2.00           $2.25             $3.50          $3.75
+                             MHS              $2.00           $2.25             $3.75          $4.00
+           MHS - Premium Lunch                                                                 $5.25
+                       Adult Meal                             $5.00                            $5.00
+           Adult - Premium Lunch                                                               $6.25
+
+Another important item to keep in mind is the Price Equity requirement that is part of the federal regulations.
+In normal times and circumstances, regulations require that the average price for a meal charged in the
+district is equal to, or greater than the value of the free reimbursement. This calculation for this requirement
+is dependent on the reimbursement meal rate that has yet to be set by the government for the upcoming
+school year. The proposed increases are expected to satisfy this requirement for the upcoming school year.
+
+Suggested Motion:
+Motion to approve student paid meal prices for the 2022-2023 school year as $2.25 for breakfast at all
+schools, $3.50 for lunch at Brown, Glover and Village, $3.75 for lunch at Veterans, $4.00 for lunch at the
+High School, and $5.25 for a premium lunch at the High School.
+                                  2022-2023 School Committee Sub-Committees and Liaisons
+Note: Subcommittee recommendations are brought back to the School Committee for action (policy BDE)
+
+I. Sub-Committees (requires vote):
+Sub-Committees of                       Description of Sub-Committee                      2021-2022        2022-2023
+School Committee                                    Activities                          Former Reps       Current Reps
+                          Support budget development process via working session
+                                                                                            David
+                          with Superintendent and Business staff, provide
+                                                                                        Harris/Meagan
+       Budget             constructive input into the budget strategy and output, and
+                                                                                            Taylor
+                          support efforts with FinCom and the Town
+
+   (Curriculum)
+    Teaching &                                                                              N/A
+     Learning
+
+      Facilities          Annual review of yearly facilities maintenance plan,
+                                                                                        Emily Barron
+     Committee            capital outlays, and long term facilities’ needs
+                                                                                         /Sarah Fox
+       Policy             Remain current in MPS curriculum                                 Emily
+                          development/alignment as progresses across disciplines        Barron/Sarah
+                                                                                            Gold
+      Building            Meet with Bldg. Comm. Bldg. Comm./report back to SC              David
+     Committee            Minutes approved to Bldg. Comm.                               Harris/Sarah           N/A
+                                                                                            Fox
+
+II. Superintendent’s Advisory
+
+Safety Advisory           Develop and maintain district safety plans in collaboration
+                                                                                          Sarah Fox
+                          with Town Officials
+
+Health/Wellness           Overview of Wellness Policy and building related
+                                                                                         Sarah Gold
+                          procedures
+
+
+
+III. SC Liaison to School Advisory Councils 2022-2023
+             School                                2021-2022 SC Liaison                               2022-2023 SC Liaisons
+
+          High School                                    Sarah Gold
+
+
+             Veterans                                   Emily Barron
+
+
+         Village School                                Meagan Taylor
+
+             Glover                              Sarah Gold & David Harris
+
+              Brown                                      Sarah Fox
+
+
+
+IV. Other SC Liaisons 2022-2023
+
+            METCO                                     Emily Barron
+
+             SEPAC
+                                                      Meagan Taylor
+
+
+Decided at SC Retreat July 2022
+QUOTE CONFIRMATION
+
+DEAR STEVE KWIATEK,
+
+Thank you for considering CDW•G LLC for your computing needs. The details of your quote are below.
+Click here to convert your quote to an order.
+
+
+       QUOTE #                   QUOTE DATE                 QUOTE REFERENCE                 CUSTOMER #                 GRAND TOTAL
+
+       MQFB889                    2/18/2022                        POLY                           419279                    $5,690.26
+
+
+
+QUOTE DETAILS
+
+ITEM                                                                    QTY             CDW#                UNIT PRICE            EXT. PRICE
+
+Poly - stand - for video conferencing system                              1             6690392                   $111.53               $111.53
+Mfg. Part#: 2215-86538-100
+Contract: Massachusetts IT Hardware and Services - ITC73 C3
+(ITC73)
+Poly Studio X70 - video conferencing kit - with Poly TC8                  1             6690401               $5,578.73             $5,578.73
+Mfg. Part#: 7200-87300-001
+Contract: Massachusetts IT Hardware and Services - ITC73 C3
+(ITC73)
+
+
+
+
+PURCHASER BILLING INFO                                                                                     SUBTOTAL                 $5,690.26
+
+Billing Address:                                                                                           SHIPPING                       $0.00
+MARBLEHEAD PUBLIC SCHOOL DISTRICT
+ACCTS PAYABLE                                                                                              SALES TAX                      $0.00
+9 WIDGER RD
+MARBLEHEAD, MA 01945-2111                                                                              GRAND TOTAL                 $5,690.26
+Phone: (617) 631-0900
+Payment Terms: NET 30 Days-Govt/Ed
+
+DELIVER TO                                                                               Please remit payments to:
+
+Shipping Address:                                                                        CDW Government
+VETERANS MIDDLE SCHOOL                                                                   75 Remittance Drive
+217 PLEASANT ST                                                                          Suite 1515
+MARBLEHEAD, MA 01945                                                                     Chicago, IL 60675-1515
+Shipping Method: DROP SHIP-GROUND
+
+
+                                          Need Assistance? CDW•G LLC SALES CONTACT INFORMATION
+
+
+                              Tim Smith               |           (866) 773-7356               |              timsmit@cdwg.com
+
+
+
+
+ This quote is subject to CDW's Terms and Conditions of Sales and Service Projects at
+ http://www.cdwg.com/content/terms-conditions/product-sales.aspx
+ For more information, contact a CDW account manager
+
+ © 2022 CDW•G LLC 200 N. Milwaukee Avenue, Vernon Hills, IL 60061 | 800.808.4239
+
+
+
+
+                                                                 Page 1 of 1
+                                                                                                      Planning for Success
+                                                                                                         In Massachusetts
+
+
+                                  MARBLEHEAD PUBLIC SCHOOLS
+                                  District Plan for Success 2021-2026
+
+
+                                                       MISSION
+       To foster in all students a passion for learning and to provide safe and nurturing, inclusive school
+ environments in which they can develop the values, knowledge, and skills needed to achieve full potential in
+        their personal, social and work lives to become engaged and contributing members of society.
+                                                        VISION
+   To be a model school district, exemplary in its student engagement and academic excellence, in which all
+             students and staff reach their highest potential in partnership with the community.
+                                                   CORE VALUES
+Student Achievement: We will provide challenging standards and differentiated instruction to encourage
+students to excel and become confident, engaged learners who achieve their potential.
+Personal Growth: We will provide students with opportunities to grow socially, emotionally, physically and
+academically, and to be respectful, contributing members of society.
+Partnerships and Collaboration: As a shared responsibility, we will foster partnerships among the schools,
+families, businesses and community at large.
+School Culture: We will create an environment of respect and appreciation for individual and cultural
+differences and instill a passion for responsible social action.
+Resources: We will make decisions in the best interests of students’ growth, recognizing funding that supports
+educational excellence and social/emotional well-being.
+
+
+                                                 THEORY OF ACTION
+If we fully align teaching and learning, Prek-12, with our multi-tiered system of supports (MTSS) framework
+to ensure all students meet or exceed academic & social-emotional learning expectations; build, strengthen
+and support educator capacity and well-being; promote equity & ensure inclusion by acknowledging and
+embedding all forms of diversity; provide students and staff with the necessary technology and support to
+promote successful student outcomes; and establish a comprehensive and equitable staffing, compensation, &
+maintenance capital plan, aligned to the facility audit; then the Marblehead Public Schools will be a model
+school district, exemplary in its student engagement and academic excellence, in which all students and staff
+reach their highest potential in partnership with the community.
+                              FOCUS AREAS OF DISTRICT IMPROVEMENT
+     Teaching &             Professional        Diversity, Equity,        Technology            Facilities &
+      Learning                 Culture              & Inclusion                                  Operations
+                                           STRATEGIC OBJECTIVES
+1. Fully align teaching   2.Build, strengthen,     3. Promote equity &   4. Provide students    5. Establish a
+& learning, Prek-12,      & support educator       ensure inclusion by   and staff with the     comprehensive and
+with our multi-tiered     capacity and well-       acknowledging &       necessary technology   equitable staffing,
+system of supports        being.                   embedding all forms   & support to promote   compensation &
+(MTSS) framework to                                of diversity          successful student     maintenance capital
+ensure all students                                throughout the        outcomes.              plan, aligned to the
+meet or exceed                                     district.                                    facility audit.
+academic & social-
+emotional learning
+expectations.
+
+
+
+
+                                                                                                                  1
+                                                                                                              Planning for Success
+                                                                                                                 In Massachusetts
+
+                                              STRATEGIC INITIATIVES
+1.1 Develop consistent      2.1 Ensure efficient     3.1 Analyze, cultivate,    4.1 Develop and           5.1 Determine town
+systems, common             financial systems to     & expand district-        implement                  and school roles and
+assessments, &              support effective        wide systems to           a comprehensive,           responsibilities.
+processes for data          instruction & the        ensure all students       long-term technology
+inquiry & analysis to       delivery of the          and families,             plan.
+support instructional       curriculum.              especially those from
+excellence & student                                 groups historically
+growth.                                              marginalized, access
+                                                     the entire scope of
+                                                     opportunities during
+                                                     & outside the school
+                                                     day.
+1.2 Expand & refine         2.2 Provide equitable    3.2 Embed diversity,      4.2 Create multi-year      5.2 Understand our
+instruction to ensure the   access to resources      equity, & inclusion       budget projections to      assets to ensure
+taught curriculum is        and supplies in each     in the mission,           support current and        accurate and timely
+consistent & equitable      school and               vision, core values,      future initiatives.        communication with
+for all students.           districtwide.            and training of our                                  community members
+                                                     leadership teams,                                    and town officials.
+                                                     schools, and the
+                                                     district.
+1.3 Align the               2.3 Ensure adequate      3.3 Examine and work      4.3 Create & add           5.3. Conduct an
+curriculum by               opportunities and        with culturally           instructional tech         enrollment,
+engaging in                 spaces for               responsive experts to     supports for staff         reconfiguration, and
+curriculum mapping          collaboration in each    revise curriculum &       using technology           re-districting
+that includes scope &       school and district      assessments to            integration specialists.   analysis.
+sequence.                   wide.                    provide equitable
+                                                     learning opportunities,
+                                                     resources, & materials
+                                                     that reflect all
+                                                     students.
+1.4 Provide                 2.4. Develop & offer     3.4 Acknowledge the       4.4 Provide                5.4 Explore revenue
+professional                relevant, effective PD   history, strengthen, &    PD opportunities for       stream possibilities for
+development that            throughout the school    support the district’s    technology use.            facility & field use.
+supports educator           system.                  METCO program for
+development, including                               both communities.
+best practices for an
+inclusive curriculum.
+1.5 Ensure financial        2.5 Conduct a            3.5 Recruit staff         4.5 Review current         5.5 Use the facility
+systems support the         compensation &           members who reflect       curriculum for             audit to develop and
+delivery of the             staffing analysis for    our students &            technology to align K-     fund the annual
+curriculum.                 Unit A personnel and     provide support           12.                        capital plan.
+                            paraprofessionals.       systems to nurture
+                                                     long-term
+                                                     employment.
+1.6 Implement full-day                               3.6 Identify, create,                                5.6 Conduct
+K programs and                                       & evaluate practices                                 compensation &
+explore other early                                  to ensure all students                               staffing analyses for all
+childhood program                                    have access to high-                                 personnel areas.
+opportunities.                                       quality educational
+                                                     opportunities.
+                                                     3.7 Cultivate                                        5.7 Develop a team to
+                                                     inclusive family &                                   market the facilities &
+                                                     community                                            maintenance plans for
+                                                     partnerships.                                        community buy-in.
+                                                     3.8 Sustain and
+                                                     support DEI team.
+
+                                                                                                                           2
+                                                                                                    Planning for Success
+                                                                                                       In Massachusetts
+
+
+
+                                                   OUTCOMES
+OUTCOMES: Objective 1-Teaching & Learning
+  A. By June 30, 2026, teaching and learning in the Marblehead Public Schools will be fully aligned, preK-12,
+     with our Multi-tiered System of Supports (MTSS) framework, resulting in students meeting or exceeding
+     academic and grade level expectations and experiencing individual social/emotional growth as evidenced
+     through a variety of assessment tools.
+  B. By June 30, 2026, instructional practices will reflect the aligned curriculum and the diversity, equity, and
+     inclusion initiatives of the Marblehead Public Schools.
+  C. By June 30, 2026, educators will be competent in their capacity to implement the aligned horizontal and
+     vertical curriculum to ensure all students graduate as conscientious members of society who are career and
+     college ready.
+  D. By June 30, 2026, the District will have implemented full day K programs and explored other early
+     childhood opportunities.
+OUTCOMES: Objective 2 – Professional Culture
+  A. By June 30, 2026, the Marblehead Public Schools, in conjunction with the Marblehead Education
+     Association Professional Development Committee, will develop a long-term professional development plan
+     (five-year) to address deficits; increase capacity; foster diversity, equity, and inclusion; support instructional
+     technology; facilitate the development of aligned curriculum; and attend to the social emotional well-being of
+     educators.
+  B. By June 30, 2026, the Marblehead Public Schools will conduct a k-12 audit of spending for instructional
+     supplies to ensure all have equitable funding that supports effective instruction.
+OUTCOMES: Objective 3 Diversity, Equity, and Inclusion
+  A. By June 30, 2026, the Marblehead families, inclusive of all students enrolled in the Marblehead Public
+     Schools, will be fully engaged and actively participate in their children’s education by way of during and
+     outside of school opportunities.
+  B. By June 30, 2026, the Marblehead Public Schools will have reduced at risk measures and outcomes for all
+     marginalized and/or at-risk students to the point where all students feel safe, supported, and included in
+     school.
+  C. By June 30, 2026, the Marblehead Public schools will provide inclusive and diverse curriculum, instruction,
+     and extracurricular practices and activities to ensure that all students have equitable access to high quality
+     educational and personal development opportunities.
+OUTCOMES: Objective 4 – Technology
+  A. By June 30, 2026, the Marblehead Public Schools will have a sustained budget that supports current and
+     future technology initiatives.
+  B. By June 30, 2026, the Marblehead Public Schools will have sufficient staff to ensure the delivery of a
+     comprehensive k-12 technology program.
+OUTCOMES: Objective 5 - Facilities and Operations.
+  A. By June 30, 2026, the Marblehead Public Schools will have equitable staff compensation.
+  B. By June 30, 2026, the Marblehead Public Schools will maintain a capital plan and align it to the facility audit.
+  C. By June 30, 2026, the Marblehead Public Schools will establish a comprehensive and equitable staffing plan.
+
+
+
+
+                                                                                                               3
+                                                                           Marblehead School Committee
+
+                   MARBLEHEAD                                              9 Widger Road,
+                                                                           Marblehead, MA 01945
+                   PUBLIC SCHOOLS                                          phone: 781.639.3140 x10114
+                                                                           email:schoolcommittee@marbleheadschools.org
+
+             Sarah Fox        Emily Baron             Sarah Gold              Meagan Taylor          Alison Taylor
+             Chairman         Vice Chairman         Committee Member         Committee Member           Secretary
+
+
+From original: The Marblehead School Committee values and views as our top priority the academic, social and
+emotional success of all students in our district. We agree to thoughtfully seek and support solutions that
+will provide the greatest benefit to students
+
+
+Who We Represent
+        1. We represent the educational and developmental needs and interests of all students in the district. We
+             place their interests above all others in the decisions we make.
+
+How We Govern
+          1. We acknowledge that a School Committee meeting is a meeting of the School Committee that
+              is held in public – not a public meeting.
+          2. We shall conduct business through a set agenda that should be connected to district goals.
+              Emerging items shall be addressed in subsequent meetings through planned agenda items
+              unless it is determined by the School Committee Chairperson that it would be detrimental to
+              delay the issue until a subsequent meeting.
+          3. Requests to add items to an agenda by members shall be made to the Superintendent or the
+              School Committee Chairperson in accordance with the law.
+          4. We shall strive to make each meeting effective and efficient giving each member an
+              equal opportunity to express their views and opinions and to relay their input in a
+              concise and topic-focused manner. No one member should monopolize the discussion.
+              All remarks must be directed through the Chair. Remarks must be courteous in
+              language and deportment.
+          5. We shall make decisions after considering data, the Superintendent’s recommendations,
+              proposals, and suggestions. We will engage in open-minded, respectful debate, vote our
+              convictions, avoid bias, and uphold and support the decision of the majority of the
+              Committee once a decision is made. We will explain the reasons for our votes.
+          6. We shall exhibit professional conduct and behavior.
+          7. We shall attend meetings well-prepared to discuss issues on the agenda and to participate
+              in efficient decision-making.
+          8. When we are in committee we will remain in our committee member role throughout
+              the meeting.
+          9. We shall ensure that we do not breach the open meeting laws by deliberating outside of
+              duly convened meetings of the committee.
+          10. The School Committee welcomes respectful, thoughtful input from the public in shaping
+              committee decisions. Public input at meetings may be made on items on the agenda, or
+              otherwise at the discretion of the Chairperson.
+          11. We acknowledge the importance of subcommittees, and the Superintendent agrees to utilize
+              them to focus on a specific topic in‐depth and to prepare for presentation, deliberation and
+              possible action by the full School Committee. We will agree on the appropriate School
+              Committee participation on subcommittees.
+                                                                   Marblehead School Committee
+
+              MARBLEHEAD                                           9 Widger Road,
+                                                                   Marblehead, MA 01945
+              PUBLIC SCHOOLS                                       phone: 781.639.3140 x10114
+                                                                   email:schoolcommittee@marbleheadschools.org
+
+         Sarah Fox      Emily Barron           Sarah Gold            Megan Taylor         Alison Taylor
+         Chairman        Vice Chairman       Committee Member        Committee Member        Secretary
+
+
+
+       12. School Committee members will maintain privileged information and respect the confidentiality
+          of Executive Session.
+       13. Our actions shall be consistent with the core values of the district, and be consistent with
+          our vision of a high class organization.
+       14. School Committee meetings will be guided by the Open Meeting law and Roberts Rules of
+           Order.
+       15. The Superintendent of Schools and such staff as are needed to advise the Committee shall
+           be seated at the Committee table.
+       16. School Committee members will familiarize themselves with and uphold all district policies.
+           Specifically, policies relating to governance (BHC, BBAA, BIA, BHE, BCA, BDD).
+
+
+How We Treat Each Other
+       1. We shall debate the issues keeping an open mind to other member’s opinions and/or positions.
+       2. We shall work to build trust between and among School Committee members, the
+          Superintendent and the Administration by treating everyone with dignity and respect, even in
+          times of disagreement.
+
+How We Communicate
+       1. It is the School Committee’s responsibility to set a positive tone for the district.
+
+       2. The Superintendent and the School Committee recognize the importance of proactive
+          communication. If School Committee members have questions or concerns, they agree
+          to contact the Superintendent well in advance of a meeting. They agree that there will
+          be no surprises.
+       3. We shall channel requests for information through the Superintendent and/or the School
+          Committee Chairperson rather than directly to district staff or Town officials. Town officials
+          shall channel requests for information through the Chairperson or Superintendent for
+          consideration by the School Committee.
+       4. We shall provide full disclosure of information and not withhold information from other
+          members.
+       5. We shall advocate for the public schools and public education as ambassadors of the school
+          system by promoting support for public education and spreading the news of our success.
+          We shall always strive to project a positive image.
+       6. We recognize the Chairperson, or her/his designee, as the official spokesperson of the
+          School Committee, including, but not limited to, legal counsel and official media requests.
+       7. The Superintendent and the School Committee recognize the importance of working
+          collaboratively with the community to improve our schools and we shall actively seek ways
+          to enlist community support for our efforts.
+                                                                  Marblehead School Committee
+
+              MARBLEHEAD                                          9 Widger Road,
+                                                                  Marblehead, MA 01945
+              PUBLIC SCHOOLS                                      phone: 781.639.3140 x10114
+                                                                  email:schoolcommittee@marbleheadschools.org
+
+        Sarah Fox      Emily Barron           Sarah Gold            Meagan Taylor       Alison Taylor
+         Chairman       Vice Chairman      Committee Member         Committee Member       Secretary
+
+
+       8. School Committee members acknowledge the importance of working collaboratively with
+          town officials, but recognize when they attend meetings of other committees and boards
+          they speak and act as individuals not for the committee as a whole and will disclose as
+          such.
+       9. We will adhere to the MASC social media guidelines
+
+How We Will Improve
+      1. All new School Committee members will attend an MASC orientation session as soon
+          as practicable, but within one year of being elected.
+      2. All members will be open to continued personal growth through participating in
+          training opportunities in order to advance the work of our public schools.
+      3. We shall review and revise operating protocols annually through an annual workshop.
+      4. We shall develop and maintain a district new member orientation program.
+      5. We shall develop annual School Committee performance objectives, or goals, and
+         appraise progress through regular self-evaluation.
+
+
+What Are Our Limits of Authority
+      1. We shall exercise leadership in vision, planning, policy, budgeting, evaluation of the
+          Superintendent of Schools, and advocacy of the district, consistent with the law and
+          district policies.
+      2. It is the Superintendent’s responsibility to oversee personnel issues and to manage the
+          day-to-day operations of the district. It is the School Committee’s responsibility to evaluate the
+          superintendent’s effectiveness in these matters.
+       3. We shall recognize that authority rests only with the majority decision of the School
+          Committee and we shall not make any independent commitments or take any independent
+          actions that may compromise the School Committee as a whole.
+      4. We shall follow the chain of command (Teacher, Principal, Superintendent) and direct others to
+          do the same.
+      5. Complaints and concerns regarding personnel will be directed to the Superintendent.
+      6. We shall not use our positions for personal or partisan gain.
+      7. We shall refer any important questions or concerns received from members of the community
+          to the Superintendent. The Superintendent, not any School Committee member has the
+          authority to investigate. The Superintendent shall provide committee members with his/her
+          response. It is not the role of the School Committee to resolve issues.
+                                                                      Marblehead School Committee
+
+               MARBLEHEAD                                             9 Widger Road,
+                                                                      Marblehead, MA 01945
+               PUBLIC SCHOOLS                                         phone: 781.639.3140 x10114
+                                                                      email:schoolcommittee@marbleheadschools.org
+
+          Sarah Fox        Emily Barron             Sarah Gold          Meagan Taylor       Alison Taylor
+          Chairman         Vice Chairman          Committee Member      Committee Member       Secretary
+
+
+What Happens When Things Go Wrong
+
+        1. We shall work together to clarify and restate discussions in order to strive for full understanding.
+        2. We recognize the importance of honoring our agreed upon operating protocols and we agree
+           to take responsibility for reminding one another when we get off track.
+        3. We shall maintain fidelity to these commitments and will be held accountable by our fellow
+           School Committee members should any of us fail to live up to these commitments. If a
+           School Committee member or Superintendent violates any of the operating protocols,
+           he/she will be referred to the Chairperson or in the case of the Chairperson to the Vice
+           Chairperson.
+
+
+
+
+Sarah Fox, Chairperson                     Emily Barron, Vice Chair
+
+
+
+
+Alison Taylor, Secretary                   Sarah Gold, Committee Member
+
+
+
+
+Meagan Taylor, Committee Member
+____________________________________________________________________________________
+
+                                 2022-2023 School Committee Meeting Dates
+
+
+
+September
+      1st Thursday Sept 1st / 3rd Thursday Sept 15th
+      School begins for students on Tuesday Sept 6th
+      Keep 1st and 3rd or hold off cycle on 8th and 22nd?
+
+October
+       1st Thursday- Oct 6th / 3rd Thursday-Oct 20th
+
+November
+     1st Thursday- Nov 3rd / 3rd Thursday-Nov 17th
+     Joint conference is the 2nd-5th, move to Wed night the 2nd to allow members to attend 3 & 4th ?
+
+December
+      1st Thursday- Dec 1st / 3rd Thursday-Dec 15th
+      1/2 day on Dec 15th for Pre-K-8 Parent Conferences (conflict at night)
+      Select alternate date or schedule meeting at 7:30pm?
+
+January
+          1st Thursday- Jan 5th / 3rd Thursday-Jan 19th
+
+February
+       1st Thursday- Feb 2nd / 3rd Thursday-Feb 16th
+
+March
+          1st Thursday- Mar 2nd / 3rd Thursday-Mar 16th / 5th Thursday-Mar 30th
+          Meet off cycle on the 30th to accommodate April break, which falls on 3rd Thursday in April
+
+April
+          2nd Thursday –Apr 13th / 3rd Thursday –Apr 20th (no school on 17th-21st=April break)
+          One off cycle meeting in April
+
+May
+          1st Thursday- May 4th / 3rd Thursday-May 18th
+
+June
+          1st Thursday- Jun 1st/ 3rd Thursday-Jun 15th
+

@@ -17,7 +17,7 @@ import pLimit from 'p-limit';
 const ROOT = resolve('data/schools');
 const PDF_ROOT = resolve(ROOT, '_pdfs');
 const MANIFEST = resolve(ROOT, 'manifest.json');
-const CONCURRENCY = 3;
+const CONCURRENCY = 5;
 const TIMEOUT_MS = 240_000;
 const TODAY = new Date().toISOString().slice(0, 10);
 
@@ -163,6 +163,136 @@ const INVENTORY = [
   ['sc-meetings-fy26', '2025-09-05', 'Facilities Subcommittee 9.5.2025', 'https://resources.finalsite.net/images/v1758897133/marbleheadschoolsorg/mnpa6mtfidx138emdetf/952025_FacilitiesSub.pdf'],
   ['sc-meetings-fy26', '2025-07-24', 'Facilities Subcommittee 7.24.2025', 'https://resources.finalsite.net/images/v1755805292/marbleheadschoolsorg/yjmintjie2s5jm81vvz9/7242025FacilitiesSub.pdf'],
 ];
+
+// ── DISCOVERY SOURCES ──────────────────────────────────────────────────
+// Section landing pages walked 1-deep at runtime. Any <a> link pointing to a
+// PDF (resources.finalsite.net, *.pdf, or /fs/resource-manager/view/<uuid>)
+// gets added to the inventory under the listed category, deduped against
+// URLs already in INVENTORY above. Re-runnable.
+//
+// What's NOT here and why:
+//   - MPS Policy Manual: classifications A–L live in Google Drive folders, not
+//     scrape-able without auth. Listed at /school-committee/mps-policy-manual.
+//   - DESE Report Cards & MCAS: external (reportcards.doe.mass.edu); separate
+//     scrape, not on the district site.
+//   - Budget Documents page (/administration/business-and-finance-office/
+//     budget-documents) is empty; current budget book is captured via the FY27
+//     packet inside sc-meetings-fy26.
+const DISCOVERY_SOURCES = [
+  // School Committee multi-year archive (year subpages indexed at the main
+  // agendas-materials-and-minutes page).
+  ['sc-archive-fy25', 'https://www.marbleheadschools.org/fs/pages/1761'],
+  ['sc-archive-fy24', 'https://www.marbleheadschools.org/fs/pages/1460'],
+  ['sc-archive-fy23', 'https://www.marbleheadschools.org/fs/pages/1457'],
+  ['sc-archive-fy22', 'https://www.marbleheadschools.org/fs/pages/1454'],
+  ['sc-archive-fy21', 'https://www.marbleheadschools.org/fs/pages/1449'],
+  ['sc-archive-fy20', 'https://www.marbleheadschools.org/fs/pages/1444'],
+  ['sc-archive-fy19', 'https://www.marbleheadschools.org/fs/pages/1438'],
+  ['sc-archive-fy18', 'https://www.marbleheadschools.org/fs/pages/1432'],
+  // Individual school subdomains (handbooks, SIPs, schedules).
+  ['school-mhs', 'https://mhs.marbleheadschools.org/'],
+  ['school-mvms', 'https://mvms.marbleheadschools.org/'],
+  ['school-village', 'https://village.marbleheadschools.org/'],
+  ['school-glover', 'https://glover.marbleheadschools.org/'],
+  ['school-brown', 'https://brown.marbleheadschools.org/'],
+  // Student services sub-pages.
+  ['special-ed', 'https://www.marbleheadschools.org/students-families/student-services/special-education'],
+  ['sepac', 'https://www.marbleheadschools.org/students-families/student-services/marblehead-sepac'],
+  ['section-504', 'https://www.marbleheadschools.org/students-families/student-services/section-504'],
+  ['english-learners', 'https://www.marbleheadschools.org/students-families/student-services/english-language-education'],
+  ['dcap', 'https://www.marbleheadschools.org/students-families/student-services/district-curriculum-accommodation-plan-dcap'],
+];
+
+const PDF_URL_PATTERNS = [
+  /^https?:\/\/resources\.finalsite\.net\/images\/[^"'\s]+\.pdf$/i,
+  /\.pdf(\?|$)/i,
+  /\/fs\/resource-manager\/view\//i,
+];
+
+function looksLikePdfUrl(url) {
+  return PDF_URL_PATTERNS.some(re => re.test(url));
+}
+
+function resolveUrl(href, base) {
+  try {
+    return new URL(href, base).toString();
+  } catch {
+    return null;
+  }
+}
+
+function parseAnchorTags(html) {
+  const out = [];
+  const re = /<a\b[^>]*\bhref=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const href = m[1].trim();
+    const text = m[2].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    out.push({ href, text });
+  }
+  return out;
+}
+
+function parseDateFromTitle(title) {
+  const m = title.match(/\b(\d{1,2})[.\/\-_](\d{1,2})[.\/\-_](\d{2,4})\b/);
+  if (!m) return '';
+  let [, mo, day, yr] = m;
+  if (yr.length === 2) yr = (parseInt(yr) > 50 ? '19' : '20') + yr;
+  const moI = parseInt(mo), dayI = parseInt(day);
+  if (moI < 1 || moI > 12 || dayI < 1 || dayI > 31) return '';
+  return `${yr}-${String(moI).padStart(2, '0')}-${String(dayI).padStart(2, '0')}`;
+}
+
+async function fetchHtml(url) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 60_000);
+  try {
+    const res = await fetch(url, {
+      signal: ctrl.signal,
+      headers: { 'User-Agent': 'marbleheaddata.org research scraper (agbaber@gmail.com)' },
+    });
+    if (!res.ok) return null;
+    return await res.text();
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function discoverFromSource(category, seedUrl, knownUrls) {
+  const html = await fetchHtml(seedUrl);
+  if (!html) {
+    console.warn(`  ! ${category}: could not fetch ${seedUrl}`);
+    return [];
+  }
+  const anchors = parseAnchorTags(html);
+  const found = [];
+  const seenInSource = new Set();
+  for (const { href, text } of anchors) {
+    const abs = resolveUrl(href, seedUrl);
+    if (!abs) continue;
+    if (!looksLikePdfUrl(abs)) continue;
+    if (knownUrls.has(abs) || seenInSource.has(abs)) continue;
+    seenInSource.add(abs);
+    knownUrls.add(abs);
+    const title = text || abs.split('/').pop().replace(/\.pdf$/i, '').replace(/[_-]+/g, ' ');
+    const doc_date = parseDateFromTitle(title);
+    found.push([category, doc_date, title, abs]);
+  }
+  return found;
+}
+
+async function discoverAll(knownUrls) {
+  console.log(`Discovery: walking ${DISCOVERY_SOURCES.length} section pages...`);
+  const all = [];
+  for (const [category, seedUrl] of DISCOVERY_SOURCES) {
+    const found = await discoverFromSource(category, seedUrl, knownUrls);
+    console.log(`  + ${category}: ${found.length} new docs`);
+    all.push(...found);
+  }
+  return all;
+}
 
 function slugify(s) {
   return s
@@ -317,6 +447,81 @@ const CATEGORY_META = {
     title: 'School Committee meetings, FY26',
     blurb: 'Agenda packets, minutes, and subcommittee minutes for July 2025 onward. Includes the FY27 Superintendent\'s Proposed Budget packet (2.5.2026 meeting).',
   },
+  // Auto-discovered: SC archive year subpages
+  'sc-archive-fy25': {
+    title: 'School Committee meetings, FY25 (auto-discovered)',
+    blurb: '2024&ndash;2025 meeting agendas, minutes, and subcommittee minutes.',
+  },
+  'sc-archive-fy24': {
+    title: 'School Committee meetings, FY24 (auto-discovered)',
+    blurb: '2023&ndash;2024 meeting materials. Includes the fall-2024 Unit A contract dispute period and FY26 budget development.',
+  },
+  'sc-archive-fy23': {
+    title: 'School Committee meetings, FY23 (auto-discovered)',
+    blurb: '2022&ndash;2023 meeting materials. Includes FY24 budget development and the FY23 FTE-jump reporting (see project_fy23_fte_reporting_error).',
+  },
+  'sc-archive-fy22': {
+    title: 'School Committee meetings, FY22 (auto-discovered)',
+    blurb: '2021&ndash;2022 meeting materials.',
+  },
+  'sc-archive-fy21': {
+    title: 'School Committee meetings, FY21 (auto-discovered)',
+    blurb: '2020&ndash;2021 meeting materials. Pandemic-era remote learning, ARPA funding decisions.',
+  },
+  'sc-archive-fy20': {
+    title: 'School Committee meetings, FY20 (auto-discovered)',
+    blurb: '2019&ndash;2020 meeting materials. Pre-pandemic plus pandemic shutdown transition.',
+  },
+  'sc-archive-fy19': {
+    title: 'School Committee meetings, FY19 (auto-discovered)',
+    blurb: '2018&ndash;2019 meeting materials.',
+  },
+  'sc-archive-fy18': {
+    title: 'School Committee meetings, FY18 (auto-discovered)',
+    blurb: '2017&ndash;2018 meeting materials. Oldest year available on the district archive page.',
+  },
+  // Auto-discovered: individual school subdomains
+  'school-mhs': {
+    title: 'Marblehead High School (auto-discovered)',
+    blurb: 'Documents linked from the MHS site: handbook, School Improvement Plan, bell schedule.',
+  },
+  'school-mvms': {
+    title: 'Marblehead Veterans Middle School (auto-discovered)',
+    blurb: 'Documents linked from the MVMS site.',
+  },
+  'school-village': {
+    title: 'Village Elementary School (auto-discovered)',
+    blurb: 'Documents linked from the Village school site.',
+  },
+  'school-glover': {
+    title: 'Glover Elementary School (auto-discovered)',
+    blurb: 'Documents linked from the Glover school site.',
+  },
+  'school-brown': {
+    title: 'Brown Elementary School (auto-discovered)',
+    blurb: 'Documents linked from the Brown school site.',
+  },
+  // Auto-discovered: student services sub-pages
+  'special-ed': {
+    title: 'Special Education (auto-discovered)',
+    blurb: 'District special education policies and resources.',
+  },
+  'sepac': {
+    title: 'Marblehead SEPAC (auto-discovered)',
+    blurb: 'Special Education Parent Advisory Committee documents.',
+  },
+  'section-504': {
+    title: 'Section 504 (auto-discovered)',
+    blurb: 'Section 504 accommodation policies.',
+  },
+  'english-learners': {
+    title: 'English Language Education (auto-discovered)',
+    blurb: 'English learner program documents.',
+  },
+  'dcap': {
+    title: 'District Curriculum Accommodation Plan (auto-discovered)',
+    blurb: 'DCAP document and related curriculum accommodation guidance.',
+  },
 };
 
 function writeIndex(manifest) {
@@ -367,6 +572,21 @@ function writeIndex(manifest) {
   lines.push('position, not neutral reporting.** Any citation drawn from that folder must be paired');
   lines.push('with the MEA\'s contemporaneous statements or framed explicitly as the SC\'s position.');
   lines.push('');
+  lines.push('## Known gaps');
+  lines.push('');
+  lines.push('- **MPS Policy Manual**: District policies (classifications A&ndash;L plus Procedures)');
+  lines.push('  live in [Google Drive folders](https://www.marbleheadschools.org/school-committee/mps-policy-manual)');
+  lines.push('  rather than directly on the school site. Drive folder contents are not scrape-able');
+  lines.push('  without authentication, so policy-text citations have to be fetched manually for now.');
+  lines.push('- **DESE Report Cards & MCAS**: External to the district site, at');
+  lines.push('  [reportcards.doe.mass.edu](https://reportcards.doe.mass.edu/2025/DistrictReportcard/01680000)');
+  lines.push('  and [profiles.doe.mass.edu](https://profiles.doe.mass.edu/general/general.aspx?orgcode=01680000&orgtypecode=5).');
+  lines.push('  These are state DESE artifacts, not district publications &mdash; a separate scrape project.');
+  lines.push('- **Budget Documents page**: The `/administration/business-and-finance-office/budget-documents`');
+  lines.push('  landing page is currently empty. The FY27 Superintendent\'s Proposed Budget is captured');
+  lines.push('  via the 2.5.2026 SC meeting packet inside `sc-meetings-fy26/`. Historical budget books');
+  lines.push('  for FY18&ndash;FY25 will be captured if they\'re embedded in their respective year\'s SC packets.');
+  lines.push('');
   lines.push('## Categories');
   lines.push('');
   for (const cat of Object.keys(CATEGORY_META)) {
@@ -392,8 +612,14 @@ function writeIndex(manifest) {
 
 async function main() {
   mkdirSync(ROOT, { recursive: true });
+
+  // Phase 1: discover PDFs from section landing pages, append to INVENTORY.
+  const knownUrls = new Set(INVENTORY.map(r => r[3]));
+  const discovered = await discoverAll(knownUrls);
+  INVENTORY.push(...discovered);
+
   const rows = buildRows();
-  console.log(`Inventory: ${rows.length} entries across ${new Set(rows.map(r => r.category)).size} categories`);
+  console.log(`Inventory: ${rows.length} entries across ${new Set(rows.map(r => r.category)).size} categories (${rows.length - discovered.length} curated + ${discovered.length} discovered)`);
 
   // Load previous manifest to preserve retrieved_date for cached files
   let prev = {};
