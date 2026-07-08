@@ -81,15 +81,28 @@
         e.back_count + (e.back_count === 1 ? ' verified resident has' : ' verified residents have') + ' backed this.');
       panel.appendChild(summary);
 
-      if (e.named_backers.length) {
+      // Reps are also backers, but they get their own named section below.
+      // Don't list them a second time among the plain backers.
+      var repKeys = {};
+      e.reps.forEach(function (r) { var k = nameLine(r); repKeys[k] = (repKeys[k] || 0) + 1; });
+      var plainNamed = e.named_backers.filter(function (b) {
+        var k = nameLine(b);
+        if (repKeys[k]) { repKeys[k] -= 1; return false; }
+        return true;
+      });
+
+      if (plainNamed.length) {
         var ul = el('ul', 'idea-engage-names');
-        e.named_backers.forEach(function (b) { ul.appendChild(el('li', null, nameLine(b))); });
-        var anon = e.anon_count;
-        if (anon > 0) ul.appendChild(el('li', 'idea-engage-anon', '+ ' + anon + ' anonymous'));
+        plainNamed.forEach(function (b) { ul.appendChild(el('li', null, nameLine(b))); });
+        if (e.anon_count > 0) ul.appendChild(el('li', 'idea-engage-anon', '+ ' + e.anon_count + ' anonymous'));
         panel.appendChild(ul);
-      } else {
+      } else if (e.anon_count === e.back_count) {
         panel.appendChild(el('p', 'idea-engage-anononly',
           e.back_count === 1 ? 'Backed anonymously.' : 'All backed anonymously.'));
+      } else if (e.anon_count > 0) {
+        var aul = el('ul', 'idea-engage-names');
+        aul.appendChild(el('li', 'idea-engage-anon', '+ ' + e.anon_count + ' anonymous'));
+        panel.appendChild(aul);
       }
 
       if (e.rep_count > 0) {

@@ -88,8 +88,10 @@ async function handleGetEngagement(request, env, url, secret) {
         name: row.display_name || 'Verified resident',
         branch: await branchLabel(row.branch_root),
       };
-      e.named_backers.push(entry);
+      // Reps are surfaced in their own list; keep named_backers to plain
+      // named backers so a rep is never rendered twice.
       if (row.state === 'rep') e.reps.push(entry);
+      else e.named_backers.push(entry);
     }
     if (callerHash && row.identity_hash === callerHash) e.my_state = row.state;
   }

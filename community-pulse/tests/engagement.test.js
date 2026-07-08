@@ -118,7 +118,9 @@ describe('GET /api/engagement', () => {
     expect(e.back_count).toBe(3);
     expect(e.rep_count).toBe(1);
     expect(e.anon_count).toBe(1);
-    expect(e.named_backers.map(b => b.name).sort()).toEqual(['Andrew Baber', 'Jane Smith']);
+    // named_backers holds plain named backers only; reps get their own list
+    // so a rep is never rendered in both places.
+    expect(e.named_backers.map(b => b.name).sort()).toEqual(['Jane Smith']);
     expect(e.reps.map(r => r.name)).toEqual(['Andrew Baber']);
   });
 
