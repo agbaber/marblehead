@@ -11,6 +11,72 @@ duration_seconds: 1695
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead COVID-19 Committee reviews rising statewide case counts and new mask order"
+  summary: "The committee received a COVID-19 update noting statewide daily new cases exceeded 2,000 for the first time since May, with hospitalizations at 558. The town's new mask order, effective November 6, requires masks in all public spaces indoors and outdoors. Discussion covered the state's revised color-coded metrics for communities, a planned December 8 household hazardous waste event, and concerns about college students returning home for Thanksgiving."
+  decisions:
+    - "Confirmed next meeting for November 24 at 7:30 p.m., pending confirmation with absent member"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-safety
+    topic_confidence: 0.82
+    start_seconds: 0
+    end_seconds: 562
+    featured: true
+    headline: "COVID-19 update: statewide cases top 2,000/day; new mask order takes effect"
+    dek: "The committee reviewed rising case counts, new state color-coded metrics, and the November 6 mask order requiring face coverings in all public spaces."
+    summary: |
+      The town's COVID-19 coordinator reported that Massachusetts recorded over 2,000 daily new cases for the first time since May, with the seven-day average at approximately 1,649 new cases and roughly 20 deaths per day. The seven-day weighted average positive test rate statewide was 2.3%, with approximately 47,000 molecular tests reported daily. Statewide hospitalizations stood at 558, up 20 from the prior day, with hospital capacity at 33%.
+      
+      The state released updated community color-coded metrics tied to population size. For Marblehead (population ~20,000, in the 10K–50K band):
+      
+      | Color | Criteria |
+      |-------|----------|
+      | Gray | ≤10 total cases over 14 days |
+      | Green | <10 average cases per 100,000 AND >10 total cases |
+      | Yellow | ≥10 average cases per 100,000 OR ≥5% positive rate |
+      | Red | ≥10 average cases per 100,000 AND ≥5% positive rate |
+      
+      The coordinator noted concern that the 5% positivity threshold for yellow/red designations is high relative to the current 2.3% statewide average. The state also announced it would discontinue its weekly color-coded community map graphic, releasing color designations only within the written public health report.
+      
+      Approximately 1,200 Marblehead residents (~10% of population) are routinely tested. Local case counts have risen to 2–3 per day over the preceding 3–4 days. The new mask order requires face coverings on all public ways, indoors and outdoors; new signage is being prepared for the rail trail, downtown, and town buildings. Enforcement is focused on education rather than fines.
+    key_speakers: ["Andrew (COVID-19 Coordinator)", "Michelle (Committee Member)", "Tom (Committee Member)"]
+  - topic: trash-dpw
+    topic_confidence: 0.85
+    start_seconds: 562
+    end_seconds: 1118
+    headline: "Household hazardous waste event scheduled for December 8; transfer station mask reminders planned"
+    dek: "A pre-registration, pre-pay curbside household hazardous waste collection event is set for December 8 using vendor ACV, with no requirement for residents to be home."
+    summary: |
+      A household hazardous waste event is scheduled for Tuesday, December 8, using the same vendor (ACV) as the previous event. Registration and payment are handled online directly through the company. Residents may leave materials in their driveways and do not need to be present. Asphalt is not accepted; residents seeking to dispose of asphalt should contact the transfer station scale house.
+      
+      The transfer station has been experiencing high volume. New signage requiring masks upon exiting vehicles will be posted near containers. Curbside leaf collection continues through November and December; dates are available on the town website.
+    key_speakers: ["Andrew (COVID-19 Coordinator)"]
+  - topic: public-safety
+    topic_confidence: 0.75
+    start_seconds: 1118
+    end_seconds: 1586
+    headline: "Committee discusses Thanksgiving holiday safety messaging and college student return protocols"
+    dek: "Members discussed the need for clear public messaging around holiday gatherings and the complexities of contact tracing for college students returning home."
+    summary: |
+      The committee agreed to hold its next meeting on November 24 at 7:30 p.m. to allow holiday safety messaging to be disseminated before Thanksgiving. Members discussed the importance of communicating how individual household 'bubbles' effectively merge during extended family gatherings.
+      
+      A substantive discussion addressed how to classify and count college students returning to Marblehead for Thanksgiving and potentially longer stays. Currently, positive cases among students residing at college are counted by the jurisdiction where the college is located. If students return to Marblehead for an extended period, the coordinator indicated those cases would need to be counted under Marblehead's totals and managed locally, with guidance to be sought from the Department of Public Health on a case-by-case basis.
+      
+      The committee also noted that travel quarantine guidelines do not specify protocols for students flying home from college, and that testing timing relative to travel (e.g., negative test before departure but subsequent airport exposure) creates uncertainty. The coordinator recommended residents resume twice-daily temperature checks and symptom monitoring during the holiday period.
+    key_speakers: ["Andrew (COVID-19 Coordinator)", "Michelle (Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1586
+    end_seconds: 1677
+    headline: "Committee votes to adjourn; next meeting confirmed for November 24"
+    dek: "The meeting concluded with a unanimous vote to adjourn after no further business was raised."
+    summary: "A motion to adjourn was made by Michelle Gottlieb and seconded. Both members present voted in favor. The next meeting was tentatively set for November 24 at 7:30 p.m., pending confirmation with an absent committee member."
+    key_speakers: ["Michelle Gottlieb (Committee Member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

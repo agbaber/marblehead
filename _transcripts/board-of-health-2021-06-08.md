@@ -11,6 +11,103 @@ duration_seconds: 3943
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health bids farewell to 12-year member Michelle Gottlieb"
+  summary: "The Board of Health held its final meeting with member Michelle Gottlieb, who served 12 years on the board. The meeting included a COVID-19 update reporting no positive cases since May 25th and a 68% full vaccination rate in Marblehead. Director Andrew Petty presented updates on grants, summer camps, Juneteenth holiday observance, and recycling policy changes including the new allowance for pizza boxes in curbside recycling."
+  decisions:
+    - "Approved adjournment of meeting"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 0
+    end_seconds: 800
+    featured: true
+    headline: "Board recognizes 12-year member Michelle Gottlieb at her final meeting"
+    dek: "Board members, former director Wayne, and Health Director Andrew Petty offered remarks honoring Gottlieb's service including leadership during COVID-19 and environmental initiatives."
+    summary: "The meeting opened with extended tributes to departing Board of Health member Michelle Gottlieb, who served 12 years. Board members noted her work on plastic bag and polystyrene bans, the wellness committee, social media outreach, and pandemic response. Former Health Director Wayne joined via Zoom to add his thanks. Gottlieb thanked colleagues, praised incoming member Joanne Miller (running unopposed), and pledged to remain active as a citizen advocate, particularly on the polystyrene tray issue in schools."
+    key_speakers: ["Michelle Gottlieb (departing Board of Health member)", "Helene Aislet (Board of Health member)", "Todd Balthaker (Board of Health member)", "Wayne (former Health Director, via Zoom)", "Andrew Petty (Health Director)"]
+  - topic: public-comment
+    topic_confidence: 0.75
+    start_seconds: 800
+    end_seconds: 894
+    headline: "COVID update: no positive cases since May 25th; Marblehead at 68% fully vaccinated"
+    dek: "Health Director Petty reported Marblehead's last positive COVID case was May 25th and that 82% of residents are either fully vaccinated or one dose away."
+    summary: "Health Director Petty reported no new COVID cases since May 25th. As of the meeting date, 68% of Marblehead residents were fully vaccinated and just over 14% had received one dose, putting approximately 82% on track to be fully vaccinated. Petty stated he would continue the weekly COVID report in a pared-down format to help residents with unvaccinated family members make informed decisions."
+    key_speakers: ["Andrew Petty (Health Director)"]
+  - topic: public-comment
+    topic_confidence: 0.7
+    start_seconds: 894
+    end_seconds: 1919
+    headline: "North Shore vaccination outreach campaign underway; participating businesses listed"
+    dek: "A regional coalition covering 10 North Shore communities reported 59% full vaccination as of June 3rd, with participating Marblehead businesses displaying outreach posters."
+    summary: |
+      Through a grant via MAPC, Marblehead joined a 10-community North Shore vaccination outreach effort. As of June 3rd, 59% of residents across the participating communities were fully vaccinated. Volunteers are visiting Marblehead businesses to solicit participation; confirmed participants include Blue Canoe, Terry's Ice Cream, Marblehead Pediatrics, CVS, Starbucks, National Grand Bank, and others. The campaign encourages masking for unvaccinated individuals and allows businesses to offer discounts to vaccinated customers.
+      
+      The board also discussed updated summer camp COVID guidance: fully vaccinated staff do not need to wear masks or socially distance; unvaccinated individuals must maintain 3-foot indoor distancing. Four camps are expected to operate in Marblehead this summer. Updated state guidelines no longer classify outdoor close contacts as COVID exposures regardless of vaccination status.
+    key_speakers: ["Andrew Petty (Health Director)", "Helene Aislet (Board of Health member)", "Sandra (resident at mic)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1919
+    end_seconds: 2300
+    headline: "Mental Health Task Force to continue biweekly meetings; high school survey results reviewed"
+    dek: "The task force reviewed a high school student mental health survey video and is working to make mental health resources publicly accessible online."
+    summary: "Michelle Gottlieb reported that the Mental Health Task Force reviewed a video of high school student mental health survey results, which showed concerns about student disconnection and lack of mentors, alongside some encouraging findings about student resilience. The task force is working to collate resources and build a community-accessible website, with Selectman Moses Grader identified as a potential funding conduit through COVID relief resources. Biweekly meetings will continue through the summer. The next meeting was noted as Monday, June 14th at 7 p.m. Gottlieb agreed to continue chairing through the transition to incoming member Joanne Miller."
+    key_speakers: ["Michelle Gottlieb (departing Board of Health member)", "Helene Aislet (Board of Health member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 2300
+    end_seconds: 2580
+    headline: "Board supports airing high school mental health survey on MHTV and town website"
+    dek: "Members agreed to reach out to faculty advisor Gina Hart for permission to share the student-produced mental health survey video publicly."
+    summary: "Board members expressed interest in sharing the high school students' mental health survey video with the broader community via MHTV and the Board of Health's website and Facebook page. Gottlieb offered to contact faculty advisor Gina Hart to obtain permission from the students. MHTV's representative John confirmed willingness to air the video. Members noted the approximately 15–16 minute video was well-produced and broadly relevant to the Marblehead community."
+    key_speakers: ["Helene Aislet (Board of Health member)", "Michelle Gottlieb (departing Board of Health member)", "John (MHTV representative)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2580
+    end_seconds: 3138
+    headline: "Director's Report: recycling grant, $300K shared public health services grant, Juneteenth observance"
+    dek: "Petty reported two grants totaling roughly $313,000, described Juneteenth holiday logistics, a household hazardous waste event, and a Planning for Success school meeting."
+    summary: |
+      **Grants:** A DEP recycling grant application estimates approximately $13,000 in the next fiscal year (the town received just over $16,000 last year). A three-year North Shore Shared Public Health Services grant totaling $300,000 will be shared among Marblehead, Swampscott, Lynn, Nahant, Salem, Beverly, and Danvers. Funds will support hiring an epidemiologist, grant coordinator, and inspectors for contact tracing, food, housing, and other inspections.
+      
+      **Juneteenth:** Massachusetts has designated Juneteenth (June 19th) a state holiday. The town will observe it on Friday, June 18th. The transfer station will be closed June 18th; regular curbside trash and recycling collection will continue that day. The Health Department office will close at 12:30 p.m. on Thursday, June 17th.
+      
+      **Household Hazardous Waste:** A residential collection event the following day was full (over 100 participants from Marblehead and Swampscott). A second event is planned for September.
+      
+      **Planning for Success:** Petty attended a school district meeting where departments presented goals for 2026, including forming a Health and Wellness Committee, restoring a school resource officer, expanding composting, removing polystyrene trays, installing dishwashers, and implementing the Youth Risk Behavior Survey (YRBS).
+    key_speakers: ["Andrew Petty (Health Director)", "Michelle Gottlieb (departing Board of Health member)"]
+  - topic: trash-dpw
+    topic_confidence: 0.88
+    start_seconds: 3138
+    end_seconds: 3598
+    headline: "Pizza boxes now recyclable in Marblehead; recycling contamination complaint addressed"
+    dek: "Massachusetts updated its recycling guidance to allow pizza boxes (food-free) in curbside bins; a complaint about recycling being mixed with trash in downtown was also discussed."
+    summary: |
+      The state of Massachusetts changed its policy on pizza boxes: boxes free of food residue may now be placed in the curbside recycling bin, reversing prior guidance about grease contamination. Residents can verify recyclability through the Recycle Smart Recyclopedia tool.
+      
+      A resident complaint about a recycling truck mixing recyclables with trash in the downtown area was addressed. Petty noted a new recycling driver is on the route and spoke with the driver and route manager. Residents were reminded to use labeled recycling containers and avoid contamination with styrofoam or loose plastic film to prevent rejection or co-mingling with trash.
+    key_speakers: ["Andrew Petty (Health Director)", "Helene Aislet (Board of Health member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 3598
+    end_seconds: 3781
+    headline: "Red seaweed odor on Marblehead beaches prompts discussion of possible removal"
+    dek: "Petty reported recurring red seaweed on beaches and is consulting with the conservation agent about potential removal, noting a concern about odor similar to problems seen in Lynn."
+    summary: "Petty noted that red seaweed has reappeared on Marblehead's beaches, generating odor complaints. He is working with the conservation agent to understand removal options, which would require conservation commission approval. The concern is that if the seaweed does not dissipate with the tide, mechanical removal (as used in Lynn) may eventually be necessary. Beach water testing had not yet begun and was expected to start within a few weeks."
+    key_speakers: ["Andrew Petty (Health Director)", "Helene Aislet (Board of Health member)"]
+  - topic: public-comment
+    topic_confidence: 0.7
+    start_seconds: 3781
+    end_seconds: 3871
+    headline: "Brief public participation; meeting adjourned"
+    dek: "No substantive public comments were made; Gottlieb moved to adjourn her final Board of Health meeting."
+    summary: "Health Director Petty invited public participation from Sandra, Pam, and John. No substantive comments were offered. Gottlieb made the motion to adjourn, which passed unanimously with all three board members voting in favor."
+    key_speakers: ["Michelle Gottlieb (departing Board of Health member)", "Helene Aislet (Board of Health member)", "Todd Balthaker (Board of Health member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

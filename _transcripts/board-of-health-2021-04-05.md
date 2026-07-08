@@ -11,6 +11,87 @@ duration_seconds: 2591
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Board of Health hears COVID update; member announces she will not seek re-election"
+  summary: "At the April 5, 2021 meeting, the Board of Health received a COVID-19 update showing 1,252 cumulative cases, 21 active cases, and approximately 46% of the town population having received a first vaccine dose. The board discussed new state guidance for school events including prom, and heard a director's report on transfer station improvements including a planned permanent swap shop and scale house relocation. A board member announced she would not seek another term after 12 years, citing relocation to Utah for the following year."
+  decisions:
+    - "Adjourned the meeting"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 1032
+    headline: "COVID update: 46% first-dose rate, 21 active cases, April 19 opens to all 16+"
+    dek: "The Board of Health director reported 1,252 cumulative cases and discussed vaccination milestones and new state school-event guidance."
+    summary: |
+      As of April 2, 2021, Marblehead had 1,252 cumulative COVID-19 cases, with 21 active cases and an average daily incidence rate of 14.3 per 100,000. The percent-positive rate held essentially flat at approximately 1.43–1.44%.
+      
+      Vaccination figures showed 3,823 residents had received a first dose and 5,172 had completed a second dose, representing roughly 46% of the total town population (including children not yet eligible). The director noted that April 19 would open eligibility to anyone 16 and older.
+      
+      A regional vaccination clinic coalition including Swampscott, Marblehead, Salem, Danvers, Beverly, and Peabody was in discussions with the state about operating a facility at the O'Keefe Center in Salem, targeting 750 vaccinations per day Monday through Friday.
+      
+      New state guidance was released for school events including prom, which the state designated a high-risk activity. The guidance strongly recommended delaying prom until after the school year, ideally until most attending students are vaccinated. Additional guidance was issued for non-athletic student groups, inter-school competitions, volunteering, and other school events.
+      
+      The director noted a slight statewide uptick in cases, with concern about a potential fourth wave driven in part by the Brazil variant on Cape Cod.
+    key_speakers: ["Andrew Petty (Director of Public Health)", "Michelle (Board member)", "Todd (Board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1032
+    end_seconds: 1403
+    headline: "COVID Mental Health Task Force holds first meeting; next session April 12"
+    dek: "A board member reported on the inaugural meeting of the Marblehead COVID Mental Health Task Force, which is identifying mental health data gaps and existing community resources."
+    summary: |
+      The Marblehead COVID Mental Health Task Force held its first meeting on March 29, drawing mental health professionals, school representatives, and community members. The group discussed potential activities including a needs assessment, a scan of existing mental health resources, identifying individuals who may fall through the cracks, and improving communication of available resources.
+      
+      The task force's next meeting was scheduled for Monday, April 12 at 7 p.m. The group is working to establish a regular meeting schedule that avoids conflicts with Board of Health meetings and town meeting dates.
+      
+      Draft minutes were being prepared by Melissa Kappalowich, with the recorder intending to supplement them using the meeting recording before bringing them to the group for approval.
+    key_speakers: ["Michelle (Board member)"]
+  - topic: trash-dpw
+    topic_confidence: 0.95
+    start_seconds: 1590
+    end_seconds: 2155
+    headline: "Transfer station update: swap shop to go to bid, scale house relocation under review"
+    dek: "The director reported that final plans exist for a permanent swap shop and that engineers and architects are evaluating repositioning the scale house to improve traffic flow."
+    summary: |
+      The director provided an update on transfer station improvements following the resolution of litigation. Key items under review include:
+      
+      - **Scale house**: The originally planned permanent location is not feasible due to the existing compactor footprint and grade change. Architects are evaluating moving it closer to the scale itself near the entrance.
+      - **Swap shop**: Final plans are complete and the facility intends to put the permanent swap shop out to bid.
+      - **Traffic flow and paving**: Reconfiguring the scale house may improve traffic circulation at the entrance without requiring additional space.
+      - **Blowing debris**: Staff are considering installation of a small metal fence near the stream to capture windblown trash, possibly on a seasonal basis.
+      - **Water main break**: A break on the lower road (tractor-trailer entrance) occurred on the prior Friday; the Water and Sewer Department repaired it quickly, and a small paving patch is planned once the area settles.
+      - **Environmental monitoring**: Watermark Engineering conducts ongoing water quality testing. An exceedance for alkalinity was detected in both up-gradient and down-gradient surface water samples, and a required notification was sent to MassDEP. The full monitoring report is approximately 209 pages.
+      
+      The town continues to work with Winter Street Architects (Dana) as architect of record; the architect has provided consultation time without charge. An updated cost estimate was prepared prior to litigation.
+    key_speakers: ["Andrew Petty (Director of Public Health)", "Todd (Board member)"]
+  - topic: elections-procedural
+    topic_confidence: 0.9
+    start_seconds: 2155
+    end_seconds: 2525
+    featured: true
+    headline: "12-year Board of Health member announces she will not seek re-election; papers due May 4"
+    dek: "A board member cited her spouse's relocation to Utah and inability to attend in-person meetings as her reasons for not seeking another term, urging public-health-minded residents to run."
+    summary: |
+      A board member announced she would not seek re-election after 12 years of service on the Marblehead Board of Health. She cited her spouse's job requiring them to be based in Utah for the following year, making full-time attendance at in-person meetings impractical as pandemic restrictions ease.
+      
+      She encouraged interested residents to pull nomination papers, noting that the deadline to take out papers is May 4, with the town election in mid-June. She offered to speak with anyone considering running about the experience of serving on the board.
+      
+      Fellow board members expressed appreciation for her contributions, particularly in environmental health and public health policy over the past year of the pandemic.
+    key_speakers: ["Michelle (Board member)", "Todd (Board member)", "Andrew Petty (Director of Public Health)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2525
+    end_seconds: 2560
+    headline: "Board votes unanimously to adjourn"
+    dek: "The meeting concluded with a unanimous vote to adjourn."
+    summary: "With no members of the public raising hands for public comment, the board moved to adjourn. All three members — Scott Leib, Hazlett, and Belfbecker — voted in favor."
+    key_speakers: ["Michelle (Board member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

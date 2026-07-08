@@ -11,6 +11,94 @@ duration_seconds: 2932
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "School committee schedules three public override education forums after town meeting vote"
+  summary: "The Marblehead School Committee met at METCO Inc. headquarters in Roxbury and received updates on the METCO program, DEI professional development, and an incoming Brown School principal. The committee's operating budget increase was confirmed to have passed at town meeting and will appear on the June ballot; three community education forums were scheduled for May 24, June 8, and June 13. The committee clarified that the forums are educational only and the approved budget figure cannot be changed."
+  decisions:
+    - "Scheduled three override education forums: May 24 (morning), June 8 (evening), June 13 (evening)"
+    - "Announced Mary Maxfield as incoming principal of Lucretia and Joseph Brown School"
+    - "Deferred METCO parent representative process to summer retreat for further discussion"
+    - "Approved correspondence recommending Mark Stroud as Essex Tech School Committee rep (formal vote deferred to next meeting)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 51
+    end_seconds: 343
+    headline: "Committee opens meeting at METCO HQ; student rep delivers activity update"
+    dek: "Committee chair welcomed a large in-person audience at METCO Inc. in Roxbury; student representative outlined spring events, AP testing, and senior week."
+    summary: "The school committee convened at METCO Inc. headquarters in Roxbury, noting it was the largest in-person audience in a long time. The student representative highlighted spring activities including AP testing (May 2–13), the junior class auction, the upcoming prom at Fenway Park (May 31), and a second annual Juneteenth flag raising on June 8."
+    key_speakers: ["School Committee Chair", "Student Representative (Yasen)"]
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 344
+    end_seconds: 653
+    headline: "Two residents speak: one raises conduct concerns from prior meeting, one praises METCO progress"
+    dek: "A resident criticized the committee's handling of a prior public comment involving a student's IEP; a second resident praised the committee's engagement with METCO."
+    summary: |
+      Nicole Cohen raised four concerns about the prior week's meeting: characterizing guidance to 'be careful with words' on the override as lacking candor; a perceived open-meeting-law risk from policy discussions at a dinner; the quick dismissal of a public survey on the superintendent's evaluation; and the chair's failure to stop a public commenter from discussing a student's accommodations and IEP based on rumor.
+      
+      Cindy Bowen, a member of the Marblehead Racial Justice team, praised the committee for attending METCO headquarters and encouraged continued support for METCO families, a stable METCO director, and growth toward 100-plus METCO students.
+    key_speakers: ["Nicole Cohen (resident)", "Cindy Bowen (resident, Marblehead Racial Justice team)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 703
+    end_seconds: 1264
+    headline: "METCO coordinator and DEI director report on program status and professional development"
+    dek: "Assistant principal Julia Ferreira outlined METCO staffing and upcoming events; DEI director Nan reviewed a full-year PD series for pre-K through 12 staff."
+    summary: |
+      Julia Ferreira, serving as interim METCO lead coordinator, reported that the METCO director position is posted, four incoming students from Boston will replace four graduating seniors, and weekly family meetings continue every Tuesday. A cultural feast is scheduled for May 20 at 6 p.m. at the high school. Graduating seniors will receive gifts and the district is monitoring a proposed DESE base-allocation funding model for FY23.
+      
+      DEI Director Nan outlined a full professional development calendar for pre-K through 12 staff aligned to Strategic Initiative 3.2, covering topics including implicit bias, culturally responsive teaching, unlearning ableism, and anti-bias planning. She noted the curriculum was grassroots-developed collaboratively by the district's DEI team.
+    key_speakers: ["Julia Ferreira (Assistant Principal / interim METCO coordinator)", "Nan (DEI Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 1264
+    end_seconds: 1776
+    headline: "Principal Bauer previews senior week; superintendent announces new Brown School principal"
+    dek: "Senior week runs May 31–June 3 and includes prom at Fenway Park; Mary Maxfield named principal of Lucretia and Joseph Brown School."
+    summary: |
+      MHS Principal Dan Bauer outlined senior week events: prom at Fenway Park on May 31, scholarship night on June 1 (awards typically exceeding $250,000), a Six Flags trip on June 2, and graduation on Piper Field at 6 p.m. on June 3. Over 150 seniors are completing senior projects in the community.
+      
+      Superintendent Bucky announced Mary Maxfield as the new principal of Lucretia and Joseph Brown School. Maxfield has 15 years of experience as principal of Barrington Elementary School in New Hampshire, which was named New Hampshire Elementary School of the Year. She also has 13 years of classroom teaching experience and holds degrees from Colby Sawyer, Keene State, and Plymouth State.
+    key_speakers: ["Dan Bauer (MHS Principal)", "Superintendent Bucky"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 1776
+    end_seconds: 1963
+    headline: "Committee discusses METCO parent representative process; defers to summer retreat"
+    dek: "After dinner conversation with METCO families, the committee agreed to gather more input and place the representative structure discussion on the summer retreat agenda."
+    summary: "The committee discussed creating a formal METCO parent representative process. Following dinner conversations with METCO families, members recommended meeting with parents in a small group before proceeding. Committee member Sarah suggested adding the topic to the summer retreat agenda and consulting with MASC and other districts with established METCO representation, including Weston and Lincoln."
+    key_speakers: ["School Committee Chair", "Sarah (School Committee member)", "Emily (METCO liaison)"]
+  - topic: override
+    topic_confidence: 0.95
+    start_seconds: 2060
+    end_seconds: 2909
+    featured: true
+    headline: "Three public override education forums scheduled after town meeting approves school budget increase"
+    dek: "The operating budget increase passed at town meeting and heads to the June ballot; the committee scheduled forums on May 24, June 8, and June 13 to educate residents."
+    summary: |
+      The committee confirmed the school operating budget increase passed at town meeting and will appear on the June ballot. Three community education forums were scheduled:
+      
+      | Date | Day | Time | Format |
+      |------|-----|------|--------|
+      | May 24 | Tuesday | 9 a.m. | Morning |
+      | June 8 | Wednesday | 7 p.m. | Evening |
+      | June 13 | Monday | 7 p.m. | Evening |
+      
+      The chair noted the forums are purely educational — the approved figure is fixed and cannot be added to or subtracted from. A committee member clarified that under Massachusetts General Law, school committees do have line-item autonomy over how an approved budget figure is allocated internally, but emphasized no changes to the total were contemplated.
+      
+      The committee chair and Superintendent Bucky agreed to collaborate on a presentation drawing on prior town meeting materials. At least one forum is expected to be available via Zoom. Administrators and school leaders were invited to attend to answer subject-matter questions.
+    key_speakers: ["School Committee Chair", "Sarah (School Committee member)", "David (School Committee member)", "Superintendent Bucky"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2819
+    end_seconds: 2909
+    headline: "Correspondence: Essex Tech rep recommendation received; Brown/Glover naming discussion pending"
+    dek: "Town meeting moderator recommended Mark Stroud as Essex Tech School Committee rep; Glover School principal requested a naming process for a school space."
+    summary: "The committee noted two items of late correspondence. Town meeting moderator Gary recommended Mark Stroud as the Essex Tech School Committee representative; a formal vote of approval is planned for the next meeting. Separately, the Glover School principal contacted the superintendent about forming a group to consider a naming recognition for Burke Dano; the committee noted all naming of buildings or building areas requires school committee approval."
+    key_speakers: ["School Committee Chair", "Superintendent Bucky"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

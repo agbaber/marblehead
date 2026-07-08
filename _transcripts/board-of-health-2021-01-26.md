@@ -11,6 +11,123 @@ duration_seconds: 6173
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health reviews COVID case data, vaccination rollout, and FY22 budget"
+  summary: "The Board of Health met to discuss pool testing in schools, weekly COVID case statistics, and the COVID-19 vaccination rollout. The board agreed it would not formally recommend for or against the DESI pool-testing pilot, viewing it as the school department's decision. The board also reviewed a proposed FY22 budget that includes increases for public health nursing and inspection staff hours and a new full-time transfer station position."
+  decisions:
+    - "Held discussion on school pool testing without issuing a formal recommendation"
+    - "Continued mask-upgrade discussion pending further CDC guidance"
+    - "Continued FY22 budget discussion; draft goals to be submitted by end of week for vote at next Tuesday's meeting"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 0
+    end_seconds: 1188
+    headline: "Board debates school pool testing but declines to issue formal recommendation"
+    dek: "Members expressed differing views on pool testing value but agreed the decision rests with the school department."
+    summary: |
+      The chair opened by stating that pool testing in schools is a DESI-initiated program and outside the Board of Health's decision-making authority. He declined to recommend for or against the six-week pilot, characterizing pool testing as 'one tool in the toolbox.'
+      
+      One member said she felt more open to pool testing after reviewing a DESI webinar, noting DESI's flexibility in allowing pilots limited to one or two schools and its commitment to helping communities manage logistics. She emphasized pool testing's value not just for in-school spread but for broader community spread tracking.
+      
+      A second member said she was influenced by the lead school nurse's reservations and noted only 41 students had been identified as infected in schools since the prior March. She questioned whether the staffing and cost burden justified the program given limited in-school transmission.
+      
+      The board took no vote and issued no formal recommendation, agreeing that if the school administration requests advisory input, board members remain available.
+    key_speakers: ["Todd (Chair)", "Michelle (Board Member)", "Helene (Board Member)", "Andrew (Health Director)"]
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 1188
+    end_seconds: 2384
+    featured: true
+    headline: "919 total COVID cases reported; board warned of limited vaccine supply — ~100 doses/week"
+    dek: "Andrew reported Marblehead had turned back to a 'yellow' community with a 4.25% positivity rate and warned the state may limit allocations to approximately 100 doses per week."
+    summary: |
+      As of the Friday, January 22 case report (data pulled Thursday morning), Marblehead had 919 total cases, up from 863 on January 15 and 789 on January 8. There were 72 active cases and 31 confirmed deaths, with one additional death certificate pending review.
+      
+      **14-day case breakdown by age group (January 7–21):**
+      
+      | Age Group | Cases |
+      |-----------|-------|
+      | 0–19 | 27 |
+      | 20–29 | 28 |
+      | 30–39 | 10 |
+      | 40–49 | 14 |
+      | 50–59 | 20 |
+      | 60–69 | 13 |
+      | 70–79 | 9 |
+      | 80+ | 9 |
+      
+      The average daily incidence rate per 100,000 fell slightly to 54.8. Approximately 29,055 tests had been administered to Marblehead residents over the prior 14 days (~20% of the population). The 14-day positivity rate was 4.25%, moving the town from red back to yellow.
+      
+      On vaccination, the director noted that Phase 1 clinics were running Tuesdays and Thursdays at Salem State in a five-town coalition (Swampscott, Marblehead, Salem, Danvers, Beverly). Phase 2 remained scheduled to open February 1. However, the state indicated it may limit allocations to approximately 100 doses per week going forward for an unspecified period of up to one month. The director confirmed that second-dose supplies are being held separately by the state to protect previously vaccinated residents.
+      
+      The governor's mandatory 9:30 p.m. business closure order was rescinded effective January 25 at 5 a.m. The state travel advisory remained in effect.
+    key_speakers: ["Andrew (Health Director)", "Sandra (Resident at mic)", "Sarah (Resident at mic)", "Deanna (Lead School Nurse, remote)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 2384
+    end_seconds: 3668
+    headline: "Residents raise questions on case counts, volunteer sign-up access, and dose allocation"
+    dek: "Several residents asked about school case numbers, second-dose booking logistics, and how to find volunteer registration links on the town website."
+    summary: |
+      Resident Katie Martin asked for clarification on the discrepancy between the 41-student school figure and the weekly 0–19 age group numbers. The health director explained the state's community-wide age data covers all residents in that bracket, including those not in public schools, while the school nurse's figure covers only students with potential in-school transmission since September 14.
+      
+      The school nurse (Deanna) confirmed the Marblehead Public Schools numbers: 42 positive students, 22 positive staff, and 4 remote students since September 14, with no confirmed school-based transmission.
+      
+      Resident Sandra asked about the 100-dose figure and how comorbidity attestations would be verified; the director confirmed reliance on self-attestation with the exception of blood-thinners, which require a physician note.
+      
+      Resident Sarah asked how second-dose slots would be protected as Phase 2 opens; the director explained the state tracks first-dose recipients and will hold allocations for second doses, potentially running closed clinics for second-dose-only appointments on some days.
+      
+      Resident Elizabeth Eisner asked that MRC volunteer sign-up links be made more prominent on the town website and Facebook page. A board member agreed to post links to the Medical Reserve Corps and Mass Responds websites on the Board of Health Facebook page.
+      
+      Resident Jody noted that a COVID information banner on the town homepage already links to volunteer resources.
+    key_speakers: ["Katie Martin (Resident at mic)", "Sandra (Resident at mic)", "Sarah (Resident at mic)", "Elizabeth Eisner (Resident at mic)", "Jody (Resident at mic)", "Deanna (Lead School Nurse, remote)", "Andrew (Health Director)"]
+  - topic: public-safety
+    topic_confidence: 0.78
+    start_seconds: 3668
+    end_seconds: 4475
+    headline: "Board discusses whether to recommend upgraded or double masking ahead of CDC guidance"
+    dek: "A board member urged a public health push toward filtration masks or double-masking indoors; the board agreed to wait for upcoming CDC guidance before issuing a formal recommendation."
+    summary: |
+      One member argued that as the new COVID variant spreads, the board should promote better mask use — specifically filtration masks such as KF-94 or KN-95 types, or at minimum double-masking indoors — citing guidance from European public health authorities and Dr. Fauci's recent statements recommending double-masking.
+      
+      Another member raised concerns about counterfeit masks sold online and the continued need for medical-grade masks in healthcare settings, as well as cost (surgical masks had risen from roughly $10 to as much as $50 per box of 50). He suggested double-masking with a surgical mask beneath a cloth mask as a more accessible recommendation, noting that combination reaches approximately 91% effectiveness compared to an N95's 95%.
+      
+      The health director said the department takes its guidance from the CDC and WHO and had not yet received formal double-masking recommendations from those bodies, though he anticipated guidance was imminent given Fauci's public statements.
+      
+      The board agreed to continue the discussion the following week once CDC guidance is available, and to issue a recommendation at that time. The reopening committee was noted to have specifically asked the board for guidance on double-masking.
+    key_speakers: ["Michelle (Board Member)", "Helene (Board Member)", "Andrew (Health Director)", "Tom (Board Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 4475
+    end_seconds: 6002
+    headline: "Board reviews FY22 budget framework; staff increases and new transfer station position proposed"
+    dek: "The health director outlined budget requests including raising two part-time staff to 40 hours and adding a full-time transfer station position at approximately $37,927."
+    summary: |
+      The health director presented a new town-wide budget format requiring departments to submit mission statements, departmental descriptions, accomplishments, and goals. The Board of Health's existing mission statement — 'The Board of Health promotes and protects the health, wellness and safety of the citizens of Marblehead while ensuring a clean and healthy environment' — was retained without change.
+      
+      Key budget proposals:
+      - **Health department:** Increase the public health nurse from 30 to 40 hours per week and the public health inspector from 30 to 40 hours per week.
+      - **Waste department:** Formalize a new full-time transfer station position at $37,926.95 annually to provide reliable Saturday and backup coverage, replacing an ad hoc arrangement that had required the director to staff the scale house himself.
+      - **Waste disposal contract:** The current five-year curbside collection contract with Waste Management is entering its final year; the director rejected the initial renewal proposal and is negotiating. Options under consideration include one-, three-, five-, and ten-year contracts. Disposal costs have risen 3–5% annually; recycling markets remain depressed, with tipping fees of approximately $74/ton at JRM and $20–$45/ton for separated paper at a Salem facility.
+      - The 10-year JRM contract is in its fifth year.
+      - Curbside compost enrollment reached at least 550 residents; food waste diversion is visibly reducing overall tonnage.
+      
+      The board acknowledged the budget goals document was due Friday (approximately two days away) and agreed each member would draft accomplishments and goals independently, submit them to the director by the end of the week, and finalize the document at the following Tuesday's meeting.
+    key_speakers: ["Andrew (Health Director)", "Todd (Chair)", "Michelle (Board Member)", "Helene (Board Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 6002
+    end_seconds: 6098
+    headline: "Board votes unanimously to adjourn"
+    dek: "All three members voted in favor of adjournment."
+    summary: "A motion to adjourn was made, seconded, and approved unanimously by all three board members present."
+    key_speakers: ["Todd (Chair)", "Michelle (Board Member)", "Helene (Board Member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

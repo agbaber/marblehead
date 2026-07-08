@@ -11,6 +11,69 @@ duration_seconds: 802
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Preview of Marblehead Special Town Meeting set for October 17, 2020"
+  summary: "Journalist Chris Stevens joined the host to preview articles on the October 17 special town meeting warrant, held outdoors at the Spee Community Center parking lot. Key articles discussed include raising snow-emergency parking fines to $200, a Village/Vine/Pleasant Street intersection redesign, a town-wide 25 mph speed limit, a gas-powered leaf blower partial ban, a demolition-by-neglect bylaw, and a Sustainability Coordinator position estimated at $50,000. Several articles, including library renovation funding and supplemental appropriations for the town and schools, were expected to be indefinitely postponed."
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 5
+    end_seconds: 99
+    featured: true
+    headline: "Special Town Meeting previewed ahead of Oct. 17 outdoor session at Spee Center"
+    dek: "Reporter Chris Stevens walked through the warrant articles expected to come before town meeting, noting which were likely to be indefinitely postponed."
+    summary: "The October 17 special town meeting was scheduled for 9 a.m. outdoors at the Spee Community Center parking lot. The discussion covered the full warrant, noting that some articles had already been flagged by selectmen for indefinite postponement. A first special town meeting in June had addressed money articles ahead of the July 1 fiscal year start; this meeting would take up most remaining articles."
+    key_speakers: ["Chris Stevens (Marblehead Reporter/Wicked Local journalist)"]
+  - topic: public-safety
+    topic_confidence: 0.72
+    start_seconds: 99
+    end_seconds: 193
+    headline: "Article 12 proposes raising snow-emergency parking fines from $25 to $200"
+    dek: "Both the police and fire chiefs, initially opposed, were reported to be on board after extensive committee work."
+    summary: "Article 12 would raise the snow-emergency parking fine from $25 to $200, making violations more of a financial deterrent. Chiefs Gillian and Picarello had originally opposed the overnight parking ban framework but were said to have come around after committee work. The associated overnight parking ban would shift to an emergency-based rather than a strict winter-long ban."
+    key_speakers: ["Chris Stevens (Marblehead Reporter/Wicked Local journalist)"]
+  - topic: bonding-capital
+    topic_confidence: 0.55
+    start_seconds: 193
+    end_seconds: 287
+    headline: "Article 16 library renovation debt exclusion expected to be postponed to next year"
+    dek: "The library indicated it does not plan to pursue the debt exclusion override until the next regular town meeting."
+    summary: "Article 16 concerned a debt exclusion override for library renovations. The library had already stated publicly it would not pursue the article at this special town meeting, intending instead to bring it forward at a future regular town meeting. The hosts noted they had heard nothing to suggest that position had changed."
+    key_speakers: ["Chris Stevens (Marblehead Reporter/Wicked Local journalist)"]
+  - topic: permits-zoning
+    topic_confidence: 0.6
+    start_seconds: 287
+    end_seconds: 386
+    headline: "Articles 18–20 address Village/Pleasant Street redesign and a town-wide 25 mph speed limit"
+    dek: "The intersection redesign would narrow Pleasant Street and better define traffic corridors; the speed limit article would apply to all town-controlled roads."
+    summary: "Articles 18 and 19 would fund and authorize a redesign of the Village Street, Vine Street, and Pleasant Street intersection, extending Village Street, narrowing Pleasant Street, and shortening crosswalk distances. Several neighboring residences were noted as potentially impacted. Article 20 would set 25 mph as the default speed limit on town roads, with state roads such as Route 114 excluded from the town's jurisdiction."
+    key_speakers: ["Chris Stevens (Marblehead Reporter/Wicked Local journalist)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.65
+    start_seconds: 386
+    end_seconds: 576
+    headline: "Articles on Council on Aging board size, leaf blower partial ban, and demolition by neglect previewed"
+    dek: "Article 25 on gas-powered leaf blowers and Article 26 on demolition by neglect were flagged as potentially contentious."
+    summary: "Article 21 would reduce the Council on Aging board from nine to seven members, primarily to ease quorum challenges. Article 25 would partially ban gas-powered leaf blowers; advocates were said to be better organized than in prior attempts, and turnout from landscapers was uncertain given the Saturday morning timing. Article 26, a multi-page demolition-by-neglect bylaw, was described as a response to the demolition of a historic Front Street house and would impose obligations on owners of historically significant structures."
+    key_speakers: ["Chris Stevens (Marblehead Reporter/Wicked Local journalist)"]
+  - topic: permits-zoning
+    topic_confidence: 0.62
+    start_seconds: 576
+    end_seconds: 672
+    headline: "Old and Historic Districts Commission articles address patios, terraces, and AC unit placement"
+    dek: "One article would reclassify terraces and patios; another would address exterior air conditioning equipment in the historic district."
+    summary: "Two articles from the Old and Historic Districts Commission were previewed. One would move terraces and patios from one regulatory category to another. A second would clarify standards for air conditioning equipment — specifically exterior condensers — that do not require a certificate of appropriateness, reportedly prompted by a recent dispute over a central air installation in the historic district."
+    key_speakers: ["Chris Stevens (Marblehead Reporter/Wicked Local journalist)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.65
+    start_seconds: 672
+    end_seconds: 764
+    headline: "Sustainability articles and supplemental appropriations expected to face indefinite postponement"
+    dek: "A $50,000 Sustainability Coordinator position was seen as financially infeasible; both town and school supplemental appropriation articles were expected to be indefinitely postponed."
+    summary: "Article 29 would establish greenhouse gas emission reduction goals, building on a 2018 commitment to 100% carbon-free energy. Article 30 sought a $50,000 Sustainability Coordinator position; the Board of Health was said to support the concept but doubt the funding feasibility following a difficult budget year. Articles 35 and 36 — supplemental appropriations for the schools and town respectively — were expected to be indefinitely postponed, with the School Committee having indicated at a prior meeting it would not pursue additional funds at this time."
+    key_speakers: ["Chris Stevens (Marblehead Reporter/Wicked Local journalist)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

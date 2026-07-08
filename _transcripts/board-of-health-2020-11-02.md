@@ -11,6 +11,73 @@ duration_seconds: 3577
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health reviews new statewide COVID orders and Gulliver School case"
+  summary: "The Board of Health reviewed three new executive orders (53, 54, and 55) issued by the governor on November 5, 2020, effective November 6, requiring masks in all public places and limiting indoor private gatherings to 10 persons. The board also discussed a positive COVID-19 case at Gulliver School, finding no close contacts as defined by CDC guidelines. The board approved meeting minutes from October 19 and rescheduled its next meeting from November 16 to November 10."
+  decisions:
+    - "Approved October 19 meeting minutes as corrected"
+    - "Rescheduled next meeting from November 16 to November 10"
+  votes:
+    - motion: "Approve October 19 meeting minutes as corrected"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 97
+    headline: "Board approves corrected October 19 meeting minutes"
+    dek: "Two corrections were made prior to the meeting: a wording fix and a clarification that a health and safety committee member was a health professional, not a Board of Health member."
+    summary: "The board voted unanimously to approve the October 19 meeting minutes with two corrections already applied before distribution. One correction was caught internally; the second clarified that a member of the school health and safety committee was a health professional rather than a Board of Health representative."
+  - topic: public-safety
+    topic_confidence: 0.82
+    start_seconds: 97
+    end_seconds: 2053
+    featured: true
+    headline: "Governor issues three COVID orders effective Nov. 6; masks required outdoors statewide"
+    dek: "Orders 53, 54, and 55 mandate masks in all public locations, cap indoor private gatherings at 10 persons, and require businesses to close to the public by 9:30 p.m."
+    summary: |
+      The health director reported that Governor Baker issued three executive orders effective 12:01 a.m. November 6, 2020:
+      
+      **Order 53** requires a broad range of businesses and facilities — including restaurants, fitness centers, theaters, pools, museums, and youth sports venues — to close to the public no later than 9:30 p.m. nightly.
+      
+      **Order 54** sets gathering limits:
+      - Indoor gatherings at private residences: maximum 10 persons
+      - Outdoor gatherings at private residences: maximum 25 persons
+      - Indoor gatherings at event venues or public settings: maximum 25 persons
+      - Outdoor gatherings in low-risk communities: maximum 100 persons
+      - Outdoor gatherings in other communities: maximum 50 persons
+      - All gatherings must end by 9:30 p.m. (except religious and political gatherings)
+      
+      **Order 55** requires all persons over age 5 to wear a mask or cloth face covering in any public location, indoors or outdoors, including public streets. Masks are also required in carpools with non-household members.
+      
+      The board discussed that this requires masks even when walking alone on a public street or on the bike path. The health director noted the town will need to produce and post signs at public areas including athletic fields, parks, and the transfer station. Violations may result in civil fines up to $300 per violation. Enforcement guidance was expected on a Friday state conference call.
+      
+      The board also reviewed a positive COVID-19 case at Gulliver School. The school nurse's investigation found no close contacts as defined by CDC (within 6 feet for a cumulative 15 minutes or more over 24 hours). Only the teacher is isolating; a second case involved a remote educator not present in the building. The board reiterated its policy of never publicly sharing the names of positive cases.
+      
+      The high school party from the prior week was also discussed. Because only approximately 5 of an estimated 50 attendees were identified, contact tracing was severely limited. A separate Halloween weekend party involved older individuals no longer enrolled in Marblehead schools; the health director stated violation notices for gathering order infractions would be issued based on police reports.
+    key_speakers: ["Andrew (Health Director)", "Hilleen (Board Member / Reopening Committee representative)", "Sondra Callahan (Resident at mic)", "Lisa (Resident at mic)"]
+  - topic: trash-dpw
+    topic_confidence: 0.9
+    start_seconds: 2429
+    end_seconds: 2614
+    headline: "Next Household Hazardous Waste pickup set for December 8 via ACV pre-registration"
+    dek: "The November 14 Clean Harbors event was canceled due to gathering orders; ACV will conduct a door-to-door pickup service for both Marblehead and Swampscott residents."
+    summary: |
+      The originally scheduled November 14 Household Hazardous Waste Day with Clean Harbors was canceled due to gathering order restrictions. The replacement event with ACV is scheduled for Tuesday, December 8. Residents must pre-register online, specify materials, and prepay; residents do not need to be home for pickup. Approximately 150–200 Marblehead residents and a similar number from Swampscott participated in the prior ACV event in September. Accepted items include latex paint, propane tanks, tires, and car batteries. The board discussed moving toward a model of approximately four events per year. A flyer was expected to be posted on the town website that week.
+      
+      Separately, the health director noted that high winds caused roof damage to the compactor shed at the transfer station. Repairs are needed to the rubber membrane roof, and a broader discussion about the facility's future will be placed on the December agenda as a budget planning item.
+    key_speakers: ["Andrew (Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2614
+    end_seconds: 3600
+    headline: "Board reschedules November 16 meeting to November 10 and votes to adjourn"
+    dek: "Due to a board member's potential unavailability following a medical procedure, the next meeting was moved from November 16 to November 10."
+    summary: "Following public comment, the board discussed rescheduling the November 16 meeting given a board member's uncertainty about availability after a medical procedure on November 13. The board agreed to move the meeting to November 10. The Thanksgiving-week meeting timing was deferred for decision at the next meeting. The board then voted unanimously to adjourn."
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

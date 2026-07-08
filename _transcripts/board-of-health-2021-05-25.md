@@ -11,6 +11,85 @@ duration_seconds: 1876
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health approves sticker rebates, reviews COVID metrics and May 29 reopening rules"
+  summary: "The Board of Health approved two facility sticker rebates totaling $110 and received a COVID-19 update showing 1,338 cumulative cases and 62% of residents fully vaccinated as of May 21, 2021. The health director summarized Governor Baker's May 29 reopening order lifting most industry restrictions and capacity limits, with masks still required in transit, schools, healthcare, and congregate care settings. The director also announced a household hazardous waste residential collection event on June 9 and confirmed beach water sampling would begin the same day."
+  decisions:
+    - "Approved facility sticker rebate of $55 to resident (first request)"
+    - "Approved facility sticker rebate of $55 to resident at 291B Ocean Ave (second request)"
+    - "Approved minutes from prior meeting"
+  votes:
+    - motion: "Accept prior meeting minutes"
+      result: "in favor (unanimous)"
+    - motion: "First facility sticker rebate ($55)"
+      result: "in favor (unanimous)"
+    - motion: "Second facility sticker rebate ($55)"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 0
+    end_seconds: 99
+    headline: "Board approves minutes and two facility sticker rebates totaling $110"
+    dek: "Two separate residents received $55 rebates after overpaying for transfer-station facility stickers."
+    summary: "The board voted unanimously to accept prior meeting minutes, then approved two $55 facility sticker rebates. The first involved a resident who purchased two stickers but should have paid $25 instead of $80. The second, submitted the morning of the meeting, involved a resident at 291B Ocean Ave who purchased three stickers but missed a discount on one."
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 99
+    end_seconds: 1314
+    featured: true
+    headline: "COVID cases nearly flat at 1,338; 62% of Marblehead residents fully vaccinated"
+    dek: "Health director summarized May 29 state reopening order lifting most capacity limits while retaining mask requirements in transit, schools, and healthcare settings."
+    summary: |
+      As of May 21, 2021, Marblehead had 1,338 cumulative COVID-19 cases (up 2 from the prior week), 4 active cases, 31 confirmed deaths, and a 14-day average daily incidence rate of 4.9 per 100,000. The percent positive over 14 days was 1.06%. Testing volume had dropped sharply to 1,516 tests over 14 days, compared with roughly 4,000 at peak.
+      
+      Vaccination: 11,852 residents (62%) were fully vaccinated; an additional 3,216 had received one dose. If all partially vaccinated residents complete their series, the town would reach approximately 79% fully vaccinated.
+      
+      **Governor Baker's May 29 reopening order highlights:**
+      - All industry restrictions lifted; capacity increased to 100%
+      - Gathering limits rescinded
+      - Commonwealth face-covering order rescinded; replaced by a DPH advisory recommending unvaccinated residents continue masking indoors
+      - Masks still **required** in: public/private transportation (MBTA, buses, ferries, rideshares, airports), K–12 schools, licensed childcare programs, healthcare facilities, and congregate care settings
+      
+      Board members discussed whether the 79% figure overstates herd immunity because children under 12 cannot yet be vaccinated. The director noted herd immunity is assessed regionally, not town by town. A COVID vaccination clinic at the Salem O'Keefe Hockey Rink (Tuesdays and Thursdays, 3–6 PM) was continuing but may close as walk-in volume declines.
+      
+      Governor Baker also filed legislation extending virtual open-meeting-law provisions until September 1, 2021, and extending outdoor-dining special permits through November 29, 2021.
+    key_speakers: ["Andrew (Health Director)", "Michelle (Board member)", "Dr. Belfbecker (Board member)"]
+  - topic: trash-dpw
+    topic_confidence: 0.9
+    start_seconds: 1314
+    end_seconds: 1589
+    headline: "Household hazardous waste residential pickup event set for June 9; quarterly schedule replaces annual drop-off"
+    dek: "ACV will collect hazardous materials directly from residents' properties, allowing more frequent events and reducing cost to the town."
+    summary: |
+      The health director announced a household hazardous waste residential collection event on June 9. Residents register and pay online, specify the quantity and location of materials, and place items on their property (not curbside) before 7 AM. Collection company ACV transports materials to the transfer station for repacking and shipment.
+      
+      Key changes from the prior drop-off model:
+      - Events can now occur quarterly instead of twice a year
+      - Residents who work Saturdays are no longer excluded
+      - Cost to the town is reduced; resident pricing remains the same
+      
+      Beach water sampling was confirmed to begin June 9, running through approximately September 15, including the Village Street dock and Sunset Pier on an alternating basis. The office will be closed Friday, June 18 in observance of Juneteenth; curbside collection will continue that day.
+    key_speakers: ["Andrew (Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1589
+    end_seconds: 1860
+    headline: "Board reviews June meeting schedule; next meetings June 8 and June 29"
+    dek: "Members discussed scheduling conflicts around the June 22 town election and noted the mental health task force would meet June 1."
+    summary: "The mental health task force was rescheduled to Tuesday, June 1 at 7 PM due to a posting error that prevented the prior meeting from occurring. The board's next regular meetings are June 8 and June 29 (after the election). Board members noted various scheduling constraints around the June 22 election date and summer travel."
+    key_speakers: ["Michelle (Board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 1860
+    end_seconds: 1920
+    headline: "Board adjourns unanimously"
+    dek: "Motion to adjourn passed unanimously."
+    summary: "A motion to adjourn was made, seconded, and approved unanimously."
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

@@ -11,6 +11,104 @@ duration_seconds: 5319
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health creates COVID Mental Health Task Force"
+  summary: "The Board of Health voted to establish the Marblehead COVID Mental Health Task Force, approved its mission statement, and appointed Michelle Gottlieb as chair. The board also accepted four sets of meeting minutes with corrections and received a COVID-19 case and vaccination update from the health director. The task force will solicit citizen and healthcare professional applications through the Board of Health office, closing March 22, with appointments to be made at a meeting on March 24 and a first task force meeting planned on or before March 31."
+  decisions:
+    - "Approved creation of the Marblehead COVID Mental Health Task Force with mission statement"
+    - "Approved Michelle Gottlieb as chair of the task force"
+    - "Approved minutes of January 26 with one correction"
+    - "Approved minutes of February 2 with two corrections"
+    - "Approved minutes of February 9 as submitted"
+    - "Approved minutes of February 23 with corrections"
+  votes:
+    - motion: "Accept January 26 minutes with correction"
+      result: "in favor (unanimous)"
+    - motion: "Accept February 2 minutes with two corrections"
+      result: "in favor (unanimous)"
+    - motion: "Accept February 9 minutes as submitted"
+      result: "in favor (unanimous)"
+    - motion: "Accept February 23 minutes with corrections"
+      result: "in favor (unanimous)"
+    - motion: "Approve mission statement and create the Marblehead COVID Mental Health Task Force"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Michelle Gottlieb as chair of the task force"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 0
+    end_seconds: 1280
+    headline: "Board approves four sets of meeting minutes with minor corrections"
+    dek: "Minutes from January 26, February 2, February 9, and February 23 were accepted after Andrea read out corrections during the meeting."
+    summary: |
+      The board initially planned to defer all four sets of minutes to the next meeting because members were uncertain about the exact corrections, but Andrea reviewed them on screen and read the changes aloud, allowing the board to vote on each set.
+      
+      - **January 26**: One correction — changed wording to "the board has all the information available as it was discussed."
+      - **February 2**: Two corrections — a sentence about January 29 case count and changing "did open" to "Todd opened."
+      - **February 9**: No corrections; accepted as submitted.
+      - **February 23**: Corrections to the Ben Day paragraph — changed reference from "two therapists" to three additional hires, and corrected a sentence about the Marblehead Counseling Center's insurance and fundraising activities.
+    key_speakers: ["Andrea (Board of Health administrator)", "Todd (board member)", "Michelle Gottlieb (board member)", "Helene (board member)"]
+  - topic: public-safety
+    topic_confidence: 0.8
+    start_seconds: 194
+    end_seconds: 1370
+    headline: "COVID cases trending down; 2,872 Marblehead residents fully vaccinated as of March 7"
+    dek: "Health director Andrew reported 1,172 total cases as of March 5, updated travel order rules, and outlined new CDC guidance for fully vaccinated individuals."
+    summary: |
+      As of March 5, Marblehead had 1,172 total COVID-19 cases, up three from the prior week, though 12 additional cases were reported between Friday and the meeting. The 14-day average daily incidence rate was 19.1 per 100,000 and the 14-day percent positive rate was 1.38%.
+      
+      **Vaccination update (as of March 7):**
+      - Statewide: 2,429,720 doses shipped to Massachusetts; 2,117,862 administered (87.2%)
+      - Marblehead residents fully vaccinated (two doses): 2,872
+      - Marblehead residents with one dose: 2,614
+      - Approximately 100 doses administered per day in town
+      - Roughly 13% of Marblehead residents fully vaccinated
+      
+      **Travel order changes:** Hawaii, Missouri, Oregon, Puerto Rico, and Washington designated lower-risk states. Fully vaccinated individuals and COVID-recovered individuals (positive test 10–90 days prior, asymptomatic) are exempt from pre-travel testing and quarantine requirements with documentation.
+      
+      **Johnson & Johnson vaccine:** Granted FDA emergency use authorization for ages 18 and older; initial allocation in Massachusetts very limited; broader availability expected later in March.
+      
+      **K–12 educators:** Eligible to schedule vaccine through the state system effective March 11, 2021. The state is working on dedicated days at mass vaccination sites for teachers.
+      
+      **Homebound and low-income senior housing:** The health department submitted surveys to the state to receive vaccine for homebound individuals and residents of public/private low-income senior housing. A by-appointment-only clinic is planned for March 23, contingent on vaccine delivery.
+      
+      **CDC guidance for fully vaccinated people:** May visit indoors without masks with other fully vaccinated people or with unvaccinated low-risk single-household members; should continue masking in public and when visiting unvaccinated high-risk individuals.
+    key_speakers: ["Andrew (Health Director)", "Todd (board member)", "Helene (board member)", "Michelle Gottlieb (board member)", "Elizabeth Eisner (resident, Dean Road)", "Sarah Fox (public commenter)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 1832
+    end_seconds: 5243
+    featured: true
+    headline: "Board establishes Marblehead COVID Mental Health Task Force; Gottlieb named chair"
+    dek: "The board unanimously approved a mission statement and membership structure for the new task force, with citizen and healthcare professional applications due March 22 and a first meeting planned on or before March 31."
+    summary: |
+      Michelle Gottlieb presented a draft mission statement and proposed membership structure for a Marblehead COVID Mental Health Task Force. After discussion, the board voted unanimously to create the task force and appoint Gottlieb as chair.
+      
+      **Mission (as approved):** The task force will convene as a cross-sector group of community leaders to address and provide appropriate intervention strategies guiding citizens, particularly the most vulnerable, toward improved mental health. It operates under the auspices of the Marblehead Board of Health and reports to the board.
+      
+      **Proposed membership (9 members):**
+      | Seat | Status |
+      |---|---|
+      | Board of Health representative (Michelle Gottlieb) | Confirmed |
+      | Board of Selectmen representative | Jason Silva to designate |
+      | School administration (Dan Bauer, HS principal) | Agreed |
+      | School guidance (Jeffrey Newsom, Village School) | Agreed |
+      | Director, Marblehead Counseling Center (Ben Day) | Confirmed |
+      | Council on Aging representative | Confirmed |
+      | Healthcare professional | Open application |
+      | Two citizen volunteers | Open application |
+      
+      The board removed a previously proposed "possible additional school representative" seat, keeping the total at nine.
+      
+      **Application process:** Letters of interest for the citizen and healthcare professional seats will be accepted through the Board of Health office (submitted to Andrea for distribution) with a deadline of **March 22**. The application notice will be posted online immediately and in the Marblehead Reporter when possible. The board will review applications and make appointments at a meeting on **March 24**. The task force's first meeting is to be held **on or before March 31**.
+      
+      The board discussed open meeting law requirements, noting that task force meetings must be publicly posted with the town clerk and that all deliberations are subject to public records laws.
+    key_speakers: ["Michelle Gottlieb (board member / task force chair)", "Helene (board member)", "Todd (board member)", "Andrew (Health Director)", "Chris Stevens (Marblehead Reporter)", "Andrea (Board of Health administrator)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

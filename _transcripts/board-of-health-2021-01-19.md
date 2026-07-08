@@ -11,6 +11,80 @@ duration_seconds: 5007
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health reviews COVID metrics, debates school pool testing feasibility"
+  summary: "The Board of Health reviewed COVID-19 data showing Marblehead had entered red-community status, with 863 confirmed cases to date, 89 active cases, and a percent-positive rate above 5%. The board discussed the feasibility of pool testing in schools, with public health staff citing staffing shortages, lack of BioNEXT Now equipment, and logistical complexity as barriers. The board also reviewed the ongoing vaccination rollout, noting that over 700 first responders had been vaccinated the prior week through a regional coalition."
+  decisions:
+    - "Approved executive session minutes from December 8th"
+  votes:
+    - motion: "Approve executive session minutes from December 8th"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1
+    end_seconds: 93
+    headline: "Board approves December 8 executive session minutes"
+    dek: "All three members voted in favor before moving to the COVID report."
+    summary: "The chair called the meeting to order and the board moved immediately to approve the executive session minutes from December 8. All three members — Ms. Gottlieb, Ms. Hazlett, and Dr. Belfbecker — voted in favor."
+    key_speakers: ["Ms. Gottlieb (board member)", "Ms. Hazlett (board member)", "Dr. Belfbecker (board member)"]
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 93
+    end_seconds: 4028
+    featured: true
+    headline: "Marblehead enters red-community status; pool testing in schools debated at length"
+    dek: "With 863 cumulative cases, 89 active, and percent-positive over 5%, the Health Director reported Marblehead is now a red community, while residents and staff debated the feasibility of state-funded pool testing in schools."
+    summary: |
+      ### COVID-19 Case Report
+      
+      Health Director Andrew reported the following metrics as of January 15:
+      
+      | Metric | Value |
+      |---|---|
+      | Confirmed cases to date | 863 |
+      | Active cases | 89 |
+      | Deaths | 31 |
+      | Average daily incidence per 100,000 | 59.7 |
+      | Percent positive | >5% |
+      
+      The 0–19 age group had the largest number of new positive cases for at least the second or third consecutive week. Both the incidence rate and percent-positive now place Marblehead in the red tier. The board attributed rising numbers to social gatherings in homes and workplaces, and noted that the UK variant had been confirmed in a Boston resident as of January 17.
+      
+      ### Vaccination Update
+      
+      The health department held regional clinics in collaboration with Swampscott, Salem, Danvers, and Beverly over five days the prior week, vaccinating over 700 first responders at a Mass facility. The department noted it has pivoted significant capacity toward vaccine rollout and is following the state's three-phase plan. Residents were directed to mass.gov for phase eligibility information. Volunteers were encouraged to sign up through the Medical Reserve Corps (MRC).
+      
+      ### Pool Testing Debate
+      
+      A substantial portion of the meeting was devoted to whether the board and schools should participate in the state-funded (six-week) pool testing program for schools. Key points raised:
+      
+      **Against / logistical barriers:**
+      - Marblehead does not have BioNEXT Now equipment required for participation
+      - Nasal swab samples do not retain enough material to avoid a second collection, unlike the saliva-based test used in Salem
+      - If a pool tests positive, all 10–25 participants must return for antigen retesting (which is SARS-specific, not COVID-19-specific), then potentially a PCR test — a multi-day process
+      - Students whose pool tests positive would be asked to quarantine pending results, disrupting schooling even for families following all protocols
+      - The health department's nursing staff is already at capacity; additional staff would need to be hired
+      - After six weeks, costs shift to the town
+      - Deanna (school nurse) and Health Director stated Marblehead's demographics differ from communities like Salem and Lynn, where access to independent testing is more limited
+      
+      **In favor / community members:**
+      - Pre-symptomatic spread accounts for an estimated 48% of cases; pool testing is designed to catch those cases before symptoms appear
+      - A resident reported that Salem's pooled testing (saliva-based, running since at least Thanksgiving for high school students) had identified approximately half of that district's school cases
+      - Residents argued that with numbers rising and the more transmissible UK variant now detected in Massachusetts, new tools should be explored rather than dismissed
+      - Volunteers — including nurse practitioners — expressed willingness to assist if the department could specify what was needed
+      
+      The board did not take a vote on pool testing. Board member Michelle indicated she wanted to learn more from Salem and other communities before forming a final position, while acknowledging capacity constraints are real. Deanna stated flatly that she does not believe the program is feasible or worth the effort for Marblehead at this time.
+    key_speakers: ["Andrew (Health Director)", "Deanna (school nurse)", "Michelle (board member)", "Helene (board member / reopening committee representative)", "Kate (resident)", "Cazzie (resident at mic)", "Sarah (resident)", "Kimberly (resident)", "Elizabeth (resident)", "Sandra (resident / provider)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 4988
+    end_seconds: 5040
+    headline: "Board adjourns; next meeting set for January 26 at 7:00 p.m."
+    dek: "All three members voted to adjourn after scheduling the next meeting."
+    summary: "The board voted unanimously to adjourn. The next meeting was set for January 26 at 7:00 p.m., moved earlier than usual at a member's request due to a scheduling conflict."
+    key_speakers: ["Ms. Hazlett (board member)", "Ms. Gottlieb (board member)", "Dr. Belfbecker (board member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

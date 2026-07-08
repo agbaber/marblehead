@@ -11,6 +11,106 @@ duration_seconds: 3788
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Board reviews COVID-19 Order 46 extending gathering limits to private property"
+  summary: "The Marblehead Board of Health reviewed Governor Baker's COVID-19 Order 46, which for the first time extended gathering limits and mask requirements to private property, including homes and backyards. Outdoor gatherings are now capped at 50 people and indoor gatherings at 25, with face coverings required when more than 10 people from different households are present. The board discussed enforcement mechanisms, compliance inspections at local restaurants, Marblehead's current case count of 255 total with fewer than five active cases, and the school district's plan to begin remote learning September 14 with a target hybrid return on October 5."
+  decisions:
+    - "Approved motion to adjourn"
+  votes:
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 561
+    featured: true
+    headline: "Governor's Order 46 extends COVID-19 gathering limits to private property"
+    dek: "New order caps outdoor gatherings at 50 and indoor at 25, and requires masks for groups over 10 on all public and private property."
+    summary: |
+      Health Director Andrew read COVID-19 Order 46 in full, which took effect August 11, 2020. Key provisions include:
+      
+      - **Indoor gatherings**: limited to 8 persons per 1,000 sq ft, never more than 25 persons in a single enclosed space.
+      - **Outdoor gatherings**: limited to 25% of maximum permitted occupancy or 8 persons per 1,000 sq ft where no occupancy permit exists, never more than 50 persons.
+      - **Face coverings**: required at all gatherings of more than 10 people, including on private property.
+      - **Private property**: unlike prior orders, Order 46 explicitly applies to private homes, backyards, parks, athletic fields, and parking lots.
+      - **Enforcement**: local boards of health, state and municipal police authorized; fines up to $500 per violation.
+      - **Alcohol service**: ABCC advisory clarified that alcoholic beverages for on-premises consumption must be accompanied by food prepared on site; prepackaged snacks do not qualify.
+      - **Phase 3 Step 2** (which would have expanded gyms and indoor seating) postponed indefinitely.
+      
+      A Code Red message was sent to all residents at 6:30 p.m. summarizing the new rules. The board discussed purchasing and distributing public health lawn signs, with staff to obtain pricing.
+    key_speakers: ["Andrew (Health Director)", "Michelle (Board member)", "Helene (Board member)", "Tom (Board member)"]
+  - topic: public-safety
+    topic_confidence: 0.8
+    start_seconds: 1403
+    end_seconds: 1495
+    headline: "Inspections at Riptide and Barnacle found general compliance with COVID-19 rules"
+    dek: "A public health inspector and police officer conducted inspections at two restaurants last Thursday following complaints submitted through the Attorney General's portal."
+    summary: "Following complaints received via the Massachusetts Attorney General's online complaint portal, public health inspector Bobby Cody and a Marblehead police officer conducted compliance inspections at the Riptide and the Barnacle on Thursday evening. The Riptide showed strong compliance. The Barnacle had some concerns related to outdoor tables and patrons approaching from the street. The board noted that the AG's office forwards complaints to the local health department for follow-up, and that inspections will continue going forward."
+    key_speakers: ["Andrew (Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1495
+    end_seconds: 1762
+    headline: "Marblehead reports 255 total COVID-19 cases, fewer than 5 active; town in 'green' category"
+    dek: "Health Director explained the difference between the town's rolling case count and the state's 14-day average daily rate, noting Marblehead currently falls in the green tier."
+    summary: |
+      As of the Monday report, Marblehead had 255 confirmed total cases, fewer than 5 active cases, and 30 confirmed deaths. The health director explained that the state's new portal reports average daily cases per 100,000 population over a 14-day period, which does not mirror the town's real-time count. The state's risk categories are:
+      
+      | Color | Average Daily Cases per 100,000 |
+      |---|---|
+      | Red | >8 |
+      | Yellow | 4–8 |
+      | Green | <4 |
+      | White | <5 reported cases |
+      
+      Marblehead currently falls in the **green** category. The board noted that most confirmed cases arrive in the health department's system 5–7 days after a person first tests positive, creating a lag in reported counts.
+    key_speakers: ["Andrew (Health Director)", "Helene (Board member)"]
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 1762
+    end_seconds: 3168
+    headline: "School reopening plan: remote start Sept. 14, hybrid target Oct. 5; metrics still undetermined"
+    dek: "The reopening committee reviewed the school department's phased plan and debated what public health metrics would trigger a shift from remote to hybrid learning."
+    summary: |
+      Helene reported from the Monday morning reopening committee meeting, where Superintendent unveiled the school reopening program. Key details:
+      
+      - **August 31**: Teachers return to prepare buildings and systems.
+      - **September 14**: Remote learning begins for all students.
+      - **October 5**: Target date to begin hybrid (in-person) learning.
+      - **Hybrid cohorts**: Two cohorts (A and B) divided alphabetically; A attends Monday/Thursday, B attends Tuesday/Friday; siblings may be kept together.
+      - **Special needs/younger learners** may have an earlier or different in-person entry.
+      - **Technology**: Every student will receive a device (Chromebooks or equivalent by level); teachers will Zoom to remote students from classrooms.
+      - **Mask breaks**: Anticipated to consume up to 45 minutes of the school day if done twice for younger students.
+      - **Clear/smile masks** discussed for students with behavioral or communication needs.
+      - All remote instruction will be delivered by Marblehead teachers, not outside vendors.
+      - A separate survey on athletics and activities will be issued by those departments.
+      
+      The board expressed concern that metrics for transitioning from remote to hybrid—or returning to remote if needed—have not been set by DESE or the state, while every other reopening aspect has been governed by unified state guidance. The health director noted he would continue to push the state Department of Public Health for top-down, uniform metrics. The board also noted that roughly half of school staff (custodial, cafeteria, etc.) do not live in Marblehead, and that surrounding communities such as Lynn and Revere are seeing increased case counts.
+    key_speakers: ["Helene (Board member)", "Michelle (Board member)", "Andrew (Health Director)", "Tom (Board member)"]
+  - topic: public-comment
+    topic_confidence: 0.6
+    start_seconds: 3260
+    end_seconds: 3542
+    headline: "Board discussed mental health uptick and beach compliance; no formal public testimony"
+    dek: "Guests Kevin McCoy and Karen Pierce declined to speak; the board discussed mental health resources and water quality."
+    summary: |
+      The health director noted an uptick in mental health concerns in the community and anticipated further increases in the fall and winter when outdoor activities and natural light decrease. The board asked that pricing for a 24/7 toll-free mental health counseling program be brought to a future agenda, noting surrounding communities have already subscribed to such a service. The board noted that fall sports cancellations may reduce an important mental health outlet.
+      
+      Beach water quality has been exceptional this summer; temperatures were approximately 63°F at Devro Beach and 64–68°F in the harbor and Salem Harbor. Five COVID-19 reminder lawn signs are posted at Devro Beach parking lot exit.
+      
+      A board member reported personally intervening with a group of unmasked teenagers crowded together at the Neck Run Café, with mixed compliance response. Guests Kevin McCoy and Karen Pierce chose not to speak.
+    key_speakers: ["Andrew (Health Director)", "Michelle (Board member)", "Helene (Board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 3728
+    end_seconds: 3780
+    headline: "Meeting adjourned; next meeting scheduled for August 25 at 7:30 p.m."
+    dek: "Health Director announced he will be on vacation the following week; the next board meeting was set for August 25."
+    summary: "The health director announced he would be on vacation the week of August 18 but would remain in town. The board agreed to meet next on August 25 at 7:30 p.m. The health director indicated he would call in remotely from within Massachusetts. The meeting was adjourned by unanimous vote."
+    key_speakers: ["Andrew (Health Director)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

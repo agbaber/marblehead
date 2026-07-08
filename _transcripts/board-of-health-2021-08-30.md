@@ -11,6 +11,104 @@ duration_seconds: 3794
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health votes to recommend mask-wearing at municipal public meetings"
+  summary: "At its August 30, 2021 meeting, the Board of Health reviewed a COVID-19 update showing 20 active cases and approximately 82% of residents fully vaccinated. The board debated a potential indoor mask mandate for all businesses, then narrowed its action to recommending that the Board of Selectmen require masks at public meetings held in municipal buildings. The board also received updates on the mental health task force website and the transfer station cost estimates."
+  decisions:
+    - "Approved minutes of August 10th meeting as corrected"
+    - "Approved recommendation to Board of Selectmen to require masks at public meetings in municipal buildings"
+    - "Rescinded earlier motion to hold a public hearing on a townwide indoor mask mandate"
+    - "Approved mental health task force website proceeding with pro bono developer at a $300 town cost"
+  votes:
+    - motion: "Accept August 10th minutes as corrected"
+      result: "in favor (unanimous)"
+    - motion: "Hold public hearing on indoor mask mandate for all public and business spaces"
+      result: "in favor (unanimous)"
+    - motion: "Recommend to Board of Selectmen that masks be worn at public meetings in municipal buildings"
+      result: "in favor (unanimous)"
+    - motion: "Rescind earlier public hearing motion"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 60
+    headline: "Board approves August 10th meeting minutes as corrected"
+    dek: "Chair noted several instances where 'School Committee' needed to be capitalized; minutes approved as corrected."
+    summary: "The board opened its August 30, 2021 meeting and approved the minutes from the August 10th meeting with minor capitalization corrections."
+  - topic: public-safety
+    topic_confidence: 0.8
+    start_seconds: 60
+    end_seconds: 2175
+    featured: true
+    headline: "Board recommends municipal-building mask requirement amid Delta variant discussion"
+    dek: "After debating a broader indoor mandate, the board voted unanimously to recommend the Board of Selectmen require masks at public meetings in municipal buildings."
+    summary: |
+      Board of Health Director Andrea presented a COVID-19 update as of August 27, 2021:
+      
+      | Metric | Value |
+      |---|---|
+      | Total cases to date | 1,437 |
+      | Active cases | 20 |
+      | Confirmed deaths | ~31 |
+      | 14-day case count | 30 |
+      | 14-day daily incidence rate per 100,000 | 15 |
+      | Total tests completed | 66,397 |
+      | 14-day percent positive | 2.55% |
+      | Fully vaccinated residents | ~15,676 (82%) |
+      | Incomplete vaccination | ~916 (4.81%) |
+      
+      The director noted approximately 87% of residents had received at least one dose, with roughly 11–12% of the population (children under 12) ineligible for vaccination at the time.
+      
+      A board member raised the question of recommending indoor mask-wearing as a mitigation tool given the Delta variant's higher transmissibility. The director outlined actions taken by other Massachusetts communities, including Salem (mandate for all public indoor spaces through November 13), Swampscott (town administrator directive for municipal buildings), and Belmont, Arlington, and others.
+      
+      After discussion — including input from an attending physician (identified as Dr. Kruger) who noted that 20 active cases represents approximately 0.1% of the population — the board concluded a townwide mandate was not yet warranted. The board voted unanimously to:
+      1. Recommend to the Board of Selectmen that masks be required at public meetings held in municipal buildings.
+      2. Rescind its earlier unanimous vote to hold a public hearing on a broader indoor mask mandate for all businesses.
+      
+      The board agreed to revisit a broader mandate if case counts rise significantly.
+    key_speakers: ["Andrea (Board of Health Director)", "Dr. Kruger (attending physician, public comment)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 2857
+    end_seconds: 3329
+    headline: "Mental health task force secures pro bono website developer; town to fund $300 setup cost"
+    dek: "A local professional offered to build the mental health task force website at no charge, with the town covering approximately $300 in startup costs."
+    summary: |
+      Board member Joanne reported that the mental health task force had connected with a local professional, Peter Shallis, who agreed to build the task force website pro bono. The town would fund approximately $300 in startup costs. The website would align with the Marblehead town site and incorporate a resource directory modeled on Lexington's mental health task force site. The developer estimated the build would take a couple of days.
+      
+      Additional updates included:
+      - Police Chief Dennis King joined the task force and suggested speaker resources including the National Alliance on Mental Illness (NAMI).
+      - Discussions with school professionals (Jeff Newsom, Daniel Bauer, and Gina) about linking school mental health resources.
+      - The Council on Aging social worker may coordinate a talk for older residents.
+      - ARPA federal funds were identified as a potential funding source for the speaker series.
+      - The task force is exploring a speaker series to reduce mental health stigma.
+    key_speakers: ["Joanne (Board member / task force lead)"]
+  - topic: trash-dpw
+    topic_confidence: 0.75
+    start_seconds: 3329
+    end_seconds: 3518
+    headline: "Transfer station cost estimates delayed; architects expect full figures at next meeting"
+    dek: "Architects are coordinating with a prior estimator to provide comprehensive construction cost estimates for the transfer station project at the September 13th meeting."
+    summary: "The director reported that architects working on the transfer station project are returning to a previously used cost estimator — rather than the firm they currently work with — to ensure continuity with earlier figures. Full cost estimates for both minor work and the larger construction project are expected to be ready for the next Board of Health meeting in two weeks."
+    key_speakers: ["Andrea (Board of Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 3518
+    end_seconds: 3704
+    headline: "Director reports September 15th water quality testing end date and household hazardous waste collection"
+    dek: "September 15th marks both the final water quality testing date of the season and the next household hazardous waste collection event; sign-up is available online."
+    summary: |
+      Director's report highlights:
+      - Water quality testing concludes September 15th; three more samples remain (Wednesday, the following week, and September 15th).
+      - Household hazardous waste collection is scheduled for September 15th; residents must sign up online through the town website (posting expected the following day).
+      - The director and several other town staff would attend an all-day Basic Disaster Life Support (BDLS) emergency preparedness course the following day.
+      - No beach closures due to failed water quality tests had occurred in recent weeks.
+    key_speakers: ["Andrea (Board of Health Director)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

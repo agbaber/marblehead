@@ -11,6 +11,55 @@ duration_seconds: 1800
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "School Committee approves interim MOA allowing educators remote PD work pending HVAC inspections"
+  summary: "The Marblehead School Committee held a special meeting to consider an interim memorandum of agreement (MOA) with the Marblehead Education Association (MEA) covering the period through September 14, 2020. The MOA allows educators uncomfortable returning to buildings to perform professional development work remotely while air quality inspections by Fuss & O'Neill and automated building systems contractors are conducted. The MEA voted to approve the MOA the prior evening, and the committee voted 5-0 to ratify it."
+  decisions:
+    - "Approved interim MOA between Marblehead School Committee and MEA allowing remote professional development pending HVAC and air quality inspections through September 14, 2020"
+    - "Approved motion to open public comment"
+  votes:
+    - motion: "Open public comment"
+      result: "in favor (4 to 0, 1 abstention)"
+    - motion: "Approve MOA between Marblehead School Committee and Marblehead Education Association"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 6
+    end_seconds: 288
+    headline: "Residents raise questions about HVAC testing scope and open MOU issues before board discussion"
+    dek: "Two residents asked about industrial hygienist involvement in air quality testing and whether the MOA resolves all outstanding teacher return-to-work issues."
+    summary: |
+      The chair opened public comment given the large attendance. Catherine Martin (29 West Shore Drive) asked whether industrial hygienists, not just HVAC consultants, would conduct carbon dioxide and humidity testing, referencing prior Fuss & O'Neill work at Eveleth School. She also questioned the timeline for mitigation if problems are found and noted that the MOA language on UV lights and filter selection was open-ended rather than binding on consultant recommendations.
+      
+      Patrick Noonan asked for clarification on the MOA clause stating there are "no unresolved issues other than the HVAC issues," seeking to understand whether that referred only to teacher building return or to the broader collective bargaining modifications needed for hybrid learning.
+    key_speakers: ["Catherine Martin (resident, 29 West Shore Drive)", "Patrick Noonan (resident)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 288
+    end_seconds: 1775
+    featured: true
+    headline: "Committee votes 5-0 to ratify interim MOA with MEA allowing remote PD pending air quality audits"
+    dek: "The MEA approved the provisional agreement the prior evening; MERV-13 filters were being installed at the time of the meeting, with Fuss & O'Neill inspections expected to begin by Monday."
+    summary: |
+      Superintendent Bucky explained that after roughly 16 reopening provisions had been negotiated collaboratively with MEA, the executive board raised HVAC concerns as a potential obstacle to membership ratification of the full MOA. The parties agreed to a provisional interim MOA focused solely on air quality, which MEA voted to approve the prior evening.
+      
+      **Key provisions discussed:**
+      - Educators not comfortable returning to buildings may work remotely during professional development weeks (through approximately September 14, 2020)
+      - Staff who wish to return in person prior to inspections are welcome to do so
+      - The period of August 31 through September 11 is recognized as contractual workdays
+      - Reasonable ADA accommodations are being arranged individually for staff with documented medical circumstances
+      - After inspections are complete, a more detailed MOA covering all reopening provisions is to be finalized before the student start date
+      - Teachers in classrooms alone or with immediate family members would be permitted to be unmasked
+      
+      Board members debated whether mandating teachers into buildings for remote teaching was appropriate; one member argued fewer non-student-facing staff in buildings reduced outbreak risk, while other members and the superintendent emphasized that in-person presence was needed for student orientation activities and was in line with state commissioner expectations.
+      
+      The superintendent confirmed that Fuss & O'Neill and Automated Building Systems were scheduled to begin inspections as early as that day, with MERV-13 filters already arriving and being installed. Air quality reports will be made publicly available on the district website, along with any remediation steps taken.
+      
+      **Vote:** 5-0 in favor.
+    key_speakers: ["Superintendent Bucky", "John (district administrator/legal)", "Sarah Fox (chair)", "Sarah Gold (board member)", "David Harris (board member)", "Emily Barron (board member)", "Megan Taylor (board member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

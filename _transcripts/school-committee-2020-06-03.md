@@ -11,6 +11,82 @@ duration_seconds: 2350
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "League of Women Voters hosts 2020 School Committee Candidates Night remotely"
+  summary: "The League of Women Voters of Marblehead held its 2020 Candidates Night remotely due to the COVID-19 pandemic, in partnership with MHTV. Four candidates — Emily Barron, Sarah Gold, Katherine Martin, and Jennifer Schaffner — answered questions about remote learning and superintendent evaluation for two open School Committee seats. The event concluded with voting logistics for the June 16, 2020 election, including changed polling locations and mail-in ballot instructions."
+
+topic_segments:
+  - topic: elections-procedural
+    topic_confidence: 0.95
+    start_seconds: 6
+    end_seconds: 102
+    headline: "League of Women Voters opens remote Candidates Night 2020"
+    dek: "Chair Shari Pressman welcomes viewers to the pandemic-adapted remote format, thanking MHTV and moderator Jeff Shribman."
+    summary: "Shari Pressman, Chair of the Voter Service Committee of the League of Women Voters of Marblehead, opened the 2020 Candidates Night, which was held remotely due to the COVID-19 pandemic instead of in person at the high school library. She acknowledged MHTV and John Caswell for making the production possible, and noted the event could be viewed on marbleheadtv.org, MHTV's Facebook page, and the League's Facebook page. She also marked the 100th anniversary of the 19th Amendment and the League of Women Voters."
+    key_speakers: ["Shari Pressman (Chair, Voter Service Committee, League of Women Voters of Marblehead)", "Jeff Shribman (Moderator)"]
+  - topic: elections-procedural
+    topic_confidence: 0.97
+    start_seconds: 102
+    end_seconds: 196
+    headline: "Moderator introduces four School Committee candidates and format"
+    dek: "Jeff Shribman outlines the two-minute opening statements and question-and-answer format for candidates Emily Barron, Sarah Gold, Katherine Martin, and Jennifer Schaffner."
+    summary: "Moderator Jeff Shribman introduced the four candidates running for School Committee: Emily Barron, Sarah Gold, Katherine Martin, and Jennifer Schaffner. He explained that candidates would each give two-minute opening statements followed by two questions written by League members, with a timing system using colored cards and a bell. The order of responses was to rotate alphabetically with each new question."
+    key_speakers: ["Jeff Shribman (Moderator)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 196
+    end_seconds: 2171
+    featured: true
+    headline: "Four School Committee candidates present platforms on remote learning and superintendent evaluation"
+    dek: "Candidates addressed COVID-19's impact on public education, the superintendent evaluation process, and their qualifications in opening statements and two structured questions."
+    summary: |
+      Each candidate delivered a two-minute opening statement and answered two questions posed by the League of Women Voters.
+      
+      **Opening Statements**
+      - **Emily Barron** cited personal experience with dyslexia and a son with a learning disability, emphasizing inclusivity, innovation, and safe leadership. She highlighted COVID-19 onboarding of new administration as a key inflection point.
+      - **Sarah Gold** (incumbent, current chair) emphasized collaborative, fiscally responsible leadership and her background as a counseling psychologist working with children. She stressed social-emotional support as a coming priority.
+      - **Katherine Martin** described herself as a construction consultant and SPED parent, calling for student-first goals and accountability of school leadership.
+      - **Jennifer Schaffner** (incumbent) outlined five focus areas: student achievement, personal growth, partnerships, school culture, and resources. She cited 22 years in financial services, 16 years as a local small business owner, and 4 years on the School Committee, including co-chairing superintendent search committees.
+      
+      **Question 1: How has your vision of public education changed because of the pandemic, including remote learning?**
+      - All four candidates agreed the core vision of academic excellence should not change, but the implementation must adapt.
+      - Barron emphasized trauma-sensitive learning and multimodal flexibility.
+      - Gold noted the steep learning curve for teachers shifting online and called for professional development support.
+      - Martin called for a modern, equitable technology platform with consistent live instruction.
+      - Schaffner cited the Center on Reinventing Public Education's three priorities: limit learning loss, assess greatest needs, and use evidence to adapt teaching.
+      
+      **Question 2: What criteria will you use to evaluate the incoming new superintendent (Dr. John Bucky)?**
+      - Martin referenced the DESE rubric and emphasized open, ongoing communication.
+      - Schaffner detailed the four standards of the DESE indicator rubric (instructional leadership, management and operations, family and community engagement, professional culture) and proposed specific goals including a flexible reopening plan and zero-based budgeting.
+      - Barron linked superintendent evaluation to a new strategic plan built with community input.
+      - Gold called for guidance from the school committee's state representative to ensure a transparent process, given that most committee members have not conducted a formal superintendent evaluation.
+      
+      **Closing Statements**
+      - Schaffner warned of significant budget reductions ahead following COVID-19 impacts on local receipts and state aid, and emphasized her financial and historical knowledge of the district budget.
+      - Barron called for a culture of respectful collaboration and said she would be a partner at the table.
+      - Gold used a general manager/head coach analogy to argue the committee should not micromanage the superintendent.
+      - Martin raised the issue of social media negativity during the campaign and called for leadership that builds people up.
+    key_speakers: ["Emily Barron (School Committee candidate)", "Sarah Gold (School Committee candidate, incumbent)", "Katherine Martin (School Committee candidate)", "Jennifer Schaffner (School Committee candidate, incumbent)"]
+  - topic: elections-procedural
+    topic_confidence: 0.99
+    start_seconds: 2171
+    end_seconds: 2338
+    headline: "League closes event with June 16 voting logistics and changed polling locations"
+    dek: "Shari Pressman details precinct-by-precinct polling place changes, mail ballot application steps, and the deadline for returning ballots."
+    summary: |
+      Shari Pressman outlined voting instructions for the June 16, 2020 town election. Polling locations were changed for this election only:
+      
+      | Precinct | Usual Location | June 16 Location |
+      |---|---|---|
+      | 1 | Old Townhouse | Village School |
+      | 2 | Masonic Lodge | Village School |
+      | 3 | Masonic Lodge | Marblehead High School Field House |
+      | 4 & 5 | Community Center | Marblehead High School Field House |
+      | 6 | Community Center | Community Center (unchanged) |
+      
+      For mail-in voting, residents were directed to complete the 2020 Municipal Election Early Ballot Application or Absentee Ballot Application — available by mail or at marblehead.org — and return it to the Town Clerk at 188 Washington Street or the drop box at Abbott Hall. Completed ballots needed to reach the Town Clerk's office by June 16. The Town Clerk's office number provided was 781-631-0528.
+    key_speakers: ["Shari Pressman (Chair, Voter Service Committee, League of Women Voters of Marblehead)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

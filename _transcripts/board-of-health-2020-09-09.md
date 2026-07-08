@@ -11,6 +11,107 @@ duration_seconds: 4114
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health votes to recommend schools prohibit valve masks, schedules Sept. 15 emergency meeting"
+  summary: "The Board of Health approved amended August meeting minutes and received a COVID-19 update showing 264 total positive cases, fewer than five active cases, and a 0.38% positivity rate. The board voted to strongly recommend that the Marblehead School Committee prohibit masks with exhalation valves, then extended that recommendation to all public and private schools and after-school programs. The board also voted to hold an emergency public meeting on September 15 to consider a broader order on valve masks."
+  decisions:
+    - "Approved August 11 minutes as amended"
+    - "Approved August 25 minutes"
+    - "Approved motion to strongly recommend the Marblehead School Committee prohibit masks with exhalation valves"
+    - "Approved motion to strongly recommend all public and private schools and after-school programs prohibit masks with exhalation valves (one member voted present)"
+    - "Approved scheduling of emergency public meeting for September 15 to discuss a broader mask order"
+  votes:
+    - motion: "Amend August 11 minutes"
+      result: "in favor (unanimous)"
+    - motion: "Accept August 11 minutes as amended"
+      result: "in favor (unanimous)"
+    - motion: "Accept August 25 minutes"
+      result: "in favor (unanimous)"
+    - motion: "Strongly recommend School Committee prohibit valve masks"
+      result: "in favor (unanimous)"
+    - motion: "Strongly recommend all schools and after-school programs prohibit valve masks"
+      result: "in favor (2 to 0, 1 present)"
+    - motion: "Schedule emergency public meeting September 15 on mask order"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 0
+    end_seconds: 192
+    headline: "Board amends and approves August 11 and August 25 meeting minutes"
+    dek: "Two factual errors in the August 11 minutes — overstating Chromebook distribution and lawn sign quantities — were corrected before approval."
+    summary: "The chair noted two inaccuracies in the previously approved August 11 minutes: (1) that all residents would receive Chromebooks, and (2) that lawn signs would be distributed to all residents. Both statements were shortened or removed. The board voted to amend and then re-approve the August 11 minutes, and separately approved the August 25 minutes without changes."
+    key_speakers: ["Board Chair (Michelle)", "Andrew (Public Health Director)"]
+  - topic: public-safety
+    topic_confidence: 0.8
+    start_seconds: 192
+    end_seconds: 474
+    headline: "COVID-19 update: 264 total cases, 0.38% positivity, mental health resources highlighted"
+    dek: "Andrew reported fewer than five active cases, approximately 30 confirmed deaths, and over 1,000 tests in the prior 14 days."
+    summary: |
+      Andrew's COVID-19 case report for Marblehead as of September 9, 2020:
+      
+      | Metric | Value |
+      |---|---|
+      | Total positive cases | 264 |
+      | Active cases | <5 |
+      | Confirmed deaths | ~30 |
+      | Total tests to date | 7,076 |
+      | Tests in last 14 days | 1,039 |
+      | Average daily incidence per 100,000 | 1.12 |
+      | Percent positivity | 0.38% |
+      
+      Andrew noted the high recent testing volume provides a good picture of current conditions. He also highlighted mass.gov mental health and well-being resources and the 211 hotline for community members experiencing pandemic-related stress.
+    key_speakers: ["Andrew (Public Health Director)"]
+  - topic: public-safety
+    topic_confidence: 0.95
+    start_seconds: 474
+    end_seconds: 3555
+    featured: true
+    headline: "Board votes to recommend schools prohibit valve masks; schedules Sept. 15 emergency meeting for broader order"
+    dek: "A pediatric nurse from the community testified at length, and the board passed two motions on valve masks before voting to hold an emergency public hearing one week later."
+    summary: |
+      Andrew presented the School Committee's face mask policy, which described masks with exhalation valves as "strongly discouraged" rather than prohibited. The board expressed concern that this language was insufficient, citing CDC guidance that valve masks do not prevent the wearer from spreading the virus to others.
+      
+      Two residents — a pediatric nurse with 35 years of experience who has treated COVID-19 patients since February, and a pediatric nurse who served on the reopening committee's health and safety subcommittee — spoke at length urging the board to use prohibitory rather than advisory language.
+      
+      **Motions passed:**
+      1. The board voted unanimously to **strongly recommend that the Marblehead School Committee prohibit the use of masks with exhalation valves**.
+      2. The board then voted (2 in favor, 1 present) to **strongly recommend that all public and private schools and after-school programs prohibit the use of masks with exhalation valves**. One member voted present as a courtesy to schools not notified of the discussion.
+      
+      The board also discussed whether to expand guidance townwide (restaurants, after-school programs at off-site facilities, etc.) and whether enforcement was feasible. Andrew noted he does not frequently observe valve masks in use in the community.
+      
+      The board voted unanimously to hold an **emergency public meeting on September 15** to consider issuing a broader emergency order on masks, including exhalation valve masks. The meeting was to be posted with the town clerk the following day.
+    key_speakers: ["Andrew (Public Health Director)", "Helene (Board member / reopening committee representative)", "Michelle (Board Chair)", "Dr. Belficher (Board member)", "Kathy (Pediatric nurse, public comment)", "Sandra Callahan (Pediatric nurse, public comment)", "Tom (Board member / physician)", "Patrick (Public commenter)"]
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 3555
+    end_seconds: 3834
+    headline: "Senior drive-through flu clinic set for September 30; pre-registration is full"
+    dek: "The first-ever drive-through flu clinic in Marblehead will serve seniors with high-dose vaccine; no additional doses are available."
+    summary: "Andrew reported that the senior drive-through flu clinic scheduled for September 30 is fully pre-registered and no additional high-dose flu vaccine is available. He encouraged seniors to contact their primary care physician or CVS for flu shots. The clinic will also serve as an emergency dispensing site drill for federal credit purposes. The board asked about school flu clinics; Andrew said the lead school nurse is working with CVS on clinics for students, and noted the state requirement that all students be vaccinated against flu by December 31."
+    key_speakers: ["Andrew (Public Health Director)", "Michelle (Board Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 3834
+    end_seconds: 4020
+    headline: "Hazardous waste pickup pilot draws positive response; beach sampling season ends"
+    dek: "The first home-pickup hazardous waste event received positive resident feedback, and Andrew hopes to expand to three or four times per year."
+    summary: |
+      Andrew reported that the hazardous waste home-pickup pilot was well received. A resident email praised the ease of online payment and contactless pickup. A small number of pickups not completed on the first day were handled the following day. Andrew said he hopes to run the program again in November and potentially three to four times per year if quantities support it.
+      
+      Andrew also noted that beach water sampling concluded for the season. Marblehead extended sampling beyond state requirements; no beach closures occurred during the 2020 season.
+    key_speakers: ["Andrew (Public Health Director)", "Michelle (Board Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 4020
+    end_seconds: 4110
+    headline: "Board schedules next meeting for September 15 and discusses ongoing Tuesday cadence"
+    dek: "The board plans to reassess its weekly meeting schedule after the emergency September 15 session as in-person school reopening approaches."
+    summary: "The board confirmed the next meeting for September 15 at 7:30 PM as the emergency public hearing on the mask order. Members discussed whether to continue weekly Tuesday meetings, noting that in-person school reopening in early October would likely generate agenda items. The board adjourned after a motion carried unanimously."
+    key_speakers: ["Michelle (Board Chair)", "Andrew (Public Health Director)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

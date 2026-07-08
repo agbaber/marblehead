@@ -11,6 +11,65 @@ duration_seconds: 662
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Reporter previews Marblehead Town Meeting warrant articles ahead of May 3 meeting"
+  summary: "Marblehead Reporter journalist Chris Stevens joined the host to preview notable warrant articles for the annual town meeting scheduled for May 3 at the Star of the Sea Church parking lot. Topics discussed include debt-exclusion override articles for a fire department pumper truck and Abbott Public Library renovations, as well as citizen articles on demolition by neglect, Board of Selectmen changes, sidewalk maintenance, and gas-powered leaf blower restrictions. The conversation was a preview discussion, not a board or committee meeting, so no votes or formal decisions were taken."
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 5
+    end_seconds: 101
+    headline: "Town Meeting preview: collective bargaining articles and level-funded budget discussed"
+    dek: "Articles 20–23 cover collective bargaining for fire, police, and municipal workers alongside a largely level-funded town budget."
+    summary: "Chris Stevens of the Marblehead Reporter previewed the annual town meeting warrant, noting the meeting is set for May 3 at the Star of the Sea Church back parking lot. Articles 20, 21, and 22 address collective bargaining for fire, police, and municipal workers; teachers are also negotiating. Article 23 is the operating budget, described as largely level-funded, though participants noted that even level funding does not fully account for rising costs."
+    key_speakers: ["Chris Stevens (Marblehead Reporter journalist)"]
+  - topic: bonding-capital
+    topic_confidence: 0.8
+    start_seconds: 101
+    end_seconds: 293
+    featured: true
+    headline: "Debt-exclusion override articles seek funding for fire pumper truck and Abbott Library"
+    dek: "Article 32 returns after being pulled last year to fund a fire department pumper truck; Article 35 revives the Abbott Public Library renovation request."
+    summary: |
+      Article 32 is a debt-exclusion override for a fire department pumper truck that was removed from the prior year's warrant. The host and Stevens noted the town is densely populated with historic structures and that further delay may not be viable.
+      
+      Article 35 is a debt-exclusion override for renovations to the Abbott Public Library, which has been closed to the public due to air quality issues. The article was withdrawn from the previous year's warrant; Stevens expressed uncertainty about whether voters would remember the need given the library's prolonged closure prevented in-person outreach.
+    key_speakers: ["Chris Stevens (Marblehead Reporter journalist)"]
+  - topic: permits-zoning
+    topic_confidence: 0.65
+    start_seconds: 203
+    end_seconds: 293
+    headline: "Article 33 revives demolition-by-neglect bylaw sponsored by Historic Districts Commission"
+    dek: "The article would require owners of deteriorating historic buildings to seek preservation alternatives before demolition permits are issued."
+    summary: "Article 33 on demolition by neglect is sponsored by the Old and Historic Districts Commission. It would encourage owners to find buyers willing to preserve or rehabilitate buildings and involves the building commissioner before demolition permits are issued. The host raised questions about potential overreach regarding private property rights, particularly for elderly residents unable to maintain their homes."
+    key_speakers: ["Chris Stevens (Marblehead Reporter journalist)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 293
+    end_seconds: 584
+    headline: "Citizen articles cover pond naming, ethics board, beach conduct, Select Board changes, and sidewalks"
+    dek: "Several citizen-sponsored articles address governance, public order, and infrastructure, including term limits and staggered terms for the Board of Selectmen."
+    summary: |
+      A range of citizen articles were previewed:
+      
+      - **Article 36**: Would install signage renaming the area around Black Joe's Pond the Joseph Brown Conservation Area, as originally voted in 1973.
+      - **Article 37**: Addresses transparency and accountability, including direct contact lines to elected officials and creation of an ethics board.
+      - **Article 38**: Amends the Peace and Good Order bylaw to prohibit disruptive behavior from boats, beaches, and public ways along the water, likely prompted by recent issues at Browns Island.
+      - **Article 39** (Megan Sweeney): Would create an alternate selectman position, establish staggered two-year terms, and impose a three-term (six-year) limit.
+      - **Article 40** (Megan Sweeney): Would update bylaws to gender-inclusive language, rename the Board of Selectmen to Select Board, and amend screening committees for diversity and inclusion.
+      - **Article 41** (James Zissen): Sidewalk snow-clearance requirement — three-foot path within 24 hours, with waivers for elderly residents, enforced by police with warnings then $50 fines.
+      - **Article 42** (James Zissen): Three-year staggered terms for selectmen matching the school committee model.
+    key_speakers: ["Chris Stevens (Marblehead Reporter journalist)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.6
+    start_seconds: 584
+    end_seconds: 622
+    headline: "Gas-powered leaf blower restriction article returns, sponsored by Kathy Breslin"
+    dek: "The article would ban professional use of gas-powered leaf blowers from Memorial Day through Labor Day, with no restriction on individual homeowners."
+    summary: "Article on gas-powered leaf blowers is sponsored by Kathy Breslin. It would restrict professional use of gas-powered leaf blowers to the period after Labor Day through the day before Memorial Day. Individual homeowners would not be restricted. Stevens noted the measure came close to passing previously and suggested the same advocate speak again."
+    key_speakers: ["Chris Stevens (Marblehead Reporter journalist)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

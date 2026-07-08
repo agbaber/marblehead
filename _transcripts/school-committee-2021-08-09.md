@@ -11,6 +11,71 @@ duration_seconds: 1731
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "School Committee approves interim SPED director and middle school nurse; declares math curriculum surplus"
+  summary: "The Marblehead School Committee held a special meeting on August 2021 to interview and vote on two personnel appointments. Dr. Paula Donnelly was approved as Interim Director of Student Services and Kathy Byrne was approved as school nurse at Veterans Middle School. The committee also voted to declare the K–8 math curriculum surplus following adoption of new programs (Learned Zillion for K–6 and Ready Math for grades 7–8)."
+  decisions:
+    - "Approved Dr. Paula Donnelly as Interim Director of Student Services"
+    - "Approved Kathy Byrne as school nurse at Veterans Middle School"
+    - "Approved declaration of K–8 math curriculum as surplus"
+  votes:
+    - motion: "Approve Dr. Paula Donnelly as Interim Director of Student Services"
+      result: "in favor (unanimous)"
+    - motion: "Approve Kathy Byrne as Veterans Middle School nurse"
+      result: "in favor (unanimous)"
+    - motion: "Declare K–8 math curriculum as surplus"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 39
+    end_seconds: 877
+    featured: true
+    headline: "Dr. Paula Donnelly approved 3–0 as Interim Director of Student Services"
+    dek: "Donnelly, a former Marblehead therapeutic teacher and high school team chair, described expanding inclusive practices and the MTSS framework as top priorities."
+    summary: |
+      Superintendent Dr. Bucky introduced Dr. Paula Donnelly for the Interim Director of Student Services position, noting she is no stranger to the district. Committee members Sarah Gold, David Harris, and Emily Baron conducted a brief interview covering priorities for the special education department.
+      
+      Donnelly identified her top priority as deepening collaboration between special education and general education staff to operationalize the multi-tiered support system (MTSS) and break down silos. She also highlighted the BRITE program at the high school as a successful model for social-emotional supports and discussed the potential for expanding executive functioning instruction to all students.
+      
+      Regarding the new Brown School, Donnelly reflected on her experience at Swampscott Public Schools when a new building opened, noting tangible improvements in staff morale and accessibility that supported inclusive practices.
+      
+      The search advisory group included Assistant Superintendent Nan Murphy, two CPAC representatives (Meryl Schell and Jennifer Jackson), parent representative Melissa Kaplovich, school committee representative Megan Taylor, and Matt Fox from the leadership team.
+      
+      **Vote:** 3–0 in favor.
+    key_speakers: ["Sarah Gold (School Committee Chair)", "Dr. Bucky (Superintendent)", "Dr. Paula Donnelly (candidate)", "David Harris (School Committee member)", "Emily Baron (School Committee member)", "Matt Fox (school leader)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 876
+    end_seconds: 1478
+    headline: "Kathy Byrne approved 3–0 as Veterans Middle School nurse"
+    dek: "Byrne brings experience from Chelsea and Lawrence school districts and cardiopulmonary, ER, oncology, and mental health settings."
+    summary: |
+      Matt Fox introduced Kathy Byrne, recommending her based on strong clinical skills, student connections, and a personal reference in which she helped diagnose a serious medical condition for a colleague.
+      
+      Byrne's interview touched on psychosocial assessment integrated into routine nursing visits and the importance of collaboration with guidance counselors, social workers, and teachers. On COVID-related challenges, she noted vaccination record-keeping, masking policies, and community education as key hurdles for the coming school year. She also served as a coordinator for pooled COVID testing in Chelsea, working with two vendors.
+      
+      Committee members noted her emphasis on educating families and staff as a core strength.
+      
+      **Vote:** 3–0 in favor.
+    key_speakers: ["Sarah Gold (School Committee Chair)", "Matt Fox (Veterans Middle School principal)", "Kathy Byrne (candidate)", "David Harris (School Committee member)", "Emily Baron (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 1478
+    end_seconds: 1680
+    headline: "K–8 math curriculum declared surplus after district adopts Learned Zillion and Ready Math"
+    dek: "Assistant Superintendent Nan Murphy noted the lengthy stakeholder process and said the district will first seek other schools or organizations that could use the materials before recycling."
+    summary: |
+      Following the adoption of Learned Zillion for grades K–6 and Ready Math for grades 7–8, the committee voted to declare the prior K–8 math curriculum surplus per district policy. Assistant Superintendent Nan Murphy described the selection process as long and involving numerous stakeholder and vendor meetings.
+      
+      Matt Fox noted that a local charter school had already expressed interest in acquiring some of the outgoing materials, as they use the same series. Murphy added that ESSER funding has prompted many districts to adopt new materials, potentially creating demand for the surplus items.
+      
+      The committee encouraged prioritizing donation or transfer to interested organizations before disposal or recycling.
+      
+      **Vote:** 3–0 in favor.
+    key_speakers: ["Sarah Gold (School Committee Chair)", "Nan Murphy (Assistant Superintendent)", "Dr. Bucky (Superintendent)", "David Harris (School Committee member)", "Emily Baron (School Committee member)", "Matt Fox (school leader)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

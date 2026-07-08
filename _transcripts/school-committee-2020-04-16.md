@@ -11,6 +11,53 @@ duration_seconds: 434
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "School Committee reviews remote learning plan, budget timeline shifted to June 29 Town Meeting"
+  summary: "The superintendent outlined a revised budget schedule working backward from a June 29 Town Meeting date, projecting a public hearing the week of May 18, a Finance Committee meeting the week of May 25, and a final School Committee budget vote on June 4. Guidance from the Massachusetts Association of School Committees indicated the committee's primary role in remote learning oversight involves collective bargaining implications, privacy, and equity policy. Discussion of spring senior events, including prom and graduation, was noted as ongoing with more information expected after May 4."
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 9
+    end_seconds: 202
+    headline: "Spring senior events in limbo pending post-May 4 guidance"
+    dek: "The superintendent described daily discussions with staff about which activities — prom, senior banquet, graduation, rafting trip — can continue, be modified, or must be canceled or postponed to fall."
+    summary: "The superintendent reported ongoing daily coordination with staff and class advisors regarding traditional senior and underclassman events. A clearer picture of what is permissible after May 4 was expected the following week, at which point decisions about continuing, canceling, or postponing events — or finding alternative engagement opportunities for graduation — could be made."
+    key_speakers: ["Superintendent", "Dan Bauer (staff)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 202
+    end_seconds: 299
+    featured: true
+    headline: "Budget calendar reconfigured around June 29 Town Meeting date"
+    dek: "Working back from the postponed Town Meeting, the superintendent projected a Finance Committee session the week of May 25, a public hearing the week of May 18, and a final School Committee budget vote at its June 4 meeting."
+    summary: |
+      The original Finance Committee meeting had been scheduled for March 30; the five-week gap to May 4 prompted a full recalibration of the budget timeline. The superintendent noted the Finance Committee had not yet made scheduling decisions, so the projected dates could shift by a week in either direction. Key milestones:
+      
+      | Milestone | Projected Date |
+      |---|---|
+      | Public hearing on budget | Week of May 18 |
+      | Final Finance Committee meeting | Week of May 25 |
+      | School Committee budget vote | June 4 |
+      | Town Meeting | June 29 |
+    key_speakers: ["Superintendent"]
+  - topic: labor-personnel
+    topic_confidence: 0.75
+    start_seconds: 299
+    end_seconds: 391
+    headline: "MASC guidance flags collective bargaining as primary committee role in remote learning oversight"
+    dek: "The superintendent read from Massachusetts Association of School Committees (MASC) counsel Dorothy Presser, who identified MOUs, privacy policy, and equity as the key areas where the School Committee has oversight responsibility over remote learning plans."
+    summary: "MASC guidance conveyed by Dorothy Presser noted that superintendents are following DESE guidance in developing and implementing remote learning plans. The School Committee's oversight role is broad but centers on policy and collective bargaining implications. Presser specifically stated that any memorandum of understanding must be approved by the School Committee as employer of record. Additional MASC guidance on learning expectations was anticipated if closures extended beyond May 4."
+    key_speakers: ["Superintendent", "Dorothy Presser (MASC counsel, quoted)"]
+  - topic: public-comment
+    topic_confidence: 0.65
+    start_seconds: 391
+    end_seconds: 420
+    headline: "Public directed to remote learning website contact form for feedback"
+    dek: "The superintendent indicated the preferred channel for community feedback on remote learning is the contact form on the remote learning website."
+    summary: "The superintendent closed by reiterating that the remote learning website contact form is the recommended avenue for public feedback, providing a structured way to collect community input as the plan continues to evolve."
+    key_speakers: ["Superintendent"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

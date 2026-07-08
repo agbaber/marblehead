@@ -11,6 +11,124 @@ duration_seconds: 2621
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health reviews COVID restrictions, testing sites, and quarantine rule changes"
+  summary: "The Board of Health reviewed significant new state COVID-19 restrictions announced by the governor, including capacity reductions, restaurant rules, and a 90-minute dining time limit. The board announced free COVID-19 testing for Marblehead residents at Temple Emmanuel on four dates in December, with pre-registration required and capacity of approximately 300 people per four-hour block. Updated CDC quarantine guidelines were discussed, offering three release options (day 8, 11, or 15 depending on testing and symptoms). The board voted to enter executive session to discuss litigation strategy."
+  decisions:
+    - "Approved motion to enter executive session to discuss litigation strategy"
+  votes:
+    - motion: "Move into executive session pursuant to MGL c.30A §21(a)(3) to discuss litigation strategy"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-safety
+    topic_confidence: 0.82
+    start_seconds: 10
+    end_seconds: 471
+    featured: true
+    headline: "Governor announces new COVID-19 restrictions; Marblehead reports 64 cases since Dec. 1"
+    dek: "New state rules reduce capacities, impose restaurant time limits, and require masks in offices and gyms; Marblehead sets up free resident testing at Temple Emmanuel."
+    summary: |
+      The board reviewed a broad set of new state COVID-19 restrictions announced by the governor, effective immediately:
+      
+      - Indoor theaters, performance venues, and high-contact indoor recreation businesses required to close to the public.
+      - Outdoor theaters limited to 25% capacity, maximum 50 people.
+      - Many sectors reduced to 40% capacity.
+      - Restaurants: masks required at all times except when eating or drinking; maximum 6 patrons per table; 90-minute time limit on tables; musical performances no longer permitted; food court seating in malls must close.
+      - Offices: employees must wear masks when not alone in their workspace.
+      - Gyms: patrons must wear masks at all times.
+      
+      **Marblehead case data (since December 1):** 64 total cases across all age groups, with the largest concentrations in the 50–59 (15 cases) and 60–69 (14 cases) ranges.
+      
+      **Free testing** for Marblehead residents announced at Temple Emmanuel, 393 Atlantic Ave, on four dates:
+      | Date | Time |
+      |---|---|
+      | Friday, Dec. 11 | 8 a.m.–12 p.m. |
+      | Tuesday, Dec. 15 | 8 a.m.–12 p.m. |
+      | Friday, Dec. 18 | 8 a.m.–12 p.m. |
+      | Monday, Dec. 21 | 2 p.m.–6 p.m. |
+      
+      Pre-registration required via a link to be posted on the town website. Capacity approximately 300 per block. Testing provided by Cataldo Ambulance. Open to any Marblehead resident, symptomatic or not, at no cost.
+    key_speakers: ["Andrew (Board of Health Director)", "Michelle (Board of Health member)"]
+  - topic: public-safety
+    topic_confidence: 0.8
+    start_seconds: 471
+    end_seconds: 845
+    headline: "CDC updates quarantine guidelines to offer three early-release options for COVID contacts"
+    dek: "Contacts may now exit quarantine on day 8, 11, or 15 under different conditions, replacing the prior 14-day standard."
+    summary: |
+      The board reviewed new CDC quarantine guidance offering three options for close contacts (not confirmed cases):
+      
+      | Release Day | Conditions | Ongoing Monitoring |
+      |---|---|---|
+      | Day 8 | Negative PCR or antigen test on day 5 or later; no symptoms | Monitor symptoms through day 14 |
+      | Day 11 | No symptoms; no test required | Monitor symptoms through day 14 |
+      | Day 15 | Experienced symptoms but negative test | Continue monitoring |
+      
+      The CDC notes up to a 12% chance of a missed positive with the day-8 option and approximately 5% with the day-11 option. The rationale is improved compliance, particularly for workers who cannot afford to miss work for a full 14-day quarantine.
+      
+      > "Isolation" (for confirmed positives) is distinct from "quarantine" (for contacts); these options apply only to contacts.
+    key_speakers: ["Andrew (Board of Health Director)", "Michelle (Board of Health member)"]
+  - topic: school-budget
+    topic_confidence: 0.65
+    start_seconds: 845
+    end_seconds: 1597
+    headline: "Superintendent clarifies travel-testing rules; winter school sports start dates under review"
+    dek: "A Friday pre-trip COVID test does not satisfy return-to-school requirements, and indoor winter sports scheduled to begin December 14 may be pushed to January 6."
+    summary: |
+      Superintendent John Bucky clarified that obtaining a COVID test on a Friday before weekend travel and using that result to return to school Monday does not meet the spirit of the regulation. Students who travel must follow appropriate testing protocols upon return.
+      
+      Discussion of winter school sports:
+      - 145 high school students signed up for winter athletics: basketball, ice hockey, skiing, gymnastics, and swim/dive. Wrestling and indoor track are not being held.
+      - Practices scheduled to begin December 14; games January 9.
+      - North Shore superintendents are discussing whether to push the indoor sports start date to January 6 due to rising case counts in Essex County.
+      - Lynn Classical and Lynn English have already withdrawn from the Northeast Conference for this season.
+      - Two spectators per athlete will be permitted at indoor events.
+      - The MIAA statement on winter sports explicitly gives local boards of health and/or school districts authority to make additional modifications — noted as an unusual departure from typical practice.
+      - A meeting with the school athletic director and others was scheduled to discuss next steps.
+    key_speakers: ["John Bucky (Superintendent of Schools)", "Helene (Reopening Committee member)", "Michelle (Board of Health member)", "Andrew (Board of Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 1597
+    end_seconds: 1965
+    headline: "Reopening committee reports on school protocols, custodial staffing, and staff retirement"
+    dek: "Custodial contract reduced from 30 to 13 additional hours while disinfection continues; technology department head Kathy Hennessey retired."
+    summary: |
+      Helene reported on reopening committee meetings held November 30 and December 7:
+      
+      - Hybrid learning remains in place; teachers described as in a good place.
+      - Students returning from Thanksgiving travel had absences excused to encourage compliance with quarantine guidance.
+      - Outside custodial staffing reduced from 30 additional hours to 13, but continuous disinfection protocols remain in place.
+      - School nurse Deanna credited with handling a high volume of quarantine cases; the board noted it is quarantine (not confirmed positives) keeping most students out of school.
+      - Technology department head Kathy Hennessey retired; replacement interviews are underway.
+      - Families with children over age 10 who have traveled must have the student tested (PCR required); for children under 10, parents test. At-home tests are not acceptable.
+      - Evening meeting organizers asked to notify custodial staff in advance.
+    key_speakers: ["Helene (Reopening Committee member)", "John Bucky (Superintendent of Schools)"]
+  - topic: public-comment
+    topic_confidence: 0.85
+    start_seconds: 1965
+    end_seconds: 2519
+    headline: "Resident offers PR assistance to Board of Health; raises concern about unmasked youth sports in parks"
+    dek: "A resident reported community concerns about groups of unmasked teenagers playing contact sports in public parks and proposed a media outreach strategy to improve voluntary compliance."
+    summary: |
+      A resident (identified as having a PR background) reported on outreach she had conducted:
+      
+      - Contacted the Chief of Police: the department currently has no dedicated COVID point-of-contact, no community outreach officer, and had not yet conducted spot patrols on rail trails. The Chief indicated willingness to work with the board but preferred non-enforcement approaches. The fine for not wearing a mask off private property in Massachusetts is $300.
+      - Contacted Marblehead Reporter editor Chris Stevens, who expressed openness to running Board of Health stories and letters to the editor.
+      - Proposed a media campaign (e.g., "I Wear My Mask" photo submissions) to increase peer-driven voluntary compliance.
+      - Offered to assist the board on an ad hoc basis with community communications.
+      
+      Michelle separately raised community concerns about tweens and young teens playing basketball and other contact sports in town parks without masks, and suggested additional messaging through the schools.
+    key_speakers: ["Resident at mic", "Michelle (Board of Health member)", "Andrew (Board of Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 2519
+    end_seconds: 2613
+    headline: "Board votes unanimously to enter executive session to discuss litigation strategy"
+    dek: "The board moved into executive session under MGL c.30A §21(a)(3); votes taken in session to be released at a time deemed appropriate by counsel."
+    summary: "On a motion made and seconded, the board voted unanimously to enter executive session pursuant to MGL c.30A §21(a)(3) — to discuss strategy with respect to litigation, the public discussion of which may have a detrimental effect on the board's litigation position. Any votes taken in executive session are to be released at a time deemed appropriate by counsel. The board indicated it would reconvene in open session."
+    key_speakers: ["Andrew (Board of Health Director)", "Ms. Scolli (Board member)", "Dr. Dalczecker (Board member)", "Ms. Saisley (Board member)", "Ms. Hill (Board member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

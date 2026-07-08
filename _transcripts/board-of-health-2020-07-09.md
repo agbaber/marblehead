@@ -11,6 +11,49 @@ duration_seconds: 428
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health reports 237 cumulative COVID-19 cases, 30 deaths as of July 9"
+  summary: "Health Director John Caswell provided a COVID-19 update as of Monday, July 6, 2020, reporting 237 cumulative confirmed cases, 8 active cases, and 30 deaths. He reminded residents of the 14-day self-quarantine requirement for travelers arriving from outside the New England states listed by the governor. Caswell also noted Massachusetts Phase 3 reopening details including movie theaters, fitness centers, museums, and sports risk categories, and reported that beach water quality testing had shown no failures to date."
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.55
+    start_seconds: 5
+    end_seconds: 381
+    featured: true
+    headline: "Board of Health reports 237 cumulative COVID-19 cases, 8 active, 30 deaths in Marblehead"
+    dek: "Health Director Caswell outlined quarantine rules, Phase 3 reopening guidance, and sports risk tiers."
+    summary: |
+      Health Director John Caswell delivered a COVID-19 update for Marblehead as of July 6, 2020:
+      
+      - **Cumulative confirmed cases:** 237
+      - **Active cases:** 8 (all community-based, not nursing home)
+      - **Deaths:** 30
+      
+      Caswell emphasized two key reminders:
+      1. Travelers arriving in Massachusetts from states outside the listed New England exemptions (RI, CT, VT, NH, ME, NY, NJ) must self-quarantine for 14 days.
+      2. Anyone with close contact with a confirmed case must quarantine for 14 days after last contact even if they test negative, because the incubation period can extend to 14 days.
+      
+      He noted a demographic shift — cases earlier in the pandemic skewed toward ages 60+, but current cases are predominantly in the 20s and 30s age group.
+      
+      **Phase 3 reopening items now open (with guidelines):**
+      - Movie theaters and outdoor performance venues
+      - Museums, cultural and historical sites
+      - Fitness centers and health clubs
+      - Certain indoor recreation with low contact potential
+      - Professional sports without spectators
+      
+      **Sports risk categories:**
+      
+      | Risk Level | Examples |
+      |---|---|
+      | Low | Tennis, golf, swimming, sailing (individual), batting cages, pickleball |
+      | Moderate | Baseball, softball, volleyball, field hockey, track & field, sailing (2–3 people) |
+      | High | Football, soccer, basketball, rugby, wrestling, ice hockey, crew (3+ in boat) |
+      
+      Beach water quality sampling (every Wednesday, results by Thursday) has shown no failures for the season. Mosquito surveillance for EEE and West Nile virus is ongoing via a Northeast Mosquito Control contract; no elevated risk in Marblehead at this time.
+    key_speakers: ["John Caswell (Health Director / narrator)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

@@ -11,6 +11,124 @@ duration_seconds: 3392
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health issues strong indoor mask recommendation through Jan. 15"
+  summary: "The Board of Health voted unanimously on December 14, 2021 to strongly recommend that all residents age two and older wear masks in indoor public spaces — including retail, restaurants, bars, and event venues — regardless of vaccination status, effective December 15, 2021 through January 15, 2022. The board also voted to urge the Board of Selectmen to mandate masks in all municipal buildings. Additional business included a COVID-19 case update showing 1,890 total cases and 120 active cases, a Mental Health Task Force update, and approval of a step increase for Health Director Andrew Petty on his 10-year anniversary."
+  decisions:
+    - "Approved strong recommendation for indoor masking in all public spaces effective December 15, 2021 through January 15, 2022"
+    - "Approved recommendation to Board of Selectmen to mandate masks in all municipal buildings"
+    - "Approved step increase (step 5 to step 6) for Health Director Andrew Petty effective January 1, 2022"
+    - "Approved commendation for Andrew Petty for 10 years of service"
+  votes:
+    - motion: "Strong indoor mask recommendation for businesses and public spaces"
+      result: "in favor (unanimous)"
+    - motion: "Recommendation to Board of Selectmen to mandate masks in municipal buildings"
+      result: "in favor (unanimous)"
+    - motion: "Step increase for Health Director Andrew Petty"
+      result: "in favor (unanimous)"
+    - motion: "Commendation for Andrew Petty for 10 years of service"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 280
+    headline: "COVID-19 update: 1,890 total cases, 120 active; vaccination rate at 85% town-wide"
+    dek: "Health Director Andrew Petty reported a sharp increase in cases over two weeks while noting Marblehead's high vaccination rates across all age groups."
+    summary: |
+      As of December 10, 2021, Marblehead had recorded 1,890 total COVID-19 cases with 120 active cases, up from 1,751 on November 29 and 1,811 on December 3. The 14-day percent positivity rate was 4.71%, above the rate from one year prior. The average daily incident rate per 100,000 was 47.3.
+      
+      Vaccination rates by age group:
+      
+      | Age Group | Fully Vaccinated |
+      |-----------|------------------|
+      | 5–11 | 34% |
+      | 12–15 | 93% |
+      | 16–19 | >95% |
+      | 20–29 | 91% |
+      | 30–49 | 94% |
+      | 50–64 | 93% |
+      | 65–74 | 92% |
+      | 85+ | >95% |
+      | Town-wide total | 85% |
+      
+      Boosters were noted as available to all 18+ as of the prior Friday, with 16- and 17-year-olds added the day of the meeting. Two vaccine clinics for the 5–11 age group had been held at the Brown School.
+    key_speakers: ["Andrew Petty (Health Director)"]
+  - topic: public-safety
+    topic_confidence: 0.9
+    start_seconds: 280
+    end_seconds: 1468
+    featured: true
+    headline: "Board votes unanimously for strong indoor mask recommendation through January 15, 2022"
+    dek: "Following discussion of enforcement challenges and guidance from the Massachusetts Medical Society, the board approved a strong recommendation for masking in all indoor public spaces and urged selectmen to mandate masks in municipal buildings."
+    summary: |
+      The Board of Health discussed whether to issue a mask mandate or a strong recommendation, weighing enforcement practicality against public health need. Members noted that the Massachusetts Medical Society — representing approximately 25,000 physicians — had called on the governor to require indoor masking statewide.
+      
+      The board ultimately passed two motions unanimously:
+      
+      1. **Strong recommendation** that all persons age two and older wear a mask or face covering indoors in any public space, including but not limited to retail establishments, restaurants, bars, performance venues, social clubs, houses of worship, personal care and fitness establishments, event spaces, and municipal buildings — regardless of vaccination status — effective 5 a.m. December 15, 2021 and remaining in effect until lifted, with a scheduled review at the January 11, 2022 board meeting.
+      
+      2. **Recommendation to the Board of Selectmen** that they mandate mask-wearing in all municipal buildings in Marblehead.
+      
+      Board members noted the volume of public gatherings expected over the holiday season and the desire to support local businesses in maintaining health protocols for employees and customers.
+    key_speakers: ["Andrew Petty (Health Director)", "Helene Miller (Board Member)", "Joanne Aisling (Board Member)", "Dr. Belfbecker (Board Member / Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.6
+    start_seconds: 1468
+    end_seconds: 2361
+    headline: "SALT committee report: school mask waiver received, vaccine clinics ongoing, SOS program launching in January"
+    dek: "Board member Helene Miller reported on four recent meetings of the Superintendent's Advisory Leadership Team covering vaccination milestones, a mask-optional waiver, and a new student suicide-prevention program."
+    summary: |
+      Board member Helene Miller summarized updates from the Superintendent's Advisory Leadership Team (SALT), which met four times since the board's previous November 15 meeting:
+      
+      - As of November 30, 87% of high school students and 69% of middle school students were fully vaccinated. The veterans middle school and high school both exceeded 80%, enabling Superintendent Bucky to request a mask-optional waiver from the state — which he confirmed was granted.
+      - Vaccine clinics for students were held December 2 at the Brown School, with additional clinics on December 13 at the veterans school and one planned for December 23.
+      - Students from visiting schools participating in athletics at Marblehead facilities are required to be masked.
+      - Students absent due to COVID have access to Google Classroom (middle and high school) or homework packets (elementary level).
+      - A concern was raised about at-home rapid tests not being reported to schools; the Board of Health only receives notification from PCR tests.
+      - A point person was designated within the school department for weekend health contacts after a communication gap arose.
+      - The SOS (Signs of Suicide) universal prevention program is set to launch at the high school in January after the holiday break.
+      - The superintendent indicated no changes to the mask policy would occur before the holiday vacation; January 15 remains the target date for re-evaluation.
+    key_speakers: ["Helene Miller (Board Member)", "Andrew Petty (Health Director)"]
+  - topic: public-comment
+    topic_confidence: 0.8
+    start_seconds: 2361
+    end_seconds: 2761
+    headline: "Mental Health Task Force outlines three upcoming speaker programs targeting students, seniors, and broader suicide prevention"
+    dek: "Board member Joanne Aisling reported that the task force set new goals after completing its first two initiatives, planning speaker series with narrower demographic focus through spring 2022."
+    summary: |
+      The Marblehead Mental Health Task Force met the previous Monday and established new goals after completing its first two initiatives in November. Three speaker programs are planned:
+      
+      1. **Late January** — Aimed at students and parents, aligned with the SOS suicide prevention program launching at Marblehead High School, featuring clinicians who work primarily with young people.
+      2. **Late March / Early April** — Focused on older residents and adult children of elderly parents, in partnership with the Council on Aging; planned as both a daytime and evening session.
+      3. **TBD** — Broader suicide prevention program potentially featuring a NAMI speaker and the NAN Project, an organization that has previously worked with the Marblehead Counseling Center and the high school.
+      
+      Additional updates:
+      - Dr. Mark Labon of Salem State University, a panelist from November's speaker event, previously built a coalition called Marblehead Cares focused on alcohol and substance abuse prevention; he will present at the December 20 meeting about reviving that effort.
+      - Social media platforms have been created; Kim Howard and Kim Leventhal are leading outreach.
+      - The task force is working with school counselor Dan Bauer on a potential student intern role.
+      - SPUR was identified as a potential partner for volunteer coordination.
+      - Weekly Thursday Zoom meetings continue to build out the task force website.
+    key_speakers: ["Joanne Aisling (Board Member)", "Helene Miller (Board Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2761
+    end_seconds: 3321
+    headline: "Sustainable Marblehead absent; Health Director marks 10-year anniversary and receives step increase"
+    dek: "A presentation on Peabody peaker plant air quality concerns was postponed due to no-show; Andrew Petty was approved for a step increase and received a formal commendation."
+    summary: |
+      Sustainable Marblehead was scheduled to present on air quality concerns related to a natural gas peaker plant being built in Peabody; no representative appeared and the item was deferred to a future meeting.
+      
+      Health Director Andrew Petty noted that December 11, 2021 marked his 10th anniversary with the town. The board voted unanimously to approve his advancement from step 5 to step 6, effective January 1, 2022, consistent with years-of-service eligibility. A separate unanimous vote approved a formal commendation for his decade of service.
+      
+      Petty also reported on recent operational items:
+      - A household hazardous waste pickup day on December 8 served over 120 homes in Marblehead and Swampscott. The program, run with contractor ACV, now operates quarterly with direct home pickup rather than transfer-station events; prices will increase slightly in the new year.
+      - Holiday recycling reminders were issued: wrapping paper is often not recyclable, lights must be removed from trees before recycling, and food composting was encouraged. Current composting program enrollment exceeds 650 households, growing by approximately three to four per week.
+    key_speakers: ["Andrew Petty (Health Director)", "Helene Miller (Board Member)", "Joanne Aisling (Board Member)", "Dr. Belfbecker (Board Member / Chair)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

@@ -11,6 +11,138 @@ duration_seconds: 6122
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead School Committee reviews live-streaming tech options and homeschool policy update"
+  summary: "The School Committee heard a superintendent's update on fact-finding for live-streaming technology in hybrid classrooms, including a vendor demonstration of a camera-and-microphone system estimated at $78,000 for the high school alone, plus an infrastructure audit underway. The committee also reviewed a proposed overhaul of the homeschool application process, moving toward a more comprehensive online form aligned with state requirements, with a vote expected at the second November meeting. Additional discussion covered collective bargaining timelines, school property disposition planning, and building project progress."
+  decisions:
+    - "Approved minutes from 6-8, 6-10, 8-6, and 8-20 (5-0)"
+    - "Approved minutes from 10-1-2020 (4-0, with one abstention)"
+    - "Approved schedule of bills totaling $1,795,993.99 (4-0, with one abstention)"
+  votes:
+    - motion: "Approve minutes from 6-8, 6-10, 8-6, 8-20"
+      result: "in favor (unanimous)"
+    - motion: "Approve minutes from 10-1-2020"
+      result: "in favor (4 to 0, one abstention)"
+    - motion: "Approve schedule of bills totaling $1,795,993.99"
+      result: "in favor (4 to 0, one abstention)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 0
+    end_seconds: 667
+    headline: "Village School principal and student rep share updates; acapella album released"
+    dek: "Principal Mandy Murphy highlighted staff and student resilience; student rep Dan Howell noted the MHS acapella groups released an album called 'Six Feet Apart' on major streaming platforms."
+    summary: |
+      Principal Mandy Murphy of Village School commended students, parents, tutors, and Allied Arts teachers for adapting to hybrid and remote learning. She noted the organic garden was cleaned up by parents over the summer and is now being used for outdoor observations.
+      
+      Student representative Dan Howell reported that the high school would return from two weeks of full-remote to hybrid the following day. He also noted the MHS acapella groups Jeweltones and Luminescence released their second album, *Six Feet Apart*, available on Apple Music, Spotify, Amazon, and YouTube. A peer mentor check-in for freshmen and a superintendent listening session for juniors and seniors were also held during the week.
+    key_speakers: ["Mandy Murphy (Village School Principal)", "Dan Howell (Student Representative)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 667
+    end_seconds: 1047
+    headline: "High school Spanish teacher describes live-streaming challenges observed at another district"
+    dek: "Elmer Magana, a Marblehead High School Spanish teacher, shared firsthand observations from Manchester-Essex's live-streaming pilot and urged a careful exploratory process before adoption."
+    summary: |
+      Elmer Magana, who teaches Spanish and coaches varsity soccer at MHS, described challenges his wife observed while teaching at Manchester-Essex, which went fully remote and piloted live-streaming. Issues included difficulty filtering background noise, the teacher being unable to move freely, delays of five to eight minutes in seeing student questions in Zoom, and the need for all in-room students to also be on Zoom.
+      
+      He expressed concern about divided attention between in-person and remote students, and suggested Marblehead set up a prototype classroom and conduct a pilot before making any district-wide decision.
+    key_speakers: ["Elmer Magana (MHS Spanish Teacher, resident at mic)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 1047
+    end_seconds: 1323
+    headline: "Committee approves minutes from six past meetings; several held for revision"
+    dek: "Minutes from six prior meetings were voted on; minutes from 9-17 and two other dates were held pending revisions."
+    summary: "The committee voted to approve minutes from meetings on 6-8, 6-10, 8-6, 8-20, and 10-1. Minutes from 9-17 and two other dates (7-8 and 8-10) were held pending updates. One member abstained from the 10-1 vote having not had time to review them. Minor spelling corrections (e.g., a board member's name) were noted for follow-up with the minutes-taker."
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1323
+    end_seconds: 2573
+    featured: true
+    headline: "District explores $78,000 vendor system and OWL cameras to enable hybrid live-streaming"
+    dek: "Superintendent described an active fact-finding effort including a vendor demo, a remote tech audit, and two pending pilots — with a school committee vote expected once the administration has a recommendation."
+    summary: |
+      Superintendent Bucky described a week of active research into live-streaming options for hybrid classrooms. He held teacher and student listening sessions, met with a technology vendor, and initiated a remote infrastructure audit.
+      
+      A vendor called Valley Communication demonstrated a mobile camera-and-microphone system with noise-canceling capability and a person-tracking camera. Outfitting the high school with that system would cost approximately $78,000 for the technology alone, not including infrastructure upgrades. The infrastructure audit began remotely that week and was scheduled to go on-site the following week.
+      
+      Separately, a parent engaged the high school booster and PTO to fund two OWL cameras (approximately $1,200 each) for a separate pilot. Both pilots were expected to begin within one to two weeks, pending delivery and infrastructure assessment. Committee members asked about teacher willingness, classroom setup (e.g., a rear screen showing the Zoom feed), and potential policy implications around student and staff privacy.
+    key_speakers: ["Superintendent (Dr. Bucky)", "Sarah Fox (School Committee Chair)", "Megan Taylor (School Committee Member)", "Sarah Gold (School Committee Member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 2573
+    end_seconds: 2670
+    headline: "Superintendent notes all six bargaining units negotiating simultaneously; first session set for Friday the 13th"
+    dek: "The district's first collective bargaining round under the current superintendent will open with a structural meeting on Friday the 13th with legal counsel and the town's counsel."
+    summary: "The superintendent noted that all six district bargaining units are up for negotiation in the same year. He and CFO Jason Silva will hold an opening organizational meeting on Friday the 13th with district counsel Liz and town counsel to establish the process and timeline. Two school committee members will participate in negotiations once they begin. The superintendent acknowledged the timing is later than ideal but attributed it to the COVID-19 pandemic."
+    key_speakers: ["Superintendent (Dr. Bucky)"]
+  - topic: bonding-capital
+    topic_confidence: 0.75
+    start_seconds: 2763
+    end_seconds: 2945
+    headline: "School Committee approves building project schedule of bills totaling approximately $1.8 million"
+    dek: "The committee voted 4-0 with one abstention to approve the schedule of bills; a $66,000 charge from Novus for additional soil remediation was briefly discussed."
+    summary: "The committee approved a schedule of bills totaling $1,795,993.99, which had previously been reviewed at the building committee level. A line item of approximately $66,000 for Novus—related to additional soil remediation and off-site disposal work at the Bell School construction site—was discussed. The amount exceeded Novus's contracted amount by approximately $40,000. One member abstained having missed the prior building committee meeting."
+    key_speakers: ["David Harris (School Committee / Building Committee Member)", "Sarah Fox (School Committee Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.7
+    start_seconds: 3039
+    end_seconds: 4695
+    headline: "Assistant superintendent presents proposed overhaul of homeschool application process"
+    dek: "A more comprehensive online application modeled on Lowell Public Schools would add curriculum planning, assessment methods, a parent commitment statement, and inquiry into student IEP or 504 needs."
+    summary: |
+      The assistant superintendent presented a proposed revision to the district's homeschool application policies (IHVTR and IHBGR). The current form is limited to a single page with minimal space for curriculum information and lacks any consistent process for reviewing student progress or parent qualifications.
+      
+      The proposed changes include:
+      - Transitioning to an online application form
+      - Requiring detailed curriculum and instructional plans for each content area
+      - Documenting assessment methods and alignment to state frameworks
+      - Inquiring about student IEP, 504, or other support needs
+      - Including a parent commitment statement covering instructional hours (900–990 hours)
+      - Establishing a minimum parent education requirement (high school diploma or equivalent)
+      
+      The committee discussed concerns about applying a prescriptive portfolio process to families who choose homeschool for principled reasons, the anomaly of COVID-driven homeschool requests, and the importance of maintaining standards so children who return to public school are not significantly behind. A vote is expected at the second November meeting.
+    key_speakers: ["Assistant Superintendent (unnamed in transcript)", "Megan Taylor (School Committee Member)", "Sarah Gold (School Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 4787
+    end_seconds: 5078
+    headline: "Committee schedules goal-setting session with facilitator Dorothy Prester for November 24"
+    dek: "A two-plus-hour team-building and goal-setting session was tentatively set for the evening of Tuesday, November 24, with the expectation that goals will be finalized that night."
+    summary: "The chair reported that facilitator Dorothy Prester has availability on the evening of November 24 for a school committee goal-setting and team-building session. The meeting is expected to last at least two hours. Committee members expressed a preference for finalizing goals that night rather than leaving them open. A 6 p.m. start time was discussed as a possibility pending confirmation from Prester."
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Megan Taylor (School Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.65
+    start_seconds: 5078
+    end_seconds: 5260
+    headline: "Committee website update: past minutes uploaded; subcommittee calendar rhythm requested"
+    dek: "All voted minutes are now posted to the new school committee website; members were asked to establish regular subcommittee meeting schedules."
+    summary: "Emily Barron confirmed that all approved past minutes have been uploaded to the new school committee website (MHDSchoolCommittee.org). Meeting materials from FY20 onward are on the new site; FY19 materials remain on the legacy district website. Members were asked to schedule subcommittee meetings through the end of the year so the calendar can be posted publicly. David Harris acknowledged Emily's work keeping the building committee website current."
+    key_speakers: ["Emily Barron (School Committee Member)", "Sarah Fox (School Committee Chair)", "David Harris (School Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 5260
+    end_seconds: 5925
+    headline: "Committee discusses future disposition of Evelith, Coffin, and Green Street school properties"
+    dek: "Following a letter from Charles Gessner and conversations with Town Administrator Jason Silva, the committee discussed how to approach the potential reuse of school properties that will become available when the new Bell School opens."
+    summary: |
+      The committee discussed a letter from resident Charles Gessner raising questions about several school properties and noted that the town's affordable housing committee has expressed interest in the land where Coffin School sits. A recreation-related gift to the town has also prompted interest in Green Street and Evelith field space for outdoor use.
+      
+      Committee members agreed the district should first internally determine its own needs — including for the VOICE program, central administration, and transition-year space — before engaging with the town on reuse options. Sarah Gold cautioned against relinquishing space prematurely, noting the example of Evelith, which would have been costly to replace with temporary facilities during the current building transition.
+      
+      The chair will invite Town Administrator Jason Silva to a future meeting to discuss further. Green Street was noted as unsuitable for a school building based on prior wetlands analysis but potentially available for outdoor or recreational programming.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "David Harris (School Committee Member)", "Sarah Gold (School Committee Member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 5925
+    end_seconds: 6117
+    headline: "Bell School gymnasium and cafeteria concrete pour rescheduled to Monday after cold-weather delay"
+    dek: "Gilbane recommended deferring the final slab-on-grade concrete pour due to snow and cold; brick deliveries are arriving and windows are next on schedule."
+    summary: "David Harris reported that the final slab-on-grade concrete pour for the gymnasium and cafeteria floors was deferred from the prior week due to cold weather and snow, which would have incurred additional costs. The pour was rescheduled for Monday with favorable weather forecast. Brick deliveries are arriving at roughly two truckloads per week, and window installation is the next upcoming milestone. New principal Brooke Lang has started at the school."
+    key_speakers: ["David Harris (School Committee / Building Committee Member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

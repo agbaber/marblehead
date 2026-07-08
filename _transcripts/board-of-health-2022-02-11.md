@@ -11,6 +11,90 @@ duration_seconds: 1535
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health rescinds indoor mask mandate effective Feb. 12, 2022"
+  summary: "The Board of Health voted unanimously to rescind the indoor mask mandate at 12:01 a.m. on February 12, 2022. The board cited declining case rates, falling percent positivity, reduced hospitalizations, and a letter from Mass General Salem supporting relaxation of restrictions. In a second unanimous vote, the board issued a strong recommendation that residents continue wearing masks indoors, to be revisited at the March 8 meeting."
+  decisions:
+    - "Approved rescinding indoor mask mandate effective 12:01 a.m. February 12, 2022"
+    - "Approved strong recommendation for indoor mask wearing pending further discussion at March 8 meeting"
+    - "Approved cancellation of next scheduled meeting prior to March 8"
+  votes:
+    - motion: "Rescind indoor mask mandate at 12:01 a.m. February 12, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Strongly recommend indoor mask wearing, to be discussed at March 8 meeting"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 0
+    end_seconds: 90
+    headline: "Board convenes remotely for single-item mask mandate discussion"
+    dek: "Chair calls roll; all three members present via Zoom."
+    summary: "The meeting was called to order under Chapter 20 of the Acts of 2021 (remote-participation authority). Roll call confirmed all three members — Joy Miller, Helene Hazley, and Joanne (Todd) Becker — participating remotely. The sole agenda item was a discussion of the indoor mask mandate."
+    key_speakers: ["Andrew (Health Director/staff)", "Helene Hazley (Board member)", "Joanne Miller (Board member)"]
+  - topic: public-safety
+    topic_confidence: 0.8
+    start_seconds: 91
+    end_seconds: 433
+    headline: "COVID data shows 120 cases in last 14 days; state positivity at 3.8%"
+    dek: "Andrew presented the 99th weekly case report alongside a letter from Mass General Salem supporting relaxation of restrictions."
+    summary: |
+      Andrew reported Marblehead's cumulative total of 3,264 cases with 61 active cases as of February 11, 2022. Over the prior 14 days there were 120 cases. The average daily incidence rate per 100,000 had declined to 53.7, and the 14-day percent positivity stood at 7.99%, trending downward. Total tests to date: 99,303.
+      
+      For Massachusetts as of February 9, the 7-day average of confirmed cases was 1,768 (lowest since November 2021), the 7-day weighted percent positivity was 3.8% (lowest since November 28, 2021), and the 7-day average hospitalization figure was 1,398.
+      
+      Andrew also read a February 7, 2022 letter from Dr. Dave J. Roberts, President of Mass General Salem Hospital, addressed to the Salem Board of Health. The letter noted a 75% drop in hospitalized COVID patients since early January, ICU capacity returning to baseline, and stated the hospital "would not be opposed to pulling back COVID mitigation restrictions in the local community." The letter encouraged maintaining a data-driven approach and the ability to respond quickly to future surges.
+      
+      Andrew listed surrounding communities that had already rescinded their indoor mask mandates: Beverly (Feb. 2), Manchester (Feb. 3, effective Feb. 11), Saugus (Feb. 7), Salem (Feb. 8), Swampscott (Feb. 8, effective Feb. 21), Lynn (Feb. 9), Hamilton (Feb. 9), Danvers (Feb. 10), and Newburyport (Jan. 25, effective Feb. 28).
+    key_speakers: ["Andrew (Health Director/staff)"]
+  - topic: public-comment
+    topic_confidence: 0.98
+    start_seconds: 434
+    end_seconds: 983
+    headline: "Four residents speak; all oppose the mask mandate or question board's evidence"
+    dek: "Speakers challenged the scientific basis for the mandate, accused the board of not consulting business owners, and warned of future electoral consequences."
+    summary: |
+      Four residents were recognized for two minutes each before the board's vote.
+      
+      - **Will (Juan Arlen Road)** argued the board had not consulted the Chamber of Commerce or businesses likely to be negatively affected, cited no scientific evidence to support the mandate, and said community members would work to remove all three board members beginning in June.
+      - **Tom** disputed the board's claim of having visited local businesses, called the policy hypocritical given one member's travel to Florida, and quoted Benjamin Franklin on liberty and safety.
+      - **Kevin McCurn (24 Foster Street)** identified himself as an expert witness on PCR testing, argued that PCR case data is unreliable for tracking COVID because tests can remain positive for 90 days, and urged the board to stop using case counts as justification for mask policy.
+      - **Kim Crowley (21 Roosevelt Avenue)** stated she had repeatedly requested specific metrics or thresholds for the mandate over six weeks and received no clear answer, expressed concern the board would impose a mandate again without defined criteria, and noted the impact on her business and teenage children.
+    key_speakers: ["Will (resident, Juan Arlen Road)", "Tom (resident)", "Kevin McCurn (resident, 24 Foster Street)", "Kim Crowley (resident, 21 Roosevelt Avenue)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 983
+    end_seconds: 1073
+    headline: "Board confirms 99 weeks of weekly case reports provided to town leadership"
+    dek: "Andrew confirmed case data has been reported at every meeting and shared weekly with town leadership."
+    summary: "Following public comment, a board member asked Andrew to confirm that case data had been provided consistently. Andrew confirmed this was the 99th weekly case report and that the reports had been shared with town leadership each week."
+    key_speakers: ["Andrew (Health Director/staff)", "Helene Hazley (Board member)"]
+  - topic: public-safety
+    topic_confidence: 0.95
+    start_seconds: 1074
+    end_seconds: 1350
+    featured: true
+    headline: "Board votes 3–0 to rescind indoor mask mandate effective 12:01 a.m. February 12"
+    dek: "A second unanimous vote issued a strong recommendation for indoor mask wearing to be revisited at the March 8 meeting."
+    summary: |
+      Board member Helene Hazley moved to rescind the indoor mask mandate, effective 12:01 a.m. on February 12, 2022. The motion was seconded and passed unanimously (Hazley, Miller, and Becker all in favor).
+      
+      In a second motion, the board voted unanimously to issue a **strong recommendation** that residents wear masks indoors, with the topic to be revisited at the March 8 meeting. Members noted that COVID is not over and that the recommendation signals continued seriousness about public health while removing the mandate.
+      
+      The board also decided to cancel the intervening Tuesday meeting. A public forum on transportation scheduled for March 1 was noted as a separate event; the mask mandate would not be discussed there.
+    key_speakers: ["Helene Hazley (Board member)", "Joanne Miller (Board member)", "Todd Becker (Board member)", "Andrew (Health Director/staff)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1350
+    end_seconds: 1474
+    headline: "Board adjourns; chair thanks community and asks residents to respect individual mask choices"
+    dek: "Board member Hazley offered personal remarks before the unanimous adjournment vote."
+    summary: "Before adjournment, a board member thanked the community for cooperation during the mandate period and asked residents to be respectful of individual choices going forward. She also responded to a public comment about her travel to Florida, explaining she had inherited a home there, had not traveled extensively, and had purchased an extra airplane seat to reduce exposure. The board voted unanimously to adjourn."
+    key_speakers: ["Helene Hazley (Board member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

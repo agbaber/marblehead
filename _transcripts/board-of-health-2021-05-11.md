@@ -11,6 +11,82 @@ duration_seconds: 3824
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Board approves two fowl permits; COVID guidelines updated for outdoor sports"
+  summary: "The Marblehead Board of Health approved fowl permits for 36 Crestwood Road and 16 Roland Street, both reviewed with neighbor sign-off. The board reviewed updated Massachusetts COVID-19 guidelines effective May 10, 2021, which allow certain outdoor sports participants to remove masks when social distancing is maintained. Board members clarified they are following state orders without additional local restrictions, directing school-related masking questions to the School Committee."
+  decisions:
+    - "Approved fowl permit for 36 Crestwood Road (Panza)"
+    - "Approved fowl permit for 16 Roland Street (Simpson)"
+  votes:
+    - motion: "Approve fowl permit for 36 Crestwood Road"
+      result: "in favor (unanimous)"
+    - motion: "Approve fowl permit for 16 Roland Street"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 215
+    headline: "Board approves minutes and takes up two fowl permit applications"
+    dek: "Minutes of April 28 accepted; board moves to fowl permit hearings."
+    summary: "The board accepted the minutes of April 28 without corrections and opened hearings on two fowl permit applications."
+  - topic: permits-zoning
+    topic_confidence: 0.9
+    start_seconds: 60
+    end_seconds: 397
+    headline: "Fowl permits approved for Crestwood Road and Roland Street applicants"
+    dek: "Both applicants described small backyard coops with neighbor approval; board noted no rooster allowance and reserved right to inspect."
+    summary: "Jennifer and Robert Panza of 36 Crestwood Road described a 20–22 sq ft raised coop with a 10×12 to 10×14 enclosed run. Larry Simpson of 16 Roland Street described a two-chicken rental arrangement through a 'rent a flock' program as a trial for his family. Both applications included signed neighbor approvals. The board noted standard conditions: no roosters, right to inspect, and requirement to submit a check before the permit is issued."
+    key_speakers: ["Jennifer Panza (applicant, 36 Crestwood Road)", "Larry Simpson (applicant, 16 Roland Street)"]
+  - topic: public-safety
+    topic_confidence: 0.8
+    start_seconds: 397
+    end_seconds: 1590
+    featured: true
+    headline: "Board reviews updated COVID sports masking guidance; clarifies schools set their own field policy"
+    dek: "State guidelines effective May 10 permit unmasking for low- and moderate-risk outdoor sports where distancing is maintained, but school masking policy remains a School Committee decision."
+    summary: |
+      The Health Director reported Marblehead had returned to green status with an average daily incidence rate of 8.3 per 100,000 and a percent-positive rate of 1.03%, with 14 active cases and 10,139 fully vaccinated residents as of May 7, 2021.
+      
+      Updated Massachusetts youth and adult amateur sports guidance (effective May 10) was read into the record. Key provisions:
+      
+      | Condition | Mask requirement |
+      |---|---|
+      | Active play, most sports | Required |
+      | Low/moderate-risk outdoor sports with consistent social distancing (e.g., tennis, baseball, softball, cross-country, running) | Exception permitted |
+      | Bench, sidelines, huddles, timeouts | Required at all times |
+      | Spectators, coaches, officials | Required at all times |
+      
+      The board clarified it is following state orders without imposing additional local restrictions. Multiple residents asked about baseball, soccer, pickleball, and playground masking. The board directed school-grounds questions to the School Committee and noted that park signage would be reviewed and updated to reflect current guidelines. The Director noted that a regional COVID vaccination clinic had opened at the O'Keefe Center in Salem, and that FDA/CDC approval of vaccines for ages 12 and up was anticipated imminently.
+    key_speakers: ["Andrew (Health Director)", "Emily (resident, public comment)", "Andrew Cremer (resident, 7 Clifton Ave)", "Resident (soccer parent, public comment)", "Michelle (board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 1590
+    end_seconds: 2163
+    headline: "Mental health task force update; beach testing, leaf collection, and hazardous waste collection dates announced"
+    dek: "Task force is compiling a community mental health resource hub; next meeting May 17; hazardous waste residential pickup scheduled for June 9."
+    summary: |
+      Board member Michelle reported the mental health task force is collating mental health resources across age groups and issue types, cross-checking with an existing school-compiled COVID resource, and will determine a hosting mechanism. The group noted heightened mental health concerns in both the adolescent and senior populations. The next task force meeting was set for Monday, May 17 at 7 p.m.
+      
+      The Health Director announced:
+      - Beach water testing typically begins mid-June; one extra week added at start and end of season.
+      - Crocker Park dock expected to return for summer.
+      - Leaf collection the following week (same day as trash).
+      - Household hazardous waste residential collection: June 9; sign-up link on town website; closes 24 hours before event; minimum fee approximately $25–$30 for 0–3 gallons; no asphalt or asbestos accepted.
+      - Reminder to contain recycling on windy days.
+    key_speakers: ["Andrew (Health Director)", "Michelle (board member)", "Elaine (board member)"]
+  - topic: elections-procedural
+    topic_confidence: 0.7
+    start_seconds: 3661
+    end_seconds: 3757
+    headline: "Board sets next meeting dates; notes Joanne Miller running unopposed for board seat"
+    dek: "Next meetings set for May 25 at 7 p.m. and June 8; board acknowledged outgoing member and welcomed incoming candidate."
+    summary: "The board set its next meeting for May 25 at 7:00 p.m. (moved up half an hour at a member's request) and June 8. A subsequent meeting was tentatively pushed to June 29 to avoid conflict with the town election. Board members noted that Joanne Miller is running unopposed for an open board seat and expressed support for her candidacy."
+    key_speakers: ["Michelle (board member)", "Elaine (board member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

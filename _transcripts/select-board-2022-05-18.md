@@ -11,6 +11,161 @@ duration_seconds: 4449
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Select Board unanimously appoints Patrick Keeser as Town Administrator"
+  summary: "The Marblehead Select Board conducted a full-board interview with Patrick Keeser, the sole remaining finalist for Town Administrator after two other finalists withdrew before the public interview. The screening committee had unanimously recommended Keeser, citing his experience as mayor of a Massachusetts city, chief operating officer of Framingham, and decades in the Air National Guard. The board voted unanimously to appoint him pending successful contract negotiations."
+  decisions:
+    - "Approved appointment of Patrick Keeser as Town Administrator pending successful contract negotiations"
+    - "Approved transfer of all-alcoholic package store license from Haley's Public Market Inc. to Mookie's at Mumford LLC doing business as Haley's Wine and Spirits"
+    - "Approved minutes of April 27, 2022 and May 11, 2022"
+    - "Approved Marblehead Pride 2022 flag-raising event at Abbott Hall on June 5, 2022 (rain date June 12)"
+    - "Approved use of Abbott Hall on August 20, 2022 for concert and video screenings"
+    - "Approved rescheduling of charter school fun run from June 5 to June 12, 2022"
+    - "Approved license agreement for private connection to town drainage system at 45–49 Pleasant Street"
+    - "Approved license agreement for private connection to town drainage system at Harris Street property"
+    - "Approved one-day liquor license for Historical Commission opening reception at Old Townhouse on July 8, 2022"
+    - "Approved two one-day liquor licenses for wine tasting events on June 2 and June 23, 2022 at 18 Atlantic Avenue"
+  votes:
+    - motion: "Appoint Patrick Keeser as Town Administrator pending contract negotiations"
+      result: "in favor (unanimous)"
+    - motion: "Transfer all-alcoholic package store license to Mookie's at Mumford LLC"
+      result: "in favor (unanimous)"
+    - motion: "Approve minutes of April 27 and May 11, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Approve Marblehead Pride 2022 flag-raising at Abbott Hall"
+      result: "in favor (unanimous)"
+    - motion: "Approve Abbott Hall concert and video screenings August 20, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Approve fun run rescheduling to June 12, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Approve drainage license agreement 45–49 Pleasant Street"
+      result: "in favor (unanimous)"
+    - motion: "Approve drainage license agreement Harris Street property"
+      result: "in favor (unanimous)"
+    - motion: "Approve one-day liquor license for Historical Commission July 8 reception"
+      result: "in favor (unanimous)"
+    - motion: "Approve two one-day liquor licenses for wine tastings June 2 and June 23"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 0
+    end_seconds: 2868
+    featured: true
+    headline: "Select Board unanimously appoints Patrick Keeser as Town Administrator"
+    dek: "Keeser, the sole remaining finalist after two others withdrew, was unanimously recommended by the screening committee and voted in by the full board."
+    summary: |
+      The screening committee — comprising Town Planner Becky Cunningham, former Town Administrator Tony Sasso, Select Board member Aaron Noonan, Interim Town Administrator John McGinn, and the chair — unanimously recommended Patrick Keeser to the full board after the other two finalists withdrew before the public interview stage.
+      
+      During his interview, Keeser described a career spanning finance committee work in Salisbury, legislative advocacy at the Massachusetts Municipal Association, director of purchasing in Beverly, eight years as mayor of a Massachusetts city, and service as chief operating officer of Framingham after it transitioned to a city form of government. He also noted 30-plus years in the Air National Guard.
+      
+      Key themes from the interview:
+      - **Budgeting/structural deficit:** Keeser recounted leading Salisbury's finance committee through a structural deficit, cutting approximately $2 million from the base budget before presenting an override with individual, itemized restoration items and requiring unified advocacy across constituencies.
+      - **Data-driven management:** He described developing an "AIMSAT" program — a standardized data-collection and reporting process — which received a government innovation award.
+      - **Town Administrator vs. elected board roles:** Keeser emphasized understanding the distinction between professional administrator and elected policy-makers, drawing on his own experience as both a mayor and a COO reporting to a mayor.
+      - **Labor relations:** He cited an example of resolving a personnel issue informally through a direct call to a union president, avoiding formal grievance procedures.
+      - **First 90 days:** He stated he would instruct all departments to continue operations unchanged while he observed, read collective bargaining agreements, reviewed strategic and master plan documents, and built relationships.
+      
+      Board members noted that 19 candidates applied through the Collins Center search process; five were selected for screening interviews; and the field narrowed to three finalists, two of whom withdrew before the public interview. The board discussed but rejected restarting the search, citing the likelihood of losing Keeser and the competitiveness of the current municipal management hiring market.
+      
+      The vote to appoint Keeser pending successful contract negotiations was unanimous.
+    key_speakers: ["Patrick Keeser (Town Administrator candidate)", "Jackie (Chair, Select Board)", "Aaron Noonan (Select Board member / screening committee)", "Becky Cunningham (Town Planner / screening committee)", "Tony Sasso (former Town Administrator / screening committee)", "John McGinn (Interim Town Administrator / screening committee)"]
+  - topic: recreation-events
+    topic_confidence: 0.72
+    start_seconds: 2929
+    end_seconds: 3205
+    headline: "Board previews Memorial Day weekend events including traditional parade and Top Gun screening"
+    dek: "A board member outlined a full slate of Memorial Day weekend events: grave flag-laying, church services, the traditional Monday parade, and a special Top Gun screening at the Beacon Cinema on Sunday morning."
+    summary: |
+      A board member (identified by context as David) described the following Memorial Day weekend schedule:
+      
+      - **Friday:** Veterans Breakfast hosted by a local group; the city band performs.
+      - **Saturday:** Traditional flag-laying at graves at Star of the Sea; a small crew lays flags annually.
+      - **Sunday:** Service at Star of the Sea at 1 p.m.; Sunday morning, the Beacon Cinema is hosting a 10 a.m. showing of the new *Top Gun* film, first come, first served, as a tribute to veterans.
+      - **Monday:** Traditional Memorial Day parade led by the high school band down to Crocker Park/State Street area; a short service honoring all war dead including merchant mariners.
+    key_speakers: ["David (Select Board member)"]
+  - topic: permits-zoning
+    topic_confidence: 0.95
+    start_seconds: 3205
+    end_seconds: 3479
+    headline: "Board approves transfer of Haley's Wine and Spirits liquor license to new operators"
+    dek: "Mookie's at Mumford LLC, operating as Haley's Wine and Spirits at 112 Washington Street, received unanimous board approval to take over the all-alcoholic package store license from Haley's Public Market Inc."
+    summary: |
+      The board held an advertised public hearing on the transfer of the all-alcoholic package store license at 112 Washington Street from Haley's Public Market Inc. to Mookie's at Mumford LLC, doing business as Haley's Wine and Spirits.
+      
+      Applicants Sean and Patricia (last name not clearly captured) noted they had operated the adjacent East Café for three years and were expanding into the adjacent retail space. John Kelly of 22 Merritt Street spoke in favor, noting that Haley's has been a family business at or near that Washington Street location since 1912 and that the new operators have been excellent tenants.
+      
+      Approved hours of operation: Monday–Saturday 8 a.m.–10 p.m.; Sunday 12 noon–6 p.m. Subject to ABCC approval, board of health sign-offs, and all fees paid.
+    key_speakers: ["Sean (applicant)", "Patricia (applicant)", "John Kelly (resident, 22 Merritt Street)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 3479
+    end_seconds: 3851
+    headline: "Board approves minutes, Pride flag-raising, Abbott Hall concert, fun run rescheduling, and drainage licenses"
+    dek: "The board moved through a consent-style agenda approving meeting minutes, several event permits, and two private drainage connection license agreements."
+    summary: |
+      Items approved in sequence:
+      
+      | Item | Details |
+      |---|---|
+      | Meeting minutes | April 27 and May 11, 2022 |
+      | Marblehead Pride 2022 flag-raising | Abbott Hall, June 5 (rain date June 12); custodial fee $150 paid by Pride committee |
+      | Concert/video screening | Abbott Hall, August 20, 12 noon–6 p.m.; certificate of insurance required |
+      | Charter school fun run reschedule | From June 5 to June 12, 2022; police and Rec & Parks approval required; no permanent street markings |
+      | Drainage license – 45–49 Pleasant St. | Between town and 45–49 Pleasant Street LLC, 96 Swampscott Road, Salem |
+      | Drainage license – Harris Street property | Between town and Pleasant Street LLC, 96 Swampscott Road, Salem |
+      
+      A letter of interest from Henry Selly for the Design Review Board was entered into the record; the board discussed scheduling an interview before the June 8 meeting.
+  - topic: permits-zoning
+    topic_confidence: 0.88
+    start_seconds: 3851
+    end_seconds: 3943
+    headline: "Board approves one-day liquor license for Historical Commission exhibit opening at Old Townhouse"
+    dek: "A one-day license was granted for a July 8 reception for the forthcoming 'Mapping Marblehead' exhibit; no alcohol to be stored on premises."
+    summary: "The board approved a one-day liquor license for the Historical Commission's opening reception on July 8, 2022 (5–8 p.m.) at the Old Townhouse for the exhibit *Mapping Marblehead in the 20th Century*. Conditions include liquor liability insurance and no alcohol stored on premises; wine will be served."
+  - topic: permits-zoning
+    topic_confidence: 0.85
+    start_seconds: 3943
+    end_seconds: 4035
+    headline: "Board approves two one-day liquor licenses for wine tasting events in June"
+    dek: "Two separate wine tasting events on June 2 and June 23, 2022 at 18 Atlantic Avenue received one-day liquor licenses, each subject to a $50 fee."
+    summary: "The board approved two one-day liquor licenses for wine tasting events from 3–7 p.m. on Thursday June 2 and Thursday June 23, 2022, under the tent at 18 Atlantic Avenue. Each license carries a $50 fee; applicant must provide proof of authorized alcohol source and proper storage and disposal in accordance with MGL Chapter 138."
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 4035
+    end_seconds: 4218
+    headline: "Board discusses leaf blower ban timeline and AV upgrade status at Town Hall"
+    dek: "A board member explained that the town meeting–approved leaf blower bylaw faces an Attorney General review period that will likely prevent implementation this summer, and the board noted that the Town Hall AV system is operational but not fully installed."
+    summary: |
+      **Leaf blower ban:** Town meeting approved a seasonal leaf blower ban (Memorial Day to Labor Day). The town clerk has 30 days to submit bylaw changes to the Attorney General's office, which then has 90 days to respond (extendable). This timeline makes summer 2022 implementation unlikely. A separate issue is that the town meeting motion included no fine or penalty provision; only a future town meeting can authorize fines, meaning enforcement would be difficult in any case.
+      
+      **AV system:** The new screen and camera setup in the meeting room is operational for both audio and video, and MHTV is able to use the feed. However, wireless microphones and the associated mixing board are not yet installed; that work is expected to be completed in September 2022, after which sound quality will improve and MHTV cameras will be fully integrated.
+      
+      **Harbor/waterfront planning:** A board member noted that the Service and Harbor Marblehead working group survey is available on the town website and covers the full waterfront from Naugus Head to Landmill.
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 4218
+    end_seconds: 4402
+    headline: "Residents raise concerns about town counsel performance and town administrator search process"
+    dek: "Two residents addressed the board during public comment, one expressing dissatisfaction with current town counsel and another questioning whether the single-finalist outcome of the town administrator search reflected sufficient diligence."
+    summary: |
+      Two residents spoke during public comment:
+      
+      - **Resident, 159 Miami Avenue (Alan):** Expressed ongoing dissatisfaction with the performance of current town counsel over the past two years and suggested it may be time to change counsel. He also acknowledged the new town administrator appointment.
+      
+      - **Second resident:** Agreed with the first speaker on town counsel. Raised IT concerns and noted he had offered feedback on the town's website and course material to the interim administrator without response. On the town administrator search, he acknowledged Keeser's qualifications but expressed concern that ending up with one finalist felt like an act of desperation, noting that Keeser had previously applied for a town manager position elsewhere and did not advance, and that his career path appeared to show a regression from mayor to working for a mayor.
+      
+      - **Jack, 67th Street:** Thanked the board for the new town administrator and noted a survey on access to polling places is available on the town website.
+    key_speakers: ["Alan (resident, 159 Miami Avenue)", "Second resident (name not captured)", "Jack (resident, 67th Street)"]
+  - topic: labor-personnel
+    topic_confidence: 0.85
+    start_seconds: 4402
+    end_seconds: 4435
+    headline: "Board votes to enter executive session for contract negotiations"
+    dek: "The board voted to enter executive session under MGL Chapter 38 for purposes of contract negotiations, with no return to open session."
+    summary: "The board voted to enter executive session pursuant to MGL Chapter 38 for the purpose of contract negotiations. The board indicated it would not return to open session after the executive session."
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

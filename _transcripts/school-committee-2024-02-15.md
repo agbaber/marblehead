@@ -11,6 +11,294 @@ duration_seconds: 8237
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead School Committee endorses I Am Bill, approves interim hires amid superintendent search discussion"
+  summary: "The Marblehead School Committee approved contracts for an interim student services director and a part-time school business operations consultant, endorsed the state I Am Bill requiring free menstrual products in public schools, and approved the 2024-25 school calendar. The committee discussed moving toward an interim superintendent search based on a recommendation from MASC Executive Director Glenn Kutcher, with focus groups to begin before the February break."
+  decisions:
+    - "Approved 2024-25 school calendar as previously presented"
+    - "Approved contract for interim student services director Patricia Bell"
+    - "Approved contract for interim school business and operations consultant Mary Delie"
+    - "Approved Village School overnight field trip to Bourne Dale"
+    - "Approved Marblehead High School Program of Studies changes for 2024-25"
+    - "Approved re-vote of DECA overnight field trip with hotel change"
+    - "Approved preschool and kindergarten tuition rate increases for 2024-25"
+    - "Approved school committee endorsement of the I Am Bill and letter to legislative representatives"
+    - "Approved schedule fills totaling approximately $762,430"
+    - "Approved minutes from December 7, 2023"
+  votes:
+    - motion: "Approve 2024-25 school calendar"
+      result: "in favor (4 to 0)"
+    - motion: "Approve schedule fills totaling approximately $762,430"
+      result: "in favor (4 to 0)"
+    - motion: "Approve minutes from December 7, 2023"
+      result: "in favor (3 to 0)"
+    - motion: "Endorse I Am Bill and write to elected representatives"
+      result: "in favor (5 to 0)"
+    - motion: "Approve contract for interim student services director"
+      result: "in favor (5 to 0)"
+    - motion: "Approve contract for school business and operations consultant"
+      result: "in favor (5 to 0)"
+    - motion: "Approve Village School overnight field trip to Bourne Dale"
+      result: "in favor (5 to 0)"
+    - motion: "Approve Marblehead High School Program of Studies changes"
+      result: "in favor (5 to 0)"
+    - motion: "Approve DECA overnight field trip with hotel change"
+      result: "in favor (5 to 0)"
+    - motion: "Approve preschool and kindergarten tuition rates for 2024-25"
+      result: "in favor (5 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 0
+    end_seconds: 194
+    headline: "Committee opens with accommodations and community announcements"
+    dek: "Chair notes acapella competition results and condolences to the Brogna family."
+    summary: "The meeting was called to order at 7 p.m. Acknowledgments included MHS a cappella groups Joel Tones (second place) and Luminescence competing in an international competition, and condolences were extended to the family of Tony O'Brogna, long-time owner of Tony's Pizza."
+    key_speakers: ["Jen Shafter (Chair, in person)", "Sarah Fox (Chair/member, remote)"]
+  - topic: public-comment
+    topic_confidence: 0.98
+    start_seconds: 194
+    end_seconds: 583
+    headline: "Residents deliver letter signed by 142, petition with 760+ signatures citing school committee concerns"
+    dek: "League of Women Voters proposed hosting a public forum; residents entered a letter and online petition into the public record."
+    summary: |
+      Nancy Powell, representing the League of Women Voters of Marblehead, proposed the League host a nonpartisan public forum with the school committee moderated by a third party, suggesting Thursday March 14 as a possible date.
+      
+      Amy Drinker entered into the public record a letter signed by 142 residents and an online petition with over 760 signers, both expressing concerns about school committee decisions since the June 2023 election.
+      
+      A third resident expressed hope for improved committee collaboration and welcomed what appeared to be a new committee member.
+    key_speakers: ["Nancy Powell (League of Women Voters)", "Amy Drinker (resident, 30 Gregory Street)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 583
+    end_seconds: 686
+    headline: "Committee discusses forum date logistics with League of Women Voters"
+    dek: "Chair Sarah Fox noted March 14 conflicts with collective bargaining and suggested February 29 as an alternative."
+    summary: "Following public comment, committee members discussed scheduling the proposed public forum. Sarah Fox noted that March 14 is reserved for collective bargaining and suggested February 29 as a possible alternative. It was agreed that Fox would work with the League offline to confirm dates."
+    key_speakers: ["Sarah Fox (member, remote)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 686
+    end_seconds: 789
+    headline: "Student representative delivers high school updates for February"
+    dek: "Updates included report cards, a Spain trip, spring play auditions, and indoor track championships."
+    summary: "The student representative reported on high school activities including: Q2 report cards released February 6; 23 students departing for Spain over February vacation; spring play auditions held that day; junior class online auction aiming to raise $50,000; sophomore semi-formal tickets on sale February 26; and the girls indoor track team winning the NEC regional championship."
+    key_speakers: ["Student Representative"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.72
+    start_seconds: 789
+    end_seconds: 2105
+    featured: true
+    headline: "Committee pivots to interim superintendent search after MASC training on transitional leadership"
+    dek: "MASC Executive Director Glenn Kutcher recommended bringing in a retired superintendent with an existing team; the committee agreed to begin focus groups immediately."
+    summary: |
+      Committee chair Sarah Fox requested the superintendent search update be taken out of order. She described a training session the committee attended facilitated by MASC Executive Director Glenn Kutcher and the committee's legal counsel, focused on transitions in school districts.
+      
+      Kutcher's recommendation was to pursue an **interim/transitional superintendent** — specifically a long-tenured retired superintendent who could bring staff from their prior work — rather than immediately launching a permanent search. Key points:
+      
+      - A permanent superintendent search typically takes 9–10 months starting in early fall; the committee is within the normal timeline for an interim search.
+      - Kutcher submitted a memo (posted to the district website) and offered to run the interim search at **no cost** through MASC.
+      - A retired superintendent consultant also submitted a proposal to run the same search for **$15,000** as an individual, not through the Collins Center.
+      - Interim finance/operations and student services positions were recently filled (see separate segment).
+      - The committee agreed to begin **focus groups** immediately, as those would occur before any position is posted and are format-neutral (applicable to either interim or permanent searches).
+      
+      A written statement from one member (Brian) outlined three priority areas: **communication** (more vehicles to explain decisions), **budget** (distributing the budget book showing ~$2.3M in cuts), and **interim superintendent** (moving toward that model).
+      
+      The committee did not take a formal vote on the interim search structure, deferring a decision until after February break.
+    key_speakers: ["Sarah Fox (member, remote)", "Jennifer Shafter (Chair)", "Brian Oda (member)", "Dr. McGinnis (Interim Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 2105
+    end_seconds: 2483
+    headline: "Interim student services director and finance consultant introduced; grant application noted"
+    dek: "Patricia Bell begins as interim student services director; Mary Delie joins as part-time school business consultant; district pursuing a DESE grant of $33,000–$35,000 to reduce timeout rooms."
+    summary: |
+      Dr. McGinnis introduced two new interim administrators:
+      
+      - **Patricia Bell** — Interim Director of Student Services, starting on a per diem basis that day. Prior experience includes roles in South Deerfield, Shelburne Falls, Hadley, and Lexington, as well as interim superintendent and assistant superintendent positions.
+      - **Mary Delie** — Part-time consultant for the business office (up to 24 hours/week) for approximately four months while a permanent director is sought. She previously worked with Dr. McGinnis in Watertown. She begins the following Tuesday, overlapping with departing Assistant Superintendent Michelle Cresta.
+      
+      Dr. McGinnis also noted the district's **student services steering committee** is writing a DESE grant for approximately $33,000–$35,000 to reduce or eliminate timeout rooms using a Collaborative Problem Solving model developed at Harvard/MGH.
+    key_speakers: ["Dr. McGinnis (Interim Superintendent)", "Patricia Bell (Interim Student Services Director)", "Mary Delie (School Business Consultant)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 2483
+    end_seconds: 2578
+    headline: "Wit and Wisdom literacy curriculum mid-year update presented to committee"
+    dek: "Instructional coaches presented iReady data showing K-3 students at or above grade level rising from ~45% in fall to over 75% mid-year."
+    summary: |
+      Assistant Superintendent Julia (teaching and learning) and literacy coaches Mary Ellen Hart, Mary LeBlanc, and Rebecca Brand presented a mid-year update on the Wit and Wisdom ELA curriculum implemented K–6.
+      
+      **Key data points:**
+      - In the fall, approximately 45% of K–3 students were at or above grade level; by mid-year, that figure exceeded 75%.
+      - At Village School, the percentage of students below grade level dropped from 47% to 35%.
+      - District-wide iReady data placed students in the "high performance, high growth" quadrant.
+      
+      The presentation included a video of fifth-grade students conducting a Socratic seminar discussing Native American stories from their Module 1 unit. Coaches noted that Wit and Wisdom is funded through ARPA funds and that teacher-leader stipends have supported professional learning communities.
+    key_speakers: ["Julia (Assistant Superintendent, Teaching and Learning)", "Mary Ellen Hart (Literacy Coach)", "Mary LeBlanc (Literacy Coach)", "Rebecca Brand (Literacy Coach)", "Dr. McGinnis (Interim Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 4104
+    end_seconds: 4472
+    headline: "FY25 budget book with $2.3M cut detail to be released before February 28 workshop"
+    dek: "Leadership team is finalizing tiered cuts beyond last year's $1.5M reduction; complete budget book expected by end of next week."
+    summary: |
+      Assistant Superintendent Michelle Cresta provided a budget update. Key points:
+      
+      - The level services budget has been complete for several weeks; the delayed release is because the district was directed to produce both a level services budget and a detailed reduced services budget simultaneously.
+      - The leadership team is working to identify approximately **$2.3 million in cuts**, which is in addition to the **$1.5 million** cut the prior year.
+      - Cuts are organized in tiers (1–4), with Tier 4 being classroom-facing staff that administrators are trying to protect.
+      - A complete budget book — including line-item breakout of proposed cuts — will be distributed to committee members by the end of the following week.
+      - A budget workshop is scheduled for **February 28** (the Wednesday after February break).
+      - Redistricting students across elementary schools to manage enrollment was discussed but deemed beyond current administrative capacity; incoming students may be assigned differently.
+      
+      > "While we had cuts last year of roughly $1.5 million, this year the $2.3 million is in addition to that $1.5 million that we cut." — Michelle Cresta
+    key_speakers: ["Michelle Cresta (Assistant Superintendent)", "Dr. McGinnis (Interim Superintendent)", "Sarah Fox (member, remote)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 4562
+    end_seconds: 4661
+    headline: "Committee approves schedule fills of approximately $762,430 and December 7 minutes"
+    dek: "Routine consent agenda items approved unanimously."
+    summary: "The committee voted 4–0 to approve schedule fills dated January 31, 2024, totaling approximately $762,430. Minutes from the December 7, 2023 meeting were approved 3–0 (one member had stepped away)."
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 4751
+    end_seconds: 5131
+    headline: "Committee votes 5-0 to endorse I Am Bill requiring free menstrual products in public schools"
+    dek: "Mass Now representative Megan Sweeney presented the bill, which passed the State Senate unanimously in October; committee will write to Ways and Means committee chairs."
+    summary: |
+      Megan Sweeney, a board member of the Massachusetts chapter of NOW (Mass Now), presented the **I Am Bill** — "An Act to Increase Access to Menstrual Products in Prisons, Homeless Shelters, and Public Schools."
+      
+      Key points from the presentation:
+      - Approximately 1 in 7 children in Massachusetts lives in poverty, making menstrual products inaccessible.
+      - The bill passed the State Senate unanimously in October 2024; it is now in the House Ways and Means Committee.
+      - Marblehead's Board of Health unanimously endorsed the bill earlier that month.
+      - State Senator Brendan (Biden-Pregnant per ASR) and Representative Jenny Armini are sponsors.
+      - MHS Principal Matt Fox (via Zoom) described how the Marblehead Middle School already provides free menstrual products in all girls' and ungendered restrooms, funded after he read a Salem News article about students in Salem doing the same.
+      
+      The committee voted **5–0** to endorse the bill and to write to the chairs and vice chairs of the House Ways and Means Committee.
+    key_speakers: ["Megan Sweeney (Mass Now board member)", "Matt Fox (Middle School Principal, via Zoom)"]
+  - topic: labor-personnel
+    topic_confidence: 0.88
+    start_seconds: 5409
+    end_seconds: 5504
+    headline: "Committee approves contracts for interim student services director and business operations consultant"
+    dek: "Patricia Bell and Mary Delie both approved 5–0; Bell's per diem start did not require a vote."
+    summary: "The committee voted 5–0 to approve the contract for interim student services director Patricia Bell (with a noted start date of February 26 for the formal contract; she began per diem that day) and 5–0 to approve the contract for school business and operations consultant Mary Delie."
+  - topic: recreation-events
+    topic_confidence: 0.9
+    start_seconds: 5595
+    end_seconds: 6295
+    headline: "Village School overnight trip to Bourne Dale approved for sixth graders"
+    dek: "Approximately 190 sixth graders expected to attend the multi-day trip with roughly 94 parent chaperones; students with accessibility needs accommodated at an on-site alternative program."
+    summary: |
+      A sixth-grade teacher (identified as John or related to 'Heller') presented the Village School overnight field trip to Bourne Dale, described as a legacy program in Marblehead. Key details:
+      
+      - Trip is scheduled for **May 21** (a Tuesday)
+      - Approximately 190 sixth graders; ~95% attendance expected
+      - Last year, 94 parent/guardian chaperones attended across three sessions
+      - Six core classes: project adventure, pond studies, engineer design (rocket building), recreation, fishing, and Science Idol (a song/performance competition integrating curriculum)
+      - Students without overnight accommodations participate in a comparable on-site program at Village School
+      - Trip was paused during COVID; returned last year
+      
+      The committee voted **5–0** to approve the trip.
+    key_speakers: ["Grade 6 Teacher (presenter)", "Jennifer Shafter (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 6385
+    end_seconds: 6663
+    headline: "Committee approves Marblehead High School Program of Studies changes for 2024-25"
+    dek: "New courses include AP Research, AP Psychology, and Music and Film; CP2 removal continues with 10th grade this year."
+    summary: |
+      Dr. Carlson (high school) presented changes to the 2024-25 Program of Studies:
+      
+      | Change | Department | Notes |
+      |---|---|---|
+      | Added AP Research | English | Prerequisite: AP Seminar; Grade 12 elective |
+      | Removed Dystopian Literature | English | Never had sufficient enrollment |
+      | Added AP Psychology | Social Studies | Grades 11–12; most-requested AP course |
+      | Removed CP2 level, Grade 10 | Math & Science | Multi-year rollout; Grade 9 removed last year |
+      | Added Music and Film | Performing Arts | New elective |
+      | Added Theater Arts II | Performing Arts | Replaces Musical Theater |
+      | Removed World Drumming | Performing Arts | Insufficient enrollment |
+      | Reduced prerequisite for Art Studio III | Visual Arts | Increases access |
+      | Renamed 21st Century Skills → Studies, Skills & Strategies | Special Ed | Grades 9–10 |
+      | Renamed Life After High School → Real World Skills | Special Ed | Grades 11–12 |
+      
+      Vote: **5–0** to approve.
+    key_speakers: ["Dr. Carlson (High School administrator)"]
+  - topic: recreation-events
+    topic_confidence: 0.85
+    start_seconds: 6753
+    end_seconds: 6845
+    headline: "DECA overnight trip re-approved after hotel change; committee votes 5-0"
+    dek: "Students will stay at the Colony Hotel, which is across the street from the conference venue."
+    summary: "The DECA overnight trip had been previously approved but required a re-vote because the hotel changed to the Colony Hotel, located across the street from the competition venue. The committee voted **5–0** to approve the updated trip."
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 6845
+    end_seconds: 7311
+    headline: "Preschool and full-day kindergarten tuition raised by $500 for 2024-25; kindergarten now $4,000"
+    dek: "Rates had not increased in two to three years; increases expected to generate approximately $97,000 in additional revenue."
+    summary: |
+      Assistant Superintendent Cresta presented proposed tuition rate increases for the 2024-25 school year:
+      
+      | Program | Current Rate | Proposed Rate |
+      |---|---|---|
+      | Full-day kindergarten | $3,500 | $4,000 |
+      | Preschool half-day (5 days/week) | $4,500 | $5,000 |
+      | Preschool full-day (4.5 days/week) | $6,500 | $7,000 |
+      
+      - Kindergarten rate had been held flat for 3 years as the district tried to reduce reliance on that revenue; the budget situation requires continuation and an increase.
+      - 163 students are currently enrolled in tuition-based full-day kindergarten; ~15% receive financial aid.
+      - The kindergarten program generates approximately **$470,000/year** used to offset teacher costs.
+      - 55 peer model preschool students generate approximately **$250,000/year**.
+      - The $500 increase is expected to generate approximately **$27,000** more from preschool and **$70,000** more from kindergarten.
+      - Revenue goes into revolving funds restricted to those programs.
+      
+      Committee member Sarah Fox noted that charging for full-day kindergarten is increasingly unusual statewide and expressed concern that the increase is a step away from equity goals. Vote: **5–0** to approve.
+    key_speakers: ["Michelle Cresta (Assistant Superintendent)", "Sarah Fox (member, remote)", "Jennifer Shafter (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 7499
+    end_seconds: 7592
+    headline: "Athletic and activity user fee changes deferred to next meeting"
+    dek: "District is still evaluating options including eliminating a family cap or restructuring fees to cover all coaching stipends."
+    summary: "Assistant Superintendent Cresta noted that discussions about athletic and activity user fees are ongoing. Variables under consideration include whether to eliminate a family cap, increase fees, or have user fees cover all coaching and club stipends. The district is also comparing rates with other area districts. A proposal will be brought to the next meeting. No vote was taken."
+    key_speakers: ["Michelle Cresta (Assistant Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 7592
+    end_seconds: 7794
+    headline: "Committee to begin superintendent search focus groups immediately; vote on interim structure deferred"
+    dek: "Focus groups can proceed without a formal vote since there is no cost; full decision on interim vs. permanent search expected after February break."
+    summary: |
+      The committee returned to the superintendent search. Key points:
+      - Focus groups — which ask community members about their main concerns and desired leadership qualities — will proceed immediately regardless of whether the search is for an interim or permanent superintendent.
+      - Because there is no cost for the MASC-facilitated focus groups, no formal vote is required to begin.
+      - The committee agreed to allow members more time to consider the interim vs. permanent search structure and to reconvene after the February break, potentially with an added meeting.
+      - The timeline would be: focus groups → candidate profile → position posting.
+      - MASC's Glenn Kutcher offered to run the search at no cost; a private consultant offered a similar scope for $15,000.
+    key_speakers: ["Sarah Fox (member, remote)", "Jennifer Shafter (Chair)", "Dr. McGinnis (Interim Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 7794
+    end_seconds: 8048
+    headline: "Committee confirms community forum planning with League of Women Voters and reviews liaison updates"
+    dek: "Chair Fox to coordinate with the League on a February 29 forum date; finance liaison joint meeting scheduled for the following morning."
+    summary: |
+      The committee confirmed that Sarah Fox will work with the League of Women Voters to schedule a community forum, with February 29 as the preferred date. Committee members were asked to confirm availability within 24 hours.
+      
+      Liaison updates included:
+      - Policy committee has not met.
+      - A joint finance liaison meeting is scheduled for the following morning at 8:30 a.m.
+      - Medco Advocacy Day is March 19 at the State House.
+      
+      Under new business, the assistant superintendent noted she is drafting an RFP for special education services, working to set minimum qualifications for firms. She also noted the district will separately issue an RFP for an Owner's Project Manager (OPM) for the high school roof, as any project over $300,000 requires one and the town is not combining its OPM procurement with the school district's.
+    key_speakers: ["Sarah Fox (member, remote)", "Jennifer Shafter (Chair)", "Michelle Cresta (Assistant Superintendent)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

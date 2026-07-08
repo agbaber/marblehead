@@ -11,6 +11,130 @@ duration_seconds: 6354
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health advances fowl-permit regulations toward public hearing"
+  summary: "The Board of Health reviewed a draft regulation for keeping fowl in Marblehead, discussed numerous wording changes, and scheduled a public hearing for May 31, 2022. The board also voted to delegate responses to two open-meeting-law complaints to Special Town Counsel, approved a $13,700 contract with VHB for a transfer-station traffic study, and formed an advisory committee for the transfer-station rehabilitation project."
+  decisions:
+    - "Approved delegation of Open Meeting Law complaint responses to Special Town Counsel"
+    - "Approved amended meeting minutes for October 12, November 15, December 13, 14, 27, 29 2021 and January 11 and 18, 2022"
+    - "Approved $13,700 contract with VHB for transfer-station traffic study"
+    - "Approved formation of transfer-station rehabilitation advisory committee"
+    - "Approved $55 sticker rebate to the Elder family at 41 Jersey Street"
+    - "Scheduled public hearing on fowl-permit regulations for May 31, 2022 at 7:30 PM"
+  votes:
+    - motion: "Delegate Open Meeting Law complaint responses to Special Town Counsel"
+      result: "in favor (unanimous)"
+    - motion: "Approve amended minutes of October 12, 2021"
+      result: "in favor (unanimous)"
+    - motion: "Approve amended minutes of November 15, 2021"
+      result: "in favor (unanimous)"
+    - motion: "Approve amended minutes of December 13, 2021"
+      result: "in favor (unanimous)"
+    - motion: "Approve amended minutes of December 14, 2021"
+      result: "in favor (unanimous)"
+    - motion: "Approve amended minutes of December 27, 2021"
+      result: "in favor (unanimous)"
+    - motion: "Approve amended minutes of December 29, 2021"
+      result: "in favor (unanimous)"
+    - motion: "Approve amended minutes of January 11, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Approve minutes of January 18, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Approve executive session minutes of January 18, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Approve $13,700 VHB traffic study contract"
+      result: "in favor (unanimous)"
+    - motion: "Form transfer-station rehabilitation advisory committee"
+      result: "in favor (unanimous)"
+    - motion: "Refund $55 to Elder family at 41 Jersey Street"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 0
+    end_seconds: 185
+    headline: "Board delegates Open Meeting Law complaint responses to Special Town Counsel"
+    dek: "Two complaints filed by resident Alan Waller on March 26 and April 25, 2022 concern meeting minutes and the waste revolving account."
+    summary: "The board voted unanimously to delegate the preparation of responses to two open-meeting-law complaints filed by Alan Waller with the Attorney General's office to Special Town Counsel. One complaint concerns meeting minutes and one concerns the waste revolving account."
+    key_speakers: ["Andrew (Director of Public Health)", "Helene Hazlett (Board member)", "Joanne Miller (Board member)", "Todd Belspecker (Board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 186
+    end_seconds: 465
+    headline: "Board approves amended meeting minutes for eight past sessions"
+    dek: "Amendments across all eight sets of minutes consisted of adding lists of documents used at each meeting, as required by the open-meeting-law complaints."
+    summary: "The board voted to approve amended minutes for October 12, November 15, December 13, 14, 27, and 29, 2021, and January 11 and 18, 2022 (including the January 18 executive session). Amendments consisted of adding document lists to each set of minutes."
+    key_speakers: ["Helene Hazlett (Board member)", "Joanne Miller (Board member)", "Todd Belspecker (Board member)"]
+  - topic: permits-zoning
+    topic_confidence: 0.95
+    start_seconds: 466
+    end_seconds: 3500
+    featured: true
+    headline: "Board reviews draft fowl-permit regulation, sets May 31 public hearing"
+    dek: "Members identified several wording changes including removing roosters from permitted fowl, shortening permit terms from two years to one, and clarifying abutter-notification requirements."
+    summary: |
+      Andrew read the full draft regulation governing the keeping of fowl in Marblehead. The board discussed and agreed on the following changes before a public hearing:
+      
+      - **Roosters prohibited**: Strike roosters from the list of permitted fowl; town counsel to confirm appropriate language.
+      - **Permit term**: Change from two years to one year (Section 5, condition D).
+      - **Abutter notification**: The applicant shall obtain an assessor-certified abutter list and mail notice to each abutter by first-class mail with a sworn affidavit; the board rejected the certified return-receipt option and the alternative of having the Board of Health office send the notices.
+      - **Animal vs. fowl**: References to "animals" to be replaced with "fowl" where appropriate throughout the document.
+      - **Application fee**: Discussion of adding a one-time $25 application fee in addition to the existing $25 annual permit fee; final fee vote deferred to the May 31 hearing.
+      
+      Two members of the public commented: an attorney retained by a permit applicant expressed support for the draft's hearing-based approach and removal of the neighbor-consent requirement; the applicant (Danielle Joyce, 17 Haley Road) asked whether coop/run design could be pre-approved before purchase and was told the draft regulations provide sufficient guidelines.
+      
+      The public hearing was scheduled for **May 31, 2022 at 7:30 PM** via Zoom.
+    key_speakers: ["Andrew (Director of Public Health)", "Helene Hazlett (Board member)", "Joanne Miller (Board member)", "Todd Belspecker (Board member)", "Elma (attorney, resident)", "Danielle Joyce (resident, 17 Haley Road)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 4355
+    end_seconds: 4535
+    headline: "COVID-19 case count rises; 115 PCR-confirmed cases in two-week period"
+    dek: "The 14-day percent positivity reached 7.9% as of May 6, 2022, with the average daily incidence rate rising to 40.5."
+    summary: "As of May 6, 2022, Marblehead recorded 3,669 total confirmed cases. Between April 22 and May 6, there were 115 new PCR-confirmed cases and 18 probable (at-home test) cases reported to the department. The 14-day percent positivity was 7.9% and the average daily incidence rate was 40.5. Andrew noted the department is transitioning from a pandemic to an endemic monitoring posture and may discontinue regular COVID reporting when the state stops publishing weekly metrics."
+    key_speakers: ["Andrew (Director of Public Health)"]
+  - topic: trash-dpw
+    topic_confidence: 0.95
+    start_seconds: 4536
+    end_seconds: 5100
+    headline: "Board approves $13,700 VHB traffic study for transfer-station access improvements"
+    dek: "VHB (Vanasse Hangen Brustlin) will begin data collection immediately with an estimated completion timeline of four to six weeks."
+    summary: "The board voted unanimously to approve a $13,700 contract with VHB (engineers, scientists, planners, and designers based in Worcester) for a traffic study of the transfer station site access. Traffic count data collection will be coordinated with town staff to represent typical operations; data collection costs are billed as reimbursable expenses. Andrew also described plans to rehabilitate the transfer-station pit structure, including replacing the compactor, the building's exterior skin (siding), and electrical/control systems, and exploring solar panel installation on the roof."
+    key_speakers: ["Andrew (Director of Public Health)", "Helene Hazlett (Board member)", "Joanne Miller (Board member)", "Todd Belspecker (Board member)"]
+  - topic: trash-dpw
+    topic_confidence: 0.9
+    start_seconds: 5100
+    end_seconds: 5375
+    headline: "Board forms advisory committee for transfer-station rehabilitation project"
+    dek: "Committee to include the owner's project manager, town planner, director of public health, a finance committee member, the building commissioner, board of health members, and a representative from the recycling committee or Sustainable Marblehead."
+    summary: "The board voted unanimously to form an advisory committee to oversee the transfer-station rehabilitation project through design, bidding, construction, and completion (estimated 18 months to two years). Membership will include the OPM, town planner, director of public health, finance committee member, building commissioner, board of health members, and a representative from either the Marblehead Recycling Committee or Sustainable Marblehead. First meeting date to be determined once design work progresses."
+    key_speakers: ["Helene Hazlett (Board member)", "Joanne Miller (Board member)", "Todd Belspecker (Board member)", "Andrew (Director of Public Health)"]
+  - topic: public-comment
+    topic_confidence: 0.85
+    start_seconds: 5375
+    end_seconds: 5940
+    headline: "Mental Health Task Force reports on Cinco de Mayo elder-care resource fair"
+    dek: "The May 5 event drew 85 in-person and 35 remote attendees at the Jacobi Community Center and featured a panel of mental health clinicians focused on older residents."
+    summary: "Board member Joanne Miller reported that the Marblehead Mental Health Task Force co-hosted a Cinco de Mayo resource fair with the Council on Aging on May 5, 2022. Eighty-five people attended in person and 35 participated via livestream. A panel moderated by Dr. Kimberly Leventhal included clinicians from McLean Hospital, Elder Care Services, and Leahy Behavioral Health discussing depression, anxiety, and caregiver challenges for older adults. The next community conversation is planned for the fall in partnership with the NAN Project. Chief Dennis King connected the task force with a Leahy Health social-worker jail-diversion initiative providing 24 hours per week of embedded mental health support for the police department."
+    key_speakers: ["Joanne Miller (Board member)", "Helene Hazlett (Board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 5940
+    end_seconds: 6215
+    headline: "Board approves $55 transfer-station sticker refund and previews upcoming programs"
+    dek: "The Elder family at 41 Jersey Street received a refund after accidentally purchasing a second sticker at full price; household hazardous waste pickup is scheduled for June 15."
+    summary: "The board voted unanimously to refund $55 to the Elder family at 41 Jersey Street, who had accidentally purchased a duplicate transfer-station sticker at the full $80 price instead of the $25 discounted rate. Andrew also noted that household hazardous waste curbside pickup is scheduled for June 15, 2022 (online sign-up with credit card required), that outdoor dining permit applications are being accepted, and that beach water testing will begin in early June."
+    key_speakers: ["Andrew (Director of Public Health)", "Helene Hazlett (Board member)", "Joanne Miller (Board member)", "Todd Belspecker (Board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 6215
+    end_seconds: 6330
+    headline: "Board sets June 14 regular meeting at 8 PM; defers decision on returning to in-person"
+    dek: "The board will reassess in-person meeting logistics at the May 31 hearing after reviewing COVID trends."
+    summary: "The board confirmed the next regular meeting for June 14, 2022 at 8:00 PM via Zoom (delayed one hour due to a school concert). Members agreed to defer a decision on returning to in-person meetings until the May 31 fowl-permit hearing, when updated COVID case trends will be reviewed."
+    key_speakers: ["Helene Hazlett (Board member)", "Joanne Miller (Board member)", "Andrew (Director of Public Health)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

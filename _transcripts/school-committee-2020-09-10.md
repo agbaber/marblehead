@@ -11,6 +11,84 @@ duration_seconds: 3060
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "School Committee approves handbooks and MEA memorandum of agreement ahead of Monday opening"
+  summary: "The Marblehead School Committee held first readings of two updated policies — a revised Title IX sexual harassment policy (ACAB) and a COVID-related supplemental policy (EBC) — without voting, as both require additional readings before action. The committee approved handbook changes for the high school, pre-K through grade 6, and Veterans Middle School for the 2020–2021 school year. The committee also unanimously approved a memorandum of agreement with the Marblehead Education Association, clearing the way for school to open Monday."
+  decisions:
+    - "Approved handbook changes for high school, pre-K through grade 6, and Veterans Middle School (2020–2021)"
+    - "Approved memorandum of agreement with the Marblehead Education Association"
+    - "Held first reading of revised sexual harassment policy (ACAB) — no vote taken"
+    - "Held first reading of COVID supplemental policy (EBC) — no vote taken"
+  votes:
+    - motion: "Approve handbook changes for high school, pre-K–6, and Veterans Middle School"
+      result: "in favor (unanimous)"
+    - motion: "Approve memorandum of agreement with the Marblehead Education Association"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 0
+    end_seconds: 190
+    headline: "First reading of revised Title IX sexual harassment policy (ACAB) opened"
+    dek: "Chair begins reading the policy aloud; board members discuss whether verbatim reading is required under policy BGB."
+    summary: |
+      The chair called the meeting to order at 6:33 p.m. and introduced the first agenda item: the revised sexual harassment policy (ACAB). A board member noted that recent federal Title IX regulatory changes required updates to the district's existing policy, and that legal counsel John Foskett had been involved in drafting the revision. A question was raised about whether the district's insurance carrier (MIIA) should also review the policy before the vote; staff agreed to follow up before the next meeting.
+      
+      The chair began reading the full policy aloud. A board member with six years of experience interrupted to note that under the committee's own policy adoption procedure (BGB), a verbatim reading is not required — the three-step process calls for distribution, discussion, and then action at separate meetings. The committee agreed to stop the reading.
+    key_speakers: ["John (board member)", "Megan Taylor (board member)", "Sarah (board member)", "David Harris (board member)", "Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 1340
+    end_seconds: 1432
+    headline: "First reading of COVID supplemental policy (EBC) presented; vote deferred"
+    dek: "The EBC supplemental policy was introduced as a single umbrella policy to handle COVID-era changes without amending ~31 individual policies."
+    summary: "The committee introduced a proposed supplemental policy (EBC) designed to address COVID-related operational changes across the district. Rather than amending approximately 31 individual policies, the district will adopt this single supplemental policy for the duration of the pandemic; it can be rescinded when restrictions ease. The Google Doc version was prepared with hyperlinks to the underlying policies it references. No vote was taken; both this policy and the ACAB sexual harassment policy are scheduled for further readings and action at the next regular meeting on September 17."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1432
+    end_seconds: 1615
+    headline: "Committee approves 2020–2021 handbook changes for three school levels unanimously"
+    dek: "Handbooks for the high school, pre-K through grade 6, and Veterans Middle School were approved 5–0."
+    summary: "The committee moved to approve handbook changes for the 2020–2021 school year covering the high school, the pre-K through grade 6 program, and Veterans Middle School. These had been tabled at the prior meeting to allow COVID-related policy language, particularly around attendance, to be incorporated. A brief question about the student ID badge provision at the high school was raised; the member indicated she would follow up with the building principal offline rather than hold the vote. The motion passed unanimously on a 5–0 roll-call vote."
+    key_speakers: ["Sarah Fox (Chair)", "Megan Taylor (board member)", "Emily Baron (board member)", "David Harris (board member)", "Sarah Gold (board member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 1615
+    end_seconds: 2677
+    featured: true
+    headline: "MEA memorandum of agreement approved 5–0, clearing path for Monday school opening"
+    dek: "The MOA, ratified by the union Tuesday, covers hybrid-model working conditions including in-building teaching requirements, childcare provisions, and student interaction during remote periods."
+    summary: |
+      The committee discussed and then approved the memorandum of agreement (MOA) with the Marblehead Education Association (MEA), which the union had ratified the prior Tuesday.
+      
+      **Key provisions discussed:**
+      
+      | Provision | Discussion |
+      |---|---|
+      | In-building teaching requirement | Teachers without a district-approved medical/ADA exemption must teach from their assigned classroom even during fully remote periods. One board member raised concerns about space and risk; the superintendent noted building walkthroughs showed adequate space. |
+      | Student/teacher interaction during remote periods | Section 2 language was referenced; members wanted assurance that the MOA did not preclude in-person meet-and-greet or orientation events. The superintendent confirmed it does not. |
+      | Childcare provision | Teachers may bring children to the district under the commissioner's school-choice flexibility provision when their home district is in full remote. Children may not be in classrooms during hybrid; they would need to enroll. |
+      
+      Board members and the superintendent praised the collaborative tone of negotiations, contrasting it with contentious labor situations elsewhere in the state. The superintendent specifically acknowledged MEA leaders Robin, Sally, and Joan. The vote passed 5–0.
+      
+      > "At the end of the day, it is what is getting us to Sarah's cheer that we're opening on Monday." — Superintendent
+    key_speakers: ["Sarah Fox (Chair)", "John (Superintendent)", "Sarah Gold (board member)", "Megan Taylor (board member)", "Emily Baron (board member)", "David Harris (board member)"]
+  - topic: public-comment
+    topic_confidence: 0.6
+    start_seconds: 2770
+    end_seconds: 3000
+    headline: "Board members raise parent-hat concerns about communication and school transitions"
+    dek: "Members asked the superintendent for consolidated, email-based communication in the first weeks and for consistent school-transition activities across all grade levels."
+    summary: |
+      Following the MOA vote, board members speaking as parents raised two themes:
+      
+      1. **Communication consolidation:** One member asked whether all information could be guaranteed to arrive via email to parents in the first three weeks rather than being spread across multiple platforms (Back Together MHD website, Google Classroom, etc.). The superintendent indicated the classroom teacher is the best granular resource and that the district pushes updates via Twitter and the website in real time.
+      
+      2. **Transition activities:** Members flagged several transition cohorts they wanted to ensure were not overlooked — second graders moving from Coffin to Village, kindergarteners from Eveleth moving to Coffin, and the standard step-up grades. One member noted her daughter's charter school sent login-testing information several days before the start of school as a model. The superintendent acknowledged the feedback and indicated that leaders hear about these priorities regularly from central office.
+    key_speakers: ["Sarah Gold (board member)", "Megan Taylor (board member)", "Emily Baron (board member)", "David Harris (board member)", "John (Superintendent)", "Sarah Fox (Chair)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

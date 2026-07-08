@@ -11,6 +11,45 @@ duration_seconds: 602
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "New Superintendent Dr. John Bucky addresses School Committee for first time"
+  summary: "The Marblehead School Committee held its regularly scheduled meeting on July 8th, marking the first appearance of new Superintendent Dr. John Bucky. Bucky praised the outgoing interim superintendent Phil McCaldiff and the administrative team, then outlined the state Department of Elementary and Secondary Education's three reopening scenarios: full in-person, full remote, or hybrid. He also shared results of a parent survey on spring remote learning, noting that 88% of respondents had an adult working remotely at home and that families broadly felt remote learning expectations were unclear."
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 5
+    end_seconds: 192
+    headline: "New Superintendent Dr. John Bucky introduces himself to the School Committee"
+    dek: "Bucky praised outgoing interim superintendent Phil McCaldiff and lauded the administrative team during his first five days on the job."
+    summary: "Dr. John Bucky addressed the School Committee for the first time as superintendent, describing his first five days as encouraging. He credited outgoing interim superintendent Phil McCaldiff with laying a strong foundation and praised assistant superintendent Nan Murphy along with other administrators and building principals. Bucky introduced his guiding philosophy of \"PPI\" — Presume Positive Intentions — and said his only mandate was to build trust and capacity in the district."
+    key_speakers: ["Dr. John Bucky (Superintendent)", "John Caswell (MHTV host)", "James Maroney (MHTV reporter)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 192
+    end_seconds: 569
+    featured: true
+    headline: "Superintendent outlines three fall reopening scenarios as state guidance still pending"
+    dek: "Bucky said the Department of Elementary and Secondary Education cautioned districts against finalizing reopening plans before mid-July guidance is released."
+    summary: |
+      Superintendent Bucky described the state Department of Elementary and Secondary Education's three fall reopening scenarios: full in-person, full remote, and hybrid. He noted that the commissioner advised districts not to publish plans prematurely because conditions were changing rapidly and more prescriptive guidance was expected in mid-July.
+      
+      Bucky said the hybrid model — involving rotating cohorts on alternating schedules — was the most complex and generated the most anxiety among educators and families. He added that the department was exploring options to provide districts with more structured remote learning support, with an expectation that remote learning in any future scenario would be standards-based and not pass-fail.
+      
+      He then summarized results of a parent survey on spring remote learning:
+      
+      | Data Point | Finding |
+      |---|---|
+      | Responses per grade level | Over 100 for most grades; pre-K and K were exceptions |
+      | Highest-response grade | 4th grade (159 responses) |
+      | Adults also working remotely at home | 88% of respondents |
+      | Adequate access to learning materials | 86% of respondents |
+      | Students spending 2 hrs/day on remote learning | 36% |
+      | Students spending 3+ hrs/day | 29% |
+      
+      Bucky noted families widely felt remote learning expectations were unclear and unmanageable, and said those concerns would inform future planning. He emphasized the survey was not scientific and the district would not commission a formal scientific survey.
+    key_speakers: ["Dr. John Bucky (Superintendent)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

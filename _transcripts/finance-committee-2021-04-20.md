@@ -11,6 +11,376 @@ duration_seconds: 6705
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "FinCom approves $8.5M library renovation override request and FY22 budget articles"
+  summary: "The Finance Committee held its annual town warrant public hearing on April 20, 2021, voting on articles with financial implications for the May 3 town meeting. Major actions included approving a $8.5 million override request for the Abbott Public Library renovation, a $750,000 appropriation for a new fire pumper truck, and $857,189 in capital improvements funded largely by the pending Derry School sale proceeds. Articles covering collective bargaining settlements and non-union salary adjustments were deferred pending completion of negotiations."
+  decisions:
+    - "Approved FY22 Selectmen's operating budget of $2,119,321.28"
+    - "Approved FY22 Town Clerk budget of $208,124"
+    - "Approved FY22 Elections and Registration budget of $42,381"
+    - "Approved FY22 Moderator budget of $100"
+    - "Approved Article 3 – assumed liability"
+    - "Indefinitely postponed Article 4 – accept trust property"
+    - "Approved Article 5 – lease of town property"
+    - "Approved Article 6 – contracts in excess of three years"
+    - "Approved Article 7 – revolving funds totaling $3,090,300 (including new Hobbs Memorial Building revolving fund)"
+    - "Approved Article 8 – purchase of equipment for several departments, $239,429.42"
+    - "Approved Article 9 – lease purchase equipment, $191,596"
+    - "Approved Article 10 – capital improvements for public buildings, $857,189"
+    - "Indefinitely postponed Article 11 – seawall stabilization (covered under Article 10)"
+    - "Approved Article 12 – water department construction, $768,853"
+    - "Approved Article 13 – sewer department construction, $917,246"
+    - "Approved Article 14 – water and sewer commission claims"
+    - "Approved Article 15 – storm drain construction, $314,000"
+    - "Approved Article 16 – Essex North Shore Agricultural and Technical School assessment, $652,392"
+    - "Approved Article 17 – reduce tax rate via electric light payment ($330,000) and free cash appropriation ($8,950,000), total $9,280,000"
+    - "Approved Article 18 – unpaid accounts, $7,143.14"
+    - "Indefinitely postponed Article 19 – transfer to Special Ed Stabilization Fund (balance sufficient from prior year)"
+    - "Deferred Articles 20, 21, 22 – collective bargaining (negotiations ongoing)"
+    - "Held Article 23 – omnibus operating budget (quorum conflict; to be voted before town meeting)"
+    - "Approved Article 24 – financial assistance for conservation"
+    - "Approved Article 30 – Affordable Housing Trust Fund appropriation, $44,400 (10% of 18 Turner Road foreclosure sale)"
+    - "Approved Article 31 – release funds from transportation network, $7,811"
+    - "Approved Article 32 – new fire pumper truck, $750,000"
+    - "Approved Article 35 – Abbott Public Library renovation, $8,500,000"
+    - "Approved Article 43 – MWRA local water system assistance program interest-free loan, $1,000,000"
+    - "Approved Article 44 – compensation bylaw amendment for internal promotions"
+    - "Indefinitely postponed Article 48 – supplemental appropriation for schools"
+    - "Indefinitely postponed Article 49 – supplemental expenses of several departments"
+  votes:
+    - motion: "FY22 Selectmen's budget $2,119,321.28"
+      result: "in favor (unanimous)"
+    - motion: "Article 3 – assumed liability"
+      result: "in favor (unanimous)"
+    - motion: "Article 5 – lease of town property"
+      result: "in favor (unanimous)"
+    - motion: "Article 6 – contracts in excess of three years"
+      result: "in favor (unanimous)"
+    - motion: "Article 7 – revolving funds $3,090,300"
+      result: "in favor (unanimous)"
+    - motion: "Article 8 – equipment purchase $239,429.42"
+      result: "in favor (unanimous)"
+    - motion: "Article 9 – lease purchase equipment $191,596"
+      result: "in favor (unanimous)"
+    - motion: "Article 10 – capital improvements $857,189"
+      result: "in favor (unanimous)"
+    - motion: "Article 12 – water construction $768,853"
+      result: "in favor (unanimous)"
+    - motion: "Article 13 – sewer construction $917,246"
+      result: "in favor (unanimous)"
+    - motion: "Article 14 – water and sewer commission claims"
+      result: "in favor (unanimous)"
+    - motion: "Article 15 – storm drain construction $314,000"
+      result: "in favor (unanimous)"
+    - motion: "Article 16 – Essex Tech assessment $652,392"
+      result: "in favor (unanimous)"
+    - motion: "Article 17 – free cash and electric light payment $9,280,000"
+      result: "in favor (unanimous)"
+    - motion: "Article 18 – unpaid accounts $7,143.14"
+      result: "in favor (unanimous)"
+    - motion: "Article 24 – financial assistance for conservation"
+      result: "in favor (unanimous)"
+    - motion: "Article 30 – affordable housing trust $44,400"
+      result: "in favor (unanimous)"
+    - motion: "Article 31 – transportation network funds $7,811"
+      result: "in favor (unanimous)"
+    - motion: "Article 32 – fire pumper truck $750,000"
+      result: "in favor (unanimous)"
+    - motion: "Article 35 – library renovation $8,500,000"
+      result: "in favor (unanimous)"
+    - motion: "Article 43 – MWRA loan $1,000,000"
+      result: "in favor (unanimous)"
+    - motion: "Article 44 – compensation bylaw amendment"
+      result: "in favor (unanimous)"
+    - motion: "IP Article 4 – accept trust property"
+      result: "in favor (unanimous)"
+    - motion: "IP Article 11 – seawall stabilization"
+      result: "in favor (unanimous)"
+    - motion: "IP Article 19 – special ed stabilization transfer"
+      result: "in favor (unanimous)"
+    - motion: "IP Article 48 – supplemental school appropriation"
+      result: "in favor (unanimous)"
+    - motion: "IP Article 49 – supplemental departmental expenses"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1
+    end_seconds: 186
+    headline: "FinCom approves FY22 Selectmen, Town Clerk, and Elections budgets"
+    dek: "Three level-funded department budgets totaling approximately $250,505 were approved by unanimous vote before the warrant hearing began."
+    summary: |
+      The meeting opened with roll-call votes on three FY22 budgets:
+      
+      | Department | Amount |
+      |---|---|
+      | Selectmen's office | $2,119,321.28 |
+      | Town Clerk | $208,124 |
+      | Elections & Registration | $42,381 |
+      | Moderator | $100 |
+      
+      All were described as level-funded. The elections budget came in slightly under because there are no state elections in FY22. All votes were unanimous.
+    key_speakers: ["Town Administrator (Jason Silva)", "Finance Committee Chair (Ben)", "Emily (FinCom member)", "Alec (FinCom member)", "Kevin (FinCom member)", "Pat (FinCom member)", "Robin (Town Clerk)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 278
+    end_seconds: 554
+    headline: "FinCom chair outlines public hearing rules for annual town warrant"
+    dek: "The chair explained the four possible FinCom actions—recommend, IP, defer, or no recommendation—and noted Articles 1 and 2 are skipped for lacking financial impact."
+    summary: "After budget approvals, the chair provided a procedural overview of the annual town warrant hearing. He explained that FinCom only votes on articles with financial implications and described the four possible committee actions: recommend approval, recommend indefinite postponement (IP), defer for lack of information, or take no position if there is no financial impact. He also thanked Town Administrator Jason Silva, Finance Director Steve Pujols, and FinCom Secretary Emma."
+    key_speakers: ["Finance Committee Chair (Ben)", "Jason Silva (Town Administrator)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 554
+    end_seconds: 747
+    headline: "Articles 3–6 approved: liability assumption, town property lease, multi-year contracts"
+    dek: "Four standard annual articles with no dollar-figure specifics were approved unanimously."
+    summary: |
+      - **Article 3** – Assumed liability for work performed: approved unanimously.
+      - **Article 4** – Accept trust property: flagged for IP (no property being accepted this year).
+      - **Article 5** – Lease of town property: approved unanimously; no active leases but preserves authority.
+      - **Article 6** – Contracts in excess of three years: approved unanimously.
+    key_speakers: ["Finance Committee Chair (Ben)", "Jason Silva (Town Administrator)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 747
+    end_seconds: 950
+    headline: "Article 7: $3,090,300 in revolving funds approved; new Hobbs House fund created"
+    dek: "Town's 11 revolving funds, capped at $3,090,300 total, were reauthorized and a new revolving fund for the Hobbs Memorial Building was established."
+    summary: |
+      Jason Silva explained that the town operates 11 revolving funds, each self-funded through fees generated by the respective departments (e.g., Council on Aging programming fees). The amounts listed represent maximum expenditure caps for FY22.
+      
+      A new revolving fund was also created for the **Hobbs Memorial Building**, which houses the Marblehead Counseling Center. Under a recently renegotiated lease, rental income will flow into this fund to finance building maintenance and repairs.
+      
+      Vote: unanimous approval at $3,090,300.
+    key_speakers: ["Jason Silva (Town Administrator)"]
+  - topic: bonding-capital
+    topic_confidence: 0.9
+    start_seconds: 950
+    end_seconds: 1228
+    headline: "Articles 8 & 9: $431,025 in equipment purchases and leases approved across multiple departments"
+    dek: "New hybrid police cruisers, a fire prevention vehicle, cemetery pickup, and a DPW sidewalk trackless machine were among the items approved."
+    summary: |
+      **Article 8 – Purchase of Equipment ($239,429.42)**
+      
+      | Item | Notes |
+      |---|---|
+      | 2 police cruisers | First-ever hybrid cruisers |
+      | Fire prevention vehicle | Hybrid |
+      | Fire rescue boat engine repair | $7,500 |
+      | Cemetery pickup | Funded via perpetual care funds |
+      | Schools pickup | 1 of a larger request |
+      | Tree department equipment repairs | — |
+      
+      **Article 9 – Lease Purchase Equipment ($191,596)**
+      
+      | Item | Lease Term | Year-1 Payment |
+      |---|---|---|
+      | Ford F-550 dump truck (Parks) | 3-year | $23,000 |
+      | Sidewalk trackless machine (DPW) | 3-year | $68,000 |
+      | Prior-year lease carry-forward | — | $72,900 |
+      
+      The sidewalk trackless machine was highlighted as operationally significant for snow removal and leaf clearing. Both articles passed unanimously.
+    key_speakers: ["Jason Silva (Town Administrator)"]
+  - topic: bonding-capital
+    topic_confidence: 0.92
+    start_seconds: 1228
+    end_seconds: 1708
+    headline: "Article 10: $857,189 capital improvements plan approved, largely funded by Derry School sale"
+    dek: "Projects span street repaving, fire stations, rail trail design, library systems, police roof, schools, and seawalls; Derry School sale proceeds of $870,000 provide the funding source."
+    summary: |
+      Jason Silva presented the capital improvement plan reflecting the town's new finalized CIP process. Key projects:
+      
+      | Project | Amount |
+      |---|---|
+      | Street repaving (supplement to ~$450K Chapter 90) | $100,000 |
+      | Animal Control Building repairs | — |
+      | Old Town House / Oco Building repainting & repairs | — |
+      | IT upgrades (match for $120K Community Compact grant) | $40,000 |
+      | Fire HQ turnout gear / Franklin St. window replacement | — |
+      | Rail trail crossing construction documents (3 crossings) | $50,000 |
+      | Mariali municipal building doors, locks & alarm | — |
+      | Seaside Park tennis court resurfacing | — |
+      | Police station roof & exterior trim | — |
+      | School fire alarms, card swipe, CO detectors | — |
+      | Seawall maintenance | — |
+      | DPW garage exhaust system | — |
+      | Shoe Shed radio box alarm | — |
+      | **Total** | **$857,189** |
+      
+      Funding source: proceeds from the pending sale of the former Derry School ($870,000), which under state law must be deposited in a special revenue account for capital uses.
+      
+      The rail trail work will convert a $393,000 Complete Streets grant into construction-ready documents at three crossings. Vote: unanimous.
+    key_speakers: ["Jason Silva (Town Administrator)", "Emily (FinCom member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1708
+    end_seconds: 2168
+    headline: "Articles 12–15: Water, sewer, and storm-drain construction funds approved from retained earnings"
+    dek: "Water ($768,853), sewer ($917,246), and storm-drain ($314,000) construction articles passed unanimously; Article 14 on commission claims also approved."
+    summary: |
+      Water/Sewer Commissioner Amy presented three construction articles funded from audited retained earnings:
+      
+      | Article | Purpose | Amount |
+      |---|---|---|
+      | 12 – Water construction | Maintenance, capital improvements, emergency repairs | $768,853 |
+      | 13 – Sewer construction | Capital improvements, maintenance, 28 pump stations | $917,246 |
+      | 14 – W&S commission claims | Authorize claims during construction projects | no dollar amount |
+      | 15 – Storm drain construction | Annual program | $314,000 |
+      
+      All passed unanimously.
+    key_speakers: ["Amy (Water/Sewer Commissioner)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 2168
+    end_seconds: 2353
+    headline: "Article 16: Essex Tech assessment of $652,392 approved for 30 Marblehead students"
+    dek: "Enrollment dropped from 46 to 30 students, saving approximately $145,000 compared to the prior year assessment."
+    summary: "The Essex North Shore Agricultural and Technical School district assessment for FY22 is $652,392, reflecting 30 Marblehead students enrolled—down from 46 the prior year. The reduction yielded approximately $145,000 in savings. Representative Mark Stroud was not present; FinCom voted based on previously received information. Vote: unanimous."
+    key_speakers: ["Emily (FinCom member)", "Finance Committee Chair (Ben)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 2353
+    end_seconds: 2631
+    headline: "Article 17: $9.28M draw on electric light payment and free cash approved amid reserve concerns"
+    dek: "Free cash appropriation of $8,950,000 leaves the town's certified free cash balance at what officials described as a dangerously low level."
+    summary: |
+      Article 17 authorizes using the electric light department payment ($330,000) and free cash ($8,950,000) to balance the FY22 budget—a total of $9,280,000.
+      
+      FinCom members and Jason Silva noted that certified free cash is approximately $11.56 million, meaning the remaining balance after this draw would fall well below the target thresholds (ideally 10% of budget, minimally 5%, or roughly $5 million on a ~$100 million budget). The Finance Director had prepared an analysis with the Collins Center financial forecasting model showing this would be the lowest remaining balance in recent history. Members agreed the town needs to address structural reliance on free cash. Vote: unanimous.
+    key_speakers: ["Jason Silva (Town Administrator)", "Finance Committee Chair (Ben)", "Steve Pujols (Finance Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2631
+    end_seconds: 2904
+    headline: "Articles 18, 19, 24, 30, 31 addressed; collective bargaining articles deferred"
+    dek: "Routine appropriation articles passed; union contract articles for fire, police, and municipal employees were deferred pending active negotiations."
+    summary: |
+      - **Article 18 – Unpaid accounts ($7,143.14):** Late-arriving bills from prior fiscal years, including some from FY15–17 in school and rec departments. Approved unanimously.
+      - **Article 19 – Special Ed Stabilization Fund:** Indefinitely postponed; $250,000 balance from prior year remains available.
+      - **Articles 20, 21, 22 – Collective bargaining (fire, police, municipal employees):** Deferred; negotiations ongoing. Non-union salary articles (25–29) also deferred pending union outcomes and results of a compensation and classification study.
+      - **Article 23 – Omnibus operating budget:** Skipped due to a member conflict creating a quorum issue; to be voted immediately before or at town meeting.
+      - **Article 24 – Conservation financial assistance:** Approved unanimously; authorizes ConCom to apply for and accept funds during FY22.
+    key_speakers: ["Jason Silva (Town Administrator)", "Finance Committee Chair (Ben)"]
+  - topic: 40b-mbta
+    topic_confidence: 0.65
+    start_seconds: 3090
+    end_seconds: 3183
+    headline: "Article 30: $44,400 to Affordable Housing Trust from Turner Road foreclosure sale"
+    dek: "Board of Selectmen policy directs 10% of tax-title foreclosure proceeds to the Affordable Housing Trust; 18 Turner Road sold for $444,000."
+    summary: "The Board of Selectmen has adopted a policy appropriating 10% of any foreclosure sale proceeds to the Affordable Housing Trust Fund. In FY21, 18 Turner Road was sold at tax-title auction for $444,000, generating a $44,400 transfer. Article 30 implements this policy. Vote: unanimous."
+    key_speakers: ["Jason Silva (Town Administrator)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 3183
+    end_seconds: 3277
+    headline: "Article 31: $7,811 in transportation network funds released for rail trail improvements"
+    dek: "Fees from rideshare companies (Uber, Lyft) collected under the transportation network program are transferred for rail trail use."
+    summary: "Article 31 releases $7,811 in accumulated rideshare company fees (Uber, Lyft, etc.) for rail trail improvements. The funds were previously appropriated and are being formally transferred. Vote: unanimous."
+    key_speakers: ["Finance Committee Chair (Ben)"]
+  - topic: public-safety
+    topic_confidence: 0.95
+    start_seconds: 3277
+    end_seconds: 3461
+    headline: "Article 32: $750,000 approved for new Pierce fire pumper to replace 2006 frontline engine"
+    dek: "The 2006 Pierce moves to reserve status while the 1994 Spartan retires; new engine mirrors 2017 specs with a Cummins motor substitution."
+    summary: |
+      The fire chief presented an apparatus replacement schedule built on NFPA guidelines (15 years frontline, 5–7 years reserve for pumpers). The 2006 Pierce engine has reached the end of frontline service and will move to reserve, while the 1994 Spartan will be retired.
+      
+      The new engine is specced identically to the 2017 engine (Engine 2) for parts, training, and maintenance consistency. The only change is a switch from a Detroit to a Cummins motor, as Detroit is exiting the fire engine market.
+      
+      The estimated quote as of January 1 was $706,000. By the time of the meeting, tariff and steel cost increases had pushed the estimate to approximately $730,000, justifying the $750,000 appropriation request as a contingency buffer.
+      
+      Vote: unanimous at $750,000.
+    key_speakers: ["Fire Chief (Vince)", "Finance Committee Chair (Ben)"]
+  - topic: bonding-capital
+    topic_confidence: 0.92
+    start_seconds: 3552
+    end_seconds: 5700
+    featured: true
+    headline: "FinCom approves $8.5M Abbott Public Library renovation override request"
+    dek: "The 144-year-old library on Pleasant Street needs full infrastructure replacement; the Abbott Public Library Fund pledges $1M privately, reducing the taxpayer ask to $8.5M of a $9.5M project."
+    summary: |
+      Nancy Perkins-Arada, chair of the Abbott Public Library Board of Trustees, and architect Stu Roberts of Johnson Roberts Associates presented the library renovation project to FinCom in a format intended to preview the town meeting presentation.
+      
+      **Why renovation is needed**
+      The library has operated in its current Pleasant Street building since 1954; the building was last renovated in 1989. Building systems—HVAC, electrical, plumbing, elevator, fire alarm, sprinklers—are at or past useful life. The elevator routinely malfunctions and traps occupants. The Wi-Fi is insufficient for phone calls. Storm runoff drains toward the building. Infrastructure failures occur approximately every other month.
+      
+      **Project scope and cost breakdown**
+      
+      | Category | Share | Amount |
+      |---|---|---|
+      | Infrastructure replacement (HVAC, elevator, fire/life safety, electrical, sprinklers, plumbing, parking drainage) | 54% | ~$5.1M |
+      | Library renovations (lobby, circulation, Wi-Fi study area, teen center, maker space, garden access) | 13% | ~$1.2M |
+      | Design fees, contingency, moving & storage, furniture | 33% | ~$3.1M |
+      | **Total project** | | **$9.5M** |
+      
+      **Financing**
+      - The Abbott Public Library Fund (foundation arm) has raised over $1 million from 221 private donors.
+      - Upon passage of the override, the Fund will forward $1M to the town, reducing the net taxpayer cost to approximately **$8.5 million**.
+      - Estimated cost to average taxpayer: approximately $6.25/month.
+      - A new library of equivalent size would cost $35–$40 million per architectural estimates.
+      
+      **State grant question**
+      FinCom asked about the Massachusetts Board of Library Commissioners grant program. Trustees reported that state grants cover at most 40–50% of project cost, require a multi-year queue (35+ libraries ahead as of 2016), and would have extended the timeline significantly. Because the project involves renovation rather than new construction, and because system deterioration is accelerating, trustees chose private fundraising and a town override instead.
+      
+      **COVID relief funding**
+      A FinCom member raised the possibility of using incoming COVID relief funds (~$6M to the town) to offset some costs. Members and the Finance Director noted that guidance on eligible uses is still vague and that the $6M has many competing demands; no commitment was made.
+      
+      **FinCom vote**
+      After clarifying that the override amount should reflect the town's net cost rather than total project cost, the committee voted unanimously to approve Article 35 at **$8,500,000**.
+    key_speakers: ["Nancy Perkins-Arada (Library Board of Trustees Chair)", "Stu Roberts (Johnson Roberts Associates, architect)", "Emily (FinCom member)", "Finance Committee Chair (Ben)", "Jason Silva (Town Administrator)", "Steve Pujols (Finance Director)", "Erin (FinCom member, audio difficulties)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 5791
+    end_seconds: 5982
+    headline: "Articles 36–42 skipped (no financial impact); Article 43 MWRA loan placeholder approved"
+    dek: "A $1 million MWRA interest-free loan placeholder for water distribution improvements was authorized to preserve the option for emergency use during FY22."
+    summary: |
+      Articles 36–42 were skipped as they carry no financial implications for FinCom action.
+      
+      **Article 43 – MWRA Local Water System Assistance Program ($1,000,000):** Amy explained this is a placeholder authorization. The MWRA allocates interest-free loan funds annually to member towns; approval at town meeting is required as a first step before any borrowing can occur. No funds are planned to be drawn at this time; the authorization simply preserves the option should an emergency arise during FY22. The town pays nothing unless and until it actually draws the loan. Vote: unanimous.
+    key_speakers: ["Amy (Water/Sewer Commissioner)"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 5982
+    end_seconds: 6345
+    headline: "Article 44: Bylaw amendment to allow market-rate internal promotions to department head roles approved"
+    dek: "The existing compensation bylaw capped salaries for internal promotees well below market; the change lets the town administrator adjust ranges with Compensation Committee approval."
+    summary: |
+      Jason Silva explained that the current town bylaw restricts salary increases for employees promoted internally to department head positions to either a minimum 2% raise or the first step of the higher grade—well below market rates that can be offered to external candidates.
+      
+      The problem was illustrated by the Building Commissioner role: a local inspector was promoted but could only be brought up to approximately $68,000, while the market rate was approximately $84,000. An outside hire could have been brought in at market with Compensation Committee approval.
+      
+      The bylaw amendment allows the town administrator to adjust salary schedules to current market levels when promoting an internal candidate, subject to Compensation Committee review and approval. It does not grant unilateral authority to set pay at any level.
+      
+      Amy (Water/Sewer) noted this issue has caused employees to decline promotions because losing overtime and union benefits made the net compensation unattractive even with the title change.
+      
+      Silva noted the forthcoming compensation and classification study (covering administrative and municipal employee union staff) will eventually make this amendment less critical, but the Building Commissioner situation required an immediate fix.
+      
+      Vote: unanimous.
+    key_speakers: ["Jason Silva (Town Administrator)", "Amy (Water/Sewer Commissioner)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 6345
+    end_seconds: 6621
+    headline: "Remaining IP articles formally voted; meeting adjourned"
+    dek: "Articles 4, 11, 19, 48, and 49 were indefinitely postponed by unanimous vote before adjournment."
+    summary: |
+      The committee formally voted indefinite postponement on the following articles:
+      
+      | Article | Subject | Reason |
+      |---|---|---|
+      | 4 | Accept trust property | No property being accepted |
+      | 11 | Seawall stabilization | Covered under Article 10 |
+      | 19 | Special Ed Stabilization Fund transfer | Prior balance of $250,000 sufficient |
+      | 48 | Supplemental school appropriation | No request submitted |
+      | 49 | Supplemental departmental expenses | No request submitted |
+      
+      Article 23 (omnibus operating budget) was noted as deferred for a separate vote before or at town meeting due to a member conflict reducing quorum. A motion to adjourn passed unanimously.
+    key_speakers: ["Finance Committee Chair (Ben)", "Emily (FinCom member)", "Alec (FinCom member)", "Kevin (FinCom member)", "Pat (FinCom member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

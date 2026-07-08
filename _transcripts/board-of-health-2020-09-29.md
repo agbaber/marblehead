@@ -11,6 +11,70 @@ duration_seconds: 2289
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health reviews COVID updates and reopening rules for fall 2020"
+  summary: "The Board of Health approved minutes from September 9th and an amended version of the September 15th meeting. The health director provided a COVID-19 case update (272 total cases), summarized Governor Baker's October 5th phase three step two reopening for lower-risk communities, and discussed Halloween guidance. The board scheduled its next meetings for October 6th and October 19th, and agreed to prepare statements for two town meeting warrant articles related to leaf blowers and sustainable Marblehead."
+  decisions:
+    - "Approved minutes of September 9th"
+    - "Approved minutes of September 15th as amended"
+    - "Scheduled next meetings for October 6th and October 19th"
+    - "Added town meeting warrant articles (leaf blowers, sustainable Marblehead) to next agenda"
+  votes:
+    - motion: "Approve September 9th minutes"
+      result: "in favor (unanimous)"
+    - motion: "Approve September 15th minutes as amended"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 277
+    headline: "Board approves September 9th minutes; tables then amends September 15th minutes"
+    dek: "A wording correction to COVID case language and a change from 'several' to 'two or more individuals' in classroom reporting language were made before approval."
+    summary: "The board opened by approving the September 9th meeting minutes unanimously. The September 15th minutes were initially questioned over language about the daily health questionnaire and classroom exposure thresholds. The phrase 'several individuals in a classroom' was corrected to 'two or more individuals within a classroom' and the case-count language was adjusted as previously requested. The minutes were then approved as amended."
+    key_speakers: ["Board Chair (unnamed)", "Andrea (staff/clerk)"]
+  - topic: public-comment
+    topic_confidence: 0.6
+    start_seconds: 277
+    end_seconds: 2271
+    featured: true
+    headline: "Health director reports 272 COVID cases; reviews Phase 3 Step 2 and Halloween guidance"
+    dek: "The health director summarized the state's October 5th reopening expansion, new restaurant and gathering rules, and emerging Halloween safety guidelines for lower-risk communities."
+    summary: |
+      The health director reported 272 total COVID-19 cases in Marblehead as of the meeting date, up four from the prior week, with approximately 30 deaths. Marblehead remained in the green on the state's weekly report.
+      
+      Key reopening updates effective **October 5th** for lower-risk communities (those not designated red in any of the prior three DPH weekly reports):
+      
+      | Sector | Change |
+      |---|---|
+      | Outdoor performance venues | 50% capacity, max 250 (seated, assigned) |
+      | Arcades / indoor recreation (trampolines, laser tag, etc.) | Permitted to open at 50% |
+      | Fitting rooms | Permitted in all retail |
+      | Gyms, museums, libraries, driving/flight schools | Capacity increases to 50% |
+      | Outdoor gatherings (public/event venues) | 50-person limit in Step 1; 100-person limit in Step 2 |
+      | Indoor gatherings | Remain at 25-person max statewide |
+      | Private backyard outdoor gatherings | Remain at 50-person max statewide |
+      
+      New restaurant rules effective September 28th include parties of up to 10 and use of bar seating (table service only; six-foot separation between parties still required; plexiglass does not reduce the six-foot requirement). Laminated menus may be reused if sanitized between parties; disposable paper menus are no longer required.
+      
+      The director noted that PCR testing is the preferred method; rapid antigen positives require PCR confirmation. MIAA guidance on fall sports for red-community scenarios was still pending.
+      
+      For **Halloween**, the North Shore shared public health coalition was developing more specific guidance beyond the state's generic guidelines. The board discussed touchless or low-contact candy delivery methods (PVC pipe chutes, candy on strings) and emphasized staying within family cohorts. Large costume parties or school-based gatherings were discouraged.
+      
+      The board also discussed the farmer's market now permitting shoppers to handle and select produce following updated governor's guidelines.
+    key_speakers: ["Andrew (Health Director)", "Board members (unnamed)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1650
+    end_seconds: 2271
+    headline: "Board to prepare statements on two town meeting warrant articles before October 17th session"
+    dek: "Warrant articles on leaf blowers (Article 25) and sustainable Marblehead (Article 29) were flagged for board discussion at the October 6th meeting."
+    summary: "The board noted that town meeting is scheduled for Saturday, October 17th at 9 a.m. under a tent and will not be live-streamed. Two warrant articles were identified as potentially within the board's purview: Article 25 (leaf blowers) and Article 29 (sustainable Marblehead). A board member agreed to prepare draft statements for discussion at the October 6th meeting. The board also acknowledged a letter of appreciation from transfer station staff (Mike, Chris, Ralph, and Kay) thanking the board for coffee and muffins."
+    key_speakers: ["Board members (unnamed)", "Andrea (staff/clerk)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

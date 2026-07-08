@@ -11,6 +11,77 @@ duration_seconds: 2808
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health approves emergency order banning exhalation-valve face coverings"
+  summary: "The Board of Health held a public hearing and unanimously approved an emergency order effective September 18, 2020 prohibiting face coverings with exhalation valves in essential businesses, with violations subject to fines up to $1,000. The board also received a COVID-19 case count update (265 total cases, fewer than 5 active) and heard a report from the school reopening committee on the first day of hybrid school. The board scheduled its next meeting for September 29, 2020."
+  decisions:
+    - "Approved Emergency Order of September 15, 2020 prohibiting face coverings with exhalation valves"
+    - "Continued next meeting to September 29, 2020"
+  votes:
+    - motion: "Approve Emergency Order of September 15, 2020 regarding face coverings with exhalation valves"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 0
+    end_seconds: 661
+    featured: true
+    headline: "Board unanimously approves ban on exhalation-valve face coverings in essential businesses"
+    dek: "The emergency order, effective September 18, 2020, prohibits masks with exhalation valves and carries fines up to $1,000 for violations."
+    summary: |
+      The Board of Health conducted a public hearing on Emergency Order 915-20, which directs all individuals entering essential businesses in Marblehead to wear face coverings that do not include exhalation valves. The order cites CDC guidance that exhalation-valve respirators protect the wearer but may not prevent transmission to others (i.e., do not provide source control).
+      
+      Key provisions discussed:
+      - Prohibited: face coverings with exhalation valves
+      - If only a valve mask is available, it must be covered by a surgical, procedural, or cloth mask
+      - Enforcement: Board of Health officials and Marblehead Police; first step is offering a compliant mask rather than issuing a fine
+      - Penalty: up to $1,000 under M.G.L. Chapter 111, Section 122
+      - Effective date: September 18, 2020 at 12:01 a.m., until the public health emergency declaration is lifted
+      
+      Board members discussed practical enforcement, including citizen complaint calls and the approach of offering replacement masks before issuing citations. A public comment period was opened; no members of the public spoke. The order was approved unanimously.
+    key_speakers: ["Board Chair (unnamed)", "Andrew (Public Health Director)", "Helene (Board member)", "Michelle (Board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 754
+    end_seconds: 2771
+    headline: "Director reports 265 total COVID cases, fewer than 5 active; school reopening committee update presented"
+    dek: "The director explained how student cases at out-of-state colleges may temporarily shift Marblehead's case count, and Helene reported on the first day of hybrid school operations."
+    summary: |
+      **COVID-19 Case Count**
+      Andrew reported 265 total cases in Marblehead with fewer than 5 active. He noted that students testing positive while attending college out of state may be temporarily attributed to Marblehead until investigation confirms their primary residence, which could cause minor fluctuations in the town's case count. Statewide, 286 new confirmed cases were reported that day, with a cumulative total of 123,425 and 9,016 confirmed deaths.
+      
+      **School Reopening Committee Report**
+      Helene provided a detailed report from the prior day's reopening committee meeting:
+      - Superintendent visited multiple schools on opening morning; anecdotal reports were generally positive across elementary buildings
+      - A few Chromebook and technical glitches were noted and addressed
+      - Facilities updates: new HVAC compressors and air purifiers on order; vents being repaired; classroom air-mover filters being upgraded; each staff member issued one face shield
+      - 300 new laptops ordered for staff, expected within two weeks
+      - Health and safety: daily parent self-certification required before sending students; students with mask exemptions will have temperatures taken each day upon entry
+      - School mask policy: no exhalation valves, no gators (masks must have ear loops or ties per DPH/CDC guidance)
+      
+      **State Mobile Rapid Response Testing Unit**
+      Andrew described the state's mobile rapid response unit, which can be deployed for asymptomatic testing under specific thresholds:
+      
+      | Trigger | Deployment scope |
+      |---|---|
+      | 2+ positives in a single classroom in 14 days | That classroom |
+      | 3+ positives or ≥3% of a grade/cohort in 14 days | That cohort |
+      | >3% of a school in 14 days | Entire school |
+      | 2+ positives on same bus in 14 days | That bus |
+      
+      **Fall Sports**
+      First practice date per MIAA: October 2; Marblehead aligning to October 5 (first day of in-person classes). Two weeks of practice required before games. Football and cheerleading will not take place; golf, soccer, and field hockey will proceed in modified form.
+      
+      **Communication Concerns**
+      Board members discussed a delay in notifying staff about a custodial employee's positive case at Veterans School; some staff did not receive official communication for approximately one week. The board recommended the superintendent establish a clear, timely communication protocol for staff. Andrew confirmed that businesses (including schools) are required to report cases to local public health, but the board does not disclose individual case details.
+      
+      **Restaurant/Outdoor Dining Extension**
+      Andrew noted the state ABCC has extended outdoor dining beyond the prior November 1 deadline; exact end date was not confirmed. Tents with two open sides and outdoor heaters are permitted subject to fire and building department review.
+    key_speakers: ["Andrew (Public Health Director)", "Helene (Board member)", "Michelle (Board member)", "Board Chair (unnamed)", "Tom (unnamed, question via Zoom)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

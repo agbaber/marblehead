@@ -11,6 +11,95 @@ duration_seconds: 4570
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health discusses COVID protocols, testing options, and school safety"
+  summary: "The Board of Health held its regular meeting on November 17, 2020, covering state COVID-19 guidance updates, local case reporting changes, and community testing options. Members discussed the possibility of bringing Cataldo Ambulance to Marblehead for resident testing funded through the CARES Act, which was set to expire December 30. The board scheduled follow-up meetings for December 8 and December 15, 2020."
+  decisions:
+    - "Approved minutes from November 2 meeting"
+    - "Approved minutes from November 10 meeting"
+    - "Scheduled next meetings for December 8 and December 15, 2020"
+  votes:
+    - motion: "Approve November 2 meeting minutes"
+      result: "in favor (unanimous)"
+    - motion: "Approve November 10 meeting minutes"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 0
+    end_seconds: 93
+    headline: "Board approves minutes from November 2 and November 10 meetings"
+    dek: "Both sets of minutes were approved unanimously before moving to the COVID update."
+    summary: "The chair called the meeting to order and moved immediately to approval of minutes from the November 2 and November 10 meetings. Both sets were approved unanimously."
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 93
+    end_seconds: 2073
+    featured: true
+    headline: "Health director reviews state COVID guidance, testing options, and holiday protocols"
+    dek: "The board's health director covered updated quarantine rules, college student travel guidance, potential local testing via Cataldo Ambulance, and an Abbott rapid-test rollout to schools."
+    summary: |
+      Health Director Andrew presented a wide-ranging COVID-19 update:
+      
+      **State quarantine guidance:** The Department of Public Health updated its quarantine rules. Individuals in quarantine due to close contact may now exit after 10 days (rather than 14) if they receive a negative PCR test administered at least 8 days after exposure and have no symptoms.
+      
+      **College student travel:** The Baker administration issued guidance urging colleges to test students within 72 hours before they depart for the holidays, and to require a negative test result before students return to campus.
+      
+      **Abbott rapid testing:** The state announced it would roll out Abbott antigen tests (15-minute results) to school districts. A pilot program was completed successfully; broader distribution to districts was expected but no firm timeline was given during the November 17 state call.
+      
+      **Local testing site:** The Health Department contacted Cataldo Ambulance about providing symptomatic/contact testing for Marblehead residents. Funding would come from CARES Act money, which was set to expire December 30, 2020.
+      
+      **Mask compliance:** New "Mask Up Marblehead" signs were received and would be posted across town. The Health Department and Police Department share enforcement authority under the Governor's order; fines are available but education was the primary approach.
+      
+      **Holiday guidance:** Indoor residential gatherings were limited to 10 people; outdoor to 25 (not both simultaneously). Massachusetts travel orders required testing before return from all states except Vermont and Hawaii.
+      
+      **Mental health resources:** Mass 211, 888-215-4920, and Red Cross Virtual Family Assistance Center were highlighted as 24-hour resources.
+    key_speakers: ["Andrew (Health Director)", "Helene (Board member)", "Michelle Gottlieb (Board member)"]
+  - topic: school-budget
+    topic_confidence: 0.7
+    start_seconds: 1705
+    end_seconds: 2073
+    headline: "Reopening committee reports schools staying in hybrid model after Thanksgiving"
+    dek: "The reopening committee spent over an hour debating whether to return to hybrid instruction after Thanksgiving and decided to proceed with in-person hybrid learning while urging families to follow all DPH protocols."
+    summary: |
+      A board member reported on two reopening committee meetings. The superintendent had met with the Commissioner of Education, who encouraged full in-person learning, but the Marblehead school community decided to remain in the cohort A/B hybrid model. Teachers were described as satisfied with the current approach.
+      
+      The committee also discussed that cleaning and disinfecting surfaces was being reassessed as less critical than air quality, and that the district was considering reducing the number of outside custodial staff (approximately 30 additional individuals had been hired).
+      
+      A community notice was sent to school families urging avoidance of travel, limiting gatherings, and following all DPH protocols over the Thanksgiving break.
+    key_speakers: ["Helene (Board member)", "Sarah (School Committee member, identified from context)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 2165
+    end_seconds: 4278
+    headline: "Residents raise questions on mask enforcement, school contact tracing, and testing access"
+    dek: "Multiple residents used the public comment period to ask about mask compliance enforcement, contact notification practices in schools, testing turnaround times, and community volunteer opportunities."
+    summary: |
+      Several residents spoke during the public comment period:
+      
+      - **Jodi Smith** asked about mask compliance enforcement and fines, and suggested police presence at high-traffic outdoor areas like rail trails. Board members discussed the possibility of coordinated sign-posting with police presence as a community signal.
+      
+      - **Zazie Kindle (163 Jersey Street)** asked whether the six-foot distancing requirement in schools could be eased to allow more in-person hours, noting that no school transmission had been identified. The board and Helene responded that the six-foot standard was being maintained statewide and was the consensus of the health and safety committee.
+      
+      - **Dawn** (identified as working in a special-needs classroom) raised concerns about lack of information and inability to maintain six-foot distancing with students who have special needs. Members directed her to raise these concerns with the school department and superintendent.
+      
+      - **Susie** (high school student or parent) raised concerns about contact notification when a classmate tests positive, and about pressure on students to attend school despite symptoms. Andrew clarified that close contacts (cumulative 15 minutes within six feet over 24 hours) receive direct notification, but that HIPAA constraints limit broader classroom-level notification.
+      
+      - **Sandra** (described as a healthcare provider and parent) asked about the timeline for local testing sites and the Abbott test rollout, noting that Quest PCR turnaround times were running five to ten days.
+      
+      - **Jean Lamkin (19 Devereux Street)** suggested community-level notification analogous to lice notices (without identifying individuals), and offered to volunteer for sign-posting and community support networks.
+    key_speakers: ["Jodi Smith (resident)", "Zazie Kindle (163 Jersey Street)", "Dawn (special-needs classroom staff)", "Sandra (healthcare provider/parent)", "Jean Lamkin (19 Devereux Street)", "Andrew (Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 4278
+    end_seconds: 4551
+    headline: "Board schedules December 8 and December 15 follow-up meetings and adjourns"
+    dek: "Members set two upcoming meeting dates timed to capture post-Thanksgiving case trends, with a December 15 start time moved to 6:30 p.m."
+    summary: "The board agreed to meet on December 8 (approximately seven days post-Thanksgiving) and December 15 (approximately 14–15 days post-Thanksgiving) to monitor for any case increase. The December 15 meeting was set to begin at 6:30 p.m. to accommodate a board member's other commitment. Members noted the December 15 meeting could be canceled if not needed. The health director noted he would be on vacation but was not expected to be absent from duties. The board then voted unanimously to adjourn."
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

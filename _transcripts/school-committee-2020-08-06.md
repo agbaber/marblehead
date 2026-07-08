@@ -11,6 +11,33 @@ duration_seconds: 346
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "School Committee adjourns reopening meeting after Zoom hits 300-person limit"
+  summary: "The Marblehead School Committee called the meeting to order on August 7, 2020 then immediately recessed to attempt to expand the Zoom account beyond its 300-participant cap. After staff were unable to increase capacity that evening, the committee voted to adjourn and reschedule the meeting for Monday, August 10 at 7 p.m. The superintendent's school reopening document was authorized for public posting at backtogethermhd.com."
+  decisions:
+    - "Approved 15-minute recess to attempt Zoom capacity expansion"
+    - "Adjourned meeting and rescheduled to Monday August 10 at 7 p.m."
+    - "Authorized posting of superintendent's reopening document at backtogethermhd.com"
+  votes:
+    - motion: "Motion to take 15-minute recess"
+      result: "in favor (5 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 7
+    end_seconds: 106
+    featured: true
+    headline: "Meeting adjourned after Zoom exceeds 300-person cap; rescheduled to Aug 10"
+    dek: "The committee recessed to seek a capacity increase but could not resolve the issue that evening."
+    summary: |
+      The chair opened the meeting at 7:08 p.m. and immediately flagged that attendance had exceeded the Zoom account's 300-participant limit, constituting an open meeting law concern. A motion to recess for 15 minutes while staff attempted to expand capacity passed 5–0 (Sarah Gold, Megan Taylor, Emily Baron, Sarah Fox, and David Harris all in favor).
+      
+      During the recess, staff member Kyle was unable to increase the participant limit that evening but indicated the account could be upgraded to 1,000 participants the following morning. The chair announced the meeting would adjourn and be re-posted for **Monday, August 10 at 7 p.m.**, within the 48-hour emergency posting window.
+      
+      The superintendent confirmed he was comfortable having his reopening document posted publicly at **www.backtogethermhd.com** pending the rescheduled meeting. The chair also noted that the state deadline for submitting reopening plans had been extended by the Commissioner, reducing urgency around the original Monday submission date.
+    key_speakers: ["Sarah Fox (Chair)", "John (Superintendent)", "Kyle (administrative staff, referenced)", "Sarah Gold (committee member)", "Megan Taylor (committee member)", "Emily Baron (committee member)", "David Harris (committee member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

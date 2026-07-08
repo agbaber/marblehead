@@ -11,6 +11,40 @@ duration_seconds: 463
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "School Committee approves three-phase reopening plan with early-learner phase-in commitment"
+  summary: "The Marblehead School Committee voted unanimously to accept a three-phase school reopening plan presented by Superintendent John, with a recommendation that early learners (K-3) be phased in before October 5th where possible. Members debated the challenges of remote learning for young children versus trusting educators to be creative and adaptive. The superintendent noted that impact bargaining with the teachers' union would be required before making in-building attendance mandatory."
+  decisions:
+    - "Approved three-phase reopening plan as presented, with a recommendation for continued consideration to allow early learners to phase in before October 5th"
+  votes:
+    - motion: "Accept the three-phase reopening plan with a recommendation to phase in early learners as soon as possible before October 5th"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.72
+    start_seconds: 0
+    end_seconds: 414
+    featured: true
+    headline: "School Committee unanimously approves three-phase reopening plan for fall 2020"
+    dek: "Members approved the superintendent's phased return-to-school framework and urged support for teacher creativity in remote and hybrid settings."
+    summary: |
+      The committee moved, seconded, and unanimously approved a three-phase school reopening plan presented by Superintendent John, adding a recommendation that K-3 early learners be allowed to phase into buildings before October 5th if possible.
+      
+      Discussion centered on the difficulty of remote learning for young children. Several members acknowledged that while learning *can* occur remotely — one member described her daughter learning to read via Zoom with a small reading group — it places a significant burden on families and is harder to manage independently for younger students.
+      
+      Members emphasized the importance of trusting educators to be creative within policy and budget constraints the committee could help address. The superintendent noted a close working relationship with the union president (Joan) and that **impact bargaining** would be required for hybrid learning modalities, leave requests, and related matters. He expressed a *preference* for teachers to be in classrooms but stopped short of declaring in-building attendance mandatory.
+      
+      **Roll-call vote:**
+      | Member | Vote |
+      |---|---|
+      | Sarah Gold | Yes |
+      | Sarah Fox | Yes |
+      | Megan Taylor | Yes |
+      | David Harris | Yes |
+      | Emily Barron | Yes |
+    key_speakers: ["John (Superintendent)", "Sarah Gold (committee member)", "Sarah Fox (committee member)", "Megan Taylor (committee member)", "David Harris (committee member)", "Emily Barron (committee member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

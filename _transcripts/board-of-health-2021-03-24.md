@@ -11,6 +11,80 @@ duration_seconds: 2240
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health selects Mental Health Task Force members"
+  summary: "The Board of Health received a COVID-19 update noting 1,213 total cases and high local vaccination rates, with 95% of residents over 75 having received at least one dose. The board selected three members for the new Mental Health Task Force: healthcare professional Kimberly Howard and two citizen members, Melissa Kapplovich and Kimberly Levensal. The first task force meeting was set for Monday, March 29, 2021 at 7:30 p.m."
+  decisions:
+    - "Appointed Kimberly Howard as the healthcare professional representative to the Mental Health Task Force"
+    - "Appointed Melissa Kapplovich and Kimberly Levensal as citizen representatives to the Mental Health Task Force"
+    - "Scheduled first Mental Health Task Force meeting for March 29, 2021 at 7:30 p.m."
+  votes:
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 574
+    headline: "COVID-19 update: 1,213 total cases; 95% of residents 75+ have received at least one vaccine dose"
+    dek: "Health officials reported a slight uptick in daily incident rate and percent positive, while highlighting expanded vaccine eligibility and a successful senior housing clinic."
+    summary: |
+      The board received a bi-weekly COVID-19 update as of March 19, 2021, reporting 1,213 total cases in Marblehead with a slight increase in average daily incident rate and percent positive. Officials reported that approximately 95% of residents over age 75 had received at least one vaccine dose.
+      
+      A clinic held the previous day vaccinated just over 110 individuals from senior housing in partnership with the Council on Aging and Marblehead Housing Association. A second-dose clinic was scheduled 28 days later.
+      
+      As of March 21, 2021, Massachusetts had shipped 3,232,930 doses statewide with 2,919,765 administered. The board noted that Governor's COVID-19 Order No. 66, effective March 22, 2021, moved all municipalities to Phase 4, Step 1, and converted the mandatory travel order to an advisory. The public was directed to mass.gov for updated guidance.
+      
+      For homebound individuals, a vaccine sign-up line was announced: 1-833-983-0485, using the single-dose Janssen vaccine.
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 574
+    end_seconds: 1831
+    headline: "School reopening committee update: K-6 in-person going smoothly; high school hybrid continues through April 15"
+    dek: "A board member summarized the school reopening committee's work, noting pool testing participation has grown to over 800 students and high school events guidance is pending from DESE."
+    summary: |
+      A board member provided an informal update from the school reopening committee, noting no formal report had been submitted in five weeks. Key points included:
+      
+      - K-6 in-person instruction is proceeding smoothly, with classrooms reconfigured and fire department egress checks completed.
+      - Pool testing participation grew from 555 students in the first week to over 800, with student demand increasing.
+      - The high school remains in hybrid mode, with a planned return to full in-person around April 15.
+      - Questions about senior events (prom, graduation, powder puff football, senior banquet, concerts, etc.) have been forwarded to DESE for statewide guidance. Officials emphasized uniform standards across municipalities.
+      
+      The health agent noted that questions from Marblehead High School were escalated to the state, which passed them to DESE for guidance applicable to all Massachusetts schools.
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1831
+    end_seconds: 2223
+    featured: true
+    headline: "Board selects Mental Health Task Force members: Kimberly Howard, Melissa Kapplovich, Kimberly Levensal"
+    dek: "After reviewing anonymized applications, the board unanimously agreed on one healthcare professional and two citizen members; the full task force roster was announced."
+    summary: |
+      The Board of Health selected three members to fill open seats on the new Mental Health Task Force. Applications were reviewed using an anonymized numbering system. All three board members independently converged on the same candidates.
+      
+      **Appointed members:**
+      
+      | Role | Name |
+      |---|---|
+      | Board of Health representative | Michelle (board member, acting as chair of committee) |
+      | Board of Selectmen representative | Moses Grader |
+      | School administration | Dan Bauer, Principal, Marblehead High School |
+      | School guidance | Jeff Newsom, Village School |
+      | Marblehead Counseling Center | Ben Day, Director |
+      | Council on Aging | Lisa Hooper or Karen Smith (to be confirmed) |
+      | Healthcare professional (newly appointed) | Kimberly Howard |
+      | Citizen member (newly appointed) | Melissa Kapplovich |
+      | Citizen member (newly appointed) | Kimberly Levensal |
+      
+      The board acknowledged that all applicants were qualified and encouraged those not selected to apply for other town positions. The first task force meeting was set for **Monday, March 29, 2021 at 7:30 p.m.** The board discussed scheduling future meetings and agreed to coordinate via email given scheduling conflicts on alternate dates.
+  - topic: public-comment
+    topic_confidence: 0.7
+    start_seconds: 2133
+    end_seconds: 2223
+    headline: "No public comment; board adjourns unanimously"
+    dek: "No members of the public spoke during the public participation portion; the board voted to adjourn."
+    summary: "The chair opened a public participation agenda item and allowed a brief period for comment. No members of the public raised their hands to speak. A motion to adjourn was made, seconded, and approved unanimously."
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

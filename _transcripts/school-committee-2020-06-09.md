@@ -11,6 +11,57 @@ duration_seconds: 799
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead School Committee holds FY21 budget public hearing; vote set for June 18"
+  summary: "The School Committee held a public hearing on the FY21 school budget on June 8, 2020. The proposed budget was adjusted downward from $41.4 million to $40.5 million, a reduction of over $900,000 from the February draft. Discussion focused on budget goals including special education tuition and transportation, central administration reorganization, and unknown costs related to school reopening under COVID-19 conditions. A final budget vote was scheduled for June 18 at the next regularly scheduled School Committee meeting."
+  decisions:
+    - "Scheduled final FY21 budget vote for June 18 School Committee meeting"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 6
+    end_seconds: 708
+    featured: true
+    headline: "FY21 school budget reduced to $40.5M; COVID reopening costs flagged as unknown"
+    dek: "The budget dropped over $900,000 from the February draft, with COLA and steps savings cited; reopening unknowns include PPE, cleaning, technology, and student support costs."
+    summary: |
+      Superintendent (or designee) outlined FY21 budget goals and the adjustment from the original February draft:
+      
+      - **Original draft budget (February):** $41.4 million
+      - **Current proposed budget:** $40.5 million
+      - **Reduction:** over $900,000, including over $500,000 in COLA/step savings
+      
+      **Budget goals identified:**
+      1. Meet collective bargaining contractual obligations
+      2. Reorganize central administration (HR director and Director of Operations/Technology positions not funded in FY20; restore assistant superintendent position)
+      3. Manage special education tuition and transportation to full funding
+      4. Ensure equitable access to K-6 math and science curriculum across schools (Gerry and Glover)
+      5. Address facilities maintenance (supplies, repairs, utilities)
+      
+      All original goals are supported by the current budget except the curriculum coach position and administrative COLAs.
+      
+      **COVID-19 reopening unknowns** flagged as potential cost pressures:
+      - Social distancing physical modifications (e.g., transparent barriers in clerical areas)
+      - PPE requirements
+      - Transportation changes
+      - Cleaning and disinfectant supplies
+      - Student social-emotional and academic support
+      - Technology needs for hybrid or staggered attendance models
+      
+      Administration described a process for addressing mid-year cost overruns: convene the leadership team, develop scenarios with rationale, and bring recommendations to the School Committee.
+      
+      A follow-up School Committee meeting was noted for Wednesday, described as an ongoing discussion rather than a major change in direction. The final budget vote was set for **Thursday, June 18**.
+    key_speakers: ["Town Administrator or Superintendent (unnamed)", "Michelle (business/finance manager, referenced)", "Bill (School Committee member, referenced)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.72
+    start_seconds: 708
+    end_seconds: 751
+    headline: "MHTV Headliner closes with reminder of upcoming meetings and COVID-19 updates"
+    dek: "Host John Caswell noted that MHTV would continue COVID-19 updates via website, Facebook, and email list."
+    summary: "Host John Caswell closed the segment by confirming the FY21 budget vote was scheduled for June 18 and directing viewers to MHTV resources including marvelatv.org, the MHTV Facebook page, and a Constant Contact email signup for ongoing COVID-19 updates."
+    key_speakers: ["John Caswell (MHTV host)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

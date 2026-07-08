@@ -11,6 +11,119 @@ duration_seconds: 6463
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health approves 5-year waste contract, CDC school guidelines"
+  summary: "The Board of Health met with Marblehead Counseling Center director Ben to review mental health services and discussed forming a town-wide mental health task force. The board voted to recommend the CDC's operational strategy for K–12 schools and approved entering a five-year waste disposal contract with Waste Management at $113.45 per ton in year two. Andrew provided a COVID-19 update noting 1,146 total cases, 35 active cases, and 31 deaths, along with vaccination rollout challenges."
+  decisions:
+    - "Approved January 5th meeting minutes as amended"
+    - "Approved January 19th meeting minutes"
+    - "Approved recommending CDC's K–12 operational strategy for phase mitigation to the school department"
+    - "Approved entering a five-year waste disposal contract with Waste Management"
+  votes:
+    - motion: "Approve January 5th minutes as amended"
+      result: "in favor (unanimous)"
+    - motion: "Approve January 19th minutes"
+      result: "in favor (unanimous)"
+    - motion: "Recommend CDC operational strategy for K–12 schools through phase mitigation to the school department"
+      result: "in favor (unanimous)"
+    - motion: "Enter into a five-year contract with Waste Management"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 1
+    end_seconds: 103
+    headline: "Board approves minutes from January 5th and January 19th meetings"
+    dek: "Both sets of minutes passed unanimously; the January 5th minutes were approved as amended."
+    summary: "The board opened the meeting with housekeeping, approving the January 5th minutes as amended (one change made prior to the meeting) and the January 19th minutes. Both votes were unanimous."
+    key_speakers: ["Elaine (Board Chair)", "Andrea (staff/clerk)"]
+  - topic: public-safety
+    topic_confidence: 0.75
+    start_seconds: 103
+    end_seconds: 2920
+    headline: "Counseling Center director reports 371 residents served; mental health task force proposed"
+    dek: "Ben from the Marblehead Counseling Center outlined services funded by the town's $60,000 appropriation and participated in discussion of a proposed town-wide mental health task force."
+    summary: |
+      The Counseling Center director reported that the town's $60,000 contribution plus approximately $55,000 from fundraising and insurance enabled 371 Marblehead residents to receive 3,300 counseling sessions. A psychiatrist hired in March saw 28 individuals for 86 sessions. Two new therapists were hired to meet COVID-related demand, with a goal of adding three more by June.
+      
+      The center's social services program assisted 60 families (a 28% increase over the prior year) and supported 74 families and 150 children during the holiday season. A 30-day wait list for children was noted, attributed to therapist capacity rather than prioritization of out-of-town residents. Children receiving virtual sessions face privacy challenges at home.
+      
+      Board member Michelle proposed forming a town-wide mental health task force under the Board of Health's umbrella, with representation from the Board of Health, Board of Selectmen, school administration, school mental health staff, a mental health professional (such as Ben), a medical professional, and two citizen representatives. Council on Aging representatives Lisa Hooper and Karen Smith expressed interest in participating, noting particular concern for isolated seniors. The board agreed to formally create the task force at the next meeting and directed Michelle to consult with the town administrator about formation process and legal requirements.
+    key_speakers: ["Ben (Marblehead Counseling Center director)", "Michelle (Board of Health member)", "Elaine (Board Chair)", "Sondra (Board member)", "Lisa Hooper (Council on Aging)", "Karen Smith (Council on Aging)", "Andrew (Health Director/Town Health Agent)"]
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 2920
+    end_seconds: 4253
+    headline: "COVID update: 1,146 total cases, 35 active; vaccine rollout challenges outlined"
+    dek: "Health Director Andrew reported declining case and positivity rates but described significant frustration with the state's vaccine distribution approach."
+    summary: |
+      As of the most recent report, Marblehead had 1,146 total cases (up 36 from the prior week), 35 active cases, and 31 deaths. The average daily incidence rate was 28.1, down from approximately 52, and the 14-day percent positive rate was 2.23%, down from just over 4%. Approximately 3,775 tests were taken in the prior two weeks.
+      
+      The 20–29 age group continued to trend highest for new cases. Hospital capacity across the Commonwealth remained elevated as patients deferred during COVID were returning for other conditions.
+      
+      On vaccines, Andrew noted Massachusetts ranked highly nationally in per-capita first doses administered. As of the report date, more than 251,000 residents age 75 and older had received a first dose, representing 51% of the statewide population in that cohort. The state had recently added 65+ and those with two or more qualifying conditions to Phase 2.
+      
+      New doses available to the state were approximately 139,000 per week, presenting a significant supply constraint for the newly expanded eligibility. Local health departments reported frustration with the state's shift toward mega vaccination sites, the PrepMod system crash, and difficulty of access for elderly residents. Andrew noted plans to hold Marblehead Housing Authority clinics and continued coordination with five surrounding communities (Swampscott, Salem, Danvers, and Beverly).
+      
+      Post-vaccination, residents were advised to continue following all existing guidelines, as Massachusetts had not yet adopted CDC guidance allowing fully vaccinated individuals to forgo isolation after a COVID exposure.
+    key_speakers: ["Andrew (Health Director)", "Sondra (Board member)", "Elaine (Board Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.7
+    start_seconds: 3699
+    end_seconds: 4253
+    featured: true
+    headline: "Board unanimously votes to recommend CDC K–12 operational strategy to school department"
+    dek: "The board adopted the CDC's phased mitigation guidance for K–12 schools, noting it calls for masks and six-foot distancing at current community transmission levels, including for sports and extracurricular activities."
+    summary: |
+      The board discussed the CDC's newly released operational strategy for K–12 schools through phase mitigation. At Marblehead's current average daily incidence rate of 28.1, the community falls in the moderate (yellow) transmission category, which under CDC guidance requires masks and six feet of physical distancing, including for sports and extracurricular activities.
+      
+      Board member Elaine noted that high school football practice had begun the prior Monday and questioned whether those protocols were being followed. Board members agreed they should not selectively endorse parts of the document, but rather recommend it in full.
+      
+      Michelle moved to recommend the CDC's operational strategy for K–12 schools through phase mitigation as the recommended framework for the school department to follow. The motion passed unanimously 3–0.
+      
+      > **Vote:** Recommend CDC K–12 operational strategy to school department — In favor (unanimous)
+    key_speakers: ["Elaine (Board Chair)", "Michelle (Board of Health member)", "Andrew (Health Director)", "Sondra (Board member)"]
+  - topic: trash-dpw
+    topic_confidence: 0.98
+    start_seconds: 5523
+    end_seconds: 6169
+    headline: "Board approves 5-year Waste Management disposal contract at $113.45/ton in year two"
+    dek: "The board voted to enter a five-year contract aligning with the town's JRM collection contract expiration in 2026; the current rate of $97.38/ton rises to $113.45 in year two."
+    summary: |
+      Andrew presented four contract options from Waste Management for solid waste disposal following the expiration of the current five-year (sixth-year) contract. The current disposal rate is $97.38 per ton. The town's largest disposal year was fiscal year 2019 at 12,470 tons, representing approximately $1.21 million in disposal costs.
+      
+      The town offsets disposal costs through commercial tonnage fees currently set at $185 per ton, generating approximately $670,000 annually. The current disposal budget is $725,491.
+      
+      For comparison, Winchester recently bid disposal-only (no trucking) at $90/ton; estimated trucking costs of $25–$30/ton would put their all-in cost at approximately $115–$120/ton, compared to Marblehead's all-in rate of $97.38.
+      
+      | Option | Term | Year 2 Rate | Annual Escalator |
+      |--------|------|-------------|------------------|
+      | 1 | 3 years | $120.00 | 4% |
+      | 2 | 5 years | $113.45 | 3.5% (yr 3–4), 4% thereafter |
+      | 3 | 7 years | $111.01 | 4% |
+      | 4 | 10 years | $110.09 | 4% |
+      
+      Andrew recommended Option 2 (five years) because it would align contract expiration with the JRM collection contract ending January 30, 2026, enabling a combined bid at that time. By the end of Option 2, disposal costs would reach approximately $1.6 million annually.
+      
+      The board voted unanimously to enter into the five-year contract. Andrew will negotiate with Waste Management's Lisa Mead; the draft contract will be reviewed by town counsel and brought back for final signatures.
+      
+      The board also noted that over 550 residents are enrolled in weekly compost pickup and the transfer station has 665 compost containers weekly, with potential savings to be shared at a future meeting. Residential sticker fees were discussed but no increase was proposed given current economic conditions.
+    key_speakers: ["Andrew (Health Director)", "Elaine (Board Chair)", "Michelle (Board of Health member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 6169
+    end_seconds: 6440
+    headline: "Board shifts to biweekly meetings; annual report due end of week"
+    dek: "The board agreed to meet next on March 9th and asked members to review the annual report draft for any edits by end of week."
+    summary: |
+      Andrew noted the annual report had been emailed and asked members to send any edits as soon as possible, with the town clerk looking to finalize it by end of week.
+      
+      The board discussed whether to continue weekly meetings or shift to biweekly. Members agreed to meet again in two weeks (March 9th at 7:30 PM) given anticipated developments around school reopening, vaccination rollout, and possible case surges following February vacation, with the option to return to weekly meetings if needed.
+      
+      Andrew also read aloud a thank-you note from transfer station staff (Mike, Chris, Ralph, Marty, and Kay) acknowledging a food delivery from the board.
+    key_speakers: ["Elaine (Board Chair)", "Andrew (Health Director)", "Michelle (Board of Health member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

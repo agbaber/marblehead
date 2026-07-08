@@ -11,6 +11,65 @@ duration_seconds: 576
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead School Committee discusses fall reopening plan and superintendent farewell"
+  summary: "The Marblehead School Committee met on June 18th to discuss planning for school reopening in fall 2020, pending guidance from DESE expected imminently. A school reopening committee structure was proposed, to be chaired by the superintendent and including administrators, teachers, nurses, and parent representatives. The outgoing superintendent also reported on Bell School construction progress, a summer meals program estimated at $2,700, and offered farewell remarks."
+  decisions:
+    - "Approved change to Bell School brick color by Planning Board vote of 4 to 1"
+  votes:
+    - motion: "Planning Board approval of Bell School brick color change"
+      result: "in favor (4 to 1)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.55
+    start_seconds: 5
+    end_seconds: 202
+    featured: true
+    headline: "School Committee awaits DESE guidance to form fall reopening committee"
+    dek: "Superintendent outlined a proposed school reopening committee structure pending release of the state's prescriptive reopening plan."
+    summary: |
+      The superintendent reported that DESE's fall school reopening plan, described as prescriptive in nature, was expected imminently — possibly the following day. A school reopening committee was proposed to oversee Marblehead's implementation, to be chaired or co-chaired by the superintendent.
+      
+      Proposed membership included:
+      - Central office administrators
+      - Building principals
+      - A nurse leader
+      - Marblehead Education Association president
+      - School Committee chair or designee
+      - Parent representatives
+      - Professional staff across content areas and grade levels
+      
+      The committee would determine necessary subcommittees once the DESE plan was released and would address academic, social-emotional, mental health, and operational needs.
+    key_speakers: ["Superintendent (outgoing)", "John Caswell (MHTV host)"]
+  - topic: bonding-capital
+    topic_confidence: 0.72
+    start_seconds: 202
+    end_seconds: 397
+    headline: "Bell School construction advances; Planning Board approves brick color change 4-1"
+    dek: "Rock crushing completed ahead of schedule and ground improvement work underway; brick color change formally approved."
+    summary: |
+      The superintendent provided a construction update on the Bell School project:
+      
+      - Rock crushing equipment was removed from the site a couple of weeks ahead of schedule, leaving a large stockpile of crushed rock for on-site use.
+      - Post-blast inspections of neighboring houses began the prior weekend and were continuing to completion.
+      - Ground improvement work was underway in the lower Bell area, which will anchor most classrooms, with concrete and superstructure work expected to begin in coming weeks.
+      - The Planning Board voted **4 to 1** to approve a change in the color of brick; all required paperwork was submitted and moving forward.
+    key_speakers: ["Superintendent (outgoing)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 397
+    end_seconds: 550
+    headline: "Summer meals program to continue at estimated cost of $2,700; superintendent offers farewell"
+    dek: "A parent volunteer offered to lead fundraising to cover the summer meals program cost as the outgoing superintendent gave closing remarks."
+    summary: |
+      The school lunch program serving approximately 65 students was continuing through the end of June. Staff and administration confirmed the program could continue through the summer at an estimated cost of approximately **$2,700**.
+      
+      Parent Samantha Rosado offered to lead fundraising efforts to cover that cost. Staff were confirmed to be available if the district moved forward with the summer extension.
+      
+      The superintendent closed with farewell remarks, expressing gratitude to the Marblehead Education Association president Joe Miller, central office support staff, and the broader school community. He noted he would remain through June 30th and expressed hope that the district was in better shape at the end of his tenure than when he arrived.
+    key_speakers: ["Superintendent (outgoing)", "Samantha Rosado (parent volunteer)", "Joe Miller (MEA president, referenced)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

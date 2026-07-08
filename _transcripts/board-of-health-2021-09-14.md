@@ -11,6 +11,110 @@ duration_seconds: 1912
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health returns to monthly meetings as COVID metrics improve"
+  summary: "The Board of Health met on September 14, 2021 to review COVID-19 case data, vaccination rates, and public health operations. The board discussed the status of a potential indoor mask mandate in public buildings, booster shot planning, and pool testing in schools. The board voted to return to its pre-pandemic schedule of meeting on the second Tuesday of each month."
+  decisions:
+    - "Approved return to monthly meetings on the second Tuesday of each month, beginning October 12"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-safety
+    topic_confidence: 0.82
+    start_seconds: 0
+    end_seconds: 306
+    featured: true
+    headline: "COVID cases total 1,462; breakthrough cases account for ~50% of current infections"
+    dek: "Health Director reported vaccination rates above 86% across all age groups and a 0.98% positivity rate over the prior 14 days."
+    summary: |
+      As of September 10, 2021, Marblehead had a cumulative total of 1,462 COVID-19 cases, up 13 from the prior week. The two-week average daily incidence rate was 8.3. Of 2,441 tests administered in the last 14 days, the positivity rate was 0.98%.
+      
+      **Vaccination rates by age group (fully vaccinated):**
+      
+      | Age Group | Rate |
+      |-----------|------|
+      | 12–15 | 86% |
+      | 16–19 | >95% |
+      | 20–29 | 86% |
+      | 30–49 | 91% |
+      | 50–64 | 90% |
+      | 65–74 | 89% |
+      | 95+ | >95% |
+      
+      Approximately 50% of current cases were reported as breakthrough cases in vaccinated individuals. The Health Director noted clusters spreading within households and encouraged daily symptom monitoring for all residents.
+    key_speakers: ["Andrew (Health Director)"]
+  - topic: public-safety
+    topic_confidence: 0.75
+    start_seconds: 306
+    end_seconds: 555
+    headline: "No indoor mask mandate recommended; Select Board did not act on Board of Health suggestion"
+    dek: "The Health Director reported that the Select Board informally indicated no mask mandate in public buildings was needed at this time, with the state mandate set to expire October 1."
+    summary: |
+      The Board of Health had previously recommended that the Select Board consider a mask mandate in public buildings. The Health Director reported he had not received official correspondence but understood informally that the Select Board did not consider it necessary at this time. The state mask mandate was noted as technically expiring October 1, with no update from DESI as of the meeting date.
+      
+      The board also discussed third-dose availability for immunocompromised individuals (to be managed through primary care physicians) and booster shot planning. The Health Director stated that booster clinics would be announced once the state provided authorization and guidance, with no timeline confirmed.
+    key_speakers: ["Andrew (Health Director)"]
+  - topic: public-safety
+    topic_confidence: 0.7
+    start_seconds: 555
+    end_seconds: 837
+    headline: "Pool testing in schools enables 'test and stay' protocol; Brown School opening set for October 13"
+    dek: "Board members discussed school reopening conditions, bus protocols, and the pool testing program that allows students who are close contacts to remain in school."
+    summary: |
+      A board member reported that school openings at all levels went smoothly and that masks had not been a significant issue. Students on buses were required to sit separately with windows open. Schools were using tents and outdoor spaces for lunch and recess where possible.
+      
+      The pool testing program was highlighted as enabling a 'test and stay' method: students enrolled in pool testing who become close contacts during school or school-sanctioned activities (including sports) may continue attending school with ongoing testing rather than quarantining. The Brown School was reported to be opening on October 13, following Indigenous People's Day on October 11 and a teacher workshop day on October 12.
+    key_speakers: ["Elaine (board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 837
+    end_seconds: 1119
+    headline: "Mental Health Task Force website nearing launch; domain name under discussion"
+    dek: "The task force is working with Flat Rock Creative to build the site, with marbleheadcares.org among the domain options being considered."
+    summary: |
+      The Mental Health Task Force reported that a professional web development team from Flat Rock Creative was building the website pro bono, using the Lexington Mental Health Task Force site as a framework. Resources collected for Marblehead residents are being incorporated.
+      
+      Two domain name options were under consideration: a name referencing the Marblehead Mental Health Task Force and marbleheadcares.org (or .com). A committee meeting was scheduled for the following Monday at 7:00 p.m. to decide on the domain. The domain registration cost was noted as approximately $300, covered by the town. The website will also be linked from the town's main website.
+      
+      The task force also indicated plans for a speaker series to help community members identify mental health symptoms and connect with available resources.
+    key_speakers: ["Joanne (Mental Health Task Force chair)", "Andrew (Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1119
+    end_seconds: 1498
+    headline: "Household hazardous waste pickup, beach sampling season ends, West Nile virus detected in one mosquito"
+    dek: "The Health Director's report covered quarterly residential hazardous waste collection serving roughly 400 households per year, end of beach season sampling, and continued mosquito surveillance after a single West Nile virus detection."
+    summary: |
+      **Household Hazardous Waste:** A residential pickup event was scheduled for September 15 serving approximately 100 Marblehead and Swampscott homes. The quarterly model with ACV Environmental now serves approximately 400 households per year, up from 260 under the prior walk-in model. The next event was planned for December.
+      
+      **Beach Sampling:** September 15 was the final sampling day of the bathing beach season. The season was described as generally good, with some closures at Grace Oliver's Beach and Gas House Beach following July rain events.
+      
+      **West Nile Virus:** One positive West Nile virus mosquito was detected approximately a week prior. Northeast Mosquito Control installed additional traps and collected at twice the normal rate; no additional positives were detected. Surveillance was to continue until the first hard frost. No Eastern Equine Encephalitis (EEE) detections were reported.
+      
+      **Leaf Collection:** A schedule for fall and spring leaf collection was in development and expected to be posted within one to two weeks, including a postcard-format flyer.
+    key_speakers: ["Andrew (Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 1498
+    end_seconds: 1873
+    headline: "Board votes to return to monthly meetings on second Tuesday, beginning October 12"
+    dek: "After 18-plus months of more frequent meetings, the board agreed that current conditions supported returning to the pre-pandemic monthly schedule, with the ability to call emergency sessions within 48 hours."
+    summary: |
+      A board member had asked the Health Director to survey neighboring boards of health regarding meeting frequency. The Health Director reported that most area boards were meeting monthly, with remote participation still permitted under current state authorization through at least the end of the year.
+      
+      The board agreed to return to the second Tuesday of each month schedule. The next scheduled meeting would be October 12, 2021, noted as the day before Indigenous People's Day. The board acknowledged that emergency meetings could be called within 48 hours, or on shorter notice in a declared emergency.
+    key_speakers: ["Andrew (Health Director)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 1873
+    end_seconds: 1950
+    headline: "Resident clarifies Brown School opening date and notes planned public open house"
+    dek: "A resident identified as Jimmy confirmed the Brown School would open October 13 and that a public open house was anticipated shortly after."
+    summary: "A resident (identified as Jimmy) clarified for the board that the Brown School's opening day would be October 13: October 11 is Indigenous People's Day, October 12 is a teacher workshop day. He noted that a parent open house was planned for the following week and that a public open house was also anticipated, with significant community interest."
+    key_speakers: ["Jimmy (resident)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

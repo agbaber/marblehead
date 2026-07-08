@@ -11,6 +11,58 @@ duration_seconds: 314
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Select Board approves parking restriction near tourist booth and two one-day liquor licenses"
+  summary: "The Marblehead Select Board held a brief May 11, 2022 meeting, approving minutes from three prior meetings and authorizing the police chief to restrict parking on Essex Street near the tourist booth during upcoming plaza improvements. The board also approved two one-day liquor licenses: one for a Jeremiah Lee Mansion spring celebration on May 14–15, and one for Eric's Barbershop on May 21."
+  decisions:
+    - "Approved minutes of May 2, May 3, and May 5, 2022"
+    - "Approved motion authorizing police chief and town administrator to restrict parking on Essex Street near the tourist booth during construction"
+    - "Approved one-day liquor license for John Connell (Jeremiah Lee Mansion) for May 14–15, 2022"
+    - "Approved one-day liquor license for Damien Savoia / Eric's Barbershop for May 21, 2022"
+  votes:
+    - motion: "Approve minutes of May 2, 3, and 5, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Authorize police chief to restrict parking on Essex Street near tourist booth during construction"
+      result: "in favor (unanimous)"
+    - motion: "Approve one-day liquor license for Jeremiah Lee Mansion spring celebration"
+      result: "in favor (unanimous)"
+    - motion: "Approve one-day liquor license for Eric's Barbershop"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 0
+    end_seconds: 97
+    headline: "Board approves minutes of three May 2022 meetings"
+    dek: "Roll call confirmed three members present; minutes from May 2, 3, and 5 approved unanimously."
+    summary: "The chair called the May 11, 2022 meeting to order, confirmed all members participating remotely, and conducted a roll call. Members Singer, Newton, and Belk (Valfager) were present. The board unanimously approved minutes from the May 2, May 3, and May 5, 2022 meetings."
+  - topic: permits-zoning
+    topic_confidence: 0.85
+    start_seconds: 97
+    end_seconds: 195
+    featured: true
+    headline: "Board authorizes parking restriction on Essex Street for tourist booth plaza construction"
+    dek: "Construction is expected to begin the following week and finish by June 30; the project replaces the existing island with granite curbing, brick paving, and two trees."
+    summary: "The board voted to authorize the police chief, in consultation with the town administrator, to restrict parking as needed on a portion of Essex Street adjacent to the tourist booth during construction. A project representative (identified as Becky) explained the tourist booth would be temporarily moved off the island. The work involves removing the existing island and installing granite curbing, a brick plaza, concrete sidewalks, two trees, and repainting the booth. The contractor expects to complete the work before the June 30 deadline."
+    key_speakers: ["Town Administrator (voice only)", "Becky (project representative, voice only)"]
+  - topic: permits-zoning
+    topic_confidence: 0.95
+    start_seconds: 195
+    end_seconds: 287
+    headline: "One-day liquor license approved for Jeremiah Lee Mansion spring celebration May 14–15"
+    dek: "Alcohol to be purchased from Bench Water Distributing LLC; $50 fee required."
+    summary: "The board approved a one-day liquor license for John Connell for a spring celebration event at the Jeremiah Lee Mansion, 161 Washington Street, on Saturday May 14, 2022 (rain date Sunday May 15), from 10 a.m. to 2 p.m. Conditions include payment of a $50 fee, proof of purchase from an authorized source (Bench Water Distributing LLC), and proper storage and disposal of alcoholic beverages per General Law Chapter 138."
+  - topic: permits-zoning
+    topic_confidence: 0.95
+    start_seconds: 287
+    end_seconds: 302
+    headline: "One-day liquor license approved for Eric's Barbershop event May 21"
+    dek: "Damien Savoia's Eric's Barbershop at 27C Atlantic Avenue licensed 1–6 p.m.; alcohol from Martin Eddy Company United Liquors."
+    summary: "The board approved a one-day liquor license for Damien Savoia of Eric's Barbershop at 27C Atlantic Avenue on Saturday May 21, 2022, from 1 p.m. to 6 p.m. Conditions mirror the prior license: $50 fee, proof of authorized purchase (Martin Eddy Company / United Liquors), and compliance with General Law Chapter 138."
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

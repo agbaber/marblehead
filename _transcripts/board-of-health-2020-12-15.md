@@ -11,6 +11,81 @@ duration_seconds: 2812
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health reviews COVID vaccine rollout, local testing, and school reopening plans"
+  summary: "The Board of Health received an update on Massachusetts's COVID-19 vaccine distribution, with 53,625 doses arriving at 17 hospitals and up to 300,000 doses expected statewide by end of December. Local testing through Cataldo and the Broad Institute has processed roughly 684 residents over two days, with 700 more scheduled at the high school on December 21. Marblehead Public Schools announced remote instruction December 21–23 for most students, with special-needs students offered optional in-person attendance with enhanced PPE for staff."
+  decisions:
+    - "Approved adjournment"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-safety
+    topic_confidence: 0.82
+    start_seconds: 1
+    end_seconds: 2551
+    featured: true
+    headline: "COVID vaccine arrives in MA; Marblehead tests ~684 residents with 700 more slated Dec. 21"
+    dek: "Health Director outlined state vaccine phasing and local testing logistics, while the board discussed Marblehead's proximity to the state's red-zone threshold."
+    summary: |
+      The Board of Health received a detailed COVID-19 update covering Massachusetts vaccine distribution and local testing operations.
+      
+      **Vaccine rollout**
+      - 4 hospitals received 5,850 Pfizer doses Monday; 53,625 more doses arrived at 17 additional hospitals by meeting date.
+      - Commonwealth anticipates approximately 180,000 Pfizer and 120,000 Moderna doses, totaling roughly 300,000 doses by end of December.
+      - CVS and Walgreens to begin vaccinating nursing homes the week of December 28 under the CDC Long-Term Care Pharmacy Partnership Program, drawing on 40,000–60,000 doses from the state's Pfizer allocation.
+      - Roughly 70% of the Massachusetts population must be vaccinated before herd-immunity effects are expected.
+      
+      **Local case data (as of December 10)**
+      - 2,806 tests taken by Marblehead residents over the prior 14 days; positivity rate: 3.85% (108 positive cases).
+      - Cumulative cases: 503; total deaths: 31.
+      - Age breakdown (past 14 days): ages 0–19: 15 cases; 20–29: 21; 30–39: 7; 40–49: 15; 50–59: 21; 60–69: 17; 70–79: 9; 80+: 2.
+      - Board noted that under the governor's prior summer metrics, Marblehead would qualify as a red community; reaching the 5% positivity threshold would require roughly 140 positives out of ~2,800 tests (32 more than current).
+      
+      **Local testing (Cataldo / Broad Institute)**
+      - First session (Friday): approximately 300 tested; staffing shortages prevented full 410-person capacity; affected residents offered rescheduling or home visits.
+      - Second session (today): approximately 384 tested; scheduling and staffing issues largely resolved.
+      - Friday session: ~300 more scheduled.
+      - December 21 session: up to 700 scheduled; moving from Temple Emmanuel to the high school for capacity; police Captain Freeman coordinating traffic flow.
+      - Results reported in 12–48 hours through the Broad Institute and entered into the Maven disease surveillance system.
+      
+      **Community volunteer analytics**
+      Resident Kate Thompson has been assisting the Board of Health with data visualization on a volunteer basis. The board welcomed past-looking analytics while expressing caution about forward projections and correlations with specific interventions.
+    key_speakers: ["Andrew (Health Director)", "Kate Thompson (volunteer data analyst)", "Helene (Board member)", "Michelle (Board member)", "Sondra Callahan (resident at mic)", "Sarah (resident at mic)", "Pam (resident at mic)"]
+  - topic: school-budget
+    topic_confidence: 0.75
+    start_seconds: 1838
+    end_seconds: 2105
+    headline: "Marblehead schools going remote Dec. 21–23; January return undecided pending case counts"
+    dek: "School officials and the Board of Health will reassess data on or around January 1 before confirming in-person or remote return after winter break."
+    summary: |
+      Marblehead Public Schools announced that the week of December 21–23 will be remote for general-education students. Special-education students may attend in person at families' discretion; those teachers were offered enhanced PPE including N95 masks, face shields, gowns, and gloves.
+      
+      The return date after winter break (January 4) remains contingent on case counts. Superintendent John (last name not audible) noted that if numbers decline significantly by January 1, an in-person return could be reconsidered; if numbers climb further, remote instruction would continue. The proactive communication was intended to give families adequate planning time rather than a last-minute pivot.
+    key_speakers: ["Helene (Board of Health member / reopening committee participant)", "John (school department representative)"]
+  - topic: public-comment
+    topic_confidence: 0.88
+    start_seconds: 2105
+    end_seconds: 2728
+    headline: "Residents ask about testing glitches, PPE for teachers, and data reporting"
+    dek: "Several residents used public comment to raise questions about COVID testing scheduling, school PPE decisions, and the new case-report format."
+    summary: |
+      Board members acknowledged resident Jody Smith for her written suggestions and offer to assist the board with community communications, including letters to the editor and articles promoting safe behavior.
+      
+      During public comment, Sondra Callahan (a healthcare provider) described a two-hour wait at her 8 a.m. Friday testing appointment and asked whether scheduling issues had been corrected; the Health Director confirmed Friday's session ran more smoothly. She also asked why teachers were offered N95 masks; a school official explained it was a precautionary measure given that some special-needs students have mask exemptions and require close physical support.
+      
+      Resident Sarah asked about Cataldo's test turnaround time (12–48 hours) and whether a positivity rate had been calculated from the town-run sessions; the Health Director noted results flow directly from the Broad Institute into the Maven system. Resident Pam reported she had not yet been rescheduled after being turned away Friday and was advised to contact Cataldo directly for a rescheduled or home-visit option.
+    key_speakers: ["Jody Smith (resident, referenced)", "Sondra Callahan (resident at mic)", "Sarah (resident at mic)", "Pam (resident at mic)", "Helene (Board member)", "Andrew (Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2728
+    end_seconds: 2787
+    headline: "Board adjourns; next regular meeting set for Tuesday at 7:30 p.m."
+    dek: "The board moved and seconded adjournment unanimously after confirming next week's meeting schedule."
+    summary: "The chair confirmed the next Board of Health meeting would return to its regular 7:30 p.m. Tuesday time slot. A motion to adjourn was made, seconded, and approved unanimously by all members present."
+    key_speakers: ["Ms. Gulab (Board member)", "Ms. Gottlieb (Board member)", "Ms. Hazlett (Board member)", "Dr. Belfucker (Board member)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

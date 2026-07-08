@@ -11,6 +11,110 @@ duration_seconds: 3576
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health reviews COVID order cuts capacity to 25%, vaccine rollout plans"
+  summary: "The Board of Health reviewed Governor Baker's COVID-19 Order 59, effective December 26, 2020, which reduced capacity limits to 25% for most sectors and 10 persons indoors for gatherings. Director of Public Health Andrew reported 558 total confirmed cases in Marblehead as of December 18, with 81 active cases and a 4.32% positive test rate. Plans were outlined to vaccinate first responders (fire, police, EMS) beginning in January using the Moderna vaccine, with clinics of at least 200 people coordinated with neighboring communities. The board also discussed CARES Act funding expiration and a potential $30,000 extension pending presidential signature."
+  decisions:
+    - "Adjourned meeting; next meeting scheduled for January 5, 2021"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 0
+    end_seconds: 394
+    featured: true
+    headline: "Gov. Baker's COVID Order 59 cuts most sector capacity to 25% starting Dec. 26"
+    dek: "The order supersedes prior capacity rules and runs through January 10, 2021, with gatherings limited to 10 indoors and 25 outdoors."
+    summary: |
+      Board of Health Director Andrew read the full text of Governor Baker's COVID-19 Order 59, announced December 22, 2020, effective at 12:01 a.m. December 26. Key capacity limits:
+      
+      | Sector | Revised Capacity |
+      |---|---|
+      | Gatherings (private/public) | 10 indoors, 25 outdoors |
+      | Restaurants | 25% of seating |
+      | Close contact personal services | 25% |
+      | Movie theaters | 25%, max 50 people |
+      | Indoor performance venues | Closed |
+      | Offices, retail, fitness, museums | 25% |
+      
+      The order remains in effect until 12 noon January 10, 2021 unless extended. Workers and staff are excluded from occupancy counts. Governor Baker stated his rationale for the post-Christmas start date was to allow people to attend places of worship.
+    key_speakers: ["Andrew (Director of Public Health)"]
+  - topic: public-safety
+    topic_confidence: 0.88
+    start_seconds: 394
+    end_seconds: 1299
+    headline: "Marblehead reports 558 total COVID cases; Moderna vaccine expected for first-responder clinics in January"
+    dek: "The health department plans to vaccinate fire, police, and EMS in two groups starting mid-January, targeting clinics of at least 200 people."
+    summary: |
+      Andrew reported the following Marblehead COVID statistics as of December 18, 2020:
+      - Total confirmed cases: 558 (up from 503 on Dec. 11 and 441 on Dec. 4 — 117 new cases in two weeks)
+      - Active cases: 81
+      - Tests in last 14 days: 3,331; positive tests: 144 (4.32% positive rate)
+      - Average daily incidence: 45 per 100,000 — keeping Marblehead in the yellow category
+      
+      The DPH community case report will shift to Monday, December 28 due to the holiday, and the following week's report will come out Monday, January 4.
+      
+      **Vaccination plans:** Marblehead will receive the Moderna vaccine (not Pfizer, due to ultra-cold storage requirements). Local health departments plan clinics of at least 200 people, potentially up to 1,000. First responders (fire, police, EMS) are the first priority. The department plans to split staff into Group A and Group B vaccinated on different days to maintain operational capacity. Second doses are required 21–28 days later. A pre-registration portal system (described as 'Promod') used in other states is being evaluated but is not yet operational in Massachusetts.
+      
+      Phase timeline shared by the state:
+      - Phase 1: December–February
+      - Phase 2: February–April
+      - Phase 3: April–June
+    key_speakers: ["Andrew (Director of Public Health)", "Helene (Board member)", "Resident at mic (Erin)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 1299
+    end_seconds: 1506
+    headline: "CARES Act funding set to expire Dec. 30; $18,000 state allocation confirmed for 2021"
+    dek: "A potential additional $30,000 federal extension awaits presidential signature; at minimum $18,000 in state funds will cover public health staff through June 30."
+    summary: "Andrew reported that CARES Act funding was scheduled to expire December 30, 2020, ending the Cataldo testing program (approximately 1,600 people tested over two weeks). A congressional bill, if signed, would extend the Coronavirus Relief Fund through December 31, 2021 and allow an additional $30,000 to roll into 2021. Separately, the state has allocated $18,000 expiring June 30, 2021, sufficient to keep the public health nurse and inspector working full-time. Combined potential funding: approximately $48,000."
+    key_speakers: ["Andrew (Director of Public Health)"]
+  - topic: school-budget
+    topic_confidence: 0.78
+    start_seconds: 1506
+    end_seconds: 2090
+    headline: "Reopening committee discusses school quarantine protocols, cohort imbalance, and sports guidelines"
+    dek: "Board of Health is acting in an advisory role; schools will not close until entering the red category, per guidance discussed at Monday's reopening committee meeting."
+    summary: |
+      Helene reported on the Monday reopening committee meeting attended by Andrew:
+      
+      - **Cohort imbalance:** Due to a snow day, Cohort A has one or two fewer days than Cohort B across multiple school levels. This is expected to even out by year-end; Cohort B will gain an additional day on Martin Luther King Day.
+      - **Sports quarantine:** If a student in an athletic group tests positive, the entire team (basketball, hockey, gymnastics, swimming) must quarantine. The Board of Health follows DPH sector-specific guidance for sports.
+      - **School closure thresholds:** Schools will not close until reaching the red category; decisions are made building by building and day by day.
+      - **Board of Health role:** The BOH acts in an advisory capacity; the school committee and superintendent make final decisions but look to the BOH for guidance.
+      - **Food service:** Bulk meal pickup available during remote and vacation weeks; all school-enrolled families eligible regardless of free/reduced lunch status.
+    key_speakers: ["Helene (Board member)", "Andrew (Director of Public Health)", "Sarah (Board member or school committee)"]
+  - topic: public-comment
+    topic_confidence: 0.85
+    start_seconds: 2090
+    end_seconds: 3395
+    headline: "Residents and board members question contact tracing capacity, data reporting, and testing plans"
+    dek: "Sandra Callahan asked about differences between Marblehead's case count and the state dashboard figures; Erin questioned the town's testing plan for January."
+    summary: |
+      Public and board discussion covered several topics:
+      
+      **Data discrepancies (Sandra Callahan):** The state pulls Maven data on Wednesday mornings while Marblehead pulls on Thursdays; timing differences explain why state and local counts diverge. The health department 'cleans' data to remove duplicates and out-of-town residents.
+      
+      **Contact tracing capacity:** Andrew confirmed the state CTC has approximately 1,800 workers handling ~5,000 cases per day statewide. Calls come from an 866 number; messages are left if no answer, but callbacks are not made. Residents are urged to answer unfamiliar numbers. Cases are sometimes pushed to the CTC when local capacity is exceeded.
+      
+      **Data visualization initiative:** A board member (Michelle) reported the department is seeking a volunteer health informatics student from Northeastern or similar institution to develop data visualizations for public reporting — no patient-identified data would be shared.
+      
+      **Testing outlook (Erin):** Andrew confirmed testing through Cataldo was limited to four sessions by both funding deadlines and vendor availability. Future testing depends on resolution of CARES Act funding. The governor has characterized Massachusetts as the highest-testing state per capita.
+      
+      **Mask up for Marblehead:** Board members reminded attendees of a Marblehead Reporter story being assembled by 'Jodi' seeking photos and statements from residents explaining why they wear masks.
+    key_speakers: ["Sandra Callahan (resident)", "Erin (resident at mic)", "Andrew (Director of Public Health)", "Michelle (board member)", "Helene (board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 3395
+    end_seconds: 3491
+    headline: "Board schedules next meeting for January 5, 2021 and adjourns"
+    dek: "Members voted unanimously to adjourn; no meeting will be held the following week."
+    summary: "The chair confirmed the next Board of Health meeting is scheduled for January 5, 2021. The board will skip the week of December 29. Members were reminded that weekly meetings are planned as a contingency but not mandatory. The meeting adjourned by unanimous vote."
+    key_speakers: ["Chair (unnamed)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

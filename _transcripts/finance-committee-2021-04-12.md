@@ -11,6 +11,102 @@ duration_seconds: 3019
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "FinCon approves FY22 school budget at $41.8M and town budget at $36.9M"
+  summary: "The Finance Committee held its final FY22 budget hearing on April 12, 2021, approving the Marblehead school department budget at $41,839,543 and the broader Selectmen-administered town budget at $36,856,853.70. Superintendent Dr. Bocky presented a school budget covering contractual obligations, technology investments, a new mathematics curriculum, and an HR director position. Town Administrator Jason Silva walked through departmental changes including fire department vacancy costs, consolidation of highway/drain/tree budgets, a restored finance clerk position, and inaugural $250,000 contributions each to OPEB and the stabilization fund."
+  decisions:
+    - "Approved FY22 Marblehead School Budget at $41,839,543"
+    - "Approved FY22 Selectmen-administered town budget at $36,856,853.70"
+    - "Approved Selectman Department budget at $271,732.48"
+    - "Approved multiple Finance Committee liaison and meeting minutes from January through March 2021"
+  votes:
+    - motion: "Approve FY22 School Budget ($41,839,543)"
+      result: "in favor (unanimous)"
+    - motion: "Approve FY22 town budget ($36,856,853.70)"
+      result: "in favor (6 to 0)"
+    - motion: "Approve Selectman Department budget ($271,732.48)"
+      result: "in favor (5 to 0, one recusal)"
+    - motion: "Approve batch of liaison and meeting minutes"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 0
+    end_seconds: 1214
+    featured: true
+    headline: "Finance Committee approves FY22 school budget at $41,839,543"
+    dek: "Superintendent Dr. Bocky presented a pared-down overview covering contractual obligations, technology, curriculum, and a new HR director position."
+    summary: |
+      Superintendent Dr. Bocky opened the meeting with a 10-slide summary of the FY22 school budget process, noting it began in December with enrollment review and retirement/resignation projections. Key budget priorities included:
+      
+      - Meeting contractual obligations (MEA contract at 1% increase)
+      - Technology investment led by a new technology director
+      - Adoption of a new pre-K mathematics program
+      - Central office HR director position, developed in collaboration with the town
+      
+      The budget was tiered into three priority levels; tiers one and two were fully funded. School Committee budget subcommittee members Megan Taylor and David Harris were acknowledged, as was Finance Director Michelle Presta for her work cleaning up the budget over two years. David Harris also noted available COVID relief funds whose spending definitions were still being clarified.
+      
+      The Finance Committee voted unanimously to approve the school budget at **$41,839,543**.
+    key_speakers: ["Dr. Bocky (Superintendent)", "David Harris (School Committee)", "Michelle Presta (Finance Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.93
+    start_seconds: 1214
+    end_seconds: 2726
+    headline: "Town administrator walks through FY22 departmental budgets; stabilization fund funded for first time"
+    dek: "Jason Silva presented department-by-department changes including fire OT costs, budget consolidations, a restored finance clerk, and inaugural contributions to OPEB and stabilization."
+    summary: |
+      Town Administrator Jason Silva presented the Selectmen-administered FY22 budget, highlighting the following changes by department:
+      
+      | Department | Notable Change |
+      |---|---|
+      | Police | Level-funded; step increases only |
+      | Fire | Three vacancies; 6-month academy onboarding driving OT costs |
+      | Harbors & Waters | Reduced capital outlay due to enterprise fund retained earnings |
+      | Highway/Drain/Tree | Consolidated into one budget; net reduction of ~$9,697 |
+      | Veterans | Increased based on 3-year rolling average of benefit spending |
+      | Building Inspection | Vacancy in commissioner position; interim coverage + $13,454 for online permitting software renewal |
+      | Council on Aging | Two furloughed part-time positions restored |
+      | Finance Dept. | Restored previously eliminated clerk position; $15K parental leave coverage; $30K for training and operational audit |
+      | Group Insurance | Increased approximately 5% |
+      | OPEB & Stabilization | $250,000 each — first-ever stabilization fund contribution |
+      | Salary Reserve | ~$150K increase anticipating retirements of police chief, chief assessor, and library director |
+      
+      Silva noted that current labor union negotiations are ongoing and salary increases for union and administrative staff are not yet reflected in these figures. A compensation and classification study found administrative pay scales have not been updated since 1997.
+      
+      In response to a Finance Committee question, the town's total OPEB liability was cited at approximately **$195.8 million**; the $250,000 contribution was described as a starting point with planned annual step-ups.
+      
+      The full town budget of **$36,856,853.70** was approved 6–0. The Selectman Department line of **$271,732.48** was approved 5–0 with one member recusing.
+    key_speakers: ["Jason Silva (Town Administrator)", "Steve (Finance Director, town side)"]
+  - topic: health-insurance
+    topic_confidence: 0.72
+    start_seconds: 1971
+    end_seconds: 2064
+    headline: "Group insurance line increased approximately 5% in FY22 budget"
+    dek: "The town's group insurance budget rose roughly 5% with no further detail provided during the hearing."
+    summary: "Town Administrator Silva briefly noted that the group insurance budget was increased by just over 5% for FY22. No additional detail on plan changes, premium-share adjustments, or enrollment was provided during the meeting."
+    key_speakers: ["Jason Silva (Town Administrator)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 2726
+    end_seconds: 3000
+    headline: "Finance Committee approves batch of liaison meeting minutes from January–March 2021"
+    dek: "Nine sets of liaison minutes and the March 22 FinCon meeting minutes were approved in a single vote to close out the budget season."
+    summary: |
+      The Finance Committee approved the following minutes in a single motion:
+      
+      - January 22, 2021 — FinCon liaisons with schools
+      - February 10, 2021 — FinCon liaisons with Rec & Parks
+      - February 16, 2021 — FinCon liaisons with water and sewer
+      - February 24, 2021 — FinCon liaisons with school department
+      - February 25, 2021 — FinCon liaisons with library department
+      - February 26, 2021 — FinCon liaisons with assessor
+      - March 3, 2021 — FinCon liaisons with retirement department
+      - March 10, 2021 — FinCon liaisons with health and waste
+      - March 22, 2021 — Full FinCon meeting minutes
+      
+      The chair noted the upcoming fiscal warrant article hearing on April 20, 2021 (Tuesday due to Patriots' Day) and the Annual Town Meeting on May 3, 2021.
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

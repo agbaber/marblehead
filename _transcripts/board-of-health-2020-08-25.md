@@ -11,6 +11,119 @@ duration_seconds: 5148
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead Board of Health votes to support mask enforcement and valve-mask ban in schools"
+  summary: "The Board of Health voted to recommend that the Marblehead school department dismiss students who refuse to wear a mask after being offered one, and separately voted to recommend the school committee exclude masks with valves from its mask policy. The meeting featured extended public discussion about the respective roles of the Board of Health, DESI, and Mass DPH in setting public health metrics for school reopening. The board also reviewed COVID-19 case counts (262 confirmed cases, fewer than 5 active, 30 confirmed deaths) and discussed school reopening protocols."
+  decisions:
+    - "Approved recommendation that schools offer a mask to students without one, then dismiss students who refuse to wear a mask"
+    - "Approved recommendation that the school committee exclude masks with valves from its school mask policy"
+    - "Approved minutes for meetings dated May 28, June 4, June 9, June 23, July 9, July 21, and August 4"
+    - "Scheduled next meeting for September 9 at 7:30 PM"
+  votes:
+    - motion: "Recommend schools offer masks and dismiss students who refuse to wear one (with medical exemption noted)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend school committee specifically exclude masks with valves from school mask policy"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 0
+    end_seconds: 186
+    headline: "Board approves seven sets of meeting minutes from May through August"
+    dek: "Minutes from May 28 through August 4 were approved by polled vote with amendments noted."
+    summary: "The board conducted polled votes to approve meeting minutes from May 28, June 4, June 9, June 23, July 9, July 21, and August 4. All votes were unanimous in favor, with several approved 'as amended.'"
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 186
+    end_seconds: 1205
+    headline: "Board reviews COVID-19 case counts, mask guidance, and school reopening health protocols"
+    dek: "The health director reported 262 confirmed cases, fewer than 5 active, and 30 confirmed deaths, while outlining new DESI and CDC guidance on close contacts, quarantine, and mask use."
+    summary: |
+      The health director reported Marblehead's cumulative COVID-19 totals: 262 confirmed cases, fewer than 5 currently active, and 30 confirmed deaths. He explained differences between town and state case counts, noting the state includes probable cases and uses a 14-day rolling average per 100,000 population, while the town counts only confirmed active cases.
+      
+      Key public health updates included:
+      - Community transmission remains ongoing; Lynn identified as a major regional hotspot
+      - Compliance checks conducted weekly at restaurants and beaches by inspectors accompanied by a police officer
+      - Masks with valves discouraged because they can expel respiratory droplets
+      - Gaiter masks: single-ply gaters are less effective but two-ply gaters may exceed some cotton masks; no recommendation to ban them
+      
+      School reopening schedule discussed:
+      - Pre-K: September 14 (in person)
+      - K–1: September 21 (in person)
+      - Grade 2: September 28 (in person)
+      - Grades 3–12: Remote until October 5, then hybrid (Mon/Thu or Tue/Fri)
+      
+      Detailed DESI/DPH guidance reviewed:
+      - Close contact definition narrowed to within 6 feet for 15 minutes (board suggested erring toward 10 minutes)
+      - Close contacts must quarantine 14 days regardless of test result
+      - COVID fever threshold lowered from 100.4°F to 100.0°F
+      - Students grade 2+ required to wear masks at all times except meals and mask breaks
+      - All students (pre-K through 12) must receive influenza vaccination regardless of learning model
+      - Rapid-response state testing teams available if multiple cases occur in a classroom or school
+    key_speakers: ["Andrew (Health Director)", "Patrick Noonan (resident, audience)", "Blair (resident, audience)"]
+  - topic: school-budget
+    topic_confidence: 0.7
+    start_seconds: 1205
+    end_seconds: 2139
+    featured: true
+    headline: "Board votes unanimously to back mask enforcement and valve-mask ban for Marblehead schools"
+    dek: "Two separate votes authorized recommendations to the school committee ahead of its Thursday mask-policy meeting."
+    summary: |
+      The board took two formal votes intended to inform the school committee's mask policy meeting scheduled for Thursday.
+      
+      **Vote 1 — Mask enforcement:** The board voted unanimously to recommend that if a student arrives at school without a mask, the school must first offer a mask. If the student refuses, the school may dismiss the student. Medical exemptions were noted as the school's responsibility to administer.
+      
+      **Vote 2 — Valve masks:** The board voted unanimously to recommend the school committee specifically exclude masks containing valves from the list of acceptable face coverings at school, on the grounds that valve masks can expel respiratory droplets and do not protect others.
+      
+      The board explicitly declined to recommend against gaiter masks, noting that the Duke University study findings had been contested and that two-ply gaiters can be more effective than some cloth masks. Members agreed there was insufficient scientific consensus to restrict gaiters.
+    key_speakers: ["Andrew (Health Director)", "Elaine Heasley (Board Member)", "Michelle Gottlieb (Board Member)", "Patrick Noonan (resident, audience)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 2966
+    end_seconds: 4354
+    headline: "Resident challenges board on deviation from state public-health metrics for school reopening"
+    dek: "Patrick Noonan argued the board should follow DESI/Mass DPH color-coded guidance and apply any additional metrics equally to private and public schools."
+    summary: |
+      Resident Patrick Noonan engaged the board in extended discussion on jurisdictional and scientific questions surrounding school reopening:
+      
+      - He argued that Marblehead is currently rated 'green' on the state's town-level COVID color-coded map and that DESI and Mass DPH have issued clear, coordinated guidance since approximately August 1.
+      - He questioned why the board would apply stricter or different metrics to Marblehead Public Schools without applying the same standards equally to private schools (Powers, Devro, JCC, YMCA).
+      - He called for any deviation from state metrics to be predetermined, publicly announced, and subject to community debate well ahead of the October 5 hybrid-reopening date.
+      - The health director acknowledged that a formal order (requiring two weeks of advertisement) would be needed to apply requirements to private institutions, and that the board has generally deferred to the governor's orders rather than issuing independent local orders.
+      - Board members clarified that their recommendations are advisory, made at the school department's request, and noted the consultation relationship between the two bodies.
+      
+      Resident Blair raised a separate concern about perverse incentives in the quarantine guidance: a close contact who tests negative must quarantine 14 days, potentially longer than someone who tests positive. Board members acknowledged the tension but noted the rationale is the virus's incubation window.
+    key_speakers: ["Patrick Noonan (resident, audience)", "Blair (resident, audience)", "Andrew (Health Director)", "Michelle Gottlieb (Board Member)"]
+  - topic: elections-procedural
+    topic_confidence: 0.85
+    start_seconds: 4354
+    end_seconds: 4813
+    headline: "Resident raises COVID safety and sign-holder concerns about Village School polling site"
+    dek: "Patricia Adams, a neighbor of the Village School, described sanitary and social-distancing issues from sign-holders during the prior election and asked whether changes were planned for upcoming elections."
+    summary: |
+      Resident Patricia Adams, who lives directly across from the Village School polling location, raised concerns she had previously brought to the board in June:
+      
+      - Sign-holders congregated on the public sidewalk in front of her home during the last election; she observed people not wearing masks and not maintaining six-foot distancing.
+      - Cigarette butts were left on the property afterward.
+      - She asked whether the entrance/exit configuration or the location of sign-holders could be changed.
+      
+      The health director explained that the public sidewalk is public property and the board cannot legally direct sign-holders to stand elsewhere; sign-holders are also prohibited from standing on school (polling-place) property within 150 feet of the entrance. The board directed her to contact the town clerk's office and noted this matter falls outside the board's jurisdiction.
+    key_speakers: ["Patricia Adams (resident, audience)", "Andrew (Health Director)", "Elaine Heasley (Board Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 4904
+    end_seconds: 5118
+    headline: "Board cancels next two Tuesday meetings; reschedules to September 9"
+    dek: "No meeting will be held the following two Tuesdays due to Election Day and a board member conflict; the next meeting is set for Wednesday, September 9 at 7:30 PM."
+    summary: |
+      The board confirmed it will not meet the following two Tuesdays (Election Day falls on the first, and a board member has a conflict on the second). The next meeting was set for Wednesday, September 9 at 7:30 PM.
+      
+      Additional housekeeping items noted:
+      - Household Hazardous Waste pickup available through ACB (by appointment via the town website, for a fee).
+      - Flu clinic schedule in development: planned senior clinic, employee clinic, and public clinics with dates to be announced.
+    key_speakers: ["Elaine Heasley (Board Member)", "Andrew (Health Director)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

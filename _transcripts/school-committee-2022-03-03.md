@@ -11,6 +11,178 @@ duration_seconds: 6048
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead School Committee reviews FY23 budget, hears CPAC survey results, approves bills"
+  summary: "The School Committee held its first in-person meeting since COVID, receiving a Special Education CPAC parent survey presentation highlighting anxiety, social skills, executive function, and ADHD as top concerns. The committee reviewed the FY23 needs-based budget, with members supporting a Prop 2½ override while discussing additions including a DEI coordinator position, grant writer, and AP exam funding. The committee also heard the MHS program of studies update and approved a schedule of bills totaling approximately $764,455."
+  decisions:
+    - "Approved minutes from 8-9-2021 (3-0-2)"
+    - "Approved minutes from 8-26-2021, 10-7-2021, 10-19-2021, 10-21-2021, and 10-28-2021 (5-0)"
+    - "Approved schedule of bills totaling $764,454.94 (5-0)"
+    - "Tabled high school schedule update pending listening sessions"
+    - "Tabled AP European History addition to program of studies"
+    - "Tabled 35-credits-per-year requirement pending schedule review"
+  votes:
+    - motion: "Approve minutes from 8-9-2021"
+      result: "in favor (3 to 2)"
+    - motion: "Approve minutes from 8-26-2021, 10-7-2021, 10-19-2021, 10-21-2021, and 10-28-2021"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills totaling $764,454.94"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 37
+    end_seconds: 224
+    headline: "Chair announces schedule update tabled; Alpine Ski Team commendations given"
+    dek: "The committee opened its first in-person meeting since COVID, tabling a high school schedule presentation and recognizing student athletes."
+    summary: "Chair Sarah Fox announced the high school schedule update presentation was being tabled after concerns were raised at a SAC meeting. Superintendent Dan Bauer's team will hold listening sessions for parents before returning to the committee. Commendations were offered to the MHS Alpine Ski Team: the girls' team finished runner-up in the state championship by three seconds, with Kate Honos finishing second in giant slalom; Baxter Jennings finished first in slalom and second in giant slalom; and Charlie Pingree finished in the top ten. The Girls Swim and Dive Team and Allstate Choir participants were also noted."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 317
+    end_seconds: 503
+    headline: "Resident criticizes delayed meeting packet release and lack of remote public participation"
+    dek: "A resident at the mic urged the committee to publish meeting packets in advance and allow remote public participation."
+    summary: "A resident identified as Jonathan spoke during the first in-person public comment in two years. He raised three concerns: (1) meeting packets are not published in advance, limiting thoughtful public engagement; (2) members of the public cannot participate remotely, unlike committee members; and (3) the combination of late packet release and no remote option effectively prevents informed participation. He argued the technology and legal authority under COVID rules exist to enable remote public participation and urged the committee to act."
+    key_speakers: ["Jonathan (resident at mic)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 503
+    end_seconds: 594
+    headline: "Committee approves multiple sets of meeting minutes from 2021"
+    dek: "Minutes from six prior meetings were approved in two separate votes, with two members recusing from the August 9 vote."
+    summary: "The committee took two votes on meeting minutes. Minutes from 8-9-2021 were approved 3-0-2, with Sarah Gold and Meghan Taylor abstaining as they were not present at that meeting. Minutes from five additional meetings — 8-26-2021, 10-7-2021, 10-19-2021, 10-21-2021, and 10-28-2021 — were approved 5-0. Spelling and typo corrections were noted to be made before posting online."
+    key_speakers: ["Sarah Fox (Chair)", "Sarah Gold", "Meghan Taylor"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 594
+    end_seconds: 1144
+    headline: "CPAC presents parent survey: anxiety, social skills, executive function top concerns"
+    dek: "Special Education CPAC co-chairs shared results of a 114-respondent parent survey and announced upcoming educational forums."
+    summary: |
+      CPAC co-chairs Meryl Schell and Jennifer Jackson presented results of a parent survey designed to identify community priorities. With 114 respondents across all district schools, the top four areas of interest were: (1) anxiety and mental wellness, especially at the high school level; (2) social skills; (3) executive function; and (4) ADHD, notably its different manifestation in girls. 
+      
+      Additionally, 65% of respondents expressed interest in CPAC-hosted educational forums (webinars or in-person). More than half shared contact information, prompting formation of a subcommittee to manage advance notifications.
+      
+      **Upcoming CPAC events:**
+      | Date | Event |
+      |---|---|
+      | March 9, 7 p.m. (Zoom) | IEP 101 with Superintendent Donnelly |
+      | March 30, 7 p.m. (Zoom) | Speaker on ableism — Ashley Harris-Waley |
+      | Monthly, 1st Tuesday, 10 a.m. | District meeting (open public) |
+      | Monthly, 3rd Wednesday, 7 p.m. | CPAC board meeting (open public) |
+      | Monthly, 3rd Wednesday, noon | Listening session with Superintendent Donnelly |
+      
+      CPAC also announced plans to resume the Unsung Heroes nominations program in April, in a virtual format similar to last year.
+    key_speakers: ["Meryl Schell (CPAC co-chair)", "Jennifer Jackson (CPAC co-chair)", "Meghan Taylor (liaison)"]
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 1235
+    end_seconds: 2588
+    headline: "MHS principal presents FY23 program of studies updates including new English electives and Essex Tech pathway"
+    dek: "Principal Dan Bauer outlined curriculum additions, the Essex Tech After Dark program expansion, and a new advanced manufacturing pathway still in development."
+    summary: |
+      Principal Dan Bauer presented proposed changes to the MHS Program of Studies for 2022-23. Key updates included:
+      
+      **Tabled items:** AP European History (communication issues cited; will allow time to review other AP electives for grade 10) and the 35-credits-per-year requirement (linked to the schedule review).
+      
+      **Essex Tech After Dark:** Four students completed the program in its first year; 17 students have applied for next year. Essex Tech will conduct interviews on March 16.
+      
+      **Advanced Manufacturing Pathway:** Still in development; planned to launch next year with a small cohort, offering credentials for students entering the workforce or pursuing further education. A CNC machine purchased with proceeds from a prior tiny house project is now operational.
+      
+      **RTI expansion:** Existing math RTI program will be joined by English and science RTI, running as semester, pass-fail courses during study halls.
+      
+      **College and Career Block:** New small-group sessions to support college and career planning through the school counseling suite.
+      
+      **English electives added** (open grades 9–12, honors and CP options): African-American Literature, 20th Century Best-Selling Fiction, Drama is Literature, Dystopian Literature, Nature Writing, The Reading Zone, Writing to Win, among others.
+      
+      **Special Education:** Updated curriculum support course descriptions to reflect SEL, executive functioning, study skills, and transitional planning components. One prior course removed as it had not run in several years.
+      
+      **Latin:** Streamlining sections into honors-level offerings with new teacher Mr. Judkins.
+      
+      **Magic Block:** A 50-minute Wednesday advisory block piloted this year, allowing students to choose where to go for support or activities. 64% of students reported having an adult connection in the building as of October; the magic block is intended to increase that figure.
+    key_speakers: ["Dan Bauer (MHS Principal)", "Sarah Fox (Chair)", "Sarah Gold (remote member)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 2812
+    end_seconds: 4152
+    featured: true
+    headline: "Committee expresses support for override to fund FY23 budget; debates DEI director and curriculum positions"
+    dek: "Committee members signaled support for a Prop 2½ override while discussing additions to the needs-based budget including a DEI coordinator, grant writer, and AP exam funding."
+    summary: |
+      Superintendent John Markey provided a FY23 budget update, noting the process was accelerated under the prior town manager and that conversations with the new town administrator are ongoing. He mentioned receptivity to moving special education out-of-district tuition out of the operating budget and into reserves. A budget subcommittee meeting is scheduled for March 10, a FinCom presentation for March 28, and a public budget hearing for March 31.
+      
+      Key discussion points:
+      
+      - **Override support:** Multiple members, including the chair, stated support for pursuing a Prop 2½ override, noting the district has been underfunded for years.
+      - **DEI coordinator position (~$125,000):** Superintendent Nan Walsh and committee member Emily Barron argued the position is urgently needed to support a volunteer DEI team that has been working for two years. Member Sarah Gold asked for more data on job scope and explored a consortium model where five districts share one director's cost.
+      - **Grant writer:** Members agreed the position could eventually self-fund through grants, though initial-year costs would need to be embedded in the budget.
+      - **Curriculum directors:** Discussed as a future-year addition; administrators prefer to allow bottom-up curriculum development to mature first.
+      - **AP exam fees:** Member Sarah Gold raised a concern that requiring AP students to take exams without district funding may be legally and ethically problematic.
+      - **Co-taught model:** Gold asked how the budget increases availability of co-teaching for special education inclusion.
+      - **Kindergarten tuition revenue:** Gold asked that the revenue line (previously ~$425,000–$450,000) be reconciled with the current $350,000 allocation.
+      
+      The public budget hearing was confirmed for March 31, with agreement to offer both in-person and Zoom access.
+    key_speakers: ["John Markey (Superintendent)", "Nan Walsh (Assistant Superintendent)", "Sarah Fox (Chair)", "Sarah Gold (remote member)", "Emily Barron", "Michelle (CFO/Business Manager)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 4344
+    end_seconds: 4435
+    headline: "Superintendent notes town report submission; food services director announces retirement"
+    dek: "The annual town report was submitted following a narrative format; food services director Richard announced retirement."
+    summary: |
+      Superintendent Markey noted the town report follows the same format as the prior year, with each school and division providing narrative reflections on the 2021 school year. A correction was requested: term expirations should read June, not May, and the strategic plan reference should be updated to 'Planning for Success.' 
+      
+      The food services director, identified as Richard, announced his retirement. Committee members and the superintendent offered remarks recognizing his contributions, including his leadership during COVID meal programs and his role in the Harvest of the Month program.
+    key_speakers: ["John Markey (Superintendent)", "Richard (Food Services Director)", "Sarah Gold (remote member)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 4528
+    end_seconds: 5090
+    headline: "CFO reports district 45% through operating budget; out-of-district SPED tuition deficit at $265,000"
+    dek: "Business manager Michelle presented the January financial report, flagging three budget lines under pressure."
+    summary: |
+      As of January 31, the district had spent $18,791,253 of the general fund operating budget, representing approximately 45% — on pace with the prior year, which ended in surplus.
+      
+      **Three lines under monitoring:**
+      
+      | Line | Status |
+      |---|---|
+      | Out-of-district SPED tuition | Projecting $265,000 deficit (up from prior $112,000 projection); expected to be covered by circuit breaker carryover and a potential new tuition-in student |
+      | Substitute teachers | At 65% of budget ($151,000 spent); a $95,113 state COVID sick-time reimbursement received will be applied to this line |
+      | Custodian overtime | At 73% (~$55,000); expected to slightly exceed budget but offset by unpaid-leave savings in salary lines |
+      
+      The ESSER 1 and 2 grants are essentially fully committed. ESSER 3 has $657,000 spent, $113,000 encumbered, and $480,000 uncommitted, with approximately two and a half years remaining to spend. The business manager advised against rushing to spend the remaining ESSER 3 funds. Member Sarah Gold requested a breakdown of the student services line within ESSER 3, which exceeds $200,000.
+    key_speakers: ["Michelle (Business Manager/CFO)", "Sarah Gold (remote member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 5184
+    end_seconds: 5274
+    headline: "Committee approves schedule of bills totaling $764,454.94"
+    dek: "A unanimous 5-0 vote approved the monthly schedule of bills."
+    summary: "The committee voted 5-0 to approve the schedule of bills totaling $764,454.94. One member noted minor questions to be addressed offline with the business manager."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: bonding-capital
+    topic_confidence: 0.75
+    start_seconds: 5366
+    end_seconds: 5841
+    headline: "Brown School punch list nearly complete; MSBA accelerated repair application being prepared for MHS roof"
+    dek: "Facilities liaison reported Gilbane has exited the Brown School and the district is preparing an MSBA accelerated repair submittal for the high school roof."
+    summary: |
+      David Harris reported that Gilbane has officially vacated the Brown School following school vacation week work. Remaining punchlist items — including media center finishes, data connections, railing improvements, and painting — were largely completed. A final building committee meeting is planned for approximately March 24 to address remaining spring items including fence work and landscape guarantees. Project manager Ralph Wallace was recognized for his ongoing on-site presence.
+      
+      Separately, the committee is preparing an MSBA Accelerated Repair Program submittal for the MHS roof. Templates from project manager Todd at Left Field were being assembled. If approved, state funding would offset town costs, similar to the process used for Fort Sewell. The submittal was described as approximately five pages and straightforward. Member Sarah Gold asked that the committee's land and facilities ownership list — obtained from town staff — be shared ahead of the next meeting to advance the MOU process.
+    key_speakers: ["David Harris", "Sarah Gold (remote member)", "Emily Barron"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 5841
+    end_seconds: 6032
+    headline: "Committee discusses hybrid meeting technology and Zoom access for public hearings"
+    dek: "Members discussed deploying Owl cameras to enable hybrid public participation, especially ahead of the March 31 budget hearing."
+    summary: "Sarah Gold requested that the chair connect with AV staff member Steven to assess what steps are needed to enable hybrid Zoom meetings using Owl cameras already purchased by the district. She noted the town has also allocated ARPA funds for Owl cameras for town-wide use. The chair agreed but noted that managing both in-person and Zoom participants simultaneously is operationally demanding and may require a dedicated moderator. The March 31 public budget hearing was specifically identified as a meeting where hybrid or fully remote access should be offered. The meeting adjourned at approximately 8:40 p.m."
+    key_speakers: ["Sarah Gold (remote member)", "Sarah Fox (Chair)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source

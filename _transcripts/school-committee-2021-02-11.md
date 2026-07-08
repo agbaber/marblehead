@@ -11,6 +11,200 @@ duration_seconds: 10836
 ai_generated: true
 status: published
 source: whisper-local
+
+summary_card:
+  headline: "Marblehead School Committee holds FY22 budget workshop covering SPED, tech, food service, and central office"
+  summary: "The School Committee met for a two-part budget workshop in which department heads presented FY22 spending requests across student services, athletics, technology, food service, curriculum, facilities, and central administration. Key themes included a projected $250,000 drop in special education tuition revenue, a significant infrastructure investment in school technology including fiber, wireless, and phone systems estimated at $541,500 financed over several years, and new staff requests for a groundskeeper, custodian, HR director, and community relations liaison. The session also opened with a presentation from newly appointed pool testing coordinator Amanda Rivers on the district's planned six-week COVID surveillance testing program."
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 0
+    end_seconds: 2060
+    headline: "New pool testing coordinator outlines six-week COVID surveillance program"
+    dek: "Amanda Rivers presented the district's plan for asymptomatic PCR pool testing targeting middle and high school students, aiming for a March 1 launch pending state matching and supply delivery."
+    summary: |
+      Amanda Rivers, hired days earlier as pool testing coordinator, described a state-funded six-week asymptomatic surveillance testing program. Key details:
+      
+      - Pools of 10–25 students/staff will submit combined PCR swabs weekly; a positive pool triggers individual antigen (BinaxNow) retesting to identify the positive case.
+      - The district is awaiting state matching to a secondary platform, preferably **Project Beacon** (Lynn), which will manage consents, rosters, and result notifications.
+      - K–6 pools will follow cohort/classroom lines; Veterans Middle and the high school will use randomly selected class periods due to schedule mixing.
+      - Testing is **asymptomatic only** and cannot be used for travel, to rule out COVID in symptomatic students, or to exit quarantine.
+      - Target launch: **March 1**, contingent on supplies and platform access; the high school and middle school are prioritized given higher case rates.
+      - Three healthcare-professional parents volunteered to assist after a district letter went out Tuesday.
+      
+      School Committee members asked about consent timelines, use of school nurses, pullout time from class, and whether the quarantine policy would be adjusted for positive-pool members pending antigen results — a policy question left for follow-up with the lead nurse.
+    key_speakers: ["Amanda Rivers (pool testing coordinator)", "John (Superintendent/Dr. Bucky)", "Sarah (School Committee member)", "Megan (School Committee member)", "Molly (School Committee member)", "Emily (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 2060
+    end_seconds: 3630
+    featured: true
+    headline: "Student Services projects ~$600K net budget increase driven by tuition-in revenue drop"
+    dek: "Special education director Eric Oxford and EL/liaison director Emily Dean outlined a significant revenue shortfall as tuition-in income falls from roughly $700K to $450K and a $200K prepayment cushion disappears."
+    summary: |
+      **Student Services FY22 key figures:**
+      
+      | Item | FY21 | FY22 Projection |
+      |---|---|---|
+      | Out-of-district (OOD) tuition expense | ~$4.2M | ~$3.4–4.5M |
+      | Tuition-in revenue | ~$700K + $200K revolving | ~$450K |
+      | Net operating impact | — | +~$600K needed |
+      | Circuit Breaker budgeted reimbursement | 70% | 68–70% |
+      | IDEA 240 grant | ~$718K | similar |
+      | OOD transportation (operating share) | $275K | $275K proposed level |
+      
+      **Staff requests:**
+      - Two pre-K teachers and four paraprofessionals for two new classrooms at the Brown Elementary School (~6 FTE total).
+      - Addition of a fifth EndCut Fellows Program fellow (~$25K incremental, offset by an unfilled special ed secretary position).
+      - Pre-K/TK model: three existing Glover pre-K teachers stay; one existing special educator shifts to TK at the new building; TK classroom uses one para (not two).
+      
+      **Program notes:**
+      - PACE classroom will be repurposed for the Transition-K class; Access program remains at Glover.
+      - "Tides" label being retired in favor of a "therapeutic strand" to reduce stigma.
+      - 12 elementary SPED teachers completed Orton-Gillingham training funded from ~$100K carryover.
+      - Transportation lease/van exploration ongoing but deferred given pandemic logistics.
+      
+      The committee flagged concern about recurring reliance on one-time tuition revenue and asked for a full grant summary to be added to the budget book.
+    key_speakers: ["Eric Oxford (Director of Student Services)", "Emily Dean (EL Director / Student Services Liaison)", "Michelle (Director of Finance, Michelle Krastow)", "Sarah (School Committee)", "Megan (School Committee)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 3995
+    end_seconds: 4460
+    headline: "Athletic Director requests hockey/football uniforms and new basketball scoreboards for FY22"
+    dek: "Greg Sigelarsky described how COVID spread games across more days, raised custodial overtime and busing costs, and outlined upcoming capital equipment needs."
+    summary: |
+      Athletic Director Sigelarsky noted FY21 spending was lower than anticipated because season decisions came only two weeks before play, deferring uniform and equipment purchases. FY22 asks include:
+      
+      - New hockey uniforms and potentially football uniforms.
+      - Approximately a dozen football helmets that are no longer certifiable (described as expensive).
+      - New basketball scoreboards for the field house (original to the building, "on its last legs").
+      
+      **Budget drivers up in FY22:**
+      - **Custodial services** — longer gym hours, Saturday games, COVID sanitizing after every practice/game.
+      - **Medical supplies** — touchless water dispensers, impact concussion testing (previously state-grant funded), extra sanitizer.
+      - **Contracted services / busing** — spreading games across more days means fewer teams per bus, increasing rental costs.
+      
+      Athletic fees currently cover roughly 50% of coaching stipends (~$142K from user fees, ~$142K from operating). The committee confirmed stipends are by sport category, not by gender of team.
+    key_speakers: ["Greg Sigelarsky (Athletic Director)", "Michelle (Director of Finance)", "Sarah (School Committee)", "Megan (School Committee)"]
+  - topic: school-budget
+    topic_confidence: 0.93
+    start_seconds: 4460
+    end_seconds: 5984
+    headline: "Technology director requests $541K capital lease for fiber, wireless, and phone upgrades plus two integration specialist positions"
+    dek: "Stephen Kwatek, hired in mid-December, outlined a district-wide infrastructure overhaul using E-Rate funds, COVID relief money, and a multi-year lease financing structure."
+    summary: |
+      **IT FY22 budget highlights:**
+      
+      | Item | Amount |
+      |---|---|
+      | Capital lease (switching, wireless, phones) total cost | ~$541,500 |
+      | FY22 lease payment | ~$212,076 |
+      | E-Rate available balance (40% discount on eligible items) | ~$500K |
+      | COVID funds earmarked (fiber, firewall) | ~$350K additional |
+      | Prior CARES Act tech investment (devices) | ~$500K |
+      | Old single tech budget line being eliminated | -$285K |
+      | New broken-out lines net request | ~$345K |
+      
+      **Infrastructure gaps identified:**
+      - No redundant switching; fiber in high school is 20+ years old and below 1 Gbps.
+      - No cloud-managed Wi-Fi; many classrooms have no access points; MCAS testing impaired by insufficient hardware.
+      - Phone systems at high school, middle school, and district office are 20+ years old and beyond repair parts.
+      - Target: 3-to-1 device-to-access-point ratio district-wide.
+      
+      **Staff requests:** Two Technology Integration Specialists (similar to a previously eliminated position held by Ami Shapiro).
+      
+      **Process:** RFPs for switching, firewalls, and Wi-Fi already drafted with E-Rate consultant; July 1 start anticipated when E-Rate funding activates. E-Rate is a use-it-or-lose-it federal subsidy — the district had not drawn on its account in recent years.
+    key_speakers: ["Stephen Kwatek (Director of Technology)", "Michelle (Director of Finance)", "Sarah (School Committee)", "Megan (School Committee)", "David (School Committee)", "Molly (School Committee)"]
+  - topic: school-budget
+    topic_confidence: 0.87
+    start_seconds: 5984
+    end_seconds: 6391
+    headline: "Food Service director projects modest surplus; new school kitchen adds a manager and 10 staff-hours"
+    dek: "Richard Kelleher, presenting for the first time to the committee, noted the ~$800K food service fund is self-contained but shortfalls flow back to the operating budget."
+    summary: |
+      Richard Kelleher joined from San Francisco to present the food service budget. Key points:
+      
+      - The food service operation runs a budget of approximately **$800,000** and does not sit in the operating budget, but shortfalls must be made whole by the district.
+      - FY22 revenues projected relatively flat, dependent on reopening scope and federal Healthy Hunger-Free Kids Act enforcement under the new administration.
+      - The Brown Elementary School kitchen adds a **cook manager (~$28K)** and approximately **10 additional staff hours (~$3,000–$4,500)**.
+      - A dishwasher room was built into the new school; staffing already accounts for it.
+      - The committee praised the pandemic meal program (federally free to all families) as financially beneficial to the district and as addressing food insecurity.
+    key_speakers: ["Richard Kelleher (Food Service Director)", "John (Superintendent)", "Sarah (School Committee)"]
+  - topic: school-budget
+    topic_confidence: 0.93
+    start_seconds: 6391
+    end_seconds: 7274
+    headline: "New Assistant Superintendent presents curriculum budget including $100K math adoption and two instructional support specialists"
+    dek: "Nan Murphy outlined four priority areas and requested two district-level instructional support specialists, a math interventionist funded via the Student Opportunity Act, and a summer literacy program."
+    summary: |
+      **Curriculum / Teaching & Learning FY22 highlights:**
+      
+      **Four priority areas:**
+      1. Aligning curriculum, materials, assessments, and instruction K–8.
+      2. Strengthening instructional practices through coaching and targeted PD.
+      3. Building a data culture for tiered interventions.
+      4. Completing the math curriculum adoption for fall 2021 implementation.
+      
+      **Budget requests:**
+      - Math curriculum adoption (K–8): high-end estimate **$250K**; FY22 cost expected **≤$100K** with multi-year financing; vendor selection targeted by end of March.
+      - Contracted services: reduced by $10K (offset by Title grant coordination).
+      - Instructional supplies and software: funds for multicultural texts, leveled libraries, and supplemental online tools.
+      - Professional development: $10K for summer collaborative planning and data analysis.
+      - **Two Instructional Support Specialists** (new FTE) — district-level coaches to support grade-level PLCs and data-driven instruction.
+      
+      **Student Opportunity Act (~$90K, one-time via Chapter 70):**
+      - District Math Interventionist (~$71K) — mirrors Rebecca Brand's ELA role.
+      - Summer literacy program (intensive decoding/fluency for early learners, co-designed with Eric Oxford).
+      - Multi-tiered systems of support (MTSS) and trauma-informed PD.
+      
+      The committee noted the math interventionist is a recurring need funded from a one-time source, and asked Murphy to confirm that her specialist proposal meets Village School principal Mandy's previously stated need for curriculum support. Murphy also noted culturally proficient PD materials are being explored using unspent Title funds.
+    key_speakers: ["Nan Murphy (Assistant Superintendent for Teaching & Learning)", "Michelle (Director of Finance)", "Sarah (School Committee)", "Megan (School Committee)", "Emily (School Committee)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 8224
+    end_seconds: 9055
+    headline: "Facilities director requests full-time groundskeeper, additional custodian for new school, and administrative assistant"
+    dek: "Todd Bloodgood presented a largely level-funded facilities budget while flagging aging equipment, rising parts costs, and the need to staff the Brown Elementary building properly from day one."
+    summary: |
+      **Facilities FY22 highlights:**
+      
+      - Contracted services held level; Coffin and Evelith schools will be maintained above freezing but not fully operational.
+      - New school maintenance costs covered by builder warranties in year one; four custodians transferring from Coffin/Evelith.
+      - Parts and supply costs up 20–30% since COVID began.
+      - Custodial supplies slightly increased; disinfectant stock sufficient through June.
+      - Vehicle repair budget increased from $35K to $50K; fleet aging.
+      - ALICE lockdown training not conducted this year due to COVID group-size constraints; committee directed staff to contact the vendor for a COVID-compliant format.
+      
+      **New staff requests (2.8 FTE net):**
+      1. **Full-time groundskeeper** — spring/summer/fall outdoor; winter indoor maintenance and snow removal.
+      2. **Additional custodian for Brown Elementary** — the new building's size, glass surfaces, and mechanical complexity require five custodians, not four.
+      3. **Full-time administrative assistant** — replacing current 8-hours/week support; needed for certifications, inspections, vendor coordination.
+      
+      The committee raised the high school roof as an ongoing capital concern, and members noted the 18–21 transition-age program displaced during the kindergarten transition needs a dedicated permanent space (either Evelith or Coffin).
+    key_speakers: ["Todd Bloodgood (Director of Facilities)", "Michelle (Director of Finance)", "Sarah (School Committee)", "Megan (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 9522
+    end_seconds: 10780
+    headline: "Superintendent requests HR director and communications liaison; committee questions communications position amid budget gap"
+    dek: "Superintendent Bucky presented two central office asks — an HR director (replacing a prior assistant position) and a part-time community relations liaison — drawing pushback on the non-student-facing communications role given a projected $1.268M gap from the town number."
+    summary: |
+      The Superintendent presented two central office staff requests:
+      
+      **1. Human Resources Director**
+      - Would replace the existing HR assistant position (net delta, not an addition).
+      - Historical context: both director and assistant were cut previously; predecessor superintendent covered the function by drawing on finance and assistant superintendent capacity.
+      - COVID-related leave questions and workload have highlighted the gap.
+      - Budget summary shows $100K in unidentified staffing reductions to offset new positions.
+      
+      **2. Community Relations Liaison** (part-time / half-time start)
+      - Framed as a resource for consistent district communications, DEI support, and crisis management.
+      - Superintendent noted a communications firm consultant called the proposed salary "a laughable sum" for the scope.
+      - **Committee concern (Sarah):** The district faces a ~$1.268M gap from the town budget figure; non-student-facing positions should be evaluated last. Sarah requested detailed survey data on communication satisfaction beyond the February 4 summary slide, broken out by learning model.
+      - Other members (Megan, Emily) argued for receiving all asks first and then prioritizing, consistent with prior workshop norms.
+      - No vote taken; the committee agreed to continue detailed budget deliberations in the budget subcommittee before returning to the full committee.
+    key_speakers: ["John Bucky (Superintendent)", "Sarah (School Committee)", "Megan (School Committee)", "Emily (School Committee)", "Michelle (Director of Finance)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source
