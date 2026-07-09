@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-07-07",
+  "as_of": "2026-07-09",
   "latest_fiscal_month": "2026-07-01",
-  "generated_at": "2026-07-07T11:42:46+00:00",
+  "generated_at": "2026-07-09T11:44:01+00:00",
   "fiscal_year": "FY27",
   "fy_months": [
     "2026-07",
@@ -20,264 +20,264 @@
   "funds": [
     {
       "fund": "GENERAL FUND - TOWN",
-      "total_through_as_of": 6267646.2,
+      "total_through_as_of": 6379880.7,
       "series": [
         {
           "month": "2026-07",
-          "cumulative": 6267646.2,
-          "monthly": 6267646.2
+          "cumulative": 6379880.7,
+          "monthly": 6379880.7
         },
         {
           "month": "2026-08",
-          "cumulative": 6267646.2,
+          "cumulative": 6379880.7,
           "monthly": 0.0
         },
         {
           "month": "2026-09",
-          "cumulative": 6267646.2,
+          "cumulative": 6379880.7,
           "monthly": 0.0
         },
         {
           "month": "2026-10",
-          "cumulative": 6267646.2,
+          "cumulative": 6379880.7,
           "monthly": 0.0
         },
         {
           "month": "2026-11",
-          "cumulative": 6267646.2,
+          "cumulative": 6379880.7,
           "monthly": 0.0
         },
         {
           "month": "2026-12",
-          "cumulative": 6267646.2,
+          "cumulative": 6379880.7,
           "monthly": 0.0
         },
         {
           "month": "2027-01",
-          "cumulative": 6267646.2,
+          "cumulative": 6379880.7,
           "monthly": 0.0
         },
         {
           "month": "2027-02",
-          "cumulative": 6267646.2,
+          "cumulative": 6379880.7,
           "monthly": 0.0
         },
         {
           "month": "2027-03",
-          "cumulative": 6267646.2,
+          "cumulative": 6379880.7,
           "monthly": 0.0
         },
         {
           "month": "2027-04",
-          "cumulative": 6267646.2,
+          "cumulative": 6379880.7,
           "monthly": 0.0
         },
         {
           "month": "2027-05",
-          "cumulative": 6267646.2,
+          "cumulative": 6379880.7,
           "monthly": 0.0
         },
         {
           "month": "2027-06",
-          "cumulative": 6267646.2,
+          "cumulative": 6379880.7,
           "monthly": 0.0
         }
       ]
     },
     {
       "fund": "ELECTRIC ENTERPRISE",
-      "total_through_as_of": 839526.6,
+      "total_through_as_of": 884339.84,
       "series": [
         {
           "month": "2026-07",
-          "cumulative": 839526.6,
-          "monthly": 839526.6
+          "cumulative": 884339.84,
+          "monthly": 884339.84
         },
         {
           "month": "2026-08",
-          "cumulative": 839526.6,
+          "cumulative": 884339.84,
           "monthly": 0.0
         },
         {
           "month": "2026-09",
-          "cumulative": 839526.6,
+          "cumulative": 884339.84,
           "monthly": 0.0
         },
         {
           "month": "2026-10",
-          "cumulative": 839526.6,
+          "cumulative": 884339.84,
           "monthly": 0.0
         },
         {
           "month": "2026-11",
-          "cumulative": 839526.6,
+          "cumulative": 884339.84,
           "monthly": 0.0
         },
         {
           "month": "2026-12",
-          "cumulative": 839526.6,
+          "cumulative": 884339.84,
           "monthly": 0.0
         },
         {
           "month": "2027-01",
-          "cumulative": 839526.6,
+          "cumulative": 884339.84,
           "monthly": 0.0
         },
         {
           "month": "2027-02",
-          "cumulative": 839526.6,
+          "cumulative": 884339.84,
           "monthly": 0.0
         },
         {
           "month": "2027-03",
-          "cumulative": 839526.6,
+          "cumulative": 884339.84,
           "monthly": 0.0
         },
         {
           "month": "2027-04",
-          "cumulative": 839526.6,
+          "cumulative": 884339.84,
           "monthly": 0.0
         },
         {
           "month": "2027-05",
-          "cumulative": 839526.6,
+          "cumulative": 884339.84,
           "monthly": 0.0
         },
         {
           "month": "2027-06",
-          "cumulative": 839526.6,
+          "cumulative": 884339.84,
           "monthly": 0.0
         }
       ]
     },
     {
       "fund": "WATER ENTERPRISE OPERATING",
-      "total_through_as_of": 170987.0,
+      "total_through_as_of": 183099.16,
       "series": [
         {
           "month": "2026-07",
-          "cumulative": 170987.0,
-          "monthly": 170987.0
+          "cumulative": 183099.16,
+          "monthly": 183099.16
         },
         {
           "month": "2026-08",
-          "cumulative": 170987.0,
+          "cumulative": 183099.16,
           "monthly": 0.0
         },
         {
           "month": "2026-09",
-          "cumulative": 170987.0,
+          "cumulative": 183099.16,
           "monthly": 0.0
         },
         {
           "month": "2026-10",
-          "cumulative": 170987.0,
+          "cumulative": 183099.16,
           "monthly": 0.0
         },
         {
           "month": "2026-11",
-          "cumulative": 170987.0,
+          "cumulative": 183099.16,
           "monthly": 0.0
         },
         {
           "month": "2026-12",
-          "cumulative": 170987.0,
+          "cumulative": 183099.16,
           "monthly": 0.0
         },
         {
           "month": "2027-01",
-          "cumulative": 170987.0,
+          "cumulative": 183099.16,
           "monthly": 0.0
         },
         {
           "month": "2027-02",
-          "cumulative": 170987.0,
+          "cumulative": 183099.16,
           "monthly": 0.0
         },
         {
           "month": "2027-03",
-          "cumulative": 170987.0,
+          "cumulative": 183099.16,
           "monthly": 0.0
         },
         {
           "month": "2027-04",
-          "cumulative": 170987.0,
+          "cumulative": 183099.16,
           "monthly": 0.0
         },
         {
           "month": "2027-05",
-          "cumulative": 170987.0,
+          "cumulative": 183099.16,
           "monthly": 0.0
         },
         {
           "month": "2027-06",
-          "cumulative": 170987.0,
+          "cumulative": 183099.16,
           "monthly": 0.0
         }
       ]
     },
     {
       "fund": "SEWER ENTERPRISE OPERATING",
-      "total_through_as_of": 152386.0,
+      "total_through_as_of": 166168.82,
       "series": [
         {
           "month": "2026-07",
-          "cumulative": 152386.0,
-          "monthly": 152386.0
+          "cumulative": 166168.82,
+          "monthly": 166168.82
         },
         {
           "month": "2026-08",
-          "cumulative": 152386.0,
+          "cumulative": 166168.82,
           "monthly": 0.0
         },
         {
           "month": "2026-09",
-          "cumulative": 152386.0,
+          "cumulative": 166168.82,
           "monthly": 0.0
         },
         {
           "month": "2026-10",
-          "cumulative": 152386.0,
+          "cumulative": 166168.82,
           "monthly": 0.0
         },
         {
           "month": "2026-11",
-          "cumulative": 152386.0,
+          "cumulative": 166168.82,
           "monthly": 0.0
         },
         {
           "month": "2026-12",
-          "cumulative": 152386.0,
+          "cumulative": 166168.82,
           "monthly": 0.0
         },
         {
           "month": "2027-01",
-          "cumulative": 152386.0,
+          "cumulative": 166168.82,
           "monthly": 0.0
         },
         {
           "month": "2027-02",
-          "cumulative": 152386.0,
+          "cumulative": 166168.82,
           "monthly": 0.0
         },
         {
           "month": "2027-03",
-          "cumulative": 152386.0,
+          "cumulative": 166168.82,
           "monthly": 0.0
         },
         {
           "month": "2027-04",
-          "cumulative": 152386.0,
+          "cumulative": 166168.82,
           "monthly": 0.0
         },
         {
           "month": "2027-05",
-          "cumulative": 152386.0,
+          "cumulative": 166168.82,
           "monthly": 0.0
         },
         {
           "month": "2027-06",
-          "cumulative": 152386.0,
+          "cumulative": 166168.82,
           "monthly": 0.0
         }
       ]
@@ -350,66 +350,66 @@
     },
     {
       "fund": "HARBOR ENTERPRISE OPERATING",
-      "total_through_as_of": 84428.0,
+      "total_through_as_of": 92312.62,
       "series": [
         {
           "month": "2026-07",
-          "cumulative": 84428.0,
-          "monthly": 84428.0
+          "cumulative": 92312.62,
+          "monthly": 92312.62
         },
         {
           "month": "2026-08",
-          "cumulative": 84428.0,
+          "cumulative": 92312.62,
           "monthly": 0.0
         },
         {
           "month": "2026-09",
-          "cumulative": 84428.0,
+          "cumulative": 92312.62,
           "monthly": 0.0
         },
         {
           "month": "2026-10",
-          "cumulative": 84428.0,
+          "cumulative": 92312.62,
           "monthly": 0.0
         },
         {
           "month": "2026-11",
-          "cumulative": 84428.0,
+          "cumulative": 92312.62,
           "monthly": 0.0
         },
         {
           "month": "2026-12",
-          "cumulative": 84428.0,
+          "cumulative": 92312.62,
           "monthly": 0.0
         },
         {
           "month": "2027-01",
-          "cumulative": 84428.0,
+          "cumulative": 92312.62,
           "monthly": 0.0
         },
         {
           "month": "2027-02",
-          "cumulative": 84428.0,
+          "cumulative": 92312.62,
           "monthly": 0.0
         },
         {
           "month": "2027-03",
-          "cumulative": 84428.0,
+          "cumulative": 92312.62,
           "monthly": 0.0
         },
         {
           "month": "2027-04",
-          "cumulative": 84428.0,
+          "cumulative": 92312.62,
           "monthly": 0.0
         },
         {
           "month": "2027-05",
-          "cumulative": 84428.0,
+          "cumulative": 92312.62,
           "monthly": 0.0
         },
         {
           "month": "2027-06",
-          "cumulative": 84428.0,
+          "cumulative": 92312.62,
           "monthly": 0.0
         }
       ]
