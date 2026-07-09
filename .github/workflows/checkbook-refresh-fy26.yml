@@ -53,6 +53,10 @@ jobs:
           python3 scripts/build_checkbook_performance.py --year 2026 --out data/checkbook_performance_FY26.json
           python3 scripts/build_budget_actual.py --year 2026
           python3 scripts/crawl_budget_drill.py --year 2026
+          # data/checkbook_redaction_disclosure.json is a single shared file
+          # that the live FY27 daily job also rewrites. Leave it to that job
+          # so the two workflows don't flip-flop it into daily no-op PRs.
+          git checkout -- data/checkbook_redaction_disclosure.json
 
       - name: Prune superseded FY26 dated CSVs
         if: steps.gate.outputs.skip == 'false'
