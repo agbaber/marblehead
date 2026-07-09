@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-30",
+  "as_of": "2026-07-08",
   "fiscal_year": "FY26",
   "checkbook_period_end": "2026-06-01",
   "source": "data/operating_budget_FY26.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
@@ -24,14 +24,14 @@
       "revised_budget": 60614084.0,
       "actual": 57094363.1,
       "original_budget": 59561708.0,
-      "encumbrance": 645433.58
+      "encumbrance": 645358.58
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 49120287.0,
       "actual": 46970271.36,
       "original_budget": 49120287.0,
-      "encumbrance": 1729191.28
+      "encumbrance": 1729091.28
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -82,7 +82,7 @@
       "revised_budget": 14574494.16,
       "actual": 13901433.85,
       "original_budget": 17832596.0,
-      "encumbrance": 1303189.13
+      "encumbrance": 1303089.13
     },
     {
       "name": "HIGH SCHOOL",
@@ -180,7 +180,7 @@
       "revised_budget": 1972597.93,
       "actual": 1856525.15,
       "original_budget": 1942697.93,
-      "encumbrance": 66523.0
+      "encumbrance": 66448.0
     },
     {
       "name": "ABBOT LIBRARY",
@@ -406,14 +406,14 @@
       "revised_budget": 34980346.27,
       "actual": 36073308.77,
       "original_budget": 34515101.0,
-      "encumbrance": 125622.95
+      "encumbrance": 125547.95
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 15101658.57,
       "actual": 21789824.94,
       "original_budget": 14399193.77,
-      "encumbrance": 1702157.44
+      "encumbrance": 1702057.44
     },
     {
       "name": "GOVERNMENTAL",
@@ -471,7 +471,7 @@
       "revised_budget": 49120287.0,
       "actual": 46970271.36,
       "original_budget": 49120287.0,
-      "encumbrance": 1729191.28
+      "encumbrance": 1729091.28
     },
     {
       "name": "SALARIES",
@@ -485,7 +485,7 @@
       "revised_budget": 21048150.0,
       "actual": 28636065.76,
       "original_budget": 20424150.0,
-      "encumbrance": 875260.05
+      "encumbrance": 875185.05
     },
     {
       "name": "GROUP INSURANCE",
@@ -1187,7 +1187,7 @@
       "revised_budget": 647185.19,
       "actual": 1131565.91,
       "original_budget": 450321.8,
-      "encumbrance": 107922.64
+      "encumbrance": 107822.64
     },
     {
       "name": "TUITION-REGIONAL DISTRICTS",
@@ -2090,7 +2090,7 @@
       "revised_budget": 48843.27,
       "actual": 69190.43,
       "original_budget": 43796.0,
-      "encumbrance": 2984.0
+      "encumbrance": 2909.0
     },
     {
       "name": "NOBLE SERVICES",

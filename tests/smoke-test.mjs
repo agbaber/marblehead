@@ -54,6 +54,26 @@ async function testCheckbookPageLoads(page) {
   h1 ? ok('Checkbook page has an h1') : fail('Checkbook h1', 'missing');
 }
 
+async function testCheckbookFY26PageLoads(page) {
+  console.log('\n── Checkbook FY26 archive page ──');
+  const resp = await page.goto(`${SITE}/checkbook/fy26/`, { waitUntil: 'domcontentloaded' });
+  resp && resp.status() === 200
+    ? ok('Checkbook FY26 page returns 200')
+    : fail('Checkbook FY26', `status ${resp ? resp.status() : 'no response'}`);
+  const h1 = await page.$('h1');
+  h1 ? ok('Checkbook FY26 page has an h1') : fail('Checkbook FY26 h1', 'missing');
+  // The archive banner is unique to this page and confirms it rendered as the FY26 variant.
+  const banner = await page.$('.archive-banner');
+  banner
+    ? ok('Checkbook FY26 page shows the archive banner')
+    : fail('Checkbook FY26 banner', '.archive-banner missing');
+  // Confirm it is the FY26 build, not FY27: the subtitle carries the fiscal year label.
+  const body = await page.textContent('body');
+  body && body.includes('FY26')
+    ? ok('Checkbook FY26 page renders FY26 label')
+    : fail('Checkbook FY26 label', 'no FY26 text found on page');
+}
+
 async function testNavLinks(page) {
   console.log('\n── Nav links ──');
   const hrefs = await page.$$eval('nav.site-nav a[href]', els =>
@@ -712,6 +732,7 @@ async function testTopicMeetingCounts(page) {
     await testHomepageLoads(page1);
     await testNavLinks(page1);
     await testCheckbookPageLoads(page1);
+    await testCheckbookFY26PageLoads(page1);
     await testGeneralGovernmentPeerChart(page1);
     await testSchoolAgeVsEnrollment(page1);
     await testTownBudgetPageLoads(page1);

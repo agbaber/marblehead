@@ -206,31 +206,31 @@ def main() -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(out, indent=2) + "\n", encoding="utf-8")
 
-    # Dashboard JSON Jekyll exposes as site.data.budget so pages can cite
-    # the live FY's budget totals and artifact filenames without per-page
-    # regexes. Only written for the current fiscal year: a close-out
-    # re-run of a prior FY must not clobber the live dashboard.
-    dashboard_path = REPO_ROOT / "_data" / "budget.json"
-    if year == fylib.current_fiscal_year():
-        dashboard = {
-            "fiscal_year": label,
-            "year": year,
-            "fy_start": fylib.fy_start(year).isoformat(),
-            "fy_end": fylib.fy_end(year).isoformat(),
-            "actual_filename": f"budget_actual_{label}.json",
-            "burn_filename": f"monthly_burn_{label}.json",
-            "drill_filename": f"budget_drill_{label}.json",
-            "all_funds_budget_M": f"${all_funds_revised / 1_000_000:.1f}M",
-            "annual_operating_M": (
-                f"${out['totals']['budgeted_annual']['revised_budget'] / 1_000_000:.1f}M"),
-            "generated_by": "scripts/build_budget_actual.py",
-        }
-        dashboard_path.parent.mkdir(parents=True, exist_ok=True)
-        dashboard_path.write_text(json.dumps(dashboard, indent=1) + "\n")
-        print(f"Wrote {dashboard_path.relative_to(REPO_ROOT)}")
-    else:
-        print(f"Skipped {dashboard_path.relative_to(REPO_ROOT)}: {label} is not "
-              f"the current fiscal year ({fylib.fy_label(fylib.current_fiscal_year())})")
+    # Dashboard JSON Jekyll exposes as site.data.budget (current FY) or
+    # site.data.budget_fy<yy> (a prior FY archive) so pages can cite the
+    # FY's budget totals and artifact filenames without per-page regexes.
+    # A prior-FY close-out re-run writes its own per-FY file and never
+    # clobbers the live current-FY dashboard.
+    is_current = year == fylib.current_fiscal_year()
+    yy = label.replace("FY", "").lower()  # "FY26" -> "26"
+    dashboard_name = "budget.json" if is_current else f"budget_fy{yy}.json"
+    dashboard_path = REPO_ROOT / "_data" / dashboard_name
+    dashboard = {
+        "fiscal_year": label,
+        "year": year,
+        "fy_start": fylib.fy_start(year).isoformat(),
+        "fy_end": fylib.fy_end(year).isoformat(),
+        "actual_filename": f"budget_actual_{label}.json",
+        "burn_filename": f"monthly_burn_{label}.json",
+        "drill_filename": f"budget_drill_{label}.json",
+        "all_funds_budget_M": f"${all_funds_revised / 1_000_000:.1f}M",
+        "annual_operating_M": (
+            f"${out['totals']['budgeted_annual']['revised_budget'] / 1_000_000:.1f}M"),
+        "generated_by": "scripts/build_budget_actual.py",
+    }
+    dashboard_path.parent.mkdir(parents=True, exist_ok=True)
+    dashboard_path.write_text(json.dumps(dashboard, indent=1) + "\n")
+    print(f"Wrote {dashboard_path.relative_to(REPO_ROOT)}")
 
     print(f"Wrote {out_path.relative_to(REPO_ROOT)}")
     print(f"  rows in source CSV     = {len(raw_rows):,} "

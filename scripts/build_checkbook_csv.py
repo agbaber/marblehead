@@ -271,34 +271,35 @@ def main() -> None:
     dropped_total = sum(ex["total_amount"] for ex in excluded.values())
     nonempty = sum(1 for r in out_rows if r["Description"] not in ("", WITHHELD))
 
-    # Dashboard JSON read by index.html, checkbook.html, and anything
-    # else that wants to cite the latest published total. Lives under
-    # _data/ so Jekyll loads it as `site.data.checkbook` and the page
-    # values stay locked together with no per-template regex. Only
-    # written for the current fiscal year: a close-out re-run of a
-    # prior FY must not clobber the live dashboard.
-    dashboard_path = REPO_ROOT / "_data" / "checkbook.json"
-    if year == fylib.current_fiscal_year():
-        dashboard = {
-            "as_of": as_of,
-            "as_of_human": as_of_dt.strftime("%b ") + str(as_of_dt.day),
-            "fiscal_year": fylib.fy_label(year),
-            "year": year,
-            "fy_start": fylib.fy_start(year).isoformat(),
-            "fy_end": fylib.fy_end(year).isoformat(),
-            "months_elapsed": fylib.months_elapsed(year, as_of_dt),
-            "total_amount": round(total, 2),
-            "total_M": f"${total / 1_000_000:.1f}M",
-            "row_count": len(out_rows),
-            "row_count_human": f"{len(out_rows):,}",
-            "csv_filename": out_path.name,
-            "generated_by": "scripts/build_checkbook_csv.py",
-        }
-        dashboard_path.parent.mkdir(parents=True, exist_ok=True)
-        dashboard_path.write_text(json.dumps(dashboard, indent=1) + "\n")
-        wrote_dashboard = True
-    else:
-        wrote_dashboard = False
+    # Dashboard JSON read by index.html, checkbook.html, and the FY26
+    # archive page. Lives under _data/ so Jekyll loads it as
+    # `site.data.checkbook` (current FY) or `site.data.checkbook_fy<yy>`
+    # (a prior FY archive). A prior-FY close-out re-run writes its own
+    # per-FY file and never clobbers the live current-FY dashboard.
+    is_current = year == fylib.current_fiscal_year()
+    yy = fylib.fy_label(year).replace("FY", "").lower()  # 2026 -> "26"
+    dashboard_name = "checkbook.json" if is_current else f"checkbook_fy{yy}.json"
+    dashboard_path = REPO_ROOT / "_data" / dashboard_name
+    perf_name = ("checkbook_performance.json" if is_current
+                 else f"checkbook_performance_FY{yy}.json")
+    dashboard = {
+        "as_of": as_of,
+        "as_of_human": as_of_dt.strftime("%b ") + str(as_of_dt.day),
+        "fiscal_year": fylib.fy_label(year),
+        "year": year,
+        "fy_start": fylib.fy_start(year).isoformat(),
+        "fy_end": fylib.fy_end(year).isoformat(),
+        "months_elapsed": fylib.months_elapsed(year, as_of_dt),
+        "total_amount": round(total, 2),
+        "total_M": f"${total / 1_000_000:.1f}M",
+        "row_count": len(out_rows),
+        "row_count_human": f"{len(out_rows):,}",
+        "csv_filename": out_path.name,
+        "performance_filename": perf_name,
+        "generated_by": "scripts/build_checkbook_csv.py",
+    }
+    dashboard_path.parent.mkdir(parents=True, exist_ok=True)
+    dashboard_path.write_text(json.dumps(dashboard, indent=1) + "\n")
 
     print(f"input rows:      {len(raw_rows):,}")
     print(f"dropped rows:    {sum(ex['row_count'] for ex in excluded.values()):,} "
@@ -308,12 +309,7 @@ def main() -> None:
           f"{nonempty:,} with a visible description")
     print(f"wrote {out_path.relative_to(REPO_ROOT)}")
     print(f"wrote {disclosure_path.relative_to(REPO_ROOT)}")
-    if wrote_dashboard:
-        print(f"wrote {dashboard_path.relative_to(REPO_ROOT)}")
-    else:
-        print(f"note: {fylib.fy_label(year)} is not the current fiscal year "
-              f"({fylib.fy_label(fylib.current_fiscal_year())}); skipped "
-              f"{dashboard_path.relative_to(REPO_ROOT)} to protect the live dashboard")
+    print(f"wrote {dashboard_path.relative_to(REPO_ROOT)}")
     print(f"wrote {REVIEW_PATH}  <-- review this before committing")
 
 

@@ -169,7 +169,7 @@ def main() -> None:
     snapshot = latest_snapshot(args.year)
     perf = build(load_rows(snapshot), args.year)
     args.out.write_text(json.dumps(perf, indent=2) + "\n")
-    out_label = (args.out.relative_to(REPO)
+    out_label = (args.out.resolve().relative_to(REPO)
                  if args.out.resolve().is_relative_to(REPO) else args.out)
     print(f"wrote {out_label} from {snapshot.name} "
           f"(as_of {perf['as_of']}, {len(perf['monthly_cadence'])} months, "
