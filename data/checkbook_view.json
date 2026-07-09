@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-07-01",
+    "date": "2026-07-07",
     "fiscal_year": "FY27",
-    "row_count": 49,
-    "total_paid": 7490746.48,
+    "row_count": 50,
+    "total_paid": 7492348.45,
     "interfund_total": 0,
-    "external_paid": 7490746.48,
+    "external_paid": 7492348.45,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-07-01",
-    "source_file": "checkbook_FY27_2026-07-01.csv"
+    "last_payment": "2026-07-07",
+    "source_file": "checkbook_FY27_2026-07-07.csv"
   },
   "buckets": [
     {
@@ -23,14 +23,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 6244694.48,
+      "amount": 6246296.45,
       "share": 0.8337,
       "fund_count": 2,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 6114374.35,
-          "row_count": 42
+          "amount": 6115976.32,
+          "row_count": 43
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -94,11 +94,11 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 6114374.35,
+    "total": 6115976.32,
     "fixed_total": 5843360.0,
-    "fixed_share": 0.9557,
-    "admin_contracts_total": 221452.35,
-    "admin_contracts_share": 0.0362,
+    "fixed_share": 0.9554,
+    "admin_contracts_total": 223054.32,
+    "admin_contracts_share": 0.0365,
     "other_recurring_total": 49562.0,
     "other_recurring_share": 0.0081,
     "segments": [
@@ -122,7 +122,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.9557,
+        "share": 0.9554,
         "row_count": 1,
         "top_vendors": [
           {
@@ -142,13 +142,17 @@
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 221452.35,
-        "share": 0.0362,
-        "row_count": 1,
+        "amount": 223054.32,
+        "share": 0.0365,
+        "row_count": 2,
         "top_vendors": [
           {
             "name": "TYLER TECHNOLOGIES INC",
             "amount": 221452.35
+          },
+          {
+            "name": "VOYA HOLDINGS INC",
+            "amount": 1601.97
           }
         ]
       },
