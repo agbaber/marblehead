@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-07-01",
+  "as_of": "2026-07-07",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 1,
-  "fy_pct_elapsed": 0.3,
+  "fy_pct_elapsed": 1.9,
   "budget_execution": {
     "by_department": [
       {
@@ -671,8 +671,8 @@
   "monthly_cadence": [
     {
       "month": "2026-07",
-      "amount": 7490746.48,
-      "count": 49
+      "amount": 7492348.45,
+      "count": 50
     }
   ],
   "drill": {
@@ -727,6 +727,11 @@
             "count": 1
           },
           {
+            "name": "VOYA HOLDINGS INC",
+            "amount": 1601.97,
+            "count": 1
+          },
+          {
             "name": "ADAM J HATFIELD",
             "amount": 1300.0,
             "count": 1
@@ -770,18 +775,13 @@
             "name": "ERIC M RIDGE",
             "amount": 1300.0,
             "count": 1
-          },
-          {
-            "name": "ERIC VERHAULT",
-            "amount": 1300.0,
-            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 6114374.35,
-            "count": 42
+            "amount": 6115976.32,
+            "count": 43
           }
         ]
       },
