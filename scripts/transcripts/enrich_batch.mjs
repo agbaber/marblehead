@@ -41,11 +41,17 @@ if (!['submit', 'poll', 'collect', 'run'].includes(subcommand)) {
 
 const maxBatch = (() => {
   const i = process.argv.indexOf('--max-batch');
-  return i >= 0 && process.argv[i + 1] ? Number(process.argv[i + 1]) : 0;
+  if (i < 0 || !process.argv[i + 1]) return 0;
+  const n = Number(process.argv[i + 1]);
+  if (!Number.isFinite(n) || n < 0) { console.error(`Invalid --max-batch: ${process.argv[i + 1]}`); process.exit(2); }
+  return n;
 })();
 const maxWaitSec = (() => {
   const i = process.argv.indexOf('--max-wait-sec');
-  return i >= 0 && process.argv[i + 1] ? Number(process.argv[i + 1]) : 2400;
+  if (i < 0 || !process.argv[i + 1]) return 2400;
+  const n = Number(process.argv[i + 1]);
+  if (!Number.isFinite(n) || n <= 0) { console.error(`Invalid --max-wait-sec: ${process.argv[i + 1]}`); process.exit(2); }
+  return n;
 })();
 const dryRun = process.argv.includes('--dry-run');
 
@@ -158,17 +164,22 @@ async function pollUntilEnded(client, batchId, maxWaitSecs) {
   const deadline = Date.now() + maxWaitSecs * 1000;
   const intervalMs = 30_000;
   while (Date.now() < deadline) {
-    const batch = await client.messages.batches.retrieve(batchId);
-    console.error(`  batch ${batchId}: ${batch.processing_status} ${JSON.stringify(batch.request_counts)}`);
-    if (batch.processing_status === 'ended') return true;
+    try {
+      const batch = await client.messages.batches.retrieve(batchId);
+      console.error(`  batch ${batchId}: ${batch.processing_status} ${JSON.stringify(batch.request_counts)}`);
+      if (batch.processing_status === 'ended') return true;
+    } catch (err) {
+      console.error(`  batch ${batchId}: poll error (will retry): ${err.message}`);
+    }
     await new Promise((r) => setTimeout(r, intervalMs));
   }
   return false;
 }
 
 async function run() {
-  const candidates = listCandidates({ maxBatch });
-  const total = listCandidates({}).length; // count before the cap, for logging
+  const all = listCandidates({});
+  const candidates = maxBatch ? all.slice(0, maxBatch) : all;
+  const total = all.length;
   if (candidates.length === 0) {
     console.error('No unenriched transcripts. Nothing to do.');
     return;
@@ -193,7 +204,7 @@ async function run() {
 
   const client = new Anthropic();
   const batch = await client.messages.batches.create({ requests });
-  writeFileSync(STATE_FILE, JSON.stringify({ batch_id: batch.id, submitted_at: null, count: requests.length }, null, 2) + '\n');
+  writeFileSync(STATE_FILE, JSON.stringify({ batch_id: batch.id, submitted_at: new Date().toISOString(), count: requests.length }, null, 2) + '\n');
   console.error(`Batch submitted: ${batch.id} (${requests.length} requests). Polling up to ${maxWaitSec}s...`);
 
   const ended = await pollUntilEnded(client, batch.id, maxWaitSec);
