@@ -34,10 +34,20 @@ const onlySource = (() => {
   const i = process.argv.indexOf('--source');
   return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : null;
 })();
-if (!['submit', 'poll', 'collect'].includes(subcommand)) {
-  console.error('Usage: enrich_batch.mjs submit|poll|collect [--force] [--skip-boards a,b] [--source vimeo-auto|youtube-auto|whisper-local]');
+if (!['submit', 'poll', 'collect', 'run'].includes(subcommand)) {
+  console.error('Usage: enrich_batch.mjs submit|poll|collect|run [--force] [--skip-boards a,b] [--source S] [--max-batch N] [--max-wait-sec N] [--dry-run]');
   process.exit(2);
 }
+
+const maxBatch = (() => {
+  const i = process.argv.indexOf('--max-batch');
+  return i >= 0 && process.argv[i + 1] ? Number(process.argv[i + 1]) : 0;
+})();
+const maxWaitSec = (() => {
+  const i = process.argv.indexOf('--max-wait-sec');
+  return i >= 0 && process.argv[i + 1] ? Number(process.argv[i + 1]) : 2400;
+})();
+const dryRun = process.argv.includes('--dry-run');
 
 function extractBody(file) {
   const m = file.match(/^---\n[\s\S]*?\n---\n([\s\S]*)$/);
@@ -144,6 +154,79 @@ async function collect() {
   if (failed > 0) console.error(`Failures logged to ${FAIL_LOG}`);
 }
 
+async function pollUntilEnded(client, batchId, maxWaitSecs) {
+  const deadline = Date.now() + maxWaitSecs * 1000;
+  const intervalMs = 30_000;
+  while (Date.now() < deadline) {
+    const batch = await client.messages.batches.retrieve(batchId);
+    console.error(`  batch ${batchId}: ${batch.processing_status} ${JSON.stringify(batch.request_counts)}`);
+    if (batch.processing_status === 'ended') return true;
+    await new Promise((r) => setTimeout(r, intervalMs));
+  }
+  return false;
+}
+
+async function run() {
+  const candidates = listCandidates({ maxBatch });
+  const total = listCandidates({}).length; // count before the cap, for logging
+  if (candidates.length === 0) {
+    console.error('No unenriched transcripts. Nothing to do.');
+    return;
+  }
+  console.error(`Enriching ${candidates.length} transcript(s) via batch` +
+    (maxBatch && total > maxBatch ? ` (${total - maxBatch} deferred past --max-batch=${maxBatch}, will run next time)` : ''));
+  if (dryRun) {
+    for (const c of candidates) console.error(`  would enrich: ${c.slug}`);
+    return;
+  }
+
+  const systemPrompt = readFileSync(PROMPT_PATH, 'utf8');
+  const requests = candidates.map(({ slug, text }) => ({
+    custom_id: slug,
+    params: {
+      model: MODEL,
+      max_tokens: 16384,
+      system: [{ type: 'text', text: systemPrompt, cache_control: { type: 'ephemeral' } }],
+      messages: [{ role: 'user', content: extractBody(text) }],
+    },
+  }));
+
+  const client = new Anthropic();
+  const batch = await client.messages.batches.create({ requests });
+  writeFileSync(STATE_FILE, JSON.stringify({ batch_id: batch.id, submitted_at: null, count: requests.length }, null, 2) + '\n');
+  console.error(`Batch submitted: ${batch.id} (${requests.length} requests). Polling up to ${maxWaitSec}s...`);
+
+  const ended = await pollUntilEnded(client, batch.id, maxWaitSec);
+  if (!ended) {
+    console.error(`Batch did not finish within ${maxWaitSec}s. Leaving it; a later run will resubmit fresh.`);
+    process.exit(1);
+  }
+
+  let written = 0, failed = 0;
+  for await (const result of await client.messages.batches.results(batch.id)) {
+    const slug = result.custom_id;
+    const path = resolve(TRANSCRIPTS_DIR, `${slug}.md`);
+    if (!existsSync(path)) { console.error(`${slug}: source gone, skipping`); failed += 1; continue; }
+    if (result.result.type !== 'succeeded') {
+      console.error(`${slug}: batch result type=${result.result.type}`);
+      appendFileSync(FAIL_LOG, `${slug}\t${result.result.type}\t${JSON.stringify(result.result.error || {})}\n`);
+      failed += 1; continue;
+    }
+    const msg = result.result.message;
+    const textOut = msg.content.filter((b) => b.type === 'text').map((b) => b.text).join('');
+    const parsed = parseResponse(textOut);
+    if (!parsed.valid) {
+      console.error(`${slug}: validation failed: ${parsed.errors.join('; ')}`);
+      appendFileSync(FAIL_LOG, `${slug}\tvalidation\t${parsed.errors.join('; ')}\n`);
+      failed += 1; continue;
+    }
+    writeFileSync(path, mergeFrontmatter(readFileSync(path, 'utf8'), parsed.summary_card, parsed.topic_segments));
+    written += 1;
+  }
+  console.error(`Done. written=${written} failed=${failed}`);
+}
+
 if (subcommand === 'submit') await submit();
 else if (subcommand === 'poll') await poll();
 else if (subcommand === 'collect') await collect();
+else if (subcommand === 'run') await run();
