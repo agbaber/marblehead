@@ -712,8 +712,8 @@
     },
     {
       "month": "2026-06",
-      "amount": 7234532.95,
-      "count": 1377
+      "amount": 7262154.44,
+      "count": 1383
     }
   ],
   "drill": {
@@ -2685,8 +2685,8 @@
           },
           {
             "name": "NATIONAL GRAND BANK OF MARBLEHEAD",
-            "amount": 132175.23,
-            "count": 86
+            "amount": 144154.27,
+            "count": 87
           },
           {
             "name": "WESCO",
@@ -2762,8 +2762,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 1599154.94,
-            "count": 132
+            "amount": 1611133.98,
+            "count": 133
           }
         ]
       },
@@ -3138,8 +3138,8 @@
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 17581536.85,
-            "count": 180
+            "amount": 17586396.85,
+            "count": 181
           },
           {
             "name": "U.S. BANK",
@@ -3148,8 +3148,8 @@
           },
           {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
-            "amount": 5389219.57,
-            "count": 12
+            "amount": 5389377.82,
+            "count": 15
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
@@ -3173,8 +3173,8 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 328296.24,
-            "count": 79
+            "amount": 338920.44,
+            "count": 80
           },
           {
             "name": "ONE TIME PAY",
@@ -3255,8 +3255,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 2058878.75,
-            "count": 468
+            "amount": 2074521.2,
+            "count": 473
           }
         ]
       },
