@@ -1,5 +1,5 @@
 {
- "as_of": "2026-07-08",
+ "as_of": "2026-07-10",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -24,7 +24,7 @@
     {
      "name": "DEBT SERVICE",
      "revised_budget": 9314141.0,
-     "actual": 9415549.38,
+     "actual": 9281144.58,
      "original_budget": 9314141.0
     },
     {
@@ -186,7 +186,7 @@
     {
      "name": "MEMORIAL & VETERANS DAY",
      "revised_budget": 7550.0,
-     "actual": 212.5,
+     "actual": 5072.5,
      "original_budget": 7550.0
     },
     {
@@ -224,7 +224,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 31124624.8,
-     "actual": 31042073.48,
+     "actual": 30907668.68,
      "original_budget": 31798623.0
     },
     {
@@ -254,7 +254,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 1123966.27,
-     "actual": 871108.71,
+     "actual": 875968.71,
      "original_budget": 913370.0
     },
     {
@@ -898,7 +898,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 9314141.0,
-     "actual": 9415549.38,
+     "actual": 9281144.58,
      "original_budget": 9314141.0
     }
    ],
@@ -906,7 +906,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 9314141.0,
-     "actual": 9415549.38,
+     "actual": 9281144.58,
      "original_budget": 9314141.0
     }
    ]
@@ -2903,7 +2903,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 5050.0,
-     "actual": 212.5,
+     "actual": 5072.5,
      "original_budget": 5050.0
     },
     {
@@ -2923,7 +2923,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 7550.0,
-     "actual": 212.5,
+     "actual": 5072.5,
      "original_budget": 7550.0
     }
    ]
@@ -3394,7 +3394,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 31124624.8,
-     "actual": 31042073.48,
+     "actual": 30907668.68,
      "original_budget": 31798623.0
     },
     {
@@ -3438,7 +3438,7 @@
     {
      "name": "DEBT SERVICE",
      "revised_budget": 9314141.0,
-     "actual": 9415549.38,
+     "actual": 9281144.58,
      "original_budget": 9314141.0
     },
     {
@@ -4199,7 +4199,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 1123966.27,
-     "actual": 871108.71,
+     "actual": 875968.71,
      "original_budget": 913370.0
     },
     {
@@ -4387,7 +4387,7 @@
     {
      "name": "MEMORIAL & VETERANS DAY",
      "revised_budget": 5050.0,
-     "actual": 212.5,
+     "actual": 5072.5,
      "original_budget": 5050.0
     },
     {
@@ -4855,7 +4855,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19400687.6,
-     "actual": 17636090.4,
+     "actual": 17506545.6,
      "original_budget": 18599491.0
     },
     {
@@ -4887,7 +4887,7 @@
     {
      "name": "DEBT SERVICE",
      "revised_budget": 9314141.0,
-     "actual": 9415549.38,
+     "actual": 9281144.58,
      "original_budget": 9314141.0
     },
     {
@@ -5061,7 +5061,7 @@
     {
      "name": "MEMORIAL & VETERANS DAY",
      "revised_budget": 7550.0,
-     "actual": 212.5,
+     "actual": 5072.5,
      "original_budget": 7550.0
     },
     {
@@ -7313,7 +7313,7 @@
    {
     "name": "BOND ISSUANCE COSTS",
     "revised_budget": 0,
-    "actual": 101504.8,
+    "actual": -32900.0,
     "original_budget": 0
    }
   ],
@@ -13997,7 +13997,7 @@
    {
     "name": "FLAGS",
     "revised_budget": 3200.0,
-    "actual": 0,
+    "actual": 4860.0,
     "original_budget": 3200.0
    },
    {
@@ -14881,7 +14881,7 @@
    {
     "name": "BOND ISSUANCE COSTS",
     "revised_budget": 0,
-    "actual": 101504.8,
+    "actual": -32900.0,
     "original_budget": 0
    }
   ],
@@ -15477,7 +15477,7 @@
    {
     "name": "FLAGS",
     "revised_budget": 6205.0,
-    "actual": 5448.2,
+    "actual": 10308.2,
     "original_budget": 4900.0
    },
    {
