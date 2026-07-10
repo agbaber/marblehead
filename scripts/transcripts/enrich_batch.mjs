@@ -16,6 +16,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, append
 import { resolve, basename } from 'node:path';
 import { parseResponse } from './lib/parse_response.mjs';
 import { mergeFrontmatter } from './lib/merge_frontmatter.mjs';
+import { selectCandidates } from './lib/select_candidates.mjs';
 
 const MODEL = 'claude-sonnet-4-6';
 const PROMPT_PATH = resolve('scripts/transcripts/prompts/summary.md');
@@ -44,31 +45,15 @@ function extractBody(file) {
   return m[1].trim();
 }
 
-function listCandidates() {
-  return readdirSync(TRANSCRIPTS_DIR)
-    .filter(f => f.endsWith('.md') && f !== '.gitkeep')
-    .map(f => ({ slug: f.replace(/\.md$/, ''), path: resolve(TRANSCRIPTS_DIR, f) }))
-    .filter(({ slug, path }) => {
-      const text = readFileSync(path, 'utf8');
-      // Always skip hand-crafted POCs. They are marked by a top-level
-      // `ingest:` block in their frontmatter and do NOT carry the
-      // `source: vimeo-auto+llm` flag that our pipeline writes.
-      if (/^ingest:/m.test(text)) return false;
-      if (skipBoards) {
-        const m = text.match(/^board: (\S+)$/m);
-        if (m && skipBoards.has(m[1])) return false;
-      }
-      // Scope to one ingest source (e.g. only the whisper-local backfill),
-      // so a batch doesn't sweep up unrelated unenriched transcripts.
-      if (onlySource) {
-        const m = text.match(/^source: (\S+)$/m);
-        if (!m || m[1] !== onlySource) return false;
-      }
-      // Default: skip files that already have a summary_card. With --force,
-      // re-enrich them (mergeFrontmatter strips prior summary_card / topic_segments).
-      if (force) return true;
-      return !/^summary_card:/m.test(text);
+function listCandidates({ maxBatch = 0 } = {}) {
+  const items = readdirSync(TRANSCRIPTS_DIR)
+    .filter((f) => f.endsWith('.md') && f !== '.gitkeep')
+    .map((f) => {
+      const slug = f.replace(/\.md$/, '');
+      const path = resolve(TRANSCRIPTS_DIR, f);
+      return { slug, path, text: readFileSync(path, 'utf8') };
     });
+  return selectCandidates(items, { force, skipBoards, source: onlySource, maxBatch });
 }
 
 async function submit() {
