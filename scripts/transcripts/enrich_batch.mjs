@@ -29,8 +29,12 @@ const skipBoards = (() => {
   const i = process.argv.indexOf('--skip-boards');
   return i >= 0 && process.argv[i + 1] ? new Set(process.argv[i + 1].split(',')) : null;
 })();
+const onlySource = (() => {
+  const i = process.argv.indexOf('--source');
+  return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : null;
+})();
 if (!['submit', 'poll', 'collect'].includes(subcommand)) {
-  console.error('Usage: enrich_batch.mjs submit|poll|collect [--force] [--skip-boards a,b]');
+  console.error('Usage: enrich_batch.mjs submit|poll|collect [--force] [--skip-boards a,b] [--source vimeo-auto|youtube-auto|whisper-local]');
   process.exit(2);
 }
 
@@ -53,6 +57,12 @@ function listCandidates() {
       if (skipBoards) {
         const m = text.match(/^board: (\S+)$/m);
         if (m && skipBoards.has(m[1])) return false;
+      }
+      // Scope to one ingest source (e.g. only the whisper-local backfill),
+      // so a batch doesn't sweep up unrelated unenriched transcripts.
+      if (onlySource) {
+        const m = text.match(/^source: (\S+)$/m);
+        if (!m || m[1] !== onlySource) return false;
       }
       // Default: skip files that already have a summary_card. With --force,
       // re-enrich them (mergeFrontmatter strips prior summary_card / topic_segments).

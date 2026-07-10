@@ -24,6 +24,13 @@ const YOUTUBE_DISCLAIMER = [
   '> jump to that moment in the source video.',
 ].join('\n');
 
+const WHISPER_DISCLAIMER = [
+  '> Transcript machine-generated with Whisper speech recognition (the source',
+  '> video has no caption track). No speaker labels; proper names and dollar',
+  '> figures occasionally misheard. Click any timecode to jump to that moment',
+  '> in the source video.',
+].join('\n');
+
 /**
  * @param {{
  *   board_slug: string,
@@ -33,7 +40,7 @@ const YOUTUBE_DISCLAIMER = [
  *   youtube_id?: string,
  *   duration_seconds: number,
  *   body: string,
- *   source?: 'vimeo-auto'|'youtube-auto',
+ *   source?: 'vimeo-auto'|'youtube-auto'|'whisper-local',
  *   date_approximate?: boolean,
  * }} args
  */
@@ -58,7 +65,9 @@ export function renderTranscript({
   const videoUrl = isYouTube
     ? `https://www.youtube.com/watch?v=${youtube_id}`
     : `https://vimeo.com/${vimeo_id}`;
-  const disclaimer = isYouTube ? YOUTUBE_DISCLAIMER : VIMEO_DISCLAIMER;
+  const disclaimer = isYouTube
+    ? YOUTUBE_DISCLAIMER
+    : source === 'whisper-local' ? WHISPER_DISCLAIMER : VIMEO_DISCLAIMER;
 
   const fields = [
     '---',
