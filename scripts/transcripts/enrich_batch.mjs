@@ -36,6 +36,7 @@ const onlySource = (() => {
 })();
 if (!['submit', 'poll', 'collect', 'run'].includes(subcommand)) {
   console.error('Usage: enrich_batch.mjs submit|poll|collect|run [--force] [--skip-boards a,b] [--source S] [--max-batch N] [--max-wait-sec N] [--dry-run]');
+  console.error('  (--max-batch, --max-wait-sec, --dry-run apply to `run` only)');
   process.exit(2);
 }
 

@@ -121,7 +121,7 @@ jobs:
           set -eu
           # Enrich all unenriched transcripts via the Message Batches API
           # (50% cheaper than real-time). One batch per run; polls up to
-          # 40 min, inside this job's 45-min timeout. If the batch does not
+          # 40 min, inside this job's 60-min timeout. If the batch does not
           # finish in time the job fails and the next scheduled run submits
           # a fresh batch (the orphaned batch's results are simply never
           # collected). --max-batch caps a single run so a very large
