@@ -235,6 +235,14 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Caveats:** First-pass extraction. Titles that wrap across two lines in the PDF may be truncated, and a few rows carry artifact titles (for example "-43" from a zoning bylaw section number). Meeting years 2017, 2018, 2020, and 2024 are gaps: no FinCom report for those years in the source archive yet. Years are Town Meeting calendar years, not fiscal years (the May 2026 meeting appropriates for FY27).
 - **Confidence:** Medium-high for article numbers and core titles. Re-verify any individual title against the source PDF before quoting it.
 
+### Town Meeting Results (398 articles, 2019-2025, 8 meetings)
+- **What it is:** Every warrant article and its voted disposition for the Annual Town Meetings of 2019 through 2025 plus the October 17, 2020 Special Town Meeting. Counted Yes/No tallies where one was recorded (every article from 2024 on, via electronic keypad voting; selected articles earlier).
+- **Source:** Annual Town Reports (which reprint each warrant with a "Results of Annual Town Meeting" section) and official Town Meeting minutes PDFs on marbleheadma.gov. Per-row `source_doc` and `source_url` columns.
+- **File:** `town_meeting_results.csv`
+- **Dispositions:** `adopted`, `defeated`, `indefinitely_postponed`, `withdrawn`, `not_taken_up` (the last only for the COVID-trimmed June 29, 2020 session, which acted on Articles 7-31 and passed over the rest; most were re-warranted to the October STM).
+- **Caveats:** Where an article was postponed or withdrawn by a counted motion (common in 2024-2025), the tally is on that motion, not the article; those rows say so in `notes`. 2025 Article 23 (3A overlay) was adopted 951-759 but overturned by the July 8, 2025 town-wide referendum; "adopted at Town Meeting" and "in effect" differ there. Dollar amounts are deliberately not transcribed here; take them from FinCom reports. Titles are normalized to ASCII (hyphens for the town's dashes). 2016 and 2026 dispositions are not yet included (2016 not gathered; 2026 results await the next Annual Town Report or posted minutes). Article counts here are authoritative where they differ from the first-pass `town_meeting_warrant_articles.csv` extraction (2025: 52 articles, not 54).
+- **Confidence:** High for dispositions and tallies (read from official results sections); transcribed by research agents and spot-checkable against the linked PDFs.
+
 ## What We Don't Have (identified gaps)
 
 1. **<abbr class="g" title="Group Insurance Commission">GIC</abbr> premium rates FY12-FY18** - not publicly available online.

@@ -37,7 +37,7 @@ This is the first sub-project of a larger "digitize Marblehead" direction. It de
 ## Data model (new tables)
 
 - **`article_series`**: slug, title, kind (`budget_line`, `money_article`, `other_article`, `consent`), first_year, notes. Persistent identity across years. Department lines of the omnibus are `budget_line` series.
-- **`article_instances`**: series_id, meeting_year, article_number, amount, fincom_recommendation, tm_result, source_doc. What the town actually put on the warrant and what Town Meeting did. Facts only; usable by the data site independent of voting.
+- **`article_instances`**: series_id, meeting_year, meeting_type (annual or special), article_number, amount, fincom_recommendation, tm_result, tm_vote_yes, tm_vote_no, in_effect, source_doc. What the town actually put on the warrant and what Town Meeting did. The result vocabulary observed in the 2019-2025 corpus: adopted, defeated, indefinitely postponed, withdrawn, not taken up. `in_effect` is distinct from adoption because the two can diverge (the 2025 3A overlay was adopted 951-759 at Town Meeting, then overturned by the July 2025 town-wide referendum). Facts only; usable by the data site independent of voting.
 - **`questions`**: series_id, cycle (`fy27-enacted`, `fy28-proposed`, ...), vote_type (`tri` or `support`), status (`open`, `superseded`), quorum_n, opened_at, superseded_by. When a new cycle opens, affected questions supersede with a final snapshot and fresh questions open on the same series.
 - **`question_votes`**: primary key (question_id, identity_hash), answer, first_voted_at, updated_at. Upsert on amendment; the current row is the vote. Never exposed per-identity through any interface.
 - **`snapshots`**: immutable dated aggregates per question and per cycle: N, answer distribution, registered-voter cut, verification-method mix. Permalinked, downloadable as JSON and CSV.
@@ -79,7 +79,7 @@ Small and owned: one token file (type scale, spacing, semantic colors that respe
 ## Rollout
 
 1. Foundation: app repo, CI, deploy, `/api/v1/` scaffold on the worker.
-2. Corpus: load series and instances from the CSVs; backfill Town Meeting results per article (in progress; two research passes are gathering dispositions and gap years).
+2. Corpus: load series and instances from the CSVs. Town Meeting results for 2019-2025 (398 articles, including the October 2020 Special Town Meeting) are already committed as `data/town_meeting_results.csv`; remaining backfill is 2016 dispositions and the 2026 results when the town posts them.
 3. Private beta: end-to-end voting with the existing verified cohort.
 4. Street list: acquire, load, enable renter self-serve and voter flags.
 5. Public launch against the FY27 enacted budget; snapshots begin as questions cross quorum.
