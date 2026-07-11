@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-07-10",
+  "as_of": "2026-07-11",
   "latest_fiscal_month": "2026-07-01",
-  "generated_at": "2026-07-10T11:43:26+00:00",
+  "generated_at": "2026-07-11T11:10:43+00:00",
   "fiscal_year": "FY27",
   "fy_months": [
     "2026-07",
@@ -349,67 +349,67 @@
       ]
     },
     {
-      "fund": "HARBOR ENTERPRISE OPERATING",
-      "total_through_as_of": 92312.62,
+      "fund": "GENERAL FUND - SCHOOL",
+      "total_through_as_of": 107400.12,
       "series": [
         {
           "month": "2026-07",
-          "cumulative": 92312.62,
-          "monthly": 92312.62
+          "cumulative": 107400.12,
+          "monthly": 107400.12
         },
         {
           "month": "2026-08",
-          "cumulative": 92312.62,
+          "cumulative": 107400.12,
           "monthly": 0.0
         },
         {
           "month": "2026-09",
-          "cumulative": 92312.62,
+          "cumulative": 107400.12,
           "monthly": 0.0
         },
         {
           "month": "2026-10",
-          "cumulative": 92312.62,
+          "cumulative": 107400.12,
           "monthly": 0.0
         },
         {
           "month": "2026-11",
-          "cumulative": 92312.62,
+          "cumulative": 107400.12,
           "monthly": 0.0
         },
         {
           "month": "2026-12",
-          "cumulative": 92312.62,
+          "cumulative": 107400.12,
           "monthly": 0.0
         },
         {
           "month": "2027-01",
-          "cumulative": 92312.62,
+          "cumulative": 107400.12,
           "monthly": 0.0
         },
         {
           "month": "2027-02",
-          "cumulative": 92312.62,
+          "cumulative": 107400.12,
           "monthly": 0.0
         },
         {
           "month": "2027-03",
-          "cumulative": 92312.62,
+          "cumulative": 107400.12,
           "monthly": 0.0
         },
         {
           "month": "2027-04",
-          "cumulative": 92312.62,
+          "cumulative": 107400.12,
           "monthly": 0.0
         },
         {
           "month": "2027-05",
-          "cumulative": 92312.62,
+          "cumulative": 107400.12,
           "monthly": 0.0
         },
         {
           "month": "2027-06",
-          "cumulative": 92312.62,
+          "cumulative": 107400.12,
           "monthly": 0.0
         }
       ]
