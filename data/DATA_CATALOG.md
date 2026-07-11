@@ -227,6 +227,14 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Caveats:** SY 2020 missing from source. SY 2007 and SY 2008 have anomalous `total_cnt` values; for non-<abbr class="g" title="Marblehead Public Schools">MPS</abbr> calculations, sum the individual non-`loc_pub` category counts rather than subtracting from `total_cnt`.
 - **Confidence:** High for individual category counts.
 
+### Town Meeting Warrant Articles (348 articles, 7 meeting years)
+- **What it is:** Every article (number and title) in the Annual Town Meeting warrant for meeting years 2016, 2019, 2021, 2022, 2023, 2025, and 2026.
+- **Source:** Finance Committee Reports, which reprint the full warrant article by article. All source PDFs are in the `source-archive-v1` GitHub release; the 2026 list is cross-checkable against the 2026 Annual Town Meeting Warrant PDF in the same release.
+- **File:** `town_meeting_warrant_articles.csv`
+- **Provenance:** each row carries `source_doc`, `source_location`, and `extraction_method` columns.
+- **Caveats:** First-pass extraction. Titles that wrap across two lines in the PDF may be truncated, and a few rows carry artifact titles (for example "-43" from a zoning bylaw section number). Meeting years 2017, 2018, 2020, and 2024 are gaps: no FinCom report for those years in the source archive yet. Years are Town Meeting calendar years, not fiscal years (the May 2026 meeting appropriates for FY27).
+- **Confidence:** Medium-high for article numbers and core titles. Re-verify any individual title against the source PDF before quoting it.
+
 ## What We Don't Have (identified gaps)
 
 1. **<abbr class="g" title="Group Insurance Commission">GIC</abbr> premium rates FY12-FY18** - not publicly available online.
