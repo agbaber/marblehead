@@ -712,8 +712,8 @@
     },
     {
       "month": "2026-06",
-      "amount": 7262154.44,
-      "count": 1383
+      "amount": 7307873.67,
+      "count": 1490
     }
   ],
   "drill": {
@@ -1930,8 +1930,13 @@
           },
           {
             "name": "A-1 EXTERMINATORS",
-            "amount": 242.0,
-            "count": 2
+            "amount": 366.0,
+            "count": 3
+          },
+          {
+            "name": "AMAZON",
+            "amount": 18.64,
+            "count": 1
           }
         ],
         "monthly": [
@@ -1958,6 +1963,11 @@
           {
             "month": "2026-05",
             "amount": 1261.58,
+            "count": 2
+          },
+          {
+            "month": "2026-06",
+            "amount": 142.64,
             "count": 2
           }
         ]
@@ -1990,19 +2000,19 @@
             "count": 12
           },
           {
+            "name": "PATRICIA EILEEN SULLIVAN",
+            "amount": 4050.0,
+            "count": 12
+          },
+          {
             "name": "JEFFREY CHELGREN",
             "amount": 4000.0,
             "count": 1
           },
           {
-            "name": "PATRICIA EILEEN SULLIVAN",
-            "amount": 3750.0,
-            "count": 11
-          },
-          {
             "name": "STACIE NARDIZZI",
-            "amount": 3060.0,
-            "count": 11
+            "amount": 3360.0,
+            "count": 13
           },
           {
             "name": "LIVING FIT LLC",
@@ -2011,13 +2021,13 @@
           },
           {
             "name": "KATHERINE CAMERON HOFFMAN",
-            "amount": 1870.0,
-            "count": 9
+            "amount": 2070.0,
+            "count": 10
           },
           {
             "name": "RAINWATER CORP",
-            "amount": 1636.5,
-            "count": 45
+            "amount": 1661.5,
+            "count": 46
           },
           {
             "name": "LISA HOOPER",
@@ -2083,8 +2093,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 5557.94,
-            "count": 17
+            "amount": 6642.94,
+            "count": 26
           }
         ]
       },
@@ -2364,13 +2374,18 @@
             "name": "LAUREL LARREW",
             "amount": 250.0,
             "count": 1
+          },
+          {
+            "name": "DONNA COTTERELL",
+            "amount": 123.02,
+            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-06",
-            "amount": 4500.0,
-            "count": 5
+            "amount": 4623.02,
+            "count": 6
           }
         ]
       },
@@ -2497,8 +2512,8 @@
         "top_vendors": [
           {
             "name": "HELEN E RIEGLE",
-            "amount": 11063.15,
-            "count": 2
+            "amount": 16463.15,
+            "count": 3
           },
           {
             "name": "JOHN D CLEMSON",
@@ -2604,8 +2619,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 11098.15,
-            "count": 3
+            "amount": 16498.15,
+            "count": 4
           }
         ]
       },
@@ -3178,13 +3193,13 @@
           },
           {
             "name": "ONE TIME PAY",
-            "amount": 268068.98,
-            "count": 365
+            "amount": 278168.91,
+            "count": 416
           },
           {
             "name": "TOWN OF MARBLEHEAD",
-            "amount": 242059.73,
-            "count": 305
+            "amount": 242304.52,
+            "count": 308
           },
           {
             "name": "FUTURE TECHNOLOGIES GROUP LLC",
@@ -3255,8 +3270,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 2074521.2,
-            "count": 473
+            "amount": 2108545.14,
+            "count": 555
           }
         ]
       },
@@ -3657,8 +3672,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 18417.19,
-            "count": 47
+            "amount": 22986.61,
+            "count": 57
           }
         ]
       },
@@ -4644,8 +4659,8 @@
           },
           {
             "name": "NATIONAL GRID COMPANY",
-            "amount": 1852.6,
-            "count": 9
+            "amount": 2077.11,
+            "count": 10
           },
           {
             "name": "TOWN OF MARBLEHEAD",
@@ -4731,8 +4746,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 803.96,
-            "count": 10
+            "amount": 1028.47,
+            "count": 11
           }
         ]
       },
@@ -6479,6 +6494,11 @@
             "name": "CHESTNUT RIDGE NURSERY INC",
             "amount": 3656.0,
             "count": 1
+          },
+          {
+            "name": "DILISIO BROS LANDSCAPE & MAS SUPPLY",
+            "amount": 150.7,
+            "count": 1
           }
         ],
         "monthly": [
@@ -6490,6 +6510,11 @@
           {
             "month": "2026-04",
             "amount": 3656.0,
+            "count": 1
+          },
+          {
+            "month": "2026-06",
+            "amount": 150.7,
             "count": 1
           }
         ]

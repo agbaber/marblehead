@@ -1,5 +1,5 @@
 {
- "as_of": "2026-07-10",
+ "as_of": "2026-07-11",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -54,7 +54,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 2213842.0,
-     "actual": 1906275.4,
+     "actual": 1927191.83,
      "original_budget": 2301042.0
     },
     {
@@ -84,13 +84,13 @@
     {
      "name": "SELECT BOARD",
      "revised_budget": 700051.0,
-     "actual": 539246.69,
+     "actual": 539786.69,
      "original_budget": 700051.0
     },
     {
      "name": "BUILDING INSPECTION",
      "revised_budget": 691113.0,
-     "actual": 604172.32,
+     "actual": 604455.07,
      "original_budget": 687313.0
     },
     {
@@ -102,7 +102,7 @@
     {
      "name": "CEMETERY",
      "revised_budget": 500243.0,
-     "actual": 478144.74,
+     "actual": 478843.42,
      "original_budget": 495043.0
     },
     {
@@ -120,13 +120,13 @@
     {
      "name": "ASSESSORS",
      "revised_budget": 370821.0,
-     "actual": 356828.42,
+     "actual": 357904.47,
      "original_budget": 394221.0
     },
     {
      "name": "PUBLIC BUILDINGS",
      "revised_budget": 363026.0,
-     "actual": 285494.71,
+     "actual": 285904.81,
      "original_budget": 286826.0
     },
     {
@@ -224,7 +224,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 31124624.8,
-     "actual": 30907668.68,
+     "actual": 30909432.48,
      "original_budget": 31798623.0
     },
     {
@@ -236,7 +236,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 5152427.8,
-     "actual": 4260995.28,
+     "actual": 4271910.69,
      "original_budget": 4814460.0
     },
     {
@@ -254,7 +254,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 1123966.27,
-     "actual": 875968.71,
+     "actual": 887213.51,
      "original_budget": 913370.0
     },
     {
@@ -589,7 +589,7 @@
     {
      "name": "HARBOR",
      "revised_budget": 1278568.0,
-     "actual": 1129925.8,
+     "actual": 1134495.22,
      "original_budget": 1276874.0
     }
    ],
@@ -603,7 +603,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 360000.0,
-     "actual": 258577.46,
+     "actual": 260620.0,
      "original_budget": 360000.0
     },
     {
@@ -627,7 +627,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 20300.0,
-     "actual": 9450.45,
+     "actual": 11977.33,
      "original_budget": 20300.0
     },
     {
@@ -1489,19 +1489,19 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 461701.91,
-     "actual": 126475.24,
+     "actual": 136400.48,
      "original_budget": 461349.21
     },
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 194993.3,
-     "actual": 117165.94,
+     "actual": 128102.13,
      "original_budget": 196346.0
     },
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 62080.0,
-     "actual": 43346.31,
+     "actual": 43401.31,
      "original_budget": 61080.0
     },
     {
@@ -1527,7 +1527,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 375680.0,
-     "actual": 204839.86,
+     "actual": 224020.03,
      "original_budget": 399680.0
     },
     {
@@ -1557,7 +1557,7 @@
     {
      "name": "PW MAINTAIN STREETS & SIDEWALK",
      "revised_budget": 73526.0,
-     "actual": 48476.75,
+     "actual": 50213.01,
      "original_budget": 49526.0
     },
     {
@@ -1861,7 +1861,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 360000.0,
-     "actual": 258577.46,
+     "actual": 260620.0,
      "original_budget": 360000.0
     },
     {
@@ -1885,7 +1885,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 20300.0,
-     "actual": 9450.45,
+     "actual": 11977.33,
      "original_budget": 20300.0
     },
     {
@@ -1905,13 +1905,13 @@
     {
      "name": "EXPENSES",
      "revised_budget": 337981.0,
-     "actual": 321866.22,
+     "actual": 324675.38,
      "original_budget": 337981.0
     },
     {
      "name": "HARBOR CAPITAL OUTLAYS",
      "revised_budget": 200000.0,
-     "actual": 109403.69,
+     "actual": 111163.95,
      "original_budget": 200000.0
     }
    ]
@@ -2086,7 +2086,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 660466.01,
-     "actual": 297137.84,
+     "actual": 297547.94,
      "original_budget": 589263.76
     },
     {
@@ -2118,7 +2118,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 222895.0,
-     "actual": 158148.56,
+     "actual": 158558.66,
      "original_budget": 149895.0
     },
     {
@@ -2187,13 +2187,13 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 181482.83,
-     "actual": 84003.04,
+     "actual": 84193.04,
      "original_budget": 183115.8
     },
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 25054.83,
-     "actual": 22197.83,
+     "actual": 22547.83,
      "original_budget": 24213.0
     },
     {
@@ -2213,7 +2213,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 196163.0,
-     "actual": 109216.13,
+     "actual": 109756.13,
      "original_budget": 196163.0
     },
     {
@@ -2258,13 +2258,13 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 37077.7,
-     "actual": 21713.4,
+     "actual": 22103.47,
      "original_budget": 38289.0
     },
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 20077.88,
-     "actual": 11240.09,
+     "actual": 11548.7,
      "original_budget": 19074.0
     },
     {
@@ -2290,7 +2290,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 35373.0,
-     "actual": 25382.43,
+     "actual": 26081.11,
      "original_budget": 35373.0
     },
     {
@@ -2323,7 +2323,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 12147.0,
-     "actual": 8675.54,
+     "actual": 8958.29,
      "original_budget": 6627.0
     },
     {
@@ -2343,7 +2343,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 87959.0,
-     "actual": 56954.03,
+     "actual": 57236.78,
      "original_budget": 87959.0
     }
    ]
@@ -2493,7 +2493,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 14138.0,
-     "actual": 5484.03,
+     "actual": 6560.08,
      "original_budget": 10250.0
     },
     {
@@ -2513,7 +2513,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 110525.0,
-     "actual": 97683.46,
+     "actual": 98759.51,
      "original_budget": 135525.0
     }
    ]
@@ -3394,7 +3394,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 31124624.8,
-     "actual": 30907668.68,
+     "actual": 30909432.48,
      "original_budget": 31798623.0
     },
     {
@@ -3486,7 +3486,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 62080.0,
-     "actual": 43346.31,
+     "actual": 43401.31,
      "original_budget": 61080.0
     },
     {
@@ -3510,7 +3510,7 @@
     {
      "name": "SELECT BOARD",
      "revised_budget": 25054.83,
-     "actual": 22197.83,
+     "actual": 22547.83,
      "original_budget": 24213.0
     },
     {
@@ -3534,7 +3534,7 @@
     {
      "name": "ASSESSORS",
      "revised_budget": 14138.0,
-     "actual": 5484.03,
+     "actual": 6560.08,
      "original_budget": 10250.0
     },
     {
@@ -3546,7 +3546,7 @@
     {
      "name": "BUILDING INSPECTION",
      "revised_budget": 12147.0,
-     "actual": 8675.54,
+     "actual": 8958.29,
      "original_budget": 6627.0
     },
     {
@@ -3657,7 +3657,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 5152427.8,
-     "actual": 4260995.28,
+     "actual": 4271910.69,
      "original_budget": 4814460.0
     },
     {
@@ -3669,7 +3669,7 @@
     {
      "name": "HARBOR ENTERPRISE OPERATING",
      "revised_budget": 360000.0,
-     "actual": 258577.46,
+     "actual": 260620.0,
      "original_budget": 360000.0
     },
     {
@@ -3713,7 +3713,7 @@
     {
      "name": "PUBLIC BUILDINGS",
      "revised_budget": 660466.01,
-     "actual": 297137.84,
+     "actual": 297547.94,
      "original_budget": 589263.76
     },
     {
@@ -3725,13 +3725,13 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 461701.91,
-     "actual": 126475.24,
+     "actual": 136400.48,
      "original_budget": 461349.21
     },
     {
      "name": "HARBOR",
      "revised_budget": 360000.0,
-     "actual": 258577.46,
+     "actual": 260620.0,
      "original_budget": 360000.0
     },
     {
@@ -3767,7 +3767,7 @@
     {
      "name": "SELECT BOARD",
      "revised_budget": 181482.83,
-     "actual": 84003.04,
+     "actual": 84193.04,
      "original_budget": 183115.8
     },
     {
@@ -3827,7 +3827,7 @@
     {
      "name": "CEMETERY",
      "revised_budget": 37077.7,
-     "actual": 21713.4,
+     "actual": 22103.47,
      "original_budget": 38289.0
     },
     {
@@ -4199,7 +4199,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 1123966.27,
-     "actual": 875968.71,
+     "actual": 887213.51,
      "original_budget": 913370.0
     },
     {
@@ -4217,7 +4217,7 @@
     {
      "name": "HARBOR ENTERPRISE OPERATING",
      "revised_budget": 20300.0,
-     "actual": 9450.45,
+     "actual": 11977.33,
      "original_budget": 20300.0
     },
     {
@@ -4249,7 +4249,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 194993.3,
-     "actual": 117165.94,
+     "actual": 128102.13,
      "original_budget": 196346.0
     },
     {
@@ -4321,13 +4321,13 @@
     {
      "name": "HARBOR",
      "revised_budget": 20300.0,
-     "actual": 9450.45,
+     "actual": 11977.33,
      "original_budget": 20300.0
     },
     {
      "name": "CEMETERY",
      "revised_budget": 20077.88,
-     "actual": 11240.09,
+     "actual": 11548.7,
      "original_budget": 19074.0
     },
     {
@@ -4855,7 +4855,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19400687.6,
-     "actual": 17506545.6,
+     "actual": 17528733.35,
      "original_budget": 18599491.0
     },
     {
@@ -4873,7 +4873,7 @@
     {
      "name": "HARBOR ENTERPRISE OPERATING",
      "revised_budget": 337981.0,
-     "actual": 321866.22,
+     "actual": 324675.38,
      "original_budget": 337981.0
     },
     {
@@ -4929,7 +4929,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 375680.0,
-     "actual": 204839.86,
+     "actual": 224020.03,
      "original_budget": 399680.0
     },
     {
@@ -4947,7 +4947,7 @@
     {
      "name": "HARBOR",
      "revised_budget": 337981.0,
-     "actual": 321866.22,
+     "actual": 324675.38,
      "original_budget": 337981.0
     },
     {
@@ -4971,13 +4971,13 @@
     {
      "name": "PUBLIC BUILDINGS",
      "revised_budget": 222895.0,
-     "actual": 158148.56,
+     "actual": 158558.66,
      "original_budget": 149895.0
     },
     {
      "name": "SELECT BOARD",
      "revised_budget": 196163.0,
-     "actual": 109216.13,
+     "actual": 109756.13,
      "original_budget": 196163.0
     },
     {
@@ -4989,7 +4989,7 @@
     {
      "name": "ASSESSORS",
      "revised_budget": 110525.0,
-     "actual": 97683.46,
+     "actual": 98759.51,
      "original_budget": 135525.0
     },
     {
@@ -5001,7 +5001,7 @@
     {
      "name": "BUILDING INSPECTION",
      "revised_budget": 87959.0,
-     "actual": 56954.03,
+     "actual": 57236.78,
      "original_budget": 87959.0
     },
     {
@@ -5031,7 +5031,7 @@
     {
      "name": "CEMETERY",
      "revised_budget": 35373.0,
-     "actual": 25382.43,
+     "actual": 26081.11,
      "original_budget": 35373.0
     },
     {
@@ -5418,7 +5418,7 @@
     {
      "name": "HARBOR ENTERPRISE OPERATING",
      "revised_budget": 200000.0,
-     "actual": 109403.69,
+     "actual": 111163.95,
      "original_budget": 200000.0
     }
    ],
@@ -5426,7 +5426,7 @@
     {
      "name": "HARBOR",
      "revised_budget": 200000.0,
-     "actual": 109403.69,
+     "actual": 111163.95,
      "original_budget": 200000.0
     }
    ]
@@ -5724,7 +5724,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 73526.0,
-     "actual": 48476.75,
+     "actual": 50213.01,
      "original_budget": 49526.0
     }
    ],
@@ -5732,7 +5732,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 73526.0,
-     "actual": 48476.75,
+     "actual": 50213.01,
      "original_budget": 49526.0
     }
    ]
@@ -10157,7 +10157,7 @@
    {
     "name": "LICENSE/PERMITS EXPENSE",
     "revised_budget": 7824.0,
-    "actual": 6620.98,
+    "actual": 6675.98,
     "original_budget": 8200.0
    },
    {
@@ -10189,13 +10189,13 @@
    {
     "name": "OTHER PROF & TECHNICAL",
     "revised_budget": 57480.0,
-    "actual": 20130.25,
+    "actual": 27830.25,
     "original_budget": 57480.0
    },
    {
     "name": "R&M MOTOR VEHICLES",
     "revised_budget": 57000.0,
-    "actual": 21310.21,
+    "actual": 21640.45,
     "original_budget": 57000.0
    },
    {
@@ -10207,7 +10207,7 @@
    {
     "name": "R&M OTHER EQUIPMENT",
     "revised_budget": 36400.0,
-    "actual": 7615.91,
+    "actual": 9510.91,
     "original_budget": 51000.0
    },
    {
@@ -10325,31 +10325,31 @@
    {
     "name": "STREET SWEEPER SUPPLIES",
     "revised_budget": 17000.0,
-    "actual": 8920.74,
+    "actual": 9095.82,
     "original_budget": 7500.0
    },
    {
     "name": "TREES & SHRUBS SUPPLIES",
     "revised_budget": 12000.0,
-    "actual": 0,
+    "actual": 3855.95,
     "original_budget": 12000.0
    },
    {
     "name": "SMALL TOOLS",
     "revised_budget": 10633.49,
-    "actual": 6742.59,
+    "actual": 6777.84,
     "original_budget": 6100.0
    },
    {
     "name": "SIGNS",
     "revised_budget": 9883.5,
-    "actual": 2189.61,
+    "actual": 7323.26,
     "original_budget": 12250.0
    },
    {
     "name": "STONE DUST",
     "revised_budget": 8000.0,
-    "actual": 5549.98,
+    "actual": 7286.24,
     "original_budget": 8000.0
    },
    {
@@ -11487,7 +11487,7 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 206000.0,
-    "actual": 116418.11,
+    "actual": 118178.37,
     "original_budget": 206000.0
    },
    {
@@ -11535,7 +11535,7 @@
    {
     "name": "CONTAINER RENTAL",
     "revised_budget": 3400.0,
-    "actual": 2201.18,
+    "actual": 2421.64,
     "original_budget": 3400.0
    },
    {
@@ -11553,7 +11553,7 @@
    {
     "name": "GAS USED FOR HEAT",
     "revised_budget": 1800.0,
-    "actual": 2433.31,
+    "actual": 2495.13,
     "original_budget": 1800.0
    },
    {
@@ -11641,7 +11641,7 @@
    {
     "name": "BOAT GASOLINE",
     "revised_budget": 9800.0,
-    "actual": 4575.99,
+    "actual": 7019.67,
     "original_budget": 9800.0
    },
    {
@@ -11671,7 +11671,7 @@
    {
     "name": "FLOAT SUPPLIES",
     "revised_budget": 1000.0,
-    "actual": 394.4,
+    "actual": 477.6,
     "original_budget": 1000.0
    },
    {
@@ -12133,7 +12133,7 @@
    {
     "name": "WATER/SEWER",
     "revised_budget": 8837.12,
-    "actual": 9521.68,
+    "actual": 9931.78,
     "original_budget": 12000.0
    },
    {
@@ -12327,7 +12327,7 @@
    {
     "name": "IN SERVICE TRAINING",
     "revised_budget": 0,
-    "actual": 2775.0,
+    "actual": 3125.0,
     "original_budget": 0
    }
   ],
@@ -12359,7 +12359,7 @@
    {
     "name": "LEGAL NOTICES",
     "revised_budget": 3700.0,
-    "actual": 2712.0,
+    "actual": 2902.0,
     "original_budget": 1650.0
    },
    {
@@ -12541,13 +12541,13 @@
    {
     "name": "ELECTRICITY",
     "revised_budget": 2719.13,
-    "actual": 2719.13,
+    "actual": 2963.92,
     "original_budget": 2600.0
    },
    {
     "name": "WATER/SEWER",
     "revised_budget": 989.0,
-    "actual": 489.94,
+    "actual": 635.22,
     "original_budget": 989.0
    },
    {
@@ -12647,7 +12647,7 @@
    {
     "name": "SAND",
     "revised_budget": 737.1,
-    "actual": 454.22,
+    "actual": 737.1,
     "original_budget": 500.0
    },
    {
@@ -12665,7 +12665,7 @@
    {
     "name": "MOTOR OIL & GREASE",
     "revised_budget": 400.0,
-    "actual": 0,
+    "actual": 25.73,
     "original_budget": 400.0
    },
    {
@@ -12747,7 +12747,7 @@
    {
     "name": "IN-STATE TRAVEL",
     "revised_budget": 6000.0,
-    "actual": 3080.54,
+    "actual": 3363.29,
     "original_budget": 6000.0
    },
    {
@@ -13151,7 +13151,7 @@
    {
     "name": "IN-STATE TRAVEL",
     "revised_budget": 8300.0,
-    "actual": 3105.03,
+    "actual": 4181.08,
     "original_budget": 8300.0
    },
    {
@@ -14773,7 +14773,7 @@
    {
     "name": "IN-STATE TRAVEL",
     "revised_budget": 42546.23,
-    "actual": 18903.88,
+    "actual": 20262.68,
     "original_budget": 41484.0
    },
    {
@@ -14797,7 +14797,7 @@
    {
     "name": "LICENSE/PERMITS EXPENSE",
     "revised_budget": 12451.5,
-    "actual": 8166.32,
+    "actual": 8221.32,
     "original_budget": 11795.0
    },
    {
@@ -14869,7 +14869,7 @@
    {
     "name": "IN SERVICE TRAINING",
     "revised_budget": 55.0,
-    "actual": 2830.0,
+    "actual": 3180.0,
     "original_budget": 0
    },
    {
@@ -14901,7 +14901,7 @@
    {
     "name": "OTHER PROF & TECHNICAL",
     "revised_budget": 557131.39,
-    "actual": 431613.38,
+    "actual": 439313.38,
     "original_budget": 380106.0
    },
    {
@@ -14913,7 +14913,7 @@
    {
     "name": "R&M MOTOR VEHICLES",
     "revised_budget": 227775.97,
-    "actual": 192820.45,
+    "actual": 193150.69,
     "original_budget": 152225.0
    },
    {
@@ -14937,7 +14937,7 @@
    {
     "name": "ELECTRICITY",
     "revised_budget": 195286.53,
-    "actual": 183711.61,
+    "actual": 183956.4,
     "original_budget": 206243.0
    },
    {
@@ -14961,7 +14961,7 @@
    {
     "name": "R&M OTHER EQUIPMENT",
     "revised_budget": 103877.34,
-    "actual": 90268.43,
+    "actual": 92163.43,
     "original_budget": 110773.0
    },
    {
@@ -14997,7 +14997,7 @@
    {
     "name": "WATER/SEWER",
     "revised_budget": 53406.4,
-    "actual": 49287.82,
+    "actual": 49843.2,
     "original_budget": 54829.0
    },
    {
@@ -15063,7 +15063,7 @@
    {
     "name": "LEGAL NOTICES",
     "revised_budget": 7459.7,
-    "actual": 4004.66,
+    "actual": 4194.66,
     "original_budget": 6350.0
    },
    {
@@ -15363,7 +15363,7 @@
    {
     "name": "STREET SWEEPER SUPPLIES",
     "revised_budget": 19300.0,
-    "actual": 8920.74,
+    "actual": 9095.82,
     "original_budget": 9800.0
    },
    {
@@ -15399,7 +15399,7 @@
    {
     "name": "TREES & SHRUBS SUPPLIES",
     "revised_budget": 12000.0,
-    "actual": 0,
+    "actual": 3855.95,
     "original_budget": 12000.0
    },
    {
@@ -15411,7 +15411,7 @@
    {
     "name": "SMALL TOOLS",
     "revised_budget": 10733.49,
-    "actual": 6785.0,
+    "actual": 6820.25,
     "original_budget": 6200.0
    },
    {
@@ -15423,7 +15423,7 @@
    {
     "name": "SIGNS",
     "revised_budget": 9883.5,
-    "actual": 38395.86,
+    "actual": 43529.51,
     "original_budget": 12250.0
    },
    {
@@ -15459,7 +15459,7 @@
    {
     "name": "STONE DUST",
     "revised_budget": 8000.0,
-    "actual": 5549.98,
+    "actual": 7286.24,
     "original_budget": 8000.0
    },
    {
@@ -15531,7 +15531,7 @@
    {
     "name": "MOTOR OIL & GREASE",
     "revised_budget": 3256.21,
-    "actual": 1437.12,
+    "actual": 1462.85,
     "original_budget": 2200.0
    },
    {
@@ -15567,7 +15567,7 @@
    {
     "name": "SAND",
     "revised_budget": 1737.1,
-    "actual": 1051.72,
+    "actual": 1334.6,
     "original_budget": 1500.0
    },
    {
@@ -17495,7 +17495,7 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 206000.0,
-    "actual": 116418.11,
+    "actual": 118178.37,
     "original_budget": 206000.0
    },
    {
@@ -17543,7 +17543,7 @@
    {
     "name": "CONTAINER RENTAL",
     "revised_budget": 3400.0,
-    "actual": 2201.18,
+    "actual": 2421.64,
     "original_budget": 3400.0
    },
    {
@@ -17561,7 +17561,7 @@
    {
     "name": "GAS USED FOR HEAT",
     "revised_budget": 1800.0,
-    "actual": 2433.31,
+    "actual": 2495.13,
     "original_budget": 1800.0
    },
    {
@@ -17649,7 +17649,7 @@
    {
     "name": "BOAT GASOLINE",
     "revised_budget": 9800.0,
-    "actual": 4575.99,
+    "actual": 7019.67,
     "original_budget": 9800.0
    },
    {
@@ -17679,7 +17679,7 @@
    {
     "name": "FLOAT SUPPLIES",
     "revised_budget": 1000.0,
-    "actual": 394.4,
+    "actual": 477.6,
     "original_budget": 1000.0
    },
    {
