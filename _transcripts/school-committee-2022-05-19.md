@@ -9,7 +9,234 @@ video_url: "https://www.youtube.com/watch?v=7alb3Z5SRtE"
 duration_seconds: 4343
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee votes 3–2 to opt out of school choice for 2022–23"
+  summary: "The School Committee held a required public hearing on school choice for the 2022–2023 school year. Superintendent Dr. Bucky recommended participating with 10 total slots (3 kindergarten, 2 grade 4, 5 grade 9), but after committee deliberation the motion to participate failed 2–3 and a subsequent motion to opt out passed 3–2. The committee also approved a bills schedule totaling approximately $1,294,094.64, approved the appointment of Mark Strout to a new three-year term on the Essex North Agricultural and Technical School board, and voted unanimously to memorialize that the last day of school will be a noon release."
+  decisions:
+    - "Rejected motion to participate in school choice for 2022–2023 (failed 2 to 3)"
+    - "Approved opting out of school choice for 2022–2023"
+    - "Approved minutes from March 3, March 17, March 31, and April 7, 2022"
+    - "Approved schedule of bills totaling approximately $1,294,094.64"
+    - "Approved appointment of Mark Strout to a three-year term on the Essex North Agricultural and Technical School District board"
+    - "Approved memorializing last day of school as a noon release"
+    - "Approved entering executive session to discuss collective bargaining strategy with MEA Unit A regarding sick days"
+  votes:
+    - motion: "Participate in school choice for 2022–2023"
+      result: "in favor (2 to 3)"
+    - motion: "Opt out of school choice for 2022–2023"
+      result: "in favor (3 to 2)"
+    - motion: "Approve meeting minutes"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills (~$1,294,094.64)"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Mark Strout to Essex North Ag & Tech board (3-year term)"
+      result: "in favor (unanimous)"
+    - motion: "Memorialize last day of school as noon release"
+      result: "in favor (unanimous)"
+    - motion: "Enter executive session (collective bargaining – MEA Unit A)"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 64
+    end_seconds: 344
+    headline: "Student rep updates committee on MHS spring activities and commendations"
+    dek: "The student representative reported on Team Harmony seminars, junior prom, MCAS testing, upcoming cultural feast, and various senior events; a board member commended two sophomore students for organizing a rally."
+    summary: |
+      The student representative covered recent and upcoming events at MHS including:
+      - Team Harmony inclusion club completed seminars for freshman health classes (May 10–11) and conducted a hybrid presentation on May 16
+      - Junior prom was held May 13
+      - Sophomores took MCAS on May 17–18
+      - Upcoming: cultural feast (May 19), freshman spikeball tournament (May 22), MVMS/MHS music trip (May 21), National French Honor Society induction, MHS arts show (May 18–June 3 at Abbot Library)
+      - Junior class raised $30,000 from class auction
+      - Senior prom at Fenway on May 31; senior project presentations May 27
+      - Girls lacrosse and tennis senior nights upcoming
+      
+      Board member Emily commended sophomores Sophia Weiner and Bella Takata for organizing a rally with nearly 100 attendees and four state rep candidates.
+    key_speakers: ["Student Representative (MHS)", "Emily (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 344
+    end_seconds: 482
+    headline: "Public hearing on school choice for 2022–23 opened at 7:05 p.m."
+    dek: "Chair explained that the school choice public hearing would run from 7:05 p.m. with public comment limited to three minutes, after which the committee would deliberate and vote."
+    summary: "Chair Sarah Fox formally opened the public hearing on school choice for the 2022–2023 school year at 7:05 p.m. as required. Dr. Bucky presented a recommendation to participate in school choice, proposing entry points at kindergarten (3 slots), grade 4 (2 slots), and grade 9 (5 slots), for a total of 10 students. He noted that last year the district opted out due to uncertainty around returning to in-person instruction after COVID."
+    key_speakers: ["Sarah Fox (Chair)", "Dr. Bucky (Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 482
+    end_seconds: 1908
+    featured: true
+    headline: "School Committee votes 3–2 to opt out of school choice for 2022–23 after divided debate"
+    dek: "A motion to participate in school choice failed 2–3; a follow-up motion to formally opt out passed 3–2, with the committee citing the need for policy development and further study before re-entering the program."
+    summary: |
+      Dr. Bucky recommended that Marblehead Public Schools participate in school choice for 2022–2023 with 10 total slots at kindergarten, grade 4, and grade 9 entry points. Key discussion points included:
+      
+      **Financial mechanics:**
+      - The district receives $5,000 per accepted student; kindergarteners from districts with free full-day kindergarten would receive only $2,500 reimbursement if Marblehead offers only a half-day free program
+      - If the override passes and full-day kindergarten is offered free, the full $5,000 per student would apply
+      - These are available seats — no additional cost to the district
+      
+      **Arguments in favor (Sarah Fox, Sarah Gold):**
+      - The hearing is a routine annual requirement under MGL; the committee has voted on it every year
+      - The proposal is a modest 10-student pilot at natural entry points
+      - School choice was previously in place through approximately 2010; the district received over $500,000 and enrolled ~100 choice students at its peak
+      - Brings diversity to the district
+      
+      **Arguments for more study (David Harris, Megan Taylor, Jason/Emily):**
+      - The committee has not discussed it prior to this meeting; no prior agenda placement or policy framework
+      - School choice was not identified as a priority in the district's strategic plan ("Planning for Success")
+      - Policy gaps exist: transportation (district not obligated except for IEP), sibling preference, discipline/expulsion records, residency priority
+      - The superintendent's own leadership team had mixed views based on prior experience in school choice districts
+      - A June 1 state deadline for opting out was noted
+      - METCO program expansion was identified as the preferred pathway for increasing enrollment diversity
+      
+      **Votes:**
+      
+      | Motion | Result |
+      |---|---|
+      | Participate in school choice 2022–23 | Failed 2–3 (Gold: yes; Harris: no; Taylor: no; Barrett: no; Fox: yes) |
+      | Opt out of school choice 2022–23 | Passed 3–2 (Gold: no; Harris: yes; Taylor: yes; Barrett: yes; Fox: no) |
+      
+      After the opt-out vote, the chair closed the public hearing at 7:31 p.m.
+    key_speakers: ["Dr. Bucky (Superintendent)", "Sarah Fox (Chair)", "Sarah Gold", "David Harris", "Megan Taylor", "Emily Barrett", "Michelle (CFO/Finance)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 1908
+    end_seconds: 1953
+    headline: "No members of the public offered comment at the general public comment period"
+    dek: "The chair opened general public comment; no hands were raised and the meeting moved on."
+    summary: "The chair opened the general public comment portion of the meeting following the close of the school choice public hearing. No members of the public raised their hands to speak."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 1953
+    end_seconds: 2044
+    headline: "Committee approves meeting minutes 5–0 with one minor correction noted"
+    dek: "Minutes from March 3, March 17, March 31, and April 7, 2022 were approved unanimously after a correction was noted regarding committee assignments to search committees."
+    summary: "The committee moved to approve minutes from four prior meetings. Member Sarah Gold noted a correction: the minutes incorrectly stated that she was appointed to both the Brown School principal search and the food service director search; she was only appointed to the food service director search. Lisa was thanked for keeping minutes current. The correction was noted and the minutes passed 5–0."
+    key_speakers: ["Sarah Fox (Chair)", "Sarah Gold", "Megan Taylor", "David Harris"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2044
+    end_seconds: 2410
+    headline: "Senior students present mental health awareness project fundraising for Mass General Hospital"
+    dek: "MHS seniors Mia Carr and Lauren Case presented their senior project partnering with Mass General Hospital to raise awareness and funds for teen mental health, including a car wash on May 22."
+    summary: |
+      MHS seniors Mia Carr and Lauren Case presented their senior project focused on teen mental health. Key details:
+      - Working with Mass General Hospital's child cognitive behavioral therapy (CBT) program
+      - Created informational pamphlets with statistics, coping mechanisms, and local resources
+      - 20% of teenagers experience mental health disorders; only 30% receive proper treatment; COVID-19 worsened symptoms
+      - Sending pamphlets to Marblehead High School, Swampscott, Salem, and other area schools
+      - Online fundraising page linked directly to MGH's CBT program (Facebook: mia.card.921)
+      - Car wash fundraiser at MHS on Sunday May 22, 12–2 p.m.; $10 per car, all proceeds to MGH
+      - Still researching additional local counseling services closer to Marblehead
+      
+      Dr. Bucky noted the difficulty of finding mental health services regardless of insurance or income, and commended the students for tackling the topic.
+    key_speakers: ["Mia Carr (MHS Senior)", "Lauren Case (MHS Senior)", "Dr. Bucky (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2410
+    end_seconds: 2696
+    headline: "Eagle Scout Tyler provides update on MHS greenhouse and outdoor classroom project"
+    dek: "Tyler presented a fundraising and construction update on his Eagle Scout project to build a greenhouse and raised garden beds at Marblehead High School, with a $75,000 goal and approximately $25,000 raised to date."
+    summary: |
+      Eagle Scout Tyler (last name unclear from transcript) updated the committee on his project to build a greenhouse and improve the outdoor classroom at MHS. Key details:
+      
+      **Fundraising:**
+      - Goal: approximately $75,000
+      - Raised to date: approximately $25,000
+        - $10,000 grant from Friends of Marblehead Public Schools
+        - ~$10,000 from individual donations and in-person fundraising
+        - ~$5,000 in business sponsorships from local businesses
+      - Website: mhsgreenhouse.org
+      
+      **Timeline:**
+      - Summer: site conservation work with Marblehead Conservancy (weed/invasive removal, native plantings)
+      - August–early fall: site preparation, new raised beds, greenhouse foundation
+      - April (following spring): greenhouse installation (6-month lead time makes late-November delivery risky for weather)
+      - Working with Kelly Tree for black locust lumber to reduce costs
+      
+      Dr. Bucky commended the project, noting his own Eagle Scout project cost approximately $500 compared to Tyler's $75,000 ambition.
+    key_speakers: ["Tyler (Eagle Scout, MHS student)", "Dr. Bucky (Superintendent)", "Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2696
+    end_seconds: 2812
+    headline: "Committee votes 5–0 to memorialize last day of school as noon release"
+    dek: "The committee formally voted to establish that the last day of school (June 23 for students) will be a noon release, memorializing the longstanding practice."
+    summary: "Dr. Bucky raised the annual question of formalizing the last day of school as a half day. The last day for students is June 23; June 24 is a staff day. The committee moved to memorialize that the last day of school will be a noon release going forward until a future committee decides otherwise. Passed 5–0."
+    key_speakers: ["Dr. Bucky (Superintendent)", "Sarah Fox (Chair)", "Megan Taylor", "Emily Barrett"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2812
+    end_seconds: 2939
+    headline: "Superintendent shares evaluation documents; individual evaluations due before June 2 meeting"
+    dek: "Dr. Bucky described the superintendent evaluation process: self-assessment rubric, goals presentation, and year-in-review documents were placed in the shared drive; committee individual evaluations are due before the June 2 meeting for compilation by June 16."
+    summary: "Dr. Bucky noted he had placed three documents in the committee's shared drive folder: a completed rubric rating indicators across four standards, a PowerPoint on his goals, and a year-in-review photo presentation. The chair described the process: individual committee evaluations are due to Lisa and Emily before the June 2 meeting; compiled summative evaluation to be presented at the June 16 meeting. To improve on last year's formatting issues, Steven is preparing an editable Word document to be emailed to committee members by Monday."
+    key_speakers: ["Dr. Bucky (Superintendent)", "Sarah Fox (Chair)", "Sarah Gold"]
+  - topic: bonding-capital
+    topic_confidence: 0.75
+    start_seconds: 2939
+    end_seconds: 3169
+    headline: "Committee approves schedule of bills totaling approximately $1,294,094.64"
+    dek: "A schedule of bills totaling $1,294,094.64 was moved, seconded, and approved unanimously."
+    summary: "The chair asked for a motion to approve the identified schedule of bills totaling $1,294,094.64. Megan Taylor moved, Emily Barrett seconded. No questions were raised. Passed 5–0."
+    key_speakers: ["Sarah Fox (Chair)", "Megan Taylor", "Emily Barrett"]
+  - topic: labor-personnel
+    topic_confidence: 0.8
+    start_seconds: 3169
+    end_seconds: 3262
+    headline: "Payroll grievance update: town administrator found MEA request not unreasonable"
+    dek: "The chair reported that a meeting with the town administrator regarding a Marblehead Education Association payroll grievance finally occurred; the town administrator did not find the request unreasonable and work continues to address the concerns."
+    summary: "The chair provided a public update on a payroll grievance filed by the Marblehead Education Association (MEA) that had been discussed in executive session months earlier. A required meeting with the town administrator occurred the prior week. The town administrator did not find the MEA's request unreasonable, and discussions about verifying figures for current versus departed staff are ongoing. The district is continuing to work on addressing the MEA's concerns."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 3262
+    end_seconds: 3383
+    headline: "Committee votes 5–0 to reappoint Mark Strout to Essex North Ag & Tech board for three-year term"
+    dek: "The committee approved the reappointment of Mark Strout as Marblehead's representative on the Essex North Agricultural and Technical School District board for a new three-year term."
+    summary: "Responding to a request from the town moderator, the committee moved to approve the reappointment of Mark Strout of Marblehead to a new three-year term as the town's representative on the Board of Essex North Agricultural and Technical School District. A committee member noted Strout's strong work representing Marblehead, the school's well-managed finances, its beautiful new facility, and its 'After Dark' programs. Motion passed 5–0."
+    key_speakers: ["Sarah Fox (Chair)", "David Harris", "Megan Taylor"]
+  - topic: school-budget
+    topic_confidence: 0.75
+    start_seconds: 3383
+    end_seconds: 3604
+    headline: "Graduation requirements policy (IKF) receives second read; third read and vote at June 2 meeting"
+    dek: "The committee reviewed a redlined draft of policy IKF (graduation requirements) incorporating clarifications requested by principal Bauer, with a third read and vote scheduled for June 2."
+    summary: |
+      The chair presented policy IKF (graduation requirements) for its second read. Changes proposed by Principal Bauer include:
+      - **Mathematics:** Remove the reference to 'integrated math equivalent' (no longer offered); requirement remains four years including completion of Algebra II
+      - **Science:** Add 'engineering' to the physics requirement (i.e., 'physics/engineering') to recognize the engineering course that satisfies the science credit
+      - **Foreign language:** Clarify that the requirement is two years of the *same* foreign language
+      
+      A committee member asked about dual enrollment classes counting as equivalents; Principal Bauer confirmed this. The word 'or' will be added between 'physics' and 'engineering' in the final text. Third read and vote scheduled for June 2.
+    key_speakers: ["Sarah Fox (Chair)", "Sarah Gold", "Principal Bauer (via audience)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 3604
+    end_seconds: 3821
+    headline: "Chair notes correspondence on Coffin School stained glass windows and MHS graduate research paper on school suspensions"
+    dek: "The chair shared two items of correspondence: an inquiry about the Coffin School stained glass windows and an academic paper by an MHS alumnus on out-of-school suspension policies."
+    summary: |
+      Two items of correspondence were entered into the record:
+      
+      1. **Coffin School stained glass windows:** A woman inquired about the windows. The chair replied explaining the disposition process for the building — it remains under school control and no decisions have been made about the building or its contents. Any transfer would require going through the town.
+      
+      2. **MHS graduate research paper:** A UMass Amherst student and MHS graduate (Danny, class of 2019) submitted a persuasive academic paper on why schools continue to use out-of-school suspension policies. The chair, who has been advocating for review of disciplinary procedures, entered it into the record. A committee member noted Danny was a classmate of her son's through school.
+    key_speakers: ["Sarah Fox (Chair)", "David Harris"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 3821
+    end_seconds: 4128
+    headline: "Committee votes 5–0 to enter executive session on MEA collective bargaining strategy regarding sick days"
+    dek: "The committee moved to close the public session and enter executive session under MGL Chapter 38 Section 21A to discuss collective bargaining strategy with MEA Unit A members regarding sick days, with no intent to return to public session."
+    summary: "The chair moved the committee to enter executive session pursuant to Massachusetts General Laws Chapter 38, Section 21A, Purpose 3 — to discuss collective bargaining strategy with the Marblehead Education Association (MEA) Unit A members regarding sick days, as an open meeting could have a detrimental effect on the school committee's bargaining position. The committee stated it would not return to public session and would adjourn from within executive session. Motion passed 5–0. The committee then relocated to another room in the library."
+    key_speakers: ["Sarah Fox (Chair)", "Megan Taylor", "Emily Barrett", "David Harris", "Sarah Gold"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

@@ -9,7 +9,213 @@ video_url: "https://www.youtube.com/watch?v=_z4QNAb-TKQ"
 duration_seconds: 12844
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee holds FY24 budget workshop; warns cuts likely without override"
+  summary: "The School Committee convened an all-schools budget workshop at which each principal and department director presented their FY24 aspirational budget request. Superintendent Dr. Bucky warned that contractual obligations alone would require a 5.43% increase—well above the 2.5% Prop 2½ cap—and that without additional revenue the district faces cuts exceeding $1 million just to maintain current services. Committee members expressed concern about the district's structural deficit and called for a more detailed multi-year strategic plan before seeking an override from voters."
+  decisions:
+    - "Approved FY2023-2024 school year calendar as presented by Superintendent"
+    - "Approved schedule of bills totaling $876,042.99"
+    - "Held budget workshop with presentations from Athletics, Technology, Facilities, Student Services, Teaching and Learning, Central Administration, MHS, Veterans Middle School, and Village School"
+  votes:
+    - motion: "Approve 2023-2024 school year calendar"
+      result: "in favor (5 to 0)"
+    - motion: "Approve schedule of bills totaling $876,042.99"
+      result: "in favor (5 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 81
+    end_seconds: 175
+    headline: "School Committee approves 2023-24 calendar and $876K bill schedule"
+    dek: "Both items passed 5-0 before the committee moved into the budget workshop."
+    summary: "The chair called the meeting to order at 6:00 PM. A motion to approve the 2023-2024 school year calendar as presented by Dr. Bucky carried 5-0, moved by Sarah Gold, seconded by Allison Taylor. A motion to approve the schedule of bills totaling $876,042.99 also carried 5-0, moved by Tom Mathers, seconded by Allison Taylor."
+    key_speakers: ["School Committee Chair"]
+  - topic: school-budget
+    topic_confidence: 0.98
+    start_seconds: 193
+    end_seconds: 608
+    featured: true
+    headline: "Superintendent warns district faces $1M+ cuts under Prop 2½ cap even without new programs"
+    dek: "Dr. Bucky outlined the budget development process and flagged a 14% state special-education tuition increase and a 5.43% contractual roll-forward that together far exceed the town's levy capacity."
+    summary: |
+      Dr. Bucky explained the road to the FY24 budget workshops, noting the process began with a community thought exchange in the fall and incorporated school improvement plans, enrollment projections, and school committee directives.
+      
+      Key financial pressure points raised:
+      - **Contractual obligations** require a **1.9% increase** just to maintain current staffing.
+      - The Office of Special Education (OSD) notified the district in the fall of a **14% increase in special-education out-of-district tuition rates**—compared with 2-3% annually over the prior 13 years. Applied to this year's numbers, that impact equals approximately **$385,000**; the current net delta (accounting for placement changes) is roughly **$45,646**.
+      - The roll-forward to maintain FY23 services converts to a **5.43% increase**, which is outside the Prop 2½ cap.
+      - A school committee member noted that without something above the 2.5% levy limit, the district is looking at cutting **over $1 million just to keep the lights on**—not to add services.
+      - Town books have not yet closed for FY22, leaving the district without a target number from the town for FY24.
+    key_speakers: ["Dr. Bucky (Superintendent)", "Sarah Gold (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 811
+    end_seconds: 1827
+    headline: "Athletics, Technology, and Facilities directors present FY24 budget requests"
+    dek: "The Athletics director flagged a major jump in athletic training contracted services; Technology highlighted infrastructure upgrades and a new technology integration specialist request; Facilities cited supply-cost inflation of 30%+ and requested a new groundskeeping crew."
+    summary: |
+      ### Athletics
+      - One large increase: **athletic training contracted services**, moving toward market value (~$54,000/year) via a proposed three-year deal with Mass General Brigham. Current arrangement has been grandfathered at below-market rates for approximately 12 years.
+      - Coaches received a 2% COLA raise, split between user fees and the coaching salaries budget.
+      - Supply budget increase tied to hockey uniform replacement; director follows an approximately 5- to 6-year uniform replacement cycle.
+      - Transportation line up ~25%; director noted four buses and four drivers are available but scheduling conflicts remain.
+      
+      ### Technology
+      - Technology represents **2% of the school committee budget**; payroll is 4% of that.
+      - **New staffing request**: additional technology integration specialist (recurring from last year) to serve K-6 and 7-12 separately.
+      - Capital requests include Apple computers for high school visual arts, smart panel expansion (14 rooms identified), a security system replacement at Village School, elevator security swipe at Glover School, Barracuda email defense, QuickBooks Online migration, and professional development for smart panels and Aspen SIS.
+      - Committee discussed whether to fund device replacement through the operating budget vs. a debt exclusion; director building a five-year replacement plan.
+      - Security grant opportunities under active pursuit.
+      
+      ### Facilities
+      - Facilities = **9% of school committee budget**; payroll is 51% of that.
+      - **New staffing request**: one lead groundskeeper + three grounds workers, totaling ~**$190,000**, to create an in-house grounds crew (currently no systematic landscaping program).
+      - Capital maintenance request total: **$741,730**, including high school main entry doors (identified as overdue since 2019), Veterans Middle School roof, and various other items. Priority is always safety and security.
+      - **High school turf field replacement** requested at an additional **$650,000**; field has passed annual gMax safety testing but showing wear. Committee asked staff to price alternative sustainable infill materials.
+      - Utility costs up significantly; natural gas locked in at a decent price; water rates noted as very high. Energy reserve fund expected to pay out to the schools this year for the first time in several years.
+      - IDEA grant allocations for the year: **$781,820** for special education services and supports outside the operating budget.
+    key_speakers: ["Athletics Director", "Technology Director (Stephen)", "Facilities Director"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 2697
+    end_seconds: 5635
+    headline: "Student Services director requests 3 new SPED teachers and BRIGHT program expansion; flags out-of-district tuition volatility"
+    dek: "Director Paula presented five-year trend data showing relatively stable out-of-district placements (~45 students, ~$87,500/pupil average) and a significant reduction in substantially separate placements from 109 to 39 students."
+    summary: |
+      ### Student Services – Key Data Points
+      - Out-of-district placements have been **relatively stable over five years** at ~45 students; average cost per pupil ~$87,500.
+      - The district is **not an anomaly**: post-COVID placement demand is rising sector-wide.
+      - Students in **substantially separate programs** (>60% of day away from general ed peers) dropped from **109 five years ago to 39 now**, reflecting progress on inclusive practices.
+      - Transportation budget line for out-of-district placements was acknowledged as a "complete lie"—the number is unknown because transportation costs are highly variable; committee requested a more realistic trailing-average figure.
+      - Swampscott comparison: Marblehead spends ~$21,000/student for out-of-district transportation vs. Swampscott's ~$13,000.
+      
+      ### New Requests
+      - **3 additional special education teachers** (co-taught settings); specific building placements TBD.
+      - **BRIGHT program** (Building Resilience & Integrating Growth through Healing Transitions) expansion to the middle school level; currently at the high school with documented success keeping students in-district.
+        - High school BRIGHT started with a grant of >$100,000; director will explore grant eligibility for middle school expansion.
+      - **Landmark School outreach program** re-engagement for language-based learning disability PD at Village School.
+      - **Therapeutic Crisis Intervention (TCI) training** (train-the-trainer model, ~$1,500/trainer); estimated recurring ~$75,000/year.
+      - **Endicott College / DESE Fellows** re-engagement for pipeline staffing.
+      
+      ### Committee Discussion
+      - Members encouraged leadership to identify specific building placements for the 3 SPED teacher positions before the next budget meeting, noting "it will sell a lot better."
+      - One member noted the case for proving cost savings: behavioral out-placements are among the most expensive; early intervention could reduce them.
+    key_speakers: ["Paula (Director of Student Services)", "School Committee members"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 4464
+    end_seconds: 5975
+    headline: "Teaching & Learning director flags missing ELA curriculum and $250K i-Ready grant expiration; Central Administration proposes kindergarten tuition phase-out"
+    dek: "The department of teaching and learning represents only 2% of the school committee budget, yet the district lacks a district-wide aligned ELA curriculum and social studies curriculum—with a $400,000 ARPA grant lined up to fund a new ELA adoption."
+    summary: |
+      ### Teaching & Learning
+      - **Teaching & Learning = 2% of school committee budget**; 38% of that is payroll.
+      - The district **does not own an aligned K-12 ELA curriculum** for elementary school—teachers create materials themselves.
+      - The district **does not own a social studies curriculum** (grades K-8).
+      - An **acceleration grant from DESE** funded Year 1 and Year 2 of i-Ready math implementation; that grant is now exhausted. Estimated remaining FY24 cost: ~**$118,000**.
+      - A **~$400,000 ARPA/ESSER grant** has been secured to fund a **new ELA curriculum adoption** in Year 3 of implementation; vendors have been asked for preliminary estimates.
+      - New requests include: decodable readers, third-grade phonics materials, supplemental literacy materials, math consumables/subscriptions, and classroom library expansions.
+      - The district piloting a new civics curriculum (Democratic Knowledge Project) at grade 8.
+      - **$274,000 in additional state grant allocations** (Title funds, Student Opportunity Act) available outside the operating budget.
+      
+      ### Central Administration
+      - **HR Generalist** request (recurring from FY23, unfunded): needed to support compliance, lane/step changes, licensure tracking.
+      - **Mid-contract pay adjustment** proposed for cafeteria workers and paraprofessionals to reach a living wage.
+      - **Full-day kindergarten tuition phase-out**: proposing a phased approach—cut tuition by half in FY24, eliminate entirely in FY25. Currently only 5-8 students per year do not enroll in full-day; FY24 cost estimated at **$175,000** (half of total).
+      - **New town budgeting software**: town has asked the district to participate; district recently demoed the company's updated product.
+      - **Substitute funding increase**: to bring the line up to actual historical expenditures; principals reported averaging 6.5 daily absences in November-December.
+    key_speakers: ["Nan (Director of Teaching & Learning)", "Dr. Bucky (Superintendent)", "Michelle (Business Office)"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 7382
+    end_seconds: 9000
+    headline: "MHS, Veterans Middle School, and Village School principals present building-level FY24 budgets"
+    dek: "High school enrollment at 884 exceeds projections; middle school bursting past design capacity at 452 students; all three buildings request behavior coaches and permanent substitutes."
+    summary: |
+      ### Marblehead High School (MHS)
+      - **23% of school committee budget**; 97% payroll.
+      - Enrollment currently **884**, above last year's projection of 877; projected ~210 incoming freshmen.
+      - Declining enrollment trend in upper grades offset by increased feeder school returns post-COVID.
+      - **New staffing requests (cost = $0—funded by reallocation of 3 eliminated positions):**
+        - College & Career Assistant (to support Pathways program, Essex Tech partnership, college application process).
+        - Curriculum Director (1 position, down from 2 requested last year).
+        - 0.4 FTE Visual Arts (to support engineering/manufacturing Pathway expansion).
+        - 2 Hall Monitors (safety/security; teachers now have a "magic block" so fewer are available for supervision).
+        - 0.4 FTE ASL teacher (pilot, 2 sections; recognized as a modern language for college admissions).
+        - Data/Intervention Coach (to interpret i-Ready and common assessment data; coordinate tier-two interventions).
+        - Equity Coach (point 2 FTE, shared with district model).
+      - Capital requests: Visual Arts room upgrades, audio/visual equipment, science equipment.
+      - Graduation line increase from ~$22,480 to closer to $30,000 to reflect actual vendor costs.
+      
+      ### Veterans Middle School
+      - **11% of school committee budget**; 98% payroll.
+      - Enrollment currently **452**—significantly above last year's projections (397-407 range). School was designed for 450 students.
+      - 43 new students this year (as of the meeting date).
+      - **New staffing requests:**
+        - School Adjustment Counselor / Social Worker (repurposed position, $0 cost) — returns to a model the school had previously.
+        - Behavior Coach (tier-two social-emotional support).
+        - Permanent Substitute.
+        - Instructional Software: a new ELA data program mirroring the math tool already in use.
+        - Steam Teacher (repurposed).
+        - Equity Coach (0.2 FTE).
+        - Intervention Teacher (reallocation).
+      
+      ### Village School
+      - **16% of school committee budget**; 98% payroll.
+      - Projected enrollment for next year: **545** (down ~10 from current year).
+      - Had ~45-46 new students this year—unusually high.
+      - **New staffing requests:**
+        - Permanent Substitute.
+        - Additional Math Tutor (1) and ELA Tutors (3)—currently no ELA tutor support.
+        - Steam Teacher (repurposed, $0 cost).
+        - Equity Coach (0.2 FTE).
+        - Orchestra Teacher increase from 0.6 to full-time (currently shared across 3 buildings with difficult scheduling).
+        - Behavior Coach (tier-two support).
+        - Intervention Teacher (reallocation).
+      - Supply requests include: World Languages instructional supplies (teacher had no line previously), music supplies split out from fine arts, science consumables, and professional development (math facilitators, Responsive Classroom, DEI work).
+      - Classroom library expansion and book club sets requested.
+      - Razkids reading software (currently PTO-funded) requested for district budget.
+    key_speakers: ["Dan (MHS Principal)", "Matt (Veterans Middle School Principal)", "Mary (Village School Principal)", "Mandy (Village School co-presenter)"]
+  - topic: override
+    topic_confidence: 0.93
+    start_seconds: 10604
+    end_seconds: 12647
+    headline: "Committee debates whether to prepare cut scenarios or wait for town financial guidance before override discussion"
+    dek: "A new committee member pushed for a realistic accounting of what level-funding would mean for students; veteran members noted an override is now needed simply to meet contractual obligations, not to expand services."
+    summary: |
+      Following the building-level presentations, school committee members engaged in an extended discussion about the budget path forward:
+      
+      - The aspirational FY24 budget represents approximately a **5.4% increase** over FY23, or roughly **24% higher** than FY21 on the expense side—well outside the 2.5% Prop 2½ cap.
+      - A new member noted that approximately **two-thirds of the year-over-year increase is head count**; the remaining third is operating/supply inflation.
+      - The district has **no target number from the town** because the town has not closed FY22 books. A Select Board/Finance Committee presentation was scheduled for the following Wednesday.
+      - Members debated whether to task administration now with producing a "level-funded scenario" (i.e., what cuts would be required at 2.5%) or to wait until after Wednesday's town presentation.
+      - One member argued the community needs to understand that an override is now required **simply to maintain current services**, not to add programs—a shift from historical override discussions.
+      - Another member cautioned against producing cut scenarios before knowing what the town can offer, noting enrollment data and Chapter 70 projections are still in flux.
+      - A long-tenured member expressed ongoing concern about political viability, noting the community did not pass the override referendum last year and the economy remains difficult.
+      - **Chapter 70 context**: FY24 Chapter 70 allocation projected at roughly $6.2 million total to the district; the year-over-year delta is approximately $160,000 (Student Opportunity Act driven). A member suggested the committee formally argue to the town that increased Chapter 70 funds—intended to address COVID learning loss—should be allocated directly to the schools.
+      - Administration was asked to have priorities and a partial level-funded scenario ready for the **February 16 meeting**.
+      
+      > *A resident (Catherine Martin, 29 West Shore Drive) spoke during public comment, urging the committee to tie budget asks to a more definitive multi-year strategic plan with timelines and cost projections, stating this would make it easier to build community support for an override.*
+    key_speakers: ["Sarah Gold (School Committee)", "Allison Taylor (School Committee)", "Tom Mathers (School Committee)", "New committee member", "Michelle (Business Office/CFO)", "Dr. Bucky (Superintendent)", "Catherine Martin (resident, public comment)"]
+  - topic: public-comment
+    topic_confidence: 0.92
+    start_seconds: 12715
+    end_seconds: 12807
+    headline: "Resident urges multi-year strategic plan with cost timelines to build override support"
+    dek: "Catherine Martin of West Shore Drive said she supports the budget asks but believes linking them to a definitive strategic plan is essential to winning voter approval."
+    summary: "Catherine Martin, 29 West Shore Drive, thanked presenters and said she has been advocating for exemplary education. She expressed concern about the financial outlook and repeated a request she has made at public comment for approximately two years: the district should develop a true strategic plan with definitive timelines and budget drivers attached to the Planning for Success framework. She argued that tying asks to measurable outcomes and a multi-year plan would give taxpayers and residents a clearer picture and improve the political viability of an override request."
+    key_speakers: ["Catherine Martin (resident)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 12780
+    end_seconds: 12809
+    headline: "Meeting adjourned at 9:27 PM; Wednesday placeholder meeting canceled"
+    dek: "The chair announced the Wednesday placeholder meeting would be canceled; the next full school committee meeting is scheduled for February 16."
+    summary: "The chair adjourned the meeting at 9:27 PM. She noted that the Wednesday night placeholder meeting would be canceled, as the committee completed all budget workshop presentations in one session. The next scheduled joint or full school committee meeting will be February 16."
+    key_speakers: ["School Committee Chair"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

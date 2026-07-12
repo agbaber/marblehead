@@ -9,7 +9,190 @@ video_url: "https://www.youtube.com/watch?v=y38Om5TYMYk"
 duration_seconds: 7561
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee votes 4-0 to rescind mask mandate effective February 28"
+  summary: "The Marblehead School Committee voted 4-0 to rescind its face-coverings policy (EBCFA) effective February 27, making masking optional district-wide when students return from February vacation on February 28. The committee also approved an MOU allowing the Abbot Public Library to use the Coffin School during its renovation, approved early-education tuition rates for 2022-2023, and voted to approve meeting minutes. Public commenters raised concerns about the non-renewal of Brown School principal Dr. Satterfield's contract and about accommodations for immunocompromised students under the mask-optional policy."
+  decisions:
+    - "Approved meeting minutes from August–September 2021 (5-0)"
+    - "Held/tabled proposed program of studies presentation until March 3 meeting"
+    - "Approved MOU with Abbot Public Library for use of Coffin School during renovation (4-0)"
+    - "Approved 2022-2023 early-education tuition rates: full-day K $3,500; half-day preschool $4,500; full-day preschool $6,500; transitional K $7,100 (4-0)"
+    - "Approved schedule of bills totaling $381,358.67 (4-0)"
+    - "Rescinded face-coverings policy EBCFA effective February 27, 2022 (4-0)"
+  votes:
+    - motion: "Approve meeting minutes (Aug–Sep 2021)"
+      result: "in favor (unanimous)"
+    - motion: "Enter into MOU with Abbot Public Library and authorize chair to sign"
+      result: "in favor (4 to 0)"
+    - motion: "Approve 2022-2023 early-education tuition rates"
+      result: "in favor (4 to 0)"
+    - motion: "Approve schedule of bills totaling $381,358.67"
+      result: "in favor (4 to 0)"
+    - motion: "Rescind face-coverings policy EBCFA effective February 27, 2022"
+      result: "in favor (4 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 42
+    end_seconds: 315
+    headline: "Student rep reports on mask-optional transition, swim team, school events"
+    dek: "Student representative Yafin gave updates including the February 7 mask-optional transition at MVMS, MHS, and Village, and athletic highlights."
+    summary: "The meeting opened with a commendation for departing local reporter Chris Stevens, who covered school committee meetings for many years. Student representative Yafin reported that MVMS, MHS, and Village School went mask-optional on February 7, that COVID testing kits are being distributed weekly, and highlighted several school events including the National Honor Society fundraiser, the drama club's production of *Macbeth*, Marblehead's Got Talent finals, the swim team's NEC championship win (14 events), and upcoming basketball games with a Best Buddies senior night."
+    key_speakers: ["Sarah (school committee member)", "Yafin/Jason (student representative)"]
+  - topic: public-comment
+    topic_confidence: 0.98
+    start_seconds: 315
+    end_seconds: 924
+    featured: true
+    headline: "Teachers and students speak out on Brown School principal non-renewal and mask accommodations"
+    dek: "Brown School teacher Eileen DaMore read a letter from concerned staff opposing the administration's decision not to renew Dr. Satterfield's contract; two residents raised mask-optional concerns."
+    summary: |
+      Three speakers addressed the committee during public comment.
+      
+      **Eileen DaMore (Brown School teacher)** read a letter on behalf of concerned staff objecting to the decision not to renew Brown School principal Dr. Satterfield's contract for 2022-2023. The letter noted his 24 years of experience, described three elementary principals whose contracts were not renewed by the current administration with a combined roughly 50 years of service, and said staff found the decision demoralizing and made without discussion or explanation.
+      
+      **Ramsey Hogan (45 Norman Street)** thanked the committee for keeping schools open in person and for reducing absences, but raised concerns about the accommodation policy for immunocompromised students after the move to mask-optional. He cited CDC guidance that universal masking in schools is recommended and argued that telling an immunocompromised child to wear an N95 alone is not an adequate solution.
+      
+      **Grace (sixth-grader at Village School)** described having an immunocompromised younger sister and said she had transferred classes due to concerns about mask-wearing. She said she was upset when a school committee member sighed with relief at the mask mandate announcement and was unable to attend school for a week after that. She asked the committee to provide a more inclusive accommodation allowing her to attend a regular class with full-time teachers and peers while still protecting her sister, noting that Village School staff had gone above and beyond to help her.
+    key_speakers: ["Eileen DaMore (Brown School teacher)", "Ramsey Hogan (resident)", "Grace (Village School sixth-grader)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 924
+    end_seconds: 1086
+    headline: "Committee approves August–September 2021 meeting minutes 5-0; tables program of studies"
+    dek: "Minutes from five meetings in fall 2021 were approved unanimously; the program of studies agenda item was tabled to March 3 at the superintendent's request."
+    summary: |
+      The committee voted 5-0 to approve minutes from meetings dated August 24, September 2, September 14, September 15, and September 23, 2021. Some names in the minutes were flagged for spelling review pending access to the Aspen student information system.
+      
+      The proposed program of studies agenda item was tabled at the request of Superintendent Bucky (attending a national conference in Nashville), who will present a more comprehensive overview at the March 3 meeting covering both program of studies changes and next year's master schedule. Committee members discussed whether draft documents created on publicly-funded computers are immediately public records, with differing views expressed; a member requested the district's legal counsel weigh in on the question.
+    key_speakers: ["Sarah Gold (chair)", "Megan Taylor", "Emily Baron", "David Harris"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 1495
+    end_seconds: 3152
+    headline: "Assistant superintendent presents district initiative priorities: curriculum alignment, MTSS, standards-based report cards, and DEI"
+    dek: "Assistant Superintendent Nan Murphy outlined completed and in-progress initiatives including new K-6 math curriculum, the iReady data platform, aligned writing expectations, a standards-based report card launching in December 2022, and kindergarten registration opening February 22."
+    summary: |
+      With Superintendent Bucky absent, Assistant Superintendent Nan Murphy presented an overview of district initiatives organized around a theme of alignment.
+      
+      **Curriculum alignment completed:**
+      - New K-6 math curriculum selected and being implemented; year two begins next year with no new programs added
+      - Writing curriculum aligned K-6 using existing purchased resources
+      - Grade 9-12 ELA texts reviewed and updated for diversity and quality
+      - iReady adopted as a common K-8 formative assessment tool in both ELA and math
+      
+      **In progress:**
+      - District-wide scope and sequence (pre-K through 12) being compiled by school teams, with a goal of completion by end of March
+      - Curriculum mapping to follow scope and sequence work
+      - Aligned K-3 master schedule prioritizing inclusive practices and weekly teacher professional development
+      - Instructional lead teachers at K-6 providing coaching and professional development
+      - Targeted district professional development on math curriculum and DEI, with some PD time returned to schools for building-based use
+      
+      **Standards-based report card:** Transitioning to a standards-based report card for grades K-6 starting December 2022. A sample will go home with the next marking period in March. Parent forums planned for spring and fall. Teachers selected the standards and performance indicators. The new card uses "meeting," "progressing," "beginning," and "not yet" rather than advanced/exceeds categories, with personalized teacher narratives.
+      
+      **DEI:** Every school now has a student DEI team; teacher-led professional development occurring monthly; first parent/community conversation on race and racism held; second session planned for March.
+      
+      **Kindergarten registration** opens February 22 (next Tuesday), with pre-K families receiving automatic enrollment emails. Screening will occur in June for pre-K students and in June/August for new families.
+      
+      **Summer program:** Tentatively four weeks in July targeting struggling readers with phonics support; funding details to be communicated in early March.
+      
+      Committee discussion included questions about MTSS implementation pace, staffing ratios for small-group intervention, whether the district is less inclusive this year than in past years, DEI team membership including students with disabilities, the "exceeds expectations" category in the new report card, and ELA professional development.
+    key_speakers: ["Nan Murphy (Assistant Superintendent)", "Megan Taylor", "Sarah Gold (chair)", "Emily Baron", "David Harris"]
+  - topic: school-budget
+    topic_confidence: 0.75
+    start_seconds: 3152
+    end_seconds: 4172
+    headline: "Director of Student Services outlines pre-K and transitional kindergarten restructuring for 2022-2023"
+    dek: "Paula Donnelly described plans to align all pre-K and transitional K to a 4-full-days-plus-Wednesday-half-day schedule starting September 8, creating a more intensive afternoon services block for students with disabilities."
+    summary: |
+      Director of Student Services Paula Donnelly reported that over 70 parents responded to a survey about the transitional kindergarten (TK) program launched this year, with overwhelmingly positive results. She described key changes planned for 2022-2023:
+      
+      - Pre-K and TK will move to a unified schedule: 8:15 a.m.–2 p.m. Monday, Tuesday, Thursday, and Friday, with a 12 noon dismissal on Wednesdays
+      - The Wednesday half-day is new for existing pre-K; TK currently dismisses at 12:30, moving to 12:00
+      - The afternoon structure will allow smaller groups so students with disabilities receive more intensive services; Donnelly noted the district currently lacks a clearly defined continuum of services required by special education regulations
+      - Pre-K students starting September 8; grades 1-12 starting September 6
+      - Donnelly noted she contacted DESE about peer model/peer partner ratios and found some ambiguity in regulations
+      - The full-day tuition-free kindergarten remains a budget-dependent aspiration for next year
+      - An ABA-based classroom at Brown School will be added for students requiring those services
+      
+      Committee members expressed support for the Wednesday half-day addition and asked about timeline for communicating placement information to families.
+    key_speakers: ["Paula Donnelly (Director of Student Services)", "Sarah Gold (chair)", "Megan Taylor"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 4172
+    end_seconds: 5341
+    headline: "Committee approves MOU with Abbot Public Library for temporary use of Coffin School during renovation"
+    dek: "The committee voted 4-0 to enter into a memorandum of understanding with the Abbot Public Library, which will occupy the vacant Coffin School while its own building is renovated."
+    summary: "Business Manager Michelle presented a memorandum of understanding (MOU) drafted by district counsel Colby Brunt authorizing the Abbot Public Library to use the Coffin School building while the library undergoes renovation. The MOU leaves move-in dates blank pending the library's schematic design phase; a fall move-in is anticipated. Kimberly from the library participated via phone, confirmed her questions were answered, and noted the division of responsibilities (including utilities and lock changes) was clear. The committee voted 4-0 to enter into the MOU and authorize the chair to sign."
+    key_speakers: ["Michelle (Business Manager)", "Kimberly (Abbot Public Library, phone)", "Sarah Gold (chair)"]
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 5341
+    end_seconds: 5667
+    headline: "Committee approves 2022-2023 early-education tuition rates; pre-K rates increase $500"
+    dek: "The committee voted 4-0 to set 2022-2023 tuition at $3,500 for full-day kindergarten (held flat), $4,500 for half-day preschool, $6,500 for full-day preschool, and $7,100 for transitional kindergarten."
+    summary: |
+      Business Manager Michelle presented recommended tuition rates for 2022-2023 early-education programs. Full-day kindergarten is held flat at $3,500 given the district's hope to eliminate the fee through the budget process. Pre-K half-day and full-day program rates increase by $500 each to reflect approximately two additional hours of programming per week added by the new Wednesday half-day. Transitional K increases by $100 (approximately 1.5%), reflecting a cost-of-living adjustment.
+      
+      Current enrollment: approximately 131 tuition-paying full-day kindergarten students generating roughly $425,000 in revenue; 40 tuition-paying preschool peer-partner students generating roughly $225,000.
+      
+      The committee voted 4-0 to approve the rates.
+    key_speakers: ["Michelle (Business Manager)", "Sarah Gold (chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 5667
+    end_seconds: 5730
+    headline: "Committee approves schedule of bills totaling approximately $381,359"
+    dek: "A roll-call vote of 4-0 approved the identified schedule of bills totaling $381,358.67."
+    summary: "The committee voted 4-0 to approve the schedule of bills totaling $381,358.67."
+    key_speakers: ["Sarah Gold (chair)", "Michelle (Business Manager)"]
+  - topic: school-budget
+    topic_confidence: 0.72
+    start_seconds: 5730
+    end_seconds: 6036
+    headline: "Committee discusses face-coverings policy ahead of vote; Superintendent recommends mask-optional by March 7"
+    dek: "Superintendent Bucky's memo recommended rescinding the mask mandate effective March 7 to allow one masked week after February vacation; the committee discussed the changed landscape before voting."
+    summary: |
+      Assistant Superintendent Murphy outlined Superintendent Bucky's recommendation: rescind the face-coverings policy effective March 7, allowing one mandatory-mask week upon return from February vacation to guard against a post-break case spike. Three requirements would remain regardless of policy: masks in school health offices (DESE guidance), masks on school buses (federal mandate), and masks for five days after a positive COVID test (DESE guidance).
+      
+      Committee members discussed the context: the state's mask mandate expired February 28, the town's Board of Health had already removed its indoor mandate, Governor Baker and DESE announced February 28 as the final day of school mask requirements, and case rates had been declining. Members noted the difficulty of asking students who had been unmasked to put masks back on, the behavioral and morale issues mask enforcement had caused, and the availability of home testing.
+      
+      Member Sarah Gold described personal difficulty with the decision, noted she had consulted Dr. Bucky directly, acknowledged valid arguments on both sides, and expressed concern about immunocompromised students while also citing the burden placed on children and the importance of protecting in-person learning.
+    key_speakers: ["Nan Murphy (Assistant Superintendent)", "Megan Taylor", "David Harris", "Sarah Gold (chair)", "Emily Baron"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 6036
+    end_seconds: 6221
+    headline: "Committee votes 4-0 to rescind face-coverings policy EBCFA effective February 27"
+    dek: "Megan Taylor moved to rescind the school mask policy effective February 28 (the day after school resumes), and the motion passed 4-0."
+    summary: "Member Megan Taylor moved to rescind the district mask policy effective February 28; Emily Baron seconded. After discussion, the committee voted 4-0 to rescind policy EBCFA (Face Coverings), effective February 27, so that masking is optional district-wide when students return from February vacation on February 28. DESE-required masking in health offices, on buses, and following COVID isolation remains in effect. The chair requested timely family communication be sent the morning after the vote."
+    key_speakers: ["Megan Taylor", "Emily Baron", "Sarah Gold (chair)", "David Harris"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 6221
+    end_seconds: 7560
+    headline: "Committee plans return to in-person meetings March 3; liaison updates include METCO and DEI events"
+    dek: "The chair proposed resuming in-person public meetings at the MHS library starting March 3; subcommittee liaisons shared upcoming community events."
+    summary: |
+      **In-person meetings:** The chair proposed returning to in-person school committee meetings at the MHS library starting with the March 3 meeting, with live-streaming capability confirmed through MHTV. Members noted remote participation would still be available for those not able to attend in person.
+      
+      **Liaison updates (Emily Baron):**
+      - Marblehead Racial Justice Team event: February 28 at 7 p.m. at the library (in-person or Zoom), featuring the president of METCO Inc. on conversations about race; registration required through the library.
+      - March 23 at 10 a.m.: Racial Justice Team presenting two artworks (Harriet Tubman and John Lewis) to the district at the Brown School.
+      - METCO Presents performances available for $10 to urban and suburban families; link to be distributed.
+      - Peace Flag Movement: student DEI teams will raise flags representing every culture, race, spirituality, gender, sexuality, age, and ability at each school.
+      
+      **CPAC updates (Megan Taylor):**
+      - March 9 at 7 p.m.: Dr. Donnelly presenting on the IEP process.
+      - March 30 at 7 p.m.: Speaker Ashley Harris Wally on ableism.
+      
+      **Budget subcommittee:** No meeting held; facilities subcommittee also did not meet. A facilities meeting is scheduled for February 28. Budget timeline to be re-established once the interim superintendent (John McGann) is up to speed.
+      
+      The meeting was adjourned at approximately 9:06 p.m.
+    key_speakers: ["Sarah Gold (chair)", "Emily Baron", "Megan Taylor", "David Harris"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

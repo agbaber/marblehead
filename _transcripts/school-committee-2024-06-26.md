@@ -9,7 +9,115 @@ video_url: "https://www.youtube.com/watch?v=kPuHKARaEMs"
 duration_seconds: 4059
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee votes to allocate up to $25,000 for independent investigation into anti-Semitism allegations"
+  summary: "The Marblehead School Committee held a special meeting to deliberate on next steps for an independent investigation following significant public comment at its previous meeting. After a failed motion to award the contract directly to a specific firm, the committee voted 5–0 to allocate up to $25,000 and delegate procurement to incoming Superintendent John Robodo, with the contract to be awarded no later than July 19th. The committee also voted unanimously to accept a Marblehead Boosters donation of up to $200,000 for lighting upgrades at Piper Field, and adjourned into executive session to discuss collective bargaining strategy."
+  decisions:
+    - "Approved acceptance of Marblehead Boosters donation up to $200,000 for Piper Field lighting replacement and upgrade"
+    - "Rejected motion to award independent investigation contract directly to a specific firm (Kirker Pagit) — failed 2 to 3"
+    - "Rejected motion to allocate $25,000 with a July 10th procurement deadline — failed 2 to 3"
+    - "Approved allocation of up to $25,000 for independent investigation, procurement delegated to Superintendent Robodo with July 19th deadline — passed 5 to 0"
+    - "Approved entering executive session for collective bargaining strategy — passed 5 to 0"
+  votes:
+    - motion: "Accept Marblehead Boosters donation up to $200,000 for Piper Field lighting"
+      result: "in favor (unanimous)"
+    - motion: "Award independent investigation contract to Kirker Pagit"
+      result: "in favor (2 to 3)"
+    - motion: "Allocate up to $25,000 for independent investigation with July 10th procurement deadline"
+      result: "in favor (2 to 3)"
+    - motion: "Allocate up to $25,000 for independent investigation, procurement by Superintendent Robodo no later than July 19th"
+      result: "in favor (unanimous)"
+    - motion: "Enter executive session for collective bargaining strategy"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.8
+    start_seconds: 171
+    end_seconds: 237
+    headline: "Chair opens brief public comment period; no speakers come forward"
+    dek: "The chair confirmed the committee's willingness to hear public comment, but no in-person or online attendees wished to speak."
+    summary: "The chair noted that public participation had inadvertently been dropped from the agenda and asked if the committee wished to open it. The committee agreed. No one in the audience or on Zoom raised a hand to speak, and public comment was closed."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: recreation-events
+    topic_confidence: 0.85
+    start_seconds: 237
+    end_seconds: 573
+    headline: "Committee votes 4–0 to accept up to $200,000 Boosters donation for Piper Field lighting"
+    dek: "The Marblehead Boosters raised money for turf replacement at the high school; a lower-than-expected bid left a surplus that the Boosters wish to use for lighting upgrades."
+    summary: |
+      The chair explained that the Marblehead Boosters had fundraised to replace the turf field at Piper Field at the high school. The bid came in lower than anticipated, leaving a remaining balance. The Boosters requested the surplus be used to replace and upgrade the field lighting — a scope item that had been scaled back earlier when costs appeared higher.
+      
+      The lighting upgrade requires a separate procurement process. The school's procurement officer confirmed via email that the work could be sourced through a purchasing consortium, satisfying state procurement requirements. A board member noted outside sports groups had raised questions about evening access to the field and said those concerns would be referred to the superintendent and athletic director.
+      
+      **Vote:** Motion to accept the donation up to $200,000 — Brian Oda in favor, Al Williams in favor, Sarah Fox in favor, Allison Taylor in favor — **4 to 0** (one member absent/not recorded).
+    key_speakers: ["Sarah Fox (Chair)", "Board member (Brian Oda)", "Board member (Al Williams)", "Board member (Allison Taylor)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 573
+    end_seconds: 619
+    headline: "Chair introduces independent investigation discussion as genesis of the special meeting"
+    dek: "The prior week's meeting drew large public attendance on allegations within the district; the committee reconvened to deliberate next steps."
+    summary: "The chair explained that the primary purpose of the special meeting was to deliberate on next steps for a potential independent investigation, following a heavily attended public comment session the prior Thursday. The committee had been presented with three investigator candidates suggested by legal counsel but had not voted. Tonight's agenda was to discuss how to move forward."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.92
+    start_seconds: 619
+    end_seconds: 3007
+    featured: true
+    headline: "Committee votes 5–0 to allocate up to $25,000 for independent investigation into allegations, delegating procurement to incoming superintendent by July 19"
+    dek: "After two failed motions — one to award directly to a named firm and one with a July 10 deadline — the committee unanimously approved delegating the hire to Superintendent-elect John Robodo with a July 19th deadline."
+    summary: |
+      The committee engaged in extended deliberation over how to procure an independent investigator for complaints that arose at the end of the prior superintendent's tenure. Legal counsel had suggested three firms; the committee was uncomfortable voting on one without further vetting.
+      
+      **Key positions expressed:**
+      - One member (identified as moving the first motion) argued that a firm called Kirker Pagit was clearly the most qualified based on scope, volume of prior cases, and expertise in workplace investigations including anti-Semitism and religious harassment.
+      - Other members wanted candidates to present their scope, timeline, and deliverables before a vote, and noted community demand — particularly from the Jewish community — for a thorough, unbiased process.
+      - One member cautioned against delay, noting that the longer the process took, the more the issue would be amplified.
+      - The chair noted the incoming superintendent (John Robodo, starting July 1) had attended the prior meeting and should lead this effort; the prior administration had conflicts of interest because its members were subjects of the complaints.
+      - Members discussed procurement thresholds: the school's guidelines require a different process above $50,000; the committee estimated the investigation would cost up to $25,000.
+      - One member raised concern that a July 10 deadline gave the new superintendent only one week, given the July 4th holiday.
+      
+      **Motions and outcomes:**
+      
+      | Motion | Result |
+      |---|---|
+      | Award contract directly to Kirker Pagit | Failed 2–3 (Oda, Fox in favor; Taylor, Williams, Chaper opposed) |
+      | Allocate $25,000 with July 10 procurement deadline | Failed 2–3 (Oda, Fox in favor; Taylor, Williams, Chaper opposed) |
+      | Allocate up to $25,000, procurement delegated to Superintendent Robodo, contract awarded no later than July 19 | **Passed 5–0** |
+      
+      The chair noted that the investigation would ultimately be reported back to the school committee, and expressed interest in forming a task force or subcommittee to address broader concerns about anti-Semitism, curriculum, and community climate raised at last week's meeting.
+    key_speakers: ["Sarah Fox (Chair)", "Brian Oda (Board member)", "Al Williams (Board member)", "Allison Taylor (Board member)", "Board member (Chaper/Chafer)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 3007
+    end_seconds: 3990
+    headline: "Committee discusses summer retreat scheduling and goal-setting ahead of new superintendent's July 30–Aug 1 administrator retreat"
+    dek: "Members agreed to coordinate via email to find a date in early-to-mid July for a school committee retreat focused on budget goals and strategic planning."
+    summary: |
+      The chair raised the need to schedule a summer school committee retreat — a recurring annual event — noting that new Superintendent Robodo already has an administrator retreat planned for July 30–31 and August 1. Members debated whether to meet before or after that retreat, with one member arguing the school committee should set high-level goals first so administrators can align their plans.
+      
+      Key scheduling constraints discussed:
+      - The week of July 4th was ruled out by several members due to travel and holidays.
+      - Superintendent Robodo will be out of district the week of July 22.
+      - One member is out of town for two weeks but willing to Zoom in.
+      - Another member works full-time and cannot easily take a full weekday off.
+      
+      The chair proposed sending an email to poll availability, tentatively targeting the week of July 8th or July 15th. A second retreat day with outside workshops (MASC, legal counsel) was also discussed. The chair noted the committee had not formally set annual goals the prior year and expressed a desire to be more proactive in the coming year.
+    key_speakers: ["Sarah Fox (Chair)", "Brian Oda (Board member)", "Al Williams (Board member)", "Allison Taylor (Board member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 3990
+    end_seconds: 4077
+    headline: "Committee votes 5–0 to enter executive session for collective bargaining strategy"
+    dek: "The committee adjourned to executive session to discuss bargaining strategy with the Marblehead Education Association and several other bargaining units, with no intent to return to open session."
+    summary: |
+      The chair moved to enter executive session pursuant to M.G.L. Chapter 30A, Section 21A, Purpose 3 — to discuss strategy with respect to and in preparation for collective bargaining with the Marblehead Education Association (Unit A), permanent substitutes, tutors, paraprofessionals, and custodians, because an open discussion may have a detrimental effect on the committee's bargaining position. The committee did not intend to return to open session.
+      
+      **Vote:** Brian Oda in favor, Al Williams in favor, Allison Taylor in favor, Sarah Fox in favor, Chaper in favor — **5 to 0**.
+    key_speakers: ["Sarah Fox (Chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

@@ -9,7 +9,105 @@ video_url: "https://www.youtube.com/watch?v=5lpI1PqAj-U"
 duration_seconds: 4404
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee reviews FY23 close-out and begins FY24 budget planning"
+  summary: "The school business office presented the FY23 budget close-out, noting that staffing vacancies throughout the year freed up funds that were applied to one-time capital security purchases including camera upgrades, door-swipe access, and intercom replacements. The committee discussed out-of-district special education tuition costs, a surge in FOIA requests driving up legal expenses, and the challenge of building the FY24 budget under a level-funding directive. Members debated the need for a student-needs-based budget exercise and discussed upcoming collective bargaining and a pending special education audit."
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 88
+    end_seconds: 1307
+    featured: true
+    headline: "FY23 close-out: staffing vacancies funded one-time security upgrades; out-of-district tuition in decent shape"
+    dek: "The business office reported that revolving-door staffing vacancies generated savings used for school security improvements, while circuit-breaker reserves reached a goal of $1.2 million carried forward."
+    summary: |
+      The chief financial officer presented the FY23 budget close-out. The district's budget was approximately $43.9 million. A significant number of staffing vacancies throughout the year created savings that were redirected in Q4 to one-time capital items including:
+      
+      - Replacement of outdated paging/caving systems
+      - Security camera replacements
+      - Door-swipe access upgrades at all four schools
+      - Security intercom replacements
+      - Furniture replacement district-wide
+      
+      The total for those one-time purchases was approximately $15,000 (per ASR; context suggests a larger figure). The business office confirmed these were legally permissible one-time expenditures within the fiscal year.
+      
+      Key budget outliers noted:
+      - Tutoring, paraprofessional, and substitute lines were significantly under-spent due to inability to fill positions; Marblehead pay rates were noted as near minimum wage and not competitive.
+      - Hardware was overextended by approximately 1,000% because salary savings were redirected there.
+      - Out-of-district transportation was overextended at roughly 200% ($290K budgeted, ~$591K expended, delta ~$301K).
+      - Consumables such as paper were over budget due to cost increases.
+      
+      Circuit breaker reserve: The district reached a long-standing goal of carrying forward a full year of circuit-breaker revenue ($1.2 million) in reserve, a safeguard developed after a 2018 special education budget shortfall.
+      
+      Out-of-district tuition: As of the meeting date, $3.7 million was budgeted and $4.4 million in funding sources was identified, leaving approximately $689,000 available, which includes six unassigned placeholder spots (~$310,000). Two additional students had pending placements. The committee asked for a briefing on how parent-placed students end up in out-of-district programs.
+    key_speakers: ["Michelle (Business/Finance Officer)", "Committee member (unidentified)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 1862
+    end_seconds: 2108
+    headline: "FOIA request volume surges to 44 in three months vs. 28 for all of last year, driving legal costs"
+    dek: "The business officer flagged a sharp increase in complex FOIA requests, mostly media-related, that are straining staff time and legal budgets."
+    summary: |
+      The business officer reported receiving 44 FOIA (public records) requests in the first three months of FY24, compared to 28 for all of the prior fiscal year. The current requests are described as substantially more complex, involving large document searches covering emails, texts, and communications across teachers, administrators, coaches, and parents. The district can charge a maximum of $25/hour for FOIA fulfillment, well below actual staff and attorney costs.
+      
+      Approximately 40% of requests were attributed to a single media source. The business officer noted she serves as the public records officer and is working with attorneys to scope responses, but indicated the legal line is expected to be exceeded for the year. She raised the possibility of needing to hire dedicated staff if the volume and complexity continue.
+    key_speakers: ["Michelle (Business/Finance Officer)"]
+  - topic: school-budget
+    topic_confidence: 0.93
+    start_seconds: 2242
+    end_seconds: 3632
+    headline: "Committee debates FY24 budget approach: level-funding directive vs. student-needs-based exercise"
+    dek: "A committee member stated she would not vote for a budget that does not account for what it actually costs to educate students, while administrators outlined a plan to deliver a roll-forward budget by mid-November and a full budget by early January."
+    summary: |
+      The business officer outlined the FY24 budget planning timeline:
+      - Budget packets to go to building principals first week of November
+      - Principal submissions due first/second week of December
+      - District budget compilation: 3–4 weeks after that
+      - Rough presentation to committee: early January
+      - Capital budget items also targeted for mid-November
+      
+      The committee was given a budget planning outline from the town finance director (identified as "Ella"), who set a November 13 deadline for departments to determine their numbers.
+      
+      The district has been directed to produce two budgets: (1) a level-services budget and (2) a level-funding budget (same dollars as prior year). One committee member argued strenuously that neither of those budgets addresses actual student needs and stated she would not vote for a budget without a student-needs-based exercise — starting from IEPs, service grids, and staff-to-student ratios rather than rolling forward existing headcount.
+      
+      The business officer acknowledged the approach and noted the district is exploring using the Aspen student information system to assist with the exercise, though teacher schedules are not entered in Aspen at the elementary level to the same detail as middle and high school.
+      
+      A special education audit is in progress: the director of student services is finalizing specs and the RFP is expected to go out within weeks. A vendor recommended expanding the review beyond special education to include Tier 1 and Tier 2 instruction.
+      
+      The committee also discussed the need for a budget workshop at the start of the process so that directives and priorities are communicated to principals before they build their submissions, avoiding the pattern of principals spending weeks on budgets only to receive last-minute redirections.
+    key_speakers: ["Michelle (Business/Finance Officer)", "Committee member (unidentified)", "Jennifer (Committee member, referenced)"]
+  - topic: labor-personnel
+    topic_confidence: 0.82
+    start_seconds: 3893
+    end_seconds: 4031
+    headline: "Collective bargaining underway; health insurance premium timing complicates budget projections"
+    dek: "The business officer noted that bargaining has not been formally initiated, and that unions are waiting on health insurance premium information before bringing asks."
+    summary: "The business officer indicated that collective bargaining has not yet formally begun. Attorneys for both sides have not yet exchanged initial proposals. The unions are reported to be waiting on health insurance premium cost information from the town before finalizing their asks, as premium share is an employee benefit that factors into total compensation. The business officer noted that once a bargaining cutoff point is reached, neither side can introduce additional proposals, so the district wants to ensure discussions begin before the town's health insurance determination is made. A target of mid-March for a budget vote was mentioned, contingent on bargaining progress."
+    key_speakers: ["Michelle (Business/Finance Officer)", "Committee member (unidentified)"]
+  - topic: health-insurance
+    topic_confidence: 0.72
+    start_seconds: 3907
+    end_seconds: 3988
+    headline: "Health insurance premium determination pending from town, affecting bargaining timeline"
+    dek: "Unions are reported to be awaiting the town's health insurance premium announcement before finalizing collective bargaining proposals."
+    summary: "A brief discussion noted that the district's unions are waiting to see what the town determines for health insurance premiums before bringing their bargaining asks. A committee member questioned what health insurance has to do with collective bargaining; the business officer explained it is an employee benefit and that if the town changes premium-share, that affects total compensation and the union's negotiating position. The formal process for communicating with bargaining units runs through the district's and unions' attorneys."
+    key_speakers: ["Michelle (Business/Finance Officer)", "Committee member (unidentified)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 3979
+    end_seconds: 4401
+    headline: "New financial software expected to cost approximately $185K–$200K annually; district objects to absorbing cost"
+    dek: "The business officer stated the district should not be required to lay off staff to fund new financial software the town is implementing, and that discussions with the town finance director are ongoing."
+    summary: |
+      The business officer reported that she and the assistant (Emma) met with the town finance director regarding the town's new financial software system. The annual cost to the district is approximately $185,000–$200,000. The district has historically not paid for financial software. The business officer stated clearly she would not support laying off a teacher to fund a financial software cost that belongs to the town, noting the town holds reserves that constitute acceptable use for such a cost.
+      
+      The town plans to pay for the first year (the go-live year), but the ongoing annual cost in subsequent years has not been resolved. A separate discussion touched on a recruitment software system the district is also exploring, for which cost quotes have not yet been received. The district also noted its current payroll systems have network vulnerabilities that create cybersecurity risk.
+      
+      The committee also briefly discussed whether other town departments (e.g., health department) are carrying their share of the software cost.
+    key_speakers: ["Michelle (Business/Finance Officer)", "Committee member (unidentified)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

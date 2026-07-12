@@ -9,7 +9,204 @@ video_url: "https://www.youtube.com/watch?v=ob27ZeFUG48"
 duration_seconds: 8798
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee reviews superintendent evaluation, hears SEL survey, and debates busing policy"
+  summary: "The school committee held its last regular meeting before the end of the school year, receiving a student-led social-emotional learning survey presentation from Marblehead High School seniors. The committee conducted the summative evaluation of Superintendent Dr. Bucky, rating him proficient overall but debating whether to approve the document immediately or return it at the next meeting for additional comments. Members also discussed sustainability initiatives, the school bus transportation software adoption, and heard public comment calling for a formal bus-safety policy motion."
+  decisions:
+    - "Approved schedule of bills totaling approximately $3,942,334.20 (5-0)"
+    - "Held superintendent summative evaluation for revision; deferred vote to June 17 meeting"
+    - "Held motion to eliminate polystyrene from schools next year (motion failed to receive a second)"
+  votes:
+    - motion: "Approve schedule of bills totaling approximately $3,942,334"
+      result: "in favor (unanimous)"
+    - motion: "Eliminate polystyrene from school cafeterias beginning next school year"
+      result: "motion not seconded; did not proceed to vote"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 45
+    end_seconds: 436
+    headline: "Coffin School principal commends PTO fun run; chair reads superintendent's senior-week notes"
+    dek: "Principal Sean Satterfield recognized the Coffin/Brown PTO fun run that raised over $18,000 and cited custodians for playground repairs."
+    summary: |
+      Principal Satterfield recognized Coffin/Brown PTO co-presidents Abby Lewis and Marina Gamble for organizing the fun run, which raised over $18,000 toward a climbing wall at Brown School. He also commended custodians led by Todd Bloodgood for playground repairs and outdoor lunch setup.
+      
+      Chair Fox read notes from student representative Dan Howell (absent for senior week): prom was held successfully in the high school parking lot; the senior show was scheduled for that evening; graduation was the following day. June 17 was noted as Dan's final school committee meeting.
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 436
+    end_seconds: 699
+    headline: "Two residents offer public comment praising superintendent and school committee"
+    dek: "Cindy Tower Lowen (12 Trinity Road) and Paul Baker (79 Overlook Road) praised Dr. Bucky's work on social-racial justice and the committee's conduct during a difficult year."
+    summary: "Cindy Tower Lowen thanked Dr. Bucky for his leadership on social and racial justice, calling it meaningful to the community. Paul Baker thanked the full school committee for their volunteer service during an exceptionally difficult year and noted that current and former members stepping up for election was impressive."
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 699
+    end_seconds: 2665
+    featured: true
+    headline: "NHS seniors present SEL survey showing over 50% of upperclassmen reporting mental-health struggles"
+    dek: "Seniors Tess Keaney and Chloe Pickering presented anonymous survey data from nearly 500 students linking teacher disconnection and declining work ethic to mental-health challenges."
+    summary: |
+      Counselor Gina Hart and Dr. Jamie Slavitz introduced the Marblehead High School Social-Emotional Learning survey initiative conducted by seniors Tess Keaney and Chloe Pickering as their senior project in partnership with Boston University and Merrimack College researchers.
+      
+      **Key survey findings (≈500 responses):**
+      
+      | Finding | Detail |
+      |---|---|
+      | Academic confidence | Declined in higher grades |
+      | Peer support | Majority felt they had peers to talk to |
+      | Teacher connection | Seniors reported greatest difficulty connecting with teachers |
+      | Enjoyment of school | Only freshmen were above 50% agreeing they enjoy school |
+      | Mental health struggles | Over 50% of students in every grade reported struggling |
+      | Work ethic decline | 87% of seniors; 72% of 11th graders reported decline |
+      | Adult to talk to (school) | 21.4% of focus-group students said they had no adult at school |
+      
+      **Significant predictors of mental-health struggles:**
+      - Not enjoying school: 2.6× more likely to be struggling
+      - Decreased teacher connection: 3.5× more likely
+      - Declining work ethic/motivation: 4.1× more likely
+      - No adult to talk to: **13.2× more likely**
+      
+      Committee members Sarah Gold and Emily Baron highlighted the 21.4% of students reporting no adult at school as a key concern. Superintendent Dr. Bucky noted a non-anonymous fall survey was already conducted to reach out to students endorsing those items. The committee discussed repeating the survey in fall 2021 to track changes, and Dr. Bucky committed to providing a professional-development overview at the next meeting.
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2665
+    end_seconds: 2712
+    headline: "New METCO Director Deandra Williams introduced in her second week"
+    dek: "Superintendent Bucky introduced Deandra Williams, who joined the district in week two and attended the reopening committee meeting, as the new METCO director."
+    summary: "Dr. Bucky introduced Deandra Williams as the new METCO director, noting she had already been contributing at the reopening planning meeting. Williams spoke briefly about her background in school administration for over 10 years in the Greater Boston area, including Boston Public Schools and Cambridge Public Schools, and expressed excitement about supporting inclusive spaces for all Marblehead students."
+  - topic: trash-dpw
+    topic_confidence: 0.72
+    start_seconds: 2712
+    end_seconds: 3162
+    headline: "District adopts School Bus Manager software; busing pilot on track for September"
+    dek: "Transportation coordinator Stephen Quiatek presented the newly adopted School Bus Manager software, while committee member Sarah Fox expressed frustration at the pace of progress on hazard busing."
+    summary: |
+      Stephen Quiatek described the School Bus Manager software, which automates student-to-school distance calculations, route planning with zone restrictions for narrow old-town streets, field-trip tracking, and optional future add-ons including GPS tracking and a parent app.
+      
+      Committee member Megan Taylor confirmed that the committee had committed to launching a busing pilot in September. Member Sarah Fox disagreed, stating that nine months after Dr. Benedetto's original proposal, the committee had not voted on a policy, allocated funding, or clearly committed to hazard busing for students lacking safe walking routes. She noted Safe Routes audits confirmed unsafe routes and said the district had not funded the change.
+      
+      Taylor responded that she had followed up repeatedly with the superintendent and that the September pilot commitment remained. No vote was taken; discussion was deferred.
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 3162
+    end_seconds: 3628
+    headline: "Superintendent updates committee on sustainability, Bike More, and Brown School"
+    dek: "Dr. Bucky covered polystyrene elimination at Brown School, the Bike More Green Street remediation, and ongoing work with Sustainable Marblehead."
+    summary: |
+      **Sustainability / polystyrene:** Brown School will open with reusable cafeteria trays, cutlery, and refillable water stations — no polystyrene. Rolling out to other schools involves a cost differential that may require lunch-price adjustments. Committee member Sarah Fox made a motion to eliminate polystyrene across all schools at the start of the 2021-22 school year; the motion was not seconded.
+      
+      **Bike More / Green Street:** Remediation of the wetlands area is complete. Town counsel provided a use-agreement template; a meeting is scheduled to resolve liability language before the agreement goes back to the school committee. Dr. Bucky noted he would bring Andrew Petty (Sustainable Marblehead) to the next meeting to finalize composting and recycling rollout.
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 3628
+    end_seconds: 4128
+    headline: "Five retiring staff honored; Glover Principal Donna Zasky's service recognized"
+    dek: "Retirees Leanne Fairbanks, Lynn Hollian, Dale Nicholson, Lisa Quillin, Meredith Reardon, and Principal Donna Zasky were recognized with the district's Crystal Apple."
+    summary: |
+      The superintendent recognized retirees on camera and by note:
+      
+      | Name | Role | Years with MPS |
+      |---|---|---|
+      | Leanne Fairbanks | Coffin School 2nd-grade teacher (remote) | Since 1998 |
+      | Lynn Hollian | Library media specialist | 18 years (4 with MPS) |
+      | Dale Nicholson | Vets middle school technology ed teacher | Since 2015 |
+      | Lisa Quillin | Glover 1st-grade teacher | Since 1989 |
+      | Meredith Reardon | Vets guidance counselor | 13 years |
+      | Donna Zasky | Glover School principal | 10 years |
+      
+      Fairbanks and Quillin joined via video to share reflections. Zasky also spoke briefly. Dr. Bucky thanked Zasky specifically for her five years on the building committee for the new Brown School project.
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 4128
+    end_seconds: 5098
+    headline: "Schedule of bills totaling approximately $3.94 million approved unanimously"
+    dek: "The committee voted 5-0 to approve the identified schedule of bills totaling $3,942,334.20."
+    summary: "On a motion by Megan Taylor, seconded by Emily Baron, the committee approved the schedule of bills totaling $3,942,334.20 by a 5-0 roll-call vote (Gold, Taylor, Fox, Baron, Harris all voting yes)."
+  - topic: labor-personnel
+    topic_confidence: 0.92
+    start_seconds: 5098
+    end_seconds: 6984
+    headline: "Superintendent summative evaluation presented as proficient overall; vote deferred to June 17"
+    dek: "Chair Fox walked through aggregated ratings for Dr. Bucky's first-year evaluation; members debated two exemplary ratings and whether to approve or revise before voting."
+    summary: |
+      Chair Fox and Lisa (unnamed committee staff) compiled individual evaluations from all five members into a summative report.
+      
+      **Summary of composite ratings:**
+      
+      | Area | Rating |
+      |---|---|
+      | Professional practice goal – induction program | Met |
+      | Professional practice goal – budget | Significant progress |
+      | Student learning goal – school visits/evaluations | Significant progress |
+      | District improvement – leadership team development | Significant progress |
+      | District improvement – supporting diverse students | Significant progress |
+      | Standard 1: Instructional leadership (evaluation/supervision) | Proficient |
+      | Standard 2: Management – environment/safety/health | Proficient |
+      | Standard 2: Management – fiscal systems | Proficient |
+      | Standard 3: Community engagement – sharing responsibility | Proficient |
+      | Standard 3: Community engagement – communication | Exemplary |
+      | Standard 4: Professional culture – high standards | Proficient |
+      | Standard 4: Professional culture – shared vision | Exemplary |
+      
+      **Overall rating: Proficient**
+      
+      Members Sarah Gold and Emily Baron raised concerns that (1) the report lacked clearly delineated areas for growth and (2) giving an entry-level superintendent an exemplary rating was difficult to justify. Member Megan Taylor defended the exemplary communication rating, noting Dr. Bucky significantly exceeded prior superintendents with the BackTogetherMHD site, fireside chats, and weekly updates. Member David Harris offered a sports analogy (Fred Lynn winning MVP as a rookie) and noted Dr. Bucky's self-evaluation was honest and thorough.
+      
+      The committee agreed not to vote that evening; members will email Fox and Lisa with any comment additions (not rating changes) before the June 17 meeting, when a vote will be taken.
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 6984
+    end_seconds: 7241
+    headline: "Subcommittee liaisons report on equity/METCO, CPAC unsung heroes, facilities master planning"
+    dek: "Emily Baron updated on the equity network and DEI mission statement work; Megan Taylor mentioned the CPAC unsung heroes virtual event; Sarah Gold reported on facilities planning progress."
+    summary: |
+      Emily Baron (METCO liaison): The equity network completed its last RIDES workshop for the year. A DEI mission statement is being drafted. The high school English department will work with a local professional over the summer on literature through an equity lens; elementary schools will receive a new book *Dots, Lines, and Curves* with companion professional development.
+      
+      Megan Taylor (CPAC): The virtual Unsung Heroes event PDFs will be distributed online next week; roughly 40 nominations were received.
+      
+      Sarah Gold (Facilities): An additional facilities meeting was held this week. The committee is developing a detailed strategic facilities plan and has been engaging partners. The assessment points to capital needs in the multi-million-dollar range for next year; the Town Administrator will be invited to a future meeting for early budget planning.
+  - topic: bonding-capital
+    topic_confidence: 0.88
+    start_seconds: 7241
+    end_seconds: 7375
+    headline: "Brown School construction photos show flooring installed in 12 classrooms; tours to be scheduled"
+    dek: "David Harris shared three construction photos showing bus-entry concrete work, rear playground grading, and completed classroom flooring at the new Brown School."
+    summary: |
+      David Harris shared photos of the new Brown School project:
+      1. Bus entry and turnaround: concrete poured for granite curbings; old telephone pole to be removed; translucent gymnasium panels visible.
+      2. Rear playground: excavation complete; hard surfaces and port-in-place play equipment areas taking shape; basketball court at far end; organic garden near building.
+      3. Classroom interior: flooring installed in approximately 12 classrooms, with paper protection down; mill work beginning; shared pass-through storage visible between rooms.
+      
+      Harris offered to set up a couple of afternoon tour dates with Gilbane for committee members.
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 7375
+    end_seconds: 7430
+    headline: "Reopening committee activity questioned; update promised for June 17"
+    dek: "Sarah Fox asked for a formal update on the reopening committee's work and objectives now that schools have reopened, including planning for the fall."
+    summary: "Sarah Fox noted that no formal notes or minutes from the reopening committee had been distributed since February, even though a second committee member had been added. She asked for a clear outline of the committee's current objectives, its meeting frequency, and how it is planning for fall 2021-22 — including students who may still need remote accommodations. Chair Fox (Superintendent Bucky) acknowledged the oversight, noted the committee had shifted from weekly to every-other or every-third-week meetings, and committed to bringing a full update to the June 17 meeting."
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 7430
+    end_seconds: 8418
+    headline: "Closing public comment raises sustainability, busing safety, planning-for-success timeline, and survey methodology"
+    dek: "Five speakers commented on polystyrene/composting waste, the lack of a formal hazard-busing motion, the need for a planning-for-success look-ahead, and survey design recommendations."
+    summary: |
+      **Ann Simco (77 Garfield St.):** As incoming MGSS co-leader, she offered to help fundraise for compostable trays. She also noted current individually-packaged lunch bags create more plastic waste than the styrofoam trays they replaced.
+      
+      **Katherine Martin (29 West Shore Drive):** Congratulated Leanne Fairbanks and Donna Zasky on retirement. Requested a high-level look-ahead — graphically presented — showing the planning-for-success timetable, how it links to the strategic plan, and how budget tie-ins will be developed before next budget season.
+      
+      **Jess Benedetto:** Thanked the committee for signaling support for expanded busing but asked for an actual motion committing the district to fund hazard busing for students without safe walking routes. She noted the policy subcommittee discussed revising the busing policy in September but no progress was visible, and questioned whether the pilot fully addressed which students would be eligible.
+      
+      **Scott Solberg (by phone):** Praised Dr. Bucky's first year, welcomed Deandra Williams, and echoed support for planning-for-success work.
+      
+      **Abby Brack Lewis (4 Park Lane, Bell/Coffin PTO co-president):** Clarified that the $18,000-plus fun run proceeds will be voted as a gift to the new Brown School at the PTO meeting June 8 at 7 pm (bellcoffinpto.org).
+      
+      **Deandra Williams:** Offered research-informed suggestions for the SEL survey: anonymous surveys yield higher response rates; demographic data collection allows cross-referencing with academic achievement data to identify the most vulnerable student populations.
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

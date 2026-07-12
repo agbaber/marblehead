@@ -9,7 +9,93 @@ video_url: "https://www.youtube.com/watch?v=cmBUN2NDNKc"
 duration_seconds: 2127
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School roof/HVAC subcommittee holds inaugural meeting, reviews bid timeline"
+  summary: "The newly formed Marblehead School Committee roof subcommittee held its first meeting, with members introducing themselves and reviewing the project timeline prepared by owner's project manager Leftfield and architect RDA. The subcommittee discussed the bidding schedule, HVAC equipment lead times of 24–30 weeks, and the key upcoming decision between two roofing approaches: a membrane recover or a liquid-applied restoration. No substantive votes were taken aside from a motion to adjourn, which passed 5 to 1."
+  decisions:
+    - "Approved adjournment of inaugural meeting"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (5 to 1)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 38
+    end_seconds: 363
+    featured: true
+    headline: "Marblehead School roof/HVAC subcommittee holds first meeting with member introductions"
+    dek: "Chair Henry Guazda introduced subcommittee members drawn from construction, real estate, and HVAC fields, alongside district staff and consultants from Leftfield and RDA."
+    summary: |
+      The inaugural meeting of the Marblehead School Committee's roof subcommittee convened. Chair Henry Guazda (School Committee) noted he lacks a construction background and sees his role as facilitating the process. Members introduced include:
+      
+      | Name | Role |
+      |---|---|
+      | Henry Guazda | School Committee member, chair |
+      | Mike Deferling | Asst. Superintendent of Finance & Operations |
+      | Todd Bloodgood | Director of Facilities & Transportation, school district |
+      | Lena Long | Project Manager, Leftfield (OPM) |
+      | Brian Dickens | Leftfield (OPM) |
+      | Molly Paris | Designer/Project Manager, RDA (architect) |
+      | Gene Raymond | Principal in charge, RDA (joining later) |
+      | Sam Altruder | Retired; commercial real estate developer |
+      | Brian Sarafin | Owner, Premier Mechanical (HVAC contracting) |
+      | Kareema Maloney | Project Executive, Suffach Construction |
+      | Ralph Wallace | Consultant, Kevl Enterprises; former Brown School Building Committee vice chair |
+      
+      Mark Leeman was noted as an additional member absent from the first meeting.
+    key_speakers: ["Henry Guazda (School Committee, chair)", "Mike Deferling (Asst. Superintendent of Finance & Operations)", "Todd Bloodgood (Director of Facilities & Transportation)", "Lena Long (Leftfield, OPM)", "Molly Paris (RDA, architect)", "Sam Altruder (member)", "Brian Sarafin (member)", "Kareema Maloney (member)", "Ralph Wallace (member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 363
+    end_seconds: 1982
+    headline: "Subcommittee reviews roof/HVAC project timeline; bids due late October–November"
+    dek: "Leftfield presented a detailed bidding schedule with filed sub-bids due October 29 and general prime bids due November 5, with HVAC equipment lead times of 24–30 weeks driving the aggressive calendar."
+    summary: |
+      Lena Long (Leftfield) walked through the project timeline. Key dates presented:
+      
+      - **October 2** – Second subcommittee meeting with detailed update and preliminary estimates
+      - **October 15** – Bidding documents available
+      - **October 21** – Contractor walkthrough
+      - **October 29** – Filed sub-bids due (roofing, plumbing, mechanical, electrical)
+      - **November 5** – General prime bids due (8 pre-qualified general contractors)
+      - **November 6** – Subcommittee meeting to make recommendation to full School Committee
+      - **November 7** – Anticipated general contractor award (pending Select Board approval)
+      
+      Mike Deferling clarified that formal contract award requires both School Committee and Select Board approval; the November 7 date would be notification of the leading bidder rather than a signed contract. The Select Board meets Wednesdays, so timing around Veterans Day (November 11) was flagged as a potential scheduling constraint.
+      
+      The primary HVAC concern is large rooftop units (RTUs) with 24–30 week lead times, driven partly by a refrigerant transition away from R-410A to R-32 or R-454B for new equipment. The district's directive is no construction activity on site before graduation (work to begin first or second week of June).
+      
+      The **biggest pending decision** for the subcommittee is choosing between two roofing approaches:
+      - **Recover** (new membrane over existing membrane) — base bid
+      - **Restore/Restoration** (liquid-applied coating) — alternate bid #1
+      
+      Full replacement (tear-off and reinsulation) was eliminated from consideration due to cost exceeding the approved budget and debt exclusion. RDA and Leftfield are preparing a pros/cons analysis for the October meeting. A vendor who proposed the liquid-applied option is expected to present at the next meeting.
+      
+      Member Kareema Maloney raised whether bid documents would receive review before release; RDA/Leftfield agreed to arrange a 90% draft review session with select committee members. Member Brian Sarafin flagged equipment ship-date slippage as a recurring risk in his HVAC contracting experience. Ralph Wallace noted the pre-qualification process attracted eight qualified general contractors, describing the current bidding environment as favorable for public school projects.
+    key_speakers: ["Lena Long (Leftfield, OPM)", "Mike Deferling (Asst. Superintendent of Finance & Operations)", "Molly Paris (RDA)", "Kareema Maloney (member)", "Brian Sarafin (member)", "Ralph Wallace (member)", "Sam Altruder (member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1982
+    end_seconds: 2122
+    headline: "Subcommittee votes to adjourn inaugural meeting 5 to 1"
+    dek: "Chair Guazda solicited new business, noted the next meeting will focus on recover vs. restore pros and cons, and called a roll-call vote to adjourn."
+    summary: |
+      Guazda noted no substantive votes were scheduled for the inaugural meeting. He indicated the next meeting (tentatively October 8 or 9) will focus on pros and cons of the restore vs. recover roofing options. A roll-call vote on adjournment was taken among voting members:
+      
+      | Member | Vote |
+      |---|---|
+      | Mike Deferling | In favor |
+      | Sam Altruder | In favor |
+      | Kareema Maloney | No |
+      | Ralph Wallace | In favor |
+      | Brian Sarafin | In favor |
+      | Henry Guazda | In favor |
+      
+      The meeting adjourned at 12:37 PM.
+    key_speakers: ["Henry Guazda (chair)", "Mike Deferling", "Sam Altruder", "Kareema Maloney", "Ralph Wallace", "Brian Sarafin"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

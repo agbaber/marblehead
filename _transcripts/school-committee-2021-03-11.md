@@ -9,7 +9,136 @@ video_url: "https://www.youtube.com/watch?v=-zoUxwL79Q4"
 duration_seconds: 4911
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead schools plan phased full return to in-person learning by late April"
+  summary: "The Marblehead School Committee met March 11, 2021 to discuss the district's phased reopening plan, with K–6 students beginning half days March 15 and transitioning to full days April 5, and grades 7–12 beginning half days April 5 before moving to full days April 26. The committee also reviewed preliminary FY22 budget priorities, with the superintendent stressing that no items had been eliminated and that a joint meeting with town finance officials was scheduled for the following Tuesday. Three residents spoke during public comment, expressing frustration that a new K–8 math curriculum appeared at risk of being cut."
+  decisions:
+    - "Approved motion to reopen meeting to public comment"
+  votes:
+    - motion: "Reopen meeting to public comment"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 189
+    end_seconds: 826
+    headline: "Residents urge school committee to advocate for full school funding and new math curriculum"
+    dek: "Three residents — Erin Noonan, Rhys Stahlberg, and Kim Day — commented on budget concerns and the pool-testing program."
+    summary: |
+      **Erin Noonan (15 Beverly Ave)** expressed disappointment that a new K–8 math curriculum — described as the first student-facing item to be cut in the next year's budget — was at risk. She noted the current 2016-era curriculum is outdated, language-based, and difficult for students with language-based disabilities. She said a working group had selected a new program that was already being piloted, and argued that cutting it while adding an HR back-office position was the wrong priority. She called on the school committee to advocate more forcefully for adequate school funding, noting that public education in Marblehead had been essentially level-funded for 17 years.
+      
+      **Rhys Stahlberg (Fieldwork Road)** thanked Amanda Rivers for the pool-testing program, sharing a lighthearted story about her anxious third-grader having a smooth testing experience.
+      
+      **Kim Day (18 Liberty Road)** said the morning's budget subcommittee meeting was difficult to follow because materials were not shared publicly and no specific numbers were discussed. She encouraged the committee to share more information so the community could understand what was being considered and offer support if needed.
+    key_speakers: ["Erin Noonan (resident)", "Rhys Stahlberg (resident)", "Kim Day (resident)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 826
+    end_seconds: 1151
+    headline: "Superintendent outlines phased COVID return plan and urges families not to delay model decisions"
+    dek: "Superintendent John Buckey presented state guidance on the return to in-person learning and stressed families must notify schools promptly if they wish to change learning models."
+    summary: |
+      Superintendent Buckey reviewed slides from a presentation the DESE commissioner made to superintendents. Key points:
+      
+      - **Phase 1 (April 5):** K–6 already returning half days March 15, then full days April 5.
+      - **Phase 2 (April 5 → April 26):** Grades 7–12 begin half days April 5; full days April 26 after April vacation.
+      - **Phase 3 (high school):** Target date remains to be determined by DESE.
+      - Massachusetts is a national leader in pool testing, with approximately 50% of schools participating.
+      - The district is **not** applying for a waiver to delay in-person return.
+      - Families in grades 7–12 who wish to change learning models need to notify principals (Matt and Dan) promptly; a 4–6 week transition window could take changes past the end of the year.
+      - Governor announced four priority vaccination dates for educators at mass vaccination sites statewide.
+      - The superintendent urged families: "Please do not employ a wait-and-see approach."
+    key_speakers: ["Superintendent John Buckey", "Sarah Fox (School Committee member)", "Matt Fox (Middle School principal, referenced)", "Dan Bauer (High School principal, referenced)"]
+  - topic: school-budget
+    topic_confidence: 0.93
+    start_seconds: 1151
+    end_seconds: 1402
+    headline: "Committee discusses transcript implications and MOA negotiation for returning 7–12 students"
+    dek: "Members raised concerns about course withdrawals appearing on student transcripts and the status of the MOA with the teachers' union."
+    summary: |
+      A committee member raised concern that students enrolled in VHS or Ingenuity online courses who chose to return in-person would have withdrawal notations on their transcripts, which could affect college applications. The superintendent said she had raised this with High School Principal Dan Bauer and was exploring whether the local transcript — sent to colleges — could reflect a 'transfer' rather than 'withdrawal.' State reporting requirements after October 1 complicate the issue.
+      
+      On the MOA with MEA, the superintendent said negotiations were ongoing and going well, but that it was not as straightforward as the commissioner's order automatically superseding the MOA because other communities' MOA situations are not yet settled. A school committee vote on the return model was not required under DESE guidance.
+    key_speakers: ["Sarah Fox (School Committee member)", "Superintendent John Buckey"]
+  - topic: school-budget
+    topic_confidence: 0.96
+    start_seconds: 1402
+    end_seconds: 2216
+    headline: "Vaccine uptake strong among staff; committee discusses distancing, lunch logistics for full return"
+    dek: "Around 250–400 vaccination appointments secured for district staff; classrooms will use 3-to-6-foot distancing, with lunch remaining at 6 feet because students are unmasked."
+    summary: |
+      The superintendent reported positive vaccination news: earlier in the week approximately 250 staff appointments had been secured, with a newspaper article citing over 400. She uses a rough estimate of 500 total staff. Four governor-prioritized vaccination dates for educators were announced leading up to the April 26 full-return target for 7–12.
+      
+      Committee members discussed classroom distancing logistics:
+      - Most classrooms can achieve 3 feet of distancing, but some larger classes will require it.
+      - Lunch will remain at 6 feet because students are unmasked.
+      - Classrooms will go outside whenever possible.
+      - Half-day transition for grades 7–12 mirrors what was done for K–6, allowing students and staff to adjust to passing times and fuller buildings.
+      
+      A committee member thanked high school teachers who had voluntarily been bringing one cohort in-person while simultaneously streaming the other cohort, noting positive feedback about the experience.
+    key_speakers: ["Superintendent John Buckey", "Sarah Fox (School Committee member)", "Sarah Gold (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 2216
+    end_seconds: 3059
+    featured: true
+    headline: "FY22 budget priorities presented; no items cut yet, but gap with town number could force staff reductions"
+    dek: "The superintendent walked through a rank-ordered budget priority list developed with building leaders, cautioning that the list reflects early-stage prioritization, not final decisions."
+    summary: |
+      The superintendent described a collaborative process in which each principal or director met individually with her and CFO Michelle Cresta to discuss needs and potential ways to cover them. Yesterday's session asked leaders to rank their top priority and justify it, generating collegial discussion about trade-offs.
+      
+      Key points:
+      - **Nothing has been eliminated.** The list is an aggregate of rank-ordered priorities 'at this time,' not a final funded/cut list.
+      - The district has not yet received a final number from the town. A joint meeting with the town budget subcommittee and FinCom representative is scheduled for Tuesday, March 16.
+      - The budget subcommittee directed the superintendent to invite **Assistant Superintendent Nan Murphy** to present on the math curriculum — specifically whether a tiered or phased approach is possible — and on her broader district-wide curriculum planning.
+      - A committee member (Sarah Fox) said the only levers to balance the budget if the town number doesn't move are: drop priorities or reduce staff lines, calling it a 'mathematical equation.' She referenced a roughly $1 million gap and said the budget hearing number should be the number the committee is prepared to vote on.
+      - The superintendent confirmed she met with CFO Jason Silva, who assured her the district is not behind in the process; Silva's office light has been on late many nights. The new town finance director (in his third week) is beginning his work.
+      - Town meeting is targeted for the first Tuesday in May.
+    key_speakers: ["Superintendent John Buckey", "Sarah Fox (School Committee member)", "Sarah Gold (School Committee member)", "David Harris (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 3059
+    end_seconds: 3242
+    headline: "Enrollment projections show roughly 2,695 students expected next year, slightly above NESDEC forecast"
+    dek: "NESDEC projected 2,566 students; the district's own survey-based estimate is approximately 2,695 (excluding pre-K), and staffing sectioning decisions are still being worked through."
+    summary: |
+      The superintendent shared enrollment projection slides. NESDEC (via survival-cohort methodology using October 2019 SIMS data) projected approximately 2,566 students for next year. The district's own estimate, factoring in a survey of families who left during COVID and whether they intend to return, lands at approximately 2,695 (not including pre-K students), which would put total enrollment just over 2,700.
+      
+      The leadership team is working through sectioning analysis — for example, whether it makes sense to maintain five sections of a grade level at Brown Elementary if only 80 students are anticipated versus maintaining five sections for a grade with 105 students. A committee member suggested the district reach out to local preschool directors (who meet monthly) as an additional data source for incoming kindergarten numbers. The superintendent agreed and asked to be connected to that group.
+    key_speakers: ["Superintendent John Buckey", "Sarah Fox (School Committee member)"]
+  - topic: public-comment
+    topic_confidence: 0.92
+    start_seconds: 3569
+    end_seconds: 3617
+    headline: "Budget calendar reviewed; public hearing targeted for April 1 with additional meetings in late March"
+    dek: "The committee discussed adding one or two extra meetings in late March to stay on track for an April 1 public hearing and April 12 FinCom presentation."
+    summary: "Working backwards from a planned April 12 presentation to FinCom (to be confirmed Tuesday), the committee would hold the public hearing on April 1 (an already-scheduled school committee meeting), vote on the budget on April 8, and add a school committee working meeting on either March 24 or March 30. The superintendent noted the school committee is not required to vote before FinCom votes, and that if time is tight she would rather 'get it right' even if the vote comes after FinCom."
+    key_speakers: ["Superintendent John Buckey", "Sarah Fox (School Committee member)"]
+  - topic: public-comment
+    topic_confidence: 0.85
+    start_seconds: 3617
+    end_seconds: 3754
+    headline: "Marblehead COVID mental health task force announced; volunteers needed for school reopening"
+    dek: "The Board of Health's Michelle Gottlieb will chair the new COVID mental health task force, and the district is seeking fingerprinted community volunteers for in-person school days."
+    summary: |
+      The superintendent noted the Board of Health asked her to publicize the new Marblehead COVID Mental Health Task Force, chaired by Michelle Gottlieb. The task force deliberately has no set end date, reflecting the expectation that mental health impacts will outlast the pandemic itself.
+      
+      Separately, the district is actively recruiting community volunteers to support in-person school days. Volunteers who will be alone with children must be fingerprinted through Identico using a district-specific code. Interested volunteers should email proof of their fingerprint appointment to corey@marbleheadschools.org. Information is available on the district website.
+    key_speakers: ["Superintendent John Buckey", "Sarah Gold (School Committee member)"]
+  - topic: public-comment
+    topic_confidence: 0.88
+    start_seconds: 4682
+    end_seconds: 4904
+    headline: "Two residents speak during second public comment; one questions why district isn't proactively setting full-return date for high school"
+    dek: "Emily Barron and Cathy Kendall offered public comment on the return-to-school plan and student voices."
+    summary: |
+      **Emily Barron** said she was offended by remarks she understood to suggest students didn't want to return to school, arguing teenagers expressing pandemic fatigue should not drive policy. She said the community is ready for a safe transition back and asked for a committee voice specifically championing older students.
+      
+      **Cathy Kendall (163 Jersey St.)** asked why the district was waiting for DESE to announce a high school full-return date when that announcement was expected, arguing the district could proactively set its own two-week notice. The superintendent clarified that the district is actually **ahead** of DESE guidance on all levels — grades 7–12 will be in half-days April 5 and full days April 26 — which satisfied Kendall's concern.
+    key_speakers: ["Emily Barron (resident)", "Cathy Kendall (resident)", "Superintendent John Buckey"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

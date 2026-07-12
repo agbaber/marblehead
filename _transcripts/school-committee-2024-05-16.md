@@ -9,7 +9,164 @@ video_url: "https://www.youtube.com/watch?v=LnrZ5EzwVLA"
 duration_seconds: 3943
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee votes 5-0 to opt out of school choice for 2024-25; hears youth risk behavior survey data"
+  summary: "The Marblehead School Committee held its annual public hearing and voted unanimously not to participate in the state school choice program for 2024-25, citing limited classroom space at the elementary level. The committee received a detailed presentation of the third annual youth risk behavior survey, covering mental health, substance use, and body image data from 743 high school students. Other business included a briefing on a proposed support-staff classification plan, an FY24 budget status update projecting a $755,000 end-of-year surplus, and an update on the superintendent search."
+  decisions:
+    - "Approved motion that Marblehead Public Schools will not participate in school choice for the 2024-25 school year"
+    - "Approved schedule of bills totaling $1,365,425.76"
+    - "Approved meeting minutes dated February 1, 2024 (4-0, one abstention)"
+    - "Held vote on support-staff classification plan and job descriptions for next agenda"
+    - "Approved motion to enter executive session for collective bargaining strategy"
+  votes:
+    - motion: "Not to participate in school choice for 2024-25"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills totaling approximately $1,365,425.76"
+      result: "in favor (unanimous)"
+    - motion: "Approve meeting minutes dated February 1, 2024"
+      result: "in favor (4 to 0, one abstention)"
+    - motion: "Enter executive session for collective bargaining strategy"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 48
+    end_seconds: 220
+    headline: "Committee votes 5-0 to opt Marblehead out of school choice for 2024-25"
+    dek: "Superintendent Dr. McGinness cited limited elementary classroom space as the basis for her recommendation against participation."
+    summary: "Under the Education Reform Act of 1993, school committees must affirmatively vote to opt out of the state school choice program before June 1 each year. Dr. McGinness recommended opting out due to lack of available classroom space, particularly at the elementary level, and concerns about class sizes following staffing reductions. After a brief public hearing with no public speakers, the committee voted 5-0 (Al Williams, Alison Taylor, Brian, Jen Chaper/Chatner, Sarah Fox all in favor) to not participate in school choice for the 2024-25 school year. The hearing was closed at 7:04 PM."
+    key_speakers: ["Dr. McGinness (Superintendent)", "Sarah Fox (Chair)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 274
+    end_seconds: 390
+    headline: "MEA representatives urge school committee to formally ratify sick-leave bank agreement"
+    dek: "Two union representatives said the agreement, negotiated with former Superintendent Bucky, was implemented in practice but never formally ratified by the school committee."
+    summary: "Jonathan H. (26 R Road) and Sally Chevy (0 Garfield Street) addressed the committee on behalf of the Marblehead Education Association. They explained that nearly a year earlier, the school committee had voted to open collective bargaining solely to negotiate a sick leave bank for Unit A. An agreement was reached with former Superintendent Bucky, ratified by the membership, and has been operating since September through HR and the business department. However, they discovered during subsequent collective bargaining that the agreement was never formally voted on by the school committee. They asked the committee to make a formal motion to approve the sick leave bank in the Unit A contract."
+    key_speakers: ["Jonathan H. (Resident at mic)", "Sally Chevy (Resident at mic)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 390
+    end_seconds: 529
+    headline: "Student rep reports on AP exams, spring events, and senior milestones; district updates cover principal searches"
+    dek: "Dr. McGinness reported the Glover School principal search has been reopened after the finalist declined, while the Village School search has two finalists in the reference-check stage."
+    summary: |
+      The student representative reported that the second week of AP testing was concluding, with events including the annual Culture Feast (May 24), the 18th annual A Cappella show, and a spring art exhibition at Abbott Hall. Senior milestones include prom at the House of Blues (May 29), scholarship night (May 28), and graduation on May 31 at 6 PM.
+      
+      Dr. McGinness noted that the Glover School principal search has been reopened after the finalist declined the position due to competitive salaries elsewhere; new applicants are being reviewed. The Village School principal search has two finalists who have completed interviews, with reference checks underway and a site visit pending.
+    key_speakers: ["Dr. McGinness (Superintendent)", "Student Representative (Cat)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 529
+    end_seconds: 796
+    headline: "District selects Academic Discovery for $66,000 special education program review"
+    dek: "The evaluation team reviewed five proposals and selected Academic Discovery; an interim report is expected by end of September and a final report by December to inform budget decisions."
+    summary: "Dr. McGinness updated the committee on a special education program review. An evaluation team reviewed five proposals and selected Academic Discovery, with contract negotiations currently underway. The cost proposal is $66,000, to be funded through ESSER funds, IDEA grant funds, and special education tuition revolving funds. An interim report is expected by end of September and a final report no later than December, intended to influence budget planning. The report will also serve as a resource for the new Assistant Superintendent of Student Services."
+    key_speakers: ["Dr. McGinness (Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 796
+    end_seconds: 2498
+    featured: true
+    headline: "High school social worker presents third annual youth risk behavior survey; suicide attempt rate doubled to 3.1%"
+    dek: "The MGH-partnered survey of 743 students (85% response rate) found declining mental health risk trends overall but a notable rise in reported suicide attempts and early substance use, with 13% of students reporting first use at age 12 or younger."
+    summary: |
+      Gina Hart, clinical social worker at Marblehead High School, and Assistant Superintendent Julia presented the third annual Youth Risk Behavior Survey to the school committee. Key findings included:
+      
+      **Survey Overview**
+      - 743 students participated, an 85% response rate (up from 75% last year)
+      - Conducted in partnership with MGH under a grant; a supplemental Marblehead-specific survey had 677 responses
+      - Survey is anonymous and voluntary; parents and students may opt out
+      
+      **Demographics & Protective Factors**
+      - 85.4% of respondents identified as white (down from ~91% last year, indicating slight increase in racial diversity)
+      - 95.5% of students reported positive peer connections
+      - ~63% reported connections with staff
+      - ~90% engaged in extracurricular activities
+      - 30% reported getting 8+ hours of sleep (nearly double from the prior year)
+      
+      **Mental Health**
+      - Slight decrease in students at risk for anxiety, depression, or psychotic experiences year-over-year
+      - 11.4% reported experiences above the clinical threshold for psychotic symptoms (which may include panic or paranoia rather than hallucinations/delusions)
+      - Suicide attempt rate increased from 1.6% to 3.1% (approximately doubled)
+      - ~45% reported struggling with body image; ~25% showed risk indicators for disordered eating
+      
+      **Discrimination**
+      - Among students identifying as non-white, 35.7% reported being called racially insulting names
+      - Religious discrimination increased ~2%; gender identity discrimination also increased from last year
+      - 64% of sexually diverse students and ~80% of gender-diverse students at risk for anxiety or depression
+      
+      **Substance Use**
+      - ~40% reported ever trying alcohol (consistent across all three years)
+      - ~20% reported ever trying cannabis/marijuana
+      - Nicotine use increased to 38%
+      - 13% of respondents reported first use of a substance at age 12 or younger — described as a notable concern
+      - ~70% of nicotine users reported planning to quit within the month
+      - 3.2% reported driving after using marijuana; 21% reported being in a car with someone using alcohol
+      - Small but flagged percentages reported using prescription drugs, hallucinogens, and other substances with high overdose risk
+      - THC potency has increased approximately 200% over the last decade, contributing to emergency room visits
+      
+      **Actions and Programs**
+      - Data shared with school staff and will be shared with the Board of Health and Marblehead Mental Health Task Force
+      - A health educator position was approved for Village School, enabling a vertically aligned health curriculum starting grades 4–6
+      - District is working on MTSS-aligned social-emotional programming, including body image/body positivity instruction in health classes
+      - Focus group feedback this year was overwhelmingly positive about health classes and assemblies
+      - Survey data previously informed the Narcan policy enabling school nurses to carry naloxone
+      
+      Committee members noted the alarming rate of substance use among sixth graders and younger and called on parents to have these conversations at home. The committee also discussed coordinating with the Board of Health.
+    key_speakers: ["Gina Hart (Clinical Social Worker, Marblehead High School)", "Julia (Assistant Superintendent)", "Dr. McGinness (Superintendent)", "Sarah Fox (Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.93
+    start_seconds: 2498
+    end_seconds: 2785
+    headline: "Interim Finance Director presents proposed support-staff classification plan; vote deferred to next meeting"
+    dek: "Mary Deli proposed replacing the existing clerks agreement with a structured classification plan covering approximately 35 non-instructional support staff, with every employee receiving at least a 2% increase."
+    summary: "Interim Director of Finance and Operations Mary Deli presented a proposed support-staff classification plan intended to replace the existing clerks agreement, which currently covers approximately 22 of 35 district and school-level non-instructional support staff. The plan creates a structured classification system with consistent position titles, pay scales, and job descriptions for six categories of positions. Every employee would receive a minimum 2% increase (as budgeted in FY25), with the overall adjustments described as essentially budget-neutral with a slight deficit of just over [amount not clearly stated]. Six job descriptions were included in the packet. The plan was developed in consultation with the town HR manager and draws on Deli's experience in other districts. Because votes were not on the agenda, the chair indicated two motions — one to adopt the classification plan and one to approve the job descriptions — would be placed on the next agenda. Committee members were asked to email any questions to Deli before the vote."
+    key_speakers: ["Mary Deli (Interim Director of Finance and Operations)", "Al Williams (Committee Member)", "Sarah Fox (Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 2922
+    end_seconds: 3230
+    headline: "FY24 budget projects $755,000 end-of-year surplus after $300,000 in technology purchases"
+    dek: "The district has prepaid $300,000 in technology orders and plans to prepay at least $300,000 in special education tuitions, with any additional surplus directed toward athletics revolving funds and unfunded technology."
+    summary: |
+      Interim Director of Finance Mary Deli reported on the FY24 budget status. During prior budget discussions, the district committed to prepaying approximately $600,000 in tuitions and technology to help support the FY25 budget. As of the report:
+      
+      - $300,000 in technology orders have already been placed
+      - The district projects an end-of-year surplus of approximately $755,000 (after the technology prepayment)
+      - At least $300,000 more will be used to prepay special education tuitions as committed
+      - Additional surplus beyond that is expected to go toward prepaying further special education tuitions, purchasing technology not funded in the FY25 budget, and replenishing athletics and extracurricular revolving funds to help cushion fee impacts for students
+      - The district has signed two additional out-of-district placement agreements beyond the four previously signed, potentially increasing special education expenditures beyond what was budgeted
+      
+      The committee noted that the special education program review may help identify opportunities to provide more services in-district or through collaboratives, reducing out-of-district placement costs. Business Manager Emma (departing June 7) was recognized for her work.
+    key_speakers: ["Mary Deli (Interim Director of Finance and Operations)", "Dr. McGinness (Superintendent)", "Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 3230
+    end_seconds: 3321
+    headline: "Committee approves bills totaling approximately $1,365,425.76 and February 1 meeting minutes"
+    dek: "Both votes passed unanimously, with one member abstaining on the minutes."
+    summary: "The committee voted 5-0 to approve a schedule of bills totaling approximately $1,365,425.76. The committee then voted 4-0 (one abstention) to approve meeting minutes dated February 1, 2024."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 3321
+    end_seconds: 3647
+    headline: "Superintendent search narrows to one finalist after Barbara Calo withdraws; site visit to John Robo scheduled for May 22"
+    dek: "The chair reassured the community that candidate attrition is normal in superintendent searches and that the committee will only proceed if they find a suitable fit."
+    summary: "Chair Sarah Fox updated the committee on the superintendent search. After narrowing to two finalists — Barbara Calo and John Robo — Calo withdrew, indicating she would keep an eye on Marblehead for future opportunities. The committee is coordinating a site visit with John Robo on Wednesday, May 22. Two committee members will attend in the morning (including the Unified Games community event) and two more in the afternoon (another community event), each meeting with administrators, staff, parents, and students. The fifth member will conduct a phone conversation with someone from the candidate's administration. After the site visit, the full committee will share feedback at the next meeting. If they continue forward, next steps include reference checks and a community interview day in the district. The chair emphasized that candidate withdrawal is common in superintendent searches and that the committee had received strong applications overall."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.88
+    start_seconds: 3739
+    end_seconds: 3901
+    headline: "Committee votes 5-0 to enter executive session for collective bargaining strategy"
+    dek: "The session covers strategy for negotiations with MEA, substitutes, tutors, and other non-personnel bargaining units, with no return to open session."
+    summary: "The committee voted 5-0 to enter executive session pursuant to M.G.L. Chapter 30A, Section 21A, for the following purposes: (2) to conduct strategy sessions in preparation for negotiations with non-personnel, or to conduct collective bargaining sessions or contract negotiations; and (3) to discuss strategies with respect to collective bargaining with the Marblehead Education Association, substitutes, tutors, and professional staff, because open discussion may have a detrimental effect on the committee's bargaining position. The committee did not intend to return to open session."
+    key_speakers: ["Sarah Fox (Chair)", "Jen Chatner (Committee Member)", "Brian Oda (Committee Member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

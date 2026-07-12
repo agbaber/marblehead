@@ -9,7 +9,246 @@ video_url: "https://www.youtube.com/watch?v=ey8u9uTKkt0"
 duration_seconds: 13916
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee votes 5-0 to name new elementary school after Lucretia and Joseph Brown"
+  summary: "The Marblehead School Committee held a lengthy meeting covering pool COVID testing, a return to full in-person learning, the FY22 budget rollout, and the naming of the new elementary school. After ranked-choice voting narrowed the field to two finalists—Anchor and Brown—the committee voted unanimously to name the building the Lucretia and Joseph Brown Elementary School. The committee also approved a three-year collective bargaining agreement with the Marblehead Educators Association Unit A and voted to pursue the state's pool-testing surveillance program."
+  decisions:
+    - "Approved minutes from December 17, 2020 (5-0); January 21 minutes held for next meeting"
+    - "Approved MHS 2021-2022 program of studies changes (5-0)"
+    - "Approved participation in DESE six-week pool surveillance testing program (5-0)"
+    - "Approved MEA Unit A collective bargaining agreement September 1, 2021–August 31, 2024 (5-0)"
+    - "Approved establishment of subcommittees to investigate contract language changes (5-0)"
+    - "Approved 2021-2022 pre-K and kindergarten tuition rates (5-0)"
+    - "Approved schedule of bills totaling approximately $3,410,300.05 (4-0-1, Fox abstained)"
+    - "Approved addition of 'homeless' to AC non-discrimination policy as required by DESE (5-0)"
+    - "Approved naming the new elementary school the Lucretia and Joseph Brown Elementary School (5-0)"
+  votes:
+    - motion: "Approve December 17, 2020 minutes"
+      result: "in favor (unanimous)"
+    - motion: "Approve MHS 2021-22 program of studies changes"
+      result: "in favor (unanimous)"
+    - motion: "Approve pool testing program participation"
+      result: "in favor (unanimous)"
+    - motion: "Approve MEA Unit A collective bargaining agreement"
+      result: "in favor (unanimous)"
+    - motion: "Establish subcommittees to investigate contract language changes"
+      result: "in favor (unanimous)"
+    - motion: "Approve 2021-22 pre-K/K tuition rates"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills ~$3.41M"
+      result: "in favor (4 to 0, 1 abstention)"
+    - motion: "Add 'homeless' to AC non-discrimination policy"
+      result: "in favor (unanimous)"
+    - motion: "Name new elementary school the Lucretia and Joseph Brown Elementary School"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 55
+    end_seconds: 660
+    headline: "Glover School psychologist commended for student grief counseling program"
+    dek: "Principal Brian Oda presented a grief-support program developed with non-profit Care Dimensions; student representative Dan Howell reported on school activities including the musical 'Urinetown.'"
+    summary: "The meeting opened with a commendation for Glover School psychologist Amanda Lockerby, who partnered with local non-profit Care Dimensions to run a six-week virtual grief group for students who had lost a parent. Principal Oda noted that 1-in-15 children experience the death of a parent or sibling by age 18. Student representative Dan Howell reported on a virtual club fair, a Valentine's Day fundraiser with Stowaway Sweets, the streaming production of *Urinetown*, and a student council spirit week."
+    key_speakers: ["Brian Oda (Glover School principal)", "Dan Howell (student representative)"]
+  - topic: public-comment
+    topic_confidence: 0.98
+    start_seconds: 690
+    end_seconds: 2308
+    headline: "Over 200 residents attend virtual meeting urging more in-person school time and mental health support"
+    dek: "Parents and a high school junior spoke about pandemic-related mental health struggles, calling for reduced social distancing, pool testing, and greater school transparency; a Board of Health member responded."
+    summary: |
+      The chair split public comment into two rounds: general topics first, then school naming. General comments focused overwhelmingly on student and family mental health during the pandemic.
+      
+      **Key themes:**
+      - Multiple parents requested reduction of classroom distancing from 6 to 3 feet, citing CDC and DESE guidance.
+      - A parent (Alexia) introduced her son Niall, a junior in full remote, who spoke emotionally about the mental health toll on himself and classmates, stating monthly check-ins feel like "checking a box."
+      - Residents Catherine Martin and others called for pool testing, adequate school budgets, and community volunteering.
+      - A Board of Health member (Michelle) clarified the BOH's advisory role, provided the Medical Reserve Corps link for volunteers, and noted the board is balancing mental health with virus transmission concerns.
+      - Resident Jonathan Letterman criticized the committee for opaque processes and suggested putting the school name to a town ballot.
+      - Virginia Brown described a student whose grades collapsed in hybrid learning after previously earning B's.
+    key_speakers: ["Catherine Martin (resident)", "Don Johns (resident)", "Emma Lee DeWitt (resident)", "Kim Day (resident)", "Niall (MHS junior, remote)", "Kristin Pratt (resident)", "Aaron Noonan (resident)", "Virginia Brown (resident)", "Michelle (Board of Health member)", "Jonathan Letterman (resident)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 2308
+    end_seconds: 3715
+    headline: "School naming public comment draws strong support for Lucretia and Joseph Brown"
+    dek: "Eight residents spoke during the school-naming portion of public comment; most supported naming the new school after the Browns, citing racial equity, community identity, and educational opportunity."
+    summary: |
+      Supporters of the Lucretia and Joseph Brown name included:
+      - **Henry Turner** (multiracial Marblehead family of 11 years, history teacher/administrator), who cited the racial trauma experienced by students of color and said "representation matters."
+      - **Melanie Lloyd**, reading a statement from the Marblehead Racial Justice Team, called the name "vital" and noted the Browns overcame discrimination to thrive as entrepreneurs.
+      - **Sherry Gagné** (Métis/Mohawk/Abenaki/Algonquin/Choctaw resident) supported honoring Joseph Brown as a Wampanoag figure.
+      - **Cindy Tower Lowen** (racial justice activist, resident since 2003) urged the committee to name the school and commit to systemic anti-racist curriculum.
+      - **Leah Bockenkamp** supported the name and called for a commitment to education on systemic racism beyond the name itself.
+      - **Natalie Bellai** (former Malcolm Bell School parent, history teacher) discussed Marblehead's role as home to the first slave ship *Desire*, arguing for complete historical honesty.
+    key_speakers: ["Henry Turner (resident)", "Jonathan Letterman (resident)", "Melanie Lloyd (Marblehead Racial Justice Team)", "Sherry Gagné (resident)", "Cindy Tower Lowen (resident)", "Leah Bockenkamp (resident)", "Natalie Bellai (resident)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 3760
+    end_seconds: 3806
+    headline: "December 2020 minutes approved; January 21 minutes held"
+    dek: "The committee approved the December 17, 2020 meeting minutes 5-0 and deferred the January 21 minutes due to missing vote details."
+    summary: "A member noted that vote outcomes were missing from the January 21 draft minutes. The committee approved only the December 17 minutes (5-0) and agreed to bring the January 21 minutes back at the next meeting."
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 3806
+    end_seconds: 4862
+    headline: "MHS principal presents 2021-22 program of studies changes; committee approves 5-0"
+    dek: "Principal Dan Bower proposed nine curriculum changes including eliminating the CP2 English track, adding a music technology course, and restructuring special education support credits."
+    summary: |
+      Principal Bower outlined changes across four subject areas:
+      
+      | Area | Change |
+      |------|--------|
+      | Science | Restore additional lab block; extend engineering course to full year at CP1 level |
+      | English | Allow AP Literature/Language in either grade 11 or 12; eliminate CP2 track in favor of co-teaching model |
+      | Visual Arts | Rename Portfolio 1/2 to Art Studio 3; eliminate Creative Expressions course |
+      | Performing Arts | New Music Technology & Electronic Music course; rename piano levels to Beginning/Advanced |
+      | Special Education | Add credit to curriculum support courses; embed executive functioning curriculum |
+      
+      Dr. Donnelly (SPED chair) explained that students receiving curriculum support were arriving at graduation short on credits and that the new structure aligns with practices at comparable districts. A committee member asked for a future presentation on how the co-teaching model will expand. The committee approved all changes unanimously.
+    key_speakers: ["Dan Bower (MHS principal)", "Dr. Donnelly (SPED department chair)", "Superintendent (John)"]
+  - topic: public-safety
+    topic_confidence: 0.88
+    start_seconds: 4862
+    end_seconds: 6121
+    headline: "Committee approves participation in DESE six-week pool surveillance testing program"
+    dek: "Nurse Megan Calpin presented the program mechanics; after extensive questioning the committee voted 5-0 to participate, with plans to begin after February vacation."
+    summary: |
+      **Program overview (DESE-supported, runs through March 28, 2021):**
+      - Groups of 5–25 students/staff form pools; all specimens analyzed as one PCR test
+      - If pool is positive, individual BinaxNOW rapid antigen follow-up tests are administered on-site
+      - Testing occurs once per week, after school on cohort days (Thursday/Friday)
+      - Results returned in 24–48 hours
+      - School responsible for: logistics, data entry, consent forms, contact tracing, specimen transport to lab
+      - Vendor (assigned by DESE, not chosen by school) provides supplies, software, training
+      - A new healthcare professional hire is needed to run the program; no internal nursing staff volunteered
+      
+      **Cost discussion:** A neighboring district (Gloucester) projected approximately $65,000 after the six free weeks end. A board member noted that if one nurse is hired rather than five, per-week costs are closer to ~$1,000, not $5,000.
+      
+      **Participation threshold:** DESE indicated ~80% opt-in is needed for meaningful data.
+      
+      **Vote:** Approved 5-0. Superintendent noted the district had proactively placed itself in the DESE queue and submitted the readiness checklist.
+    key_speakers: ["Megan Calpin (MHS nurse)", "Deanna McMahon (lead nurse)", "Superintendent (John)", "Sarah Gold (chair)", "Sarah Fox (committee member)", "Megan Taylor (committee member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 6121
+    end_seconds: 8141
+    headline: "Committee approves three-year MEA Unit A teachers contract and authorizes subcommittees for language review"
+    dek: "The Marblehead Educators Association Unit A contract was approved 5-0, covering September 2021 through August 2024 with a 5% pay increase over three years; a second motion established subcommittees to negotiate language changes in other contracts."
+    summary: |
+      Superintendent Bucky presented the Unit A (teachers) agreement as a successfully negotiated three-year contract during a pandemic. The only substantive change is the pay schedule: a 5% increase spread over three years. No language changes to roles or responsibilities were included in this agreement.
+      
+      A second motion (5-0) approved the establishment of subcommittees to investigate and report out recommendations for language changes in other contracts (custodians, tutors, paraprofessionals). The committee noted this will not duplicate the existing reopening subcommittee and discussed avoiding open-meeting-law complications by ensuring committee representation is managed appropriately.
+    key_speakers: ["Superintendent (John)", "Megan Taylor (committee member)", "Sarah Gold (chair)", "David Harris (committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 8141
+    end_seconds: 8502
+    headline: "FY22 draft budget notebooks distributed; full review begins next week"
+    dek: "CFO Michelle presented draft budget binders to committee members; a summary tab will be added before Tuesday's budget workshop."
+    summary: "The committee received FY22 draft budget notebooks organized by school and cost center, with new tabs for food service (which can affect the general fund) and several empty tabs for tracking changes throughout the process. The summary rollup tab was not yet complete due to ongoing salary reconciliation. Food service was included for the first time because shortfalls are absorbed by the general fund. Full budget workshops are scheduled for Tuesday and Thursday of the following week, with each principal and district administrator presenting their sections."
+    key_speakers: ["Michelle (CFO/business manager)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 8502
+    end_seconds: 8651
+    headline: "Superintendent presents survey results and announces plan for combined cohorts five days a week"
+    dek: "Survey data showed improving teacher pacing confidence but persistent social-emotional concerns; superintendent requested committee support for a plan to bring all students back five days a week at reduced distancing."
+    summary: |
+      The January survey showed pacing confidence among teachers rising from under one-third (November) to over half. Remote students overwhelmingly reported workload as too heavy. Two-thirds of hybrid families said nothing would cause them to leave the hybrid model, but 184 families identified reduced distancing as a potential trigger for going remote.
+      
+      The superintendent requested committee support for the administrative team to develop a plan during the February break to:
+      1. Reduce classroom distancing (not below 3 feet, classroom-by-classroom assessment)
+      2. Bring combined cohorts back five days per week
+      3. Maintain the current four-hour in-person schedule as a starting point
+      
+      He committed that any family wishing to go fully remote due to distancing changes would be accommodated. The committee voted 5-0 to support the superintendent and principals in creating this plan. Members noted particular urgency for high school students in full remote programs.
+    key_speakers: ["Superintendent (John)", "Emily Baron (committee member)", "Sarah Gold (chair)", "Sarah Fox (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 8651
+    end_seconds: 8862
+    headline: "Pre-K and kindergarten tuition rates for 2021-22 approved 5-0"
+    dek: "Rates set at $3,500 for full-day kindergarten, $4,000 half-day preschool, $6,000 full-day preschool, and new transitional kindergarten options at $5,000 and $7,000."
+    summary: |
+      In preparation for registration for the expanded preschool and new transitional kindergarten program, the following 2021-22 tuition rates were approved:
+      
+      | Program | Rate |
+      |---------|------|
+      | Full-day kindergarten | $3,500 |
+      | Half-day preschool | $4,000 |
+      | Full-day preschool | $6,000 |
+      | Half-day transitional kindergarten | $5,000 |
+      | Full-day transitional kindergarten | $7,000 |
+      
+      Previous year revenues from these programs were estimated at approximately $430,000 (kindergarten) and $85,000 (preschool).
+    key_speakers: ["Michelle (CFO/business manager)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 10257
+    end_seconds: 10393
+    headline: "AC non-discrimination policy updated to add 'homeless'; schedule of bills approved"
+    dek: "The word 'homeless' was added to the district's non-discrimination policy following a DESE audit; the schedule of bills totaling approximately $3.41M was approved 4-0-1."
+    summary: "The schedule of bills totaling approximately $3,410,300.05 was approved on a 4-0-1 vote (Fox abstaining pending clarification on a family member's testing costs appearing in the bill). The AC non-discrimination policy was updated to add the word 'homeless' in the location specified by DESE following an audit, approved unanimously."
+    key_speakers: ["Michelle (CFO/business manager)", "Sarah Fox (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 10911
+    end_seconds: 11171
+    headline: "Superintendent's goal update includes diversity initiatives, budget progress, and leadership team retreat"
+    dek: "Superintendent Bucky briefly reviewed progress on his annual goals, highlighting the equity audit, professional development, and an upcoming two-day leadership retreat over February break."
+    summary: |
+      The superintendent reviewed his annual goals, noting:
+      - Continued enrollment in the METCO equity audit
+      - Professional development program on diversity underway
+      - Students working with other students on inclusive history curriculum
+      - Budget process on track with notebooks distributed
+      - Leadership team retreat scheduled over February break (in-person, socially distanced)
+      - School visits remain an area for improvement due to the demands of central office work
+      - Henry Turner (history teacher/administrator) mentioned as a valued community resource for diversity work
+    key_speakers: ["Superintendent (John)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 11171
+    end_seconds: 11231
+    headline: "Staff and student school naming surveys presented before committee vote"
+    dek: "The superintendent shared school-by-school results of optional staff surveys and student polls on the five finalist school names, showing varied preferences across buildings."
+    summary: "The superintendent presented two slides: one showing staff votes by school building and one showing student votes. Results were not scientific (participation was optional and distributed by principals). Two schools apparently created an unauthorized write-in option. A student essay from a Coffin School student was shown as an example of the educational engagement the naming process generated. The ranked-choice vote by the five committee members narrowed the field to two finalists: Anchor and Lucretia/Joseph Brown."
+    key_speakers: ["Superintendent (John)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.97
+    start_seconds: 11231
+    end_seconds: 13400
+    featured: true
+    headline: "Committee votes 5-0 to name new elementary school the Lucretia and Joseph Brown Elementary School"
+    dek: "After ranked-choice voting narrowed finalists to Anchor and Brown, committee members made their case for each name before unanimously approving the Brown name, with discussion of incorporating an anchor symbol in the building."
+    summary: |
+      Following the ranked-choice process, the two finalists were **Anchor** and **Lucretia and Joseph Brown**.
+      
+      **Committee member statements:**
+      - **Chair (Sarah Gold):** Expressed concern that online campaigning for the Brown name made it difficult to take community feedback at face value; nevertheless said the community "spoke loudly" and committed to supporting it.
+      - **Megan Taylor:** Supported Brown, noting the community had driven the process from suggestion boxes to final vote, and that the name opens a door to inclusive curriculum.
+      - **David Harris:** Plugged Anchor as a symbol of past, present, and foundation, but deferred to the committee.
+      - **Sarah Fox:** Advocated for Bell to honor the community that occupied that neighborhood and Malcolm Bell's career-long advocacy for education funding.
+      - **Emily Baron** (motion maker): Made a detailed case for Brown, stating the name "solidifies our commitment for change," puts equity and diversity front and center for young students, and creates curriculum opportunity. Noted the district is already undertaking diversity work (equity audit, PD program).
+      
+      **Motion:** To name the new elementary school the Lucretia and Joseph Brown Elementary School.
+      **Vote:** 5-0 unanimous.
+      
+      **Post-vote discussion:** Committee members agreed that future naming opportunities within the building (media center, rooms) could honor other finalist figures including Lizzie Coffin, Malcolm Bell, and an anchor motif. The superintendent noted an architect is already looking to procure an anchor for the building entrance.
+    key_speakers: ["Emily Baron (committee member, motion maker)", "Sarah Gold (chair)", "Megan Taylor (committee member)", "David Harris (committee member)", "Sarah Fox (committee member)", "Superintendent (John)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 13400
+    end_seconds: 13576
+    headline: "Chair reads response letter to community member's open meeting law complaint"
+    dek: "Chair Gold read aloud the committee's formal response to a letter from a resident alleging open meeting law violations related to the reopening committee, stating the claims are baseless."
+    summary: "The chair read the committee's written response to a letter from a resident alleging that the reopening committee operates in violation of open meeting law. The response stated that the reopening committee functions as a superintendent's advisory committee under district policy CE and is not subject to open meeting law; that legal counsel confirmed the committee is operating lawfully; that the committee has made zero policy decisions; and that the continued accusations distract from the committee's work and have cost the district legal fees. The reading prompted a brief exchange between the chair and committee member Megan Taylor, who objected to the tone and said the chair should not speak for the committee on matters the committee has not voted on."
+    key_speakers: ["Sarah Gold (chair)", "Megan Taylor (committee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

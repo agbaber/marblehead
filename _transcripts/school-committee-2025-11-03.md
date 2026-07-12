@@ -9,7 +9,68 @@ video_url: "https://www.youtube.com/watch?v=9nkUwFJFTFE"
 duration_seconds: 8511
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee approves superintendent evaluation, discusses FY26 goals"
+  summary: "The School Committee voted 5–0 to approve the annual evaluation of Superintendent John Rabadu for the period ending October 2025. The committee then met with the superintendent to discuss and refine his goals for the upcoming cycle, focusing on student achievement and growth, district improvement through instructional leadership, and a professional practice goal. Members also raised the possibility of extending the superintendent's three-year contract, potentially to four or five years."
+  decisions:
+    - "Approved superintendent evaluation for period ending October 2025"
+  votes:
+    - motion: "Approve evaluation of Superintendent John Rabadu"
+      result: "in favor (5 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 59
+    end_seconds: 167
+    featured: true
+    headline: "School Committee votes 5–0 to approve superintendent's annual evaluation"
+    dek: "The board finalized its evaluation of Superintendent John Rabadu for the period ending October 2025 after a brief discussion about one goal area."
+    summary: |
+      The chair called the meeting to order at 10:01 a.m. on November 3, 2025. The first item was finalizing the superintendent evaluation that had been mostly completed at the prior meeting. A member (Melissa) noted a concern about the storytelling/communications goal — specifically that the superintendent had not yet established a baseline survey or measurement system. After brief discussion the committee concluded the evaluation was ready for a vote.
+      
+      A motion was made by Jen and seconded by Melissa. The motion to approve the evaluation of Superintendent John Rabadu passed 5 to 0. A member noted for the record that the evaluation covered the period ending October 2025.
+    key_speakers: ["Jen (committee member)", "Melissa (committee member)", "Superintendent John Rabadu"]
+  - topic: labor-personnel
+    topic_confidence: 0.8
+    start_seconds: 205
+    end_seconds: 1072
+    headline: "Committee and superintendent begin setting new performance goals for upcoming cycle"
+    dek: "Discussion covered goal structure, evaluation cycle length, possible contract extension, and the superintendent's proposed student achievement and district improvement goals."
+    summary: |
+      After approving the evaluation, the committee turned to setting the superintendent's goals for the upcoming year. Discussion touched on several process questions:
+      
+      **Evaluation cycle:** A member suggested considering a two-year cycle or an 18-month cycle (e.g., October 2025 through May/June 2027) to better align with the sitting committee and school calendar before elections.
+      
+      **Contract extension:** A member raised the possibility of extending Superintendent Rabadu's three-year contract to four or five years, noting that consistency and experience at the helm benefit the district. The superintendent responded positively to the conversation, noting that longer tenure has historically been considered optimal for district stability. No vote was taken.
+      
+      **Goal-setting process:** The superintendent presented draft goals organized in three areas. The committee asked for one or two focus indicators per standard to sharpen accountability, and requested that goals include specific measurable language rather than broad descriptors.
+      
+      **Student learning goal:** The superintendent described a goal focused on ensuring ways to assess student achievement and growth from early grades through graduation. Committee members emphasized the need for measurable, specific data (assessments, MCAS, AP scores, benchmarks) reported on a regular schedule — quarterly or trimester — rather than just anecdotal conversation. Members also requested comparative data against similar districts and attention to high school readiness metrics (SAT, ACT, AP) and special education outcomes.
+      
+      **District improvement / instructional leadership goal:** The superintendent described a goal around building cohesion across the district's five schools through 'learning walks' — principals visiting each other's buildings to observe and share instructional strategies. A committee member reframed the goal as being about empowering principals to be the instructional leaders of their buildings, with learning walks as one tactic toward that strategic goal. The most senior principal in the district has been in Marblehead for approximately four years, underscoring the need to develop instructional leadership capacity.
+    key_speakers: ["Superintendent John Rabadu", "Committee Chair", "Jen (committee member)", "Melissa (committee member)", "Henry (committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.55
+    start_seconds: 1073
+    end_seconds: 4471
+    headline: "Committee refines superintendent goal language around student data, instructional leadership, and professional practice"
+    dek: "Extended working session on goal wording covered assessment frameworks, absenteeism, college readiness, district-wide instructional coherence, and how to measure principal effectiveness."
+    summary: |
+      The working session continued with refinement of all three superintendent goal areas:
+      
+      **Student achievement goal:** Members asked that the summary be sharpened to specify which assessments will be used (MCAS, iReady, Dibels, etc.), at what frequency data will be reported to the school committee, and how the district compares to peer districts. The committee expressed particular interest in high school metrics — AP course enrollment and scores, SAT/ACT scores, and where graduating seniors go after high school. One member noted that approximately 97–98% of MHS graduates go to college, making it effectively a college preparatory school. Chronic absenteeism was raised as a driver of outcomes; a member suggested it be captured within the student achievement goal framework rather than as a standalone superintendent goal, since the committee sets policy and the administration is responsible for implementation.
+      
+      A member noted the district has a data platform (referenced as 'AREAd' or similar) that may allow tracking of how graduates are performing in college, and suggested that data be incorporated into future reporting.
+      
+      **District improvement / instructional leadership goal:** The committee agreed the goal should be reframed from a description of learning walk tactics to a strategic goal about developing building principals as strong instructional leaders. Specific focus indicators from the state rubric were identified — including 1A (rigorous standards-based instruction), 4E (shared vision), and a continuous learning standard about staff reflection on practice. A member noted that curriculum directors were eliminated in the mid-2000s for cost reasons, and the current 'lead teacher' model, while valuable for coaching, does not carry supervisory authority — making the principal's instructional leadership role all the more important.
+      
+      Discussion also addressed how to measure this goal without inappropriately evaluating principals through the superintendent's own evaluation. Staff surveys were discussed as one mechanism, though members acknowledged collective bargaining and trust issues with anonymous surveys. 360-degree feedback and structured conversations were mentioned as alternatives.
+      
+      **Professional practice goal:** The session turned to the third goal (professional practice / storytelling and communication) at approximately 1:11 a.m. A member expressed some dissatisfaction with the current draft language and asked that it be made more concrete. Discussion touched on the challenge of holding comfortable evaluative conversations, particularly when principals and evaluators develop personal relationships. A member with a corporate background noted that performance management training — including how to give structured feedback — is standard in the private sector but less emphasized in public education, and suggested this could be an area for professional development for building leaders.
+    key_speakers: ["Superintendent John Rabadu", "Committee Chair", "Jen (committee member)", "Melissa (committee member)", "Henry (committee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

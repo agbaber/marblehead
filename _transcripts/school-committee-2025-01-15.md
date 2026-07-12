@@ -9,7 +9,79 @@ video_url: "https://www.youtube.com/watch?v=KSRri88dZe8"
 duration_seconds: 3352
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee subcommittee plans flag-policy forums and second-recess policy"
+  summary: "A Marblehead School Committee policy subcommittee working session covered three main topics: a draft flag-flying policy, a review of district policies for currency, and a proposal to enshrine a second daily recess for K–6 students as district policy. The subcommittee agreed to organize two community forums on the flag policy—one focused on students, one open to the public—tentatively before February break, and to bring superintendent John Cafasso and assistant superintendent Julia to the next meeting to discuss a draft recess policy. Public comment at the opening of the meeting drew several residents who voiced opinions on the flag policy."
+  decisions:
+    - "Agreed to hold two public forums on the flag policy before February break (one student-focused, one community-wide)"
+    - "Agreed to draft a second-recess policy for K–6 students targeting implementation in fall 2025"
+    - "Agreed to review MASC policy updates from 2022–2024 and consult district attorney on Title IX policy status"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 4
+    end_seconds: 932
+    headline: "Residents urge school committee to reconsider draft flag policy, include student voice"
+    dek: "Three residents—including one speaking on behalf of student surveyors—asked the subcommittee to allow administrators and students, not the school committee, to decide which flags fly."
+    summary: |
+      **Renee Keeny (Beverly Avenue)** returned after commenting at the August 14 meeting. She relayed that students Marin Potter and Nina Johnson, who have continued surveying peers, report that an overwhelming majority believe flag and banner decisions should rest with the principal and superintendent in consultation with students, not with the school committee. She argued that a restrictive policy removes a valuable civic-learning opportunity.
+      
+      A second speaker (name unclear from audio) offered a counterpoint, saying that certain symbols—including the pride flag and Black Lives Matter flag—do not speak for all members of those communities, and questioned whether government institutions should mandate values in schools.
+      
+      **Chris Brule (212 West Shore Drive)** argued that the flag policy is uniquely personal to students and that holding the meeting at 9:30 a.m. on a Wednesday when students cannot attend is inappropriate.
+    key_speakers: ["Renee Keeny (resident, Beverly Avenue)", "Nyla (remote attendee, audio issues)", "Chris Brule (resident, 212 West Shore Drive)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 973
+    end_seconds: 1346
+    headline: "Subcommittee plans to streamline seven-page school committee protocols document"
+    dek: "Members agreed to independently draft a condensed set of operating protocols before the next meeting, then consult MASC representative Alicia for feedback."
+    summary: "The chair noted that reviewing and updating school committee protocols was a stated annual goal. She printed the current seven-page protocols and a MASC best-practices document. Discussion centered on condensing the document to roughly 10–12 items across three categories (how we govern, how we communicate, how we improve), mirroring what most Massachusetts districts use. The plan is for both members to independently revise the document before the next meeting, then share the draft with Alicia (MASC field representative) for comment."
+    key_speakers: ["School Committee Chair (unnamed in transcript)", "Second subcommittee member (unnamed)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 1346
+    end_seconds: 1729
+    headline: "District policy review underway; four civil-rights and Title IX policies flagged for update"
+    dek: "The last comprehensive policy review was conducted with MASC in 2018; members identified a backlog of MASC policy updates from 2020–2024 that may not yet be reflected in district policies."
+    summary: "Superintendent John Cafasso sent members a list of recent MASC policy updates. The chair noted that the last full review took 16 months and involved every policy. The current priority batch—flagged by Cafasso—includes four policies around civil rights grievance procedures, sexual/sex-based harassment, retaliation, and non-discrimination, several of which were updated for federal Title IX rule changes that are now on hold federally but mirrored in Massachusetts state law. Members agreed to consult district attorney Liz to clarify which versions are currently operative before bringing any updates to the full school committee for approval (one reading for updates; three readings for new policies)."
+    key_speakers: ["School Committee Chair (unnamed in transcript)", "Second subcommittee member (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.72
+    start_seconds: 1729
+    end_seconds: 2534
+    featured: true
+    headline: "Subcommittee plans two community forums on flag policy, aims to finalize before February break"
+    dek: "Members discussed the genesis of the flag-policy effort, agreed on a forum format open to the public and students, and set a tentative date of February 13, 2025 for an evening community forum."
+    summary: |
+      The subcommittee reviewed two existing draft flag policies. Members explained that the policy effort began when Principal Dr. Carlson and Assistant Superintendent Michelle Presta asked the committee what the flag policy was and discovered none existed; under Massachusetts law, the school committee is responsible for developing such a policy.
+      
+      Key process decisions:
+      - **Two forums planned**: one student-focused (timing in consultation with school administration) and one community-wide, both posted as open school committee meetings.
+      - **Tentative date**: February 13, 2025 (evening, approximately 6 p.m.) for the community forum, subject to the chair confirming her travel schedule.
+      - **Format**: Interactive forum rather than a one-way listening session, to allow dialogue.
+      - Morning working sessions (9:30 a.m.) will continue for subcommittee business; community forums will be held in the evening.
+      - After the forums, the subcommittee will finalize a draft policy to bring to the full school committee.
+    key_speakers: ["School Committee Chair (unnamed in transcript)", "Second subcommittee member (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.65
+    start_seconds: 2534
+    end_seconds: 3335
+    headline: "Subcommittee pushes to codify second daily recess for K–6 as district policy by fall 2025"
+    dek: "One member argued strenuously for a written policy guaranteeing two recesses for K–6 students, citing a labor contract provision that starts school five minutes earlier to create time for a morning break."
+    summary: |
+      The chair described the history: a second recess for K–6 was previously eliminated, reinstated after parent complaints, then removed again citing 'time on learning.' She consulted both MASC and DESE and was told there is no state rule that counts waiting in line or changing snow boots as instructional time.
+      
+      The recently ratified teachers' unit contract includes a provision starting the school day five minutes earlier. A joint committee of teachers, unit members, and administrators is to meet during the remainder of the school year to determine how those five minutes are operationalized, with the goal of providing a morning outdoor break effective the 2025–26 school year.
+      
+      The subcommittee member said she wants the full school committee to adopt a formal policy guaranteeing two recesses for K–6. Both members agreed to:
+      - Ask Superintendent Cafasso and Assistant Superintendent Julia to attend the next meeting.
+      - Look for existing recess policy language from comparable districts.
+      - Draft a new policy (requiring three readings) with a target effective date of fall 2025.
+    key_speakers: ["School Committee Chair (unnamed in transcript)", "Second subcommittee member (unnamed)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

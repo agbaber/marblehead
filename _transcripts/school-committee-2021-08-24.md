@@ -9,7 +9,130 @@ video_url: "https://www.youtube.com/watch?v=-3g-fl6U11k"
 duration_seconds: 6726
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee reviews COVID back-to-school plan as state mask mandate takes effect"
+  summary: "The Marblehead School Committee held a Tuesday evening meeting focused on the district's back-to-school COVID preparedness plan, including a new three-tier testing program, quarantine protocols, and updated health attestation requirements. The board voted 5-0 to approve two personnel hires: Amanda Mavros as Veteran School nurse and Joseph Griffin as long-term substitute nurse and COVID testing coordinator. The committee also received updates on federal free lunch, technology upgrades, and a new paid bus ridership pilot program, with votes on these items deferred to Thursday's meeting."
+  decisions:
+    - "Approved Amanda Mavros as nurse for Veteran School, 5-0"
+    - "Approved Joseph Griffin as long-term substitute nurse and COVID testing coordinator, 5-0"
+    - "Continued vote on optional paid bus ridership pilot program to Thursday meeting"
+    - "Continued vote on bus ridership fee ($250 per student) to Thursday meeting"
+  votes:
+    - motion: "Approve Amanda Mavros as Veteran School nurse"
+      result: "in favor (unanimous)"
+    - motion: "Approve Joseph Griffin as long-term substitute nurse and COVID testing coordinator"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 391
+    end_seconds: 626
+    headline: "Parent raises concerns about elimination of morning recess in K-3 schedule"
+    dek: "Jessica Shot, citing dual certification in elementary and special education, argued that morning recess should be preserved year-round for academic and mental health reasons."
+    summary: "Jessica Shot (3 Oak Circle) addressed the committee about the proposed K-3 school schedule, which had eliminated morning recess. She outlined three reasons morning recess should remain: research showing K-3 students benefit from two daily recesses; the impact on special-needs children who require frequent sensory breaks; and the mental health benefits of socialization. She also noted that shortening the school day by 15 minutes amounts to 45 lost hours annually and suggested a rotating special-teacher coverage schedule as a solution."
+    key_speakers: ["Jessica Shot (resident, 3 Oak Circle)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 626
+    end_seconds: 832
+    headline: "School Committee approves Amanda Mavros as Veteran School nurse, 5-0"
+    dek: "Mavros, a Brigham and Women's pediatric and hematology nurse with experience as an on-call substitute in Marblehead and Swampscott, was approved unanimously."
+    summary: "Superintendent Dr. Bucky introduced Amanda Mavros for the Veteran School nurse position. Mavros holds two bachelor's degrees—one from MCPHS and one from MGH Institute of Health Professions—and has worked at Brigham and Women's Hospital in pediatric, adult radiation, and hematology/oncology units, as well as Spaulding Rehabilitation. She noted her decade-long ties to the Marblehead community. The committee voted 5-0 to approve her appointment."
+    key_speakers: ["Dr. Bucky (Superintendent)", "Amanda Mavros (candidate)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 832
+    end_seconds: 1028
+    headline: "Vote on second nurse hire deferred after candidate Joseph Griffin had technical difficulties joining meeting"
+    dek: "Griffin, proposed as long-term substitute nurse and COVID testing coordinator, could not be reached during the initial agenda item and the vote was moved later in the meeting."
+    summary: "Joseph Griffin was recommended as a one-year grant-funded COVID testing coordinator and long-term substitute nurse, a position created because the expanded state testing program would place excessive demands on existing nursing staff. Griffin was unable to join the Zoom at the scheduled time due to technical problems, so the committee deferred his vote until he could join later in the meeting."
+    key_speakers: ["Dr. Bucky (Superintendent)"]
+  - topic: public-safety
+    topic_confidence: 0.92
+    start_seconds: 1028
+    end_seconds: 1536
+    featured: true
+    headline: "State mask mandate through October 1 confirmed; district outlines three-tier COVID testing program"
+    dek: "Dr. Bucky presented the district's 12-page back-to-school COVID preparedness plan hours after the state Board of Elementary and Secondary Education granted the Education Commissioner authority to mandate masks in all K-12 buildings."
+    summary: |
+      Dr. Bucky reported that the BESE voted that day to grant Commissioner Riley authority to mandate masks through October 1 in all K-12 buildings, superseding any local decisions. He noted Marblehead's vaccination rate is very high and COVID incidence is relatively low, but said the mask question is not a local choice until October 1.
+      
+      The district's preparedness plan carries over many successful protocols from the prior spring, including:
+      - Universal masking indoors
+      - No mandatory distancing requirement under DESE guidance, but the district will maintain 3-foot spacing where possible
+      - MERV-13 filters and air purifiers in every classroom
+      - Tents for outdoor eating and instruction
+      - Seating charts for contact tracing
+      - Masks required on school buses, windows open
+      
+      Marblehead has been accepted into the state's expanded COVID testing program with priority status, triggering the decision to hire a dedicated testing coordinator.
+    key_speakers: ["Dr. Bucky (Superintendent)", "Sarah Gold (Chair, School Committee)"]
+  - topic: public-safety
+    topic_confidence: 0.93
+    start_seconds: 1536
+    end_seconds: 2192
+    headline: "COVID testing nurse Deanna McMahon details three-tier test-and-stay, symptomatic, and pooled safety-check program"
+    dek: "The district will use BinaxNOW rapid antigen tests for in-school symptomatic and close-contact testing, plus weekly pooled lab-based 'COVID safety checks' at each building starting after October 13."
+    summary: |
+      Deanna McMahon (district COVID/nursing lead) walked through the state's three-tier testing framework:
+      
+      **Tier 1 – Symptomatic testing:** If a student becomes ill during the school day with COVID-like symptoms, nurses will administer a BinaxNOW rapid antigen test on-site. Families must not send sick children to school; the school is not a community testing site.
+      
+      **Tier 2 – Test and Stay:** Asymptomatic close contacts who consent may come to school and be tested each morning for five consecutive days from the date of exposure rather than quarantining at home. Students test before entering their classrooms. Results take ~15 minutes.
+      
+      **Tier 3 – COVID Safety Checks (pooled testing):** Each building will have a designated weekly pool-testing day. Students perform two simultaneous nasal swabs; one goes into a pool sent to the lab, the second is held. If a pool tests positive, the lab retests the saved individual swabs without requiring families to bring children back. The district was approved for the lab-based (not rapid antigen) version of this program.
+      
+      Consent for all three tiers will be obtained via a multilingual link sent to families before school starts; last year's consent does not carry over. Students who do not consent and become symptomatic must quarantine 10 days without testing or obtain a doctor's note with an alternative diagnosis. Vaccinated close contacts are generally exempt from test-and-stay but should monitor for symptoms 14 days post-exposure.
+      
+      Committee members requested a plain-language summary/flow chart for parents; McMahon noted she would share her own three-page notes and that the state is expected to release an official flow chart.
+    key_speakers: ["Deanna McMahon (district COVID/nursing lead)", "Sarah Gold (Chair)", "Megan Taylor (committee member)", "Emily Barron (committee member)", "Sarah Fox (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 2192
+    end_seconds: 2905
+    headline: "District updates committee on quarantine protocols, lunch, ventilation, and department news"
+    dek: "Superintendent and staff discussed close-contact exemptions, quarantine timelines, daily health attestations, federal free lunch program, and air purifier inventory (~350 units)."
+    summary: |
+      Key topics covered in the department update portion:
+      
+      **Quarantine protocols:** Protocol B (asymptomatic close contacts) has three sub-options: B1 (test-and-stay, daily testing for 5 days); B2 (traditional quarantine 7 days, may test out on day 5 and return day 8); B3 (no testing, quarantine 10 days, return day 11). Protocol C covers symptomatic individuals: C1 requires a negative PCR or doctor's note before return; C2 requires 10-day isolation if declining to test.
+      
+      Close-contact exemptions include: fully vaccinated asymptomatic individuals; classroom contacts where both parties wore masks and were at least 3 feet apart; masked bus riders with windows open; and individuals who had COVID within the past 90 days and are fully recovered.
+      
+      **Federal free lunch:** The federal government is covering all meals this year, though reimbursement rates may not cover full costs. À la carte options will continue. The district is exploring creative revenue options including vending machines. ESSER funds cannot replace lost revenue directly, but can cover salary/expense costs of revolving fund programs.
+      
+      **Ventilation:** Approximately 350 air purifiers have been ordered district-wide, with priority given to rooms without windows. MERV-13 filters remain in place. The new Brown School opens with an entirely new HVAC system and MERV-13 filters already installed.
+      
+      **Technology:** The district upgraded to a 2-gigabit fiber internet connection, installed a new firewall, expanded Wi-Fi (high school near 3:1 device-to-student ratio), upgraded phone systems at multiple buildings, deployed a new website, and launched a new Blackboard notification system.
+    key_speakers: ["Dr. Bucky (Superintendent)", "Richard Kelleher (Food Services)", "Steven Quiatek (Technology)", "Todd (Facilities)", "Michelle (Finance)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 2905
+    end_seconds: 3228
+    headline: "Joseph Griffin approved 5-0 as long-term substitute nurse and COVID testing coordinator"
+    dek: "Griffin, whose son is a Marblehead High School senior, rejoined the meeting after technical difficulties and was unanimously approved for the grant-funded one-year position."
+    summary: "Joseph Griffin introduced himself to the committee, noting his personal connection to the Marblehead community and his positive impression of how the district handled the prior school year. Dr. Bucky confirmed Griffin is certified as a school nurse and will serve as a long-term substitute across the district, beginning at the new Evoluth/Brown School, while also coordinating the district's expanded COVID testing program. The committee voted 5-0 to approve his appointment."
+    key_speakers: ["Dr. Bucky (Superintendent)", "Joseph Griffin (candidate)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 3228
+    end_seconds: 3583
+    headline: "District to offer first-ever paid optional bus pilot program with 8 seats at $250 per student"
+    dek: "A national bus driver shortage limits Marblehead to two large buses; a registration process opens Friday for eligible K-6 students, with a paid pilot for non-mandated riders."
+    summary: |
+      Director Michelle presented the transportation update. Key points:
+      - Approximately 250–300 students are legally eligible for mandated busing (K-6, living 2+ miles from school); the district can currently accommodate only about 200 seats across two large buses due to a nationwide bus driver shortage.
+      - A new registration process will launch to gauge actual demand among eligible students.
+      - A first-ever optional paid pilot program will offer 8 additional seats at $250 per student per year, allocated first-come first-served via email at 9 a.m. Friday.
+      - The committee has not yet set a family cap; a vote on the fee is expected Thursday.
+      - The district will not offer fee waivers for the optional program.
+      - The existing courtesy bus from Coffin School to the new Brown/Evoluth School will continue for the first six weeks while the school transition is underway.
+      - The district is actively recruiting CDL-licensed bus drivers and will pay for CDL training for interested candidates.
+      - School Committee member Sarah Fox raised the question of prioritizing students with documented unsafe walking routes; this will be discussed further before Thursday.
+    key_speakers: ["Michelle (Finance/Operations)", "Todd (Facilities)", "Sarah Fox (committee member)", "Emily Barron (committee member)", "Megan Taylor (committee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

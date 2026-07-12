@@ -9,7 +9,74 @@ video_url: "https://www.youtube.com/watch?v=9VPdK2Nj5RY"
 duration_seconds: 2606
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee approves FY22 operating budget $41.8M, 4-1"
+  summary: "The Marblehead School Committee voted 4 to 1 to approve the FY22 operating budget of approximately $41.8 million. One member (Sarah Fox) voted against, citing reliance on one-time revenues to fund recurring costs and concerns that eight administration-identified priorities were not funded, including full staffing for the new Brown Elementary School. The superintendent also presented an update on the phased return to in-person learning, noting that grades K–6 had returned to full days and grades 7–12 had begun half-day in-person instruction."
+  decisions:
+    - "Approved FY22 operating budget in the amount of approximately $41,839,543"
+    - "Approved holding a second public comment period at end of meeting"
+  votes:
+    - motion: "Approve FY22 operating budget (~$41,839,543)"
+      result: "in favor (4 to 1)"
+    - motion: "Allow second public comment period"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.85
+    start_seconds: 88
+    end_seconds: 153
+    headline: "No public comments submitted at opening of meeting"
+    dek: "Chair opened public comment period but no participants raised their hands."
+    summary: "The chair called the meeting to order at 6:01 p.m. and invited public comment. No members of the public raised their hands, so the committee moved immediately to the next agenda item."
+    key_speakers: ["Chair (unnamed in transcript)"]
+  - topic: school-budget
+    topic_confidence: 0.98
+    start_seconds: 153
+    end_seconds: 1569
+    featured: true
+    headline: "FY22 school budget of ~$41.8M approved 4-1 after dissent over structural deficits and Brown School staffing"
+    dek: "One member voted no, arguing the budget uses one-time revenues for recurring costs and leaves Brown Elementary understaffed on opening day."
+    summary: |
+      The committee took up a motion to approve the FY22 operating budget of approximately $41,839,543. Before the vote, member Sarah Fox read prepared remarks stating she could not support the budget because:
+      
+      - Over $400,000 in recurring costs are funded by one-time revenues, creating a projected deficit entering FY23 planning.
+      - Eight administration-identified priorities went unfunded.
+      - The new Brown Elementary School was budgeted for only four classrooms per grade at the K–1–2 level rather than the five promised, leaving empty classrooms on opening day of the $54 million building.
+      - No dedicated bus for the north end of town was included, contrary to commitments made when the Brown School was proposed.
+      - The additional custodian and groundskeeper needed to maintain the new building were not funded.
+      
+      She urged administration to explore using COVID relief funding to staff the additional classrooms, arguing smaller class sizes would help remediate pandemic learning loss.
+      
+      Other members responded that the budget does fund all high- and medium-priority items, that custodial coverage (4.5 positions) is adequate, that busing capacity exists, and that staffing reductions reflect consolidation of three schools and enrollment-driven ratios that remain favorable (approximately 17.5 students per teacher). One member expressed frustration that objections were raised at the vote rather than during the budget development process.
+      
+      **Roll-call vote:** Sarah Gold — yes; Megan Taylor — yes; David Harris — yes; Emily Baron — yes; Sarah Fox — no. Motion passes 4–1.
+    key_speakers: ["Sarah Fox (School Committee member, dissenting vote)", "Megan Taylor (School Committee member)", "David Harris (School Committee member)", "Emily Baron (School Committee member)", "Sarah Gold (School Committee member)", "Dr. Bucky (Superintendent)", "Michelle Crosta (Finance/Budget administrator)"]
+  - topic: public-safety
+    topic_confidence: 0.72
+    start_seconds: 1569
+    end_seconds: 2302
+    headline: "Superintendent reports on phased in-person return and first COVID positive case at secondary level"
+    dek: "Grades K–6 returned to full in-person days; grades 7–12 began half-day hybrid; a first positive COVID case was identified and managed through contact-tracing protocols."
+    summary: |
+      Following the budget vote, the superintendent (Dr. Bucky) shared a slide presentation prepared by building principals on the status of in-person learning:
+      
+      - Elementary students (K–6) returned to full in-person instruction the prior Monday after beginning with half-days on March 15.
+      - Grades 7–12 began half-day in-person learning and a first positive COVID case had already been identified and managed. Principal Dan Power maintains a binder of seating charts for each class; classroom-level contact-tracing notifications went to affected families.
+      - The district follows CDC and Massachusetts Department of Public Health guidelines and sends general notifications to approximately 3,800 community email subscribers.
+      - Staff have been using outdoor learning spaces extensively across all grade levels.
+      - Pool testing was discussed as a key mitigation tool; the state is covering its cost through the end of the academic year. Administration is exploring incentives (including a humorous dunk-tank suggestion) to increase participation among middle and high school students before end-of-year events such as prom and graduation.
+    key_speakers: ["Dr. Bucky (Superintendent)", "Megan Taylor (School Committee member)", "Dan Power / 'Dan' (High school principal, named in context)", "Deanna (named administrator, student services/contact tracing)", "Aaron Noonan (Resident/parent volunteer, public comment)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 2394
+    end_seconds: 2623
+    headline: "Parent volunteer Aaron Noonan praises Village School staff's rapid adaptations during in-person return"
+    dek: "A parent serving as a lunch-duty volunteer commended staff for day-by-day adjustments in the first week back."
+    summary: "After the committee voted unanimously to allow a second public comment period, parent Aaron Noonan spoke. As a lunch-duty volunteer at the Village School, he praised Principal Murphy and other staff for rapidly adjusting logistics from day to day during the first week of in-person return. He noted that improvements observed on Monday were implemented by Tuesday, and encouraged continued progress toward a normal recess experience for students."
+    key_speakers: ["Aaron Noonan (Resident/parent volunteer)", "Chair (unnamed)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

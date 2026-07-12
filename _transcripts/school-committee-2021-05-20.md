@@ -9,7 +9,124 @@ video_url: "https://www.youtube.com/watch?v=Mvs3JHS7nNM"
 duration_seconds: 5118
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee votes 5-0 to adopt updated face-coverings policy with superintendent delegation clause"
+  summary: "The Marblehead School Committee held its regular meeting and voted unanimously to reconsider and then adopt revised face-coverings policy EBCFA, adding language allowing the superintendent to amend masking guidance when a committee quorum cannot convene in time. The committee also received graduation updates allowing six guests per student without masks on Piper Field, heard a kickoff report on the district's Planning for Success strategic-planning process, and discussed sustainability priorities including composting, recycling, and polystyrene-free operations at the new Brown School."
+  decisions:
+    - "Approved motion to reconsider face-coverings policy EBCFA (5-0)"
+    - "Approved face-coverings policy EBCFA as revised, including superintendent delegation clause (5-0)"
+    - "Approved schedule of bills totaling approximately $225,574.23 (4-0-1)"
+  votes:
+    - motion: "Motion to reconsider face-coverings policy EBCFA"
+      result: "in favor (unanimous)"
+    - motion: "Approval of revised face-coverings policy EBCFA"
+      result: "in favor (unanimous)"
+    - motion: "Approval of schedule of bills (~$225,574)"
+      result: "in favor (4 to 1)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 70
+    end_seconds: 351
+    headline: "Committee commendations: Cultural Feast organizers and student rep report"
+    dek: "Committee members recognized three seniors who organized the Cultural Feast fundraiser; student rep Dan Howell previewed end-of-year events."
+    summary: "A committee member commended seniors Diana Gordon, Boomi Oyadeshi, and Brandi Scott for organizing the Cultural Feast, an annual event that raises scholarship funds. Student representative Dan Howell noted upcoming MCAS testing for 10th graders, the powder-puff game, and the MHS Drama Club's production of *The 25th Annual Putnam County Spelling Bee* performing Friday through Sunday in the MHS parking-lot tent."
+    key_speakers: ["Meg (committee member)", "Dan Howell (student representative)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 351
+    end_seconds: 563
+    headline: "Resident requests strategic 'look-ahead' tying Planning for Success data to budget calendar"
+    dek: "Catherine Martin urged the committee to present a timeline connecting the new planning initiative to curriculum priorities and budget allocation."
+    summary: "Catherine Martin (29 West Shore Drive) expressed support for the district's new Planning for Success initiative but asked for a public presentation outlining the timeline—from data collection through fall curriculum alignment and budget allocation—so the district does not repeat the pattern of collecting data that 'sits on a shelf.' A second commenter, Sarah (a committee member), raised a concern about a campaign shirt visible on camera constituting a potential campaign finance issue, and the individual agreed to remove it."
+    key_speakers: ["Catherine Martin (resident)", "Sarah Fox (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 609
+    end_seconds: 1138
+    headline: "Graduation updated: six guests per student, no masks on field, diplomas handed directly"
+    dek: "Principal Bauer reported new state guidance allows graduates and spectators to be mask-free on Piper Field, with six guest tickets per student."
+    summary: "Principal Dan Bauer (referred to as 'dan') reported that updated guidance received the prior day allows students and spectators to forgo masks on Piper Field. The guest allotment increased from four to six per student. Approximately 500 extra chairs were ordered. Diplomas will be handed directly to graduates on stage. Programs will be pre-distributed in graduation bags at the Senior Show. The scholarship ceremony will remain virtual. The senior formal event is expected to allow outside dates, and dancing will be permitted under current Massachusetts guidelines. Scholarship night will remain virtual."
+    key_speakers: ["Principal Bauer (MHS)", "Superintendent (Dr. Bucky)", "Sarah (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1138
+    end_seconds: 1561
+    featured: true
+    headline: "Committee votes 5-0 to adopt revised masking policy with superintendent delegation clause"
+    dek: "After reconsidering the policy voted the prior night, members approved policy EBCFA with language allowing the superintendent to act when a quorum cannot be convened in time."
+    summary: |
+      The superintendent summarized revisions to face-coverings policy EBCFA: students are exempt from outdoor masking requirements on school property; adults must continue masking outdoors during school hours when distancing cannot be maintained; individuals at off-campus school-sponsored events are subject to that venue's rules; and mask breaks indoors require a minimum of six feet of distance and are optional for students.
+      
+      At the request of committee member Sarah Fox, counsel John Foskett added language specifying that the superintendent's delegation to amend the policy is conditioned on a school committee quorum being unavailable within the time needed to implement updated guidance. Fox cited MGL Part I, Title VII, Chapter 71, Section 37, which reserves policy authority to the school committee.
+      
+      The committee first voted 5-0 to reconsider the prior night's vote, then voted 5-0 to approve the policy as revised.
+    key_speakers: ["Sarah Fox (committee member)", "David Harris (committee member)", "Superintendent (Dr. Bucky)", "John Foskett (school counsel, referenced)"]
+  - topic: school-budget
+    topic_confidence: 0.75
+    start_seconds: 1561
+    end_seconds: 1607
+    headline: "Schedule of bills totaling ~$225,574 approved 4-0-1"
+    dek: "The committee approved the identified bills with one abstention."
+    summary: "A motion to approve the schedule of bills totaling $225,574.23 was made and seconded. Roll call: Sarah Gold yes, Sarah Fox yes (noted as abstaining in the chair's tally — recorded as 4-0-1), David Harris yes, Megan Taylor yes, Emily Baron yes. The chair announced the result as four to zero to one."
+    key_speakers: ["Chair (Emily Baron)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2197
+    end_seconds: 2660
+    headline: "Planning for Success kickoff held; five-year strategic plan process outlined through fall"
+    dek: "Superintendent described a SWOT-based community engagement process facilitated by an experienced former superintendent, with community forums and a target of action plans by November."
+    summary: "The superintendent reported that the Planning for Success kickoff meeting was held with approximately 25 participants including two students. An outside facilitator—a former superintendent—trained participants in a protocol for gathering community input. The process timeline: leadership SWOT analysis in June, initiative work at a summer retreat in July, revision of core values/mission/vision in August, and a full district action plan ready by September or November at the latest. Building principals will conduct sessions with staff, students, and families. A community forum will be open to any group not otherwise captured. The committee discussed reaching out to MHS alumni approximately five years out as an additional data source."
+    key_speakers: ["Superintendent (Dr. Bucky)", "Megan Taylor (committee member)", "Sarah Fox (committee member)", "Scott Solberg (PFS participant, public comment)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 2660
+    end_seconds: 2703
+    headline: "Superintendent evaluation self-assessments due; chair outlines collation process"
+    dek: "The chair described a parallel independent-review process with the clerk before comparing notes and producing a consolidated evaluation document."
+    summary: "The chair noted that a few committee members requested extensions on their self-assessment submissions, with a new deadline of the following Monday or Tuesday. The chair described her plan to independently review all submissions with the clerk, separately score numeric rankings, identify supporting comments, then reconcile differences before presenting a consolidated document to the full committee. Members also discussed whether individual evaluations are public documents and agreed to consult legal counsel on posting requirements."
+    key_speakers: ["Chair (Emily Baron)", "David Harris (committee member)", "Sarah Fox (committee member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.88
+    start_seconds: 3516
+    end_seconds: 4070
+    headline: "Facilities audit finds ~$1.5M in critical needs and $19.9M over 20 years; high school roof a top priority"
+    dek: "The facilities subcommittee reported on a 77-page-per-school audit, with the high school roof estimate potentially reaching $1M when completed as a single project."
+    summary: "Committee member Sarah (Gold) presented findings from the facilities condition audit. Critical needs total approximately $1.476M. The single largest item is the high school roof, initially estimated at $770,000 but now projected closer to $1M when the full roof is done at once to avoid disrupting new roofing to update systems. The 20-year maintenance figure is approximately $19.9M (roughly $1M/year), compared with the district's historic capital allocation of about $200,000/year. That figure does not include the new Brown School or sustainability upgrades. Sustainable Marblehead is scheduled to present at the next facilities subcommittee meeting. The facilities subcommittee is also working with the IT director on technology infrastructure scheduling and reviewing food-service equipment needs with the food-services director."
+    key_speakers: ["Sarah Gold (committee member, facilities subcommittee chair)", "David Harris (committee member)", "Emily Baron (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 2750
+    end_seconds: 3238
+    headline: "Sustainability discussion: composting/recycling pilot to restart for fall; Brown School dish room confirmed"
+    dek: "Megan Taylor asked the committee to greenlight restarting the composting/recycling pilot at elementary schools, with the Brown School's full dish room already in place."
+    summary: "Committee member Megan Taylor asked the full committee to authorize the superintendent to work with building principals, Facilities Director Todd, and food-services director Richard to prepare a composting and recycling pilot for fall launch at elementary schools. The effort was originally planned for spring 2020 but was halted by the pandemic. The Brown School has a full dish room and dishwasher. David Harris confirmed LEED certification for the Brown School, noting sustainability features including PV-ready roof, electric vehicle charging stations, and water-metering systems. Committee members and public commenters urged the district to honor its commitment to open the Brown School polystyrene-free on day one."
+    key_speakers: ["Megan Taylor (committee member)", "David Harris (committee member)", "Superintendent (Dr. Bucky)", "Erin Noonan (resident, public comment)", "Jeanne Skona (Sustainable Marblehead, public comment)", "Catherine Martin (building committee member, public comment)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 4289
+    end_seconds: 4583
+    headline: "Brown School construction update: sidewalks poured, gymnasium skylight complete; playground vendor fire causes minor delay"
+    dek: "David Harris shared construction photos showing rapid progress; a playground equipment manufacturer fire in upstate New York is expected to cause a delay of a couple of weeks."
+    summary: "David Harris presented a photo slideshow of recent Brown School construction progress. Highlights include completed sidewalk and curbing, completed gymnasium translucent skylight panels, and binder paving on the new bus turnaround off Dartmouth Road. One setback: a playground equipment vendor in upstate New York suffered a factory fire causing approximately $4M in damage. Gilbane is readjusting its schedule; the delay is currently expected to be 'a couple of weeks.' The committee noted that diversifying vendors across product lines helps mitigate such risks."
+    key_speakers: ["David Harris (committee member, building committee liaison)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 4583
+    end_seconds: 5110
+    headline: "Residents urge district to honor polystyrene-free commitment at Brown School opening"
+    dek: "Multiple public commenters, including a building committee member, stressed that the dish room investment was made on the explicit promise of eliminating disposable trays."
+    summary: |
+      Three residents spoke during the second public comment period:
+      
+      - **Erin Noonan** (15 Beverly Ave) expressed disappointment that the Brown School may not open polystyrene-free, saying the district risks paying lip service to sustainability.
+      - **Scott Solberg** (1 Ramsey Road) praised the Planning for Success kickoff and called for better public communication about the phased strategic process; also commended Dr. Oxford's (head of student services) presentation to CPAC as visionary.
+      - **Jeanne Skona** (16 Foster St, Sustainable Marblehead education working group) urged the district to honor requests discussed two years ago with the building committee: refill water stations, composting in the cafeteria, and expanded recycling. She expressed excitement that Sarah Fox had reached out to Sustainable Marblehead and MHS Green School Society students for the Planning for Success process.
+      - **Catherine Martin** (29 West Shore Dr, building committee member) confirmed that building committee minutes would show a commitment to open the school polystyrene-free and urged the district to fund it operationally.
+    key_speakers: ["Erin Noonan (resident)", "Scott Solberg (resident, PFS participant)", "Jeanne Skona (Sustainable Marblehead)", "Catherine Martin (building committee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

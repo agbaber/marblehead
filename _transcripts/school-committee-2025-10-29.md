@@ -9,7 +9,62 @@ video_url: "https://www.youtube.com/watch?v=KBuMhPRcWYY"
 duration_seconds: 6747
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee completes draft superintendent evaluation, rated proficient"
+  summary: "The School Committee held a working session to collaboratively draft the formal evaluation of Superintendent John Roberto for a period running approximately from July 2024 through fall 2025. Committee members discussed ratings for three goal areas — professional practice, student learning, and district improvement — and agreed on a composite 'proficient' rating across all four performance standards. The draft includes narrative sections on staffing accountability, student voice, the district improvement plan, and work on the anti-discrimination committee. The committee voted 4–0 to adjourn, with plans to finalize the document and schedule a vote on the full evaluation at the November 6 meeting."
+  decisions:
+    - "Approved adjournment of the working session (4–0)"
+    - "Agreed to rate Superintendent Roberto 'proficient' on all four performance standards"
+    - "Agreed to share draft evaluation with absent member Melissa and place final vote on November 6 agenda"
+  votes:
+    - motion: "Motion to adjourn working session"
+      result: "in favor (4 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.6
+    start_seconds: 19
+    end_seconds: 304
+    headline: "Technical difficulties delay start of superintendent evaluation working session"
+    dek: "Committee members troubleshoot audio feedback from a live-stream conflict before beginning substantive work."
+    summary: "The session opens with extended audio and screen-sharing technical issues related to a live-stream conflict. Members sort out muting and connectivity before settling on a plan to work through the state evaluation form, skipping sections that require focus indicators the committee had not previously assigned."
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 304
+    end_seconds: 6718
+    featured: true
+    headline: "School Committee drafts proficient evaluation of Superintendent Roberto, sets Nov. 6 vote"
+    dek: "Members worked through three goal areas, agreed on ratings, and compiled narrative feedback covering staffing accountability, student voice, the district improvement plan, and anti-discrimination efforts."
+    summary: |
+      The committee conducted a collaborative working session to produce a formal summative evaluation of Superintendent John Roberto covering roughly July 2024 through fall 2025 — a period described as a 'hybrid' between his interim and permanent appointments. Key discussion points included:
+      
+      **Goal ratings (Step 1)**
+      
+      | Goal Area | Agreed Rating |
+      |---|---|
+      | Professional Practice | Some Progress |
+      | Student Learning | Met |
+      | District Improvement | Met |
+      
+      **Professional Practice Goal:** Members noted a staffing and expense accountability report — described as critical to the FY27 budget process — was not completed. The committee agreed this goal showed only 'some progress,' citing the superintendent's own self-assessment and the extenuating circumstances of the year, including what one member referred to as an 'illegal teacher strike.'
+      
+      **Student Learning Goal:** The committee credited Roberto with taking steps to improve student voice and culture that no previous superintendent had undertaken, including directing building principals to present student-voice initiatives to the committee. The goal was rated 'met.'
+      
+      **District Improvement Goal:** Roberto came on board in July 2024 with a goal to produce a district improvement plan. The original completion target shifted from June 2025 to approximately January 2026 for school committee approval with a July 2026 implementation date. Members agreed — given the goal had evolved — to rate it 'met,' while noting the district still lacks a strategic plan with deliverables.
+      
+      **Step 2 / Standards:** Members individually rated Roberto 'proficient' across all four performance standards, though several noted they lacked sufficient data to evaluate rigorously, as agreed-upon metrics had not been established at the outset.
+      
+      **Summary narrative highlights compiled by the committee:**
+      - Roberto stepped into a difficult situation as interim superintendent in July 2024 and made reasonable progress given the complexity of issues he faced.
+      - He has done an excellent job building relationships within the district; his 'moving forward together' motto reflects his focus on repairing trust.
+      - His commitment to strengthening district culture and climate is evident in his establishment and leadership of the Superintendent's Anti-Discrimination Committee and his initial focus on combating anti-semitism in the district's schools and community.
+      - Going forward, it is important that Roberto build upon the district's data-driven decision-making practices to equip administrators, school committee members, and other stakeholders to explain and justify the district's needs.
+      - One member noted Roberto 'could have advocated more vocally for what he believes is in the best interest of the district so that school committee members can rely on his professional expertise in their decision-making.'
+      
+      **Next steps:** The draft will be sent to absent member Melissa with a request for any feedback. The final evaluation will be placed on the November 6 regular meeting agenda for a committee vote, after which it will be presented to Superintendent Roberto.
+    key_speakers: ["Al (School Committee Chair, based on context)", "Jen (School Committee member, primary evaluator narrative)", "Henry (School Committee member)", "Kate (School Committee member)", "Melissa (School Committee member, participating remotely, departed early)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

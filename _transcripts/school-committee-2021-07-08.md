@@ -9,7 +9,85 @@ video_url: "https://www.youtube.com/watch?v=yh3rOk6zGq4"
 duration_seconds: 6570
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee votes 4-1 to extend superintendent's contract through 2025"
+  summary: "The Marblehead School Committee voted 4-1 to extend Superintendent Dr. John Bucky's employment agreement through June 30, 2025, adding two years to the existing contract and granting a 2% COLA increase for the 2021-2022 school year. The committee also unanimously approved a three-year contract for Michelle Cresta as Assistant Superintendent for Finance and Operations, amended from a one-year term. A 2.5% increase in student activity user fees for FY2022 was approved 5-0."
+  decisions:
+    - "Approved amended employment agreement for Dr. John Bucky extending contract through June 30, 2025 with 2% COLA"
+    - "Approved three-year contract for Michelle Cresta as Assistant Superintendent for Finance and Operations"
+    - "Approved 2.5% increase in student activity user fees for FY2022"
+  votes:
+    - motion: "Extend superintendent Dr. John Bucky's contract through June 30, 2025 with 2% COLA"
+      result: "in favor (4 to 1)"
+    - motion: "Designate chair to execute amended superintendent employment agreement"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Michelle Cresta as Assistant Superintendent for Finance and Operations on a three-year contract"
+      result: "in favor (unanimous)"
+    - motion: "Designate chair to execute Cresta contract"
+      result: "in favor (unanimous)"
+    - motion: "Approve 2.5% user fee rate increase for FY2022"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.98
+    start_seconds: 96
+    end_seconds: 2978
+    headline: "Residents divided over proposed superintendent contract extension"
+    dek: "Twelve residents spoke during public comment, with views split on whether to extend Dr. Bucky's contract after only one year during the pandemic."
+    summary: |
+      Public comment drew extensive community input on the pending superintendent contract extension. Several speakers — including former school committee member Meredith Tedford and residents Catherine Martin, Dan Elbert, Kim Day, and John DuPiano — urged the committee not to extend the contract, citing the lack of performance data from a typical school year, concerns about conflict of interest, and the unusual nature of a five-year contract for a first-year superintendent.
+      
+      Other residents — including Scott Solberg, Bree Stahlberg, Melissa Kaplawicz, Paul Baker, Mary McAriston, and Cindy Tower Lowing — expressed support for the extension, emphasizing the need for leadership stability, Dr. Bucky's accomplishments during COVID-19, and the difficulty of recruiting a replacement given Marblehead's reputation.
+      
+      Kazzy Kindle and Kristin Pratt offered more neutral perspectives, noting the decision seemed driven by fear on both sides and questioning why the extension was being pursued before the superintendent had completed a typical school year.
+    key_speakers: ["Meredith Tedford (former school committee chair, resident)", "Catherine Martin (resident)", "Dan Elbert (resident)", "Kim Day (resident)", "Scott Solberg (resident, education professional)", "Bree Stahlberg (resident, Planning for Success parent rep)", "Melissa Kaplawicz (resident, educator)", "Paul Baker (resident)", "John DuPiano (resident, attorney)", "Mary McAriston (resident)", "Cindy Tower Lowing (resident)", "Kazzy Kindle (resident)", "Kristin Pratt (resident)", "Sarah Fox (chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 3121
+    end_seconds: 3747
+    headline: "School committee unanimously approves Cresta as Assistant Superintendent on 3-year contract"
+    dek: "Michelle Cresta's contract was amended from one year to three years before being approved 5-0, with Juneteenth added as a holiday."
+    summary: |
+      The committee considered a contract to appoint Michelle Cresta as Assistant Superintendent for Finance and Operations. Committee member Sarah Fox moved to amend the original one-year contract to three years, noting that one-year contracts are typically reserved for interim positions and that three years is customary. The amendment was seconded and passed unanimously.
+      
+      The committee also added Juneteenth as a recognized holiday to the contract. Members noted that Cresta had filled in for the town during a gap in town finance leadership, managed close to $2 million in COVID-related funds, and played a key role in a new school construction project. The chair was also authorized to execute the contract on the committee's behalf, also 5-0.
+    key_speakers: ["Sarah Fox (chair)", "Sarah Gold (committee member)", "David Harris (committee member)", "Michelle Cresta (appointee, Director of Finance)", "Dr. John Bucky (superintendent)"]
+  - topic: labor-personnel
+    topic_confidence: 0.98
+    start_seconds: 3747
+    end_seconds: 5898
+    featured: true
+    headline: "Superintendent Bucky's contract extended through 2025 in 4-1 vote"
+    dek: "After lengthy debate, the committee voted to extend Dr. John Bucky's contract by two years with a 2% cost-of-living increase, with member Sarah Fox dissenting."
+    summary: |
+      The committee debated and voted on an amended employment agreement for Superintendent Dr. John Bucky, extending his term through June 30, 2025 and granting a 2% COLA for FY2022.
+      
+      Committee member David Harris read extensively from his summative evaluation of Dr. Bucky's first year, noting performance rated as "proficient if not exemplary in many areas" despite the extraordinary challenges of the pandemic. He cited curriculum alignment work, special education redesign under Eric Oxford, weekly COVID updates, school reopening before state guidance required it, and active engagement with the new Lucretia and Joseph Brown school construction project.
+      
+      Member Sarah Fox moved to table the contract and revisit it at the end of the next school year, citing the absence of data from a typical in-person school year and feedback from professional organizations (MASC and NSBA) that a five-year contract for a first-year superintendent is unprecedented. That motion failed for lack of a second.
+      
+      Fox also clarified that the contract's departure clause — 180 days notice plus a half-year salary — does not legally prevent the superintendent from leaving, and therefore does not guarantee the stability supporters cited. She voted no on the final motion.
+      
+      Members Emily Baron and Megan Taylor both expressed support for the extension, emphasizing the need for stable leadership to execute the multi-year Planning for Success initiative and other long-term district goals. The motion passed 4-1, with Fox dissenting. A follow-on motion to authorize the chair to execute the agreement passed 5-0.
+      
+      Dr. Bucky thanked the committee and stated he views tonight's vote as a mandate to go further into the district's vision, goals, and budget development work.
+    key_speakers: ["Sarah Fox (chair, dissenting vote)", "David Harris (committee member)", "Emily Baron (committee member)", "Megan Taylor (committee member)", "Sarah Gold (committee member)", "Dr. John Bucky (superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 5898
+    end_seconds: 6549
+    headline: "Committee approves 2.5% user fee increase for FY2022, signals desire to eventually eliminate fees"
+    dek: "The school committee voted unanimously to raise student activity and sports user fees by 2.5%, while expressing a shared goal of eventually eliminating fees in favor of operating budget funding."
+    summary: |
+      The committee considered a 2.5% increase in user fees for the 2021-2022 school year, applied against rates established in 2019-2020 (no increase was made the prior year due to COVID uncertainty). Dr. Bucky explained that staff member Greg Ciglarsky had been asked to review the entire user fee structure, including benchmarking against North Shore districts and evaluating whether a fee structure is still appropriate.
+      
+      Committee members clarified several structural questions: the family maximum applies across all schools and programs (excluding preschool and kindergarten tuition); fees for combined intramural and interscholastic participation are capped at the applicable maximum with students paying only the balance difference.
+      
+      All five members expressed a desire to eventually eliminate user fees and fund coaching stipends and related costs through the operating budget, citing equity and inclusion concerns. The 2.5% increase passed 5-0.
+    key_speakers: ["Sarah Fox (chair)", "Dr. John Bucky (superintendent)", "Michelle Cresta (finance)", "David Harris (committee member)", "Sarah Gold (committee member)", "Greg Ciglarsky (athletic director, identified by name only)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

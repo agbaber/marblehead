@@ -9,7 +9,127 @@ video_url: "https://www.youtube.com/watch?v=AoONzwWK4kk"
 duration_seconds: 5089
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee finance liaison reviews FY24 close, FY25 budget controls, and FY26 outlook"
+  summary: "The School Committee's finance liaison subcommittee met with new school CFO Mike (last name unclear from transcript) and Superintendent to review the FY24 year-end close, current FY25 budget tracking efforts, and early FY26 planning. The CFO described building out salary-encumbrance workarounds in the current financial system, tracking out-of-district special education tuition lines (collaborative at $713K budgeted, private day at $426K, residential at $1.2M), and initiating detailed staffing audits by school. FinCom liaison Alec noted the town faces a structural reliance on one-time revenues and that both a structural fix and any contract settlements would likely require overrides; without an override, available new revenue for FY26 was estimated at $800K–$1.2M against significantly higher needs."
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.8
+    start_seconds: 2
+    end_seconds: 217
+    headline: "Resident raises concern about meeting recording and MHTV access"
+    dek: "Mary McCarrison asked in-person that meetings be recorded by MHTV; chair explained the meeting is live-streamed and MHTV has been given access."
+    summary: "Before the formal agenda began, a resident (Mary McCarrison) raised concerns about Zoom technical difficulties at public meetings and asked why MHTV was not recording meetings directly. The chair repeated her concerns for the remote audience and explained that the meeting is recorded and live-streamed, and MHTV has been granted full access to use that stream. McCarrison had also emailed the school committee with legal questions; the chair noted attorney-client privilege precluded sharing legal counsel's advice publicly."
+    key_speakers: ["Mary McCarrison (resident)", "Chair (unidentified)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 217
+    end_seconds: 1800
+    featured: true
+    headline: "School CFO details FY24 close, tuition prepayments, and FY25 salary-tracking system"
+    dek: "The new school CFO described rebuilding budget controls from scratch, including monthly purchase-order encumbrances for salaries and a four-category out-of-district tuition tracking framework."
+    summary: |
+      The school CFO (Mike) presented a detailed operational update on FY24 year-end close and FY25 budget management:
+      
+      **FY24 Year-End Close**
+      - The FY24 end-of-year report was submitted October 8th, signed by the superintendent and town CFO Alicia Benjamin.
+      - The district closed under budget; salary surpluses from unfilled positions were transferred to prepay out-of-district special education tuitions (~$900K prepaid), a practice disclosed to FinCom and allowable by law.
+      - The prepayment was intended to frontload FY25 tuition costs and save staff positions.
+      
+      **FY25 Budget Controls**
+      - The current financial system (referred to as "Soft R") cannot encumber payroll automatically. The CFO is creating monthly purchase orders for each pay period beginning November to approximate salary encumbrances.
+      - He has met with each principal twice to verify staffing alignment.
+      - Out-of-district tuition lines budgeted for FY25:
+        - Collaborative tuitions: $713,000
+        - Private day: $426,000 (supplemented by circuit breaker reimbursement)
+        - Residential tuitions: $1.2 million
+        - Recovery/rehab: approximately $48,000 (budgeted; no expenditures to date)
+      - Circuit breaker reimbursement offsets a significant portion of private-day and residential costs.
+      
+      **Staffing and Enrollment**
+      - Enrollment is declining but staffing headcount has not decreased proportionally, and in some cases increased, partly due to special education program needs requiring higher staff ratios.
+      - Marblehead's staff-to-student ratio (10.3) is the lowest on the North Shore vs. a state average of 11.9.
+      - John (superintendent or administrator) is building a detailed staffing document showing individual teacher loads and class sizes; one example cited was a high school teacher with five sections averaging 13 students per section.
+      
+      **Budget Transparency Goals**
+      - The school committee's draft goals include publishing a budget glossary and clearer one-page summaries so the public can understand terms like "circuit breaker," "tuition revolving fund," and "encumbrance."
+      - FinCom requested a detailed FY24 budget-to-actual report at the next meeting, including encumbrances and prepaid tuitions as a separate notation.
+    key_speakers: ["Mike (school CFO)", "Alec (FinCom liaison)", "Superintendent (unidentified)", "Allison (school committee member, remote)"]
+  - topic: override
+    topic_confidence: 0.9
+    start_seconds: 1800
+    end_seconds: 2542
+    headline: "FinCom liaison explains structural deficit, override mechanics, and FY26 revenue outlook"
+    dek: "Alec outlined that without an override, FY26 available new revenue is estimated at $800K–$1.2M, far short of level-service costs including unsettled contracts."
+    summary: |
+      FinCom liaison Alec provided an extended explanation of Marblehead's fiscal structure for the benefit of the new school CFO:
+      
+      **Structural vs. Operational Deficit**
+      - The town has for years increased its reliance on free cash (one-time, non-renewable revenue) by approximately $2 million per year.
+      - A "structural challenge" exists because ongoing expenses exceed recurring revenues under Proposition 2½ limits.
+      - A separate "operational" gap arises from unsettled collective bargaining contracts whose costs exceed what was budgeted.
+      - Both issues would require overrides to resolve, but they are distinct problems.
+      
+      **Revenue Outlook for FY26**
+      - Prior year tax levy: approximately $73.2 million.
+      - Proposition 2½ increase: approximately $1.8 million.
+      - New growth estimate: $300,000–$400,000.
+      - Total new property tax revenue: approximately $2.2 million, split roughly 50/50 between schools and town (when health insurance stays on the town side).
+      - FY26 conservative available revenue estimate for schools: **$800,000–$1.2 million**.
+      - Schools also receive 50% of local receipts growth voted at town meeting; that line was estimated at $400K last year and may be higher.
+      
+      **Override Mechanics**
+      - FinCom places placeholder override articles in the warrant each January.
+      - The balanced budget article goes to town meeting; anything above the balanced budget is in the override request.
+      - Pink slips (reduction notices) must go out before the ballot, because contract notification dates precede the election.
+      - If the override passes, rehire letters can follow; if it fails, those reductions stand.
+      - Two years ago, both a town-side and school-side override failed at the ballot.
+      
+      **School Committee Negotiations Page**
+      - The superintendent directed the group to marbleheadschools.org, where proposed MEA contract wage tables, cost projections by year, and levy comparison data with DESE "dark community" peers are publicly posted.
+    key_speakers: ["Alec (FinCom liaison)", "Mike (school CFO)", "Superintendent (unidentified)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 2542
+    end_seconds: 3231
+    headline: "FY26 budget calendar and process alignment discussed between school and FinCom"
+    dek: "The school CFO and FinCom discussed timeline for the FY26 budget, including when a three-year expenditure forecast will be presented and how the school budget workshop fits into the town calendar."
+    summary: |
+      The group discussed how the school budget process aligns with FinCom and the select board's timeline:
+      
+      - CFO Alicia Benjamin (town-side) and FinCom are collaborating on a three-year financial forecast to be presented to both FinCom and the Select Board in **early December**, ahead of the January State of the Town address.
+      - The forecast will model revenue (relatively predictable under Prop 2½) and expenditures under multiple assumptions, including different contract settlement scenarios.
+      - The school budget workshop (where all directors and principals present sub-budgets) historically occurs mid-to-late January.
+      - FinCom reviews the budget through liaison meetings, a budget hearing, and a warrant hearing; it votes to recommend or not recommend (approval is not legally required from FinCom).
+      - The school committee now votes its budget before FinCom (a change made two years ago).
+      - The school CFO asked what salary assumption to use for FY26 level-service budgeting given unsettled contracts; Alec suggested using the school committee's current offer as the best available placeholder.
+      - The group agreed to schedule a follow-up liaison meeting to continue the FY26 budget discussion.
+    key_speakers: ["Alec (FinCom liaison)", "Mike (school CFO)", "Superintendent (unidentified)", "Allison (school committee member, remote)"]
+  - topic: labor-personnel
+    topic_confidence: 0.82
+    start_seconds: 2815
+    end_seconds: 3092
+    headline: "Collective bargaining costs and fee structures discussed in context of FY26 budget gap"
+    dek: "Participants noted that current school committee contract offers exceed what was budgeted for FY25, and that user fees (e.g., sports fees) are currently funding staff salaries in revolving accounts."
+    summary: |
+      The discussion touched on collective bargaining as a distinct fiscal pressure:
+      
+      - The school committee's current contract offers to the MEA (Marblehead Educators Association) exceed the amounts budgeted in FY25 for contract negotiations.
+      - The superintendent noted that teacher unions in negotiations are pushing to eliminate fees (e.g., sports participation fees), but those fees currently fund coaches and trainers through revolving accounts — if eliminated without a replacement revenue source, programs would need to be cut.
+      - The director of Food Services salary was shifted to the school lunch revolving fund in FY24, freeing up general fund dollars.
+      - The superintendent emphasized that fees are not paying core teachers' salaries but are sustaining specific program staff that would otherwise require general fund support or cuts.
+    key_speakers: ["Superintendent (unidentified)", "Alec (FinCom liaison)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 3231
+    end_seconds: 3250
+    headline: "Meeting adjourned at 11:34 a.m.; follow-up meeting to be scheduled"
+    dek: "The chair adjourned the meeting and noted a follow-up liaison meeting would be scheduled by email."
+    summary: "The meeting was adjourned at approximately 11:34 a.m. The chair indicated that a follow-up meeting would be scheduled by email to continue discussions on the FY26 budget, the FY24 detailed close-out report, and out-of-district tuition tracking."
+    key_speakers: ["Chair (unidentified)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

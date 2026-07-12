@@ -9,7 +9,217 @@ video_url: "https://www.youtube.com/watch?v=WZBt5EsoEo4"
 duration_seconds: 11362
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee approves face-mask policy and 2020-21 school calendar"
+  summary: "The School Committee convened for a special meeting focused on COVID-19 reopening planning, hearing reports from nine subcommittees on teaching/learning, facilities, transportation, technology, health/safety, and food service. The committee approved a revised 2020-21 school calendar (September 14 start, June 14 end) and a new face-mask policy requiring masks for all individuals in school buildings and on transportation. A contentious subcommittee assignment vote passed 4-1 after a member objected that her removal from the budget subcommittee was politically motivated."
+  decisions:
+    - "Approved revised school calendar: first day September 14, 2020; last day June 14, 2021"
+    - "Approved schedule of bills totaling approximately $94,726.32"
+    - "Approved operating protocols/norms document (4-1)"
+    - "Approved subcommittee and liaison assignments (4-1)"
+    - "Approved face-mask policy EBCFA (5-0)"
+  votes:
+    - motion: "Approve revised 2020-21 school calendar"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills totaling approximately $94,726"
+      result: "in favor (unanimous)"
+    - motion: "Approve operating standards of practice, norms, and protocols"
+      result: "in favor (4 to 1)"
+    - motion: "Approve subcommittee and liaison representative assignments"
+      result: "in favor (4 to 1)"
+    - motion: "Approve face-mask policy EBCFA"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1010
+    end_seconds: 1105
+    headline: "Meeting called to order; public comment period opened with no speakers"
+    dek: "Chair called the meeting to order at 7:03 p.m. and invited public comment via Zoom raise-hand function; no hands were raised."
+    summary: "The chair opened the meeting and explained how participants could use Zoom's raise-hand function to request public comment. No members of the public raised their hand, so the committee moved directly to the superintendent's report."
+    key_speakers: ["Sarah Gold (Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.65
+    start_seconds: 1105
+    end_seconds: 2124
+    featured: true
+    headline: "Superintendent presents COVID-19 reopening overview; nine subcommittees report on reentry plan"
+    dek: "Superintendent described a phased reentry starting September 14 with three weeks of remote learning before hybrid instruction begins October 5 for grades 3-12, with younger grades returning earlier."
+    summary: |
+      Superintendent John Buckey provided an extensive reentry update, describing the plan as a 'tsunami of information' given daily guidance changes from the state. Key elements included:
+      
+      - **School start:** September 14, 2020 (remote learning only)
+      - **Hybrid transition:** October 5 for grades 3-12; kindergarten through grade 2 return earlier
+      - **Last day of school:** June 14 (the superintendent's birthday)
+      - **Modality changes:** Families may switch between remote and hybrid at quarter/trimester points, not mid-quarter; exceptions handled case-by-case
+      - **Communication:** Nearly 80% of viewers watch the superintendent's weekly video updates from start to finish
+      - **Backpack drive:** Raised $2,000, with an anonymous donor adding $1,000 match; over 100 students to benefit
+      - **Masks:** School-branded masks obtained for all students to receive during early building visits
+      
+      Subcommittee chairs then provided brief reports:
+      
+      **Teaching & Learning (Nan Murphy, Asst. Superintendent):** A 34-member team worked over seven weeks across six subcommittees covering pre-K through 12. Priorities anchored on student/staff health and safety, social-emotional well-being, maximizing face-to-face time, equity, and SPED services.
+      
+      **Facilities & Transportation (Todd Bloodgood):** HVAC upgrades underway—computer-controlled dampers will open 100% every two hours for 20-minute fresh-air flushes. HEPA/charcoal air purifiers acquired for isolation and nurses' rooms. Water fountains will be turned off; bottled water will be distributed. Buses limited to 20-23 students on 62-seat buses; a new bus on order expected in November. District has one full-time and two part-time-licensed bus drivers; recruiting two additional part-time drivers.
+      
+      **Technology (Kathy Hennessey):** Committee of 14, including two high school students, reviewed 12-15 software packages. Goals: standardize platforms by grade level, create a parent-facing tech-support portal, and explore Comcast Internet Essentials partnership for families with connectivity gaps. Staff laptops on order; devices being collected, cleaned, and inventoried.
+      
+      **Health & Safety (Deanna McMahon):** Committee of 21 used CDC, DPH, and DESE guidance. Next steps include a daily health-certifying screening tool and scenario guides on the district website. Schools will use contact tracing definitions (within 6 feet for 15+ minutes) in coordination with the Marblehead Board of Health; assigned seating required to support contact tracing.
+      
+      **Food Service (Richard Kelleher):** Two kitchens will open; remote-learning families can pick up meals 10:45-11:45 a.m., in-school students 12:00-12:30 p.m. A Google Form will be sent each Friday for the following week's orders. No cash transactions; e-check and credit/debit card accepted via My School Bucks; lock boxes at each school for checks.
+      
+      **Athletics & Student Activities (Greg, AD):** MIAA released guidance allowing almost all fall sports under EEA guidelines with modifications. A 'Fall II' season is planned for February 22–April 25 (primarily football and cheer). Spring season moves to April 26–July 3. Major concerns: transportation capacity, student safety during athletic training, and coaches enforcing protocols instead of coaching.
+    key_speakers: ["John Buckey (Superintendent)", "Nan Murphy (Assistant Superintendent)", "Todd Bloodgood (Facilities Director)", "Kathy Hennessey (Technology Director)", "Deanna McMahon (Health & Safety Committee Chair)", "Richard Kelleher (Food Service Director)", "Greg (Athletic Director)", "Megan Taylor (School Committee)", "Sarah Fox (School Committee)", "Emily Barron (School Committee)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 5342
+    end_seconds: 5515
+    headline: "Committee approves revised 2020-21 school calendar 5-0"
+    dek: "The calendar was updated to reflect the DESE reduction from 180 to 170 required school days, enabling a September 14 start and June 14 last day."
+    summary: "Following the superintendent's report, the chair asked for a motion to approve the revised calendar. The key change was a reduction from 180 to 170 required instructional days per DESE guidance, which allowed September 14 as the first day and June 14 as the last day. Previously-voted professional development days, religious holidays, and February and April vacations remain unchanged. A member asked whether snow days would still need to be made up given a remote-learning platform; the superintendent said DESE had not yet issued guidance on that point. The motion was moved, seconded, and passed 5-0."
+    key_speakers: ["Sarah Gold (Chair)", "John Buckey (Superintendent)", "Megan Taylor (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 5677
+    end_seconds: 5707
+    headline: "Schedule of bills totaling approximately $94,726 approved 5-0"
+    dek: "The committee approved the identified schedule of bills with supporting invoice documentation included in the packet."
+    summary: "The chair called for a motion to approve the schedule of bills totaling approximately $94,726.32. A member noted the improved clarity from having scanned invoices included in the packet. The motion was moved, seconded, and approved 5-0 on a roll-call vote. One member indicated she had a few clarifying questions that would not affect her vote and would follow up with the finance manager."
+    key_speakers: ["Sarah Gold (Chair)", "David Harris (School Committee)", "Michelle (Finance Manager)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 5707
+    end_seconds: 6356
+    headline: "Operating protocols adopted 4-1; Sarah Fox dissents over communication language"
+    dek: "The committee approved standards of practice and norms with minor revisions from the Friday retreat, but member Sarah Fox voted no over a provision channeling information requests to the superintendent."
+    summary: |
+      The chair presented the third revision of the committee's operating protocols. Three changes were made since the previous meeting:
+      
+      1. Removed a sentence from point five on governance regarding no one person monopolizing the conversation.
+      2. Updated the social-media section to reference MASC social media guidelines.
+      3. Revised the communication provision (point three) so requests for information from district staff and town officials go through the superintendent (removing a prior reference to the school committee chair as an additional channel).
+      
+      Member Sarah Fox raised concerns that this provision could recreate silos and limit the committee's ability to efficiently gather information from town officials—particularly given the collaborative bridges built over recent years. Other members responded that the language pertains specifically to formal requests for information, not personal relationships, and that channeling requests through the superintendent keeps him informed and effective. Emily Barron noted she had reviewed similar protocols from other districts and the MASC website and found them standard.
+      
+      On roll call: Gold yes, Barron yes, Harris yes, Taylor yes, Fox no. Passed 4-1.
+    key_speakers: ["Sarah Gold (Chair)", "Megan Taylor (School Committee)", "Sarah Fox (School Committee)", "Emily Barron (School Committee)", "David Harris (School Committee)", "John Buckey (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 6356
+    end_seconds: 6641
+    headline: "School committee website update: mock-up presented for a dedicated committee site"
+    dek: "Communications director Kate Thompson created a mock-up website for the school committee, featuring bio pages, a meeting calendar, and potential push-notification and live-stream capabilities."
+    summary: |
+      The chair described a mock-up website created by communications director Kate Thompson for a dedicated school committee web presence. Key features discussed:
+      
+      - **Calendar:** Meeting dates and agendas for all subcommittees and special meetings, with potential push notifications
+      - **Bio pages:** Individual member pages (requiring updated photos and short bios from each member)
+      - **Live-stream embeds:** Ability to embed recorded meetings so residents can watch later
+      - **Minutes repository:** Easier posting of approved minutes
+      
+      The committee agreed to target a fall launch, with Megan Taylor identified as the point person to work with Thompson on next steps. Members suggested also exploring a tech-support portal for parents and linking the site from the district's main website. The committee will receive a further update at the second regularly scheduled September meeting.
+    key_speakers: ["Sarah Gold (Chair)", "Megan Taylor (School Committee)", "Emily Barron (School Committee)"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 6641
+    end_seconds: 8319
+    headline: "Subcommittee appointments approved 4-1 after dispute over budget committee assignment"
+    dek: "Member Sarah Fox voted no and objected at length that her removal from the budget subcommittee was politically motivated; the chair and other members said the assignment reflected expressed interest and normal rotation."
+    summary: |
+      The chair presented recommended subcommittee assignments:
+      
+      | Subcommittee | Chair | Members |
+      |---|---|---|
+      | Budget | Megan Taylor | David Harris |
+      | Collective Bargaining (new, CBA year) | Sarah Gold | Megan Taylor (vice chair) |
+      | Facilities | Sarah Fox | Emily Barron |
+      | Policy | Sarah Gold | Emily Barron |
+      | Selectmen MOU (reframed as "Joint School-Town") | Chair of SC + Budget chair | — |
+      | Building Committee | David Harris | — |
+      
+      Superintendent's Advisories (no vote required):
+      - Safety: Sarah Fox
+      - Health & Wellness: Sarah Gold
+      - Reopening Oversight: Sarah Gold
+      - Communications/Website: Megan Taylor (interim)
+      
+      Liaisons (no vote required):
+      - CPAC: Megan Taylor
+      - METCO: Emily Barron (with Emily Barron noting she had not previously been on it)
+      
+      **Contentious exchange:** Sarah Fox objected that being removed from the budget subcommittee was politically motivated. She described her contributions to the prior year's budget work, including a pre-payment suggestion that was credited with providing the town early access to surplus funds. She stated she saw 'no data points' supporting her removal and no 'earthly reason' other than political motivation. The chair responded that David Harris and Megan Taylor had independently expressed interest in the budget subcommittee, that this was a normal annual rotation, and that the full committee remains involved in all major budget decisions. David Harris said he welcomed the opportunity and cited 11 years on the finance committee. Roll call: Gold yes, Barron yes, Harris yes, Taylor yes, Fox no. Passed 4-1.
+      
+      **School Advisory Councils (SACs) deferred:** The superintendent noted that in his prior districts he had not seen school committee members assigned to SACs (site-based councils created under ed reform to balance teacher and parent voice). He said he wanted to tread lightly on community perception. After discussion, the committee agreed to defer the question; Emily Barron will work with the superintendent to explore alternative options for building-level engagement and report back at the second September meeting.
+    key_speakers: ["Sarah Gold (Chair)", "Sarah Fox (School Committee)", "Megan Taylor (School Committee)", "David Harris (School Committee)", "Emily Barron (School Committee)", "John Buckey (Superintendent)", "Nan Murphy (Assistant Superintendent)"]
+  - topic: public-safety
+    topic_confidence: 0.9
+    start_seconds: 8319
+    end_seconds: 9494
+    headline: "Face-mask policy approved unanimously; gaiters excluded as non-compliant with DPH/CDC standards"
+    dek: "Policy EBCFA requires masks for all individuals in school buildings and on transportation; students may be sent home for non-compliance; accommodations available for documented medical or disability needs."
+    summary: |
+      The chair read policy EBCFA (renamed from 'Face Coverings' to 'Face Masks' per advice from school attorney John Foskett) in full. Key provisions:
+      
+      **Requirements:**
+      - Masks must cover nose and mouth, fit securely, be secured with ties or ear loops, allow unrestricted breathing, have no exhalation valve or vent, and be machine-washable
+      - Required for all individuals in school buildings, on school grounds, and on school transportation—even when social distancing is maintained
+      - Families must provide a daily mask plus a backup; schools will supply disposable masks for those who arrive without one
+      - Masks must comply with school dress code (no offensive or inappropriate imagery)
+      
+      **Exemptions:**
+      - Children under age 2
+      - Individuals who cannot safely wear a mask (medical condition, disability, behavioral challenges)—requires medical documentation approved by the building principal in consultation with the school nurse or Board of Health
+      - Parents may not excuse their children by signing a waiver
+      
+      **Mask-free situations (outdoors, 10-foot minimum distance):**
+      - Mask breaks (optional for individual students)
+      - Eating or drinking
+      - PE classes, chorus/choir, brass and woodwind instruments, and musical theater
+      
+      **Enforcement:**
+      - Students without a documented exemption who refuse to wear a mask will be sent home
+      - Progressive discipline for repeated non-compliance
+      - Staff violations handled under standard workplace policy
+      - Visitors in violation will be denied entry
+      - Policy remains in effect until rescinded by the school committee
+      
+      A member asked about gaiters; the superintendent confirmed gaiters do not meet DPH/CDC standards because they are not secured with ties or ear loops and will not be permitted. The attorney also recommended that face shields are not acceptable substitutes unless specifically approved as an accommodation. The policy was approved 5-0.
+    key_speakers: ["Sarah Gold (Chair)", "John Buckey (Superintendent)", "Deanna McMahon (Health & Safety Chair)", "Emily Barron (School Committee)", "David Harris (School Committee)"]
+  - topic: bonding-capital
+    topic_confidence: 0.95
+    start_seconds: 9494
+    end_seconds: 11296
+    headline: "New elementary school (Elbridge Gary project) ahead of schedule; topping-off beam-signing event planned"
+    dek: "Steel erection is underway and slightly ahead of schedule; families from the former Coffin, Gary, Eveleth, and Bell schools are invited to sign the last steel beam before it is raised."
+    summary: |
+      Building Committee chair David Harris presented a photo-based update on the new elementary school project (referred to as the 'Elbridge Gary School project'). Key construction milestones:
+      
+      - **Utilities:** Installed in July
+      - **Concrete:** Pouring began early July; approximately 4-7 trucks/day; project will be effectively out of concrete work by end of the current week—slightly ahead of schedule
+      - **Rock/ledge:** Natural ledge along the Two Jane Road side will be incorporated into landscaping and retaining walls
+      - **Steel erection:** Began recently; 70+ pieces installed on the first day; steel arrived two weeks early
+      - **Building shape:** Cafetorium and gymnasium wing are taking form; skylights for natural interior lighting are visible
+      - **Brick/envelope:** Expected to begin by mid-October
+      - **Status:** On schedule and on budget
+      
+      **Topping-off community event:**
+      The last piece of steel (painted bright white) will be placed inside the fence off Baldwin Street for families from the Coffin, Gary, Eveleth, and Bell schools to visit between 8:30 a.m. and 3:00 p.m. (approximately the week of August 24-28) and sign with a Sharpie. The actual raising of that beam will occur approximately the week of August 31–September 4. The Board of Health has not permitted public gathering for the raising itself, so MHTV and the Marblehead Reporter will record the event for community sharing.
+      
+      Marblehead Police coordinated delivery of oversized steel-joist trucks that had to back up Baldwin Street from Smith Street. A drone video of the site is posted on the building project website.
+      
+      The Building Committee meets the following Thursday at 7:00 p.m. and will receive a budget update at that meeting.
+    key_speakers: ["David Harris (School Committee / Building Committee Chair)", "John Buckey (Superintendent)", "Emily Barron (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 11296
+    end_seconds: 11346
+    headline: "Member thanks out-of-contract staff for summer reentry planning work"
+    dek: "Member Sarah Fox acknowledged staff volunteers who donated hours over the summer outside their contracts to develop the COVID-19 reentry plan."
+    summary: "In closing business, member Sarah Fox offered public thanks to school staff who volunteered hours over the summer outside of their contracts to serve on reentry planning subcommittees. No other new business was raised. The chair adjourned the meeting at 9:55 p.m."
+    key_speakers: ["Sarah Fox (School Committee)", "Sarah Gold (Chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

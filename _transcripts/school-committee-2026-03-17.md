@@ -10,7 +10,129 @@ duration_seconds: 2936
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Facilities Subcommittee reviews capital requests, tree plantings, and Eveleth site future"
+  summary: "The Marblehead School Committee Facilities Subcommittee met on March 16, 2025, approving meeting minutes and discussing three main topics: FY27 capital requests (with a $1 million town request likely tied to an override scenario), tree-planting proposals from the town tree warden at the high school and Village School, and the future of the Eveleth School site. The subcommittee agreed to request a recommendation from the superintendent on next steps for the Eveleth site, to be presented to the subcommittee on May 19 and updated to the full school committee on May 21. Building walkthroughs of all five school buildings were scheduled for the week of April 6–10."
+  decisions:
+    - "Approved meeting minutes from July 24, September 5, November 5, 2024, and February 13, 2025"
+    - "Directed superintendent to present Eveleth School site next-steps recommendation to the facilities subcommittee on May 19 and update the full committee on May 21"
+    - "Scheduled school building walkthroughs: High School on April 6, Veterans/VETS on April 7, Brown and Glover on April 8 (9–11 a.m. and 12–2 p.m.), and Village School on April 10"
+    - "Confirmed next subcommittee meetings on April 14 and May 12 at 10 a.m."
+  votes:
+    - motion: "Approve consent agenda meeting minutes"
+      result: "in favor (2 to 0)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 6
+    end_seconds: 198
+    headline: "Subcommittee approves meeting minutes from multiple 2024–25 dates"
+    dek: "With two members present, the facilities subcommittee voted 2–0 to approve minutes from July 24, September 5, November 5, 2024, and February 13, 2025."
+    summary: "The chair called the meeting to order at approximately 10:01 a.m. with two members present (Jen and Henry); Mike joined shortly after. A motion was made and seconded to approve the consent agenda meeting minutes. The vote passed 2–0 before Mike's arrival. A note was made that the agenda should include the year on date references to avoid confusion."
+    key_speakers: ["Jen (chair)", "Henry (subcommittee member)", "Mike (subcommittee member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 247
+    end_seconds: 824
+    headline: "FY27 capital request unclear; town may seek $1M via override scenario"
+    dek: "A real-time text exchange with Town Administrator Alicia confirmed a $1 million recurrent capital request, but a Finance Committee contact indicated the amount may have been pulled from the general fund, with any appropriation likely structured as an override."
+    summary: |
+      The subcommittee discussed the status of the FY27 capital warrant article, which carries a placeholder at town meeting. Members noted that last year a capital line was approved and then pulled back. During the meeting, a member texted Town Administrator Alicia, who responded that the town is requesting $1 million in recurrent capital needs and would accept the school's capital request if submitted.
+      
+      A separate contact at FINCOM indicated they believed the $1 million was pulled from the general fund, and that if the town were to proceed, it would likely be structured as an override scenario. The subcommittee agreed to:
+      - Inquire about the Finance Committee's warrant hearing date (likely early April)
+      - Brief the full school committee on the status at its next meeting
+      - Vote before the FINCOM warrant hearing if seeking a recommendation
+      - Discuss whether to request indefinite postponement or an actual dollar amount at town meeting
+      
+      The school's previously approved prioritized capital request list (focused on health and safety items) was to be re-circulated by Mike.
+    key_speakers: ["Jen (chair)", "Henry (subcommittee member)", "Mike (subcommittee member)", "Town Administrator (Alicia, via text)"]
+  - topic: recreation-events
+    topic_confidence: 0.72
+    start_seconds: 824
+    end_seconds: 1488
+    headline: "Tree warden proposes plantings at high school and Village School; watering responsibility unresolved"
+    dek: "The subcommittee discussed two grant-dependent tree-planting proposals and identified a potential labor-contract question about whether custodial staff are required to water new trees."
+    summary: |
+      The subcommittee reviewed two tree-planting proposals from the town tree warden:
+      
+      1. **High school parking lot** — Grant-dependent plantings to create a canopy over asphalt to mitigate heat island effects.
+      2. **Village School access road** (Jersey Street to Village Street) — Funded from the tree warden's donation fund.
+      
+      Both projects require the district to commit to watering and maintaining newly planted trees. A past project met resistance from the custodial group, who argued watering was outside their scope of work. The contract language references a job description that has not yet been provided to the subcommittee.
+      
+      A proposed solution: a 275-gallon portable water tank (~$170, reconditioned) that could fit in a pickup truck, offering a practical alternative to running long hoses. Members noted leaf removal at Brown Park falls under Parks & Recreation, not school custodians.
+      
+      Next steps:
+      - Mike to request custodial job descriptions
+      - Subcommittee to review contract language
+      - Chair to call the tree warden back with an update on the watering question
+      - If watering is outside custodial scope, the district may need to involve maintenance staff or negotiate
+    key_speakers: ["Jen (chair)", "Henry (subcommittee member)", "Mike (subcommittee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1488
+    end_seconds: 1533
+    headline: "Facilities director position to be posted within a week"
+    dek: "The superintendent's designee confirmed that the job description for facilities director is under review and the position is expected to be posted within approximately one week."
+    summary: "The subcommittee was informed that the facilities director position—vacant for five to seven years—is being prepared for posting. The job description and posting are being reviewed to ensure they accurately reflect current requirements before the position is advertised."
+    key_speakers: ["Mike (subcommittee member)", "Jen (chair)"]
+  - topic: bonding-capital
+    topic_confidence: 0.78
+    start_seconds: 1533
+    end_seconds: 2259
+    featured: true
+    headline: "Subcommittee directs superintendent to bring Eveleth School site recommendation by May 19"
+    dek: "Members agreed the school committee has not yet determined the Eveleth School is no longer needed for educational purposes, and directed administration to present next steps—not a final plan—to the subcommittee on May 19 and update the full committee on May 21."
+    summary: |
+      The subcommittee discussed the future of the Eveleth School site (also referred to as the "Eveless" or "Ellen" school in the transcript). Key points:
+      
+      **Current status:**
+      - The building is under the care, custody, and control of the school committee.
+      - The school committee has **not** voted to declare the property no longer necessary for educational purposes.
+      - The town uses a couple of rooms for document storage; Parks & Recreation uses it as a rain-day location in summer.
+      - A farm co-op uses the parking lot several times a week from spring through Thanksgiving.
+      - The building has no active heat.
+      
+      **Pathway to transfer:** If the school committee determines the property is no longer educationally necessary, it would vote to turn it over to the Select Board, which must then be approved at town meeting.
+      
+      **Potential uses discussed:**
+      - Early education center (noted as requiring significant investment, likely a debt exclusion override, and a multi-year process)
+      - Joint use with Parks & Recreation for extracurriculars
+      - Lease to educational programs (e.g., YMCA-style after-school)
+      - Feasibility study needed before any reuse decision; a feasibility study itself has a cost
+      
+      **A prior community survey** showed general interest but confusion about what was being proposed.
+      
+      **Decision:** The subcommittee directed the superintendent to bring a recommendation on next steps (not concrete plans, but a timeline and direction) to:
+      - The facilities subcommittee: **May 19**
+      - The full school committee: **May 21**
+      
+      Members noted the Eveleth site alone would not resolve the town's budget challenges.
+    key_speakers: ["Jen (chair)", "Henry (subcommittee member)", "Mike (subcommittee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2259
+    end_seconds: 2909
+    headline: "Subcommittee schedules building walkthroughs for first two weeks of April"
+    dek: "The subcommittee set walkthrough dates for all five school buildings: High School (April 6, 11:30 a.m.–2:30 p.m.), VETS (April 7, noon–2:30 p.m.), Brown and Glover (April 8, 9–11 a.m. and 12–2 p.m.), and Village School (April 10, 9–11:30 a.m.)."
+    summary: |
+      The subcommittee rescheduled building walkthroughs that had previously been postponed. The walkthroughs are intended to assess facility conditions; members confirmed they would not observe teaching and learning, would not stop in classrooms with students, and would only engage staff informally if staff were willing. Dates confirmed:
+      
+      | Date | Building | Time |
+      |------|----------|------|
+      | April 6 (Sun) | High School | 11:30 a.m. – 2:30 p.m. |
+      | April 7 (Mon) | VETS | 12:00 – 2:30 p.m. |
+      | April 8 (Tue) | Brown & Glover | 9–11 a.m. / 12–2 p.m. |
+      | April 10 (Thu) | Village School | 9–11:30 a.m. |
+      
+      Note: April vacation is the week of the 20th, so walkthroughs avoid that period. A member expressed interest in accessing the high school roof; Mike indicated hard hats and vests would be needed. Next subcommittee meetings confirmed for April 14 and May 12 at 10 a.m. The subcommittee also noted that Henry would not be returning next year and encouraged continuity on the subcommittee.
+    key_speakers: ["Jen (chair)", "Henry (subcommittee member)", "Mike (subcommittee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

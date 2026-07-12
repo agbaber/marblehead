@@ -9,7 +9,120 @@ video_url: "https://www.youtube.com/watch?v=DK8Mi93HaLc"
 duration_seconds: 3117
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee approves new high school principal and assistant superintendent"
+  summary: "The School Committee voted 5-0 to approve Michelle Carlson as the next Marblehead High School principal and 5-0 to appoint Julia Ferreira as assistant superintendent. The committee also reviewed i-Ready assessment data showing reading and math growth across grades K-8, discussed next steps for the district's strategic plan, and addressed the superintendent evaluation process and proper complaint-handling procedures."
+  decisions:
+    - "Approved contract with Michelle Carlson as Marblehead High School principal"
+    - "Approved contract with Julia Ferreira as assistant superintendent"
+    - "Approved meeting minutes (11/10, 3/21, and 3/27)"
+  votes:
+    - motion: "Approve Michelle Carlson as MHS principal"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Julia Ferreira as assistant superintendent"
+      result: "in favor (unanimous)"
+    - motion: "Approve consent agenda minutes"
+      result: "in favor (5 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 38
+    end_seconds: 562
+    headline: "Superintendent reports on legislative luncheon, i-Ready data, and enrollment growth"
+    dek: "Superintendent described four legislative asks presented at a North Shore roundtable and shared district-wide i-Ready reading and math improvement data."
+    summary: |
+      The superintendent reported on moderating a legislative luncheon at Whittier Tech with approximately 60 superintendents, Senator Lovely, and Representative Armini. Four asks were presented: out-of-district special education (OSD) funding, circuit breaker reimbursement, Chapter 70 formula reform, and Chapter 71B special education legislation updates.
+      
+      The superintendent then presented i-Ready assessment data showing K–8 district-wide reading scores improved from 52% at or above grade level in the fall to 60% in winter, with similar math gains (38% to 57% at grade level). All grade levels fell in the "high performance, high growth" quadrant. The committee noted that i-Ready data is accessible to parents as well as teachers and principals.
+      
+      Enrollment data showed increases at every grade level between the October 1 and winter submissions, which the committee noted creates a funding lag because Cherry Sheet allocations are based on October 1 counts.
+    key_speakers: ["Superintendent (Dr. Bucky, referenced by name)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 564
+    end_seconds: 961
+    headline: "Student rep reports spring activities; MHS to produce 'Legally Blonde' April 28–30"
+    dek: "The student representative highlighted fundraisers, spring sports launches, a French trip, a music trip to Disney World, and upcoming senior project departures."
+    summary: |
+      The student representative noted:
+      - The Triad Music Honor Society coffee house raised $300 for the music department.
+      - The National Honor Society raised $500 through donut and bake-sale fundraisers during MCAS.
+      - The National Art Honor Society community art night raised $1,200.
+      - MHS will perform *Legally Blonde* April 28–30.
+      - Music department members are traveling to Disney World over April break to perform; 18 students in the French department are traveling to France.
+      - Quarter four begins April 10; spring break is April 17–21.
+      - The superintendent announced the district received the Innovation Pathway Grant: $75,000 in year one and $50,000 per year for the subsequent four years.
+      - MHS principal Dan Bauer's successor, Michelle Carlson, was congratulated by the student representative.
+    key_speakers: ["Student Representative"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 1120
+    end_seconds: 1350
+    featured: true
+    headline: "Committee votes 5-0 to approve Michelle Carlson as MHS principal and Julia Ferreira as assistant superintendent"
+    dek: "Both appointments were approved unanimously following internal searches; Carlson comes from within the district and Ferreira brings nearly 20 years of experience."
+    summary: |
+      **Michelle Carlson – MHS Principal**
+      The committee approved Carlson's contract 5-0. A search committee member noted strong faculty and staff support for the internal promotion. Carlson is currently an assistant principal at MHS and will succeed Dan Bauer, who is retiring.
+      
+      **Julia Ferreira – Assistant Superintendent**
+      The committee voted 5-0 to appoint Ferreira. She described nearly 20 years in public education as a middle and high school English teacher, department chair, team leader, and assistant principal in Massachusetts and California school districts.
+    key_speakers: ["School Committee Chair", "Michelle Carlson (incoming MHS principal)", "Julia Ferreira (incoming assistant superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 1375
+    end_seconds: 1985
+    headline: "Committee discusses strategic plan benchmarks and FY24 budget advocacy ahead of Town Meeting"
+    dek: "Members called for measurable milestones under the district's 'Plan for Success' and urged support for override Article 31 at the upcoming Town Meeting warrant hearing."
+    summary: |
+      A committee member introduced a discussion on next steps for the district's five-pillar 'Plan for Success' strategic document. Key themes included:
+      
+      - Adding measurable benchmarks to each pillar so the committee can track progress rather than waiting until 2025–26.
+      - Aligning planning with future budget cycles (FY25 and beyond).
+      - Proposing that point persons for each pillar compile current work into a shared document, with the option to form ad hoc subcommittees (e.g., for curriculum).
+      - Improving communication to the community about actual class sizes and enrollment-based staffing.
+      
+      On the FY24 budget, a member noted that the Finance Committee had praised the school district's financial transparency as a 'gold standard.' The committee discussed supporting Article 31 (the Prop 2½ override) at the upcoming Town Meeting warrant hearing. Members indicated they had publicly stated the need and expressed confidence in administration's ability to manage under any budget.
+    key_speakers: ["School Committee member (Allison, referenced)", "School Committee member (Sarah Fox, referenced)", "Superintendent"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1985
+    end_seconds: 2308
+    headline: "Committee reviews superintendent evaluation process; workshop format preferred"
+    dek: "The chair consulted MASC-connected adviser Dorothy Presser on best practices; the committee leaned toward a collective workshop format rather than a chair-compiled document."
+    summary: |
+      The chair reported consulting with Dorothy Presser (described as having 27 years of experience) on superintendent evaluation formats. She described three methods:
+      1. Individual reviews submitted to the chair, who compiles.
+      2. Chair and secretary compile together.
+      3. Full committee deliberates together (rarest).
+      
+      Presser noted individual reviews are public documents. The committee expressed preference for a collective workshop format to avoid any one person's voice dominating the compiled document. The process timeline would begin with Dr. Bucky submitting a self-assessment, followed by a committee session planned for approximately end of May. The chair noted she would circulate dates.
+    key_speakers: ["School Committee Chair", "Committee member (Tom, referenced)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 2308
+    end_seconds: 2642
+    headline: "Committee keeps FY24 budget item on agenda through Town Meeting; notes capital lab discussions ongoing"
+    dek: "The chair noted the warrant hearing is Monday and that capital lab details are still being finalized."
+    summary: "The chair noted the FY24 budget discussion item would remain on the agenda through Town Meeting. A warrant hearing is scheduled for Monday. Capital lab planning details were described as still being worked out, with finalized answers expected within a few days. The committee also briefly discussed subcommittee and liaison updates, including a forthcoming FOSS meeting and a policy subcommittee meeting."
+    key_speakers: ["School Committee Chair"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2642
+    end_seconds: 3099
+    headline: "Chair reminds committee that library book complaints must follow formal policy, not direct committee involvement"
+    dek: "Multiple emails about a library book arrived to various committee members; the chair directed all such complaints to the district's formal review policy and process."
+    summary: |
+      The chair reported that emails regarding a library book complaint had come to the full committee and to individual members. The chair reminded the committee that:
+      - A formal book-review policy exists (developed with input from district librarians) with an addendum laying out step-by-step procedures.
+      - School committee members are not operational actors; complaints must be routed through the superintendent.
+      - The appropriate response is to reply with the policy and complaint form, directing residents to follow the established steps.
+      
+      A broader discussion followed about the committee's governance role vs. operational matters, and the challenge of balancing roles as both elected officials and parents of students in the district. The chair noted that the Massachusetts Association of School Committees emphasizes that committee members do not forfeit parental rights, but that direct contact with district staff outside of normal parent channels is inappropriate unless routed through the superintendent.
+    key_speakers: ["School Committee Chair", "Committee member (Allison, referenced)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

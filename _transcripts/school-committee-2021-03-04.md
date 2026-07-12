@@ -9,7 +9,217 @@ video_url: "https://www.youtube.com/watch?v=qkAZh2hRwNA"
 duration_seconds: 9616
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee votes 5-0 to mandate COVID pool testing for all student athletes"
+  summary: "The Marblehead School Committee held its March 4, 2021 meeting on the one-year anniversary of COVID-19 school closures. The committee voted unanimously to mandate pool COVID testing as a condition of participation in school athletics, with student registration required by Wednesday, March 10. The committee also voted 5-0 to set April 5 as a goal date to return all K-12 students to five-day, full-day in-person learning, coinciding with the high school and middle school quarter change."
+  decisions:
+    - "Approved mandate requiring student athletes to enroll in pool testing program by March 10 as condition of athletic participation"
+    - "Approved April 5 as target date to return all K-12 students to full in-person, five-day-per-week learning"
+    - "Approved schedule of bills totaling approximately $3,126,033.26"
+    - "Approved policy updates including face coverings (EBCFA), special education observations (IHBAA), summer school (IHCA), homeless students (JFABD), military children (JFABE), and foster care children (JFABF)"
+    - "Approved motion establishing registration deadline for athlete pool testing (Wednesday, March 10)"
+  votes:
+    - motion: "Amend prior motion to mandate pool testing as condition of athletic participation"
+      result: "in favor (unanimous)"
+    - motion: "Families to have until Wednesday March 10 to enroll in pool testing to continue in athletics"
+      result: "in favor (unanimous)"
+    - motion: "Set April 5 as goal date to return K-12 students to full in-person five-day learning"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills totaling approximately $3,126,033.26"
+      result: "in favor (unanimous)"
+    - motion: "Accept policy changes (EBCFA, IHBAA, IHCA, JFABD, JFABE, JFABF)"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 71
+    end_seconds: 462
+    headline: "Chair opens with COVID anniversary reflection, calls for community civility"
+    dek: "The chair read a prepared statement marking the one-year anniversary of the March 13, 2020 school closures and asked the community to de-escalate heated discourse."
+    summary: "The chair opened the meeting with a personal statement invoking Jewish mourning traditions as a framework for collective reflection on the pandemic's first anniversary. She acknowledged community pain, noted that recent public feedback had become unusually heated, and asked that residents remember that all parties — school committee, teachers, and parents — share the same goal of returning children to normal school life. She asked for a moment of silence."
+    key_speakers: ["Sarah Gold (School Committee Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 462
+    end_seconds: 1560
+    headline: "Committee recognizes Eveleth School paras, student 'Growing Together' program, crossing guards"
+    dek: "Commendations covered paraprofessionals at Eveleth School, high school students running a K-6 wellness Zoom program, and a community crossing-guard appreciation campaign."
+    summary: |
+      Principal Donna Zasky recognized four Eveleth School kindergarten paraprofessionals — Milena Conley, Linda Ferris, Becky Hastings, and Kathy Doman — for their work adapting to hybrid and remote instruction during the pandemic.
+      
+      High school principal Dan Bauer recognized 13 high school students involved in the 'Growing Together' program, coordinated by school psychologist Dr. Jamie Slavitt, which provides weekly Zoom activities including yoga, coloring, and board games to K-6 students.
+      
+      A school committee member highlighted a crossing-guard appreciation program with a nomination deadline of March 24, and another noted an outdoor activity tracking initiative by Sustainable Marblehead and a high school student named Sadie.
+      
+      Community volunteers booking vaccination appointments for school staff were also commended; over 200 appointments had been secured in Marblehead.
+    key_speakers: ["Donna Zasky (Eveleth School Principal)", "Dan Bauer (High School Principal)", "Sarah Fox (School Committee)", "Megan Taylor (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1269
+    end_seconds: 1598
+    headline: "Student representative describes successful senior 'Family Feud' event and senior projects"
+    dek: "Student representative Dan Howells reported on a Family Feud event with over 80 seniors and described a variety of senior internship projects underway."
+    summary: "Student representative Dan Howells described the previous evening's socially distanced Family Feud event, organized by senior class advisors Drew Bordeaux and Jade Demelo, with over 80 seniors participating in teams. He also described several senior projects: one student interning with the school nurse at Glover School, another developing a product with Seaside Alert, a third composing jazz arrangements with the band director, another interning with a theater company in Salem, one working with health teachers on mental health curriculum, and one working with the middle school art teacher. Howells himself will be producing two singles with the school's a cappella groups."
+    key_speakers: ["Dan Howells (Student Representative)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 1598
+    end_seconds: 2260
+    headline: "Residents comment on pool testing, budget planning, vaccination support, and volunteer needs"
+    dek: "Five residents addressed the committee on topics ranging from pool testing for athletes to budget concerns and teacher vaccination appointment assistance."
+    summary: |
+      **Kim Day** (18 Liberty Road) thanked the committee and school nurse Amanda Rivers for launching pool testing; her third- and sixth-graders participated in the first week without disrupting class time. She urged the committee to make pool testing mandatory for athletes, noting that athletes compete at close distances with students from other towns and then share classrooms with non-athletes.
+      
+      **Jennifer Eaton** (CPAC) announced a CPAC conference on March 9 at 7 p.m. featuring Dr. Zach Rossetti of Boston University on peer relationships and inclusion for students with intellectual and developmental disabilities.
+      
+      **Scott Silberg** (1 Ramsay Road) praised the chair's opening statement and acknowledged parents volunteering on reopening committees and the social-emotional learning work underway in the district.
+      
+      **Aleister Connor** (9 Cloutman's Lane) urged the committee to learn from past budget shortfalls, fund the stabilization fund, and allocate the approximately $400,000 in COVID grant funds toward pandemic-related needs rather than balancing the operating budget.
+      
+      **Emily DeWitt** (154 Atlantic Avenue) asked the committee to plan for classroom coverage during teacher vaccination appointments and suggested that trained parents, parents who can volunteer quickly, or senior students might fill gaps.
+    key_speakers: ["Kim Day (Resident)", "Jennifer Eaton (CPAC)", "Scott Silberg (Resident)", "Aleister Connor (Resident)", "Emily DeWitt (Resident)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 2305
+    end_seconds: 2643
+    headline: "District launches parent volunteer recruitment and booster fundraiser for outdoor instruction tents"
+    dek: "Superintendent and school committee members outlined plans to recruit parent volunteers for lunch and recess supervision and to raise approximately $100,000 for outdoor tent rentals."
+    summary: |
+      The superintendent and a school committee member described two parallel community-engagement efforts ahead of the K-6 return to school on March 15:
+      
+      1. **Parent volunteers**: The district is placing a volunteer sign-up portal on the school website, with individual school PTOs/PCOs organizing sign-up geniuses. Volunteers are needed for lunch supervision, recess, hallway transitions, and potentially as classroom substitutes. A CORI form is required.
+      
+      2. **Tent fundraiser**: The school boosters are organizing a fundraiser to rent outdoor tents at every school for outdoor lunch and instruction. A single tent rental at the high school alone costs approximately $16,000; the committee is hoping to procure approximately six to seven tents (two for the high school) from March 17 through May 22, totaling close to $100,000. Purchase of tents was explored but ruled out due to flammability regulations.
+    key_speakers: ["Nan Murphy (Assistant Superintendent)", "Megan Taylor (School Committee)"]
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 2643
+    end_seconds: 3103
+    headline: "School nurse reports 840 students enrolled in pool testing in first week; high school adds 72 in one session"
+    dek: "Nurse Amanda Rivers and Athletic Director Greg Siglorski presented results from the first week of pool COVID testing and a proposed plan for mandatory athlete testing in thirds."
+    summary: |
+      School nurse Amanda Rivers reported that pool testing launched Monday at all elementary schools and at the high school. Key statistics from the first week:
+      - **840 students enrolled**, approximately one-third of the student population
+      - **72 people tested** at the high school (teachers and students) in about 20 minutes
+      - **225 high school students** have signed up so far
+      - The swabbing process takes under 30–45 seconds per student, with students missing under one minute of class
+      
+      The courier service picks up samples Tuesday, Wednesday, and Thursday, limiting collection to Monday–Wednesday. If a pool test is positive, nurse Rivers would follow up with BinaxNow rapid tests to identify the individual, then conduct contact tracing.
+      
+      AD Greg Siglorski noted approximately 234 athletes and 19 coaches (253 total) are active in fall-2 season sports including football, volleyball, track, and cheer. Only 15–20 per team had voluntarily enrolled so far.
+      
+      The proposed mandatory plan would divide each team into three groups, testing one-third per week so every athlete is tested approximately twice per season. Sports considered highest risk include football (tackling, no consistent six-foot distancing), and the committee discussed whether marching band — a credited course with state-mandated 10-foot distancing due to aerosolization — could be included in a mandate.
+    key_speakers: ["Amanda Rivers (School Nurse)", "Greg Siglorski (Athletic Director)", "Dan Bauer (High School Principal)"]
+  - topic: public-safety
+    topic_confidence: 0.95
+    start_seconds: 3103
+    end_seconds: 3628
+    featured: true
+    headline: "School committee votes 5-0 to mandate pool COVID testing for all student athletes"
+    dek: "After legal review confirmed the committee has authority to require testing as a condition of voluntary sports participation, the committee voted unanimously and set a Wednesday March 10 enrollment deadline."
+    summary: |
+      Following nurse Rivers' presentation, the committee moved to make pool testing mandatory for athletic participation. Key procedural and policy elements:
+      
+      - Town counsel confirmed the committee may mandate testing as a condition of participation in **voluntary** sports (athletes choose to participate; testing can be required of that choice)
+      - The committee could **not** mandate testing for **employees** (coaches), but could strongly encourage it
+      - **Marching band** was excluded from the mandate because it is a credited course (not voluntary extracurricular), making a participation condition legally complex
+      - A prior motion on this topic had been voted down the previous week; under Roberts Rules, a member who voted with the prevailing side had to move to amend — member Megan Taylor made that motion
+      
+      **Vote 1** — Motion to amend prior motion to mandate pool testing as condition of athletic participation: **5-0 (unanimous)**
+      
+      **Vote 2** — Motion to allow families until Wednesday, March 10 to enroll in pool testing to continue in athletics: **5-0 (unanimous)**
+      
+      Implementation logistics were left to the superintendent, athletic director, and nurse. The testing-in-thirds plan presented by Siglorski and Rivers (described in the prior segment) was affirmed as the operational model.
+    key_speakers: ["Megan Taylor (School Committee)", "Sarah Gold (School Committee Chair)", "Sarah Fox (School Committee)", "Emily Baron (School Committee)", "David Harris (School Committee)", "Amanda Rivers (School Nurse)", "Greg Siglorski (Athletic Director)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 3628
+    end_seconds: 4087
+    headline: "Principals present mixed survey results on hybrid schedule changes for grades 7–12"
+    dek: "Middle school principal Matt Fox and high school principal Dan Bauer reported that 523 parents and 424 students responded to a survey comparing the current hybrid model with a proposed AM/PM schedule; results were closely split."
+    summary: |
+      Principals Matt Fox (middle school) and Dan Bauer (high school) presented survey data from approximately 523 parents and 424 students (grades 7–12) comparing two options:
+      
+      - **Option A**: Stay with the current hybrid model (students in person 2 days/week, ~16 hours)
+      - **Option B**: Move to a proposed AM/PM block schedule (students in person 4 days/week in half-day blocks, ~23 hours; Wednesday remote for shared-staff reasons)
+      
+      **Key findings**:
+      - Students (both schools): approximately 70%+ prefer the current model
+      - Parents: roughly split 50/50
+      - Faculty: mixed — high school ~55% prefer current model, middle school ~75% prefer proposed model
+      - If the district moved to 3-foot distancing, an estimated 20–25% of currently hybrid students said they would switch to remote — which Principal Bauer noted could mean ~90 additional remote students at the high school, requiring significant schedule restructuring
+      - 101 respondents indicated they would move from hybrid to remote under a model change; only 12 would move from remote to hybrid
+      - The high school junior class officers conducted their own independent survey, with results also favoring the current model
+      
+      Principal Bauer recommended staying with the current schedule through April 5 (the quarter change), citing student feedback about schedule fatigue from nine prior changes, state-level uncertainty, and ongoing union negotiations.
+    key_speakers: ["Matt Fox (Middle School Principal)", "Dan Bauer (High School Principal)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 4087
+    end_seconds: 4543
+    headline: "Committee votes 5-0 to set April 5 as goal for returning all K-12 students to full in-person learning"
+    dek: "Following extensive discussion, the committee voted unanimously to direct the superintendent to plan for full five-day in-person learning for all students by the April 5 quarter change, while preserving the remote option for families who need it."
+    summary: |
+      After reviewing the survey results, school committee members debated whether to set a firm target date for full in-person return. Key discussion points:
+      
+      - School committee member Megan Taylor proposed using April 5 as a 'line in the sand' goal, arguing it would reduce community anxiety, align with the natural quarter break, and be proactive ahead of anticipated state mandates
+      - Member Sarah Fox raised concern that a vote could appear to promise something the district legally cannot guarantee given the existing collective bargaining agreement; impact bargaining with the MEA is ongoing
+      - Superintendent Buckley confirmed ongoing negotiations with the union, that a legally binding contract currently limits flexibility, and that April 5 would give time for teacher vaccinations and logistics
+      - The superintendent noted that any families uncomfortable with reduced distancing would continue to be accommodated in a remote program through the end of the school year
+      - Principal Bauer highlighted that moving from 6-foot to 3-foot distancing would require significant restructuring of student teams and schedules, particularly at the high school
+      
+      State Education Commissioner is scheduled to present to the Board of Education the following day, with potential guidance on structured learning time definitions and a possible April 5 statewide target.
+      
+      **Vote**: Motion to set April 5 as goal to return K-12 students to five-day full in-person learning, with obstacles to be brought back promptly for problem-solving: **5-0 (unanimous)**
+    key_speakers: ["Megan Taylor (School Committee)", "Sarah Fox (School Committee)", "Sarah Gold (School Committee Chair)", "John Buckley (Superintendent)", "Dan Bauer (High School Principal)", "Matt Fox (Middle School Principal)", "Emily Baron (School Committee)", "David Harris (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 4543
+    end_seconds: 4664
+    headline: "Superintendent updates: schedule of bills approved, Brown School principal search committee formed"
+    dek: "The committee approved approximately $3.1 million in bills, heard about a new Brown School principal search committee, and got a website transition update."
+    summary: |
+      The committee approved a schedule of bills totaling approximately $3,126,033.26 (5-0).
+      
+      The superintendent reported the formation of a search committee for the Brown School principal vacancy, including: himself, Assistant Superintendent Nan Murphy, Middle School Principal Matt Fox, School Committee rep David Harris, parents Cindy Schieffer, Brian Burke, and Emily Moore, and educators Rachel Levitt and Melissa McGinnis. Initial meetings are scheduled for the following Wednesday.
+      
+      The committee was also notified that the school website is transitioning to the Blackboard Connect platform; Emily Baron was identified as the school committee representative on the transition committee. Megan Taylor asked all subcommittees to post approved minutes to the new website promptly.
+    key_speakers: ["John Buckley (Superintendent)", "Megan Taylor (School Committee)", "Emily Baron (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 4664
+    end_seconds: 4826
+    headline: "Policy updates approved 5-0; METCO cultural celebration set for May 14; building construction milestone reached"
+    dek: "The committee approved six policy updates, heard liaison reports including a METCO cultural celebration date, and got a construction update on underground power for the new school."
+    summary: |
+      **Policy vote**: The committee voted 5-0 to approve updates to six policies: EBCFA (face coverings), IHBAA (observations of special education programs), IHCA (summer school), JFABD (homeless students), JFABE (military children), and JFABF (foster care children). Most changes reflect best-practice updates from peer districts; the special education observation policy added a parental notification clause that was standard elsewhere but missing from Marblehead's version.
+      
+      **METCO liaison**: The annual cultural celebration has been scheduled for May 14 at 6:30 p.m. as an outdoor, COVID-friendly event.
+      
+      **Facilities/building update**: A moving company specializing in school relocations met with the district to begin planning the move from three existing buildings into the new school. Separately, a new utility pole has been installed at the corner of Dartmouth Road near Tower School; underground three-phase power will be trenched from that point to the new school building, with digging expected to begin the following week.
+    key_speakers: ["Sarah Gold (School Committee Chair)", "Emily Baron (School Committee)", "David Harris (School Committee)", "John Buckley (Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 4826
+    end_seconds: 5337
+    headline: "FY22 budget update: subcommittee met, town relationship positive, public hearing date may shift"
+    dek: "The budget subcommittee met to prioritize requests; the superintendent noted a strong collaborative relationship with town leadership, while public commenters urged the committee to close an approximately $1 million gap with additional funding rather than cuts."
+    summary: |
+      The budget subcommittee chair reported that the superintendent and his team are working to rank-order six priority requests plus additional leadership-team requests. A second meeting with town officials is planned within a few weeks. The public budget hearing, tentatively scheduled for March 18, may be rescheduled based on the FinCom presentation timeline.
+      
+      The chair noted a strong collaborative working relationship with the Board of Selectmen, FinCom, and Town Administrator, and pushed back on characterizations of adversarial budget negotiations.
+      
+      **Public comment on the budget** raised significant concerns:
+      
+      - **Aleister Connor** (earlier in the meeting) called for the committee to fund the stabilization fund and allocate COVID grant money to student needs rather than balancing the operating budget.
+      
+      - **Erin Noonan** (Beverly Ave) called for the committee to direct the administration to identify and plan for learning loss, noting no such plan has been presented at any budget meeting. She listed unmet needs: curriculum coaching, gifted and talented programs, guidance counselors, curriculum review at the high school, STEAM programming, and expanding co-taught special education models.
+      
+      - **Catherine Martin** (29 West Shore Drive) stated the district has a roughly $1 million gap from the town's level-funding ask, and that the district faces tradeoffs between technology needs and personnel. She quoted former finance director Bill McCalda: 'You don't find a million dollars in pencils.'
+    key_speakers: ["Megan Taylor (School Committee / Budget Subcommittee)", "John Buckley (Superintendent)", "Erin Noonan (Resident)", "Catherine Martin (Resident)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

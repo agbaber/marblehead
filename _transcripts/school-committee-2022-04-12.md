@@ -10,7 +10,151 @@ duration_seconds: 5165
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee discusses face-covering waiver, DEI mission statement, and facilities MOU"
+  summary: "The Marblehead School Committee heard a presentation from its DEI team on a new district-wide mission statement and professional development rollout. The committee discussed a proposed face-covering policy amendment that would allow vaccinated students and staff in buildings reaching 80% vaccination to apply to DESE for a mask waiver, but members decided to defer a vote to the November 18 meeting. The committee also reviewed a proposed Memorandum of Agreement with the town on facilities and land use, which was also tabled for further discussion."
+  decisions:
+    - "Approved minutes for April 15 and April 29, 2021"
+    - "Approved declaration of high school visual arts furniture as surplus goods"
+    - "Continued face-covering policy amendment to November 18 meeting"
+    - "Continued facilities and land use MOU to November 18 meeting"
+    - "Continued social media and school volunteers policy review to November 18 meeting pending legal review"
+  votes:
+    - motion: "Accept minutes for April 15 and April 29, 2021"
+      result: "in favor (unanimous)"
+    - motion: "Declare high school visual arts furniture as surplus"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 47
+    end_seconds: 260
+    headline: "Committee opens meeting; commends custodial staff and Brown School PTO"
+    dek: "Chair noted school YouTube channel has moved to the school committee section of the district website."
+    summary: "The chair called the meeting to order at 7:02 p.m. Members commended the custodial team led by Todd for clearing school buildings after a significant storm the previous day, and recognized the Brown School PTO for the Monster Mash event held at the new school. The committee also noted that YouTube livestreaming is now accessible under the school committee section of the district website."
+    key_speakers: ["Sarah Gold (Chair)", "Sarah Fox (Committee member)", "Megan Taylor (Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 260
+    end_seconds: 481
+    headline: "Committee approves meeting minutes and surplus furniture declaration"
+    dek: "Both routine items passed unanimously, 5-0."
+    summary: "The committee voted 5-0 to approve minutes for April 15 and April 29, 2021. The committee then voted 5-0 to declare a list of high school visual arts department items — including old paper cutters and tables — as surplus goods. A committee member requested that items be donated or recycled before disposal."
+    key_speakers: ["Sarah Gold (Chair)", "Megan Taylor (Committee member)", "Emily Baron (Committee member)", "John (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 481
+    end_seconds: 2100
+    featured: true
+    headline: "District DEI team presents new mission statement and faculty rollout plan"
+    dek: "The team described a year-long process using the RIDES program and consultant Enid Lee to develop and share the statement district-wide."
+    summary: |
+      The district's Diversity, Equity, and Inclusion (DEI) team — comprising administrators, faculty, and three high school students — presented their new mission statement and the process used to develop it. Key steps included:
+      
+      - Participating in the METCO-sponsored RIDES program, a year-long professional equity cycle
+      - Conducting research on DEI statements from public and private schools nationally
+      - Using a collaborative Jamboard to identify essential words and phrases
+      - Working with consultant Enid Lee (described as having national and international experience) to finalize the statement
+      
+      The DEI mission statement reads in part: *"Marblehead Public Schools is committed to sustaining an inclusive environment that fosters belonging and acceptance. We apply an equitable, culturally relevant lens to students' social, emotional, physical, and academic development. MPS sees the power of diversity. We support proactive allies. We respect and affirm the unique identities of all people across disability, ethnicity, gender identity, expression, language, nationality, sexuality, socioeconomic status, race, and religion. Through holistic practices, we cultivate awareness and agency to grow conscious-minded, empathetic citizens. MPS is committed to an introspective process. We provide ongoing opportunities for learning, reflection, and sharing with all stakeholders."
+      
+      The rollout to all faculty and staff on the same day was intentional to ensure equity across buildings. Three more district-wide professional development days have been allocated to this work. Action steps for the year include developing school-based DEI committees at each building, engaging community partners and families, and continuing the RIDES program.
+      
+      Committee members asked about staff feedback, which was described as very positive, with faculty reaching out to join school-level DEI teams. The Marblehead Task Force Against Discrimination sent a letter commending the mission statement.
+    key_speakers: ["Emily Baron (Committee member / DEI team)", "Lindsay Page (DEI team)", "Maggie Dobin (DEI team, Glover School)", "Julia Ferreira (DEI team, Vets)", "D'andra Williams (DEI team)", "Megan Taylor (Committee member)", "Sarah Fox (Committee member)", "John (Superintendent)"]
+  - topic: public-safety
+    topic_confidence: 0.8
+    start_seconds: 2100
+    end_seconds: 2485
+    headline: "Superintendent reports on storm response and school facilities after major weather event"
+    dek: "Generators, roof leaks, sprinkler systems, and fire panel issues were addressed; a post-event review is planned."
+    summary: |
+      The superintendent detailed the district's response to a significant storm that caused a school closure the previous day. Key items:
+      
+      - All school generators engaged correctly
+      - Roof leaks at the high school; roofing company contacted for repairs
+      - Coffin School sprinkler system filled with water when power failed but no pipes or heads leaked; sprinkler company coming the next day
+      - A new fire panel at Vets triggered alerts due to multiple power pole outages at 5 a.m.
+      - Poles behind Village School came down but were re-secured
+      - A large tree fell near Glover School intersection between morning and lunchtime
+      - DPW and school custodial staff (led by Todd) coordinated cleanup
+      
+      A committee member raised the question of whether the new Brown School could be used as an emergency shelter, and the superintendent acknowledged a formal plan for that use is not yet in place, suggesting the safety subcommittee address it.
+    key_speakers: ["John (Superintendent)", "Sarah Fox (Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 2485
+    end_seconds: 2575
+    headline: "Superintendent updates committee on ARPA fund requests"
+    dek: "School proposals include summer programming, after-school programs, IT upgrades, HVAC improvements, and staff vaccination clinics."
+    summary: "The superintendent reported having another ARPA meeting with the town the following day. Proposals submitted by the schools include summer programming, after-school programs, IT and broadband upgrades, HVAC improvements for the middle school and Village School, and vaccination clinics for staff and students. He noted the town's emergency management priorities from the storm may take precedence for some ARPA funds, but committed to continuing to advocate for school initiatives."
+    key_speakers: ["John (Superintendent)", "Megan Taylor (Committee member)", "Sarah Fox (Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.6
+    start_seconds: 2575
+    end_seconds: 2692
+    headline: "COVID-19 vaccination clinic planning discussed; boosters and 5-to-11 age group addressed"
+    dek: "The Board of Health has secured 300 doses for a 5-to-11 vaccination clinic; staff booster clinics also under consideration."
+    summary: "The superintendent confirmed that a vaccination clinic for children ages 5-11 is being planned in coordination with the Board of Health (Tracy and Deanna), with 300 doses already secured — enough for approximately 150 children (about 10% of the 5-12 population). A committee member asked about hosting booster clinics for staff. The superintendent noted that DESE released guidance in anticipation of 5-to-11 vaccine availability and that vaccines are now broadly accessible at pharmacies. He has also reached out to a pharmacy that previously ran clinics in the district to explore staff booster options."
+    key_speakers: ["John (Superintendent)", "Sarah Fox (Committee member)", "Megan Taylor (Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 2692
+    end_seconds: 2811
+    headline: "Committee reviews policies on face coverings, social media, and school volunteers"
+    dek: "Social media and school volunteers policies referred to legal counsel before further discussion; face-covering policy deferred to Nov. 18."
+    summary: "The chair noted two policies were carried over from the prior week due to late submission. A committee member raised concerns about the social media policy (IJND) potentially infringing on First Amendment rights and asked that legal counsel review it before the committee votes. The school volunteers policy (IJOC) raised a question about background checks (CORI/SORI) and a provision that volunteers should not engage in discipline. The committee agreed to hold both policies for legal review and continue at the November 18 meeting."
+    key_speakers: ["Sarah Gold (Chair)", "Megan Taylor (Committee member)", "David Harris (Committee member)"]
+  - topic: health-insurance
+    topic_confidence: 0.6
+    start_seconds: 2811
+    end_seconds: 3636
+    headline: "Committee debates proposed face-covering policy amendment tied to 80% vaccination threshold"
+    dek: "The committee discussed but did not vote on an amendment that would allow vaccinated individuals to go unmasked in buildings that reach 80% vaccination and receive DESE waiver approval."
+    summary: |
+      The superintendent presented a proposed addition to the face-covering policy (EVCFA) that would allow vaccinated individuals in a school building to be exempt from the state mask mandate if the building demonstrates an 80% or higher vaccination rate — verified through an attestation form submitted to and approved by DESE.
+      
+      Key discussion points:
+      - The state mask mandate runs through at least January 15; the 80% threshold only allows a school to *apply* for a waiver, which DESE must approve
+      - As of the meeting, Vets Middle School had approximately 59% of vaccination cards returned; the high school was below 40%
+      - Only about 20 schools statewide had applied for waivers, and not all were approved
+      - The superintendent spoke with Hopkinton (an early adopter), whose school committee voted 3-2 to move forward after two community meetings; Hopkinton set a threshold of 5 new cases before returning to masking
+      - Some vaccinated families are strategically withholding vaccination information to keep masks in place
+      - Committee members raised concerns about the burden on staff to monitor unmasked vs. masked students, privacy issues, and social-emotional impacts
+      
+      The committee chair had intended to vote on the amendment that evening but, after discussion, the committee agreed to defer the vote to the November 18 meeting or call a special meeting if the 80% threshold is reached sooner.
+    key_speakers: ["Sarah Gold (Chair)", "John (Superintendent)", "Megan Taylor (Committee member)", "Sarah Fox (Committee member)", "Emily Baron (Committee member)", "David Harris (Committee member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.7
+    start_seconds: 3636
+    end_seconds: 5066
+    headline: "Committee reviews draft Memorandum of Agreement with town on facilities and land use"
+    dek: "Members debated the scope and timing of the MOU, with some calling for a community forum before any property decisions."
+    summary: |
+      The chair introduced a proposed Memorandum of Agreement (MOU) between the School Committee and the Board of Selectmen on facilities and land use, developed with Select Board member Jackie Belfecker. The MOU is modeled on the existing budget and finance MOU and formalizes a collaborative process for managing school properties.
+      
+      Key discussion points:
+      - The MOU does not transfer or relinquish school property; it establishes a joint framework for discussion
+      - The district owns several parcels including Coffin School and Eveleth School, and has worked with a bike trail group on other land
+      - The library is scheduled to present at the November 18 meeting about using the Coffin School as interim space during renovations
+      - Committee member Sarah Fox advocated for a community forum before any property decisions, noting that once land is relinquished, it cannot be recovered, and that Brown School opened with higher enrollment than projected just a year prior
+      - Committee member David Harris noted the MOU simply establishes a working relationship and does not bind the committee
+      - Committee member Megan Taylor suggested a facilities subcommittee could conduct an inventory and engage with the community
+      - The Select Board did not vote on the MOU at their prior meeting (canceled due to storm); their next meeting is the following Tuesday
+      
+      The committee agreed to continue discussion of the MOU at the November 18 meeting.
+    key_speakers: ["Sarah Gold (Chair)", "Sarah Fox (Committee member)", "David Harris (Committee member)", "Megan Taylor (Committee member)", "John (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 5098
+    end_seconds: 5156
+    headline: "Meeting adjourned at 8:26 p.m.; next meeting November 18"
+    dek: "The chair noted a special meeting may be called earlier if the 80% vaccination threshold is reached."
+    summary: "The chair moved to closing business. The committee received a letter from the Marblehead Task Force Against Discrimination commending the new DEI mission statement and expressing support for next steps. The meeting was adjourned at 8:26 p.m. The next regularly scheduled meeting is November 18."
+    key_speakers: ["Sarah Gold (Chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

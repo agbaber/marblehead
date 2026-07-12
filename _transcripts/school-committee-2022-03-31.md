@@ -9,7 +9,90 @@ video_url: "https://www.youtube.com/watch?v=D8CvAq70TZU"
 duration_seconds: 5601
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee holds FY23 budget public hearing with override context"
+  summary: "The Marblehead School Committee convened a public budget hearing on the FY23 operating budget, presented by the superintendent. The budget includes significant personnel additions, technology upgrades, security cameras, free full-day kindergarten, and a new DEI director position, with new items contingent on a Prop 2½ override. Several residents raised concerns about transparency, budget format, special education staffing, busing efficiency, and the priority given to the DEI director position versus curriculum support at the high school."
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 45
+    end_seconds: 217
+    headline: "Chair opens meeting with tribute to James Velante, acknowledges community grief"
+    dek: "The chair acknowledged the death of James Velante two weeks prior and thanked schools, community organizations, and the YMCA for supporting students."
+    summary: "The chair opened the meeting at 7:01 PM with a statement acknowledging the tragic death of James Velante and expressing condolences to his family and friends. The chair thanked district staff, administrators, teachers, therapy dog volunteers, restaurants, area schools, and the YMCA for supporting students during the difficult period. The chair then officially opened the FY23 school budget public hearing at 7:03 PM."
+    key_speakers: ["School Committee Chair (Sarah)"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 217
+    end_seconds: 1899
+    featured: true
+    headline: "Superintendent presents FY23 budget with major personnel, safety, and curriculum adds"
+    dek: "The superintendent walked through the iterative FY23 budget, organized by safety, technology, personnel, and curriculum buckets, noting that all new items are tied to a proposed Prop 2½ override."
+    summary: |
+      Superintendent John (last name not captured) presented the FY23 operating budget, describing an iterative process begun in October/November aligned to the district's five-year 'Planning for Success' strategic plan.
+      
+      **Budget categories and key figures:**
+      
+      | Category | One-Time Cost | Recurring Cost |
+      |---|---|---|
+      | Safety (security cameras, card swipe) | ~$343,000 | ~$32,000 |
+      | Technology | ~$21,000 | ~$35,000 |
+      | Curriculum | ~$184,000 | ~$70,340 |
+      | Free Full-Day Kindergarten | — | ~$375,000 |
+      | Student Services (town-funded) | — | ~$848,000 |
+      
+      **Key personnel additions proposed:**
+      - Bus drivers and custodians (did not make FY22 budget)
+      - Groundskeeper and maintenance
+      - Permanent substitutes at each building
+      - Math specialist (additional)
+      - STEAM teachers
+      - College and career assistant
+      - Attendance clerk (high school)
+      - DEI director
+      - HR generalist
+      - Technology integration specialist
+      - Assistant principal for Brown and Glover schools
+      - Director of school counseling (high school)
+      
+      **Technology:** Town agreed to put smart panel purchases for the four schools as a capital/warrant article. Security cameras (~$355,000) placed in operating budget because useful life cannot be determined for bonding purposes.
+      
+      **Capital requests** (town warrant articles): fire alarm panel, high school and middle school roofs, boilers, HVAC computer controls. A remaining capital balance of approximately $586,407 was unanimously voted by the facilities subcommittee to be placed as an operating request.
+      
+      **ESSER funding:** Total received approximately $1.2 million, largely spent on COVID operational costs (PPE, cleaning ~$10,000/week, teacher laptops).
+      
+      **Grants and revolving funds** noted: METCO grant, IDEA special education, Title 1/2A/3/4, user fee revolving fund (~$220,000), guidance revolving, special education preschool and kindergarten tuition, building use and rental fees.
+    key_speakers: ["Superintendent (John)", "Michelle (Assistant Superintendent/Business)", "Paula Donnelly (Special Services Director)", "Dan Murphy (DEI team)"]
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 1922
+    end_seconds: 5567
+    headline: "Residents raise concerns about budget transparency, SPED staffing, busing, and DEI position"
+    dek: "Eight residents spoke during the public comment period, raising questions ranging from statutory compliance with budget publication requirements to special education caseloads, busing efficiency, and the rationale for a DEI director."
+    summary: |
+      **Jonathan Letterman (United Road)** — Former school committee member (2013–2020). Raised three concerns: (1) the district published only a budget supplement, not a full line-item budget, arguing this may violate MGL Chapter 71 Section 38N requiring full budget publication 48 hours before the hearing; (2) the true cost of adding lower-paid, benefits-eligible staff falls on the town budget for retirement and insurance, not the school budget; (3) characterizing any reduction to proposed new spending as 'cutting to the bone' is inaccurate. He cited Westford as a comparable district spending $2,000 less per student with higher academic rankings. Administration responded that a detailed budget binder has been available at the central office since December and that full salary line items are not published in advance because staff assignments fluctuate before July 1.
+      
+      **Meredith Tedford (40 Locust Street)** — Former school committee member. Expressed appreciation for the override effort, noting many budget needs have been deferred for years. Acknowledged the structural fiscal disconnect between school and town budgets would persist; noted the interim town administrator and incoming town manager search committee have identified it as a top priority.
+      
+      **Nancy Smith (55 Commercial Street)** — Asked how the school lunch program is managed to maximize federal reimbursement. Administration confirmed the program is largely self-sustaining under federal program rules, with only the food service director's salary carried in the operating budget; noted the district is currently searching for a new food service director and projected a surplus balance at year-end.
+      
+      **Jessica Benedetto (8 Bradley Road)** — Parent in the pay-to-ride program. Raised concern that the 'additional' bus driver is actually a vacancy refill, not a net new position, and that the routing is inefficient (over one hour to travel 1.5 miles). Requested expansion of busing to middle and high school students living more than two miles from school. Administration clarified two bus driver positions are currently vacant, a third is a new FY23 request to expand the pay-to-ride program.
+      
+      **Jeff St. George (29 West Shore Drive)** — Special education parent. Expressed concern about large team chair caseloads, specialist ratios, and lack of inclusion for students with complex IEPs. Called for the district to implement a co-taught model. Paula Donnelly (Special Services) responded that the district has a 5.1 student-to-staff ratio across all staff and 3.7 students per special education staff member including related service providers; noted special education professional development is largely grant-funded.
+      
+      **Kim Day (18 Liberty Road)** — Expressed appreciation for the override effort. Questioned why the DEI director position was prioritized over curriculum director positions at the high school that had been previously cut. Asked whether a consultant model would be more cost-effective.
+      
+      **Julia Ferreira (district employee, DEI team)** — Spoke in support of the DEI director budget item, emphasizing that consultant models cannot build the in-district relationships needed for student-facing work and that school-based DEI teams have already been established.
+      
+      **Maggie Dobin (district employee, DEI team)** — Emphasized that SEL and DEI are intertwined and that Marblehead is the last district in the immediate area to consider a DEI director position. Noted a recent LGBTQ community event she had to leave to attend this meeting as evidence of ongoing need.
+      
+      **Emily Dewitt (154 Atlantic Ave)** — Echoed support for high school curriculum support positions. Noted a line-through on those positions in the published budget; administration clarified the positions are being restructured (existing teachers taking reduced teaching loads for curriculum liaison work) rather than eliminated.
+      
+      **Alexis Singer (22 [street not captured])** — Asked whether K–6 social studies curriculum adoption is in this budget. Administration confirmed it is not; explained the district is currently building a K–12 scope and sequence for the first time and piloting a DESE-offered grades 5–7 social studies program before committing to a full adoption.
+    key_speakers: ["Jonathan Letterman (resident, former school committee member)", "Meredith Tedford (resident, former school committee member)", "Nancy Smith (resident)", "Jessica Benedetto (resident)", "Jeff St. George (resident)", "Kim Day (resident)", "Julia Ferreira (district DEI team employee)", "Maggie Dobin (district DEI team employee)", "Emily Dewitt (resident)", "Alexis Singer (resident)", "Michelle (business office)", "Paula Donnelly (Special Services)", "Superintendent (John)", "School Committee Chair (Sarah)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

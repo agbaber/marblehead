@@ -9,7 +9,54 @@ video_url: "https://www.youtube.com/watch?v=DUEn3qzvEb8"
 duration_seconds: 1455
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee communication subcommittee reviews outreach tools and email strategy"
+  summary: "Two subcommittee members met to assess existing school committee communication channels, finding limited email distribution and a minimal social media presence. They discussed pursuing an email newsletter platform (such as Mailchimp, estimated at $10–$15/month or free tier), reviving post-meeting 'instant recap' emails, and partnering with PTOs and local papers to build a subscriber list. One member was nominated and voted in as subcommittee chair, and the group agreed to meet monthly on the Tuesday before the first school committee business meeting."
+  decisions:
+    - "Approved nomination of one member as subcommittee chair"
+    - "Approved monthly meeting schedule set to the Tuesday before the first school committee business meeting each month"
+  votes:
+    - motion: "Nominate and approve subcommittee chair"
+      result: "in favor (unanimous)"
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.55
+    start_seconds: 2
+    end_seconds: 240
+    headline: "Subcommittee inventories existing communication channels, finds significant gaps"
+    dek: "Members catalogued available tools — website, district email list, and nearly absent social media — and identified the lack of a dedicated subscriber list as a core problem."
+    summary: |
+      The two members opened by reviewing what communication channels the school committee currently uses. They identified the district website, a district-managed email list (which excludes community members without current school-age children), and social media accounts with very few followers. They noted no formal inventory existed and proposed documenting each tool's owner and publication frequency to identify gaps and duplication.
+      
+      > "I believe I received one email from the school committee a year ago maybe."
+  - topic: admin-housekeeping
+    topic_confidence: 0.6
+    start_seconds: 240
+    end_seconds: 865
+    featured: true
+    headline: "Subcommittee plans email newsletter via platform like Mailchimp, targets Monday post-meeting recaps"
+    dek: "Members agreed to explore email vendors and revive 'instant recap' emails sent within days of each school committee meeting, with an estimated cost of $10–$15/month."
+    summary: |
+      Members agreed that email and possibly social media (Instagram preferred over Facebook to limit two-way engagement) should be the primary tools to develop. Key discussion points included:
+      
+      - **Email platform**: Explore vendors such as Mailchimp; estimated cost $10–$15/month or potentially free at low send volume (~60 emails/year). Using a vendor would reduce burden on district administrative staff.
+      - **Distribution list**: The committee has no independent list. Members plan to partner with PTOs, local papers, and social accounts such as "All Marblehead" to recruit sign-ups, and to announce the newsletter at regular school committee meetings.
+      - **Instant recap emails**: Members want to resume post-meeting summary emails highlighting three top headlines with links to the full recording and eventually the minutes. A Monday release (following Thursday evening meetings) was proposed to allow chair review over the weekend without putting reviewers on call Friday.
+      - **Surveys**: A fall and spring community survey was discussed to gather input beyond current school parents and to measure progress.
+      - **Approval workflow**: Recap emails would be reviewed by the committee chair and the superintendent before distribution.
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 865
+    end_seconds: 1429
+    headline: "Subcommittee elects chair and sets monthly Tuesday meeting schedule"
+    dek: "One member self-nominated as subcommittee chair, received a second, and the motion passed; the group will meet monthly on the Tuesday before the first school committee business meeting."
+    summary: "Members briefly discussed the question of subcommittee chair appointment — noting some ambiguity about whether the full committee chair appoints subcommittee chairs or whether the subcommittee does so itself — and agreed to confirm the process at the following evening's full committee meeting. One member nominated themselves, received a second, and the vote passed. The group also set a regular cadence of monthly meetings on the Tuesday before the first school committee business meeting, while reserving the option to call a focused single-agenda meeting if a time-sensitive decision (such as selecting an email vendor) arises. The meeting adjourned at 4:24 p.m."
+    key_speakers: ["Melissa (subcommittee member)", "Henry Glaz (subcommittee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

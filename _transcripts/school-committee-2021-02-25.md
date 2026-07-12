@@ -9,7 +9,215 @@ video_url: "https://www.youtube.com/watch?v=E1xaNd1Ur84"
 duration_seconds: 8546
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "K-6 set to return five days March 15; 7-12 plan and 3-ft distancing MOU negotiations ongoing"
+  summary: "The Marblehead School Committee held its regular meeting, confirming a March 15 start date for full five-day in-person learning for grades K-6 without requiring new union negotiation. A survey was announced for the following day to gather family data on a proposed 7-12 return model, with the committee set to vote the following Thursday. The committee also approved collective bargaining MOAs for custodian, cafeteria, paraprofessional, tutor, and permanent substitute units, awarded a $79,900 fiber connectivity contract, and received updates on COVID relief funding totaling approximately $452,000 across two new grants."
+  decisions:
+    - "Approved minutes from January 21, 2021"
+    - "Approved surplus/recycling of identified technology items"
+    - "Approved MOA for MEA custodian, cafeteria, paraprofessional, tutor, and permanent substitute contracts beginning FY2021 through August 31, 2024"
+    - "Approved establishment of subcommittees to investigate and report on language changes for remaining bargaining units"
+    - "Approved policy changes to IHAM, IHAMR, IHAMA, IHMB, and FFA policies"
+    - "Approved $79,900 contract with company from Boxborough, MA for fiber connection installation across school locations"
+    - "Approved schedule of bills totaling $406,863.10"
+    - "Tabled motion to mandate athletics participation in pool testing pending legal review; referred to next week's agenda"
+  votes:
+    - motion: "Approve January 21, 2021 minutes"
+      result: "in favor (5 to 0)"
+    - motion: "Approve technology surplus/recycling per Kowalik memo"
+      result: "in favor (5 to 0)"
+    - motion: "Approve MEA bargaining unit MOAs (custodian, cafeteria, paraprofessional, tutor, permanent sub)"
+      result: "in favor (5 to 0)"
+    - motion: "Approve establishment of language-review subcommittees"
+      result: "in favor (5 to 0)"
+    - motion: "Mandate sports teams participate in pool testing"
+      result: "in favor (2 to 3) — motion failed"
+    - motion: "Approve policy changes to IHAM/IHAMR/IHAMA/IHMB/FFA"
+      result: "in favor (5 to 0)"
+    - motion: "Award fiber connection contract to Boxborough firm for $79,900"
+      result: "in favor (5 to 0)"
+    - motion: "Approve schedule of bills totaling $406,863.10"
+      result: "in favor (4 to 0) with one abstention"
+    - motion: "Add additional public comment period at end of meeting"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 84
+    end_seconds: 551
+    headline: "Commendations for pool testing coordinator, ski team, and Coffin School staff"
+    dek: "Board members recognized Amanda Rivers for launching the pool testing program, the MHS ski team for winning the Massachusetts Bay Ski League, and Coffin School teachers and counselors."
+    summary: "Chair Sarah Gold opened with commendations for Amanda Rivers (pool testing program coordinator) and the MHS ski teams. Boys and girls both finished first in the Massachusetts Bay Ski League; all-stars named included Christopher Thompson (2nd), Matthew Thompson (4th), Charlie Pingree (5th) for the boys, and Samantha McKay (1st), May Calwell (2nd), and Sydney Hamilton (5th) for the girls. Principal Sean Satterfield commended Coffin School classroom teachers, counselors Allison Eaton and Allie Carey, psychologist Meg Burns, and special needs teachers including Lindsay O'Hara, Paula Morrison, Janet Pock, Anita Candelayaro, Marianne Levine, and team chair Meredith Wishart. A shout-out was also given to student art displayed at National Grand Bank and Scholastic Art and Writing Award recipients."
+    key_speakers: ["Sarah Gold (School Committee Chair)", "Principal Sean Satterfield (Coffin School)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 551
+    end_seconds: 1836
+    headline: "Student rep and residents urge faster return to in-person learning for upper grades"
+    dek: "Student representative Dan Howells reported on sports scheduling challenges; multiple residents and a seventh-grade student spoke in favor of expanded in-person schooling and immediate use of COVID relief funds."
+    summary: |
+      Student representative Dan Howells discussed COVID-disrupted sports scheduling, ongoing course selection, and a senior class Family Feud fundraiser event. He also described the senior project internship program.
+      
+      During public comment, residents urged the committee to act on approximately $450,000 in COVID relief grants for immediate student needs including outdoor classrooms and PPE. A physician (Dr. Jess Benedetto-Bradley) outlined hospital-based safety protocols adaptable to schools and called for a move to full days. Alexia Kearney read a community letter signed by many residents citing student mental health concerns and learning loss. An ICU nurse (Jennifer Eaton) shared her seventh-grade daughter Megan's experience; Megan then spoke directly, describing the difficulty of remote Wednesdays and ADHD-related challenges.
+      
+      The chair limited the first public comment block to 15 minutes and deferred additional speakers (Kelly Salowitz, Emily Dewitt, Mary McCarrick, Jeff St. George) to a second comment period at the end of the meeting.
+    key_speakers: ["Dan Howells (Student Representative)", "Catherine Martin (resident)", "Dr. Jess Benedetto-Bradley (resident/physician)", "Alexia Kearney (resident)", "Jennifer Eaton (resident/ICU nurse)", "Megan Eaton (7th-grade student)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1836
+    end_seconds: 2045
+    headline: "Committee approves January minutes and surplus technology recycling 5-0"
+    dek: "The consent agenda included January 21 meeting minutes and a memo from technology director Stephen Kowalik to recycle outdated iPads and other equipment."
+    summary: "The committee approved January 21, 2021 minutes (5-0) and authorized recycling of surplus technology items identified by Director of Technology Stephen Kowalik, including approximately 20 iPads noted to be over 10 years old and non-functional. A question was raised about donating the iPads to the community; Kowalik confirmed the devices could not support current educational software. The policy subcommittee was noted as needing to review any gifting-to-public policy."
+    key_speakers: ["Sarah Gold (Chair)", "Stephen Kowalik (Director of Technology)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 2045
+    end_seconds: 2293
+    headline: "Superintendent clarifies March 15 K-6 return requires no union negotiation; 7-12 survey launching Thursday"
+    dek: "Superintendent John Buckey clarified that the March 15 five-day return for K-6 is a set date not contingent on MEA negotiations, while a family survey on 7-12 reopening options would go out the next morning."
+    summary: |
+      Superintendent Buckey used the superintendent's report to clarify that the March 15 full return for K-6 does not require negotiation with the teachers' union. Principals had advised that earlier dates (March 1 and March 8) were not feasible due to turnaround time. A survey would be sent to families the following day about the proposed 7-12 model. The school committee planned to vote on the 7-12 plan the following Thursday.
+      
+      Buckey also noted that ongoing MEA negotiations concern only the six-to-three-foot distancing change, that these negotiations are not public, and that all committee communications with teachers on this matter should go through the school committee's designated negotiator. A K-6 opt-in/opt-out change form was described: families who take no action remain in their current learning model.
+    key_speakers: ["John Buckey (Superintendent)", "Sarah Gold (Chair)"]
+  - topic: health-insurance
+    topic_confidence: 0.3
+    start_seconds: 2293
+    end_seconds: 2524
+    headline: "Pool testing program launching next week with nearly 600 families enrolled"
+    dek: "School nurse Amanda Rivers reported that pool testing supplies are secured, a courier service is arranged, and the state has extended the free program through April 18."
+    summary: "Amanda Rivers updated the committee on the district's COVID pool testing program operated in partnership with Beacon Testing. Nearly 600 individuals have enrolled district-wide, including approximately 150 at the high school, 110 at Village School, and 100 at Veterans. The state Department of Elementary and Secondary Education announced an extension of the free program through April 18 (approximately seven additional weeks). Rivers visited Salem Charter School to observe their testing process and reported the swab procedure takes about 30 seconds per student. Testing is planned to begin Monday with central administration as a demonstration group, with courier pickup on Tuesday, Wednesday, and Thursday."
+    key_speakers: ["Amanda Rivers (School Nurse / Pool Testing Coordinator)", "John Buckey (Superintendent)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 2524
+    end_seconds: 3170
+    featured: true
+    headline: "Committee votes 2-3 against mandating sports pool testing, approves MEA contracts for five non-teaching units 5-0"
+    dek: "A motion to require athletes to participate in pool testing failed 2-3 pending legal review; the committee separately approved MOAs for custodian, cafeteria, paraprofessional, tutor, and permanent substitute bargaining units through August 2024."
+    summary: |
+      **Pool testing / sports mandate vote:** A motion by Sarah Gold, seconded by another member, to require sports teams to participate in pool testing (following Salem Public Schools' model) failed 2 to 3. Members voting no indicated they wished to await a joint presentation from Athletic Director Greg Ziglarski and Amanda Rivers at the next week's meeting before voting. The motion was deferred to the March 4 agenda.
+      
+      **MEA contract approvals:**
+      
+      The committee approved two motions related to remaining bargaining units:
+      
+      1. **Approved (5-0):** MOA for MEA custodian, cafeteria, paraprofessional, tutor, and permanent substitute contracts beginning at the start of the 2021 school year through August 31, 2024. These contracts mirror the Unit A agreement previously voted on.
+      
+      2. **Approved (5-0):** Establishment of subcommittees to investigate and report recommendations on any language changes as agreed upon by both parties for the five remaining units.
+      
+      A question was raised about stipends; the superintendent confirmed the topic had arisen in executive session. The committee also discussed the composition of the collective bargaining subcommittee.
+    key_speakers: ["Sarah Gold (Chair)", "Megan Taylor (School Committee)", "Emily Baron (School Committee)", "Sarah Fox (School Committee)", "David Harris (School Committee)", "John Buckey (Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 3170
+    end_seconds: 3631
+    headline: "FY22 budget gap stands at approximately $975K; COVID grants total over $452K in new funding"
+    dek: "CFO Michelle Cresta presented the monthly FY21 financial report projecting a shortfall of under $7,000, and detailed two new COVID relief grants: $98,175 for IT and $364,000 ESSER II with $10,000 earmarked for mental health."
+    summary: |
+      **FY21 Budget:** As of end of January, the district had spent approximately $18,019,878 (44% of operating budget). A shortfall of just under $7,000 is projected. Out-of-district tuition costs decreased slightly. Substitute teaching costs totaled $30,237, representing 13% of the substitute budget.
+      
+      **New COVID funding:**
+      - State Coronavirus Prevention Fund: $98,175 — earmarked entirely for IT (fiber connection and high school internal fiber upgrade)
+      - ESSER II Grant: approximately $364,000 (total grant ~$454,000 minus $10,000 required for mental health services) — flexible for COVID-related needs including remediation, technology, and student services; usable through September 2023
+      
+      **Total COVID costs to date:** approximately $2,011,662 spent or encumbered.
+      
+      **FY22 Budget priorities** (totaling approximately $813,496, included in the previously presented $42,649,142 total ask):
+      | Item | Estimated Cost |
+      |------|---------------|
+      | Brown School expanded preschool (2 teachers, 4 paraprofessionals) | $147,670 |
+      | 2 Integration Technology Specialists | $160,000 |
+      | IT capital leases (network switching, wireless, phone system district-wide) | $212,706 |
+      | 2 Instructional Specialists + curriculum | ~$1,120 + $100,000 math program K-8 |
+      | HR Director (net increase over current HR Assistant) | $30,000 |
+      | Community Relations Liaison | $42,000 |
+      
+      **Budget gap vs. town target:** approximately $974,624.
+      
+      The committee noted the school budget goes to the Finance Committee on approximately April 5.
+    key_speakers: ["Michelle Cresta (CFO)", "John Buckey (Superintendent)", "Sarah Gold (Chair)", "Sarah Fox (School Committee)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 3631
+    end_seconds: 3727
+    headline: "Committee approves $79,900 fiber connection contract funded by COVID prevention grant"
+    dek: "The board voted 5-0 to award a one-time fiber installation contract to a Boxborough, MA company under state contract ITC 68, covering all school buildings."
+    summary: "Technology Director Stephen Kowalik and CFO Michelle Cresta presented a memo recommending award of a fiber connection contract to a company from Boxborough, Massachusetts under state contract ITC 68 (no additional bidding required). The contract covers fiber connections between all school buildings (including Elveleth, which was initially listed as excluded). Total cost: $79,900, funded by the State Coronavirus Prevention Fund grant. The high school internal fiber upgrade is separately scheduled for April break to minimize downtime. Full speed improvements will be realized after subsequent network switch and wireless upgrades. The committee voted 5-0 to approve and authorize the chair to sign."
+    key_speakers: ["Michelle Cresta (CFO)", "Stephen Kowalik (Director of Technology)", "Sarah Gold (Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 3727
+    end_seconds: 3909
+    headline: "Schedule of bills totaling $406,863 approved 4-0 with one abstention"
+    dek: "The committee approved routine bill payments; one member abstained due to a conflict with a vendor in the batch."
+    summary: "The committee moved to approve the identified schedule of bills totaling $406,863.10. The motion passed 4-0 with one abstention (Sarah Fox noted a vendor bill in the batch that required her to abstain). The superintendent also presented a revised 22-page town report featuring narrative school-building summaries from each principal, replacing the previous more statistical format."
+    key_speakers: ["Sarah Gold (Chair)", "Michelle Cresta (CFO)", "Sarah Fox (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 3909
+    end_seconds: 4104
+    headline: "Policy committee approves five policy updates; face coverings policy deferred to next meeting"
+    dek: "The committee voted 5-0 to approve updates to health education and memorial policies; the EBCFA face coverings policy was deferred for the standard review process."
+    summary: |
+      The policy subcommittee, led by Emily Baron, presented updates:
+      
+      - **Approved (5-0):** Policy changes to IHAM (Health Education), IHAMR (Health Education Exemption Procedure), IHAMA (Parent Notification re: Sex Education), IHMB (Teaching about Alcohol, Tobacco and Drugs), and FFA (Memorials)
+      - **Deferred to next meeting:** EBCFA Face Coverings policy — minor language changes requested by principals (mask break distancing language and indoor mask break conditions at 6 feet); to be brought back as a standard policy vote
+      - **First read scheduled (no vote tonight):** IHCA (Summer Schools) and IHBAA policies, reviewed in collaboration with Emily Dean (DESE guidance compliance); vote expected at next meeting
+      
+      A note from the commissioner's call was shared: proposed updated singing guidance was rejected by medical professionals and will need to be resubmitted.
+    key_speakers: ["Emily Baron (School Committee / Policy Subcommittee)", "Sarah Gold (Chair)"]
+  - topic: bonding-capital
+    topic_confidence: 0.72
+    start_seconds: 4104
+    end_seconds: 4264
+    headline: "Brown School construction update: nietzsche panels, interior mock-ups, kitchen concrete pour complete"
+    dek: "Building Committee representative David Harris shared photos showing nietzsche panel installation, interior classroom mock-ups with floor-to-ceiling windows, kitchen concrete pour, and the lighthouse entryway interior framing."
+    summary: |
+      David Harris presented a photo update from the new Brown School construction:
+      
+      - **Exterior nietzsche panels** are being installed between the brick; mock-ups were reviewed by the architect and Gilbane before proceeding
+      - **Interior classroom mock-ups** show floor-to-ceiling storefront windows; 24-28 touchscreen displays (replacing projectors) were approved via a ~$30,000 change order; whiteboards cover lockers and retract to expose touchscreens
+      - **Kitchen** received its last concrete pour; a dish room was included for sustainability (reusable dishware replacing polystyrene)
+      - **Cafeteria/gymnasium** windows face the playground at second-floor level; translucent panels will be installed between windows
+      - **Mosaic**: Artist Cindy Schieffer is leading the project; a public reveal is planned for approximately March 7-8; first payment to artists was authorized at last night's building committee meeting
+      - **Playground/landscaping** final design is being finalized; expected to come to the committee for approval
+    key_speakers: ["David Harris (School Committee / Building Committee)", "Sarah Gold (Chair)"]
+  - topic: recreation-events
+    topic_confidence: 0.6
+    start_seconds: 4264
+    end_seconds: 4378
+    headline: "Bike Marblehead group seeks use of school land at Green Street and Beacon for pump track"
+    dek: "Chair Gold briefed the committee on a community group's request to lease school-owned land near Green and Beacon Streets for a bicycle pump track and trail system."
+    summary: "Chair Gold reported that the Bike Marblehead group, led by Pat Milner, has been seeking space for a pump track and trail system. After the Conservation Commission declined, the group approached the school committee. Town counsel reviewed the matter and returned it to the school committee as a rental/lease issue. The superintendent and CFO Michelle Cresta will work with the group on lease terms and liability. Wetlands delineation from the Brown School project was noted as a constraint. The committee discussed that some land at Green/Beacon is in early planning stages, while the pump track area (near the high school tennis courts) involves clearing fallen trees and overgrown brush rather than clearing live trees. No vote was taken; the matter will return when lease terms are developed."
+    key_speakers: ["Sarah Gold (Chair)", "John Buckey (Superintendent)", "Michelle Cresta (CFO)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 4378
+    end_seconds: 8466
+    headline: "Additional public comment: residents urge more in-person time for grades 7-12, pool testing enrollment, and appreciation for staff"
+    dek: "Eight additional residents and one student speaker addressed topics including senior project inequity, 7-12 scheduling concerns, pool testing advocacy, and appreciation for teachers and the committee."
+    summary: |
+      The committee voted 5-0 to add a second public comment period. Speakers included:
+      
+      - **Kelly Salowitz**: Criticized the timing of the 7-12 plan as too late for seniors; called for longer school days and expressed frustration with the six-foot distancing requirement
+      - **Mary McCarrick**: Offered positive feedback about her child's remote learning experience and thanked teachers Mrs. Bergeron and Mrs. Clean
+      - **Jeff St. George**: Criticized what he characterized as a pattern of discouraging public comment and limiting speaking time; urged the committee to fully own its public obligations
+      - **Aaron Noonan**: Respectfully disagreed with the criticism of the split public comment format; advocated strongly for pool testing enrollment, stating she changed from skeptical to supportive after researching the program
+      - **Scott Solberg**: Thanked committee members and Superintendent Buckey; acknowledged the difficulty of the year for all parties; expressed hope for continued constructive dialogue
+      - **Alistair Connor**: Thanked K-6 families but urged the committee to find more learning time for grades 7-12; expressed frustration at the slow pace of technology improvements
+      - **Farah Wolfson (middle school teacher)**: Acknowledged resilience of students; urged perspective and noted many voices not represented at the meeting; suggested COVID grant funds be directed to service learning
+      - **Amy Whipple**: Thanked high school and middle school teachers; raised concern about the proposed 7-12 hybrid schedule's impact on working families; questioned the $42,000 community liaison position relative to other priorities
+      - **Jody Kerbel**: Offered a parent/teacher dual perspective; noted schedule change concerns for her 11th-grade daughter; expressed appreciation for teachers
+      - **Kate Simcoe (11th-grade student)**: Thanked teachers and asked the committee to explore the three-foot distancing option to facilitate more in-person school time
+      
+      Chair Gold clarified the split public comment format was her suggestion, made to allow the public to hear key updates before commenting.
+    key_speakers: ["Kelly Salowitz (resident)", "Mary McCarrick (resident)", "Jeff St. George (resident)", "Aaron Noonan (resident)", "Scott Solberg (resident)", "Alistair Connor (resident)", "Farah Wolfson (middle school teacher)", "Amy Whipple (resident)", "Jody Kerbel (resident/teacher)", "Kate Simcoe (11th-grade student)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

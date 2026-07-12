@@ -9,7 +9,91 @@ video_url: "https://www.youtube.com/watch?v=bRht-beTUoU"
 duration_seconds: 8493
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee aligns on four FY21 capital priorities and debates administrator pay freeze"
+  summary: "The Marblehead School Committee met to finalize capital outlay priorities and discuss use of an approximately $225,000 FY20 budget surplus. Members reached consensus on four capital items — Coffin School entry doors, Marblehead High School security entry, a capital facilities needs assessment, and a school bus lease — totaling roughly $115,000, with the remainder reverting to the town. The committee also debated, without reaching a final vote, whether to forgo cost-of-living increases for non-union administrative staff as part of balancing the FY21 budget."
+  decisions:
+    - "Approved opening the meeting to public comment"
+    - "Reached consensus (no formal vote taken) to prioritize four capital items: Coffin School doors, MHS entry security, capital needs assessment, and school bus lease"
+  votes:
+    - motion: "Open meeting to public comment"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 334
+    end_seconds: 825
+    headline: "Committee members chat informally before meeting is called to order at 7:04 p.m."
+    dek: "Members discussed haircuts, logistics for recording minutes without the usual clerk, and confirmed quorum before opening."
+    summary: "Informal pre-meeting conversation covered personal topics. The chair noted that Lisa would not be attending and asked Megan and another member to collaborate on minutes. The meeting was called to order at approximately 7:04 p.m. The agenda was described as having only a couple of items: a follow-up to the budget subcommittee meeting held the previous Friday, and a possible executive session."
+    key_speakers: ["Sarah (chair)", "Megan (member)", "Bill (member)", "David Harris (member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.92
+    start_seconds: 825
+    end_seconds: 3303
+    featured: true
+    headline: "Committee reaches consensus on four FY21 capital priorities totaling ~$115K from FY20 surplus"
+    dek: "Members debated how to allocate an approximately $225,000 FY20 surplus toward school facility and vehicle needs, ultimately identifying four priority items to bring to the town's budget subcommittee on Friday."
+    summary: |
+      The facilities subcommittee (comprising Michelle, Todd, Jen, and Justine George) had conducted building walkthroughs and developed a priority list. Key priorities discussed:
+      
+      | Item | Estimated Cost |
+      |---|---|
+      | Coffin School entry doors | ~$20,000 |
+      | Marblehead High School security entry build-out | ~$30,000 |
+      | Capital facilities needs assessment | ~$42,000 |
+      | School bus (3-year lease to own) | ~$23,000 |
+      
+      The committee discussed using FY20 surplus funds rather than the town's $81,000 capital outlay allocation. A safety reserve of $50,000 was identified, leaving $60,000–$110,000 to revert to the town. Bill explained that the bus lease — about $23,000 for the first year — would require town meeting approval. David Harris recommended prioritizing the two sets of doors and the bus on safety grounds, and deferring the needs assessment to FY21 if budget allowed. After extended discussion about bid thresholds, timing, and whether to use surplus vs. operating budget line swaps, members reached informal consensus on the four items. No formal vote was taken; members agreed to bring the priorities to the Friday budget subcommittee meeting.
+    key_speakers: ["Sarah (chair)", "Megan (member)", "Bill (superintendent/CFO role)", "Michelle (finance)", "David Harris (member)", "Jen Schaffner (member)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 3303
+    end_seconds: 4434
+    headline: "FY21 budget discussion covers kindergarten tuition revenue, circuit breaker, and a new late retirement"
+    dek: "Bill and Michelle updated the committee on a late kindergarten teacher retirement that creates ~$30,000 in salary savings, plus ongoing uncertainty around circuit breaker funding and the K tuition revolving fund."
+    summary: |
+      Bill noted a late-breaking retirement of a kindergarten teacher, saving approximately $30,000 in salary that could be reallocated to the unanticipated expenses line, bringing it to approximately $165,699. Combined with anticipated CARES Act funds (~$100,000), compensatory services grant spending, and the $250,000 special education reserve, he estimated roughly $500,000 in available resources to cover FY21 unknowns.
+      
+      Members also noted that circuit breaker reimbursement had been budgeted conservatively at 70% (vs. the state's suggested 75%), and expressed uncertainty about whether that would prove conservative enough given COVID-19's state budget impacts. Bill and Michelle indicated they were analyzing the kindergarten tuition revolving fund balance (approximately $90,000 at year-end) and would have more to share at the following Thursday's meeting.
+    key_speakers: ["Bill (superintendent/CFO role)", "Michelle (finance)", "Sarah (chair)", "Megan (member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 4434
+    end_seconds: 7253
+    headline: "Committee debates withholding COLA increases for non-union administrators amid COVID-19 fiscal constraints"
+    dek: "Members expressed difficulty supporting a freeze on cost-of-living adjustments for administrative staff but acknowledged the town's own non-union employees faced the same constraint."
+    summary: |
+      Megan summarized that the Friday budget subcommittee meeting included a strong suggestion from the town administrator that the school committee reconsider awarding COLA increases to its non-union administrative staff, noting the town administrator was taking a personal pay cut and no town non-union employees would receive increases.
+      
+      The committee had previously voted unanimously to protect lower-wage non-union staff while holding administrative COLAs. The proposed freeze affects approximately $43,000 in the budget. Several members expressed personal discomfort with the decision:
+      
+      > "It's very hard for me to support this ... our administrators have worked above and beyond over the last 15 months."
+      
+      David Harris raised whether school surplus funds could be used to help make both school and town non-union employees partially whole, but members noted that using one-time surplus for recurring salary costs is generally inadvisable. Bill indicated this would be incorporated into the FY21 budget to be voted the following Thursday, so no separate vote was taken tonight. Members acknowledged the freeze affects the long-term salary base for future contract negotiations.
+    key_speakers: ["Megan (member)", "Sarah (chair)", "Bill (superintendent/CFO role)", "David Harris (member)", "Jen Schaffner (member)", "Michelle (finance)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 7253
+    end_seconds: 7615
+    headline: "Members discuss extending school lunch program through end of June using surplus funds"
+    dek: "A committee member proposed using a small portion of the FY20 surplus to extend the free lunch program from its scheduled June 18 end date through June 30, at an estimated cost of a few thousand dollars."
+    summary: "Michelle noted the lunch program was scheduled to end June 18 with approximately eight staff running it at a cost of roughly $8,000/month ($400/day at full staffing). Extending through June 30 — eight additional days — would cost approximately $3,200 at full staffing, likely less. She noted staff availability and willingness to continue was uncertain but that extending to end-of-month was more feasible than through the summer. Bill indicated it would cost roughly $300/day all-in. The committee expressed support for the idea as a way to help families in need, with members saying \"I would strongly support\" extending the program. Michelle agreed to explore it further."
+    key_speakers: ["Michelle (finance)", "Bill (superintendent/CFO role)", "Jen Schaffner (member)", "Sarah (chair)"]
+  - topic: public-comment
+    topic_confidence: 0.99
+    start_seconds: 7852
+    end_seconds: 8474
+    headline: "Two residents speak during public comment on structural budget challenges and school reopening planning"
+    dek: "Meredith (resident) called for upstream, big-picture budget solutions rather than repeated yearly cuts; Jennifer Eaton raised concerns about sourcing PPE and cleaning supplies for eventual school reopening."
+    summary: |
+      **Meredith** (address not stated) said she appreciated the committee's difficult position and noted she had seen these challenges in prior years. She urged the committee to think about upstream, systemic budget solutions rather than yearly downstream cuts, saying the town would not be in as tight a bind if longer-term planning work had been done.
+      
+      **Jennifer Eaton** raised a practical concern: even large healthcare organizations like Partners Healthcare are struggling to source disposable masks, wipes, and PPE. She asked whether the committee had thought through sourcing and budgeting for cleaning supplies and PPE for eventual school reopening, noting that five-minute disinfecting wipes have replaced two-minute wipes in clinical settings due to supply constraints.
+    key_speakers: ["Meredith (resident at mic)", "Jennifer Eaton (resident at mic)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

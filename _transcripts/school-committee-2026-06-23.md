@@ -10,7 +10,137 @@ duration_seconds: 2717
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee sets superintendent's year-two salary at $221,450 and approves ten policy updates"
+  summary: "The Marblehead School Committee met on June 22nd and voted unanimously to amend the superintendent's contract, setting his FY27 salary at $221,450, a 3% increase consistent with other educators and administrators. The committee then approved ten school policy updates, including new MASC-recommended policies on technology use, bullying prevention, and student discipline, before entering executive session to discuss collective bargaining strategy with the Marblehead Education Association Unit A."
+  decisions:
+    - "Approved amendment to superintendent's contract setting year-two salary at $221,450"
+    - "Approved policy GBEE — Personnel Use of Technology"
+    - "Approved policy KBG — Parent Advisory Councils"
+    - "Approved policy JICK — Harassment of Students"
+    - "Approved policy JLCDC — Self-Administration and Self-Carry of Medications"
+    - "Approved policy KDC — Community Use of Digital Resources"
+    - "Approved policy KDCB — District Website and Social Media"
+    - "Approved revised policy IGA — Curriculum Development"
+    - "Approved revised policy JIC — Student Discipline"
+    - "Approved revised policy JICFB — Bullying Prevention"
+    - "Approved revised policy JLCD — Administering Medicines to Students"
+    - "Approved revised policy KI — Visitors to the Schools (with first paragraph stricken)"
+    - "Approved revised policy LBC — Relations with Non-Public Schools"
+    - "Approved entering executive session to discuss collective bargaining with MEA Unit A"
+  votes:
+    - motion: "Superintendent contract amendment — year-two salary at $221,450"
+      result: "in favor (unanimous)"
+    - motion: "Policy GBEE — Personnel Use of Technology"
+      result: "in favor (unanimous)"
+    - motion: "Policy KBG — Parent Advisory Councils"
+      result: "in favor (unanimous)"
+    - motion: "Policy JICK — Harassment of Students"
+      result: "in favor (unanimous)"
+    - motion: "Policy JLCDC — Self-Administration and Self-Carry of Medications"
+      result: "in favor (unanimous)"
+    - motion: "Policy KDC — Community Use of Digital Resources"
+      result: "in favor (unanimous)"
+    - motion: "Policy KDCB — District Website and Social Media"
+      result: "in favor (unanimous)"
+    - motion: "Revised policy IGA — Curriculum Development"
+      result: "in favor (unanimous)"
+    - motion: "Revised policy JIC — Student Discipline"
+      result: "in favor (unanimous)"
+    - motion: "Revised policy JICFB — Bullying Prevention"
+      result: "in favor (unanimous)"
+    - motion: "Revised policy JLCD — Administering Medicines to Students"
+      result: "in favor (unanimous)"
+    - motion: "Revised policy KI — Visitors to the Schools (first paragraph stricken)"
+      result: "in favor (unanimous)"
+    - motion: "Revised policy LBC — Relations with Non-Public Schools"
+      result: "in favor (unanimous)"
+    - motion: "Enter executive session — collective bargaining strategy, MEA Unit A"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 17
+    end_seconds: 46
+    headline: "No public comment at June 22nd School Committee meeting"
+    dek: "Chair called for public comment; no attendees raised hands."
+    summary: "The chair opened the meeting at 12:30 p.m. and invited public comment. No members of the public wished to speak, and the committee moved directly to agenda items."
+    key_speakers: ["Kate (Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.98
+    start_seconds: 46
+    end_seconds: 730
+    featured: true
+    headline: "Committee votes 5-0 to set superintendent's FY27 salary at $221,450 (3% increase)"
+    dek: "The superintendent noted his salary remains approximately $32,000 below the average for 17 comparable North Shore districts."
+    summary: |
+      The chair explained that the superintendent's three-year contract set only the first-year salary, requiring the committee to fix compensation for years two and three on or before June 30th. A 3% increase — consistent with raises received by other educators and administrators for FY27 — brings the year-two salary to **$221,450**.
+      
+      The superintendent addressed the committee directly, noting that the average salary for superintendents across 17 North Shore communities was approximately $246,000 in 2025-26, projected to rise to roughly $253,000 with a typical 3% increase — leaving his proposed salary about $32,000 below regional average. He stated he was not seeking a different number given current budget constraints but wanted the committee to understand market context for future negotiations and succession planning.
+      
+      Committee members agreed the action was largely administrative, consistent with the already-approved FY27 budget line. The motion carried 5-0. The chair indicated she would coordinate with legal counsel on the formal contract addendum.
+    key_speakers: ["Kate (Chair)", "Superintendent (John)", "Melissa (member)", "Henry (member)", "Al (member)", "Ann Marie (member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 454
+    end_seconds: 2339
+    headline: "Committee approves ten MASC-recommended policy updates in final batch for the year"
+    dek: "New and revised policies cover technology use, bullying prevention, student discipline, medications, and relations with non-public schools — all passing 5-0."
+    summary: |
+      The committee worked through its final batch of policy updates, voting unanimously on each. The policies fell into two groups:
+      
+      **New policies (third reading, final approval):**
+      
+      | Policy | Subject |
+      |---|---|
+      | GBEE | Personnel Use of Technology |
+      | KBG | Parent Advisory Councils (SPED & EL) |
+      | JICK | Harassment of Students (updated for Title IX changes) |
+      | JLCDC | Self-Administration and Self-Carry of Medications |
+      | KDC | Community Use of Digital Resources (district Wi-Fi) |
+      | KDCB | District Website and Social Media |
+      
+      **Revised existing policies:**
+      
+      | Policy | Subject | Notable change |
+      |---|---|---|
+      | IGA | Curriculum Development | Combined with former IGD per MASC recommendation |
+      | JIC | Student Discipline | Replaced 2018-flagged version with MASC version; includes MGL ch. 71 §37H references |
+      | JICFB | Bullying Prevention | Language modernized; aligned with district bullying plan |
+      | JLCD | Administering Medicines to Students | Revised record-keeping and administration-plan requirements with lead nurse input |
+      | KI | Visitors to the Schools | Approved with first paragraph stricken on superintendent's recommendation; retained language governing observation procedures |
+      | LBC | Relations with Non-Public Schools | Clarifies school committee approval process for private schools serving grades 6+ located within town limits |
+      
+      The superintendent noted that technology policies were reviewed with the district's technology director (Steven Kwiatek/Stephen) to ensure operational alignment. The bullying prevention policy update was driven in part by a prior DESE program review. The visitors policy prompted the most discussion: the superintendent recommended removing a first paragraph that he felt gave parents broad classroom-access rights without appropriate parameters; the committee agreed unanimously.
+    key_speakers: ["Kate (Chair)", "Superintendent (John)", "Henry (member)", "Melissa (member)", "Ann Marie (member)", "Al (member)"]
+  - topic: override
+    topic_confidence: 0.82
+    start_seconds: 2339
+    end_seconds: 2568
+    headline: "Committee discusses July 8th retreat agenda, including override MOU accountability framework"
+    dek: "Members agreed to use the retreat to review district improvement plan goals, subcommittee assignments, and re-commit to transparent use of approved override funds."
+    summary: |
+      Following policy approvals, the chair opened discussion about the July 8th committee retreat. Planned elements include:
+      
+      - A training session with Alicia from MASC (Massachusetts Association of School Committees), focused on the division of responsibility between the school committee and superintendent
+      - A Wayfinder team-building activity facilitated by legal counsel Julia
+      - Review of district improvement plan goals and subcommittee assignments
+      
+      One member raised the idea of re-addressing the MOU with the town around the override and re-committing to transparent, responsible use of the approved funds. The superintendent noted there is still a community perception that voters simply approved more money across the board, and that the override primarily provided breathing room rather than new spending capacity — avoiding what he described as potential 40–50% staff reductions.
+      
+      The superintendent also flagged the upcoming transition from the town's finance director ("Thatcher") and the need to integrate whoever fills that role into ongoing financial conversations. The Select Board had reportedly discussed targeting October for the first financial-update meeting under the override MOU.
+    key_speakers: ["Kate (Chair)", "Superintendent (John)", "Henry (member)", "Melissa (member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 2568
+    end_seconds: 2700
+    headline: "Committee votes 5-0 to enter executive session on MEA Unit A collective bargaining strategy"
+    dek: "Session entered under MGL ch. 30A §21(a)(3); chair declared no intent to return to open session."
+    summary: "The chair moved the committee into executive session pursuant to M.G.L. ch. 30A, §21(a)(3) — collective bargaining strategy — to discuss negotiations with the Marblehead Education Association Unit A. The chair declared that an open meeting could have a detrimental effect on the committee's bargaining position and stated there was no intent to return to open session. The motion to enter executive session carried 5-0."
+    key_speakers: ["Kate (Chair)", "Melissa (member)", "Henry (member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

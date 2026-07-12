@@ -9,7 +9,151 @@ video_url: "https://www.youtube.com/watch?v=2sRpl2asIq8"
 duration_seconds: 7013
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Capital Facilities Committee reviews high school roof/HVAC project and summer building work"
+  summary: "The Marblehead Capital Facilities Committee met July 24, 2025 to receive an update on the Marblehead High School roof and HVAC replacement project, which remains in design with bidding anticipated for October and contract award targeted around mid-November. The committee also reviewed an extensive list of summer 2025 facility projects across all school buildings and discussed longer-term planning needs including a facilities management software system, solar readiness, and a feasibility study for early childhood programming space."
+  decisions:
+    - "Held discussion on high school roof recover vs. restoration options without selecting a preferred method"
+    - "Held discussion on solar readiness; agreed to stub conduit through new roof without delaying the project"
+    - "Directed facilities staff to produce a written update on 2021 capital needs assessment recommendations by August 31st"
+    - "Agreed to schedule next committee meeting the week after the first full week of school (approximately week of September 8)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 76
+    end_seconds: 188
+    headline: "No public comment; audio setup resolved before meeting begins"
+    dek: "The chair opened public comment but received no speakers; a remote audio issue was resolved before substantive business."
+    summary: "The chair announced the July 24, 2025 meeting was being recorded. Public comment was opened but no members of the public spoke. A brief audio issue (the conference room microphone had been muted) was resolved by switching to the Smartboard mic and shutting off the air conditioning."
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 188
+    end_seconds: 2360
+    featured: true
+    headline: "High school roof/HVAC project heads to bid this fall; recover vs. restoration decision still open"
+    dek: "The project team presented a schedule targeting October bidding and mid-November contract award, while the committee weighed pros and cons of a full roof recover versus a liquid-applied restoration coating."
+    summary: |
+      Representatives from Left Field (OPM), Raymond Design Associates (architect), and industry expert Mike Veli presented an update on the Marblehead High School roof and HVAC replacement project.
+      
+      **Schedule highlights:**
+      - Currently in design documents
+      - Pre-qualification of bidders to begin in the next few weeks
+      - 60% cost estimate expected before bidding
+      - Bid documents complete by end of September / approximately October 1
+      - Bids to go out to market in October; approximately 6-week bidding period
+      - Contract award targeted around mid-November 2025 (requires Select Board and School Committee approval)
+      - Equipment ordering to follow award; construction planned for summer 2026
+      
+      The School Committee had voted at its July 2 meeting to authorize schematic design for two alternatives: a **roof recover** (new membrane over existing, with cover board, creates seams) and a **roof restoration** (seamless liquid-applied multi-layer coating over existing membrane). Bid documents will include both as alternatives. The committee reviewed a pros/cons comparison:
+      
+      | Feature | Recover | Restoration |
+      |---|---|---|
+      | New membrane | Yes, with seams | No seams |
+      | Cover board | Yes (high-density) | No |
+      | Edge flashings | Replaced | Generally remain |
+      | HVAC curbs | Lifted/replaced | Lifted/replaced (due to HVAC project) |
+      | Cost | Higher initial | Lower initial |
+      | Longevity | Potentially longer | Extends existing membrane life |
+      
+      A follow-up infrared scan of the roof is being scheduled within the next few weeks. The pre-qualification committee has not yet been formed; Left Field and Raymond Design will each provide one representative per statutory requirements. The committee discussed scheduling a roof walkthrough for committee members the week of August 1, coordinating around a planned dedication event at the athletic center.
+      
+      **Solar readiness** was also discussed. The original high school designer confirmed the roof was not designed for PV panels 25 years ago, but a structural review area-by-area could determine capacity. The committee agreed that, at minimum, capped conduit stubs should be run through the new roof at each roof level to make it "conduit ready" for future solar installation without cutting into a completed roof. The Marblehead Light Department has previously expressed interest in and financial responsibility for PV installation on school roofs; the Brown School roof is similarly conduit-ready but the Light Department has not yet installed panels there.
+    key_speakers: ["Lena Long (Left Field, OPM)", "Brian Dacon (Left Field, OPM)", "Gene Raymond (Raymond Design Associates, architect)", "Molly Paris (Raymond Design Associates)", "Mike Veli (industry expert)", "Sarah (committee member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.8
+    start_seconds: 2360
+    end_seconds: 3780
+    headline: "Summer 2025 facilities projects reviewed across all school buildings"
+    dek: "The assistant superintendent for facilities presented a comprehensive update on capital and maintenance projects underway at Brown, Glover, Village, Vets, and the high school."
+    summary: |
+      The committee reviewed an extensive list of summer 2025 projects by building:
+      
+      **Brown School**
+      - Bottle filling station being installed in cafeteria
+      - EV charging stations (3 stations, 6 connections) being installed in parking lot; Marblehead Light Department to fund installation and collect revenue per prior agreement; delayed until MSBA closeout was completed in the last 2-3 months
+      - Broken cafeteria shade replaced
+      - Gymnasium shades replaced
+      - Staging area trim (hardwood flooring panel above staging) was repaired by custodial staff; 99% complete
+      - Brown School Building Committee not yet formally dissolved
+      
+      **Glover School**
+      - New LG rooftop HVAC units installed (old units removed ~2 weeks prior); electrical and controls connections underway; affected classrooms (second floor music, art, library; first floor main office and conference rooms) expected to have functioning heat and AC soon
+      - Central stair area to receive decorative epoxy-type floor coating
+      - Whiteboard paint in hallways to be repainted
+      - PTO purchased new rope climbing structure (~$60,000); to be installed before Labor Day
+      - Playground resurfacing funded at $60,000 from town; actual bid came in at $62,000; $2,000 shortfall covered from operating budget
+      
+      **Village School**
+      - Rear windows to be re-caulked by maintenance staff
+      - New scoreboard arriving Friday, August 1; to be stored in gymnasium over weekend; installation with Marblehead Light Department assistance the following week; scoreboard panels are 24 in. (vs. specified 18 in.) but adequate clearance confirmed
+      - New cafeteria serving lines being installed
+      - Plumbing issues under kitchen noted as needing follow-up
+      
+      **Veterans Middle School**
+      - Two-head mini-split system installed in computer lab
+      - Packed seating (auditorium) being reupholstered; seats removed; redelivery expected week of August 18
+      - Pack Center painting started in June using reserved operating funds (removed from town capital at FY26 town meeting); paint colors to be confirmed with a committee member who has design expertise
+      - D-wing roof and HVAC units (one HVAC unit, one exhaust fan) being replaced; funded from town capital from approximately two years ago; this was a section value-engineered out of original Vets renovation
+      - New gym padding installed
+      - Specific ceiling in red wing being repainted
+      - Basement/old locker room storage area being cleaned out carefully (possible historic items)
+      - Door being installed between Magic Hat Shop and school space for security
+      - New kitchen equipment going into cafeteria
+      
+      **High School**
+      - Mini-split in food service office (12-month department)
+      - Mini-split in athletic director's office (12-month department)
+      - Main entry doors replaced (capital article from ~2 years ago)
+      - Main staircase to receive epoxy/durable paint
+      - New clocks being installed (tied to fire alarm/PA system; tech department)
+      - Auditorium door (first floor) warped; full door and frame replacement underway
+      - Boiler replacement in progress; product not yet selected; funded from capital ~2 years ago
+      - Fire door upgrade at main office: contractor was non-responsive/non-performing; notice issued to remove equipment; replacement plan approved by Fire Chief Gillow using fire-rated glass doors with wall framing, giving front office improved security and sightlines
+      - High school grease trap replacement (food service revolving account)
+      - New kitchen equipment in cafeteria
+      - Cafeteria speaker/strobe upgrade for emergency announcements (safety item)
+      - Electronically controlled gate at emergency entrance road (near post office); awaiting light department to drop a pole; police and fire will be able to trigger with existing equipment
+      
+      Funding sources: cafeteria items from food service revolving account (requires DESE/school nutrition department approval); other items from capital or operating budgets as noted.
+    key_speakers: ["Mike (assistant superintendent for facilities/operations)", "Sarah (committee member)", "Kate Thompson (resident/public commenter)"]
+  - topic: bonding-capital
+    topic_confidence: 0.75
+    start_seconds: 3780
+    end_seconds: 5900
+    headline: "Committee discusses facilities management system, building signage, 2021 capital needs assessment, and early childhood feasibility study"
+    dek: "The committee reviewed longer-term facility planning needs including a ticketing/tracking software system, updated capital needs assessment, and a potential feasibility study for early childhood space."
+    summary: |
+      The committee discussed several longer-term facilities management topics:
+      
+      **Facilities maintenance tracking system:** A committee member advocated for a software system with scannable equipment codes that would track filter replacements, maintenance history, and generate reminders—preventing the generational word-of-mouth approach currently in use. The committee has an existing ticketing system but it does not proactively track preventive maintenance. A similar system was recommended approximately a year ago by community member Jeff St. George (facilities management professional) but was not funded. The committee discussed pursuing an RFP (request for proposal) for such a system, with startup costs and an annual subscription fee; targeting bid documents out by December for a potential FY27 appropriation.
+      
+      **Building signage:** Committee members noted inconsistency across schools: Brown School and High School have building signage; Village has an older wooden sign; Veterans has old stanchions with nothing; Glover has a dilapidated sign. Consistent, aesthetically coordinated signage for Glover, Village, and Veterans was discussed as a possible FY27 capital request, potentially fundable from the rental revolving account.
+      
+      **2021 capital needs assessment:** The superintendent shared that EBI Capital/Consulting completed building-by-building assessments (60-80 pages each) in June 2021 for all buildings including Coffin and Eve. A prior subcommittee boiled the 20-year plan down to a 10-year plan (now approximately 7 years remaining), approved by the School Committee. The assessment recommended approximately $2 million per year in capital improvements—more than the town has historically appropriated. The superintendent emailed the facilities director asking for a written update by August 31 on which critical, non-critical, and capital items from the 2021 reports have been addressed at each of the four operating schools.
+      
+      **Early childhood feasibility study:** A committee member noted the need to address the Eve School building and determine whether an early childhood program (potentially including special education integration, paying tuition students, and/or the outsourced 18-22 transition program) could be accommodated there or in existing buildings. Left Field's David Sandor agreed to put together a quote for a feasibility study scope. The committee discussed whether a pre-feasibility or full feasibility study is needed, and whether it could eventually connect to MSBA funding (MSBA is beginning to explore early childhood programming). A target date of June 30, 2026 was added for completion of the feasibility study.
+      
+      **Custodial practices:** The superintendent described a summer-opening walk-through protocol with all custodians—starting at ceiling level and working down—to address deferred cleaning of high surfaces, cobwebs, and stained ceiling tiles before school opens. Custodians were praised for their work ethic.
+    key_speakers: ["Mike (assistant superintendent for facilities)", "Sarah (committee member)", "Kate Thompson (resident/public commenter)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 5900
+    end_seconds: 6998
+    headline: "Meeting adjourned; next meeting planned for week after first full week of school"
+    dek: "The committee discussed pre-qualification committee formation, reviewed the completed and ongoing project lists, and agreed to meet again in early September."
+    summary: |
+      The committee wrapped up by:
+      
+      - Reviewing the FY25 completed projects list and the ongoing FY26 projects list (a single running spreadsheet with strikethroughs for completed items)
+      - Confirming the superintendent would forward the 2021 EBI capital assessment spreadsheets to committee members Sarah and Jen for review
+      - Discussing pre-qualification committee formation: per state law, the committee requires two district-side representatives plus the OPM (Left Field) and architect (Raymond Design); the superintendent suggested tapping community volunteers Ralph Wallace, Jeremy Polander, and/or Mike Veli given their construction management expertise
+      - Agreeing the next Capital Facilities Committee meeting should be held the week after the first full week of school (approximately the week of September 8)
+      - Noting that the committee chair has not yet been formally established; this is on the agenda for the July 31 School Committee meeting
+      - The meeting was adjourned
+    key_speakers: ["Mike (assistant superintendent for facilities)", "Sarah (committee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

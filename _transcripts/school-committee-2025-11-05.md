@@ -9,7 +9,109 @@ video_url: "https://www.youtube.com/watch?v=bcqTsxi1T9o"
 duration_seconds: 4503
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee facilities subcommittee explores early-education center at E School site"
+  summary: "The subcommittee met to discuss a potential early-education feasibility study focused on the vacant E School building, considering uses ranging from expanded public pre-K to an 18-to-22 transition program. The group agreed the next step is a short community survey to gauge demand, with results reviewed at a December 2 follow-up meeting. A second agenda item covered ongoing roof repairs to the middle school D-wing, where a contractor error caused flooding; insurance is covering damages and a new roofer has been engaged."
+  decisions:
+    - "Agreed to conduct a short community survey on early-education programming demand"
+    - "Scheduled follow-up subcommittee meeting for December 2 at 8:30 a.m."
+    - "Established recurring monthly subcommittee meetings on the second Tuesday of each month (Jan. 6, Feb. 3, Mar. 3, Apr. 14, May 12, Jun. 9)"
+    - "Directed administration to consult district attorney regarding leverage over general contractor on D-wing roof"
+  votes:
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 117
+    end_seconds: 209
+    headline: "Subcommittee opens with public comment period; no attendees present"
+    dek: "Chair called the meeting to order at 11:01 a.m., noted no public attendees, and moved to subcommittee business."
+    summary: "The chair opened the meeting, confirmed live streaming and recording, opened public comment, received no public attendees, and proceeded directly to subcommittee agenda items."
+    key_speakers: ["Chair (school committee member)", "Lee (staff, not further identified)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 209
+    end_seconds: 1196
+    featured: true
+    headline: "Subcommittee explores early-education center concept for vacant E School building"
+    dek: "Members discussed a potential pre-K expansion or early-childhood hub at the E School, including a state-required integrated-classroom model, a one-quote feasibility study estimate of $240,000, and a lighter internal survey as a first step."
+    summary: |
+      A school committee member described the genesis of the early-education feasibility study: the E School (formerly the Coffin School), now used mainly for town archives, is the last unrenovated building from the district's 1998 master plan. The building has a condemned boiler, needs a new roof, windows, insulation, and HVAC, but sits on an attractive site.
+      
+      **Current pre-K model:**
+      - Six integrated classrooms split evenly between Brown and Glover schools
+      - Each classroom: up to 8 typical students + up to 7 students with IEPs (state/federal law; 49%/51% ratio required)
+      - Tuition-paying "typical" students generate revenue; the 262 federal grant supports the integrated model
+      - Registration has moved from April/May to February/March, but still loses some typical students to private providers who register in December/January
+      - The district starts the year with a wait list for typical spaces
+      
+      **Options discussed for the E School:**
+      1. Expanded public pre-K (integrated model, school-hours program)
+      2. Longer-day/extended-care model operated by a third party leasing the building
+      3. Co-location with Early Intervention (EI), which is run by independent private agencies (historically served by a Salem-based provider)
+      4. An 18-to-22 transition program for students with IEPs who age out of high school
+      5. Multi-purpose building combining any of the above with archives storage
+      
+      **Key regulatory constraints noted:**
+      - Public schools cannot operate a non-integrated preschool
+      - The 49/51 IEP-to-typical ratio is both a federal grant requirement and a state regulation
+      - Children turning three qualify for public-school pre-K the day they turn three, creating rolling enrollment pressure
+      
+      **Cost discussion:**
+      - Earlier conversations estimated a full feasibility study at ~$175,000 (from capital funds); a preliminary quote from one firm came back at ~$240,000, described as "far greater" than expected
+      - Members agreed a lighter internal survey should precede any formal feasibility study
+      
+      **Survey design agreed:**
+      - Short (3–4 questions), broad distribution (EI through K families, private preschools in town, Board of Health outreach)
+      - Superintendent to draft and circulate; window of roughly two weeks targeting results by the Wednesday before Thanksgiving
+      - December 2 subcommittee meeting to review results and determine next steps
+      - Town meeting warrant-article deadline (~January) cited as a soft deadline for any building decision
+    key_speakers: ["School committee member (subcommittee lead, 'John')", "Superintendent", "Lisa Marie (early childhood/special education administrator)"]
+  - topic: school-budget
+    topic_confidence: 0.75
+    start_seconds: 1426
+    end_seconds: 2063
+    headline: "Subcommittee discusses 18-to-22 transition program as potential use for E School building"
+    dek: "Members noted the district currently outsources its 18-to-22 vocational/life-skills program and expressed interest in bringing it back in-house, possibly at the E School."
+    summary: |
+      A member noted that students with IEPs who do not meet graduation requirements remain district students until age 22 and must be served with vocational and life-skills programming. The district previously ran an in-house program at the high school, then at the YMCA (described as thriving), before it was outsourced during a building transition. The superintendent confirmed the program is currently outsourced and the location is not in Marblehead.
+      
+      Members discussed that a separate building (like the E School) could be appropriate for this cohort — allowing community outings by van while maintaining some separation from the high-school environment. The district also previously attracted tuition-paying students from surrounding districts for this program, making it a potential revenue source. Approximately three or four current students would benefit from an in-district 18-to-22 program.
+    key_speakers: ["School committee member", "Superintendent", "Lisa Marie"]
+  - topic: bonding-capital
+    topic_confidence: 0.82
+    start_seconds: 3200
+    end_seconds: 3451
+    headline: "Middle school D-wing roof failure due to contractor error; insurance covering all damages"
+    dek: "A roofer hired by general contractor Pacon improperly installed the D-wing membrane, causing flooding; the claims adjuster approved full coverage and a new roofer has been brought in."
+    summary: |
+      The director of buildings updated the subcommittee on the middle school D-wing roof situation:
+      
+      - The D-wing is approximately 9,000 sq. ft.
+      - The roofer hired by general contractor Pacon installed a membrane over existing 'poles' (masonry penetrations) and used wrong-specification metal flashing, causing significant water intrusion and flooding.
+      - Immediate response included restoration company Surro arriving the same night to begin drying.
+      - Inspectional services require replacement of all smoke detectors, sprinklers, pull stations, horn-strobes, outlets, lighting fixtures, and ceiling tiles in the affected wing.
+      - MHTV (the school TV studio) is located in the D-wing; its equipment and contents are being relocated using two storage containers arriving Tuesday.
+      - Insurance claims adjuster (Chris Lo, representing insurer Maya) approved covering all damages with no deductible charged to the district.
+      - A different roofer sealed the roof the prior Saturday; moisture scanning identified wet insulation areas to be cut out.
+      - The original roofer is no longer on the project; the general contractor (Pacon) has not been paid.
+      - The district has not paid Pacon anything; members discussed withholding payment until the entire roof is stripped and redone.
+      - The high school roofing consultant (Mike Moses, representing Maya on the construction side) inspected the roof and recommended a full tear-off and restart; he is overseeing the new work.
+      - A 20-year manufacturer warranty is contingent on manufacturer sign-off, which requires the work to be done correctly.
+      - Members agreed to loop in the district's attorney and to provide updates to the full school committee at the November 20 meeting.
+    key_speakers: ["Director of Buildings/Facilities (Mike)", "School committee member (subcommittee chair)", "Mike Moses (Maya construction representative, mentioned)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 4343
+    end_seconds: 4497
+    headline: "Subcommittee sets recurring monthly meeting schedule through June 2026"
+    dek: "Members established second-Tuesday monthly meetings at 10 a.m., with dates confirmed for December through June."
+    summary: "The subcommittee agreed to meet on the second Tuesday of each month at 10 a.m. (with the December meeting moved to Tuesday, December 2 at 8:30 a.m. to accommodate schedule conflicts). Confirmed dates: January 6, February 3, March 3, April 14, May 12, and June 9. The chair noted ad-hoc meetings could be called as needed, particularly around the roof situation and feasibility study results. Meeting adjourned at approximately 12:14 p.m."
+    key_speakers: ["School committee member (chair)", "Superintendent"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

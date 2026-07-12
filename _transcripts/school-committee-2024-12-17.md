@@ -9,7 +9,56 @@ video_url: "https://www.youtube.com/watch?v=elk8odl7xPY"
 duration_seconds: 2055
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee subcommittee reviews Marblehead High School roof options, recommends full recover plus HVAC replacement at ~$8.6M"
+  summary: "The Marblehead School Committee's building subcommittee met with consultants from Leftfield (OPM) and Raymond Design Associates (architect) to review a feasibility study for the Marblehead High School roof. The $5.36 million appropriated in 2022 is insufficient for the recommended Option A1 — a full roof recover combined with replacement of all rooftop HVAC equipment — which is estimated at approximately $8.61 million. Consultants explained that all existing HVAC rooftop equipment, roughly 24 years old, is at or beyond its useful service life and should be replaced concurrently with the roof to avoid inefficiency and doubled costs. The subcommittee planned to present findings to the full committee on Thursday."
+
+topic_segments:
+  - topic: bonding-capital
+    topic_confidence: 0.93
+    start_seconds: 7
+    end_seconds: 2040
+    featured: true
+    headline: "Consultants recommend $8.6M roof+HVAC overhaul at Marblehead High School, well above $5.36M budget"
+    dek: "Leftfield and Raymond Design Associates presented six options; the recommended Option A1 combines full roof recovery with replacement of all rooftop HVAC units, requiring roughly $3.25M in additional funding."
+    summary: |
+      The school committee's capital-project subcommittee convened a special session with its Owner's Project Manager (Leftfield, brought on May 2024) and designer (Raymond Design Associates, contracted shortly after) to review the Marblehead High School roof feasibility study.
+      
+      **Background on the appropriation**
+      In 2022, town meeting approved $5.36 million for the roof replacement, broken down as:
+      - $845,000 — designer, OPM, and miscellaneous costs
+      - $4.2 million — construction
+      - $236,000 — contingencies
+      
+      Of the soft-cost budget, $420,000 is committed to Leftfield's contract and $425,000 to RDA's contract.
+      
+      **Existing conditions**
+      An infrared moisture scan revealed significant wet insulation across roof areas A and B, with active leaks (resulting from a December 2024 storm) still being repaired. A mechanical engineering firm (GGD Engineering) assessed all 77 rooftop units — 43 exhaust fans, 20 compact condensing units, 8 large RTUs, 5 heat-recovery ventilators, and 1 makeup-air unit — and concluded:
+      
+      > *In summary, all of the existing HVAC rooftop is either at or in its expected useful service life and should be considered for replacement as part of the upcoming roof project.*
+      
+      **Options studied**
+      
+      | Option | Scope | Estimated Cost |
+      |--------|-------|----------------|
+      | A | Full roof recover, no HVAC replacement | ~$6.92M (slightly over budget) |
+      | A1 *(recommended)* | Full roof recover + replace all rooftop HVAC | ~$8.61M |
+      | A2 | Roof recover and HVAC as two separate projects | ~$11M+ (not recommended — duplicated costs) |
+      | C | Stay within $5.36M — most roof areas but not areas J (library) and D (gym) | ~$5.36M |
+      
+      Consultants noted that doing roof and HVAC in one project avoids approximately $2.5 million in duplicated general conditions, hoisting, rigging, and repair costs, and prevents premature voiding of roofing warranties.
+      
+      **MSBA reimbursement context**
+      The district applied to the Massachusetts School Building Authority accelerated repair program in early 2023 but was denied because the roof did not meet the MSBA's minimum age requirement (typically 25–30 years). The assistant superintendent noted that MSBA announced it will accept accelerated repair applications only every other year beginning after 2025 (next window: January 2027), meaning even a successful application would not yield a completed roof until approximately 2028. Marblehead's estimated MSBA reimbursement rate would be approximately 30–40%, but HVAC equipment would not be eligible for any reimbursement.
+      
+      **Brown School bond funds**
+      Town finance staff indicated there is approximately $1.6 million not yet borrowed on the Brown School project bond that could potentially be repurposed, though details were deferred to a future meeting.
+      
+      **Original estimate clarification**
+      The chair clarified that the 2022 town-meeting estimate was a per-square-foot desktop calculation, not based on a physical roof inspection, which explains why HVAC replacement scope was not included in the original appropriation. The subcommittee plans to present the full findings to the school committee on Thursday.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Jen Schaffner (School Committee member, standing in for Al Williams)", "Mike Piering (Assistant Superintendent of Finance and Operations)", "Lena Long (Leftfield, OPM)", "David Sanden (Leftfield, OPM)", "Jean Raymond (Raymond Design Associates, Architect)", "Molly Paris (Raymond Design Associates, Architect)", "Alicia Benjamin (Town Finance Office)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

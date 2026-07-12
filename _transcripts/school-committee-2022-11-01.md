@@ -9,7 +9,164 @@ video_url: "https://www.youtube.com/watch?v=hWA7RP7p1bc"
 duration_seconds: 3584
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee votes 2-2 on filling vacancy, unanimously condemns 'culture of intimidation'"
+  summary: "The Marblehead School Committee held its regular meeting, receiving a presentation from the Marblehead Rotary Club on the Inner Explorer mindfulness program donated to all five public schools. The committee approved superintendent goals 4-0 and approved a schedule of bills totaling approximately $396,904. A motion to fill the vacant seat left by Emily Barron's resignation failed 2-2, with the chair recommending the seat be left for voters at the June election. A separate motion condemning a 'culture of intimidation and attack' and recommitting to productive governance passed unanimously 4-0."
+  decisions:
+    - "Approved superintendent goals as presented"
+    - "Held motion to fill vacant school committee seat — failed 2-2"
+    - "Approved motion condemning culture of intimidation and attack (4-0)"
+    - "Approved Megan Taylor as Vice Chair (2-2 split, motion carried with two yes votes against two no votes)"
+    - "Approved schedule of bills totaling approximately $396,904"
+  votes:
+    - motion: "Approve superintendent goals"
+      result: "in favor (unanimous)"
+    - motion: "Fill the vacant school committee seat"
+      result: "in favor (2 to 2)"
+    - motion: "Nominate Megan Taylor as Vice Chair"
+      result: "in favor (2 to 2)"
+    - motion: "Condemn culture of intimidation and attack, recommit to productive governance"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills totaling approximately $396,904"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 23
+    end_seconds: 120
+    headline: "Committee commends departing member Emily Barron for service"
+    dek: "A member offered a formal commendation for Emily Barron, who recently resigned from the school committee."
+    summary: "At the opening of the meeting, a committee member commended Emily Barron for her service on the school committee, describing her as an asset who conducted herself with grace and who genuinely cared about students. The commendation noted her work building relationships and moving the district forward."
+    key_speakers: ["Sarah Gold (committee member)", "Emily Barron (departing member, acknowledged)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 120
+    end_seconds: 168
+    headline: "No public comments received at opening"
+    dek: "The chair opened the floor for public comment and no hands were raised."
+    summary: "The chair called for public comment. No members of the public raised their hands, and the meeting proceeded to the scheduled presentation."
+  - topic: school-budget
+    topic_confidence: 0.65
+    start_seconds: 168
+    end_seconds: 1907
+    headline: "Marblehead Rotary donates Inner Explorer mindfulness app to all five public schools"
+    dek: "The Rotary Club of Marblehead presented the Inner Explorer mindfulness platform, which it donated to the district, citing data showing reductions in stress and improvements in behavior and academics."
+    summary: |
+      Nancy Gwynn, president of the Marblehead Rotary Club, and Lisa Cahill of Inner Explorer presented the mindfulness application to the school committee. The Rotary Club donated licenses to all five Marblehead public schools.
+      
+      The program involves 5–10 minute daily audio-guided mindfulness exercises. Key data points cited:
+      - Approximately 43% reduction in stress for participating teachers and students
+      - 60% improvement in behavior (measured by teacher referrals)
+      - 15% improvement in academics (described as nearly a full letter grade)
+      - A pilot in nine Boston Public Schools showed 5–20% improvement in MCAS scores during a COVID year in schools using the program
+      
+      A Tampa, Florida school serving 80% homeless students went from an F-rated to an A-rated school over five years using the program as their only change.
+      
+      Usage is currently voluntary and teachers shared access via a fall newsletter. The superintendent indicated the district was already seeing early classroom usage. Committee members asked about rollout, communication to families, and whether use would become required. Administration indicated it is currently strongly encouraged rather than mandated. Committee members expressed interest in embedding the program in the social-emotional curriculum K–12.
+      
+      The Rotary also announced a fundraising 5K on Sunday, November 6 at noon at the Boston Yacht Club to support continued program funding.
+    key_speakers: ["Nancy Gwynn (Marblehead Rotary Club president)", "Lisa Cahill (Inner Explorer)", "Megan Taylor (committee member)", "Nan (superintendent/administrator, referenced as 'John or Nan')"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1907
+    end_seconds: 1960
+    headline: "Committee approves superintendent goals 4-0"
+    dek: "Following prior presentations and red-line revisions, the full committee voted unanimously to approve the superintendent's goals."
+    summary: |
+      The chair noted that the superintendent's goals had previously been presented with red-line revisions, and the committee had been awaiting a full committee vote. With all four members present, the motion to approve the goals as presented passed 4-0 on a roll call vote.
+      
+      | Member | Vote |
+      |---|---|
+      | Sarah Gold | Yes |
+      | Allison Taylor | Yes |
+      | Megan Taylor | Yes |
+      | Sarah Fox | Yes |
+    key_speakers: ["Sarah Gold (committee member)", "Allison Taylor (committee member)", "Megan Taylor (committee member)", "Sarah Fox (chair)"]
+  - topic: elections-procedural
+    topic_confidence: 0.92
+    start_seconds: 1960
+    end_seconds: 2564
+    featured: true
+    headline: "Motion to fill vacant school committee seat fails 2-2; seat to remain open until June election"
+    dek: "A motion to initiate the appointment process for the seat vacated by Emily Barron's resignation split the four-member committee evenly, leaving the seat open for voters."
+    summary: |
+      The chair explained that with Emily Barron's resignation, the committee is left with four members. After reviewing policy, consulting legal counsel, and speaking with MASC representative Dorothy Presser, the chair recommended leaving the vacant seat open until the next general election, noting the committee retains quorum with four members and that nomination papers would be available in March.
+      
+      Committee member Sarah Gold moved to fill the unexpired term, arguing the committee faces a busy budget year, that the departed member held multiple liaison roles (Vice Chair, policy subcommittee, DEI committee, METCO liaison, wellness committee), and that a fifth perspective would be valuable. Megan Taylor seconded the motion and agreed a fifth member was needed.
+      
+      Allison Taylor and Sarah Fox both stated a preference for leaving the seat to voters, with Fox noting it was a potentially dynamic budget year and that the public should make the choice.
+      
+      The motion failed on a 2-2 roll call vote:
+      
+      | Member | Vote |
+      |---|---|
+      | Sarah Gold | Yes |
+      | Megan Taylor | Yes |
+      | Allison Taylor | No |
+      | Sarah Fox | No |
+      
+      Following the failed vote, the chair stated she would work to reassign the committee roles vacated by Barron's departure before the next meeting cycle, and noted she had already reached out regarding the METCO liaison position.
+    key_speakers: ["Sarah Fox (chair)", "Sarah Gold (committee member)", "Megan Taylor (committee member)", "Allison Taylor (committee member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.7
+    start_seconds: 2564
+    end_seconds: 2743
+    headline: "Megan Taylor nominated and approved as Vice Chair in 2-2 split vote"
+    dek: "Sarah Gold nominated Megan Taylor to serve as Vice Chair following Emily Barron's departure; the motion passed on a 2-2 split with Taylor abstaining."
+    summary: |
+      Sarah Gold moved to nominate Megan Taylor as Vice Chair, citing her prior experience in the role. The chair explained that the vice chair role serves primarily to chair meetings when the chair is absent, and that in the absence of a vice chair the secretary would run the meeting.
+      
+      The roll call vote:
+      
+      | Member | Vote |
+      |---|---|
+      | Sarah Gold | Yes |
+      | Allison Taylor | No |
+      | Megan Taylor | Yes (as nominee) |
+      | Sarah Fox | No |
+      
+      The motion passed 2-2 with Taylor casting a yes vote as the nominee.
+    key_speakers: ["Sarah Gold (committee member)", "Megan Taylor (committee member)", "Allison Taylor (committee member)", "Sarah Fox (chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2743
+    end_seconds: 3200
+    headline: "Committee votes 4-0 to condemn 'culture of intimidation and attack' linked to recent resignation"
+    dek: "Megan Taylor moved to formally condemn what she described as a growing culture of intimidation and personal attacks, connecting it to the committee member's recent resignation; the motion passed unanimously."
+    summary: |
+      Committee member Megan Taylor introduced a motion condemning what she described as a 'growing culture of intimidation and attack' that she said had culminated in the recent resignation of Emily Barron. Taylor stated this pattern sets a poor example for students, discourages qualified candidates from running for office, and interferes with the committee's ability to govern effectively.
+      
+      The motion called on the committee to commit to working together in a positive and productive manner. Sarah Gold seconded the motion.
+      
+      During discussion, the chair noted she and Superintendent Dr. Bucky had been working on plans to bring in an outside facilitator for team-building, and that MASC was offering relevant seminars at an upcoming conference.
+      
+      Sarah Gold expressed strong agreement, noting concerns about the effect on qualified candidates and describing personal concerns about the pattern of behavior.
+      
+      The motion passed unanimously 4-0:
+      
+      | Member | Vote |
+      |---|---|
+      | Sarah Gold | Yes |
+      | Allison Taylor | Yes |
+      | Megan Taylor | Yes |
+      | Sarah Fox | Yes |
+    key_speakers: ["Megan Taylor (committee member)", "Sarah Gold (committee member)", "Sarah Fox (chair)", "Allison Taylor (committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 3200
+    end_seconds: 3474
+    headline: "Committee approves schedule of bills totaling approximately $396,904; budget forum announced"
+    dek: "The committee voted 4-0 to approve the schedule of bills and announced a public budget forum the following Thursday via Zoom."
+    summary: |
+      The committee approved a schedule of bills totaling approximately $396,904 on a unanimous 4-0 roll call vote.
+      
+      The chair announced a public budget forum scheduled for the following Thursday at 7 p.m., accessible via Zoom only. She apologized for a posting error the prior week in which the wrong Zoom link was distributed, attributing it to an administrative error. She encouraged community members to attend and participate in a two-way dialogue about the budget.
+      
+      The chair also noted correspondence from Kristen Jellison inquiring about the process for rehabbing school fields, and indicated she referred Jellison to the boosters organization and would follow up with the superintendent on protocols.
+    key_speakers: ["Sarah Fox (chair)", "Allison Taylor (committee member)", "Sarah Gold (committee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

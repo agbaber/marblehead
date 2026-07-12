@@ -9,7 +9,151 @@ video_url: "https://www.youtube.com/watch?v=_gQdkQIkB0s"
 duration_seconds: 3410
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee presents two FY24 budgets amid uncertainty over town funding level"
+  summary: "Superintendent Dr. Bucky opened the meeting with a state-of-the-district address, noting the committee had decided to present two budgets — one with significant personnel and program cuts and one at level-services — because the town had not yet provided a funding figure. A budget liaison meeting earlier that day signaled the town would not automatically include the full level-services increase in Article 31, and an additional $142,000 electricity cost increase would need to be absorbed. The committee also received a second reading of a proposed Narcan/naloxone policy formalizing storage and administration procedures in district schools."
+  decisions:
+    - "Approved consent agenda including minutes, scheduled bills, and surplus library books (5-0)"
+    - "Held second reading of naloxone/Narcan policy JLCD; no vote taken, returned to agenda in two weeks"
+    - "Continued FY24 budget deliberations pending town funding guidance"
+  votes:
+    - motion: "Consent agenda approval"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 36
+    end_seconds: 248
+    featured: true
+    headline: "Superintendent presents two FY24 budgets four days before public hearing without town figure"
+    dek: "Dr. Bucky cited the absence of a town budget allocation as an unprecedented position, describing a level-services option and a significant-cuts option."
+    summary: |
+      Superintendent Dr. Bucky opened the meeting by describing the school district's difficult budget situation. Because the town had not yet provided a funding figure with the public budget hearing four days away, the committee on the preceding Monday agreed to present two budgets:
+      
+      - A **level-services budget** maintaining current operations
+      - An **austerity budget** with significant reductions to personnel, programs, and resources
+      
+      The superintendent noted the community's prior concerns that a standalone school override would not succeed, particularly without collective bargaining provisions for teachers, and expressed a preference for pursuing a joint approach with the town in a future cycle after collective bargaining concludes.
+    key_speakers: ["Dr. Bucky (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 280
+    end_seconds: 498
+    headline: "Committee recognizes student valedictorian, athletic achievements, and upcoming school events"
+    dek: "Board chair commended student representative Yasin for being named valedictorian and highlighted recent athletics and arts accomplishments."
+    summary: |
+      The chair recognized student representative Yasin as valedictorian and highlighted several recent district events and achievements:
+      
+      - MHS Drama Club performed *Beowulf* and advanced to Dramafest semi-finals
+      - Girls swim team won the state championship (February 18)
+      - Six MHS indoor track athletes competed at Nationals in Boston (March 10–11)
+      - Four DECA students advanced to international competition after the state championships (March 11)
+      - Upcoming events included MCAS for grade 10 (March 28–29), a Music Honor Society coffee house (March 24), and a National Art Honor Society community art night (March 31)
+  - topic: public-comment
+    topic_confidence: 0.98
+    start_seconds: 498
+    end_seconds: 835
+    headline: "Resident urges committee to restore warrant article as leverage ahead of town budget decision"
+    dek: "Catherine Martin of 29 West Shore Drive argued the committee surrendered its only negotiating tool by voting against Article 32 before receiving a town funding commitment."
+    summary: |
+      Catherine Martin addressed the committee, arguing that by voting against the override/warrant article before receiving a town budget number, members had given up their only leverage. Key points:
+      
+      > "Your only card... rescind your vote tonight, carry your warrant. If they give you what you need in the morning then vote to get rid of it."
+      
+      - She said the town had repeatedly failed to keep commitments to the school department and that the Select Board chair was publicly criticizing school finances.
+      - She argued the district lacked a formal strategic plan that could rally community support for funding.
+      - She referenced the 2019 budget situation as a parallel and COVID-era federal funds as having masked structural underfunding.
+    key_speakers: ["Catherine Martin (Resident, 29 West Shore Drive)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 835
+    end_seconds: 863
+    headline: "Consent agenda approved 5-0 including minutes, scheduled bills, and surplus library books"
+    dek: "The committee voted unanimously to approve the consent action agenda."
+    summary: "The chair called for a motion to approve the consent agenda, which included previously closed meeting minutes, scheduled bills, and a declaration of surplus high school library books. The motion carried 5 to 0."
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 1012
+    end_seconds: 1286
+    headline: "Technology director reports district awarded state cybersecurity awareness grant"
+    dek: "Director Stephen reported the district was awarded a state Municipal Cybersecurity Awareness Training grant this month, launching phishing-simulation training for all staff."
+    summary: |
+      Technology Director Stephen (last name unclear from transcript) updated the committee on cybersecurity progress:
+      
+      - The district moved to a paid cybersecurity program beginning in October of the prior year.
+      - This month the district was awarded a state Municipal Cybersecurity Awareness Training grant, which is a competitive annual program.
+      - Staff phishing-simulation training began this week using the same vendor (Proofpoint) as the district's email security.
+      - The director noted software and firewall upgrades had been completed over the past two years.
+      - The grant is for the current year; the district can reapply annually but cannot carry the same award forward.
+    key_speakers: ["Stephen (Technology Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 1286
+    end_seconds: 1476
+    headline: "High school principal search continues; assistant superintendent search narrows to four finalists"
+    dek: "One candidate was in an accident before the principal interview; the search was reopened with four new applicants, while the assistant superintendent search advanced four candidates to initial interviews."
+    summary: |
+      The committee received updates on two active leadership searches:
+      
+      **High School Principal:** Interviews were held the previous day but one candidate was in an accident on the way to the interview. The search has been reopened with four new applicants; the committee was to meet Monday to review them and determine next steps.
+      
+      **Assistant Superintendent:** The search committee reviewed 24 applications and identified four candidates for initial interviews, two alternates, and a second tier receiving mixed support. Initial interviews were scheduled for the following Wednesday.
+      
+      A graffiti/tagging incident at Village school was also noted; the school resource officer and building cameras were used to identify the individuals involved. Some graffiti remained visible pending full removal.
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 1476
+    end_seconds: 1960
+    headline: "Committee receives second reading of naloxone policy; vote scheduled in two weeks"
+    dek: "Lead nurse Megan Calvin and high school social worker Gina Hart presented data on opioid risk and supported formalizing Narcan storage and administration procedures in district schools."
+    summary: |
+      The policy subcommittee brought forward a second reading of a proposed standalone naloxone policy, supplementing the existing medicine-administration policy JLCD. Key discussion points:
+      
+      - School counselor/social worker Gina Hart cited district Youth Risk Behavior Survey data (Fall 2021): 5% of students reported non-prescription opiate use; 1.1% benzodiazepine use; 1% cocaine use.
+      - Essex County has the second-highest overdose death rate in Massachusetts, with approximately 2,500 deaths in the last decade.
+      - CDC data showed adolescent overdose deaths increased 109% from 2019 to 2021; fentanyl-related deaths rose 182%.
+      - The proposed policy formalizes the nurse's authority to procure and store Narcan; Massachusetts Good Samaritan law already allows any person to administer it.
+      - Committee members asked whether future steps should include Narcan in public areas and teacher emergency kits; staff expressed support for broader access.
+      
+      No vote was taken; the policy returns for a formal vote in two weeks.
+    key_speakers: ["Megan Calvin (Lead Nurse)", "Gina Hart (High School Social Worker/Counselor)", "Sarah (Committee Member)"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 1960
+    end_seconds: 3154
+    headline: "Budget liaison meeting reveals town unlikely to include full level-services increase in Article 31"
+    dek: "The committee's budget liaison reported the Select Board chair indicated the school department should not assume the full 5.4–5.5% level-services increase would be included in town Article 31, and an additional $142,000 electricity increase would need to be absorbed."
+    summary: |
+      Following the budget liaison meeting held earlier that day, the committee discussed the FY24 budget outlook:
+      
+      **Town funding signal:** The Select Board chair told the liaison not to assume the ~5.4–5.5% level-services figure would automatically appear in Article 31; the schools may need to further reduce their ask.
+      
+      **Electricity costs:** CFO Michelle identified an additional $142,000 increase in electricity costs. The superintendent recommended putting forward $22,000 in the level-services budget and seeking the remainder from the town's utility reserve fund, which she was scheduled to discuss with the finance director the following day.
+      
+      **Reserve fund discussion:** The CFO explained the district's three revolving funds (circuit breaker/SPED reimbursement, user fees, and preschool/kindergarten tuition). The circuit breaker fund was projected to bring in approximately $1.3 million for FY24, though not confirmed until July. The committee discussed the 2018 tipping point when circuit breaker reimbursement came in significantly below projections with no reserve safeguard.
+      
+      **Override structure:** The liaison clarified that any future service-level override would be department-specific, not town-wide; the town's current position is that no town-wide service-increase override is being recommended.
+      
+      **Article 32 status:** Members clarified that the committee voted on Monday only to determine what budgets to present at the public hearing; no final budget vote had been taken and no warrant article had been definitively removed. The committee planned to present two budgets at the public hearing, hear community input, and vote a budget the following Monday.
+    key_speakers: ["Michelle (CFO/Finance Director)", "Dr. Bucky (Superintendent)", "Committee Member (budget liaison)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.72
+    start_seconds: 3154
+    end_seconds: 3389
+    headline: "Committee receives update on pedestrian safety at Smith-Baldwin-Pleasant intersection"
+    dek: "A liaison reported that state agencies are reviewing the intersection; the town is hopeful state action will remedy safety concerns before pursuing its own remediation."
+    summary: "A committee member provided a brief safety update: state agencies (including MassDOT and at least one other organization) are reviewing the intersection of Smith Street, Baldwin Street, and Pleasant Street. The town is waiting on that process before taking independent action. A crosswalk was also noted at Mohawk Drive. No formal action was taken."
+  - topic: admin-housekeeping
+    topic_confidence: 0.65
+    start_seconds: 3317
+    end_seconds: 3420
+    headline: "Town moderator requests committee use consistent budget terminology at town meeting"
+    dek: "Town Moderator Jack Attridge emailed the superintendent and committee chair asking them to align on standardized budget language to reduce public confusion."
+    summary: "The chair reported receiving an email from Town Moderator Jack Attridge requesting that the school committee and Select Board align on common terminology for describing the school budget (e.g., avoiding inconsistent use of \"austerity,\" \"keep the lights on,\" etc.) as town meeting approaches. The chair indicated the email would be placed in the committee's shared Dropbox. No formal action was taken."
+    key_speakers: ["Jack Attridge (Town Moderator, by correspondence)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

@@ -10,7 +10,58 @@ duration_seconds: 1290
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee goals subcommittee reviews strategic planning and educator voice goals"
+  summary: "The Marblehead School Committee goals subcommittee met on June 10th to assess progress on two goals: strategic planning and elevating educator voices. Members discussed drafting a statement clarifying the division of responsibilities between the school committee and administration, and reviewed models from other districts for creating a superintendent-led educator advisory group. Both topics were flagged as suitable for further discussion at an upcoming committee retreat."
+  decisions:
+    - "Adjourned the June 10 goals subcommittee meeting"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 17
+    end_seconds: 632
+    headline: "Subcommittee reviews progress on strategic planning goal"
+    dek: "Members discussed supporting the district improvement plan, clarifying school committee vs. administration roles, and integrating those topics into the year-long agenda and upcoming retreat."
+    summary: |
+      The subcommittee chair opened the June 10th meeting and reviewed progress on the strategic planning goal, which had three objectives: articulating a clear division of responsibilities between the school committee and administration, supporting the superintendent in completing the district improvement plan (DIP), and considering strategic planning frameworks going forward.
+      
+      Members noted the DIP had been approved, and discussed plans to draft a statement clarifying committee vs. administration responsibilities. One member volunteered to take a first draft. The group agreed the year-long agenda and goal review schedule (currently set every six months, in October and April) should be revisited at the upcoming retreat to avoid overlap with the budget season. Members also raised a question about where the district's strategic/improvement plan should be posted on the website, noting it was not prominently visible on the school committee page.
+  - topic: labor-personnel
+    topic_confidence: 0.75
+    start_seconds: 645
+    end_seconds: 1258
+    featured: true
+    headline: "Subcommittee explores models for elevating educator voices without disrupting bargaining"
+    dek: "Members reviewed several approaches — including a superintendent advisory group, teacher advisory cabinets modeled on DESE practice, and informal listening sessions — to structure educator input while respecting the collective bargaining relationship."
+    summary: |
+      The second goal on the agenda was 'elevate educator voices.' One member reported reaching out to MASC (Massachusetts Association of School Committees) contact Alicia, who provided one example — a Groton-Dunstable district METCO and SEPAC representative — but did not directly answer questions about broader educator representation on school committees.
+      
+      The other member had researched the topic using AI assistance and identified several models:
+      
+      | Model | Description |
+      |---|---|
+      | Non-voting METCO representatives | Common in Massachusetts districts; pending state legislation would extend this to CPAC representatives |
+      | Staff involvement in decision-making policy | Some districts have explicit policies authorizing the superintendent to establish advisory committees |
+      | Superintendent advisory group | Teachers meet regularly with the superintendent, who brings their input to the committee; modeled on New Bedford's approach with separate elementary/middle and high school groups |
+      | DESE teacher and principal advisory cabinets | State-level model that could be recreated at the school committee level |
+      | Bargained advisory structures | Found in other states; teachers provide advisory input as part of collective bargaining agreements |
+      
+      The superintendent advisory group concept resonated most strongly. Members discussed the risk that educators might be less candid with the superintendent present, but concluded that fostering the right environment would require deliberate effort over time. Both members agreed the committee should not impose a structure on the superintendent without discussion, and that further conversation with Superintendent John and the full committee — likely at the retreat — would be the appropriate next step.
+      
+      Members also discussed informal listening sessions (two committee members attending quarterly, below the open-meeting threshold) as a complementary mechanism, noting the committee had held some informal meetings with the superintendent and MEA representatives that could be formalized.
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1258
+    end_seconds: 1310
+    headline: "Subcommittee votes to adjourn at 1:24 p.m."
+    dek: "Motion to adjourn carried 2–0."
+    summary: "With no further business, a member moved to adjourn. The motion was seconded and passed 2–0. The meeting was adjourned at 1:24 p.m."
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

@@ -9,7 +9,60 @@ video_url: "https://www.youtube.com/watch?v=IVzY414j9Ok"
 duration_seconds: 1461
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee declares vacant seat, creates high school roof subcommittee"
+  summary: "The Marblehead School Committee opened its brief public session by voting unanimously to declare the seat vacated by Brian Ott's resignation. The committee then debated committee structure for the high school roof project before voting unanimously to establish a school committee subcommittee, with Henry Guazda named as the school committee representative and tasked with returning at the August 21st meeting with recommendations for community members with subject matter expertise. The meeting closed by voting to enter executive session to discuss collective bargaining strategy with Marblehead Teachers Association Unit A and threatened litigation by a former administrator."
+  decisions:
+    - "Approved declaration of vacant school committee seat left by Brian Ott's resignation"
+    - "Approved establishment of a subcommittee for oversight of the high school roof project, with Henry Guazda as school committee representative"
+    - "Approved entering executive session to discuss MTA Unit A collective bargaining strategy and threatened litigation by a former administrator"
+  votes:
+    - motion: "Declare school committee seat vacant following Brian Ott's resignation"
+      result: "in favor (unanimous)"
+    - motion: "Establish subcommittee for oversight of high school roof project"
+      result: "in favor (4 to 0)"
+    - motion: "Enter executive session for collective bargaining strategy and threatened litigation"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 7
+    end_seconds: 226
+    headline: "School Committee votes 4-0 to formally declare seat vacant after Ott resignation"
+    dek: "Chair sought a motion per town counsel Thatcher's recommendation to formally declare the vacancy before notifying the Select Board."
+    summary: "At the opening of the meeting, the chair noted that following Brian Ott's resignation at the prior meeting, town counsel Thatcher had recommended the committee formally vote to declare the seat vacant before sending a letter to the Select Board. After brief discussion about whether such a vote had been done in the past, the committee moved and voted unanimously (4-0) to declare the seat vacant."
+    key_speakers: ["Committee Chair (Al)", "Jen (member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.78
+    start_seconds: 250
+    end_seconds: 1115
+    featured: true
+    headline: "School Committee votes 4-0 to create high school roof project subcommittee"
+    dek: "Members debated three oversight structures before coalescing around a school committee subcommittee subject to open meeting law, with Henry Guazda named as the school committee member."
+    summary: |
+      The committee discussed how to structure oversight of the high school roof project, considering three options: a superintendent's advisory committee (not subject to open meeting law), an advisory committee to the school committee (subject to open meeting law under school policy), or a formal school committee subcommittee (also subject to open meeting law and requiring posted public meetings).
+      
+      Members noted that a superintendent's advisory committee would not be open to the public, which was seen as problematic given community concerns about the project raised during a recent campaign. The committee referenced past precedent where significant building projects used school committee subcommittees chaired by a school committee member but with broader community membership.
+      
+      The superintendent noted the pre-bid process was already underway with a deadline around August 28th, creating time pressure. The committee coalesced around a subcommittee structure. A motion was made to:
+      - Establish a subcommittee for oversight of the high school roof project
+      - Name Henry Guazda as the school committee member
+      - Include administration members as recommended by the superintendent
+      - Task Henry Guazda with returning at the August 21st meeting with recommendations for community members with subject matter expertise
+      
+      The motion passed 4-0.
+    key_speakers: ["Committee Chair (Al)", "Jen (member)", "Henry Guazda (member)", "John (Superintendent)"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 1147
+    end_seconds: 1433
+    headline: "Committee votes to enter executive session on MTA bargaining and threatened litigation"
+    dek: "The committee voted unanimously to close the public session and convene executive session to discuss collective bargaining strategy with Marblehead Teachers Association Unit A and threatened litigation by a former administrator."
+    summary: "Before adjourning the open session, the chair read the two executive session purposes into the record: (1) strategy discussion regarding collective bargaining with Unit A of the Marblehead Teachers Association, and (2) threatened litigation by a former administrator. Both were cited under Chapter 30A Section 21A, Purpose 3. The chair declared no intent to return to open session. A committee member (Henry) noted he had consulted the state Ethics Commission by phone regarding his participation in the executive session, and had filed a disclosure of appearance of conflict of interest with the town clerk. The committee voted unanimously to enter executive session."
+    key_speakers: ["Committee Chair (Al)", "Henry Guazda (member)", "Jen (member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

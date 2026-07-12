@@ -9,7 +9,63 @@ video_url: "https://www.youtube.com/watch?v=-nIC_8q0JxQ"
 duration_seconds: 3600
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School budget faces $643K gap after cuts; override strategy debated"
+  summary: "A joint meeting of Finance Committee and School Committee liaisons reviewed the Marblehead school department's FY24 budget situation, which shows a remaining gap of approximately $643,000 even after eliminating most staffing requests, reducing supplies, and identifying a calculation error worth $584,000. Superintendent and finance staff described the cuts as leaving the district below state curriculum framework compliance in areas such as technology education. Participants discussed whether to pursue a unified town-wide override or separate school override, with no final decision reached."
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 41
+    end_seconds: 2794
+    featured: true
+    headline: "School dept faces $643K remaining gap after cuts; compliance with state frameworks at risk"
+    dek: "After eliminating most new staffing requests, cutting supplies, and correcting a $584K calculation error, the district still needs to cut roughly $643,000 to meet the town's guidance of an ~$800,000 budget increase."
+    summary: |
+      The meeting opened with a recap of the fiscal situation revealed at the recent State of the Town: a structural operational deficit means all departments must target approximately 1.3–1.8% budget growth. For the school department, that translates to roughly an $800,000 increase over FY23, far below the $2.387 million needed to maintain current services.
+      
+      **Steps already taken to close the gap:**
+      
+      | Action | Savings |
+      |---|---|
+      | Elimination of most new staffing requests | ~$556,000–$517,000 |
+      | Unfilled positions proposed not to be filled in FY24 | ~$539,000 |
+      | Correction of roll-forward calculation error (part-time staff counted as full-time) | ~$584,000 |
+      
+      After these reductions, a gap of approximately **$643,651** remains. The superintendent described this as representing "catastrophic cuts," with everything not required by state law — including athletics, co-curriculars, and curriculum areas such as science and technology — potentially on the table.
+      
+      A key concern raised by the school committee chair is that even before closing the $643K gap, the district is already out of compliance with Massachusetts curriculum frameworks (e.g., technology/STEM instruction). Participants agreed that a detailed list of compliance shortfalls should be prepared for the next liaison meeting.
+      
+      **Special education** was identified as a particularly volatile budget driver. The district's finance director explained that circuit breaker reimbursement lags one year and that a reserve of nearly $1 million has been built up to buffer shortfalls. Participants discussed the value of proactive investments in tiered supports to reduce costly out-of-district placements over the long term, though those line items were among those cut from the initial request.
+      
+      **Process and timeline:** The budget hearing/approval is tentatively scheduled for **Monday, April 3**, with warrant articles due the following Monday (April 10). The liaison group agreed to meet again in approximately three weeks, then every two weeks leading up to April 3. Budget detail will be provided in a line-by-line Excel format showing prior years alongside the current request and reductions.
+    key_speakers: ["Sarah (School Committee Chair/Liaison)", "Dr. Bucky (Superintendent)", "Michelle (School Finance Director)", "Alec (FinCom Liaison)", "Cam (FinCom Liaison)", "Pat (FinCom Liaison)", "John (School Committee Liaison)"]
+  - topic: override
+    topic_confidence: 0.92
+    start_seconds: 479
+    end_seconds: 2468
+    headline: "Liaisons debate unified vs. separate override approach for FY24 structural deficit"
+    dek: "Finance Committee and School Committee liaisons expressed a strong preference for a single town-wide override but noted that the school committee may independently pursue an override if a joint effort does not meet state compliance thresholds."
+    summary: |
+      Participants discussed the override strategy at length. A Finance Committee liaison urged a **single unified override** covering all town departments — schools, DPW, fire, police — arguing that multiple competing override questions would be harder to pass and harder to explain to voters.
+      
+      The school committee chair agreed that a unified approach is the goal but stated that the school committee views it as its duty to bring forward a number sufficient to achieve state curriculum compliance, whether or not that fits within a collective override framework. A Finance Committee liaison sought clarification on whether the school committee might pursue a separate additional override if the collective override fell short; the chair indicated that the committee would advocate for whatever mechanism is necessary to reach compliance.
+      
+      Participants noted that the Town Administrator (referred to as Thatcher) had begun work over the weekend following the State of the Town to develop accurate department-by-department gap figures, and that the $800,000 school allocation figure is still an estimate. A multi-year framing — showing the cost to maintain level service in years 1, 2, 3, and beyond — was discussed as important context for the override ask.
+    key_speakers: ["Sarah (School Committee Chair/Liaison)", "Cam (FinCom Liaison)", "Pat (FinCom Liaison)", "Alec (FinCom Liaison)", "John (School Committee Liaison)"]
+  - topic: public-comment
+    topic_confidence: 0.88
+    start_seconds: 3482
+    end_seconds: 3579
+    headline: "Resident asks about disposition of Coffin and Evelith school properties"
+    dek: "A resident asked why the vacant Coffin and Evelith properties have not been returned to town stewardship for possible sale, given the town's budget pressures."
+    summary: |
+      A resident (Paul Baker) noted that both the Coffin and Evelith school properties have been empty since the Brand School opened approximately 15 months ago and asked why the school committee had not voted to transfer them back to the town for potential sale, referencing the Gerry School sale at approximately $700,000–$800,000 as a comparable.
+      
+      The school committee chair responded that the topic was discussed and voted on at the most recent Facilities Subcommittee meeting, that another facilities meeting had been posted for the following Tuesday, and that an update would be given at the full school committee meeting the following Thursday. She directed the resident to the YouTube recording of the prior facilities meeting for details.
+    key_speakers: ["Paul Baker (Resident at mic)", "Sarah (School Committee Chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

@@ -9,7 +9,126 @@ video_url: "https://www.youtube.com/watch?v=Xz4FJEP5qCM"
 duration_seconds: 3872
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead schools finance subcommittee reviews FY25 budget and begins FY26 planning"
+  summary: "The school committee finance subcommittee met on January 7, 2025 to review the FY25 mid-year budget status and begin FY26 budget calendar planning. The business manager reported special education out-of-district tuitions are running approximately $1 million over budget, partially offset by a $900,000 prepayment, leaving a net delta of roughly $200,000. The subcommittee tentatively set a budget workshop for February 3 and a school committee budget vote for March 20, with a FinCom hearing on March 31 and a town meeting warrant hearing on April 7."
+  decisions:
+    - "Tentatively scheduled FY26 budget workshop for February 3"
+    - "Tentatively set school committee budget vote for March 20"
+    - "Set FinCom budget hearing for March 31"
+    - "Noted town meeting warrant hearing date of April 7"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1
+    end_seconds: 68
+    headline: "Finance subcommittee called to order; no public comment"
+    dek: "The chair opened the January 7 finance subcommittee meeting at approximately 8:11 a.m. with no public comment."
+    summary: "The meeting was called to order and no members of the public came forward for public comment, so the session proceeded directly to agenda items."
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 68
+    end_seconds: 1236
+    featured: true
+    headline: "FY25 budget on track but SPED out-of-district costs $1M over; legal line elevated by strike"
+    dek: "The business manager reported special education tuitions are approximately $1 million over the $2.3 million budget, though a $900,000 prepayment limits the visible shortfall to roughly $200,000."
+    summary: |
+      Business Manager Mike presented the mid-year FY25 budget status, noting the district is generally on track despite several pressure points:
+      
+      **Special Education Out-of-District Costs**
+      - Budgeted: approximately $2.3 million for tuitions
+      - Projected actual: approximately $3.3 million (roughly 43% over)
+      - A $900,000 FY24 prepayment reduces the net current-year delta to approximately $200,000
+      - Transportation for out-of-district students is also approximately $100,000 over budget
+      - The overrun is partly attributed to bookkeeping catch-up: students placed out of district in prior years had not been fully identified and allocated in the previous budget
+      
+      **Legal Line**
+      - The legal budget of $165,000 was split: $115,000 to the school committee (primarily labor negotiations) and $50,000 to special education legal
+      - The line is running over due to arbitrations, negotiations, and costs associated with the teachers' strike
+      - Strike-related costs tracked separately include approximately $111,000, primarily police details; food services and additional invoices are still being collected
+      - Under normal circumstances, legal fees incurred during a strike would be charged back to the union; because the union ran out of money, the district absorbed those costs as part of the settlement agreement
+      
+      **Other Areas**
+      - Custodial/maintenance retains approximately 18% of budget in reserve
+      - Technology retains approximately 13–14% of budget in reserve
+      - The district is not using reserve funds this year, which is a change from prior practice
+      
+      **Payroll Reporting**
+      - Payroll is being manually encumbered due to limitations of the current financial system; this process takes approximately two hours each time reports are run
+      - Munis/School ERP is expected to go live for general ledger and accounts payable by July 1, 2025, with payroll and HR modules live by January 1, 2026
+      
+      **ARPA Funds**
+      - The business manager entered into contracts for playground resurfacing at Glover School (priority) and Village School (secondary), and clock system replacement at the high school, all contingent on ARPA funding availability; contracts include void provisions if ARPA funds are unavailable
+      - Town has also budgeted capital funds for playgrounds and clocks as a backup
+    key_speakers: ["Mike (Business Manager)", "Sarah (subcommittee member)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 1236
+    end_seconds: 2820
+    headline: "FY26 budget calendar set; workshop tentatively February 3, FinCom hearing March 31"
+    dek: "The subcommittee mapped out a FY26 budget development calendar, with a principals' budget workshop tentatively on February 3 and a FinCom budget hearing on March 31."
+    summary: |
+      The subcommittee reviewed a draft FY26 budget development calendar. Key dates and process elements discussed:
+      
+      | Milestone | Tentative Date |
+      |---|---|
+      | Finance subcommittee preview meeting | Week of January 28 or 29 |
+      | Internal leadership budget meeting (principals) | Week of January 13 |
+      | Budget workshop (public, principals present) | February 3 (tentative) |
+      | School committee budget public hearing | March 6 |
+      | School committee budget vote | March 20 |
+      | FinCom budget hearing | March 31 |
+      | Town meeting warrant hearing | April 7 |
+      | Annual town meeting | May 5–7 |
+      | Potential override election | June 17 (if applicable) |
+      
+      The superintendent noted that budget workshops in prior years have included principals presenting their school budgets to the full school committee and the public, with a discussion of the delta between level-services costs and available funding. The committee acknowledged that for at least three consecutive years the allocated amount has not covered level services.
+      
+      On the question of a potential Prop 2½ override, the superintendent stated it would be premature to discuss one until the State of the Town address provides revenue projections and the FY26 budget is completed.
+      
+      A staff accountability report is in development; the superintendent indicated it will show staffing by program and building without attaching individual names to salary numbers, and will help explain the district's student-to-staff ratio (10.3) versus the state average (11.9).
+      
+      Enrollment data from the NEZDA report was distributed; the district has lost approximately 22 students since the teachers' strike, a decline that is statistically significant (above the 1% threshold). The superintendent noted enrollment has been trending downward since she arrived (from approximately 2,710 students), and that the NEZDA projections show the same downward trend independent of the strike.
+    key_speakers: ["Mike (Business Manager)", "Superintendent (John referenced)", "Molly (subcommittee member)", "Pat (subcommittee member)", "Sarah (subcommittee member)"]
+  - topic: override
+    topic_confidence: 0.75
+    start_seconds: 2540
+    end_seconds: 2683
+    headline: "Superintendent says override discussion premature until budget and revenue picture clearer"
+    dek: "Asked about community pressure for a Prop 2½ override, the superintendent said no decision is possible until the State of the Town address and FY26 budget are complete."
+    summary: "Multiple community members have been asking about an override. The superintendent explained that until the town presents its revenue projections at the State of the Town address and the school budget is developed, it is not possible to determine whether an override is necessary or what size it would need to be. A potential override ballot election was noted as likely June 17 if pursued."
+    key_speakers: ["Superintendent"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 2683
+    end_seconds: 3837
+    headline: "Enrollment decline, staffing accountability report, and SPED programming discussed"
+    dek: "The subcommittee discussed a 22-student enrollment decline since the strike, a staff accountability report in development, and the superintendent's plan to restructure special education programming over two years."
+    summary: |
+      Additional FY26 planning topics addressed:
+      
+      **Enrollment**
+      - The district has lost approximately 22 students since the strike, which the superintendent described as statistically significant
+      - The NEZDA enrollment projection report shows a continuing downward trend regardless of the strike
+      - Out-of-district special education students are counted in enrollment figures because they remain district students
+      - Anecdotally, some families who withdrew cited the strike directly
+      
+      **Staff Accountability Report**
+      - A staff accountability report is being developed to show staffing by school and program without attaching individual names to numbers
+      - The report will help explain why the district's student-to-staff ratio (10.3) is below the state average (11.9), noting that programs such as language-based special education have very different staffing models than general education classrooms
+      - The superintendent expressed concern about publishing individual names alongside salary figures
+      
+      **Special Education Programming**
+      - The superintendent said it will take approximately two years to restructure special education programming to the point where out-of-district students can be brought back in-district where appropriate
+      - She acknowledged the community narrative that the district is understaffed in some areas while noting that in other pockets staffing may exceed current enrollment needs
+      - Victoria (Director of Student Services) and Lisa Marie have been working on reviewing special education staffing and programming
+      
+      **Budget Forum**
+      - The committee discussed holding a public budget forum (separate from the statutory public hearing) as had been done in prior years when an override was anticipated; the superintendent supported holding such a forum regardless of whether an override is pursued
+    key_speakers: ["Superintendent", "Sarah (subcommittee member)", "Molly (subcommittee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

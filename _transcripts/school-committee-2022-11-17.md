@@ -9,7 +9,126 @@ video_url: "https://www.youtube.com/watch?v=8PuIUmGHbRE"
 duration_seconds: 4252
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee reviews MCAS trends, opens vacancy application process"
+  summary: "The committee received a district-wide MCAS trend analysis showing proficiency at 58.1% in ELA, 52% in math, and 51.9% in science for spring 2022, all above state norms but below prior-year levels. The committee also formally announced the process to fill a school committee vacancy, with applications due by November 30 and a joint interview meeting with the Select Board scheduled for December 7 at Abbott Hall. The board approved a schedule of bills totaling approximately $475,000 and discussed upcoming budget planning, wellness policy updates, and a facilities letter from the library."
+  decisions:
+    - "Approved minutes from October 20, 2022"
+    - "Approved schedule of bills totaling approximately $475,000"
+    - "Tabled agenda item on school committee member conflict-of-interest/ethics designation change"
+  votes:
+    - motion: "Approve minutes from October 20, 2022"
+      result: "in favor (4 to 0)"
+    - motion: "Approve schedule of bills totaling approximately $475,000"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 114
+    end_seconds: 404
+    headline: "Board commends cross country teams, Ruby Bridges walk, student activities"
+    dek: "The chair recognized the boys cross country 1C state championship and the Ruby Bridges school-wide walk organized by the METCO director."
+    summary: "The chair noted the boys cross country team won the 1C state championship and would compete at the state meet the following weekend. The girls team finished ninth overall, with Mari O'Connell placing second individually and also advancing to all-states. A board member commended METCO Director Cajun Johnson for organizing a Ruby Bridges walk with over a thousand students participating. The student representative reported on NHS tutoring, French National Honor Society week, upcoming pep rally, Powderpuff events, and class fundraisers."
+    key_speakers: ["Chair (School Committee)", "Board member (Allison)", "Student Representative"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 404
+    end_seconds: 497
+    headline: "Committee approves October 20 minutes 4-0, moves to superintendent report"
+    dek: "Consent agenda minutes approved unanimously before the superintendent introduced an MCAS data presentation."
+    summary: "The chair called for a motion to approve minutes from October 20, 2022. The motion was made by Sarah Gold, seconded by Allison Taylor, and passed 4-0 on a roll call vote with Sarah Gold, Allison Taylor, Megan Taylor, and Fairfax all voting yes."
+    key_speakers: ["Chair (School Committee)", "Sarah Gold (Committee Member)", "Allison Taylor (Committee Member)", "Megan Taylor (Committee Member)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 497
+    end_seconds: 1535
+    featured: true
+    headline: "District MCAS data shows Marblehead above state norms but proficiency declined from prior years"
+    dek: "A 30,000-foot trend analysis covering 2019–2022 showed ELA proficiency at 58.1%, math at 52%, and science at 51.9%, each above state averages but below pre-pandemic levels."
+    summary: |
+      The superintendent introduced an MCAS trend presentation, noting that public comments characterizing scores as 'not great' fail to account for the full picture. A district administrator presented comparative data across 2019, 2021, and 2022 (no testing occurred in 2020).
+      
+      **Key findings:**
+      
+      | Subject | 2022 Proficiency | vs. State |
+      |---------|-----------------|----------|
+      | ELA | 58.1% | +17 points |
+      | Math | 52% | +13 points |
+      | Science | 51.9% | +10 points |
+      
+      Proficiency declined from 2021 to 2022 in all three areas. The 'exceeding' category in ELA dropped from 14% to 9% — a roughly 33% decrease. Student growth percentiles for 2021 were deemed not comparable to 2022 due to the modified test format.
+      
+      Comparative data was shown against both state-designated 'DART' districts (including Bedford, Foxborough, Northampton) and districts commonly referenced by parents (Lexington, Winchester, Wellesley, Weston). The district noted it performs in line with DART peers but below the aspirational comparison districts.
+      
+      Administrators attributed the math decline partly to implementation of a new math curriculum. The ELA gap was linked to the absence of a comprehensive K-6 ELA curriculum; staff indicated one town spent close to $2 million in ARPA funds on an ELA curriculum to address a similar gap. The superintendent said principals will present grade-level deep dives at December meetings. A coaching model using lead teachers to conduct data analysis discussions with grade-level teams was described as a key instructional improvement strategy.
+    key_speakers: ["Superintendent (Dr. Bucky)", "District Administrator (Nan)", "Megan Taylor (Committee Member)", "Sarah Gold (Committee Member)", "Allison Taylor (Committee Member)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 1535
+    end_seconds: 1982
+    headline: "Budget forum follow-up: second thought exchange planned; ARPA after-school funds approved"
+    dek: "The superintendent reported about 80 attendees at last week's budget forum and announced plans for a narrower follow-up thought exchange to gather more actionable community input."
+    summary: "The superintendent noted roughly 80 people attended the budget forum despite it being scheduled the night before a long weekend. A board member requested the next thought exchange be more narrowly focused, noting that broad prompts generated approximately 200 responses that were difficult to act on. The superintendent also noted that ARPA funds were approved at a selectboard meeting the prior evening for after-school learning loss programming and summer initiatives. Discussion touched on the need for a K-6 ELA curriculum as a key upcoming budget ask, supported by the MCAS data presented. A CPAC meeting was announced for November 30 at 7 p.m."
+    key_speakers: ["Superintendent (Dr. Bucky)", "Megan Taylor (Committee Member)", "Sarah Gold (Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1982
+    end_seconds: 2596
+    headline: "School committee vacancy announced; applications due November 30, joint interview December 7"
+    dek: "A vacancy created by a resignation effective October 27, 2022 will be filled through a joint process with the Select Board, with applications due by 4 p.m. on November 30."
+    summary: "The committee announced the vacancy process per policy BBBE and Massachusetts General Law Section 411. Under the process, the school committee and Select Board will jointly interview applicants and make an appointment. Applications (letters of interest) are due by 4 p.m. on November 30, 2022. The joint interview and appointment meeting is scheduled for Wednesday, December 7 at Abbott Hall. Information will be posted on the school and town websites. Members discussed logistics for distributing application materials to all committee members, referencing a 2016 precedent and noting the current timeline is one day shorter than that prior process. A member raised the question of whether the one-week-notice provision in existing policy was a minimum or maximum; it was clarified as a minimum waiting period. Discussion of potential policy amendments was deferred."
+    key_speakers: ["Chair (School Committee)", "Sarah Gold (Committee Member)", "Megan Taylor (Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2550
+    end_seconds: 2596
+    headline: "Schedule of bills totaling approximately $475,000 approved unanimously"
+    dek: "The committee voted 4-0 to approve the identified bill schedules."
+    summary: "The chair called for a motion to approve the schedule of bills totaling approximately $475,015. The motion was moved and seconded; a roll call vote passed unanimously with Sarah Gold, Allison Taylor, Megan Taylor, and a fourth member all voting yes."
+    key_speakers: ["Chair (School Committee)", "Sarah Gold (Committee Member)", "Allison Taylor (Committee Member)", "Megan Taylor (Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 2596
+    end_seconds: 2922
+    headline: "Committee discusses policy BBBE vacancy procedure and potential policy updates"
+    dek: "A committee member reviewed the unexpected-term-fulfillment policy and suggested consulting MASC guidance to potentially update the one-week-notice language."
+    summary: "Sarah Gold had placed policy BBBE (unexpected term fulfillment) on the agenda as a placeholder pending the outcome of the Select Board meeting the prior evening. Discussion centered on whether the current one-week-notice provision should be amended to better reflect actual practice — both recent vacancy processes took considerably longer than one week. A member suggested reaching out to Dorothy and reviewing MASC's model policy. The committee also noted that without an active policy subcommittee, any amendments would need to go through three full committee readings. Reassignment of committee roles and subcommittees was deferred until after the vacancy is filled."
+    key_speakers: ["Sarah Gold (Committee Member)", "Megan Taylor (Committee Member)", "Chair (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 2922
+    end_seconds: 3063
+    headline: "Policy subcommittee work previewed; MASC membership and policy management service discussed"
+    dek: "A committee member outlined several pending policy items including a nurse-related policy and background-check policy, and suggested subscribing to the MASC policy update service."
+    summary: "Sarah Gold described in-progress policy work including a policy requested by the district's lead nurse and a background-check/volunteer policy that Lisa had been pursuing. She indicated she hoped to bring first-read items to the full committee at the next regular meeting. The committee discussed using MASC's policy management service, estimated at approximately $700 per year, which would keep policies current and automatically update the district website. A separate agenda item regarding a potential conflict-of-interest/ethics designation change was tabled by the member who requested it, citing the need for more research after a conversation with the town manager revealed added complexity."
+    key_speakers: ["Sarah Gold (Committee Member)", "Chair (School Committee)", "Megan Taylor (Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 3063
+    end_seconds: 3187
+    headline: "Wellness committee, hazing policy review, and Safety Committee updates reported"
+    dek: "Members reported on the wellness committee's first meeting, a request for an athletic director presentation on hazing and harassment, and safety committee updates including new cameras at the Gerry School."
+    summary: "The wellness committee met for the first time with the DESE representative attending. The committee is focused first on tightening the wellness policy to include social-emotional health components and ensuring composting/recycling initiatives from prior years are fully implemented. A board member requested the athletic director present to the committee on hazing and harassment protocols, prompted by incidents in a neighboring district and recent news. The safety committee reported that lock-down drills at all schools had gone well. New cameras are being installed at the Gerry School due to concerns about littering and unauthorized access. A new road configuration near the school was noted as a potential pedestrian safety concern."
+    key_speakers: ["Megan Taylor (Committee Member)", "Chair (School Committee)", "Sarah Gold (Committee Member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.75
+    start_seconds: 3187
+    end_seconds: 3235
+    headline: "District entered into MSBA pipeline for roof replacement at Veterans School"
+    dek: "The Select Board voted the prior evening to enter the district into the MSBA Accelerated Repair Program pipeline for a roof replacement."
+    summary: "A committee member reported that the Select Board took action at its November 2022 meeting to enter the district into the Massachusetts School Building Authority (MSBA) Accelerated Repair Program pipeline for a roof replacement at Veterans School. A facilities subcommittee meeting is being scheduled for after Thanksgiving to address this and other capital items. The committee also received correspondence from the library (located in a school building under an MOU) raising concerns about roof leaks, air quality, and other building issues; the chair indicated the MOU governs how such matters should be handled and that Todd and the facilities team would engage with the library."
+    key_speakers: ["Chair (School Committee)", "Megan Taylor (Committee Member)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 3725
+    end_seconds: 4204
+    headline: "Budget calendar and principal budget presentations deferred to January; priorities discussion held"
+    dek: "Principals received budget packets and will present in January rather than December; the committee discussed wanting multi-year cost visibility tied to data."
+    summary: "The superintendent reported that budget packets went out to principals, who will present at meetings in January — earlier than the historical February timeline but moved back from December to allow more preparation time. The town has not yet provided a budget timeline as it is still closing its books. The committee discussed wanting budget requests to be tied directly to data (such as the MCAS trends presented) and to show multi-year cost projections for known upcoming needs, such as a literacy curriculum, high school curriculum updates, and other instructional investments. A finance/facilities subcommittee meeting will be scheduled for after Thanksgiving."
+    key_speakers: ["Chair (School Committee)", "Superintendent (Dr. Bucky)", "Megan Taylor (Committee Member)", "Sarah Gold (Committee Member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

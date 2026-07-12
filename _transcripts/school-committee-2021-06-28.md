@@ -9,7 +9,169 @@ video_url: "https://www.youtube.com/watch?v=9RBU41TUZ9U"
 duration_seconds: 3238
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee elects officers, rescinds mask policy, approves two union contracts"
+  summary: "The Marblehead School Committee reorganized for the new year, re-electing Sarah Gold as chair (5-0) and Megan Taylor as vice chair (4-1), and naming Emily Barron as secretary (4-1). The committee unanimously rescinded its face-coverings policy (EBCFA) following updated DESE guidance indicating masks would not be required in the fall. Two ratified union contracts — the clerks' FY22 compensation plan and the cafeteria workers' contract — were approved 5-0 each, and a schedule of bills totaling approximately $587,831 was also approved."
+  decisions:
+    - "Approved Sarah Gold as chair for the coming year"
+    - "Approved Megan Taylor as vice chair"
+    - "Approved Emily Barron as secretary"
+    - "Approved rescission of face-coverings policy EBCFA"
+    - "Approved clerks' FY22 compensation plan"
+    - "Approved cafeteria workers' contract"
+    - "Approved schedule of bills totaling approximately $587,831"
+  votes:
+    - motion: "Sarah Gold as chair"
+      result: "in favor (unanimous)"
+    - motion: "Megan Taylor as vice chair"
+      result: "in favor (4 to 1)"
+    - motion: "Emily Barron as secretary"
+      result: "in favor (4 to 1)"
+    - motion: "Rescind face-coverings policy EBCFA"
+      result: "in favor (unanimous)"
+    - motion: "Clerks' FY22 compensation plan"
+      result: "in favor (unanimous)"
+    - motion: "Cafeteria workers' contract"
+      result: "in favor (unanimous)"
+    - motion: "Schedule of bills (~$587,831)"
+      result: "in favor (unanimous)"
+    - motion: "Enter executive session (non-union personnel negotiations)"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 150
+    end_seconds: 542
+    headline: "School Committee re-elects Gold as chair, Taylor as vice chair, Barron as secretary"
+    dek: "All three officer elections were held by roll-call vote at the start of the reorganization meeting."
+    summary: "The committee held its annual officer reorganization. Sarah Gold was nominated by Megan Taylor, accepted with noted trepidation given a difficult prior year, and was re-elected chair unanimously (5-0). Sarah Gold then nominated Megan Taylor for vice chair; David Harris seconded with praise for Taylor's work on the finance subcommittee, building committee attendance, and CPAC involvement. Taylor was elected 4-1. Emily Barron was nominated for secretary and elected 4-1, with a suggestion that website-update responsibilities be folded into the role."
+    key_speakers: ["Sarah Gold (Chair)", "Megan Taylor (Vice Chair)", "David Harris", "Emily Barron", "Sarah Fox"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 557
+    end_seconds: 696
+    headline: "Committee members commend spring athletic teams for playoff performances"
+    dek: "A committee member praised the baseball, lacrosse, softball, tennis, and wrestling teams for their end-of-year showings."
+    summary: "A committee member reported attending both baseball playoff games at Seaside Park and praised community turnout. Shout-outs were given to the undefeated boys lacrosse team, girls softball, both tennis teams, and the wrestling team. The athletic director confirmed all spring sports seasons had officially concluded."
+    key_speakers: ["David Harris", "Superintendent (Dr. Bucky)"]
+  - topic: public-comment
+    topic_confidence: 0.98
+    start_seconds: 696
+    end_seconds: 935
+    headline: "Resident Cindy Tower Lowen calls for less divisive community dialogue in coming year"
+    dek: "The sole public commenter urged the committee to move forward constructively and praised Marblehead schools relative to other districts."
+    summary: "Cindy Tower Lowen addressed the committee, expressing support for Megan Taylor's re-election as vice chair and urging that the divisiveness of the prior year not continue. She asked for constructive dialogue without community \"noise\" or pitting factions against one another. She noted Marblehead schools fared well compared to Boston-area districts and expressed hope that planning tools (referencing \"PFS\"/Dr. Bucky's planning work) would guide the committee's budget decisions going forward."
+    key_speakers: ["Cindy Tower Lowen (Resident at mic)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 935
+    end_seconds: 1240
+    featured: true
+    headline: "Committee unanimously rescinds face-coverings policy after DESE signals masks not required for fall"
+    dek: "Superintendent recommended rescinding policy EBCFA because DESE is recommending but not requiring masks for summer school and anticipates no mask requirement in the fall."
+    summary: |
+      The superintendent (referenced as "John") presented updated DESE guidance recommending but not mandating face coverings for summer school, with an expectation masks would not be required in fall. He recommended rescinding policy EBCFA rather than continuously updating it, with the ability to reinstate if guidance changes.
+      
+      A committee member (Sarah Fox) noted the current policy contradicted CDC guidance for unvaccinated persons, which still called for masking and six-foot distancing. The superintendent acknowledged the contradiction was widely noted on the superintendent's listserv and clarified the district follows DESE and Mass. DPH rather than CDC.
+      
+      After brief discussion about whether there had been pushback from either pro- or anti-mask groups, the committee voted 5-0 to rescind the policy.
+    key_speakers: ["Sarah Gold (Chair)", "Sarah Fox", "Superintendent (John)", "David Harris", "Megan Taylor", "Emily Barron"]
+  - topic: bonding-capital
+    topic_confidence: 0.8
+    start_seconds: 1240
+    end_seconds: 1710
+    headline: "New school building project reported at ~88% completion; specialty lighting and terrazzo flooring remain pending"
+    dek: "A building committee liaison reported construction milestones and contingency plans for supply-chain delays ahead of a September 1 school opening."
+    summary: |
+      David Harris reported on the school building project following a site tour the prior Wednesday. Key updates included:
+      
+      - Project approximately **88% complete** by construction measure
+      - Remaining spaces: cafetorium, gymnasium, and admin area
+      - Gym flooring installation began the day of the meeting
+      - Specialty **lighting fixtures** delayed due to market demand; plan for electricians to work seven days a week once fixtures arrive in the second week of August; temporary lighting contingency exists for certificate of occupancy (CO)
+      - **Terrazzo staircase flooring** may be delayed; temporary flooring would be installed if needed
+      - Landscaping by "Exquisite" underway; playground equipment arrived
+      - Building committee voted to have a subcommittee examine sod placement for athletic and recreational areas
+      - **Teachers return August 30**; plan is for them to begin setting up classrooms in the new building
+      - **Furniture delivery** scheduled with a hard-stop date of August 14
+      - A follow-up tour planned for mid-July
+    key_speakers: ["David Harris", "Superintendent (Dr. Bucky)", "Sarah Gold (Chair)", "Megan Taylor"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1710
+    end_seconds: 2199
+    headline: "Committee schedules summer retreat for August 3; discusses subcommittee reorganization and draft minutes posting"
+    dek: "After lengthy scheduling discussion, the committee settled on August 3 for its annual day-long retreat, with a Zoom option for members unable to attend in person."
+    summary: |
+      The chair proposed returning to a single day-long retreat format rather than multiple shorter meetings. After working through member conflicts — including travel, medical commitments, and a committee member expecting a baby — the group settled on **August 3** as the retreat date. Sarah Fox indicated she may need to participate by Zoom. The field house was identified as a likely venue.
+      
+      The committee also noted that draft minutes from the year would be posted publicly (labeled as drafts) and formally approved at the retreat. The chair planned to contact facilitator Dorothy about retreat programming options.
+    key_speakers: ["Sarah Gold (Chair)", "Megan Taylor", "David Harris", "Emily Barron", "Sarah Fox"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 2199
+    end_seconds: 2291
+    headline: "FY21 budget at 96% spent as of June 18; estimated ~$100K surplus expected at year-end"
+    dek: "The director of finance reported the district had spent approximately $38.9M of its operating budget and anticipated a roughly $100,000 year-end surplus."
+    summary: |
+      Finance Director Michelle reported that as of June 18 the district had spent **$38,934,537**, or **96%** of the operating budget, with two payrolls and many invoices still to post.
+      
+      Key budget variances:
+      
+      | Area | Status | Amount |
+      |---|---|---|
+      | System-wide substitutes | Surplus | ~$120,000 |
+      | Legal counsel | Surplus | ~$45,000 |
+      | Unemployment expenses | Deficit | ~$28,000 |
+      | Custodian overtime | Deficit | ~$38,000 |
+      | Settlement agreement | Additional cost | ~$60,000 |
+      
+      The director noted staffing vacancies throughout the year (substitutes, paras, tutors, some teachers, and bus drivers) offset many costs. Bus driver positions remained vacant all year; the district is actively recruiting CDL drivers.
+      
+      Estimated year-end surplus: approximately **$100,000**. The director was evaluating whether to prepay special education out-of-district tuitions before the June 30 fiscal year-end to improve the FY22 opening position. Salary line-item cleanup across accounts was planned before FY22 reporting begins.
+    key_speakers: ["Finance Director (Michelle)", "Sarah Fox", "Sarah Gold (Chair)", "David Harris"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 2582
+    end_seconds: 2767
+    headline: "District allotted $3.17M in total COVID relief funds; ~$997K remains unallocated"
+    dek: "Finance Director reported on seven buckets of COVID funding totaling approximately $3.17M, with ESSER III grant of ~$796K requiring at least 20% spent on learning-loss mitigation."
+    summary: |
+      The district's total COVID funding allocation across seven funding streams totals **$3,172,200**, including:
+      
+      - Operating budget COVID line
+      - State Coronavirus Prevention Fund
+      - Coronavirus Relief Fund (CRF) — town allocated **$1M** of its share to schools
+      - CVRF grant
+      - ESSER I, II, and III grants
+      
+      **ESSER III** (the most recent, received approximately six weeks prior) totals **$796,075**.
+      
+      Spend to date: **$1,850,000** paid; **$320,000** encumbered; **$997,000** remaining available (from ESSER II and III).
+      
+      ESSER III carries a mandate that **at least 20%** be spent on learning-loss mitigation programs; no maximum applies. Grants expire in September 2023 and September 2024 respectively. Leadership plans to determine allocations over the summer.
+      
+      The director noted these funds do not include American Rescue Plan Act (ARPA) funds being received by the town; potential school partnership on ARPA spending was flagged for future discussion.
+    key_speakers: ["Finance Director (Michelle)", "Sarah Fox", "Sarah Gold (Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 2291
+    end_seconds: 2381
+    headline: "Clerks' FY22 compensation plan and cafeteria workers' contract approved 5-0 each"
+    dek: "Both contracts had been ratified by their respective unions and received final school committee approval."
+    summary: "The superintendent reported that two collectively bargained agreements — the **clerks' FY22 compensation plan** and the **cafeteria workers' contract** — had been ratified by both union groups. A committee member who observed the cafeteria bargaining session noted the union representative was complimentary of how smoothly the process went. Both contracts were approved by roll-call vote of 5-0."
+    key_speakers: ["Superintendent (John/Dr. Bucky)", "Sarah Gold (Chair)", "Emily Barron", "Megan Taylor", "David Harris", "Sarah Fox"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 3103
+    end_seconds: 3195
+    headline: "Schedule of bills totaling ~$587,831 approved 5-0; committee moves to executive session"
+    dek: "The committee approved routine vendor payments and then entered executive session for non-union personnel (superintendent and finance director) contract negotiations."
+    summary: "A schedule of bills totaling **$587,831.70** was approved 5-0. The committee then voted unanimously to enter executive session pursuant to M.G.L. Chapter 30A §21(a)(2) to conduct strategy sessions and contract negotiations with non-union personnel — specifically the Superintendent and Director of Finance. No return to public session was planned."
+    key_speakers: ["Sarah Gold (Chair)", "Finance Director (Michelle)", "David Harris"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

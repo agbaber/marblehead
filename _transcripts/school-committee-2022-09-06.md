@@ -10,7 +10,201 @@ duration_seconds: 7398
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee votes to transfer Beacon Street parcel to Recreation & Park Dept."
+  summary: "The Marblehead School Committee voted unanimously to transfer a parcel at Beacon and Green Streets to the care and custody of the Recreation and Park Department, and to support Article 33 at the annual town meeting. The committee also approved bills totaling approximately $554,906 and discussed preparations for town meeting, including the proposed Prop 2½ override (Article 46). A presentation on the district's first Youth Risk Behavior Survey since 2007 showed that 41% of high school students reported ever drinking alcohol and 23% reported marijuana use."
+  decisions:
+    - "Approved transfer of Beacon Street parcel (Map 159, Lot 20) to care and custody of Recreation and Park Department"
+    - "Approved support for Article 33 at annual town meeting"
+    - "Approved bills totaling approximately $554,906"
+    - "Held motion to develop a staff survey for superintendent evaluation (no second)"
+  votes:
+    - motion: "Transfer of Beacon Street parcel to Recreation and Park Department"
+      result: "in favor (unanimous)"
+    - motion: "Support Article 33 at annual town meeting"
+      result: "in favor (unanimous)"
+    - motion: "Approval of bills totaling approximately $554,906"
+      result: "in favor (unanimous)"
+    - motion: "Five-minute recess"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 166
+    end_seconds: 628
+    headline: "Residents raise concerns about school committee governance, bus program, and student privacy"
+    dek: "Three residents spoke during public comment on topics including a governance concern about a committee member's children, a proposal to expand the paid-to-ride bus program, and objections to public discussion of committee members' children."
+    summary: |
+      Three residents addressed the committee during public comment:
+      
+      - **Josh Barron (17 Vassar Road)** raised questions about what process exists for approving accommodations for children of school committee members, how staff can raise concerns without fear of retaliation, and what investigation would be conducted regarding allegations he had heard in the community.
+      - **Jessica Benedetto (8 Bradley Road)** proposed adding 7th and 8th grade students at Veterans School to the paid-to-ride bus program on Run 3 only, contingent on a dedicated bus and driver, arguing that run utilization data showed available capacity.
+      - **Catherine Martin (29 Westshire Drive)** expressed strong objection to any public discussion of school committee members' children, calling it 'disgraceful.'
+    key_speakers: ["Josh Barron (resident)", "Jessica Benedetto (resident)", "Catherine Martin (resident)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 628
+    end_seconds: 960
+    headline: "Committee takes brief recess after public comment raises concerns about a member's child"
+    dek: "A school committee member requested a recess in response to a public comment referencing their disabled child; the committee voted unanimously to recess for five minutes."
+    summary: "Following public comment, a committee member requested a brief recess, stating that their disabled child had been referenced in a public meeting. The committee voted unanimously to recess and reconvened at approximately 7:19 PM."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 960
+    end_seconds: 2380
+    headline: "High school social worker presents first Youth Risk Behavior Survey results since 2007"
+    dek: "Survey of 587 students found 41% had ever consumed alcohol, 23% reported marijuana use, and nearly 80% reported getting only five to seven hours of sleep per night."
+    summary: |
+      Gina Hart, a school social worker at Marblehead High School, presented results from the district's first Youth Risk Behavior Survey (YRBS) since 2007. The survey was completed by 587 students (out of approximately 935 enrolled) in October via anonymous Google form.
+      
+      **Key findings:**
+      
+      | Category | Finding |
+      |---|---|
+      | Sleep (8+ hrs recommended) | Only 14.5% meeting recommendation |
+      | Regular physical activity | 71.7% |
+      | Positive peer connections | 97% |
+      | Connection with a staff member | 64.7% |
+      | Mental health affecting daily functioning (sometimes/often/always) | ~79% |
+      | Comfortable speaking to school staff when struggling | 17% |
+      | Would tell no one if struggling | 14% |
+      | Experienced bullying | 23.8% |
+      | Ever drank alcohol | 41% |
+      | Alcohol use in past 30 days | 26.3% |
+      | Ever used nicotine vape products | 19.2% |
+      | Ever used marijuana | 23% |
+      | Marijuana use in past 30 days | 13.7% |
+      
+      Hart noted that students significantly overestimate how many peers use alcohol and marijuana, consistent with social norms theory. She attributed a pandemic-era dip in first-use rates to reduced social contact. Recommendations included evidence-based prevention programming at lower grade levels, annual re-administration of the survey, and student-led substance use prevention initiatives.
+    key_speakers: ["Gina Hart (High School Social Worker)", "Sarah Fox (Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.85
+    start_seconds: 2425
+    end_seconds: 2562
+    headline: "Stipend committee nears resolution on club and coaching stipends; Brown School principal search concludes"
+    dek: "Superintendent reported that club and activity stipend schedules are finalized, athletic coaching stipends are still under negotiation, and final interviews for the Brown School principal were held."
+    summary: "The superintendent reported that the district's stipend committee has reached a final position on club, activity, and team leader stipends. Athletic coaching stipend categories and step structures remain under negotiation, with resolution expected by year-end for implementation the following year. The Brown School principal search completed final interviews; an announcement is expected at the next school committee meeting, with the position expected to start July 1."
+    key_speakers: ["John (Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 2562
+    end_seconds: 3128
+    headline: "District projects ~$700K deficit if fully staffed; out-of-district tuition shortfall at $552K"
+    dek: "The CFO reported that vacancy savings are covering a projected $552,000 deficit in out-of-district tuition and other areas, but warned that if positions were filled the net deficit would be approximately $700,000."
+    summary: |
+      The district's finance director presented the monthly financial report as of March 31, with $25,668,000 in expenditures representing 61% of the operating budget.
+      
+      **Areas of concern:**
+      - **Out-of-district tuition:** Projected deficit of $552,000 due to additional placements and reduced tuition revenue from student withdrawals.
+      - **Out-of-district transportation:** Costs split between IDEA grant and operating budget; to be covered by discretionary grant funds.
+      - **Substitute account:** $178,000 spent (78% of budget line); a $100,000 COVID reimbursement from the state offset what would otherwise be a deficit.
+      - **Custodian overtime:** In deficit at approximately $75,000 (full budget amount spent); to be covered by savings from vacant custodial positions.
+      
+      The finance director noted that if all positions were filled, the district would face an approximate $700,000 deficit. ESSER grant balances total approximately $480,000 remaining unspent, with the ESSER 3 grant not expiring until 2024. The committee was also informed that the district will not need to draw on the special education stabilization reserve fund this year.
+    key_speakers: ["Michelle (Finance Director)", "Sarah Fox (Chair)", "Sarah Gold (Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 3128
+    end_seconds: 3191
+    headline: "Committee unanimously approves bills totaling approximately $554,906"
+    dek: "On a roll-call vote, the school committee approved the identified schedule of bills."
+    summary: "The school committee voted unanimously to approve bills totaling $554,906.94."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: recreation-events
+    topic_confidence: 0.92
+    start_seconds: 3191
+    end_seconds: 4089
+    featured: true
+    headline: "Committee votes 5-0 to transfer Beacon Street parcel to Recreation & Park Dept. and support Article 33"
+    dek: "The committee transferred a vacant school-owned parcel at Beacon and Green Streets to Recreation and Park custody to facilitate a proposed bike park, resolving a longstanding liability insurance obstacle."
+    summary: |
+      The school committee voted unanimously on two motions related to a proposed bike park at the Beacon and Green Streets parcel:
+      
+      1. **Transfer of parcel:** The committee voted 5-0 to transfer the parcel (Assessor's Map 159, Lot 20) from school department custody to the care and custody of the Recreation and Park Department. The rationale was that insurance for recreational use requires the property to be designated as recreational, which is not possible under school department custody.
+      
+      2. **Support for Article 33:** The committee voted 5-0 to support Article 33 at the annual town meeting, which would formally authorize the town to accept the transfer and allow Recreation and Park to work with the bike park organization (referred to as 'Bikemore') on a memorandum of understanding.
+      
+      Linda Rice Collins of the Recreation and Park Commission attended the meeting and noted that no formal agreement with the bike park group has yet been reached, and that discussions would need to proceed through the town's process. The committee also called for progress on a broader MOU between the school committee and the town regarding all school-owned properties, noting that the Board of Selectmen had not yet appointed representatives to that process.
+    key_speakers: ["Sarah Fox (Chair)", "Linda Rice Collins (Recreation and Park Commission)", "Michelle (Finance Director)", "Emily Baron (Committee Member)"]
+  - topic: override
+    topic_confidence: 0.95
+    start_seconds: 4089
+    end_seconds: 5355
+    headline: "Committee discusses town meeting strategy for override Article 46 and commits to public information forums"
+    dek: "Members discussed the presentation plan for the operating override article at town meeting and agreed to hold two to three public information forums if the article passes."
+    summary: |
+      The committee discussed preparation for town meeting, specifically Article 46 (the operating budget override) and Article 11 (capital items including the high school roof, Veterans School roof, HVAC, and smart screens).
+      
+      **Article 46 presentation:**
+      - Superintendent and a committee member (David) will lead the presentation, limited to approximately three to five slides per guidance from the town meeting moderator.
+      - Committee members emphasized that the unanimous 5-0 budget vote should be highlighted.
+      - The committee committed to holding **two to three public information forums** following town meeting approval to answer community questions before the ballot vote.
+      
+      **Article 11:**
+      - Sponsored by the Board of Selectmen; the Town Administrator (John McGinn) will present.
+      - The full MSBA worst-case reimbursement scenario of $5.6 million is carried in the article; committee members noted they should be prepared to explain the MSBA reimbursement possibility.
+      
+      **Override substance clarification:**
+      - The committee discussed and clarified that if the override does not pass, **no existing staff would be cut** — all current positions are funded through the existing budget. The override would add positions and services.
+      - Items in the override that are not passed would be deferred, though some costs (facilities maintenance, etc.) would grow over time.
+      - The finance director noted that some override items, such as long-term substitute positions, are already partially in place but could not be sustained at the proposed level without the override.
+    key_speakers: ["Sarah Fox (Chair)", "Michelle (Finance Director)", "Sarah Gold (Committee Member)", "Megan Taylor (Committee Member)", "Emily Baron (Committee Member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.8
+    start_seconds: 5355
+    end_seconds: 5820
+    headline: "Superintendent evaluation timeline set; motion for staff survey fails for lack of a second"
+    dek: "The committee established a schedule for the annual superintendent evaluation, with self-evaluation due May 19 and a final vote planned for June 16; a motion to conduct a broader staff survey was made but received no second."
+    summary: |
+      The committee established the following schedule for the annual superintendent evaluation:
+      - **May 19:** Superintendent presents self-evaluation
+      - **By June 2:** Committee members submit individual evaluations
+      - **June 16:** Consolidated evaluation presented and voted
+      
+      A motion was made to have two committee members develop a 360-degree staff survey to supplement the evaluation. The motion received no second. Members cited concerns about the appropriateness of the school committee directly surveying staff (as opposed to the superintendent managing his direct reports), lack of time for proper survey design, and data from a survey of 79 superintendents showing that 77 of their districts do not conduct 360-degree evaluations. The superintendent offered to survey his direct reports as he did the prior year.
+    key_speakers: ["Sarah Fox (Chair)", "John (Superintendent)", "Megan Taylor (Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 5820
+    end_seconds: 6212
+    headline: "Committee advances METCO parent representative policy and plans visit to METCO headquarters"
+    dek: "The committee reviewed policies from Bedford and Lincoln schools for adding a non-voting METCO parent representative to the school committee, and will bring a draft policy to the policy subcommittee after next week's visit to METCO headquarters in Boston."
+    summary: |
+      Committee member Emily Baron presented policies from Bedford and Lincoln school districts for adding a non-voting METCO parent representative to the school committee. The Bedford policy calls for the METCO director and parent organization to jointly nominate a candidate who is then voted on by the school committee.
+      
+      The committee will hold its next regular meeting at METCO headquarters in Boston, where it plans to:
+      - Tour the facility and meet with Boston families over dinner
+      - Discuss the proposed METCO representative policy with METCO leadership
+      - Hear from METCO interim co-director Julia Ferreira on program updates, including enrollment for next year and the upcoming Cultural Fest on May 20
+      
+      Members noted that the METCO program has had five directors in four years and discussed the importance of gathering parent perspectives on that issue. The Chair indicated she would consult with legal counsel about how to structure a community discussion portion of the meeting in compliance with open meeting law.
+    key_speakers: ["Emily Baron (Committee Member)", "Sarah Fox (Chair)", "John (Superintendent)"]
+  - topic: bonding-capital
+    topic_confidence: 0.88
+    start_seconds: 6399
+    end_seconds: 6761
+    headline: "Brown School project reaches 95% MSBA reimbursement at approximately $13.2M; final audit pending"
+    dek: "The committee was informed that the Brown School building project has reached 95% reimbursement from the MSBA at approximately $13,225,000, with the remaining 5% to be released after a final audit."
+    summary: |
+      A committee member (David) shared construction punch-list updates completed over April vacation, including:
+      - Installation of an eight-foot ornamental fence along the Tower School property line, improving safety and fulfilling an agreement for egress rights
+      - Completion of the Brown School outdoor classroom, including raised garden beds now in active use for curriculum
+      - Installation of ornamental fencing replacing chain-link along the retaining wall
+      
+      The committee also received notification that the Brown School project has reached **95% MSBA reimbursement at approximately $13,225,000**. The remaining 5% will be released after the MSBA completes its audit of project books, which is expected to bring total reimbursement close to $14 million.
+    key_speakers: ["David Harris (Committee Member)", "Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 6761
+    end_seconds: 7388
+    headline: "Committee recognizes loss of Glover School teacher Brooke Gano and closes meeting"
+    dek: "Before adjourning, the committee acknowledged the death of Glover School teacher Brooke Gano, with several members and the superintendent noting their attendance at her funeral."
+    summary: "Near the close of the meeting, the committee recognized the passing of Glover School teacher Brooke Gano. The chair, superintendent, and at least one other committee member attended the funeral. The meeting adjourned at 9:06 PM."
+    key_speakers: ["Sarah Fox (Chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

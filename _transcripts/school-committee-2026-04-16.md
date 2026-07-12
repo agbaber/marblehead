@@ -10,7 +10,80 @@ duration_seconds: 1762
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee communication subcommittee reviews draft budget-and-override newsletter"
+  summary: "The two-member communication subcommittee reviewed a draft informational newsletter covering the school budget, district trends, and override ballot mechanics, targeting a send date of April 28. Members discussed verifying budget figures and FTE counts with the superintendent and CFO, adding comparable-district data, and clarifying how the tiered override ballot works. The subcommittee also discussed hosting pre-town-meeting office hours with school administration and adding a formal post-town-meeting outreach plan to the April 30 school committee agenda."
+  decisions:
+    - "Approved plan to distribute newsletter on April 28"
+    - "Approved sharing draft with superintendent and CFO for fact-check before distribution"
+    - "Approved reaching out to administration to schedule office hours the week of April 28"
+    - "Approved adding post-town-meeting public outreach as an agenda item for the April 30 school committee meeting"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 5
+    end_seconds: 565
+    featured: true
+    headline: "Subcommittee reviews draft newsletter explaining school budget cuts and override options"
+    dek: "Members walked through each newsletter section, flagging number discrepancies and the need for superintendent and CFO sign-off before an April 28 send."
+    summary: |
+      The subcommittee reviewed a draft HTML newsletter hosted on a member's personal test site. Key sections discussed included:
+      
+      - **School budget summary**: Level-services cost cited as approximately $53.2 million; members noted a discrepancy between that figure and the stated $3.1 million in reductions and flagged it for CFO review.
+      - **FTE vs. positions**: The draft referenced 18.25 FTEs but noted that a recent meeting referenced 22 positions because many were part-time. Members agreed to use FTE figures throughout and add a clarifying note.
+      - **District trends**: Enrollment, staffing ratios, per-pupil spending, and MCAS proficiency compared against a cohort of similar North Shore communities. Members noted Marblehead's per-pupil spend and teacher salaries rank lowest in the cohort while MCAS scores remain competitive.
+      - **What's already been done**: The newsletter references the consolidation of elementary schools (Brown and one other) and prior staff reductions.
+      - **Override options**: A three-tier override structure outlined; members planned to update figures pending the Select Board vote the same day.
+      - **Draw schedule**: Newsletter shows no additional school draw in the immediate year but flags a structural deficit beginning in FY2028.
+      - **Ballot mechanics**: A section explaining how voters can vote yes on multiple tiers up to their comfort level, with an example illustrating that the highest tier above 50% prevails — not the tier with the most votes.
+      - **Disclaimer**: A footer notes compliance with Massachusetts General Laws and states the newsletter does not advocate for or against any ballot question. Members agreed to have the superintendent review for any inadvertently advocacy language.
+      
+      Target send date: Tuesday, April 28. Draft to be shared with superintendent (John) and CFO (Mike) for fact-checking the same day.
+    key_speakers: ["School Committee member (speaker 1)", "School Committee member (Melissa)"]
+  - topic: override
+    topic_confidence: 0.88
+    start_seconds: 849
+    end_seconds: 1178
+    headline: "Newsletter section on tiered override ballot mechanics reviewed and refined"
+    dek: "Members discussed how to explain the three-tier override vote clearly without inadvertently advocating for a position."
+    summary: |
+      The newsletter's override section describes a three-tier Prop 2½ override with draw amounts shown by year. The chart shows nothing drawn in the first year and a structural deficit beginning in FY2028.
+      
+      Members discussed:
+      - Adding the total town override amount (not just the schools' portion) to underscore that schools are not acting alone.
+      - Clarifying for residents that they may vote yes on every tier up to the highest amount they are comfortable with, and that the outcome is determined by the highest tier receiving more than 50% — not by which tier gets the most votes.
+      - Pending Select Board vote figures (expected the same day) would be incorporated before the April 28 send.
+      - The footer disclaimer language was reviewed; members agreed to have the superintendent confirm no language reads as advocacy.
+    key_speakers: ["School Committee member (speaker 1)", "School Committee member (Melissa)"]
+  - topic: public-comment
+    topic_confidence: 0.75
+    start_seconds: 5
+    end_seconds: 10
+    headline: "No public attendees; public comment skipped"
+    dek: "The chair noted no attendees were present and the public comment portion was bypassed."
+    summary: "At the opening of the meeting the chair noted there were no public attendees and skipped the public comment portion."
+    key_speakers: ["School Committee member (chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1369
+    end_seconds: 1745
+    headline: "Subcommittee plans office hours and adds post-town-meeting outreach to April 30 agenda"
+    dek: "Members discussed hosting administration-joined office hours the week of April 28 and a more formal outreach plan after town meeting."
+    summary: |
+      The subcommittee discussed two outreach tracks:
+      
+      1. **Pre-town-meeting office hours (week of April 28)**: Members proposed pairing school committee members with the superintendent (John) and CFO (Mike) for one-hour drop-in sessions, possibly at 2:30–3:00 p.m. to catch parents at school dismissal. One member also floated an informal solo session at a local coffee shop. Any session with three or more school committee members would require posting.
+      2. **Post-town-meeting forums**: Described as more significant given the outcomes that may follow. Members agreed to place a formal agenda item on the April 30 school committee meeting to authorize and organize broader outreach.
+      3. **Newsletter hosting**: Members discussed asking the school website team to host the newsletter content directly on the school committee's newsletter page to reduce clicks for residents.
+      
+      Action items: (a) reach out to John and Mike for availability; (b) contact board member Al to add post-town-meeting outreach to the April 30 agenda; (c) finalize newsletter dates and add any confirmed session times before the April 28 send.
+    key_speakers: ["School Committee member (speaker 1)", "School Committee member (Melissa)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

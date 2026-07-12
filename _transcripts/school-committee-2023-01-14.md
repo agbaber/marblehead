@@ -10,7 +10,121 @@ duration_seconds: 3657
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee votes 6-0 to retain all school properties, reject transfers this year"
+  summary: "The School Committee's Facilities Subcommittee voted unanimously not to sponsor warrant articles transferring ownership of any school properties this year, including Coffin and Eveleth schools. The committee also discussed the Eveleth Library MOU, concluding the school department lacks funds to assist with approximately $5,500 in roof and boiler repairs at the temporary library space. Additional topics included a facilities update covering ongoing roof repairs, HVAC controls upgrades, and a high-school roof replacement timeline of roughly 18 months."
+  decisions:
+    - "Approved motion to not sponsor warrant articles to transfer ownership of any school properties this year (6-0)"
+    - "Held discussion on Eveleth Library MOU; no amendment approved due to lack of funds"
+    - "Held capital request discussion; warrant article placeholder to be submitted for Prop 2½ and/or debt exclusion"
+  votes:
+    - motion: "Recommendation that the committee not sponsor warrant articles this year to transfer ownership of any school properties"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 20
+    end_seconds: 138
+    headline: "Meeting called to order; agenda reordered due to hard stops"
+    dek: "Chair opens the meeting and announces items will be taken out of order, beginning with the Eveleth Library MOU discussion."
+    summary: "The chair calls the meeting to order at approximately 9:03 AM. No hands were raised for public comment. The chair announces the agenda will be reordered, starting with the Eveleth Library memorandum of understanding discussion."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 138
+    end_seconds: 1119
+    featured: true
+    headline: "Library director seeks MOU amendment for Eveleth roof and boiler repairs; school committee declines"
+    dek: "The library director reported approximately $5,500 spent on emergency roof repairs and ongoing boiler issues at the Eveleth School temporary library space, but the school committee said it has no available funds to assist."
+    summary: |
+      Library Director Kim reported that the Eveleth School, serving as the library's temporary location during its renovation, has experienced significant roof leaks and boiler issues. The library spent approximately $4,800 on an initial 96-spot roof repair and has a pending $775 quote for three additional leaks. Total committed spending is roughly $5,500. The library's board chair Gary noted the repairs feel more like capital improvements than routine maintenance, and asked whether the school committee could assist through the existing MOU or a new warrant article.
+      
+      The school committee's chief financial officer (Michelle) clarified that no funds are earmarked for Eveleth, that the school receives no rental income from the library's use of the building, and that the school carries costs for the Coffin School separately. The chair noted the school committee's budgets are fixed and that diverting funds from student education for a building without students is not feasible. Suggestions included the library approaching the Finance Committee and potentially filing a warrant article for supplemental funding, though the warrant closes the following Friday (January 20). No amendment to the MOU was approved.
+    key_speakers: ["Kim (Library Director)", "Gary (Library Board Chair)", "Michelle (School CFO/Counsel)", "Sarah Fox (Chair)"]
+  - topic: bonding-capital
+    topic_confidence: 0.72
+    start_seconds: 1208
+    end_seconds: 1841
+    headline: "Facilities director updates committee on roof repairs, HVAC upgrades, and generator capacity"
+    dek: "Facilities Director Todd reported ongoing roof patching at the high school and Veterans School, an HVAC controls upgrade covering four of five buildings, a fire alarm replacement at the high school, and confirmed generators cannot sustain full building operations during rolling blackouts."
+    summary: |
+      Facilities Director Todd provided a routine update covering:
+      
+      - Ongoing roof leaks at the high school and Veterans School, with a contracted roofer making repairs and MSBA involvement planned for the high school's D-wing roof.
+      - An HVAC controls contractor arriving Tuesday to upgrade four of five school buildings (Brown School operates independently).
+      - A fire alarm system replacement at the high school expected within four to six weeks, projected to provide another 20 years of service.
+      - A fallen cement board piece at the Veterans School stairwell area; a mason has been contacted for repair.
+      - A railing at Veterans School damaged by a plow, requiring deeper anchor work.
+      - Generator capacity: generators at most schools are emergency-only units that can run boilers and pumps but cannot power full lighting or smart panels. Only the Brown School generator was purpose-built to sustain the full building. Rolling blackouts would require school-by-school closures except at Brown.
+      - A nearly complete project running 550 feet of cable from the high school server room to the main power room, with battery backup, to keep technology seamless during outages.
+      
+      The committee discussed the high school roof replacement timeline. Staff estimated roughly 18 months at best before replacement could begin, given the need to hire an Owner's Project Manager (OPM) via RFP, then an architect, then order roofing materials (approximately one year lead time). The roof will be stripped to the metal decking with five-inch insulation added, and the project would be done in phases over multiple summers. A prior public commitment to make the roof solar-panel-ready was noted.
+    key_speakers: ["Todd (Facilities Director)", "Michelle (School CFO/Counsel)", "Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 1921
+    end_seconds: 3122
+    headline: "Committee votes 6-0 to retain Coffin and Eveleth school properties; defers transfers indefinitely"
+    dek: "After a lengthy discussion on land scarcity, enrollment growth, emergency capacity, and the need for a permanent central administration home, the committee unanimously voted not to sponsor warrant articles to transfer any school properties this year."
+    summary: |
+      The chair opened a discussion on school properties. The committee's current active surplus properties are Coffin School and Eveleth School (the remaining operating campuses and adjacent parcels are all part of existing school grounds). Last year the committee returned Beacon Street to the town; the Garey School was previously sold for approximately $800,000.
+      
+      **Arguments for retaining both Coffin and Eveleth:**
+      - Marblehead has an extreme land shortage; once properties are given up they cannot be recovered.
+      - Brown School was built for 425 students and currently enrolls approximately 453, meaning the district is already over capacity.
+      - Enrollment projections used during the MSBA process underestimated actual growth; new families moving in from Boston-area cities are increasing enrollment beyond historical birth-rate-based forecasts.
+      - In past emergencies (e.g., Brown School evacuation), Coffin and Eveleth provided essential backup space.
+      - The community expressed strong opposition to closing north-end schools; the committee feels an obligation to restore a school to that neighborhood if enrollment demands it.
+      - Coffin School has an 18-to-22-year-old special program that previously had dedicated space at Eveleth and deserves a purpose-built intentional space.
+      - Central administration is currently housed at Widger Road at the town's discretion; the district has nearly been given short notice to vacate before and needs a permanent home.
+      - Eveleth functioned well as a kindergarten/preschool center and could serve similar educational purposes.
+      
+      **Concerns about retention:**
+      - Maintaining Coffin costs over $30,000 annually in non-utility expenses alone.
+      - Both Coffin and Eveleth were the district's most capital-needy buildings per the capital needs assessment.
+      - Vandalism at Coffin and an underground oil tank requiring eventual remediation add ongoing liability.
+      - If occupied permanently, both buildings would require substantial capital investment.
+      
+      Superintendent John agreed that land should not be given up but noted the community needs to understand the maintenance liability. He distinguished the land question from the building question.
+      
+      The chair made a motion, seconded by Jeff St. George and Allison Taylor, that the committee recommend it not sponsor warrant articles to transfer ownership of any properties this year.
+      
+      **Roll-call vote:** Jeff St. George – Yes; Allison Taylor – Yes; Dr. Bucky – Yes; Michelle Cresta – Yes; Chad Bloodgood – Yes; Sarah Fox – Yes. **Motion carries 6-0.**
+      
+      Next steps discussed: invite Paula (director of the 18-to-22 program) to outline space needs; have Superintendent compile a list of central administration space needs; explore feasibility of renovating Coffin or Eveleth for those uses; consider future warrant articles for capital renovation.
+    key_speakers: ["Sarah Fox (Chair)", "Jeff St. George", "Allison Taylor", "John (Superintendent)", "Michelle (School CFO/Counsel)", "Dr. Bucky"]
+  - topic: bonding-capital
+    topic_confidence: 0.8
+    start_seconds: 3122
+    end_seconds: 3394
+    headline: "Capital request discussion held; warrant placeholder to be filed before January 20 deadline"
+    dek: "The committee discussed capital needs but cannot finalize requests until the town certifies free cash; a warrant article placeholder covering Prop 2½ and possibly a debt exclusion will be submitted before the Friday noon deadline."
+    summary: |
+      The committee noted that the town has not yet closed its FY2022 books (normally completed in October), so certified free cash is unknown and a capital request target number cannot be set. The school's facility strategic plan is not currently posted on the website and staff was asked to upload it.
+      
+      Items discussed for potential capital requests include:
+      - Turf field replacement (estimated approximately $650,000; boosters are fundraising but not expected to cover the full amount).
+      - Eveleth School roof (cost not confirmed; a capital needs assessment figure exists but construction costs have fluctuated significantly).
+      
+      The committee confirmed a warrant article placeholder will be submitted by the following week covering both a Prop 2½ request and possibly a debt exclusion, as some prior capital items were pushed to a debt exclusion format at community request. The town cannot make capital recommendations until certified free cash is known.
+    key_speakers: ["Sarah Fox (Chair)", "Michelle (School CFO/Counsel)"]
+  - topic: public-safety
+    topic_confidence: 0.65
+    start_seconds: 3440
+    end_seconds: 3648
+    headline: "Goose management plan underway at Brown School field; coyote decoys and professional assessment ordered"
+    dek: "The committee discussed a Canada goose problem at the Brown School field; coyote decoys have been ordered, the fire chief is assisting with dog-walking deterrence, and a professional wildlife mitigation consultant has been engaged."
+    summary: |
+      A committee member raised the issue of goose droppings on the Brown School field. Facilities Director Todd reported:
+      - The fire chief has been visiting the field daily at 4 PM with his dogs to chase geese, and also early several mornings per week.
+      - A professional wildlife mitigation consultant has been contacted to assess the situation and provide a proposal.
+      - Coyote decoy figures have been ordered (ordered approximately a week prior); delivery is pending. Decoys must be moved regularly to remain effective and may need to be secured to fencing.
+      
+      The principal was notified and parents have been kept informed. The committee noted the information should be shared publicly.
+    key_speakers: ["Todd (Facilities Director)", "Sarah Fox (Chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

@@ -10,7 +10,60 @@ duration_seconds: 3504
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School finance committee reviews FY23 budget pressures and plans FY24 process"
+  summary: "The joint school-finance liaison meeting reviewed the FY23 school budget, flagging custodial vacancies, rising utility costs, and SPED tuition and transportation overruns totaling roughly $970,000 above budget. The group discussed FY24 planning priorities including a four-year historical look-back on out-of-district placements, enrollment projections, and a community budget-priority survey conducted through a platform called Thought Exchange. The town's new ClearGov budgeting software is in a transition phase with five years of historical data being uploaded, with full implementation expected around mid-January for budgeting and a general-ledger replacement from the legacy SoftRight system anticipated sometime in FY24."
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 163
+    end_seconds: 714
+    featured: true
+    headline: "SPED costs, utility spikes, and custodial vacancies strain FY23 school budget"
+    dek: "The school CFO reported SPED transportation commitments running $458K over budget and tuitions $513K over budget, offset by an $800K circuit-breaker carryover and $220K in additional reimbursement."
+    summary: |
+      The school finance director (identified as Michelle) briefed the joint liaison group on FY23 budget watch areas:
+      
+      - **Custodians:** Five vacancies district-wide; two positions being filled by contracted workers at substantially higher cost.
+      - **Substitutes:** Teaching-absence volume is outpacing available substitutes.
+      - **Utilities:** Natural-gas rates were locked in at 2019 prices through March; the expiration is expected to produce a significant cost increase for the final three months of FY23 and beyond. Electric rates are rising roughly 30–33%, adding an estimated $120,000–$130,000 this year and approximately $212,000 on an annualized basis.
+      - **SPED:** Transportation commitments are $458,000 above budget; tuition costs are $513,000 above budget. Offsets include approximately $800,000 in circuit-breaker fund carryover, $250,000 in prepaid tuitions from the prior year, and $220,000 in higher-than-anticipated circuit-breaker reimbursement, leaving an available balance of roughly $478,000. The presenter cautioned that fully spending that balance would leave no circuit-breaker cushion for FY24.
+      - **FY24 outlook:** Out-of-district placement tuitions are expected to increase approximately 14% (versus the historical 2–3%), with current out-of-district placements in the $4 million range. A four-year historical trend report on SPED placements is being assembled.
+    key_speakers: ["Michelle (School CFO/Finance Director)", "Dr. Bucky (Superintendent)", "Sarah (Finance Committee member)", "Alec (Finance Committee member)", "Pat (School Committee member)", "Cam (Finance Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.93
+    start_seconds: 1367
+    end_seconds: 2108
+    headline: "Finance committee and school department align on FY24 budget planning process"
+    dek: "The liaison group agreed on budget presentation formats, hearing dates, and the importance of presenting a level-services budget separately from new requests."
+    summary: |
+      The chair described a newly developed budget-priorities document shared with the superintendent for use in building department requests. Key FY24 process agreements discussed:
+      
+      - **Budget book:** Will be digital and posted publicly by the week of January 9; school committee budget hearings are scheduled for January 9–10.
+      - **FinCom hearing dates:** February 13, February 27, March 13, and March 27 (catch-all). Schools are tentatively scheduled for March 13.
+      - **Sequencing concern:** The school committee chair asked that the school budget be voted before FinCom votes it, noting it has historically gone the other way.
+      - **Presentation format requested:** A level-services budget (including contractual and SPED adjustments) shown separately from new requests; three-year comparison (FY22 actual, FY23 budget, FY24 request); salary detail broken out by category (teachers, SPED teachers, paraprofessionals, custodians, etc.) and by school.
+      - **Enrollment data:** The finance committee asked for enrollment history and projections, including kindergarten influx data. The Brown School opened this year and currently has 453 students (capacity 450); an extra kindergarten section had to be added three weeks before school started.
+      - **Peer comparisons:** A finance committee member requested per-pupil spending, teacher-to-student ratios, IEP percentage, and out-of-district placement rates compared to peer communities, noting Marblehead's per-pupil spending is far below the so-called 'W towns' (Wellesley, Weston, etc.).
+    key_speakers: ["Sarah (Finance Committee chair/member)", "Alec (Finance Committee member)", "Cam (Finance Committee member)", "Michelle (School CFO)", "Dr. Bucky (Superintendent)", "Pat (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 2109
+    end_seconds: 3490
+    headline: "ClearGov budgeting software in transition; SoftRight general-ledger replacement targeted for FY24"
+    dek: "The town administrator (Thatcher) reported that five years of budget data are being uploaded to ClearGov and estimated the system would be operational for budgeting by mid-January, while a full general-ledger replacement from SoftRight is anticipated sometime in FY24."
+    summary: |
+      Town technology staff described a multi-phase software modernization:
+      
+      - **ClearGov (budget transparency/reporting):** Five years of historical data are being uploaded; data anomalies from the transfer are largely resolved. A small number of users (including Michelle) have accounts. Training modules are described as user-friendly. Estimate: operational for budget management by **mid-January**. ClearGov sits on top of the existing general ledger and is not a replacement for it.
+      - **SoftRight (general ledger):** Still in use; extracting historical data is described as extremely labor-intensive (20–30 staff hours in recent weeks for a four-year pull). The town administrator noted that SoftRight's data is further complicated by the FY18–19 budget-shortfall period, which involved journal-entry corrections.
+      - **Payroll software:** Identified as the next priority after ClearGov stabilizes. A recent glitch caused school-side employees (who use external email) not to receive pay stubs for the most recent pay cycle, though pay itself was delivered.
+      - **General ledger replacement:** Expected sometime in **FY24**, likely requiring a parallel-run period alongside SoftRight.
+      - **Thought Exchange survey:** Dr. Bucky described a community budget-priorities survey sent to staff, students, parents, and the general public via social media and the school website; it closed the prior Thursday and data are being aggregated by respondent category (parent, teacher, community member).
+    key_speakers: ["Thatcher (Town Administrator/IT lead)", "Michelle (School CFO)", "Pat (School Committee member)", "Alec (Finance Committee member)", "Dr. Bucky (Superintendent)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

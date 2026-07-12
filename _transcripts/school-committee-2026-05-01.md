@@ -10,7 +10,178 @@ duration_seconds: 5949
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee votes 4-1 to recommend indefinitely postponing Article 28 supplemental appropriation"
+  summary: "The Marblehead School Committee met April 30, 2026 and acted on several town meeting warrant articles, voting unanimously to recommend indefinitely postponing Articles 25, 26, and 27 (capital and technology needs) and voting 4-1 to recommend indefinitely postponing Article 28 (school department supplemental appropriation). The committee also approved the annual Recreation and Parks MOU with an added clause covering irrigation on all School District properties, approved $735,165.42 in bills and April 9 meeting minutes, and received an update on state fair-share supplemental grant funding covering bus cameras, high school re-arcs, and music program needs. The meeting closed with a vote to enter executive session on collective bargaining strategy and potential litigation."
+  decisions:
+    - "Approved bills totaling $735,165.42 and April 9, 2026 meeting minutes"
+    - "Approved recommendation to indefinitely postpone Article 25 (school capital needs)"
+    - "Approved recommendation to indefinitely postpone Article 26 (school building technology needs)"
+    - "Approved recommendation to indefinitely postpone Article 27 (school department capital needs)"
+    - "Approved recommendation to indefinitely postpone Article 28 (school department supplemental appropriation)"
+    - "Approved annual MOU with Recreation and Parks with added irrigation language"
+    - "Approved motion to enter executive session"
+  votes:
+    - motion: "Approve bills and April 9 meeting minutes"
+      result: "in favor (unanimous)"
+    - motion: "Recommend indefinitely postpone Article 25"
+      result: "in favor (unanimous)"
+    - motion: "Recommend indefinitely postpone Article 26"
+      result: "in favor (unanimous)"
+    - motion: "Recommend indefinitely postpone Article 27"
+      result: "in favor (unanimous)"
+    - motion: "Recommend indefinitely postpone Article 28"
+      result: "in favor (4 to 1)"
+    - motion: "Approve Recreation and Parks MOU with irrigation amendment"
+      result: "in favor (unanimous)"
+    - motion: "Enter executive session"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 85
+    end_seconds: 268
+    headline: "Resident praises teachers and shares granddaughter's mock town meeting experience on override"
+    dek: "A resident named Mary described her granddaughter's participation in a middle school mock town meeting that debated the override and trash fee."
+    summary: "A resident (identified as Mary) addressed the committee during public comment in advance of Teacher Appreciation Week, commending educators and recounting how her granddaughter participated in a mock town meeting at the middle school that debated the proposed override. She noted the experience sparked intergenerational conversation at home."
+    key_speakers: ["Mary (resident)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 268
+    end_seconds: 820
+    headline: "Superintendent reports on NELMS Spotlight School visit, mock town meeting, and tree-planting at Village School"
+    dek: "The superintendent highlighted a New England League of Middle Schools evaluation visit at Vets, an engaging student mock town meeting, and a privately funded tree-planting initiative."
+    summary: "The superintendent opened with a moment of silence for Scott Boy, a long-serving custodian who recently passed away. He then reported that NELMS (New England League of Middle Schools) visited Vets Middle School to evaluate it for a Spotlight School Award, with results expected within a week. He also described the student mock town meeting at the middle school, facilitated by Jack Gatschet, in which students debated the override tiers — tiers one and two passed but tier three narrowly failed. Tree warden Jonathan Hebert and volunteers planted trees along the drive at Village School using private donations to address a heat-island effect from large asphalt areas; a similar planting is planned at the high school."
+    key_speakers: ["Superintendent", "Jack Gatschet (town meeting moderator, referenced)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 820
+    end_seconds: 933
+    headline: "Student representative provides fourth-quarter update including senior projects, AP exams, and spring athletics"
+    dek: "The student representative reported on senior passion projects, upcoming AP exams, Mamma Mia! performances, and spring sports records."
+    summary: "The student representative (class of 2026) noted the start of the fourth quarter and senior projects, with over 150 seniors engaged in internships and passion projects. He is personally fundraising for the track team through a community track meet. AP tests run May 4–15. The school musical *Mamma Mia!* opens the following day. Spring sports records reported: baseball 7–4, softball 9–5, boys lacrosse 7–2, boys tennis 6–2 (ranked #1 in Division 3 Massachusetts power rankings), girls tennis 5–3, girls lacrosse 4–5, boys track 4–1, girls track 2–3, and sailing beat St. John's Prep."
+    key_speakers: ["Student representative (class of 2026)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 840
+    end_seconds: 2362
+    headline: "Superintendent presents district improvement plan draft; committee sets May 8 feedback deadline and June 4 vote target"
+    dek: "The superintendent walked through parent and staff feedback incorporated into the multi-year district improvement plan, covering AI/technology use, restorative practices, and administrator mentorship."
+    summary: |
+      The superintendent described an iterative process of drafting the district improvement plan — gathering feedback from the administrative team, staff, and parents via survey — and highlighted key additions:
+      
+      - **Goal 1 (Curriculum):** Added language addressing artificial intelligence as a learning tool and reviewing Chromebook use to ensure balance between screen time and hands-on learning.
+      - **Goal 2 (Educator development):** Added language on celebrating and supporting developing educators, expanding mentoring, and providing new administrators with mentorship and alignment with district mission.
+      - **Goal 4 (Student support):** Added language establishing avenues to address online safety, cyberbullying, and social media partnerships with parents and caregivers; added restorative practice protocols district-wide.
+      - **Goal 5 (Governance):** Added language around streamlining district-wide systems and services through enhanced tools.
+      
+      A committee member noted that listing a committee meeting as "assessment and evidence" is insufficient and that the document lacks specific deliverables and data metrics. The superintendent acknowledged the feedback.
+      
+      The committee agreed to the following timeline:
+      - Committee members email feedback to the superintendent by **May 8**
+      - Full committee discussion at the **May 21** meeting
+      - Vote no later than the **June 4** meeting
+      
+      The plan covers FY2026–27 through FY2028–29 and contains 6 goals, 22 objectives, 59 improvement strategy boxes, and approximately 100–150 individual strategies.
+    key_speakers: ["Superintendent (John)", "Committee member (unnamed, raised deliverables concern)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 2362
+    end_seconds: 2387
+    headline: "School Committee approves $735,165.42 in bills and April 9 meeting minutes 5-0"
+    dek: "The consent agenda covering bills and minutes passed unanimously."
+    summary: "On a motion by Kate, seconded by Henry, the committee voted 5–0 to approve the identified schedules of bills totaling $735,165.42 and the meeting minutes from April 9, 2026."
+    key_speakers: ["Kate (committee member)", "Henry (committee member)"]
+  - topic: override
+    topic_confidence: 0.9
+    start_seconds: 2387
+    end_seconds: 2524
+    headline: "Committee discusses public outreach forums ahead of June 9 override ballot vote"
+    dek: "A subcommittee member described two recent open-office-hour sessions and proposed continuing informal public Q&A events before the June 9 vote."
+    summary: |
+      Committee member Lucy raised the topic of public communication strategy. Member Henry described participating in two open-office-hour style sessions over the prior two days with the superintendent, town administrator Dan, and others. Attendance was roughly 10–12 people each day. The dominant questions from the public were about the town budget side of the override and the mechanics of the tiered ballot structure.
+      
+      The committee discussed the legal obligation to provide information but not to advocate. Members noted that if two school committee members attend the same event, they must be careful not to deliberate on matters they will subsequently vote on. The group agreed that Lucy would schedule future informal sessions, share dates with all members, and report back to the committee on themes and questions raised. Members expressed interest in staggering daytime and evening sessions to reach different audiences.
+    key_speakers: ["Lucy (committee member)", "Henry (committee member)", "Superintendent (John)"]
+  - topic: bonding-capital
+    topic_confidence: 0.92
+    start_seconds: 3016
+    end_seconds: 3400
+    featured: true
+    headline: "Committee votes 4-1 to recommend indefinitely postponing Article 28 supplemental appropriation; Articles 25–27 postponed unanimously"
+    dek: "The committee recommended indefinitely postponing four school department warrant articles at the May 2026 town meeting, with one dissenting vote on Article 28."
+    summary: |
+      Director of Finance Mike presented the school department's prioritized capital needs list for FY27, noting that the administration's recommendation was not to bring new capital requests forward at this town meeting given the override context. Existing lease obligations would still appear on the warrant.
+      
+      The committee voted on four warrant articles:
+      
+      | Article | Description | Vote |
+      |---------|-------------|------|
+      | 25 | School capital needs | 5–0 (indefinitely postpone) |
+      | 26 | School building technology needs | 5–0 (indefinitely postpone) |
+      | 27 | School department capital needs | 5–0 (indefinitely postpone) |
+      | 28 | School department supplemental appropriation | 4–1 (indefinitely postpone) |
+      
+      The 4–1 vote on Article 28 reflected a debate: one member preferred to leave the article open as a contingency if the school budget in Article 23 were amended downward at town meeting. Other members argued the school department had joined the town-wide override, the FY27 budget was right-sized, and the article would not practically be usable at the town meeting floor. All four motions were made by Henry and seconded by Melissa.
+    key_speakers: ["Henry (committee member)", "Melissa (committee member)", "Mike (Director of Finance)", "Kate (committee member, dissenting vote on Art. 28)"]
+  - topic: recreation-events
+    topic_confidence: 0.85
+    start_seconds: 3400
+    end_seconds: 5015
+    headline: "Committee approves Recreation and Parks MOU 5-0, with new language covering irrigation on all school district properties"
+    dek: "An annual memorandum of understanding with the town Recreation and Parks department was approved with an amendment addressing ongoing irrigation ambiguity at Brown School."
+    summary: |
+      The superintendent presented the updated annual MOU with Recreation and Parks (April 30 through August 31). The committee identified a recurring ambiguity over who is responsible for irrigation system maintenance — particularly at Brown School — and agreed to add language to Exhibit A, bullet six, covering management of irrigation on all Marblehead School District athletic fields and properties.
+      
+      A motion by Jen, seconded by Henry, to approve the MOU with that amendment passed 5–0. Members noted the agreement is a one-year document and that irrigation cost-sharing and responsibility should be clarified further over the coming months, ideally with input from a new facilities director once hired.
+      
+      Members also flagged spring grounds cleanup timing: Recreation and Parks crews prioritize field lining for sports season first, then address loose mulch and leaves, leading to visible delays at school grounds. The superintendent confirmed ongoing communication with Recreation and Parks leadership.
+    key_speakers: ["Jen (committee member)", "Henry (committee member)", "Superintendent (John)", "Mike (Director of Finance/Facilities)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 5015
+    end_seconds: 5287
+    headline: "Superintendent reports on state fair-share supplemental grant covering bus cameras, high school re-arcs, and music program"
+    dek: "Senator Creighton and Representative Armini (or Ramel) secured supplemental state funding covering approximately $66,000 in school needs for FY27."
+    summary: |
+      The superintendent and CFO reported that state legislators secured fair-share supplemental budget funding for the school district. Confirmed awards include:
+      
+      - **$40,700** for bus camera systems (a top Vets priority)
+      - **$15,720** for high school re-arcs (ARC systems)
+      - **$10,000** for the music program
+      
+      Additional funding may still be forthcoming that could address the Glover playground and other capital items. The superintendent credited Senator Creighton and Representative Armini/Ramel with advocacy. The committee discussed sending a public thank-you letter to both legislators.
+    key_speakers: ["Superintendent (John)", "Julie (CFO or assistant superintendent, referenced)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 5287
+    end_seconds: 5800
+    headline: "Subcommittee reports: April newsletter sent, roof work ongoing, school facilities walk-throughs completed"
+    dek: "Members reported on communications, roof repairs, and a facilities walk-through of all five school buildings, finding them generally in good condition."
+    summary: |
+      Committee member Lucy reported the communications subcommittee sent the April newsletter, which was well received. She also reported that, over April break, four sections of the roof — including the section over the meeting room — were replaced as part of ongoing roof work; the facilities subcommittee will meet the following week.
+      
+      The facilities subcommittee completed walk-throughs of all five school buildings with Buildings and Grounds directors James and Gilberto. Key findings:
+      
+      - Four of five building principals attended
+      - Buildings are generally in good condition; custodians know their buildings well
+      - The high school, as the oldest building, has the most outstanding items
+      - Many previously identified issues have already been addressed
+      - Preventative maintenance on HVAC unit vents, belts, and fans remains a priority discussion item
+      
+      The committee expressed appreciation for the custodial and maintenance team and noted the departure of Crystal (transportation/facilities coordinator) as a future gap.
+    key_speakers: ["Lucy (committee member)", "Mike (Director of Finance/Facilities)", "James and Gilberto (Buildings and Grounds, referenced)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 5829
+    end_seconds: 5950
+    headline: "Committee votes 5-0 to enter executive session on collective bargaining strategy and potential litigation"
+    dek: "The committee entered executive session without intent to return to open session to discuss MEA and related bargaining units and a matter identified as J. Buckley."
+    summary: "On a motion by Kate, seconded by Henry, the committee voted 5–0 by roll call to enter executive session pursuant to MGL c.30A §21(a)(3) for two purposes: (1) to discuss collective bargaining strategy with the Marblehead Education Association, occupational therapists, physical therapists, board-certified behavior analysts, OT assistants, PT assistants, and certified nurse assistants; and (2) to discuss strategy regarding potential litigation identified as J. Buckley. The chair declared no intent to return to open session."
+    key_speakers: ["Kate (committee member)", "Henry (committee member)", "Chair"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

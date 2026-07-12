@@ -9,7 +9,173 @@ video_url: "https://www.youtube.com/watch?v=9hdn3o1UxIo"
 duration_seconds: 4867
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee approves superintendent's summative evaluation 4-1, approves FY23 stipend adjustments"
+  summary: "The Marblehead School Committee held its final meeting of the year with outgoing member David Harris. The committee voted 4-1 to approve Superintendent Dr. Bucky's summative evaluation after an extended discussion about rating methodology and one member's dissenting concerns. The committee also unanimously approved FY23 stipend adjustments totaling just under $65,000 and voted to declare six vision-testing machines as surplus. A motion for a 2.5% salary increase for the superintendent passed 4-1."
+  decisions:
+    - "Approved declaration of six TopTech 2000 vision testing machines as surplus goods (5-0)"
+    - "Approved FY23 stipend adjustments totaling just under $65,000 (5-0)"
+    - "Approved schedule of bills totaling approximately $769,068.88 (5-0)"
+    - "Approved summative evaluation of Superintendent Dr. Bucky (4-1)"
+    - "Approved 2.5% salary increase for Superintendent Dr. Bucky for FY23 (4-1)"
+    - "Tabled FY23 user and lunch fees pending federal funding clarification"
+    - "Continued policy FFA memorials review to next week's meeting"
+  votes:
+    - motion: "Declare six TopTech 2000 vision testers as surplus"
+      result: "in favor (unanimous)"
+    - motion: "Approve FY23 stipend adjustments"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills (~$769,068.88)"
+      result: "in favor (unanimous)"
+    - motion: "Approve summative evaluation of Superintendent Dr. Bucky"
+      result: "in favor (4 to 1)"
+    - motion: "Approve 2.5% salary increase for Superintendent Dr. Bucky for FY23"
+      result: "in favor (4 to 1)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 59
+    end_seconds: 653
+    headline: "Committee honors outgoing member David Harris at his final meeting"
+    dek: "Harris, who served seven years on the school committee and oversaw the Lucretia J. Brown Elementary School building project, received remarks from colleagues before the student representative gave year-end updates."
+    summary: "Committee members offered tributes to outgoing member David Harris, noting his seven years of service, prior decade on the finance committee, and his role chairing the building committee that delivered the new Brown School. Harris thanked colleagues, the community, superintendent Dr. Bucky, and his family. The student representative (Yasin) then gave a final year-end update covering June graduation, senior sunrise, underclassmen awards, Juneteenth flag-raising, MCAS completion, and upcoming last days of school."
+    key_speakers: ["David Harris (outgoing School Committee member)", "Megan (School Committee member)", "Sarah (School Committee member)", "Yasin (Student Representative)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 840
+    end_seconds: 1087
+    headline: "Chair addresses letter alleging verbal abuse; one resident raises declining enrollment concerns"
+    dek: "A committee member disputed a letter submitted for public comment alleging she had been verbally abusive, calling it politically motivated; a resident questioned the committee's handling of declining enrollment and staff turnover."
+    summary: |
+      Before formal public comment, a committee member (identified contextually as Sarah Fox, chair) stated that a letter submitted by a school committee member's husband alleging she had been verbally abusive was inaccurate and politically motivated. She said the conversation in question was a professional courtesy to address concerns about her summative review.
+      
+      During public comment, one resident thanked David Harris for his service and raised two questions: (1) whether the committee has or should have a civility policy, and (2) why the committee has not publicly addressed declining enrollment — noting enrollment dropped from approximately 3,100 students in 2017 to approximately 2,600 in 2022 — or the departure of teachers and staff.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Resident at mic (Nicole, per transcript)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1087
+    end_seconds: 1312
+    headline: "Committee declares six vision-testing machines surplus; state health department recommended discontinuing their use"
+    dek: "The Massachusetts Department of Public Health recommended schools stop using automated vision-testing machines in favor of chart-based protocols; the committee voted unanimously to declare six TopTech 2000 units surplus for sale."
+    summary: |
+      Finance Director Michelle Augusta explained that the Massachusetts Department of Public Health recently recommended discontinuing automated vision testing machines in schools for all age groups. The district has six TopTech 2000 vision testers valued at approximately $120–$250 each. Under state rules, the committee must formally declare them surplus before selling them, likely via eBay or a similar platform. The new protocol uses printed eye charts similar to those used in eye doctors' offices, which staff believe will catch more vision problems. No significant new equipment purchase is required; the state will provide training.
+      
+      **Vote:** 5–0 in favor (Sarah Gold, Sarah Fox, David Harris, Megan Taylor, Emily Barron).
+    key_speakers: ["Michelle Augusta (Finance Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1312
+    end_seconds: 1623
+    headline: "Superintendent reports 10 retirees, new food service director hired, assistant principal named"
+    dek: "Superintendent Dr. Bucky presented a list of 10 retiring staff, announced the hiring of food service director John Constantino, and noted that an internal candidate, Lindsay Johnson, was selected as high school assistant principal."
+    summary: |
+      The superintendent's report included:
+      
+      - **Retirees:** Ten staff across the district including cafeteria workers, custodians, administrative assistants, teachers, and tutors will be recognized with glass apple awards.
+      - **Metco Director Search:** Posted April 27; a screening meeting was held the same day as this meeting. Search committee includes administrator rep Dan Bauer and PCO rep Monique. Additional outreach planned in Boston including Boys & Girls Club connections.
+      - **New hires:** Food service director John Constantino (to be introduced at the summer retreat or September meeting); high school assistant principal selected — internal candidate Lindsay Johnson, who helped develop the 'Magic Block' schedule.
+    key_speakers: ["Dr. Bucky (Superintendent)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 1623
+    end_seconds: 1873
+    headline: "Committee approves FY23 stipend adjustments totaling just under $65,000; MEA approved unanimously"
+    dek: "After a lengthy negotiation process, the Marblehead Education Association unanimously approved a new stipend structure on June 14; the school committee also approved 5-0, with all advisors receiving at least a cost-of-living increase going forward."
+    summary: |
+      Finance Director Michelle Augusta presented updated FY23 stipend adjustments for coaches, club advisors, and team leaders. Key details:
+      
+      - Total cost allocated: $65,000; final amount came in just below that.
+      - The MEA approved the adjustments unanimously on June 14.
+      - Changes are shown in red in the committee's slide presentation to highlight what changed.
+      - Inconsistencies were corrected — e.g., the AP testing coordinator role had grown significantly but stipend had not kept pace.
+      - All positions receive at least a cost-of-living increase; going forward, the negotiated COLA will automatically apply to stipends annually.
+      - Steps for coaches are based on years of coaching experience.
+      
+      A committee member noted this is an important step toward competitive compensation, citing Lynn's recent salary increases as an example of attracting talent during a teacher shortage.
+      
+      **Vote:** 5–0 in favor.
+    key_speakers: ["Michelle Augusta (Finance Director)", "Sarah Fox (School Committee Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 1873
+    end_seconds: 2059
+    headline: "Lunch fee vote tabled pending federal funding clarity; ESSER funds discussed"
+    dek: "The committee tabled FY23 user and lunch fees to await word from the federal government on whether free-meal programs will continue, while noting ESSER grant funds through 2024 are being conserved for residual learning-loss needs."
+    summary: |
+      The chair tabled the FY23 user and lunch fees vote, citing uncertainty about whether the federal government will extend the universal free meals program (which was extended with little notice in a prior year). The committee may defer the decision to its summer retreat.
+      
+      A committee member also asked about ESSER (federal COVID relief) funds. Augusta noted the district has completed drawdowns on ESSER I and II; ESSER III funds extend through 2024. Small amounts are being spent on summer programming and learning loss; the committee is sitting tight on most of the remaining balance. A committee member requested a future presentation on assessment data showing learning loss and regression to help guide earmarking of remaining ESSER funds.
+    key_speakers: ["Michelle Augusta (Finance Director)", "Sarah Fox (School Committee Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.98
+    start_seconds: 2136
+    end_seconds: 3446
+    featured: true
+    headline: "Superintendent Dr. Bucky's summative evaluation approved 4-1 after dispute over ratings process and dissenting voice"
+    dek: "One committee member voted no, contending her individual ratings and a request for a staff survey were not reflected in the summative document and that some 'exemplary' ratings were given by majority rather than unanimously."
+    summary: |
+      The committee discussed and voted on the FY22 summative evaluation of Superintendent Dr. Bucky. Committee members Emily Barron and Lisa compiled the document using the MASC (Massachusetts Association of School Committees) process, tabulating each member's individual ratings by majority vote per standard.
+      
+      **Process described:**
+      - Each member submitted individual ratings and written comments.
+      - Emily and Lisa identified themes across comments, blended them into comprehensive paragraphs, and used majority ratings for each standard.
+      - Individual reviews are not shared among members prior to the summative (open meeting law constraint); two members were designated to compile.
+      
+      **Key points of contention (member identified contextually as Sarah Fox):**
+      - She felt her individual voice was not reflected in the summative.
+      - She objected to 'exemplary' ratings being assigned by majority rather than unanimously, arguing exemplary should only appear when all five members agreed.
+      - She had requested a staff survey to evaluate the professional leadership goal; that request was denied. She wanted the denial noted in the document.
+      - She had not seen other members' individual reviews and therefore felt she could not confirm the summative was an accurate synthesis.
+      - She voted **no** on approving the summative.
+      
+      **Chair's (Emily) response:**
+      - The process followed MASC guidelines and the same process used last year, which all members agreed to follow.
+      - The majority rule for ratings was the agreed-upon method.
+      - The staff survey request is a separate committee discussion that does not belong in the superintendent's evaluation.
+      - Emily offered Sarah the opportunity to suggest edits before the meeting; Sarah declined, wanting the discussion in open session.
+      - The document noted that 'one person on the committee felt a lot of progress was necessary,' reflecting the minority view.
+      
+      **David Harris's summary comments** (read aloud): praised Dr. Bucky's pandemic leadership, budget clarity achieved in collaboration with Finance Director Cresta, and his communications with the community. Characterized overall performance as 'proficient and highlighted by many exemplary achievements.'
+      
+      **Vote on summative evaluation:** 4 in favor (Sarah Gold, David Harris, Megan Taylor, Emily Barron), 1 opposed (Sarah Fox).
+      
+      **Superintendent salary increase:** A motion was made to approve a 2.5% raise for Dr. Bucky's FY23 contract. A motion to amend and postpone the vote until after the town ballot (to know the full budget scope) received no second and failed. The 2.5% increase was then approved **4–1** (Sarah Fox voted no).
+    key_speakers: ["Emily Barron (School Committee member, summative lead)", "Sarah Fox (School Committee Chair)", "David Harris (School Committee member)", "Megan Taylor (School Committee member)", "Dr. Bucky (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 3446
+    end_seconds: 4116
+    headline: "Policy FFA memorials review continued to next week; committee adds school committee vote requirement for additions and removals"
+    dek: "After reviewing multiple districts' memorial policies, the subcommittee drafted a revised FFA memorials policy based on Stoughton's language; the committee agreed to amend it to require a school committee vote for any addition or removal of permanent memorials before voting next week."
+    summary: |
+      The chair and Emily Barron reviewed the district's FFA memorials policy following a prior presentation by Matthew Cat and Principal Bauer about a proposed 'forever fans' area at Piper Field. They compared several districts' policies, settled on language adapted from Stoughton, and presented a draft.
+      
+      During discussion, Sarah Fox noted the draft did not require school committee approval for new memorials (only removals). The committee agreed to amend the language to require a school committee vote for **any addition or removal** of a permanent memorial.
+      
+      Because this is the final meeting with the current composition and the change is not time-sensitive, the committee agreed to table the vote until the following week's meeting, when at least one new member will be seated. The policy subcommittee will finalize language. A reference to CD-ROMs in the draft will be removed.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Emily Barron (School Committee member)", "Megan Taylor (School Committee member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.75
+    start_seconds: 4567
+    end_seconds: 4661
+    headline: "Member requests policy subcommittee review MGL Ch. 71 §80 teacher lunch break provision"
+    dek: "A committee member asked the policy subcommittee to examine a Massachusetts statute requiring a 30-minute duty-free lunch period for teachers that must be formally accepted by a school committee vote, noting Marblehead has never voted to accept it."
+    summary: "Member Sarah Fox raised Mass General Law Chapter 71, Section 80, which requires a 30-minute duty-free lunch period between 10 a.m. and 1 p.m. for any teacher whose duties began before noon — but only in municipalities that formally accept the section by school committee vote. Fox stated Marblehead has never taken that vote and asked the policy subcommittee to review adopting it, potentially in conjunction with contract language review."
+    key_speakers: ["Sarah Fox (School Committee Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 4707
+    end_seconds: 4856
+    headline: "Chair flags MASC/MASS joint fall conference early registration; correspondence addresses member conduct concerns"
+    dek: "The chair noted a deadline for reduced-rate registration at the fall MASC/MASS conference and entered two pieces of correspondence into the record related to committee member conduct and operating protocol boundaries."
+    summary: |
+      The chair noted the MASC and MASS joint fall conference has an early sign-up window (before July) for a reduced registration rate; the committee will review attendance at next week's meeting.
+      
+      Two additional pieces of correspondence were entered into the record. The chair declined to detail their contents fully but stated they relate to operating protocols and the defined roles and boundaries of school committee members. She expressed disappointment in what she read and reminded the committee of its obligation to treat staff, the superintendent, and each other with respect, in accordance with the committee's agreed-upon operating protocols. No decisions were made.
+    key_speakers: ["Sarah Fox (School Committee Chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;
