@@ -1,9 +1,9 @@
 ---
 title: "Fixing the Crocker Park dock"
-description: "A storm broke the Crocker Park dock. Repairing it means paying the town's longtime no-bid dock contractor, which raises a procurement question. The law has a fast path built for exactly this."
+description: "A storm broke the Crocker Park dock. The obvious fix is to call the town's longtime dock contractor. Why the town can't quite just do that, and what its options are."
 permalink: /waterfront-procurement.html
-og_title: "A broken dock and the emergency the procurement law is built for"
-og_description: "The Crocker Park dock broke in a July storm. The town's docks are maintained by one contractor, paid roughly $48,000 in FY2026 on a no-bid blanket order. How a town repairs an urgent public hazard without breaking Chapter 30B, traced to primary records."
+og_title: "A broken dock and the rule that complicates fixing it"
+og_description: "The Crocker Park dock broke in a July storm. The town's docks are maintained by one contractor, paid roughly $48,000 in FY2026 on a no-bid blanket order. Why the repair isn't as simple as a phone call, and the town's options, traced to primary records."
 og_url: https://marbleheaddata.org/waterfront-procurement.html
 scripts: [citations]
 community_pulse: off-sections
@@ -11,33 +11,13 @@ community_pulse: off-sections
 <style>
   .wf-lead { font-size: 18px; line-height: 1.55; max-width: 720px; }
   .wf-num { font-weight: 700; font-variant-numeric: tabular-nums; }
-
-  /* Two-track callout: stabilize now vs. rebuild later */
-  .wf-track { display: grid; gap: 14px; margin: 16px 0 20px;
-              grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-  .wf-track-card { background: var(--surface); border: 1px solid var(--border);
-                   border-radius: 6px; padding: 14px 16px; border-left: 4px solid var(--c-teal); }
-  .wf-track-card--now { border-left-color: var(--c-buoy); }
-  .wf-track-card--later { border-left-color: var(--c-navy); }
-  .wf-track-card h3 { margin: 0 0 2px; font-size: 0.98rem; font-weight: 700; line-height: 1.25; }
-  .wf-track-card .wf-track-tag { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.4px;
-                                 color: var(--text-muted); display: block; margin-bottom: 8px; }
-  .wf-track-card p { font-size: 0.875rem; line-height: 1.55; color: var(--text-muted); margin: 0; }
-
-  /* Threshold table */
   .wf-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0 8px; }
   .wf-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--text);
                  font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
   .wf-table td { padding: 8px 10px; border-bottom: 1px solid var(--divider); line-height: 1.45; }
   .wf-table td:first-child { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
-
-  /* Two-failure-mode panel */
-  .wf-modes { display: grid; gap: 14px; margin: 16px 0 20px;
-              grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-  .wf-mode { background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
-             padding: 14px 16px 12px; border-left: 4px solid var(--c-brass); }
-  .wf-mode h3 { margin: 0 0 6px; font-size: 0.98rem; font-weight: 700; line-height: 1.25; }
-  .wf-mode p { font-size: 0.875rem; line-height: 1.55; color: var(--text-muted); margin: 0; }
+  .wf-options p { margin: 0 0 14px; }
+  .wf-options p strong { color: var(--text); }
 </style>
 
 <h1>Fixing the Crocker Park dock</h1>
@@ -45,48 +25,40 @@ community_pulse: off-sections
 <p class="wf-lead">On the Tuesday of a July rainstorm, a flotation log beneath the
 Crocker Park dock broke free and the town closed one of its most popular swimming
 spots.<sup class="cite" data-href="https://marbleheadcurrent.org/2026/07/08/damage-forces-closure-of-popular-crocker-park-dock/" data-source="Marblehead Current, 'Damage forces closure of popular Crocker Park dock,' Leigh Blander, July 8, 2026"></sup>
-Repairing it means paying someone. How the town is allowed to pay them, and how fast,
-is the unsettled part.</p>
+The obvious next step is to call the contractor who has always fixed the town's docks
+and have him fix it. The town cannot quite do that, and the reason is worth
+understanding.</p>
 
-<p>Closing a dock does not wall off a float sitting in the water; a swimmer or boater
-can still reach a damaged structure from the harbor. Whether that makes this an urgent
-safety matter or a routine repair is the judgment that decides which rules apply, and
-it is the harbormaster's to make. The storm also arrived the same season the town stood
-up its first full-time procurement officer, a role the town administrator described as
-covering "capital projects" and "enforcement of construction contracts," whose job
-includes bringing informal vendor arrangements into a formal process.<sup class="cite" data-href="https://marbleheadcurrent.org/2025/06/25/compensation-committee-backs-procurement-officer-role-80-116k-salary/" data-source="Marblehead Current, 'Compensation Committee backs procurement officer role, $80-116K salary,' Will Dowd, June 25, 2025"></sup></p>
-
-<h2>Who repairs the town's docks</h2>
+<h2>The situation</h2>
 
 <p>The town's docks and floats are installed, removed, and repaired by
 <strong>Marblehead Marine Construction</strong>, the trade name of David Haley Inc. The
 Harbors and Waters Board's own meeting record puts it plainly: "Dave Haley moves all
 our docks."<sup class="cite" data-href="https://my.lwv.org/sites/default/files/leagues/wysiwyg/%5Bcurrent-user%3Aog-user-node%3A1%3Atitle%5D/harbors_l0_waters_board_2-6-23_0.pdf" data-source="League of Women Voters of Marblehead observer report, Harbors and Waters Board, February 6, 2023"></sup>
-That has included the Crocker Park float specifically: in September 2022 the board was
-"waiting to hear from Dave Haley on the rest of the float removal."<sup class="cite" data-href="https://my.lwv.org/sites/default/files/leagues/wysiwyg/%5Bcurrent-user%3Aog-user-node%3A1%3Atitle%5D/harbors_0_waters_board_9-12-22.pdf" data-source="League of Women Voters of Marblehead observer report, Harbors and Waters Board, September 12, 2022"></sup>
-When a dock has broken loose before, he is the one who brought it back: in January 2023,
-after the Village Street dock "broke away and was found in Kettle Cove in Magnolia," the
-record notes that "Dave Haley of Marblehead Marine brought the dock back."<sup class="cite" data-href="https://my.lwv.org/sites/default/files/leagues/wysiwyg/%5Bcurrent-user%3Aog-user-node%3A1%3Atitle%5D/harbors_0_waters_board_1-9-23.pdf" data-source="League of Women Voters of Marblehead observer report, Harbors and Waters Board, January 9, 2023"></sup>
-He has also given back: a 2023 Recreation and Parks report records that "Dave Haley has
-contributed $2,500 for a new float at Stramski's."<sup class="cite" data-href="https://my.lwv.org/sites/default/files/leagues/wysiwyg/%5Bcurrent-user%3Aog-user-node%3A1%3Atitle%5D/rec_park_8-1-23.pdf" data-source="League of Women Voters of Marblehead observer report, Recreation and Parks Commission, August 1, 2023"></sup></p>
+That has included the Crocker Park float specifically,<sup class="cite" data-href="https://my.lwv.org/sites/default/files/leagues/wysiwyg/%5Bcurrent-user%3Aog-user-node%3A1%3Atitle%5D/harbors_0_waters_board_9-12-22.pdf" data-source="League of Women Voters of Marblehead observer report, Harbors and Waters Board, September 12, 2022 (board 'waiting to hear from Dave Haley on the rest of the float removal')"></sup>
+and when a dock has broken loose before, he is the one who brought it back: after the
+Village Street dock "broke away and was found in Kettle Cove in Magnolia" in January
+2023, the record notes that "Dave Haley of Marblehead Marine brought the dock back."<sup class="cite" data-href="https://my.lwv.org/sites/default/files/leagues/wysiwyg/%5Bcurrent-user%3Aog-user-node%3A1%3Atitle%5D/harbors_0_waters_board_1-9-23.pdf" data-source="League of Women Voters of Marblehead observer report, Harbors and Waters Board, January 9, 2023"></sup>
+He has also given back, contributing "$2,500 for a new float at Stramski's."<sup class="cite" data-href="https://my.lwv.org/sites/default/files/leagues/wysiwyg/%5Bcurrent-user%3Aog-user-node%3A1%3Atitle%5D/rec_park_8-1-23.pdf" data-source="League of Women Voters of Marblehead observer report, Recreation and Parks Commission, August 1, 2023"></sup></p>
 
-<p>In fiscal year 2026, the town paid Marblehead Marine Construction
-<span class="wf-num">$47,846.75</span> across 13 payments, drawn from the Harbor
-Enterprise fund. Nearly every line reads "Float work Blanket PO."<sup class="cite" data-href="https://townofmarblehead-ma-oe.spending.socrata.com/" data-source="Town of Marblehead open-finance checkbook, FY2026, vendor MARBLEHEAD MARINE CONS INC; 13 payments totaling $47,846.75, Harbor Enterprise fund. Snapshot in data/checkbook_FY26_2026-06-30.csv"></sup>
-A blanket purchase order is a standing account a department draws against for recurring
-work without writing a separate order each time. It is a routine tool. What makes this
-one worth noting is the total and the type of work: roughly $48,000 of construction and
-repair service, to one vendor, with no competitive bid behind it. The payments are
-traceable in the town's <a href="/checkbook-fy26.html">FY26 checkbook</a>.</p>
+<p>In fiscal year 2026 the town paid Marblehead Marine Construction
+<span class="wf-num">$47,846.75</span> across 13 payments from the Harbor Enterprise
+fund, nearly all coded "Float work Blanket PO."<sup class="cite" data-href="https://townofmarblehead-ma-oe.spending.socrata.com/" data-source="Town of Marblehead open-finance checkbook, FY2026, vendor MARBLEHEAD MARINE CONS INC; 13 payments totaling $47,846.75, Harbor Enterprise fund. Snapshot in data/checkbook_FY26_2026-06-30.csv"></sup>
+There is no competitive bid behind that arrangement; the payments are traceable in the
+town's <a href="/checkbook-fy26.html">FY26 checkbook</a>. So when the dock breaks, the
+natural move is to have him repair it. Whether the town can simply do that is the
+unsettled part.</p>
 
-<h2>The apparent dilemma</h2>
+<h2>Why it is not that simple</h2>
 
-<p>Paying a vendor for a service is governed by
+<p>Paying a vendor for a service is procurement, governed by
 <abbr class="g" title="Massachusetts General Laws Chapter 30B">Chapter 30B</abbr>, the
-state's Uniform Procurement Act, which sets the process by the dollar amount:<sup class="cite" data-href="https://www.mass.gov/doc/oig-charts-on-procurement-procedures-july-2025/download" data-source="Massachusetts Office of the Inspector General, 'Charts on Procurement Procedures,' July 2025; MGL c.30B sections 4-6"></sup></p>
+state's Uniform Procurement Act. The rules key off "the estimated dollar value of the
+goods or services you wish to procure,"<sup class="cite" data-href="https://www.mass.gov/doc/chapter-30b-procurement-manual/download" data-source="The Chapter 30B Manual, Office of the Inspector General (Commonwealth of Massachusetts), on determining the procurement procedure by estimated dollar value and on bid-splitting"></sup>
+and that value is the whole job, not each visit:<sup class="cite" data-href="https://www.mass.gov/doc/oig-charts-on-procurement-procedures-july-2025/download" data-source="Massachusetts Office of the Inspector General, 'Charts on Procurement Procedures,' July 2025; MGL c.30B sections 4-6"></sup></p>
 
 <table class="wf-table">
-  <thead><tr><th>Contract size</th><th>What the law requires</th></tr></thead>
+  <thead><tr><th>Estimated value of the work</th><th>What the law requires</th></tr></thead>
   <tbody>
     <tr><td>Under $10,000</td><td>"Sound business practices" &ndash; informal, no set process.</td></tr>
     <tr><td>$10,000&ndash;$50,000</td><td>Written quotes from at least three vendors.</td></tr>
@@ -94,60 +66,63 @@ state's Uniform Procurement Act, which sets the process by the dollar amount:<su
   </tbody>
 </table>
 
-<p>Massachusetts does not offer a general "sole source" exemption for services the way
-federal rules do: being the only contractor a town wants to use does not, by itself,
-remove the requirement to seek quotes. So a repair looks like a choice between two bad
-options. Run the normal quote or bid process, and a damaged structure sits in the water
-while it plays out. Skip the process to move fast, and the town is out of step with the
-law it just hired an officer to enforce.</p>
+<p>What matters is the total the town expects to spend on the service, not the size of
+any single payment. A town cannot take a large body of work and pay it out as a stream
+of small orders to stay under the threshold: dividing "a purchase into two or more
+smaller purchases for the purpose of evading the requirements of a bidding law" is
+bid-splitting, which the Inspector General's manual calls "illegal under Chapter 30B."
+So roughly $48,000 of annual float work is measured as one $48,000 procurement, in the
+written-quotes range and near the line where a formal bid is required, even though each
+individual float job is smaller.</p>
 
-<h2>How the law resolves it</h2>
+<p>That does not make frequent small payments automatically improper. The same manual
+notes that "in some circumstances, it makes good business sense to make small, frequent
+purchases," and dock work &ndash; seasonal, weather-driven, hard to predict &ndash; may
+be one of them. But the burden is on the town to "justify the practice with a good
+business reason," and Massachusetts offers no general "sole source" exemption that would
+let it skip competition simply because Haley is the contractor it trusts. Whether the
+float arrangement clears that bar is exactly the judgment the town's first full-time
+procurement officer, hired in 2025, exists to make.<sup class="cite" data-href="https://marbleheadcurrent.org/2025/06/25/compensation-committee-backs-procurement-officer-role-80-116k-salary/" data-source="Marblehead Current, 'Compensation Committee backs procurement officer role, $80-116K salary,' Will Dowd, June 25, 2025"></sup>
+That is why the town cannot simply cut a check for the Crocker repair without asking the
+question first.</p>
 
-<p>That dilemma is mostly a false one, because Chapter 30B has an emergency provision
-written for exactly this. A procurement officer may skip the normal process "whenever
-the time required to comply with a requirement of this chapter would endanger the health
-or safety of the people or their property," provided the work is "limited to only
-supplies or services necessary to meet the emergency" and documented afterward.<sup class="cite" data-href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIII/Chapter30B/Section8" data-source="MGL c.30B section 8 (emergency procurement)"></sup>
-The key words are "limited to" and "the emergency." They split the job in two:</p>
+<h2>What the town can do</h2>
 
-<div class="wf-track">
-  <div class="wf-track-card wf-track-card--now">
-    <h3>Stabilize now</h3>
-    <span class="wf-track-tag">Emergency provision, no bid</span>
-    <p>If the harbormaster judges the damaged dock a hazard, the town can hire a
-    contractor immediately to remove or secure it, no bid required, with a written
-    record filed afterward. This is the urgent part, and only the urgent part.</p>
-  </div>
-  <div class="wf-track-card wf-track-card--later">
-    <h3>Rebuild later</h3>
-    <span class="wf-track-tag">Normal procurement</span>
-    <p>Replacing or permanently repairing the dock is not time-critical once the hazard
-    is gone. That work runs through the normal thresholds &ndash; written quotes at this
-    size &ndash; on an ordinary timeline.</p>
-  </div>
-</div>
+<p>Fixing a broken public dock quickly and following the procurement rules are not
+actually in conflict. There are a few paths, and they can be combined.</p>
 
-<p>The town already works this way on the waterfront. The Harbors and Waters Board kept
-a yacht-club furnace replacement "below $10,000" after "soliciting multiple estimates,"<sup class="cite" data-href="https://my.lwv.org/sites/default/files/leagues/wysiwyg/%5Bcurrent-user%3Aog-user-node%3A1%3Atitle%5D/harbors_waters_12-4-23.pdf" data-source="League of Women Voters of Marblehead observer report, Harbors and Waters Board, December 4, 2023"></sup>
-and it has used emergency fund transfers before the Finance Committee for urgent
-repairs.<sup class="cite" data-href="https://my.lwv.org/sites/default/files/leagues/wysiwyg/%5Bcurrent-user%3Aog-user-node%3A1%3Atitle%5D/harbors_and_waters_board_11.14.2022_0.pdf" data-source="League of Women Voters of Marblehead observer report, Harbors and Waters Board, November 14, 2022"></sup>
-The pieces to fix a broken dock fast and stay within the rules are both already in use.</p>
+<div class="wf-options">
+<p><strong>Secure it now under the emergency provision.</strong> If the harbormaster
+judges the damaged dock a hazard, Chapter 30B lets the town hire a contractor
+immediately to remove or stabilize it, with no bid and a written record filed
+afterward.<sup class="cite" data-href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIII/Chapter30B/Section8" data-source="MGL c.30B section 8 (emergency procurement): a procurement officer may skip a requirement 'whenever the time required to comply ... would endanger the health or safety of the people or their property,' limited to the emergency and documented afterward"></sup>
+This is the fastest lawful option, and it covers only the urgent work: getting the
+danger out of the water. The town has used emergency fund transfers for urgent
+waterfront repairs before.<sup class="cite" data-href="https://my.lwv.org/sites/default/files/leagues/wysiwyg/%5Bcurrent-user%3Aog-user-node%3A1%3Atitle%5D/harbors_and_waters_board_11.14.2022_0.pdf" data-source="League of Women Voters of Marblehead observer report, Harbors and Waters Board, November 14, 2022"></sup></p>
 
-<h2>Two ways it can still go wrong</h2>
+<p><strong>Get three quotes for the repair.</strong> At roughly $48,000, the repair
+itself falls in the band where the town needs written quotes from three vendors, not a
+full advertised bid. That is a matter of days or a couple of weeks, not months. The
+town's longtime dock contractor could still be the one who wins it; the difference is
+that the price now sits on paper next to two others.</p>
 
-<div class="wf-modes">
-  <div class="wf-mode">
-    <h3>Process treated as a wall</h3>
-    <p>If a routine procurement timeline is allowed to hold up stabilizing a genuine
-    hazard, that is a misread of the law, not a requirement of it. The emergency
-    provision exists precisely so safety does not wait on paperwork.</p>
-  </div>
-  <div class="wf-mode">
-    <h3>"Emergency" stretched too far</h3>
-    <p>If the emergency label is used to hand a full, non-urgent rebuild to one vendor
-    with no bid, that is the opposite error. Section 8 covers only what the emergency
-    requires; the permanent work still belongs in the normal process.</p>
-  </div>
+<p><strong>Bid it formally if the rebuild is large.</strong> If a permanent replacement
+runs past $50,000, a formal, advertised sealed bid or request for proposals is required.
+That is the slowest path, and it applies to a full rebuild, not to clearing an immediate
+hazard.</p>
+
+<p><strong>Settle whether it is a "service" or "construction" first.</strong> Everything
+above assumes dock repair is a service. If the state treats it as public construction
+instead, a different statute sets the thresholds and state prevailing-wage rules attach
+at any dollar amount, changing both the process and the cost. This classification
+decides which of the options above applies.</p>
+
+<p><strong>Put dock work on a standing contract going forward.</strong> The reason a
+routine repair becomes an open question is that the town's float work has ridden a
+blanket order with no competitive award underneath it. The town could bid a multi-year
+dock-maintenance contract once, so future jobs, including the next storm, draw against
+an agreement that is already compliant. That does not speed up this repair, but it keeps
+the next one from landing in the same spot.</p>
 </div>
 
 <h2>Open questions</h2>
@@ -160,11 +135,11 @@ The pieces to fix a broken dock fast and stay within the rules are both already 
   project could locate. It remains unverified. The Harbors and Waters Board's published
   observer record ends in January 2024, and recent Recreation and Parks records do not
   mention it.</li>
-  <li><strong>Is dock repair a "service" or "construction"?</strong> If the work is
-  public construction rather than a marine service, a different statute applies, with
-  its own thresholds and state prevailing-wage rules that attach at any dollar amount.
-  Which category dock installation and repair falls into changes both the process and
-  the cost, and is the kind of judgment the procurement officer exists to make.</li>
+  <li><strong>Has the town justified the blanket-order arrangement?</strong> Small,
+  frequent purchases from one vendor are allowed with a documented "good business
+  reason." Whether the town has one on file for the float work, and whether the ~$48,000
+  was ever competitively procured, is not established in the public record this project
+  reviewed.</li>
   <li><strong>How much has the town paid over time?</strong> The FY26 figure is
   $47,846.75. The town's open-finance portal did not return earlier years to this
   project's queries, so whether this has been a steady arrangement or varies is not yet
@@ -178,30 +153,31 @@ The pieces to fix a broken dock fast and stay within the rules are both already 
   <summary>Sources and methodology</summary>
   <p><strong>The dock closure.</strong> Marblehead Current, "Damage forces closure of
   popular Crocker Park dock," July 8, 2026. The flotation-log detail and the
-  harbormaster's assessment are from that article, which names no repair contractor. The
-  characterization of a closed-but-reachable float as a possible hazard is stated here
-  as the judgment that determines which procurement path applies, not as a claim from
-  the article.</p>
-  <p><strong>The Haley / Marblehead Marine quotes.</strong> These come from the League of
-  Women Voters of Marblehead Observer Corps, volunteers who summarize public meetings the
-  town does not record on video. They are the observers' summaries, not verbatim board
+  harbormaster's assessment are from that article, which names no repair contractor.</p>
+  <p><strong>The Haley / Marblehead Marine quotes.</strong> From the League of Women
+  Voters of Marblehead Observer Corps, volunteers who summarize public meetings the town
+  does not record on video. These are the observers' summaries, not verbatim board
   minutes; for direct quotation elsewhere, pair them with the official Harbors and Waters
-  Board minutes for the same dates. Reports cited: Harbors and Waters Board, September 12,
-  2022; November 14, 2022; January 9, 2023; December 4, 2023. Recreation and Parks
-  Commission, August 1, 2023.</p>
-  <p><strong>The payment figure.</strong> From the Town of Marblehead's open-finance
-  checkbook (Socrata portal), FY2026. Vendor "MARBLEHEAD MARINE CONS INC": 13 payments
-  totaling $47,846.75, Harbor Enterprise fund, purpose "Float work Blanket PO," dated
-  August 2025 through April 2026, captured in
-  <code>data/checkbook_FY26_2026-06-30.csv</code>. The payee name is the town's own; the
-  identification with David Haley's marine business is corroborated by the Harbors and
-  Waters Board record describing Dave Haley of Marblehead Marine performing the town's
-  float work.</p>
-  <p><strong>Chapter 30B.</strong> Dollar thresholds from the Massachusetts Office of the
+  Board minutes for the same dates. Reports cited: Harbors and Waters Board, September
+  12, 2022; November 14, 2022; January 9, 2023. Recreation and Parks Commission, August
+  1, 2023.</p>
+  <p><strong>The payment figure.</strong> Town of Marblehead open-finance checkbook
+  (Socrata portal), FY2026. Vendor "MARBLEHEAD MARINE CONS INC": 13 payments totaling
+  $47,846.75, Harbor Enterprise fund, purpose "Float work Blanket PO," dated August 2025
+  through April 2026, captured in <code>data/checkbook_FY26_2026-06-30.csv</code>. The
+  identical total appears in an independent April 2026 vendor-totals snapshot of the same
+  portal. The payee name is the town's own; the identification with David Haley's marine
+  business is corroborated by the Harbors and Waters Board record describing Dave Haley
+  of Marblehead Marine performing the town's float work. The figure is FY2026 only; the
+  portal did not return prior years.</p>
+  <p><strong>Chapter 30B.</strong> That the procedure is set by "the estimated dollar
+  value" and that bid-splitting is "illegal under Chapter 30B," along with the point that
+  small frequent purchases can be legitimate with a "good business reason," are from The
+  Chapter 30B Manual, Office of the Inspector General. Dollar thresholds also from the
   Inspector General's July 2025 procurement-procedures charts and MGL c.30B sections
-  4&ndash;6. The emergency provision is MGL c.30B section 8, quoted verbatim. Whether a
-  given dock job is a "service" under c.30B or "construction" under a different statute
-  is a classification this project has not resolved.</p>
+  4&ndash;6. The emergency provision is MGL c.30B section 8. Whether a given dock job is a
+  "service" under c.30B or "construction" under a different statute is a classification
+  this project has not resolved.</p>
   <p><strong>The procurement officer role.</strong> Marblehead Current, June 25, 2025, on
   the creation of the full-time chief procurement officer position.</p>
 </details>
