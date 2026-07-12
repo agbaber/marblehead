@@ -275,16 +275,16 @@
       {
         "name": "BROWN SCHOOL",
         "revised": 5422623.26,
-        "actual": 0,
-        "delta": -5422623.26,
-        "pct": 0.0
+        "actual": 5414.62,
+        "delta": -5417208.64,
+        "pct": 0.1
       },
       {
         "name": "MIDDLE SCHOOL",
         "revised": 5712762.68,
-        "actual": 0,
-        "delta": -5712762.68,
-        "pct": 0.0
+        "actual": 5348.08,
+        "delta": -5707414.6,
+        "pct": 0.09
       },
       {
         "name": "FIRE",
@@ -303,9 +303,9 @@
       {
         "name": "VILLAGE SCHOOL",
         "revised": 7545798.37,
-        "actual": 0,
-        "delta": -7545798.37,
-        "pct": 0.0
+        "actual": 5737.88,
+        "delta": -7540060.49,
+        "pct": 0.08
       },
       {
         "name": "DEBT SERVICE",
@@ -317,16 +317,16 @@
       {
         "name": "HIGH SCHOOL",
         "revised": 11552590.13,
-        "actual": 0,
-        "delta": -11552590.13,
-        "pct": 0.0
+        "actual": 10948.07,
+        "delta": -11541642.06,
+        "pct": 0.09
       },
       {
         "name": "DISTRICTWIDE",
         "revised": 13090519.6,
-        "actual": 0,
-        "delta": -13090519.6,
-        "pct": 0.0
+        "actual": 79951.47,
+        "delta": -13010568.13,
+        "pct": 0.61
       },
       {
         "name": "OTHER GOVERNMENTAL",
@@ -347,16 +347,16 @@
       {
         "name": "DISTRICTWIDE",
         "revised": 13090519.6,
-        "actual": 0,
-        "delta": -13090519.6,
-        "pct": 0.0
+        "actual": 79951.47,
+        "delta": -13010568.13,
+        "pct": 0.61
       },
       {
         "name": "HIGH SCHOOL",
         "revised": 11552590.13,
-        "actual": 0,
-        "delta": -11552590.13,
-        "pct": 0.0
+        "actual": 10948.07,
+        "delta": -11541642.06,
+        "pct": 0.09
       },
       {
         "name": "DEBT SERVICE",
@@ -368,9 +368,9 @@
       {
         "name": "VILLAGE SCHOOL",
         "revised": 7545798.37,
-        "actual": 0,
-        "delta": -7545798.37,
-        "pct": 0.0
+        "actual": 5737.88,
+        "delta": -7540060.49,
+        "pct": 0.08
       },
       {
         "name": "WATER",
@@ -389,16 +389,16 @@
       {
         "name": "MIDDLE SCHOOL",
         "revised": 5712762.68,
-        "actual": 0,
-        "delta": -5712762.68,
-        "pct": 0.0
+        "actual": 5348.08,
+        "delta": -5707414.6,
+        "pct": 0.09
       },
       {
         "name": "BROWN SCHOOL",
         "revised": 5422623.26,
-        "actual": 0,
-        "delta": -5422623.26,
-        "pct": 0.0
+        "actual": 5414.62,
+        "delta": -5417208.64,
+        "pct": 0.1
       },
       {
         "name": "POLICE",
