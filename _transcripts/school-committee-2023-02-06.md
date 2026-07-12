@@ -9,7 +9,37 @@ video_url: "https://www.youtube.com/watch?v=Lw4neVLNy-s"
 duration_seconds: 1711
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee budget subcommittee warns cuts exceeding $1.59M needed for FY24"
+  summary: "The Marblehead School Committee budget subcommittee met to discuss the FY24 budget gap, noting the district faces a 5.43% cost increase against a town-afforded 1.3% increase, creating a gap of more than $1.59 million that must be cut. Administrators were asked to prepare a list of legally non-negotiable items — including SPED obligations, contractual class-size requirements, and utilities — to establish the true cut target before Thursday's full committee meeting. The committee also clarified that federal grant funds (IDEA, Title grants) are strictly regulated and cannot be redirected to the operating budget."
+  decisions:
+    - "Directed administration to produce a non-negotiable expense list prior to Thursday's full committee meeting"
+    - "Directed CFO to share updated budget tracking sheets with the finance committee and full school committee"
+    - "Scheduled a facilities subcommittee meeting to review capital requests received from the town"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 144
+    end_seconds: 1707
+    featured: true
+    headline: "District faces $1.59M+ cut target; non-negotiable list requested before Thursday meeting"
+    dek: "The budget subcommittee outlined a framework for identifying legally mandated expenses versus discretionary cuts as it prepares two budget scenarios — one with and one without a Prop 2½ override."
+    summary: |
+      The chair opened by summarizing the fiscal situation: the town can currently afford only a 1.3% budget increase, while keeping the district running with contractual obligations (salary steps and lanes, out-of-district SPED placements, and utilities) requires a 5.43% increase — a gap of roughly $800,000 in additional town contribution against $1.9 million in contractual costs, leaving approximately $1.59 million to cut before accounting for inflation on supply costs and additional SPED needs.
+      
+      The superintendent (Dr. Bucky) confirmed the cabinet had already begun a rank-order list from each department's budget workshop submissions and would meet that afternoon to identify non-negotiables. The committee asked for:
+      
+      1. **A non-negotiable list** — items the district is legally required to fund regardless of override outcome (SPED/IEP services, contractual class sizes, certain curriculum mandates).
+      2. **A prioritized wish list** — items to restore if an override is secured, noting the full 12.17% ask is not achievable.
+      3. **Updated budget tracking sheets** distributed to the full school committee and Finance Committee (fincom) ahead of Thursday's meeting.
+      
+      The CFO (Michelle) clarified that federal entitlement grants (Section 240/262, IDEA, Title I) are strictly regulated: funds can only be spent for their designated purpose and cannot be shifted to the operating budget. She offered to share the federal resource guide with the Finance Committee liaison (Pat).
+      
+      The meeting closed with a reminder that a full school committee meeting is posted for the following Monday at 9:00 a.m. solely on the budget, and that a facilities subcommittee meeting is needed early in the week to review capital request forms received from the town.
+    key_speakers: ["School Committee Chair (unnamed, female)", "Dr. Bucky (Superintendent)", "Michelle (CFO/Finance Director)", "Pat (Finance Committee liaison)", "Paula Donnelly (Special Education Director)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

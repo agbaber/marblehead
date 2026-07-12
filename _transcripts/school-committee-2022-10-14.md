@@ -10,7 +10,58 @@ duration_seconds: 5340
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee holds FY24 budget-priorities working session, reaches no final directives"
+  summary: "The School Committee convened a special working session to develop high-level budget directives to guide Superintendent John's leadership team in building the FY24 budget. Members discussed priorities including addressing district-wide curriculum gaps, increasing special-education inclusion, stabilizing out-of-district placement costs, and moving toward a school system rather than a system of schools. The committee did not reach consensus on a final set of directives, agreeing instead to hear from an upcoming community forum before reconvening."
+  decisions:
+    - "Held FY24 budget-priorities discussion without adopting formal directives"
+    - "Continued discussion to a future meeting following an upcoming community forum"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 42
+    end_seconds: 118
+    headline: "One resident comments on budget priorities at opening of session"
+    dek: "A resident named Aaron urged the committee to prioritize curriculum, extracurricular activities, project-based learning, and career-readiness programming."
+    summary: "At the opening of the meeting the chair invited public comment. One attendee (identified as Aaron) stated he had caught the meeting on the calendar and wanted to advocate for more emphasis on curriculum, extracurricular activities, project-based learning, longer school days, and career-readiness programs for non-college-track students."
+    key_speakers: ["Aaron (resident at mic)"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 118
+    end_seconds: 5273
+    featured: true
+    headline: "School Committee debates FY24 budget directives but reaches no consensus"
+    dek: "Members spent roughly 90 minutes discussing high-level priorities—curriculum gaps, special-education inclusion, district-wide equity, and transportation—but could not agree on a final directive document to present to the superintendent's leadership team."
+    summary: |
+      The chair explained that the purpose of the meeting was to produce high-level budget directives that Superintendent John could pass along to building leaders and directors before they drafted their FY24 budget requests—a practice described as common in other districts.
+      
+      **Key themes that emerged:**
+      
+      | Priority area | Position articulated |
+      |---|---|
+      | Planning for Success strategic plan | Member Megan argued this document already captures the community's priorities and should serve as the primary driver; others agreed it was the foundation but said more specific annual directives were also appropriate |
+      | Curriculum gaps | Multiple members wanted a district-wide inventory of curriculum deficits (e.g., no comprehensive ELA curriculum) with a multi-year plan for addressing them, presented to the public with dollar figures |
+      | Special education / out-of-district placements | Discussion of significant year-to-year swings in out-of-district placement costs; one member asked for a reserve/stabilization fund conversation with the town rather than embedding the full swing in the operating budget; circuit-breaker carry-forward noted as a current buffer |
+      | WIN block (intervention period) | Member Allison raised concerns that the elementary WIN block was not consistently implemented across schools or adequately staffed; framed as a curriculum-scope-and-sequence issue |
+      | DEI | One member asked that DEI-focused resources (library, classroom materials, windows-and-mirrors) continue to be prioritized after being cut when the override failed last spring |
+      | District-wide approach | Broad consensus that budgeting should support a "school system" not a "system of schools"—district-wide staffing equity, not siloed school-by-school allocations |
+      | Transportation | Raised as a large variable cost; members noted community frustration over route changes and safe-route determinations |
+      | Financial software (Softright) | One member argued the town's current financial reporting system is dysfunctional, costing 3–4 days of staff time per month to produce basic reports; urged the committee to formally support the CFO's request to replace it |
+      | Student obligations / AP exams | Discussion of whether the budget should fund items students are required to access their education (e.g., devices, AP exam fees); no consensus reached |
+      
+      **Process disagreement:** Member Megan repeatedly questioned whether the directives exercise added value beyond the existing strategic plan. Other members argued that explicit, publicly-visible budget directives—tied to multi-year projections—were necessary to build community trust ahead of a potential future override. The chair noted at the close that she was not comfortable reporting consensus had been reached and proposed: (1) waiting for the upcoming community budget forum, (2) preparing a one-page summary of tonight's draft themes, and (3) reconvening after the forum before transmitting anything to the superintendent.
+    key_speakers: ["Chair (Sarah, name inferred from context)", "Megan (School Committee member)", "Allison (School Committee member)", "Aaron (public commenter)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 5273
+    end_seconds: 5297
+    headline: "Meeting adjourned at 8:32 p.m. with no new business"
+    dek: "The chair confirmed no new business items and adjourned the session."
+    summary: "Following the budget-priorities discussion, the chair asked whether anyone had new business. Hearing none, she adjourned the meeting at 8:32 p.m."
+    key_speakers: ["Chair (Sarah)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

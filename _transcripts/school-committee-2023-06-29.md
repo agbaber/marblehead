@@ -9,7 +9,113 @@ video_url: "https://www.youtube.com/watch?v=xPrC5Hdia0w"
 duration_seconds: 5301
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee reorganizes, debates reinstating freshman sports amid 33-position cuts"
+  summary: "The newly organized Marblehead School Committee held its first meeting of the new term, electing officers and conducting an extended discussion of the FY24 budget following the failure of a Prop 2½ override. The superintendent confirmed 33 positions are being eliminated due to the override failure, and committee members debated whether to use a year-end surplus of approximately $500,000 to prepay special education tuitions and potentially restore freshman sports. A motion to immediately reinstate freshman sports failed; the committee voted to table the question pending additional financial data, with a working session tentatively scheduled for July 6."
+  decisions:
+    - "Approved scheduled bills totaling $602,846.57"
+    - "Held FY24 budget discussion without final action"
+    - "Tabled motion to reinstate freshman sports pending financial data from CFO"
+    - "Approved scheduling a summer working session/retreat tentatively July 6"
+  votes:
+    - motion: "Approve scheduled bills ($602,846.57)"
+      result: "in favor (unanimous)"
+    - motion: "Table motion to reinstate freshman sports until next meeting"
+      result: "in favor (unanimous)"
+    - motion: "Reinstate freshman sports effective immediately"
+      result: "in favor (N to M)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 67
+    end_seconds: 303
+    headline: "School committee reorganizes, elects officers, commends outgoing member Sarah Golds"
+    dek: "The newly seated committee elected a chair, vice chair, and secretary, and recognized departing member Sarah Golds for five years of service."
+    summary: "At the opening of the meeting the committee organized itself, electing officers by unanimous votes. A commendation was offered for Sarah Golds, who served five years on the committee. Members also praised elementary school PTOs and principals for end-of-year celebrations."
+    key_speakers: ["Committee Chair (unnamed)", "Allison (secretary, nominated)", "Alex (nominated)"]
+  - topic: public-comment
+    topic_confidence: 0.92
+    start_seconds: 303
+    end_seconds: 589
+    headline: "Resident praises Golds, urges new member to drop wrongful-dismissal complaint"
+    dek: "A resident at the mic congratulated newly elected members, commended Sarah Golds, and asked member Mr. Otto whether he would drop a pending wrongful-dismissal complaint against the district."
+    summary: "During public comment, a resident (identified by ASR as addressing 'Mr. Odin/Otto') congratulated newly elected school committee members, praised outgoing member Sarah Golds's leadership during difficult years including superintendent transitions, and asked whether the newly elected member would drop a wrongful-dismissal complaint against the district. The chair intervened, noting the comment was out of order. The resident also urged the committee to fulfill campaign promises around transparency."
+    key_speakers: ["Resident at mic", "Committee Chair"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 589
+    end_seconds: 611
+    headline: "Consent agenda approved: scheduled bills totaling approximately $602,846"
+    dek: "The committee voted unanimously to approve scheduled bills totaling $602,846.57."
+    summary: "The chair moved through the consent agenda. A motion to approve scheduled bills totaling $602,846.57 was made, seconded by Allison Taylor, and carried unanimously."
+    key_speakers: ["Committee Chair", "Allison Taylor"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 611
+    end_seconds: 1302
+    headline: "Superintendent reports academic progress; district rolls out new 'Wit & Wisdom' literacy curriculum"
+    dek: "The superintendent highlighted principal-level literacy and math goal achievement, and Assistant Superintendent Julia Carrera presented the district's adoption of the 'Wit & Wisdom' ELA curriculum for grades K–6."
+    summary: |
+      The superintendent reported that building principals set literacy and math goals and in most cases met or exceeded them on i-Ready assessments. He expressed concern about a reported 50-year national low in academic results for 13-year-olds.
+      
+      Assistant Superintendent Julia Carrera presented the district's new 'Wit & Wisdom' ELA curriculum, a knowledge-based, research-aligned program selected in collaboration with schools. Key implementation details:
+      - K–3 teachers and ELA teachers in grades 4–6 received initial training
+      - Literacy leaders at each grade level received additional training
+      - A full-day training for all teachers is planned for August return
+      - The existing 'Foundations' phonics program will continue alongside Wit & Wisdom
+      - The curriculum is designed to engage advanced learners through knowledge-based texts
+      
+      Committee members asked about phonics integration, supports for students with additional needs, and differentiation for advanced learners. Administration confirmed the program was recommended by collaborating schools and families were engaged through PTO meetings.
+    key_speakers: ["Superintendent (John, unnamed in ASR)", "Julia Carrera (Assistant Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.98
+    start_seconds: 1302
+    end_seconds: 4207
+    featured: true
+    headline: "33 positions cut after override fails; committee debates using year-end surplus to restore freshman sports"
+    dek: "Following the Prop 2½ override failure, the committee held an extended debate on the FY24 budget, a projected surplus of approximately $500,000, and whether to immediately restore freshman sports; a motion to reinstate them failed and was tabled to a July working session."
+    summary: |
+      The committee discussed an FY24 budget document listing all changes from the FY23 budget, reflecting the elimination of **33 positions** due to the override failure. The chief financial officer (Michelle) explained the document shows every line-item change made to balance the budget after abandoning new-year requests.
+      
+      **Key financial facts discussed:**
+      - The school district carries a projected year-end surplus of several hundred thousand dollars, estimated at approximately $500,000
+      - The CFO plans to prepay special education out-of-district tuitions using surplus funds before the July 14 fiscal-year close deadline, a practice used in prior years
+      - The CFO does not recommend using one-time surplus funds to restore recurring positions, noting it would create a structurally unbalanced FY25 budget
+      - The expense side of the budget is over budget; surplus exists only on the salary side due to vacancies, retirements, and resignations following the announced cuts
+      - The special education reserve fund (approximately $250,000) has been preserved intact
+      
+      **Debate over restoring cuts:**
+      One committee member strongly advocated reinstating freshman sports, citing urgency (fall practice begins in mid-August) and describing the cost as "de minimis" in a roughly $43 million budget. Another member argued the committee should not prioritize non-academic spending before academic positions (e.g., middle school librarian) and wanted to know whether user fees could be raised to self-fund freshman sports.
+      
+      A member pushed back on the framing that restoring any cut would undermine credibility, arguing that Massachusetts General Law gives the elected school committee sole budget authority and that using a legal surplus mechanism for student benefit is appropriate.
+      
+      **Votes:**
+      - Motion to table reinstatement of freshman sports pending additional financial data from CFO: approved unanimously
+      - Motion to immediately reinstate freshman sports: failed (vote count unclear in transcript)
+      
+      The committee also discussed:
+      - ARPA funds: a member expressed frustration that Marblehead imposes additional local restrictions on ARPA disbursements beyond U.S. Treasury requirements, and advocated resubmitting previously denied school ARPA requests to the ARPA committee and Select Board
+      - Public records: concern raised that the district may have not complied with a Massachusetts Secretary of State order to release public records; chair committed to consulting district counsel (Chandler & Miller)
+      - Property sale inquiries: the superintendent clarified the committee has no authority to sell school properties (e.g., Coffin School) and use proceeds directly for the school budget; proceeds would go to the town's general fund
+      
+      A summer working session was tentatively scheduled for **July 6** (four to eight p.m.) to review year-end financials and FY24 budget tracking, with a second session around **July 24** for professional development with MASC or MISD.
+    key_speakers: ["Committee Chair", "Michelle (CFO/Director of Finance)", "Superintendent", "Committee member (unnamed, freshman sports advocate)", "Committee member (unnamed, fiscal prudence advocate)", "Greg (Athletic Director, referenced)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 4207
+    end_seconds: 5273
+    headline: "Committee plans summer retreat; MASC annual conference registered for November"
+    dek: "The committee discussed scheduling a summer working retreat, committee assignments, and pre-registration for the MASC annual conference November 8–10."
+    summary: |
+      The chair proposed a summer retreat format focused on: FY24/25 budget work, committee liaison assignments, operating protocol review, and goal-setting. Two dates were tentatively identified — July 6 and July 24 — pending confirmation with all members including one attending remotely.
+      
+      The MASC (Massachusetts Association of School Committees) annual conference is scheduled for November 8–10. At least three members expressed interest in attending; a discounted pre-registration rate is available. The chair will confirm with a fourth member.
+      
+      An executive session was flagged as needed to brief the full committee on outstanding legal matters and a public records compliance issue involving a Secretary of State directive.
+    key_speakers: ["Committee Chair", "Committee members (unnamed)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

@@ -9,7 +9,128 @@ video_url: "https://www.youtube.com/watch?v=PVMY4Jw4teY"
 duration_seconds: 10162
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee interviews interim superintendent candidates and appoints new finance director"
+  summary: "The Marblehead School Committee conducted public interviews of interim superintendent candidates across two evening sessions, questioning four finalists on budget process, MTSS implementation, override strategy, and leadership philosophy. At the close of the second session, the committee unanimously approved Michael Piering as assistant superintendent of finance and operations, subject to successful contract negotiations. The committee also observed a moment of silence for Coach Norman and acknowledged a safety incident at Marblehead High School earlier that week."
+  decisions:
+    - "Approved Michael Piering as assistant superintendent of finance and operations (subject to contract negotiations)"
+    - "Held interim superintendent candidate interviews (candidates: Barbara Catalo, David Thompson, and two others)"
+    - "Scheduled deliberation meeting for the following Wednesday at 8:00 PM"
+  votes:
+    - motion: "Approve Michael Piering as assistant superintendent of finance and operations subject to successful contract negotiations"
+      result: "in favor (4 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 80
+    end_seconds: 206
+    headline: "Chair thanks police and school staff for response to Monday safety incident"
+    dek: "The chair opened the meeting by commending the Marblehead Police Department, school administrators, and students for their calm response to an incident at the high school."
+    summary: "The chair called the meeting to order at 7:04 PM and thanked the Marblehead Police Department, Marblehead High School staff, and administrators for their response to an incident on the previous Monday. The chair noted that students followed protocols, staff was calm and organized, and communication within the building went well. Everything resolved safely for students."
+    key_speakers: ["Sarah Fox (Chair, School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 172
+    end_seconds: 332
+    headline: "Moment of silence held for Coach Norman, a longtime Marblehead softball coach"
+    dek: "The committee paused for a moment of silence in memory of Coach Norman, described as a longtime softball coach beloved by students, teachers, and the broader community."
+    summary: "After thanking first responders, the chair noted the committee had been remiss in not observing a moment of silence at the prior meeting for Coach Norman, a Marblehead softball coach who was well-known across the community. A moment of silence was observed."
+    key_speakers: ["Sarah Fox (Chair, School Committee)", "Alison Taylor (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 332
+    end_seconds: 500
+    headline: "Committee explains format for interim superintendent candidate interviews"
+    dek: "The chair described the public interview format: ten questions, five minutes per answer, fifteen-minute breaks between candidates, and community feedback available via survey on the district website."
+    summary: "The chair explained that four superintendent candidates would be interviewed over two evenings, with a potential fifth to be scheduled. Each committee member submitted questions, which were compiled without editing for content. Community members could access candidate resumes, cover letters, and a feedback survey at marbleheadschools.org or via QR code. Committee member Al Williams participated remotely via video from China."
+    key_speakers: ["Sarah Fox (Chair, School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 382
+    end_seconds: 5025
+    featured: true
+    headline: "School Committee publicly interviews first interim superintendent candidate Barbara Catalo"
+    dek: "Barbara Catalo, a 43-year education veteran with superintendent experience in Cohasset and other districts, fielded ten questions on override strategy, MTSS, budget process, technology, staffing challenges, and crisis management."
+    summary: |
+      The committee interviewed Barbara Catalo, who described 43 years in education progressing from teacher to superintendent, most recently serving as interim assistant superintendent for student services. She cited personal experience with dyslexia as motivating her career commitment to ensuring every student learns to read.
+      
+      Key topics covered:
+      
+      **Override strategy:** Catalo said overrides require community dialogue, transparency, and a long runway—at least a year of communication before a vote. She noted that in all five budgets she presented as superintendent, each was approved.
+      
+      **Budget process:** She described a zero-based budget approach starting in August, weekly meetings with her business manager, bi-weekly check-ins with school committee leadership, and a process that typically produced an approved budget by early December ready for town meeting.
+      
+      **MTSS:** She emphasized assembling leadership teams, documenting current practice, creating a shared definition, building monthly check-ins with principals, and aligning special education services with classroom instruction.
+      
+      **Technology:** She advocated for a district-wide technology plan from kindergarten through graduation, balanced with teaching responsible use, and cited experience implementing Chromebook programs in prior districts.
+      
+      **First 90 days:** She would tour all schools on day one, meet with principals and central office in the first week, schedule a community open house, review the budget and strategic plan, and initiate planning for a possible override if necessary.
+      
+      **Staffing/morale:** She acknowledged reviewing the district budget and observing significant cuts, and committed to honoring the existing budget while building team morale starting day one.
+      
+      **Special education audit:** The chair noted the district is conducting an external SPED audit with an RFP in progress; Catalo said she would actively co-lead rebuilding the SPED department rather than leaving it solely to the director.
+      
+      **On strategic planning:** Catalo advised against an interim superintendent writing the next multi-year strategic plan, suggesting that task belongs to the permanent superintendent with a fully settled team.
+    key_speakers: ["Barbara Catalo (Candidate)", "Jen Schaffner (Vice Chair, School Committee)", "Alison Taylor (School Committee)", "Sarah Fox (Chair, School Committee)", "Al Williams (School Committee, remote)", "Brian Oda (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 5025
+    end_seconds: 8893
+    headline: "School Committee publicly interviews second interim superintendent candidate Dr. David Thompson"
+    dek: "Dr. David Thompson, a former superintendent with override success in Norwood and building-project experience, was interviewed on budget, MTSS, technology, crisis management, and leadership team rebuilding."
+    summary: |
+      The committee interviewed Dr. David Thompson, who described a career path from classroom teacher to principal to superintendent. He most recently served as superintendent in Norwood, where he led a $8.6 million operational override (the largest in Massachusetts at the time, passing 75%-25%) and subsequently a $158 million building project.
+      
+      Key topics covered:
+      
+      **Override strategy:** Thompson emphasized starting community conversations at least a year in advance, creating two parallel budgets (override passes vs. fails), and being transparent about what programs would be cut or added. He also advocated for a ballot vote following a town meeting debate to maximize voter exposure.
+      
+      **Budget process:** He described looking at salary projections in August, sitting with principles and department heads in September, running six-to-eight weeks of iterative sessions, and having a fully approved budget ready by early December with town meeting approval in spring.
+      
+      **MTSS and SPED:** His longest discussion point; he described moving Norwood toward an inclusion model, implementing co-teaching, and investing in behavioral interventions. He called the failure to complete UDL professional development before COVID his biggest professional regret, and said he would actively support rebuilding Marblehead's SPED department rather than delegating it entirely.
+      
+      **Technology:** He pushed for one-to-one Chromebook programs in prior districts, advocated for a whole-district technology plan, expressed nuanced caution about AI, and said he financed Chromebook refreshes within the operating budget on a rolling cycle.
+      
+      **Crisis management:** Thompson described slowing down to gather information before acting, using the people around him, having pre-established emergency plans, and conducting after-incident reviews to refine protocols.
+      
+      **Rebuilding the team:** He would hold an administrative retreat in early summer, do individual listening tours with all new principals and central office staff, bring the teacher union leadership in early, and work to rebuild morale starting day one.
+      
+      **Strategic plan:** He agreed with Catalo that the next full strategic plan should belong to the permanent superintendent; as interim, he would inventory what has been accomplished under the current plan and identify essential remaining items for FY25.
+      
+      **Communication:** Thompson described standardizing communication channels in Norwood—email digests on set days, calls only for urgent matters, texts only for emergencies—as well as using video and Facebook Live for broader community engagement.
+    key_speakers: ["David Thompson (Candidate)", "Jen Schaffner (Vice Chair, School Committee)", "Alison Taylor (School Committee)", "Sarah Fox (Chair, School Committee)", "Al Williams (School Committee, remote)", "Brian Oda (School Committee)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 8893
+    end_seconds: 9980
+    headline: "School Committee unanimously approves Michael Piering as assistant superintendent of finance and operations"
+    dek: "Following an interview, the committee voted 4-0 to appoint Michael Piering, currently assistant superintendent in Haverhill, pending successful contract negotiations."
+    summary: |
+      Assistant superintendent for teaching and learning Julia introduced Michael Piering as the administration's recommended finalist for the position of assistant superintendent of finance and operations for the 2024-25 school year. Piering's bio noted 12 years of experience in public school finance and operations in Haverhill and Wakefield, a bachelor's in business management from Southern New Hampshire University, and a master's in educational leadership from Westfield State University, along with all required licenses.
+      
+      In the interview, Piering discussed:
+      
+      - The importance of starting budget work long before formal budget season by aligning salary projections and chart-of-accounts coding.
+      - His experience bundling a special education stabilization fund, full-day kindergarten, and a Chromebook initiative into a single override in Norwood, which passed.
+      - Transparent reporting to finance committees and school committees throughout the year.
+      - His prior experience navigating a software conversion from Infinite Visions to Munis (Tyler Technologies)—particularly relevant given the district's planned Munis conversion.
+      - His approach to the Marblehead override question: communication must start at least a year in advance, costs must be itemized with clear benefits, and the community must understand why the investment matters.
+      
+      Committee members noted that Michelle Crespo had already cleaned up the district's chart of accounts to align with DESE format, which should ease the Munis transition.
+      
+      The motion was made and seconded. The vote was 4-0 in favor (committee member Al Williams was not connected at time of vote).
+    key_speakers: ["Michael Piering (Candidate / Appointee)", "Sarah Fox (Chair, School Committee)", "Jen Schaffner (Vice Chair, School Committee)", "Alison Taylor (School Committee)", "Brian Oda (School Committee)", "Julia (Assistant Superintendent, Teaching and Learning)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 9980
+    end_seconds: 10172
+    headline: "Committee discusses next steps: deliberation meeting set for following Wednesday at 8 PM"
+    dek: "After the second interview session concluded, the chair outlined the schedule for completing the interim superintendent search and scheduling a deliberation or possible additional interview."
+    summary: "The chair noted that two more candidates would be interviewed the following evening, with a possible fifth candidate requiring separate scheduling. The committee discussed whether to hold a deliberation meeting the following Wednesday at 8:00 PM, or to use that slot for an additional interview if needed. The chair planned to post school committee meetings for Monday, Tuesday, Wednesday, and Thursday of the following week to preserve flexibility, with Wednesday evening reserved as a deliberation or interview night. Community survey feedback would be released to members over the weekend before deliberations."
+    key_speakers: ["Sarah Fox (Chair, School Committee)", "Jen Schaffner (Vice Chair, School Committee)", "Alison Taylor (School Committee)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

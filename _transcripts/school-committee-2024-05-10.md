@@ -9,7 +9,92 @@ video_url: "https://www.youtube.com/watch?v=-pACw2SRDms"
 duration_seconds: 1918
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee advances two interim superintendent finalists, approves two assistant superintendent contracts"
+  summary: "The Marblehead School Committee held a special meeting to deliberate on its interim superintendent search, voting 5-0 to advance Barbara Catalo and John Robodo to the next phase. The committee also approved contracts 5-0 for two new assistant superintendents: Michael Piffer (Finance and Operations) and Lisa Marie Iolo (Student Services). The chair noted a clerical error in the original meeting posting had prompted this special session."
+  decisions:
+    - "Approved advancing Barbara Catalo and John Robodo to the next phase of the interim superintendent search"
+    - "Approved contract with Michael Piffer as Assistant Superintendent of Finance and Operations"
+    - "Approved contract with Lisa Marie Iolo as Assistant Superintendent of Student Services"
+  votes:
+    - motion: "Move Barbara Catalo and John Robodo to the next phase of the interim superintendent search"
+      result: "in favor (unanimous)"
+    - motion: "Approve contract with Michael Piffer as Assistant Superintendent of Finance and Operations"
+      result: "in favor (unanimous)"
+    - motion: "Approve contract with Lisa Marie Iolo as Assistant Superintendent of Student Services"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 118
+    end_seconds: 210
+    headline: "Chair apologizes for clerical posting error that required special meeting"
+    dek: "Chair Sarah Fox explained she consulted the Secretary of State's office and chose to hold the meeting out of caution given the time-sensitive nature of the superintendent search."
+    summary: "Chair Sarah Fox opened the meeting by apologizing for a clerical error in the meeting posting. After consulting the Secretary of State's office, she was told the error was a judgment call that could go either way. Given that candidates were actively interviewing elsewhere, she chose to err on the side of caution and convene the meeting rather than delay the process."
+    key_speakers: ["Sarah Fox (School Committee Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 210
+    end_seconds: 911
+    featured: true
+    headline: "Committee votes 5-0 to advance Catalo and Robodo as interim superintendent finalists"
+    dek: "Each member shared their top candidates, with John Robodo receiving support from four of five members and Barbara Catalo receiving three votes, placing both in the next phase."
+    summary: |
+      The committee went through each member's preferences for advancing candidates. Al Williams named John Robodo; Brian Oda named two candidates (later identified as King and Thompson); Allison Taylor named Thompson and Robodo; Jen Schaffner named Barbara Catalo and Robodo; and Chair Sarah Fox indicated she was between two candidates. A tally showed Robodo supported by four members and Catalo by three, placing both in the next phase.
+      
+      The committee discussed next steps: a visit by committee members to each finalist's current district, followed by a day-in-district visit by the finalists in Marblehead that would include meetings with the admin team, teachers, students at the high school, and a parent/community session. Reference checks would precede the final decision.
+      
+      A motion to advance Barbara Catalo and John Robodo to the next phase passed 5-0 (Al Williams, Brian Oda, Allison Taylor, Jen Schaffner, Sarah Fox all in favor).
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Al Williams (School Committee)", "Brian Oda (School Committee)", "Allison Taylor (School Committee)", "Jen Schaffner (School Committee)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 911
+    end_seconds: 1140
+    headline: "Committee approves contracts for two new assistant superintendents, 5-0 each"
+    dek: "Michael Piffer joins as Assistant Superintendent of Finance and Operations and Lisa Marie Iolo as Assistant Superintendent of Student Services, both receiving unanimous approval."
+    summary: |
+      Chair Fox noted that Assistant Superintendent Julia Ferrera led the interview process for both positions. Jen Schaffner and Allison Taylor served on the interview panel for Michael Piffer; Brian Oda served on the panel for Lisa Marie Iolo. Attorney Liz Valeria drafted the contracts, which both candidates had signed off on.
+      
+      Both contracts were approved 5-0. Fox noted she observed both candidates' professional demeanor during contract negotiations as an indicator of character. Michael Piffer was present in the virtual meeting and was welcomed aboard.
+      
+      The committee also noted that principal search processes are ongoing for Village school and Glover school, with those contracts expected on a future agenda.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Brian Oda (School Committee)", "Allison Taylor (School Committee)", "Michael Piffer (incoming Asst. Superintendent of Finance and Operations)", "Julia Ferrera (Assistant Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1140
+    end_seconds: 1420
+    headline: "566 responses received to school communications survey; results to be presented at a future meeting"
+    dek: "Brian Oda reported 566 survey responses on school communications, describing the response rate as statistically meaningful; he and Al Williams plan to review results with consultant Steve Quiek before presenting to the full committee."
+    summary: "Brian Oda reported that 566 responses had been received for the school communications survey, noting this was a high response rate given approximately 500 people attended the community forums in person and online. He and Al Williams plan to meet with consultant Steve Quiek to review the data before presenting to the full School Committee, potentially at the May 16 meeting. The committee also noted that the League of Women Voters had requested a specific question be included in the survey, and members were asked to share relevant data with that organization."
+    key_speakers: ["Brian Oda (School Committee)", "Sarah Fox (School Committee Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 1420
+    end_seconds: 1800
+    headline: "Chair raises possibility of requesting state auditor review of school district; deferred to future agenda"
+    dek: "Chair Fox briefed the committee on a conversation with the State Auditor's office, noting a district audit would require town meeting approval and could cost up to $20,000 for the most extensive scope."
+    summary: |
+      Chair Sarah Fox reported on a conversation with a representative from the State Auditor's office regarding a potential audit of the school district. Key points discussed:
+      
+      - The School Committee would need to vote affirmatively to request the audit
+      - Town meeting approval is required by statute
+      - The town meeting warrant for the current year was closed; a possible special town meeting in the fall could provide an opportunity
+      - Cost for the most extensive audit of a district this size was estimated at less than $20,000; a narrower audit might be $10,000–$15,000
+      - The scope (financial, programmatic, or full district) would be determined by the School Committee
+      
+      Fox noted the interim finance director Mary Deli had suggested that targeted programmatic reviews with private vendors could be a cost-effective alternative to a sweeping district audit. The committee agreed to place this on a future agenda once the new administrative team is on board, but took no vote.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Jen Schaffner (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 1800
+    end_seconds: 1860
+    headline: "Committee confirms prior superintendent searches used NESDA and MASC as search consultants"
+    dek: "In response to a question from CPAC, Brian Oda confirmed the district used NESDA (with Carolyn Burke) for the Dr. Bucky search in 2019, and is currently using MASC for the interim superintendent search."
+    summary: "Brian Oda confirmed for the committee that NESDA (New England School Development Council), represented by Carolyn Burke, was used for the Dr. Bucky superintendent search in 2019. The current interim superintendent search is being conducted using MASC. A previous permanent search for Jason Silva used the Collins Center. Oda noted that a private Connecticut-based firm (AYP) was also interviewed in 2019 but was not selected, in part because the committee was not comfortable with that firm's process of conducting all initial candidate screening without committee involvement. Oda agreed to convey this information back to CPAC."
+    key_speakers: ["Brian Oda (School Committee)", "Sarah Fox (School Committee Chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

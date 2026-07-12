@@ -9,7 +9,84 @@ video_url: "https://www.youtube.com/watch?v=xxreA8htzrA"
 duration_seconds: 5630
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Finance Committee and School Committee meet on FY24 status, SPED costs, and budget transparency"
+  summary: "The Marblehead Finance Committee held a joint working session with school officials to review the FY24 school budget status, out-of-district SPED placements, circuit breaker reimbursement practices, and grant/revolving fund transparency. The discussion covered a roughly $200,000 shortfall each in transportation and tuition lines, offset by a $539,000 out-of-district tuition prepayment, and flagged rising special education transportation costs projected to reach $1.1 million in FY24 and $2 million in FY25. A follow-up hybrid meeting was set for March 6 at 4 p.m."
+  decisions:
+    - "Agreed to present FY25 budget book in the same line-item format used in FY24"
+    - "Scheduled next joint meeting for March 6 at 4 p.m. as a hybrid session"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 11
+    end_seconds: 266
+    headline: "Meeting called to order; departing school CFO recognized"
+    dek: "The chair acknowledged the outgoing school business administrator's service before opening the session."
+    summary: "After a brief technical delay getting all participants connected, the chair called the meeting to order at 8:34 a.m. Before turning to agenda items, a Finance Committee member expressed appreciation for the outgoing school business administrator (identified as Michelle), noting she was leaving for a position in Manchester and praising her leadership during a difficult period for the district."
+    key_speakers: ["Finance Committee chair (voice only)", "Michelle (school business administrator, departing)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 266
+    end_seconds: 1200
+    featured: true
+    headline: "FY24 school budget running roughly even; SPED transport costs hitting $1.1M vs. $880K budget"
+    dek: "A $539,000 out-of-district tuition prepayment is masking a significant transportation overrun as new residential placements emerge."
+    summary: |
+      The school business administrator provided a FY24 budget update, noting:
+      
+      - **Transportation**: Budgeted at $880,000 but estimated to reach **$1.1 million** in FY24, with FY25 projected at **$2 million**. Transportation bids are sometimes returned at $500/day with only one vendor responding.
+      - **Tuition (out-of-district)**: Approximately $200,000 over budget, but offset by a **$539,000 prepayment** of out-of-district tuitions made in June of the prior year — the fourth consecutive year this practice has been used.
+      - **Residential placement**: A nearly $100,000 residential placement finalized in the prior week was on the district's radar but not fully certain.
+      - **Circuit breaker**: FY23 carryover was approximately $900,000; $1.2 million received and applied to FY24; $1.4 million received and to be applied to FY25; FY26 projection is $1.6 million — though state reimbursement rate (historically 75%) may decrease.
+      - **Unemployment line**: Was increased from $100,000 to $420,000 in the prior year; fewer layoffs than anticipated meant the district had a cushion.
+      - **Vacancy impact**: Para, tutor, and custodial positions remain hard to fill due to union pay scales that in some cases start below minimum wage; the district is bringing some workers in at Step 3 or 4 rather than Step 1.
+      
+      A Finance Committee member flagged that without the prepayment the district would be roughly **$500,000** short on the out-of-district line. The group discussed the importance of maintaining the circuit breaker one-year rollover best practice, referencing the 2018 shortfall that precipitated the district's financial difficulties.
+    key_speakers: ["Michelle (school business administrator)", "Finance Committee member (Alec, voice)", "Finance Committee member (Molly, voice)", "Finance Committee member (Jen, voice)", "Finance Committee member (Sarah, voice)", "Finance Committee member (Pat, voice)", "School Committee member (Teresa, voice)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 1200
+    end_seconds: 2085
+    headline: "FinCom seeks full P&L view of school budget including grants, revolving funds, and circuit breaker"
+    dek: "Members pressed for a consolidated budget picture showing all revenue sources alongside general fund appropriations."
+    summary: |
+      Finance Committee members argued that reviewing only the general fund appropriation gives an incomplete picture and requested a consolidated view showing:
+      
+      - All grant revenues (Title I, IDEA 240, METCO, etc.) and their associated expenses
+      - Revolving fund balances (food service ended FY23 with approximately **$564,000** in balance; school lunch revenue now exceeds costs because the state covers all student meals)
+      - Circuit breaker rollover treatment
+      - How grant spending rules vary (federal grants must be spent within roughly 27 months; IDEA FY23 balance was approximately **$163,000**)
+      
+      The school CFO noted the financial system does not easily produce combined grant/revolving reports, requiring manual Excel work. The CFO also described that the DESE per-pupil spending figure of approximately **$148,000** for Marblehead includes charter school tuition payments routed through cherry sheet assessments, making direct comparisons to towns like Lynnfield (approximately $41,000 per pupil) difficult. The district recently signed on to a benchmarking platform (described as 'ArcX' or similar) covering 12 comparable districts.
+      
+      A Finance Committee member cautioned against presenting data in a way that pits special education spending against general education spending, while acknowledging SPED out-of-district costs are a primary budget pressure. The district has 12 students at Landmark School; Landmark and Windham Woods together serve the district's language-based program students.
+    key_speakers: ["Finance Committee member (Alec, voice)", "Finance Committee member (Jen, voice)", "Finance Committee member (Molly, voice)", "Finance Committee member (Sarah, voice)", "Finance Committee member (Pat, voice)", "Michelle (school business administrator)", "School Committee member (Teresa, voice)"]
+  - topic: labor-personnel
+    topic_confidence: 0.88
+    start_seconds: 2085
+    end_seconds: 2400
+    headline: "School union negotiations to begin in March; CFO says town guidance limits salary disclosure in budget"
+    dek: "The MEA covers all school unions; the district's first negotiation session is scheduled for March, with the CFO noting competing pressures around budget transparency during active bargaining."
+    summary: |
+      Discussion turned to how to present salary lines in the FY25 budget book while labor negotiations are pending. Key points:
+      
+      - The MEA covers all school unions; the first negotiation session is scheduled for **March**.
+      - The town's Chief Financial Officer (Alicia) has advised the district to limit disclosure of the specific cost-of-living adjustment percentage budgeted for staffing lines, citing labor relations concerns.
+      - The school CFO noted that Marblehead's COLA increase over the prior three years was approximately **1.3%** — at the bottom compared to comparable districts shown in a bar chart.
+      - Finance Committee members said they were comfortable with the same line-by-line presentation format used in FY24 (showing positions, not the specific assumed COLA rate), and the group agreed to proceed on that basis pending clarification from the town CFO.
+      - The CFO noted that statewide MTA negotiations are proceeding slowly, making it unlikely contracts will be settled before the budget is finalized.
+    key_speakers: ["Michelle (school business administrator)", "Finance Committee member (Alec, voice)", "Finance Committee member (Sarah, voice)", "Finance Committee member (Jen, voice)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2400
+    end_seconds: 5627
+    headline: "Next joint meeting set for March 6 at 4 p.m.; budget workshop scheduled for February 28"
+    dek: "The group agreed to a hybrid follow-up meeting before the February 28 budget workshop and before the School Committee vote on the budget in late March."
+    summary: "Before adjourning, the group scheduled a next joint meeting for **March 6 at 4 p.m.** as a hybrid session, with a hard stop at 5 p.m. at the outgoing CFO's request. The school budget workshop with the full School Committee is scheduled for **February 28 at 5 p.m.** The Finance Committee noted it will likely formally act on the school budget around **April 1**. The school was also slotted for a **March 25** Finance Committee night. The CFO committed to sending follow-up materials, including a FY24 projection, before the March 6 meeting."
+    key_speakers: ["Finance Committee chair (voice only)", "Michelle (school business administrator)", "Finance Committee member (Alec, voice)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

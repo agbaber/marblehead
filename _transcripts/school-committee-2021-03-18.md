@@ -9,7 +9,324 @@ video_url: "https://www.youtube.com/watch?v=kma3_eRTxRU"
 duration_seconds: 10866
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee reviews FY22 budget priorities, neighborhood bus pilot, and full-day kindergarten proposal"
+  summary: "The Marblehead School Committee held a lengthy meeting covering the FY22 budget (totaling approximately $42.1M with an estimated $826K gap to the town allocation), a proposed neighborhood bus pilot program starting with the Beacon Street area, and a proposal to offer free full-day kindergarten for the remainder of the school year. The committee also discussed the Student Opportunity Act expenditure plan ($90,690), approved the February 4 minutes and a schedule of bills totaling approximately $217,757, and debated whether to support a MASS position paper opposing MCAS testing this spring. A public comment policy revision was presented for first reading."
+  decisions:
+    - "Approved February 4, 2021 meeting minutes with corrections"
+    - "Approved schedule of bills totaling approximately $217,757"
+    - "Approved expenditure plan for Student Opportunity Act funds ($90,690)"
+    - "Directed administration to continue developing neighborhood bus pilot program"
+  votes:
+    - motion: "Approve February 4, 2021 minutes with corrections"
+      result: "in favor (4 to 0)"
+    - motion: "Approve schedule of bills totaling $217,757.74"
+      result: "in favor (4 to 0)"
+    - motion: "Approve Student Opportunity Act expenditure plan of $90,690"
+      result: "in favor (4 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 121
+    end_seconds: 699
+    headline: "Commendations for school nurse, vaccination appointment helpers, and Cornerstones student group"
+    dek: "School committee member Matt Fox recognized three groups for their work during the 2020–21 school year."
+    summary: |
+      Matt Fox presented commendations to the new school nurse Andrea (last name unclear from audio) who tracked over 228 COVID-related instances, to tutor Leslie Dexter and eighth-grader Jared Kaplovich who secured approximately 30 vaccination appointments for staff, and to the Cornerstones volunteerism and leadership group and its advisors for running over eight events including a Toys for Tots drive that collected over 180 toys.
+      
+      Student representative Dan Howell reported that the football team won its first game against Beverly, that social worker Mr. Ed Reiner hosted grade-level Zoom sessions for student reflection, and that the Jewel Tones a cappella group placed second at a virtual ICHSA quarterfinal. He noted students were generally positive about the upcoming April 5 return to five half-days per week.
+    key_speakers: ["Matt Fox (School Committee member)", "Dan Howell (student representative)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 699
+    end_seconds: 835
+    headline: "Resident raises concerns about late packet posting and COVID spending transparency"
+    dek: "Katherine Martin of 29 West Shore Drive asked the committee to post meeting materials earlier and to publicly disclose how COVID relief funds are being spent before launching parent fundraising campaigns."
+    summary: |
+      Katherine Martin noted the meeting packet was not posted until 6:58 p.m., making it difficult for engaged residents to review materials in advance. She also stated that when a budget spreadsheet was shown at a prior subcommittee meeting, residents were told they could not have a copy, which she argued was incorrect once it had been shared in a public meeting.
+      
+      Martin called for transparency about COVID spending—specifically disclosing how funds such as an approximately $450,000 allocation have been earmarked—before the district asks parents to contribute to fundraising campaigns tied to school reopening costs.
+    key_speakers: ["Katherine Martin (resident, 29 West Shore Drive)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 835
+    end_seconds: 973
+    headline: "Committee approves February 4 minutes with corrections including pool-testing notation"
+    dek: "Sarah Fox requested several corrections to the February 4 minutes before the committee voted 4–0 to approve them."
+    summary: "Corrections included fixing a misspelling of a parent's name, adding a notation that Sarah Fox and David Harris had voiced concerns about a discrepancy in state guidance on pool testing, and appending both a memo by Ms. Martin and a prepared statement by committee chair Ms. Gold to the record. The committee voted 4–0 to approve the minutes as amended."
+    key_speakers: ["Sarah Fox (School Committee member)", "Sarah Gold (School Committee chair)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 1019
+    end_seconds: 2069
+    headline: "Superintendent's report covers busing pilot, pool testing, full return to school, and kindergarten proposal"
+    dek: "Superintendent Dr. Bucky presented several updates including a detailed neighborhood bus pilot proposal, COVID pool testing statistics, and the first week of expanded in-person instruction for grades K–6."
+    summary: |
+      **Neighborhood Bus Pilot (Dr. Benedetto)**
+      
+      Assistant Superintendent Dr. Jess Benedetto proposed a one-year pilot neighborhood bus program to begin when the new Brown School opens. Key elements:
+      
+      - Bus route would serve Old Town, the Gracie Oliver area, and the Beacon Street/Evans Street/West Shore Drive corridor
+      - Three rider populations: K–3 students the town is required to bus to Brown (publicly funded, red area on map); optional K–12 bus-pass purchasers (yellow area, $300/student or $450 family cap); and hazard-busing students on Beacon Street (no safe walking route under DESE guidelines)
+      - Seven pickup stops; drop-offs at Village, Vets, Baldwin/Pleasant intersection near the high school, and Brown School
+      - Fee of $300/student or $450 family maximum for families who do not qualify for public busing, first-come first-served with priority for those farthest from schools
+      - Pilot would run one year with end-of-year survey and possible expansion
+      
+      The superintendent indicated administration would invest in routing software and sought committee blessing to continue planning. The committee expressed general support; member Megan Taylor suggested running the pilot without a fee to avoid equity disparities, while member Emily Baron noted charging is a common practice with subsidies available for families who cannot afford it.
+      
+      **Pool Testing Update**
+      
+      The superintendent reported over 700 pool tests completed, only one positive case, and noted staff Amanda and Greg had done the bulk of the work. The DESE-funded trial runs through spring break (April 18); final cost figures for continuing the program after the trial have not yet been provided by DESE.
+      
+      **In-Person Instruction**
+      
+      Grades K–6 began five half-days per week as of the prior Monday. Principals reported high excitement, some drop-off/pick-up logistical challenges on the first very cold day, and custodians moved 35 classrooms at Village over the weekend. Full days with lunch are planned for later in April. Grades 7–12 remain on track for an April 5 return.
+      
+      **Full-Day Kindergarten Proposal (Nan Murphy)**
+      
+      Assistant Superintendent Nan Murphy proposed offering all kindergarteners the remainder of the year at no charge, with mornings focused on ELA/math and afternoons on hands-on, outdoor learning. Murphy noted this is consistent with equity and inclusion goals, as most Massachusetts districts no longer charge for afternoon kindergarten. The committee expressed strong support; administration will verify whether a formal policy vote is required given current practice of charging tuition.
+    key_speakers: ["Dr. Jess Benedetto (Assistant Superintendent)", "Superintendent (Dr. Bucky)", "Nan Murphy (Assistant Superintendent)", "Megan Taylor (School Committee member)", "Sarah Fox (School Committee member)", "Emily Baron (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 2069
+    end_seconds: 2305
+    headline: "Math curriculum review narrows to two programs; decision delayed past original deadline"
+    dek: "The K–8 math curriculum committee is finalizing its review of vendors, with consensus forming around a K–5 program and a separate 6–8 program, and one more presenter scheduled."
+    summary: |
+      Assistant Superintendent Murphy reported the math curriculum committee has conducted hours of vendor presentations using a state-provided rubric. Two candidate programs have emerged: one for K–5 (or K–6) and one for grades 6–8. One more presenter is scheduled for the following Thursday. The committee is slightly behind its original decision timeline but deliberately slowed the process to ensure the right program is selected rather than rushing to meet the budget cycle.
+      
+      Committee members raised questions about:
+      - Whether two programs in one building creates alignment or coaching challenges (Murphy: a hard but manageable ask; instructional specialists would need to cover both)
+      - Cost implications (per-pupil pricing means two programs do not necessarily double costs)
+      - Timing of professional development given teachers cannot purchase the program until July 1 when FY22 funds become available (Murphy: grant money and stipends will support lead teachers over the summer; union-negotiated pre-year PD time is available)
+      
+      The district currently has roughly one-to-one device coverage and expects elementary schools to reach full one-to-one next year, which is important because all candidate programs have rich online components.
+    key_speakers: ["Nan Murphy (Assistant Superintendent)", "Sarah Fox (School Committee member)", "Megan Taylor (School Committee member)", "Michelle (CFO/Finance Director)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 2305
+    end_seconds: 2628
+    headline: "Superintendent reports first week of 5-day K–6 in-person learning went well; high school April 5 return on track"
+    dek: "Dr. Bucky described an energetic first week back for K–6 students and noted planning continues for the April 5 grades 7–12 return, including open-campus lunch and quarantine contingency plans."
+    summary: |
+      The superintendent described receiving numerous grateful emails and in-person comments from families after the first four days of expanded in-person instruction. Custodians moved 35 classrooms at Village over the weekend without issue. Drop-off/pick-up volumes doubled with both cohorts returning and caused some first-week hiccups that principals are addressing.
+      
+      For grades 7–12 (April 5 launch), planning topics discussed at the morning reopening meeting included:
+      - Quarantine protocols: direct contacts who test negative at day 5 can return at day 8; confirmed positives quarantine 14 days
+      - Concern that moving to 3-foot distancing increases the radius of potential close contacts, especially for students who switch classrooms each period
+      - High school lunch: blocks are 30 minutes (too short for off-campus), so an additional tent was added for outdoor eating; the goal is to keep students on campus
+      - About half of full-remote families indicated they want to return in-person for grades 7–12
+      
+      The superintendent called on the community to continue COVID-safe behaviors outside school, noting that data shows students are safest inside school buildings where mitigation is in place.
+    key_speakers: ["Superintendent (Dr. Bucky)", "Nan Murphy (Assistant Superintendent)", "Sarah Fox (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 2628
+    end_seconds: 2938
+    headline: "Free full-day kindergarten proposed for remainder of year to remove financial barrier"
+    dek: "Nan Murphy proposed making full-day kindergarten available at no charge for the rest of FY21, framing it as an equity and inclusion measure for students who have never experienced a traditional school year."
+    summary: |
+      Murphy proposed that the district offer the afternoon kindergarten session free of charge for the remainder of the school year, removing the existing tuition barrier. She noted the pandemic has made this year particularly critical for equity and access, and that kindergarteners entering first grade in September need exposure to a full school day.
+      
+      Planned afternoon programming would include hands-on science, outdoor play, nature walks, and bus excursions around town, while mornings remain focused on ELA and math content.
+      
+      Committee member Megan Taylor expressed strong support and noted Marblehead is one of very few Massachusetts communities still charging for afternoon kindergarten, calling it a longer-term goal to eliminate the fee permanently. Sarah Fox asked whether a formal vote is needed since current policy charges tuition; administration agreed to review the policy and bring a motion if required at the next meeting.
+    key_speakers: ["Nan Murphy (Assistant Superintendent)", "Megan Taylor (School Committee member)", "Sarah Fox (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2938
+    end_seconds: 3035
+    headline: "Pool testing running through April 18; cost of continuing program after trial still pending from DESE"
+    dek: "The DESE-funded pool testing trial ends at spring break; the district awaits final cost figures before deciding whether to continue."
+    summary: "The superintendent confirmed the pool testing free trial runs through April 18 (spring break). DESE has not yet provided final cost figures for supplies and materials needed to continue after the trial. The district would continue with vendor Beacon (on the procurement list) and would need to organize testing logistics itself. A nurse is currently out on leave and Amanda is handling pool testing, raising staffing concerns if the program continues at full scale."
+    key_speakers: ["Superintendent (Dr. Bucky)", "Sarah Fox (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 3035
+    end_seconds: 3175
+    headline: "Administration updates committee on COVID quarantine protocols and high school open-campus considerations"
+    dek: "The superintendent raised concern that moving to 3-foot distancing at grades 7–12 will increase close-contact quarantine exposure, particularly at the high school where students change classes each period."
+    summary: |
+      The superintendent outlined how reducing classroom distancing from 6 feet to 3 feet (as may occur at grades 7–12) significantly expands the quarantine radius when a student tests positive, because students travel among multiple classrooms. This is distinct from elementary cohorts where exposure is limited to one classroom.
+      
+      Regarding open campus: Dr. Bucky noted that the 30-minute high school lunch block is insufficient for students to leave and return safely, and expressed caution that anecdotal reports indicate students remove masks in cars. The high school added an extra outdoor tent for lunch to encourage students to remain on campus. Dan Bauer (likely Dan, the high school principal) is working with faculty on simultaneous in-person/remote instruction options for quarantined students, though teacher capacity for this varies.
+    key_speakers: ["Superintendent (Dr. Bucky)", "Sarah Fox (School Committee member)", "Megan Taylor (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 3175
+    end_seconds: 3453
+    headline: "Tent fundraising effort for outdoor eating spaces raises over $10,000; purchase blocked by fire-rating rules"
+    dek: "Nan Murphy and 'Muffy' have raised over $10,000 for outdoor tents, but purchasing tents outright remains difficult due to town fire-rating requirements for fabric structures."
+    summary: |
+      Murphy described a district-wide fundraising initiative ("Friends of" program structure described as being in early formation) to provide outdoor tented eating and instructional spaces at all schools, benefiting students from kindergarten through grade 12. The effort has raised over $10,000.
+      
+      Purchasing tents outright has been blocked because the town bylaws require a specific fire rating for fabric structures near buildings, and no available vendors have been able to provide a compliant product. The district is currently renting tents from a company on its procurement list that meets the requirements. Murphy noted she has been unable to confirm the rental through the end of the year due to budget uncertainty, and the end date remains open pending fundraising totals. The high school tent is the largest and most expensive.
+    key_speakers: ["Nan Murphy (Assistant Superintendent)", "Sarah Fox (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 3453
+    end_seconds: 3849
+    featured: true
+    headline: "FY22 budget shows roughly $826K gap after contractual costs; committee reviews 15 priority items"
+    dek: "Finance Director Michelle presented a budget tracking sheet showing a level-service cost increase of approximately $1.6M offset by $738K in savings, leaving about $287K available before hitting the target appropriation number; 15 prioritized budget requests totaling approximately $1.1M would require an additional $826K."
+    summary: |
+      Finance Director Michelle walked the committee through the FY22 budget tracking sheet:
+      
+      | Category | Amount |
+      |---|---|
+      | FY21 budget base | ~$40.5M |
+      | Contractual payroll increases | ~$862K |
+      | Student Opportunity Act (one-time) | $90,690 |
+      | Other operating cost increases (primarily SPED tuition, revolving fund decrease) | ~$574K |
+      | New Brown School utilities | ~$77K |
+      | Operating cost decreases | (~$121K) |
+      | Staffing cost decreases | (~$500K+) |
+      | Unemployment reserve increase | included |
+      | **Net savings** | **~$738K** |
+      | **Available for priorities before hitting target** | **~$287K** |
+      | **Gap if all 15 priorities funded** | **~$826K** |
+      
+      **Top budget priority requests (items 9–23, in priority order):**
+      1. Brown School preschool (2 teachers, 4 paras, net ~$148K after new revenue)
+      2. Technology — 1 integration specialist + capital leases (~$293K)
+      3. Central admin — HR Director net of HR assistant savings (~$30K)
+      4. Curriculum — 1 instructional specialist (~$80K)
+      5. New math curriculum (~$180K)
+      6. Village School — guidance counselor net of teacher-leader stipend reductions (~$16.5K)
+      7. MHS academic skills teacher
+      8. Additional reading teacher (veterans)
+      9. Brown School custodian
+      10. Glover/Village allied arts (1 FTE split)
+      11. MHS BRIGHT program tutor → teaching position
+      12. Director of Guidance (upgrade from department head)
+      13. Facilities administrative/groundskeeper support
+      14. Community relations liaison
+      15. Athletics scoreboard replacement at MHS (removed — fellows expansion also removed after Endicott College cannot provide additional fellows)
+      
+      The superintendent noted ongoing conversations with town Finance Director Jason Silva and Town Administrator; free cash has not yet been certified. American Rescue Plan Act funds expected for Marblehead add another variable. The next budget subcommittee meeting is scheduled for the following Tuesday.
+      
+      Sarah Fox asked about tiering priorities into must-fund vs. aspirational categories. The superintendent and Michelle noted the process is iterative and they are not hearing alarm from town officials about the current trajectory.
+    key_speakers: ["Michelle (Finance Director)", "Superintendent (Dr. Bucky)", "Sarah Fox (School Committee member)", "Megan Taylor (School Committee member)", "Sarah Gold (School Committee chair)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 3849
+    end_seconds: 4026
+    headline: "Committee votes 4–0 to approve Student Opportunity Act plan allocating $90,690 to math interventionist and literacy programs"
+    dek: "The $90,690 in Student Opportunity Act funds will support a new district math interventionist position (K–8), a summer literacy program targeting decoding and fluency deficits, and professional development on tiered instruction."
+    summary: |
+      Nan Murphy presented the approved allocation:
+      
+      | Use | Amount |
+      |---|---|
+      | District math interventionist position | ~$70,690 |
+      | Summer literacy program (decoding/fluency) | $10,000 |
+      | Professional development (multi-tiered systems of support) | $10,000 |
+      | **Total** | **$90,690** |
+      
+      The math interventionist would work primarily with adults (teachers) to unpack new curriculum and support tiered instruction—similar to the existing literacy coaching role Rebecca Brand plays for ELA. The state is expected to provide this funding for at least three years.
+      
+      Megan Taylor expressed concern about using grant (one-time) funds for a recurring position, but acknowledged this mirrors the approach used for the BRIGHT program, which was later absorbed into the operating budget. The committee voted 4–0 to approve.
+    key_speakers: ["Nan Murphy (Assistant Superintendent)", "Megan Taylor (School Committee member)", "Michelle (Finance Director)", "Sarah Gold (School Committee chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 4026
+    end_seconds: 4242
+    headline: "Schedule of bills totaling approximately $217,757 approved 4–0"
+    dek: "The committee unanimously approved the identified schedules of bills."
+    summary: "The committee voted 4–0 to approve the schedule of bills totaling $217,757.74."
+    key_speakers: ["Sarah Gold (School Committee chair)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 4242
+    end_seconds: 4569
+    headline: "Committee discusses strategic planning timeline; members disagree on how far planning has progressed"
+    dek: "Members expressed interest in launching the strategic planning process by April; a brief exchange revealed differing expectations about whether preliminary work has been completed."
+    summary: |
+      Megan Taylor proposed getting the strategic planning process underway formally in April so that by fall the district would have a plan to tie to budget and potential override discussions. Sarah Fox asked whether a strategic plan committee structure and timeline had already been worked out, saying she was 'taken back' to learn it may not have been.
+      
+      The superintendent clarified a distinction between his superintendent entry plan (which he has been working on) and the formal community-wide strategic planning process (which requires facilitation, community representation, and work on mission/vision/goals). The latter is on the school committee's goals list, originally with a May timeframe. The superintendent agreed to work toward an April presentation of a process framework and timeline.
+      
+      Members also agreed the budget hearing format—specifically how public comment and committee responses are structured—needs to be discussed in advance, referencing a prior year's hearing where significant time was spent debating whether to answer questions from the public.
+    key_speakers: ["Megan Taylor (School Committee member)", "Sarah Fox (School Committee member)", "Superintendent (Dr. Bucky)", "Sarah Gold (School Committee chair)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 4569
+    end_seconds: 4711
+    headline: "Committee weighs supporting MASS position paper against administering MCAS this spring"
+    dek: "Chair Sarah Gold proposed writing to state legislators in support of a Massachusetts Association of School Superintendents position paper recommending against MCAS testing this spring, citing social-emotional concerns; the committee generally agreed."
+    summary: |
+      Chair Gold introduced the MASS position paper arguing against administering MCAS this spring. Key points from the discussion:
+      
+      - MASS/MASC position: the year's disruptions, social-emotional toll, and shift toward in-person learning make this an inappropriate time for standardized testing
+      - Nan Murphy noted MCAS data is valuable for identifying proficiency gaps and growth percentiles across years, and that districts can create a culture of low-stakes testing; she expressed uncertainty about a firm position either way
+      - Sarah Fox asked whether this year's modified test (reduced to one session) would produce comparable data to prior years and future years, given no baseline from the missed 2020 test
+      - The superintendent stated he fully supports the MASS position, noting MCAS causes anxiety for teachers who take results personally and that instructional time is better spent on social-emotional recovery
+      - Emily Baron agreed the culture around MCAS needs to change and supported the position paper approach
+      
+      Chair Gold agreed to draft a letter to the district's state senator and state representative in support of the MASS position paper and circulate it to the committee before sending.
+    key_speakers: ["Sarah Gold (School Committee chair)", "Nan Murphy (Assistant Superintendent)", "Superintendent (Dr. Bucky)", "Sarah Fox (School Committee member)", "Emily Baron (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 4711
+    end_seconds: 5121
+    headline: "Public comment policy presented for first reading with proposed changes to address criticism and clarification rules"
+    dek: "The policy subcommittee (chair Gold and Emily Baron) proposed revisions to the public comment policy drawn from MASC guidance, including removing a redundant provision and adding language about the proper channels for staff-related complaints."
+    summary: |
+      Key proposed changes to the public comment policy:
+      
+      1. **Item 3 (new language in red):** Add that public comments should not direct personal criticism at individual staff or students; complaints involving staff should go through administrative channels; the school committee as a whole (not individual members) may be criticized
+      2. **Item 6:** Remove as redundant
+      3. **Item 8:** Add language (from MASC) clarifying that the chair may address factual misunderstandings in comments where there is a clear misunderstanding, but that extended back-and-forth dialogue is not appropriate; clarify that the committee may address questions/themes as deemed appropriate by the chair *or by majority vote*
+      
+      Member Taylor suggested language be focused on 'themes' from public comment rather than individual comments, and that the policy preserve flexibility for the committee to take action (e.g., refer to a subcommittee or put an item on a future agenda) when recurring themes emerge. Fox noted the policy should remain policy-level rather than drifting into operating protocols.
+      
+      The policy will return for a vote at the next meeting. Chair Gold plans to consult again with MASC's Dorothy Presser before finalizing.
+    key_speakers: ["Sarah Gold (School Committee chair)", "Emily Baron (School Committee member)", "Megan Taylor (School Committee member)", "Sarah Fox (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 5121
+    end_seconds: 5186
+    headline: "Subcommittee updates: budget subcommittee meeting next Tuesday; facilities assessment expected within a week"
+    dek: "Brief liaison updates noted the budget subcommittee meets Tuesday, a facilities assessment is expected shortly, and the METCO program has expanded K–8 to full days."
+    summary: |
+      - Budget subcommittee: next meeting scheduled for the following Tuesday
+      - Facilities: awaiting an assessment document expected within approximately one week; will schedule a meeting once received
+      - METCO: K–8 students began full school days the prior week, a positive development for a population that has struggled during the pandemic; a 'Friends of METCO' group is forming to sustain the Tyrone Bumper scholarship and other METCO initiatives; RIDES (Reimagining Integration Diverse and Equitable Schools) program application accepted—an equity team including Nan Murphy, Lindsey Paige, Emily Dean, Julia Ferreira, and Heidi Harris will follow the RIDES cycle through November to develop a district equity plan
+    key_speakers: ["Sarah Gold (School Committee chair)", "Sarah Fox (School Committee member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.75
+    start_seconds: 5186
+    end_seconds: 5232
+    headline: "Brown School building project on schedule and on budget; Marblehead Electric completes underground power"
+    dek: "Building committee member David Harris (via text) reported the project remains on schedule and on budget, with a notable milestone of underground electrical work completed."
+    summary: "Chair Gold relayed that David Harris (absent from the meeting) reported the Brown School project is on schedule and on budget. Marblehead Electric completed underground power for the school during the week of the meeting. The building committee previously approved a school mural (featured in local media and social media) and the landscape budget, which required drawing on contingency funds but remains within the overall project budget."
+    key_speakers: ["Sarah Gold (School Committee chair)", "Sarah Fox (School Committee member)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 5232
+    end_seconds: 5879
+    headline: "Three residents comment on budget transparency, learning loss data, and quarantine planning for high school return"
+    dek: "Second public comment period included remarks on facilities committee scope, the need for learning-loss data, and concerns about the lack of a concrete education plan for students quarantined when grades 7–12 return."
+    summary: |
+      **Aaron (resident):** Thanked the committee for split public comment; asked that a future agenda item address learning loss and social-emotional needs district-wide, informed by existing assessment data (AIMS Web and teacher assessments), to guide spending of upcoming federal relief funds including any summer learning programs.
+      
+      **Katherine Martin (29 West Shore Drive):** Clarified that a facilities committee's role is to review the annual facilities plan, capital outlays, and long-term needs—not to address operational items like PPE or extra desks. She expressed hope the recently completed facilities assessment would be available before the budget hearing so long-term facility needs could be funded.
+      
+      **Jennifer Brennan (resident):** Raised concern that with three-foot distancing at the high school, the quarantine radius expands significantly for students who change classes each period. She noted that students whose teachers are not willing to stream live instruction could lose up to 14 days of education through no fault of their own, and called this an educational equity issue. She asked that the district communicate a clearer plan for quarantined high school students—noting juniors and seniors face AP exams—before the April 5 return.
+      
+      Superintendent Bucky responded that the topic came up at the morning reopening meeting; the high school principal is working with faculty, and the quarantine timeline is shorter than many assume (direct contacts who test negative at day 5 can return at day 8). He agreed the plan and timeline should be communicated clearly to families.
+    key_speakers: ["Aaron (resident)", "Katherine Martin (resident, 29 West Shore Drive)", "Jennifer Brennan (resident)", "Superintendent (Dr. Bucky)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 5879
+    end_seconds: 5961
+    headline: "Correspondence noted: 'Support Our Students' petition and letter supporting communications position"
+    dek: "Two items of correspondence were entered into the record: a community petition and a letter from Kate Thompson supporting the community relations liaison budget priority."
+    summary: "Chair Gold noted two pieces of correspondence in the meeting packet: (1) a petition from the 'Support Our Students' organization, entered into the official record; and (2) a letter from Kate Thompson expressing support for the community relations/communications position included in the FY22 budget priorities. The meeting was adjourned at approximately 10:01 p.m."
+    key_speakers: ["Sarah Gold (School Committee chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

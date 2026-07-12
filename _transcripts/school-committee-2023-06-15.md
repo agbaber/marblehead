@@ -9,7 +9,105 @@ video_url: "https://www.youtube.com/watch?v=XIl7Y7QNgpA"
 duration_seconds: 3107
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee approves superintendent's FY23 review 5-0; superintendent declines pay raise"
+  summary: "The Marblehead School Committee approved Superintendent Dr. Bucky's 2022–23 annual review unanimously (5-0), using a new collaborative process in which all members worked through ratings together rather than submitting individual written evaluations. The superintendent opened the meeting by stating publicly that he would not accept a pay increase in the coming fiscal year given stretched town finances, framing the override vote scheduled for June 20 as the community's most pressing concern. The committee also voted 4-0 to approve FY24 user fee rates for school programs, and deferred pickleball court operating-hours scheduling to Parks & Recreation."
+  decisions:
+    - "Approved FY24 school user fee rates as proposed (4-0)"
+    - "Approved superintendent's 2022–23 annual review as presented (5-0)"
+    - "Referred pickleball court operating-hours scheduling to Parks & Recreation"
+  votes:
+    - motion: "Approve FY24 user fee rates"
+      result: "in favor (4 to 0)"
+    - motion: "Approve superintendent's 2022–23 annual review"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 216
+    end_seconds: 368
+    headline: "Superintendent honors retiring staff and notes state recognition for school program"
+    dek: "Over a dozen educators across all Marblehead school buildings were recognized for retirements ranging from 7 to 50 years of service."
+    summary: |
+      The superintendent reported that the district received recognition from SEAFRETS (state organization) for an exemplary program, with a state representative present at the State House for the presentation.
+      
+      Retirees acknowledged included staff from the High School (school counselors Alan Gaither, 24 years; Anita Lamby, 21 years; special education teacher Ken Rosinski, 23 years; paraprofessional Brenda, 10 years), Little School (Steve Tenney, paraprofessional, 7 years), the Vets (Elizabeth Fogerty, special education, 12 years; Bob Torelli, music, 24 years; librarian, 14 years), Village School (PE teacher Gigi Breed, 19 years; Sue Stybell, nearly 50 years in education), Glover School (Barbara Thomas, kindergarten/first grade, 30 years; Tammy Nolte, art, 14 years), and Brown School (Carol Newman, tutor, 22 years).
+    key_speakers: ["Superintendent (Dr. Bucky)"]
+  - topic: labor-personnel
+    topic_confidence: 0.92
+    start_seconds: 424
+    end_seconds: 528
+    featured: true
+    headline: "Superintendent says he will not accept a pay raise, citing town financial pressures and override vote"
+    dek: "Dr. Bucky stated publicly that a superintendent salary freeze is appropriate given stretched town finances and urged focus on the June 20 override vote."
+    summary: |
+      Superintendent Dr. Bucky addressed what he described as an unnecessary political controversy over his contract. He stated unequivocally that he had never requested his contract be placed on the agenda, that his contract structure allows the committee to choose annually whether to update compensation, and that he had previously said he would defer to the committee on such matters.
+      
+      He then stated: "I believe a salary freeze for the superintendent is appropriate and I will not accept a pay increase in the coming fiscal year." He said the override vote on June 20 is a far more pressing matter and that speculation about his contract should have no bearing on that critical town-wide vote.
+    key_speakers: ["Superintendent (Dr. Bucky)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 716
+    end_seconds: 1804
+    headline: "Residents address busing safety gaps, CPAC unsung hero nominees, and superintendent's leadership"
+    dek: "Multiple residents commented on school busing deficiencies, the Marblehead CPAC's 52 unsung-hero nominations, and the importance of the upcoming override vote."
+    summary: |
+      **Jessica Benedetto (Bradley Road)** raised a long-standing concern about the lack of safe transportation for students living two or more miles from school, a service she said most surrounding towns provide. She stated the superintendent had described busing for distant students as "a luxury and simply not a budgetary priority" in an email, and noted the district had found funds for a communications consultant. She asked how much a second afternoon bus route for grades 6–12 would cost, given an existing elementary bus she observed sitting unused at the Vets by 3 p.m.
+      
+      **Marblehead CPAC co-chair** reported 52 unsung-hero nominations received across all five public schools, the charter school, and community organizations. Named nominees included staff from Glover, Brown, Village, Vets, and the High School, as well as central administrator Dr. Paula Donnelly, Eric Roberts at the charter school, cub scout leader Christy Hebert, Kevin Evans from Island Roots Camp, and minister Lindsay Papperson at Old North Church.
+      
+      **Scott Solberg** praised outgoing high school administrator Dan Bauer and expressed support for superintendent stability, noting improved transparency between the district and the Finance Committee over the past two years.
+      
+      **Cam Staples** (via Zoom, audio difficulties) expressed concern about a "proficient" rating in the superintendent's review and emphasized the importance of leadership continuity for a high-performing district.
+      
+      **Catherine Martin (29 West Shore Drive)** thanked retiring educators including Tammy Nolte and Elizabeth Fogerty, and noted that school committee meeting agendas have always been publicly posted as required by state law.
+    key_speakers: ["Jessica Benedetto (resident)", "CPAC co-chair (resident)", "Scott Solberg (resident)", "Cam Staples (Zoom, Finance Committee liaison)", "Catherine Martin (resident)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 936
+    end_seconds: 1129
+    headline: "Committee approves FY24 user fee rates 4-0; universal free lunch program expected to end"
+    dek: "The committee voted 4-0 to approve school user fee rates for 2023–24, and noted that the state universal free lunch program appears unlikely to be renewed."
+    summary: |
+      The committee voted 4-0 to approve user fee rates for the 2023–24 school year as proposed. A committee member noted appreciation for the incremental approach to fee increases, referencing a past instance of a large one-time jump that had been hard on families.
+      
+      The committee also discussed the state's universal free lunch program for all students, which the Senate did not include in its budget (the House did approve it). Staff noted that families who qualify for free or reduced lunch would have fees automatically waived in the online system without having to request a waiver, preserving their privacy. It was noted the state program does not look likely to continue but that the situation remains uncertain.
+    key_speakers: ["School committee chair (Sarah Fox)"]
+  - topic: labor-personnel
+    topic_confidence: 0.88
+    start_seconds: 1129
+    end_seconds: 2270
+    headline: "Committee approves superintendent's FY23 annual review 5-0 using new collaborative process"
+    dek: "The committee adopted a revised review process in which all members evaluated the superintendent collaboratively at the table rather than submitting individual written reviews."
+    summary: |
+      Committee chair Sarah Fox described the revised superintendent evaluation process: rather than having members submit individual written evaluations that one person compiles, the committee worked as a whole, reviewing each other's ratings and reasoning before reaching consensus. She credited the process as highly collaborative and noted the resulting summative review had been publicly posted and widely reported.
+      
+      A committee member (identified as Tom) provided context on the DESE/MASC evaluation framework, explaining that a "proficient" rating under state DESE standards is the expected standard of strong performance—not a middling grade—and that "exemplary" requires substantial documented justification. He acknowledged the FY23 goals could have been better framed using the SMART framework and encouraged the incoming committee to conduct a mid-year formative assessment.
+      
+      The committee voted 5-0 to approve the superintendent's 2022–23 annual review as presented. Tom used his final meeting remarks to commend the superintendent's leadership growth, praise chair Sarah Fox for her development, and urge all members to keep governance separate from politics.
+    key_speakers: ["Sarah Fox (chair)", "Tom (committee member, departing)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 1851
+    end_seconds: 1955
+    headline: "Superintendent reports sick-leave bank agreement with union and interim Village School AP appointment"
+    dek: "An agreement on a new sick-leave bank was reached with the union, and ELL teacher Carla Rose was recommended as interim assistant principal at Village School pending contract negotiations."
+    summary: "The superintendent reported several district updates: the wellness committee finalized a wellness policy, which will be brought forward along with a new life-threatening food allergies policy. Village School principal Mandy recommended ELL teacher Carla Rose as interim assistant principal for FY24, pending contract negotiations. The superintendent and chair Sarah Fox reached agreement with the union on a sick-leave bank, described as a notable accomplishment as the district had not previously had one."
+    key_speakers: ["Superintendent (Dr. Bucky)", "Sarah Fox (chair)"]
+  - topic: recreation-events
+    topic_confidence: 0.85
+    start_seconds: 2270
+    end_seconds: 2615
+    headline: "Pickleball court operating hours referred back to Parks & Recreation; governance questions raised"
+    dek: "The committee agreed to return scheduling authority for pickleball courts at the Vets to Parks & Recreation, while a departing member raised unresolved questions about how the courts were originally converted from tennis use."
+    summary: |
+      The pickleball court operating-hours item had come before the committee after the pickleball community met with Parks & Recreation and abutters. The committee's recommendation was to refer scheduling back to Parks & Recreation, consistent with how other school athletic fields are scheduled.
+      
+      A departing committee member noted that the conversion of the Vets tennis courts to pickleball courts—funded by a pickleball community organization—had occurred without coming before the committee for a vote, and that school-owned property had been effectively repurposed without the committee formally receiving the gift or approving the change. She raised concerns about deferred maintenance costs and unresolved legal questions, and suggested the incoming committee address the full history of the arrangement at a summer retreat. No formal vote was taken on the pickleball item.
+    key_speakers: ["Sarah Fox (chair)", "Committee member (departing)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

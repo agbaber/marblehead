@@ -9,7 +9,104 @@ video_url: "https://www.youtube.com/watch?v=WTLK_gkq37s"
 duration_seconds: 2953
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Policy subcommittee advances MASC-recommended revisions to school committee"
+  summary: "The Marblehead School Committee policy subcommittee met on October 23rd and approved forwarding five minor MASC policy updates to the full school committee as consent agenda items and five additional policy revisions — including purchasing and procurement threshold changes — as individual votes. The subcommittee also approved a revision to the kindergarten entrance age policy (JB) tying eligibility to September 1st rather than the first day of school. Members discussed next steps for the competency determination policy (IKF) and agreed to schedule an additional meeting with the superintendent before the November 20th subcommittee meeting."
+  decisions:
+    - "Approved minutes of the September 30th meeting"
+    - "Approved revised kindergarten entrance age policy JB for full school committee vote"
+    - "Approved forwarding policies CA, CB, CBI, CCB, and CHCA to full school committee as consent agenda items"
+    - "Approved forwarding policy CHCA- (rescission), CL (rescission), DJ, DJA, and DJ procurement requirements to full school committee as individual agenda items"
+  votes:
+    - motion: "Approve minutes of 9/30 meeting"
+      result: "in favor (unanimous)"
+    - motion: "Revise and forward kindergarten entrance age policy JB"
+      result: "in favor (unanimous)"
+    - motion: "Send CA, CB, CBI, CCB, CHCA to full school committee as consent agenda"
+      result: "in favor (unanimous)"
+    - motion: "Send CHCA- rescission, CL rescission, DJ, DJA, DJ procurement to full school committee as individual votes"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 4
+    end_seconds: 178
+    headline: "Subcommittee opens; recording/streaming issues resolved before 8:31 call to order"
+    dek: "No public attendees were present; members moved directly to minutes approval after noting a 24-hour delay before YouTube posting."
+    summary: "The chair called the policy subcommittee meeting of October 23rd to order at 8:31 a.m. after resolving a live-streaming technical issue. No members of the public were in attendance, so the public comment period was skipped."
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 131
+    end_seconds: 323
+    headline: "Minutes approved 2-0; members discuss format consistency and hyperlinked timestamps"
+    dek: "One member expressed a preference for minutes that include hyperlinked timestamps so residents can navigate directly to specific agenda items."
+    summary: "The subcommittee approved the September 30th meeting minutes on a 2-0 roll-call vote. One member noted she prefers a meeting-minutes format that includes hyperlinked timestamps tied to each agenda item, citing transparency benefits. The members agreed to raise the broader question of minutes consistency at a future full school committee meeting."
+  - topic: school-budget
+    topic_confidence: 0.6
+    start_seconds: 323
+    end_seconds: 416
+    headline: "Subcommittee approves revised kindergarten entrance age policy JB, tied to September 1st"
+    dek: "The superintendent recommended tying kindergarten eligibility to a fixed date rather than the start of the school year, which shifts annually."
+    summary: "The subcommittee voted 2-0 to revise policy JB (entrance age for kindergarten) to tie eligibility to September 1st rather than the first day of school, consistent with the MASC model policy. The superintendent supported the change, noting that a floating first-day-of-school standard creates an unpredictable target for families whose children have birthdays near that period. The policy will go to the full school committee for a single reading."
+  - topic: school-budget
+    topic_confidence: 0.55
+    start_seconds: 416
+    end_seconds: 743
+    headline: "Competency determination policy IKF deferred pending further superintendent guidance"
+    dek: "Members noted a December 31st MASC deadline but agreed no binding consequence exists for missing it, and scheduled an additional meeting with the superintendent and assistant superintendent."
+    summary: |
+      The subcommittee discussed the competency determination policy (IKF), noting that the superintendent and assistant superintendent have not yet prepared a draft because districts are still debating approaches. Members agreed the December 31st deadline is not legally enforceable — 'there is no policy jail' — and said the policy is likely to take effect for incoming freshmen rather than current students.
+      
+      Members also noted press reports that DESE may reinstate a state exam requirement. They agreed to schedule an additional meeting with the superintendent and assistant superintendent before the November 20th subcommittee meeting to get a clearer picture of where administrators stand and what the available policy options are.
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 743
+    end_seconds: 2024
+    featured: true
+    headline: "Subcommittee advances 10 MASC policy revisions, raises procurement threshold to $100K"
+    dek: "Five minor updates go to the full school committee as consent items; five purchasing/procurement revisions — including lifting the bid threshold from $50,000 to $100,000 — go as individual votes."
+    summary: |
+      The subcommittee worked through a slate of MASC-recommended policy revisions in the C and D series:
+      
+      **Consent agenda items (approved for full school committee consent vote):**
+      | Policy | Change |
+      |--------|--------|
+      | CA – Administration Goals | Language made less passive |
+      | CB – School Superintendent | Pronouns updated; "Mayor" changed to "Select Board" |
+      | CBI – Evaluation of the Superintendent | Centering on goals for evaluation |
+      | CCB – Line and Staff Relations | Title change; "system" changed to "district" |
+      | CHCA – Approval of Handbooks | Changed approval timing to spring; deleted statutory description while retaining requirements |
+      
+      **Individual vote items (approved to go as separate school committee votes):**
+      | Policy | Change |
+      |--------|--------|
+      | CHCA- | Rescind as unnecessary (items are already required by state law) |
+      | CL | Rescind administrative reports policy |
+      | DJ – Purchasing | Adopt MASC model as written; superintendent recommended |
+      | DJA – Purchasing Authority | Update to "cost centers" language; add 3-year contract-duration limit |
+      | DJ – Procurement Requirements | Revise bid threshold from $50,000 to $100,000 per 2022 statutory change; align language with MASC model |
+      
+      On the procurement threshold, members confirmed the district conducts all of its own purchasing through a certified procurement officer, making it eligible under the 2022 change to raise the formal bid threshold to $100,000. Members noted a potential gap if the certified officer position were ever vacant, but agreed the policy need not address that scenario explicitly.
+  - topic: school-budget
+    topic_confidence: 0.5
+    start_seconds: 1686
+    end_seconds: 1925
+    headline: "Subcommittee flags student exam-return practices and lack of midterm exams as policy gap"
+    dek: "A community member's email prompted discussion of whether handbook language on returning exams to students should be anchored in a formal school committee policy."
+    summary: "A community member's email raised concerns about the district's practice of not returning midterm and final exams to students. Members noted the high school stopped midterm exams during COVID and has not resumed them, and that some teachers reuse tests — leading to potential academic-integrity issues. Members discussed whether existing handbook language should be formalized into a policy under IK (academic achievement) and agreed to raise the topic with the superintendent and assistant superintendent at the upcoming additional meeting."
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2070
+    end_seconds: 2932
+    headline: "Subcommittee plans E–G policy sections for November 20th meeting; adjourns at 9:19"
+    dek: "Members reviewed the master policy spreadsheet for gaps versus MASC newsletters and agreed to target completing E, F, and G sections at the November meeting."
+    summary: |
+      Members reviewed the shared policy-tracking spreadsheet and identified potential gaps between MASC newsletter recommendations and policies currently listed in the district's manual. One member noted several policies referenced in MASC newsletters (e.g., JBB – Educational Equity) do not appear in the district's current policy list. Members agreed to reconcile these gaps and add missing policies to a "new policies" tab.
+      
+      The subcommittee voted 2-0 to adjourn at 9:19 a.m. and plans to cover policy sections E, F, and G at the November 20th meeting, with the additional superintendent meeting to be scheduled for sometime in the following week or two.
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

@@ -9,7 +9,107 @@ video_url: "https://www.youtube.com/watch?v=fe6hGtwVjY4"
 duration_seconds: 3368
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee votes 5-0 on face-covering policy change, 4-1 finding no open-meeting-law violation"
+  summary: "The Marblehead School Committee held a brief lottery to seat the Planning for Success strategic-plan advisory committee, then voted unanimously to narrow the district's face-covering policy (EBCF) so masks are required only in school buildings, on school grounds, and at school-sponsored events during school hours rather than any time anyone is on school property. The committee then debated an open-meeting-law complaint filed by a resident regarding a social gathering attended by three members and the superintendent; the committee voted 4-1 that no violation occurred. The meeting closed with a move into executive session to discuss collective bargaining strategy with the Marblehead Education Association."
+  decisions:
+    - "Approved revised face-covering policy EBCF (masks required during school hours/school-sponsored events only) — 5 to 0"
+    - "Approved finding of no open-meeting-law violation — 4 to 1"
+    - "Approved motion to enter executive session for MEA collective-bargaining strategy — 5 to 0"
+  votes:
+    - motion: "Accept revised face-covering policy EBCF as of 5/13"
+      result: "in favor (unanimous)"
+    - motion: "School committee did not commit an open-meeting-law violation"
+      result: "in favor (4 to 1)"
+    - motion: "Enter executive session pursuant to MGL Ch. 30A §21a(3) — MEA collective bargaining"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 134
+    end_seconds: 538
+    headline: "Lottery selects members for Planning for Success strategic-plan advisory committee"
+    dek: "Names were drawn from bags for elementary, middle school, and high school parent seats; teacher and community representatives were also announced."
+    summary: |
+      The superintendent conducted a random drawing to fill contested parent seats on the Planning for Success advisory committee. Selected members include:
+      
+      | Category | Selected |
+      |---|---|
+      | Elementary parent (2 seats) | Reese Daubert, Mimi Lemay |
+      | Middle school parent (1 seat) | Jeff St. George (drawn; second seat TBD) |
+      | High school parent (1 seat) | Lucy Burke |
+      | Middle school teacher | Tawny Callahan |
+      | High school teacher | To be drawn at the high school (2 candidates) |
+      | K–6 teacher | Diane Babbitt; second TBD |
+      | Community members | Muriel Shell, Cindy Lowen |
+      | School committee reps | Sarah Fox, Megan Taylor |
+      | Student reps | Ariel Mogulesko (grade 10), Benjamin Khan (grade 11) |
+      | METCO parent | Monique Lloyd |
+      | CPAC rep | Scott Solberg |
+      
+      The first full advisory committee session was scheduled for Tuesday at 9 a.m. in the high school field house.
+    key_speakers: ["Superintendent (John Bucky identified later in transcript)", "Sarah Fox (School Committee member)", "Megan Taylor (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.72
+    start_seconds: 539
+    end_seconds: 586
+    headline: "Face-covering policy review introduced as next agenda item"
+    dek: "Chair noted the policy subcommittee met Monday and flagged rapidly changing CDC and state guidance as context for the discussion."
+    summary: "The chair (identified as Sarah Gold) introduced policy EBCF (face coverings) for review, noting that the policy subcommittee — composed of herself and Emily Varan — had met the prior Monday morning. Rapidly evolving CDC guidance and anticipated DESE updates were cited as reasons to consider revisions expeditiously."
+    key_speakers: ["Sarah Gold (Chair)", "Emily Varan (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 586
+    end_seconds: 2005
+    featured: true
+    headline: "Committee votes 5-0 to narrow mask mandate to school hours and school property only"
+    dek: "Parents had asked for optional masking at outdoor recess; committee approved the policy change but deferred outdoor-PE and recess decisions to the following week pending updated state and MIAA guidance."
+    summary: |
+      The policy subcommittee proposed amending EBCF so that masks must be worn "in school buildings, on school grounds, during school hours, at school-sponsored events, and on school transportation" — removing the prior requirement that anyone on school property at any time wear a mask. Key discussion points:
+      
+      - A group of parents appeared at Monday's subcommittee meeting requesting masks be made optional at outdoor recess and PE, citing outdoor transmission risk as very low.
+      - The superintendent (Dr. Bucky) noted a survey of 23 North Shore superintendents found none were actively changing mask policies as of Tuesday, though that was before the new CDC announcement.
+      - MIAA's sports medicine group met Thursday afternoon; any recommendation would not take effect until the full MIAA board meets the following Thursday.
+      - DESE had not yet updated its guidance; current state guidance required masks when social distancing could not be maintained outdoors.
+      - Committee members noted elementary students cannot reliably maintain six-foot distancing at recess, complicating an optional-mask rule.
+      - One member asked the administration and PE teachers to explore whether outdoor gym classes could be conducted unmasked in a structured way.
+      - Concern was raised that the phrase "school-sponsored events" might extend to off-campus athletic games; legal counsel (John Foskett) was present and heard the discussion.
+      - A motion was made to approve EBCF as revised on 5/13; it passed 5–0.
+      
+      The committee committed to revisiting outdoor masking and recess/PE questions at the following Thursday's meeting after more state and MIAA guidance is expected.
+    key_speakers: ["Sarah Gold (Chair)", "Emily Varan (School Committee member)", "Megan Taylor (School Committee member)", "Sarah Fox (School Committee member)", "David Harris (School Committee member)", "Dr. Bucky (Superintendent)", "John Foskett (School Committee counsel)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2005
+    end_seconds: 3134
+    headline: "Committee votes 4-1 that social gathering at chair's home did not violate open meeting law"
+    dek: "An open-meeting-law complaint filed by a resident alleged that three school committee members and the superintendent deliberated at a private gathering; the committee found no violation but one member dissented."
+    summary: |
+      About six weeks prior, a photo of a gathering at the chair's home was posted to Facebook with a caption referencing the budget and getting kids back to school; a resident subsequently filed an open-meeting-law complaint with the Attorney General's office. Per the AG's process, the complaint had to be discussed at an open public meeting and the committee had to vote on whether a violation occurred.
+      
+      **Attendees at the gathering:** Sarah Gold (chair/host), Megan Taylor, Emily Varan, and Dr. Bucky (for part of the evening).
+      
+      **Committee positions:**
+      - The chair and the three members present stated there was no deliberation — no discussion of committee business, no vote-coordination.
+      - David Harris (who was not present) called the complaint "absurd" and said he would back every member up, noting the committee members understand the open meeting law.
+      - Sarah Fox (not present at gathering) noted she supported the process and read the AG's open-meeting-law guide, which defines a "meeting" as requiring deliberation. She acknowledged ambiguity in the Facebook caption's language referencing budget and kids in school — both core school committee responsibilities — and said she personally saw a possible violation, leading to her dissenting vote.
+      - Emily Varan suggested the committee develop clearer guidelines on social media posts.
+      
+      **Vote on motion that no violation occurred:** 4 in favor (Gold, Varan, Taylor, Harris), 1 opposed (Fox).
+      
+      The chair noted willingness to take an open-meeting-law refresher course through MASC and expressed no objection to doing so. The committee then moved into executive session.
+    key_speakers: ["Sarah Gold (Chair)", "Megan Taylor (School Committee member)", "Emily Varan (School Committee member)", "Sarah Fox (School Committee member)", "David Harris (School Committee member)", "Dr. Bucky (Superintendent)", "John Foskett (School Committee counsel)"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 3134
+    end_seconds: 3323
+    headline: "Committee enters executive session to discuss MEA collective-bargaining strategy"
+    dek: "The committee voted 5-0 to close the public session and meet in executive session with MEA union president and counsel."
+    summary: "The chair moved to enter executive session pursuant to MGL Ch. 30A §21(a)(3) — strategy with respect to collective bargaining with the Marblehead Education Association (MEA) — stating that an open meeting may have a detrimental effect on the committee's bargaining position. The motion passed 5–0. The committee stated no intent to return to public session. MEA representatives Joan Miller and Sally were noted as joining for the executive session."
+    key_speakers: ["Sarah Gold (Chair)", "John Foskett (School Committee counsel)", "Dr. Bucky (Superintendent)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

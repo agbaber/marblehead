@@ -9,7 +9,130 @@ video_url: "https://www.youtube.com/watch?v=TilWSOwgKb0"
 duration_seconds: 10943
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee interviews two interim superintendent finalists"
+  summary: "The Marblehead School Committee conducted public interviews with two interim superintendent candidates: Dr. John Roo, current superintendent of Swansea MA with eight years in that role, and a second candidate (name partially unclear from transcript) who previously served as superintendent and finance manager in a small district. Committee members questioned both candidates on topics including administrative team-building, budget processes, MTSS implementation, technology in education, override strategy, and crisis management. After the interviews, the committee discussed next steps, indicating plans to review community feedback forms and schedule site visits before making a final selection."
+  decisions:
+    - "Continued interim superintendent search to next week after reviewing community feedback"
+    - "Held discussion on narrowing candidates to one or two for site visits"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 242
+    end_seconds: 586
+    headline: "School Committee opens interim superintendent candidate interviews"
+    dek: "Chair Sarah Fox explains the interview format, public feedback process via marbleheadschools.org, and introduces the first candidate."
+    summary: "The School Committee chair called the meeting to order and explained the process: candidates would have approximately five minutes per question, committee members would introduce themselves before asking questions, and one member (Al Williams) was participating remotely from China. The public was encouraged to submit feedback through the school district website. Julia Ferreira is noted as having been invaluable running the search process. The committee noted recent hires including an assistant superintendent of student services (Lisa Marieo from Newburyport) and contract negotiations underway for an assistant superintendent of finance and operations."
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Jen Shaffner (Vice Chair)", "Al Williams (Member, remote from China)", "Brian OT (Member)", "Alice Taylor (Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 488
+    end_seconds: 4324
+    featured: true
+    headline: "School Committee interviews Dr. John Roo for interim superintendent role"
+    dek: "Dr. Roo, superintendent of Swansea for eight years, answered questions on team-building, MTSS, technology, budgeting, override strategy, and crisis response."
+    summary: |
+      The first candidate, identified as Dr. John Roo, is the current superintendent of Swansea, MA with eight years in that district and prior experience as special education director and assistant superintendent. He described his approach across several topic areas:
+      
+      **Administrative team-building:** Roo said he sees a largely new administrative team as a positive, favoring a collaborative 'leading from the middle' approach. He would hold a summer retreat to build shared vision and goals.
+      
+      **MTSS:** He emphasized being present in schools, differentiating instruction, ensuring tiers are solidly in place, professional development, and appropriate staffing.
+      
+      **Technology and AI:** He advocated embracing technology rather than avoiding it, using AI as a teaching tool rather than a cheating mechanism, and having a district technology plan.
+      
+      **Budget process:** He starts in September/October, involves finance director and special education, builds a five-year capital improvement plan, and works with union leaders regularly. He noted his district's budget has ranged from roughly 3–5% increases.
+      
+      **Override strategy:** He acknowledged he has never had to run an override. He stressed community education, open forums, transparent communication, and legal preparation.
+      
+      **Biggest failure:** He described rolling out equity teams in schools without first ensuring his administrative team was aligned, requiring a full reset before successfully re-implementing the initiative.
+      
+      **Crisis management:** He described handling a major storm event by coordinating DPW, principals, and buses to move students safely within an hour, and described his prioritization approach (safety first, then students, then parents).
+      
+      In his questions to the committee, he learned that key administrative positions are being filled, with a Village School principal search underway, and that collective bargaining is actively in progress with five union units.
+    key_speakers: ["Dr. John Roo (Candidate, Superintendent of Swansea MA)", "Jen Shaffner (Vice Chair)", "Brian OT (Member)", "Alice Taylor (Member)", "Sarah Fox (Chair)", "Al Williams (Member, remote)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 5051
+    end_seconds: 9359
+    headline: "School Committee interviews second interim superintendent candidate"
+    dek: "The second candidate, a former superintendent and current school principal who grew up in Texas and has lived in New England for over 20 years, answered identical structured questions."
+    summary: |
+      The second candidate (name partially unclear from transcript, referred to contextually) shared a background that includes: middle school teaching in Texas, a career shift into high tech, returning to education in the Lowell school district, serving as a middle school principal at a challenging diverse school, serving as principal at Murdock High School in Winchendon during COVID, and then as interim superintendent and finance manager simultaneously for that small district. He currently serves as a school principal.
+      
+      **Administrative team-building:** He emphasized the importance of building trust before anything else, giving trust first, being vulnerable with the team, and identifying individual strengths. He described a retreat process where he disclosed his own weaknesses to break the ice. He views shared governance and distributive leadership as fundamental.
+      
+      **MTSS:** He stressed starting with an evaluation of current programs, ensuring alignment between intended and implemented curriculum, and addressing both struggling and advanced learners through the same framework. He noted MTSS is also about social-emotional learning.
+      
+      **Technology:** He noted schools are behind the curve in embracing technology students actually use; argued technology is a tool for engagement, not an end in itself, and that districts need to teach students to use it productively. He noted the tension between embracing AI and fears about academic dishonesty.
+      
+      **Budget:** He described starting the process in November/December, engaging all stakeholders, ensuring budget alignment with strategic plan, meeting proactively with FinCom leadership, and emphasizing 100% transparency. He noted his unique experience serving simultaneously as superintendent and finance manager.
+      
+      **Override strategy:** He referenced personal experience as a community member who could not support his own town's override because the story wasn't clear, emphasizing that trust must be built over multiple years through transparent communication about how money is spent. He stressed that if the community trusts how money is being spent, they are more likely to support an override.
+      
+      **Biggest failure:** He described forwarding parent emails to appropriate staff without following up, assuming the matter was handled—a communication failure that cost him trust. He has since changed to always communicating directly back to the originator.
+      
+      **Crisis/safety:** He described a layered response to a social-media threat: coordinating with the SRO, setting up a plan before school started, isolating and searching the student, and then communicating to community with police sign-off.
+      
+      **Questions for the committee:** He asked about the biggest challenges. Committee members identified: rebuilding community and town government trust, the budget situation and need for revenue exploration (potentially an override), and supporting and retaining dedicated teachers who are paid less than surrounding districts.
+    key_speakers: ["Second Candidate (name unclear from transcript)", "Jen Shaffner (Vice Chair)", "Brian OT (Member)", "Alice Taylor (Member)", "Sarah Fox (Chair)", "Al Williams (Member, remote)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 9359
+    end_seconds: 9663
+    headline: "Student representative report covers AP exams, musical, prom, and spring events"
+    dek: "Outgoing student representative Cat introduced her successor Ella Bena, a junior, who gave the student report."
+    summary: |
+      The outgoing student representative introduced incoming representative Ella Bena, a junior involved in varsity swimming, band, acapella group Luminescence, and drama club. Ella reported:
+      
+      - AP exams begin the following Monday; the high school library will be closed May 6–17
+      - The musical comedy *The Prom* ran for four shows over the weekend with students and professionals in the pit orchestra
+      - Upcoming performing arts concerts scheduled after APs, May 4th at the high school fieldhouse
+      - AAPI Heritage Month celebration being organized by the Marblehead Task Force Against Discrimination with student representatives
+      - Spring Art Show on May 14th at Abbot Hall, 4–7:30 PM (grades 8–12)
+      - Annual Cultural Fest on May 24th at the high school, 4–7:30 PM
+      - Junior prom at Danversport on May 10th; Senior prom at House of Blues in Boston on May 29th
+      - Annual Carnival running through Sunday, proceeds to the rising senior class
+      - Girls lacrosse team dedicated a game to raise funds for the Dana-Farber Cancer Institute/Jimmy Fund
+      - Track teams competed at state relay invitational, finishing in the top five
+    key_speakers: ["Ella Bena (Incoming Student Representative, junior)", "Cat (Outgoing Student Representative)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 9692
+    end_seconds: 10801
+    headline: "Committee deliberates next steps in interim superintendent search process"
+    dek: "After four interviews, the committee discussed whether to seek a fifth candidate, conduct site visits, and timing given upcoming town meeting and a member's travel."
+    summary: |
+      Following all interviews, the committee discussed next steps:
+      
+      - A fifth candidate had been approached but did not offer an alternative date when the two scheduled nights didn't work, without explanation. The committee consensus was to proceed with the four interviewed candidates rather than wait indefinitely.
+      - Community feedback forms were a priority before deliberating; the chair indicated a Monday deadline for feedback submissions.
+      - The committee's tentative timeline:
+        - Sarah Fox to call all four candidates Saturday/Sunday
+        - Community feedback collected by Monday
+        - Committee to meet Wednesday or Thursday evening (noting Al Williams returns from China late Wednesday) to review feedback and narrow to one or two finalists for site visits
+        - Site visits tentatively planned for the week of the 13th
+        - Full committee meeting scheduled for the 16th for possible final deliberation
+      - Site visits were described as a few hours at a candidate's current district, with the candidate presenting and key staff introduced; the committee cannot deliberate at the site visit location.
+      - The chair noted that some candidates mentioned they are actively interviewing elsewhere, creating urgency.
+      - Open meeting law parameters were noted: site visits are allowable as presentations, but deliberation must occur at a posted public meeting.
+      - Al Williams noted he can participate by phone or email even while traveling.
+    key_speakers: ["Sarah Fox (Chair)", "Jen Shaffner (Vice Chair)", "Brian OT (Member)", "Alice Taylor (Member)", "Al Williams (Member, remote)"]
+  - topic: override
+    topic_confidence: 0.72
+    start_seconds: 2182
+    end_seconds: 2392
+    headline: "Candidates questioned on override strategy given two failed attempts and flat operational budget"
+    dek: "Committee member described a decade-plus of flat operational budgets and two failed override attempts, asking both candidates how they would approach a future override."
+    summary: |
+      During both candidate interviews, a committee member noted that Marblehead's school operational budget has been flat for more than a decade—with only salary increases—and that two override attempts have failed. Both candidates were asked what steps they would take to make a future override successful.
+      
+      **Dr. Roo** acknowledged he has never run an override. He said he would: have very direct conversations with selectmen/town council about resource needs, hold open forums for parents, educate the community on why resources are needed, ensure legal counsel is aligned, and build enough community support before the vote.
+      
+      **Second candidate** shared personal experience as a community member who could not support his own town's override because the story wasn't clearly communicated and he didn't trust the narrative. He emphasized that override success requires years of trust-building through budget transparency, educating the public on what circuit breaker funds and other restricted sources can and cannot be spent on, and consistent honest communication about results achieved with current funding.
+    key_speakers: ["Alice Taylor (Member)", "Dr. John Roo (Candidate)", "Second Candidate"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

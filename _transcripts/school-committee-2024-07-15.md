@@ -9,7 +9,97 @@ video_url: "https://www.youtube.com/watch?v=qaREIKdRv4I"
 duration_seconds: 2522
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee approves FTE expansion for student services director, cafeteria wage increases"
+  summary: "The Marblehead School Committee met on July 10, 2024, approving a schedule of bills, cafeteria worker hourly wage increases, and an expansion of the assistant director of student services from 0.5 to 1.0 FTE funded from the pre-K/kindergarten revolving account. The committee also appointed Town Administrator Patrick Keer to the school committee bargaining subcommittee ahead of upcoming contract negotiations with multiple units. The meeting concluded with the committee entering executive session to discuss collective bargaining strategy."
+  decisions:
+    - "Approved schedule of bills totaling approximately $86,521"
+    - "Approved cafeteria worker hourly wage increases for FY2024-25"
+    - "Approved increase of assistant director of student services from 0.5 to 1.0 FTE, funded from pre-K/kindergarten revolving account"
+    - "Approved appointment of Town Administrator Patrick Keer to school committee bargaining subcommittee"
+  votes:
+    - motion: "Approve schedule of bills"
+      result: "in favor (unanimous)"
+    - motion: "Approve cafeteria worker hourly wage increases"
+      result: "in favor (unanimous)"
+    - motion: "Increase assistant director of student services to 1.0 FTE from pre-K/K revolving account"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Town Administrator Patrick Keer to bargaining subcommittee"
+      result: "in favor (unanimous)"
+    - motion: "Enter executive session for collective bargaining strategy"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.85
+    start_seconds: 8
+    end_seconds: 361
+    headline: "Resident asks about funding source for special education assistant director position"
+    dek: "School committee member Samantha Rosado questioned why the assistant director of special education position was funded from the pre-K/K revolving fund rather than the special education revolving fund."
+    summary: "During the public comment portion, committee member Samantha Rosado raised a question about the funding mechanism for expanding the assistant director of student services from 0.5 to 1.0 FTE. She questioned whether the pre-K/kindergarten revolving fund was the appropriate source, given the language under which that fund was established. A school administrator explained that the position's work would primarily involve early childhood students, making the pre-K/K fund an appropriate funding vehicle for the current school year, though they acknowledged it was a short-term solution."
+    key_speakers: ["Samantha Rosado (school committee member, remote)", "John (administrator, likely assistant superintendent of finance and operations)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 361
+    end_seconds: 514
+    headline: "School committee approves schedule of bills totaling approximately $86,521"
+    dek: "The committee voted 4–0 to approve a schedule of bills after briefly navigating audio difficulties with a remote member."
+    summary: "The chair called for a motion to approve the schedule of bills, which had been shared in the committee's Google Drive. The total figure cited was approximately $86,521. Motion was made by Brian Oda and seconded by Allison Taylor. After resolving audio issues with remote member Sarah Fox, a roll-call vote was taken and the motion passed 4 to 0."
+    key_speakers: ["Brian Oda (school committee member)", "Allison Taylor (school committee member)", "Sarah Fox (school committee member, remote)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 514
+    end_seconds: 1247
+    headline: "Cafeteria workers receive hourly wage increase of $3–$5 per hour after decertifying union"
+    dek: "The committee approved wage increases for non-union cafeteria staff, citing the need to improve competitiveness for recruitment and retention."
+    summary: "The committee discussed and approved an increase in hourly wages for cafeteria workers for the 2024–25 school year. The chair noted that the wage increases ranged from approximately $3 to $5 per hour over FY24 rates, depending on position. It was explained that cafeteria workers had previously been members of an AFSCME local but voted to decertify, allowing the district to make wage adjustments without collective bargaining. Food service director John Constantino was credited with advocating for the change. The motion passed 4 to 0."
+    key_speakers: ["Allison Taylor (school committee member)", "Mike (likely assistant superintendent or finance director, remote)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 1247
+    end_seconds: 1658
+    featured: true
+    headline: "School committee approves 0.5-to-1.0 FTE expansion of student services director funded from pre-K/K revolving account"
+    dek: "The committee voted unanimously to expand the assistant director of student services to full-time, with the additional 0.5 FTE cost funded from the pre-K/kindergarten revolving account, over the objection of one member regarding the funding source's legality."
+    summary: "The committee took up a motion to increase the assistant director of student services from 0.5 to 1.0 FTE, funding the additional half-position from the pre-K/kindergarten revolving account. Committee member Sarah Fox expressed concern that the revolving fund's establishing language may only authorize expenditures tied directly to tuition-paying students in that program, and questioned whether the use was legally permissible. Administrators responded that the position's primary focus would be early childhood students and that using such revolving accounts for related staff is not atypical. Finance staff projected that because the hire would start mid-year, the actual cost would be approximately $47,000 rather than the full $53,000 annualized amount, a savings of roughly $8,700. The committee voted 4 to 0, with Fox voting in favor but requesting a follow-up meeting with administration to review the funding source question."
+    key_speakers: ["Sarah Fox (school committee member, remote)", "John (administrator)", "Mike (administrator, remote)", "Brian Oda (school committee member)", "Allison Taylor (school committee member)", "Jen Shapner (school committee member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 1658
+    end_seconds: 1778
+    headline: "Town Administrator Patrick Keer appointed to school committee bargaining subcommittee"
+    dek: "The committee voted 4–0 to add the town administrator to its bargaining subcommittee ahead of contract negotiations starting the following day."
+    summary: "The chair explained that school committee attorney advised the committee to formally appoint Town Administrator Patrick Keer to the bargaining subcommittee. Bargaining with multiple units of the Marblehead Education Association was set to begin the following day. One committee member noted the importance of open meeting law compliance, cautioning that any conversation between two committee members and Keer about contract matters would constitute a quorum and must be posted. The motion passed 4 to 0."
+    key_speakers: ["Patrick Keer (Town Administrator)", "Allison Taylor (school committee member)", "Sarah Fox (school committee member, remote)", "Brian Oda (school committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1778
+    end_seconds: 2087
+    headline: "Committee plans August 14 retreat; superintendent to select independent investigator by July 19"
+    dek: "New business included scheduling a school committee retreat for August 14 and a status update on selecting an independent investigator."
+    summary: |
+      The chair announced a school committee retreat scheduled for Wednesday, August 14, from 9 a.m. to 1 p.m. The agenda is expected to include superintendent goal-setting with MASC assistance and a legal update from school attorney Liz Valerio or her firm. Committee members asked to prioritize goal-setting before legal matters in the agenda.
+      
+      Regarding an independent investigation that had been previously authorized, the chair stated she had until July 19 to select a firm, was gathering community input, and would update the committee as each step was taken. The timeline for the investigation itself would depend on availability of staff over the summer and the scope of the inquiry.
+    key_speakers: ["Jen Shapner (school committee member)", "Brian Oda (school committee member)", "Sarah Fox (school committee member, remote)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 2087
+    end_seconds: 2317
+    headline: "Attorney General found no open meeting law violation in prior executive session complaint"
+    dek: "The chair entered into the record that the AG's Office of Open Government found no open meeting law violation arising from a complaint filed against a prior executive session."
+    summary: "The chair reported that the Massachusetts Attorney General's Office of Open Government issued a finding of no open meeting law violation in response to a complaint filed approximately the prior fall, believed to have been filed by a resident named Kathy Swindlehurst. The opinion runs five or six pages. One committee member raised concern that the AG's opinion referenced health records requests in footnotes in a way that she felt mischaracterized an email she had written as records officer at the time, and she asked whether a clarifying statement could be added to the meeting minutes."
+    key_speakers: ["Allison Taylor (school committee member)", "Sarah Fox (school committee member, remote)"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 2317
+    end_seconds: 2414
+    headline: "Committee enters executive session to discuss collective bargaining strategy with five MEA units"
+    dek: "The committee voted to enter executive session under MGL Chapter 38 Section 21A to discuss bargaining strategy with the Marblehead Education Association units covering teachers, substitutes, tutors, paraprofessionals, and custodians."
+    summary: "The chair moved the committee into executive session pursuant to Massachusetts General Laws Chapter 38, Section 21A, Purpose 3, to discuss collective bargaining strategy with five units of the Marblehead Education Association: Unit A (teachers), substitutes, tutors, paraprofessionals, and custodians. The committee voted unanimously and did not intend to return to open session."
+    key_speakers: ["Sarah Fox (school committee member, remote)", "Brian Oda (school committee member)", "Allison Taylor (school committee member)", "Jen Shapner (school committee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

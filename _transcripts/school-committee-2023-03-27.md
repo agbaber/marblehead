@@ -9,7 +9,45 @@ video_url: "https://www.youtube.com/watch?v=xavM8mcMuqY"
 duration_seconds: 386
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee approves two FY24 budgets — one base, one contingent on override"
+  summary: "The Marblehead School Committee held a brief meeting on June 7, 2023, voting unanimously to approve two FY24 budgets. The first, a base Services budget of $44,837,273, passed 4-0. The second, a level-Services budget of $45,971,790 representing a 4.52% increase, passed 5-0 but is contingent upon passage of a Proposition 2½ override at Town Meeting and the ballot."
+  decisions:
+    - "Approved FY24 Services (base) budget of $44,837,273"
+    - "Approved FY24 level-Services budget of $45,971,790, contingent on Proposition 2½ override"
+  votes:
+    - motion: "Approve FY24 Services budget of $44,837,273"
+      result: "in favor (unanimous)"
+    - motion: "Approve FY24 level-Services budget of $45,971,790, contingent on Prop 2½ override"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 48
+    end_seconds: 338
+    featured: true
+    headline: "School Committee passes two FY24 budgets — base and override-contingent level-services"
+    dek: "Both motions passed unanimously; the larger budget takes effect only if voters approve a Prop 2½ override."
+    summary: |
+      The chair called the meeting to order at 6:03 PM and immediately moved to two sequential votes on the FY24 school budget.
+      
+      **Vote 1 — Base Services Budget (Article 30):** $44,837,273, representing an increase of approximately $855,000 over FY23. Passed 4-0 (Allison Taylor, Megan Taylor, Sarah Gold, Sarah Fox all in favor; Tom Mathers was not yet present).
+      
+      **Vote 2 — Level-Services Budget (Article 31):** $45,971,790, representing a 4.52% increase over FY23. Includes contractual salary increases, utilities, curriculum, and known special education costs. Passed 5-0 (Tom Mathers joined before this vote). This appropriation is **contingent on passage of a Proposition 2½ override** at both Town Meeting and the subsequent ballot.
+      
+      Following adjournment at 6:07 PM, the chair noted she would proceed to the Finance Committee meeting at Abbott Hall to seek their support for both figures ahead of Town Meeting.
+    key_speakers: ["Sarah Fox (Chair)", "Allison Taylor (member)", "Megan Taylor (member)", "Sarah Gold (member)", "Tom Mathers (member)", "Michelle (staff, budget liaison)", "John (staff, budget liaison)", "Alicia (Finance Director)"]
+  - topic: override
+    topic_confidence: 0.85
+    start_seconds: 93
+    end_seconds: 338
+    headline: "Level-services budget explicitly tied to Prop 2½ override passage at Town Meeting and ballot"
+    dek: "The $45,971,790 level-services appropriation (Article 31) only takes effect if the override succeeds."
+    summary: "The chair explained that the meeting was structured as two votes: the first covering what the town can appropriate without a Proposition 2½ override, and the second — the level-services budget — contingent on override passage. The override article must pass both Town Meeting (Article 31) and the subsequent ballot. The chair indicated she would seek Finance Committee support for both articles at the same evening's FinCom meeting."
+    key_speakers: ["Sarah Fox (Chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

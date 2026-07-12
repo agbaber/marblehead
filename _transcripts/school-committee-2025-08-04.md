@@ -9,7 +9,150 @@ video_url: "https://www.youtube.com/watch?v=QbV58pQmywY"
 duration_seconds: 13055
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee holds summer retreat covering goals, governance, and legal training"
+  summary: "The Marblehead School Committee held an all-day summer retreat facilitated by a MASC field director and a MASC attorney. The session covered review of the prior year's three goals, goal-setting for the upcoming year, and an extended legal training on conflict of interest, open meeting law, public records law, and school committee roles. The committee discussed shifting policy manual maintenance to the policy subcommittee, carrying over the communications goal, and adding new objectives around exofficio membership and community engagement."
+  decisions:
+    - "Held goal-setting retreat reviewing prior-year goals and drafting next-year priorities"
+    - "Held MASC legal training covering conflict of interest, open meeting law, and school committee roles"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 1317
+    featured: true
+    headline: "School Committee reviews prior-year goals with MASC facilitator at summer retreat"
+    dek: "The committee discussed progress on its three FY goals—policy review, communications, and budget documentation—with a MASC field director, and began setting next-year priorities."
+    summary: |
+      A MASC field director facilitated a structured review of the committee's three prior-year goals:
+      
+      **Goal 1 – Policy Manual Review:** Members discussed whether the goal was fully met and agreed to transition ongoing policy housekeeping to the policy subcommittee as a standing charge rather than a full-committee goal. The MASC director noted an upcoming policy bulletin (expected by end of August) covering competency determination and other updates due to DESE by October/November.
+      
+      **Goal 2 – Enhancing School Committee Communications:** The committee reported creating a communications subcommittee, developing a newsletter template, and establishing a process for flagging website updates through the superintendent. Unfinished items include a visible public-comment timer, a public-comment opening statement, a community survey, a public-relations plan, and potential social media use. The MASC director advised extreme caution around social media and open meeting law.
+      
+      **Goal 3 – Budget Process Documentation:** Members reported that the budget workshop, public hearing, and committee vote sequence worked well, and the school committee approved its budget before FinCom's hearing for the first time. The MASC director recommended posting the budget timeline document publicly and conducting a postmortem through the budget subcommittee.
+      
+      **Emerging next-year goals discussed:**
+      - Exploring exofficio/advisory membership (e.g., student representation, union liaisons, CPAC)
+      - Developing a portrait of a graduate (tied to NEASC accreditation process)
+      - Improving data availability to the committee (staff accountability report, needs-based budget)
+      - Relationship repair/rebuilding with teachers and staff
+      - Social media policy development (with legal-counsel review)
+      - Email opt-in distribution list for residents without students in the district
+    key_speakers: ["MASC field director (facilitator)", "Committee chair (Jen)", "Committee member (Alicia)", "Superintendent (John)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1317
+    end_seconds: 1676
+    headline: "MASC facilitator presents SMART goal-setting framework and best practices"
+    dek: "The MASC field director walked the committee through goal-setting principles—SMART goals, measurable outcomes, and aligning committee goals with the superintendent's work rather than creating extra administrative burden."
+    summary: |
+      After a brief break, the MASC facilitator reviewed the rationale and mechanics of school committee goal-setting:
+      
+      - Goals keep the committee on track and aligned with the superintendent.
+      - Without self-set goals, external events (funding cuts, building issues, state mandates) will set the agenda.
+      - Goals must be **S**pecific, **M**easurable, **A**ction-oriented, **R**igorous/Realistic, and **T**imed/Tracked.
+      - Distinguish between outputs (actions, processes) and outcomes (results, benchmarks).
+      - The committee's prior-year format—goal + action steps + checkpoint—was praised as a model for other districts.
+      
+      The facilitator then walked through next-year goal candidates, confirming: Goal 1 (policy) moves to the subcommittee as a maintenance charge; Goal 2 (communications) continues as a full-committee goal with subcommittee support.
+    key_speakers: ["MASC field director (facilitator)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 4201
+    end_seconds: 4908
+    headline: "MASC facilitator walks committee through operating protocols and governance best practices"
+    dek: "The facilitator reviewed the committee's recently adopted operating protocols, recommending annual adoption by vote and signature, and answered questions about subcommittees, advisory committees, and school building projects."
+    summary: |
+      After the break, the MASC director turned to operating protocols:
+      
+      - Operating protocols were last adopted in June; the facilitator recommended the full committee **vote to adopt and sign them annually**, preferably at the first fall meeting, to give the document more accountability weight.
+      - If a member violates protocols, the chair's role is to have a private conversation; some districts use censure but only if they have a policy for it.
+      - Members with concerns about another member's conduct should bring them to the chair.
+      - **Subcommittee vs. advisory committee:** A school-committee subcommittee is bound by open meeting law; a superintendent's advisory committee (e.g., a school building committee) is more appropriate for broad stakeholder participation, with one or two school-committee members serving as liaisons under quorum.
+      - The committee voted the prior year to make the roof project a facility subcommittee; the facilitator noted the subcommittee charge should be re-voted annually or when the charge changes.
+      - Exofficio members (non-elected participants at the table) can be invited; they cannot vote or enter executive session.
+    key_speakers: ["MASC field director (facilitator)", "Committee member (Kate)", "Superintendent (John)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 5765
+    end_seconds: 9069
+    headline: "MASC attorney provides legal training on conflict of interest and open meeting law"
+    dek: "MASC attorney Liz Valerio delivered a detailed training on Massachusetts conflict-of-interest law (Ch. 268A), open meeting law, executive session procedures, and public records obligations for school committee members."
+    summary: |
+      Attorney Liz Valerio (referred to as the MASC attorney/field director for legal) presented a multi-hour legal training, working through scenario exercises in teams. Key topics included:
+      
+      **Conflict of Interest (Ch. 268A)**
+      - Covers all public employees and officials; prohibits using public resources for personal purposes or positions for unwarranted privileges.
+      - Members cannot take official action affecting their own financial interest or that of immediate family (spouse, children, parents, siblings, and spouse's equivalent relatives).
+      - Disclosures must be filed in writing with the town clerk; recusal means leaving the room during deliberation and vote.
+      - Gifts of substantial value ($50 or more, aggregated) cannot be accepted.
+      - Rule of necessity: if so many members are disqualified that action is impossible, members may disclose and participate—but only as a last resort confirmed with the State Ethics Commission.
+      - Always ask the State Ethics Commission *before* acting (free, available by phone).
+      
+      **Open Meeting Law**
+      - Applies to all deliberations (oral, written, electronic) by a quorum of the committee or any subcommittee.
+      - A two-member subcommittee's quorum is two—members cannot communicate privately about subcommittee business.
+      - Serial communications (A tells B who tells C) violate the law even without a simultaneous quorum.
+      - Social media posts on matters within the committee's jurisdiction may constitute deliberation; emoji reactions (thumbs up, hearts) have been found to count.
+      - Texting or emailing during a meeting is visible to the public and may be subject to public records requests.
+      - Meetings must be posted 48 hours in advance (excluding weekends and holidays) with a specific agenda, location, and—if virtual—a link.
+      - Agenda items cannot generally be added within 48 hours unless an unanticipated emergency arises.
+      - Public comment is not required at every meeting unless policy mandates it; limit total time and enforce individual time limits (typically 3 minutes) consistently.
+      - One-way informational emails to all members (distributing packet materials) are permissible if members are instructed not to reply-all.
+      
+      **Executive Session**
+      - Must convene in open session first; a roll-call vote is required, stating the purpose and whether the committee will return to open session.
+      - Purpose 1 (personnel reputation/discipline), Purpose 2 (collective bargaining strategy), Purpose 3 (litigation strategy), and Purpose 7 (reviewing executive session minutes) are the most commonly used.
+      - Individual discussed in executive session must receive 48-hour written notice and has the right to be present, have a representative, speak, and record.
+      - Executive session minutes must be kept separately; reviewed periodically under Purpose 7 and redacted before release when appropriate.
+      
+      **Public Records**
+      - Individual committee members do not respond to public records requests—direct requesters to the district's Records Access Officer.
+      - Minutes must be provided within 10 *calendar* days of a request (not 10 business days).
+      - Use only district email for school committee business; personal accounts are still subject to public records law if the content relates to committee jurisdiction.
+    key_speakers: ["MASC attorney (Liz Valerio)", "Committee member (Kate)", "Committee member (Henry)", "Committee member (Jen)", "Committee member (Al)", "Superintendent (John)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 9069
+    end_seconds: 13053
+    headline: "Legal training continues: school committee roles, personnel authority, and labor relations"
+    dek: "The MASC attorney concluded the training with scenario exercises covering school committee roles and responsibilities, the superintendent's authority over administrators, communications protocols, and avoiding unfair labor practice charges."
+    summary: |
+      The final session covered school committee roles and responsibilities through scenario exercises:
+      
+      **Personnel authority**
+      - The committee appoints and sets compensation for the superintendent, school business administrator, administrator of special education, legal counsel, school physicians, registered nurses, and supervisor of attendance.
+      - Assistant superintendents require the superintendent's recommendation.
+      - Principals and other administrators are appointed by the superintendent; the committee has no role in those decisions.
+      - Individual committee members cannot direct staff or administrators; direction flows from the committee as a whole through the superintendent.
+      
+      **Roles and communications**
+      - The chair is the committee's spokesperson and must convey the committee's official position (established by vote) even if it differs from the chair's personal view.
+      - Individual members may express personal views but must clarify they are not speaking on behalf of the committee.
+      - Committee members should not contact principals or other non-supervisory staff directly on school business; all communication should follow the chain of command through the superintendent.
+      - Legal counsel requests should go through the chair to avoid duplication of costs; counsel represents the committee as a whole, not individual members.
+      - Budget authority: the select board cannot require school committee line-item budget approval; the committee submits to town meeting for bottom-line approval only.
+      
+      **Unfair labor practices**
+      - Direct dealing—going around union leadership to individual employees—is an unfair labor practice.
+      - Committee members speaking to union employees in their capacity as committee members (even informally) can trigger ULP charges, even without a quorum present.
+      - School committee members should not promise benefits, threaten consequences, or make statements that could be interpreted as chilling employees' protected union activity.
+    key_speakers: ["MASC attorney (Liz Valerio)", "Committee member (Jen)", "Committee member (Henry)", "Committee member (Kate)", "Committee member (Al)", "Superintendent (John)"]
+  - topic: elections-procedural
+    topic_confidence: 0.55
+    start_seconds: 13053
+    end_seconds: 13073
+    headline: "Committee adjourns by unanimous vote"
+    dek: "The chair entertained a motion to adjourn; the motion passed unanimously on a roll-call vote."
+    summary: "After the final scenario exercise, the chair entertained a motion to adjourn. A member moved, a second was received, and the chair conducted a roll-call vote. All four members present (Jen, Henry, Kate, Al) voted in favor. The meeting was adjourned."
+    key_speakers: ["Committee chair (Jen)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

@@ -9,7 +9,114 @@ video_url: "https://www.youtube.com/watch?v=KqDKVqdnymE"
 duration_seconds: 5139
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee votes FY25 budget at approximately $47.5M"
+  summary: "The School Committee voted a preliminary FY25 budget of approximately $47,476,000, which includes restoring three priority categories of previously cut positions totaling roughly $1.2 million. The committee acknowledged the budget relies on anticipated year-end surplus funds and revolving-account draws not yet finalized, and planned a second vote within days once those figures are confirmed. The meeting also covered ongoing roof leaks and mold testing at Marblehead High School, a special education program audit RFP, and a vote to post for an Assistant Superintendent of Finance and Operations."
+  decisions:
+    - "Approved preliminary FY25 school budget of approximately $47,476,000"
+    - "Approved posting for Assistant Superintendent of Finance and Operations (5-0)"
+    - "Approved establishment of a Communications subcommittee (5-0)"
+  votes:
+    - motion: "Approve FY25 school budget at approximately $47,476,000"
+      result: "in favor (unanimous)"
+    - motion: "Allow posting for Assistant Superintendent of Finance and Operations"
+      result: "in favor (5 to 0)"
+    - motion: "Establish Communications subcommittee"
+      result: "in favor (5 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 23
+    end_seconds: 1072
+    headline: "Superintendent reports on MHS roof leaks, mold testing, and student awards"
+    dek: "Two independent air quality tests found mold not airborne; a comprehensive re-inspection is planned and roof replacement Phase 1 is expected summer 2025."
+    summary: |
+      Superintendent McGinness opened with district updates. On the Marblehead High School roof:
+      
+      - An RFP for an Owner's Project Manager (OPM) is underway; responses due late April with contract award expected in May. State procurement law (Ch. 149) requires an OPM for projects over $1.5 million before a designer can be procured — a process taking 8–12 weeks — explaining the roughly 14-month timeline before Phase 1 construction begins in summer 2025.
+      - A mold issue was found behind a sink in one classroom earlier in winter; the affected area was vacated and remediated. Air quality tests in January and on March 23 both found mold was not airborne and no professional remediation was required.
+      - Facilities staff walked the building with the superintendent and principal; air purifiers and dehumidifiers were placed near active leak areas. A second independent firm was engaged after the teachers' union raised concerns at a March 21 budget hearing.
+      - The committee requested that upcoming inspections include all locations identified by the MEA and by a staff member (referred to as Mr. King) in recent emails.
+      - Village School students were recognized by the Massachusetts Center for the Book; one finalist and four semi-finalists were named in the Letters About Literature program.
+      
+      The special education program review audit RFP was released publicly the following day with responses due approximately April 18–25. A school committee member (identified as Allison) was designated to participate in the evaluation committee, with the committee asked to post the sub-committee assignment.
+    key_speakers: ["Dr. McGinness (Superintendent)", "Mary (Director of Finance and Operations / consultant)"]
+  - topic: school-budget
+    topic_confidence: 0.98
+    start_seconds: 1259
+    end_seconds: 3967
+    featured: true
+    headline: "School Committee votes ~$47.5M FY25 budget, restoring three priority tiers of cuts"
+    dek: "The committee approved a budget of approximately $47,476,000 — about $1.2M above the reduced-services level — pending a follow-up vote to adjust the number downward once revolving-fund and surplus figures are confirmed."
+    summary: |
+      Superintendent McGinness and Director of Finance Mary presented a prioritized restoration list developed collaboratively with school and district leadership. The list was divided into three categories ranked by urgency, plus an unprioritized fourth group:
+      
+      | Category | Approximate total |
+      |---|---|
+      | One (most critical) | ~$631,000 |
+      | Two | — |
+      | Three | — |
+      | Categories 1–3 combined | ~$1,229,000 |
+      | Category 4 (not restored) | ~$600,000+ |
+      
+      Key discussion points:
+      
+      - The committee had previously rejected a level-funded budget and was seeking to move closer to "level services."
+      - Restoring categories 1–3 costs approximately $1.2 million above the reduced-services baseline.
+      - Funding sources discussed: (a) drawing down revolving accounts from 100% reserve to ~80–85%; (b) using projected year-end surplus (estimated at roughly $600,000 available); (c) approximately $340,000–$380,000 in incremental revenue from proposed athletic/extracurricular user fee increases; (d) potentially asking the town for an additional ~$250,000 from unallocated free cash (free cash came in approximately $200,000 above the state-of-the-town estimate).
+      - A committee member expressed concern about funding ongoing positions with one-time sources, noting FY26 budget projections are negative. The chair responded that revolving funds are recurring and that FY26 planning must begin immediately.
+      - Category 4 items — including after-dark programs and certain athletics stipends — were not restored. Committee members requested more detail on specific special education paraprofessionals at Glover and Village Schools before the next vote.
+      - The total budget voted was approximately **$47,476,000**. The committee acknowledged this number will be reduced by a second vote within days (possibly Monday at 5:30 PM via Zoom) once Mary finalizes revolving-fund and surplus numbers. That reduction will not cut staff — it reflects moving certain funding from the general fund appropriation to revolving accounts and surplus.
+      - FinCom had been scheduled to vote the school budget that same evening but collaborated with the school committee to delay, with FinCom expected to vote the following Monday.
+      - A spending cutoff for FY24 purchase orders was set at May 15 to protect the year-end surplus.
+      
+      **Vote:** Motion by Allison Taylor, second by Sarah Fox — approved unanimously (5–0).
+    key_speakers: ["Dr. McGinness (Superintendent)", "Mary (Director of Finance and Operations)", "Allison Taylor (School Committee member)", "Sarah Fox (School Committee member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.92
+    start_seconds: 3967
+    end_seconds: 4507
+    headline: "Committee votes 5-0 to post for Assistant Superintendent of Finance and Operations"
+    dek: "Applicants for the director-level finance posting were not applying because they hold assistant-superintendent titles; the committee agreed to keep both postings open simultaneously."
+    summary: |
+      The superintendent reported that the posting for a Director of Finance and Operations was not attracting qualified candidates because most qualified applicants currently hold assistant-superintendent titles and are not interested in a downgrade. To address the pipeline problem, the committee voted to simultaneously post for an **Assistant Superintendent of Finance and Operations** — the position that had been reduced from the prior classification — while keeping the director posting open as well. The committee emphasized only one person would be hired.
+      
+      **Vote:** Moved by (inaudible), seconded — approved 5–0.
+    key_speakers: ["Dr. McGinness (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 4507
+    end_seconds: 4760
+    headline: "Committee establishes Communications subcommittee and reviews draft survey"
+    dek: "A committee member presented a draft community communications survey; the committee voted to form a subcommittee to finalize and distribute it broadly."
+    summary: |
+      A committee member (Brian) presented a draft community survey on school district communications, responding to public requests for improved outreach. The committee noted minor typos and wordsmithing needs. Key points:
+      
+      - The survey would be distributed via the district's parent database, Blackboard, the local press, and potentially the League of Women Voters.
+      - A QR code will be created for broader distribution including community members without school-age children.
+      - Survey responses will route to the district's IT administrator (Stephen) to avoid any appearance that individual committee members are receiving raw data.
+      - A communications subcommittee consisting of Brian and Allison was established by vote.
+      
+      **Vote (subcommittee establishment):** Moved by J. Shner, seconded by Williams — approved 5–0.
+    key_speakers: ["Brian (School Committee member)", "Allison (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.72
+    start_seconds: 4760
+    end_seconds: 5093
+    headline: "Committee member raises idea of inviting State Auditor for programmatic review"
+    dek: "A committee member suggested requesting a state auditor review of district operations as context for a potential future override ask; no vote was taken."
+    summary: |
+      A committee member raised the idea of contacting the Massachusetts State Auditor's office to request a programmatic and financial audit of the school district. Key points discussed:
+      
+      - The state auditor reviews not just finances but policies, practices, and service delivery — at no cost to the municipality.
+      - The committee member suggested the audit could lend credibility to a future Proposition 2½ override ask by providing independent validation of district practices.
+      - It was noted that the request may need to originate through the Select Board.
+      - The committee agreed to gather more information, potentially inviting a representative from the auditor's office (identified as Anthony) to present to the committee at a future meeting.
+      - No vote was taken; the item may be added to a future agenda.
+    key_speakers: ["School Committee member (unidentified)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

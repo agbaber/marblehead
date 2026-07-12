@@ -9,7 +9,64 @@ video_url: "https://www.youtube.com/watch?v=0mNWsK3Lh7s"
 duration_seconds: 10127
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee conducts closed superintendent performance review"
+  summary: "The School Committee met in what appears to be a closed or informal session to conduct the annual summative evaluation of Superintendent Dr. Bucky (full name unclear from audio). Members compared individual written evaluations across multiple performance standards, negotiating consensus ratings and narrative language. The committee settled on 'significant progress' for student learning goals and 'proficient' across most instructional leadership and management standards, with growth areas noted in measurability of outcomes, engagement with critics, and proactive communication."
+  decisions:
+    - "Approved 'significant progress' rating for student learning goal"
+    - "Approved 'proficient' overall rating for instructional leadership"
+    - "Approved 'proficient' overall rating for family and community engagement"
+    - "Approved 'proficient' overall rating for management and operations"
+    - "Approved 'proficient' overall rating for professional culture"
+    - "Held follow-up Zoom meeting for Tuesday morning at 9 a.m. to finalize and spell-check summative document"
+  votes:
+    - motion: "Support summative evaluation document as developed pending grammatical/spelling corrections"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 53
+    end_seconds: 10093
+    featured: true
+    headline: "School Committee negotiates superintendent summative evaluation ratings and narrative"
+    dek: "Members compared individual written evaluations of Superintendent Dr. Bucky across all DESE performance standards, reaching consensus on ratings and narrative language for the official summative document."
+    summary: |
+      The School Committee convened what appears to be a working session to collaboratively build the superintendent's annual summative evaluation. Members had each independently prepared written assessments prior to the meeting and shared them aloud.
+      
+      **Process**
+      The chair (identified as Allison) opened a shared document and members read their individual comments goal by goal. A member experienced in prior superintendent evaluations suggested using the document as a working draft, looking for themes and consensus rather than individual differences.
+      
+      **Student Learning Goal (Goal 1)**
+      Individual scores ranged from 'some progress' to 'met.' The group landed on **'significant progress'** with dissent from one member who rated lower due to measurability concerns. Narrative themes included:
+      - Stabilization of the METCO program and strong working relationship with the new METCO director (identified as Ms. Johnson)
+      - Use of iReady as a longitudinal data tool in its second year
+      - Stakeholder engagement via thought exchange, advisory lunches, and student forums
+      - Growth area: need for quantifiable examples of how instructional rounds and iReady data translate to improved student outcomes; need for more outreach to students on IEPs
+      
+      **Professional Practice Goal (Goal 2: Leadership & Community Relations)**
+      All members rated this **'met'** after reviewing the seven key actions. The superintendent had completed all benchmarks, including participation in the new superintendent induction program (NSIP), North Shore Superintendent Roundtable (where he was elected chair), book studies, and summer/mid-year leadership retreats. Growth areas noted:
+      - Engaging with critics and dissenting voices
+      - Proactive rather than reactive leadership and communication
+      - Reducing reliance on a communications consultant now that budget has been cut
+      
+      **Instructional Leadership (Standard 1)**
+      The committee settled on **'proficient'** overall. Sub-ratings: curriculum proficient; instruction needs improvement (consistency of implementation across schools); assessment and evaluation proficient (with abstentions from members who felt they lacked visibility into evaluation timelines).
+      
+      **Management & Operations (Standard 2)**
+      Overall **'proficient.'** Highlighted achievements include the FY24 budget process (described as setting a transparency standard for all town departments), a new wellness policy, the Narcan policy, and the library materials policy. Growth area: strict adherence to public records laws after a Secretary of State citation.
+      
+      **Family & Community Engagement (Standard 3)**
+      Overall **'proficient,'** with some members rating individual indicators as exemplary. The superintendent was credited for coffee talks, superintendent advisory lunches, attendance at community events, and the budget's transparent presentation. Growth area: two-way communication, particularly with critical voices; limited use of the "thought exchange" platform relative to its cost; ensuring community feedback visibly informs decisions.
+      
+      **Professional Culture (Standard 4)**
+      Overall **'proficient.'** Noted positive: staff morale evidenced by low grievances, collective bargaining support for the sick leave bank, and retention despite districts paying more. Shared vision rated 'needs improvement' based on the decision to reduce K–3 recess from two to one period in opposition to a unanimous recommendation from the committee-appointed exploration group.
+      
+      **Next Steps**
+      The chair will compile all narrative comments into a clean Word document for spell-check and send to all members by Tuesday. A 9 a.m. Zoom call is set for Tuesday morning for final review. A formal vote of support for the summative document was taken unanimously, pending those editorial corrections.
+    key_speakers: ["Allison (School Committee Chair)", "Megan (School Committee Member)", "Tom (School Committee Member)", "Sarah (School Committee Member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

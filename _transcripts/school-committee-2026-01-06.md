@@ -10,7 +10,82 @@ duration_seconds: 3210
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee budget subcommittee reviews FY27 gap of ~$879K after offsets"
+  summary: "The Marblehead School Committee budget subcommittee met January 5, 2026 to review the FY27 school budget planning process. Administration reported a $1.7 million gap between level-service and level-funded budgets, which through vacancies, revolving-fund offsets, and operational efficiencies has been reduced to approximately $879,000 still needing resolution. The subcommittee discussed the need to quantify special education staffing costs relative to enrollment trends and agreed to schedule a joint meeting with FinCom liaison around January 29 before a full school committee presentation on February 5."
+  decisions:
+    - "Approved meeting minutes of October 17, October 30, and December 1, 2025 budget subcommittee meetings"
+    - "Held discussion on FY27 budget gap and efficiency measures without final budget vote"
+    - "Scheduled next joint subcommittee/FinCom meeting tentatively for January 29, 2026"
+  votes:
+    - motion: "Approve draft meeting minutes of 10/17/25, 10/30/25, and 12/1/25"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 36
+    end_seconds: 158
+    headline: "Budget subcommittee called to order January 5, 2026; no public comment"
+    dek: "Chair opens the meeting with members Melissa Klucas and Jen Shaner present along with Superintendent John Robu and Assistant Superintendent Mike Piferling."
+    summary: "The School Committee budget subcommittee was called to order at 11:03 a.m. on January 5, 2026. Members present included Melissa Klucas (remote) and Jen Shaner. Administration staff present included Superintendent John Robu, Assistant Superintendent Mike Piferling, and other district staff. No public comment was offered in-person or online."
+    key_speakers: ["Jen Shaner (subcommittee chair)", "Melissa Klucas (subcommittee member, remote)", "John Robu (Superintendent)", "Mike Piferling (Assistant Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.98
+    start_seconds: 158
+    end_seconds: 2180
+    featured: true
+    headline: "FY27 school budget gap stands at ~$879K after $1.7M level-service shortfall is partially offset"
+    dek: "Administration outlined a $1.7 million level-service vs. level-funded gap, reduced to approximately $879,000 through vacancies, revolving-fund draws, and operational changes, with further cuts expected to affect classroom sizes and instructional staffing."
+    summary: |
+      Superintendent Robu and Assistant Superintendent Piferling reported that the FY27 school budget faces a gap of approximately $1.7 million between level-service costs and the town's level-funded allocation (FY26 town appropriation was $49.1 million; level-service need is approximately $53.2 million from town funds before revolving offsets).
+      
+      Through a series of measures, administration reduced the gap to approximately $879,000:
+      
+      | Measure | Notes |
+      |---|---|
+      | Retirement savings | ~$182,000 taken annually as retirees are replaced at lower salaries |
+      | Circuit breaker reserve draw | ~$2.1 million above one-year reserve |
+      | Open position vacancies not filled | HR assistant, physical therapy assistant at Glover, others |
+      | 1.75 FTE EL teachers at Village School eliminated | EL population no longer requires those positions |
+      | Math intervention position at Vets eliminated | Not filled this year; to be removed |
+      | High school teacher reduced from 1.0 to 0.8 FTE | ~0.2 FTE savings |
+      | Copier contract renegotiation | Ongoing savings |
+      | Level-funding supplies and professional development | No 2% increase that had been budgeted |
+      | Two university fellows moved to IDEA grant funding | ~$80,000 savings |
+      | 10% of assistant business manager salary shifted to pre-K revolving account | Reflects her grant-related work |
+      | 50% of facilities assistant director shifted to building funds | Reflects custodial scheduling duties |
+      | 50% of assistant special education director shifted to special ed revolving | Reflects program administration |
+      
+      Subcommittee members pressed administration on whether the staffing picture reflects enrollment-based analysis. Administration confirmed that further cuts beyond the ~$879,000 gap would require reducing classroom staffing — potentially increasing elementary class sizes from approximately 19 to 22 or higher — with direct instructional impacts.
+      
+      The subcommittee discussed the difficulty of publicly quantifying special education staffing needs without revealing individual student information, and agreed that aggregate program-level data (e.g., number of students in specific programs, staffing required) should be prepared for the community. Administration noted Marblehead has built approximately $2 million in circuit breaker reserves and has been pre-paying $800,000–$1 million annually in out-of-district tuition as financial buffers.
+      
+      The chair noted the subcommittee needs to begin discussing whether an override article is warranted, with that conversation targeted for the January 15 school committee meeting.
+    key_speakers: ["John Robu (Superintendent)", "Mike Piferling (Assistant Superintendent)", "Jen Shaner (subcommittee chair)", "Melissa Klucas (subcommittee member)", "Julia Ferrer (Assistant Superintendent of Teaching and Learning)", "Lisa Maria Bido (Assistant Superintendent of Student Services)"]
+  - topic: override
+    topic_confidence: 0.82
+    start_seconds: 2225
+    end_seconds: 2306
+    headline: "Subcommittee chair signals need to discuss potential override article at January 15 meeting"
+    dek: "With ~$879,000 still unresolved after efficiency measures, the chair noted the school committee needs to begin discussing whether a Prop 2½ override article is needed and for what amount."
+    summary: "Near the close of the budget discussion, the subcommittee chair stated that from the school committee standpoint, a conversation about an override article — whether it is needed and what the amount might be — should begin at the January 15 school committee meeting. No dollar figure for a potential override was discussed; the chair acknowledged the budget calendar calls for the administration to finalize a recommended budget by January 26 for presentation to the full school committee on February 5."
+    key_speakers: ["Jen Shaner (subcommittee chair)", "John Robu (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 3047
+    end_seconds: 3200
+    headline: "Subcommittee approves five sets of meeting minutes and schedules next meeting for January 29"
+    dek: "Minutes from October 17, October 30, and December 1 budget subcommittee meetings were approved 2-0; a joint meeting with FinCom liaison is tentatively set for January 29."
+    summary: |
+      The subcommittee moved to approve draft minutes from the October 17, October 30, and December 1, 2025 budget subcommittee meetings (November 17 minutes had previously been approved). Member Klucas noted two minor formatting issues — missing YouTube links at the top of the October 17 and October 30 minutes — and the assistant business manager agreed to add those before posting.
+      
+      On a roll-call vote, both members voted in favor. The subcommittee agreed to shoot for January 29 in the afternoon for a joint meeting with FinCom liaison to review the draft recommended budget before the February 5 full school committee presentation. The chair committed to contacting FinCom liaison Alec to confirm availability. The meeting adjourned at 11:55 a.m.
+    key_speakers: ["Jen Shaner (subcommittee chair)", "Melissa Klucas (subcommittee member)", "Mike Piferling (Assistant Superintendent/business staff)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

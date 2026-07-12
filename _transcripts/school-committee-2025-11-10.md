@@ -9,7 +9,47 @@ video_url: "https://www.youtube.com/watch?v=W0u8H9YWpnY"
 duration_seconds: 1208
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee communications subcommittee approves first monthly newsletter for distribution"
+  summary: "The Marblehead School Committee communications subcommittee met and reviewed a draft monthly community newsletter covering committee activities, subcommittee updates, and key dates. Members voted to forward the newsletter to the district superintendent (referred to as John) for distribution through the district mailing list. The subcommittee also discussed adopting the S'more newsletter platform ($99/year) and agreed to bring a budget request to the full School Committee at its next meeting."
+  decisions:
+    - "Approved sending the draft monthly newsletter to John for distribution via the district mailing list"
+    - "Agreed to add a budget request for S'more newsletter platform to the next full School Committee meeting agenda"
+  votes:
+    - motion: "Pass the monthly newsletter content to John for distribution on the district list"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 15
+    end_seconds: 1200
+    featured: true
+    headline: "Comm subcommittee approves first monthly newsletter; eyes S'more platform for subscriber list"
+    dek: "Members voted 2–0 to send a draft community newsletter through the district distribution list and plan to request $99/year for the S'more tool at the next full School Committee meeting."
+    summary: |
+      The communications subcommittee reviewed a draft monthly newsletter intended to keep the Marblehead community informed about School Committee activities. The draft included quick links (school calendar, YouTube channel, meeting minutes), roles and responsibilities, subcommittee charter summaries, and upcoming dates.
+      
+      Distribution channels discussed included:
+      - The district's existing mailing list (via the superintendent)
+      - Local newspapers
+      - Social media accounts (Facebook, community groups such as "All Marblehead")
+      - PTO newsletters
+      
+      Members noted that the school committee's existing Facebook account has approximately four followers and would need to be built up over time. They also identified a gap in reaching community members without children currently enrolled in schools.
+      
+      On the question of whether the subcommittee needs full committee approval to send the newsletter, a MASC advisor confirmed that because the subcommittee is tasked with external and internal communications, formal sign-off is not required for factual, non-opinion content.
+      
+      The subcommittee discussed using S'more (a newsletter platform already used by the district) at $99/year. Members agreed to bring a budget request to the next full School Committee meeting and to ask about being added to the district's existing S'more account.
+      
+      **Vote 1:** Motion to pass the monthly newsletter content to John for distribution on the district list — passes 2–0.
+      
+      **Vote 2:** Motion to adjourn — passes 2–0. Meeting adjourned at 11:50 a.m.
+    key_speakers: ["Melissa Clucas (subcommittee member)", "Subcommittee member (second voice)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

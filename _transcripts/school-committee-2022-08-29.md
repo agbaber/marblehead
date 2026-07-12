@@ -9,7 +9,146 @@ video_url: "https://www.youtube.com/watch?v=fXkNwPFhAoA"
 duration_seconds: 3705
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee approves handbooks, hires Glover nurse, and votes on AV equipment"
+  summary: "The School Committee met fully remotely and voted unanimously on several items including approval of all MPS school handbooks, appointment of Mary Talbot RN as Glover School nurse, and a schedule of bills totaling approximately $1,165,116.65. The committee also approved a PolyStudio X70 video conferencing kit and technologist stipend (~$9,000 combined) to support hybrid meetings, and authorized Marblehead Boosters to place sponsorship banners at Hopkins Field at Village School and the softball field at Vets. Superintendent Dr. Bucky reported a notable 9.1% district-wide enrollment increase over the summer, with kindergarten enrollment up 14.4% year-over-year."
+  decisions:
+    - "Approved all MPS school handbooks (elementary, middle, and high school)"
+    - "Approved appointment of Mary Talbot RN as Glover Elementary School nurse"
+    - "Approved adoption/second reading of Title IX and related policy updates (vote deferred to next meeting)"
+    - "Approved schedule of bills totaling approximately $1,165,116.65"
+    - "Approved purchase of PolyStudio X70 video conferencing kit and stand, and stipend for technologist for school committee meetings"
+    - "Approved Marblehead Boosters to accept sponsorship and hang banners at Hopkins Field at Village School and the softball field at Veterans Middle School"
+  votes:
+    - motion: "Approve all MPS handbooks (elementary, middle, high school)"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Mary Talbot RN as Glover Elementary School nurse"
+      result: "in favor (4 to 0)"
+    - motion: "Approve schedule of bills totaling ~$1,165,116.65"
+      result: "in favor (unanimous)"
+    - motion: "Approve PolyStudio X70 video conferencing kit, stand, and technologist stipend"
+      result: "in favor (unanimous)"
+    - motion: "Approve Marblehead Boosters sponsorship banners at Hopkins Field and Veterans softball field"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 369
+    headline: "School Committee approves all MPS handbooks after discussion on dress code consistency"
+    dek: "Members voted unanimously to approve elementary, middle, and high school handbooks, with a committee member flagging inconsistent dress code enforcement across the district."
+    summary: |
+      A committee member from the policy subcommittee opened the meeting noting efforts to streamline handbook policies and hot-link them to avoid 300-page documents. Discussion centered on dress code inconsistencies across grade levels and buildings, with members noting that enforcement — not the district's broad policy — was the chief concern.
+      
+      The initial motion covered only the elementary handbooks; a clarification revealed the middle and high school handbooks were also ready for approval. The committee amended the motion to cover all MPS handbooks and voted unanimously (4–0).
+    key_speakers: ["Sarah Fox (chair)", "Emily Barron (committee member)", "Allison Taylor (committee member)", "Sarah Gold (policy subcommittee chair)", "Dr. Bucky (superintendent)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 369
+    end_seconds: 779
+    headline: "Mary Talbot appointed as Glover Elementary School nurse, 4–0"
+    dek: "The committee conducted a brief interview with Talbot, a Salem State graduate with hospital and prior school nursing experience, before voting unanimously to appoint her."
+    summary: |
+      Superintendent Dr. Bucky introduced Mary Talbot, who appeared remotely from outside Columbia University where she was helping her daughter move into Barnard. Talbot described pediatric nursing experience at North Shore Evanston Hospital, a seven-month stint as a pandemic nurse in Raleigh, and prior service as a school nurse at Whitman Elementary (CCSD 21 in Illinois) and as the MASCO special education nurse for its summer program.
+      
+      Committee members welcomed her and noted she had multiple competing offers from other districts. The committee voted 4–0 to appoint her as Glover Elementary School nurse.
+    key_speakers: ["Mary Talbot (Glover School nurse candidate)", "Dr. Bucky (superintendent)", "Sarah Fox (chair)", "Allison Taylor (committee member)", "Emily Barron (committee member)", "Sarah Gold (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 779
+    end_seconds: 1364
+    headline: "Policy subcommittee presents second reading of Title IX and related procedure updates"
+    dek: "The committee reviewed rescissions and new procedures tied to federal Title IX changes, with a vote deferred to the following week's meeting."
+    summary: |
+      Sarah Gold, chair of the policy subcommittee, introduced updates developed with district counsel (Matt McAvoy's office). Dr. Bucky explained that some policies were being rescinded because they are no longer required following Title IX changes made a couple of years ago, and a new instructional materials reconsideration procedure (policy IJR) was being added at the librarians' long-standing request.
+      
+      Discussion items included:
+      - A requirement (per a 2019 OCR directive) that the district's civil rights coordinators include one male and one female; the committee currently has two female coordinators and agreed to clarify with legal counsel.
+      - Section K of the Title IX procedure lists key personnel as 'to be determined'; members suggested using job titles rather than individual names to reduce future amendments.
+      - The HR director's potential role as a named coordinator was raised.
+      
+      The administrative team had already completed a four-hour professional development session with district counsel on the Title IX changes. The committee noted this was the second reading; a vote is anticipated at the next meeting.
+    key_speakers: ["Sarah Gold (policy subcommittee chair)", "Dr. Bucky (superintendent)", "Emily Barron (committee member)", "Allison Taylor (committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 1364
+    end_seconds: 1796
+    featured: true
+    headline: "District enrollment up 9.1% over summer; kindergarten alone up 14.4%"
+    dek: "Superintendent Dr. Bucky reported enrollment increases at nearly every grade level, with outstanding openings primarily in paraprofessional and cafeteria positions."
+    summary: |
+      Dr. Bucky provided an enrollment and staffing update, describing the summer hiring as productive with many positions filled internally — through Endicott fellows, tutors moving to teaching roles, and paraprofessionals advancing. Outstanding positions include:
+      
+      | Position | Location |
+      |---|---|
+      | Special education teacher | Village School |
+      | English teacher | High school (offer pending) |
+      | Student services administrator / preschool coordinator | Glover School (temporarily filled) |
+      | Paraprofessional positions (lunch/recess) | Multiple buildings |
+      | Cafeteria workers | Multiple buildings |
+      | Custodians (3 offers extended) | District |
+      | Bus drivers (2 potential) | District |
+      
+      Enrollment rose approximately 9.1% district-wide over the summer, with increases at every grade level except grade 4 (flat) and grade 10 (static). Kindergarten enrollment increased 14.4% year-over-year. Dr. Bucky noted this data will be important for future budget discussions, as prior budget cycles had assumed continued declining enrollment. He credited the new school buildings as a factor in attracting families.
+    key_speakers: ["Dr. Bucky (superintendent)", "Sarah Fox (chair)", "Mandy (Village School administrator, voice only)"]
+  - topic: bonding-capital
+    topic_confidence: 0.75
+    start_seconds: 1796
+    end_seconds: 1841
+    headline: "Committee approves schedule of bills totaling approximately $1,165,116.65"
+    dek: "The larger-than-usual bill schedule reflects summer accumulation at the start of the school year."
+    summary: "The chair noted that the first meeting of the school year typically carries a larger schedule of bills because they accumulate over the summer. The committee voted unanimously to approve bills totaling $1,165,116.65."
+    key_speakers: ["Sarah Fox (chair)", "Sarah Gold (committee member)", "Allison Taylor (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 1841
+    end_seconds: 2540
+    headline: "Committee votes 4–0 to purchase PolyStudio X70 video kit (~$5,600) and create $3,000 technologist stipend for hybrid meetings"
+    dek: "Members debated the combined ~$9,000 cost before approving unanimously, citing community engagement and transparency as justifications."
+    summary: |
+      The chair explained that the AV bar previously used for hybrid meetings had been borrowed from equipment purchased for the Brown School, which has since been installed there. The committee considered two items:
+      
+      1. **PolyStudio X70 video conferencing kit and stand** — quoted at approximately $5,600 (described as the best available price; higher online).
+      2. **Technologist stipend** — approximately $3,000 annually, structured as either a flat fee or per-meeting rate, for a staff member to run the technology so committee members can focus on governance.
+      
+      One member expressed hesitation about the combined ~$9,000 cost and questioned whether the money could be better spent elsewhere, and noted she had searched for grants without success. Supporters argued hybrid meetings significantly increase public attendance and community engagement, which they linked indirectly to future school funding support. The committee also discussed the possibility of the equipment being shared on a cart for school-day educational and community use (e.g., class presentations, concerts).
+      
+      The motion passed unanimously (4–0).
+    key_speakers: ["Sarah Fox (chair)", "Emily Barron (committee member)", "Allison Taylor (committee member)", "Sarah Gold (committee member)"]
+  - topic: recreation-events
+    topic_confidence: 0.85
+    start_seconds: 2540
+    end_seconds: 3463
+    headline: "Boosters authorized to place sponsorship banners at two additional athletic fields"
+    dek: "Muffy Paquette and new VP Mandy Caruso presented; the committee unanimously approved expanding the existing sponsorship banner program to Hopkins Field at Village School and the Veterans softball field."
+    summary: |
+      Marblehead Boosters president Muffy Paquette, joined by new VP Mandy Caruso, clarified that the banners display only donor company names — no email addresses, websites, or phone numbers — and therefore constitute sponsorship recognition rather than advertising. The program had been approved originally around 2019 for the high school football field at Piper.
+      
+      Boosters sought approval to extend the program to:
+      - **Hopkins Field at Village School**
+      - **Softball field at Veterans Middle School**
+      
+      Paquette also provided an update on the 'Forever Fan Zone' project: approximately $40,000 raised toward a $75,000 goal, with Boosters potentially able to float funds to begin construction this fall. The committee voted unanimously (4–0) to approve the expanded sponsorship banner placement.
+    key_speakers: ["Muffy Paquette (Marblehead Boosters president)", "Mandy Caruso (Boosters VP)", "Sarah Fox (chair)", "Sarah Gold (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 3463
+    end_seconds: 3679
+    headline: "Chair previews next meeting agenda: COVID protocols, K–3 schedules, dual enrollment, community forums, and possible curriculum subcommittee"
+    dek: "Members flagged parent concerns about K–3 schedule publication and discussed forming a curriculum subcommittee."
+    summary: |
+      Closing items discussed for the next meeting agenda:
+      
+      - **COVID/health protocols**: Members asked to review current district protocols alongside MASC recommendations ahead of a vote.
+      - **K–3 schedules**: Allison Taylor raised community concerns about when schedules would be published; the chair indicated Nan (likely the assistant superintendent for curriculum) would present schedule information at the next meeting.
+      - **Dual enrollment**: Dr. Bucky had already contacted Salem State to explore a dual enrollment program.
+      - **Thought Exchange platform**: Dr. Bucky contracted with the company to gather community feedback on forum topics; establishing community forums is an agenda item for the next meeting.
+      - **Curriculum subcommittee**: Sarah Gold reported preliminary research and meetings with Nan; she aims to bring a proposal to the next meeting.
+      - **Two additional subcommittees**: Dr. Bucky will present proposals for two more subcommittees at the next meeting.
+    key_speakers: ["Sarah Fox (chair)", "Allison Taylor (committee member)", "Sarah Gold (committee member)", "Dr. Bucky (superintendent)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

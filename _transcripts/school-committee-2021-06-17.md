@@ -9,7 +9,224 @@ video_url: "https://www.youtube.com/watch?v=8Zz4u_pNUg0"
 duration_seconds: 8287
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee approves superintendent evaluation 3-1, awards 8 facility contracts"
+  summary: "The Marblehead School Committee honored retiring Bell/Coffin School Principal Donna Zasky, heard year-end reports from the student representative and superintendent, and voted 3-1 to approve the superintendent's summative evaluation with two edits. The committee also approved one-year extensions for eight facilities maintenance contracts and accepted two donations totaling approximately $20,000 from the Marblehead Boosters Club for outdoor tents."
+  decisions:
+    - "Approved minutes from 2/11/21 and 2/25/21 (4-0)"
+    - "Approved superintendent summative evaluation with two edits (3-1)"
+    - "Approved schedule of bills totaling $421,202.69 (4-0)"
+    - "Approved one-year extension of on-call plumbing contract to Robert Irvine and Sons for $43,080 (4-0)"
+    - "Approved one-year extension of HVAC mechanical repairs contract to Cooling and Heating Specialists for $9,980 (4-0)"
+    - "Approved one-year extension of HVAC control work contract to Automated Building Systems Inc for $35,436 (4-0)"
+    - "Approved one-year extension of roofing repairs contract to Greenwood Industries Inc for $29,160 (4-0)"
+    - "Approved one-year extension of Simplex fire alarm contract to Johnson Controls for $15,285 (4-0)"
+    - "Approved one-year extension of fire alarm contract to BNB Engineering for $68,000 (4-0)"
+    - "Approved one-year extension of elevator maintenance contract to Embry Elevator for $51,400 (4-0)"
+    - "Approved one-year extension of boiler maintenance contract to Combustion Service Company of New England for $78,000 (4-0)"
+    - "Accepted donation from Marblehead Boosters Club of $19,395 and $652.28 for outdoor tents (4-0)"
+    - "Accepted donation from estate of Barbara S. Gray of $307.74 for the Donald J. and Barbara S. Gray scholarship fund (4-0)"
+  votes:
+    - motion: "Approve minutes from 2/11/21 and 2/25/21"
+      result: "in favor (4 to 0)"
+    - motion: "Approve superintendent summative evaluation"
+      result: "in favor (3 to 1)"
+    - motion: "Approve schedule of bills totaling $421,202.69"
+      result: "in favor (unanimous)"
+    - motion: "One-year extension, on-call plumbing contract, Robert Irvine and Sons, $43,080"
+      result: "in favor (unanimous)"
+    - motion: "One-year extension, HVAC mechanical repairs, Cooling and Heating Specialists, $9,980"
+      result: "in favor (unanimous)"
+    - motion: "One-year extension, HVAC control work, Automated Building Systems Inc, $35,436"
+      result: "in favor (unanimous)"
+    - motion: "One-year extension, roofing repairs, Greenwood Industries Inc, $29,160"
+      result: "in favor (unanimous)"
+    - motion: "One-year extension, Simplex fire alarm, Johnson Controls, $15,285"
+      result: "in favor (unanimous)"
+    - motion: "One-year extension, fire alarm, BNB Engineering, $68,000"
+      result: "in favor (unanimous)"
+    - motion: "One-year extension, elevator maintenance, Embry Elevator, $51,400"
+      result: "in favor (unanimous)"
+    - motion: "One-year extension, boiler maintenance, Combustion Service Company of New England, $78,000"
+      result: "in favor (unanimous)"
+    - motion: "Accept Marblehead Boosters Club donations ($19,395 and $652.28) for outdoor tents"
+      result: "in favor (unanimous)"
+    - motion: "Accept estate of Barbara S. Gray donation ($307.74) for Gray scholarship fund"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 44
+    end_seconds: 1118
+    headline: "Committee honors retiring Principal Donna Zasky and outgoing student rep Dan Howells"
+    dek: "Colleagues from across the district offered tributes to Zasky, who joined the Bell School in 2011, and Howells introduced his successor Yasin Cologne."
+    summary: |
+      The meeting opened with commendations for retiring Bell/Coffin/Eveleth School Principal Donna Zasky. Fellow principals—including Oda, Satterfield, Murphy, Fox, and Bauer—offered remarks praising her energy, collaboration, honesty, and dedication to students. Zasky then delivered a brief address reflecting on her 14-year tenure, noting accomplishments including a 2017 MCAS high-progress recognition at the state house, the creation of the Bell School organic garden, and the new Lucretia and Joseph Brown School building.
+      
+      Student representative Dan Howells (MHS graduating senior) presented his final year-end report covering the 2020–2021 school year, which began September 14 with hybrid learning before transitioning to full in-person instruction in April. He highlighted extracurricular achievements including the ski team's division title and the drama club's virtual production, and recommended retaining practices like outdoor classes, mental health check-ins, and live-streaming events post-pandemic. He introduced his successor, Yasin Cologne, and was presented with an engraved gavel by the committee.
+    key_speakers: ["Donna Zasky (retiring principal)", "Dan Howells (student representative, outgoing)", "Yasin Cologne (student representative, incoming)", "Sarah Gold (School Committee Chair)", "Principal Oda", "Principal Satterfield", "Principal Murphy", "Principal Fox (Matt)", "Principal Bauer"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 1772
+    end_seconds: 2232
+    headline: "Residents praise Zasky, question remote participation plans, urge polystyrene-free schools"
+    dek: "Three residents commented, with one pressing the committee on eliminating polystyrene trays from school cafeterias."
+    summary: |
+      Jonathan Letterman asked whether the committee plans to continue allowing remote public participation after COVID-era open meeting rules expire. The chair indicated the district would work with MHTV over the summer to maximize accessibility.
+      
+      A resident named Gene (Schona) praised Zasky and highlighted the organic garden project she supported at the Bell School. She also urged the committee to commit to eliminating polystyrene from all school cafeterias, noting that in 2014 the town passed an article banning polystyrene from businesses but the schools received an exemption. She stated polystyrene is carcinogenic and volunteered to help the transition.
+      
+      Scott Solberg offered additional thanks to Zasky and previewed Dr. Eric Oxford's upcoming presentation on student services improvements.
+    key_speakers: ["Jonathan Letterman (resident)", "Gene Schona (resident)", "Scott Solberg (resident)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2317
+    end_seconds: 2422
+    headline: "Committee approves minutes from February 11 and February 25 meetings, 4-0"
+    dek: "After brief discussion about a reference to a math program adoption in the minutes, all four present members voted to approve both sets of minutes."
+    summary: "The chair asked for a motion to approve minutes from the February 11 and February 25, 2021 meetings. Member Sarah Fox raised a question about language in the minutes regarding resuming a math program adoption that had begun before COVID, but the committee proceeded to approve both sets of minutes 4-0 (David Harris absent)."
+    key_speakers: ["Sarah Gold (chair)", "Sarah Fox (member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 2422
+    end_seconds: 3060
+    featured: true
+    headline: "Superintendent summative evaluation approved 3-1 after debate over late-submitted edits"
+    dek: "Sarah Fox voted no, objecting that her suggested additions were not incorporated because they arrived too late for the co-chairs to integrate before the vote."
+    summary: |
+      The committee voted 3-1 to approve the superintendent's summative evaluation report as presented at the June 3 meeting, with two edits incorporated: an addition in the comments in Step 4 (page 3) and a strikethrough in the comments under Standard 4 (page 10).
+      
+      Emily Barron, who co-authored the consolidated report with Lisa (another member/administrator), moved to approve and recounted that the discussion at the prior meeting had spiraled negatively. She acknowledged Dr. Bucky's leadership during a difficult year.
+      
+      Sarah Fox voted no, stating that her suggested edits—submitted the morning of the meeting—were not incorporated because there was insufficient time for the co-chairs to integrate them. She argued the omission over-represented other voices and under-represented hers. Barron responded that Fox's edits arrived too late compared to Megan Taylor's, which came in days earlier.
+      
+      Megan Taylor offered a conciliatory reflection, drawing on graduating seniors' resilience and quoting a David Foster Wallace reference to encourage moving forward positively rather than dwelling on negatives. She expressed confidence in Dr. Bucky's leadership going forward.
+      
+      Vote: Gold yes, Barron yes, Taylor yes, Fox no.
+    key_speakers: ["Emily Barron (member, co-chair of evaluation)", "Sarah Fox (member)", "Megan Taylor (member)", "Sarah Gold (chair)", "Superintendent Dr. Bucky"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 3060
+    end_seconds: 3404
+    headline: "Facilities subcommittee reports progress on sustainability, composting, and water fill stations"
+    dek: "The Board of Health offered to pay for composting at all district schools and provide receptacles; a 10-year facilities strategic plan is nearing completion."
+    summary: |
+      Sarah Gold reported on a recent facilities subcommittee meeting attended by Andrew Petty (Board of Health) and Stephen Quiatek. Petty indicated the Board of Health is willing to partner with the schools on sustainability, including paying for composting throughout the district and providing needed receptacles. The committee also discussed water fill stations, which were thought to be needed only at two schools but may have broken units at others.
+      
+      Stephen Quiatek briefed the committee on infrastructure needs, including a schedule for wireless server updates (every five years). The subcommittee is close to completing a comprehensive 10-year strategic facilities plan with specific items, timelines, and cost projections to aid financial planning. The new Lucretia and Joseph Brown School is on schedule; principals are eager to tour the building and a tour is being arranged.
+    key_speakers: ["Sarah Gold (facilities subcommittee chair)", "Andrew Petty (Board of Health)", "Stephen Quiatek (technology/facilities)", "Sarah Gold (chair)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 3404
+    end_seconds: 4254
+    headline: "Superintendent previews 5-year strategic planning process and mask policy update"
+    dek: "Dr. Bucky reported the district is two-thirds through the 'Planning for Success' process and that mask mandates ended with the school year; summer school will recommend but not require masks."
+    summary: |
+      **Planning for Success:** Superintendent Dr. Bucky reported that the district is two-thirds of the way through its Planning for Success strategic planning initiative, facilitated by an outside consultant (Ruth) through DECI. Hundreds of community members participated in stakeholder input sessions, and consistent themes have emerged—with two priorities that every stakeholder group listed. Five potential themes were identified at the most recent planning team meeting through root-cause analysis. The plan is expected to be ready for the first September school committee meeting, with budget implications beginning in FY23.
+      
+      **Mask Update:** The state commissioner indicated masks are no longer mandated as of the end of the school year. For summer school, masks are recommended but not required; the district will follow DECI guidance. A formal policy language change will be voted at the next week's meeting.
+      
+      **Reopening Committee Final Meeting:** Topics included a follow-up vaccination clinic scheduled for the following Wednesday, a social-emotional health survey sent on the last day of school, and updates on summer services, METCO, and the mental health task force.
+    key_speakers: ["Superintendent Dr. Bucky (John)", "Megan Taylor (member)", "Sarah Gold (chair)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 4254
+    end_seconds: 5402
+    headline: "Director of Student Services Oxford presents 5-year improvement plan focused on inclusion, DEI, and data"
+    dek: "Oxford outlined four priority areas: redefining the department, culturally responsive competency, maximizing inclusive opportunities, and data-driven eligibility and progress monitoring."
+    summary: |
+      Dr. Eric Oxford, Director of Student Services, presented a five-year department improvement plan covering four priority areas:
+      
+      1. **Redefining the Department:** The department encompasses special education, English language learners, educational stability for students experiencing homelessness or in DCF custody, and civil rights/DEI work. Oxford noted that 38% of students identified as African American in the district have qualified for an IEP—nearly double the district average of ~20%—calling for examination of over-identification.
+      
+      2. **Culturally Responsive Competency:** In partnership with DEI Director Nan Murphy, the department is focusing on diversifying hiring and retention, addressing disproportionality, and fostering brave conversations about race and equity.
+      
+      3. **Maximizing Inclusive Opportunities:** Program labels on IEPs (e.g., TIDES, language-based) will be phased out; the focus will be on placement in the least restrictive environment first. Research shows students with disabilities in general education settings are five times more likely to graduate on time. A consultant (Dr. Katy Novak) is coming this summer to norm MTSS (Multi-Tiered Systems of Support) language and expectations district-wide.
+      
+      4. **Data Use with Fidelity:** Aligning district-wide approaches to IEP goal-setting, progress monitoring, and eligibility determinations.
+      
+      A nearly 20-page draft five-year improvement plan is in development. Megan Taylor, a former CPAC member, praised the direction as what the community had been advocating for years.
+    key_speakers: ["Dr. Eric Oxford (Director of Student Services)", "Megan Taylor (member)", "Emily Barron (member)", "Sarah Fox (member)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 5402
+    end_seconds: 7262
+    headline: "Director of Teaching and Learning Murphy presents new math curriculum, K-6 scope and sequence, and DEI initiatives"
+    dek: "The district adopted LearnZillion (K-6) and Ready Math (7-8), developed a K-6 curriculum calendar, and is transitioning to a standards-based report card."
+    summary: |
+      **Writing Program:** Teachers piloted one unit of Lucy Calkins Units of Study in Writing this year; sixth grade will be added in 2021-22 to create a fully aligned K-6 writing program.
+      
+      **Math Adoption:** The committee selected LearnZillion (K-6) and Ready Math (7-8) as new problem-based math curricula. Teachers received initial professional development on the last day of school and will receive two afternoons of further PD in August. A four-part PD package was purchased for ongoing support. For the first time, elementary schedules were built so all teachers at a grade level share a common planning period, enabling weekly coaching with math and literacy specialists.
+      
+      **Curriculum Calendar:** Rebecca Brand (district literacy specialist) and Murphy developed a K-6 scope and sequence curriculum calendar aligned to Common Core and Massachusetts frameworks. A 7-12 scope and sequence is planned for summer. A standards-based report card is also in development to replace outdated language.
+      
+      **DEI Work:** A district RIDES team (Reimagining Integration Diverse and Equitable Schools) was established, including school leadership and three high school students. The high school English department will review its curriculum through a DEI lens and select more diverse texts over the summer. DEI lead teacher Maggie Dobin is ensuring every K-3 classroom has a diverse text book bin and will provide related professional development. Henry Turner, a Marblehead community member, will provide high school PD; Indeedlee will support elementary DEI work.
+      
+      **Summer Learning:** Elementary summer program (July 6–August 12) will target at-risk readers in grades 1-4 with literacy instruction partnered with YMCA afternoons. High school students (all grades) can attend July 12–August 12 for subject-area support by invitation from guidance. METCO students will have remote one-to-one tutoring opportunities.
+    key_speakers: ["Nan Murphy (Director of Teaching and Learning)", "Megan Taylor (member)", "Sarah Fox (member)", "Emily Barron (member)", "Sarah Gold (chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 7262
+    end_seconds: 7415
+    headline: "Committee approves schedule of bills totaling $421,202.69, 4-0"
+    dek: "The routine end-of-year schedule of bills was approved unanimously before moving to contract renewals."
+    summary: "The committee voted unanimously to approve the schedule of bills totaling $421,202.69 as listed in the dropbox."
+    key_speakers: ["Sarah Gold (chair)", "Michelle (finance staff)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 7415
+    end_seconds: 7910
+    headline: "Committee approves one-year extensions for 8 facilities maintenance contracts totaling approximately $330,000"
+    dek: "Contracts covering plumbing, HVAC, roofing, fire alarms, elevators, and boilers were each extended for one year, all unanimously."
+    summary: |
+      Finance Director Michelle presented eight facilities/maintenance contracts for one-year extensions. All were existing contracts not requiring re-bid. Four are joint with the town, requiring Board of Selectmen co-approval.
+      
+      | Contract | Vendor | Amount |
+      |---|---|---|
+      | On-call plumbing | Robert Irvine and Sons (Lynn) | $43,080 |
+      | HVAC mechanical repairs | Cooling and Heating Specialists (Newton) | $9,980 |
+      | HVAC control work | Automated Building Systems Inc | $35,436 |
+      | Roofing repairs | Greenwood Industries Inc (Worcester) | $29,160 |
+      | Simplex fire alarm (HS and Vet only) | Johnson Controls (Canton) | $15,285 |
+      | Fire alarm (all other schools + town buildings) | BNB Engineering (Georgetown) | $68,000 |
+      | Elevator maintenance | Embry Elevator (Woburn) | $51,400 |
+      | Boiler maintenance | Combustion Service Company of New England (Cambridge) | $78,000 |
+      
+      All eight motions passed 4-0.
+    key_speakers: ["Michelle (finance director)", "Sarah Gold (chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 7910
+    end_seconds: 8021
+    headline: "Committee accepts $20,047 from Marblehead Boosters and $307.74 from Gray estate"
+    dek: "Boosters fundraiser covered more than half the cost of outdoor tents; the Gray donation brings a cumulative scholarship gift to just over $560,000."
+    summary: |
+      The committee accepted two donations:
+      
+      1. **Marblehead Boosters Club** — Two checks totaling approximately $20,047 ($19,395 + $652.28) for outdoor tents. The tents cost just over $36,000 total, so the donation covered more than half.
+      
+      2. **Estate of Barbara S. Gray** — $307.74 added to the Donald J. and Barbara S. Gray scholarship fund. This final disbursement brings cumulative donations from the Gray estate to just over $560,000.
+      
+      Both were approved unanimously.
+    key_speakers: ["Michelle (finance director)", "Sarah Gold (chair)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 8112
+    end_seconds: 8258
+    headline: "Closing business: Sarah Fox requests invoices for Back Together Marblehead website; Juneteenth flag-raising announced"
+    dek: "The chair announced a Juneteenth flag-raising at Abbott Hall the following evening; Gene Schona received clarification that polystyrene trays will be eliminated from all schools in fall 2021."
+    summary: |
+      In new business, Sarah Fox requested itemized invoices related to the 'Back Together Marblehead' website, including server costs and management questions, noting community members had contacted her about the topic.
+      
+      In correspondence, the chair shared an invitation to join a Juneteenth flag-raising at Abbott Hall on June 18 at 5 p.m., organized by the town with participation by the Board of Selectmen and Superintendent Dr. Bucky.
+      
+      During the second public comment period, Gene Schona sought clarification on polystyrene. Superintendent Dr. Bucky confirmed the operational goal is to have no polystyrene trays in any school by fall 2021; the food service director is currently costing out alternatives.
+      
+      The meeting adjourned at 9:18 p.m.
+    key_speakers: ["Sarah Fox (member)", "Gene Schona (resident)", "Sarah Gold (chair)", "Superintendent Dr. Bucky"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

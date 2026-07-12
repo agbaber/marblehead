@@ -9,7 +9,59 @@ video_url: "https://www.youtube.com/watch?v=NklDgRzS-uE"
 duration_seconds: 6793
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "FinCom school liaison subcommittee reviews FY24 closeout and FY26 budget outlook"
+  summary: "The Finance Committee's school liaison subcommittee met with the superintendent and school business manager to review FY24 actual expenditures, which showed the school department returned approximately $379,000–$382,000 to the town on a roughly $44.9 million budget. Discussions covered out-of-district special education tuition costs—now exceeding $5 million annually—salary trends, circuit breaker reimbursement mechanics, technology refresh planning, and the structural budget pressures expected in FY27 and FY28 under the new teachers contract. The group also addressed revolving fund balances, federal grant uncertainty, and plans for the March 31 budget hearing before the full Finance Committee."
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 24
+    end_seconds: 2198
+    featured: true
+    headline: "FY24 closeout: ~$380K returned to town; out-of-district SPED tuition tops $5M"
+    dek: "The school business manager walked through FY24 actuals and explained why out-of-district special education tuition—now roughly $5 million—drove expense-side overruns despite salary underspending."
+    summary: |
+      The school business manager reported that the district returned approximately **$379,000–$382,000** to the town at the end of FY24 on a budget of roughly **$44.9 million** (budget approximately $44,947,274; actual expenditures approximately $44,509,320; encumbrances approximately $55,570). Key takeaways:
+      
+      - **Salaries were approximately $2 million over budget** relative to actuals, providing a cushion that offset the expense-side shortfall.
+      - **Out-of-district tuition overspent by roughly $1.5 million** on the expense side—largely because some students were not properly accounted for in prior budgets, a discrepancy since identified and corrected.
+      - The district now carries a **full-year circuit breaker reserve**, which reduces the urgency of waiting until after April 1 to vote the budget.
+      - A multi-year trend analysis of out-of-district costs (adjusted for prepayments) was recommended to better forecast future budgets.
+      - The superintendent described plans to rebuild in-district special education programs—particularly language-based and therapeutic programs—so that students currently at Landmark School and similar placements can return over the next one to two years, potentially saving several hundred thousand dollars per returning cohort.
+      - Circuit breaker **extraordinary relief** was noted as a potential current-year funding source if out-of-district expenditures exceed 125% of the prior year's claim.
+      - The business manager disclosed that **circuit breaker filings were historically done by the business office rather than student services**, which likely resulted in under-claiming; a corrective process is underway with the director of student services.
+      - A **five-year technology refresh plan** was discussed, including a proposed three-year lease ramp-up of approximately **$150,000/year** to build a sustainable IT capital line.
+      - A **$200,000 curriculum refresh line** was included in the proposed FY26 budget.
+      - FY25 salary budget was built conservatively, with a manual encumbrance approach; the business manager estimated an **unexpended balance of approximately $2.8–$3 million** as of late January, expected to trend down to roughly **$800,000–$1 million** available for out-of-district prepayments at year-end.
+      - The new teachers contract carries **3% in FY27 and 3.5% in FY28**, plus step increases, which will compress future salary surpluses and make the current unexpended balance pattern unsustainable in out-years.
+    key_speakers: ["School Business Manager (male voice)", "Superintendent (male voice)", "FinCom liaison (female voice, identified as Sarah)", "FinCom liaison (female voice, identified as Molly)", "FinCom liaison (male voice)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 2198
+    end_seconds: 3700
+    headline: "FY26 budget: technology leasing plan, staffing strategy, and override runway discussed"
+    dek: "The superintendent and business manager outlined a phased IT leasing model, strategic hiring practices to manage salary lines, and the intentional contract structure designed to give the district runway before bringing a Prop 2½ override to voters."
+    summary: |
+      This segment covered forward-looking budget strategy:
+      
+      - **Technology**: The business manager proposed a three-year ramp-up of **$150,000/year** in new IT capital (leasing $400,000 of equipment per tranche), reaching a steady-state budget line of approximately **$450,000** by year three. A five-year device replacement cycle was illustrated with examples from a prior district.
+      - **Staffing**: Three sources of salary variance were identified: (1) unfilled positions, (2) retirements replaced at lower steps, and (3) strategic hiring decisions. A **$182,000 'retirement savings' placeholder** (negative line) was built into FY26. Principals were advised to plan new hires at approximately **$70,000–$80,000**.
+      - **Enrollment and staffing levels**: The superintendent stated current staffing is appropriate for identified needs, but acknowledged efficiencies will emerge as special education programs are consolidated and restructured.
+      - **Override preparation**: The contract's lower increases in FY27 (3%) and FY28 (3.5%) were described as **intentional negotiating strategy** to give the administration time to complete the strategic plan before approaching voters with a well-documented override request. Two prior overrides were noted to have failed partly due to insufficient multi-year projections.
+      - **Federal grants**: The superintendent stated he is not changing operations based on federal-level noise until the Massachusetts DESE directs otherwise. The district's IDEA 240 grant (approximately **$800,000**) was noted as an entitlement grant appropriated in a prior federal fiscal year, currently not threatened.
+      - **Revolving funds**: The business manager noted he has manually rolled forward revolving balances pending the town's formal closeout process; the kindergarten tuition revolving account was identified as historically underfunded from the general fund side, a gap corrected in FY26.
+    key_speakers: ["School Business Manager (male voice)", "Superintendent (male voice)", "FinCom liaison (female voice, identified as Sarah)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 3700
+    end_seconds: 3839
+    headline: "Next steps: one more liaison meeting before March 31 full FinCom budget hearing"
+    dek: "The subcommittee agreed to schedule a follow-up meeting to review revolving fund roll-forwards before the March 31 budget hearing night, and briefly discussed the April 7 warrant hearing format."
+    summary: "The chair noted the subcommittee would schedule one additional meeting to review revolving fund balances before the March 31 Finance Committee budget hearing, at which the school administration will present and the liaison members will provide context. The April 7 warrant hearing format was briefly explained: the full Finance Committee reviews all warrant articles, and the school department would appear only if a separate school-sponsored article (e.g., the roof capital request at approximately **$8.6 million**) or a question arises. The debt exclusion article was flagged as a topic for a separate liaison session."
+    key_speakers: ["FinCom liaison (female voice, identified as Sarah)", "School Business Manager (male voice)", "Superintendent (male voice)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

@@ -10,7 +10,305 @@ duration_seconds: 5823
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee reorganizes, approves $731K budget transfers and auditorium naming"
+  summary: "The Marblehead School Committee met June 11, 2026, electing Kate McCaffrey as chair and Melissa Goulas as vice chair for the coming year. The committee approved approximately $731,000 in budget transfers to cover out-of-district special education tuitions, approved a Disney World performing arts trip, and voted to name the high school auditorium after Gregory Dana. The district's five-year Plan for Success was reviewed, highlighting curriculum reforms and student achievement data including 81% of K-3 students at or above grade level in math."
+  decisions:
+    - "Approved Kate McCaffrey as School Committee Chair"
+    - "Approved Melissa Goulas as School Committee Vice Chair"
+    - "Approved Anne Marie as School Committee Secretary"
+    - "Approved consent agenda including bills totaling $1,456,265.34, May 21 meeting minutes, and multiple policy revisions"
+    - "Approved high school performing arts trip to Disney World at $2,481 per student"
+    - "Approved student handbook updates with minor amendment"
+    - "Approved $488,000 transfer from district salary lines to out-of-district tuition lines"
+    - "Approved $69,000 transfer from contracted services lines to out-of-district tuition lines"
+    - "Approved $101,000 transfer from supply lines to out-of-district tuition lines"
+    - "Approved $73,000 transfer from professional expenses lines to out-of-district tuition lines"
+    - "Approved naming of high school auditorium after Gregory Dana"
+    - "Approved declaration of surplus and disposal of outdated high school science textbooks"
+    - "Released executive session minutes from October 17 and November 20, 2024, and January 15, 2025"
+    - "Continued withholding executive session minutes from November 24, 2024, and January 6, 2025"
+    - "Approved MOAs adding OTs, PTs, BCBAs to MEA Unit A and PTAs, OTAs, CNAs to instructional assistant unit"
+    - "Approved revisions to policy GBEB (staff conduct)"
+    - "Approved revisions to policy JKAA (timeout, seclusion, and restraint of students)"
+    - "Rescinded policy KCB (community involvement in decision-making)"
+  votes:
+    - motion: "Kate McCaffrey as Chair"
+      result: "in favor (5 to 0)"
+    - motion: "Melissa Goulas as Vice Chair"
+      result: "in favor (5 to 0)"
+    - motion: "Anne Marie as Secretary"
+      result: "in favor (5 to 0)"
+    - motion: "Consent agenda"
+      result: "in favor (5 to 0)"
+    - motion: "Disney World performing arts trip"
+      result: "in favor (unanimous)"
+    - motion: "Student handbook updates"
+      result: "in favor (unanimous)"
+    - motion: "Transfer $488,000 from salary lines"
+      result: "in favor (5 to 0)"
+    - motion: "Transfer $69,000 from contracted services lines"
+      result: "in favor (5 to 0)"
+    - motion: "Transfer $101,000 from supply lines"
+      result: "in favor (5 to 0)"
+    - motion: "Transfer $73,000 from professional expenses lines"
+      result: "in favor (5 to 0)"
+    - motion: "Naming auditorium after Gregory Dana"
+      result: "in favor (5 to 0)"
+    - motion: "Declare science textbooks surplus"
+      result: "in favor (5 to 0)"
+    - motion: "Authorize disposal of surplus science materials"
+      result: "in favor (5 to 0)"
+    - motion: "Revisions to policy GBEB"
+      result: "in favor (unanimous)"
+    - motion: "Revisions to policy JKAA"
+      result: "in favor (5 to 0)"
+    - motion: "Rescind policy KCB"
+      result: "in favor (5 to 0)"
+    - motion: "Adjourn"
+      result: "in favor (5 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 66
+    end_seconds: 234
+    headline: "School Committee elects new chair, vice chair, and secretary for 2026-27"
+    dek: "Kate McCaffrey was elected chair, Melissa Goulas vice chair, and Anne Marie secretary, all by 5-0 votes."
+    summary: "The outgoing chair opened reorganization by soliciting nominations. Kate McCaffrey was nominated and elected chair (5-0), Melissa Goulas was elected vice chair (5-0), and Anne Marie was elected secretary (5-0). Subcommittee appointments were deferred to an upcoming retreat."
+    key_speakers: ["Outgoing Chair (School Committee)", "Kate McCaffrey (incoming Chair)", "Melissa Goulas (incoming Vice Chair)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 393
+    end_seconds: 458
+    headline: "Resident Mary McCarriston congratulates newly composed committee"
+    dek: "One resident spoke during public comment to offer congratulations and encouragement to the committee."
+    summary: "Mary McCarriston of Pine Cliff Road was the sole public commenter, offering congratulations to the newly elected and continuing members and expressing confidence in the committee. No other speakers came forward and public comment was closed."
+    key_speakers: ["Mary McCarriston (resident)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 458
+    end_seconds: 1059
+    headline: "Brown School student leadership council presents annual spotlight; commendations given"
+    dek: "Third-grade student leadership council members from Brown School presented their year's work; Girl Scout Troop 64458 and retiring staff were also recognized."
+    summary: |
+      The chair took the agenda out of order to accommodate Brown School's student spotlight. Third-grade student leadership council members described their election process, monthly community meetings, PBIS tracking, gardening project, and growth as public speakers.
+      
+      Separately, a committee member commended Girl Scout Troop 64458 (16 Village School fifth graders) for earning their bronze award by restoring deteriorating entrance signs at Village School using an artist from Tufts.
+      
+      The superintendent offered a lighthearted 'largest fish' award to Superintendent John Ruopp as a commendation.
+    key_speakers: ["Mary Next Deal (Brown School Principal)", "Cara Ford (Brown School Counselor)", "Brown School student leadership council members"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 1096
+    end_seconds: 1650
+    headline: "Superintendent reports on override passage, graduation highlights, and staff retirements"
+    dek: "The superintendent's update covered the approved Prop 2½ override, class of 2026 graduation, college signing day athletes, Math Olympiad honorees, and retiring staff."
+    summary: |
+      The superintendent briefly acknowledged the passage of the override, noting it allows the district to 'take a breath, reset, and begin planning.' Highlights included:
+      
+      - Class of 2026 graduation ceremony described as successful
+      - College signing day: Sydney Ball (women's soccer), Madison Bessette (College of Charleston, cheerleading), Braden Callahan (Johns Hopkins, football), Ian Zucker (Colby College, soccer), Finn Gallup (Salve Regina, football), Daphne Gibson (Bethany College, football), Sadie Halpern (Colby College, track and field)
+      - Sixth-grade National Math Olympiad honorees listed
+      - English learner parent advisory council summer reading book event held at Brown School playground
+      - Six staff retirees recognized: Judy Cowan (20 years, Village), Moira McMahon (11 years, Village SPED), Rhonda Gifford Flynn (16 years, teacher), custodian James Rackey (21 years), Mary Roberts (4 years, Glover), Christine Seymour (10 years, food/bus services), Mark Tarmy (17 years as athletic director)
+    key_speakers: ["Superintendent (John Ruopp)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 1650
+    end_seconds: 1820
+    headline: "CFO reports $1.7M unexpended balance as of May 31; pre-paying SPED tuitions"
+    dek: "The business office reported an unexpended balance of approximately $1.7 million through 11 months and is actively pre-paying out-of-district special education tuitions to balance the FY27 budget."
+    summary: |
+      The district's finance director (identified as 'Mike') presented an 11-month financial update as of May 31. Key figures:
+      
+      - Unexpended balance: approximately $1.703 million
+      - Roughly $285,000 less than one month prior
+      - Approximately $200,000 deemed a comfortable cushion for remaining end-of-year bills
+      - District is pre-paying approximately half of next year's out-of-district special education tuitions, with invoices already encumbered
+      - Final payroll push expected around June 18-23 will clarify year-end landing
+      
+      A separate budget transfer motion was flagged for later in the meeting.
+    key_speakers: ["Finance Director (Mike)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1820
+    end_seconds: 1882
+    headline: "Committee approves consent agenda including $1.45M in bills and multiple policy revisions"
+    dek: "A consent agenda covering a schedule of bills totaling $1,456,265.34, May 21 meeting minutes, and revisions to more than 20 policy codes was approved 5-0."
+    summary: "The chair moved a consent agenda including a schedule of bills totaling $1,456,265.34, draft minutes from May 21, 2026, and revisions to policies ECAB, ECAF, EEAE, IGB, IHANA, IHBH, JB, JFABE, JFABF, JFBB, JH, JHE, JAICB, JAICFA, JAIH, JJ, JJE, JJIB, JL, JLC, JLCA, JLCB, and JLCC. The motion carried 5-0."
+  - topic: recreation-events
+    topic_confidence: 0.82
+    start_seconds: 1882
+    end_seconds: 2041
+    headline: "Committee approves high school music trip to Disney World at $2,481 per student"
+    dek: "Performing arts teacher Colleen Eagles requested approval for an overnight trip to Orlando for approximately 50-60 students, including a professional workshop and performance at Downtown Disney."
+    summary: |
+      Colleen Eagles, a performing arts teacher at the high school, presented a request for a trip to Disney World open to approximately 100 eligible students with an expected 50-60 participants. Trip details:
+      
+      - Cost: $2,481 per student
+      - Duration: 5 days in Orlando, 4 days in the park
+      - Includes: round-trip airfare, hotel on Disney property, breakfast and dinner daily
+      - Educational component: workshop with Disney professionals, sight-reading music for a movie trailer
+      - Performance opportunity at Downtown Disney
+      - Chaperone ratio: 10:1 (overnight trip)
+      
+      The committee approved the trip unanimously.
+    key_speakers: ["Colleen Eagles (performing arts teacher)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2041
+    end_seconds: 2289
+    headline: "Student handbooks updated for 2026-27 with new cell phone, attendance, and absence language"
+    dek: "Annual handbook updates include smartwatch restrictions, updated bell schedules, absence coding clarifications at the high school, and suspension notification procedures at elementary schools."
+    summary: |
+      The superintendent's team presented annual handbook updates across all schools:
+      
+      **District-wide:** Staff names, website links, user fees, calendar information, and emergency card (annual information update) language updated.
+      
+      **High school:** Updated METCO section language; added bus behavior language; added absence category/attendance chart; added language about electronic devices (including smartwatches and AR glasses) in testing contexts; updated 9:00 a.m. attendance requirement for extracurricular participation.
+      
+      **Middle school (K-8):** Updated cell phone/electronics policy to include smartwatches; renamed 'Just Read' block to 'WIN' (What I Need); updated bell schedule.
+      
+      **Elementary schools:** Updated attendance language with direct policy quotations; added student health section language about family-nurse communication; clarified suspension notification requirement for principals to notify superintendent.
+      
+      The committee approved the handbooks with a minor added sentence on suspension procedures, unanimously.
+    key_speakers: ["Superintendent (John Ruopp)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 2289
+    end_seconds: 2337
+    headline: "District's five-year Plan for Success report-out initiated"
+    dek: "The committee transitioned to a review of accomplishments under the 2021-2026 Plan for Success strategic plan, presented by the assistant superintendent for teaching and learning."
+    summary: "The chair introduced the Plan for Success review, noting the committee had previously approved a new district-wide improvement plan and that this agenda item closes out the prior five-year strategic plan. The superintendent noted the fall initiatives will be shared at a future meeting."
+    key_speakers: ["Superintendent (John Ruopp)"]
+  - topic: school-budget
+    topic_confidence: 0.93
+    start_seconds: 2337
+    end_seconds: 4131
+    featured: true
+    headline: "Five-year Plan for Success review shows 81% of K-3 students at/above grade level; free full-day K coming 2027-28"
+    dek: "The assistant superintendent for teaching and learning presented five years of curriculum, instruction, and equity accomplishments, including key student outcome data and the announcement that free full-day kindergarten will launch in 2027-28."
+    summary: |
+      The assistant superintendent (identified contextually as 'Julie Ryan' or 'Ms. Ryan') presented a comprehensive review of the 2021-2026 Plan for Success strategic plan outcomes. Key highlights:
+      
+      **Curriculum (Goal Area 1 - Teaching & Learning):**
+      - Completed a 6-year curriculum review cycle
+      - Adopted Wit & Wisdom literacy curriculum K-6
+      - Adopted Illustrative Math
+      - Adopted new K-12 science curriculum (first year of integration)
+      - Adopted Wayfinder social-emotional learning curriculum K-12 (first time ever district-wide)
+      - Updated scope and sequences; embedded enrichment/intervention block K-12
+      - Integrated DIBELS early literacy assessments; expanded i-Ready and IXL use
+      - Added WIN block at high school (equivalent of K-8 WIN time)
+      - Launched MET (manufacturing, engineering, technology) pathway with state grant funding
+      
+      **Student Outcome Data:**
+      - 81% of K-3 students on or above grade level in math (end of year)
+      - 87% of K-3 students on or above grade level in reading (end of year)
+      - High-needs students: math meeting/exceeding grew from 27% to 34% since 2022
+      - ELA growth percentiles for high-needs students showed strong growth
+      - Science: no measurable change (anticipated; new curriculum just implemented)
+      
+      **Equity & Inclusion (Goal Area 3):**
+      - Wayfinder SEL curriculum in year 2; first year with beginning-and end-of-year measurement
+      - METCO program strengthened under director Kesha Johnson
+      - AP course access expanded
+      - Inclusive performing arts community highlighted
+      - Placement process overhauled with cross-school collaborative approach
+      
+      **One Unmet Goal:**
+      - Free full-day kindergarten not achieved by June 30, 2026
+      - Announced: free full-day kindergarten will launch in **2027-28 school year**
+      
+      **Professional Development (Goal Area 2A):**
+      - Active PD committee with MEA partnership
+      - Over 200 educator survey responses on PD needs
+      - AI professional development added to annual training
+      - Instructional coaches K-12 credited: Rebecca Brand, Mary LeBlanc, Emily Perez, Angie Graziano, Danielle Boucher
+      - PDP tracking system for DESE re-licensure established
+      
+      Committee members asked about connecting chronic absenteeism improvements to academic gains and expressed interest in longitudinal Wayfinder data. The superintendent noted the district has been recognized as one of few in the state to improve chronic absenteeism.
+    key_speakers: ["Assistant Superintendent for Teaching and Learning (Julie Ryan / Ms. Ryan)", "Superintendent (John Ruopp)", "Henry (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 4131
+    end_seconds: 4483
+    headline: "Committee approves $731K in budget transfers to cover out-of-district SPED tuitions"
+    dek: "Four separate transfer motions moved funds from salary, contracted services, supply, and professional expenses lines to out-of-district tuition accounts, totaling approximately $731,000."
+    summary: |
+      Finance Director Mike presented and the committee approved four budget transfer motions. The transfers were described as extraordinary due to early budget freeze and the need to pre-pay $1.5 million in next year's out-of-district tuitions. In a typical year, transfers would not exceed 1% of budget (approximately $490,000).
+      
+      | Transfer | Amount |
+      |---|---|
+      | District salary lines → OOD tuition | $488,000 |
+      | Contracted services lines → OOD tuition | $69,000 |
+      | Supply lines → OOD tuition | $101,000 |
+      | Professional expenses lines → OOD tuition | $73,000 |
+      | **Total** | **$731,000** |
+      
+      All four motions carried 5-0. The district had also pre-paid $1.1 million in out-of-district tuitions at the end of the prior fiscal year.
+    key_speakers: ["Finance Director (Mike)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 4483
+    end_seconds: 4575
+    headline: "Committee approves naming high school auditorium after Gregory Dana for 150 years of performing arts service"
+    dek: "A bronze plaque (18×24 inches) costing approximately $29,545 including installation will be purchased; funds are already available from prior donations."
+    summary: "Superintendent Ruopp presented a proposal to name the high school auditorium the 'Gregory Dana Auditorium' in recognition of 150 years of outstanding service to Marblehead Performing Arts by the Dana family. Two design options for a bronze plaque (18 by 24 inches) were presented; the committee preferred Option A. Total cost: approximately $29,110 for the plaque plus $150.99 shipping and $285 installation. Donations reportedly covered all but approximately $800 of the cost. The motion was approved 5-0. The superintendent also noted a naming policy update should be a priority for the policy subcommittee next year."
+    key_speakers: ["Superintendent (John Ruopp)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 4575
+    end_seconds: 4694
+    headline: "Committee declares outdated high school science textbooks surplus and authorizes disposal"
+    dek: "A student-led senior project inventoried obsolete science materials; the committee voted to declare them surplus and authorize disposal after donation attempts to area schools were unsuccessful."
+    summary: "The assistant superintendent for teaching and learning presented a request initiated by teacher leader Dave Alan Askey and completed as a senior capstone project by student Victoria Yusenko. The student conducted a thorough inventory of high school science materials made obsolete by the new curriculum and reached out to charter schools and Salem schools to donate materials, but no takers were found. The committee voted 5-0 to declare the materials surplus and 5-0 to authorize the administration to dispose of them."
+    key_speakers: ["Assistant Superintendent for Teaching and Learning"]
+  - topic: labor-personnel
+    topic_confidence: 0.92
+    start_seconds: 4927
+    end_seconds: 4972
+    headline: "Committee reports MOAs adding therapists and behavioral analysts to MEA bargaining units"
+    dek: "Following an MEA petition to the Department of Labor Relations, OTs, PTs, and BCBAs were added to Unit A; PTAs, OTAs, and CNAs were added to the instructional assistant unit."
+    summary: "In fall 2025, the MEA petitioned the Commonwealth Department of Labor Relations to represent the district's occupational therapists, physical therapists, board-certified behavioral analysts, physical therapist assistants, occupational therapist assistants, and certified nurse assistants. The school committee and MEA reached agreement: OTs, PTs, and BCBAs were added to Unit A; PTAs, OTAs, and CNAs were added to the instructional assistant unit. Memoranda of agreement were approved by the school committee and included in the meeting packet."
+    key_speakers: ["School Committee Chair (Kate McCaffrey)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 4972
+    end_seconds: 5213
+    headline: "Multiple policy updates approved including new staff conduct policy and DESE-mandated seclusion/restraint revisions"
+    dek: "The committee approved revisions to staff conduct policy GBEB, seclusion and restraint policy JKAA to comply with new August DESE regulations, and rescinded redundant community involvement policy KCB."
+    summary: |
+      **Policy GBEB (Staff Conduct):** A more robust version modeled on other districts was brought forward by the policy subcommittee after being sent back from January. The committee approved it unanimously.
+      
+      **Policy JKAA (Timeout, Seclusion, and Restraint):** New DESE regulations take effect in August. MASC-recommended revisions were adopted to bring the district into compliance ahead of the effective date. Approved 5-0.
+      
+      **Policy KCB (Community Involvement in Decision-Making):** MASC recommended rescinding as the intent is covered elsewhere in district policies. The committee voted 5-0 to rescind.
+      
+      **Second Readings (no vote; deferred to subsequent meeting):** Four new policies on second reading: KDC (community use of digital resources), KDCB (district website and social media), JLCDC (self-administration of medications), and JICK (harassment of students).
+      
+      The superintendent praised the policy subcommittee for reviewing over 100 policy items in one year, calling it 'unheard of.'
+    key_speakers: ["School Committee Chair (Kate McCaffrey)", "Superintendent (John Ruopp)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 5213
+    end_seconds: 5654
+    headline: "Subcommittee updates cover communications newsletter, wellness, data, and school safety progress"
+    dek: "Committee members reported on the school committee newsletter, wellness committee year-end work, data/information committee security reporting improvements, and bus discipline tracking."
+    summary: |
+      Subcommittee and liaison reports:
+      
+      - **Communications:** Newsletter issued covering override vote, district improvement plan, and school achievements; distribution list slowly growing.
+      - **Wellness:** Final meeting of the year completed; plans for next year underway.
+      - **Data/Information:** Finalized school security reporting forms (electronic, paper, and QR code formats) for September implementation; improved Aspen discipline reporting processes.
+      - **Safety (external):** Ongoing work with union, administrators, Marblehead PD, and area fire departments; SRO collaboration on bus discipline tracking and parent communication.
+      - **Goals subcommittee:** Met to review progress on goals; will come together at the retreat.
+      
+      The meeting adjourned at approximately 11:00 p.m. (meeting opened at 9:00 p.m.) by a 5-0 vote.
+    key_speakers: ["School Committee members"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

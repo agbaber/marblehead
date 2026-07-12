@@ -10,7 +10,112 @@ duration_seconds: 3627
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Facilities subcommittee votes to recommend indefinite postponement of school capital warrant article"
+  summary: "The Marblehead School Committee Facilities Subcommittee met on April 16, 2025 and voted 2-0 to recommend that the full school committee indefinitely postpone the school department's capital expenditure warrant article at town meeting, deferring instead to the Prop 2½ override tier structure for future capital funding. The subcommittee reviewed a tiered capital request list covering safety, building maintenance, and facility improvements across all school buildings. Members also received an update on the high school roof project, which is tracking under its $300,000 ceiling budget with a milestone schedule targeting completion by late August 2025."
+  decisions:
+    - "Approved recommendation to full school committee to indefinitely postpone the school capital warrant article at town meeting"
+    - "Approved motion to adjourn"
+  votes:
+    - motion: "Recommend indefinite postponement of school capital warrant article for town meeting"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.85
+    start_seconds: 22
+    end_seconds: 36
+    headline: "No public comment received at subcommittee meeting"
+    dek: "Chair opened public comment; only one attendee (Lee) was online and no comment was offered."
+    summary: "The chair called the meeting to order at 10:03 a.m. and invited public comment from the single online attendee, who did not raise a hand to speak."
+  - topic: bonding-capital
+    topic_confidence: 0.95
+    start_seconds: 36
+    end_seconds: 1986
+    featured: true
+    headline: "Subcommittee votes 2-0 to recommend indefinitely postponing school capital warrant article"
+    dek: "The committee determined the school's capital needs would be addressed through the Prop 2½ override tier structure rather than a standalone town meeting warrant article this year."
+    summary: |
+      The subcommittee discussed two interrelated agenda items: the school capital requests for the town meeting warrant and the $500,000 school building capital fund included in the Prop 2½ override tier three.
+      
+      Key points:
+      - The administration recommended against placing a separate capital article on the town meeting warrant at this time.
+      - The procedural mechanism is for the school committee to vote to recommend indefinite postponement of the capital warrant article at the April 30 meeting (the last meeting before town meeting).
+      - The school committee previously voted to submit its capital requests to the select board as part of the override proposal: $1 million split 62/38 between town and schools in tier three, plus an additional $500,000 dedicated to schools, proposed in year three of tier three.
+      - A speaker cautioned that even if the override passes, there is no legal requirement that any future board fund capital from those revenues — it flows into the general fund.
+      
+      **Tiered capital request list reviewed (school's own priority tiers, unrelated to override tiers):**
+      
+      | Priority | Items |
+      |---|---|
+      | Tier 1A (life/safety) | Bus camera system, Glover/Leers playground boulder remediation, clock/bell system at Veterans school, PA system, Hopkins Field fencing |
+      | Tier 1B | High school fieldhouse refresh (paint, padding, flooring) |
+      | Tier 2 | Brown School playground shade, Veterans flooring cracks, gym floor refinishing at Veterans (large and small gym), Veterans gym lighting, Veterans D-wing pathway, Performing Arts Center carpeting and lighting, Village gym re-flooring |
+      
+      The subcommittee voted **2 to 0** to recommend that the full school committee indefinitely postpone the capital warrant article.
+      
+      The committee also discussed the Village School courtyard as a potential PTO-led community project to convert an unused asphalt courtyard into an outdoor learning space. A PTO member (Cara Wheelen) had previously submitted a grant application to the Friends of Marblehead Public Schools for a design by landscape firm Four Seasons. The committee agreed to reach out to the principal (Scott) and Ms. Wheelen to explore next steps, noting the district is not in a position to fund the project given competing priorities.
+    key_speakers: ["Jen (subcommittee member/chair)", "Henry (subcommittee member)", "Town/school administrator (voice)"]
+  - topic: labor-personnel
+    topic_confidence: 0.88
+    start_seconds: 1153
+    end_seconds: 1434
+    headline: "Facilities Director position posted at $110,000–$122,000; screening committee being assembled"
+    dek: "The position was posted on School Spring and LinkedIn-linked job boards, with applications expected after April school vacation week."
+    summary: |
+      The Facilities Director position was posted the prior week at a salary range of $110,000 to $122,000, consistent with the budget and prior funding levels. The posting went up on School Spring (the district's primary job board) with a link to LinkedIn/Indeed to attract candidates outside education who might not monitor School Spring.
+      
+      The job description emphasizes a bachelor's degree preferred with mechanical/electrical/plumbing (MEP) background, OSHA and asbestos (AHERA) certifications, and roof management experience. The position is superintendent-appointed, not school committee-appointed. A screening committee including community members will be assembled; the administration plans to begin reviewing applicants after April vacation week (around April 27–28). The committee noted MASBO should also be used to post the position to reach business/operations candidates.
+    key_speakers: ["Jen (subcommittee member)", "CFO/business administrator (voice)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 2309
+    end_seconds: 2513
+    headline: "School building walkthroughs scheduled for April 17, 24 (Vets), and 29 across all campuses"
+    dek: "The subcommittee scheduled facility walkthroughs at the high school, Veterans Middle School, Brown, Glover, and Village schools ahead of the May 12 facilities meeting."
+    summary: |
+      The subcommittee scheduled the following facility walkthroughs:
+      
+      - **Thursday, April 17** – High school, 9:00 a.m. to 11:30 a.m. (invites: Michelle, Henry, Jen, Ramon, John)
+      - **Tuesday, April 29** – Veterans Middle School at noon to approximately 2:00 p.m. (Gilberto to lead Brown walkthrough; James Douglas for Village/Vets)
+      - **Wednesday, April 30 (morning)** – Possibly Glover
+      - **Friday, April 18** – Brown and Glover, 9:00 a.m. to 10:30 a.m.
+      
+      The Eames Way school (Eve) walkthrough was deferred until after the May 12 facilities meeting when the principal (John) is expected to present his plans for that building.
+      
+      Roof work is underway at the high school during April vacation week; the subcommittee agreed not to tour the high school roof while live contractor activity is occurring.
+    key_speakers: ["Jen (subcommittee member)", "Henry (subcommittee member)", "CFO/facilities administrator (voice)"]
+  - topic: bonding-capital
+    topic_confidence: 0.9
+    start_seconds: 3013
+    end_seconds: 3595
+    headline: "High school roof project on track; mold air-quality testing scheduled for April 21; ceiling budget approximately $300,000"
+    dek: "The roof contractor is proposing to complete three roof sections over April break, with a milestone schedule targeting full facility completion by late August 2025 and final project closeout by October 12."
+    summary: |
+      The subcommittee received a detailed update on the high school roof and HVAC replacement project:
+      
+      **Project milestone schedule (approximate):**
+      | Milestone | Date |
+      |---|---|
+      | Roofing operations complete/demobilized | ~July 26 (typo in document noted) |
+      | Above-ceiling scope complete | July 31 |
+      | Air handling equipment complete | August 2 |
+      | Ceiling reinstallation complete | August 16 |
+      | Hydronic systems/facility testing complete | August 21 |
+      | Final project completion | October 12 |
+      
+      **Key discussion points:**
+      - Bids came in under the project budget; however, change orders remain possible.
+      - A $300,000 budget exists for ceiling work; both the save-and-reinstall and full-replacement options came in at approximately $300,000.
+      - The committee favored salvaging undamaged ceiling tiles for reuse in other school buildings (estimated 60% reusable at approximately $3–4/tile).
+      - An **air quality/mold test is scheduled for Monday, April 21** at 9:00 a.m. in areas that have experienced moisture intrusion. Results could affect remediation scope.
+      - Roof contractor is accelerating: originally planned two sections over April break, now proposing three sections.
+      - School is expected to be fully buttoned up before the start of the 2025–26 school year, with only minor finish work (gutters, curbing, trim) potentially extending into fall.
+    key_speakers: ["CFO/facilities administrator (voice)", "Jen (subcommittee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

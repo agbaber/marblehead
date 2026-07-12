@@ -9,7 +9,116 @@ video_url: "https://www.youtube.com/watch?v=0IJSDWWiuo8"
 duration_seconds: 12352
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee interviews two interim superintendent finalists"
+  summary: "The Marblehead School Committee held a special public meeting to interview two candidates for interim superintendent: Janelle Pearson Campbell and Teresa McGinness. Each candidate answered the same ten prepared questions covering onboarding plans, budget engagement, MTSS methodology, inclusion, DEI, and community transparency. The committee then discussed next steps, dividing reference-check calls among members with a goal of voting on a selection at the next scheduled meeting on Thursday."
+  decisions:
+    - "Divided reference check calls among committee members for both candidates"
+    - "Scheduled deliberation and potential vote on interim superintendent selection for Thursday's meeting"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 7
+    end_seconds: 610
+    headline: "Chair Fox opens meeting, explains interview format and feedback process"
+    dek: "Committee chair Sarah Fox described the interview structure, public feedback forms, and the rationale for not including live public questions."
+    summary: "Chair Sarah Fox called the meeting to order at 5:00 PM and explained the format: ten prepared questions, two questions per committee member, follow-up questions allowed through the chair. She noted feedback forms and candidate résumés were available at the back of the room and encouraged community members to submit written feedback or email the committee. Fox clarified this was a formal school committee interview rather than a full day-in-district process and asked the audience to refrain from disruption to protect the candidates."
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 610
+    end_seconds: 692
+    headline: "Committee introduces itself to first candidate Janelle Pearson Campbell"
+    dek: "Members introduced themselves as candidate Pearson Campbell joined the interview session."
+    summary: "Chair Fox introduced committee members Sarah Fox, Brian OTA, Megan Taylor, Jen Schaffner (Vice Chair), and others to the first candidate, Janelle Pearson Campbell, who had previously met the committee the prior week. Fox reminded the audience that the session was being recorded and would be available on YouTube."
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 692
+    end_seconds: 3633
+    featured: true
+    headline: "Janelle Pearson Campbell interviewed for interim superintendent, addresses budget, inclusion, and DEI"
+    dek: "Candidate Pearson Campbell, a 23-year educator and former interim superintendent, answered 10 questions on onboarding, budget stakeholder engagement, MTSS, inclusion, transparency, and community belonging."
+    summary: |
+      Janelle Pearson Campbell introduced herself as a 23-year educator who began as a pharmacy major, served as interim superintendent in North Hampton Public Schools (where she inherited 75% staff turnover and a budget deficit), assistant superintendent in Old Rochester Regional School District during COVID, and assistant director of special education in Walkin Public Schools.
+      
+      **Key answers included:**
+      
+      - **90-day plan**: Visiting schools and community members, analyzing DESE data and subgroup achievement, reviewing the district website, meeting with principals and department heads, beginning budget review in October using a five-year window approach, and sharing an interactive document publicly.
+      
+      - **Budget engagement**: Sending family and staff surveys, analyzing Chapter 70 funds with the finance team, doing a 'shopping' audit of existing resources, reviewing Title I/II/IV grants, working with the union on staffing decisions, and using accessible Google Docs to communicate the budget publicly.
+      
+      - **MTSS/advanced learners**: Reviewing documentation of existing MTSS structures, using standard-based Navigator (a free DESE tool), creating onboarding PowerPoints, and reviewing schedules to identify time for acceleration and intervention.
+      
+      - **Inclusion and differentiated instruction**: Defined inclusion as all learners being supported—general ed and special ed teachers co-teaching and intertwining their roles; noted physical classroom setup matters for auditory/visual/kinesthetic learners; described 60-minute blocks broken into acceleration/intervention time.
+      
+      - **DEI and belonging**: Led district-wide professional development on DEI implementation; participated in the state-level Readiness Committee; developed an inclusive practice guide; emphasized community meetings to discuss data openly.
+      
+      - **Transparency**: Prioritizing the website, sending bi-weekly newsletters with spotlights on staff, holding open community forums, and using the Marblehead Beacon for open dialogue.
+      
+      - **Pressing issues in Marblehead**: Centering students in every decision, creating a feasible budget, and building a sense of belonging and community; referenced the district's completed building projects as a source of pride.
+      
+      - **What gives her pause**: Expressed excitement rather than pause at community engagement; said she would always make sure to have complete information before speaking publicly; noted she would need honesty and direct communication from stakeholders.
+      
+      She mentioned that her father passed away during the pandemic, which reinforced her belief in celebrating accomplishments and focusing on the positive. She also noted she attended a school in Marblehead's district (BR school) in fifth grade.
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 3633
+    end_seconds: 6896
+    headline: "Committee takes recess between the two candidate interviews"
+    dek: "Chair Fox called a recess at approximately 6:01 PM and noted the second interview would begin when the next candidate arrived."
+    summary: "Following the conclusion of Janelle Pearson Campbell's interview, Chair Fox called a recess at 6:01 PM. The committee had scheduled an hour and a half for each interview with a buffer between them. Fox noted to the public via the live stream that the first interview finished slightly early, and the meeting would resume when the second candidate arrived, estimated around 7 PM."
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 6896
+    end_seconds: 10160
+    headline: "Teresa McGinness interviewed for interim superintendent, discusses data-driven approach and community trust"
+    dek: "Candidate McGinness, an assistant superintendent with eight years in her current district, answered identical questions emphasizing transparency, budget collaboration, MTSS implementation, and community engagement."
+    summary: |
+      Teresa McGinness introduced herself and outlined three core values guiding her leadership: Excellence (high expectations and a continuum of services), Building Community (nurturing growth-oriented relationships), and Equity (an inclusive environment with joyous student engagement and belonging as the overarching umbrella).
+      
+      **Key answers included:**
+      
+      - **90-day plan**: Establishing a communication plan with the school committee first, then central office staff and principals; gathering both qualitative (focus groups, community forums) and quantitative (three-question staff/parent survey) data; conducting a historical/present document review; developing an action plan from November to June and sharing it broadly with benchmarks.
+      
+      - **Budget engagement**: Meeting first with the assistant superintendent of finance and town finance officials; working collaboratively with central office and principals; reviewing enrollment, staffing, programs, and anticipated caseloads; looking at alternative revenue streams including DESE federal grants (she recently wrote a grant covering 50% of a new literacy program adoption for 2024–25), Foundation grants, and Marblehead Friends of Schools; operating under the assumption that no category is off limits.
+      
+      - **Academic recovery (MCAS/COVID gaps)**: Described using I-Ready three times per year as a progress monitoring tool; in her district, one elementary school (700 students, 40% non-English-speaking parents) was recognized by DESE as a School of Recognition for growth since COVID; cited 23-point gain in math and 15-point gain in ELA over 2017–2019 from instructional coaches and cohesive curriculum; from 2022 to 2023, the district showed remarkable growth across many grade levels and one school is now 23 points ahead of pre-COVID numbers in science.
+      
+      - **MTSS**: Described a tiered support system articulated K–8 (working on extending to grade 12); tier one covers all students academically and behaviorally; using I-Ready data and intervention blocks with four cycles per year; working on measuring social-emotional wellness growth more accurately.
+      
+      - **Inclusion and differentiated instruction**: Defined inclusion as every student having a sense of belonging and worth; special educators and ESL teachers co-teaching or supporting within the general education setting; students are not pulled out of core instruction; described how intervention blocks allow grouping by need rather than label; used DESE's accelerated learning roadmap adopted post-COVID.
+      
+      - **DEI and belonging (including METCO)**: Acknowledged making a mistake early in her role—chartering a bus to bring METCO families to open house without understanding community context; subsequently went to Dorchester at 5:20 AM to ride the bus and learn the experience firsthand; advocates meeting families where they are, including at senior centers; described using diversity to mean neurodiversity, learning styles, and cultural backgrounds; emphasized anti-racist professional development for staff.
+      
+      - **Transparency**: Used the upcoming unpacking of new health and wellness standards as an example—sharing the rationale and data publicly from the start; publishing bi-weekly newsletters with a budget section every issue; sharing the 'why' behind decisions rather than just citing mandates; acknowledged limits around student behavioral/disciplinary information but emphasized building a culture of trust.
+      
+      - **Pressing issues in Marblehead**: Building trust in leadership as the top priority; addressing the budget and contract negotiations; establishing stability through transparent communication and clear priorities; highlighted social-emotional recovery of students.
+      
+      - **What gives her pause/what she needs**: Said leaving a stable eight-year position is a calculated risk reflecting genuine interest; asked the committee what they would need from her; committee members emphasized stability, hitting the ground running, transparent communication, willingness to make difficult decisions, and relationship-building with all stakeholders. McGinness also disclosed interest in applying for the permanent position if the interim role goes well; the chair clarified that Marblehead does not have a contractual clause preventing an interim from applying for the permanent position.
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 10160
+    end_seconds: 12276
+    headline: "Committee deliberates next steps, divides reference calls, eyes Thursday vote"
+    dek: "After a five-minute recess, the committee discussed how to complete reference checks equitably for both candidates and whether to visit Teresa McGinness's district before Thursday's meeting."
+    summary: |
+      Chair Fox opened post-interview discussion by thanking the screening committee for identifying two strong candidates. She distributed reference grids for both candidates and outlined the process for next steps.
+      
+      **Key discussion points:**
+      
+      - **Day-in-district visit**: Brian OTA and Megan Taylor strongly advocated for visiting Teresa McGinness's current district before a vote. Fox noted this was not standard for interim searches (consistent with how the 2019 interim search was conducted) but agreed it should be attempted if feasible before Thursday. Sarah Fox and Jen Schaffner said they would reach out to McGinness to arrange a visit. For Janelle Pearson Campbell, who is not currently in a district, the committee agreed deeper reference calls would provide comparable information.
+      
+      - **Reference call assignments (Janelle Pearson Campbell)**: Members divided calls—Jen Schaffner (mayor), Fox (school committee chair), another member (budget/finance chair), Fox (past superintendent), Fox (middle school principal), Alison (elementary principal), another member (union president), another member (team chair/SPED), another member (parent references). Megan Taylor was assigned CPAC contact information.
+      
+      - **Reference call assignments (Teresa McGinness)**: Sarah Fox and Jen Schaffner planned to visit the district; Alison Taylor (principal), Megan Taylor (teachers union president), others assigned to superintendent, PTO parent, and director of student services. Fox noted the CPAC number was not visible on either application and would research it.
+      
+      - **Timeline**: The committee expressed reluctance to wait two more weeks for the next regular meeting. Fox confirmed a potential vote was already tentatively on the Thursday meeting agenda. The committee agreed to report reference findings and deliberate Thursday, with a possible vote that night.
+      
+      - **Community feedback**: Fox asked staff to post the feedback form electronically so that community members who watched via Zoom could submit responses; feedback can be emailed to schoolcommittee@marbleheadschools.org.
+      
+      Fox adjourned the meeting at approximately 8:24 PM.
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

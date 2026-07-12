@@ -9,7 +9,160 @@ video_url: "https://www.youtube.com/watch?v=3OqKYsTWJ4U"
 duration_seconds: 5107
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee appoints parent to interim superintendent search committee, 3-0"
+  summary: "The Marblehead School Committee held its first meeting of the school year, opening with public comment on pedestrian safety near Glover School and student privacy concerns after personal information appeared in published public-records documents. The committee voted 3-0 (with one abstention) to appoint Sarah Magazine as the parent representative to the interim superintendent screening committee; a separate motion to add a CPAC representative died for lack of a second. Members also discussed ARPA fund allocation, with one member noting a roughly $413,000 gap between what the schools requested and what they received, and tabled a vote on district student handbooks until the next meeting."
+  decisions:
+    - "Approved scheduled bills totaling $663,934.07"
+    - "Approved appointment of Sarah Magazine as parent representative to interim superintendent screening committee (3-0, one abstention)"
+    - "Motion to add a CPAC member to the screening committee died for lack of a second"
+    - "Continued vote on student handbooks to next meeting"
+  votes:
+    - motion: "Approve scheduled bills totaling $663,934.07"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Sarah Magazine as parent representative to interim superintendent screening committee"
+      result: "in favor (3 to 0)"
+    - motion: "Add a CPAC member to the interim superintendent screening committee"
+      result: "failed — no second"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 24
+    end_seconds: 121
+    headline: "Chair opens meeting with acknowledgments for building staff and first day of school"
+    dek: "Board chair recognized building secretaries and custodians for summer preparation and noted a successful first day of school."
+    summary: "The chair called the meeting to order at 7:01 and offered acknowledgments for building secretaries who processed paperwork and supplies, and custodians who spent the summer waxing floors. A board member also commended all principals and shared a personal note about a child starting at Village School."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 121
+    end_seconds: 1049
+    featured: true
+    headline: "Residents press school committee on decade-old unmet Glover School traffic-safety condition"
+    dek: "Multiple residents cited a 2012 planning board site-plan condition requiring six-foot bike-friendly shoulders on Maple Street that they say has never been installed."
+    summary: |
+      **Dan Albert (50 Lester Road)** outlined the history: in 2009 voters approved the new Glover School; a 2011 peer review by Faye Spofford & Thorndike recommended six-foot bike-friendly shoulders; and the planning board's February 2012 site-plan approval required re-striping Maple Street between Lafayette and Humphrey Streets to provide two such shoulders. Albert said he learned through a public-records request in June that the shoulders had never been created, contacted town officials, received no substantive reply through August, and was ultimately told by Planning Board Chair Bob Schaffner that enforcement rested with the DPW. Albert asked the school committee to take forceful action rather than merely send emails.
+      
+      **Alex Chrisack (1 Tedesco Street)** described living at the six-way intersection where students cross to Glover School. She recounted multiple near-misses — including a traumatic incident where a driver braked hard and honked when her four-year-old chased a ball into the street — and asked the committee to act.
+      
+      **Alex Shoob (2 Richard Road)** echoed Albert's request and noted that traffic studies have already been done, so a new study is not necessary; he asked the committee to ensure the shoulders are installed as soon as possible.
+      
+      A board member responded that road markings are outside the school committee's governing authority but said the committee would reach out to Chief King for a traffic study and would ask Superintendent Michelle Cresta to place the issue on the safety committee's agenda.
+    key_speakers: ["Dan Albert (resident)", "Alex Chrisack (resident)", "Alex Shoob (resident)", "Sarah Fox (Chair)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 1154
+    end_seconds: 1360
+    headline: "Online commenter raises student privacy concern after personal emails published in media"
+    dek: "A parent joining remotely said she was troubled that student names, personal email addresses, and school placements appeared in publicly released school-department records."
+    summary: "An online participant (named Kazi or similar, audio unclear) said she struggled with whether to raise the issue but felt compelled to after reading a local news publication that included emails from the school department containing student names, personal email addresses, and school placements. She has children with ADHD and a son with autism, and said private communications she sent to the school should be redacted before public release. She asked the committee to implement processes ensuring thorough redaction — multiple reviewers — before any Massachusetts Public Records Law response."
+    key_speakers: ["Resident (online)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1360
+    end_seconds: 1499
+    headline: "CPAC co-chair reads letter requesting representation on interim superintendent search committee"
+    dek: "Jen Jackson, co-chair of the Marblehead Special Education Parent Advisory Council, read a formal letter requesting a CPAC seat on the interim superintendent screening committee."
+    summary: "Jen Jackson (23 Bowen Street), co-chair of the Marblehead SEPAC (CPAC), read a letter to Chair Fox requesting that CPAC be given a seat on the 2023 search committee for an interim superintendent. The letter cited CPAC's statutory authorization under M.G.L. c.71B §3 and 603 CMR 28.05.07 to advise the school committee on matters pertaining to students with disabilities. CPAC noted it has participated in previous superintendent and administrator search committees and offered to provide a member who has not previously participated in a district search."
+    key_speakers: ["Jen Jackson (CPAC co-chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 1690
+    end_seconds: 1782
+    headline: "Student representative reports on first week back, prom and graduation dates set"
+    dek: "New student representative Cat Piper gave her first report, covering the high school's abbreviated first day, athletics, and upcoming senior events."
+    summary: "Student representative Cat Piper reported that school started Tuesday, September 7th with seniors welcoming freshmen at 7:45 a.m. and grades 10–12 arriving at 11 a.m. The senior class selected the House of Blues for prom on May 29th, with graduation on May 31st. Athletics highlights: first football game of the season is tomorrow at 6:30 p.m. (blackout theme), girls field hockey won their first game, and cross country was successful in their first meet against Salem."
+    key_speakers: ["Cat Piper (student representative)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 1828
+    end_seconds: 2088
+    headline: "Superintendent and assistant provide district opening update, flag special education program review"
+    dek: "Interim Superintendent Michelle Cresta reported a successful school opening and announced meetings with firms to conduct a special education program review before budget season."
+    summary: |
+      Superintendent Cresta reported grades 1–12 returned Tuesday and preschool/kindergarten returned Thursday. Convocation featured Dr. Judy Carrington speaking on staff mental health and wellbeing. Warm-weather mitigation measures were in place — additional fans, moving hotter classrooms to cooler areas.
+      
+      On the **special education program review**: Cresta said a memo was added to the school community drive the evening before the meeting. She and Dr. Donnelly plan to meet with two prospective review firms that week. The goal is to have the review mostly complete before the budget process begins in December. A committee member asked that the school committee be involved in scoping the review.
+    key_speakers: ["Michelle Cresta (Interim Superintendent)", "Julie (Assistant Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.75
+    start_seconds: 2088
+    end_seconds: 2440
+    headline: "Committee discusses Written Wisdom literacy curriculum and equity concerns"
+    dek: "A board member raised community concern that adopting a standardized literacy curriculum might reduce teacher autonomy, and the assistant superintendent explained the district's 'skillful implementation' approach."
+    summary: "A committee member asked whether the new Written Wisdom literacy curriculum sacrifices teacher individuality in pursuit of equity. The assistant superintendent explained the district aims for equity and alignment — students deserve equal access to instruction — while still allowing educators to make professional decisions within the curriculum framework. The district uses professional learning communities (PLCs) and literacy facilitators at each grade level. Accommodations remain in place for special education students."
+    key_speakers: ["Julie (Assistant Superintendent)", "Jen (committee member, remote)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2440
+    end_seconds: 2494
+    headline: "Committee approves scheduled bills totaling $663,934.07"
+    dek: "On a motion by Allison Taylor, the committee approved the consent agenda bills unanimously, 4-0."
+    summary: "Chair Fox asked for a motion to approve scheduled bills totaling $663,934.07. The motion was made by Allison Taylor, seconded, and carried 4-0 (Brian Oda yes, Allison Taylor yes, one additional member yes, Sarah Fox yes)."
+    key_speakers: ["Sarah Fox (Chair)", "Allison Taylor (member)", "Brian Oda (member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 2494
+    end_seconds: 2998
+    headline: "Committee appoints Sarah Magazine as parent rep on interim superintendent search, 3-0; CPAC motion dies"
+    dek: "Chair Fox nominated Sarah Magazine, a PTO president and strategic communications consultant, as the parent representative; a motion to also add a CPAC member received no second."
+    summary: |
+      The chair announced the interim superintendent screening committee will consist of two school committee members, one administrator (Michelle Cresta), one staff member (Allison Carey, a mental health clinician in her 11th year with the district), and one parent. Twelve parents submitted letters of interest; one withdrew.
+      
+      Chair Fox nominated **Sarah Magazine**, parent of students at Village and Glover schools, currently in her second year as PTO president and a strategic communications consultant and former Massachusetts state government spokesperson. The motion passed **3-0 with one abstention** (the abstaining member, joining remotely, said she had missed the prior meetings where the committee structure was discussed).
+      
+      A committee member then made a motion to add a CPAC member to the committee, citing CPAC's statutory role and past precedent. The motion **died for lack of a second**. The chair responded that the committee followed its consultant's recommendation on committee size (5 members), that 80% of the current committee has special education experience, and that the state statute does not require a CPAC board member — only someone who can speak from a special education lens.
+    key_speakers: ["Sarah Fox (Chair)", "Brian Oda (member)", "Allison Taylor (member)", "Jen (member, remote)"]
+  - topic: bonding-capital
+    topic_confidence: 0.72
+    start_seconds: 2998
+    end_seconds: 3634
+    headline: "Committee member flags $413K gap between ARPA funds requested and received by schools"
+    dek: "Board member Allison Taylor reported that the schools received approximately $652,000 of ARPA funds — roughly $413,000 less than she believed they had requested — and that some of the additional amount counted by the town is for shared financial software."
+    summary: |
+      Committee member Taylor said she has been a longstanding advocate for ARPA funds going to the school system. She reviewed documents showing the schools were allocated approximately $652,613 — a gap of about $413,000 from what she understood was requested. Select Board Chair Aaron Noonan had disclosed in an email that afternoon that the schools had received $1.07 million total.
+      
+      Interim Superintendent Cresta explained two sources of the discrepancy:
+      1. **Capital asks** — At the last town meeting, amounts presented to town meeting were understated by about $200,000 due to a clerical/sorting error; the town made the schools whole by adding approximately $200,000.
+      2. **Financial software** — The town is planning to replace its financial software (dating to 2008) and is attributing a portion of the cost (approximately $200,000) as a school expense, based on a usage percentage.
+      
+      Taylor argued that if money is labeled as school money she should be able to direct it toward student needs rather than town-wide administrative systems. The committee agreed to schedule a meeting with the town administrator and Cresta before the next school committee meeting to get full details, and to bring a draft memo to the select board urging greater transparency in ARPA allocations.
+    key_speakers: ["Allison Taylor (member)", "Michelle Cresta (Interim Superintendent)", "Sarah Fox (Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.7
+    start_seconds: 3953
+    end_seconds: 4027
+    headline: "Committee defers vote on student handbooks; asks staff to address specific policy questions"
+    dek: "Draft handbooks for Veterans, elementary, and high schools were distributed, but a vote was deferred to the next meeting to allow members more time to review."
+    summary: |
+      Superintendent Cresta noted three handbooks (Veterans School, elementary — covering Glover, Brown, and Village — and the high school) were placed in the shared drive, with the high school copy still having minor formatting issues. Changes are largely annual updates plus legally required additions on dress code (religious hairstyles) and school discipline. A new item at the high school involves a vaping diversion program through Mass General Hospital.
+      
+      A committee member raised questions about: conflict resolution policy referencing school committee policy KE, dress code enforcement consistency, and the definition/threshold for bullying. The chair suggested members send their questions to administration before the next meeting and that the vote be taken at the next meeting. The committee also noted that going forward, handbooks would be reviewed and approved each spring rather than in September.
+    key_speakers: ["Michelle Cresta (Interim Superintendent)", "Sarah Fox (Chair)", "Allison Taylor (member)"]
+  - topic: public-safety
+    topic_confidence: 0.65
+    start_seconds: 4027
+    end_seconds: 4282
+    headline: "High school vaping diversion program through Mass General Hospital described"
+    dek: "A new vaping diversion program replacing the prior program will use surveys and three-to-four sessions run by social worker Gina Hart, with reduced school discipline for participants."
+    summary: "The assistant principal or administrator described a new vaping diversion program through Mass General Hospital, replacing the prior program developed by social worker Gina Hart. The program includes surveys similar to the YRBS, three-to-four sessions with Hart, and can be used as a standalone resource for parents with concerns about substance use. Students who complete the diversion program receive reduced school discipline — separately from any MIAA consequences for student athletes. The high school's vape detectors alert staff via text message and also detect loud noise such as a fight."
+    key_speakers: ["Michelle Cresta (Interim Superintendent)", "Allison Taylor (member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 4752
+    end_seconds: 5082
+    headline: "Subcommittee updates: safety committee, policy, facilities and finance meetings being scheduled"
+    dek: "Board members reported subcommittee activity including upcoming safety, finance, and policy subcommittee meetings, and CPAC's first district meeting the following day."
+    summary: |
+      - **Safety committee**: A meeting is being scheduled within the next two weeks; it is a superintendent advisory committee and not subject to open meeting law.
+      - **Policy subcommittee**: Jen and Allison will schedule a meeting with counsel before the end of September.
+      - **Facilities and Finance**: Two meetings being scheduled — a joint meeting with the select board chair and town administrator, and a separate Finance subcommittee meeting (Allison, Jen, Michelle, and Emma) targeting the end of the following week.
+      - **CPAC**: Will hold its first district meeting the following day at noon.
+      - **Correspondence**: The chair acknowledged an uptick in parent contacts about privacy concerns following the release of records containing personal student information, apologized for the chilling effect it may have had, and encouraged parents to continue reaching out.
+    key_speakers: ["Sarah Fox (Chair)", "Allison Taylor (member)", "Jen (member, remote)", "Michelle Cresta (Interim Superintendent)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

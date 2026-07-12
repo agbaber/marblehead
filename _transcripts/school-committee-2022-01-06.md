@@ -9,7 +9,144 @@ video_url: "https://www.youtube.com/watch?v=2d1gv-EsEcI"
 duration_seconds: 5241
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee reviews COVID dashboard, FY22 finances, and 2022-23 calendar"
+  summary: "The School Committee heard public concern about COVID dashboard transparency, with district nurses and the superintendent explaining the reporting process tied to the Board of Health. Superintendent presented two draft 2022-23 school year calendars for committee feedback, with a final version to be brought for a vote on January 20th. Business director Michelle reported FY22 spending at 26% of budget as of November 30, with a projected $112,000 special education out-of-district deficit and a substitute account now at 28% spent following a pay-rate increase to $110/day."
+  decisions:
+    - "Approved minutes from four meetings (5/6/21, 5/13/21, 5/19/21, 5/20/21) with one correction"
+    - "Approved schedules of bills totaling approximately $2,104,357.53"
+    - "Voted to enter executive session to discuss strategy for non-union personnel negotiations (Director of Student Services)"
+  votes:
+    - motion: "Approve four sets of meeting minutes with correction"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedules of bills totaling approximately $2,104,357.53"
+      result: "in favor (unanimous)"
+    - motion: "Enter executive session pursuant to MGL Chapter 30A Section 21A Purpose 2"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 22
+    end_seconds: 505
+    headline: "Board commends staff for COVID test kit pickup over break and three NYT contest winners"
+    dek: "Members praised Scott Lavoy and district leadership for securing test kits over the New Year holiday and recognized three high school students placed in the top 25 of a New York Times writing contest."
+    summary: "Board members opened with commendations. A member praised Scott Lavoy, who went to Franklin on New Year's Day to retrieve COVID test kits after a multi-day delay, and the entire leadership team who assisted with Sunday's distribution. A separate commendation recognized three MHS students — Mimi Fallon, Carrie Lindy, and Courtney Duffy — who were among 25 nationwide finalists featured in a New York Times \"Coming of Age\" contest out of over 4,000 entries. Town Administrator Jason Silva's upcoming departure after 3.5 years was also acknowledged, with members noting his work on the school building project, zoning process, and budget transition."
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 536
+    end_seconds: 883
+    headline: "Parents raise COVID dashboard transparency concerns; resident thanks district for sustainability work"
+    dek: "Two residents questioned why positive antigen tests and self-reported results were removed from the school dashboard; a third commended a district sustainability meeting."
+    summary: |
+      **Sandra Callahan (25 August Road)** said a disclaimer added to the COVID dashboard on Monday indicated only confirmed PCR tests would be counted, excluding home antigen and self-reported positives. She asked whether the district was requiring PCR confirmation for antigen positives, what constitutes an official result, and why parents learned about high absenteeism from the local news rather than the superintendent. She noted other districts such as Lynnfield list both PCR and antigen results.
+      
+      **Jessica Benedetto (Bradley Road)** raised the issue of school bus transportation as a necessity for essential workers facing unprecedented staff shortages, saying she had raised the topic for two years and wanted it included in budget discussions.
+      
+      **Elaine Leahy (Ida Road)** thanked the district for a sustainability meeting held that day, noting composting at Veterans, new trash bags, and the work of Sustainable Marblehead.
+    key_speakers: ["Sandra Callahan (resident)", "Jessica Benedetto (resident)", "Elaine Leahy (resident, Sustainable Marblehead)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 883
+    end_seconds: 1042
+    headline: "Committee approves minutes from four May 2021 meetings with one correction"
+    dek: "Minutes from 5/6, 5/13, 5/19, and 5/20 were approved unanimously after correcting a reference to 'director of student services' to 'director of food services' in the 5/20 minutes."
+    summary: "The chair called for approval of four sets of meeting minutes. Member Sarah noted one correction in the 5/20 minutes: a reference to the superintendent touching base with the \"director of student services\" should read \"director of food services.\" The minutes were then approved unanimously on a motion by Megan, seconded by Sarah."
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1042
+    end_seconds: 1169
+    headline: "Superintendent reports sustainability initiatives, budget subcommittee meetings scheduled"
+    dek: "District updates included composting expansion to middle school grades, an electric bus company site visit, and upcoming joint budget subcommittee meetings with the town."
+    summary: "The superintendent reported that composting and recycling is operational at the high school and beginning at Veterans Middle School, with Village expected next. An electric bus company presented before the holiday break and is scheduled for an on-site visit this month. The superintendent also noted a joint budget meeting with the town was held before the holiday, and that a school committee budget subcommittee meeting and a joint subcommittee meeting with the town were scheduled for the following week. Sustainable Marblehead funded water refill stations at Veterans; idling signage is being expanded to all school buildings."
+    key_speakers: ["Superintendent (John)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 1169
+    end_seconds: 1415
+    headline: "Superintendent addresses COVID dashboard concerns and affirms schools are safely operating"
+    dek: "The superintendent clarified the dashboard reporting process, noting numbers align with Board of Health records, and said the district would act if absences threatened safe operations."
+    summary: |
+      In response to public comment, the superintendent explained that the district monitors staff and student absences daily and would use a snow day if safe operations were threatened. He noted that Lynnfield, the source of Marblehead's dashboard format, does not conduct pool testing and only recently began including antigen results. He stated the district is not hiding case numbers and said nurses are overworked but capable.
+      
+      District nurse Deanna McMahon clarified that antigen positives administered by school nurses flow through CIIC to the Board of Health before appearing on the dashboard, and that the district cannot count unverified self-reported results. She said school-administered antigen and confirmed PCR tests are both counted. The committee acknowledged the lag between testing and dashboard posting.
+    key_speakers: ["Superintendent (John)", "Deanna McMahon (District Nurse)"]
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 1415
+    end_seconds: 2007
+    headline: "Committee also discusses state mask quality, substitute antigen policy, and mask supply status"
+    dek: "Members asked about state-distributed masks and whether positive antigen tests used for sick leave must be PCR-confirmed; the district has over 4,000 masks on hand from prior procurement."
+    summary: "A committee member asked whether state-distributed masks were among those reported as below surgical grade. The superintendent said the commissioner clarified the masks are acceptable face coverings. The district had distributed DESE masks but has over 4,000 masks in reserve from prior procurement. A member asked whether staff using DESE-distributed antigen tests to identify as COVID-positive could use that as basis for sick leave; the superintendent confirmed there is no contractual requirement for a doctor's note after two days, so no issue exists."
+    key_speakers: ["Superintendent (John)", "Sarah (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2007
+    end_seconds: 3625
+    featured: true
+    headline: "Committee debates two draft 2022-23 school calendars; final version to be voted January 20"
+    dek: "Key disagreements centered on whether to start before or after Labor Day, the structure of parent conference days, kindergarten start date, and whether Good Friday should remain a half-day."
+    summary: |
+      The superintendent presented two draft calendars for the 2022-23 school year, both developed after a superintendent's community coffee and consultations with MEA.
+      
+      **Key features common to both versions:**
+      - Three professional development days at the start of the year (moved from end of year)
+      - Full day plus half day for parent conferences in December
+      - Good Friday as a half day
+      
+      **Version 1:** Starts after Labor Day (Tuesday); ends June 21.
+      **Version 2:** Starts before Labor Day (day and a half, then three-day weekend); ends June 16.
+      
+      **Committee feedback:**
+      - **Megan** supported starting after Labor Day for continuity and noted summer programs (Y, camps) would extend an extra week, helping working families. She raised concern about kindergarteners not starting until September 13 under one version.
+      - **Emily** expressed concern that the calendar celebrates only certain religious holidays (Good Friday/Easter) and not others, and suggested the district survey families to be more representative of all faiths. This prompted a debate about whether Christmas/Easter are federal holidays versus religious observances.
+      - **Sarah (Fox)** supported the after-Labor-Day start, citing recurring heat days in late August forcing last-minute schedule changes. She advocated moving kindergarten evaluations back to April from September to improve staffing planning.
+      - **David** noted the roof situation requires buckets and ceiling tile replacement ongoing.
+      - The superintendent said he would incorporate feedback and return a final calendar version for a vote at the January 20 meeting.
+    key_speakers: ["Superintendent (John)", "Megan (School Committee member)", "Emily (School Committee member)", "Sarah Fox (School Committee member)", "David Harris (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.93
+    start_seconds: 3625
+    end_seconds: 4362
+    headline: "FY22 budget at 26% spent as of Nov. 30; substitute rate increase attracts 17 new hires"
+    dek: "Business director Michelle reported a $112,000 projected special education out-of-district deficit and noted substitute spending jumped to 28% of budget versus 5% at same point last year."
+    summary: |
+      Business Director Michelle presented the FY22 operating budget report as of November 30, 2021. Key figures:
+      
+      | Item | Amount | % of Budget |
+      |---|---|---|
+      | Total spent YTD | ~$10,797,474 | 26% |
+      | Last year same period | — | 29% |
+      | Substitute account spent | $65,256 | 28% (vs. 5% last year) |
+      | Custodial overtime spent | $41,268 | 55% (vs. 65% last year) |
+      | SPED out-of-district projected deficit | ~$112,000 | — |
+      
+      The substitute rate was raised to $110/day, resulting in 17 new substitutes hired. The custodial overtime overage is expected to continue due to workers' comp injuries and COVID absences; the FY23 budget will request two additional custodial positions (one at Brown School, one floater).
+      
+      **COVID funding:** Most earlier relief funds (state coronavirus prevention, municipal ARPA allocation of $1M, school reopening grant, ESSER I/II) are fully or nearly spent. The ESSER III grant (award ~$796,750) has $229,577 spent on IT network/wi-fi upgrades originally expected to be covered by ARPA. The town declined to use ARPA funds for this purpose after the district committed; approximately $124,000 remains undetermined in ESSER III. Permanent building substitutes and an additional nurse are encumbered against ESSER III. Approximately $470,000 remains in various COVID funding lines.
+      
+      A committee member asked about potential uses for remaining ESSER III funds including after-school programming, summer remediation, and learning loss services. The superintendent indicated preliminary discussions are underway about an in-house after-school program.
+    key_speakers: ["Michelle (Business Director)", "Sarah (School Committee member)", "Superintendent (John)"]
+  - topic: bonding-capital
+    topic_confidence: 0.82
+    start_seconds: 4607
+    end_seconds: 5101
+    headline: "Facilities subcommittee reports broken HVAC unit atop field house; roof leaks require ongoing patching"
+    dek: "One of two rooftop HVAC units serving the field house has failed; the district is pursuing quotes and may explore ARPA funding for the replacement given its ventilation classification."
+    summary: |
+      The facilities subcommittee met Monday. The primary issue discussed was the loss of one of two rooftop HVAC units at the field house. The remaining unit is under strain. Facilities Director Todd Bloodgood has sought bids for roof repairs across the district but has received minimal contractor response. The committee is in contact with Gilbane and Left Field (construction manager from the new school project) for informal estimates.
+      
+      A committee member noted the high school roof is "spongy" and custodians are continuously replacing water-stained ceiling tiles due to ongoing leaks. The capital requests have been submitted to the town in groupings above and below the $25,000 threshold per town protocol, with a January 11 deadline for first-pass submission. The committee noted that replacing an HVAC/ventilation unit could qualify for ARPA funding, though the town's position on that remains unclear.
+    key_speakers: ["Sarah (School Committee member, Facilities Liaison)", "Superintendent (John)", "Michelle (Business Director)"]
+  - topic: labor-personnel
+    topic_confidence: 0.92
+    start_seconds: 5147
+    end_seconds: 5280
+    headline: "Committee votes unanimously to enter executive session on Director of Student Services contract"
+    dek: "The committee entered executive session pursuant to MGL Chapter 30A Section 21A Purpose 2 to discuss non-union personnel negotiations, with no return to open session."
+    summary: "At the close of the public meeting, the chair moved to enter executive session to discuss strategy in preparation for negotiations with non-union personnel, specifically the Director of Student Services. The motion was made by Sarah, seconded by Megan, and approved unanimously on a roll-call vote. The committee stated it would not return to open session and would adjourn from executive session."
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

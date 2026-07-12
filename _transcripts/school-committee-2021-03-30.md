@@ -9,7 +9,159 @@ video_url: "https://www.youtube.com/watch?v=thL-cEW9e-E"
 duration_seconds: 7276
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee approves COVID MOA with teachers union 5-0; $331K budget gap remains unresolved"
+  summary: "The Marblehead School Committee voted unanimously to approve a memorandum of agreement with the Marblehead Education Association covering COVID-19 distancing and notification requirements, pending legal counsel review. The committee heard a FY22 budget update showing a $331,206 gap between the school department's priority list and available town funding, with Superintendent Buckey and Town Administrator Jason scheduled to meet to close the gap. Committee member Sarah Fox made an unsuccessful motion to postpone the scheduled budget public hearing until a secured funding number is established; no other member seconded the motion."
+  decisions:
+    - "Approved MOA with Marblehead Education Association (COVID distancing/notification) pending legal counsel review"
+    - "Held motion to postpone budget public hearing — motion failed for lack of a second"
+  votes:
+    - motion: "Approve MOA with MEA pending legal counsel review"
+      result: "in favor (unanimous)"
+    - motion: "Postpone budget public hearing until funding is secured"
+      result: "failed (no second)"
+    - motion: "Open second public comment period"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 64
+    end_seconds: 490
+    headline: "Residents demand clarity on how school budget gap shrank from $800K to $331K"
+    dek: "Three residents questioned the budget subcommittee process, the shift in the delta figure, and the absence of a public meeting between the two numbers."
+    summary: |
+      Three residents spoke during opening public comment:
+      
+      - **Catherine Martin, 29 West Shore Drive** questioned when school committee liaisons were informed the town would provide only level funding, why the budget delta dropped from $800K to $300K without a public meeting, and asked for a tracking sheet to be presented that evening.
+      - **Kim Day, 18 Liberty Road** echoed Martin's concerns, noted that a $331K gap was shared at the morning joint meeting, said a prior priority — a high school academic skills position — had disappeared from the list, and asked the community to understand the trade-offs.
+      - **Erin Noonan, Beverly Ave** expressed frustration that needs-based budgeting was again deferred, asked for agenda items on learning loss and remediation, and questioned how pandemic-related state money for remediation would be spent.
+    key_speakers: ["Catherine Martin (resident)", "Kim Day (resident)", "Erin Noonan (resident)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 490
+    end_seconds: 929
+    featured: true
+    headline: "School Committee votes 5-0 to ratify COVID MOA with teachers union, pending legal review"
+    dek: "The MEA had already ratified the agreement covering distancing reductions and COVID notification requirements for the return to in-person learning."
+    summary: |
+      The chair announced that a memorandum of agreement (MOA) with the Marblehead Education Association covering COVID-19 protocols had been ratified by the MEA and was before the committee for a vote.
+      
+      Key discussion points:
+      - The MOA addresses reduced physical distancing and staff notification requirements when a COVID-positive case occurs in a classroom at less than six feet.
+      - A committee member asked whether the same notification and air purifier safeguards would extend to students; administrators noted students who are close contacts are notified through quarantine protocols, and that 268 additional air purifiers had been ordered.
+      - One member expressed comfort voting with the caveat that the document pass legal counsel review by John Foss; the superintendent noted the language was drawn from a Massachusetts template used by other districts and carried no budgetary implication.
+      - The agreement was described as enabling grades 7–12 to return before DESE had even set a return date for high schools.
+      
+      **Vote:** Motion by Sarah Gold, seconded by Emily Barron. Roll call: Sarah Gold – yes; Emily Barron – yes; Megan Taylor – yes; Sarah Fox – yes; David Harris – yes. **Passes 5 to 0.**
+    key_speakers: ["Sarah Fox (committee member)", "Emily Barron (committee member)", "Sarah Gold (committee member)", "Superintendent (John Buckey)", "Megan Taylor (committee member)", "David Harris (committee member)"]
+  - topic: recreation-events
+    topic_confidence: 0.82
+    start_seconds: 1114
+    end_seconds: 2125
+    headline: "Athletic director presents Veterans Middle School softball field improvement plan, committee defers fence decision"
+    dek: "A community group has offered to donate grading, seating, and stonework at the Veterans Middle School softball field; the committee asked for a more detailed plan before approving the permanent outfield fence."
+    summary: |
+      Athletic director Greg (last name unclear from transcript) presented a plan to improve the softball field behind Veterans Middle School:
+      
+      **Proposed improvements (largely operations-level, no committee vote required):**
+      - Grade and clear wooded/rocky area in right field to create two-level stadium-style seating
+      - Install crushed stone walkway behind the batting cage for spectators
+      - Remove or trim tree cluster near the new scoreboard (tree department can handle this)
+      - Paint the existing snack shed red
+      - Install a permanent chain-link outfield fence during April break to replace the mesh temporary fence; the fence is removable for field hockey season
+      
+      **Key details:**
+      - Grading and seating work would be donated by a local company
+      - The permanent fence sleeves are set 18 inches into the ground with caps 4 inches below the grass surface, so the field remains safe for field hockey and intramurals
+      - The field is school-department property behind the Veterans Middle School
+      
+      **Committee discussion:**
+      - Sarah Fox suggested the tree trimming is a quick call to the tree department and that much of the work is operational, not requiring committee approval
+      - Concern was raised that the outfield fence has some community controversy; Fox asked for a more detailed satellite-view plan before approving the fence placement, noting concerns about impact on gym classes and outdoor COVID activities
+      - Superintendent Buckey noted the work was brought to committee to avoid blindsiding members given the history of community disagreement
+      - Park and Rec (Peter James) should be included in the discussion since they maintain the fields
+      
+      **Updated spectator guidance** was also shared: outdoor athletic contests may now have two spectators per athlete for both home and away teams; indoor sports (volleyball) remain at two per home athlete due to space constraints.
+    key_speakers: ["Greg (athletic director, last name unclear)", "Sarah Fox (committee member)", "Superintendent Buckey", "Frank (athletics, last name unclear)"]
+  - topic: school-budget
+    topic_confidence: 0.98
+    start_seconds: 2343
+    end_seconds: 3961
+    headline: "Veterans and high school principals outline three-phase quarantine education plan for full return starting April 5"
+    dek: "Middle school principal Matt described a quarantine education coordinator role and audit options; high school principal Dan Power outlined a parallel plan for the April 5–16 half-day and April 26 full-day return."
+    summary: |
+      The committee heard in-person learning updates from the Veterans Middle School and Marblehead High School principals.
+      
+      **Veterans Middle School (Matt, principal):**
+      - **Phase 1:** Students awaiting a 1–2 day PCR test result are treated as a typical absence; they monitor Google Classroom and email teachers.
+      - **Phase 2:** Students under a quarantine order receive support from a designated *quarantine education coordinator* who provides morning check-ins (~7:30 AM), afternoon check-outs, coordinates with teachers, and can offer the student the option to audit core remote classes (English, math, science, social studies) being taught to the elected-remote cohort.
+      - **Phase 3:** If quarantine numbers exceed Phase 2 capacity, the superintendent may pull a team, grade, or the whole school to a step-back — possibly hybrid, not necessarily full remote.
+      - Since opening, the Veterans Middle School had approximately 10 COVID-related student cases; the vast majority tested positive while already on quarantine, not while infectious in the building.
+      - At peak, quarantine numbers reached 25–26 per grade; currently below 10 and ~13.
+      
+      **High School (Dan Power, principal):**
+      - April 5–16 (half-day schedule): afternoon remote classes provide continuity for quarantined students; mirrors current hybrid model.
+      - After April 26 (full in-person): afternoon remote classes end; the school will adopt a quarantine coordinator model similar to the Veterans plan, using Google Classroom, office hours, Gmail, and course auditing where schedules align.
+      - 130 seniors will begin senior projects starting April 26, reducing building density.
+      - A large outdoor tent and efforts to move classes outside will reduce indoor density.
+      - The custodial crew (led by Rick King, directed by Todd Bloodgood) has set up full classroom furniture in advance so teachers and students can visualize the three-foot spacing.
+      
+      Superintendent Buckey thanked both principals and acknowledged the transition represents a significant undertaking, noting Principal Bauer's flexibility and the importance of families keeping symptomatic children home.
+    key_speakers: ["Matt (Veterans Middle School principal, last name unclear)", "Dan Power (Marblehead High School principal)", "Superintendent Buckey", "Nan (Assistant Superintendent, last name unclear)"]
+  - topic: school-budget
+    topic_confidence: 0.99
+    start_seconds: 4560
+    end_seconds: 6902
+    headline: "FY22 budget gap stands at $331K after reductions; superintendent and town administrator to negotiate"
+    dek: "CFO Michelle presented a revised priority list totaling $619,350 against $288K in available funds, leaving a $331,206 delta; a motion to postpone the budget public hearing failed for lack of a second."
+    summary: |
+      CFO Michelle presented the updated FY22 budget status:
+      
+      **Starting point:** $42,649,142 (initial superintendent's recommended budget)
+      
+      **Reductions made since last presentation:**
+      | Item | Change | Amount |
+      |------|--------|--------|
+      | Technology capital leases | Moved to one-time stimulus funding | –$212,706 |
+      | Brown School custodian (5th FTE) | Covered by half-FTE from another school | removed |
+      | Bright teacher → tutor conversion at HS | Deferred | removed |
+      | Budget priorities 7–13 (lowest tier / pink) | Removed from ask | –$271,360 |
+      | Village teacher leader stipends | Added back (equity concern) | +$44,057 |
+      | Academic skills teacher at high school | Funded via existing position swap | $0 net |
+      
+      **Current budget total:** approximately $42,005,724
+      
+      **Remaining priority list (green + yellow tiers):** $619,350
+      **Available remaining funds:** $288,144
+      **Gap (delta):** **$331,206**
+      
+      Superintendent Buckey noted there are no cuts to existing services; the list represents additions above level funding. He and Town Administrator Jason are scheduled to meet to work toward closing the $331K gap.
+      
+      **Committee discussion:**
+      - Sarah Fox argued the town made clear at the morning joint meeting that no money above level funding would be forthcoming; she raised concerns that the delta shrank from ~$800K to $331K without a public meeting and that the remaining gap could only be closed by cuts or new revenue.
+      - Fox made a motion to postpone Thursday's budget public hearing until a secured funding number is established; **the motion received no second and failed**.
+      - Superintendent Buckey addressed the override question directly, stating he did not believe FY22 was the right year for an override given the pandemic, new school opening, pending strategic plan, and desire to do an override collaboratively with the town if one is pursued.
+      - David Harris pushed back on characterizations of the district's quality, citing federal stimulus funds (~$2.3M received, ~$6M more announced over three years) and the completed 20-year facilities master plan.
+      - The committee agreed to proceed with Thursday's public hearing, with members planning to take notes on community questions and address themes at the end of the session.
+    key_speakers: ["Michelle (CFO, last name unclear)", "Superintendent Buckey (John)", "Sarah Fox (committee member)", "David Harris (committee member)", "Megan Taylor (committee member)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 7110
+    end_seconds: 7212
+    headline: "Closing public comment: resident urges postponing budget hearing until a final number is secured"
+    dek: "Catherine Martin argued that proceeding with a $331K delta in the budget is disingenuous and called for a more interactive hearing format."
+    summary: "**Catherine Martin, 29 West Shore Drive** returned during the second public comment period to urge the committee not to proceed Thursday with a budget hearing while a $331K gap remains unresolved. She argued that public hearing norms — as seen in Planning Board, ZBA, and Conservation Commission hearings — involve back-and-forth interaction, not a collect-and-answer format, and that going into the hearing without a final number risks boxing the committee in if the town does not close the gap."
+    key_speakers: ["Catherine Martin (resident)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 7201
+    end_seconds: 7212
+    headline: "Meeting adjourned at approximately 9:02 PM"
+    dek: "Chair adjourned the meeting after closing public comment with no further hands raised."
+    summary: "The chair adjourned the meeting at approximately 9:02 PM after closing the second public comment period."
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

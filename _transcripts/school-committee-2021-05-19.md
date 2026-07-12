@@ -9,7 +9,70 @@ video_url: "https://www.youtube.com/watch?v=P7-PATti_Lw"
 duration_seconds: 3111
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee votes 5-0 to update outdoor masking policy, exempting students at recess and athletics"
+  summary: "Marblehead School Committee held a special emergency-posted meeting to align the district's masking policy with new DESE guidance issued earlier that week. The committee debated language drafted by legal counsel John Foskett, ultimately voting 5-0 to exempt students from masking requirements when outdoors on school property and to limit the adult outdoor mask requirement to school hours only. Discussion of lunch distancing, singing guidance, and a proposal to allow the superintendent to make future policy changes in response to DESE guidance were deferred to the following evening's regular meeting."
+  decisions:
+    - "Approved updated mask policy: students exempt from outdoor masking on school property; non-student adults must mask outdoors on school property during school hours when social distancing cannot be maintained; language about mask breaks during PE, choir, and woodwind/brass instruments struck from policy"
+  votes:
+    - motion: "Accept policy changes as written by legal counsel John Foskett with addition of 'during school hours' language for adult outdoor masking requirement"
+      result: "in favor (5 to 0)"
+    - motion: "Open second public comment period"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 5
+    end_seconds: 368
+    headline: "Chair explains 48-hour posting requirement that delayed special meeting"
+    dek: "Legal counsel confirmed the committee could not convene an emergency meeting on shorter notice, requiring a full 48-hour public posting."
+    summary: "The chair opened the meeting at 7:05 PM and explained that when new DESE guidance was released, the committee initially hoped the superintendent could implement changes directly. After consulting with the Massachusetts Association of School Committees representative and legal counsel, the committee was advised it could not hold an emergency meeting and needed to post for the full 48-hour notice period. The chair thanked the town clerk for accommodating the last-minute posting on Monday evening."
+    key_speakers: ["Chair (School Committee)", "Town Administrator (referenced)"]
+  - topic: school-budget
+    topic_confidence: 0.55
+    start_seconds: 368
+    end_seconds: 3088
+    featured: true
+    headline: "Committee votes 5-0 to update outdoor mask policy, exempting students; adults limited to school hours"
+    dek: "Revised DESE guidance triggered debate over adult masking at non-school events, mask breaks, lunch distancing, and singing before a unanimous vote."
+    summary: |
+      The sole substantive agenda item was a revised school masking policy drafted by legal counsel John Foskett to incorporate new DESE guidance. Key provisions as voted:
+      
+      - **Masks required** for all individuals inside school buildings and on school transportation.
+      - **Students exempt** from masking outdoors on school property even when social distancing cannot be maintained.
+      - **Non-student adults** must wear masks outdoors on school property **during school hours** when social distancing cannot be maintained (the phrase "during school hours" was added by the committee over Foskett's draft, which had omitted it).
+      - Language requiring mask breaks to occur outdoors with maximal distancing was **struck**.
+      - Language requiring PE, choir, singing, brass/woodwind, and musical theater to occur outdoors at a minimum of 10 feet distancing was also **struck**.
+      
+      **Key debates:**
+      - Committee members Sarah Fox and Megan (last name not captured) raised concern that Foskett's draft, by removing the "outside school hours" exception, would effectively require adults at weekend soccer games and similar events to mask outdoors — the opposite of the committee's intent.
+      - Chair noted Foskett believed the operative phrase "when social distancing cannot be maintained" provided adequate flexibility; the committee disagreed and added "during school hours."
+      - Lead nurse Deanna McMahon raised concerns about outdoor lunch, high school students eating in close proximity, and singing/band, noting those activities are higher-risk. The committee agreed that lunch distancing would remain unchanged under current practice (not altered by this vote) and that singing guidance had not changed per a call with the commissioner that day.
+      - MIAA had voted to allow outdoor sports unmasked; indoor sports had tiered guidance.
+      - A proposal to allow the superintendent to update the policy in line with DESE guidance without a committee vote was raised but deferred to the next night's meeting.
+      
+      > "All other individuals who are not students must continue to wear masks outdoors on school property during school hours when social distancing cannot be maintained." — policy language as voted
+      
+      Vote: 5–0 in favor.
+    key_speakers: ["Chair (School Committee)", "Sarah Fox (School Committee member)", "Megan (School Committee member)", "Emily Baron (School Committee member)", "Sarah Gold (School Committee member)", "David Harris (School Committee member)", "Deanna McMahon (Lead Nurse)", "John (Superintendent/Dr. Bucky referenced)", "John Foskett (Legal Counsel, referenced)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 2731
+    end_seconds: 3094
+    headline: "Residents ask about lunch distancing, singing guidance timeline, and spectator masking"
+    dek: "Three residents spoke during a second public comment period opened by a 5-0 vote after the policy vote."
+    summary: |
+      Three residents addressed the committee:
+      
+      - **Emily Dewitt, 154 Atlantic Avenue**: Expressed appreciation for the vote unmasking students at recess and athletic play but asked about the status of outdoor lunch distancing and called for clearer leadership communication.
+      - **Unnamed resident (music teacher context)**: Asked how quickly the committee could act if DESE updated its singing guidance, noting only 18 days remained with students. The chair committed to calling her first if guidance changed. The chair also noted the choir/singing 10-foot distancing language had been struck from the policy.
+      - **Andrew Kramer, 7 Clifton Avenue**: Asked whether spectators at outdoor school events would need to mask; the chair confirmed that under the "during school hours" language, weekend games would not require adult masking.
+      
+      A second public comment period was opened by a 5-0 vote after the main policy motion passed.
+    key_speakers: ["Emily Dewitt (Resident, 154 Atlantic Avenue)", "Andrew Kramer (Resident, 7 Clifton Avenue)", "Resident at mic (music teacher)", "Chair (School Committee)", "John (Superintendent, responding to singing guidance question)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

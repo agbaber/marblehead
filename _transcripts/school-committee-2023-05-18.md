@@ -9,7 +9,168 @@ video_url: "https://www.youtube.com/watch?v=PXfwAJgRYJU"
 duration_seconds: 4448
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee votes to decline School Choice for 2023-24 and adopts 'Wit & Wisdom' literacy curriculum"
+  summary: "The committee opened with a public hearing and voted unanimously to opt out of School Choice for the 2023-24 year, citing budget instability and a potential 33-position reduction if an override fails. High School Principal Bauer presented on the phased elimination of College Prep 2 (CP2) course levels, emphasizing co-teaching and MTSS as replacement supports, while clarifying there are no plans to eliminate honors or AP courses. The committee also approved a public-comment policy update (policy EDH) and an MOU with Parks & Recreation, and received a first reading on school advisory council and school improvement plan policies."
+  decisions:
+    - "Approved opt-out of School Choice for 2023-24 school year"
+    - "Approved selection of 'Wit & Wisdom' as new K-6 literacy curriculum (funded through ARPA)"
+    - "Approved updated policy EDH governing public comment at school committee meetings"
+    - "Approved updated Memorandum of Understanding with Parks & Recreation"
+    - "Approved consent agenda including minutes and schedule of bills"
+    - "Held first reading of school advisory council policy (BDFA) consolidation"
+    - "Held first reading of school improvement plan policy consolidation"
+  votes:
+    - motion: "Opt out of School Choice for 2023-24"
+      result: "in favor (4 to 0)"
+    - motion: "Adopt policy EDH (public comment) as amended"
+      result: "in favor (4 to 0)"
+    - motion: "Approve updated MOU with Parks & Recreation"
+      result: "in favor (4 to 0)"
+    - motion: "Approve consent agenda (minutes and schedule of bills)"
+      result: "in favor (4 to 0)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 23
+    end_seconds: 128
+    headline: "Committee votes 4-0 to opt out of School Choice for 2023-24"
+    dek: "Superintendent Dr. Bucky recommended against participation citing potential 33-position staff reductions and financial instability around a pending override."
+    summary: "The meeting opened with a public hearing on School Choice for the 2023-24 school year. Dr. Bucky presented a memo recommending the district not pursue School Choice, noting the financial situation with an upcoming override vote and the possibility of reducing staff by 33 positions. The committee moved, seconded by Allison Taylor, and voted 4-0 to accept the recommendation. The hearing was closed at 7:02 p.m."
+    key_speakers: ["Dr. Bucky (Superintendent)", "Allison Taylor (committee member)", "Chair (Sarah Fox)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 164
+    end_seconds: 710
+    headline: "District adopts 'Wit & Wisdom' as new K-6 literacy curriculum after 5-month review"
+    dek: "A 15-member committee reviewed six vendors over 12 meetings, piloted two finalists, and selected Wit & Wisdom; the curriculum is funded through ARPA and materials will be distributed before summer."
+    summary: |
+      Dr. Bucky reported on several district updates:
+      
+      **MTSS / Advanced Learning (K-8):** DESE is partnering with Northwestern University's talent development program to create a continuum of services for above-grade-level students. Marblehead has been nominated as a pilot district for roundtable discussions.
+      
+      **Literacy Curriculum Adoption:** After a 5-month process involving a 15-member review committee (teachers, coaches, administrators), 12 meetings, visits to 7 implementing districts, lesson pilots, and 60 educator feedback forms, *Wit & Wisdom* was selected as the new K-6 literacy curriculum. It replaces the Lucy Calkins writing component while phonics program Foundations remains in place. The adoption is funded through ARPA (as the math curriculum was). Materials will be sent to teachers before summer, with stipended professional development planned.
+      
+      **Superintendent International Trip:** Dr. Bucky was selected by MASS to represent Massachusetts on a superintendent exchange trip to the Dominican Republic (October 5-8), focused on STEM education, at no cost to the district.
+      
+      **Student Representative:** Junior Kat Piper was introduced as the incoming student representative for the next school year.
+    key_speakers: ["Dr. Bucky (Superintendent)", "Megan Taylor (committee member)", "Allison Taylor (committee member)", "Kat Piper (incoming student representative)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 389
+    end_seconds: 932
+    headline: "MHS Legally Blonde production raises over $10,000; year-end activities listed"
+    dek: "High school student update covered sold-out shows, AP exams, junior prom, Holocaust cattle car visit, and upcoming events including the MHS art show and senior prom."
+    summary: |
+      The high school student update included:
+      - *Legally Blonde* ran April 28-30 with three sold-out shows and raised over $10,000; a message from actress Jennifer Coolidge was noted.
+      - AP exams ran May 1-12.
+      - A cattle car visited MHS May 8-9 providing Holocaust education for sophomores.
+      - Junior prom was May 12 at Danversport.
+      - Grade 10 MCAS: May 16-17.
+      - Junior auction opens May 19; NHS blood drive May 19 with American Red Cross.
+      - Cultural Feast: May 19, 5-8 p.m. at MHS; tickets $5 students, $8 adults.
+      - Class officer elections: May 22, 24, and June 2.
+      - Volleyball tournament: May 21 at 6 p.m., MHS field house; proceeds to Heather Walker's cancer charity.
+      - MHS art show reception: May 23, 4-7:30 p.m. at Abbott Hall.
+      - Senior prom: June 6 at House of Blues, Boston.
+    key_speakers: ["Kat Piper (student representative)", "Dr. Bucky (Superintendent)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 1146
+    end_seconds: 1154
+    headline: "Public comment period opens and closes with no speakers"
+    dek: "The chair called for public comment; no members of the public came forward."
+    summary: "The chair opened public comment. No members of the public raised their hands or came forward to speak, and the committee moved directly to the superintendent's report."
+    key_speakers: ["Chair (Sarah Fox)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 1201
+    end_seconds: 2724
+    featured: true
+    headline: "High school phasing out lowest course level (CP2); co-teaching cited as key support model"
+    dek: "Principal Bauer presented a multi-year plan eliminating College Prep 2 sections across subject areas, noting CP2 classes were disproportionately composed of students on IEPs and created a de facto tracking system."
+    summary: |
+      High School Principal Dan Bauer, Assistant Principal Lindsey Donaldson, and (via Zoom) incoming Assistant Principal Michelle Carlson presented on the history of course leveling and the school's phased elimination of CP2 (College Prep 2) sections.
+      
+      **Background:** MHS has four course levels: AP, Honors, College Prep 1 (CP1), and College Prep 2 (CP2). Research dating to the 1930s and peaking in the late 1980s-90s shows that lower-level tracking can create inequitable educational experiences.
+      
+      **The problem with CP2:** Principal Bauer reported that CP2 classes at MHS had a disproportionate concentration of students with IEPs—upwards of 60-80% in some sections—compared to the school's overall IEP rate in the low 20s. Students in CP2 often traveled as a cohort across multiple subjects, effectively creating a separate sub-group and limiting scheduling flexibility.
+      
+      **Phased elimination:**
+      | Subject | Status |
+      |---|---|
+      | English | CP2 eliminated in prior year |
+      | Social Studies | Never had CP2 |
+      | World Language | CP2 (Spanish) eliminated in 2017-18; replaced with introductory/global sequence |
+      | Math | Algebra 1 CP2 being eliminated next year (freshman level, two-year rollout) |
+      | Science | Biology CP2 being eliminated next year |
+      
+      **Supports in place:** Over 20 co-taught classes at MHS pair general and special education teachers. An MTSS teacher training is scheduled to begin the following Monday, coordinated by special education chair Lauren Skelton. The school also runs RTI (response to intervention) courses.
+      
+      **Key assurances:** Principal Bauer and Dr. Bucky emphatically stated there is *no plan* to eliminate honors or AP levels. AP test participation at MHS is high—reportedly higher than some larger neighboring schools—partly because MHS requires students in AP courses to take the exam.
+      
+      **Peer districts that eliminated CP2:** Beverly High School (2010), Swampscott (2014), Masconomet (end of current year), Wellesley, Dover-Sherborn, Winchester, and West.
+      
+      Committee members requested ongoing data sharing to address community concerns about "averaging down," and Principal Bauer agreed to bring outcome data in future presentations.
+    key_speakers: ["Principal Dan Bauer (MHS)", "Lindsey Donaldson (Assistant Principal)", "Dr. Bucky (Superintendent)", "Megan Taylor (committee member)", "Allison Taylor (committee member)", "Tom (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2724
+    end_seconds: 2883
+    headline: "Superintendent announces new assistant principal hire; HR manager offer extended"
+    dek: "A new high school assistant principal was selected from 35 applicants as the unanimous choice of the selection committee, and an offer was made to a new HR manager."
+    summary: "Dr. Bucky announced that a new high school assistant principal had been hired, emerging as the leading candidate from 35 applicants and the unanimous choice of the selection committee. The hire is currently a dean of students and assistant principal who has served as a building principal in two previous districts. The superintendent also noted that an offer had been extended to a new HR Manager with an extensive background in schools."
+    key_speakers: ["Dr. Bucky (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 2883
+    end_seconds: 3130
+    headline: "Policy committee recommends restructuring review cycle; school advisory council policies consolidated"
+    dek: "The policy subcommittee recommended pulling year-three policies into year two so the incoming school committee can examine curriculum and pedagogy policies (I and J series) early in their term."
+    summary: |
+      Committee member Tom reported on a recent policy subcommittee meeting with member Sarah Fox and Dr. Bucky. Key items:
+      
+      1. **Policy review cycle adjustment:** The subcommittee recommended shifting what was year-three policy review content into year two, so the newly seated school committee (after June 20 elections) will review "I" and "J" series policies governing pedagogy, curriculum, and parental rights. Tom noted these topics are nationally contested and the district should be prepared.
+      
+      2. **Policy EDH (Public Comment):** A second reading was presented and voted on. The updated policy incorporates MASS model language, adds a 15-minute cap on total public comment (at the chair's discretion, extendable by motion), and cross-references district complaint procedures so public comment is not used to air specific grievances about staff. The policy language was reviewed by legal counsel. Voted 4-0 to adopt.
+      
+      3. **School Advisory Council policy (BDFA) – First Reading:** Multiple related policies consolidated into one. Discussion clarified that school committee members should *not* serve on school advisory councils, which are independent bodies working with building leadership.
+      
+      4. **School Improvement Plan policy – First Reading:** Similar consolidation; question raised whether school committee should vote (not just review) on SIPs—referred to policy subcommittee.
+    key_speakers: ["Tom (committee member)", "Sarah Fox (committee member/chair)", "Allison Taylor (committee member)", "Dr. Bucky (Superintendent)"]
+  - topic: override
+    topic_confidence: 0.85
+    start_seconds: 3700
+    end_seconds: 3805
+    headline: "Committee plans FAQ and community outreach sessions ahead of override election"
+    dek: "Chair noted the committee and Dr. Bucky are planning a FAQ document and will attend civic group meetings, with a SEPAC budget Q&A scheduled for May 31 via Zoom."
+    summary: "Ahead of the upcoming override vote, the chair reported that she and Dr. Bucky are preparing an FAQ for the community and are making themselves available to civic groups. Dr. Bucky has been in contact with the Central Council and has offered to present at school PTOs. The chair is attending Rotary and Sarah Fox has been invited to present to other groups. A SEPAC budget Q&A with Dr. Bucky is scheduled for May 31 at 7 p.m. via Zoom. The chair also noted that all four candidates running for the two school committee seats in the June election have publicly stated support for the schools and the override."
+    key_speakers: ["Chair (Sarah Fox)", "Dr. Bucky (Superintendent)", "Megan Taylor (committee member)"]
+  - topic: recreation-events
+    topic_confidence: 0.88
+    start_seconds: 4077
+    end_seconds: 4410
+    headline: "Committee approves MOU with Parks & Recreation; pickleball court hours and turf fields also discussed"
+    dek: "After a lengthy negotiation process, the school committee and Parks & Recreation finalized a memorandum of understanding; a formal recommendation on pickleball court operating hours will come at the next meeting."
+    summary: |
+      The committee voted 4-0 to approve the final version of the Memorandum of Understanding (MOU) between the school committee and Parks & Recreation.
+      
+      **Pickleball courts at Vets:** Parks & Recreation voted to make a formal recommendation to the school committee regarding a pilot schedule for pickleball court hours at Veterans Middle School, intended to control noise for neighbors while maintaining student safety. The chair reported the Parks & Rec meeting was collaborative, with pickleball players, neighbors, and Parks & Rec staff all agreeing on a proposed solution. This recommendation will be brought to the next school committee meeting for a vote.
+      
+      **Turf fields:** The school committee had requested turf field replacement as a capital item this year, but the town was unable to fund it. Boosters are planning a fundraising kickoff. A request is also being explored to determine if turf field replacement qualifies as ARPA-eligible infrastructure spending. The chair suggested a joint request from both the school committee and Parks & Rec could be more powerful in conveying the community-wide nature of the project.
+    key_speakers: ["Chair (Sarah Fox)", "Dr. Bucky (Superintendent)", "Allison Taylor (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 4410
+    end_seconds: 4480
+    headline: "Consent agenda approved; meeting adjourns at 8:14 p.m."
+    dek: "Minutes and schedule of bills were approved 4-0 after the chair noted she had inadvertently skipped the consent agenda earlier in the meeting."
+    summary: "The chair noted she had skipped the consent agenda items earlier in the meeting and called for a motion to approve the minutes and schedule of bills. The motion was made by Megan Taylor, seconded, and approved 4-0 (Megan Taylor yes, Allison Taylor yes, John yes, Sarah Fox yes). The meeting adjourned at 8:14 p.m."
+    key_speakers: ["Chair (Sarah Fox)", "Megan Taylor (committee member)", "Allison Taylor (committee member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

@@ -9,7 +9,68 @@ video_url: "https://www.youtube.com/watch?v=la-_S0KSLaA"
 duration_seconds: 4074
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee votes 4-1 to present two budget scenarios at public hearing"
+  summary: "The Marblehead School Committee held an emergency Monday morning meeting to give Superintendent Dr. Bucky direction on which budget scenarios to present at the upcoming public budget hearing. After extended debate, the committee voted 4 to 1 to present only two scenarios: the austerity budget (approximately $800,000 increase in town appropriation) and a level-service budget (approximately $2.2 million increase in town appropriation), declining to also present the aspirational budget. Member Sarah Fox cast the sole dissenting vote, preferring to present all three scenarios to gather community feedback."
+  decisions:
+    - "Approved presenting two budget scenarios at the public hearing: austerity ($800K increase) and level-service ($2.2M increase)"
+    - "Declined to include the aspirational budget scenario (~$2.7M increase) in the public hearing presentation"
+    - "Discussed but did not formally decide on scheduling a budget vote at 6 p.m. on March 27 prior to Finance Committee meeting"
+  votes:
+    - motion: "Present two budget scenarios (austerity and level-service) at the public budget hearing"
+      result: "in favor (4 to 1)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 80
+    end_seconds: 2368
+    featured: true
+    headline: "School Committee debates three budget scenarios; votes 4-1 on two-scenario approach"
+    dek: "Dr. Bucky called the emergency meeting seeking direction on which budget figures to post publicly before Thursday's deadline, prompting nearly two hours of discussion on the town's $800K guidance, level-service costs, and a potential override."
+    summary: |
+      Dr. Bucky (Superintendent) convened the emergency meeting because the district was required to post budget figures before Thursday for the upcoming public hearing. He outlined three scenarios under discussion:
+      
+      | Scenario | Increase in Town Appropriation |
+      |---|---|
+      | Austerity (Town guidance) | ~$800,000 |
+      | Level service | ~$2.2 million (corrected from initial $1.8M figure by CFO Michelle Cresta, noting the $1.8M covered only payroll/utilities/SPED increases and did not include i-Ready math curriculum and other contractual obligations) |
+      | Aspirational | ~$2.7 million (7.93% increase) |
+      
+      Key points raised:
+      - The level-service figure was disputed: the town had not confirmed whether out-of-district SPED placements, utilities increases, and curriculum contracts would be included.
+      - Dr. Bucky advised against going out alone on an override as the district did the prior year, noting voters "sent a very clear message."
+      - Member Tom argued that expansion-of-services requests should be separated from the current financial reality and that the aspirational budget risked spending political capital on "a bridge too far."
+      - Member Sarah Fox (chair) argued it was her duty to present all three options and let the community weigh in before the committee decided; she was the sole "no" vote.
+      - The austerity budget, if enacted, would require cutting approximately 30 FTE positions and eliminating freshman-level sports, per information already posted on the district website.
+      - Charter school reimbursement funds flow back to the town general fund and do not return directly to the school department.
+    key_speakers: ["Dr. Bucky (Superintendent)", "Sarah Fox (School Committee Chair)", "Tom (School Committee member)", "Megan (School Committee member)", "Allison (School Committee member)", "Sarah Gold (School Committee member)", "Michelle Cresta (CFO/Finance)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 2368
+    end_seconds: 2495
+    headline: "Committee considers scheduling budget vote at 6 p.m. March 27 before Finance Committee"
+    dek: "A committee member noted she would be out of town for the scheduled Thursday budget vote, prompting discussion about moving the vote to Monday, March 27 at 6 p.m. prior to the Finance Committee meeting."
+    summary: "Member Megan Taylor disclosed she would be unable to attend the budget hearing or scheduled vote the following week due to a personal matter. The committee discussed whether to move the formal budget vote to Monday, March 27 at 6 p.m., immediately before the Finance Committee's 7 p.m. meeting, to maximize attendance. Chair Fox indicated she would confer with Dr. Bucky and CFO Michelle Cresta before confirming the scheduling. The chair also stated that if a vote occurred without full attendance, she intended to re-vote the budget at the next regular Thursday meeting so the full committee could go on record."
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Megan Taylor (School Committee member)", "Tom (School Committee member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.75
+    start_seconds: 2495
+    end_seconds: 4021
+    headline: "Chair seeks feedback on attending superintendent's weekly union meeting; committee expresses reservations"
+    dek: "Chair Sarah Fox raised under new business whether she could attend Dr. Bucky's weekly meeting with the teachers' union to discuss the budget and show solidarity; members raised concerns about overstepping the superintendent's operational role."
+    summary: "Chair Fox indicated she had asked Dr. Bucky about attending his weekly meeting with union representatives, noting the upcoming collective bargaining process and the impact of budget decisions on staff morale. Several members, particularly Tom, argued this would overstep the school committee's governance role under the Education Reform Act and could undermine Dr. Bucky's authority as CEO of the district. Member Megan suggested Dr. Bucky could relay feedback to the committee rather than committee members attending directly. The chair said she had reached out to MASC (Massachusetts Association of School Committees) for guidance and was awaiting a response. No formal vote was taken on the matter."
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Tom (School Committee member)", "Megan (School Committee member)", "Allison (School Committee member)", "Dr. Bucky (Superintendent)"]
+  - topic: public-comment
+    topic_confidence: 0.85
+    start_seconds: 4067
+    end_seconds: 4080
+    headline: "No public comment received; meeting adjourned at 10 a.m."
+    dek: "The chair opened the floor for public comment but received no hands; the meeting was adjourned."
+    summary: "The chair noted she had not opened for public comment at the start of the meeting and briefly opened the floor. No members of the public raised their hand or typed in the chat. The meeting was adjourned at approximately 10 a.m."
+    key_speakers: ["Sarah Fox (School Committee Chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

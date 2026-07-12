@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-05T15:14:34.762Z",
+  "last_updated": "2026-07-12T11:28:19.630Z",
   "channel_url": "https://www.youtube.com/channel/UC3mmZuBmhKUJsXeWbqwFQJQ",
-  "total_videos": 262,
+  "total_videos": 263,
   "meetings": [
     {
       "youtube_id": "gYE7TlHvW9o",
@@ -370,7 +370,7 @@
       "board_display": "School Committee",
       "date": "2025-12-05",
       "date_approximate": true,
-      "duration_seconds": 1295,
+      "duration_seconds": 1296,
       "raw_title": "Policy Subcommittee Meeting"
     },
     {
@@ -1374,6 +1374,16 @@
       "raw_title": "SC Meets-Thursdays at 7-RECURRING Nov 2, 2023"
     },
     {
+      "youtube_id": "93BPFsoQ7DY",
+      "title": "Policy Sub Committee Oct 27, 2023",
+      "board_slug": "school-committee",
+      "board_display": "School Committee",
+      "date": "2023-10-27",
+      "date_approximate": false,
+      "duration_seconds": 3868,
+      "raw_title": "Policy Sub Committee Oct 27, 2023"
+    },
+    {
       "youtube_id": "5lpI1PqAj-U",
       "title": "Budget Sub Committee Meeting Oct 25, 2023",
       "board_slug": "school-committee",
@@ -1574,6 +1584,26 @@
       "raw_title": "4/6/2023 SC Meet"
     },
     {
+      "youtube_id": "xavM8mcMuqY",
+      "title": "3.27.2023 Budget Vote",
+      "board_slug": "school-committee",
+      "board_display": "School Committee",
+      "date": "2023-03-27",
+      "date_approximate": false,
+      "duration_seconds": 386,
+      "raw_title": "3.27.2023 Budget Vote"
+    },
+    {
+      "youtube_id": "PTlo-3MAAtg",
+      "title": "3.21.2023 Budget Public Hearing",
+      "board_slug": "school-committee",
+      "board_display": "School Committee",
+      "date": "2023-03-21",
+      "date_approximate": false,
+      "duration_seconds": 4320,
+      "raw_title": "3.21.2023 Budget Public Hearing"
+    },
+    {
       "youtube_id": "_gQdkQIkB0s",
       "title": "3/16/2023 SC Meet",
       "board_slug": "school-committee",
@@ -1584,6 +1614,16 @@
       "raw_title": "3/16/2023 SC Meet"
     },
     {
+      "youtube_id": "jDW5dk7LaI8",
+      "title": "3.16.2023 Budget Sub-Joint",
+      "board_slug": "school-committee",
+      "board_display": "School Committee",
+      "date": "2023-03-16",
+      "date_approximate": false,
+      "duration_seconds": 3918,
+      "raw_title": "3.16.2023 Budget Sub-Joint"
+    },
+    {
       "youtube_id": "la-_S0KSLaA",
       "title": "SC 3.13.23 meeting",
       "board_slug": "school-committee",
@@ -1592,6 +1632,16 @@
       "date_approximate": false,
       "duration_seconds": 4074,
       "raw_title": "SC 3.13.23 meeting"
+    },
+    {
+      "youtube_id": "AHukEU1uil4",
+      "title": "3/10/23 Budget Sub Joint",
+      "board_slug": "school-committee",
+      "board_display": "School Committee",
+      "date": "2023-03-10",
+      "date_approximate": false,
+      "duration_seconds": 4585,
+      "raw_title": "3/10/23 Budget Sub Joint"
     },
     {
       "youtube_id": "CURRhLv1FrY",
@@ -1614,6 +1664,16 @@
       "raw_title": "2/16/2023 sc meeting"
     },
     {
+      "youtube_id": "ReihWeqMvDk",
+      "title": "2/13/2023 Facilities Submcommittee",
+      "board_slug": "school-committee",
+      "board_display": "School Committee",
+      "date": "2023-02-13",
+      "date_approximate": false,
+      "duration_seconds": 1117,
+      "raw_title": "2/13/2023 Facilities Submcommittee"
+    },
+    {
       "youtube_id": "03oaZfGYLNo",
       "title": "2/13/2023 SC Meet",
       "board_slug": "school-committee",
@@ -1624,6 +1684,16 @@
       "raw_title": "2/13/2023 SC Meet"
     },
     {
+      "youtube_id": "-nIC_8q0JxQ",
+      "title": "2/9/2023 Budget Sub Joint with Liaisons",
+      "board_slug": "school-committee",
+      "board_display": "School Committee",
+      "date": "2023-02-09",
+      "date_approximate": false,
+      "duration_seconds": 3600,
+      "raw_title": "2/9/2023 Budget Sub Joint with Liaisons"
+    },
+    {
       "youtube_id": "Lw4neVLNy-s",
       "title": "2/6/23 Budget Subcommittee",
       "board_slug": "school-committee",
@@ -1632,6 +1702,16 @@
       "date_approximate": false,
       "duration_seconds": 1711,
       "raw_title": "2/6/23 Budget Subcommittee"
+    },
+    {
+      "youtube_id": "_z4QNAb-TKQ",
+      "title": "1/30/2023 Budget Workshop",
+      "board_slug": "school-committee",
+      "board_display": "School Committee",
+      "date": "2023-01-30",
+      "date_approximate": false,
+      "duration_seconds": 12844,
+      "raw_title": "1/30/2023 Budget Workshop"
     },
     {
       "youtube_id": "C2kdQzHY31E",
@@ -2144,6 +2224,16 @@
       "raw_title": "School Committee   4 15 2021"
     },
     {
+      "youtube_id": "9VPdK2Nj5RY",
+      "title": "Budget Vote Apr 8, 2021",
+      "board_slug": "school-committee",
+      "board_display": "School Committee",
+      "date": "2021-04-08",
+      "date_approximate": false,
+      "duration_seconds": 2606,
+      "raw_title": "Budget Vote Apr 8, 2021"
+    },
+    {
       "youtube_id": "dO24SIbIHH0",
       "title": "Budget Hearing & School Committee Meeting   4 1 2021",
       "board_slug": "school-committee",
@@ -2501,49 +2591,9 @@
       "reason": "not a board meeting"
     },
     {
-      "youtube_id": "9VPdK2Nj5RY",
-      "raw_title": "Budget Vote Apr 8, 2021",
-      "reason": "not a board meeting"
-    },
-    {
-      "youtube_id": "93BPFsoQ7DY",
-      "raw_title": "Policy Sub Committee Oct 27, 2023",
-      "reason": "not a board meeting"
-    },
-    {
-      "youtube_id": "xavM8mcMuqY",
-      "raw_title": "3.27.2023 Budget Vote",
-      "reason": "not a board meeting"
-    },
-    {
-      "youtube_id": "PTlo-3MAAtg",
-      "raw_title": "3.21.2023 Budget Public Hearing",
-      "reason": "not a board meeting"
-    },
-    {
-      "youtube_id": "jDW5dk7LaI8",
-      "raw_title": "3.16.2023 Budget Sub-Joint",
-      "reason": "not a board meeting"
-    },
-    {
-      "youtube_id": "AHukEU1uil4",
-      "raw_title": "3/10/23 Budget Sub Joint",
-      "reason": "not a board meeting"
-    },
-    {
-      "youtube_id": "ReihWeqMvDk",
-      "raw_title": "2/13/2023 Facilities Submcommittee",
-      "reason": "not a board meeting"
-    },
-    {
-      "youtube_id": "-nIC_8q0JxQ",
-      "raw_title": "2/9/2023 Budget Sub Joint with Liaisons",
-      "reason": "not a board meeting"
-    },
-    {
-      "youtube_id": "_z4QNAb-TKQ",
-      "raw_title": "1/30/2023 Budget Workshop",
-      "reason": "not a board meeting"
+      "youtube_id": "Wl-Z_B_kPPk",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
     },
     {
       "youtube_id": "Y8VFCOfajV8",

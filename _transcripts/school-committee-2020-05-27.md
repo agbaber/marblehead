@@ -9,7 +9,48 @@ video_url: "https://www.youtube.com/watch?v=ZKJGIZxsB2I"
 duration_seconds: 3082
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee votes 5–0 to appoint Nan Murphy as Assistant Superintendent"
+  summary: "The Marblehead School Committee held a special meeting to interview and vote on the appointment of Nan Murphy as the next Assistant Superintendent of Schools, subject to successful contract negotiation. Murphy, currently a school improvement specialist at the Massachusetts Department of Education, brought 16 years of classroom experience and leadership roles in Lowell Public Schools. The committee voted unanimously 5–0 to approve the appointment, with a planned start date of July 1."
+  decisions:
+    - "Approved appointment of Nan Murphy as Assistant Superintendent of Schools, subject to successful contract negotiation"
+  votes:
+    - motion: "Appoint Nan Murphy as Assistant Superintendent of Schools, subject to successful contract negotiation"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 90
+    end_seconds: 686
+    headline: "Committee members gather via Zoom for special meeting ahead of formal agenda"
+    dek: "Board members and administrators exchanged informal remarks before the chair called the meeting to order at approximately 7:02 p.m."
+    summary: "Committee members connected via Zoom, exchanging informal conversation about remote working conditions, the housing market, and the challenges of COVID-era life with children at home. The chair called the meeting to order shortly after 7:00 p.m."
+    key_speakers: ["Sarah Fox (Chair)", "Bill McLaughlin (Interim Superintendent)", "John Bucky (Superintendent-elect)"]
+  - topic: labor-personnel
+    topic_confidence: 0.98
+    start_seconds: 717
+    end_seconds: 3056
+    featured: true
+    headline: "School Committee votes 5–0 to appoint Nan Murphy as Assistant Superintendent"
+    dek: "Murphy, a former Lowell principal and current Massachusetts DOE school improvement specialist, was selected from a field of more than 40 applicants following a multi-stage search process."
+    summary: |
+      Interim Superintendent Bill McLaughlin opened the agenda item by recognizing the Search Advisory Committee, which included School Committee members Jim Schaffner and Megan Taylor, administrators Michelle Cresta, Matt Fox, and Brian Ota, staff members Robin Fines, Eric Fargo, and Jonathan Heller, and parents Melissa Kaplich and Paul Baker. The committee reviewed more than 40 application packets before recommending finalists to McLaughlin and incoming Superintendent Dr. John Bucky for final vetting.
+      
+      Nan Murphy introduced herself as a lifelong educator with 16 years in the classroom (grades 1, 3, and 4). She described turning around the lowest-performing of Lowell's 14 elementary schools — moving it from a Level 3 designation to Level 1 MCAS status in four years — before becoming Lowell's Director of Accountability and School Improvement and later joining the Massachusetts Department of Education, where she works with underperforming districts.
+      
+      Committee members asked Murphy about:
+      - Her educational philosophy (belief that all students can meet and exceed expectations with the right time, support, and scaffolding)
+      - How she sees the Assistant Superintendent role differently given COVID re-entry (priority on social-emotional health, curriculum backfilling, supporting staff)
+      - What she would bring to a largely new administrative team (instructional rounds experience, professional development background, crisis-management experience)
+      - Her approach to culturally proficient teaching and leadership (implicit/explicit bias awareness, relationship-building, referencing Zaretta Hammond's work)
+      
+      McLaughlin read from his recommendation memo, describing Murphy as a collaborative team player, excellent communicator, and dedicated advocate for all students. Dr. Bucky expressed enthusiasm for the working relationship established during the search process.
+      
+      The chair called for a motion; Sarah Fox moved and Megan Taylor seconded. Roll-call vote: Sarah Gold — yes; Megan Taylor — yes; Sarah Fox — yes; David Harris — yes; [fifth member] — yes. Motion carried 5–0. Murphy indicated she is targeting a July 1 start date.
+    key_speakers: ["Bill McLaughlin (Interim Superintendent)", "John Bucky (Superintendent-elect)", "Nan Murphy (appointee)", "Sarah Fox (Chair)", "Megan Taylor (School Committee)", "David Harris (School Committee)", "Sarah Gold (School Committee)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

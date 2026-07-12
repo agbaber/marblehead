@@ -9,7 +9,147 @@ video_url: "https://www.youtube.com/watch?v=xj3Rp2ox98Q"
 duration_seconds: 11891
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee approves K–6 return to five half-days in-person starting March 15"
+  summary: "The committee voted 4-0-1 to approve Superintendent Bucky's plan moving K–6 students from a hybrid cohort model to five half-days of in-person learning per week, beginning March 15. Principals reported no in-school transmission and said classrooms can maintain six-foot distancing at current enrollment levels. A separate AM/PM cohort model for grades 7–12 was presented but not voted on; the committee asked for parent/student surveys and further MEA negotiations before deciding. Fall 2 athletics (football, volleyball, indoor track, cheerleading) were also approved to proceed."
+  decisions:
+    - "Approved K–6 expansion to five half-days of in-person learning starting March 15"
+    - "Approved Fall 2 athletics program moving forward"
+  votes:
+    - motion: "Support the plan to move K–6 to five half-days of in-person learning starting March 15"
+      result: "in favor (4 to 0, 1 abstention)"
+    - motion: "Support Fall 2 athletics moving forward"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 160
+    end_seconds: 1105
+    featured: true
+    headline: "Superintendent proposes K–6 return to five half-days in-person starting March 1 (later moved to March 15)"
+    dek: "Dr. Bucky cited improved public health data, no in-school transmission, and lower enrollment to justify combining cohorts A and B for K–6."
+    summary: |
+      Superintendent Bucky opened with a presentation explaining why expanding in-person learning was now feasible. Key reasons cited:
+      
+      - No documented in-school transmission since reopening
+      - Marblehead's positivity rate at 2.23%, community in yellow status
+      - Enrollment has dropped since fall, allowing six-foot distancing in K–6 classrooms
+      - Pool testing being picked up by Project Beacon
+      - Vaccinations now available for some staff
+      
+      **Proposal:** K–3 return to five half-days (8 a.m.–noon) on March 1; grades 4–6 on March 8. Students would come in Monday–Friday, then log on for remote classes 1:30–2:30 p.m. Monday, Tuesday, Thursday, Friday; Wednesday afternoons remain teacher planning/PD time.
+      
+      Principals from Evelyth, Coffin/Village, and Glover schools each spoke positively, noting teachers had already begun rearranging classrooms. They acknowledged challenges: reconfiguring furniture, technology access with students spread across rooms, logistics of doubled drop-off/pickup traffic.
+      
+      During Q&A, committee members raised questions about:
+      - Consistency of the Wednesday afternoon schedule across buildings
+      - Whether families could change learning models at the trimester break
+      - Whether the start date should be March 1 vs. March 8 vs. March 15
+      
+      After hearing that MEA had expressed a preference for more preparation time (ideally the March 15 trimester break), the committee moved and approved **March 15** as the start date.
+    key_speakers: ["Superintendent Bucky (district superintendent)", "Donna Zasky (Evelyth/Village principal)", "Dr. Satterfield (Coffin principal)", "Brian (Glover School principal)", "Mandy Murphy (Village principal)", "Sarah Fox (school committee member)", "Megan Taylor (school committee member)", "Emily Baron (school committee member)", "David Harris (school committee member)", "Sarah Gold (school committee chair)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 1105
+    end_seconds: 5425
+    headline: "Grades 7–12 AM/PM cohort model presented; no vote taken pending surveys and MEA talks"
+    dek: "Middle school principal Matt Fox and high school principal Dan Bauer outlined an AM/PM split giving students four in-person days per week, increasing in-person hours from 16 to 23 over two weeks."
+    summary: |
+      Middle school principal Fox and high school principal Bauer presented Option B for grades 7–12: a rotating AM/PM cohort schedule.
+      
+      **How it would work (Vets Middle School example):**
+      - Cohort A in school mornings, Cohort B in school afternoons — each attending four days/week
+      - Wednesday remains fully remote for teacher planning
+      - In-person advisories replace virtual advisories
+      - After-school homework clubs added on Mondays and Tuesdays
+      - Remote classes reduced from two-thirds of the week to one-third (Wednesdays only)
+      - Class length increases from ~33 minutes to 42–46 minutes
+      
+      **Limitations acknowledged:**
+      - Six-foot distancing is not achievable for full cohorts at either building; three-foot distancing would require MOU renegotiation with MEA
+      - Any schedule change would require a full reschedule for each grade/team
+      - Families switching learning modes would cascade into additional section creation
+      - Course-selection process for seniors already built around current hybrid schedule
+      
+      **Committee discussion:**
+      - Members expressed support for the model in principle but asked for parent/student surveys before voting
+      - Some members pushed for April 1 (quarter break) as the target start; others wanted sooner
+      - Superintendent confirmed MEA conversations about three-foot distancing are ongoing
+      - No vote was taken on 7–12; committee agreed to gather more data by the next Thursday meeting
+    key_speakers: ["Matt Fox (Vets Middle School principal)", "Dan Bauer (Marblehead High School principal)", "Superintendent Bucky", "Megan Taylor (school committee)", "Emily Baron (school committee)", "Sarah Fox (school committee)", "David Harris (school committee)"]
+  - topic: labor-personnel
+    topic_confidence: 0.85
+    start_seconds: 768
+    end_seconds: 4510
+    headline: "MEA negotiations on distancing and return timeline ongoing; teachers ask for more preparation time"
+    dek: "Superintendent Bucky and a committee member relayed that MEA leadership expressed strong preference for additional prep time and that three-foot distancing remains under negotiation."
+    summary: |
+      Throughout the meeting, the MEA's position was described as follows:
+      
+      - The union does not oppose returning to more in-person learning
+      - MEA leadership met with the superintendent the afternoon of the meeting
+      - Teachers expressed they want to be prepared before students arrive; the trimester break (March 15) was the preferred start date
+      - Three-foot distancing for grades 7–12 is a live negotiation item; without it, the AM/PM model is the workable alternative
+      - The superintendent clarified that no administrator or principal at the meeting asked for more time; the preference came from MEA leadership
+      
+      MEA President Joan Miller also spoke during public comment, affirming teachers' commitment to a safe return and noting no in-school transmission under the current hybrid.
+    key_speakers: ["Superintendent Bucky", "Sarah Gold (chair, relaying MEA meeting content)", "Joan Miller (MEA President, public comment)"]
+  - topic: recreation-events
+    topic_confidence: 0.95
+    start_seconds: 9054
+    end_seconds: 9943
+    headline: "Fall 2 athletics approved; 230 athletes registered including 74 football players"
+    dek: "Athletic Director Greg Siglerski reported a successful winter season with no in-school sport transmission and outlined plans for Fall 2 sports beginning February 23."
+    summary: |
+      AD Siglerski gave a winter season recap and Fall 2 update:
+      
+      **Winter season highlights:**
+      - Boys hockey: 8-4-1
+      - Girls hockey: 5-4-3 (first-year head coach Brittany Smith)
+      - Boys basketball: 7-5
+      - Girls basketball: 7-5
+      - Swim & dive: broke several long-standing school records
+      - Gymnastics: 1-5
+      - Ski team also competed (noted in public comment)
+      - Managed 2 close-contact situations, 3 positive COVID tests; return-to-play policy implemented
+      
+      **Fall 2 season (started February 23):**
+      - Sports: football, volleyball, indoor track, cheerleading
+      - 230 athletes registered; 74 football players (17–18 freshmen, rest JV/varsity)
+      - Season runs through April 25; spring season begins April 26
+      - Spectator policy: 2 per home athlete (parent/household member only); no away spectators
+      - Football practicing indoors initially, moving outside as turf clears
+      - Pool testing for athletes discussed as a possibility; Siglerski to consult with superintendent
+      
+      **Vote:** Approved unanimously to support Fall 2 athletics.
+    key_speakers: ["Greg Siglerski (Athletic Director)", "Sarah Gold (chair)", "David Harris (school committee)"]
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 9988
+    end_seconds: 11871
+    headline: "Public comment divided: parents and students press for faster return; teachers urge caution on distancing"
+    dek: "More than a dozen residents, students, and a teacher spoke, with parents and students largely urging a faster return and the MEA president and two teachers emphasizing safety protocols."
+    summary: |
+      Public comments reflected a range of views:
+      
+      **In favor of faster/fuller return:**
+      - Patrick Noonan criticized the committee for pushing the timeline from March 1/8 to March 15 without a request from administrators
+      - Blair (unnamed parent) argued lunch logistics are solvable and parents will volunteer; called for full days
+      - Emily DeWitt and Lauren Andriano raised concerns about the 7–12 timeline stretching to April
+      - Scott Solberg acknowledged the complexity while urging a compromise between March 1 and April 1
+      - Seniors Alexandra Colonette, Theo Shemel, and Anne Simcoe (sophomore) all spoke; Simcoe and Shemel questioned the necessity of six-foot distancing and expressed frustration at the pace
+      - High school senior Ruby (last name unclear) thanked principals for keeping students central
+      
+      **Urging caution or raising nuanced concerns:**
+      - Susan Shiowitz (mental health clinician) noted that in-person school is not automatically the cure for adolescent mental health struggles and asked that fully remote students' needs not be overlooked
+      - Joan Miller (MEA president) spoke on behalf of teachers, affirming commitment to a safe return while cautioning that older students transmit the virus as adults do
+      - Kristen Zeros (kindergarten teacher) expressed concern about having 20 kids in her room without six-foot distancing
+      - Lauren Andriano raised the inconsistency between sports protocols and classroom distancing rules
+      - Kristin Pratt suggested polling/Q&A tools to improve public engagement and offered to organize parent volunteers for lunch supervision
+    key_speakers: ["Susan Shiowitz (resident, mental health clinician)", "Patrick Noonan (resident)", "Joan Miller (MEA President)", "Blair (resident, name partially unclear)", "Emily DeWitt (resident)", "Lauren Andriano (resident)", "Alexandra Colonette (MHS senior)", "Theo Shemel (MHS senior)", "Anne Simcoe (MHS sophomore)", "Ruby (MHS senior, last name unclear)", "Scott Solberg (resident)", "Kristen Zeros (teacher)", "Kristin Pratt (resident)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

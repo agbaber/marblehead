@@ -10,7 +10,176 @@ duration_seconds: 6952
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee approves $47.6M FY27 budget with $3.1M in cuts, votes three-tier override framework"
+  summary: "The Marblehead School Committee unanimously approved a reduced FY27 budget of approximately $47.6 million, representing a $3.1 million reduction from the current year through position eliminations and use of revolving accounts. The committee also voted 4-0 to endorse a three-tier Proposition 2½ override framework with three-year totals of $6.2M (Tier 1), $7.2M (Tier 2), and $8.5M (Tier 3), and voted 4-0 to approve a draft memorandum of understanding with the Select Board and Finance Committee governing override fund allocation. Additional votes approved a Portugal field trip for FY26, the line-item budget, and a draft MOU subject to final numbers being inserted."
+  decisions:
+    - "Approved Portugal field trip request (April 15–24) for MHS world language students"
+    - "Approved FY27 line-item budget at $47,620,287"
+    - "Approved three-tier override framework (Tier 1: $6.2M, Tier 2: $7.2M, Tier 3: $8.5M three-year totals)"
+    - "Approved draft MOU with Select Board and Finance Committee subject to final numbers"
+    - "Approved consent agenda including bills totaling $443,690.77 and meeting minutes from March 12 and March 27, 2026"
+    - "Approved declaration of athletic department equipment as surplus"
+    - "Approved Tommo Tackle donation of $215 for the Bourne field trip"
+  votes:
+    - motion: "Portugal field trip approval"
+      result: "in favor (unanimous, 5 to 0)"
+    - motion: "FY27 line-item budget approval"
+      result: "in favor (unanimous, 5 to 0)"
+    - motion: "Three-tier override framework approval"
+      result: "in favor (4 to 0)"
+    - motion: "Draft MOU approval (subject to numbers)"
+      result: "in favor (4 to 0)"
+    - motion: "Consent agenda approval"
+      result: "in favor (4 to 0)"
+    - motion: "Athletic equipment surplus declaration"
+      result: "in favor (4 to 0)"
+    - motion: "Tommo Tackle donation approval"
+      result: "in favor (4 to 0)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2
+    end_seconds: 563
+    headline: "Superintendent shares school spotlight items including MAGIC Coalition and staff shout-outs"
+    dek: "Superintendent reported on student anti-hate coalition, a Broadway producer's visit to MHS, MCAS testing logistics, and staff recognition."
+    summary: |
+      The superintendent opened with updates including:
+      
+      - MHS alumni Harry Ki, co-producer of the Broadway show *Suffs*, worked with the MHS women's ensemble at Marblehead Little Theater.
+      - A forthcoming panel on student safety (April 14 at 7 p.m., Mary Allen) featuring the Essex County DA and Chief of Police, related to the "Drive to Stay Alive" program for seniors.
+      - METCO advocacy day at the State House, with concern about potential state funding reductions; a transportation pilot with Swampscott is underway for Boston-based students.
+      - The superintendent participated in a department heads panel at the COA.
+      - Shout-outs to the MPS Technology Department for MCAS transition at Veterans Middle School, to Village School substitute Mary Davies, and to Brown School music teacher Eileen Demor.
+      
+      The assistant superintendent provided a monthly financial update: the unencumbered balance stands just under $2.1 million, with $1.5 million reserved for out-of-district tuition prepayments. March saw unexpected HVAC, bus, and elevator repair costs. Roof projects at Veterans Middle School and the high school are on track for April break.
+    key_speakers: ["Superintendent (name not clearly identified)", "Assistant Superintendent Mike (last name not clearly identified)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 577
+    end_seconds: 761
+    headline: "MHS students present MAGIC Coalition, a student-led anti-hate group formed after October 7 swastika incident"
+    dek: "Five MHS juniors and a sophomore described the Marblehead Alliance for Growth, Inclusion, and Connection (MAGIC), created after a hate symbol was drawn in a school bathroom."
+    summary: |
+      Students Michael Labosier, Max Colin, Don Obesi, Caleb Sidman, and Lucy Molinari introduced MAGIC — the Marblehead Alliance for Growth, Inclusion, and Connection — a student-led coalition formed in response to a swastika found in a second-floor boys' bathroom on October 7.
+      
+      The group held school-wide assemblies split by grade and installed suggestion boxes. They plan to visit Village School sixth-graders to discuss why hate is harmful, emphasizing peer-to-peer messaging over teacher-led instruction. Students argued that hate is environmentally driven and that early education is key to prevention. The coalition also aims to provide students with resources if they experience discrimination.
+    key_speakers: ["Michael Labosier (MHS junior)", "Max Colin (MHS junior)", "Don Obesi (MHS junior)", "Caleb Sidman (MHS junior)", "Lucy Molinari (MHS sophomore)"]
+  - topic: recreation-events
+    topic_confidence: 0.8
+    start_seconds: 807
+    end_seconds: 1086
+    headline: "Committee approves Portugal field trip April 15–24 for MHS world language students, 5-0"
+    dek: "Lead world language teacher Kelly presented a 10-day trip to Lisbon and Porto as a historical and linguistic experience; the committee approved unanimously."
+    summary: |
+      Kelly, the lead world language teacher at MHS, presented a proposed international field trip to Portugal (Lisbon and Porto) from April 15–24, overlapping with April break. The trip would include day excursions to historic sites and cultural activities such as a Portuguese cooking class. The organizing company and tour guide from the prior year's trip would return. Chaperones would include administrator Dan Richards, teachers Erin Bark and Jay Gudara, and Kelly herself.
+      
+      A board member expressed support for experiential learning. The committee voted 5–0 to approve the trip.
+    key_speakers: ["Kelly (MHS lead world language teacher)", "School Committee Chair"]
+  - topic: school-budget
+    topic_confidence: 0.98
+    start_seconds: 1086
+    end_seconds: 3577
+    featured: true
+    headline: "School Committee approves reduced FY27 budget of $47.6M, cutting 18.25 FTE positions and drawing $1.5M from prepaid tuition reserves"
+    dek: "The committee voted 5-0 on the line-item FY27 budget after administration detailed $3.1 million in reductions driven by rising out-of-district special education tuition, health insurance, and pension costs."
+    summary: |
+      ## FY27 Budget Overview
+      
+      The FY26 budget is $49,122,287. A level-services FY27 budget would have been approximately $50,073,633 but was not approved. The adopted FY27 reduced-services budget is **$47,620,287**, representing a total reduction of approximately **$3.157 million**.
+      
+      Key drivers of cuts:
+      - Out-of-district special education tuition increased 12% (9.4% average across the consortium, up to 12% for higher-end programs).
+      - Health insurance costs rose approximately 11%.
+      - Pension contributions rose over 8%.
+      - Contractual salary obligations (COLA + step increases) apply to all staff annually.
+      - The district has no control over OSD-set tuition rates.
+      
+      ## Where Reductions Landed
+      
+      **Personnel (22 positions reduced, 11 currently filled / 11 vacant; approximately 18.25 FTE):**
+      - Brown School: clerical position reduced from 261 to 195 days; potential custodian reduction; 1.24 FTE general ed instructional assistants shifted to grant funding.
+      - Glover: vacant EL teacher (census-driven); supply reductions (~$1,600); second custodian; pre-K Wednesday afternoon hours reduced.
+      - Village: 1.75 FTE EL teacher (census-driven); vacant special ed teacher; one elementary teacher position; one of three general ed instructional assistants; supply/PD savings (~$2,600); discussion to cut part-time position.
+      - Veterans Middle: math interventionist; one classroom teacher (rate TBD); supply level-funding (~$1,600 savings); clerical position cut.
+      - High School: art teacher reduced from 1.0 to 0.8 FTE (prior year decision); 2 teachers moved from general fund to revolving (Educious) account (not a long-term solution); 3 classroom teachers cut; supply level-funding (~$4,000 savings).
+      - Athletics: supply lines level-funded.
+      - District-wide: 2 fellow (non-FTE) positions eliminated from grant, saving ~$81,000 for general fund; ABA coordinator vacancy eliminated; summer IT help cut; HR generalist/assistant vacancy cut; special ed physical therapy assistant (PTA) vacancy eliminated; assistant business manager 20% salary shifted to pre-K revolving and grants; facilities assistant 50% salary shifted to building rental revolving fund; substitute budget reduced by approximately $137,000–$138,000; 1.0 maintenance employee cut; heating fuel and electricity budgets reduced; student services contract services and supplies level-funded; curriculum refresh cycle paused; speech and language pathologist reduced from 1.0 to 0.6 FTE.
+      
+      **Prepaid tuition:** $1.5 million prepaid from end-of-year FY26 surplus (unencumbered balance target ~$1.5M) to reduce the FY27 out-of-district tuition line from approximately $5.3 million to $3.8 million. This is a one-time measure that cannot be repeated without new funding.
+      
+      The committee voted **5–0** on the line-item budget.
+      
+      > "Without any restoration of the funding, our cuts would be much deeper." — Superintendent
+      
+      A board member raised concern that specifics were being publicly disclosed before all affected staff had been individually notified. The superintendent confirmed principals were part of the iterative process and union presidents have been meeting with administration every two weeks.
+    key_speakers: ["Superintendent (John)", "Assistant Superintendent (Mike)", "School Committee member Jen", "School Committee member Kate", "School Committee member Melissa", "School Committee member Henry"]
+  - topic: override
+    topic_confidence: 0.98
+    start_seconds: 3577
+    end_seconds: 6034
+    headline: "Committee votes 4-0 to endorse three-tier Prop 2½ override framework; draft MOU with town boards also approved 4-0"
+    dek: "The three tiers carry three-year totals of $6.2M, $7.2M, and $8.5M, with no school draw in FY27 under any tier; a draft MOU spells out allocation intent and accountability reporting."
+    summary: |
+      ## Why an Override Is Needed
+      
+      Marblehead has not passed a general override since 2005. Revenue is capped at 2.5% annual growth under Proposition 2½, while school costs grow faster: health insurance +11%, pension contributions +8%, out-of-district tuition +12% (FY27), contractual salaries rising every year.
+      
+      ## Three-Tier Structure
+      
+      The tiers were developed collaboratively by the superintendent, assistant superintendent, a school committee member (Melissa), and a working group that included Fincom, the Select Board, and town administration.
+      
+      | Tier | FY27 | FY28 | FY29 | 3-Year Total |
+      |---|---|---|---|---|
+      | Tier 1 – Prevent Further Damage | $0 | ~$4.3M | ~$1.9M | $6.2M |
+      | Tier 2 – Get Back to Basics | $0 | ~$4.98M | ~$2.2M | $7.2M |
+      | Tier 3 – Invest in the Future | $0 | ~$5.2M | ~$3.3M | $8.5M |
+      
+      **Tier 1** includes: restore $1.5M prepaid tuition to full required level in FY28; fund contractual salary increases for all staff; move revolving-funded positions back to general fund (~$599K over FY28–29).
+      
+      **Tier 2** adds: school technology lease ($150K/year starting FY28); eliminate full-day kindergarten fee (~$671K in FY28, ~$710K in FY29).
+      
+      **Tier 3** adds: curriculum and professional development refresh ($100K/year starting FY29); in-district 18-to-22-year-old special education program (~$500K startup); dedicated school building capital fund ($500K).
+      
+      The school department is **not** recommending restoration of the 18.25 FTE positions cut in any override tier, given enrollment decline of 3.8% since 2019 and a projected additional decline of 86 students in fall 2025.
+      
+      A board member raised concern that the presentation slide stating "without an override, these shortfalls…cannot be resolved within the levy limit" and a slide summarizing consequences of a "no" vote may constitute an impermissible value statement under campaign finance law. The superintendent acknowledged the concern and agreed to review the document.
+      
+      ## Draft MOU
+      
+      A draft memorandum of understanding was shared with the full committee over the weekend. Key provisions:
+      - Sets out a 62%/38% school-municipal revenue split from override proceeds.
+      - Commits that no additional general override will be sought until at least FY30 if any tier passes.
+      - Establishes annual reporting by the superintendent and town administrator on override fund use and remaining levy capacity.
+      - Establishes quarterly reporting to chairs of Select Board, School Committee, and Fincom.
+      - Addresses free cash and health insurance as major drivers; surplus funds above projections go to stabilization rather than operating budgets.
+      - Commits to publicizing tax abatement and relief programs, including the new means-tested senior property tax exemption approved at the prior year's town meeting.
+      - Current boards cannot bind future committees; the MOU is an expression of intent.
+      
+      The committee voted **4–0** to approve the three-tier override framework and **4–0** to approve the draft MOU subject to final dollar figures being inserted.
+      
+      A resident at the public comment period questioned whether the committee had been sufficiently interested in public feedback before taking these votes.
+    key_speakers: ["Superintendent (John)", "Assistant Superintendent (Mike)", "School Committee member Kate", "School Committee member Melissa", "School Committee member Henry", "Resident (mic only, identified as Sarah)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 6034
+    end_seconds: 6944
+    headline: "Committee approves consent agenda, surplus declaration, donation, and calendaring adjustments"
+    dek: "Routine business included approval of bills, meeting minutes, athletic equipment surplus, and a $215 Tommo Tackle donation for the Bourne fishing trip."
+    summary: |
+      The committee approved the following in separate 4–0 votes:
+      
+      - **Consent agenda**: schedules of bills totaling $443,690.77; meeting minutes from March 12 and March 27, 2026.
+      - **Athletic equipment surplus**: portable basketball nets, field sweepers, and other equipment with total estimated value around $1,100 declared surplus per athletic director Ken's memo.
+      - **Tommo Tackle donation**: rod-and-reel combination valued at $140 plus two gift certificates ($50 and $25) totaling $215 for the Bourne field trip fishing contest.
+      - **Executive session disclosure**: publicly stated that the committee determined on March 19, 2026, that executive session minutes from September 12, 2025, and October 10, 2025, remain non-public.
+      - **Calendar adjustments**: The June 18 school committee meeting was moved to June 11 to align with the election cycle; the April 16 meeting is proposed to move to April 30, with agreement to revisit given member availability.
+      
+      Subcommittee updates: the roof subcommittee confirmed work begins over April break at MHS (three sections without HVAC equipment); CPAC met and fielded budget/override questions; the Wellness Advisory Committee discussed new DESE guidance and drafted a measles response protocol.
+    key_speakers: ["School Committee Chair", "Superintendent (John)", "School Committee member Kate", "School Committee member Melissa", "School Committee member Henry"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

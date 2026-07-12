@@ -9,7 +9,55 @@ video_url: "https://www.youtube.com/watch?v=KQtf1tcqJgI"
 duration_seconds: 3048
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee policy subcommittee maps out multi-month MASC policy update process"
+  summary: "The Marblehead School Committee Policy Subcommittee met to review pending MASC-recommended policy changes, cataloguing items into minor edits, substantive edits, and new policies. Members agreed to redline minor edits and bring them forward for a vote, while referring substantive changes and new policies to the superintendent for review before action. The subcommittee scheduled a series of meetings through May 2026 to work through updates by policy letter category."
+  decisions:
+    - "Approved scheduling next policy subcommittee meeting for Tuesday, September 30 at 8:30 a.m."
+    - "Approved scheduling follow-on meetings on approximately November 20, December 18, January 22, January 26 (February), March 26, and May 28"
+    - "Held adoption of substantive policy changes pending superintendent review"
+    - "Held adoption of policy ILD (student submission to educational surveys) pending superintendent explanation of operationalization"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 66
+    end_seconds: 81
+    headline: "No public comment received at opening of policy subcommittee meeting"
+    dek: "The chair checked for public comment and, finding no raised hands, moved directly to the agenda."
+    summary: "The meeting was called to order at 11:04 a.m. with members Kate Schmeck, Pepper, Jen, and others present. The chair confirmed no members of the public wished to comment."
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 81
+    end_seconds: 2795
+    featured: true
+    headline: "Policy subcommittee charts year-long plan to clear MASC-recommended updates backlog"
+    dek: "Members reconciled two independent spreadsheets tracking MASC policy bulletins dating to March 2023 and agreed on a letter-by-letter review schedule stretching to May 2026."
+    summary: |
+      A subcommittee member had prepared a master spreadsheet of all current district policies cross-referenced against MASC policy bulletins going back to at least March 2023. A second member had independently prepared a similar spreadsheet, and members agreed to merge the two. The items were categorized into three groups:
+      
+      - **Minor edits** (mostly from the March 2023 bulletin): terminology changes such as "parents" → "parent/guardian" and "children" → "student." One member agreed to redline the existing policy documents and bring the full set forward for vote, with the recommendation that materials be distributed at least two weeks before the vote.
+      - **Substantive edits**: Policies with notable differences from current district language, including BEDH (public comment at school committee meetings), IGB (student services program), JJ (student fundraising — contains a door-to-door solicitation discouragement clause the district currently uses), KBE (relations with parent organizations), and EKAB (access to buildings and grounds). These require superintendent review before action.
+      - **New policies** (13 recommended by MASC): Including EF (civil rights complaint for child nutrition programs), EFBA (school food and nutrition meal modifications), visitors to schools, service animals, and others. Several may already have been adopted; the subcommittee noted the website versions may be out of date.
+      
+      A specific discussion arose around policy ILD (student submission to educational surveys), which implements a federal statute requiring districts to notify parents annually and give them an opportunity to opt out before surveys on certain sensitive topics are administered. Members noted the current handbook version requires prior consent, questioned how operationalization works in practice, and agreed to place this on a future agenda with the superintendent present to explain procedures.
+      
+      The subcommittee also discussed the need to track review dates on policies (even when no change is made) and the desirability of building a hyperlinked index of the policy manual to improve usability, noting the school IT contact (Stephen) had discussed possible solutions.
+      
+      **Planned meeting schedule:**
+      | Date | Focus |
+      |---|---|
+      | September 30 (8:30 a.m.) | Minor edits — introduce/discuss |
+      | ~November 20 (11:00 a.m.) | Substantive edits, sections A & B |
+      | ~December 18 (11:00 a.m.) | Substantive edits, continued |
+      | ~January 22 (11:00 a.m.) | Continued by letter category |
+      | ~January 26 | Continued |
+      | ~March 26 | Continued |
+      | ~May 28 | Final |
+      
+      The meeting adjourned at 11:54 a.m.
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;
