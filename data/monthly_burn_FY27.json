@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-07-11",
+  "as_of": "2026-07-14",
   "latest_fiscal_month": "2026-07-01",
-  "generated_at": "2026-07-11T11:10:43+00:00",
+  "generated_at": "2026-07-14T11:14:40+00:00",
   "fiscal_year": "FY27",
   "fy_months": [
     "2026-07",
@@ -217,6 +217,72 @@
       ]
     },
     {
+      "fund": "GENERAL FUND - SCHOOL",
+      "total_through_as_of": 194178.57,
+      "series": [
+        {
+          "month": "2026-07",
+          "cumulative": 194178.57,
+          "monthly": 194178.57
+        },
+        {
+          "month": "2026-08",
+          "cumulative": 194178.57,
+          "monthly": 0.0
+        },
+        {
+          "month": "2026-09",
+          "cumulative": 194178.57,
+          "monthly": 0.0
+        },
+        {
+          "month": "2026-10",
+          "cumulative": 194178.57,
+          "monthly": 0.0
+        },
+        {
+          "month": "2026-11",
+          "cumulative": 194178.57,
+          "monthly": 0.0
+        },
+        {
+          "month": "2026-12",
+          "cumulative": 194178.57,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-01",
+          "cumulative": 194178.57,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-02",
+          "cumulative": 194178.57,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-03",
+          "cumulative": 194178.57,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-04",
+          "cumulative": 194178.57,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-05",
+          "cumulative": 194178.57,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-06",
+          "cumulative": 194178.57,
+          "monthly": 0.0
+        }
+      ]
+    },
+    {
       "fund": "WATER ENTERPRISE OPERATING",
       "total_through_as_of": 183099.16,
       "series": [
@@ -344,72 +410,6 @@
         {
           "month": "2027-06",
           "cumulative": 130320.13,
-          "monthly": 0.0
-        }
-      ]
-    },
-    {
-      "fund": "GENERAL FUND - SCHOOL",
-      "total_through_as_of": 107400.12,
-      "series": [
-        {
-          "month": "2026-07",
-          "cumulative": 107400.12,
-          "monthly": 107400.12
-        },
-        {
-          "month": "2026-08",
-          "cumulative": 107400.12,
-          "monthly": 0.0
-        },
-        {
-          "month": "2026-09",
-          "cumulative": 107400.12,
-          "monthly": 0.0
-        },
-        {
-          "month": "2026-10",
-          "cumulative": 107400.12,
-          "monthly": 0.0
-        },
-        {
-          "month": "2026-11",
-          "cumulative": 107400.12,
-          "monthly": 0.0
-        },
-        {
-          "month": "2026-12",
-          "cumulative": 107400.12,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-01",
-          "cumulative": 107400.12,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-02",
-          "cumulative": 107400.12,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-03",
-          "cumulative": 107400.12,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-04",
-          "cumulative": 107400.12,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-05",
-          "cumulative": 107400.12,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-06",
-          "cumulative": 107400.12,
           "monthly": 0.0
         }
       ]
