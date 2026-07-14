@@ -712,8 +712,8 @@
     },
     {
       "month": "2026-06",
-      "amount": 7307873.67,
-      "count": 1490
+      "amount": 8156784.61,
+      "count": 1857
     }
   ],
   "drill": {
@@ -727,13 +727,13 @@
           },
           {
             "name": "HOMER CONTRACTING IN",
-            "amount": 951900.0,
-            "count": 4
+            "amount": 1239750.0,
+            "count": 5
           },
           {
             "name": "RAYMOND DESIGN ASSOCIATES INC",
-            "amount": 898722.5,
-            "count": 8
+            "amount": 918860.0,
+            "count": 9
           },
           {
             "name": "MDM ENGINEERING COMPANY INC",
@@ -747,8 +747,8 @@
           },
           {
             "name": "LEFTFIELD LLC",
-            "amount": 245104.75,
-            "count": 11
+            "amount": 302249.75,
+            "count": 12
           },
           {
             "name": "AMERICAN REFRIGERATION COMPANY LLC",
@@ -834,8 +834,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 180677.04,
-            "count": 7
+            "amount": 545809.54,
+            "count": 10
           }
         ]
       },
@@ -843,8 +843,8 @@
         "top_vendors": [
           {
             "name": "NV5",
-            "amount": 459776.22,
-            "count": 9
+            "amount": 469776.22,
+            "count": 10
           },
           {
             "name": "R B ALLEN CO INC",
@@ -885,8 +885,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 51085.78,
-            "count": 1
+            "amount": 61085.78,
+            "count": 2
           }
         ]
       },
@@ -1387,6 +1387,11 @@
             "count": 1
           },
           {
+            "name": "SARAH ALLEN SCOVILLE",
+            "amount": 750.0,
+            "count": 1
+          },
+          {
             "name": "JOSEPH DIPOLI",
             "amount": 500.0,
             "count": 1
@@ -1450,8 +1455,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 2925.0,
-            "count": 3
+            "amount": 3675.0,
+            "count": 4
           }
         ]
       },
@@ -2158,14 +2163,14 @@
       "COUNCIL ON AGING DONATION FUND": {
         "top_vendors": [
           {
+            "name": "DENNIS K BURKE INC",
+            "amount": 3409.74,
+            "count": 9
+          },
+          {
             "name": "TAYLOR PRICE",
             "amount": 3000.0,
             "count": 1
-          },
-          {
-            "name": "DENNIS K BURKE INC",
-            "amount": 2778.51,
-            "count": 7
           },
           {
             "name": "SHARON DOLIBER",
@@ -2201,8 +2206,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 1011.12,
-            "count": 3
+            "amount": 1642.35,
+            "count": 5
           }
         ]
       },
@@ -2215,13 +2220,13 @@
           },
           {
             "name": "TOOLE DESIGN GROUP LLC",
-            "amount": 206503.88,
-            "count": 17
+            "amount": 277119.37,
+            "count": 19
           },
           {
             "name": "TYLER TECHNOLOGIES INC",
-            "amount": 192194.48,
-            "count": 66
+            "amount": 211219.98,
+            "count": 72
           },
           {
             "name": "COMM TRACT CORP",
@@ -2327,8 +2332,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 48306.96,
-            "count": 11
+            "amount": 137947.95,
+            "count": 19
           }
         ]
       },
@@ -2456,8 +2461,8 @@
         "top_vendors": [
           {
             "name": "DENNIS K BURKE INC",
-            "amount": 4909.56,
-            "count": 20
+            "amount": 5338.56,
+            "count": 22
           }
         ],
         "monthly": [
@@ -2503,8 +2508,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 675.3,
-            "count": 3
+            "amount": 1104.3,
+            "count": 5
           }
         ]
       },
@@ -2561,14 +2566,14 @@
             "count": 1
           },
           {
+            "name": "VERIZON INC",
+            "amount": 109.16,
+            "count": 12
+          },
+          {
             "name": "AMERICAN ASSOCIATION FOR STATE AND LOCAL HISTORY",
             "amount": 98.0,
             "count": 1
-          },
-          {
-            "name": "VERIZON INC",
-            "amount": 86.94,
-            "count": 9
           }
         ],
         "monthly": [
@@ -2619,8 +2624,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 16498.15,
-            "count": 4
+            "amount": 16520.37,
+            "count": 7
           }
         ]
       },
@@ -2777,8 +2782,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 1611133.98,
-            "count": 133
+            "amount": 1612570.65,
+            "count": 140
           }
         ]
       },
@@ -2849,8 +2854,8 @@
         "top_vendors": [
           {
             "name": "ENVIRONMENTAL PARTNERS GROUP LLC",
-            "amount": 7552.5,
-            "count": 2
+            "amount": 22960.5,
+            "count": 3
           }
         ],
         "monthly": [
@@ -2861,8 +2866,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 2422.5,
-            "count": 1
+            "amount": 17830.5,
+            "count": 2
           }
         ]
       },
@@ -2926,8 +2931,8 @@
           },
           {
             "name": "NATIONAL GRID",
-            "amount": 301539.09,
-            "count": 67
+            "amount": 303813.39,
+            "count": 73
           },
           {
             "name": "NEW ENGLAND ACADEMY LLC",
@@ -3023,8 +3028,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 1429726.24,
-            "count": 255
+            "amount": 1584195.66,
+            "count": 360
           }
         ]
       },
@@ -3144,8 +3149,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 123291.82,
-            "count": 16
+            "amount": 146903.84,
+            "count": 20
           }
         ]
       },
@@ -3153,8 +3158,8 @@
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 17586396.85,
-            "count": 181
+            "amount": 17581536.85,
+            "count": 182
           },
           {
             "name": "U.S. BANK",
@@ -3197,14 +3202,14 @@
             "count": 416
           },
           {
-            "name": "TOWN OF MARBLEHEAD",
-            "amount": 242304.52,
-            "count": 308
+            "name": "FUTURE TECHNOLOGIES GROUP LLC",
+            "amount": 249207.0,
+            "count": 38
           },
           {
-            "name": "FUTURE TECHNOLOGIES GROUP LLC",
-            "amount": 230950.55,
-            "count": 36
+            "name": "TOWN OF MARBLEHEAD",
+            "amount": 242751.81,
+            "count": 312
           },
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -3270,8 +3275,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 2108545.14,
-            "count": 555
+            "amount": 2212860.34,
+            "count": 685
           }
         ]
       },
@@ -3466,6 +3471,16 @@
             "count": 1
           },
           {
+            "name": "NORTHEAST TRAILWORKS LLP",
+            "amount": 1600.0,
+            "count": 1
+          },
+          {
+            "name": "HD SUPPLY INC",
+            "amount": 463.18,
+            "count": 5
+          },
+          {
             "name": "CHRISTOPHER FIELDS",
             "amount": 346.51,
             "count": 1
@@ -3481,6 +3496,11 @@
             "month": "2026-05",
             "amount": 346.51,
             "count": 1
+          },
+          {
+            "month": "2026-06",
+            "amount": 2063.18,
+            "count": 6
           }
         ]
       },
@@ -3584,14 +3604,14 @@
             "count": 3
           },
           {
+            "name": "MARBLEHEAD WATER AND SEWER",
+            "amount": 8575.24,
+            "count": 23
+          },
+          {
             "name": "TRAVELERS INDEMNITY AND AFFILIATES",
             "amount": 8380.0,
             "count": 2
-          },
-          {
-            "name": "MARBLEHEAD WATER AND SEWER",
-            "amount": 7840.19,
-            "count": 22
           },
           {
             "name": "WILLARD & SON INC",
@@ -3610,8 +3630,8 @@
           },
           {
             "name": "TOWN OF MARBLEHEAD",
-            "amount": 5660.5,
-            "count": 66
+            "amount": 5711.86,
+            "count": 67
           }
         ],
         "monthly": [
@@ -3672,8 +3692,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 22986.61,
-            "count": 57
+            "amount": 26548.96,
+            "count": 71
           }
         ]
       },
@@ -4016,14 +4036,14 @@
             "count": 1
           },
           {
+            "name": "CONNOR RYAN",
+            "amount": 1115.52,
+            "count": 6
+          },
+          {
             "name": "VIRTUAL DESIGN & CONSTRUCTION VIRTUAL DESIGN & CON",
             "amount": 999.0,
             "count": 1
-          },
-          {
-            "name": "CONNOR RYAN",
-            "amount": 921.85,
-            "count": 5
           }
         ],
         "monthly": [
@@ -4059,8 +4079,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 7373.63,
-            "count": 11
+            "amount": 7567.3,
+            "count": 12
           }
         ]
       },
@@ -4507,8 +4527,8 @@
         "top_vendors": [
           {
             "name": "NORTH READING-LYNNFIELD TAXI",
-            "amount": 303813.0,
-            "count": 10
+            "amount": 329398.5,
+            "count": 11
           },
           {
             "name": "TOWN OF MARBLEHEAD",
@@ -4614,8 +4634,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 45456.99,
-            "count": 11
+            "amount": 71042.49,
+            "count": 12
           }
         ]
       },
@@ -4625,6 +4645,11 @@
             "name": "TOWN OF MARBLEHEAD",
             "amount": 11902.0,
             "count": 4
+          },
+          {
+            "name": "HEALEY BUS INC",
+            "amount": 3950.25,
+            "count": 1
           }
         ],
         "monthly": [
@@ -4635,8 +4660,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 6600.0,
-            "count": 2
+            "amount": 10550.25,
+            "count": 3
           }
         ]
       },
@@ -4674,8 +4699,8 @@
           },
           {
             "name": "SPRAGUE ENERGY CORP",
-            "amount": 545.56,
-            "count": 8
+            "amount": 553.72,
+            "count": 9
           },
           {
             "name": "MARBLEHEAD NEWS GROUP",
@@ -4746,8 +4771,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 1028.47,
-            "count": 11
+            "amount": 1036.63,
+            "count": 12
           }
         ]
       },
@@ -4945,13 +4970,13 @@
         "top_vendors": [
           {
             "name": "LEAH GOODMAN",
-            "amount": 90675.3,
-            "count": 12
+            "amount": 94037.7,
+            "count": 13
           },
           {
             "name": "ONE TIME PAY",
-            "amount": 38371.0,
-            "count": 188
+            "amount": 41163.0,
+            "count": 210
           },
           {
             "name": "HAM ELECTRIC LLC",
@@ -4964,19 +4989,19 @@
             "count": 13
           },
           {
+            "name": "TINA FOX",
+            "amount": 34111.16,
+            "count": 8
+          },
+          {
             "name": "MATT CORREIA",
             "amount": 32767.2,
             "count": 2
           },
           {
-            "name": "TINA FOX",
-            "amount": 26025.12,
-            "count": 6
-          },
-          {
             "name": "AMAZON CAPITAL SERVICES INC",
-            "amount": 21935.75,
-            "count": 124
+            "amount": 22293.33,
+            "count": 128
           },
           {
             "name": "CHRISTOPHER FIELDS",
@@ -5062,8 +5087,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 37171.03,
-            "count": 35
+            "amount": 56474.68,
+            "count": 71
           }
         ]
       },
@@ -5454,8 +5479,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 73905.02,
-            "count": 47
+            "amount": 76362.51,
+            "count": 48
           }
         ]
       },
@@ -5543,6 +5568,11 @@
             "count": 1
           },
           {
+            "name": "PARTNERS HEALTHCARE",
+            "amount": 8112.0,
+            "count": 2
+          },
+          {
             "name": "NORTH SHORE CHILDREN'S THEATRE",
             "amount": 7790.0,
             "count": 4
@@ -5568,6 +5598,11 @@
             "count": 2
           },
           {
+            "name": "HEALEY BUS INC",
+            "amount": 3255.8,
+            "count": 1
+          },
+          {
             "name": "SKI WARD INC",
             "amount": 1856.0,
             "count": 1
@@ -5585,16 +5620,6 @@
           {
             "name": "BRENDON F. GRAFFUM",
             "amount": 750.0,
-            "count": 1
-          },
-          {
-            "name": "MASS BAY SKI LEAGUE EAST",
-            "amount": 500.0,
-            "count": 1
-          },
-          {
-            "name": "UNITED SERVICE COMPANY",
-            "amount": 356.0,
             "count": 1
           }
         ],
@@ -5646,8 +5671,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 14174.0,
-            "count": 3
+            "amount": 25900.8,
+            "count": 7
           }
         ]
       },
@@ -5776,8 +5801,8 @@
           },
           {
             "name": "TOWN OF MARBLEHEAD",
-            "amount": 92230.27,
-            "count": 339
+            "amount": 92247.85,
+            "count": 340
           },
           {
             "name": "NORTHERN DATA SYSTEMS INC",
@@ -5786,8 +5811,8 @@
           },
           {
             "name": "DENNIS K BURKE INC",
-            "amount": 17930.66,
-            "count": 32
+            "amount": 19092.16,
+            "count": 35
           },
           {
             "name": "HALEY WARD, INC",
@@ -5878,8 +5903,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 49927.38,
-            "count": 74
+            "amount": 51910.18,
+            "count": 90
           }
         ]
       },
@@ -6004,6 +6029,11 @@
             "count": 1
           },
           {
+            "name": "PATRIOT FENCE CRAFTERS INC",
+            "amount": 10450.0,
+            "count": 1
+          },
+          {
             "name": "HANCOCK ASSOCIATES",
             "amount": 7169.55,
             "count": 1
@@ -6048,6 +6078,11 @@
           {
             "month": "2026-04",
             "amount": 826.88,
+            "count": 1
+          },
+          {
+            "month": "2026-06",
+            "amount": 10450.0,
             "count": 1
           }
         ]
@@ -6239,8 +6274,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 128859.49,
-            "count": 38
+            "amount": 128879.54,
+            "count": 39
           }
         ]
       },
@@ -6604,6 +6639,11 @@
             "name": "AMAZON CAPITAL SERVICES INC",
             "amount": 2897.34,
             "count": 2
+          },
+          {
+            "name": "LCJ MARKETING SOURCE INC",
+            "amount": 169.0,
+            "count": 1
           }
         ],
         "monthly": [
@@ -6619,8 +6659,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 21909.74,
-            "count": 3
+            "amount": 22078.74,
+            "count": 4
           }
         ]
       },
@@ -6933,13 +6973,13 @@
           },
           {
             "name": "TOWN OF MARBLEHEAD",
-            "amount": 19473.54,
-            "count": 51
+            "amount": 19493.92,
+            "count": 52
           },
           {
             "name": "DENNIS K BURKE INC",
-            "amount": 16925.98,
-            "count": 35
+            "amount": 17883.12,
+            "count": 38
           },
           {
             "name": "CORE & MAIN LP",
@@ -6948,8 +6988,8 @@
           },
           {
             "name": "NATIONAL GRID COMPANY",
-            "amount": 11270.39,
-            "count": 21
+            "amount": 11337.75,
+            "count": 22
           },
           {
             "name": "JOHN HOADLEY AND SONS INC",
@@ -7020,8 +7060,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 44255.37,
-            "count": 46
+            "amount": 45846.16,
+            "count": 62
           }
         ]
       },
