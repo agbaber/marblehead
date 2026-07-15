@@ -250,7 +250,9 @@ _HEADCOUNT_CROSSWALK = {
     "human_resources": "HUMAN RESOURCES",
     "town_counsel": "Town Counsel",
     "community_development": "COMMUNITY DEV & PLANNING",
-    "planning_board": "COMMUNITY DEV & PLANNING",
+    # NOTE: do NOT map planning_board to "COMMUNITY DEV & PLANNING" — that payroll
+    # line is community_development's staffed dept; planning_board is a volunteer
+    # board with only a stipend line and no paid staff. It stays headcount=None.
     "building_inspection": "BUILDING COMMISSIONER",
     "animal_inspector": "ANIMAL INSPECTOR",
     "police": "POLICE",
