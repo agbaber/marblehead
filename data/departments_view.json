@@ -65,7 +65,7 @@
   ],
   "departments": {
     "moderator": {
-      "name": "moderator",
+      "name": "Town Moderator",
       "function": "general_government",
       "function_label": "General Government",
       "role": null,
@@ -94,7 +94,7 @@
       "overrides": []
     },
     "select_board": {
-      "name": "select_board",
+      "name": "Select Board",
       "function": "general_government",
       "function_label": "General Government",
       "role": "Town Administrator",
@@ -216,7 +216,7 @@
       "overrides": []
     },
     "finance_committee": {
-      "name": "finance_committee",
+      "name": "Finance Committee",
       "function": "general_government",
       "function_label": "General Government",
       "role": null,
@@ -253,7 +253,7 @@
       "overrides": []
     },
     "reserve_fund": {
-      "name": "reserve_fund",
+      "name": "Reserve Fund",
       "function": "general_government",
       "function_label": "General Government",
       "role": null,
@@ -289,7 +289,7 @@
       ]
     },
     "finance": {
-      "name": "finance",
+      "name": "Finance Department",
       "function": "general_government",
       "function_label": "General Government",
       "role": "Finance Director / CFO",
@@ -428,7 +428,7 @@
       ]
     },
     "assessor": {
-      "name": "assessor",
+      "name": "Assessors' Office",
       "function": "general_government",
       "function_label": "General Government",
       "role": "Chief Assessor",
@@ -550,7 +550,7 @@
       "overrides": []
     },
     "town_counsel": {
-      "name": "town_counsel",
+      "name": "Town Counsel",
       "function": "general_government",
       "function_label": "General Government",
       "role": null,
@@ -608,7 +608,7 @@
       "overrides": []
     },
     "parking_clerk": {
-      "name": "parking_clerk",
+      "name": "Parking Clerk",
       "function": "general_government",
       "function_label": "General Government",
       "role": null,
@@ -637,7 +637,7 @@
       "overrides": []
     },
     "town_clerk": {
-      "name": "town_clerk",
+      "name": "Town Clerk",
       "function": "general_government",
       "function_label": "General Government",
       "role": "Town Clerk",
@@ -758,7 +758,7 @@
       ]
     },
     "election_registration": {
-      "name": "election_registration",
+      "name": "Elections & Registration",
       "function": "general_government",
       "function_label": "General Government",
       "role": "Town Clerk",
@@ -872,7 +872,7 @@
       "overrides": []
     },
     "planning_board": {
-      "name": "planning_board",
+      "name": "Planning Board",
       "function": "general_government",
       "function_label": "General Government",
       "role": null,
@@ -901,7 +901,7 @@
       "overrides": []
     },
     "public_buildings": {
-      "name": "public_buildings",
+      "name": "Public Buildings",
       "function": "general_government",
       "function_label": "General Government",
       "role": "Superintendent of Public Buildings",
@@ -1028,7 +1028,7 @@
       ]
     },
     "human_resources": {
-      "name": "human_resources",
+      "name": "Human Resources",
       "function": "general_government",
       "function_label": "General Government",
       "role": "Director of Human Resources",
@@ -1093,7 +1093,7 @@
       ]
     },
     "community_development": {
-      "name": "community_development",
+      "name": "Community Development & Planning",
       "function": "general_government",
       "function_label": "General Government",
       "role": "Director of Community Development & Planning",
@@ -1180,7 +1180,7 @@
       ]
     },
     "police": {
-      "name": "police",
+      "name": "Police Department",
       "function": "public_safety",
       "function_label": "Public Safety",
       "role": "Chief of Police",
@@ -1313,7 +1313,7 @@
       ]
     },
     "fire": {
-      "name": "fire",
+      "name": "Fire Department",
       "function": "public_safety",
       "function_label": "Public Safety",
       "role": "Fire Chief",
@@ -1434,7 +1434,7 @@
       ]
     },
     "building_inspection": {
-      "name": "building_inspection",
+      "name": "Building Inspection",
       "function": "public_safety",
       "function_label": "Public Safety",
       "role": "Building Commissioner",
@@ -1555,7 +1555,7 @@
       ]
     },
     "sealer_weights_measures": {
-      "name": "sealer_weights_measures",
+      "name": "Sealer of Weights & Measures",
       "function": "public_safety",
       "function_label": "Public Safety",
       "role": null,
@@ -1584,7 +1584,7 @@
       "overrides": []
     },
     "animal_inspector": {
-      "name": "animal_inspector",
+      "name": "Animal Inspector",
       "function": "public_safety",
       "function_label": "Public Safety",
       "role": null,
@@ -1650,7 +1650,7 @@
       "overrides": []
     },
     "public_works_ops": {
-      "name": "public_works_ops",
+      "name": "Public Works Operations",
       "function": "public_works",
       "function_label": "Public Works and Facilities",
       "role": "Director of Public Works",
@@ -1722,7 +1722,7 @@
       ]
     },
     "waste_collection": {
-      "name": "waste_collection",
+      "name": "Waste Collection",
       "function": "public_works",
       "function_label": "Public Works and Facilities",
       "role": "Assistant Director of Waste",
@@ -1767,7 +1767,7 @@
       "overrides": []
     },
     "curbside_collection": {
-      "name": "curbside_collection",
+      "name": "Curbside Collection",
       "function": "public_works",
       "function_label": "Public Works and Facilities",
       "role": "Assistant Director of Waste",
@@ -1804,7 +1804,7 @@
       "overrides": []
     },
     "cemetery": {
-      "name": "cemetery",
+      "name": "Cemetery",
       "function": "public_works",
       "function_label": "Public Works and Facilities",
       "role": "Cemetery Superintendent",
@@ -1933,7 +1933,7 @@
       ]
     },
     "health": {
-      "name": "health",
+      "name": "Health Department",
       "function": "human_services",
       "function_label": "Human Services",
       "role": "Director of Public Health",
@@ -2062,7 +2062,7 @@
       ]
     },
     "council_on_aging": {
-      "name": "council_on_aging",
+      "name": "Council on Aging",
       "function": "human_services",
       "function_label": "Human Services",
       "role": "Council on Aging Director",
@@ -2195,7 +2195,7 @@
       ]
     },
     "veterans_benefits": {
-      "name": "veterans_benefits",
+      "name": "Veterans' Benefits",
       "function": "human_services",
       "function_label": "Human Services",
       "role": "Veterans' Agent & Director of Veterans' Services",
@@ -2317,7 +2317,7 @@
       "overrides": []
     },
     "library": {
-      "name": "library",
+      "name": "Abbot Public Library",
       "function": "culture_recreation",
       "function_label": "Culture and Recreation",
       "role": "Library Director",
@@ -2456,7 +2456,7 @@
       ]
     },
     "rec_park": {
-      "name": "rec_park",
+      "name": "Recreation & Parks",
       "function": "culture_recreation",
       "function_label": "Culture and Recreation",
       "role": "Superintendent of Parks",
@@ -2589,7 +2589,7 @@
       ]
     },
     "memorial_veterans_day": {
-      "name": "memorial_veterans_day",
+      "name": "Memorial & Veterans Day",
       "function": "culture_recreation",
       "function_label": "Culture and Recreation",
       "role": null,
@@ -2618,7 +2618,7 @@
       "overrides": []
     },
     "debt_service": {
-      "name": "debt_service",
+      "name": "Debt Service",
       "function": "other_general_government",
       "function_label": "Other General Government",
       "role": null,
@@ -2655,7 +2655,7 @@
       "overrides": []
     },
     "other_general_government_dept": {
-      "name": "other_general_government_dept",
+      "name": "Other General Government",
       "function": "other_general_government",
       "function_label": "Other General Government",
       "role": null,
@@ -2804,7 +2804,7 @@
       "overrides": []
     },
     "sewer": {
-      "name": "sewer",
+      "name": "Sewer Department",
       "function": "sewer_enterprise",
       "function_label": "Sewer Enterprise",
       "role": "Working Foreman, Sewer",
@@ -2926,7 +2926,7 @@
       "overrides": []
     },
     "water": {
-      "name": "water",
+      "name": "Water Department",
       "function": "water_enterprise",
       "function_label": "Water Enterprise",
       "role": "Working Foreman, Water",
@@ -3048,7 +3048,7 @@
       "overrides": []
     },
     "harbor": {
-      "name": "harbor",
+      "name": "Harbormaster",
       "function": "harbor_enterprise",
       "function_label": "Harbor Enterprise",
       "role": "Harbormaster",
@@ -3170,7 +3170,7 @@
       "overrides": []
     },
     "school_brown": {
-      "name": "school_brown",
+      "name": "Brown Elementary School",
       "function": "schools",
       "function_label": "Schools",
       "role": null,
@@ -3560,7 +3560,7 @@
       "overrides": []
     },
     "school_glover": {
-      "name": "school_glover",
+      "name": "Glover Elementary School",
       "function": "schools",
       "function_label": "Schools",
       "role": null,
@@ -3954,7 +3954,7 @@
       "overrides": []
     },
     "school_village": {
-      "name": "school_village",
+      "name": "Village Elementary School",
       "function": "schools",
       "function_label": "Schools",
       "role": null,
@@ -4372,7 +4372,7 @@
       "overrides": []
     },
     "school_middle": {
-      "name": "school_middle",
+      "name": "Marblehead Veterans Middle School",
       "function": "schools",
       "function_label": "Schools",
       "role": null,
@@ -4862,7 +4862,7 @@
       "overrides": []
     },
     "school_high": {
-      "name": "school_high",
+      "name": "Marblehead High School",
       "function": "schools",
       "function_label": "Schools",
       "role": null,
@@ -5600,7 +5600,7 @@
       "overrides": []
     },
     "school_athletics": {
-      "name": "school_athletics",
+      "name": "School Athletics",
       "function": "schools",
       "function_label": "Schools",
       "role": null,
