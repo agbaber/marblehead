@@ -1,0 +1,288 @@
+---
+title: "The library: staffing, services, and funding"
+scripts: [citations, deep-dive]
+og_title: "Abbot Library: 17 staff, 52 hours a week, and the cut voters reversed"
+og_description: "Abbot Public Library employs about 17 people and is open 52 hours a week. The no-override budget would have cut it 43%; voters restored it in June. How it compares to four other towns."
+og_url: https://marbleheaddata.org/library.html
+---
+<style>
+/* Page-scoped: TL;DR box (shared pattern) */
+  .tldr {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 22px 16px;
+    margin: 0 0 24px;
+    border-top: 3px solid var(--c-navy);
+  }
+  .tldr-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-subtle);
+    margin-bottom: 10px;
+  }
+  .tldr ul { list-style: none; padding: 0; margin: 0; }
+  .tldr li {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    padding: 6px 0 6px 22px;
+    position: relative;
+    border-top: 1px solid var(--divider);
+  }
+  .tldr li:first-child { border-top: none; padding-top: 2px; }
+  .tldr li:last-child { padding-bottom: 0; }
+  .tldr li::before {
+    content: "";
+    position: absolute;
+    left: 4px; top: 14px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--c-teal);
+  }
+  .tldr li:first-child::before { top: 10px; }
+  .tldr li strong { color: var(--text); }
+  .tldr--teal { border-top-color: var(--c-teal); }
+
+  /* Page-scoped: key-stat row */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 22px 0 26px;
+  }
+  .stat-card {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 16px 16px 14px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.05;
+    color: var(--c-navy);
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-subtle);
+    line-height: 1.4;
+    margin-top: 6px;
+  }
+  @media (max-width: 600px) {
+    .stat-row { grid-template-columns: 1fr; gap: 10px; }
+    .stat-card { display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: 12px; text-align: left; }
+    .stat-num { font-size: 24px; }
+    .stat-label { margin-top: 0; }
+  }
+
+  /* Page-scoped: before/after cut comparison */
+  .ba {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0 24px;
+  }
+  .ba-col {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 16px 18px;
+  }
+  .ba-col--after { border-top: 3px solid var(--c-buoy); }
+  .ba-col--now { border-top: 3px solid var(--c-navy); }
+  .ba-h {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+    margin-bottom: 10px;
+  }
+  .ba-col ul { list-style: none; padding: 0; margin: 0; }
+  .ba-col li {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 7px 0;
+    border-top: 1px solid var(--divider);
+    color: var(--text-muted);
+  }
+  .ba-col li:first-child { border-top: none; }
+  .ba-col li strong { color: var(--text); }
+  @media (max-width: 600px) {
+    .ba { grid-template-columns: 1fr; }
+  }
+
+  .source {
+    font-size: 12.5px;
+    color: var(--text-subtle);
+    line-height: 1.5;
+    margin: 6px 0 22px;
+  }
+
+  /* Page-scoped: cross-town comparison table (shared peer-table pattern) */
+  .peer-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0 16px; }
+  .peer-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--text); font-size: 12px; }
+  .peer-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); font-variant-numeric: tabular-nums; }
+  .peer-table td:not(:first-child), .peer-table th:not(:first-child) { text-align: right; }
+  .peer-table .peer-highlight { background: color-mix(in srgb, var(--c-navy) 6%, transparent); }
+  .peer-table .peer-highlight td { font-weight: 600; }
+  @media (max-width: 600px) {
+    .peer-table { font-size: 13px; }
+    .peer-table td, .peer-table th { padding: 6px 6px; }
+  }
+</style>
+
+<h1>The library: staffing, services, and funding</h1>
+
+<p class="page-lead">Abbot Public Library employs about 17 people and is open 52 hours a week. It spent this spring at the center of the <a href="/2026-override/">override</a> fight: the budget the town would have run without an override cut the library by roughly 43 percent, dropped it to 24 hours a week, and put its state certification at risk. On June 9, 2026, voters approved the $15 million operating override at its top tier, which restored the library and added two positions.<sup class="cite" data-href="https://marbleheadcurrent.org/2026/04/01/abbot-library-to-open-only-three-days-a-week-with-new-budget/" data-source="Marblehead Current, &quot;Abbot Library to open only three days a week with new budget&quot; (April 1, 2026): 17 FTE currently, no-override budget eliminates 8.25 FTE and retains 8.74, hours drop from 52 to 24 per week with no evenings or Saturdays, new-materials budget eliminated, certification at risk."></sup></p>
+
+<div class="tldr">
+  <p class="tldr-label">TL;DR</p>
+  <ul>
+    <li><strong>17 people</strong> work at Abbot Library (full-time equivalent). A director, plus reference and adult services, youth services, circulation, technical services, and building staff.</li>
+    <li>It is open <strong>52 hours a week</strong> and belongs to <strong>NOBLE</strong>, the consortium that lets a Marblehead card borrow from dozens of other North Shore libraries.</li>
+    <li>The no-override budget would have cut the library department from <strong>$1.49M to $0.86M</strong>, a <strong>43% reduction</strong>, eliminating <strong>8.25 of 17 positions</strong>, dropping hours to <strong>24 a week</strong>, zeroing the new-materials budget, and risking <strong>state certification</strong> and the town's <strong>$44,317</strong> in state aid.</li>
+    <li>Marblehead already funds its library well: at <strong>$68 per resident</strong> it is second of five comparable towns, behind Harwich and ahead of Swampscott, Melrose, and Stoneham. The cut would have dropped it to about <strong>$42</strong>, the bottom of that group.</li>
+    <li>On <strong>June 9, 2026</strong> voters approved the $15M operating override at <strong>Tier 3</strong>, restoring all library funding and adding a part-time custodian and assistant. The library was not cut.</li>
+  </ul>
+</div>
+
+<div class="stat-row">
+  <div class="stat-card"><div class="stat-num">~17</div><div class="stat-label">people employed (<abbr class="g" title="Full-Time Equivalent">FTE</abbr>)</div></div>
+  <div class="stat-card"><div class="stat-num">52</div><div class="stat-label">hours open per week</div></div>
+  <div class="stat-card"><div class="stat-num">208K</div><div class="stat-label">items borrowed a year</div></div>
+</div>
+
+<h2 id="who-works-there">Who works there, and what they do</h2>
+
+<p>The library is staffed at about <strong>17 full-time-equivalent</strong> <abbr class="g" title="Full-Time Equivalent: a way of counting staff where two half-time employees equal one FTE">positions</abbr>, a headcount that is higher because many roles are part-time. The director is Kimberly Grad.<sup class="cite" data-href="https://mblc.state.ma.us/directories/libraries/library.php?record_id=1469" data-source="Massachusetts Board of Library Commissioners directory, Abbot Public Library Marblehead: director Kimberly Grad, 235 Pleasant Street."></sup> The work divides into a few functions:</p>
+
+<ul class="tldr tldr--teal">
+  <li><strong>Circulation</strong> checks materials in and out, manages holds and interlibrary loans, and issues cards. It is the desk most patrons interact with.</li>
+  <li><strong>Reference and adult services</strong> answer research questions, run adult programming, manage databases and digital resources, and curate the adult collection.</li>
+  <li><strong>Youth services</strong> run story times, summer reading, and school-age and teen programming, and manage the children's and young-adult collections.</li>
+  <li><strong>Technical services</strong> order, catalog, and process new materials so they can be found and borrowed.</li>
+  <li><strong>Building and support staff</strong> keep the Pleasant Street building, its meeting rooms, and its public technology running.</li>
+</ul>
+
+<p>Library director Kimberly Grad has estimated the value of services the library delivers to residents at roughly <strong>$5 million a year</strong>, against a town appropriation well under half that.<sup class="cite" data-href="https://www.cbsnews.com/boston/news/marblehead-abbot-library-closing-budget-gap/" data-source="CBS Boston, &quot;Marblehead, Massachusetts could lose its public library amid budget deficit&quot; (March 2026): library director estimates roughly $5 million in annual service value to residents."></sup></p>
+
+<h2 id="services">What the library offers</h2>
+
+<p>Beyond lending books, the library runs a set of services that a card unlocks:</p>
+
+<ul class="tldr tldr--teal">
+  <li><strong>Borrowing across the region.</strong> Abbot belongs to the <abbr class="g" title="North of Boston Library Exchange: a shared catalog and delivery network among North Shore libraries">NOBLE</abbr> consortium, so a Marblehead card borrows from and returns to dozens of other member libraries, and interlibrary loan reaches beyond that.</li>
+    <li><strong>Digital collections.</strong> E-books, audiobooks, streaming, and research databases, available from home with a card.</li>
+    <li><strong>Programming.</strong> Author talks, classes, book groups, and community events for adults.</li>
+    <li><strong>Youth and teen services.</strong> Story times, summer reading, and after-school and teen programs.</li>
+    <li><strong>Museum passes.</strong> Discounted or free admission to area museums, reserved through the library.</li>
+    <li><strong>Meeting and study space.</strong> Public meeting rooms and quiet study areas in the renovated building.</li>
+    <li><strong>Public technology.</strong> Computers, printing, scanning, and Wi-Fi.</li>
+</ul>
+
+<p>The building at 235 Pleasant Street reopened on July 10, 2024 after a roughly <strong>$10 million renovation</strong> that added meeting space, an accessible garden, and new electrical and mechanical systems. The library, founded in 1878, is approaching its 150th year.<sup class="cite" data-href="https://en.wikipedia.org/wiki/Abbot_Public_Library" data-source="Abbot Public Library (Wikipedia): founded 1878 following Benjamin Abbot's bequest; relocated to 235 Pleasant Street in 1954; ~$10M renovation begun fall 2022, reopened July 10, 2024; member of the North of Boston Library Exchange (NOBLE)."></sup></p>
+
+<h2 id="the-cut">The cut that was on the ballot</h2>
+
+<p>The FY27 budget the town would have adopted <em>without</em> an override cut the Abbot Library department from <strong>$1,493,292 to $857,633</strong>, a reduction of <strong>$635,659, or 43 percent</strong>.<sup class="cite" data-href="https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override" data-source="Town of Marblehead FY27 Proposed Budget (No Override), Abbot Public Library (lines 186/187): FY26 budget $1,493,292; FY27 proposed $857,633; salaries $1,148,053 to $667,580; expense $345,239 to $190,053. Compiled in marbleheaddata.org data/town_budget_FY27.json."></sup> Board of Trustees chair Gary Amberik called it the largest cut in the library's 150-year history.<sup class="cite" data-href="https://marbleheadcurrent.org/2026/04/01/abbot-library-to-open-only-three-days-a-week-with-new-budget/" data-source="Marblehead Current (April 1, 2026): Board chair Gary Amberik: &quot;The library is facing the largest budget cut in its 150-year history, which will have a profound effect on our staff and operations.&quot;"></sup> That was the version voters weighed on June 9.</p>
+
+<div class="ba">
+  <div class="ba-col ba-col--after">
+    <div class="ba-h">If the override had failed</div>
+    <ul>
+      <li><strong>8.74</strong> staff retained; <strong>8.25</strong> eliminated</li>
+      <li><strong>24</strong> hours a week; no evenings, no Saturdays</li>
+      <li><strong>$0.86M</strong> budget; new-materials budget eliminated</li>
+      <li>Certification at risk</li>
+    </ul>
+  </div>
+  <div class="ba-col ba-col--now">
+    <div class="ba-h">What voters approved (FY27)</div>
+    <ul>
+      <li><strong>17</strong> staff restored, plus 2 new part-time positions</li>
+      <li><strong>52</strong> hours a week, including evenings and Saturdays</li>
+      <li>Materials budget restored; about <strong>$1.59M</strong> in all</li>
+      <li>State certification maintained</li>
+    </ul>
+  </div>
+</div>
+
+<p class="source">Under the no-override budget, salaries fell from $1,148,053 to $667,580 (down 42%) and the expense line, which includes new books and materials, from $345,239 to $190,053 (down 45%). The Tier 3 override voters approved adds $736,941 back on top of the $857,633 base, bringing the FY27 library budget to about $1.59M, above FY26. Sources: Town of Marblehead FY27 Proposed Budget and override tier detail; staffing and hours from the Marblehead Current.</p>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="accreditation">What certification means, and why it matters</h2>
+    <p class="deep-dive-teaser">The state ties library funding to a minimum appropriation. Fall below it and the town joins a handful of decertified towns, and cards stop working elsewhere.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>Massachusetts certifies public libraries for state aid through the <abbr class="g" title="Massachusetts Board of Library Commissioners: the state agency that certifies libraries and distributes state aid">MBLC</abbr>. To stay certified, a town must meet the <abbr class="g" title="Municipal Appropriation Requirement: the minimum a town must budget for its library to stay certified">MAR</abbr>, which is roughly the average of the last three years' municipal appropriation increased by 2.5 percent, along with minimum standards for hours open, staffing, and materials spending.<sup class="cite" data-href="https://mblc.state.ma.us/programs-and-support/state-aid-and-aris/regs-standards.php" data-source="MBLC, State Aid regulations and standards: Municipal Appropriation Requirement equals the average of the prior three years' municipal appropriation increased by 2.5%; libraries must also meet minimum standards for hours, staffing, and materials, or receive a waiver, to be certified."></sup></p>
+
+    <p>Beyond the dollar requirement, the standards set minimums a library of Marblehead's size must meet. For a town in the 15,000 to 24,999 population band, the rules require the library to be open at least <strong>50 hours a week across five days, including evenings</strong>, and to spend at least <strong>15 percent</strong> of its municipal appropriation on materials.<sup class="cite" data-href="https://mblc.state.ma.us/programs-and-support/state-aid-and-aris/regs-standards.php" data-source="MBLC certification standards (605 CMR 4.00): population band 15,000-24,999 requires minimum 50 hours open per week across 5 days including evening hours, and minimum materials expenditure of 15% of municipal appropriation."></sup> Abbot clears both: it is open 52 hours a week and spent about 15.7 percent of its appropriation on materials in FY25. The no-override budget would have dropped it to <strong>24 hours</strong> and eliminated the materials budget, missing both thresholds; the override kept the library above them.<sup class="cite" data-href="https://mblc.state.ma.us/programs-and-support/library-statistics/" data-source="MBLC FY2025 Financial data: Abbot materials expenditure $216,788 on a $1,384,122 municipal appropriation = 15.7%. FY27 balanced budget drops hours to 24/week and eliminates the new-materials budget (Marblehead Current, April 1, 2026)."></sup></p>
+
+    <p>A town that cannot meet the requirement can apply for a <strong>waiver</strong> on grounds of fiscal hardship, which is how Stoneham stayed certified after its own cut. Without either the funding or a waiver, the library is decertified. In the most recent cycle, <strong>347 of 350</strong> Massachusetts municipalities were certified, so decertification would put Marblehead among a very small group.<sup class="cite" data-href="https://mblc.state.ma.us/programs-and-support/state-aid-and-aris/noncertified-list.php" data-source="MBLC certification: 347 of 350 municipalities certified in the most recent cycle; the non-certified list (as of Jan 1, 2026) contains only Alford, Monroe, New Ashford, and Savoy."></sup></p>
+
+    <p>Decertification has two direct effects for residents. The town loses its annual <strong>state aid</strong>, which was <strong>$44,317</strong> for Marblehead in FY26, and Marblehead library cards <strong>stop working at other libraries</strong> in the NOBLE network and through interlibrary loan. The library has pointed residents to a Boston Public Library card as a partial fallback.<sup class="cite" data-href="https://mblc.state.ma.us/programs-and-support/state-aid-and-aris/files/awards/award_list_final.pdf" data-source="MBLC FY2026 State Aid award list (April 2026): Marblehead total award $44,317.49 (Library Incentive Grant $32,815.55 + Municipal Equalization Grant $9,316.46 + Non-Resident Circulation $2,185.48)."></sup></p>
+  </div>
+</details>
+
+<h2 id="comparison">How Abbot compares to other towns</h2>
+
+<p>Measured against its usual peer set plus Harwich, a Cape town sometimes raised as a comparison, Marblehead already funds its library relatively well. Per resident, Abbot's municipal appropriation is the <strong>second-highest of the five</strong>, behind only Harwich.<sup class="cite" data-href="https://mblc.state.ma.us/programs-and-support/library-statistics/" data-source="MBLC Library Statistics, FY2025 ARIS and Financial Report data files (2025_FinancialData.xlsx, 2025_Staffing_Summary.xlsx, 2025_Circulations.xlsx). Municipal appropriation per capita: Marblehead $68.20, Swampscott $55.37, Melrose $43.69, Stoneham $43.43, Harwich $86.24. FTE: Marblehead 19.41, Swampscott 11.19, Melrose 17.66, Stoneham 13.50, Harwich 11.86."></sup></p>
+
+<table class="peer-table">
+  <thead>
+    <tr>
+      <th>Town (library)</th>
+      <th>Population</th>
+      <th>Staff <abbr class="g" title="Full-Time Equivalent">FTE</abbr></th>
+      <th>Municipal appropriation</th>
+      <th>Per resident</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Harwich (Brooks Free)</td><td>13,595</td><td>11.9</td><td>$1,172,397</td><td>$86.24</td></tr>
+    <tr class="peer-highlight"><td>Marblehead (Abbot)</td><td>20,296</td><td>19.4</td><td>$1,384,122</td><td>$68.20</td></tr>
+    <tr><td>Swampscott</td><td>15,487</td><td>11.2</td><td>$857,504</td><td>$55.37</td></tr>
+    <tr><td>Melrose</td><td>29,357</td><td>17.7</td><td>$1,282,681</td><td>$43.69</td></tr>
+    <tr><td>Stoneham</td><td>22,854</td><td>13.5</td><td>$992,571</td><td>$43.43</td></tr>
+  </tbody>
+</table>
+
+<p class="source">State-reported figures for fiscal 2025, the most recent year the state has published. Population is the library service population. Marblehead's 19.4 <abbr class="g" title="Full-Time Equivalent">FTE</abbr> is the FY25 state figure; the library's own FY27 statement counts about 17 today, of which 8.25 would be cut. Source: MBLC Annual Report Information Survey (ARIS) and Financial Report, FY2025.</p>
+
+<p>The no-override budget would have moved Marblehead from near the top of this group to the bottom: at $857,633 the appropriation works out to about <strong>$42 per resident</strong>, roughly level with Stoneham and Melrose and well below the town's $68.<sup class="cite" data-href="https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override" data-source="Derived: no-override FY27 Abbot Public Library appropriation $857,633 divided by 20,296 library service population = $42.26 per resident. FY27 figure from Town of Marblehead FY27 Proposed Budget (No Override); population from MBLC FY2025 ARIS."></sup> With the Tier 3 override approved, the FY27 appropriation instead rises above its FY25 level.</p>
+
+<p>Two comparisons need a caveat. Harwich's circulation, about <strong>653,000 items a year</strong> against Marblehead's 208,000, is an outlier driven by its <abbr class="g" title="Cape Libraries Automated Materials Sharing: the shared library network on Cape Cod">CLAMS</abbr> network and heavy seasonal use, so it is not a like-for-like measure of local activity.<sup class="cite" data-href="https://mblc.state.ma.us/programs-and-support/library-statistics/" data-source="MBLC FY2025 Circulations data file: total circulation (print + non-print) Harwich 653,052; Marblehead 208,329; Swampscott 202,910; Melrose 309,894; Stoneham 148,761."></sup> And Stoneham is a live example of the certification risk: after cutting its library budget by more than 5 percent, it kept certification only through a state waiver.<sup class="cite" data-href="https://mblc.state.ma.us/programs-and-support/state-aid-and-aris/waiver-list.php" data-source="MBLC FY2026 MAR waiver list: Stoneham granted a &quot;waiver with reservation&quot; after a library budget cut of approximately 12.33%, exceeding the 5% disproportionate-cut threshold. Of the five towns compared, only Stoneham appears on the waiver list."></sup></p>
+
+<h2 id="override-connection">What the override restored</h2>
+
+<p>The <a href="/2026-override/">override</a> ballot was written in tiers. The first tier funded only the piece that keeps the library certified; later tiers restored materials and added staff. Voters chose the top tier, so every line below is funded for FY27.<sup class="cite" data-href="https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override" data-source="Town of Marblehead FY27 override tier detail (Recreation, Library, Parks): Tier 1 restores $311,183 in Abbot Library staffing for accreditation; Tier 2/3 add $218,980 staffing, $168,400 materials, and $38,378 for one part-time custodian and one part-time assistant. Compiled in marbleheaddata.org data/town_budget_FY27.json."></sup> <a href="/override-tracker.html">The override tracker</a> follows whether these restorations are delivered.</p>
+
+<div class="table-wrap">
+  <table class="data">
+    <thead>
+      <tr><th>Restores</th><th>Tier 1</th><th>Tier 2</th><th>Tier 3</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Staffing for accreditation</td><td>$311,183</td><td>$311,183</td><td>$311,183</td></tr>
+      <tr><td>Additional staffing</td><td>&ndash;</td><td>$218,980</td><td>$218,980</td></tr>
+      <tr><td>Materials</td><td>&ndash;</td><td>$168,400</td><td>$168,400</td></tr>
+      <tr><td>1 PT custodian + 1 PT assistant</td><td>&ndash;</td><td>$38,378</td><td>$38,378</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="source">Tier 1 alone would have restored the staffing the state requires for certification. Voters approved Tier 3, funding all three columns: the new-materials budget and additional positions on top of the accreditation staffing, leaving the library slightly above its FY26 level. Source: Town of Marblehead FY27 override detail.</p>
+
+<details class="notes">
+  <summary>Notes and sources</summary>
+  <div>
+    <p>Staffing counts (17 <abbr class="g" title="Full-Time Equivalent">FTE</abbr>; 8.25 eliminated, 8.74 retained) and weekly hours (52 to 24) come from the Marblehead Current's April 1, 2026 reporting and the library's own FY27 budget statement. Department dollar figures come from the Town of Marblehead FY27 Proposed Budget, compiled in this site's <code>data/town_budget_FY27.json</code>. Certification rules come from the MBLC's published State Aid standards. The cross-town comparison uses MBLC Annual Report Information Survey (ARIS) data for the most recent reporting year.</p>
+  </div>
+</details>
