@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Join FY27 budget + headcount + org_chart roles + override tiers into one
+"""Join FY27 budget + headcount + org_chart roles into one
 per-department view for departments.html.
 
 Inputs:
@@ -103,38 +103,6 @@ _ROLE_CROSSWALK = {
     "sewer": "Sewer Department",
     "water": "Water Department",
 }
-
-
-# Ordered (keyword_in_description_lower -> budget dept key). First match wins.
-# Specific phrases FIRST so e.g. "finance committee reserve fund" resolves to the
-# reserve fund, not the finance dept. Items matching no rule stay unattributed
-# (town-wide transfers, stabilization, recurring capital, the unemployment offset).
-_OVERRIDE_RULES = [
-    ("finance committee reserve fund", "reserve_fund"),
-    ("school resource officer", "police"),
-    ("police", "police"),
-    ("fire", "fire"),
-    ("inspections", "building_inspection"),
-    ("department of public works", "public_works_ops"),
-    ("cemetery", "cemetery"),
-    ("abbot library", "library"),
-    ("recreation and parks", "rec_park"),
-    ("hr other technical", "human_resources"),
-    ("community development", "community_development"),
-    ("town clerk", "town_clerk"),
-    ("public buildings", "public_buildings"),
-    ("council on aging", "council_on_aging"),
-    ("health department", "health"),
-    ("finance", "finance"),
-]
-
-
-def _match_override_dept(description: str):
-    d = (description or "").lower()
-    for keyword, key in _OVERRIDE_RULES:
-        if keyword in d:
-            return key
-    return None
 
 
 def _load_budget() -> dict:
@@ -244,7 +212,6 @@ def _departments_from_budget(budget: dict) -> dict:
             "line_items": [],
             "line_items_reconcile": True,
             "headcount": None,
-            "overrides": [],
         }
     # Lines are flat under their department: parent_id points directly at
     # the department row's id, there is no intermediate subgroup level in
@@ -306,16 +273,6 @@ def build_view() -> dict:
         if org_name and org_name in org_roles:
             dept.update(org_roles[org_name])
 
-    for tier in budget["meta"]["override_tiers"]:
-        key = _match_override_dept(tier.get("description"))
-        if key and key in departments:
-            departments[key]["overrides"].append({
-                "description": tier["description"],
-                "tier_1": tier["tier_1"],
-                "tier_2": tier["tier_2"],
-                "tier_3": tier["tier_3"],
-            })
-
     functions = []
     for r in budget["rows"]:
         if r.get("level") == "function":
@@ -330,8 +287,7 @@ def build_view() -> dict:
         "schema_version": 1,
         "source_note": ("Budget from FY27 Proposed Budget (No Override); "
                         "headcount from town payroll FY08-26; roles from "
-                        "org_chart.yml; override restorations from the FY27 "
-                        "override tiers. See town-budget.html and org-chart.html "
+                        "org_chart.yml. See town-budget.html and org-chart.html "
                         "for full citations."),
         "functions": functions,
         "departments": departments,
