@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-07-08",
+  "as_of": "2026-07-14",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 1,
-  "fy_pct_elapsed": 2.2,
+  "fy_pct_elapsed": 3.8,
   "budget_execution": {
     "by_department": [
       {
@@ -261,9 +261,9 @@
       {
         "name": "GLOVER SCHOOL",
         "revised": 4284992.96,
-        "actual": 0,
-        "delta": -4284992.96,
-        "pct": 0.0
+        "actual": 7906.56,
+        "delta": -4277086.4,
+        "pct": 0.18
       },
       {
         "name": "POLICE",
@@ -275,16 +275,16 @@
       {
         "name": "BROWN SCHOOL",
         "revised": 5422623.26,
-        "actual": 5414.62,
-        "delta": -5417208.64,
-        "pct": 0.1
+        "actual": 13035.9,
+        "delta": -5409587.36,
+        "pct": 0.24
       },
       {
         "name": "MIDDLE SCHOOL",
         "revised": 5712762.68,
-        "actual": 5348.08,
-        "delta": -5707414.6,
-        "pct": 0.09
+        "actual": 17153.78,
+        "delta": -5695608.9,
+        "pct": 0.3
       },
       {
         "name": "FIRE",
@@ -303,9 +303,9 @@
       {
         "name": "VILLAGE SCHOOL",
         "revised": 7545798.37,
-        "actual": 5737.88,
-        "delta": -7540060.49,
-        "pct": 0.08
+        "actual": 16293.97,
+        "delta": -7529504.4,
+        "pct": 0.22
       },
       {
         "name": "DEBT SERVICE",
@@ -317,16 +317,16 @@
       {
         "name": "HIGH SCHOOL",
         "revised": 11552590.13,
-        "actual": 10948.07,
-        "delta": -11541642.06,
-        "pct": 0.09
+        "actual": 25072.23,
+        "delta": -11527517.9,
+        "pct": 0.22
       },
       {
         "name": "DISTRICTWIDE",
         "revised": 13090519.6,
-        "actual": 79951.47,
-        "delta": -13010568.13,
-        "pct": 0.61
+        "actual": 114716.13,
+        "delta": -12975803.47,
+        "pct": 0.88
       },
       {
         "name": "OTHER GOVERNMENTAL",
@@ -347,16 +347,16 @@
       {
         "name": "DISTRICTWIDE",
         "revised": 13090519.6,
-        "actual": 79951.47,
-        "delta": -13010568.13,
-        "pct": 0.61
+        "actual": 114716.13,
+        "delta": -12975803.47,
+        "pct": 0.88
       },
       {
         "name": "HIGH SCHOOL",
         "revised": 11552590.13,
-        "actual": 10948.07,
-        "delta": -11541642.06,
-        "pct": 0.09
+        "actual": 25072.23,
+        "delta": -11527517.9,
+        "pct": 0.22
       },
       {
         "name": "DEBT SERVICE",
@@ -368,9 +368,9 @@
       {
         "name": "VILLAGE SCHOOL",
         "revised": 7545798.37,
-        "actual": 5737.88,
-        "delta": -7540060.49,
-        "pct": 0.08
+        "actual": 16293.97,
+        "delta": -7529504.4,
+        "pct": 0.22
       },
       {
         "name": "WATER",
@@ -389,16 +389,16 @@
       {
         "name": "MIDDLE SCHOOL",
         "revised": 5712762.68,
-        "actual": 5348.08,
-        "delta": -5707414.6,
-        "pct": 0.09
+        "actual": 17153.78,
+        "delta": -5695608.9,
+        "pct": 0.3
       },
       {
         "name": "BROWN SCHOOL",
         "revised": 5422623.26,
-        "actual": 5414.62,
-        "delta": -5417208.64,
-        "pct": 0.1
+        "actual": 13035.9,
+        "delta": -5409587.36,
+        "pct": 0.24
       },
       {
         "name": "POLICE",
@@ -417,9 +417,9 @@
       {
         "name": "GLOVER SCHOOL",
         "revised": 4284992.96,
-        "actual": 0,
-        "delta": -4284992.96,
-        "pct": 0.0
+        "actual": 7906.56,
+        "delta": -4277086.4,
+        "pct": 0.18
       },
       {
         "name": "PUBLIC WORKS",
@@ -671,8 +671,8 @@
   "monthly_cadence": [
     {
       "month": "2026-07",
-      "amount": 11083531.91,
-      "count": 65
+      "amount": 19737097.83,
+      "count": 97
     }
   ],
   "drill": {
@@ -683,13 +683,18 @@
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
             "amount": 838251.0,
             "count": 1
+          },
+          {
+            "name": "COMMONWEALTH OF MA",
+            "amount": 50929.87,
+            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 838251.0,
-            "count": 1
+            "amount": 889180.87,
+            "count": 2
           }
         ]
       },
@@ -717,14 +722,19 @@
       "GENERAL FUND - TOWN": {
         "top_vendors": [
           {
+            "name": "U.S. BANK",
+            "amount": 9934634.39,
+            "count": 24
+          },
+          {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
             "amount": 5843360.0,
             "count": 1
           },
           {
-            "name": "U.S. BANK",
-            "amount": 2999650.0,
-            "count": 4
+            "name": "COMMONWEALTH OF MA",
+            "amount": 1594597.3,
+            "count": 6
           },
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -737,6 +747,11 @@
             "count": 1
           },
           {
+            "name": "VOYA HOLDINGS INC",
+            "amount": 14875.81,
+            "count": 2
+          },
+          {
             "name": "THE PITNEY BOWES RESERVE ACCOUNT",
             "amount": 5000.0,
             "count": 1
@@ -744,11 +759,6 @@
           {
             "name": "TRAVELERS INSURANCE",
             "amount": 2116.0,
-            "count": 1
-          },
-          {
-            "name": "VOYA HOLDINGS INC",
-            "amount": 1601.97,
             "count": 1
           },
           {
@@ -770,18 +780,13 @@
             "name": "BRENT TARASUIK",
             "amount": 1300.0,
             "count": 1
-          },
-          {
-            "name": "CHARLES P CERRUTTI",
-            "amount": 1300.0,
-            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 9140710.98,
-            "count": 54
+            "amount": 17683566.51,
+            "count": 81
           }
         ]
       },
@@ -791,13 +796,18 @@
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
             "amount": 84428.0,
             "count": 1
+          },
+          {
+            "name": "COMMONWEALTH OF MA",
+            "amount": 12286.72,
+            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 84428.0,
-            "count": 1
+            "amount": 96714.72,
+            "count": 2
           }
         ]
       },
@@ -827,6 +837,22 @@
           }
         ]
       },
+      "SCHOOL LUNCH": {
+        "top_vendors": [
+          {
+            "name": "COMMONWEALTH OF MA",
+            "amount": 3975.99,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 3975.99,
+            "count": 1
+          }
+        ]
+      },
       "SEWER ENTERPRISE OPERATING": {
         "top_vendors": [
           {
@@ -838,13 +864,18 @@
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
             "amount": 152386.0,
             "count": 1
+          },
+          {
+            "name": "COMMONWEALTH OF MA",
+            "amount": 17237.53,
+            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 687162.0,
-            "count": 2
+            "amount": 704399.53,
+            "count": 3
           }
         ]
       },
@@ -854,13 +885,18 @@
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
             "amount": 170987.0,
             "count": 1
+          },
+          {
+            "name": "COMMONWEALTH OF MA",
+            "amount": 26280.28,
+            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 170987.0,
-            "count": 1
+            "amount": 197267.28,
+            "count": 2
           }
         ]
       }
