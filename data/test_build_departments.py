@@ -1,7 +1,7 @@
 """Tests for build_departments_data.py."""
 import json
 from pathlib import Path
-from build_departments_data import build_view, _HEADCOUNT_CROSSWALK
+from build_departments_data import build_view, _HEADCOUNT_CROSSWALK, _ROLE_CROSSWALK, ROOT
 
 DATA = Path(__file__).resolve().parent
 
@@ -81,3 +81,43 @@ def test_role_note_and_source_url_present_for_finance():
     finance = view["departments"]["finance"]
     assert finance["role"] == "Finance Director / CFO"
     assert finance["role_source_url"] is not None
+
+
+def test_police_has_sro_override_restoration():
+    view = build_view()
+    police = view["departments"]["police"]
+    assert any("School Resource Officer" in o["description"] for o in police["overrides"])
+    sro = next(o for o in police["overrides"] if "School Resource Officer" in o["description"])
+    assert sro["tier_1"] == 65482
+
+
+def test_library_has_four_override_items():
+    view = build_view()
+    lib = view["departments"]["library"]
+    assert len(lib["overrides"]) == 4  # items 9,10,11,12 (Abbot Library)
+
+
+def test_townwide_transfers_not_attributed_to_any_department():
+    view = build_view()
+    for dept in view["departments"].values():
+        for o in dept["overrides"]:
+            desc = o["description"].lower()
+            assert "opeb" not in desc
+            assert "stabilization" not in desc
+            assert "workers comp" not in desc
+            assert "recurring capital" not in desc
+
+
+def test_finance_committee_reserve_fund_not_mapped_to_finance():
+    # "Finance Committee Reserve Fund Cut" must NOT land on the finance dept
+    view = build_view()
+    for o in view["departments"]["finance"]["overrides"]:
+        assert "Reserve Fund" not in o["description"]
+
+
+def test_role_crosswalk_targets_exist_in_org_chart():
+    import yaml
+    doc = yaml.safe_load((ROOT / "_data" / "org_chart.yml").read_text())
+    names = {d["name"] for d in doc["town"]["departments"]}
+    for org_name in _ROLE_CROSSWALK.values():
+        assert org_name in names, f"{org_name!r} not in org_chart.yml"

@@ -105,6 +105,38 @@ _ROLE_CROSSWALK = {
 }
 
 
+# Ordered (keyword_in_description_lower -> budget dept key). First match wins.
+# Specific phrases FIRST so e.g. "finance committee reserve fund" resolves to the
+# reserve fund, not the finance dept. Items matching no rule stay unattributed
+# (town-wide transfers, stabilization, recurring capital, the unemployment offset).
+_OVERRIDE_RULES = [
+    ("finance committee reserve fund", "reserve_fund"),
+    ("school resource officer", "police"),
+    ("police", "police"),
+    ("fire", "fire"),
+    ("inspections", "building_inspection"),
+    ("department of public works", "public_works_ops"),
+    ("cemetery", "cemetery"),
+    ("abbot library", "library"),
+    ("recreation and parks", "rec_park"),
+    ("hr other technical", "human_resources"),
+    ("community development", "community_development"),
+    ("town clerk", "town_clerk"),
+    ("public buildings", "public_buildings"),
+    ("council on aging", "council_on_aging"),
+    ("health department", "health"),
+    ("finance", "finance"),
+]
+
+
+def _match_override_dept(description: str):
+    d = (description or "").lower()
+    for keyword, key in _OVERRIDE_RULES:
+        if keyword in d:
+            return key
+    return None
+
+
 def _load_budget() -> dict:
     return json.loads((DATA / "town_budget_FY27.json").read_text())
 
@@ -224,6 +256,16 @@ def build_view() -> dict:
         org_name = _ROLE_CROSSWALK.get(key)
         if org_name and org_name in org_roles:
             dept.update(org_roles[org_name])
+
+    for tier in budget["meta"]["override_tiers"]:
+        key = _match_override_dept(tier.get("description"))
+        if key and key in departments:
+            departments[key]["overrides"].append({
+                "description": tier["description"],
+                "tier_1": tier["tier_1"],
+                "tier_2": tier["tier_2"],
+                "tier_3": tier["tier_3"],
+            })
 
     return {
         "schema_version": 1,
