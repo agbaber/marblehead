@@ -35,6 +35,33 @@ test('splits a semicolon list under one leading keyword (real eCode format)', ()
   ]);
 });
 
+test('parses an Adopted note with bare TM meeting type', () => {
+  const notes = parseAmendmentNotes('[Adopted 3-11-1954 TM by Art. 73]');
+  assert.deepEqual(notes, [
+    { action: 'adopted', date: '1954-03-11', type: 'TM', article: 73 },
+  ]);
+});
+
+test('parses a mixed-case semicolon list with plural Arts. and carry-forward action', () => {
+  const notes = parseAmendmentNotes(
+    '[Added 3-10-1971 ATM by Art. 74; amended 3-12-1973 ATM by Arts. 26 and 27; 6-27-1977 STM by Art. 21]'
+  );
+  assert.equal(notes.length, 3);
+  assert.deepEqual(notes[0], { action: 'added', date: '1971-03-10', type: 'ATM', article: 74 });
+  assert.deepEqual(notes[1], { action: 'amended', date: '1973-03-12', type: 'ATM', article: 26, articles: [26, 27] });
+  assert.deepEqual(notes[2], { action: 'amended', date: '1977-06-27', type: 'STM', article: 21 });
+});
+
+test('parses a dotless "by Art 5"', () => {
+  const [n] = parseAmendmentNotes('[Amended 5-1-1990 ATM by Art 5]');
+  assert.equal(n.article, 5);
+});
+
+test('tolerates a missing space after the action word (eCode typo)', () => {
+  const [n] = parseAmendmentNotes('[Amended5-3-2021 ATM by Art. 46]');
+  assert.deepEqual(n, { action: 'amended', date: '2021-05-03', type: 'ATM', article: 46 });
+});
+
 test('returns empty array when there is no note', () => {
   assert.deepEqual(parseAmendmentNotes('The dog officer shall...'), []);
 });
