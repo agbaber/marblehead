@@ -14,6 +14,7 @@ og_url: https://marbleheaddata.org/town-staffing-over-time.html
   <a href="#the-arc">The 19-year arc</a>
   <a href="#then-vs-now">Then versus now, by function</a>
   <a href="#other-lines">Lines that move for other reasons</a>
+  <a href="#schools">The school side</a>
 </nav>
 
 <h2 id="the-arc">The 19-year arc</h2>
@@ -208,4 +209,19 @@ og_url: https://marbleheaddata.org/town-staffing-over-time.html
 
 
 <h2 id="other-lines">Lines that move for other reasons</h2>
-<!-- Movement 3 (quarantine block) is added by a later task. -->
+
+<p>These payroll lines change for reasons other than town staffing decisions, so they sit apart from the chart above.</p>
+
+<div class="org-cluster-grid">
+  {% for q in site.data.town_staffing.quarantine %}
+  <div class="org-card">
+    <span class="org-card-dept">{{ q.name }}</span>
+    <span class="org-card-fte">{{ q.fy08 }} to {{ q.fy26 }}</span>
+    <p class="org-card-note">{{ q.caveat }}</p>
+  </div>
+  {% endfor %}
+</div>
+
+<h2 id="schools">The school side</h2>
+
+<p>Schools are the larger share of the municipal payroll, shown as the middle line in the chart at the top. The school workforce has its own story, including a FY2023 reporting change that briefly overstated education staff. That is covered on the <a href="/inside-school-staffing.html">school staffing page</a> and the <a href="/charts/enrollment_vs_staffing.html">enrollment versus staffing chart</a>, so this page keeps its focus on the town side.</p>
