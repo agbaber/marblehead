@@ -138,6 +138,7 @@ async function gatherResults(client, batchIds) {
 }
 
 function logFail(slug, kind, detail) {
+  console.error(`  ${slug}: ${kind}: ${detail}`); // surface in CI logs, not just FAIL_LOG
   appendFileSync(FAIL_LOG, `${slug}\t${kind}\t${detail}\n`);
 }
 
@@ -190,7 +191,6 @@ async function collectResults(client, batchIds) {
       segments = concatSegments(parsed.segments);
       const reduced = await reduceCard(client, parsed.cards);
       if (!reduced.valid) {
-        console.error(`${slug}: reduce validation failed: ${reduced.errors.join('; ')}`);
         logFail(slug, 'reduce', reduced.errors.join('; '));
         failed += 1;
         continue;
