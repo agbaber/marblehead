@@ -38,8 +38,9 @@ _FUNCTION_LABELS = {
 _BUDGET_KEYS = ("fy25_actual", "fy26_budget", "fy27_proposed",
                 "change_dollars", "change_pct")
 
-# Budget department key -> headcount CSV "Department" name.
-# Only departments with a real payroll line appear here; others stay None.
+# Budget department key -> headcount CSV "Department" name. Not every budget
+# department has its own payroll line; those without one stay None. A single
+# CSV line is mapped to at most one budget key.
 _HEADCOUNT_CROSSWALK = {
     "select_board": "SELECTMEN",
     "finance": "FINANCE DEPARTMENT",
@@ -49,7 +50,6 @@ _HEADCOUNT_CROSSWALK = {
     "human_resources": "HUMAN RESOURCES",
     "town_counsel": "Town Counsel",
     "community_development": "COMMUNITY DEV & PLANNING",
-    "planning_board": "COMMUNITY DEV & PLANNING",
     "building_inspection": "BUILDING COMMISSIONER",
     "animal_inspector": "ANIMAL INSPECTOR",
     "police": "POLICE",
@@ -80,7 +80,7 @@ def _load_headcount() -> dict:
     """Return {csv_department_name: [ {fy, headcount}, ... sorted by fy ]}."""
     series = {}
     path = DATA / "town_employee_headcount_FY08-26.csv"
-    with path.open() as f:
+    with path.open(newline="") as f:
         for row in csv.DictReader(f):
             dept = row["Department"]
             try:

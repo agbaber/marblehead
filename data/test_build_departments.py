@@ -1,7 +1,7 @@
 """Tests for build_departments_data.py."""
 import json
 from pathlib import Path
-from build_departments_data import build_view
+from build_departments_data import build_view, _HEADCOUNT_CROSSWALK
 
 DATA = Path(__file__).resolve().parent
 
@@ -53,3 +53,10 @@ def test_unmapped_department_headcount_is_none():
     # reserve_fund / debt_service have no payroll headcount line
     view = build_view()
     assert view["departments"]["reserve_fund"]["headcount"] is None
+
+
+def test_headcount_crosswalk_targets_unique():
+    # No CSV department name should be mapped by more than one budget key,
+    # or one department's staff headcount gets duplicated onto another.
+    values = list(_HEADCOUNT_CROSSWALK.values())
+    assert len(set(values)) == len(values)
