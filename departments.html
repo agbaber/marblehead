@@ -1,0 +1,225 @@
+---
+title: "Department explorer"
+og_title: "What each Marblehead department does and costs"
+og_description: "Browse all 40 town departments: role, staffing, three-year budget, and what the override would restore. From the town's own budget and payroll."
+og_url: https://marbleheaddata.org/departments.html
+---
+<style>
+  .dx-func {
+    margin: 32px 0 12px;
+  }
+  .dx-func:first-of-type { margin-top: 20px; }
+  .dx-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .dx-card {
+    display: flex; flex-direction: column; gap: 4px;
+    text-align: left; cursor: pointer;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
+    padding: 12px 14px; font: inherit; color: var(--text);
+  }
+  .dx-card:hover {
+    border-color: var(--c-teal);
+    background: var(--surface-hover, color-mix(in srgb, var(--c-teal) 5%, transparent));
+  }
+  .dx-card-name { font-weight: 700; font-size: 0.875rem; }
+  .dx-amt {
+    font-variant-numeric: tabular-nums; font-size: 0.9375rem; font-weight: 700;
+    color: var(--text);
+  }
+  .dx-change-up, .dx-change-down {
+    font-size: 0.75rem; font-variant-numeric: tabular-nums;
+  }
+  .dx-change-up { color: var(--c-teal); }
+  .dx-change-down { color: var(--c-navy); }
+
+  .dx-back {
+    background: none; border: none; cursor: pointer; padding: 0;
+    font-size: 0.8125rem; color: var(--c-teal); margin-bottom: 12px;
+  }
+  .dx-back:hover { text-decoration: underline; }
+  .dx-src {
+    color: var(--text-subtle); margin: 4px 0 0;
+  }
+  .dx-src a { color: var(--c-teal); }
+  .dx-caveat {
+    color: var(--text-muted); background: var(--surface);
+    border-radius: var(--radius-md); padding: 10px 12px; margin: 8px 0 12px;
+  }
+
+  .dx-money, .dx-lines {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    font-size: 0.875rem; margin: 8px 0 20px;
+  }
+  .dx-money th, .dx-lines th {
+    padding: 8px; font-weight: 600; font-size: 0.6875rem;
+    color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--divider); text-align: right; white-space: nowrap;
+  }
+  .dx-money th:first-child, .dx-lines th:first-child { text-align: left; }
+  .dx-money td, .dx-lines td {
+    padding: 8px; text-align: right; color: var(--text);
+    font-variant-numeric: tabular-nums; font-weight: 600; font-size: 0.8125rem;
+    border-bottom: 1px solid var(--divider);
+  }
+  .dx-money td:first-child, .dx-lines td:first-child {
+    text-align: left; font-weight: 400; white-space: normal;
+  }
+  .dx-money tbody tr:last-child td, .dx-lines tbody tr:last-child td { border-bottom: none; }
+  .dx-lines td.dx-amt { font-weight: 600; }
+
+  @media (max-width: 600px) {
+    .dx-cards { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+    .dx-card { padding: 10px 12px; }
+  }
+</style>
+
+<h1 class="h-center">Department explorer</h1>
+<p class="subtitle h-center">All 40 town departments, by role, staffing, and budget.</p>
+
+<div id="dept-app" aria-live="polite">Loading department data...</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var app = document.getElementById('dept-app');
+  var DATA = null;
+
+  function esc(s) {
+    if (s == null) return '';
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function fmtUSD(n) {
+    if (n == null) return 'n/a';
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+  function fmtPct(p) {
+    if (p == null) return '';
+    return (p >= 0 ? '+' : '') + (p * 100).toFixed(1) + '%';
+  }
+  function changeClass(p) { return p >= 0 ? 'dx-change-up' : 'dx-change-down'; }
+
+  function deptLabel(d) { return esc(d.name.replace(/_/g, ' ')); }
+
+  function renderIndex() {
+    var parts = [];
+    DATA.functions.forEach(function (fn) {
+      var depts = Object.keys(DATA.departments)
+        .filter(function (k) { return DATA.departments[k].function === fn.key; })
+        .sort(function (a, b) {
+          return DATA.departments[b].budget.fy27_proposed - DATA.departments[a].budget.fy27_proposed;
+        });
+      if (!depts.length) return;
+      parts.push('<h2 class="dx-func">' + esc(fn.label) + '</h2>');
+      parts.push('<div class="dx-cards">');
+      depts.forEach(function (k) {
+        var d = DATA.departments[k];
+        parts.push(
+          '<button class="dx-card" data-key="' + esc(k) + '">' +
+          '<div class="dx-card-name">' + deptLabel(d) + '</div>' +
+          '<div class="dx-amt">' + fmtUSD(d.budget.fy27_proposed) + '</div>' +
+          '<div class="' + changeClass(d.budget.change_pct) + '">' +
+          fmtPct(d.budget.change_pct) + ' vs FY26</div>' +
+          '</button>'
+        );
+      });
+      parts.push('</div>');
+    });
+    app.innerHTML = parts.join('');
+    app.querySelectorAll('.dx-card').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        location.hash = btn.getAttribute('data-key');
+      });
+    });
+  }
+
+  function renderProfile(key) {
+    var d = DATA.departments[key];
+    var p = [];
+    p.push('<button class="dx-back" id="dx-back">&larr; All departments</button>');
+    p.push('<h2>' + deptLabel(d) + '</h2>');
+    p.push('<p class="subtitle">' + esc(d.function_label) + '</p>');
+
+    // `role` is the org_chart head_title (leadership), not a service
+    // description, so it is always paired with role_note.
+    if (d.role) {
+      p.push('<p>Led by the ' + esc(d.role) + '.' + (d.role_note ? ' ' + esc(d.role_note) : '') + '</p>');
+      if (d.role_source) {
+        var srcHtml = d.role_source_url
+          ? '<a href="' + esc(d.role_source_url) + '">' + esc(d.role_source) + '</a>'
+          : esc(d.role_source);
+        p.push('<p class="dx-src"><small>Source: ' + srcHtml + '</small></p>');
+      }
+    } else {
+      p.push('<p><em>A fuller description of this department is forthcoming.</em></p>');
+    }
+
+    p.push('<h3>Budget</h3>');
+    p.push('<div class="table-wrap"><table class="dx-money"><thead><tr>' +
+      '<th>FY25 actual</th><th>FY26 budget</th><th>FY27 proposed</th><th>Change</th>' +
+      '</tr></thead><tbody><tr>' +
+      '<td>' + fmtUSD(d.budget.fy25_actual) + '</td>' +
+      '<td>' + fmtUSD(d.budget.fy26_budget) + '</td>' +
+      '<td>' + fmtUSD(d.budget.fy27_proposed) + '</td>' +
+      '<td class="' + changeClass(d.budget.change_pct) + '">' +
+      fmtUSD(d.budget.change_dollars) + ' (' + fmtPct(d.budget.change_pct) + ')</td>' +
+      '</tr></tbody></table></div>');
+
+    if (d.line_items && d.line_items.length) {
+      p.push('<h3>Line items</h3>');
+      if (d.line_items_reconcile === false) {
+        p.push('<p class="dx-caveat"><small>These are the level-funded (pre-reduction) request lines from the school committee packet. They sum to more than the department total above, which reflects later negotiated reductions not allocated back to individual lines.</small></p>');
+      }
+      p.push('<div class="table-wrap"><table class="dx-lines"><tbody>');
+      d.line_items.forEach(function (li) {
+        p.push('<tr><td>' + esc(li.description) + '</td>' +
+          '<td class="dx-amt">' + fmtUSD(li.fy27_proposed) + '</td></tr>');
+      });
+      p.push('</tbody></table></div>');
+    }
+
+    if (d.headcount && d.headcount.length) {
+      var first = d.headcount[0], last = d.headcount[d.headcount.length - 1];
+      p.push('<h3>Staffing</h3>');
+      p.push('<p>Headcount (includes part-time and seasonal, not <abbr class="g" title="Full-Time Equivalent">FTE</abbr>): ' +
+        first.headcount + ' in FY' + String(first.fy).slice(2) +
+        ' to ' + last.headcount + ' in FY' + String(last.fy).slice(2) + '.</p>');
+    }
+
+    if (d.overrides && d.overrides.length) {
+      p.push('<h3>What the override would restore here</h3><ul class="tldr">');
+      d.overrides.forEach(function (o) {
+        p.push('<li>' + esc(o.description) + ' &ndash; Tier 1 ' + fmtUSD(o.tier_1) +
+          ', Tier 2 ' + fmtUSD(o.tier_2) + ', Tier 3 ' + fmtUSD(o.tier_3) + '</li>');
+      });
+      p.push('</ul>');
+    }
+
+    app.innerHTML = p.join('');
+    document.getElementById('dx-back').addEventListener('click', function () {
+      location.hash = '';
+    });
+  }
+
+  function route() {
+    var key = location.hash.replace(/^#/, '');
+    if (key && DATA.departments[key]) { renderProfile(key); }
+    else { renderIndex(); }
+  }
+
+  fetch('{{ "/data/departments_view.json" | relative_url }}')
+    .then(function (r) { return r.json(); })
+    .then(function (json) {
+      DATA = json;
+      window.addEventListener('hashchange', route);
+      route();
+    })
+    .catch(function () { app.textContent = 'Department data is unavailable right now.'; });
+})();
+</script>
