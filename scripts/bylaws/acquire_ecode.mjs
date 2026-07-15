@@ -11,10 +11,12 @@
 
 import { chromium } from 'playwright';
 import { writeFileSync, mkdirSync } from 'node:fs';
+import { parsePrintText } from './lib/print_parse.mjs';
 
 const PART_I_PRINT = 'https://ecode360.com/print/MA1991?guid=11769479';
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
-const OUT = 'data/bylaws-history/raw/ecode-part1.txt';
+const OUT_TXT = 'data/bylaws-history/raw/ecode-part1.txt';
+const OUT_JSON = 'data/bylaws-history/raw/ecode-part1.json';
 
 async function fetchPartI() {
   const browser = await chromium.launch();
@@ -38,8 +40,11 @@ async function fetchPartI() {
 
 const text = await fetchPartI();
 mkdirSync('data/bylaws-history/raw', { recursive: true });
-writeFileSync(OUT, text);
-const chapters = (text.match(/^Chapter\s+[\dA-Z]+\.\s+/gm) || []).length;
-const sections = (text.match(/§\s*[\dA-Z]+-\d+/g) || []).length;
-const notes = (text.match(/\[(Adopted|Added|Amended|Repealed)[^\]]{0,120}\]/gi) || []).length;
-console.log(`wrote ${OUT}: ${text.length} chars, ${chapters} chapters, ${sections} section markers, ${notes} notes`);
+writeFileSync(OUT_TXT, text);
+
+const structured = parsePrintText(text);
+writeFileSync(OUT_JSON, JSON.stringify(structured, null, 2));
+
+const nSections = structured.reduce((n, c) => n + c.sections.length, 0);
+console.log(`wrote ${OUT_TXT} (${text.length} chars)`);
+console.log(`wrote ${OUT_JSON}: ${structured.length} chapters, ${nSections} sections`);
