@@ -397,6 +397,38 @@ async function testTownBudgetPageLoads(page) {
   }
 }
 
+async function testDepartmentsExplorerPageLoads(page) {
+  console.log('\n── Department Explorer ──');
+  const resp = await page.goto(`${SITE}/departments.html`, { waitUntil: 'domcontentloaded' });
+  resp && resp.ok()
+    ? ok('Departments page loads')
+    : fail('Departments page loads', `status ${resp ? resp.status() : 'no response'}`);
+
+  await page.waitForSelector('.dx-card', { timeout: 5000 }).catch(() => null);
+  const cards = await page.$$eval('.dx-card', els => els.length);
+  cards === 40
+    ? ok('Departments index card count')
+    : fail('Departments index card count', `expected 40, got ${cards}`);
+
+  const funcs = await page.$$eval('.dx-func', els => els.length);
+  funcs === 10
+    ? ok('Departments function groups')
+    : fail('Departments function groups', `expected 10, got ${funcs}`);
+
+  await page.goto(`${SITE}/departments.html#police`, { waitUntil: 'domcontentloaded' });
+  await page.waitForSelector('.dx-money', { timeout: 5000 }).catch(() => null);
+
+  const hasSRO = await page.$eval('body', el => el.textContent.includes('School Resource Officer'));
+  hasSRO
+    ? ok('Police profile SRO override')
+    : fail('Police profile SRO override', 'text missing');
+
+  const moneyTable = await page.$('.dx-money');
+  moneyTable
+    ? ok('Police profile budget table present')
+    : fail('Police profile budget table', '.dx-money missing');
+}
+
 async function testWhatIsActuallyFlexiblePageLoads(page) {
   console.log('\n── What is Actually Flexible page ──');
   const resp = await page.goto(`${SITE}/what-is-actually-flexible.html`, { waitUntil: 'domcontentloaded' });
@@ -736,6 +768,7 @@ async function testTopicMeetingCounts(page) {
     await testGeneralGovernmentPeerChart(page1);
     await testSchoolAgeVsEnrollment(page1);
     await testTownBudgetPageLoads(page1);
+    await testDepartmentsExplorerPageLoads(page1);
     await testWhatIsActuallyFlexiblePageLoads(page1);
     await testM101Landing(page1);
     await testM101ChapterPages(page1);
