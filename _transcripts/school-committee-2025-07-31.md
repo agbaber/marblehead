@@ -9,7 +9,252 @@ video_url: "https://www.youtube.com/watch?v=8UXgRB5yzEE"
 duration_seconds: 6536
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee appoints Basta as secretary 3-1, flags ~$550K in grants tied to 3A zoning"
+  summary: "The Marblehead School Committee held its July meeting with member Brian Oda's seat vacated due to relocation. The committee voted 3-1 to appoint Henry Basta as secretary and approved a schedule of bills totaling approximately $1.28 million, along with a $2,500-per-school donation from the Friends of Marblehead Public Schools. The superintendent warned that approximately $500,000 in METCO grant funding and a $50,000 Pathways and Innovations grant are contingent on town compliance with MBTA Communities 3A zoning. The committee also discussed a facilities advisory committee proposal, deferred it to the facilities subcommittee, and passed a 4-0 motion requiring all subcommittees to set regular meeting schedules, create minutes, and provide monthly updates."
+  decisions:
+    - "Approved appointment of Henry Basta as committee secretary (3-1)"
+    - "Approved schedule of bills totaling approximately $1.28 million (unanimous)"
+    - "Approved meeting minutes with pending secretary corrections (3-0-1 abstention)"
+    - "Approved acceptance of $2,500-per-school donation from Friends of Marblehead Public Schools (4-0)"
+    - "Approved appointment of Henry Basta to the communications subcommittee (4-0)"
+    - "Approved appointment of Kate to the superintendent's safety advisory team (4-0)"
+    - "Approved appointment of Henry Basta as CPAC liaison (4-0)"
+    - "Held student survey policy — referred back to policy subcommittee"
+    - "Approved school committee meeting calendar for FY26 with amendments"
+    - "Approved motion requiring all subcommittees to set regular meeting schedules by September 1st, create and approve meeting minutes, and provide monthly communication updates to the school committee"
+  votes:
+    - motion: "Appoint Henry Basta as committee secretary"
+      result: "in favor (3 to 1)"
+    - motion: "Approve schedule of bills (~$1.28M)"
+      result: "in favor (unanimous)"
+    - motion: "Approve meeting minutes with corrections"
+      result: "in favor (3 to 0, 1 abstention)"
+    - motion: "Accept Friends of Marblehead Public Schools donation ($2,500 per school)"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Henry Basta to communications subcommittee"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Kate to superintendent safety advisory team"
+      result: "in favor (4 to 0)"
+    - motion: "Appoint Henry Basta as CPAC liaison"
+      result: "in favor (4 to 0)"
+    - motion: "Subcommittee consistency practices (schedule, minutes, monthly updates)"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 281
+    end_seconds: 579
+    headline: "Brian Oda vacates school committee seat due to relocation; Henry Basta appointed secretary 3-1"
+    dek: "Oda announced he is leaving Marblehead after his rental home was sold through probate, and the committee voted to fill the secretary vacancy."
+    summary: |
+      At the opening of the meeting, member Brian Oda announced he was vacating his seat effective immediately because he would no longer be a Marblehead resident as of the following day. His rental home had gone through probate and the estate decided to sell it.
+      
+      The chair then called for a motion to appoint Henry Basta as committee secretary. Basta reported he had called the state ethics office and was told there was no conflict-of-interest issue, provided he recuses himself when discussions touch on his own compensation as a part-time substitute or when his own evaluation is at issue. The motion passed 3-1.
+    key_speakers: ["Brian Oda (departing member)", "Henry Basta (new secretary)", "Chair (Al Williams)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 579
+    end_seconds: 961
+    headline: "Committee recognizes departing member Oda and awards Margaret Voss Howard Teacher Recognition to Katie Abear"
+    dek: "Commendations included the Margaret Voss Howard Teacher Recognition Award recipient from Veterans Middle School and the Friends of Marblehead Public Schools on their 35th anniversary."
+    summary: |
+      The committee commended Brian Oda for his service as both a school committee member and as a former principal and assistant principal in the district.
+      
+      The chair announced that this year's Margaret Voss Howard Teacher Recognition Award — presented annually to one Marblehead teacher and one Salem teacher — went to Katie Abear of Veterans Middle School, recognized for her dedication and impact on students and colleagues.
+      
+      A committee member also commended the Friends of Marblehead Public Schools on their 35th anniversary.
+    key_speakers: ["Chair (Al Williams)", "Jen (committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.75
+    start_seconds: 744
+    end_seconds: 961
+    headline: "MEA, superintendent, and assistant superintendent issue joint statement reaffirming local curriculum independence from NEA"
+    dek: "The joint statement addressed community concerns stemming from an NEA representative assembly proposal to end the organization's relationship with the ADL."
+    summary: |
+      A committee member read a joint statement co-signed by MEA leadership, the superintendent, and the assistant superintendent of teaching and learning.
+      
+      The statement affirmed that all curricular materials in Marblehead Public Schools go through a district review and approval process independent of external organizations, and that curriculum decisions are not driven by positions taken by national organizations such as the NEA. The statement noted the NEA board of directors had voted not to adopt a proposal brought forward at its annual assembly regarding the ADL, and that NEA leadership subsequently reaffirmed its commitment to combating antisemitism and all forms of discrimination.
+    key_speakers: ["Committee member (reading joint statement)", "Superintendent"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 961
+    end_seconds: 1441
+    featured: true
+    headline: "Two community members urge school committee to accelerate antisemitism action plan before the fall school year"
+    dek: "Speakers cited recent antisemitic incidents nationally and internationally, referenced a district anti-discrimination committee survey, and asked for a formal timeline of policies and consequences."
+    summary: |
+      Two community members — one in person, one remote — addressed the committee during public comment on the topic of antisemitism in the schools and broader society.
+      
+      The first speaker described a pattern of antisemitic violence in the United States and Europe, including incidents in New York City and Brooklyn, and said she was personally affected by one of the attacks. She asked the committee to set a timeline before the next meeting to implement policies, educational programming, consequences, and clear reporting systems addressing antisemitism in the schools.
+      
+      The second speaker, participating remotely, also described heightened antisemitism globally and stated that a district anti-discrimination survey sent to parents, teachers, and students showed respondents had experienced antisemitism physically or verbally approximately once a week. She called on the committee to ensure antisemitic curriculum does not enter district schools and praised the committee for previously taking action on a curriculum matter.
+      
+      Both speakers noted they are members of the superintendent's anti-discrimination task force. The superintendent acknowledged the feedback and committed to moving forward with monthly meetings of the committee starting in the fall.
+    key_speakers: ["Sarah (resident at mic)", "Megan (resident, remote)", "Superintendent"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1441
+    end_seconds: 2068
+    headline: "Superintendent updates: admin retreat Aug. 5-6, students return Aug. 27, new electric transport van delivered"
+    dek: "Summer facilities work is underway including HVAC replacement at Glover, playground resurfacing, and a new school board sign; ESY and literacy programs are wrapping up."
+    summary: |
+      The superintendent provided a summer update covering:
+      
+      - Admin retreat scheduled for August 5–6 for expectation-setting, team building, and SPED training
+      - New staff orientation on August 22; PD days August 25–26; students return August 27
+      - Facilities: painting of the Veterans Middle School PAC and foyer complete; reupholstered seats expected back the week of August 18; playground resurfacing and new equipment at Glover underway; HVAC system at Glover being replaced and expanded; mini-splits installed at Veterans and the high school
+      - First electric transport van received — to be used for special education and individual transportation needs
+      - New school sign arriving; trees trimmed and lighting updated
+      - Contingency plan in place if waste management strike continues when school opens
+      - ESY and summer literacy/math programs concluding
+    key_speakers: ["Superintendent"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 1717
+    end_seconds: 2068
+    headline: "Superintendent presents anti-discrimination committee update and introduces trauma specialist Dr. Mary Ghart via recorded video"
+    dek: "The anti-discrimination committee — comprising community members, administrators, and teachers — plans monthly meetings in the fall; the superintendent acknowledged surveys were sent too late and committed to resending them."
+    summary: |
+      The superintendent reported on the anti-discrimination committee created last year. The committee currently includes three community members, three administrators, and three teachers, with high school students consulted separately.
+      
+      The superintendent acknowledged that surveys sent to parents, teachers, and students near the end of the school year did not get adequate response, and committed to resending them in the fall with better framing. The overarching goal is to understand the frequency and nature of discrimination in the district and develop proactive solutions.
+      
+      The committee then screened a recorded interview with Dr. Mary Ghart, described as director of trauma training and services at Parents for Peace and a lecturer in psychology at Harvard Medical School. Dr. Ghart's work focuses on resilience, healing, and recovery in the context of extremism and identity-based violence. The superintendent indicated he would follow up with Dr. Ghart about potentially bringing her into the district in some capacity, following discussion with the anti-discrimination committee about appropriate format and audience.
+    key_speakers: ["Superintendent", "Sarah (community member, anti-discrimination committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2971
+    end_seconds: 3070
+    headline: "Friends of Marblehead Public Schools donates $2,500 per school for supplies; committee votes 4-0 to accept"
+    dek: "The Friends board unanimously approved the donation; the superintendent will coordinate with principals on specific supply needs."
+    summary: "The committee received notice that the Friends of Marblehead Public Schools board unanimously voted to provide $2,500 in school supplies to each school in the district. A motion to accept the donation passed 4-0. The superintendent noted he would work with principals to identify specific supply needs."
+    key_speakers: ["Chair (Al Williams)", "Superintendent"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 3024
+    end_seconds: 3298
+    headline: "Committee approves schedule of bills (~$1.28M) and meeting minutes with corrections on 3-0 vote"
+    dek: "A procedural discussion clarified that meeting minutes are approved as final upon vote, and a new member abstained from voting on minutes predating his tenure."
+    summary: "The committee approved a schedule of bills totaling approximately $1,279,691 by unanimous voice vote. The committee then addressed several sets of draft meeting minutes. A discussion arose about whether motions in the draft minutes lacked attribution. The committee voted 3-0 with one abstention to approve the minutes pending corrections to be made by the new secretary. The abstaining member noted he was not present at the meetings in question."
+    key_speakers: ["Chair (Al Williams)", "Jen (committee member)", "Henry Basta (secretary)"]
+  - topic: 40b-mbta
+    topic_confidence: 0.92
+    start_seconds: 3298
+    end_seconds: 3623
+    headline: "Superintendent warns ~$500K METCO grant and $50K Pathways grant are tied to town's 3A compliance; current year funding secured"
+    dek: "Federal grant freeze (~$70K) has apparently been lifted, but state grants contingent on MBTA Communities 3A zoning compliance remain at risk for future years."
+    summary: |
+      The superintendent reported on two categories of grant risk:
+      
+      **Federal grants:** Approximately $68,000–$70,000 in federal grant funding was frozen by the administration earlier this year. The superintendent indicated the freeze appears to have been lifted, though he remains cautiously optimistic and will continue monitoring.
+      
+      **State grants tied to 3A compliance:**
+      - The METCO program grant — approximately $500,000 — is directly contingent on the town's compliance with MBTA Communities 3A zoning requirements. The superintendent noted the current year's METCO funding was secured before the 3A compliance deadline (approximately June 17), but future years are at risk if the town does not come into compliance. A committee member noted the compliance deadline may have been extended to January.
+      - The Pathways and Innovations grant — approximately $50,000 — supports high school programming and is also tied to 3A compliance. As of the meeting date, that funding had not yet been released.
+      
+      The superintendent emphasized that the METCO grant funds the transportation program for METCO students, meaning non-compliance could threaten the program itself. He stated the information was shared for the community's awareness, not to assign blame.
+    key_speakers: ["Superintendent", "Committee member"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 3623
+    end_seconds: 3808
+    headline: "Superintendent updates committee on high school roof pre-bid qualification process; completion targeted for next summer"
+    dek: "A four-member pre-bid qualification committee will be posted on the central register for two weeks ending approximately August 28, after which bidders will be vetted."
+    summary: |
+      The superintendent described the current status of the high school roof project procurement:
+      
+      - A pre-bid qualification posting is required under procurement law. The committee consists of the schematic designer (Raymond Design Associates), the OPM (Left Field), the facilities director (Todd Blood), and the finance director (Mike Pifflin).
+      - The posting runs for two weeks on the central register, ending approximately August 28.
+      - After that, the four-member committee reviews bidders for licensure and experience (not technical roofing expertise).
+      - The key remaining decision — liquid-applied versus resurfacing — will be made as part of the bid process; the superintendent noted the window for changing scope has passed.
+      - If timelines are met, the roof repair is expected to be completed next summer.
+      
+      The superintendent expressed frustration that notification about the pre-bid committee requirement came at the last minute.
+    key_speakers: ["Superintendent"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 3808
+    end_seconds: 4089
+    headline: "Student survey policy on educational research referred back to policy subcommittee; handbook language also needs alignment"
+    dek: "Confusion arose over which version of the policy — MASC or a prior draft — had been presented; the superintendent and a committee member agreed to return the MASC version to the subcommittee."
+    summary: "The chair noted that at the prior meeting, the committee approved several policy updates but held one related to student submission to educational surveys and research. The superintendent explained that the version presented at the prior meeting was not the MASC model policy, causing confusion. The MASC version needs to go back to the policy subcommittee for review before being brought to the full committee. Additionally, the committee noted the student handbook language would need to be aligned with whatever policy is ultimately adopted. No vote was taken."
+    key_speakers: ["Superintendent", "Jen (committee member)", "Chair (Al Williams)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 4179
+    end_seconds: 4640
+    headline: "Committee adopts FY26 meeting calendar with October date moved to Wednesday the 15th; August 4 meeting added"
+    dek: "The calendar generally follows the first and third Thursday pattern, with adjustments for Yom Kippur, school vacation, and a member's conflict on October 16."
+    summary: |
+      Committee member Kate presented a proposed meeting calendar for the fiscal year. Most months follow the standard first and third Thursday schedule. Notable adjustments discussed:
+      
+      - A third September meeting was proposed for Tuesday, September 30 (because the first Thursday in October falls on Yom Kippur)
+      - October 16 was moved to Wednesday, October 15 due to a member's prior commitment
+      - October 30 retained as a fifth-Thursday placeholder if a meeting is needed
+      - January meetings shift to the second and fourth Thursdays because January 1 is a Thursday
+      - February 26 (fourth Thursday) used instead of the third Thursday, which falls during school vacation
+      - An August 4 meeting was added to the calendar
+      
+      The committee discussed whether a third September meeting was necessary and agreed to leave it on the calendar as an option, with the ability to cancel if there is insufficient business.
+    key_speakers: ["Kate (committee member)", "Chair (Al Williams)", "Jen (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 4640
+    end_seconds: 5450
+    headline: "Committee fills subcommittee and liaison vacancies left by Oda's departure; health/wellness advisory held open"
+    dek: "Henry Basta appointed to communications subcommittee and CPAC liaison; Kate appointed to superintendent safety advisory; budget subcommittee and health/wellness advisory remain open."
+    summary: |
+      The committee reviewed its subcommittee and liaison rosters following Brian Oda's departure and the need to reconstitute committees for the new year.
+      
+      **Appointments made (all 4-0):**
+      - Henry Basta: communications subcommittee
+      - Kate: superintendent safety advisory team (meets quarterly)
+      - Henry Basta: CPAC liaison
+      
+      **Held open:**
+      - Budget subcommittee: one opening; Jen Ferreri indicated willingness to serve; decision deferred pending possible new member
+      - Marblehead Master Plan committee representative: deferred
+      - Health and wellness advisory: deferred; superintendent noted the advisory hasn't met in years and needs to be reconstituted
+      
+      The committee also discussed the policy distinction between subcommittees (school committee members only) and advisory committees (can include community members and subject matter experts). A member suggested the high school roof project might benefit from an advisory committee structure to allow broader participation. The discussion was not resolved.
+    key_speakers: ["Chair (Al Williams)", "Henry Basta", "Kate (committee member)", "Superintendent", "Jen (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.72
+    start_seconds: 5768
+    end_seconds: 6230
+    headline: "School committee debates forming advisory committee for facilities/roof project"
+    dek: "Members weighed community expertise against procurement law compliance and the risk of slowing the project timeline."
+    summary: |
+      School committee members discussed whether to establish a small advisory committee to gather community input on a major facilities project (a roof project). Supporters argued it would channel community expertise currently being offered ad hoc or only through public comment. Skeptics cautioned that the committee was already deep into the project, that procurement laws constrain outside involvement, and that adding a committee could bifurcate work with the existing facilities subcommittee and double the number of meetings.
+      
+      Members agreed to defer a final decision to an upcoming Monday meeting that would include NASC representatives and legal counsel, who could offer guidance on how other districts have handled similar governance questions. One member noted she would be willing to join such a committee if formed, and there was general agreement that any advisory body should report directly to the school committee rather than working in parallel with the facilities subcommittee.
+    key_speakers: ["Jen (school committee member)", "Henry (school committee member)", "John (school committee member, referenced)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 6258
+    end_seconds: 6446
+    headline: "School committee votes 4-0 to standardize subcommittee practices for the year"
+    dek: "A motion requiring regular schedules, minutes, and monthly updates passed unanimously after minor amendment."
+    summary: |
+      A member moved that all school committee subcommittees take three steps during the current year: (1) set a regular meeting schedule and communicate it to the chair by September 1st; (2) create and approve meeting minutes as part of regular business; and (3) provide the full committee with monthly communication updates.
+      
+      During discussion, a member suggested that verbal updates should suffice for the third item, noting the workload involved. The motion was amended to replace "written update" with "monthly communication update" to avoid implying a lengthy document requirement. One member noted this was not a formal policy but a practice for the year. The amended motion passed 4-0 on roll call.
+      
+      The committee also noted that the curriculum subcommittee was never formally established, and that the collective bargaining subcommittee typically dissolves once all contracts are signed.
+    key_speakers: ["Jen (school committee member)", "Henry (school committee member)", "Al (school committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 6485
+    end_seconds: 6509
+    headline: "Meeting adjourned on unanimous roll call vote"
+    dek: "No new business or correspondence was raised before adjournment."
+    summary: "With no new business or correspondence, the chair called for a motion to adjourn. The motion was seconded and the meeting adjourned on a unanimous roll call vote."
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

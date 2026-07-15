@@ -9,7 +9,99 @@ video_url: "https://www.youtube.com/watch?v=JOlpUlm--nA"
 duration_seconds: 2579
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee sets $46.6M FY23 budget request for Finance Committee"
+  summary: "The School Committee held a pre-meeting work session to align on the FY23 budget figure before a Finance Committee presentation the same evening. The agreed total ask is $46,606,959, which includes $1.29M in payroll/contractual obligations above the FY22 base, $848,000 for special education costs, and $325,000 for security camera systems moved back into the operating budget. Smart panels ($665,000) were shifted to a town IT capital article, and $497,000 in health-insurance costs for roughly 30 new FTEs was incorporated into the override request rather than the school operating budget."
+  decisions:
+    - "Approved opening public comment (4-0)"
+    - "Held FY23 budget figure at $46,606,959 for presentation to Finance Committee"
+    - "Moved smart-panel purchase ($665,000) to town IT capital article"
+    - "Returned security camera systems ($325,000) to school operating budget after capital classification failed"
+    - "Included $497,000 health-insurance estimate for new FTEs in the override request, to be carried in a town budget line"
+  votes:
+    - motion: "Open public comment"
+      result: "in favor (4 to 0)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 93
+    end_seconds: 1287
+    featured: true
+    headline: "School Committee aligns on $46.6M FY23 budget before Finance Committee hearing"
+    dek: "Administration detailed changes from the prior meeting including revised payroll figures, smart-panel capital transfer, and security camera reinstatement."
+    summary: |
+      The committee convened to clarify the budget figure being presented to the Finance Committee the same evening.
+      
+      **Key budget components:**
+      
+      | Item | Amount | Treatment |
+      |---|---|---|
+      | FY22 base budget | ~$41.8M | Roll-forward |
+      | Payroll/contractual obligations | $1,294,730 | Operating |
+      | Special education costs | $848,000 | Operating (non-controversial) |
+      | Security cameras (4 schools, excl. Brown) | $325,000 | Returned to operating |
+      | Smart panels (4 schools, excl. Brown) | $665,000 | Moved to town IT capital article |
+      | Health insurance for ~30 new FTEs | $497,000 | Town budget/override |
+      | **Total ask** | **$46,606,959** | |
+      
+      The payroll figure was reduced slightly after discovering a double-count of stipends. Smart panels were shifted to the town's IT capital debt-exclusion article because their useful life exceeds 10 years; bond counsel agreed. Security cameras were moved back into the operating budget because documentation supporting a 10-year-plus useful life could not be found, making capital classification unlikely to survive bond counsel review.
+      
+      The $497,000 health-insurance estimate for new FTEs is unprecedented — normally benefits for general-fund departments are carried entirely on the town side. It will sit in a town budget line, not the school operating budget, but is embedded in the override request. If those employees do not elect coverage, unused funds close to free cash at year-end.
+    key_speakers: ["Sarah Fox (School Committee member)", "Michelle (District CFO/Finance Director)", "John McGinn (referenced — Town official)", "Steve Poulos (Town Finance Director, referenced)", "David (School Committee member)", "Alec (Finance Committee, referenced)"]
+  - topic: health-insurance
+    topic_confidence: 0.9
+    start_seconds: 278
+    end_seconds: 1196
+    headline: "$497K health-insurance estimate for ~30 new FTEs included in override request"
+    dek: "The school and town finance directors used different methods but arrived near the same figure; the lower estimate was adopted."
+    summary: |
+      The district CFO and town Finance Director (Steve Poulos) independently calculated the cost of health insurance for approximately 29.8–30 new FTEs proposed in the budget. Both methods arrived in a similar range; the lower figure of $497,000 was adopted. The calculation assumed 50% of eligible employees would elect family coverage (~$26,000/year per employee cost to town) and 50% individual coverage (~$12,000/year).
+      
+      This treatment is described as unprecedented in Marblehead since at least 2000: general-fund department benefits are normally budgeted on the town side without being explicitly attributed to a specific department's headcount request. Enterprise funds (harbors, water/light) include health costs internally because they must function as self-contained entities. A committee member expressed discomfort with the precedent but acknowledged the rationale. Unused amounts would revert to free cash at year-end, not to the school department.
+    key_speakers: ["Michelle (District CFO/Finance Director)", "David (School Committee member)", "Sarah Fox (School Committee member)"]
+  - topic: override
+    topic_confidence: 0.88
+    start_seconds: 370
+    end_seconds: 756
+    headline: "Override structure discussed: $497K health-insurance line embedded in operating override ask"
+    dek: "The committee clarified that the Finance Committee will first vote the standard operating budget, with the override article — including health-insurance costs — coming later in the town meeting."
+    summary: "The committee discussed the procedural sequence at town meeting: the general operating budget (including the $43.98M non-controversial base plus special education) would be voted first and is expected to pass routinely. The override article — covering the additional staffing, security cameras, and associated health-insurance costs — would come later. A committee member noted the Finance Committee is expected to approve the roll-forward portion this evening and vote on the override-linked items in April. The committee chose to present the full $46,606,959 ask tonight, leaving the Finance Committee to segment it as they see fit."
+    key_speakers: ["Michelle (District CFO/Finance Director)", "Sarah Fox (School Committee member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 231
+    end_seconds: 618
+    headline: "Smart panels ($665K) moved to town IT capital article; security cameras ($325K) returned to operating"
+    dek: "Bond counsel concerns about useful-life documentation drove both decisions."
+    summary: |
+      Smart interactive panels for four schools (excluding Brown) were moved in full ($665,000) to the town's IT capital debt-exclusion article after Town Finance Director John McGinn confirmed they qualify given a useful life exceeding 10 years.
+      
+      Security camera systems for the same four schools were originally removed from the operating budget in anticipation of a capital article, but the district could not find documentation establishing a 10-year minimum useful life — industry sources cite a range of 5–20 years. Because bond counsel review at the time of actual bonding would likely reject the classification, the $325,000 was returned to the school operating budget.
+    key_speakers: ["Michelle (District CFO/Finance Director)", "John McGinn (Town Finance Director, referenced)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 1640
+    end_seconds: 2303
+    headline: "Special education reserve depleted; out-of-district transportation costs projected $200K over budget in FY22"
+    dek: "Fifteen students are on the district's watch list, transportation contracts are year-to-year, and fuel-cost volatility adds further uncertainty."
+    summary: |
+      The CFO reported that all cushion previously budgeted for anticipated out-of-district placements has been committed; FY23 has no reserve for unexpected placements. Fifteen students are currently on a watch list for potential high-cost placements.
+      
+      Out-of-district transportation is projected to run approximately $200,000 over the FY22 budget due to a combination of increased transport volumes, higher fuel prices, and driver shortages. Contracts are bid year-to-year with no locked-in rates for FY23. Mitigation strategies under consideration include adding new transportation vendors to broaden competition, combining rides, and exploring collaborative transport arrangements with neighboring districts (students traveling to the same placement sites from different towns sharing a vehicle).
+      
+      A pending transportation audit covering all busing services is expected within weeks and may identify additional cost-reduction opportunities. The district has new buses (55-passenger and 20-passenger) added in the last three years, which should limit repair exposure.
+    key_speakers: ["Michelle (District CFO/Finance Director)", "Sarah Fox (School Committee member)", "David (School Committee member)"]
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 2382
+    end_seconds: 2554
+    headline: "Resident urges aggressive public outreach on budget ahead of override vote"
+    dek: "Catherine Martin (29 West Shore Drive) called on the committee to push budget information to parents through all available channels before town meeting."
+    summary: "Catherine Martin addressed the committee during the brief public comment period. She argued that with an override on the horizon the committee should proactively distribute budget information — including items still under discussion such as user fees and curriculum coaches — to parents via Blackboard/Connected messenger and any other channel available. She emphasized that parent turnout at town meeting and at the subsequent override election depends on residents understanding what the funds would purchase, and that many younger parents are unaware of long-standing funding gaps such as the special education reserve not keeping pace with inflation."
+    key_speakers: ["Catherine Martin (Resident, 29 West Shore Drive)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;
