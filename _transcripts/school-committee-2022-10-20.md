@@ -9,7 +9,110 @@ video_url: "https://www.youtube.com/watch?v=xxMpEk9Mmcc"
 duration_seconds: 3209
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee reviews Thought Exchange survey results and hears curriculum update"
+  summary: "The school committee met on October 20, 2022, receiving a presentation on the district's first Thought Exchange community survey, which drew 500 participants and surfaced top themes including budget, lunch, staff retention, mental health, and later school start times. Assistant Superintendent Dan Murphy presented on curriculum alignment and the multi-tiered support framework. The committee approved the bills schedule totaling approximately $632,443, tabled the superintendent's goal-setting vote until the full committee is present, and scheduled a budget forum for October 25 via Zoom."
+  decisions:
+    - "Approved meeting minutes from October 6, 2022"
+    - "Approved bills schedule totaling approximately $632,443"
+    - "Tabled superintendent goals vote until full committee is present"
+    - "Scheduled budget/finance forum for October 25 at 7 PM via Zoom"
+    - "Held teaching and learning subcommittee activity pending further review"
+  votes:
+    - motion: "Approve minutes from October 6, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Approve bills schedule totaling approximately $632,443"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 101
+    end_seconds: 427
+    headline: "Chair recognizes Marblehead Beacon writing contest winners and school staff"
+    dek: "Three Marblehead High School students took first, second, and third place in the Marblehead Beacon journalism competition, sharing $500 in prizes."
+    summary: "The chair opened the meeting with accommodations, recognizing the Marblehead Beacon online newspaper's writing competition for high school students. First place went to Benji Boyd (sophomore), second to Bella Takata (junior), and third to Marblehead freshman Tessa France. Kate Konos (senior) and Pauline Geisler (junior exchange student from Germany) received honorable mention. The chair also commended a crosswalk guard at Pleasant Street Village for managing traffic safely, and recognized Fine Arts teachers for student work on display in school buildings. The student representative reported on Day Zero activities (community service, PSAT, college planning), upcoming events including the eighth-grade open house on October 27, drama club auditions, honor society inductions, and sports senior nights."
+    key_speakers: ["Chair (School Committee)", "Student Representative"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 447
+    end_seconds: 492
+    headline: "Committee approves October 6 minutes by roll-call vote"
+    dek: "The consent agenda item — minutes from the October 6, 2022 meeting — was moved, seconded, and approved unanimously."
+    summary: "The chair called for a motion to approve minutes from October 6, 2022. Motion made by Sarah Paul, seconded by Allison Taylor. Roll-call vote: Emily (absent), Sarah Paul (yes), Allison Taylor (yes), Megan Taylor (yes), Fairfax (yes). Motion carried."
+    key_speakers: ["Chair (School Committee)", "Sarah Paul (member)", "Allison Taylor (member)", "Megan Taylor (member)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 492
+    end_seconds: 1896
+    featured: true
+    headline: "Superintendent presents Thought Exchange survey: 500 participants, top themes include budget, staff, mental health"
+    dek: "The district's first Thought Exchange community survey drew 500 participants with 14,781 ratings; polarizing topics included DEI and sex education, while staff appreciation and outdoor time found broad common ground."
+    summary: |
+      Superintendent Dr. Buffy presented results from the district's inaugural Thought Exchange survey, noting 500 participants, approximately 247 thoughts submitted, and 14,781 ratings — well above the onboarding specialist's benchmark of 20–30 for an exceptional initial launch. Participants were predominantly parents and guardians (approximately 81%), with about 17% staff and 2% community members not connected to Aspen.
+      
+      Top themes by rating included:
+      - **Budget** (highest-rated overall category)
+      - **Lunch / food services** (healthier options)
+      - **Staff** (large volume of positive comments; retention concerns noted)
+      - **Later school start times** for secondary students
+      - **Mental health** (anxiety, depression, suicide prevention, social media impact)
+      - **Town infrastructure** (sidewalks, traffic)
+      
+      A polarization analysis identified DEI-related thoughts rated 4.6 by one group and 1.8 by another, and sex-education materials rated 4.7 by one group and 1.7 by another. Common ground across groups was found on staff appreciation and outdoor time/recess, which scored 4.3–4.5 from both sides.
+      
+      Board members noted that a thought about meeting students at all levels — ranked fifth overall with 85 ratings — did not appear in the top thematic buckets presented. Discussion addressed plans to expand outreach via social media for future rounds and to use the platform with students on mental health pulse checks. The superintendent noted plans to link full results in the Friday update.
+    key_speakers: ["Dr. Buffy (Superintendent)", "Stephen Quietek (staff)", "Megan Taylor (member)", "Allison Taylor (member)", "Sarah Paul (member)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 1896
+    end_seconds: 2433
+    headline: "Assistant Superintendent Murphy outlines curriculum alignment and multi-tiered support work"
+    dek: "Dan Murphy described how the district is using Wednesday professional development time, WIN blocks, and scope-and-sequence alignment Pre-K through 12 to improve student outcomes."
+    summary: |
+      Assistant Superintendent for Teaching and Learning Dan Murphy reported on two strategic initiatives under the district's Plan for Success:
+      
+      **1.1 – Data inquiry and instructional excellence:** Teachers meet three times a month on Wednesday afternoons; one session per month is dedicated to Plan for Success teams (DEI, Technology, Social-Emotional Learning groups). Professional Learning Community time during the school week is guided by authentic student assessment data, with teachers discussing what data shows and planning next steps.
+      
+      **1.2 – Curriculum alignment:** Scope and sequence K through 8 is described as strong and tightening. The high school is completing the same process and is expected to present results in December. Curriculum mapping — identifying what materials and resources are used — is the next step.
+      
+      Murphy also noted the WIN (What I Need) block at the elementary level is being refined so students receive work at their instructional level, whether enrichment or remediation. A board member asked that Murphy consider identifying needs that align with ARPA/ESSER funding given that federal guidelines now prioritize learning loss recovery. Murphy agreed the curriculum-building work would generate backup data to support such funding requests.
+    key_speakers: ["Dan Murphy (Assistant Superintendent for Teaching and Learning)", "Allison Taylor (member)", "Megan Taylor (member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2433
+    end_seconds: 2573
+    headline: "Superintendent goals vote tabled; full committee not present"
+    dek: "The chair opted to defer the vote on the superintendent's annual goals until all five members can vote, as the committee was not at full attendance."
+    summary: "The chair noted the superintendent goals item had been previously tabled so all members could vote together. With the committee still not at full attendance, the chair proposed continuing the table. Members Allison Taylor and Megan Taylor indicated they were comfortable waiting. The superintendent acknowledged he is working on goals regardless of the formal vote, having already incorporated member feedback."
+    key_speakers: ["Chair (School Committee)", "Allison Taylor (member)", "Megan Taylor (member)", "John (Superintendent, referenced)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 2573
+    end_seconds: 2681
+    headline: "Bills schedule of approximately $632,443 approved unanimously"
+    dek: "The committee voted to approve the identified bills schedule by roll-call vote."
+    summary: "The chair asked for a motion to approve the bills schedule totaling approximately $632,443. The motion was made and seconded; roll-call vote returned yes from Sarah Paul, Allison Taylor, Megan (Patrick) Taylor, and Fairfax, with one member absent. Motion carried."
+    key_speakers: ["Chair (School Committee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 2681
+    end_seconds: 3196
+    headline: "Subcommittee updates: CPAC liaison report, teaching-and-learning subcommittee tabled, budget forum set for October 25"
+    dek: "Megan Taylor reported from the CPAC liaison meeting; the teaching-and-learning subcommittee was tabled; a budget/finance forum was scheduled for October 25 via Zoom at 7 PM."
+    summary: |
+      **Subcommittee and liaison updates:**
+      - The teaching-and-learning subcommittee was tabled indefinitely because of difficulty keeping discussion within school committee purview rather than becoming operational.
+      - Megan Taylor reported as CPAC liaison: CPAC's board meeting is October 26 at 7 PM (open to the public); a planned Asperger/Autism Network presentation was rescheduled — watch CPAC's website and Facebook page.
+      - Finance and Facilities subcommittee will meet the second week of November, following the budget forum.
+      
+      **Budget forum scheduling:**
+      - The forum topic is finance and budget. Originally discussed for October 26, a conflict with the CPAC board meeting (held at the high school) shifted the date. The committee agreed to hold the forum on **Tuesday, October 25 at 7 PM via Zoom**. The chair asked that it be posted and included in the superintendent's Friday update, and suggested the town website be used to reach residents not in the Aspen school system.
+      
+      **MASC conference:** A discussion arose about whether the November school committee meeting conflicted with the MASC conference; members were asked to email availability so a potential Tuesday rescheduling could be confirmed.
+    key_speakers: ["Chair (School Committee)", "Megan Taylor (member)", "Allison Taylor (member)", "Sarah Paul (member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

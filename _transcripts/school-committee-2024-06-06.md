@@ -9,7 +9,288 @@ video_url: "https://www.youtube.com/watch?v=ijz-EYP14Yk"
 duration_seconds: 7400
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School committee votes 5-0 to appoint John Robu as interim superintendent starting July 1"
+  summary: "The Marblehead School Committee held its June meeting, voting unanimously to enter contract negotiations with John Robu as interim superintendent commencing July 1 and appointing Scott Williams as the new Village School principal. The committee approved school improvement plans for Marblehead Veterans Middle School and Marblehead High School, a support staff classification plan, a special education program review contract with Academic Discoveries (not to exceed $58,000), and an OPM contract with Left Field for the high school roof replacement project. A project manager services contract was awarded to Leftfield of Boston for an amount not to exceed $420,000, and the committee received a presentation on a community communication survey that drew 568 responses. The meeting concluded with a 5-0 vote to enter executive session to discuss collective bargaining strategy with the Marblehead Education Association."
+  decisions:
+    - "Approved appointment of Scott Williams as Village School principal"
+    - "Approved MVMS and MHHS school improvement plans"
+    - "Approved district and school support staff classification plan"
+    - "Approved four proposed job descriptions for support staff"
+    - "Approved schedule of bills totaling approximately $253,887.99"
+    - "Approved meeting minutes"
+    - "Approved MOU with Recreation and Parks Department"
+    - "Approved MOU with Essex North Shore Agricultural and Technical School"
+    - "Approved contract award to Academic Discoveries for special education program review (not to exceed $58,000)"
+    - "Approved OPM contract to Left Field for high school roof replacement"
+    - "Approved motion to enter contract negotiations with John Robu as interim superintendent"
+    - "Approved contract for project manager services to Leftfield of Boston (not to exceed $420,000)"
+    - "Approved entry into executive session for collective bargaining strategy discussion"
+  votes:
+    - motion: "Appoint Scott Williams as Village School principal"
+      result: "in favor (unanimous)"
+    - motion: "Approve MVMS and MHHS school improvement plans"
+      result: "in favor (unanimous)"
+    - motion: "Adopt district and school support staff classification plan"
+      result: "in favor (unanimous)"
+    - motion: "Approve four proposed job descriptions"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills"
+      result: "in favor (unanimous)"
+    - motion: "Approve meeting minutes"
+      result: "in favor (unanimous)"
+    - motion: "Approve MOU with Recreation and Parks Department"
+      result: "in favor (unanimous)"
+    - motion: "Approve MOU with Essex Tech"
+      result: "in favor (unanimous)"
+    - motion: "Award special education program review contract to Academic Discoveries"
+      result: "in favor (unanimous)"
+    - motion: "Award OPM contract to Left Field for high school roof replacement"
+      result: "in favor (unanimous)"
+    - motion: "Appoint John Robu as interim superintendent pending contract negotiations"
+      result: "in favor (unanimous)"
+    - motion: "Award project manager services contract to Leftfield of Boston (not to exceed $420,000)"
+      result: "in favor (unanimous)"
+    - motion: "Enter executive session pursuant to MGL Chapter 38 Section 21A for collective bargaining strategy"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 12
+    end_seconds: 385
+    headline: "Parents commend Glover Field Day, sixth-grade outdoor education trip, and graduation"
+    dek: "Residents offered recognition to teachers and staff for year-end events including the Village School sixth-grade Boro trip and MHHS graduation."
+    summary: |
+      Board members noted attendance at Glover School Field Day and praised teacher Eric Fargo and parent volunteers. A board member commended the graduating class for their politeness at the diploma ceremony.
+      
+      Two parents — identified as Diane G. (Glover first-grade teacher, 4 Merson Street) and Vanessa (Fieldbrook Road) — addressed the committee. Diane G. noted that first-grade classrooms at Glover would drop from four to three sections in September, raising class sizes to 20–22, and asked the committee to staff appropriately if enrollment increases. Vanessa and another parent offered an extended commendation to sixth-grade Village School teacher Jonathan Heler for organizing the annual Boro outdoor education trip for 164 students.
+    key_speakers: ["Diane G. (Glover first-grade teacher, public commenter)", "Vanessa (parent, public commenter)", "Board Chair (Fox)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 405
+    end_seconds: 594
+    headline: "Student representative reports on end-of-year high school events including graduation and prom"
+    dek: "The student representative summarized MHS year-end activities: Culture Feast, senior prom at House of Blues, graduation, and step-up day for eighth graders."
+    summary: |
+      The student representative reported on the final weeks of the school year:
+      - Culture Feast on May 24th
+      - Underclassman awards ceremony
+      - Senior prom on June 29th at the House of Blues (over 250 attendees)
+      - Graduation on a sunny Friday with band, orchestra, and choir
+      - Eighth-grade step-up day held the day of the meeting
+      - MCAS biology testing completed by freshmen
+      - Final exams beginning the following week
+      
+      A board member noted that a graduating student named 'Cat' competed at the NEC track championship.
+    key_speakers: ["Student Representative", "Board member"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 549
+    end_seconds: 839
+    featured: true
+    headline: "School committee votes 5-0 to appoint Scott Williams as Village School principal"
+    dek: "Superintendent Dr. Teresa M. introduced Scott Williams, currently principal at Cushing Elementary in Scituate, as her recommended appointment to replace outgoing principal Mandy Murphy."
+    summary: |
+      Dr. Teresa M. gave a tribute to departing Village School principal Mandy Murphy, who spent two decades at the school as counselor, assistant principal, and principal.
+      
+      She then introduced Scott Williams as the candidate for the Village School principal position for the 2024–25 school year. Williams is currently principal at Cushing Elementary School in Scituate Public Schools. His credentials include a Certificate of School Management and Leadership from Harvard, two master's degrees (elementary education and communications), and a bachelor's from the University of Maine Orono. His noted strength is collaborative and distributive leadership.
+      
+      Williams briefly addressed the committee, expressing enthusiasm for the community and noting his desire to return to the North Shore after stints in the city and on the South Shore.
+      
+      The committee voted 5-0 to appoint Williams. Dr. M. also noted the Glover School principal search was ongoing, with interviews held the previous Tuesday.
+      
+      **Vote:** Motion to appoint Scott Williams as Village School principal — 5 to 0.
+    key_speakers: ["Dr. Teresa M. (Superintendent)", "Scott Williams (incoming Village School principal)", "Sarah Fox (Chair)", "Alison Taylor (board member)", "Al Williams (board member)", "Brian O'D (board member)", "Jen Shaffner (board member)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 882
+    end_seconds: 2665
+    headline: "MVMS and MHHS present school improvement plans focused on belonging, vertical alignment, and AI literacy"
+    dek: "Principals Fox (MVMS) and Carlson (MHHS) presented four-goal improvement plans each, with committee approval 5-0; a DESE special education audit received just before the meeting was briefly discussed."
+    summary: |
+      **Marblehead Veterans Middle School (Principal Fox) — four goals:**
+      1. Vertical curriculum alignment with Village School and MHHS (Teaching & Learning)
+      2. Social-emotional learning curriculum and student engagement calendar, emphasizing "belonging" (Teaching & Learning)
+      3. Peer observation program expanded with a standardized observation tool; nearly 10 teachers conducted over 30 peer observations this year (Professional Culture)
+      4. Belonging survey to be administered to evaluate DEI curriculum efforts (DEI strand)
+      
+      **Marblehead High School (Principal Carlson) — four goals:**
+      1. Prepare for NEASC accreditation collaborative visit (spring or fall 2025)
+      2. Continue vertical alignment work with MVMS begun this year (Teaching & Learning)
+      3. Professional learning around AI literacy and technology; a teacher AI study group formed this year (Professional Culture)
+      4. DEI model classrooms and curriculum lens review; a student found an outdated (10-year-old) worksheet with historical errors, leading to a social studies curriculum revision (DEI)
+      
+      **DESE monitoring audit discussion:** A DESE special education monitoring report (three-year cycle) arrived just days before the meeting, later than the required 60 days post-visit. Interim Director of Student Services Patricia Bell and incoming Assistant Superintendent of Student Services Lisa Mariao are working with DESE. A July 1 response plan deadline applies. The committee noted the full special education program review contract (voted later in the meeting) would work in tandem with addressing the DESE findings.
+      
+      **Vote:** Motion to approve both school improvement plans — 5 to 0.
+    key_speakers: ["Principal Fox (MVMS)", "Principal Carlson (MHHS)", "Alison Taylor (board member)", "Dr. Teresa M. (Superintendent)"]
+  - topic: labor-personnel
+    topic_confidence: 0.93
+    start_seconds: 2665
+    end_seconds: 3243
+    headline: "Committee votes 5-0 to adopt new support staff classification plan and four job descriptions"
+    dek: "Interim Director of Finance Mary Ju presented a restructured pay classification plan for district and school support staff, with all current employees held harmless."
+    summary: |
+      Mary Ju (interim Director of Finance and Operations) presented the new district and school support staff classification plan. Key features:
+      
+      - Reorganized clerk and secretary groupings into a single "secretaries and administrative assistants" tier
+      - A position serving the assistant superintendent of student services reclassified to "executive assistant" level (higher confidentiality)
+      - Every current employee is held harmless — no pay cuts; employees receiving compensation above the new scale are grandfathered
+      - All employees receive at least the budgeted 2% increase
+      - Tuition reimbursement language will be revised to remove the requirement that courses relate only to the *current* job (to support succession planning)
+      - Weekly pay will be transitioned to biweekly as part of a new payroll system migration
+      
+      The committee approved both the classification plan (5-0) and the four proposed job descriptions (5-0), with a noted amendment to the degree requirement language for consistency across positions.
+      
+      **Votes:** Classification plan — 5 to 0; Job descriptions — 5 to 0.
+    key_speakers: ["Mary Ju (interim Director of Finance and Operations)", "Alison Taylor (board member)", "Brian O'D (board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 3243
+    end_seconds: 3396
+    headline: "Committee approves schedule of bills totaling approximately $253,888 and prior meeting minutes"
+    dek: "Routine end-of-meeting approvals for bills and minutes were passed unanimously."
+    summary: "The committee voted 5-0 to approve the schedule of bills totaling approximately $253,887.99 and 5-0 to approve the minutes from the March 7 meeting."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.87
+    start_seconds: 3396
+    end_seconds: 3619
+    headline: "Committee discusses interim superintendent candidate John Robu and votes 5-0 to enter contract negotiations"
+    dek: "Committee members shared positive feedback from site visits to Robu's current district and the candidate's day in Marblehead; the committee authorized negotiations for a position commencing July 1."
+    summary: |
+      The chair summarized the superintendent candidate review process: the interim superintendent candidate John Robu (referred to as 'Robu' throughout; ASR may have rendered the name variously) visited Marblehead on Monday, meeting with administrators, principals, staff, parents, community members, and the town administrator. Feedback forms were distributed and reviewed.
+      
+      Board members shared strong support based on site visits to his current district (Swansea) and his day in Marblehead:
+      - Robu had watched prior school committee meetings and demonstrated detailed knowledge of local issues
+      - His 18–19 years at his current district demonstrated stability
+      - Reference checks from principals and a school committee member were very positive
+      - His prior district departure was attributed to cumulative turnover in school committee leadership over several elections, not performance issues
+      
+      Discussion arose about whether to negotiate a one-year or two-year interim contract. The position was advertised as one year; committee members noted the contract could be extended or converted to permanent during the term. The chair noted she would relay the committee's preference for a two-year term during negotiations.
+      
+      The committee voted 5-0 to appoint John Robu as interim superintendent of Marblehead Public Schools commencing July 1, pending successful contract negotiations.
+      
+      **Vote:** 5 to 0.
+    key_speakers: ["Sarah Fox (Chair)", "Alison Taylor (board member)", "Brian O'D (board member)", "Jen Shaffner (board member)", "Al Williams (board member)"]
+  - topic: recreation-events
+    topic_confidence: 0.88
+    start_seconds: 3619
+    end_seconds: 3758
+    headline: "Committee approves MOU with Recreation and Parks Department with effective date correction"
+    dek: "The annual MOU between Marblehead Public Schools and the Recreation and Parks Department was renewed with one minor revision, after a board member noted the listed effective date of April 15 was in the past."
+    summary: |
+      The committee voted 5-0 to approve the MOU with the Recreation and Parks Department as presented, with a correction to the effective date (April 15 was struck; the date of signing will be used going forward). Mary Ju confirmed the MOU was substantially unchanged from the prior year.
+      
+      **Vote:** 5 to 0.
+    key_speakers: ["Sarah Fox (Chair)", "Alison Taylor (board member)", "Mary Ju (interim Director of Finance and Operations)"]
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 3758
+    end_seconds: 4002
+    headline: "Committee approves Essex North Shore Tech MOU; after-dark CTE program will not enroll new juniors next year"
+    dek: "The annual MOU with Essex North Shore Agricultural and Technical School was renewed; the committee was informed the dual-enrollment after-dark CTE program will not accept a new junior cohort due to cost and low enrollment interest."
+    summary: |
+      The committee voted 5-0 to renew the annual MOU with Essex North Shore Agricultural and Technical School (Essex Tech). Per the MOU, the per-student cost is $7,500 or the Chapter 74 per-pupil differential rate, whichever is higher.
+      
+      The committee learned that the after-dark dual-enrollment CTE program — in which Marblehead juniors attend MHHS in the morning and Essex Tech in the afternoon for programs such as health assisting (leading to CNA certification), construction/craft labor, early education and care, and sustainable horticulture — will not enroll a new junior cohort for the upcoming year. The decision was budgetary (program cost was approximately equal to a full-time high school teacher) and enrollment-driven (only four students had expressed interest for the new cohort). Current enrolled students (rising seniors) will complete the two-year program.
+      
+      **Vote:** 5 to 0.
+    key_speakers: ["Sarah Fox (Chair)", "Michelle (district administrator, identified from context)", "Al Williams (board member)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 4002
+    end_seconds: 4242
+    headline: "Committee awards $58,000 special education program review contract to Academic Discoveries"
+    dek: "Following a competitive RFP process with five proposals, the committee voted 5-0 to award a comprehensive special education program review to Massachusetts-based Academic Discoveries."
+    summary: |
+      Interim Director of Finance Mary Ju described a rigorous RFP process: five proposals were received, all of high quality. An evaluation team including board member Alison Taylor, interim Director of Student Services Patricia Bell, and a team chair scored proposals using a structured point system. Academic Discoveries, a Massachusetts-based consultancy, ranked highest.
+      
+      After reference checks and negotiations, the contract was set at a not-to-exceed price of $58,000. The review will be more comprehensive than the recent DESE monitoring audit, examining demographic data, academic performance, IEPs, process, and procedures districtwide. The committee noted the review would work in tandem with the DESE monitoring response plan.
+      
+      Board member Alison Taylor praised the process and the structured spreadsheet approach used by Mary Ju to facilitate independent review of the thick proposal packets.
+      
+      **Vote:** 5 to 0.
+    key_speakers: ["Mary Ju (interim Director of Finance and Operations)", "Alison Taylor (board member)", "Sarah Fox (Chair)"]
+  - topic: bonding-capital
+    topic_confidence: 0.92
+    start_seconds: 4242
+    end_seconds: 4680
+    headline: "Committee approves OPM contract with Left Field for $420,000 to manage high school roof replacement"
+    dek: "The committee voted 5-0 to award an owner's project manager contract to Left Field; the $5.2 million roof project is on track to be completed over the coming summer."
+    summary: |
+      Mary Ju presented the award of an owner's project manager (OPM) contract to Left Field for the Marblehead High School roof replacement project, at a not-to-exceed price of $420,000.
+      
+      Key points:
+      - The $5.2 million in capital funding was previously appropriated by town meeting
+      - At roughly 10% of construction cost, the OPM fee is within normal range for a project of this size
+      - The OPM will now procure an engineer/designer and then a construction contractor, with the goal of completing all work over the summer
+      - Work could begin before the end of the school year to ensure summer completion
+      - Mary Ju noted the committee's general practice of bringing contracts over $250,000 for approval, though no formal policy exists; she indicated this should be formalized
+      
+      The committee also discussed the question of school committee vs. town-side approval authority, with Mary Ju confirming the school committee is the owner of the building for procurement purposes.
+      
+      **Vote:** 5 to 0.
+    key_speakers: ["Mary Ju (interim Director of Finance and Operations)", "Alison Taylor (board member)", "Sarah Fox (Chair)"]
+  - topic: bonding-capital
+    topic_confidence: 0.72
+    start_seconds: 4919
+    end_seconds: 5125
+    headline: "School committee votes 5-0 to award Leftfield up to $420K as project manager"
+    dek: "A board member cited prior success with Leftfield on the Brown School building project before the unanimous vote."
+    summary: "The committee discussed and approved a contract for owners project manager (OPM) services awarded to Leftfield of Boston, Massachusetts, for an amount not to exceed $420,000. A board member who had served on the Brown School building committee spoke favorably about Leftfield's past performance, noting the project came in ahead of schedule and under budget, and expressed confidence that Leftfield's familiarity with Marblehead's permitting process would benefit the new project. The motion was made by Jen Chatner, seconded by Brian Oda, and passed 5-0 (Alison Taylor, Al Williams, Brian Oda, Jen Chatner, and Sarah Fox all in favor)."
+    key_speakers: ["Sarah Fox (Chair)", "Jen Chatner (board member)", "Brian Oda (board member)"]
+  - topic: school-budget
+    topic_confidence: 0.65
+    start_seconds: 5125
+    end_seconds: 5191
+    headline: "Committee transitions to communication survey presentation after contract vote"
+    dek: "Board members prepare to share slides from a community communication survey that received 568 responses."
+    summary: "Following the contract vote, the chair moved to a communication survey presentation. Board members noted the survey received 568 responses and discussed logistics for displaying the data using pivot tables and presentation slides."
+    key_speakers: ["Brian Oda (board member)", "Alison Taylor (board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 5191
+    end_seconds: 6975
+    headline: "School committee presents results of 568-response community communication survey"
+    dek: "Survey themes included transparency, the departure of Dr. Bucky, MOU negotiations, budget communication, and school committee performance."
+    summary: |
+      Two board members (Brian Oda and Alison Taylor) co-presented results of a community communication survey. Key findings included:
+      
+      **Response volume:** 568 total responses; approximately 58% came in within the first six hours of the survey going live over a 10-day window.
+      
+      **Major categories identified:**
+      - **Improved communication:** Respondents called for active listening, faster publication of meeting minutes (goal: by next school committee meeting), responses to public comments at meetings, and a cleaned-up school committee website.
+      - **Transparency:** Frequently cited; respondents requested that rationale for past decisions be made clear, that goals and progress be published, and that collective bargaining negotiations be opened to public observation.
+      - **Dr. Bucky:** A large number of comments asked what happened with the former superintendent. The presenting board member stated for the record: Dr. Bucky resigned and was not fired; he required a non-disparagement clause in his resignation agreement that prevents disclosure of reasons; the school committee did not want any NDA. A board member also addressed a separate transparency concern, disclosing that she filed an MCAD (Massachusetts Commission Against Discrimination) complaint against Dr. Bucky before running for office, that the Massachusetts Ethics Commission advised her not to disclose it before the election because it was a personal and confidential matter, and that she filed the required conflict-of-interest form (MGL Ch. 23 B3) upon being sworn in and recused herself from all discussions involving Dr. Bucky's employment.
+      - **Budget:** Respondents asked for a budget primer explaining terms like free cash and revolving funds; noted the 220-page budget book is already online on the Marblehead Public Schools website.
+      - **School committee performance:** Responses were roughly evenly split between those calling for the committee to resign and those supportive of the current committee.
+      
+      **Preferred communication formats (survey question):** FAQ page received the most interest; "conversations with the school committee" format (ad hoc, back-and-forth) received the most positive comments from attendees.
+      
+      **Attendance at prior forums:** Only 47% of survey respondents who left comments had actually watched or attended the school committee communication forum; only 35% (82 of 232 commenters) had attended the League of Women Voters forum.
+      
+      **Next steps identified:** Schedule a summer retreat to set committee goals and measurable outcomes; develop and post an FAQ on the district website; consider a policy on screening committee composition; continue to build on the facts/FAQ document circulated to committee members.
+    key_speakers: ["Brian Oda (board member)", "Alison Taylor (board member)", "Sarah Fox (Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 7109
+    end_seconds: 7341
+    headline: "Superintendent offers perspective on facilities goal-setting before executive session vote"
+    dek: "The outgoing assistant superintendent of finance and operations recommended that facilities goals be driven by administration, not a school committee subcommittee."
+    summary: "An administrator (identified as assistant superintendent of finance and operations) offered an opinion that facilities goals should be the responsibility of the person in that administrative role and the facilities director, not a school committee subcommittee goal. She noted a prior comprehensive facilities audit estimated $2–3 million per year is needed to maintain district facilities, and encouraged the incoming successor and facilities director to develop a comprehensive facilities plan. The committee then moved to executive session."
+    key_speakers: ["Assistant Superintendent of Finance and Operations", "Sarah Fox (Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.92
+    start_seconds: 7341
+    end_seconds: 7387
+    headline: "Committee votes 5-0 to enter executive session for MEA collective bargaining strategy"
+    dek: "The session covers strategy for bargaining with the Marblehead Education Association; the committee did not plan to return to open session."
+    summary: "The chair requested a motion to enter executive session pursuant to MGL Chapter 38, Section 21A, to discuss collective bargaining strategy with the Marblehead Education Association (including substitutes and professional team), noting that open discussion may have a detrimental effect on bargaining. The committee voted not to return to open session after executive session. Motion by Jen Chatner, seconded by Brian Oda; passed 5-0."
+    key_speakers: ["Sarah Fox (Chair)", "Jen Chatner (board member)", "Brian Oda (board member)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

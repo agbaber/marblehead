@@ -9,7 +9,179 @@ video_url: "https://www.youtube.com/watch?v=efMpJIK3Ndc"
 duration_seconds: 7213
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee approves Wayfinder SEL curriculum and $30,000 tennis court donation"
+  summary: "The Marblehead School Committee held its first meeting of the new school year, approving a schedule of bills totaling approximately $826,000, hiring a school nurse pending DESE licensure, and accepting four donations including a $30,000 gift from All Sports Boosters for tennis court resurfacing. The committee unanimously adopted the Wayfinder social-emotional learning curriculum (approximately $25,000/year, funded by ESSER) for K–12 implementation beginning next school year. The committee worked through subcommittee and liaison assignments and debated reinstating formal school committee liaisons to each school's School Advisory Council, directing the superintendent to gather principal feedback. The meeting concluded with a unanimous vote to enter executive session to discuss collective bargaining strategy with the Marblehead Education Association and related units."
+  decisions:
+    - "Approved schedule of bills totaling approximately $826,000"
+    - "Approved hiring of school nurse Jessica Chu, pending DESE license"
+    - "Approved donation of Narcan kits from the Board of Health"
+    - "Approved donation of an AED funded by a student senior project"
+    - "Approved donation of menstrual products from Free Period organization"
+    - "Approved $30,000 donation from All Sports Boosters for tennis court resurfacing"
+    - "Approved Wayfinder social-emotional learning curriculum (K–12)"
+    - "Approved subcommittee and liaison assignments for the year"
+    - "Held discussion on reinstating School Advisory Council liaison positions; directed superintendent to gather principal feedback"
+    - "Tabled school committee calendar and subcommittee assignments to next meeting"
+    - "Approved motion to enter executive session for collective bargaining strategy discussion"
+  votes:
+    - motion: "Approve schedule of bills (~$826,000)"
+      result: "in favor (unanimous)"
+    - motion: "Approve hiring of school nurse Jessica Chu pending DESE license"
+      result: "in favor (4 to 1)"
+    - motion: "Approve Narcan kit donation from Board of Health"
+      result: "in favor (unanimous)"
+    - motion: "Approve AED donation from student senior project"
+      result: "in favor (unanimous)"
+    - motion: "Approve menstrual product donation from Free Period"
+      result: "in favor (unanimous)"
+    - motion: "Approve $30,000 donation from All Sports Boosters for tennis courts"
+      result: "in favor (unanimous)"
+    - motion: "Approve Wayfinder SEL curriculum"
+      result: "in favor (unanimous)"
+    - motion: "Enter executive session under MGL Chapter 30A Section 21A to discuss collective bargaining strategy with the Marblehead Education Association and related units"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 2
+    end_seconds: 95
+    headline: "Residents comment on teacher retention and override strategy at meeting opening"
+    dek: "Two residents addressed the committee, one urging transparency in teacher negotiations to secure voter support for an override, and another praising a former teacher."
+    summary: "A resident warned the committee that substitute teachers prefer neighboring districts over Marblehead and urged that contract negotiations be made public, particularly to reach older voters whose support would be needed for any override ballot question. A second resident briefly praised community involvement around the Brown School garden."
+    key_speakers: ["Resident at mic"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 95
+    end_seconds: 557
+    headline: "New superintendent delivers opening-of-school update covering staffing, buses, and personnel investigation"
+    dek: "The superintendent thanked staff, described the first days of school, acknowledged bus route delays, and provided a brief update on an ongoing independent personnel investigation."
+    summary: "Student representative Alan Zetto reported on the first week back, noting picture day September 13 and a Razer fundraiser for the senior class on September 5. The superintendent acknowledged custodial staff, technology teams, and new administrators for their back-to-school preparation. She described a welcome event for METCO families in Boston and noted new staff orientation on August 28. The superintendent acknowledged bus route delays in the first days of school and said communication improvements were already underway. She also noted that an independent investigation into prior personnel allegations was ongoing through investigator Alison Kirk, with no completion timeline confirmed."
+    key_speakers: ["Alan Zetto (student representative)", "Superintendent"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 557
+    end_seconds: 645
+    headline: "School Committee approves schedule of bills totaling approximately $826,000"
+    dek: "A unanimous roll-call vote approved the schedule of bills at the start of the consent agenda."
+    summary: "The committee took a roll-call vote on the schedule of bills. All five members — Al Williams, Ryan Odo, Sarah Fox, Jen Shaner, and Alison Taylor — voted in favor. The motion passed 5–0."
+    key_speakers: ["School Committee Chair"]
+  - topic: labor-personnel
+    topic_confidence: 0.92
+    start_seconds: 645
+    end_seconds: 934
+    headline: "Committee votes 4–1 to hire school nurse Jessica Chu pending DESE license"
+    dek: "After discussion about the candidate's pending DESE (Department of Elementary and Secondary Education) license, the committee approved the hire with continued employment contingent on obtaining the credential."
+    summary: "The superintendent recommended Jessica Chu for a school nurse position at Leber School. Board member Sarah Fox raised the issue of the candidate's pending DESE license, noting a prior problem when this was not checked. The candidate confirmed her DESE license application was awaiting one employment verification document. The superintendent confirmed she could work under a licensed nurse's supervision in the interim. A motion was made to approve the hire with the understanding her continued employment is contingent on obtaining the DESE license. The motion passed 4–1, with Ryan Odo the sole dissenting vote."
+    key_speakers: ["Superintendent", "Sarah Fox (school committee member)", "Jessica Chu (nurse candidate)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 979
+    end_seconds: 1722
+    headline: "Committee unanimously approves four donations including $30,000 for tennis court resurfacing"
+    dek: "The committee accepted Narcan kits, an AED, menstrual products, and a $30,000 sports booster gift across four separate 5–0 votes."
+    summary: |
+      **Narcan kits:** The Board of Health donated cases of Narcan for each school, supplementing state-supplied stock. A board member asked for future usage data. Approved 5–0.
+      
+      **AED:** Students raised money through a senior project via the Walker Foundation to donate an AED, slated for Village School. Approved 5–0.
+      
+      **Menstrual products:** Free Period, a Hingham-area organization, donated approximately 12,000 pads, 4,800 tampons, 48,000 liners, 12 dispensers, and three books for the high school and Village School. A board member recognized Marblehead resident Megan Sweeney for state-level advocacy. Approved 5–0.
+      
+      **Tennis courts:** All Sports Boosters donated $30,000 to resurface the high school tennis courts. A board member noted the courts are over 20 years old and raised longer-term concerns about subgrade replacement. The superintendent indicated the work would likely be bid in spring. Approved 5–0.
+    key_speakers: ["Superintendent", "School Committee members", "Alison Taylor (school committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.87
+    start_seconds: 1759
+    end_seconds: 3195
+    featured: true
+    headline: "Committee unanimously adopts Wayfinder as district-wide K–12 social-emotional learning curriculum"
+    dek: "Following a summer-long committee review, the school committee voted 5–0 to adopt the Wayfinder SEL program at approximately $25,000 per year, funded initially by ESSER funds."
+    summary: |
+      Assistant Superintendent Julia (teaching and learning) and co-facilitator Angela Gano presented the results of a summer curriculum committee process involving classroom teachers, counselors, mental health clinicians, health staff, and administrators from across the district.
+      
+      **Why Wayfinder was selected:**
+      - Aligned with CASEL competencies and is a CASEL Select program
+      - Vetted by the Stanford Education Center and Harvard's development lab
+      - K–12 scope and sequence with coherent themes across grade bands (20 lessons at ~20 min each for elementary; 26 lessons at ~30 min for middle; 23 lessons at ~30 min for high school)
+      - Integrates with Clever and Google Classroom (digital for grades 6–12; workbooks for K–5)
+      - Addresses Student Opportunity Act obligations, bullying prevention policy, and district SEL priorities
+      - Approximately 11% average academic achievement gain reported when SEL is integrated
+      - Used in districts from Revere to Gloucester and thousands across the U.S.
+      
+      **Cost and funding:** Approximately $25,000 per year (site/district license, roughly $10/student); initial years to be funded by ESSER. Multi-year contracts reduce per-year cost.
+      
+      **Implementation:** Not in the current school year; planned for rollout next year with family letters, a counselor activity bank for tier 2/3 supports, and an implementation committee already meeting.
+      
+      The motion to approve passed 5–0.
+    key_speakers: ["Julia (Assistant Superintendent, Teaching and Learning)", "Angela Gano (co-facilitator, SEL curriculum committee)", "Superintendent", "School Committee members"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 3241
+    end_seconds: 4504
+    headline: "Committee discusses school year meeting calendar dates and a possible earlier start time"
+    dek: "Several meeting dates conflicting with holidays or vacations were identified for rescheduling, and committee members discussed whether to shift from a 7 p.m. to a 6 or 6:30 p.m. start time."
+    summary: |
+      The committee identified three calendar dates that fall on holidays or school breaks: October 3 (Rosh Hashanah), November 7 (MASC conference and parent-teacher conference half day), and a June date coinciding with Juneteenth. Replacement or alternative dates discussed included October 10 and 17, November 14 and 21, December 5 and 19, February 6 and a Wednesday February 26, June 5 and June 18.
+      
+      The committee also discussed moving its regular 7 p.m. start time to 6 or 6:30 p.m., prompted by the superintendent's interest in including student presentations earlier in the evening. Some members noted that a 6 p.m. start had been proposed previously and received community pushback; others were open to the change. The superintendent offered to survey parents and the broader community. No votes were taken; all calendar decisions were tabled to the September 19 meeting.
+    key_speakers: ["School Committee Chair", "Jen Shaner (school committee member)", "Sarah Fox (school committee member)", "Alison Taylor (school committee member)", "Superintendent"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 4586
+    end_seconds: 6244
+    headline: "School Committee divides up subcommittee seats; debates reviving advisory council liaisons"
+    dek: "Members assigned roles on policy, budget, facilities, bargaining, safety, communications, CPAC, Medco, health/wellness, and per-school advisory councils, while debating the pros and cons of formal school committee presence at principal-run meetings."
+    summary: |
+      The chair (Jen) led the committee through subcommittee and liaison position assignments. The following assignments were recorded:
+      
+      | Role | Member(s) |
+      |---|---|
+      | Policy subcommittee | Jen (chair), Alison |
+      | Budget subcommittee | Sarah, Alison |
+      | Facilities subcommittee | Sarah, Alison |
+      | Bargaining subcommittee | Sarah, Jen |
+      | Safety & Security subcommittee | Brian |
+      | Communications subcommittee | Alison, Brian |
+      | Medco liaison | Alison |
+      | CPAC liaison | Brian |
+      | Health & Wellness liaison | Alison |
+      | School Advisory Council – Brown | Sarah |
+      | School Advisory Council – Village | Sarah |
+      | School Advisory Council – Glover | Brian (contingent on committee vote) |
+      | School Advisory Council – Vets | Jen |
+      | School Advisory Council – High School | Alison |
+      
+      A significant portion of the discussion concerned whether to formally reinstate school committee members as liaisons to the per-building School Advisory Councils (SACs), which had been discontinued approximately three to four years earlier. Supporters argued the liaisons provided valuable insight into school improvement plans and helped inform budget and policy decisions. One member (Brian) opposed reinstatement, citing the Ed Reform Act of 1993's separation of school committee and operational roles, and noting that principals historically felt uncomfortable with school committee members present. The straw poll found Jen, Alison, Sarah, and one other member in favor; Brian opposed. The committee agreed the superintendent (John) would gather informal principal feedback and the topic would return at a future meeting, aiming to begin the liaison cycle in October if approved.
+      
+      A curriculum subcommittee was discussed but tabled; the committee noted that most districts have moved away from standalone curriculum subcommittees and that curriculum transparency would be addressed through communications and the district improvement plan.
+    key_speakers: ["Jen (School Committee Chair)", "Sarah (School Committee Member)", "Alison (School Committee Member)", "Brian (School Committee Member)", "John (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 6244
+    end_seconds: 6388
+    headline: "Committee plans goal-setting workshop for late September, targeting superintendent evaluation timeline"
+    dek: "Members agreed to schedule a 90-minute to two-hour goal-setting workshop, potentially on September 19 or 25, with facilitator Alicia from MASD, prior to a regular business meeting."
+    summary: "Following the subcommittee assignments, the chair flagged the need to schedule a standalone school committee goal-setting workshop rather than embedding it in a regular business meeting. The purpose would be to develop both school committee goals and formal superintendent goals for John. Members discussed holding a 5–7 p.m. session before a 7 p.m. business meeting. Candidate dates floated were September 19 and September 25, both contingent on the availability of facilitator Alicia (from MASD). John noted a class conflict on the evening of the 23rd. The committee agreed to confirm Alicia's availability and finalize a date."
+    key_speakers: ["Jen (School Committee Chair)", "Alison (School Committee Member)", "John (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 6897
+    end_seconds: 7009
+    headline: "Member proposes dedicating Brown School organic garden in honor of former staff member"
+    dek: "Sarah requested a future agenda item to formally dedicate the Brown School organic garden and potentially pair it with a fundraiser to support garden programs."
+    summary: "In closing business, Sarah proposed placing on a future agenda a dedication of the organic garden at Brown School to honor a former staff or community member who started it. She envisioned a small clay plaque consistent with existing garden signage, created by a local artist, and suggested pairing the dedication with a fundraiser or donation mechanism to support ongoing garden education programs benefiting Marblehead students. The committee agreed to add it to the next meeting agenda."
+    key_speakers: ["Sarah (School Committee Member)", "Jen (School Committee Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 7046
+    end_seconds: 7157
+    headline: "School Committee votes 5–0 to enter executive session for collective bargaining strategy"
+    dek: "The committee unanimously approved entering executive session under MGL Chapter 30A, Section 21A to discuss strategy for collective bargaining with the Marblehead Education Association and related units, with no return to open session."
+    summary: "The chair moved to enter executive session pursuant to Massachusetts General Law Chapter 30A, Section 21A, purpose three, to discuss collective bargaining strategy with the Marblehead Education Association (Unit A), permanent substitutes, tutors, paraprofessionals, and custodians. The motion stated that open discussion may have a detrimental effect on the committee's bargaining position. Roll call: Williams – in favor; Sarah Fox – in favor; Jenner – in favor; Taylor – in favor. Motion passed 5 to 0. The committee entered executive session with no stated intent to return to open session."
+    key_speakers: ["Jen (School Committee Chair)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;
