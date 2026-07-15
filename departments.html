@@ -106,7 +106,7 @@ og_url: https://marbleheaddata.org/departments.html
   }
   function changeClass(p) { return p == null ? '' : (p >= 0 ? 'dx-change-up' : 'dx-change-down'); }
 
-  function deptLabel(d) { return esc(d.name.replace(/_/g, ' ')); }
+  function deptLabel(d) { return esc(d.name); }
 
   function renderIndex() {
     var parts = [];

@@ -1,7 +1,9 @@
 """Tests for build_departments_data.py."""
 import json
 from pathlib import Path
-from build_departments_data import build_view, _HEADCOUNT_CROSSWALK, _ROLE_CROSSWALK, ROOT
+from build_departments_data import (
+    build_view, _HEADCOUNT_CROSSWALK, _ROLE_CROSSWALK, _DISPLAY_NAMES, ROOT,
+)
 
 DATA = Path(__file__).resolve().parent
 
@@ -9,6 +11,25 @@ DATA = Path(__file__).resolve().parent
 def test_all_40_departments_present():
     view = build_view()
     assert len(view["departments"]) == 40
+
+
+def test_every_department_has_a_human_display_name():
+    view = build_view()
+    for key, dept in view["departments"].items():
+        name = dept["name"]
+        # A real display name, not the raw slug echoed back.
+        assert name == _DISPLAY_NAMES[key], f"{key} missing curated display name"
+        assert "_" not in name, f"{key} name still looks like a slug: {name!r}"
+        assert name != key
+
+
+def test_specific_display_names_are_grammatical():
+    view = build_view()
+    d = view["departments"]
+    assert d["select_board"]["name"] == "Select Board"
+    assert d["school_high"]["name"] == "Marblehead High School"
+    assert d["public_works_ops"]["name"] == "Public Works Operations"
+    assert d["rec_park"]["name"] == "Recreation & Parks"
 
 
 def test_department_has_budget_and_function():

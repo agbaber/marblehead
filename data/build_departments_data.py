@@ -176,6 +176,55 @@ def _load_org_roles() -> dict:
     return roles
 
 
+# Budget department key -> human display name shown on cards + profile headings.
+# The source budget JSON stores the same slug in both `id` and `department`, so
+# the raw value ("school_high", "public_works_ops") is unfit to display. School
+# building names follow org_chart.yml's schools section; town department names
+# follow org_chart.yml's town.departments where one exists.
+_DISPLAY_NAMES = {
+    "moderator": "Town Moderator",
+    "select_board": "Select Board",
+    "finance_committee": "Finance Committee",
+    "reserve_fund": "Reserve Fund",
+    "finance": "Finance Department",
+    "assessor": "Assessors' Office",
+    "town_counsel": "Town Counsel",
+    "parking_clerk": "Parking Clerk",
+    "town_clerk": "Town Clerk",
+    "election_registration": "Elections & Registration",
+    "planning_board": "Planning Board",
+    "public_buildings": "Public Buildings",
+    "human_resources": "Human Resources",
+    "community_development": "Community Development & Planning",
+    "police": "Police Department",
+    "fire": "Fire Department",
+    "building_inspection": "Building Inspection",
+    "sealer_weights_measures": "Sealer of Weights & Measures",
+    "animal_inspector": "Animal Inspector",
+    "public_works_ops": "Public Works Operations",
+    "waste_collection": "Waste Collection",
+    "curbside_collection": "Curbside Collection",
+    "cemetery": "Cemetery",
+    "health": "Health Department",
+    "council_on_aging": "Council on Aging",
+    "veterans_benefits": "Veterans' Benefits",
+    "library": "Abbot Public Library",
+    "rec_park": "Recreation & Parks",
+    "memorial_veterans_day": "Memorial & Veterans Day",
+    "debt_service": "Debt Service",
+    "other_general_government_dept": "Other General Government",
+    "sewer": "Sewer Department",
+    "water": "Water Department",
+    "harbor": "Harbormaster",
+    "school_brown": "Brown Elementary School",
+    "school_glover": "Glover Elementary School",
+    "school_village": "Village Elementary School",
+    "school_middle": "Marblehead Veterans Middle School",
+    "school_high": "Marblehead High School",
+    "school_athletics": "School Athletics",
+}
+
+
 def _departments_from_budget(budget: dict) -> dict:
     rows = budget["rows"]
     depts = {}
@@ -184,7 +233,7 @@ def _departments_from_budget(budget: dict) -> dict:
             continue
         key = r["id"]
         depts[key] = {
-            "name": r["department"],
+            "name": _DISPLAY_NAMES.get(key, r["department"].replace("_", " ").title()),
             "function": r["function"],
             "function_label": _FUNCTION_LABELS.get(r["function"], r["function"]),
             "role": None,
