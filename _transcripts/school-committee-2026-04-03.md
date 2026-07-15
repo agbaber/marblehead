@@ -10,7 +10,79 @@ duration_seconds: 1763
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead school roof project subcommittee reviews controls, meeting notes, and Procore access"
+  summary: "The subcommittee met to discuss the high school roof replacement project, covering HVAC controls issues across the district, the ceiling procurement timeline under Chapter 30B bidding, and concerns about the formality and detail of contractor meeting notes. Members discussed granting Procore access to Brian and Kareema so they could independently review submittals, RFI logs, and equipment tracking. The meeting concluded with a roll-call vote to adjourn and a tentative next meeting set for Wednesday, April 29."
+  decisions:
+    - "Approved motion to adjourn at 12:44 p.m."
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: bonding-capital
+    topic_confidence: 0.55
+    start_seconds: 1
+    end_seconds: 231
+    featured: true
+    headline: "Subcommittee reviews HVAC controls, building permit requirements, and ceiling procurement for high school roof project"
+    dek: "Project manager reports controls consolidation is underway and ceiling contractor bid documents go out Wednesday the 8th with bids due the 23rd."
+    summary: |
+      The project manager (Lena) reported that district-wide building controls are a concern, with three separate systems — Johnson Controls, Allerin, and a third — currently in use. The high school has been prioritized for pre-construction controls documentation so that any non-operational items can be attributed to the contractor rather than pre-existing conditions.
+      
+      A member (Kareema) raised a question about the building permit scope and whether a Certificate of Occupancy or affidavits from the building department, fire department, electrical, AAB, and conservation/ZBA would be required at project close. The project manager agreed to follow up.
+      
+      On the ceiling procurement: documents will be available to contractors on Wednesday the 8th; a walkthrough is scheduled for the 16th at 3 p.m.; bids are due the 23rd. The intent is to have the ceiling contractor begin work immediately after the school year ends and complete reinstallation before students return.
+    key_speakers: ["Lena (project manager)", "Kareema (subcommittee member)", "Mike (owner's representative)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.72
+    start_seconds: 334
+    end_seconds: 870
+    headline: "Subcommittee requests more detailed OAC meeting notes, three-week look-ahead, and Procore access for members"
+    dek: "Members ask for RFI and submittal logs attached to meeting minutes and direct Procore access for experienced committee members Brian and Kareema."
+    summary: |
+      A member (Sam) raised that the OAC meeting notes shared so far lacked the formality and specificity typical of projects of this scale. The group discussed adding a three-week look-ahead, flagging critical RFIs and submittals by deadline, and attaching RFI and submittal logs to the minutes produced by the general contractor (Homer Contracting).
+      
+      The chair (Henry) noted that panel members currently do not have direct access to Procore, the project management platform used by Homer Contracting and Raymond Design. The group agreed that Brian and Kareema — both familiar with Procore — should be given access so they can independently review submittals and equipment tracking logs and flag issues between meetings.
+      
+      The project manager (Lena) committed to sharing available materials after the meeting and to requesting a more detailed three-week look-ahead from the contractor.
+    key_speakers: ["Sam (subcommittee member)", "Kareema (subcommittee member)", "Brian (subcommittee member)", "Henry (chair)", "Lena (project manager)", "Mike (owner's representative)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.65
+    start_seconds: 1136
+    end_seconds: 1432
+    headline: "Subcommittee discusses oversight role, project communication, and schedules next meeting for week of April 27"
+    dek: "Members clarify that Left Field and Raymond Design serve as owner's project managers, and agree to schedule the next meeting around the conclusion of April school vacation roof work."
+    summary: |
+      The group discussed the oversight relationship between the subcommittee, the town's owner's project manager (Mike), and consultants Left Field and Raymond Design (RDA). It was noted that Left Field effectively co-manages the project with Mike, each advising the other.
+      
+      A member (Sam) asked that the subcommittee begin receiving weekly meeting notes, draw requests, and long-lead item schedules directly, rather than only through Mike. The chair (Henry) noted that committee member Ralph has a standing conflict every Thursday at noon, the recurring meeting time, and proposed moving future meetings.
+      
+      The next meeting was tentatively set for Wednesday, April 29 (the week after April school vacation), to allow time for an update following the vacation-week roof work. The chair committed to sending a calendar invite before Friday the 24th.
+    key_speakers: ["Henry (chair)", "Sam (subcommittee member)", "Mike (owner's representative)", "Lena (project manager)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.65
+    start_seconds: 1432
+    end_seconds: 1730
+    headline: "Members question HVAC commissioning, roof testing protocol, and long-lead item tracking"
+    dek: "RDA representative confirms weekly on-site inspection and manufacturer warranty inspection are planned but no formal flood or vacuum commissioning testing is currently specified."
+    summary: |
+      Sam asked whether anyone would be inspecting the AC equipment, prompting the project manager to defer to Molly (Raymond Design). Molly confirmed that John Bartki from RDA handles construction management and will be on site roughly weekly. The roofing manufacturer (believed to be Sarnafil) will also conduct a warranty inspection. However, no formal commissioning tests such as vacuum or flood testing are currently in the specifications, though more intensive testing could be added at additional cost to the district.
+      
+      Kareema asked about water testing for drain performance and whether a flood-style roof test was in the spec. Molly confirmed contractor-performed water testing for drains is included, but deliberate large-scale flood testing is not. A third-party commissioning line item could be added given savings elsewhere in the budget.
+      
+      Kareema also requested that OAC meeting notes include current status and lead times for long-lead items, noting that previous notes indicated some items had not been released to the contractor due to storage constraints. The project manager agreed to follow up and incorporate this into committee communications.
+    key_speakers: ["Sam (subcommittee member)", "Kareema (subcommittee member)", "Molly (Raymond Design)", "Lena (project manager)", "Mike (owner's representative)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1730
+    end_seconds: 1782
+    headline: "Subcommittee adjourns by roll-call vote at 12:44 p.m."
+    dek: "All four present members voted yes to adjourn; chair will distribute meeting packets and a notice for the next meeting."
+    summary: "The chair made a motion to adjourn, which was seconded. A roll-call vote was taken: Sam — yes; Brian — yes; Kareema — yes; Mike — yes. The meeting was declared adjourned at 12:44 p.m. The chair indicated meeting packets and the next meeting notice would be sent out afterward."
+    key_speakers: ["Henry (chair)", "Sam (subcommittee member)", "Brian (subcommittee member)", "Kareema (subcommittee member)", "Mike (owner's representative)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;
