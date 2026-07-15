@@ -106,6 +106,7 @@ def test_townwide_transfers_not_attributed_to_any_department():
             assert "stabilization" not in desc
             assert "workers comp" not in desc
             assert "recurring capital" not in desc
+            assert "unemployment" not in desc
 
 
 def test_finance_committee_reserve_fund_not_mapped_to_finance():
@@ -113,6 +114,17 @@ def test_finance_committee_reserve_fund_not_mapped_to_finance():
     view = build_view()
     for o in view["departments"]["finance"]["overrides"]:
         assert "Reserve Fund" not in o["description"]
+    # positive half: the item IS on reserve_fund
+    assert any("Reserve Fund" in o["description"]
+               for o in view["departments"]["reserve_fund"]["overrides"])
+
+
+def test_override_attribution_is_complete():
+    view = build_view()
+    attributed = sum(len(d["overrides"]) for d in view["departments"].values())
+    total = 36  # meta.override_tiers count in FY27 budget
+    unattributed = 5  # town-wide transfers/capital/offset, intentionally on no dept
+    assert attributed == total - unattributed  # 31
 
 
 def test_role_crosswalk_targets_exist_in_org_chart():
