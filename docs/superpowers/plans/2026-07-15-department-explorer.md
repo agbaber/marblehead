@@ -732,10 +732,19 @@ with a real function placed above `route()`:
     p.push('<h2>' + d.name.replace(/_/g, ' ') + '</h2>');
     p.push('<p class="subtitle">' + d.function_label + '</p>');
 
-    // Role (cited) or forthcoming line
+    // Role (cited) or forthcoming line. NOTE: `role` is the org_chart head_title
+    // (leadership), NOT a service description. ALWAYS pair it with role_note so a
+    // reader does not read "Assistant Director of Waste" as "personally runs
+    // curbside pickup" (waste_collection + curbside_collection share a role).
     if (d.role) {
-      p.push('<p>' + d.role + '</p>');
-      if (d.role_source) p.push('<p class="dx-src"><small>' + d.role_source + '</small></p>');
+      p.push('<p>Led by the ' + d.role + '.' +
+        (d.role_note ? ' ' + d.role_note : '') + '</p>');
+      if (d.role_source) {
+        var srcHtml = d.role_source_url
+          ? '<a href="' + d.role_source_url + '">' + d.role_source + '</a>'
+          : d.role_source;
+        p.push('<p class="dx-src"><small>Source: ' + srcHtml + '</small></p>');
+      }
     } else {
       p.push('<p><em>A fuller description of this department is forthcoming.</em></p>');
     }
