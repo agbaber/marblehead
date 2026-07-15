@@ -38,12 +38,63 @@ _FUNCTION_LABELS = {
 _BUDGET_KEYS = ("fy25_actual", "fy26_budget", "fy27_proposed",
                 "change_dollars", "change_pct")
 
+# Budget department key -> headcount CSV "Department" name.
+# Only departments with a real payroll line appear here; others stay None.
+_HEADCOUNT_CROSSWALK = {
+    "select_board": "SELECTMEN",
+    "finance": "FINANCE DEPARTMENT",
+    "assessor": "ASSESSORS",
+    "town_clerk": "TOWN CLERK",
+    "election_registration": "ELECTION & REGISTRATION",
+    "human_resources": "HUMAN RESOURCES",
+    "town_counsel": "Town Counsel",
+    "community_development": "COMMUNITY DEV & PLANNING",
+    "planning_board": "COMMUNITY DEV & PLANNING",
+    "building_inspection": "BUILDING COMMISSIONER",
+    "animal_inspector": "ANIMAL INSPECTOR",
+    "police": "POLICE",
+    "fire": "FIRE",
+    "health": "HEALTH",
+    "council_on_aging": "COUNCIL ON AGING",
+    "veterans_benefits": "VETERANS AGENT",
+    "library": "LIBRARY",
+    "rec_park": "PARK",
+    "harbor": "HARBORMASTER",
+    "cemetery": "CEMETERY",
+    "public_buildings": "PUBLIC BUILDINGS",
+    "water": "WATER",
+    "sewer": "SEWER",
+    "school_high": "HIGH SCHOOL",
+    "school_middle": "VETERANS MIDDLE SCHOOL",
+    "school_brown": "BROWN SCHOOL",
+    "school_glover": "GLOVER SCHOOL",
+    "school_village": "VILLAGE SCHOOL",
+}
 
-def _load_budget():
+
+def _load_budget() -> dict:
     return json.loads((DATA / "town_budget_FY27.json").read_text())
 
 
-def _departments_from_budget(budget):
+def _load_headcount() -> dict:
+    """Return {csv_department_name: [ {fy, headcount}, ... sorted by fy ]}."""
+    series = {}
+    path = DATA / "town_employee_headcount_FY08-26.csv"
+    with path.open() as f:
+        for row in csv.DictReader(f):
+            dept = row["Department"]
+            try:
+                fy = int(row["FY"])
+                hc = int(row["Headcount"])
+            except (ValueError, KeyError):
+                continue
+            series.setdefault(dept, []).append({"fy": fy, "headcount": hc})
+    for dept in series:
+        series[dept].sort(key=lambda pt: pt["fy"])
+    return series
+
+
+def _departments_from_budget(budget: dict) -> dict:
     rows = budget["rows"]
     depts = {}
     for r in rows:
@@ -106,9 +157,16 @@ def _departments_from_budget(budget):
     return depts
 
 
-def build_view():
+def build_view() -> dict:
     budget = _load_budget()
     departments = _departments_from_budget(budget)
+
+    headcount = _load_headcount()
+    for key, dept in departments.items():
+        csv_name = _HEADCOUNT_CROSSWALK.get(key)
+        if csv_name and csv_name in headcount:
+            dept["headcount"] = headcount[csv_name]
+
     return {
         "schema_version": 1,
         "source_note": ("Budget from FY27 Proposed Budget (No Override); "
@@ -121,7 +179,7 @@ def build_view():
     }
 
 
-def main():
+def main() -> None:
     view = build_view()
     out = DATA / "departments_view.json"
     out.write_text(json.dumps(view, indent=2) + "\n")
