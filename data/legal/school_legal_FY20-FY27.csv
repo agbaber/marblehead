@@ -1,0 +1,13 @@
+fiscal_year,metric,amount,basis,source_doc
+FY20,legal_counsel_line,115748,actual,MPS FY25 Budget Book (Central Admin Budget Request Summary)
+FY21,legal_counsel_line,62011,actual,MPS FY25 Budget Book
+FY22,legal_counsel_line,52160,actual,MPS FY25 Budget Book
+FY23,legal_counsel_line,136363,actual,MPS FY25 Budget Book
+FY24,legal_counsel_line,334735,actual,MPS FY26 Proposed Budget Book (Central Admin Supplies/Service Detail; FY24 Actual col)
+FY24,legal_counsel_line_budget,115000,budget,MPS FY26 Proposed Budget Book
+FY25,total_legal_expenses,493704,actual_aggregate,"SC 9-18-2025 year-end report (~$328K over legal budget + ~$90K over settlements); Marblehead Current 2025-09-30"
+FY25,fired_employee_settlement,98000,actual,Marblehead Current 2025-09-30
+FY26,legal_fees_budget,117300,budget,MPS FY27 Budget Packet
+FY26,legal_fees_sped_budget,53000,budget,MPS FY27 Budget Packet
+FY27,legal_fees_budget,119646,proposed,MPS FY27 Budget Packet
+FY27,legal_fees_sped_proposed,54060,proposed,MPS FY27 Budget Packet

@@ -1,0 +1,246 @@
+---
+title: "What has Marblehead spent on legal fees?"
+scripts: [citations, deep-dive]
+og_title: "Marblehead's legal spending, traced across 20 years and every fund"
+og_description: "The Town Counsel line ran $29K in FY04 and is $276K in the FY27 proposal. But the schools spend more on lawyers than the town does, and it does not show up in one place."
+og_url: https://marbleheaddata.org/legal-fees.html
+---
+<h1>What has Marblehead spent on legal fees?</h1>
+
+<p class="page-lead">No single line in the town budget shows what Marblehead pays for lawyers. The town, the schools, and the Municipal Light Department each hire their own counsel and pay them out of separate funds. Pulled together, the town spent roughly $364,000 on outside law firms in FY26, and the schools alone spent more on legal fees than the town's own Town Counsel line in each of the last two years.</p>
+
+<div class="key-stats">
+  <div class="key-stat">
+    <div class="key-stat-value">$29K&rarr;$276K</div>
+    <div class="key-stat-label">Town Counsel, FY04 to FY27 proposed</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">$334,735</div>
+    <div class="key-stat-label">School legal counsel, FY24 actual</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">~$364K</div>
+    <div class="key-stat-label">Paid to law firms in FY26, all funds</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">5 firms</div>
+    <div class="key-stat-label">Handling town, school, and light dept. work</div>
+  </div>
+</div>
+
+<nav class="page-toc" aria-label="On this page">
+  <span class="page-toc-label">On this page</span>
+  <a href="#town-counsel">The Town Counsel line</a>
+  <a href="#school-legal">School legal fees</a>
+  <a href="#fy26-firms">Who got paid in FY26</a>
+  <a href="#outcomes">Cases and outcomes</a>
+</nav>
+
+<h2 id="town-counsel">The Town Counsel line</h2>
+
+<p>The general fund has a single Town Counsel appropriation. Its audited actual spending sat between roughly $29,000 and $76,000 a year for most of a decade, then rose sharply. The FY2027 proposed budget of $276,000 would be the highest on record, about nine times the FY04 figure.<sup class="cite" data-href="data/legal/town_counsel_expense_FY04-FY27.csv" data-source="Marblehead ACFR, Schedule of Revenues, Expenditures and Changes in Fund Balance - Budget and Actual - General Fund, Town Counsel Expense line, FY04 through FY24 (actual expended); FY25 through FY27 from the FY2027 Proposed Budget (FY25 Expended, FY26 Budget, FY27 Proposed). Compiled in data/legal/town_counsel_expense_FY04-FY27.csv."></sup></p>
+
+<div class="chart-wrapper">
+  <svg class="chart" viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart of Marblehead's Town Counsel expense from FY04 to FY27. Actual expended spending runs roughly 29,000 to 76,000 dollars per year through FY17, rises to a peak of about 153,000 in FY20, drops back, then the FY25 expended figure is about 170,000, the FY26 budget 113,000, and the FY27 proposed 276,000, an all-time high.">
+    <!-- x = 60 + (FY-2004)*28.6957, FY04=60 ... FY27=720
+         y = 280 - value*240/300000, $0=280, $300K=40 -->
+    <!-- Grid lines -->
+    <line class="grid-minor" x1="60" y1="200" x2="720" y2="200"/>
+    <line class="grid-minor" x1="60" y1="120" x2="720" y2="120"/>
+    <line class="grid-minor" x1="60" y1="40"  x2="720" y2="40"/>
+
+    <!-- Y ticks and labels -->
+    <line class="tick" x1="56" y1="280" x2="60" y2="280"/>
+    <text class="tick-label" x="53" y="284" text-anchor="end">$0</text>
+    <line class="tick" x1="56" y1="200" x2="60" y2="200"/>
+    <text class="tick-label" x="53" y="204" text-anchor="end">$100K</text>
+    <line class="tick" x1="56" y1="120" x2="60" y2="120"/>
+    <text class="tick-label" x="53" y="124" text-anchor="end">$200K</text>
+    <line class="tick" x1="56" y1="40" x2="60" y2="40"/>
+    <text class="tick-label" x="53" y="44" text-anchor="end">$300K</text>
+
+    <!-- Actual / budget boundary after FY24 (x between FY24=633.9 and FY25=662.6).
+         Solid vs dashed and the boundary meaning are explained in the caption. -->
+    <line class="annotation-line" x1="648" y1="40" x2="648" y2="280"/>
+
+    <!-- Solid line: audited actuals FY04-FY24 -->
+    <polyline class="data-line s-neutral" fill="none" points="60,256.8 88.7,253.9 117.4,241.7 146.1,249.5 174.8,226.8 203.5,237.4 232.2,231.3 260.9,238.6 289.6,231.7 318.3,222.9 346.9,221.3 375.7,224.4 404.3,214.7 433,218.9 461.7,173.2 490.4,166.8 519.1,157.9 547.8,224 576.5,183.8 605.2,207.9 633.9,209.6"/>
+    <!-- Dashed line: FY25 expended, FY26 budget, FY27 proposed -->
+    <polyline class="data-line data-line--dashed s-neutral" fill="none" points="633.9,209.6 662.6,143.7 691.3,189.6 720,59.2"/>
+
+    <!-- Data dots -->
+    <circle class="data-dot s-neutral" cx="60" cy="256.8" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="88.7" cy="253.9" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="117.4" cy="241.7" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="146.1" cy="249.5" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="174.8" cy="226.8" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="203.5" cy="237.4" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="232.2" cy="231.3" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="260.9" cy="238.6" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="289.6" cy="231.7" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="318.3" cy="222.9" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="346.9" cy="221.3" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="375.7" cy="224.4" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="404.3" cy="214.7" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="433" cy="218.9" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="461.7" cy="173.2" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="490.4" cy="166.8" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="519.1" cy="157.9" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="547.8" cy="224" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="576.5" cy="183.8" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="605.2" cy="207.9" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="633.9" cy="209.6" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="662.6" cy="143.7" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="691.3" cy="189.6" r="2.5"/>
+    <circle class="data-dot s-neutral" cx="720" cy="59.2" r="3"/>
+
+    <!-- Annotations -->
+    <text class="annotation annotation--hide-sm" x="519" y="150" text-anchor="middle">FY18&ndash;FY20 rise</text>
+    <text class="annotation" x="712" y="50" text-anchor="end">FY27 proposed $276K</text>
+
+    <!-- X axis baseline -->
+    <line class="axis-base" x1="60" y1="280" x2="720" y2="280"/>
+
+    <!-- X labels: majors every 4 years plus FY27 -->
+    <text class="tick-label tick-label--major" x="60"  y="300" text-anchor="middle">FY04</text>
+    <text class="tick-label tick-label--major" x="174.8" y="300" text-anchor="middle">FY08</text>
+    <text class="tick-label tick-label--major" x="289.6" y="300" text-anchor="middle">FY12</text>
+    <text class="tick-label tick-label--major" x="404.3" y="300" text-anchor="middle">FY16</text>
+    <text class="tick-label tick-label--major" x="519.1" y="300" text-anchor="middle">FY20</text>
+    <text class="tick-label tick-label--major" x="633.9" y="300" text-anchor="middle">FY24</text>
+    <text class="tick-label tick-label--major" x="720"  y="300" text-anchor="middle">FY27</text>
+  </svg>
+</div>
+
+<p class="source">Town Counsel Expense line only (a flat $2,000 salary stipend sits on top of each year). FY04 through FY24 are audited actual expended figures from each year's <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> budget-to-actual schedule. FY25 is the unaudited expended figure, FY26 the adopted budget, and FY27 the proposed budget, all from the FY2027 Proposed Budget. Solid line is audited; dashed is expended, budget, and proposed.</p>
+
+<p>Two features stand out. Legal spending roughly doubled for three years in FY18 through FY20 (peaking near $153,000), then fell back to about $70,000 in FY21. And the FY2027 proposal nearly triples the FY2024 actual. Neither the FY27 Proposed Budget nor the 2026 Finance Committee report explains the FY27 increase.<sup class="cite" data-href="data/FY27_Proposed_Budget_No_Override.txt" data-source="FY2027 Proposed Budget, Town Counsel line (items 29 and 30). The document does not explain the year-over-year increase."></sup></p>
+
+<p>A separate general-fund line, Zoning Board Legal Services, adds smaller and more volatile amounts: about $40,000 in FY16, $44,000 in FY18, and $22,000 in FY19, dropping to near zero from FY21 through FY24.<sup class="cite" data-href="data/legal/town_counsel_expense_FY04-FY27.csv" data-source="Marblehead ACFR budget-to-actual schedules, Zoning Board Legal Services line, FY14 through FY24 (actual expended)."></sup> The related <a href="where-has-the-money-gone.html">Where has the money gone?</a> page also flags the Town Counsel line as one that grew faster than most.</p>
+
+<h2 id="school-legal">School legal fees</h2>
+
+<p>The school district hires its own lawyers, on its own budget lines, entirely separate from Town Counsel. And in recent years the schools have spent more on legal work than the town has. The district's central "Legal Counsel" line held around $52,000 to $136,000 a year from FY20 through FY23, then jumped to $334,735 in FY24.<sup class="cite" data-href="data/legal/school_legal_FY20-FY27.csv" data-source="Marblehead Public Schools FY25 Budget Book (Central Administration: Budget Request Summary) for FY20-FY23 actuals; MPS FY26 Proposed Budget Book (Central Administration: Supplies / Service Detail Budget Request), FY24 Actual column, for the $334,735 FY24 figure."></sup></p>
+
+<div class="chart-wrapper">
+  <svg class="chart" viewBox="0 0 760 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizontal bar chart of the Marblehead Public Schools central Legal Counsel line, actual spending. FY20 about 116,000 dollars, FY21 62,000, FY22 52,000, FY23 136,000, and FY24 335,000, the highest by far.">
+    <!-- width = value / 334735 * 480 -->
+    <rect class="data-bar s-neutral" x="160" y="12"  width="166" height="24"/>
+    <text class="tick-label" x="152" y="29" text-anchor="end">FY20</text>
+    <text class="value-label" x="334" y="29">$115,748</text>
+
+    <rect class="data-bar s-neutral" x="160" y="48"  width="89" height="24"/>
+    <text class="tick-label" x="152" y="65" text-anchor="end">FY21</text>
+    <text class="value-label" x="257" y="65">$62,011</text>
+
+    <rect class="data-bar s-neutral" x="160" y="84"  width="75" height="24"/>
+    <text class="tick-label" x="152" y="101" text-anchor="end">FY22</text>
+    <text class="value-label" x="243" y="101">$52,160</text>
+
+    <rect class="data-bar s-neutral" x="160" y="120" width="196" height="24"/>
+    <text class="tick-label" x="152" y="137" text-anchor="end">FY23</text>
+    <text class="value-label" x="364" y="137">$136,363</text>
+
+    <rect class="data-bar s-neutral" x="160" y="156" width="480" height="24"/>
+    <text class="tick-label" x="152" y="173" text-anchor="end">FY24</text>
+    <text class="value-label" x="648" y="173">$334,735</text>
+  </svg>
+</div>
+
+<p class="source">Marblehead Public Schools central "Legal Counsel" line, actual expended. FY20 through FY23 from the FY25 school budget book; FY24 from the FY26 proposed budget book's FY24 Actual column. This line excludes the separate special education legal line and any settlement payments.</p>
+
+<p>The Assistant Superintendent of Finance attributed the run-up in part to the 2024 teachers strike.<sup class="cite" data-href="data/schools/sc-meetings-fy26/agenda-and-materials-9-18-2025.txt" data-source="Marblehead School Committee, September 18, 2025 agenda and materials, Business Office year-end report: FY25 legal expenses approximately $328,000 over budget and legal settlements approximately $90,000 over budget. Also reported in Marblehead Current, September 30, 2025."></sup> In FY25 the picture grew larger still: the district's year-end report to the School Committee described legal expenses running about $328,000 over budget and legal settlements about $90,000 over budget. Counting all legal lines and settlements, FY25 school legal spending reached about $493,704, against a $165,000 budget, and the district separately paid $98,000 to settle with a fired employee after a legal ruling.<sup class="cite" data-href="data/legal/school_legal_FY20-FY27.csv" data-source="FY25 total school legal expenses of $493,704 against a $165,000 budget, and a $98,000 settlement to a fired employee: Marblehead Current, September 30, 2025, drawing on the district's FY25 year-end financial report; corroborated by the September 18, 2025 School Committee materials."></sup></p>
+
+<p>These are different measures: the $52,000 to $334,735 series is the central Legal Counsel line alone, while the FY25 $493,704 figure is the broader total across every school legal line plus settlements. Both are shown because the district reports them separately.</p>
+
+<h2 id="fy26-firms">Who got paid in FY26</h2>
+
+<p>The town's checkbook is the one place legal spending across every fund can be counted for a single year. In FY26, Marblehead paid about $364,000 to five law firms, spread across the general fund, the schools, and the Municipal Light Department.<sup class="cite" data-href="data/checkbook_FY26_2026-06-17.csv" data-source="Town of Marblehead FY26 checkbook (vendor payments export, 2026-06-17), payments to Mead Talerman & Costa LLC, Valerio Dominello & Hillman LLC, KP Law PC, Nuttall & Macavoy PC, and Rainen Law Office PC. Compiled in data/legal/fy26_law_firm_payments.csv."></sup></p>
+
+<div class="table-wrap">
+  <table class="data data--stack">
+    <caption>Payments to law firms, FY26 (July 2025 through June 2026)</caption>
+    <thead>
+      <tr>
+        <th>Firm</th>
+        <th>FY26 paid</th>
+        <th>Paid from</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mead Talerman &amp; Costa</td>
+        <td>$180,699</td>
+        <td>General fund (town), plus enterprise funds</td>
+        <td>Town general and labor counsel</td>
+      </tr>
+      <tr>
+        <td>Valerio Dominello &amp; Hillman</td>
+        <td>$95,195</td>
+        <td>General fund (school)</td>
+        <td>School district counsel</td>
+      </tr>
+      <tr>
+        <td>KP Law</td>
+        <td>$44,523</td>
+        <td>Electric enterprise</td>
+        <td>Municipal Light Department counsel</td>
+      </tr>
+      <tr>
+        <td>Nuttall &amp; Macavoy</td>
+        <td>$33,255</td>
+        <td>General fund (school)</td>
+        <td>School district counsel</td>
+      </tr>
+      <tr>
+        <td>Rainen Law Office</td>
+        <td>$10,000</td>
+        <td>General fund (town)</td>
+        <td>Single town matter</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td><strong>$363,672</strong></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Mead Talerman &amp; Costa, the town's outside firm, billed across a range of matters coded in the checkbook: labor negotiations (about $58,900, the same figure the Select Board carries as its labor attorney line), the Assessors, the Police Department, Historic Preservation, Zoning, the Planning Board, and small amounts against the water, sewer, and harbor enterprise funds.<sup class="cite" data-href="data/checkbook_FY26_2026-06-17.csv" data-source="Town of Marblehead FY26 checkbook, Mead Talerman & Costa LLC line-item descriptions (Labor Counsel $58,907.77; General Counsel, Assessors, CPD, Historic Preservation, Zoning, Planning Board, and enterprise-fund legal)."></sup> The schools and the Light Department use different firms, which is why no single budget line captures the town-wide total.</p>
+
+<p>Two limits are worth stating plainly. Vendor-level detail like this exists only for FY26, because the town's spending portal does not carry earlier years. And the Light Department's own reports fold legal work into a single "Outside Services Employed" line (about $340,000 in 2024) that also covers its audit and engineering, so its legal cost cannot be separated in any year except through the checkbook.<sup class="cite" data-href="https://marbleheadelectric.com/meetings-annual-reports.html" data-source="Marblehead Municipal Light Department 2024 Annual Report, Administrative and General Expenses, Outside Services Employed line ($340,176.34). The report does not break out legal separately."></sup></p>
+
+<h2 id="outcomes">Cases and outcomes</h2>
+
+<p>Public records tie some of this spending to specific matters. The town does not publish settlement dollar figures for most of them, so what follows is what the primary records state, without amounts where amounts were not disclosed.</p>
+
+<div class="card">
+  <h3>Officer Gallo arbitration</h3>
+  <p>On October 22, 2025 the Select Board approved a settlement agreement with Officer Gallo resolving the financial components of an arbitration award, described as a full and final resolution without admission of wrongdoing. No dollar figure was disclosed in the public record.<sup class="cite" data-href="data/catalog_raw.csv" data-source="Marblehead Select Board, October 22, 2025 (select_board_2025-10-22_seq-004): settlement agreement with Officer Gallo resolving the financial components of an arbitration award, full and final resolution without admission of wrongdoing."></sup></p>
+</div>
+
+<div class="card">
+  <h3>Middle school roof and the contractor</h3>
+  <p>On November 5, 2025 the School Committee directed administration to consult the district's attorney about requiring contractor Patcon to remove and replace the entire middle school D-wing roof rather than repair sections, after an installation the district said caused significant water damage. The district withheld payment to the contractor, and its insurer was covering damage-related costs. The matter was unresolved as of that record.<sup class="cite" data-href="data/catalog_raw.csv" data-source="Marblehead School Committee, November 5, 2025 (school_committee_2025-11-05_seq-002): counsel directed regarding contractor Patcon and the middle school D-wing roof; payment withheld; insurer covering damage costs."></sup></p>
+</div>
+
+<div class="card">
+  <h3>Light Department general manager</h3>
+  <p>A lawsuit stemming from the 2025 change in the Municipal Light Department's general manager alleges the transition broke a contract; the board frames it as a planned transition. The matter is unresolved.<sup class="cite" data-href="https://marbleheadelectric.com/meetings-annual-reports.html" data-source="Marblehead Municipal Light Department board records regarding the 2025 general manager transition and related contract litigation, unresolved."></sup></p>
+</div>
+
+<div class="card">
+  <h3>National opioid settlement</h3>
+  <p>This one runs the other way: money in, not out. On April 22, 2026 the Select Board authorized joining the national opioid settlement with the remaining defendants, a nationwide distribution of about $94 million from which Marblehead receives a one-time payment of undetermined amount, restricted to mental health and addiction services.<sup class="cite" data-href="data/meetings.json" data-source="Marblehead Select Board, April 22, 2026: authorization to join the national opioid settlement with remnant defendants; nominal one-time payment into the town's restricted Opioid Settlement Fund."></sup></p>
+</div>
+
+<details class="notes">
+  <summary>Sources and methodology</summary>
+  <p>The Town Counsel trend is built from each year's Annual Comprehensive Financial Report (<abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>), specifically the "Schedule of Revenues, Expenditures and Changes in Fund Balance, Budget and Actual, General Fund," Town Counsel Expense line. FY04 through FY24 are the audited actual expended figures. Each figure was verified against its own schedule, where the reported variance equals the final budget minus the actual. FY25 (expended, unaudited), FY26 (budget), and FY27 (proposed) come from the FY2027 Proposed Budget. The series is compiled in <code>data/legal/town_counsel_expense_FY04-FY27.csv</code>.</p>
+  <p>School legal figures come from Marblehead Public Schools budget books. The FY20 through FY23 actuals for the central Legal Counsel line are from the FY25 budget book's Central Administration summary; the FY24 actual of $334,735 is from the FY26 proposed budget book's Central Administration supplies and service detail, which carries an explicit FY24 Actual column. The FY25 aggregate of about $493,704, the roughly $328,000 and $90,000 over-budget figures, and the $98,000 fired-employee settlement are from the district's FY25 year-end report to the School Committee (September 18, 2025) and the Marblehead Current's September 30, 2025 account of it. The central Legal Counsel line and the all-lines-plus-settlements aggregate are different measures and are labeled as such. Compiled in <code>data/legal/school_legal_FY20-FY27.csv</code>.</p>
+  <p>The FY26 firm payments are summed from the town's FY26 checkbook (vendor payments export), which spans every fund. Only FY26 is available at vendor level; the town's spending portal returns nothing for earlier years. The Light Department reports legal inside a single "Outside Services Employed" line, so its legal cost cannot be isolated in any year except through the checkbook. Firm totals are compiled in <code>data/legal/fy26_law_firm_payments.csv</code>.</p>
+  <p>The cases in the last section are from Select Board and School Committee records. Where the public record does not state a dollar amount, none is given here. This page was built in July 2026 and will be rechecked when the next ACFR, budget book, and School Committee year-end report are published.</p>
+</details>
