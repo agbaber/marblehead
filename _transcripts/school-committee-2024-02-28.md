@@ -9,7 +9,335 @@ video_url: "https://www.youtube.com/watch?v=kC3YJjpkvSU"
 duration_seconds: 12451
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead schools face $2.3M budget gap; 36-position, 28-FTE cut list presented to School Committee"
+  summary: "The Marblehead Public Schools administration presented a preliminary FY25/FY26 budget to the School Committee showing a level-services request of approximately $47.4M against a reduced-services budget of approximately $45.6M, a 1.68% increase over the prior fiscal year. A $2.3M gap between level services and available revenues drove the identification of approximately $2.5M in cuts, including 36 positions totaling 28 FTEs across all school buildings. Principals from Brown, Glover, Village, and the middle school described reductions to classroom teachers, paraprofessionals, tutors, counselors, and special education staff. The facilities director also flagged approximately $400,000 in urgent capital needs, including a Glover heating system replacement (~$218,000), a Veterans School structural repair (~$100,000), a Village fire panel update (~$30,000), and a high school paging system (~$52,700)."
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 50
+    end_seconds: 2595
+    featured: true
+    headline: "Schools present FY25 preliminary budget with ~$2.3M gap; reduced-services total ~$45.6M"
+    dek: "Superintendent McGinness and Assistant Superintendent Cesta walked the School Committee through a level-services request of ~$47.4M and a reduced-services budget of ~$45.6M, a 1.68% increase over FY24."
+    summary: |
+      ## Budget Overview
+      
+      The administration opened with three framing points:
+      1. Fiscal responsibility and educational quality are both necessary simultaneously.
+      2. Marblehead taxpayers have rejected overrides twice in two years, so no override is assumed for FY25.
+      3. New Interim Director of Student Services Patty Bell (Day 3 on the job) is reviewing special education staffing grids.
+      
+      ## Level-Services Budget
+      The level-services request came in at approximately **$47,423,851**, an increase of roughly **$2.5 million or 5.77%** over FY24. Major cost drivers:
+      - Wages: ~$927,000
+      - Out-of-district tuition (operating budget): ~$448,000
+      - Out-of-district transportation: ~$409,000
+      - Utility costs (gross increase ~$487,000, but ~$400,000 is a transfer from the town side, so net increase is smaller)
+      - IT/hardware equipment replacement plan: ~$420,000
+      - Various other increases (legal costs, etc.): ~$293,000
+      
+      Salaries and wages represent **80%** of the total budget.
+      
+      ## Reduced-Services Budget
+      The town indicated approximately **$1.5 million** in available new revenues, allocating **50%** (~$755,000) to the schools. Taking the FY24 adopted budget of approximately **$44.8 million** and adding $755,000 yields a reduced-services budget of approximately **$45,592,667** — an increase of 1.68% over FY24 (vs. the 5.77% needed for level services), creating an effective gap of roughly **$2.3 million** in reductions.
+      
+      Two additional budget transfers are not reflected in the 1.68% figure:
+      - **$400,000** utility reserve transfer from the town
+      - Medicare payroll tax transfer for school-side employees
+      
+      ## Budget Offsets
+      - **Circuit breaker** (special education reimbursement): ~$1.4 million; the district has now reached the recommended one-year reserve level after four years of building toward it, enabling a ~$1 million offset in the reduced-services scenario.
+      - Special education tuition revenues: ~$90,000 offset.
+      - Revolving funds (athletics fees, etc.): sound financial practice requires carrying one year of revenue before using as a budget offset.
+      
+      ## Out-of-District Placements
+      - FY24: 42 students in out-of-district placements
+      - FY25 projected: 46 students (includes 4 placeholders)
+      - OSD rate increase for FY25: 4.69% (down from 14% last year)
+      
+      ## Enrollment
+      - District enrollment as of October 1 (most recent): approximately 2,619 students
+      - Projections show slight growth to approximately 2,708 by 2028
+      - 108 English Learners districtwide
+      - School committee class-size policy is approximately 25 students; administration suggested the policy may warrant refinement by grade band (K–3 vs. upper grades)
+      
+      ## Budget Allocation by School (Level Services)
+      | School/Area | % of Budget |
+      |---|---|
+      | High School | 22% |
+      | High School Athletics | 1% |
+      | Veteran School | 15% |
+      | Village School | 15% |
+      | Glover School | 8% |
+      | Brown School | 11% |
+      | Central Administration | 8% |
+      | Teaching & Learning | 2% |
+      | Student Services | 10% |
+      | Information Technology | 2% |
+      | Other/Operations | 6% |
+      
+      ## Grants
+      - Federal entitlement grants (Title, IDEA): ~$1.4–1.5M annually (FY22–FY24)
+      - State grants: METCO, METCO ATT, Innovations Pathways (~$75,000 first year)
+      - Remaining ESSER/COVID funds: ~$250,000 must be spent by September
+      - All grants must supplement, not supplant, the operating budget per federal regulations
+      
+      ## Tiered Decision-Making Methodology
+      The administration used a four-tier framework mirroring the district's MTSS model:
+      - **Tier 1** (last to cut): Instructional staff in classrooms
+      - **Tier 2**: Teaching & learning materials, technology, course offerings
+      - **Tier 3**: Extracurricular programs including athletics
+      - **Tier 4** (first to cut): Professional development, transportation
+      
+      Principals met repeatedly, reviewed data across schools, and made cross-school equity considerations (e.g., adjusting cuts when one school's class sizes would increase disproportionately).
+    key_speakers: ["Josh McGinness (Superintendent)", "Assistant Superintendent Cesta (Finance & Operations)", "Emma (Assistant Director of Finance & Operations)", "Patty Bell (Interim Director of Student Services)", "School Committee Chair (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 2595
+    end_seconds: 3192
+    headline: "Central admin and student services reductions detailed; food services director moved to revolving fund"
+    dek: "The administration described central office reductions including eliminating the Assistant Director of Student Services position and restructuring special education administration to six school-based roles."
+    summary: |
+      ## Central Administration Changes
+      - **Food Services Director**: Not eliminated; salary moved from central office operating budget to the food services revolving fund.
+      - **Assistant Director of Student Services**: Position eliminated. Responsibilities are being redistributed; the special education administrative assistant will increase from 0.5 FTE to 1.0 FTE to absorb some duties.
+      - **Central registrar**: A 0.25 FTE (10 hours/week) position eliminated.
+      - **Admin assistant hours**: Minor reductions totaling fractional FTE adjustments.
+      
+      ## Special Education Administrative Restructuring
+      The district currently has six special education administrators. The proposed structure assigns one to each school building, with the sixth overseeing pre-K across both elementary schools and out-of-district placements. This replaces a prior model where administrators served multiple buildings, which had been confusing operationally.
+      
+      ## Teaching & Learning (Assistant Superintendent Ferrera)
+      - Office represents approximately 2% of total budget.
+      - Maintaining instructional coaches (viewed as critical); reduced external professional development contracts and curriculum purchases.
+      - Continuing to fund the I-Ready universal screener.
+      - One additional instructional coach is grant-funded (Title grant) and does not appear in the operating budget.
+      - District has four literacy/math coaches total; three are in the operating budget, one is grant-funded.
+      - A $75,000 Innovations Pathways grant was submitted to DESE for collaborative problem-solving training (Dr. Stuart Ablon, Harvard/MGH); reduces need for restraints by ~80% per research. Decision expected in two weeks.
+    key_speakers: ["Josh McGinness (Superintendent)", "Assistant Superintendent Ferrera (Teaching & Learning)", "Patty Bell (Interim Director of Student Services)"]
+  - topic: school-budget
+    topic_confidence: 0.93
+    start_seconds: 3192
+    end_seconds: 3578
+    headline: "Special education delivery model shift toward broader tier-one services; behavior analyst vacancy not filled"
+    dek: "Interim Director of Student Services Patty Bell outlined a multi-year strategy to expand tier-one special education supports districtwide and noted that an unfilled behavior analyst position will not be replaced in FY25."
+    summary: |
+      ## Special Education Philosophy & FY25 Direction
+      Patty Bell (Day 3 as interim director) described a shift toward using specialists such as speech-language pathologists in broader tier-one settings rather than exclusively in one-on-one instruction, particularly at the youngest grades. The goal is to strengthen universal instruction so fewer students require intensive tier-three supports.
+      
+      ## Staffing Changes in Student Services
+      - Administrative assistant to the student services office: increased from 0.5 FTE to 1.0 FTE given loss of the assistant director position.
+      - **Unfilled behavior analyst (BCBA) position**: Not being filled for FY25. The school committee member noted concern; Bell indicated this is strictly a tier-three, clinically specialized role and that the current caseload does not warrant filling it at this time. She committed to reviewing service hours in IEPs and contracts before finalizing this position.
+      
+      ## Multi-Year View
+      Bell noted that re-examining special education delivery models to reduce budget load will be a multi-year process. She described reviewing caseloads, efficient service delivery, and identifying model changes in the remaining four months of the school year.
+    key_speakers: ["Patty Bell (Interim Director of Student Services)", "Josh McGinness (Superintendent)", "School Committee member (unnamed)"]
+  - topic: recreation-events
+    topic_confidence: 0.82
+    start_seconds: 3578
+    end_seconds: 4035
+    headline: "Athletics proposes moving coach stipends 100% to user fees; new fee structure to come at next meeting"
+    dek: "Athletic Director Greg (last name unclear from transcript) described a proposal to shift the operating budget's 50% share of coach stipends entirely to participant user fees, with a revised fee structure to be presented at the next School Committee meeting."
+    summary: |
+      ## Athletics Overview
+      - 69% of high school students participate in one, two, or three sports seasons.
+      - 64 teams; approximately 90 paid coaches.
+      - 1,233 individual athlete-season participations recorded.
+      - Staffing: just the athletic director and one additional staff member.
+      
+      ## Current User Fee Structure
+      | Category | Fee |
+      |---|---|
+      | Athletic/Performing Arts unlimited (per student) | $495 |
+      | High school clubs | $140 |
+      | Flag football | $66 |
+      | Interscholastic sports (middle school) | $220 |
+      | Intramural sports | $140 |
+      | Family cap | $800 |
+      
+      ## Proposed Change for Reduced-Services Budget
+      Currently, the operating budget covers 50% of coach stipends and user fees cover 50%. Under the proposed reduced-services budget, 100% of stipend costs would move to the user revolving fund (i.e., covered entirely by participant fees). Other athletic costs (transportation, pool/ice rentals) would remain in the operating budget.
+      
+      If the current $495 fee covers 50% of stipend costs, covering 100% would imply roughly a doubling — approximately $990 per student for unlimited use — though the administration noted it is not that simple and will tier fees by sport cost. Comparisons to peer districts will be included in the proposal.
+      
+      Key considerations:
+      - A family cap will be maintained.
+      - Free-and-reduced lunch program eligibility used as financial aid proxy.
+      - Concern that higher fees could reduce participation; administration will monitor.
+      - Administration emphasized athletics are not being cut, only the funding source for stipends is changing.
+      - The superintendent noted a desire to explore broader fundraising options to prevent any student being unable to participate.
+    key_speakers: ["Greg (Athletic Director, last name unclear)", "Josh McGinness (Superintendent)", "Assistant Superintendent Cesta", "School Committee member (unnamed)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 4035
+    end_seconds: 4830
+    headline: "Technology director presents device replacement plan, cybersecurity grant, and Glover school camera upgrade"
+    dek: "Technology Director Stephen outlined FY25 goals including replacing approximately 390 staff laptops purchased in 2019, a state-approved cybersecurity training program launching imminently, and a pending state grant for external security camera upgrades at Glover School."
+    summary: |
+      ## Device Replacement Plan
+      - Approximately 390 staff laptops purchased in 2019 are due for replacement on a 4–5 year cycle.
+      - Under the reduced-services budget, the additional Chromebook request was reduced from the level-services ask to approximately 150 units.
+      - Replaced laptops will cascade down to paraprofessionals and other staff currently using older devices.
+      - All major assessments (MCAS, I-Ready, PSAT) are now online, requiring devices to meet minimum specifications.
+      - Chromebooks remain appropriate for student use; laptops are better suited for staff.
+      
+      ## Cybersecurity
+      - District applied for and received the state cybersecurity grant two years running.
+      - A new program called 'KnowBe4' launches imminently: staff will receive phishing simulation emails and online training modules.
+      - The district has upgraded fiber between all buildings, replaced switching equipment, and upgraded firewalls over the past three and a half years.
+      
+      ## School Security Cameras
+      - Internal cameras at Glover School have been upgraded; external cameras remain a longstanding concern.
+      - A new state security grant was announced recently; the technology director plans to apply and potentially remove external camera upgrades from the operating budget request.
+      
+      ## Grant/Title Coaching Clarification
+      A school committee member asked about whether four literacy/math coaches showed as three in the budget. Administration clarified that one coach is 100% grant-funded (Title grant), so only three appear in the operating budget line. Benefits for the grant-funded position are also covered by the grant — there is no double-dipping.
+    key_speakers: ["Stephen (Technology Director, last name unclear)", "School Committee member (unnamed)", "Assistant Superintendent Cesta"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 4817
+    end_seconds: 5143
+    headline: "Technology director presents district's 5,000+ devices and one-to-one rollout"
+    dek: "The district technology director described the shift to one-to-one device coverage K–6 using iPads and Chromebooks, supported by ARPA funding and the Brown School construction project."
+    summary: "The technology director reported the district now owns approximately 5,000 devices—1,493 iPads, 2,612 Chromebooks, 520 laptops, and 485 desktops—and has achieved one-to-one coverage for grades K–2 (iPads) and 3–6 (Chromebooks). Grades 7–8 use shared carts. The high school operates a BYOT model, with roughly 900 student-owned devices connecting to the network daily; in the past 30 days about 12,700 individual devices connected across all buildings. Security grants funded cameras at the idle school building. Technology staff are student-facing districtwide and respond to device issues in real time."
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 5144
+    end_seconds: 5375
+    headline: "Facilities director outlines custodial staffing, cleanliness standards, and idle building oversight"
+    dek: "The facilities director described a new formal maintenance plan, Common Education Data Standards cleanliness levels, and daily monitoring of the vacant school building."
+    summary: "The facilities director explained that after five years he is now implementing a structured preventive maintenance program. Custodial staffing targets CEDS Level 2 for elementary schools and Level 3 for larger buildings; the district is currently below the recommended 27 FTE custodians and will fall to roughly 20 after planned reductions. The idle school building has water and gas shut off at the street, the fire panel remains active, and staff installed exterior cameras and conduct daily checks seven days a week."
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 5375
+    end_seconds: 5481
+    headline: "Facilities director describes plan to convert maintenance staff to dual maintenance-custodian roles"
+    dek: "Rather than hiring two new custodians and releasing others, the director will cross-train existing maintenance employees to cover custodial duties on an offset schedule."
+    summary: "To address custodial shortfalls without net new hires, the facilities director said several maintenance employees will be reclassified as maintenance-custodians on offset schedules, preserving institutional knowledge and avoiding layoffs. The director noted the district is already four positions below CEDS recommendations and said external complaints about building appearance reflect inadequate staffing rather than staff performance."
+  - topic: bonding-capital
+    topic_confidence: 0.93
+    start_seconds: 5482
+    end_seconds: 6097
+    headline: "Four urgent capital repairs totaling ~$400K flagged; Glover heating system alone ~$218K"
+    dek: "The superintendent said she is not confident the town will fully fund the $400,000-plus capital request, but plans to draw on remaining ESSER funds (~$250K), building rental revolving funds, and foreign tuition accounts."
+    summary: |
+      The superintendent presented four priority capital items:
+      
+      | Item | Estimated Cost |
+      |---|---|
+      | Veterans School D-wing structural repair | ~$100,000 |
+      | Glover School HVAC replacement (LG units, undersized/incorrect piping) | ~$218,000 |
+      | Village School fire panel update (end of life) | ~$30,000 |
+      | High school paging/bell/clock system replacement (parts unavailable) | ~$52,700 |
+      | **Total** | **~$400,700** |
+      
+      She noted the Glover units are only about 10 years old but were installed undersized with incorrect freon piping slope, destroying compressors; a temporary repair was made after six classrooms lost heat. The Village fire panel is at end-of-life and a failure would require a fire watch. The superintendent said she does not expect full town capital funding and plans to supplement with approximately $250,000 in remaining ESSER funds, building rental revolving funds, and foreign tuition student funds. A committee member raised the possibility that $1.4 million in remaining bond authorization from the school building project might be reallocated through Town Meeting; the superintendent said she had heard approximately $300,000 might be available town-side and suggested making inquiries. Cumulative deferred maintenance was described as approximately $1.5–2 million annually for multiple years.
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 6285
+    end_seconds: 6633
+    headline: "Brown/Glover elementary principals present FY26 staffing reductions and MTSS goals"
+    dek: "Principal Maxfield (Brown) and Principal Richards (Glover) detailed cuts including a half-time secretary, reduced tutor hours, and the transfer of a special education paraprofessional, while reporting MCAS growth of nine points in both ELA and math."
+    summary: |
+      Brown School principal Maxfield reported FY26 reductions including a 0.5 secretary position, reduced ELL staff as a larger cohort transitions to Village, and reduced tutor hours that will cut small-group intervention capacity. She noted Brown's inclusion teacher average caseload of 11 versus Glover's 29.4% lower caseload, raising a question about whether outcomes differ by caseload size. A committee member noted that cutting custodians will bring the district to 20.3 FTE against a CEDS recommendation of 27, and that last year's savings came from leaving positions vacant rather than formal cuts. The Brown School MCAS results showed increases of nine points in ELA and math from FY22 to FY23.
+      
+      Both principals discussed goals centered on MTSS implementation, the Wit & Wisdom literacy curriculum, DEI team work on the BEAP document, and collaborative problem-solving. Kindergarten enrollment projections were described as difficult to forecast; the district has begun directing new-to-district kindergartners to whichever elementary school has lower enrollment, though redistricting has not been formally adopted.
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 6633
+    end_seconds: 7581
+    headline: "ARPA committee approves $63K for Wit & Wisdom professional development; school budget recess taken"
+    dek: "The superintendent reported that the Select Board's ARPA committee voted to fund a second year of Wit & Wisdom trainer costs at $63,000, providing relief from one budget line."
+    summary: "During discussion of capital and program funding, the superintendent confirmed that the town's ARPA committee voted to allocate $63,000 for Year 2 of Wit & Wisdom professional development implementation, which had been cut from the school budget. She had presented the case for continuity of the program. A 10-minute recess was then called before the second half of the principal presentations."
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 7581
+    end_seconds: 8312
+    headline: "Village School principal presents FY26 cuts: 2 classroom teachers, tutors, counselor, and $70K supplies"
+    dek: "Village School principal Murphy described cutting two classroom teachers, reducing paraprofessional/tutor FTE from 3.73 to 1.10, reducing a school counselor by one, and cutting approximately $70,000 in supply lines to preserve a teacher position."
+    summary: |
+      Village School (grades 4–6, enrollment ~537 projected next year) will see the following FY26 reductions:
+      
+      - Classroom teachers: 28 → 26 (–2)
+      - Other teachers: 3 → 2 (–1)
+      - Paraprofessional/tutor: 3.73 → 1.10 FTE
+      - School counselor: –1
+      - Special education teacher: –1 (transferred to Brown)
+      - Supply budget: –$70,000
+      
+      The principal emphasized that the supply cut was chosen over cutting an additional teacher position, and that losing tutors eliminates general education support in Wit & Wisdom intervention blocks. She noted Village currently has 7 inclusion teachers with an average caseload of 10—a ratio described as favorable but set deliberately through a co-teaching model. The principal expressed concern that the therapeutic support program may be discussed for consolidation and stressed that any such shift requires community transparency, as neighborhood home-school assignment was a key promise made during the school building campaign.
+  - topic: school-budget
+    topic_confidence: 0.94
+    start_seconds: 8312
+    end_seconds: 9311
+    headline: "Middle school principal warns district is 'one year away' from losing middle school structure"
+    dek: "Principal Fox reported cutting an assistant principal position (retirement) plus one teacher, which will raise some class sizes to 27; he said further reductions next year could eliminate the team-based middle school model."
+    summary: |
+      The middle school principal presented goals including MTSS, PBIS, DEI, and Wit & Wisdom implementation, and reported the school ranks first or second on the North Shore in all four MCAS growth and achievement categories. For FY26 he is eliminating the assistant principal position (a retirement, saving the equivalent of two teaching positions) and one classroom teacher. This will bring some eighth-grade class sizes to 27 in three subject periods.
+      
+      The principal warned that continued cuts could require abandoning the team-based middle school structure in favor of a departmentalized junior high model, noting he has experienced this in a prior district and considers it a serious programmatic loss. He described creative scheduling this year—cross-team teacher assignments—to absorb a larger-than-expected seventh-grade cohort (which grew from 24 to 42 students after COVID-era departures). He also noted the loss of a Latin position in a prior budget cycle created a structural scheduling problem that still affects Spanish class sizes (averaging 25–26).
+      
+      The principal presented detailed data on 29 mandated special education support sections (17 inclusion, 12 through ABA, language-based, and therapeutic strands), and noted that four inclusion teachers carry an average caseload of 18 students with co-teaching in English and math.
+  - topic: admin-housekeeping
+    topic_confidence: 0.72
+    start_seconds: 9311
+    end_seconds: 9573
+    headline: "School Committee acknowledges outgoing assistant principal and hears Glover principal's staffing overview"
+    dek: "Committee members recognized the contributions of the retiring middle school assistant principal and received a brief Glover School staffing overview from Principal Richards."
+    summary: "After the middle school presentation, committee members paused to thank the departing assistant principal. The Glover School principal then provided a brief staffing summary noting current enrollment of approximately 537 students and confirming that the school's special education caseloads and projected class sizes are slightly lower than Village's, with only kindergarten showing a meaningful difference between the two elementary buildings."
+  - topic: school-budget
+    topic_confidence: 0.94
+    start_seconds: 9573
+    end_seconds: 10854
+    headline: "Village and middle school principals detail FY26 class sizes, special ed services, and enrollment projections"
+    dek: "Detailed class size data showed Village averaging 21–18 by grade; the middle school projects flat enrollment and noted that a third of current classes are already at 23 or above."
+    summary: |
+      Village School class sizes: fourth grade 21, fifth grade 21, sixth grade 18 (home rooms). Projected next year similar. The principal reiterated that supply cuts and tutor reductions are necessary to keep a classroom teacher, and that the loss of a general education tutor pool eliminates Wit & Wisdom small-group support.
+      
+      The middle school principal presented a 'Kathy Leonardson slide' showing mode and range of class sizes by subject: English mode 23, science mode 24 (inflated because substantially separate students re-enter for science). A third of all middle school classes are already at 23 or above. Enrollment is projected flat; seventh grade has rebounded strongly post-COVID. The principal tracks cohorts back to third grade to project enrollment and anticipates the incoming class will be manageable but not small.
+      
+      Both principals discussed the importance of not cutting further into special education staffing, noting legally capped class sizes of 10 for substantially separate programs and the fluidity of student needs (e.g., EI transitions at age 3).
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 10903
+    end_seconds: 12448
+    headline: "Principals present FY27 cut list: 36 positions, 28 FTEs, with SPED and counseling reductions"
+    dek: "Each school principal walked through staffing reductions, program impacts, and the gap between what was requested and what will be cut."
+    summary: |
+      School principals presented detailed budget reduction proposals to the School Committee for FY27. Key items discussed included:
+      
+      **Middle School**
+      - Loss of the school librarian last year reduced first-semester book checkouts from a typical 2,200–5,000 to fewer than 400; the library remains open three days per week after school
+      - Restoration of the librarian position was on the principals' wish list but unfunded
+      
+      **High School (Dr. Carlson)**
+      - Current staffing: 132.5 FTE
+      - Goals include preserving tiered academic interventions (RTI, co-teaching), updating curriculum alignment, and maintaining MCAS progress back to pre-pandemic levels
+      - Proposed reductions:
+        - Special education teachers: from 16 down to 14.6 (one position eliminated, one made part-time)
+        - Special education paraprofessionals/tutors: from 15 down to 12.4
+        - One school counselor/mental health position reduced (current count of 10 includes guidance counselors, mental health counselors, psychologists, and social workers)
+        - Secretary positions reduced with workload redistributed
+        - Non-SPED paraprofessional/tutor position already moved to SPED use
+      - RTI classes (6 sections in math, English, and science) and co-teaching preserved under this budget
+      
+      **District-wide summary slide**
+      - Total reductions: 36 positions, 28 FTEs
+      - Of the 36 positions, approximately 4.2 are currently vacant and 3 are open vacancies
+      - Other cuts include: consolidation of the therapeutic program to Brown School, elimination of elementary teacher-leader positions, significant decrease in professional development and instructional supply budgets, partial transfer of athletics/extracurricular funding to participants
+      - Principals' unfunded wish list included: middle school librarian restoration, 7 tutor positions for elementary MTSS support, 2 permanent substitute positions, staffing for Bridge for Resilient Youth program, and curriculum/data intervention coaching at the high school
+      
+      **School Committee discussion**
+      - A committee member noted unemployment costs are projected to increase by approximately $400,000 due to prior layoffs
+      - Members highlighted that the district identified approximately $2.5 million in cuts while the town side identified approximately $1 million
+      - The committee chair described the presentation as the most thorough and detailed budget presentation seen, while noting the district has faced repeated annual cuts since at least 2019
+      - The school committee vote on the superintendent-recommended budget was tentatively scheduled for March 21
+      - Next steps include school advisory council presentations, staff accountability data, and a special education numbers overlay
+    key_speakers: ["Dr. Carlson (High School Principal)", "Mandy (Elementary Principal, referenced)", "Matt (Middle School Principal, referenced)", "School Committee Chair", "School Committee Member"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

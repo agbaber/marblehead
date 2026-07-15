@@ -9,7 +9,318 @@ video_url: "https://www.youtube.com/watch?v=dO24SIbIHH0"
 duration_seconds: 11296
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee approves ~$3.3M schedule of bills, closes FY22 budget hearing"
+  summary: "The Marblehead School Committee held a public hearing on the FY22 school budget of approximately $41.8 million, during which Superintendent Dr. Bucky announced that a previously identified budget gap had been resolved through discussions with Town Administrator Jason Silva. Community members raised concerns about nursing staffing ratios, reliance on one-time ESSER funds for recurring needs, arts program reductions, and student learning loss recovery. The committee also approved minutes, a schedule of bills totaling approximately $3,315,140, policy BEDH on public comment, and voted unanimously to sponsor a Coalition for Racial Justice event; the meeting closed with a construction progress update on the Lucretia and Joseph Brown Elementary School."
+  decisions:
+    - "Approved minutes from February 9, 2021"
+    - "Approved schedule of bills totaling approximately $3,315,140"
+    - "Approved policy BEDH (public comment at school committee meetings)"
+    - "Approved sponsorship of April 27 Coalition for Racial Justice event on Lucretia and Joseph Brown"
+    - "Held FY22 budget public hearing"
+  votes:
+    - motion: "Approve February 9 minutes"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills ~$3.3M"
+      result: "in favor (unanimous)"
+    - motion: "Approve policy BEDH"
+      result: "in favor (unanimous)"
+    - motion: "Sponsor Coalition for Racial Justice April 27 event"
+      result: "5-0 in favor"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.98
+    start_seconds: 114
+    end_seconds: 1467
+    featured: true
+    headline: "Superintendent presents FY22 budget of ~$41.8M; gap with town closed day of hearing"
+    dek: "Dr. Bucky walked the School Committee and public through the budget's evolution from an original February proposal of $42.6M down to $41.8M, confirming a previously reported gap had been resolved with Town Administrator Jason Silva."
+    summary: |
+      Superintendent Dr. Bucky presented the FY22 budget at the public hearing, noting the budget had evolved iteratively since November through collaboration with building principals, the leadership team, and the budget subcommittee.
+      
+      **Key budget figures:**
+      | Item | Amount |
+      |---|---|
+      | FY22 proposed budget | ~$41,839,543 |
+      | FY21 final budget | ~$40M |
+      | Year-over-year increase | ~$1.3M |
+      | Contractual obligation increase (MEA, 1% COLA + steps/lanes) | $862,549 |
+      | Technology capital leases (year 1 of 3) | $212,706 |
+      | New PreK–12 math curriculum (year 1 of 3, ESSER-funded) | $100,000 |
+      | HR director position (offset $50K from current HR assistant) | $80,000 net |
+      | Utilities increase tied to Brown School opening | $77,000 |
+      | Savings from known retirements | $91,804 |
+      
+      **Enrollment context:** NESDEC projected pre-pandemic enrollment of 2,665; actual enrollment was approximately 2,691. NESDEC projects a decline to approximately 2,008 students by 2030. Current year has 258 seniors graduating versus a projected 168 incoming kindergartners.
+      
+      **Brown School consolidation:** Two classroom teachers are being reduced at Brown due to enrollment. One nurse position is being eliminated as three schools consolidate to one (going from two nurses to one for approximately 450 students). A principal position is not being cut — the incumbent is retiring.
+      
+      **Funded tier priorities:** All green-tier priorities are funded, including the guidance counselor at Village, BRIGHT tutor-to-teacher conversion, technology integration specialist, and new math curriculum. Tier 3 priorities (custodian, second curriculum specialist) remain unfunded.
+      
+      **Stimulus funds:** The district anticipates approximately $6 million in federal COVID relief funds over three years (ESSER/ARP), which will cover the math curriculum, technology capital leases, and COVID-related expenses.
+    key_speakers: ["Dr. Bucky (Superintendent)", "Jason Silva (Town Administrator, referenced)", "Nan Murphy (Assistant Superintendent)", "Eric Oxford (Director of Special Education)", "Michelle (CFO/Business Manager)"]
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 1467
+    end_seconds: 5554
+    headline: "Community members raise concerns about nursing ratios, arts cuts, PTO reliance, and learning loss"
+    dek: "Nine community members spoke during the public comment period, asking about nursing staffing levels post-consolidation, arts program reductions, appropriate use of ESSER funds, student learning-loss recovery, and strategic long-range planning."
+    summary: |
+      **Kazzy Kendall (163 Jersey Street):** Asked how consolidation-related staffing reductions (nurse, allied arts teacher, secretary, classroom teachers) differ from cuts; expressed concern about reliance on PTO funding for operational needs and use of ESSER funds for a math curriculum identified as a need before COVID.
+      
+      **Colleen Renee Nile (3 Bowdoin Street):** Asked how the 12 budget priorities align with long-range strategic planning; questioned how level-funding goals advance district excellence; asked what the balanced budget means in 1, 5, and 10 years.
+      
+      **Catherine Martin (29 West Shore Drive):** Raised procedural concern about budget documents not being posted 48 hours in advance per state law. Asked whether the new Brown School would have a vice principal (answer: no) and how many special education teachers were being added (answer: two pre-K classrooms fall under the SPED umbrella; equity and parity across both K–3 buildings was confirmed). Asked about multi-year funding for the math curriculum and $212,000 technology ask. A school committee member noted an override was likely being pursued next year.
+      
+      **Paul Baker (79 Overlook Road):** Expressed appreciation for the work of Dr. Bucky, the school committee, and Finance Committee; described the budget process as improved and the balanced result as a positive outcome.
+      
+      **Ann (Garfield Street, 16-year-old MHS student):** Expressed concern about allied arts teacher reductions; noted the CAD teacher is teaching painting; asked for more emphasis on arts. Dr. Bucky and Mr. Bauer noted the reduction was enrollment-driven and confirmed advocacy for the arts.
+      
+      **Alastair Connor (9 Claptman's Lane):** Asked about the district's plan to address learning loss and avoid a spike in IEPs. Nan Murphy described summer intervention plans, YMCA partnership, and student support services planning. Dr. Bucky noted SOA funds are being used for assessments.
+      
+      **Jenny Armini (Russell Street):** Asked whether the state had approved use of COVID relief funds for the math curriculum. Dr. Bucky confirmed vetting through school superintendents association and the North Shore roundtable, noting the federal government has given wide latitude.
+      
+      **Alexis (22 Forever Street, approximate):** Emphasized importance of incorporating historical PTO funding data into the strategic plan; noted PTOs are funding operational infrastructure (smart boards, wi-fi, security doors, furniture) rather than enrichments. Dr. Bucky acknowledged the issue and invited her to meet at the central office.
+      
+      **Sandra Callahan (25 August App, approximate):** A pediatric nurse, raised three concerns: (1) one nurse for 450+ students is insufficient given COVID contact-tracing workload; (2) guidance services were inadequate before COVID and are more so now; (3) enrollment loss may not fully recover and the budget should anticipate that. She praised the district for conducting Zoom meetings. The school committee noted pool testing is state-funded through end of year and that Dr. Bucky has surveyed unenrolled students about returning.
+      
+      **Julie Duggan (18 Dodge Road, PCO co-president at MHS):** Clarified that the MHS PCO is not currently fundraising for smart boards; the PCO recently approved funding for six smart boards (two from an anonymous donor).
+      
+      **School Committee discussion:** Members David, Megan, Emily, and Sarah offered closing remarks. Sarah raised substantive concerns about use of one-time ESSER funds for recurring three-year costs (math curriculum, technology), declining enrollment projections (23% drop over 9 years per NESDEC), the Brown School being built for 450 students with enrollment trending down, and the need to identify funding sources for the telephone system upgrade. She also noted no dedicated STEM teacher was added — classroom teachers will have access to the STEM space and supplies. Dr. Bucky clarified the STEM space is outfitted with supplies but no separate teacher has been hired.
+    key_speakers: ["Kazzy Kendall (resident)", "Colleen Renee Nile (resident)", "Catherine Martin (resident)", "Paul Baker (resident)", "Ann (MHS student, resident)", "Alastair Connor (resident)", "Jenny Armini (resident)", "Alexis (resident volunteer)", "Sandra Callahan (resident, pediatric nurse)", "Julie Duggan (MHS PCO co-president)", "Sarah (School Committee member)", "Megan (School Committee member)", "David (School Committee member)", "Emily (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 5572
+    end_seconds: 6081
+    headline: "School committee closes budget hearing after debate over override decision and process"
+    dek: "Members exchanged pointed remarks about the collaborative budget process, the absence of an override this year, and the need for a strategic plan before future budget advocacy."
+    summary: |
+      The budget public hearing segment featured a tense exchange among school committee members. One member (identified as Sarah) argued the budget process had been transparent and collaborative, emphasized that no override would be sought this year due to COVID-related complications, and disputed characterizations of the budget as reflecting 'cuts.' She noted the district had received significant federal and state funds and that the town had been supportive.
+      
+      Another member countered that the committee had repeatedly deferred the override to the following year and that without a strategic plan first, the committee was 'doing it backwards.' They argued the board had never fully articulated a vision for what education in Marblehead should look like before building a budget around it.
+      
+      The superintendent noted approximately $6 million in anticipated new town revenue. The chair closed the public hearing at 7:41 PM after no additional public commenters were present.
+    key_speakers: ["Sarah (school committee member)", "David Harris (school committee member)", "Superintendent (John)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 6102
+    end_seconds: 6515
+    headline: "High school principal reports on student achievements, unified basketball win, and April 5 reopening prep"
+    dek: "Principal Dan Bauer highlighted DECA state placements, a quiz bowl state championship, the spring musical, and extensive staff preparation for the return to full in-person learning."
+    summary: |
+      Principal Bauer (identified as 'Mr. Bauer' / 'Dan') gave commendations covering the high school's DECA program state-level placements, a state championship quiz bowl team, the upcoming spring musical ('25th Annual Putnam County Spelling Bee'), visual arts auction and senior art show preparations, an SEL committee improving school culture, Team Harmony's work with ninth-grade health classes, and the PCO's help vaccinating staff.
+      
+      He highlighted preparation for the April 5 return to in-person learning, praising custodial staff, teachers, Deanna McMahon from the health department, and guidance counselors. He noted the high school's remote learning cohort also deserved recognition.
+      
+      The superintendent added a commendation for the unified basketball team, which he attended that day, calling it exactly the reminder of why educators go into the profession.
+    key_speakers: ["Dan Bauer (high school principal)", "Superintendent (John)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 6515
+    end_seconds: 6620
+    headline: "Committee approves February 9 minutes 5-0 and hears superintendent's report introduction"
+    dek: "Chair called roll on the February 9 minutes; all five members voted yes before the superintendent introduced guests for the Juneteenth presentation."
+    summary: |
+      The chair noted only the February 9, 2021 minutes were in the dropbox. Megan moved, Emily seconded. Roll call: Sarah Gold yes, David Harris yes, Emily Baron yes, Sarah Fox yes, Megan Taylor yes — motion carried 5-0.
+      
+      The superintendent then introduced Candice Sliney, a Spanish teacher and Team Harmony advisor at the high school, and Jody Smith, a community liaison for the North Shore Juneteenth Association.
+    key_speakers: ["Sarah Fox (chair)", "Superintendent (John)"]
+  - topic: recreation-events
+    topic_confidence: 0.82
+    start_seconds: 6618
+    end_seconds: 7392
+    headline: "Teacher and community liaison present North Shore Juneteenth Association; committee supports banners, flag, and art program for schools"
+    dek: "Candice Sliney and Jody Smith presented the history of Juneteenth and proposed purchasing banners, a flag, and an elementary art program for Marblehead schools ahead of its first recognition as a state holiday."
+    summary: |
+      Candice Sliney (Spanish teacher, Team Harmony advisor) and Jody Smith (North Shore Juneteenth Association liaison) presented to the committee on Juneteenth — the annual commemoration marking the day in 1865 when enslaved people in Texas were informed of their freedom, two years after the Emancipation Proclamation.
+      
+      Sliney noted that Massachusetts DESE updated the school calendar so that 2021 would be the first year Juneteenth is officially recognized as a state holiday. She proposed the following for Marblehead Public Schools:
+      
+      - Purchase a Juneteenth banner ($95 each) for each school in a high-visibility area
+      - Purchase a shared elementary school art program ($200)
+      - Purchase a Juneteenth flag ($60) for the high school cafeteria, to accompany recently donated Gay Pride and Black Lives Matter flags
+      - Fund a professional study group to examine curricula for diversity and representation ('windows and mirrors' framework)
+      
+      Committee members expressed strong support. One member noted it was 'an incredibly small financial ask for something that has the potential to have a significant impact.' Another asked whether Team Harmony students could use upcoming Village School sessions to discuss Juneteenth. Sliney confirmed Team Harmony was already presenting in all freshman and sophomore health classes that week.
+      
+      The chair noted the Juneteenth calendar item — recognizing it as a state holiday — would come back at the next meeting, as the school year ends before June 19 this year but the calendar would need to be amended for next year.
+    key_speakers: ["Candice Sliney (Spanish teacher, Team Harmony advisor)", "Jody Smith (North Shore Juneteenth Association liaison)", "Sarah Fox (chair)", "Emily Baron (school committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 7392
+    end_seconds: 7545
+    headline: "Superintendent reports conservation citation for unauthorized BMX work at Green Street property"
+    dek: "Unauthorized BMX trail construction on school property near wetlands triggered a conservation commission enforcement order; the district has posted no-trespass signs and must appear at a hearing the following Thursday."
+    summary: |
+      Superintendent Buckey reported that a local bike group had been in conversations with the district about using school property for BMX trails and ramps. Before a formal agreement was in place, work began at the Green Street property, which abuts wetlands. This triggered an enforcement order from the Conservation Commission.
+      
+      The superintendent went out with the town engineer and the head of the Conservation Commission to assess the situation. The work was not sanctioned by the bike group the district had been speaking with — it was described as a confusion at the outset of the discussions.
+      
+      The district has posted no-trespassing signs at Green Street and redirected conversations about a possible BMX facility to the high school property near the tennis courts. The superintendent and chair (Sarah Fox) are required to appear before the Conservation Commission the following Thursday.
+      
+      To accommodate that appearance, the April 8 school committee budget vote meeting was proposed to start at 5:00 or 6:00 PM rather than 7:00 PM. Members noted the budget vote is the only agenda item for that session.
+      
+      Questions were raised about potential fines or remediation costs; the superintendent said those details would be clearer after the Thursday conservation hearing. He noted liability questions are being explored with the district's counsel and the town.
+    key_speakers: ["Superintendent (John)", "Sarah Gold (school committee member)", "Emily Baron (school committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 7545
+    end_seconds: 7912
+    headline: "Superintendent previews April 29 special meeting for entry plan and strategic planning kickoff"
+    dek: "The superintendent requested a special meeting on April 29 to present his entry plan findings and outline the strategic planning process launching in mid-May, which he said would ultimately inform future budget and override priorities."
+    summary: |
+      The superintendent noted it was 'bizarre' to still be talking about his entry plan in April, but confirmed he had asked the chair for a special meeting on April 29 at 6:30 PM or later. At that meeting he planned to present entry plan findings and roll out the strategic planning process — including focus groups and surveys beginning in earnest in mid-May — which would eventually inform future budgets.
+      
+      He described the strategic plan as the proper foundation for budget advocacy, implicitly responding to earlier debate about the order of operations (vision first, then budget, then override).
+      
+      He also confirmed that full K-12 in-person learning begins April 5: grades 7-12 would be half-days five days a week, while pre-K through grade 6 students would have full days.
+      
+      The committee also discussed rescheduling the April 8 budget vote to an earlier start time given the conservation commission hearing conflict that evening.
+    key_speakers: ["Superintendent (John)", "Sarah Gold (school committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 7912
+    end_seconds: 9090
+    headline: "Business manager reports FY finances at 52% spent; ESSER II plan totals ~$2.4M including 268 new air purifiers"
+    dek: "Business Manager Michelle reported special education out-of-district tuition is essentially balanced, COVID funds have been committed or anticipated at approximately $2.4 million, and custodian overtime is projected to run $35,000–$40,000 over budget."
+    summary: |
+      Business Manager Michelle presented the monthly financial report for the period ending February 28, 2021.
+      
+      **General Fund:** Year-to-date expenditures were approximately $21,812,900 or 52% of the operating budget.
+      
+      **Special Education:** Out-of-district tuition costs are currently breaking even — described as 'four dollars difference' from budget — a significant improvement from earlier in the year when there had been an unexpected shortfall when circuit breaker funding came in lower than anticipated. The April 1 deadline for private school placement responsibility has been reached, reducing future risk.
+      
+      **Substitute teaching:** Spent approximately $38,000 or 16% of that budget — significantly under budget.
+      
+      **Custodian overtime:** Currently over budget by approximately $3,000 due to additional cleaning, staff leaves, and furniture moving for reopening. Projected end-of-year shortfall of $35,000–$40,000, expected to be absorbed elsewhere.
+      
+      **Unemployment compensation:** Approximately $24,000 spent of a $60,000 budget, but the state unemployment agency is far behind in processing claims due to pandemic fraud, and could retroactively bill the district. Projected shortfall of approximately $30,000 for the year.
+      
+      **COVID/ESSER II funding plan (through March 29):**
+      - Paid out: $1,538,000
+      - Encumbered (ordered/reserved): $568,000
+      - Anticipated expenditures: $269,000
+      - **Total: approximately $2,376,000**
+      
+      Key planned expenditures include:
+      | Category | Amount |
+      |---|---|
+      | Supplemental classroom staffing | ~$81,000 |
+      | Air purifiers (268 additional units) | ~$65,000 |
+      | KN-95 masks | ~$9,800 |
+      | Rolling laptop desks | ~$20,000 |
+      | Mental health supports (grant requires ≥$10K) | ~$25,000 |
+      | Mobile smart boards for alternative spaces | ~$38,500 |
+      | Technology (headphones, charging carts) | ~$10,000 |
+      | Math curriculum / facilities (reserve) | ~$115,000 |
+      
+      The business manager confirmed math curriculum could be purchased this fiscal year once the grant is formally approved. She noted none of the COVID funds are recurring costs.
+    key_speakers: ["Michelle (business manager)", "Sarah Gold (school committee member)", "Superintendent (John)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 9090
+    end_seconds: 9260
+    headline: "Committee approves schedule of bills totaling approximately $3,315,140 on 5-0 vote"
+    dek: "All five committee members voted to approve the monthly schedule of bills after no questions were raised."
+    summary: |
+      The chair asked for a motion to approve the schedule of bills totaling $3,315,140.31. Megan moved, Emily seconded. Roll call: Sarah Gold yes, Emily Baron yes, Sarah Fox yes, David Harris yes, Megan Taylor yes — motion carried 5-0.
+      
+      The superintendent used the moment to publicly commend business manager Michelle for her work, calling her 'an invaluable partner' and noting that securing her was one of the most important things the prior interim superintendent Bill had done for the district.
+    key_speakers: ["Sarah Fox (chair)", "Michelle (business manager)", "Superintendent (John)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 9259
+    end_seconds: 9405
+    headline: "Committee votes 5-0 to sponsor Coalition for Racial Justice event on Lucretia and Joseph Brown"
+    dek: "The school committee and Marblehead Public Schools will be listed as sponsors on a April 27 community event co-presented by the Marblehead Museum and the Marblehead Racial Justice Team."
+    summary: |
+      Chair Sarah Fox described a request from Select Board Chair Jackie Belfecker on behalf of the Coalition for Racial Justice — a group that includes the racial justice league, the Task Force Against Discrimination, Team Harmony, and the League of Women Voters — for the school committee and school department to become co-sponsors of an upcoming educational event.
+      
+      The event on April 27 at 7:00 PM will feature Lauren McCormick (executive director of the Marblehead Museum) and Robin Taylor (writer, Marblehead Racial Justice Team), moderated by Selectman Jackie Belfecker, presenting on 'The Real History of Lucretia Thomas Brown and Joseph Brown.' Sponsorship is non-monetary — it means the school committee and Marblehead Public Schools names appear on flyers.
+      
+      Committee member Emily Baron, who had been in contact with Lauren McCormick, was informally designated as the school committee's liaison to the coalition for the remainder of the year.
+      
+      Motion by Sarah Gold, second by Emily Baron; roll call: Sarah Gold yes, Sarah Fox yes, David Harris yes, Megan Taylor yes, Emily Baron yes — carried 5-0.
+    key_speakers: ["Sarah Fox (chair)", "Emily Baron (school committee member)", "Candice Sliney (Team Harmony advisor)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 9405
+    end_seconds: 9665
+    headline: "Committee approves policy BEDH 5-0 on third reading; new email push notification system announced"
+    dek: "Policy BEDH on public comment at school committee meetings passed on its third reading; Emily Baron announced a new subscriber email system on the school committee website to notify community members of meetings and changes."
+    summary: |
+      **Policy BEDH:** The chair noted this was the third reading, with minor changes from the previous meeting reflected in the revised draft. No further questions were raised. Megan moved, Emily seconded; roll call: Sarah Gold yes, Sarah Fox yes, David Harris yes, Megan Taylor yes, Emily Baron yes — carried 5-0.
+      
+      **Push notification system:** Committee member Emily Baron described a new feature on the school committee website: a signup form under the mission statement where residents can enter their name and email to receive weekly notifications. Plans call for a Sunday email listing that week's meetings and times with a link to the calendar, plus additional emails if meetings are changed or cancelled. Baron acknowledged it is currently a manual process but will capture both regular and subcommittee meetings as long as they are posted to the school committee calendar.
+    key_speakers: ["Sarah Fox (chair)", "Emily Baron (school committee member)", "Megan Taylor (school committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 9665
+    end_seconds: 9961
+    headline: "Subcommittee updates: CPAC event April 6 on career readiness; facilities report on new building construction progress"
+    dek: "Megan Taylor announced a CPAC Zoom event April 6 on future readiness skills; David Harris shared construction photos of the new elementary school showing painted classrooms, the gymnasium ceiling, cafeteria/stage, and nurse's office."
+    summary: |
+      **CPAC event:** Megan Taylor reported that Marblehead CPAC board member and Boston University professor Dr. Scott Solberg will speak April 6 at 7:00 PM on 'Developing Future Readiness Skills and Answering Questions About Your Child's Career Plans After High School.' The Zoom link is on the CPAC website. The superintendent noted he has also invited Dr. Solberg to present to the school committee after the budget process concludes, given his extensive work on reopening and SEL committees.
+      
+      **New building construction:** David Harris shared a photo slideshow from the new elementary school (named for Lucretia and Joseph Brown) showing:
+      - Painted second-floor classrooms with colors and windows installed; radiant heating above windows
+      - Extended learning spaces with touch-screen panel locations, painted blue hallways, and doorways to classrooms
+      - Cafeteria/cafetorium looking toward the stage with pass-through openings
+      - Nurse's office with sheetrock complete
+      - Gymnasium ceiling painted Monday night (painters worked until 11 PM); skylights in place; translucent panels coming in the next few weeks
+      - Classroom-to-classroom connecting doors (a teacher-requested feature for both flexibility and security/egress)
+      
+      Harris noted ceilings will begin installation the following week and the building is progressing rapidly.
+    key_speakers: ["Megan Taylor (school committee member)", "David Harris (school committee member)", "Superintendent (John)"]
+  - topic: school-budget
+    topic_confidence: 0.55
+    start_seconds: 10530
+    end_seconds: 10824
+    headline: "Rooftop HVAC units installed and exterior signage revealed at new Lucretia & Joseph Brown School"
+    dek: "Construction is nearing key milestones with skylights, sheetrock, and furniture purchase orders all advancing."
+    summary: |
+      A presenter identified as David provided a photo-based construction update on the Lucretia and Joseph Brown Elementary School. Highlights included:
+      
+      - The first rooftop HVAC unit was hoisted onto the building, with remaining units delayed slightly by wind and rain.
+      - Skylight installation is expected imminently, allowing natural light into the lighthouse-area corridor.
+      - Sheetrock is largely complete; a staircase to the second floor is pending final sheetrock work.
+      - A rendering of the school's exterior signage — in a script matching the window frame colors — was shared for the first time.
+      - Furniture and equipment purchase orders have been submitted following a building committee presentation, with confirmation from David Sandon.
+      - Site visit tours for stakeholder groups are being organized, typically starting after construction ends at 3:00–3:30 PM.
+      - Katie Martin has been involved in the landscape component; Dr. Nan Murphy and teachers were thanked for their work on the furniture/equipment selection.
+    key_speakers: ["David (presenter, name only)", "David Sandon (confirmed purchase orders)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.72
+    start_seconds: 10832
+    end_seconds: 10899
+    headline: "Board requests future agenda update on 18-to-22 special education program location"
+    dek: "A board member asked for an upcoming agenda item covering the program's current placement at Vets and its long-term destination."
+    summary: "A board member asked to place an agenda item on an upcoming meeting to receive an update on the district's 18-to-22-year-old transition program. The program was previously moved from the Bell School and is currently housed at Vets, which was described as a temporary placement. The board member sought information on both the physical and programmatic direction of the program. A staff member (John) was noted to be writing down the request to follow up with Eric."
+    key_speakers: ["Board member (unnamed)", "John (staff, noted taking action)"]
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 10899
+    end_seconds: 11267
+    headline: "Public commenters praise committee, school reopening energy, and racial justice curriculum work"
+    dek: "Scott Solberg and Cindy (Tower Lowen) offered remarks at the close of the meeting, citing school reopening excitement and appreciation for the committee."
+    summary: |
+      Two community members offered public comment:
+      
+      **Scott Solberg (Ramsay Road):** Praised the morning's school reopening committee session, noting enthusiasm from principals and staff ahead of Monday's return. He thanked CFO Michelle Cresta for her clear budget communication and expressed excitement about high school students leading an upcoming SEO (student engagement/outreach) conversation with the community, facilitated by Gina Hart.
+      
+      **Cindy (Tower Lowen):** Thanked the school committee for their work over several difficult years, acknowledged the district's efforts on curriculum and racial justice, and expressed enthusiasm about the new school's exterior signage revealed during the meeting. She requested a copy of the building photo to share on the Marblehead Racial Justice Team Facebook page.
+    key_speakers: ["Scott Solberg (Ramsay Road, resident/CPAC parent)", "Cindy Tower Lowen (resident)", "Michelle Cresta (CFO, referenced)", "Gina Hart (referenced)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 11267
+    end_seconds: 11289
+    headline: "Meeting adjourned at 9:08 PM with no correspondence"
+    dek: "The chair confirmed no additional correspondence and officially adjourned the meeting."
+    summary: "The chair noted no correspondence to share and adjourned the meeting at 9:08 PM."
+    key_speakers: ["Chair (unnamed)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

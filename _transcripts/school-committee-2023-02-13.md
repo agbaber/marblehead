@@ -9,7 +9,67 @@ video_url: "https://www.youtube.com/watch?v=03oaZfGYLNo"
 duration_seconds: 3966
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee directed to cut ~$850K from FY24 budget under $800K town appropriation guidance"
+  summary: "The Marblehead School Committee held a special session to give Superintendent Dr. Bucky direction ahead of a Thursday leadership meeting. The town's guidance of an $800,000 increase over FY23 — with no available free cash — requires the district to cut roughly $850,000 from programs and personnel to produce a balanced budget. The committee also discussed a separate override budget to be developed simultaneously, with a fincom presentation tentatively scheduled for April 3rd and a notification deadline of April 15th for affected staff."
+  decisions:
+    - "Directed Superintendent to produce an itemized list of eliminated positions and expenses by Thursday"
+    - "Directed Superintendent to develop a prioritized override budget alongside the level-funded budget"
+    - "Requested a retirement savings line be added to the budget tracking sheet"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 109
+    end_seconds: 3962
+    featured: true
+    headline: "District faces ~$850K in cuts under $800K town appropriation guidance with no free cash buffer"
+    dek: "The school committee discussed the mechanics of producing both a level-funded budget and a parallel override budget before an April 3rd fincom hearing."
+    summary: |
+      ## Budget Situation
+      
+      The School Committee convened at 9:00 AM for a special session called by Superintendent Dr. Bucky to provide formal direction before a Thursday leadership meeting.
+      
+      **Key figures discussed:**
+      
+      | Item | Amount |
+      |---|---|
+      | Town appropriation guidance (increase over FY23) | ~$800,000 |
+      | Contractual obligation roll-forward (before error correction) | ~$1.4M |
+      | FTE calculation error (partial-time staff counted as full FTE) | ~$584,000 |
+      | Additional staffing requests eliminated from aspirational budgets | ~$556,000 |
+      | Supply/service line reductions | ~$500,000+ |
+      | Remaining gap requiring cuts to programs and people | ~$643,000–$850,000 |
+      | Per-student spending reduction under the $800K budget vs. FY23 | ~$1,351 (~7.7%) |
+      
+      **Town fiscal context:** The town administrator (Thatcher) communicated that the $800,000 increase is guidance based on available levy capacity; the town has exhausted its free cash, which in prior years had been used to bridge budget gaps. There is no additional flexibility without an override.
+      
+      **Two-budget approach:** The committee agreed it must simultaneously produce:
+      1. A balanced "800 budget" for fincom review (target: April 3rd fincom presentation, with documents due two weeks prior)
+      2. An override budget specifying what would be restored if voters approve additional funding
+      
+      **Staffing concerns:** Dr. Bucky noted that budget uncertainty is already affecting staff morale, with employees asking principals whether they will have jobs next year. The contractual notification deadline for non-renewal is **April 15th**. If an override passes, the district could call back notified staff around June 22nd–23rd.
+      
+      **Committee direction to administration:**
+      - Provide an itemized list of positions being eliminated (without individual names) and what expenses are being cut, for Thursday's meeting
+      - Develop a prioritized list of override asks aligned to the district's Strategic Plan for Success
+      - Include a retirement savings line on the tracking sheet (5–6 retirements now known, with roughly $50,000 recaptured per retirement)
+      - Explore whether removing unfilled positions from benefits rosters produces additional savings
+      
+      **Fincom liaison input (Pat Franklin, public comment):** Cautioned that characterizing the fincom liaison subcommittee as broadly supportive of specific items was premature; the committee's interest in understanding costs to meet state frameworks and reduce special education out-of-district placements is a work in progress.
+      
+      **Student behavioral needs:** Committee member Sarah Fox (chair) and others emphasized that student behavioral and social-emotional needs — exacerbated by pandemic-era disruptions — must be prominent in any override ask, noting that kids cannot access curriculum when they are not emotionally regulated. A remaining ESSER balance is earmarked for social-emotional programming.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Dr. Bucky (Superintendent)", "Michelle (CFO/Finance Director)", "Tom (School Committee member)", "Megan (School Committee member)", "Allison (School Committee member)", "Sarah Gold (School Committee member)", "Pat Franklin (Finance Committee liaison, public comment)"]
+  - topic: public-comment
+    topic_confidence: 0.85
+    start_seconds: 3829
+    end_seconds: 3962
+    headline: "Fincom liaison Pat Franklin urges caution on characterizing committee support for specific override items"
+    dek: "Franklin clarified that the fincom liaison subcommittee's interest in areas like special education cost reduction and state framework compliance does not constitute formal endorsement of specific spending items."
+    summary: "Pat Franklin, attending in a finance committee liaison capacity, asked the school committee chair to clarify that remarks attributing fincom support to specific override items — such as raising paraprofessional wages to minimum wage, expanding technology/STEAM curriculum, and investing in out-of-district placement reduction programs — were preliminary. Franklin noted that understanding costs to meet minimum state frameworks was a personal suggestion and that the broader fincom discussion was a work in progress."
+    key_speakers: ["Pat Franklin (Finance Committee liaison)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;
