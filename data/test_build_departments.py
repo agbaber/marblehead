@@ -24,5 +24,16 @@ def test_line_items_sum_to_department_total():
     for key, dept in view["departments"].items():
         if not dept["line_items"]:
             continue
+        if not dept["line_items_reconcile"]:
+            continue
         line_sum = sum(li["fy27_proposed"] for li in dept["line_items"])
-        assert line_sum == dept["budget"]["fy27_proposed"], f"{key} lines != total"
+        total = dept["budget"]["fy27_proposed"]
+        assert abs(line_sum - total) <= 1, f"{key} lines != total"
+
+
+def test_schools_flagged_non_reconciling():
+    view = build_view()
+    for key in ("school_high", "school_village"):
+        dept = view["departments"][key]
+        assert dept["line_items_reconcile"] is False, f"{key} should be flagged"
+        assert dept["line_items"], f"{key} line items should be preserved"

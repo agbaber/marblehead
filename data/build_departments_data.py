@@ -58,6 +58,7 @@ def _departments_from_budget(budget):
             "role_source": None,
             "budget": {k: r.get(k) for k in _BUDGET_KEYS},
             "line_items": [],
+            "line_items_reconcile": True,
             "headcount": None,
             "overrides": [],
         }
@@ -87,17 +88,20 @@ def _departments_from_budget(budget):
     # town's FY27 Proposed Budget book and already reflects negotiated
     # cuts that are not allocated back down to individual munis lines in
     # this source data (fy26_budget reconciles to the penny; fy27_proposed
-    # does not -- see data/project_schools_budget_page notes). Publishing
-    # those non-reconciling lines as "line items" of the reduced total
-    # would misrepresent the budget, so line_items are only kept for a
-    # department when they actually sum to its reported fy27_proposed
-    # total; otherwise they're dropped rather than shown as if they add up.
+    # does not -- see data/project_schools_budget_page notes).
+    #
+    # Schools are the budget item residents most want to see, so the line
+    # detail is preserved rather than dropped. Instead each department
+    # carries a line_items_reconcile flag: True when the lines' fy27
+    # sum matches the department total (within $1 rounding), False for the
+    # six schools whose lines are level-funded pre-reduction. The page can
+    # surface a caveat next to non-reconciling line items.
     for dept in depts.values():
         if not dept["line_items"]:
             continue
         line_sum = sum(li["fy27_proposed"] or 0 for li in dept["line_items"])
-        if line_sum != dept["budget"]["fy27_proposed"]:
-            dept["line_items"] = []
+        total = dept["budget"]["fy27_proposed"] or 0
+        dept["line_items_reconcile"] = abs(line_sum - total) <= 1
 
     return depts
 
