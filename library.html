@@ -45,6 +45,9 @@ og_url: https://marbleheaddata.org/library.html
   .tldr li:first-child::before { top: 10px; }
   .tldr li strong { color: var(--text); }
   .tldr--teal { border-top-color: var(--c-teal); }
+  /* Suppress the global `ul.tldr { list-style: disc }` so these standalone
+     lists show only the custom ::before dot, not a native disc as well. */
+  ul.tldr.tldr--teal { list-style: none; }
 
   /* Page-scoped: key-stat row */
   .stat-row {
@@ -233,7 +236,7 @@ og_url: https://marbleheaddata.org/library.html
 
 <h2 id="comparison">How Abbot compares to other towns</h2>
 
-<p>Measured against its usual peer set plus Harwich, a Cape town sometimes raised as a comparison, Marblehead already funds its library relatively well. Per resident, Abbot's municipal appropriation is the <strong>second-highest of the five</strong>, behind only Harwich.<sup class="cite" data-href="https://mblc.state.ma.us/programs-and-support/library-statistics/" data-source="MBLC Library Statistics, FY2025 ARIS and Financial Report data files (2025_FinancialData.xlsx, 2025_Staffing_Summary.xlsx, 2025_Circulations.xlsx). Municipal appropriation per capita: Marblehead $68.20, Swampscott $55.37, Melrose $43.69, Stoneham $43.43, Harwich $86.24. FTE: Marblehead 19.41, Swampscott 11.19, Melrose 17.66, Stoneham 13.50, Harwich 11.86."></sup></p>
+<p>The towns this site usually compares Marblehead with are Swampscott, Melrose, and Stoneham; a resident raised Harwich, a Cape Cod town, as another. Per resident, Abbot's municipal appropriation is the <strong>second-highest of the five</strong>, behind only Harwich.<sup class="cite" data-href="https://mblc.state.ma.us/programs-and-support/library-statistics/" data-source="MBLC Library Statistics, FY2025 ARIS and Financial Report data files (2025_FinancialData.xlsx, 2025_Staffing_Summary.xlsx, 2025_Circulations.xlsx). Municipal appropriation per capita: Marblehead $68.20, Swampscott $55.37, Melrose $43.69, Stoneham $43.43, Harwich $86.24. FTE: Marblehead 19.41, Swampscott 11.19, Melrose 17.66, Stoneham 13.50, Harwich 11.86."></sup></p>
 
 <table class="peer-table">
   <thead>
