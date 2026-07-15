@@ -19,6 +19,8 @@ import csv
 import json
 from pathlib import Path
 
+import yaml
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
@@ -71,6 +73,37 @@ _HEADCOUNT_CROSSWALK = {
     "school_village": "VILLAGE SCHOOL",
 }
 
+# Budget department key -> org_chart.yml town.departments "name".
+# Descriptive role text (leadership + context) may be shared by two budget lines
+# run by the same office (e.g. town_clerk + election_registration). That is fine
+# for role TEXT (not a summed number). Departments with no clean org_chart entry
+# (volunteer boards, accounting lines, schools, enterprise sub-lines) stay None.
+_ROLE_CROSSWALK = {
+    "select_board": "Select Board Office",
+    "finance": "Finance",
+    "assessor": "Assessors' Office",
+    "town_clerk": "Town Clerk + Elections",
+    "election_registration": "Town Clerk + Elections",
+    "human_resources": "Human Resources",
+    "community_development": "Community Development and Planning",
+    "public_buildings": "Public Buildings",
+    "police": "Police Department",
+    "fire": "Fire Department",
+    "building_inspection": "Building Inspection",
+    "public_works_ops": "Department of Public Works",
+    "waste_collection": "Solid Waste",
+    "curbside_collection": "Solid Waste",
+    "cemetery": "Cemetery Department",
+    "health": "Health Department",
+    "council_on_aging": "Council on Aging",
+    "veterans_benefits": "Veterans Services",
+    "library": "Abbot Public Library",
+    "rec_park": "Recreation & Parks",
+    "harbor": "Harbormaster",
+    "sewer": "Sewer Department",
+    "water": "Water Department",
+}
+
 
 def _load_budget() -> dict:
     return json.loads((DATA / "town_budget_FY27.json").read_text())
@@ -94,6 +127,23 @@ def _load_headcount() -> dict:
     return series
 
 
+def _load_org_roles() -> dict:
+    """Return {org_chart "name": {role, role_note, role_source, role_source_url}}."""
+    doc = yaml.safe_load((ROOT / "_data" / "org_chart.yml").read_text())
+    roles = {}
+    for entry in doc.get("town", {}).get("departments", []):
+        name = entry.get("name")
+        if not name:
+            continue
+        roles[name] = {
+            "role": entry.get("head_title"),
+            "role_note": entry.get("note"),
+            "role_source": entry.get("source_label"),
+            "role_source_url": entry.get("source_url"),
+        }
+    return roles
+
+
 def _departments_from_budget(budget: dict) -> dict:
     rows = budget["rows"]
     depts = {}
@@ -107,6 +157,8 @@ def _departments_from_budget(budget: dict) -> dict:
             "function_label": _FUNCTION_LABELS.get(r["function"], r["function"]),
             "role": None,
             "role_source": None,
+            "role_note": None,
+            "role_source_url": None,
             "budget": {k: r.get(k) for k in _BUDGET_KEYS},
             "line_items": [],
             "line_items_reconcile": True,
@@ -166,6 +218,12 @@ def build_view() -> dict:
         csv_name = _HEADCOUNT_CROSSWALK.get(key)
         if csv_name and csv_name in headcount:
             dept["headcount"] = headcount[csv_name]
+
+    org_roles = _load_org_roles()
+    for key, dept in departments.items():
+        org_name = _ROLE_CROSSWALK.get(key)
+        if org_name and org_name in org_roles:
+            dept.update(org_roles[org_name])
 
     return {
         "schema_version": 1,

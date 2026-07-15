@@ -60,3 +60,24 @@ def test_headcount_crosswalk_targets_unique():
     # or one department's staff headcount gets duplicated onto another.
     values = list(_HEADCOUNT_CROSSWALK.values())
     assert len(set(values)) == len(values)
+
+
+def test_police_role_populated_from_org_chart():
+    view = build_view()
+    police = view["departments"]["police"]
+    assert police["role"] == "Chief of Police"
+    assert police["role_source"] is not None
+
+
+def test_role_none_when_no_org_chart_match():
+    view = build_view()
+    # reserve_fund is an accounting line, not a real org_chart department
+    assert view["departments"]["reserve_fund"]["role"] is None
+    assert view["departments"]["moderator"]["role"] is None
+
+
+def test_role_note_and_source_url_present_for_finance():
+    view = build_view()
+    finance = view["departments"]["finance"]
+    assert finance["role"] == "Finance Director / CFO"
+    assert finance["role_source_url"] is not None
