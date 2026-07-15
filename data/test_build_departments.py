@@ -133,3 +133,12 @@ def test_role_crosswalk_targets_exist_in_org_chart():
     names = {d["name"] for d in doc["town"]["departments"]}
     for org_name in _ROLE_CROSSWALK.values():
         assert org_name in names, f"{org_name!r} not in org_chart.yml"
+
+
+def test_functions_index_has_ten_groups():
+    view = build_view()
+    assert len(view["functions"]) == 10
+    keys = {f["key"] for f in view["functions"]}
+    assert "public_safety" in keys and "schools" in keys
+    for f in view["functions"]:
+        assert "label" in f and "fy27_proposed" in f

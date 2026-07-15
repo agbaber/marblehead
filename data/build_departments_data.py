@@ -267,6 +267,16 @@ def build_view() -> dict:
                 "tier_3": tier["tier_3"],
             })
 
+    functions = []
+    for r in budget["rows"]:
+        if r.get("level") == "function":
+            functions.append({
+                "key": r["id"],
+                "label": _FUNCTION_LABELS.get(r["id"], r["id"]),
+                "fy27_proposed": r.get("fy27_proposed"),
+                "change_pct": r.get("change_pct"),
+            })
+
     return {
         "schema_version": 1,
         "source_note": ("Budget from FY27 Proposed Budget (No Override); "
@@ -274,7 +284,7 @@ def build_view() -> dict:
                         "org_chart.yml; override restorations from the FY27 "
                         "override tiers. See town-budget.html and org-chart.html "
                         "for full citations."),
-        "functions": [],
+        "functions": functions,
         "departments": departments,
     }
 

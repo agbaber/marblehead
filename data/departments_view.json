@@ -1,0 +1,5728 @@
+{
+  "schema_version": 1,
+  "source_note": "Budget from FY27 Proposed Budget (No Override); headcount from town payroll FY08-26; roles from org_chart.yml; override restorations from the FY27 override tiers. See town-budget.html and org-chart.html for full citations.",
+  "functions": [
+    {
+      "key": "general_government",
+      "label": "General Government",
+      "fy27_proposed": 4618544,
+      "change_pct": -0.0286
+    },
+    {
+      "key": "public_safety",
+      "label": "Public Safety",
+      "fy27_proposed": 11861711,
+      "change_pct": 0.0555
+    },
+    {
+      "key": "schools",
+      "label": "Schools",
+      "fy27_proposed": 47620287,
+      "change_pct": -0.0305
+    },
+    {
+      "key": "public_works",
+      "label": "Public Works and Facilities",
+      "fy27_proposed": 6862170,
+      "change_pct": 0.1741
+    },
+    {
+      "key": "human_services",
+      "label": "Human Services",
+      "fy27_proposed": 881569,
+      "change_pct": -0.0183
+    },
+    {
+      "key": "culture_recreation",
+      "label": "Culture and Recreation",
+      "fy27_proposed": 1870167,
+      "change_pct": -0.2631
+    },
+    {
+      "key": "other_general_government",
+      "label": "Other General Government",
+      "fy27_proposed": 24965092,
+      "change_pct": 0.1096
+    },
+    {
+      "key": "sewer_enterprise",
+      "label": "Sewer Enterprise",
+      "fy27_proposed": 4799291,
+      "change_pct": -0.1325
+    },
+    {
+      "key": "water_enterprise",
+      "label": "Water Enterprise",
+      "fy27_proposed": 6865301,
+      "change_pct": 0.0621
+    },
+    {
+      "key": "harbor_enterprise",
+      "label": "Harbor Enterprise",
+      "fy27_proposed": 1319500,
+      "change_pct": 0.0334
+    }
+  ],
+  "departments": {
+    "moderator": {
+      "name": "moderator",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": 100,
+        "fy26_budget": 100,
+        "fy27_proposed": 100,
+        "change_dollars": 0,
+        "change_pct": 0.0
+      },
+      "line_items": [
+        {
+          "description": "Officials Expense",
+          "fy25_actual": 100,
+          "fy26_budget": 100,
+          "fy27_proposed": 100,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": []
+    },
+    "select_board": {
+      "name": "select_board",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": "Town Administrator",
+      "role_source": "Town of Marblehead, Select Board Office; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, SELECT BOARD + TOWN COUNSEL cost centers); Chief Procurement Officer reclassified per Article 20 of the 2026 Town Meeting warrant",
+      "role_note": "Administrative office supporting the five elected Select Board members. FY27 no-override budget eliminates one Assistant Town Administrator line.",
+      "role_source_url": "https://marbleheadma.gov/selectboard-office/",
+      "budget": {
+        "fy25_actual": 581924,
+        "fy26_budget": 700051,
+        "fy27_proposed": 723176,
+        "change_dollars": 23125,
+        "change_pct": 0.03303330757330537
+      },
+      "line_items": [
+        {
+          "description": "Officials Expense",
+          "fy25_actual": 0,
+          "fy26_budget": 5500,
+          "fy27_proposed": 0,
+          "change_dollars": -5500,
+          "change_pct": -1.0
+        },
+        {
+          "description": "Salaries",
+          "fy25_actual": 369673,
+          "fy26_budget": 502138,
+          "fy27_proposed": 502714,
+          "change_dollars": 576,
+          "change_pct": 0.0011
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 212251,
+          "fy26_budget": 192413,
+          "fy27_proposed": 220462,
+          "change_dollars": 28049,
+          "change_pct": 0.1458
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 9
+        },
+        {
+          "fy": 2009,
+          "headcount": 8
+        },
+        {
+          "fy": 2010,
+          "headcount": 8
+        },
+        {
+          "fy": 2011,
+          "headcount": 8
+        },
+        {
+          "fy": 2012,
+          "headcount": 8
+        },
+        {
+          "fy": 2013,
+          "headcount": 6
+        },
+        {
+          "fy": 2014,
+          "headcount": 6
+        },
+        {
+          "fy": 2015,
+          "headcount": 5
+        },
+        {
+          "fy": 2016,
+          "headcount": 4
+        },
+        {
+          "fy": 2017,
+          "headcount": 4
+        },
+        {
+          "fy": 2018,
+          "headcount": 4
+        },
+        {
+          "fy": 2019,
+          "headcount": 6
+        },
+        {
+          "fy": 2020,
+          "headcount": 6
+        },
+        {
+          "fy": 2021,
+          "headcount": 4
+        },
+        {
+          "fy": 2022,
+          "headcount": 5
+        },
+        {
+          "fy": 2023,
+          "headcount": 4
+        },
+        {
+          "fy": 2024,
+          "headcount": 7
+        },
+        {
+          "fy": 2025,
+          "headcount": 8
+        },
+        {
+          "fy": 2026,
+          "headcount": 6
+        }
+      ],
+      "overrides": []
+    },
+    "finance_committee": {
+      "name": "finance_committee",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": 2985,
+        "fy26_budget": 6375,
+        "fy27_proposed": 6375,
+        "change_dollars": 0,
+        "change_pct": 0.0
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 0,
+          "fy26_budget": 0,
+          "fy27_proposed": 0,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 2985,
+          "fy26_budget": 6375,
+          "fy27_proposed": 6375,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": []
+    },
+    "reserve_fund": {
+      "name": "reserve_fund",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": 0,
+        "fy26_budget": 444000,
+        "fy27_proposed": 414000,
+        "change_dollars": -30000,
+        "change_pct": -0.06756756756756757
+      },
+      "line_items": [
+        {
+          "description": "Reserves",
+          "fy25_actual": 0,
+          "fy26_budget": 444000,
+          "fy27_proposed": 414000,
+          "change_dollars": -30000,
+          "change_pct": -0.0676
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": [
+        {
+          "description": "Restore Finance Committee Reserve Fund Cut",
+          "tier_1": 26000,
+          "tier_2": 26000,
+          "tier_3": 26000
+        }
+      ]
+    },
+    "finance": {
+      "name": "finance",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": "Finance Director / CFO",
+      "role_source": "Town of Marblehead, Finance Department page; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, FINANCE cost center)",
+      "role_note": "Finance Director also serves as CFO. Town has no separate IT department, so IT reports through Finance.",
+      "role_source_url": "https://marbleheadma.gov/finance-department/",
+      "budget": {
+        "fy25_actual": 1699903,
+        "fy26_budget": 1688913,
+        "fy27_proposed": 1778805,
+        "change_dollars": 89892,
+        "change_pct": 0.05322476646221564
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 798886,
+          "fy26_budget": 841786,
+          "fy27_proposed": 847395,
+          "change_dollars": 5609,
+          "change_pct": 0.0067
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 901017,
+          "fy26_budget": 847127,
+          "fy27_proposed": 931410,
+          "change_dollars": 84283,
+          "change_pct": 0.09949999999999999
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 6
+        },
+        {
+          "fy": 2009,
+          "headcount": 6
+        },
+        {
+          "fy": 2010,
+          "headcount": 6
+        },
+        {
+          "fy": 2011,
+          "headcount": 6
+        },
+        {
+          "fy": 2012,
+          "headcount": 7
+        },
+        {
+          "fy": 2013,
+          "headcount": 7
+        },
+        {
+          "fy": 2014,
+          "headcount": 6
+        },
+        {
+          "fy": 2015,
+          "headcount": 9
+        },
+        {
+          "fy": 2016,
+          "headcount": 9
+        },
+        {
+          "fy": 2017,
+          "headcount": 10
+        },
+        {
+          "fy": 2018,
+          "headcount": 10
+        },
+        {
+          "fy": 2019,
+          "headcount": 10
+        },
+        {
+          "fy": 2020,
+          "headcount": 9
+        },
+        {
+          "fy": 2021,
+          "headcount": 9
+        },
+        {
+          "fy": 2022,
+          "headcount": 11
+        },
+        {
+          "fy": 2023,
+          "headcount": 12
+        },
+        {
+          "fy": 2024,
+          "headcount": 10
+        },
+        {
+          "fy": 2025,
+          "headcount": 10
+        },
+        {
+          "fy": 2026,
+          "headcount": 9
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Restore Finance Staffing Cut",
+          "tier_1": 68287,
+          "tier_2": 68287,
+          "tier_3": 68287
+        },
+        {
+          "description": "Restore Finance Technology and Training Cut",
+          "tier_1": 58361,
+          "tier_2": 58361,
+          "tier_3": 58361
+        },
+        {
+          "description": "Increase Finance Staffing - IT Director",
+          "tier_1": 0,
+          "tier_2": 150000,
+          "tier_3": 150000
+        },
+        {
+          "description": "Increase Finance Staffing - Budget Analyst",
+          "tier_1": 0,
+          "tier_2": 70000,
+          "tier_3": 70000
+        }
+      ]
+    },
+    "assessor": {
+      "name": "assessor",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": "Chief Assessor",
+      "role_source": "Town of Marblehead, Assessor's Office page; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, ASSESSOR cost center)",
+      "role_note": "Reports up through the Finance Director / CFO. The elected Board of Assessors (3 members) sets policy.",
+      "role_source_url": "https://marbleheadma.gov/assessors-office/",
+      "budget": {
+        "fy25_actual": 385405,
+        "fy26_budget": 394221,
+        "fy27_proposed": 388003,
+        "change_dollars": -6218,
+        "change_pct": -0.01577287866450544
+      },
+      "line_items": [
+        {
+          "description": "Officials Expense",
+          "fy25_actual": 300,
+          "fy26_budget": 300,
+          "fy27_proposed": 300,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Salaries",
+          "fy25_actual": 263503,
+          "fy26_budget": 258696,
+          "fy27_proposed": 268502,
+          "change_dollars": 9806,
+          "change_pct": 0.0379
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 121602,
+          "fy26_budget": 135225,
+          "fy27_proposed": 119201,
+          "change_dollars": -16024,
+          "change_pct": -0.1185
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 3
+        },
+        {
+          "fy": 2009,
+          "headcount": 3
+        },
+        {
+          "fy": 2010,
+          "headcount": 3
+        },
+        {
+          "fy": 2011,
+          "headcount": 2
+        },
+        {
+          "fy": 2012,
+          "headcount": 2
+        },
+        {
+          "fy": 2013,
+          "headcount": 2
+        },
+        {
+          "fy": 2014,
+          "headcount": 2
+        },
+        {
+          "fy": 2015,
+          "headcount": 2
+        },
+        {
+          "fy": 2016,
+          "headcount": 2
+        },
+        {
+          "fy": 2017,
+          "headcount": 3
+        },
+        {
+          "fy": 2018,
+          "headcount": 3
+        },
+        {
+          "fy": 2019,
+          "headcount": 3
+        },
+        {
+          "fy": 2020,
+          "headcount": 3
+        },
+        {
+          "fy": 2021,
+          "headcount": 3
+        },
+        {
+          "fy": 2022,
+          "headcount": 5
+        },
+        {
+          "fy": 2023,
+          "headcount": 6
+        },
+        {
+          "fy": 2024,
+          "headcount": 3
+        },
+        {
+          "fy": 2025,
+          "headcount": 4
+        },
+        {
+          "fy": 2026,
+          "headcount": 3
+        }
+      ],
+      "overrides": []
+    },
+    "town_counsel": {
+      "name": "town_counsel",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": 172352,
+        "fy26_budget": 115000,
+        "fy27_proposed": 278000,
+        "change_dollars": 163000,
+        "change_pct": 1.4173913043478261
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 2000,
+          "fy26_budget": 2000,
+          "fy27_proposed": 2000,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 170352,
+          "fy26_budget": 113000,
+          "fy27_proposed": 276000,
+          "change_dollars": 163000,
+          "change_pct": 1.4425
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2009,
+          "headcount": 1
+        },
+        {
+          "fy": 2010,
+          "headcount": 1
+        },
+        {
+          "fy": 2011,
+          "headcount": 1
+        },
+        {
+          "fy": 2012,
+          "headcount": 1
+        },
+        {
+          "fy": 2013,
+          "headcount": 1
+        }
+      ],
+      "overrides": []
+    },
+    "parking_clerk": {
+      "name": "parking_clerk",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": 4080,
+        "fy26_budget": 8400,
+        "fy27_proposed": 8400,
+        "change_dollars": 0,
+        "change_pct": 0.0
+      },
+      "line_items": [
+        {
+          "description": "Expense",
+          "fy25_actual": 4080,
+          "fy26_budget": 8400,
+          "fy27_proposed": 8400,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": []
+    },
+    "town_clerk": {
+      "name": "town_clerk",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": "Town Clerk",
+      "role_source": "Town of Marblehead, Town Clerk + Elections pages; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, TOWN CLERK + ELECTIONS cost centers); Town Clerk compensation set by Article 18 of the 2026 Town Meeting warrant",
+      "role_note": "Town Clerk is elected (3-year term). FY27 no-override budget drops the office from 3 employees to 2.",
+      "role_source_url": "https://marbleheadma.gov/town-clerk/",
+      "budget": {
+        "fy25_actual": 242680,
+        "fy26_budget": 244733,
+        "fy27_proposed": 201877,
+        "change_dollars": -42856,
+        "change_pct": -0.17511328672471632
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 224727,
+          "fy26_budget": 231396,
+          "fy27_proposed": 173785,
+          "change_dollars": -57611,
+          "change_pct": -0.249
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 17953,
+          "fy26_budget": 13337,
+          "fy27_proposed": 28092,
+          "change_dollars": 14755,
+          "change_pct": 1.1063
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 2
+        },
+        {
+          "fy": 2009,
+          "headcount": 3
+        },
+        {
+          "fy": 2010,
+          "headcount": 2
+        },
+        {
+          "fy": 2011,
+          "headcount": 2
+        },
+        {
+          "fy": 2012,
+          "headcount": 2
+        },
+        {
+          "fy": 2013,
+          "headcount": 3
+        },
+        {
+          "fy": 2014,
+          "headcount": 3
+        },
+        {
+          "fy": 2015,
+          "headcount": 3
+        },
+        {
+          "fy": 2016,
+          "headcount": 3
+        },
+        {
+          "fy": 2017,
+          "headcount": 3
+        },
+        {
+          "fy": 2018,
+          "headcount": 3
+        },
+        {
+          "fy": 2019,
+          "headcount": 3
+        },
+        {
+          "fy": 2020,
+          "headcount": 3
+        },
+        {
+          "fy": 2021,
+          "headcount": 3
+        },
+        {
+          "fy": 2022,
+          "headcount": 3
+        },
+        {
+          "fy": 2023,
+          "headcount": 3
+        },
+        {
+          "fy": 2024,
+          "headcount": 3
+        },
+        {
+          "fy": 2025,
+          "headcount": 3
+        },
+        {
+          "fy": 2026,
+          "headcount": 3
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Restore Town Clerk Special Clerk Staffing Cut",
+          "tier_1": 0,
+          "tier_2": 66125,
+          "tier_3": 66125
+        }
+      ]
+    },
+    "election_registration": {
+      "name": "election_registration",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": "Town Clerk",
+      "role_source": "Town of Marblehead, Town Clerk + Elections pages; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, TOWN CLERK + ELECTIONS cost centers); Town Clerk compensation set by Article 18 of the 2026 Town Meeting warrant",
+      "role_note": "Town Clerk is elected (3-year term). FY27 no-override budget drops the office from 3 employees to 2.",
+      "role_source_url": "https://marbleheadma.gov/town-clerk/",
+      "budget": {
+        "fy25_actual": 80947,
+        "fy26_budget": 71015,
+        "fy27_proposed": 132200,
+        "change_dollars": 61185,
+        "change_pct": 0.8615785397451242
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 13114,
+          "fy26_budget": 16150,
+          "fy27_proposed": 49150,
+          "change_dollars": 33000,
+          "change_pct": 2.0433000000000003
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 67833,
+          "fy26_budget": 54865,
+          "fy27_proposed": 83050,
+          "change_dollars": 28185,
+          "change_pct": 0.5136999999999999
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 62
+        },
+        {
+          "fy": 2009,
+          "headcount": 62
+        },
+        {
+          "fy": 2010,
+          "headcount": 65
+        },
+        {
+          "fy": 2011,
+          "headcount": 60
+        },
+        {
+          "fy": 2012,
+          "headcount": 51
+        },
+        {
+          "fy": 2013,
+          "headcount": 50
+        },
+        {
+          "fy": 2014,
+          "headcount": 69
+        },
+        {
+          "fy": 2015,
+          "headcount": 55
+        },
+        {
+          "fy": 2016,
+          "headcount": 49
+        },
+        {
+          "fy": 2017,
+          "headcount": 55
+        },
+        {
+          "fy": 2018,
+          "headcount": 56
+        },
+        {
+          "fy": 2019,
+          "headcount": 65
+        },
+        {
+          "fy": 2020,
+          "headcount": 48
+        },
+        {
+          "fy": 2021,
+          "headcount": 44
+        },
+        {
+          "fy": 2022,
+          "headcount": 47
+        },
+        {
+          "fy": 2023,
+          "headcount": 51
+        },
+        {
+          "fy": 2024,
+          "headcount": 50
+        },
+        {
+          "fy": 2025,
+          "headcount": 63
+        },
+        {
+          "fy": 2026,
+          "headcount": 25
+        }
+      ],
+      "overrides": []
+    },
+    "planning_board": {
+      "name": "planning_board",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": 7835,
+        "fy26_budget": 5775,
+        "fy27_proposed": 1775,
+        "change_dollars": -4000,
+        "change_pct": -0.6926406926406926
+      },
+      "line_items": [
+        {
+          "description": "Expense",
+          "fy25_actual": 7835,
+          "fy26_budget": 5775,
+          "fy27_proposed": 1775,
+          "change_dollars": -4000,
+          "change_pct": -0.6926000000000001
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": []
+    },
+    "public_buildings": {
+      "name": "public_buildings",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": "Superintendent of Public Buildings",
+      "role_source": "Town Administrator page lists Superintendent of Public Buildings among reporting positions; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, PUBLIC BUILDINGS cost center); Building Commissioner / Superintendent dual role per Annual Report 2025",
+      "role_note": "Building Commissioner doubles as Superintendent (salary sits in Building Inspection). FY27 no-override budget cuts both custodians for Mary Alley and Abbot Hall.",
+      "role_source_url": "https://marbleheadma.gov/town-administrator/",
+      "budget": {
+        "fy25_actual": 262340,
+        "fy26_budget": 286826,
+        "fy27_proposed": 178671,
+        "change_dollars": -108155,
+        "change_pct": -0.37707530000767014
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 126862,
+          "fy26_budget": 136931,
+          "fy27_proposed": 18976,
+          "change_dollars": -117955,
+          "change_pct": -0.8614
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 135478,
+          "fy26_budget": 149895,
+          "fy27_proposed": 159695,
+          "change_dollars": 9800,
+          "change_pct": 0.0654
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 5
+        },
+        {
+          "fy": 2009,
+          "headcount": 6
+        },
+        {
+          "fy": 2010,
+          "headcount": 6
+        },
+        {
+          "fy": 2011,
+          "headcount": 6
+        },
+        {
+          "fy": 2012,
+          "headcount": 5
+        },
+        {
+          "fy": 2013,
+          "headcount": 5
+        },
+        {
+          "fy": 2014,
+          "headcount": 5
+        },
+        {
+          "fy": 2015,
+          "headcount": 6
+        },
+        {
+          "fy": 2016,
+          "headcount": 5
+        },
+        {
+          "fy": 2017,
+          "headcount": 6
+        },
+        {
+          "fy": 2018,
+          "headcount": 4
+        },
+        {
+          "fy": 2019,
+          "headcount": 3
+        },
+        {
+          "fy": 2020,
+          "headcount": 3
+        },
+        {
+          "fy": 2021,
+          "headcount": 3
+        },
+        {
+          "fy": 2022,
+          "headcount": 7
+        },
+        {
+          "fy": 2023,
+          "headcount": 6
+        },
+        {
+          "fy": 2024,
+          "headcount": 7
+        },
+        {
+          "fy": 2025,
+          "headcount": 5
+        },
+        {
+          "fy": 2026,
+          "headcount": 6
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Restore Public Buildings Custodians Staffing Cuts",
+          "tier_1": 122554,
+          "tier_2": 122554,
+          "tier_3": 122554
+        },
+        {
+          "description": "Increase Public Buildings Maintenance",
+          "tier_1": 0,
+          "tier_2": 450000,
+          "tier_3": 450000
+        }
+      ]
+    },
+    "human_resources": {
+      "name": "human_resources",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": "Director of Human Resources",
+      "role_source": "Town of Marblehead, Human Resources Department; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, HUMAN RESOURCES cost center)",
+      "role_note": "Created January 2024. Marblehead's first dedicated HR department \u2014 previously handled informally out of the Select Board office.",
+      "role_source_url": "https://marbleheadma.gov/hr/",
+      "budget": {
+        "fy25_actual": 358452,
+        "fy26_budget": 294927,
+        "fy27_proposed": 303480,
+        "change_dollars": 8553,
+        "change_pct": 0.029000396708337997
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 269369,
+          "fy26_budget": 279927,
+          "fy27_proposed": 299491,
+          "change_dollars": 19564,
+          "change_pct": 0.0699
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 89083,
+          "fy26_budget": 15000,
+          "fy27_proposed": 3989,
+          "change_dollars": -11011,
+          "change_pct": -0.7341
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2022,
+          "headcount": 1
+        },
+        {
+          "fy": 2023,
+          "headcount": 2
+        },
+        {
+          "fy": 2024,
+          "headcount": 3
+        },
+        {
+          "fy": 2025,
+          "headcount": 3
+        },
+        {
+          "fy": 2026,
+          "headcount": 3
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Restore HR Other Technical Advertising Subscriptions Cuts",
+          "tier_1": 11000,
+          "tier_2": 11000,
+          "tier_3": 11000
+        }
+      ]
+    },
+    "community_development": {
+      "name": "community_development",
+      "function": "general_government",
+      "function_label": "General Government",
+      "role": "Director of Community Development & Planning",
+      "role_source": "Town of Marblehead, Community Development & Planning; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, COMMUNITY DEVELOPMENT cost center)",
+      "role_note": "Created at the May 2024 Town Meeting. FY27 no-override budget eliminates the Director, Sustainability Coordinator, and Grant Coordinator (~61% cut).",
+      "role_source_url": "https://marbleheadma.gov/development-planning/",
+      "budget": {
+        "fy25_actual": 339182,
+        "fy26_budget": 494402,
+        "fy27_proposed": 203682,
+        "change_dollars": -290720,
+        "change_pct": -0.5880235112317507
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 252947,
+          "fy26_budget": 456696,
+          "fy27_proposed": 177946,
+          "change_dollars": -278750,
+          "change_pct": -0.6103999999999999
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 86235,
+          "fy26_budget": 37706,
+          "fy27_proposed": 25736,
+          "change_dollars": -11970,
+          "change_pct": -0.3175
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2018,
+          "headcount": 1
+        },
+        {
+          "fy": 2019,
+          "headcount": 1
+        },
+        {
+          "fy": 2020,
+          "headcount": 1
+        },
+        {
+          "fy": 2021,
+          "headcount": 1
+        },
+        {
+          "fy": 2022,
+          "headcount": 1
+        },
+        {
+          "fy": 2023,
+          "headcount": 1
+        },
+        {
+          "fy": 2024,
+          "headcount": 2
+        },
+        {
+          "fy": 2025,
+          "headcount": 5
+        },
+        {
+          "fy": 2026,
+          "headcount": 5
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Restore Community Development and Planning Staffing Cut",
+          "tier_1": 137423,
+          "tier_2": 307975,
+          "tier_3": 307975
+        },
+        {
+          "description": "Increase Community Development Staffing - Grant Writer",
+          "tier_1": 0,
+          "tier_2": 0,
+          "tier_3": 70000
+        }
+      ]
+    },
+    "police": {
+      "name": "police",
+      "function": "public_safety",
+      "function_label": "Public Safety",
+      "role": "Chief of Police",
+      "role_source": "Town of Marblehead, Police Department page; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, POLICE + ANIMAL INSPECTOR cost centers)",
+      "role_note": "FY27 no-override budget eliminates the School Resource Officer; staffing falls to ~29 officers (vs ~33 historical).",
+      "role_source_url": "https://marbleheadma.gov/police/",
+      "budget": {
+        "fy25_actual": 4856175,
+        "fy26_budget": 4984687,
+        "fy27_proposed": 5216914,
+        "change_dollars": 232227,
+        "change_pct": 0.0465880806558165
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 4608022,
+          "fy26_budget": 4730006,
+          "fy27_proposed": 4988616,
+          "change_dollars": 258610,
+          "change_pct": 0.0547
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 248153,
+          "fy26_budget": 254681,
+          "fy27_proposed": 228298,
+          "change_dollars": -26383,
+          "change_pct": -0.1036
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 76
+        },
+        {
+          "fy": 2009,
+          "headcount": 88
+        },
+        {
+          "fy": 2010,
+          "headcount": 92
+        },
+        {
+          "fy": 2011,
+          "headcount": 95
+        },
+        {
+          "fy": 2012,
+          "headcount": 87
+        },
+        {
+          "fy": 2013,
+          "headcount": 102
+        },
+        {
+          "fy": 2014,
+          "headcount": 95
+        },
+        {
+          "fy": 2015,
+          "headcount": 79
+        },
+        {
+          "fy": 2016,
+          "headcount": 86
+        },
+        {
+          "fy": 2017,
+          "headcount": 90
+        },
+        {
+          "fy": 2018,
+          "headcount": 81
+        },
+        {
+          "fy": 2019,
+          "headcount": 84
+        },
+        {
+          "fy": 2020,
+          "headcount": 81
+        },
+        {
+          "fy": 2021,
+          "headcount": 64
+        },
+        {
+          "fy": 2022,
+          "headcount": 66
+        },
+        {
+          "fy": 2023,
+          "headcount": 70
+        },
+        {
+          "fy": 2024,
+          "headcount": 76
+        },
+        {
+          "fy": 2025,
+          "headcount": 72
+        },
+        {
+          "fy": 2026,
+          "headcount": 68
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Restore Police Department School Resource Officer Cut",
+          "tier_1": 65482,
+          "tier_2": 65482,
+          "tier_3": 65482
+        },
+        {
+          "description": "Increase Police Department Staffing",
+          "tier_1": 0,
+          "tier_2": 65482,
+          "tier_3": 130964
+        },
+        {
+          "description": "Restore Police Department Equipment Cut",
+          "tier_1": 2000,
+          "tier_2": 2000,
+          "tier_3": 2000
+        }
+      ]
+    },
+    "fire": {
+      "name": "fire",
+      "function": "public_safety",
+      "function_label": "Public Safety",
+      "role": "Fire Chief",
+      "role_source": "Town of Marblehead, Fire Department page; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, FIRE cost center); IAFF Local 2043 contract funded via Article 19 of the 2026 Town Meeting warrant",
+      "role_note": "FY27 no-override budget keeps headcount flat but cuts one full shift, relying on overtime containment. Salary line up ~8% to fund the firefighter union contract.",
+      "role_source_url": "https://marbleheadma.gov/fire/",
+      "budget": {
+        "fy25_actual": 5449702,
+        "fy26_budget": 5561260,
+        "fy27_proposed": 6016967,
+        "change_dollars": 455707,
+        "change_pct": 0.08194312080355891
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 4996060,
+          "fy26_budget": 5220615,
+          "fy27_proposed": 5644187,
+          "change_dollars": 423572,
+          "change_pct": 0.08109999999999999
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 453642,
+          "fy26_budget": 340645,
+          "fy27_proposed": 372780,
+          "change_dollars": 32135,
+          "change_pct": 0.0943
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 43
+        },
+        {
+          "fy": 2009,
+          "headcount": 46
+        },
+        {
+          "fy": 2010,
+          "headcount": 44
+        },
+        {
+          "fy": 2011,
+          "headcount": 47
+        },
+        {
+          "fy": 2012,
+          "headcount": 43
+        },
+        {
+          "fy": 2013,
+          "headcount": 45
+        },
+        {
+          "fy": 2014,
+          "headcount": 45
+        },
+        {
+          "fy": 2015,
+          "headcount": 44
+        },
+        {
+          "fy": 2016,
+          "headcount": 46
+        },
+        {
+          "fy": 2017,
+          "headcount": 43
+        },
+        {
+          "fy": 2018,
+          "headcount": 48
+        },
+        {
+          "fy": 2019,
+          "headcount": 44
+        },
+        {
+          "fy": 2020,
+          "headcount": 42
+        },
+        {
+          "fy": 2021,
+          "headcount": 43
+        },
+        {
+          "fy": 2022,
+          "headcount": 44
+        },
+        {
+          "fy": 2023,
+          "headcount": 42
+        },
+        {
+          "fy": 2024,
+          "headcount": 42
+        },
+        {
+          "fy": 2025,
+          "headcount": 40
+        },
+        {
+          "fy": 2026,
+          "headcount": 40
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Increase Fire Department Staffing",
+          "tier_1": 0,
+          "tier_2": 148000,
+          "tier_3": 444000
+        }
+      ]
+    },
+    "building_inspection": {
+      "name": "building_inspection",
+      "function": "public_safety",
+      "function_label": "Public Safety",
+      "role": "Building Commissioner",
+      "role_source": "Town of Marblehead, Building Inspection Department; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, BUILDING INSPECTIONS cost center)",
+      "role_note": "FY27 budget reorganizes inspector lines (Local, Electrical, Plumbing); net count and dollars roughly preserved. Building Commissioner also serves as Superintendent of Public Buildings.",
+      "role_source_url": "https://marbleheadma.gov/building-inspection/",
+      "budget": {
+        "fy25_actual": 553941,
+        "fy26_budget": 687313,
+        "fy27_proposed": 623330,
+        "change_dollars": -63983,
+        "change_pct": -0.0930915027069181
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 443894,
+          "fy26_budget": 599354,
+          "fy27_proposed": 587071,
+          "change_dollars": -12283,
+          "change_pct": -0.020499999999999997
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 110047,
+          "fy26_budget": 87959,
+          "fy27_proposed": 36259,
+          "change_dollars": -51700,
+          "change_pct": -0.5878
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 8
+        },
+        {
+          "fy": 2009,
+          "headcount": 9
+        },
+        {
+          "fy": 2010,
+          "headcount": 10
+        },
+        {
+          "fy": 2011,
+          "headcount": 12
+        },
+        {
+          "fy": 2012,
+          "headcount": 10
+        },
+        {
+          "fy": 2013,
+          "headcount": 10
+        },
+        {
+          "fy": 2014,
+          "headcount": 12
+        },
+        {
+          "fy": 2015,
+          "headcount": 11
+        },
+        {
+          "fy": 2016,
+          "headcount": 11
+        },
+        {
+          "fy": 2017,
+          "headcount": 11
+        },
+        {
+          "fy": 2018,
+          "headcount": 11
+        },
+        {
+          "fy": 2019,
+          "headcount": 10
+        },
+        {
+          "fy": 2020,
+          "headcount": 9
+        },
+        {
+          "fy": 2021,
+          "headcount": 12
+        },
+        {
+          "fy": 2022,
+          "headcount": 12
+        },
+        {
+          "fy": 2023,
+          "headcount": 12
+        },
+        {
+          "fy": 2024,
+          "headcount": 9
+        },
+        {
+          "fy": 2025,
+          "headcount": 10
+        },
+        {
+          "fy": 2026,
+          "headcount": 10
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Restore Inspections Other Technical Subscriptions & Maintenance Cuts",
+          "tier_1": 52500,
+          "tier_2": 52500,
+          "tier_3": 52500
+        }
+      ]
+    },
+    "sealer_weights_measures": {
+      "name": "sealer_weights_measures",
+      "function": "public_safety",
+      "function_label": "Public Safety",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": 1050,
+        "fy26_budget": 2100,
+        "fy27_proposed": 2100,
+        "change_dollars": 0,
+        "change_pct": 0.0
+      },
+      "line_items": [
+        {
+          "description": "Expense",
+          "fy25_actual": 1050,
+          "fy26_budget": 2100,
+          "fy27_proposed": 2100,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": []
+    },
+    "animal_inspector": {
+      "name": "animal_inspector",
+      "function": "public_safety",
+      "function_label": "Public Safety",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": 2400,
+        "fy26_budget": 2400,
+        "fy27_proposed": 2400,
+        "change_dollars": 0,
+        "change_pct": 0.0
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 2400,
+          "fy26_budget": 2400,
+          "fy27_proposed": 2400,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 1
+        },
+        {
+          "fy": 2009,
+          "headcount": 1
+        },
+        {
+          "fy": 2010,
+          "headcount": 1
+        },
+        {
+          "fy": 2011,
+          "headcount": 1
+        },
+        {
+          "fy": 2012,
+          "headcount": 1
+        },
+        {
+          "fy": 2013,
+          "headcount": 1
+        },
+        {
+          "fy": 2014,
+          "headcount": 1
+        },
+        {
+          "fy": 2015,
+          "headcount": 1
+        },
+        {
+          "fy": 2016,
+          "headcount": 1
+        }
+      ],
+      "overrides": []
+    },
+    "public_works_ops": {
+      "name": "public_works_ops",
+      "function": "public_works",
+      "function_label": "Public Works and Facilities",
+      "role": "Director of Public Works",
+      "role_source": "Town of Marblehead, Department of Public Works; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, PUBLIC WORKS cost center)",
+      "role_note": "FY27 no-override budget: Director cut to part-time, 2.5 operating positions cut, asphalt program eliminated. New engineering and foreman lines replace the eliminated ones; net dollars roughly flat.",
+      "role_source_url": "https://marbleheadma.gov/dpw/",
+      "budget": {
+        "fy25_actual": 2064861,
+        "fy26_budget": 2406042,
+        "fy27_proposed": 2474771,
+        "change_dollars": 68729,
+        "change_pct": 0.028565170516557898
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 1504796,
+          "fy26_budget": 1851836,
+          "fy27_proposed": 1868711,
+          "change_dollars": 16875,
+          "change_pct": 0.0091
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 229250,
+          "fy26_budget": 391180,
+          "fy27_proposed": 437560,
+          "change_dollars": 46380,
+          "change_pct": 0.1186
+        },
+        {
+          "description": "Maintain Streets and Sidewalks",
+          "fy25_actual": 19447,
+          "fy26_budget": 58026,
+          "fy27_proposed": 63500,
+          "change_dollars": 5474,
+          "change_pct": 0.0943
+        },
+        {
+          "description": "Snow Removal",
+          "fy25_actual": 311368,
+          "fy26_budget": 105000,
+          "fy27_proposed": 105000,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": [
+        {
+          "description": "Restore Department of Public Works Staffing Cuts",
+          "tier_1": 140594,
+          "tier_2": 140594,
+          "tier_3": 140594
+        },
+        {
+          "description": "Restore Department of Public Works Hot Top Cuts",
+          "tier_1": 60000,
+          "tier_2": 60000,
+          "tier_3": 60000
+        },
+        {
+          "description": "Increase Department of Public Works Staffing GIS position",
+          "tier_1": 0,
+          "tier_2": 70000,
+          "tier_3": 70000
+        }
+      ]
+    },
+    "waste_collection": {
+      "name": "waste_collection",
+      "function": "public_works",
+      "function_label": "Public Works and Facilities",
+      "role": "Assistant Director of Waste",
+      "role_source": "FY27 budget detail (data/_enrichment/fy27_personnel.yml, WASTE COLLECTION + CURBSIDE COLLECTION cost centers); Article 20 of 2026 Town Meeting warrant reclassifies the Assistant Director of Waste; Article 23 of 2026 Town Meeting moved curbside costs to the General Fund with a corresponding annual fee",
+      "role_note": "Town runs the transfer station with 7 staff; curbside pickup is a contracted hauler. Question 2 on the June 9, 2026 ballot approved an override carve-out for trash costs.",
+      "role_source_url": "https://marbleheadma.gov/dpw/",
+      "budget": {
+        "fy25_actual": 2819542,
+        "fy26_budget": 2943402,
+        "fy27_proposed": 1790344,
+        "change_dollars": -1153058,
+        "change_pct": -0.3917432956830226
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 482394,
+          "fy26_budget": 634777,
+          "fy27_proposed": 569999,
+          "change_dollars": -64778,
+          "change_pct": -0.102
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 2222548,
+          "fy26_budget": 2194025,
+          "fy27_proposed": 1105745,
+          "change_dollars": -1088280,
+          "change_pct": -0.496
+        },
+        {
+          "description": "Landfill Monitoring Expense",
+          "fy25_actual": 114600,
+          "fy26_budget": 114600,
+          "fy27_proposed": 114600,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": []
+    },
+    "curbside_collection": {
+      "name": "curbside_collection",
+      "function": "public_works",
+      "function_label": "Public Works and Facilities",
+      "role": "Assistant Director of Waste",
+      "role_source": "FY27 budget detail (data/_enrichment/fy27_personnel.yml, WASTE COLLECTION + CURBSIDE COLLECTION cost centers); Article 20 of 2026 Town Meeting warrant reclassifies the Assistant Director of Waste; Article 23 of 2026 Town Meeting moved curbside costs to the General Fund with a corresponding annual fee",
+      "role_note": "Town runs the transfer station with 7 staff; curbside pickup is a contracted hauler. Question 2 on the June 9, 2026 ballot approved an override carve-out for trash costs.",
+      "role_source_url": "https://marbleheadma.gov/dpw/",
+      "budget": {
+        "fy25_actual": 0,
+        "fy26_budget": 0,
+        "fy27_proposed": 2186516,
+        "change_dollars": 2186516,
+        "change_pct": 0.0
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 0,
+          "fy26_budget": 0,
+          "fy27_proposed": 69000,
+          "change_dollars": 69000,
+          "change_pct": 1.0
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 0,
+          "fy26_budget": 0,
+          "fy27_proposed": 2117516,
+          "change_dollars": 2117516,
+          "change_pct": 1.0
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": []
+    },
+    "cemetery": {
+      "name": "cemetery",
+      "function": "public_works",
+      "function_label": "Public Works and Facilities",
+      "role": "Cemetery Superintendent",
+      "role_source": "Town of Marblehead, Cemetery Department; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, CEMETERY cost center)",
+      "role_note": "Superintendent is appointed by the elected Cemetery Commission. FY27 no-override budget reduces the Superintendent to part-time and cuts 1 laborer.",
+      "role_source_url": "https://marbleheadma.gov/cemetery/",
+      "budget": {
+        "fy25_actual": 468585,
+        "fy26_budget": 495043,
+        "fy27_proposed": 410539,
+        "change_dollars": -84504,
+        "change_pct": -0.17070032300224425
+      },
+      "line_items": [
+        {
+          "description": "Officials Expense",
+          "fy25_actual": 580,
+          "fy26_budget": 300,
+          "fy27_proposed": 300,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Salaries",
+          "fy25_actual": 434286,
+          "fy26_budget": 459670,
+          "fy27_proposed": 374906,
+          "change_dollars": -84764,
+          "change_pct": -0.1844
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 33719,
+          "fy26_budget": 35073,
+          "fy27_proposed": 35333,
+          "change_dollars": 260,
+          "change_pct": 0.0074
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 9
+        },
+        {
+          "fy": 2009,
+          "headcount": 9
+        },
+        {
+          "fy": 2010,
+          "headcount": 9
+        },
+        {
+          "fy": 2011,
+          "headcount": 9
+        },
+        {
+          "fy": 2012,
+          "headcount": 7
+        },
+        {
+          "fy": 2013,
+          "headcount": 7
+        },
+        {
+          "fy": 2014,
+          "headcount": 8
+        },
+        {
+          "fy": 2015,
+          "headcount": 12
+        },
+        {
+          "fy": 2016,
+          "headcount": 10
+        },
+        {
+          "fy": 2017,
+          "headcount": 11
+        },
+        {
+          "fy": 2018,
+          "headcount": 11
+        },
+        {
+          "fy": 2019,
+          "headcount": 10
+        },
+        {
+          "fy": 2020,
+          "headcount": 11
+        },
+        {
+          "fy": 2021,
+          "headcount": 10
+        },
+        {
+          "fy": 2022,
+          "headcount": 7
+        },
+        {
+          "fy": 2023,
+          "headcount": 10
+        },
+        {
+          "fy": 2024,
+          "headcount": 11
+        },
+        {
+          "fy": 2025,
+          "headcount": 11
+        },
+        {
+          "fy": 2026,
+          "headcount": 9
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Restore Cemetery Laborer Cut",
+          "tier_1": 58692,
+          "tier_2": 58692,
+          "tier_3": 58692
+        }
+      ]
+    },
+    "health": {
+      "name": "health",
+      "function": "human_services",
+      "function_label": "Human Services",
+      "role": "Director of Public Health",
+      "role_source": "Town of Marblehead, Health Department; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, HEALTH cost center)",
+      "role_note": "The Director of Public Health is paid a stipend, not a full salary \u2014 likely a shared position. The Board of Health also oversees Solid Waste.",
+      "role_source_url": "https://marbleheadma.gov/health/",
+      "budget": {
+        "fy25_actual": 305794,
+        "fy26_budget": 326041,
+        "fy27_proposed": 339320,
+        "change_dollars": 13279,
+        "change_pct": 0.04072800660039688
+      },
+      "line_items": [
+        {
+          "description": "Officials Expense",
+          "fy25_actual": 400,
+          "fy26_budget": 400,
+          "fy27_proposed": 400,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Salaries",
+          "fy25_actual": 222819,
+          "fy26_budget": 237560,
+          "fy27_proposed": 253939,
+          "change_dollars": 16379,
+          "change_pct": 0.0689
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 82575,
+          "fy26_budget": 88081,
+          "fy27_proposed": 84981,
+          "change_dollars": -3100,
+          "change_pct": -0.0352
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 4
+        },
+        {
+          "fy": 2009,
+          "headcount": 3
+        },
+        {
+          "fy": 2010,
+          "headcount": 2
+        },
+        {
+          "fy": 2011,
+          "headcount": 1
+        },
+        {
+          "fy": 2012,
+          "headcount": 3
+        },
+        {
+          "fy": 2013,
+          "headcount": 3
+        },
+        {
+          "fy": 2014,
+          "headcount": 3
+        },
+        {
+          "fy": 2015,
+          "headcount": 3
+        },
+        {
+          "fy": 2016,
+          "headcount": 3
+        },
+        {
+          "fy": 2017,
+          "headcount": 3
+        },
+        {
+          "fy": 2018,
+          "headcount": 3
+        },
+        {
+          "fy": 2019,
+          "headcount": 3
+        },
+        {
+          "fy": 2020,
+          "headcount": 3
+        },
+        {
+          "fy": 2021,
+          "headcount": 3
+        },
+        {
+          "fy": 2022,
+          "headcount": 3
+        },
+        {
+          "fy": 2023,
+          "headcount": 3
+        },
+        {
+          "fy": 2024,
+          "headcount": 3
+        },
+        {
+          "fy": 2025,
+          "headcount": 4
+        },
+        {
+          "fy": 2026,
+          "headcount": 3
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Increase Health Department for Mental Health Psychological Counseling",
+          "tier_1": 0,
+          "tier_2": 0,
+          "tier_3": 60000
+        }
+      ]
+    },
+    "council_on_aging": {
+      "name": "council_on_aging",
+      "function": "human_services",
+      "function_label": "Human Services",
+      "role": "Council on Aging Director",
+      "role_source": "Town of Marblehead, Council on Aging; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, COUNCIL ON AGING cost center)",
+      "role_note": "FY27 no-override budget cuts the Nutrition Coordinator and Temporary Clerk.",
+      "role_source_url": "https://marbleheadma.gov/coa/",
+      "budget": {
+        "fy25_actual": 406698,
+        "fy26_budget": 423460,
+        "fy27_proposed": 387377,
+        "change_dollars": -36083,
+        "change_pct": -0.08520993718414963
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 392648,
+          "fy26_budget": 395401,
+          "fy27_proposed": 351118,
+          "change_dollars": -44283,
+          "change_pct": -0.11199999999999999
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 14050,
+          "fy26_budget": 28059,
+          "fy27_proposed": 36259,
+          "change_dollars": 8200,
+          "change_pct": 0.2922
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 5
+        },
+        {
+          "fy": 2009,
+          "headcount": 6
+        },
+        {
+          "fy": 2010,
+          "headcount": 7
+        },
+        {
+          "fy": 2011,
+          "headcount": 8
+        },
+        {
+          "fy": 2012,
+          "headcount": 7
+        },
+        {
+          "fy": 2013,
+          "headcount": 8
+        },
+        {
+          "fy": 2014,
+          "headcount": 8
+        },
+        {
+          "fy": 2015,
+          "headcount": 12
+        },
+        {
+          "fy": 2016,
+          "headcount": 12
+        },
+        {
+          "fy": 2017,
+          "headcount": 15
+        },
+        {
+          "fy": 2018,
+          "headcount": 14
+        },
+        {
+          "fy": 2019,
+          "headcount": 13
+        },
+        {
+          "fy": 2020,
+          "headcount": 15
+        },
+        {
+          "fy": 2021,
+          "headcount": 12
+        },
+        {
+          "fy": 2022,
+          "headcount": 11
+        },
+        {
+          "fy": 2023,
+          "headcount": 12
+        },
+        {
+          "fy": 2024,
+          "headcount": 11
+        },
+        {
+          "fy": 2025,
+          "headcount": 11
+        },
+        {
+          "fy": 2026,
+          "headcount": 12
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Restore Council on Aging Staffing Cuts",
+          "tier_1": 76171,
+          "tier_2": 76171,
+          "tier_3": 76171
+        },
+        {
+          "description": "Increase Council on Aging Staffing - PT Social Worker",
+          "tier_1": 0,
+          "tier_2": 45000,
+          "tier_3": 45000
+        },
+        {
+          "description": "Increase Council on Aging Maintenance",
+          "tier_1": 0,
+          "tier_2": 15000,
+          "tier_3": 15000
+        }
+      ]
+    },
+    "veterans_benefits": {
+      "name": "veterans_benefits",
+      "function": "human_services",
+      "function_label": "Human Services",
+      "role": "Veterans' Agent & Director of Veterans' Services",
+      "role_source": "Town of Marblehead, Veterans Services; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, VETERANS SERVICES cost center); additional roles per Annual Report 2025 appointed officials",
+      "role_note": "Single-position office. The Veterans' Agent also serves as Flag Officer and Veterans' Graves Officer.",
+      "role_source_url": "https://marbleheadma.gov/veterans-services/",
+      "budget": {
+        "fy25_actual": 129048,
+        "fy26_budget": 148525,
+        "fy27_proposed": 154872,
+        "change_dollars": 6347,
+        "change_pct": 0.042733546540986364
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 61942,
+          "fy26_budget": 78725,
+          "fy27_proposed": 80572,
+          "change_dollars": 1847,
+          "change_pct": 0.0235
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 4200,
+          "fy26_budget": 4800,
+          "fy27_proposed": 9300,
+          "change_dollars": 4500,
+          "change_pct": 0.9375
+        },
+        {
+          "description": "Benefits",
+          "fy25_actual": 62906,
+          "fy26_budget": 65000,
+          "fy27_proposed": 65000,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 1
+        },
+        {
+          "fy": 2009,
+          "headcount": 1
+        },
+        {
+          "fy": 2010,
+          "headcount": 1
+        },
+        {
+          "fy": 2011,
+          "headcount": 1
+        },
+        {
+          "fy": 2012,
+          "headcount": 1
+        },
+        {
+          "fy": 2013,
+          "headcount": 1
+        },
+        {
+          "fy": 2014,
+          "headcount": 1
+        },
+        {
+          "fy": 2015,
+          "headcount": 1
+        },
+        {
+          "fy": 2016,
+          "headcount": 1
+        },
+        {
+          "fy": 2017,
+          "headcount": 1
+        },
+        {
+          "fy": 2018,
+          "headcount": 1
+        },
+        {
+          "fy": 2019,
+          "headcount": 1
+        },
+        {
+          "fy": 2020,
+          "headcount": 1
+        },
+        {
+          "fy": 2021,
+          "headcount": 1
+        },
+        {
+          "fy": 2022,
+          "headcount": 1
+        },
+        {
+          "fy": 2023,
+          "headcount": 1
+        },
+        {
+          "fy": 2024,
+          "headcount": 1
+        },
+        {
+          "fy": 2025,
+          "headcount": 2
+        },
+        {
+          "fy": 2026,
+          "headcount": 1
+        }
+      ],
+      "overrides": []
+    },
+    "library": {
+      "name": "library",
+      "function": "culture_recreation",
+      "function_label": "Culture and Recreation",
+      "role": "Library Director",
+      "role_source": "Abbot Public Library; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, LIBRARY cost center)",
+      "role_note": "Governed by the elected Board of Trustees (6 members), separate from Select Board oversight. FY27 no-override budget cuts the library ~42%, opens it 3 days/week, and loses state certification.",
+      "role_source_url": "https://abbotlibrary.org/",
+      "budget": {
+        "fy25_actual": 1338401,
+        "fy26_budget": 1493292,
+        "fy27_proposed": 857633,
+        "change_dollars": -635659,
+        "change_pct": -0.42567629104019844
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 1042706,
+          "fy26_budget": 1148053,
+          "fy27_proposed": 667580,
+          "change_dollars": -480473,
+          "change_pct": -0.41850000000000004
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 295695,
+          "fy26_budget": 345239,
+          "fy27_proposed": 190053,
+          "change_dollars": -155186,
+          "change_pct": -0.4495
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 29
+        },
+        {
+          "fy": 2009,
+          "headcount": 28
+        },
+        {
+          "fy": 2010,
+          "headcount": 30
+        },
+        {
+          "fy": 2011,
+          "headcount": 28
+        },
+        {
+          "fy": 2012,
+          "headcount": 27
+        },
+        {
+          "fy": 2013,
+          "headcount": 27
+        },
+        {
+          "fy": 2014,
+          "headcount": 29
+        },
+        {
+          "fy": 2015,
+          "headcount": 28
+        },
+        {
+          "fy": 2016,
+          "headcount": 26
+        },
+        {
+          "fy": 2017,
+          "headcount": 31
+        },
+        {
+          "fy": 2018,
+          "headcount": 31
+        },
+        {
+          "fy": 2019,
+          "headcount": 31
+        },
+        {
+          "fy": 2020,
+          "headcount": 28
+        },
+        {
+          "fy": 2021,
+          "headcount": 24
+        },
+        {
+          "fy": 2022,
+          "headcount": 32
+        },
+        {
+          "fy": 2023,
+          "headcount": 32
+        },
+        {
+          "fy": 2024,
+          "headcount": 24
+        },
+        {
+          "fy": 2025,
+          "headcount": 24
+        },
+        {
+          "fy": 2026,
+          "headcount": 27
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Restore Abbot Library Staffing cuts for accreditation",
+          "tier_1": 311183,
+          "tier_2": 311183,
+          "tier_3": 311183
+        },
+        {
+          "description": "Restore Abbot Library Staffing Cuts",
+          "tier_1": 0,
+          "tier_2": 218980,
+          "tier_3": 218980
+        },
+        {
+          "description": "Restore Abbot Library Materials",
+          "tier_1": 0,
+          "tier_2": 168400,
+          "tier_3": 168400
+        },
+        {
+          "description": "Increase Abbot Library Staffing 1 PT Custodian and 1 PT Assistant",
+          "tier_1": 0,
+          "tier_2": 38378,
+          "tier_3": 38378
+        }
+      ]
+    },
+    "rec_park": {
+      "name": "rec_park",
+      "function": "culture_recreation",
+      "function_label": "Culture and Recreation",
+      "role": "Superintendent of Parks",
+      "role_source": "Town of Marblehead, Recreation & Parks Department; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, RECREATION & PARKS cost center)",
+      "role_note": "Superintendent is appointed annually by the elected Recreation & Parks Commission. FY27 no-override budget cuts 1 Groundskeeper and ends pickup for the town's 187 public trash barrels.",
+      "role_source_url": "https://marbleheadma.gov/recreation-parks/",
+      "budget": {
+        "fy25_actual": 904581,
+        "fy26_budget": 1037027,
+        "fy27_proposed": 1003034,
+        "change_dollars": -33993,
+        "change_pct": -0.03277928154233207
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 669293,
+          "fy26_budget": 749527,
+          "fy27_proposed": 702216,
+          "change_dollars": -47311,
+          "change_pct": -0.06309999999999999
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 235288,
+          "fy26_budget": 287500,
+          "fy27_proposed": 300818,
+          "change_dollars": 13318,
+          "change_pct": 0.0463
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 19
+        },
+        {
+          "fy": 2009,
+          "headcount": 26
+        },
+        {
+          "fy": 2010,
+          "headcount": 26
+        },
+        {
+          "fy": 2011,
+          "headcount": 32
+        },
+        {
+          "fy": 2012,
+          "headcount": 28
+        },
+        {
+          "fy": 2013,
+          "headcount": 31
+        },
+        {
+          "fy": 2014,
+          "headcount": 30
+        },
+        {
+          "fy": 2015,
+          "headcount": 27
+        },
+        {
+          "fy": 2016,
+          "headcount": 31
+        },
+        {
+          "fy": 2017,
+          "headcount": 29
+        },
+        {
+          "fy": 2018,
+          "headcount": 35
+        },
+        {
+          "fy": 2019,
+          "headcount": 36
+        },
+        {
+          "fy": 2020,
+          "headcount": 29
+        },
+        {
+          "fy": 2021,
+          "headcount": 25
+        },
+        {
+          "fy": 2022,
+          "headcount": 37
+        },
+        {
+          "fy": 2023,
+          "headcount": 32
+        },
+        {
+          "fy": 2024,
+          "headcount": 39
+        },
+        {
+          "fy": 2025,
+          "headcount": 34
+        },
+        {
+          "fy": 2026,
+          "headcount": 26
+        }
+      ],
+      "overrides": [
+        {
+          "description": "Restore Recreation and Parks Groundskeeper Staffing Cut",
+          "tier_1": 45000,
+          "tier_2": 45000,
+          "tier_3": 45000
+        },
+        {
+          "description": "Increase Recreation and Parks Staffing 1 PT Senior Clerk",
+          "tier_1": 0,
+          "tier_2": 27000,
+          "tier_3": 27000
+        },
+        {
+          "description": "Increase Recreation and Parks Maintenance",
+          "tier_1": 0,
+          "tier_2": 15000,
+          "tier_3": 15000
+        }
+      ]
+    },
+    "memorial_veterans_day": {
+      "name": "memorial_veterans_day",
+      "function": "culture_recreation",
+      "function_label": "Culture and Recreation",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": 4488,
+        "fy26_budget": 7550,
+        "fy27_proposed": 9500,
+        "change_dollars": 1950,
+        "change_pct": 0.2582781456953642
+      },
+      "line_items": [
+        {
+          "description": "Expense",
+          "fy25_actual": 4488,
+          "fy26_budget": 7550,
+          "fy27_proposed": 9500,
+          "change_dollars": 1950,
+          "change_pct": 0.2583
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": []
+    },
+    "debt_service": {
+      "name": "debt_service",
+      "function": "other_general_government",
+      "function_label": "Other General Government",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": 11085298,
+        "fy26_budget": 9314141,
+        "fy27_proposed": 11098398,
+        "change_dollars": 1784257,
+        "change_pct": 0.19156431065409038
+      },
+      "line_items": [
+        {
+          "description": "Maturing Debt",
+          "fy25_actual": 7540000,
+          "fy26_budget": 5955000,
+          "fy27_proposed": 7251017,
+          "change_dollars": 1296017,
+          "change_pct": 0.21760000000000002
+        },
+        {
+          "description": "Interest",
+          "fy25_actual": 3545298,
+          "fy26_budget": 3359141,
+          "fy27_proposed": 3847381,
+          "change_dollars": 488240,
+          "change_pct": 0.14529999999999998
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": []
+    },
+    "other_general_government_dept": {
+      "name": "other_general_government_dept",
+      "function": "other_general_government",
+      "function_label": "Other General Government",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": 19180387,
+        "fy26_budget": 22101072,
+        "fy27_proposed": 24664754,
+        "change_dollars": 2563682,
+        "change_pct": 0.11599808371286244
+      },
+      "line_items": [
+        {
+          "description": "Street Lighting",
+          "fy25_actual": 73630,
+          "fy26_budget": 60000,
+          "fy27_proposed": 60000,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Utility Reserve",
+          "fy25_actual": 46060,
+          "fy26_budget": 0,
+          "fy27_proposed": 0,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Contributory Retirement Fund",
+          "fy25_actual": 4879451,
+          "fy26_budget": 5380625,
+          "fy27_proposed": 5843360,
+          "change_dollars": 462735,
+          "change_pct": 0.086
+        },
+        {
+          "description": "Medicare",
+          "fy25_actual": 248379,
+          "fy26_budget": 280000,
+          "fy27_proposed": 277629,
+          "change_dollars": -2371,
+          "change_pct": -0.0085
+        },
+        {
+          "description": "Training",
+          "fy25_actual": 12100,
+          "fy26_budget": 15000,
+          "fy27_proposed": 0,
+          "change_dollars": -15000,
+          "change_pct": -1.0
+        },
+        {
+          "description": "Group Insurance",
+          "fy25_actual": 12994934,
+          "fy26_budget": 15100893,
+          "fy27_proposed": 16754748,
+          "change_dollars": 1653855,
+          "change_pct": 0.10949999999999999
+        },
+        {
+          "description": "Other Insurance",
+          "fy25_actual": 799955,
+          "fy26_budget": 964554,
+          "fy27_proposed": 978309,
+          "change_dollars": 13755,
+          "change_pct": 0.0143
+        },
+        {
+          "description": "Salary Reserve",
+          "fy25_actual": 20478,
+          "fy26_budget": 50000,
+          "fy27_proposed": 145000,
+          "change_dollars": 95000,
+          "change_pct": 1.9
+        },
+        {
+          "description": "Noncontributory Retirement",
+          "fy25_actual": 0,
+          "fy26_budget": 0,
+          "fy27_proposed": 0,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Energy Reserve",
+          "fy25_actual": 9589,
+          "fy26_budget": 0,
+          "fy27_proposed": 0,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Other Post Employment Benefits",
+          "fy25_actual": 0,
+          "fy26_budget": 250000,
+          "fy27_proposed": 0,
+          "change_dollars": -250000,
+          "change_pct": -1.0
+        },
+        {
+          "description": "Stabilization Fund",
+          "fy25_actual": 0,
+          "fy26_budget": 0,
+          "fy27_proposed": 0,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Flex Spending Admin Charge",
+          "fy25_actual": 5282,
+          "fy26_budget": 0,
+          "fy27_proposed": 8500,
+          "change_dollars": 8500,
+          "change_pct": 1.0
+        },
+        {
+          "description": "Transfer to Fireworks Trust",
+          "fy25_actual": 25529,
+          "fy26_budget": 0,
+          "fy27_proposed": 0,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Transfer to Other Special Revenue Fund",
+          "fy25_actual": 65000,
+          "fy26_budget": 0,
+          "fy27_proposed": 0,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        },
+        {
+          "description": "Unemployment",
+          "fy25_actual": 0,
+          "fy26_budget": 0,
+          "fy27_proposed": 597208,
+          "change_dollars": 597208,
+          "change_pct": 1.0
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": null,
+      "overrides": []
+    },
+    "sewer": {
+      "name": "sewer",
+      "function": "sewer_enterprise",
+      "function_label": "Sewer Enterprise",
+      "role": "Working Foreman, Sewer",
+      "role_source": "Town of Marblehead, Sewer Department; staff roster from Annual Report 2025 (Sewer Department Employees list)",
+      "role_note": "Office and administrative staff are shared with the Water Department under the joint commission.",
+      "role_source_url": "https://marbleheadma.gov/sewer/",
+      "budget": {
+        "fy25_actual": 4981960,
+        "fy26_budget": 5532269,
+        "fy27_proposed": 4799291,
+        "change_dollars": -732978,
+        "change_pct": -0.13249138825317425
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 1014439,
+          "fy26_budget": 1150375,
+          "fy27_proposed": 1673018,
+          "change_dollars": 522643,
+          "change_pct": 0.4543
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 816982,
+          "fy26_budget": 1114149,
+          "fy27_proposed": 852953,
+          "change_dollars": -261196,
+          "change_pct": -0.23440000000000003
+        },
+        {
+          "description": "South Essex Sewer District",
+          "fy25_actual": 3150539,
+          "fy26_budget": 3267745,
+          "fy27_proposed": 2273320,
+          "change_dollars": -994425,
+          "change_pct": -0.3043
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 12
+        },
+        {
+          "fy": 2009,
+          "headcount": 13
+        },
+        {
+          "fy": 2010,
+          "headcount": 12
+        },
+        {
+          "fy": 2011,
+          "headcount": 10
+        },
+        {
+          "fy": 2012,
+          "headcount": 9
+        },
+        {
+          "fy": 2013,
+          "headcount": 11
+        },
+        {
+          "fy": 2014,
+          "headcount": 10
+        },
+        {
+          "fy": 2015,
+          "headcount": 12
+        },
+        {
+          "fy": 2016,
+          "headcount": 13
+        },
+        {
+          "fy": 2017,
+          "headcount": 14
+        },
+        {
+          "fy": 2018,
+          "headcount": 13
+        },
+        {
+          "fy": 2019,
+          "headcount": 12
+        },
+        {
+          "fy": 2020,
+          "headcount": 10
+        },
+        {
+          "fy": 2021,
+          "headcount": 11
+        },
+        {
+          "fy": 2022,
+          "headcount": 10
+        },
+        {
+          "fy": 2023,
+          "headcount": 13
+        },
+        {
+          "fy": 2024,
+          "headcount": 11
+        },
+        {
+          "fy": 2025,
+          "headcount": 11
+        },
+        {
+          "fy": 2026,
+          "headcount": 10
+        }
+      ],
+      "overrides": []
+    },
+    "water": {
+      "name": "water",
+      "function": "water_enterprise",
+      "function_label": "Water Enterprise",
+      "role": "Working Foreman, Water",
+      "role_source": "Town of Marblehead, Water Department; staff roster from Annual Report 2025 (Water Department Employees + Water & Sewer Commission Administration office staff)",
+      "role_note": "Water and Sewer share an elected commission (5 members, 3-year staggered terms) and a combined office staff.",
+      "role_source_url": "https://marbleheadma.gov/water/",
+      "budget": {
+        "fy25_actual": 5444730,
+        "fy26_budget": 6463957,
+        "fy27_proposed": 6865301,
+        "change_dollars": 401344,
+        "change_pct": 0.06208952194453026
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 927397,
+          "fy26_budget": 1140856,
+          "fy27_proposed": 1703041,
+          "change_dollars": 562185,
+          "change_pct": 0.4928
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 947395,
+          "fy26_budget": 1248799,
+          "fy27_proposed": 939541,
+          "change_dollars": -309258,
+          "change_pct": -0.24760000000000001
+        },
+        {
+          "description": "Mass Water Resource Authority",
+          "fy25_actual": 3569938,
+          "fy26_budget": 4074302,
+          "fy27_proposed": 4222719,
+          "change_dollars": 148417,
+          "change_pct": 0.0364
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 12
+        },
+        {
+          "fy": 2009,
+          "headcount": 11
+        },
+        {
+          "fy": 2010,
+          "headcount": 13
+        },
+        {
+          "fy": 2011,
+          "headcount": 14
+        },
+        {
+          "fy": 2012,
+          "headcount": 13
+        },
+        {
+          "fy": 2013,
+          "headcount": 14
+        },
+        {
+          "fy": 2014,
+          "headcount": 14
+        },
+        {
+          "fy": 2015,
+          "headcount": 15
+        },
+        {
+          "fy": 2016,
+          "headcount": 16
+        },
+        {
+          "fy": 2017,
+          "headcount": 16
+        },
+        {
+          "fy": 2018,
+          "headcount": 17
+        },
+        {
+          "fy": 2019,
+          "headcount": 18
+        },
+        {
+          "fy": 2020,
+          "headcount": 16
+        },
+        {
+          "fy": 2021,
+          "headcount": 16
+        },
+        {
+          "fy": 2022,
+          "headcount": 17
+        },
+        {
+          "fy": 2023,
+          "headcount": 19
+        },
+        {
+          "fy": 2024,
+          "headcount": 18
+        },
+        {
+          "fy": 2025,
+          "headcount": 20
+        },
+        {
+          "fy": 2026,
+          "headcount": 17
+        }
+      ],
+      "overrides": []
+    },
+    "harbor": {
+      "name": "harbor",
+      "function": "harbor_enterprise",
+      "function_label": "Harbor Enterprise",
+      "role": "Harbormaster",
+      "role_source": "Town of Marblehead, Harbormaster; staff roster from Annual Report 2025 (Harbormaster Personnel list + Seasonal Assistants list)",
+      "role_note": "Reports jointly to the Town Administrator and the appointed Harbors & Waters Board.",
+      "role_source_url": "https://marbleheadma.gov/harbormaster/",
+      "budget": {
+        "fy25_actual": 1120418,
+        "fy26_budget": 1276874,
+        "fy27_proposed": 1319500,
+        "change_dollars": 42626,
+        "change_pct": 0.033383090265758406
+      },
+      "line_items": [
+        {
+          "description": "Salaries",
+          "fy25_actual": 449908,
+          "fy26_budget": 490136,
+          "fy27_proposed": 755711,
+          "change_dollars": 265575,
+          "change_pct": 0.5418
+        },
+        {
+          "description": "Expense",
+          "fy25_actual": 520403,
+          "fy26_budget": 586738,
+          "fy27_proposed": 363789,
+          "change_dollars": -222949,
+          "change_pct": -0.38
+        },
+        {
+          "description": "Outlays",
+          "fy25_actual": 150107,
+          "fy26_budget": 200000,
+          "fy27_proposed": 200000,
+          "change_dollars": 0,
+          "change_pct": 0.0
+        }
+      ],
+      "line_items_reconcile": true,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 11
+        },
+        {
+          "fy": 2009,
+          "headcount": 12
+        },
+        {
+          "fy": 2010,
+          "headcount": 12
+        },
+        {
+          "fy": 2011,
+          "headcount": 13
+        },
+        {
+          "fy": 2012,
+          "headcount": 15
+        },
+        {
+          "fy": 2013,
+          "headcount": 12
+        },
+        {
+          "fy": 2014,
+          "headcount": 12
+        },
+        {
+          "fy": 2015,
+          "headcount": 13
+        },
+        {
+          "fy": 2016,
+          "headcount": 15
+        },
+        {
+          "fy": 2017,
+          "headcount": 16
+        },
+        {
+          "fy": 2018,
+          "headcount": 15
+        },
+        {
+          "fy": 2019,
+          "headcount": 19
+        },
+        {
+          "fy": 2020,
+          "headcount": 19
+        },
+        {
+          "fy": 2021,
+          "headcount": 15
+        },
+        {
+          "fy": 2022,
+          "headcount": 21
+        },
+        {
+          "fy": 2023,
+          "headcount": 24
+        },
+        {
+          "fy": 2024,
+          "headcount": 18
+        },
+        {
+          "fy": 2025,
+          "headcount": 19
+        },
+        {
+          "fy": 2026,
+          "headcount": 17
+        }
+      ],
+      "overrides": []
+    },
+    "school_brown": {
+      "name": "school_brown",
+      "function": "schools",
+      "function_label": "Schools",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": null,
+        "fy26_budget": 5481505,
+        "fy27_proposed": 5554252,
+        "change_dollars": 72747,
+        "change_pct": 0.013271355220874559
+      },
+      "line_items": [
+        {
+          "description": "PROFESSIONAL SALARIES - SPED",
+          "fy25_actual": null,
+          "fy26_budget": 107110,
+          "fy27_proposed": 110323,
+          "change_dollars": 3213,
+          "change_pct": 0.02999719914106993
+        },
+        {
+          "description": "CLERICAL SALARIES - SPED",
+          "fy25_actual": null,
+          "fy26_budget": 30718,
+          "fy27_proposed": 32921,
+          "change_dollars": 2203,
+          "change_pct": 0.07171690865290709
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 233437,
+          "fy27_proposed": 240440,
+          "change_dollars": 7003,
+          "change_pct": 0.02999952878078454
+        },
+        {
+          "description": "CLERICAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 111812,
+          "fy27_proposed": 115167,
+          "change_dollars": 3355,
+          "change_pct": 0.030005723893678674
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 2346,
+          "fy27_proposed": 2393,
+          "change_dollars": 47,
+          "change_pct": 0.020034100596760442
+        },
+        {
+          "description": "PROFESSIONAL DEV LEADERSHIP",
+          "fy25_actual": null,
+          "fy26_budget": 2040,
+          "fy27_proposed": 2081,
+          "change_dollars": 41,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "TEAM LEADERS / DEPT COOR",
+          "fy25_actual": null,
+          "fy26_budget": 24895,
+          "fy27_proposed": 25642,
+          "change_dollars": 747,
+          "change_pct": 0.0300060253062864
+        },
+        {
+          "description": "PRESCHOOL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 214251,
+          "fy27_proposed": 113305,
+          "change_dollars": -100946,
+          "change_pct": -0.471157660874395
+        },
+        {
+          "description": "KINDERGARTEN SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 219812,
+          "fy27_proposed": 229211,
+          "change_dollars": 9399,
+          "change_pct": 0.04275926700999035
+        },
+        {
+          "description": "SPECIAL EDUCATION SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 828021,
+          "fy27_proposed": 874760,
+          "change_dollars": 46739,
+          "change_pct": 0.05644663601527014
+        },
+        {
+          "description": "REGULAR EDUCATION SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 1385653,
+          "fy27_proposed": 1452785,
+          "change_dollars": 67132,
+          "change_pct": 0.048447915892362664
+        },
+        {
+          "description": "SPECIALIST SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 404321,
+          "fy27_proposed": 420626,
+          "change_dollars": 16305,
+          "change_pct": 0.04032686899765286
+        },
+        {
+          "description": "EL TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 200073,
+          "fy27_proposed": 209388,
+          "change_dollars": 9315,
+          "change_pct": 0.046558006327690395
+        },
+        {
+          "description": "OT/PT/SLP PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 140882,
+          "fy27_proposed": 145689,
+          "change_dollars": 4807,
+          "change_pct": 0.03412075353842223
+        },
+        {
+          "description": "BUILDING SUB SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 30600,
+          "fy27_proposed": 32300,
+          "change_dollars": 1700,
+          "change_pct": 0.05555555555555555
+        },
+        {
+          "description": "INSTRUCTIONAL ASSISTANTS",
+          "fy25_actual": null,
+          "fy26_budget": 217460,
+          "fy27_proposed": 225801,
+          "change_dollars": 8341,
+          "change_pct": 0.038356479352524606
+        },
+        {
+          "description": "INSTRUCTIONAL ASSISTANTS - SPECIAL ED",
+          "fy25_actual": null,
+          "fy26_budget": 257230,
+          "fy27_proposed": 275393,
+          "change_dollars": 18163,
+          "change_pct": 0.07060995995801422
+        },
+        {
+          "description": "INSTRUCTIONAL ASST KINDERGARTEN",
+          "fy25_actual": null,
+          "fy26_budget": 76495,
+          "fy27_proposed": 82543,
+          "change_dollars": 6048,
+          "change_pct": 0.0790639911105301
+        },
+        {
+          "description": "INSTRUCTIONAL ASSISTANTS - PK SPEC ED",
+          "fy25_actual": null,
+          "fy26_budget": 133062,
+          "fy27_proposed": 70756,
+          "change_dollars": -62306,
+          "change_pct": -0.4682478844448453
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 105781,
+          "fy27_proposed": 109909,
+          "change_dollars": 4128,
+          "change_pct": 0.03902402132708142
+        },
+        {
+          "description": "PD CONTRACTED SERVICES",
+          "fy25_actual": null,
+          "fy26_budget": 2040,
+          "fy27_proposed": 2081,
+          "change_dollars": 41,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "PROF DEVEL TRAVEL",
+          "fy25_actual": null,
+          "fy26_budget": 2040,
+          "fy27_proposed": 2081,
+          "change_dollars": 41,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "TEXT/SUPPLEMENTARY BOOKS",
+          "fy25_actual": null,
+          "fy26_budget": 3315,
+          "fy27_proposed": 3381,
+          "change_dollars": 66,
+          "change_pct": 0.019909502262443438
+        },
+        {
+          "description": "LIBRARY BOOKS AND PERIODICALS",
+          "fy25_actual": null,
+          "fy26_budget": 7854,
+          "fy27_proposed": 8011,
+          "change_dollars": 157,
+          "change_pct": 0.019989814107461167
+        },
+        {
+          "description": "PAPER AND PRINTER SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 11730,
+          "fy27_proposed": 11965,
+          "change_dollars": 235,
+          "change_pct": 0.020034100596760442
+        },
+        {
+          "description": "REGULAR EDUCATION SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 41820,
+          "fy27_proposed": 42656,
+          "change_dollars": 836,
+          "change_pct": 0.01999043519846963
+        },
+        {
+          "description": "INSTRUCTIONAL SOFTWARE",
+          "fy25_actual": null,
+          "fy26_budget": 5100,
+          "fy27_proposed": 5202,
+          "change_dollars": 102,
+          "change_pct": 0.02
+        },
+        {
+          "description": "CONTRACTED SERVICES",
+          "fy25_actual": null,
+          "fy26_budget": 1020,
+          "fy27_proposed": 1040,
+          "change_dollars": 20,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "EQUIP MAINTENANCE / REPLACEMENT",
+          "fy25_actual": null,
+          "fy26_budget": 4080,
+          "fy27_proposed": 4162,
+          "change_dollars": 82,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "ADJUSTMENT COUNSELORS",
+          "fy25_actual": null,
+          "fy26_budget": 247423,
+          "fy27_proposed": 256885,
+          "change_dollars": 9462,
+          "change_pct": 0.03824220060382422
+        },
+        {
+          "description": "SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 4080,
+          "fy27_proposed": 4162,
+          "change_dollars": 82,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 99309,
+          "fy27_proposed": 103532,
+          "change_dollars": 4223,
+          "change_pct": 0.04252383973255194
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 81359,
+          "fy27_proposed": 83747,
+          "change_dollars": 2388,
+          "change_pct": 0.02935139320788112
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 2040,
+          "fy27_proposed": 2081,
+          "change_dollars": 41,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "LUNCH & RECESS SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 17670,
+          "fy27_proposed": 18788,
+          "change_dollars": 1118,
+          "change_pct": 0.06327108092812676
+        },
+        {
+          "description": "CUSTODIAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 207622,
+          "fy27_proposed": 217323,
+          "change_dollars": 9701,
+          "change_pct": 0.046724335571374905
+        },
+        {
+          "description": "CUSTODIAL OVERTIME",
+          "fy25_actual": null,
+          "fy26_budget": 17004,
+          "fy27_proposed": 17514,
+          "change_dollars": 510,
+          "change_pct": 0.029992942836979536
+        }
+      ],
+      "line_items_reconcile": false,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 47
+        },
+        {
+          "fy": 2009,
+          "headcount": 48
+        },
+        {
+          "fy": 2010,
+          "headcount": 53
+        },
+        {
+          "fy": 2011,
+          "headcount": 59
+        },
+        {
+          "fy": 2012,
+          "headcount": 58
+        },
+        {
+          "fy": 2013,
+          "headcount": 58
+        },
+        {
+          "fy": 2014,
+          "headcount": 60
+        },
+        {
+          "fy": 2015,
+          "headcount": 64
+        },
+        {
+          "fy": 2017,
+          "headcount": 72
+        },
+        {
+          "fy": 2018,
+          "headcount": 74
+        },
+        {
+          "fy": 2019,
+          "headcount": 80
+        },
+        {
+          "fy": 2020,
+          "headcount": 84
+        },
+        {
+          "fy": 2021,
+          "headcount": 82
+        },
+        {
+          "fy": 2022,
+          "headcount": 85
+        },
+        {
+          "fy": 2023,
+          "headcount": 92
+        },
+        {
+          "fy": 2024,
+          "headcount": 81
+        },
+        {
+          "fy": 2025,
+          "headcount": 84
+        },
+        {
+          "fy": 2026,
+          "headcount": 88
+        }
+      ],
+      "overrides": []
+    },
+    "school_glover": {
+      "name": "school_glover",
+      "function": "schools",
+      "function_label": "Schools",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": null,
+        "fy26_budget": 4472968,
+        "fy27_proposed": 4437815,
+        "change_dollars": -35153,
+        "change_pct": -0.007858987589448438
+      },
+      "line_items": [
+        {
+          "description": "PROFESSIONAL SALARIES - SPED",
+          "fy25_actual": null,
+          "fy26_budget": 107110,
+          "fy27_proposed": 110323,
+          "change_dollars": 3213,
+          "change_pct": 0.02999719914106993
+        },
+        {
+          "description": "CLERICAL SALARIES - SPED",
+          "fy25_actual": null,
+          "fy26_budget": 30718,
+          "fy27_proposed": 31638,
+          "change_dollars": 920,
+          "change_pct": 0.029949866527768734
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 145100,
+          "fy27_proposed": 149453,
+          "change_dollars": 4353,
+          "change_pct": 0.03
+        },
+        {
+          "description": "CLERICAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 68952,
+          "fy27_proposed": 70999,
+          "change_dollars": 2047,
+          "change_pct": 0.029687318714468034
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 2244,
+          "fy27_proposed": 2289,
+          "change_dollars": 45,
+          "change_pct": 0.020053475935828877
+        },
+        {
+          "description": "TRAVEL",
+          "fy25_actual": null,
+          "fy26_budget": 2040,
+          "fy27_proposed": 2081,
+          "change_dollars": 41,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "TEAM LEADERS / DEPT COOR",
+          "fy25_actual": null,
+          "fy26_budget": 31118,
+          "fy27_proposed": 32052,
+          "change_dollars": 934,
+          "change_pct": 0.030014782441030913
+        },
+        {
+          "description": "KINDERGARTEN SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 160027,
+          "fy27_proposed": 168373,
+          "change_dollars": 8346,
+          "change_pct": 0.05215369906328307
+        },
+        {
+          "description": "REGULAR EDUCATION SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 939549,
+          "fy27_proposed": 994772,
+          "change_dollars": 55223,
+          "change_pct": 0.05877607234960604
+        },
+        {
+          "description": "SPECIALIST SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 299059,
+          "fy27_proposed": 310975,
+          "change_dollars": 11916,
+          "change_pct": 0.039844980421923436
+        },
+        {
+          "description": "PK SPECIAL EDUCATION SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 279208,
+          "fy27_proposed": 146696,
+          "change_dollars": -132512,
+          "change_pct": -0.47459958167387756
+        },
+        {
+          "description": "SPECIAL EDUCATION SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 548227,
+          "fy27_proposed": 584928,
+          "change_dollars": 36701,
+          "change_pct": 0.06694489691314
+        },
+        {
+          "description": "EL TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 77301,
+          "fy27_proposed": 82834,
+          "change_dollars": 5533,
+          "change_pct": 0.07157734052599578
+        },
+        {
+          "description": "OT/PT/SLP PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 236972,
+          "fy27_proposed": 262984,
+          "change_dollars": 26012,
+          "change_pct": 0.10976824266158026
+        },
+        {
+          "description": "BUILDING SUB SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 30600,
+          "fy27_proposed": 32300,
+          "change_dollars": 1700,
+          "change_pct": 0.05555555555555555
+        },
+        {
+          "description": "Instructional Assistants - General Ed",
+          "fy25_actual": null,
+          "fy26_budget": 168687,
+          "fy27_proposed": 177402,
+          "change_dollars": 8715,
+          "change_pct": 0.05166373223781323
+        },
+        {
+          "description": "Instructional Assistants - Special Ed",
+          "fy25_actual": null,
+          "fy26_budget": 300299,
+          "fy27_proposed": 316766,
+          "change_dollars": 16467,
+          "change_pct": 0.0548353474370544
+        },
+        {
+          "description": "Instructional Assistants - Kindergarten",
+          "fy25_actual": null,
+          "fy26_budget": 61196,
+          "fy27_proposed": 68676,
+          "change_dollars": 7480,
+          "change_pct": 0.12223021112491013
+        },
+        {
+          "description": "Instructional Assistants - Special Ed PK",
+          "fy25_actual": null,
+          "fy26_budget": 172566,
+          "fy27_proposed": 90350,
+          "change_dollars": -82216,
+          "change_pct": -0.4764322056488532
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 98393,
+          "fy27_proposed": 102418,
+          "change_dollars": 4025,
+          "change_pct": 0.04090738162267641
+        },
+        {
+          "description": "PROFESSIONAL DEV LEADERSHIP",
+          "fy25_actual": null,
+          "fy26_budget": 2040,
+          "fy27_proposed": 2081,
+          "change_dollars": 41,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "IN STATE CONFERENCES",
+          "fy25_actual": null,
+          "fy26_budget": 2244,
+          "fy27_proposed": 2289,
+          "change_dollars": 45,
+          "change_pct": 0.020053475935828877
+        },
+        {
+          "description": "BOOKS AND PERIODICALS",
+          "fy25_actual": null,
+          "fy26_budget": 5964,
+          "fy27_proposed": 6083,
+          "change_dollars": 119,
+          "change_pct": 0.01995305164319249
+        },
+        {
+          "description": "PAPER AND PRINTER SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 7650,
+          "fy27_proposed": 7803,
+          "change_dollars": 153,
+          "change_pct": 0.02
+        },
+        {
+          "description": "REGULAR EDUCATION SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 40600,
+          "fy27_proposed": 41412,
+          "change_dollars": 812,
+          "change_pct": 0.02
+        },
+        {
+          "description": "SCIENCE SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 4590,
+          "fy27_proposed": 4682,
+          "change_dollars": 92,
+          "change_pct": 0.020043572984749455
+        },
+        {
+          "description": "INSTRUCTIONAL SOFTWARE",
+          "fy25_actual": null,
+          "fy26_budget": 6072,
+          "fy27_proposed": 6193,
+          "change_dollars": 121,
+          "change_pct": 0.019927536231884056
+        },
+        {
+          "description": "EQUIP MAINTENANCE / REPLACEMENT",
+          "fy25_actual": null,
+          "fy26_budget": 3876,
+          "fy27_proposed": 3954,
+          "change_dollars": 78,
+          "change_pct": 0.020123839009287926
+        },
+        {
+          "description": "GIUDANCE COUNSELORS",
+          "fy25_actual": null,
+          "fy26_budget": 84792,
+          "fy27_proposed": 91114,
+          "change_dollars": 6322,
+          "change_pct": 0.07455892065289178
+        },
+        {
+          "description": "ADiUSTMENT COUNSELORS",
+          "fy25_actual": null,
+          "fy26_budget": 98186,
+          "fy27_proposed": 104662,
+          "change_dollars": 6476,
+          "change_pct": 0.06595645000305543
+        },
+        {
+          "description": "GUIDANCE TESTING SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 1224,
+          "fy27_proposed": 1248,
+          "change_dollars": 24,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 103206,
+          "fy27_proposed": 107334,
+          "change_dollars": 4128,
+          "change_pct": 0.03999767455380501
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 79609,
+          "fy27_proposed": 81997,
+          "change_dollars": 2388,
+          "change_pct": 0.02999660842367069
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 1428,
+          "fy27_proposed": 1457,
+          "change_dollars": 29,
+          "change_pct": 0.02030812324929972
+        },
+        {
+          "description": "LUNCH & RECESS SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 24666,
+          "fy27_proposed": 25910,
+          "change_dollars": 1244,
+          "change_pct": 0.050433795507986705
+        },
+        {
+          "description": "CUSTODIAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 230452,
+          "fy27_proposed": 241382,
+          "change_dollars": 10930,
+          "change_pct": 0.047428531754985855
+        },
+        {
+          "description": "CUSTODIAL OVERTIME",
+          "fy25_actual": null,
+          "fy26_budget": 17004,
+          "fy27_proposed": 17514,
+          "change_dollars": 510,
+          "change_pct": 0.029992942836979536
+        }
+      ],
+      "line_items_reconcile": false,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 39
+        },
+        {
+          "fy": 2009,
+          "headcount": 46
+        },
+        {
+          "fy": 2010,
+          "headcount": 53
+        },
+        {
+          "fy": 2011,
+          "headcount": 58
+        },
+        {
+          "fy": 2012,
+          "headcount": 57
+        },
+        {
+          "fy": 2013,
+          "headcount": 58
+        },
+        {
+          "fy": 2014,
+          "headcount": 67
+        },
+        {
+          "fy": 2015,
+          "headcount": 78
+        },
+        {
+          "fy": 2016,
+          "headcount": 76
+        },
+        {
+          "fy": 2017,
+          "headcount": 69
+        },
+        {
+          "fy": 2018,
+          "headcount": 74
+        },
+        {
+          "fy": 2019,
+          "headcount": 66
+        },
+        {
+          "fy": 2020,
+          "headcount": 65
+        },
+        {
+          "fy": 2021,
+          "headcount": 69
+        },
+        {
+          "fy": 2022,
+          "headcount": 69
+        },
+        {
+          "fy": 2023,
+          "headcount": 72
+        },
+        {
+          "fy": 2024,
+          "headcount": 74
+        },
+        {
+          "fy": 2025,
+          "headcount": 67
+        },
+        {
+          "fy": 2026,
+          "headcount": 66
+        }
+      ],
+      "overrides": []
+    },
+    "school_village": {
+      "name": "school_village",
+      "function": "schools",
+      "function_label": "Schools",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": null,
+        "fy26_budget": 7579771,
+        "fy27_proposed": 7646853,
+        "change_dollars": 67082,
+        "change_pct": 0.008850135446044478
+      },
+      "line_items": [
+        {
+          "description": "PROFESSIONAL SALARIES - SPED",
+          "fy25_actual": null,
+          "fy26_budget": 107110,
+          "fy27_proposed": 110323,
+          "change_dollars": 3213,
+          "change_pct": 0.02999719914106993
+        },
+        {
+          "description": "CLERICAL SALARIES - SPED",
+          "fy25_actual": null,
+          "fy26_budget": 23721,
+          "fy27_proposed": 23362,
+          "change_dollars": -359,
+          "change_pct": -0.015134269212933687
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 256840,
+          "fy27_proposed": 264545,
+          "change_dollars": 7705,
+          "change_pct": 0.029999221305092666
+        },
+        {
+          "description": "CLERICAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 137966,
+          "fy27_proposed": 142402,
+          "change_dollars": 4436,
+          "change_pct": 0.03215284925271444
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 1100,
+          "fy27_proposed": 1122,
+          "change_dollars": 22,
+          "change_pct": 0.02
+        },
+        {
+          "description": "TEAM LEADERS / DEPT COOR",
+          "fy25_actual": null,
+          "fy26_budget": 49789,
+          "fy27_proposed": 51283,
+          "change_dollars": 1494,
+          "change_pct": 0.03000662797003354
+        },
+        {
+          "description": "REGULAR EDUCATION SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 2464452,
+          "fy27_proposed": 2610289,
+          "change_dollars": 145837,
+          "change_pct": 0.05917623877438068
+        },
+        {
+          "description": "SPECIALISTS SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 740684,
+          "fy27_proposed": 787457,
+          "change_dollars": 46773,
+          "change_pct": 0.06314838716645695
+        },
+        {
+          "description": "SPECIAL EDUCATION SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 1424216,
+          "fy27_proposed": 1490915,
+          "change_dollars": 66699,
+          "change_pct": 0.04683208165053616
+        },
+        {
+          "description": "EL TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 184206,
+          "fy27_proposed": 194628,
+          "change_dollars": 10422,
+          "change_pct": 0.05657796162991433
+        },
+        {
+          "description": "READING SPEC / INTERVENTIONIST SAL",
+          "fy25_actual": null,
+          "fy26_budget": 205791,
+          "fy27_proposed": 214090,
+          "change_dollars": 8299,
+          "change_pct": 0.040327322380473395
+        },
+        {
+          "description": "OT/PT/SLP SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 110254,
+          "fy27_proposed": 160757,
+          "change_dollars": 50503,
+          "change_pct": 0.45806047853139115
+        },
+        {
+          "description": "BUILDING SUB SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 65600,
+          "fy27_proposed": 69500,
+          "change_dollars": 3900,
+          "change_pct": 0.05945121951219512
+        },
+        {
+          "description": "INSTRUCTIONAL ASSISTANTS",
+          "fy25_actual": null,
+          "fy26_budget": 107817,
+          "fy27_proposed": 111043,
+          "change_dollars": 3226,
+          "change_pct": 0.029921069961137855
+        },
+        {
+          "description": "INSTRUCTIONAL ASSISTANTS - SPECIAL ED",
+          "fy25_actual": null,
+          "fy26_budget": 474629,
+          "fy27_proposed": 500739,
+          "change_dollars": 26110,
+          "change_pct": 0.05501138784187228
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 88596,
+          "fy27_proposed": 95040,
+          "change_dollars": 6444,
+          "change_pct": 0.07273466070702966
+        },
+        {
+          "description": "PUBLICATIONS",
+          "fy25_actual": null,
+          "fy26_budget": 6120,
+          "fy27_proposed": 6242,
+          "change_dollars": 122,
+          "change_pct": 0.019934640522875816
+        },
+        {
+          "description": "PROFESSIONAL DEV LEADERSHIP",
+          "fy25_actual": null,
+          "fy26_budget": 2244,
+          "fy27_proposed": 2289,
+          "change_dollars": 45,
+          "change_pct": 0.020053475935828877
+        },
+        {
+          "description": "PD CONTRACTED SERVICES",
+          "fy25_actual": null,
+          "fy26_budget": 3366,
+          "fy27_proposed": 3433,
+          "change_dollars": 67,
+          "change_pct": 0.01990493166963755
+        },
+        {
+          "description": "TEXT/SUPPLEMENTARY BOOKS",
+          "fy25_actual": null,
+          "fy26_budget": 1000,
+          "fy27_proposed": 1020,
+          "change_dollars": 20,
+          "change_pct": 0.02
+        },
+        {
+          "description": "BOOKS AND PERIODICALS",
+          "fy25_actual": null,
+          "fy26_budget": 7140,
+          "fy27_proposed": 7283,
+          "change_dollars": 143,
+          "change_pct": 0.020028011204481794
+        },
+        {
+          "description": "REGULAR EDUCATION SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 34520,
+          "fy27_proposed": 35210,
+          "change_dollars": 690,
+          "change_pct": 0.01998841251448436
+        },
+        {
+          "description": "ART SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 6732,
+          "fy27_proposed": 6867,
+          "change_dollars": 135,
+          "change_pct": 0.020053475935828877
+        },
+        {
+          "description": "MUSIC SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 4896,
+          "fy27_proposed": 4994,
+          "change_dollars": 98,
+          "change_pct": 0.020016339869281044
+        },
+        {
+          "description": "PE SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 2550,
+          "fy27_proposed": 2601,
+          "change_dollars": 51,
+          "change_pct": 0.02
+        },
+        {
+          "description": "ELA SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 8000,
+          "fy27_proposed": 8160,
+          "change_dollars": 160,
+          "change_pct": 0.02
+        },
+        {
+          "description": "MATH SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 8000,
+          "fy27_proposed": 8160,
+          "change_dollars": 160,
+          "change_pct": 0.02
+        },
+        {
+          "description": "SCIENCE SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 8000,
+          "fy27_proposed": 8160,
+          "change_dollars": 160,
+          "change_pct": 0.02
+        },
+        {
+          "description": "SOCIAL STUDIES SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 8000,
+          "fy27_proposed": 8160,
+          "change_dollars": 160,
+          "change_pct": 0.02
+        },
+        {
+          "description": "INSTRUCTIONAL SOFTWARE",
+          "fy25_actual": null,
+          "fy26_budget": 13860,
+          "fy27_proposed": 14137,
+          "change_dollars": 277,
+          "change_pct": 0.019985569985569985
+        },
+        {
+          "description": "EQUIP MAINTENANCE / REPLACEMENT",
+          "fy25_actual": null,
+          "fy26_budget": 12000,
+          "fy27_proposed": 12240,
+          "change_dollars": 240,
+          "change_pct": 0.02
+        },
+        {
+          "description": "GIUDANCE COUNSELORS",
+          "fy25_actual": null,
+          "fy26_budget": 291045,
+          "fy27_proposed": 305588,
+          "change_dollars": 14543,
+          "change_pct": 0.04996821797316566
+        },
+        {
+          "description": "ADJUSTMENT COUNSELORS",
+          "fy25_actual": null,
+          "fy26_budget": 40211,
+          "fy27_proposed": 41417,
+          "change_dollars": 1206,
+          "change_pct": 0.029991793290393177
+        },
+        {
+          "description": "TESTING",
+          "fy25_actual": null,
+          "fy26_budget": 510,
+          "fy27_proposed": 520,
+          "change_dollars": 10,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 204442,
+          "fy27_proposed": 212696,
+          "change_dollars": 8254,
+          "change_pct": 0.040373308811301
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 166806,
+          "fy27_proposed": 171693,
+          "change_dollars": 4887,
+          "change_pct": 0.029297507283910652
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 3060,
+          "fy27_proposed": 3121,
+          "change_dollars": 61,
+          "change_pct": 0.019934640522875816
+        },
+        {
+          "description": "LUNCH & RECESS SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 25897,
+          "fy27_proposed": 27393,
+          "change_dollars": 1496,
+          "change_pct": 0.05776730895470518
+        },
+        {
+          "description": "CUSTODIAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 261597,
+          "fy27_proposed": 281004,
+          "change_dollars": 19407,
+          "change_pct": 0.07418663058062593
+        },
+        {
+          "description": "CUSTODIAL OVERTIME",
+          "fy25_actual": null,
+          "fy26_budget": 17004,
+          "fy27_proposed": 17514,
+          "change_dollars": 510,
+          "change_pct": 0.029992942836979536
+        }
+      ],
+      "line_items_reconcile": false,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 100
+        },
+        {
+          "fy": 2009,
+          "headcount": 113
+        },
+        {
+          "fy": 2010,
+          "headcount": 126
+        },
+        {
+          "fy": 2011,
+          "headcount": 112
+        },
+        {
+          "fy": 2012,
+          "headcount": 106
+        },
+        {
+          "fy": 2013,
+          "headcount": 114
+        },
+        {
+          "fy": 2014,
+          "headcount": 115
+        },
+        {
+          "fy": 2015,
+          "headcount": 106
+        },
+        {
+          "fy": 2016,
+          "headcount": 107
+        },
+        {
+          "fy": 2017,
+          "headcount": 106
+        },
+        {
+          "fy": 2018,
+          "headcount": 106
+        },
+        {
+          "fy": 2019,
+          "headcount": 110
+        },
+        {
+          "fy": 2020,
+          "headcount": 111
+        },
+        {
+          "fy": 2021,
+          "headcount": 102
+        },
+        {
+          "fy": 2022,
+          "headcount": 100
+        },
+        {
+          "fy": 2023,
+          "headcount": 98
+        },
+        {
+          "fy": 2024,
+          "headcount": 94
+        },
+        {
+          "fy": 2025,
+          "headcount": 102
+        },
+        {
+          "fy": 2026,
+          "headcount": 90
+        }
+      ],
+      "overrides": []
+    },
+    "school_middle": {
+      "name": "school_middle",
+      "function": "schools",
+      "function_label": "Schools",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": null,
+        "fy26_budget": 5784165,
+        "fy27_proposed": 5778193,
+        "change_dollars": -5972,
+        "change_pct": -0.0010324740044587249
+      },
+      "line_items": [
+        {
+          "description": "PROFESSIONAL SALARIES - SPED",
+          "fy25_actual": null,
+          "fy26_budget": 97500,
+          "fy27_proposed": 100425,
+          "change_dollars": 2925,
+          "change_pct": 0.03
+        },
+        {
+          "description": "CLERICAL SALARIES - SPED",
+          "fy25_actual": null,
+          "fy26_budget": 23721,
+          "fy27_proposed": 23362,
+          "change_dollars": -359,
+          "change_pct": -0.015134269212933687
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 247000,
+          "fy27_proposed": 253060,
+          "change_dollars": 6060,
+          "change_pct": 0.024534412955465587
+        },
+        {
+          "description": "CLERICAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 119472,
+          "fy27_proposed": 123422,
+          "change_dollars": 3950,
+          "change_pct": 0.03306214008303201
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 1420,
+          "fy27_proposed": 1448,
+          "change_dollars": 28,
+          "change_pct": 0.01971830985915493
+        },
+        {
+          "description": "PRINTING SERVICES",
+          "fy25_actual": null,
+          "fy26_budget": 3060,
+          "fy27_proposed": 3121,
+          "change_dollars": 61,
+          "change_pct": 0.019934640522875816
+        },
+        {
+          "description": "POSTAGE",
+          "fy25_actual": null,
+          "fy26_budget": 2040,
+          "fy27_proposed": 2081,
+          "change_dollars": 41,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "TRAVEL",
+          "fy25_actual": null,
+          "fy26_budget": 510,
+          "fy27_proposed": 520,
+          "change_dollars": 10,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "TEAM LEADERS / DEPT COOR",
+          "fy25_actual": null,
+          "fy26_budget": 31118,
+          "fy27_proposed": 32052,
+          "change_dollars": 934,
+          "change_pct": 0.030014782441030913
+        },
+        {
+          "description": "REGULAR EDUCATION SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 2108350,
+          "fy27_proposed": 2202138,
+          "change_dollars": 93788,
+          "change_pct": 0.04448407522470178
+        },
+        {
+          "description": "FINE ARTS SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 97065,
+          "fy27_proposed": 100937,
+          "change_dollars": 3872,
+          "change_pct": 0.039890794828207905
+        },
+        {
+          "description": "PERFORMING ARTS SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 114724,
+          "fy27_proposed": 121843,
+          "change_dollars": 7119,
+          "change_pct": 0.062053275687737525
+        },
+        {
+          "description": "PE/HEALTH SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 396823,
+          "fy27_proposed": 380317,
+          "change_dollars": -16506,
+          "change_pct": -0.04159537123604227
+        },
+        {
+          "description": "EL TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 98393,
+          "fy27_proposed": 102318,
+          "change_dollars": 3925,
+          "change_pct": 0.03989104916000122
+        },
+        {
+          "description": "TECHNOLOGY SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 95754,
+          "fy27_proposed": 102068,
+          "change_dollars": 6314,
+          "change_pct": 0.06593980408129164
+        },
+        {
+          "description": "SPECIAL EDUCATION SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 763203,
+          "fy27_proposed": 802250,
+          "change_dollars": 39047,
+          "change_pct": 0.051162010631509575
+        },
+        {
+          "description": "READING SPEC SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 96815,
+          "fy27_proposed": 100687,
+          "change_dollars": 3872,
+          "change_pct": 0.03999380261323142
+        },
+        {
+          "description": "OT/PT/SLP PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 171303,
+          "fy27_proposed": 100687,
+          "change_dollars": -70616,
+          "change_pct": -0.4122286241338447
+        },
+        {
+          "description": "BUILDING SUB SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 68900,
+          "fy27_proposed": 73300,
+          "change_dollars": 4400,
+          "change_pct": 0.06386066763425254
+        },
+        {
+          "description": "INSTRUCTIONAL ASSISTANTS - SPECIAL ED",
+          "fy25_actual": null,
+          "fy26_budget": 352250,
+          "fy27_proposed": 367233,
+          "change_dollars": 14983,
+          "change_pct": 0.04253513129879347
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 65885,
+          "fy27_proposed": 70820,
+          "change_dollars": 4935,
+          "change_pct": 0.07490324049480154
+        },
+        {
+          "description": "PERIODICALS",
+          "fy25_actual": null,
+          "fy26_budget": 5100,
+          "fy27_proposed": 5202,
+          "change_dollars": 102,
+          "change_pct": 0.02
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 128,
+          "fy27_proposed": 130,
+          "change_dollars": 2,
+          "change_pct": 0.015625
+        },
+        {
+          "description": "PROFESSIONAL DEV CONTR SVCS",
+          "fy25_actual": null,
+          "fy26_budget": 5100,
+          "fy27_proposed": 5202,
+          "change_dollars": 102,
+          "change_pct": 0.02
+        },
+        {
+          "description": "PROF DEVEL TRAVEL",
+          "fy25_actual": null,
+          "fy26_budget": 2807,
+          "fy27_proposed": 2863,
+          "change_dollars": 56,
+          "change_pct": 0.0199501246882793
+        },
+        {
+          "description": "TEXT/SUPPLEMENTARY BOOKS",
+          "fy25_actual": null,
+          "fy26_budget": 3672,
+          "fy27_proposed": 3745,
+          "change_dollars": 73,
+          "change_pct": 0.019880174291938998
+        },
+        {
+          "description": "ELA TEXTBOOKS",
+          "fy25_actual": null,
+          "fy26_budget": 5304,
+          "fy27_proposed": 5410,
+          "change_dollars": 106,
+          "change_pct": 0.01998491704374057
+        },
+        {
+          "description": "REGULAR EDUCATION SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 11045,
+          "fy27_proposed": 11265,
+          "change_dollars": 220,
+          "change_pct": 0.019918515165233137
+        },
+        {
+          "description": "ART SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 4712,
+          "fy27_proposed": 4807,
+          "change_dollars": 95,
+          "change_pct": 0.020161290322580645
+        },
+        {
+          "description": "PE SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 2795,
+          "fy27_proposed": 2851,
+          "change_dollars": 56,
+          "change_pct": 0.02003577817531306
+        },
+        {
+          "description": "ELA SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 1473,
+          "fy27_proposed": 1502,
+          "change_dollars": 29,
+          "change_pct": 0.019687712152070606
+        },
+        {
+          "description": "MATH SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 1339,
+          "fy27_proposed": 1366,
+          "change_dollars": 27,
+          "change_pct": 0.020164301717699777
+        },
+        {
+          "description": "SCIENCE SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 4488,
+          "fy27_proposed": 4578,
+          "change_dollars": 90,
+          "change_pct": 0.020053475935828877
+        },
+        {
+          "description": "WORLD LANGUAGE SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 1071,
+          "fy27_proposed": 1092,
+          "change_dollars": 21,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "SOCIAL STUDIES SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 1245,
+          "fy27_proposed": 1270,
+          "change_dollars": 25,
+          "change_pct": 0.020080321285140562
+        },
+        {
+          "description": "SPED SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 3210,
+          "fy27_proposed": 3274,
+          "change_dollars": 64,
+          "change_pct": 0.019937694704049845
+        },
+        {
+          "description": "ELA CONTRACTED SERVICES",
+          "fy25_actual": null,
+          "fy26_budget": 204,
+          "fy27_proposed": 208,
+          "change_dollars": 4,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "WORLD LANGUAGE CONTR SVCS",
+          "fy25_actual": null,
+          "fy26_budget": 2754,
+          "fy27_proposed": 2809,
+          "change_dollars": 55,
+          "change_pct": 0.019970951343500364
+        },
+        {
+          "description": "SOCIAL STUDIES CONTR SVCS",
+          "fy25_actual": null,
+          "fy26_budget": 306,
+          "fy27_proposed": 312,
+          "change_dollars": 6,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "UNIFIED ARTS CONTR SVCS",
+          "fy25_actual": null,
+          "fy26_budget": 765,
+          "fy27_proposed": 780,
+          "change_dollars": 15,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "SCIENCE CONTR SVCS",
+          "fy25_actual": null,
+          "fy26_budget": 918,
+          "fy27_proposed": 936,
+          "change_dollars": 18,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "INSTRUCTIONAL SOFWARE",
+          "fy25_actual": null,
+          "fy26_budget": 13260,
+          "fy27_proposed": 13525,
+          "change_dollars": 265,
+          "change_pct": 0.01998491704374057
+        },
+        {
+          "description": "PROF SALARIES - GUID COUNSELOR",
+          "fy25_actual": null,
+          "fy26_budget": 180161,
+          "fy27_proposed": 191321,
+          "change_dollars": 11160,
+          "change_pct": 0.06194459400203152
+        },
+        {
+          "description": "TESTING SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 255,
+          "fy27_proposed": 260,
+          "change_dollars": 5,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 187258,
+          "fy27_proposed": 198514,
+          "change_dollars": 11256,
+          "change_pct": 0.06010958143310299
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 88817,
+          "fy27_proposed": 91687,
+          "change_dollars": 2870,
+          "change_pct": 0.03231363365121542
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 1683,
+          "fy27_proposed": 1717,
+          "change_dollars": 34,
+          "change_pct": 0.020202020202020204
+        },
+        {
+          "description": "CUSTODIAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 281986,
+          "fy27_proposed": 300814,
+          "change_dollars": 18828,
+          "change_pct": 0.06676927223337328
+        },
+        {
+          "description": "CUSTODIAL OVERTIME",
+          "fy25_actual": null,
+          "fy26_budget": 17004,
+          "fy27_proposed": 17514,
+          "change_dollars": 510,
+          "change_pct": 0.029992942836979536
+        }
+      ],
+      "line_items_reconcile": false,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 67
+        },
+        {
+          "fy": 2009,
+          "headcount": 71
+        },
+        {
+          "fy": 2010,
+          "headcount": 74
+        },
+        {
+          "fy": 2011,
+          "headcount": 79
+        },
+        {
+          "fy": 2012,
+          "headcount": 74
+        },
+        {
+          "fy": 2013,
+          "headcount": 74
+        },
+        {
+          "fy": 2014,
+          "headcount": 75
+        },
+        {
+          "fy": 2015,
+          "headcount": 76
+        },
+        {
+          "fy": 2016,
+          "headcount": 78
+        },
+        {
+          "fy": 2017,
+          "headcount": 77
+        },
+        {
+          "fy": 2018,
+          "headcount": 69
+        },
+        {
+          "fy": 2019,
+          "headcount": 66
+        },
+        {
+          "fy": 2020,
+          "headcount": 66
+        },
+        {
+          "fy": 2021,
+          "headcount": 63
+        },
+        {
+          "fy": 2022,
+          "headcount": 64
+        },
+        {
+          "fy": 2023,
+          "headcount": 63
+        },
+        {
+          "fy": 2024,
+          "headcount": 62
+        },
+        {
+          "fy": 2025,
+          "headcount": 64
+        },
+        {
+          "fy": 2026,
+          "headcount": 65
+        }
+      ],
+      "overrides": []
+    },
+    "school_high": {
+      "name": "school_high",
+      "function": "schools",
+      "function_label": "Schools",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": null,
+        "fy26_budget": 10904809,
+        "fy27_proposed": 11229153,
+        "change_dollars": 324344,
+        "change_pct": 0.02974320779025107
+      },
+      "line_items": [
+        {
+          "description": "PROFESSIONAL SALARIES - SPED",
+          "fy25_actual": null,
+          "fy26_budget": 107110,
+          "fy27_proposed": 110323,
+          "change_dollars": 3213,
+          "change_pct": 0.02999719914106993
+        },
+        {
+          "description": "CLERICAL SALARIES - SPED",
+          "fy25_actual": null,
+          "fy26_budget": 54068,
+          "fy27_proposed": 55668,
+          "change_dollars": 1600,
+          "change_pct": 0.029592365169786194
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 406864,
+          "fy27_proposed": 408345,
+          "change_dollars": 1481,
+          "change_pct": 0.0036400369656691177
+        },
+        {
+          "description": "CLERICAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 176130,
+          "fy27_proposed": 178297,
+          "change_dollars": 2167,
+          "change_pct": 0.012303412252313631
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 12668,
+          "fy27_proposed": 12921,
+          "change_dollars": 253,
+          "change_pct": 0.01997158193874329
+        },
+        {
+          "description": "PRINTING EXPENSES",
+          "fy25_actual": null,
+          "fy26_budget": 1530,
+          "fy27_proposed": 1561,
+          "change_dollars": 31,
+          "change_pct": 0.020261437908496733
+        },
+        {
+          "description": "IN STATE TRAVEL EXPENSES",
+          "fy25_actual": null,
+          "fy26_budget": 1020,
+          "fy27_proposed": 1040,
+          "change_dollars": 20,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "TEAM LEADERS / DEPT COOR",
+          "fy25_actual": null,
+          "fy26_budget": 56013,
+          "fy27_proposed": 55453,
+          "change_dollars": -560,
+          "change_pct": -0.00999767911020656
+        },
+        {
+          "description": "ENGLISH TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 968007,
+          "fy27_proposed": 1103732,
+          "change_dollars": 135725,
+          "change_pct": 0.14021076293869775
+        },
+        {
+          "description": "MATH TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 1000459,
+          "fy27_proposed": 1050615,
+          "change_dollars": 50156,
+          "change_pct": 0.050132988958068246
+        },
+        {
+          "description": "SCIENCE TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 1006109,
+          "fy27_proposed": 1063258,
+          "change_dollars": 57149,
+          "change_pct": 0.05680199660275378
+        },
+        {
+          "description": "SOCIAL STUDIES TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 884563,
+          "fy27_proposed": 928787,
+          "change_dollars": 44224,
+          "change_pct": 0.04999530841782892
+        },
+        {
+          "description": "WORLD LANG TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 751682,
+          "fy27_proposed": 799710,
+          "change_dollars": 48028,
+          "change_pct": 0.0638940402989562
+        },
+        {
+          "description": "TECH ED TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 143362,
+          "fy27_proposed": 157581,
+          "change_dollars": 14219,
+          "change_pct": 0.09918248908357863
+        },
+        {
+          "description": "HEALTH / PE TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 452141,
+          "fy27_proposed": 472307,
+          "change_dollars": 20166,
+          "change_pct": 0.04460113106309757
+        },
+        {
+          "description": "PERFORMING ARTS TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 260343,
+          "fy27_proposed": 275679,
+          "change_dollars": 15336,
+          "change_pct": 0.058906903584886094
+        },
+        {
+          "description": "FINE ARTS TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 321691,
+          "fy27_proposed": 345452,
+          "change_dollars": 23761,
+          "change_pct": 0.07386280623331085
+        },
+        {
+          "description": "BUSINESS ED TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 96815,
+          "fy27_proposed": 100687,
+          "change_dollars": 3872,
+          "change_pct": 0.03999380261323142
+        },
+        {
+          "description": "PATHWAYS TEACHER/COOR SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 82925,
+          "fy27_proposed": 86307,
+          "change_dollars": 3382,
+          "change_pct": 0.04078384082001809
+        },
+        {
+          "description": "SPECIAL EDUCATION SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 1303796,
+          "fy27_proposed": 1374864,
+          "change_dollars": 71068,
+          "change_pct": 0.05450852740766193
+        },
+        {
+          "description": "EL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 87495,
+          "fy27_proposed": 93652,
+          "change_dollars": 6157,
+          "change_pct": 0.07036973541345219
+        },
+        {
+          "description": "BRYT TEACHER SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 46120,
+          "fy27_proposed": 70820,
+          "change_dollars": 24700,
+          "change_pct": 0.5355594102341718
+        },
+        {
+          "description": "OT/PT/SLP PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 38726,
+          "fy27_proposed": 40275,
+          "change_dollars": 1549,
+          "change_pct": 0.039998967102205234
+        },
+        {
+          "description": "BUILDING SUB SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 61200,
+          "fy27_proposed": 64600,
+          "change_dollars": 3400,
+          "change_pct": 0.05555555555555555
+        },
+        {
+          "description": "INSTRUCTIONAL ASSISTANTS - SPECIAL ED",
+          "fy25_actual": null,
+          "fy26_budget": 492442,
+          "fy27_proposed": 527347,
+          "change_dollars": 34905,
+          "change_pct": 0.07088144390608438
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 96104,
+          "fy27_proposed": 102418,
+          "change_dollars": 6314,
+          "change_pct": 0.06569965870307168
+        },
+        {
+          "description": "LIBRARY SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 2344,
+          "fy27_proposed": 2391,
+          "change_dollars": 47,
+          "change_pct": 0.020051194539249147
+        },
+        {
+          "description": "LIBRARY DIGITAL MEDIA",
+          "fy25_actual": null,
+          "fy26_budget": 9550,
+          "fy27_proposed": 9741,
+          "change_dollars": 191,
+          "change_pct": 0.02
+        },
+        {
+          "description": "PUBLICATIONS",
+          "fy25_actual": null,
+          "fy26_budget": 9502,
+          "fy27_proposed": 9692,
+          "change_dollars": 190,
+          "change_pct": 0.019995790359924225
+        },
+        {
+          "description": "MEMBERSHIP AND DUES",
+          "fy25_actual": null,
+          "fy26_budget": 9404,
+          "fy27_proposed": 9592,
+          "change_dollars": 188,
+          "change_pct": 0.01999149298170991
+        },
+        {
+          "description": "IN STATE CONFERENCES",
+          "fy25_actual": null,
+          "fy26_budget": 2550,
+          "fy27_proposed": 2601,
+          "change_dollars": 51,
+          "change_pct": 0.02
+        },
+        {
+          "description": "DATA COACH",
+          "fy25_actual": null,
+          "fy26_budget": 79609,
+          "fy27_proposed": 82247,
+          "change_dollars": 2638,
+          "change_pct": 0.03313695687673504
+        },
+        {
+          "description": "IN STATE TRAVEL EXP FINE ARTS",
+          "fy25_actual": null,
+          "fy26_budget": 816,
+          "fy27_proposed": 832,
+          "change_dollars": 16,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "PROFESSIONAL DEVELOPMENT",
+          "fy25_actual": null,
+          "fy26_budget": 3890,
+          "fy27_proposed": 3968,
+          "change_dollars": 78,
+          "change_pct": 0.02005141388174807
+        },
+        {
+          "description": "ELA TEXTBOOKS",
+          "fy25_actual": null,
+          "fy26_budget": 5660,
+          "fy27_proposed": 5773,
+          "change_dollars": 113,
+          "change_pct": 0.019964664310954065
+        },
+        {
+          "description": "WORLD LANGUAGE TEXTBOOKS",
+          "fy25_actual": null,
+          "fy26_budget": 10899,
+          "fy27_proposed": 1020,
+          "change_dollars": -9879,
+          "change_pct": -0.9064134324249932
+        },
+        {
+          "description": "SOCIAL STUDIES TEXTBOOKS",
+          "fy25_actual": null,
+          "fy26_budget": 7446,
+          "fy27_proposed": 7595,
+          "change_dollars": 149,
+          "change_pct": 0.020010744023636853
+        },
+        {
+          "description": "SENIOR PROJECT EXPENSES",
+          "fy25_actual": null,
+          "fy26_budget": 714,
+          "fy27_proposed": 728,
+          "change_dollars": 14,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "TV/THEATRE/STUDIO MAINTENANCE",
+          "fy25_actual": null,
+          "fy26_budget": 8568,
+          "fy27_proposed": 8739,
+          "change_dollars": 171,
+          "change_pct": 0.01995798319327731
+        },
+        {
+          "description": "HEALTH INSTRUCTIONAL SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 1530,
+          "fy27_proposed": 1561,
+          "change_dollars": 31,
+          "change_pct": 0.020261437908496733
+        },
+        {
+          "description": "CONSUMER SCIENCE SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 11475,
+          "fy27_proposed": 11705,
+          "change_dollars": 230,
+          "change_pct": 0.020043572984749455
+        },
+        {
+          "description": "SOCIAL STUDIES SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 1530,
+          "fy27_proposed": 1561,
+          "change_dollars": 31,
+          "change_pct": 0.020261437908496733
+        },
+        {
+          "description": "COPIER SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 4080,
+          "fy27_proposed": 4162,
+          "change_dollars": 82,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "REPLACEMENT OF EQUIPMENT",
+          "fy25_actual": null,
+          "fy26_budget": 510,
+          "fy27_proposed": 520,
+          "change_dollars": 10,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "PHYS ED EQUIPMENT",
+          "fy25_actual": null,
+          "fy26_budget": 816,
+          "fy27_proposed": 832,
+          "change_dollars": 16,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "INSTUCTIONAL SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 13200,
+          "fy27_proposed": 13464,
+          "change_dollars": 264,
+          "change_pct": 0.02
+        },
+        {
+          "description": "MARINE TECHNOLOGY",
+          "fy25_actual": null,
+          "fy26_budget": 2040,
+          "fy27_proposed": 2081,
+          "change_dollars": 41,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "VISUAL ARTS SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 20400,
+          "fy27_proposed": 20808,
+          "change_dollars": 408,
+          "change_pct": 0.02
+        },
+        {
+          "description": "PERFORMING ARTS SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 6426,
+          "fy27_proposed": 6555,
+          "change_dollars": 129,
+          "change_pct": 0.020074696545284782
+        },
+        {
+          "description": "APPLIED ARTS SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 2856,
+          "fy27_proposed": 2913,
+          "change_dollars": 57,
+          "change_pct": 0.01995798319327731
+        },
+        {
+          "description": "INDUSTRIAL ARTS SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 12750,
+          "fy27_proposed": 13005,
+          "change_dollars": 255,
+          "change_pct": 0.02
+        },
+        {
+          "description": "PHYS ED SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 1122,
+          "fy27_proposed": 1144,
+          "change_dollars": 22,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "BUSINESS SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 4080,
+          "fy27_proposed": 4162,
+          "change_dollars": 82,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "SCIENCE SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 19278,
+          "fy27_proposed": 19664,
+          "change_dollars": 386,
+          "change_pct": 0.020022823944392573
+        },
+        {
+          "description": "WORLD LANGUAGE SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 1530,
+          "fy27_proposed": 1561,
+          "change_dollars": 31,
+          "change_pct": 0.020261437908496733
+        },
+        {
+          "description": "PERFORMING ARTS CONTR SVCS",
+          "fy25_actual": null,
+          "fy26_budget": 15300,
+          "fy27_proposed": 15606,
+          "change_dollars": 306,
+          "change_pct": 0.02
+        },
+        {
+          "description": "TECHNOLOGY EQUIPMENT",
+          "fy25_actual": null,
+          "fy26_budget": 1020,
+          "fy27_proposed": 1040,
+          "change_dollars": 20,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "INSTRUCTIONAL SOFTWARE",
+          "fy25_actual": null,
+          "fy26_budget": 25353,
+          "fy27_proposed": 25860,
+          "change_dollars": 507,
+          "change_pct": 0.019997633416163767
+        },
+        {
+          "description": "MATH INSTRUCTIONAL SOFTWARE",
+          "fy25_actual": null,
+          "fy26_budget": 16320,
+          "fy27_proposed": 16646,
+          "change_dollars": 326,
+          "change_pct": 0.01997549019607843
+        },
+        {
+          "description": "TECHNOLOGY SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 6120,
+          "fy27_proposed": 6242,
+          "change_dollars": 122,
+          "change_pct": 0.019934640522875816
+        },
+        {
+          "description": "GUIDANCE COUNSELOR PROF SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 472873,
+          "fy27_proposed": 499245,
+          "change_dollars": 26372,
+          "change_pct": 0.05576973098485217
+        },
+        {
+          "description": "ADJ COUNSELOR PROF SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 328199,
+          "fy27_proposed": 346208,
+          "change_dollars": 18009,
+          "change_pct": 0.054872196441792934
+        },
+        {
+          "description": "CLERICAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 60233,
+          "fy27_proposed": 62029,
+          "change_dollars": 1796,
+          "change_pct": 0.02981754187903641
+        },
+        {
+          "description": "CONTRACTED SERVICES",
+          "fy25_actual": null,
+          "fy26_budget": 1224,
+          "fy27_proposed": 1248,
+          "change_dollars": 24,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 2040,
+          "fy27_proposed": 2081,
+          "change_dollars": 41,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 196551,
+          "fy27_proposed": 207164,
+          "change_dollars": 10613,
+          "change_pct": 0.05399616384551592
+        },
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 126809,
+          "fy27_proposed": 133248,
+          "change_dollars": 6439,
+          "change_pct": 0.05077715304118793
+        },
+        {
+          "description": "SUPPLIES & MATERIALS",
+          "fy25_actual": null,
+          "fy26_budget": 1224,
+          "fy27_proposed": 1248,
+          "change_dollars": 24,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "LUNCH & RECESS SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 8213,
+          "fy27_proposed": 8633,
+          "change_dollars": 420,
+          "change_pct": 0.05113843906002679
+        },
+        {
+          "description": "GRADUATION EXPENSES",
+          "fy25_actual": null,
+          "fy26_budget": 21169,
+          "fy27_proposed": 21592,
+          "change_dollars": 423,
+          "change_pct": 0.01998204922292031
+        },
+        {
+          "description": "MATH STUDENT ACTIV SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 510,
+          "fy27_proposed": 520,
+          "change_dollars": 10,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "SCIENCE STUDENT ACTIV SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 1020,
+          "fy27_proposed": 1040,
+          "change_dollars": 20,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "STUDENT ACTIV DUES / MEMBERSHIP",
+          "fy25_actual": null,
+          "fy26_budget": 1020,
+          "fy27_proposed": 1040,
+          "change_dollars": 20,
+          "change_pct": 0.0196078431372549
+        },
+        {
+          "description": "ACTIVITY STIPENDS CLERICAL",
+          "fy25_actual": null,
+          "fy26_budget": 5100,
+          "fy27_proposed": 5253,
+          "change_dollars": 153,
+          "change_pct": 0.03
+        },
+        {
+          "description": "SECURITY MONITOR SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 63617,
+          "fy27_proposed": 66126,
+          "change_dollars": 2509,
+          "change_pct": 0.039439143625131644
+        },
+        {
+          "description": "CUSTODIAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 330103,
+          "fy27_proposed": 394338,
+          "change_dollars": 64235,
+          "change_pct": 0.19459077924163065
+        },
+        {
+          "description": "CUSTODIAL OVERTIME",
+          "fy25_actual": null,
+          "fy26_budget": 22672,
+          "fy27_proposed": 23352,
+          "change_dollars": 680,
+          "change_pct": 0.029992942836979536
+        },
+        {
+          "description": "FINE ARTS EQUIP MAINTENANCE",
+          "fy25_actual": null,
+          "fy26_budget": 2040,
+          "fy27_proposed": 2081,
+          "change_dollars": 41,
+          "change_pct": 0.020098039215686276
+        },
+        {
+          "description": "HEALTH / PE EQUIP MAINTENANCE",
+          "fy25_actual": null,
+          "fy26_budget": 1000,
+          "fy27_proposed": 1020,
+          "change_dollars": 20,
+          "change_pct": 0.02
+        },
+        {
+          "description": "RECOVERY HIGH SCHOOL TUITION",
+          "fy25_actual": null,
+          "fy26_budget": 22000,
+          "fy27_proposed": 23320,
+          "change_dollars": 1320,
+          "change_pct": 0.06
+        }
+      ],
+      "line_items_reconcile": false,
+      "headcount": [
+        {
+          "fy": 2008,
+          "headcount": 136
+        },
+        {
+          "fy": 2009,
+          "headcount": 137
+        },
+        {
+          "fy": 2010,
+          "headcount": 143
+        },
+        {
+          "fy": 2011,
+          "headcount": 144
+        },
+        {
+          "fy": 2012,
+          "headcount": 132
+        },
+        {
+          "fy": 2013,
+          "headcount": 129
+        },
+        {
+          "fy": 2014,
+          "headcount": 144
+        },
+        {
+          "fy": 2015,
+          "headcount": 155
+        },
+        {
+          "fy": 2016,
+          "headcount": 154
+        },
+        {
+          "fy": 2017,
+          "headcount": 159
+        },
+        {
+          "fy": 2018,
+          "headcount": 156
+        },
+        {
+          "fy": 2019,
+          "headcount": 166
+        },
+        {
+          "fy": 2020,
+          "headcount": 166
+        },
+        {
+          "fy": 2021,
+          "headcount": 166
+        },
+        {
+          "fy": 2022,
+          "headcount": 143
+        },
+        {
+          "fy": 2023,
+          "headcount": 138
+        },
+        {
+          "fy": 2024,
+          "headcount": 130
+        },
+        {
+          "fy": 2025,
+          "headcount": 128
+        },
+        {
+          "fy": 2026,
+          "headcount": 125
+        }
+      ],
+      "overrides": []
+    },
+    "school_athletics": {
+      "name": "school_athletics",
+      "function": "schools",
+      "function_label": "Schools",
+      "role": null,
+      "role_source": null,
+      "role_note": null,
+      "role_source_url": null,
+      "budget": {
+        "fy25_actual": null,
+        "fy26_budget": 646395,
+        "fy27_proposed": 660030,
+        "change_dollars": 13635,
+        "change_pct": 0.021093913164551087
+      },
+      "line_items": [
+        {
+          "description": "PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 111427,
+          "fy27_proposed": 114770,
+          "change_dollars": 3343,
+          "change_pct": 0.03000170515225215
+        },
+        {
+          "description": "NON-PROFESSIONAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 66369,
+          "fy27_proposed": 68360,
+          "change_dollars": 1991,
+          "change_pct": 0.02999894529072308
+        },
+        {
+          "description": "ATHLETIC POLICE / GAMEDAY SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 16000,
+          "fy27_proposed": 16480,
+          "change_dollars": 480,
+          "change_pct": 0.03
+        },
+        {
+          "description": "ATHLETIC OFFICIALS SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 57120,
+          "fy27_proposed": 58834,
+          "change_dollars": 1714,
+          "change_pct": 0.03000700280112045
+        },
+        {
+          "description": "ATHLETIC MEDICAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 50388,
+          "fy27_proposed": 51900,
+          "change_dollars": 1512,
+          "change_pct": 0.03000714455822815
+        },
+        {
+          "description": "ATHLETIC CUSTODIAL SALARIES",
+          "fy25_actual": null,
+          "fy26_budget": 23038,
+          "fy27_proposed": 23729,
+          "change_dollars": 691,
+          "change_pct": 0.029993923083601007
+        },
+        {
+          "description": "ATHLETICS - DRIVERS",
+          "fy25_actual": null,
+          "fy26_budget": 87000,
+          "fy27_proposed": 89610,
+          "change_dollars": 2610,
+          "change_pct": 0.03
+        },
+        {
+          "description": "ATHLETICS - CONTR SVCS TRANSP",
+          "fy25_actual": null,
+          "fy26_budget": 56250,
+          "fy27_proposed": 57375,
+          "change_dollars": 1125,
+          "change_pct": 0.02
+        },
+        {
+          "description": "ATHLETIC CONTRACTED SERVICES",
+          "fy25_actual": null,
+          "fy26_budget": 27030,
+          "fy27_proposed": 27571,
+          "change_dollars": 541,
+          "change_pct": 0.02001479837217906
+        },
+        {
+          "description": "ATHLETIC RENTAL OF FACILITIES",
+          "fy25_actual": null,
+          "fy26_budget": 82520,
+          "fy27_proposed": 84170,
+          "change_dollars": 1650,
+          "change_pct": 0.019995152690256906
+        },
+        {
+          "description": "ATHLETIC SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 55146,
+          "fy27_proposed": 56249,
+          "change_dollars": 1103,
+          "change_pct": 0.02000145069452
+        },
+        {
+          "description": "ATHLETIC MEDICAL SUPPLIES",
+          "fy25_actual": null,
+          "fy26_budget": 5607,
+          "fy27_proposed": 5719,
+          "change_dollars": 112,
+          "change_pct": 0.019975031210986267
+        },
+        {
+          "description": "ATHLETIC INSURANCE",
+          "fy25_actual": null,
+          "fy26_budget": 8500,
+          "fy27_proposed": 8670,
+          "change_dollars": 170,
+          "change_pct": 0.02
+        }
+      ],
+      "line_items_reconcile": false,
+      "headcount": null,
+      "overrides": []
+    }
+  }
+}
