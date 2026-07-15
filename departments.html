@@ -1,7 +1,7 @@
 ---
 title: "Department explorer"
 og_title: "What each Marblehead department does and costs"
-og_description: "Browse all 40 town departments: role, staffing, three-year budget, and what the override would restore. From the town's own budget and payroll."
+og_description: "Browse all 40 town departments: who leads each, its three-year budget and line items, and staffing since 2008. From the town's own budget and payroll."
 og_url: https://marbleheaddata.org/departments.html
 ---
 <style>
@@ -191,15 +191,6 @@ og_url: https://marbleheaddata.org/departments.html
       p.push('<p>Headcount (includes part-time and seasonal, not <abbr class="g" title="Full-Time Equivalent">FTE</abbr>): ' +
         first.headcount + ' in FY' + String(first.fy).slice(2) +
         ' to ' + last.headcount + ' in FY' + String(last.fy).slice(2) + '.</p>');
-    }
-
-    if (d.overrides && d.overrides.length) {
-      p.push('<h3>What the override would restore here</h3><ul class="tldr">');
-      d.overrides.forEach(function (o) {
-        p.push('<li>' + esc(o.description) + ' &ndash; Tier 1 ' + fmtUSD(o.tier_1) +
-          ', Tier 2 ' + fmtUSD(o.tier_2) + ', Tier 3 ' + fmtUSD(o.tier_3) + '</li>');
-      });
-      p.push('</ul>');
     }
 
     app.innerHTML = p.join('');

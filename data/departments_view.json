@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_note": "Budget from FY27 Proposed Budget (No Override); headcount from town payroll FY08-26; roles from org_chart.yml; override restorations from the FY27 override tiers. See town-budget.html and org-chart.html for full citations.",
+  "source_note": "Budget from FY27 Proposed Budget (No Override); headcount from town payroll FY08-26; roles from org_chart.yml. See town-budget.html and org-chart.html for full citations.",
   "functions": [
     {
       "key": "general_government",
@@ -90,8 +90,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": []
+      "headcount": null
     },
     "select_board": {
       "name": "Select Board",
@@ -212,8 +211,7 @@
           "fy": 2026,
           "headcount": 6
         }
-      ],
-      "overrides": []
+      ]
     },
     "finance_committee": {
       "name": "Finance Committee",
@@ -249,8 +247,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": []
+      "headcount": null
     },
     "reserve_fund": {
       "name": "Reserve Fund",
@@ -278,15 +275,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": [
-        {
-          "description": "Restore Finance Committee Reserve Fund Cut",
-          "tier_1": 26000,
-          "tier_2": 26000,
-          "tier_3": 26000
-        }
-      ]
+      "headcount": null
     },
     "finance": {
       "name": "Finance Department",
@@ -398,32 +387,6 @@
         {
           "fy": 2026,
           "headcount": 9
-        }
-      ],
-      "overrides": [
-        {
-          "description": "Restore Finance Staffing Cut",
-          "tier_1": 68287,
-          "tier_2": 68287,
-          "tier_3": 68287
-        },
-        {
-          "description": "Restore Finance Technology and Training Cut",
-          "tier_1": 58361,
-          "tier_2": 58361,
-          "tier_3": 58361
-        },
-        {
-          "description": "Increase Finance Staffing - IT Director",
-          "tier_1": 0,
-          "tier_2": 150000,
-          "tier_3": 150000
-        },
-        {
-          "description": "Increase Finance Staffing - Budget Analyst",
-          "tier_1": 0,
-          "tier_2": 70000,
-          "tier_3": 70000
         }
       ]
     },
@@ -546,8 +509,7 @@
           "fy": 2026,
           "headcount": 3
         }
-      ],
-      "overrides": []
+      ]
     },
     "town_counsel": {
       "name": "Town Counsel",
@@ -604,8 +566,7 @@
           "fy": 2013,
           "headcount": 1
         }
-      ],
-      "overrides": []
+      ]
     },
     "parking_clerk": {
       "name": "Parking Clerk",
@@ -633,8 +594,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": []
+      "headcount": null
     },
     "town_clerk": {
       "name": "Town Clerk",
@@ -746,14 +706,6 @@
         {
           "fy": 2026,
           "headcount": 3
-        }
-      ],
-      "overrides": [
-        {
-          "description": "Restore Town Clerk Special Clerk Staffing Cut",
-          "tier_1": 0,
-          "tier_2": 66125,
-          "tier_3": 66125
         }
       ]
     },
@@ -868,8 +820,7 @@
           "fy": 2026,
           "headcount": 25
         }
-      ],
-      "overrides": []
+      ]
     },
     "planning_board": {
       "name": "Planning Board",
@@ -897,8 +848,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": []
+      "headcount": null
     },
     "public_buildings": {
       "name": "Public Buildings",
@@ -1011,20 +961,6 @@
           "fy": 2026,
           "headcount": 6
         }
-      ],
-      "overrides": [
-        {
-          "description": "Restore Public Buildings Custodians Staffing Cuts",
-          "tier_1": 122554,
-          "tier_2": 122554,
-          "tier_3": 122554
-        },
-        {
-          "description": "Increase Public Buildings Maintenance",
-          "tier_1": 0,
-          "tier_2": 450000,
-          "tier_3": 450000
-        }
       ]
     },
     "human_resources": {
@@ -1081,14 +1017,6 @@
         {
           "fy": 2026,
           "headcount": 3
-        }
-      ],
-      "overrides": [
-        {
-          "description": "Restore HR Other Technical Advertising Subscriptions Cuts",
-          "tier_1": 11000,
-          "tier_2": 11000,
-          "tier_3": 11000
         }
       ]
     },
@@ -1162,20 +1090,6 @@
         {
           "fy": 2026,
           "headcount": 5
-        }
-      ],
-      "overrides": [
-        {
-          "description": "Restore Community Development and Planning Staffing Cut",
-          "tier_1": 137423,
-          "tier_2": 307975,
-          "tier_3": 307975
-        },
-        {
-          "description": "Increase Community Development Staffing - Grant Writer",
-          "tier_1": 0,
-          "tier_2": 0,
-          "tier_3": 70000
         }
       ]
     },
@@ -1290,26 +1204,6 @@
           "fy": 2026,
           "headcount": 68
         }
-      ],
-      "overrides": [
-        {
-          "description": "Restore Police Department School Resource Officer Cut",
-          "tier_1": 65482,
-          "tier_2": 65482,
-          "tier_3": 65482
-        },
-        {
-          "description": "Increase Police Department Staffing",
-          "tier_1": 0,
-          "tier_2": 65482,
-          "tier_3": 130964
-        },
-        {
-          "description": "Restore Police Department Equipment Cut",
-          "tier_1": 2000,
-          "tier_2": 2000,
-          "tier_3": 2000
-        }
       ]
     },
     "fire": {
@@ -1422,14 +1316,6 @@
         {
           "fy": 2026,
           "headcount": 40
-        }
-      ],
-      "overrides": [
-        {
-          "description": "Increase Fire Department Staffing",
-          "tier_1": 0,
-          "tier_2": 148000,
-          "tier_3": 444000
         }
       ]
     },
@@ -1544,14 +1430,6 @@
           "fy": 2026,
           "headcount": 10
         }
-      ],
-      "overrides": [
-        {
-          "description": "Restore Inspections Other Technical Subscriptions & Maintenance Cuts",
-          "tier_1": 52500,
-          "tier_2": 52500,
-          "tier_3": 52500
-        }
       ]
     },
     "sealer_weights_measures": {
@@ -1580,8 +1458,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": []
+      "headcount": null
     },
     "animal_inspector": {
       "name": "Animal Inspector",
@@ -1646,8 +1523,7 @@
           "fy": 2016,
           "headcount": 1
         }
-      ],
-      "overrides": []
+      ]
     },
     "public_works_ops": {
       "name": "Public Works Operations",
@@ -1699,27 +1575,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": [
-        {
-          "description": "Restore Department of Public Works Staffing Cuts",
-          "tier_1": 140594,
-          "tier_2": 140594,
-          "tier_3": 140594
-        },
-        {
-          "description": "Restore Department of Public Works Hot Top Cuts",
-          "tier_1": 60000,
-          "tier_2": 60000,
-          "tier_3": 60000
-        },
-        {
-          "description": "Increase Department of Public Works Staffing GIS position",
-          "tier_1": 0,
-          "tier_2": 70000,
-          "tier_3": 70000
-        }
-      ]
+      "headcount": null
     },
     "waste_collection": {
       "name": "Waste Collection",
@@ -1763,8 +1619,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": []
+      "headcount": null
     },
     "curbside_collection": {
       "name": "Curbside Collection",
@@ -1800,8 +1655,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": []
+      "headcount": null
     },
     "cemetery": {
       "name": "Cemetery",
@@ -1921,14 +1775,6 @@
         {
           "fy": 2026,
           "headcount": 9
-        }
-      ],
-      "overrides": [
-        {
-          "description": "Restore Cemetery Laborer Cut",
-          "tier_1": 58692,
-          "tier_2": 58692,
-          "tier_3": 58692
         }
       ]
     },
@@ -2051,14 +1897,6 @@
           "fy": 2026,
           "headcount": 3
         }
-      ],
-      "overrides": [
-        {
-          "description": "Increase Health Department for Mental Health Psychological Counseling",
-          "tier_1": 0,
-          "tier_2": 0,
-          "tier_3": 60000
-        }
       ]
     },
     "council_on_aging": {
@@ -2171,26 +2009,6 @@
         {
           "fy": 2026,
           "headcount": 12
-        }
-      ],
-      "overrides": [
-        {
-          "description": "Restore Council on Aging Staffing Cuts",
-          "tier_1": 76171,
-          "tier_2": 76171,
-          "tier_3": 76171
-        },
-        {
-          "description": "Increase Council on Aging Staffing - PT Social Worker",
-          "tier_1": 0,
-          "tier_2": 45000,
-          "tier_3": 45000
-        },
-        {
-          "description": "Increase Council on Aging Maintenance",
-          "tier_1": 0,
-          "tier_2": 15000,
-          "tier_3": 15000
         }
       ]
     },
@@ -2313,8 +2131,7 @@
           "fy": 2026,
           "headcount": 1
         }
-      ],
-      "overrides": []
+      ]
     },
     "library": {
       "name": "Abbot Public Library",
@@ -2426,32 +2243,6 @@
         {
           "fy": 2026,
           "headcount": 27
-        }
-      ],
-      "overrides": [
-        {
-          "description": "Restore Abbot Library Staffing cuts for accreditation",
-          "tier_1": 311183,
-          "tier_2": 311183,
-          "tier_3": 311183
-        },
-        {
-          "description": "Restore Abbot Library Staffing Cuts",
-          "tier_1": 0,
-          "tier_2": 218980,
-          "tier_3": 218980
-        },
-        {
-          "description": "Restore Abbot Library Materials",
-          "tier_1": 0,
-          "tier_2": 168400,
-          "tier_3": 168400
-        },
-        {
-          "description": "Increase Abbot Library Staffing 1 PT Custodian and 1 PT Assistant",
-          "tier_1": 0,
-          "tier_2": 38378,
-          "tier_3": 38378
         }
       ]
     },
@@ -2566,26 +2357,6 @@
           "fy": 2026,
           "headcount": 26
         }
-      ],
-      "overrides": [
-        {
-          "description": "Restore Recreation and Parks Groundskeeper Staffing Cut",
-          "tier_1": 45000,
-          "tier_2": 45000,
-          "tier_3": 45000
-        },
-        {
-          "description": "Increase Recreation and Parks Staffing 1 PT Senior Clerk",
-          "tier_1": 0,
-          "tier_2": 27000,
-          "tier_3": 27000
-        },
-        {
-          "description": "Increase Recreation and Parks Maintenance",
-          "tier_1": 0,
-          "tier_2": 15000,
-          "tier_3": 15000
-        }
       ]
     },
     "memorial_veterans_day": {
@@ -2614,8 +2385,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": []
+      "headcount": null
     },
     "debt_service": {
       "name": "Debt Service",
@@ -2651,8 +2421,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": []
+      "headcount": null
     },
     "other_general_government_dept": {
       "name": "Other General Government",
@@ -2800,8 +2569,7 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null,
-      "overrides": []
+      "headcount": null
     },
     "sewer": {
       "name": "Sewer Department",
@@ -2922,8 +2690,7 @@
           "fy": 2026,
           "headcount": 10
         }
-      ],
-      "overrides": []
+      ]
     },
     "water": {
       "name": "Water Department",
@@ -3044,8 +2811,7 @@
           "fy": 2026,
           "headcount": 17
         }
-      ],
-      "overrides": []
+      ]
     },
     "harbor": {
       "name": "Harbormaster",
@@ -3166,8 +2932,7 @@
           "fy": 2026,
           "headcount": 17
         }
-      ],
-      "overrides": []
+      ]
     },
     "school_brown": {
       "name": "Brown Elementary School",
@@ -3556,8 +3321,7 @@
           "fy": 2026,
           "headcount": 88
         }
-      ],
-      "overrides": []
+      ]
     },
     "school_glover": {
       "name": "Glover Elementary School",
@@ -3950,8 +3714,7 @@
           "fy": 2026,
           "headcount": 66
         }
-      ],
-      "overrides": []
+      ]
     },
     "school_village": {
       "name": "Village Elementary School",
@@ -4368,8 +4131,7 @@
           "fy": 2026,
           "headcount": 90
         }
-      ],
-      "overrides": []
+      ]
     },
     "school_middle": {
       "name": "Marblehead Veterans Middle School",
@@ -4858,8 +4620,7 @@
           "fy": 2026,
           "headcount": 65
         }
-      ],
-      "overrides": []
+      ]
     },
     "school_high": {
       "name": "Marblehead High School",
@@ -5596,8 +5357,7 @@
           "fy": 2026,
           "headcount": 125
         }
-      ],
-      "overrides": []
+      ]
     },
     "school_athletics": {
       "name": "School Athletics",
@@ -5721,8 +5481,7 @@
         }
       ],
       "line_items_reconcile": false,
-      "headcount": null,
-      "overrides": []
+      "headcount": null
     }
   }
 }

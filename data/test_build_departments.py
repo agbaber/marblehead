@@ -104,48 +104,12 @@ def test_role_note_and_source_url_present_for_finance():
     assert finance["role_source_url"] is not None
 
 
-def test_police_has_sro_override_restoration():
-    view = build_view()
-    police = view["departments"]["police"]
-    assert any("School Resource Officer" in o["description"] for o in police["overrides"])
-    sro = next(o for o in police["overrides"] if "School Resource Officer" in o["description"])
-    assert sro["tier_1"] == 65482
-
-
-def test_library_has_four_override_items():
-    view = build_view()
-    lib = view["departments"]["library"]
-    assert len(lib["overrides"]) == 4  # items 9,10,11,12 (Abbot Library)
-
-
-def test_townwide_transfers_not_attributed_to_any_department():
+def test_no_override_data_on_departments():
+    # Override restorations were removed from this view (they belong on the
+    # override pages, not a neutral department reference). Guard against re-adding.
     view = build_view()
     for dept in view["departments"].values():
-        for o in dept["overrides"]:
-            desc = o["description"].lower()
-            assert "opeb" not in desc
-            assert "stabilization" not in desc
-            assert "workers comp" not in desc
-            assert "recurring capital" not in desc
-            assert "unemployment" not in desc
-
-
-def test_finance_committee_reserve_fund_not_mapped_to_finance():
-    # "Finance Committee Reserve Fund Cut" must NOT land on the finance dept
-    view = build_view()
-    for o in view["departments"]["finance"]["overrides"]:
-        assert "Reserve Fund" not in o["description"]
-    # positive half: the item IS on reserve_fund
-    assert any("Reserve Fund" in o["description"]
-               for o in view["departments"]["reserve_fund"]["overrides"])
-
-
-def test_override_attribution_is_complete():
-    view = build_view()
-    attributed = sum(len(d["overrides"]) for d in view["departments"].values())
-    total = 36  # meta.override_tiers count in FY27 budget
-    unattributed = 5  # town-wide transfers/capital/offset, intentionally on no dept
-    assert attributed == total - unattributed  # 31
+        assert "overrides" not in dept
 
 
 def test_role_crosswalk_targets_exist_in_org_chart():

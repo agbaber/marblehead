@@ -426,10 +426,10 @@ async function testDepartmentsExplorerPageLoads(page) {
   await page.goto(`${SITE}/departments.html#police`, { waitUntil: 'domcontentloaded' });
   await page.waitForSelector('.dx-money', { timeout: 5000 }).catch(() => null);
 
-  const hasSRO = await page.$eval('body', el => el.textContent.includes('School Resource Officer'));
-  hasSRO
-    ? ok('Police profile SRO override')
-    : fail('Police profile SRO override', 'text missing');
+  const hasRole = await page.$eval('body', el => el.textContent.includes('Chief of Police'));
+  hasRole
+    ? ok('Police profile shows cited role')
+    : fail('Police profile shows cited role', '"Chief of Police" text missing');
 
   const moneyTable = await page.$('.dx-money');
   moneyTable

@@ -6,7 +6,6 @@ Inputs:
   data/town_budget_FY27.json                 (budget rows: function/department/line)
   data/town_employee_headcount_FY08-26.csv   (FY, Department, Headcount)
   _data/org_chart.yml                        (per-department roles, cited)
-  town_budget_FY27.json meta.override_tiers  (override restorations)
 
 Output:
   data/departments_view.json
