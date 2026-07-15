@@ -26,7 +26,7 @@ test('an oversized transcript fans out into chunk requests with i-of-K custom_id
   assert.ok(reqs.length > 1, 'should fan out');
   const total = reqs.length;
   reqs.forEach((r, i) => {
-    assert.equal(r.custom_id, `big#${i + 1}of${total}`);
+    assert.equal(r.custom_id, `big__${i + 1}of${total}`);
   });
   // Chunk bodies rejoin to the original body.
   const rejoined = reqs.map((r) => r.params.messages[0].content).join('\n\n');
@@ -41,8 +41,32 @@ test('mixed batch keeps small ones whole and only fans out the big one', () => {
   ], opts);
   const ids = reqs.map((r) => r.custom_id);
   assert.ok(ids.includes('small'));
-  assert.ok(ids.some((id) => id.startsWith('big#')));
+  assert.ok(ids.some((id) => id.startsWith('big__')));
   assert.ok(!ids.includes('big'), 'oversized slug must not appear un-chunked');
+});
+
+test('every generated custom_id matches the Anthropic batch pattern', () => {
+  const bigBody = Array.from({ length: 8 }, (_, i) => para(i, 'w'.repeat(60))).join('\n\n');
+  const reqs = buildRequests([
+    { slug: 'small', text: md('small', 'tiny') },
+    { slug: 'school-committee-2021-01-07', text: md('school-committee-2021-01-07', bigBody) },
+  ], opts);
+  const pattern = /^[a-zA-Z0-9_-]{1,64}$/;
+  for (const r of reqs) {
+    assert.match(r.custom_id, pattern, `bad custom_id: ${r.custom_id}`);
+  }
+});
+
+test('chunk custom_ids round-trip through parseCustomId', () => {
+  const bigBody = Array.from({ length: 8 }, (_, i) => para(i, 'w'.repeat(60))).join('\n\n');
+  const reqs = buildRequests([{ slug: 'sc-2021-01-07', text: md('sc-2021-01-07', bigBody) }], opts);
+  reqs.forEach((r, i) => {
+    const p = parseCustomId(r.custom_id);
+    assert.equal(p.slug, 'sc-2021-01-07');
+    assert.equal(p.index, i);
+    assert.equal(p.total, reqs.length);
+    assert.equal(p.chunked, true);
+  });
 });
 
 test('parseCustomId reads a plain slug as a single un-chunked request', () => {
@@ -52,7 +76,7 @@ test('parseCustomId reads a plain slug as a single un-chunked request', () => {
 });
 
 test('parseCustomId reads an i-of-K suffix', () => {
-  assert.deepEqual(parseCustomId('big#2of4'), {
+  assert.deepEqual(parseCustomId('big__2of4'), {
     slug: 'big', index: 1, total: 4, chunked: true,
   });
 });

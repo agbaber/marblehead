@@ -32,16 +32,18 @@ export function buildRequests(candidates, opts) {
     }
     const chunks = chunkBody(body, opts.maxChars);
     for (const c of chunks) {
-      requests.push(makeRequest(`${slug}#${c.index + 1}of${c.total}`, c.text, opts));
+      requests.push(makeRequest(`${slug}__${c.index + 1}of${c.total}`, c.text, opts));
     }
   }
   return requests;
 }
 
-// Inverse of the custom_id scheme. `<slug>#<i>of<K>` → chunked; anything else is
-// treated as a single un-chunked request keyed by the whole string.
+// Inverse of the custom_id scheme. `<slug>__<i>of<K>` → chunked; anything else
+// is a single un-chunked request keyed by the whole string. The `__` delimiter
+// (vs `#`) keeps custom_ids within Anthropic's `^[a-zA-Z0-9_-]{1,64}$` rule;
+// slugs are kebab-case and never contain `__`.
 export function parseCustomId(id) {
-  const m = id.match(/^(.*)#(\d+)of(\d+)$/);
+  const m = id.match(/^(.*)__(\d+)of(\d+)$/);
   if (!m) return { slug: id, index: 0, total: 1, chunked: false };
   return { slug: m[1], index: Number(m[2]) - 1, total: Number(m[3]), chunked: true };
 }
