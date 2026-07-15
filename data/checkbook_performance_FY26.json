@@ -712,8 +712,8 @@
     },
     {
       "month": "2026-06",
-      "amount": 8156784.61,
-      "count": 1857
+      "amount": 8177966.47,
+      "count": 1871
     }
   ],
   "drill": {
@@ -2680,8 +2680,8 @@
           },
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 794265.49,
-            "count": 43
+            "amount": 809434.53,
+            "count": 45
           },
           {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
@@ -2782,8 +2782,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 1612570.65,
-            "count": 140
+            "amount": 1627739.69,
+            "count": 142
           }
         ]
       },
@@ -3028,8 +3028,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 1584195.66,
-            "count": 360
+            "amount": 1584258.38,
+            "count": 361
           }
         ]
       },
@@ -3158,8 +3158,8 @@
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 17581536.85,
-            "count": 182
+            "amount": 17581746.41,
+            "count": 187
           },
           {
             "name": "U.S. BANK",
@@ -3193,8 +3193,8 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 338920.44,
-            "count": 80
+            "amount": 340600.84,
+            "count": 81
           },
           {
             "name": "ONE TIME PAY",
@@ -3275,8 +3275,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 2212860.34,
-            "count": 685
+            "amount": 2215272.3,
+            "count": 692
           }
         ]
       },
@@ -3873,6 +3873,11 @@
             "count": 1
           },
           {
+            "name": "SQUARE INC",
+            "amount": 220.55,
+            "count": 5
+          },
+          {
             "name": "FRANCISCO URENA",
             "amount": 195.0,
             "count": 1
@@ -3886,11 +3891,6 @@
             "name": "SUSAN FISCHER",
             "amount": 160.0,
             "count": 1
-          },
-          {
-            "name": "SQUARE INC",
-            "amount": 157.46,
-            "count": 4
           }
         ],
         "monthly": [
@@ -3941,8 +3941,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 364.5,
-            "count": 2
+            "amount": 427.59,
+            "count": 3
           }
         ]
       },
@@ -4979,14 +4979,14 @@
             "count": 210
           },
           {
+            "name": "CAPTUREPOINT",
+            "amount": 37574.21,
+            "count": 14
+          },
+          {
             "name": "HAM ELECTRIC LLC",
             "amount": 35290.12,
             "count": 3
-          },
-          {
-            "name": "CAPTUREPOINT",
-            "amount": 34147.05,
-            "count": 13
           },
           {
             "name": "TINA FOX",
@@ -5087,8 +5087,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 56474.68,
-            "count": 71
+            "amount": 59901.84,
+            "count": 72
           }
         ]
       },
@@ -5791,8 +5791,8 @@
           },
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 208867.8,
-            "count": 24
+            "amount": 208891.24,
+            "count": 25
           },
           {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
@@ -5903,8 +5903,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 51910.18,
-            "count": 90
+            "amount": 51933.62,
+            "count": 91
           }
         ]
       },
@@ -6948,8 +6948,8 @@
           },
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 290738.18,
-            "count": 26
+            "amount": 290762.63,
+            "count": 27
           },
           {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
@@ -7060,8 +7060,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 45846.16,
-            "count": 62
+            "amount": 45870.61,
+            "count": 63
           }
         ]
       },
