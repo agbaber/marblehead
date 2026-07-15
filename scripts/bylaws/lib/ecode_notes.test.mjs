@@ -23,6 +23,18 @@ test('normalizes zero-padless dates', () => {
   assert.equal(n.date, '1972-03-14');
 });
 
+test('splits a semicolon list under one leading keyword (real eCode format)', () => {
+  const notes = parseAmendmentNotes(
+    '[Amended 3-14-1974 ATM by Art. 67; 5-6-2013 ATM by Art. 38; 5-6-2019 ATM by Art. 38; 5-1-2023 ATM by Art. 38]'
+  );
+  assert.deepEqual(notes, [
+    { action: 'amended', date: '1974-03-14', type: 'ATM', article: 67 },
+    { action: 'amended', date: '2013-05-06', type: 'ATM', article: 38 },
+    { action: 'amended', date: '2019-05-06', type: 'ATM', article: 38 },
+    { action: 'amended', date: '2023-05-01', type: 'ATM', article: 38 },
+  ]);
+});
+
 test('returns empty array when there is no note', () => {
   assert.deepEqual(parseAmendmentNotes('The dog officer shall...'), []);
 });
