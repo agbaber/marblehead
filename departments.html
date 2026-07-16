@@ -219,10 +219,10 @@ og_url: https://marbleheaddata.org/departments.html
       var s = d.staffing;
       p.push('<h3>Staffing &amp; positions</h3>');
       var line = 'FY27 roster';
-      if (s.fte != null) line += ': about ' + s.fte + ' positions';
-      if (s.fte_basis) line += ' (' + esc(s.fte_basis) + ')';
-      if (s.salary_total != null) line += ', ' + fmtUSD(s.salary_total) + ' in budgeted salaries';
+      if (s.fte != null) line += ': about ' + s.fte + ' budgeted positions';
+      if (s.salary_total != null) line += ', ' + fmtUSD(s.salary_total) + ' in salaries';
       line += '.';
+      if (s.fte_basis) line += ' Counts are ' + esc(s.fte_basis) + '.';
       p.push('<p>' + line + '</p>');
       var ps = s.position_summary || {}, chg = [];
       if (ps.new) chg.push(ps.new + ' new');
