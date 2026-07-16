@@ -1,0 +1,142 @@
+---
+layout: default
+title: "Splashy format gallery: pre-override write-up experiments"
+body_class: "fs-mockup fs-gallery"
+sitemap: false
+robots: noindex
+---
+
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+
+<style>
+  .fs-gallery .wrap { max-width: 1100px; margin: 0 auto; padding: 56px 24px 90px; }
+  .fs-gallery .eye { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--text-subtle); margin: 0 0 12px; }
+  .fs-gallery h1 { font-family: 'Libre Franklin', sans-serif; font-size: clamp(32px, 4.2vw, 50px); letter-spacing: -0.02em; line-height: 1.05; margin: 0 0 18px; }
+  .fs-gallery p.lede { font-size: 18px; line-height: 1.55; color: var(--text-muted); max-width: 760px; margin: 0 0 8px; }
+  .fs-gallery p.sub { font-size: 14px; line-height: 1.5; color: var(--text-subtle); max-width: 760px; margin: 6px 0 0; }
+
+  .fs-gallery .grid { display: grid; gap: 26px; grid-template-columns: 1fr; margin-top: 40px; }
+  @media (min-width: 720px) { .fs-gallery .grid { grid-template-columns: 1fr 1fr; } }
+
+  .fs-gallery .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; transition: border-color 0.15s, transform 0.12s; text-decoration: none; color: var(--text); }
+  .fs-gallery .card:hover { border-color: var(--c-teal); transform: translateY(-2px); }
+  .fs-gallery .card .shot { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; background: var(--surface-sunk); border-bottom: 1px solid var(--border); }
+  .fs-gallery .card .body { padding: 18px 20px 22px; display: flex; flex-direction: column; flex: 1; }
+  .fs-gallery .card .badge { display: inline-block; align-self: flex-start; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+  .fs-gallery .card .badge.live { background: rgba(47, 125, 142, 0.14); color: var(--c-teal); }
+  .fs-gallery .card .badge.image { background: rgba(108, 74, 110, 0.13); color: var(--c-plum); }
+  .fs-gallery .card h2 { font-family: 'Libre Franklin', sans-serif; font-size: 21px; margin: 0 0 8px; line-height: 1.2; }
+  .fs-gallery .card p { font-size: 14px; line-height: 1.55; color: var(--text-muted); margin: 0 0 14px; }
+  .fs-gallery .card .go { margin-top: auto; font-size: 12px; font-weight: 700; color: var(--c-teal); }
+  .fs-gallery .card .go::after { content: " \2192"; }
+  .fs-gallery .card .go.static { color: var(--text-subtle); }
+  .fs-gallery .card .go.static::after { content: ""; }
+
+  .fs-gallery .note { margin-top: 48px; padding: 16px 20px; background: color-mix(in srgb, var(--c-brass) 8%, var(--surface)); border-left: 3px solid var(--c-brass); font-size: 13px; line-height: 1.6; color: var(--text-muted); border-radius: var(--radius-sm); }
+  .fs-gallery .note strong { color: var(--text); }
+</style>
+
+<div class="wrap">
+  <p class="eye">Brainstorming &middot; not linked from production nav</p>
+  <h1>Splashier write-ups, before the vote.</h1>
+  <p class="lede">Every distinct "splashier" article treatment built in the run-up to the June 9 2026 override, gathered in one place. Most never shipped to the live site. Click through the live ones; the rest are shown as the screenshots left behind on their branches.</p>
+  <p class="sub">LIVE cards open a working page on this preview deploy. IMAGE cards need their original (now-diverged) layout or data to run, so only the captured screenshot survives.</p>
+
+  <div class="grid">
+
+    <a class="card" href="{{ '/mockups/finance-story/arc-report.html' | relative_url }}">
+      <img class="shot" src="{{ '/proof/restore-finance-story-mockups-v5-report.png' | relative_url }}" alt="Finance-story executive brand-report">
+      <span class="body">
+        <span class="badge live">Live</span>
+        <h2>Finance-story: executive brand-report</h2>
+        <p>Big Source Serif italics, huge stat numbers, cream + navy + teal full-bleed sections, sticky bottom progress bar. The "Bidwells" white-paper treatment.</p>
+        <span class="go">Open live mockup</span>
+      </span>
+    </a>
+
+    <span class="card">
+      <img class="shot" src="{{ '/proof/gallery-finance-story-ch1.png' | relative_url }}" alt="Finance-story built Chapter 1">
+      <span class="body">
+        <span class="badge image">Image</span>
+        <h2>Finance-story: built Chapter 1</h2>
+        <p>The implemented version, not the mockup. "Town money lives in four separate buckets," navy serif hero, scroll-progress bar, dedicated mobile render.</p>
+        <span class="go static">Screenshot only &middot; needs finance-story layout + data</span>
+      </span>
+    </span>
+
+    <span class="card">
+      <img class="shot" src="{{ '/proof/transcripts-newspaper-summary.png' | relative_url }}" alt="Transcript newspaper front page">
+      <span class="body">
+        <span class="badge image">Image</span>
+        <h2>Meeting write-ups: newspaper front page</h2>
+        <p>Each meeting as a front page: a LEAD story card with serif headline and expandable breakdown, then an "Also on the agenda" grid of secondary stories.</p>
+        <span class="go static">Screenshot only &middot; needs old transcript layout + data</span>
+      </span>
+    </span>
+
+    <span class="card">
+      <img class="shot" src="{{ '/proof/gallery-marblehead-corp.png' | relative_url }}" alt="Marblehead Corp 10-K annual report">
+      <span class="body">
+        <span class="badge image">Image</span>
+        <h2>Marblehead Corp: 10-K annual report</h2>
+        <p>A straight-faced SEC annual-report parody. "Symbol: MHD. Letter from Management: We do not have a Chief Executive Officer." Executive-document register.</p>
+        <span class="go static">Screenshot only &middot; needs corp-page styles</span>
+      </span>
+    </span>
+
+    <a class="card" href="{{ '/mockups/acquisition-letter.html' | relative_url }}">
+      <img class="shot" src="{{ '/proof/gallery-acquisition-letter.png' | relative_url }}" alt="Private-equity acquisition letter parody">
+      <span class="body">
+        <span class="badge live">Live</span>
+        <h2>The acquisition letter</h2>
+        <p>A satirical private-equity acquisition letter to Marblehead "shareholders." Short, formal, letterhead-styled. Fully self-contained, so it still runs.</p>
+        <span class="go">Open live page</span>
+      </span>
+    </a>
+
+    <a class="card" href="{{ '/what-can-we-do.html' | relative_url }}">
+      <img class="shot" src="{{ '/proof/wcwd-cautions.png' | relative_url }}" alt="What can we do editorial cards">
+      <span class="body">
+        <span class="badge live">Live</span>
+        <h2>What can we do: editorial cards</h2>
+        <p>Big display headlines ("This is not a list of free money."), numbered idea cards with oversized stat ranges and "In plain language" quote boxes.</p>
+        <span class="go">Open live page</span>
+      </span>
+    </a>
+
+    <a class="card" href="{{ '/your-true-cost.html' | relative_url }}">
+      <img class="shot" src="{{ '/proof/your-true-cost-preview.png' | relative_url }}" alt="Your true cost personalized scrolly">
+      <span class="body">
+        <span class="badge live">Live</span>
+        <h2>What you'll actually pay</h2>
+        <p>The Lovable-style personalized scrolly calculator. App-like, animated as you scroll, tap any figure for its source. Known for a rough mobile render.</p>
+        <span class="go">Open live page</span>
+      </span>
+    </a>
+
+    <a class="card" href="{{ '/town-history.html' | relative_url }}">
+      <img class="shot" src="{{ '/proof/town-history.png' | relative_url }}" alt="Town history magazine feature">
+      <span class="body">
+        <span class="badge live">Live</span>
+        <h2>Four-centuries magazine feature</h2>
+        <p>"The town that argued itself into existence." Photo hero, oversized display headline with an italic accent word, drop cap, long-read magazine layout.</p>
+        <span class="go">Open live page</span>
+      </span>
+    </a>
+
+    <a class="card" href="{{ '/mockups/finance-story/' | relative_url }}">
+      <img class="shot" src="{{ '/proof/restore-finance-story-mockups.png' | relative_url }}" alt="Finance-story mockup gallery">
+      <span class="body">
+        <span class="badge live">Live</span>
+        <h2>Finance-story: all mockup variants</h2>
+        <p>The full mockup gallery: choreographed narrative motion (v3), Lottie-style explainer (v4), and the earlier discrete-scroll iterations (v1/v2).</p>
+        <span class="go">Open the mockup index</span>
+      </span>
+    </a>
+
+  </div>
+
+  <div class="note">
+    <strong>Is one of these the treatment you remember?</strong> If not, the specific look you described (larger right-aligned prose sprinkled through the body, heavy quote boxes) does not survive in any committed branch. Tell me which card is closest, or a phrase from the original copy, and I can chase the exact page from there.
+  </div>
+</div>
