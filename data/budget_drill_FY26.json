@@ -1,5 +1,5 @@
 {
- "as_of": "2026-07-15",
+ "as_of": "2026-07-16",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -7763,16 +7763,16 @@
     "original_budget": 22000.0
    },
    {
-    "name": "OTHER PURCHASED SERVICES",
-    "revised_budget": 18000.0,
-    "actual": 5950.68,
-    "original_budget": 18000.0
-   },
-   {
     "name": "R&M OTHER EQUIPMENT",
     "revised_budget": 17350.0,
     "actual": 4599.42,
     "original_budget": 17350.0
+   },
+   {
+    "name": "OTHER PURCHASED SERVICES",
+    "revised_budget": 17050.0,
+    "actual": 5950.68,
+    "original_budget": 18000.0
    },
    {
     "name": "ENGINEERING/ARCHITECTURAL",
@@ -7805,6 +7805,12 @@
     "original_budget": 4200.0
    },
    {
+    "name": "LEGAL SERVICES",
+    "revised_budget": 3950.0,
+    "actual": 2637.96,
+    "original_budget": 3000.0
+   },
+   {
     "name": "RENTAL-PHOTOCOPIER",
     "revised_budget": 3600.0,
     "actual": 1922.19,
@@ -7821,12 +7827,6 @@
     "revised_budget": 3500.0,
     "actual": 851.08,
     "original_budget": 3500.0
-   },
-   {
-    "name": "LEGAL SERVICES",
-    "revised_budget": 3000.0,
-    "actual": 2637.96,
-    "original_budget": 3000.0
    },
    {
     "name": "INTERNET ACCESS",
@@ -16465,16 +16465,16 @@
     "original_budget": 22000.0
    },
    {
-    "name": "OTHER PURCHASED SERVICES",
-    "revised_budget": 18000.0,
-    "actual": 5950.68,
-    "original_budget": 18000.0
-   },
-   {
     "name": "R&M OTHER EQUIPMENT",
     "revised_budget": 17350.0,
     "actual": 4599.42,
     "original_budget": 17350.0
+   },
+   {
+    "name": "OTHER PURCHASED SERVICES",
+    "revised_budget": 17050.0,
+    "actual": 5950.68,
+    "original_budget": 18000.0
    },
    {
     "name": "ENGINEERING/ARCHITECTURAL",
@@ -16507,6 +16507,12 @@
     "original_budget": 4200.0
    },
    {
+    "name": "LEGAL SERVICES",
+    "revised_budget": 3950.0,
+    "actual": 2637.96,
+    "original_budget": 3000.0
+   },
+   {
     "name": "RENTAL-PHOTOCOPIER",
     "revised_budget": 3600.0,
     "actual": 1922.19,
@@ -16523,12 +16529,6 @@
     "revised_budget": 3500.0,
     "actual": 851.08,
     "original_budget": 3500.0
-   },
-   {
-    "name": "LEGAL SERVICES",
-    "revised_budget": 3000.0,
-    "actual": 2637.96,
-    "original_budget": 3000.0
    },
    {
     "name": "INTERNET ACCESS",

@@ -9,7 +9,116 @@ video_url: "https://www.youtube.com/watch?v=GO-nQboZ6lI"
 duration_seconds: 9404
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee appoints Al Williams to vacant seat after two-round vote"
+  summary: "The Marblehead School Committee conducted structured public interviews of seven applicants for a vacant committee seat, with each of the nine sitting members posing one question to every candidate on topics including governance, budget challenges, collective bargaining, and transparency. After a first round in which no candidate reached the required five votes, a second round resulted in Al Williams receiving six votes to Tom Mathers's three, securing the appointment. Members cited Williams's background in finance, higher education, MSBA building projects, and collective bargaining as reasons for their support. The district is also preparing a budget with a projected deficit that candidates acknowledged could require significant staff and program reductions, with collective bargaining underway with all unions."
+  decisions:
+    - "Approved appointment of Al Williams to the vacant School Committee seat"
+  votes:
+    - motion: "Second-round roll-call vote to appoint Al Williams to the School Committee vacancy"
+      result: "in favor (6 to 3)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 2
+    end_seconds: 108
+    headline: "Chair opens applicant interview session and explains format"
+    dek: "The chair welcomes applicants, notes MHTV coverage, and explains each of the nine committee members will ask one question per candidate."
+    summary: "The chair opened the meeting by noting a technical issue with the Zoom stream and encouraging viewers to switch to MHTV for full coverage. She welcomed applicants, outlined the process — each of the nine school committee members would ask one question of each applicant — and asked that follow-up questions be for clarification only."
+    key_speakers: ["School Committee Chair (speaking)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 325
+    end_seconds: 5960
+    featured: true
+    headline: "Seven candidates interviewed for open School Committee seats amid budget deficit and leadership vacancies"
+    dek: "Candidates addressed a projected multi-million-dollar budget deficit, upcoming collective bargaining with all unions, staff turnover, and a perceived transparency deficit."
+    summary: |
+      The committee interviewed at least seven applicants — including Louisa, a candidate referred to as Ruth, Sarah (second-year Glover PTO president), a candidate identified as Tom M., and others identified as Alexa, Lisa/Louisa, and a candidate with a computer-science background — across a structured nine-question format.
+      
+      **Recurring questions and themes:**
+      
+      | Question | Common thread in responses |
+      |---|---|
+      | Preconceived notions about the committee | Most said they had few preconceptions; some cited the difficult year of unusual events |
+      | Day-one governance priorities | Emphasis on communication, open mind, attracting strong district leadership |
+      | Differences of opinion on committee | Nearly all emphasized communication, collaboration, keeping student interests central |
+      | Budget deficit / projected cuts | District budget is projecting a deficit described variously as approximately $2.2M–$2.5M; staffing is the largest expense; candidates generally avoided naming specific cuts |
+      | Collective bargaining | The town is entering bargaining with all unions; described as challenging given the town's financial shortfall |
+      | Transparency / letter to the editor | A letter signed by a group of constituents was published the day of the meeting alleging a perceived lack of transparency; candidates were asked what concrete steps they would take to rebuild trust |
+      | Commitment to run in the June election | Responses ranged from "absolutely" to "I need to discuss with the committee" to "no, I can only fill this period" |
+      
+      **Notable candidate statements:**
+      - One candidate (Sarah) said the district faces a "Herculean" task, warned the teacher corps could be "decimated" in 12–24 months, and called the situation a communication and reputation-management challenge.
+      - Tom M. said he believed an override "is not in the cards" this year and that the town has not passed one in 19 years; he emphasized scrutinizing unfunded liabilities and non-salary contract terms in collective bargaining.
+      - One candidate noted the middle school has no librarian and that history textbooks at the high school predate September 11, 2001.
+      - One candidate (Louisa) consulted the state Ethics Commission about a potential conflict arising from her part-time enrichment work in Marblehead schools.
+      - Two applicants withdrew before the meeting.
+      
+      Two rounds of questions occurred because there were multiple open positions (up to three).
+    key_speakers: ["School Committee Chair", "Sarah (applicant)", "Tom M. (applicant)", "Louisa (applicant)", "Ruth (applicant)", "Alexa (applicant)", "Brendan/BR (applicant)", "Jim (committee member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.85
+    start_seconds: 6517
+    end_seconds: 6746
+    headline: "Candidate discusses collective bargaining experience from private and public sector"
+    dek: "One applicant described experience with French works councils and managing union workforces at the Commonwealth."
+    summary: "A school committee vacancy candidate answered questions about handling contentious negotiations, drawing on private-sector experience with a French works council and current state government employment where roughly 90% of staff are union members. The candidate emphasized finding overlapping interests between parties and maintaining transparency about fiscal constraints during bargaining."
+    key_speakers: ["Candidate (unidentified)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 7576
+    end_seconds: 8107
+    headline: "Candidates questioned on school budget deficit and potential cuts exceeding $2 million"
+    dek: "Committee members pressed applicants on how they would address a projected deficit that could require significant staff and program reductions."
+    summary: "Committee members noted the school district is preparing multiple budget scenarios with a projected deficit that could have implications exceeding $2 million, potentially requiring major staff and program cuts. Candidates were asked their views on a possible Proposition 2½ override and how they would prioritize classroom-level spending. One candidate said he had not yet formed a position on the override and needed to understand the data better, while expressing a strong preference for protecting classroom instruction as the last area to cut."
+    key_speakers: ["Candidate (unidentified)", "School Committee chair (unidentified)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 8108
+    end_seconds: 8252
+    headline: "Candidates questioned on transparency, collaboration, and commitment to run for election"
+    dek: "Members asked about a published letter citing a lack of transparency and whether candidates intended to seek election in June."
+    summary: "A candidate confirmed he would seek election at the June ballot after being appointed, noting he is retiring from his current job in five weeks. He proposed that the committee could improve community trust through direct public forums, a dedicated newspaper column written by the committee, and clearer communication about what can and cannot be shared publicly. The chair noted that a forum with the superintendent had already been penciled in."
+    key_speakers: ["Candidate (unidentified)", "School Committee chair (unidentified)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 8252
+    end_seconds: 8468
+    headline: "Committee explains appointment voting procedure: roll-call, majority of five required"
+    dek: "After interviews concluded, the Town Administrator walked members through the ranked-elimination roll-call process used the previous year."
+    summary: "Following the conclusion of candidate interviews, the chair asked the Town Administrator to review the appointment voting procedure. A candidate needs at least five votes (a majority of the nine-member body) to be appointed. If no candidate reaches five in a round, the lowest vote-getter is eliminated and another round is held. All candidates were placed into nomination by motion, seconded, and approved before voting began."
+    key_speakers: ["Town Administrator", "School Committee chair (unidentified)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 8468
+    end_seconds: 9402
+    headline: "Al Williams appointed to School Committee vacancy 6-3 in second-round vote"
+    dek: "Williams won after a first inconclusive round; members cited his finance committee experience, teaching background, MSBA work, and collective bargaining knowledge."
+    summary: |
+      In the first round of voting, the tally was: Tom Mathers — 4 votes, Al Williams — 3 votes, Sarah Magaziner — 2 votes, with other candidates receiving zero. Because no candidate reached the required five votes, candidates with zero votes were eliminated and a second round was held among Magaziner, Mathers, and Williams.
+      
+      In the second round:
+      
+      | Member | Vote |
+      |---|---|
+      | Mr. Oda | Williams |
+      | Ms. Shapiro/Shaner | Williams |
+      | Ms. Taylor | Mathers |
+      | Ms. Fox | Williams |
+      | Mr. Murray | Williams |
+      | Ms. Singer | Williams |
+      | Mr. Grater | Mathers |
+      | Mr. Nigh | Mathers |
+      | Ms. Newton | Williams |
+      
+      **Williams received six votes; Mathers received three. Williams was appointed.**
+      
+      Members supporting Williams cited his finance committee background, experience as a high school and college educator, MSBA building-project work, and long-term collective bargaining experience. Members supporting Mathers praised his prior service in the vacancy seat the previous year, his community relationships, and his focus on students. A question arose mid-vote about whether Williams's current Commonwealth employment posed an ethics conflict; he indicated he would clear any conflict formally with the Ethics Commission and did not foresee a problem.
+    key_speakers: ["Al Williams (appointee candidate)", "Tom Mathers (candidate)", "Sarah Magaziner (candidate)", "Ms. Fox (School Committee member)", "Ms. Singer (School Committee member)", "Mr. Grater (School Committee member)", "Ms. Newton (School Committee member)", "Mr. Oda (School Committee member)", "Ms. Taylor (School Committee member)", "Mr. Murray (School Committee member)", "Town Administrator"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

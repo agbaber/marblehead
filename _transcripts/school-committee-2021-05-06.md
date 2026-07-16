@@ -9,7 +9,257 @@ video_url: "https://www.youtube.com/watch?v=-Au9atDjrqw"
 duration_seconds: 7487
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee votes 3-0 to end mandatory athlete pool testing, approves $3.1M schedule of bills"
+  summary: "The Marblehead School Committee held its regular meeting on May 11, 2021, addressing COVID-19 protocols, budget matters, and administrative items. The committee voted 3-0 (with one abstention) to make pool testing for student athletes voluntary rather than mandatory, consistent with updated DESE guidance, and heard a briefing on a new DESE quarantine exemption for masked students near COVID cases in classrooms. The committee approved a schedule of bills totaling approximately $3,109,281.57, received a COVID budget update showing approximately $1.6 million paid to date with nearly $2.4 million in total projected COVID-related spending, and discussed challenges staffing summer programs despite available federal grant funds. Additional approvals included FY2021-22 meeting dates, appointment of two school committee representatives to the Planning for Success initiative, and content for the Joseph and Lucretia Brown School dedication plaque."
+  decisions:
+    - "Approved amendment to prior vote ending mandatory pool testing for student athletes (pool testing now strongly encouraged but voluntary)"
+    - "Held discussion on outdoor mask policy changes, referred to policy subcommittee for Monday meeting"
+    - "Approved schedule of bills totaling approximately $3,109,281.57"
+    - "Approved appointment of Sarah Fox and Megan Taylor as school committee representatives to the Planning for Success initiative"
+    - "Approved FY2021-22 school committee meeting dates as presented with alternate options"
+    - "Approved content for the Joseph and Lucretia Brown School dedication plaque, amended to include Dr. Eric Oxford under administrators"
+  votes:
+    - motion: "Amend prior vote mandating pool testing for athletics so that pool testing is strongly encouraged but no longer mandatory"
+      result: "in favor (3 to 0, one abstention)"
+    - motion: "Approve schedule of bills (~$3.1M)"
+      result: "in favor (3 to 1)"
+    - motion: "Appoint Sarah Fox and Megan Taylor as Planning for Success representatives"
+      result: "in favor (unanimous)"
+    - motion: "Approve FY2021-22 school committee meeting dates"
+      result: "in favor (unanimous)"
+    - motion: "Approve Brown School dedication plaque content with addition of Dr. Eric Oxford"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 167
+    end_seconds: 599
+    headline: "Glover School principal highlights origami grant, Heart Challenge, and disability awareness month"
+    dek: "Principal Brian Oda reported on a $4,200 Mass Cultural Council origami grant, the school's 12th consecutive Kids Heart Challenge participation, and an April disability awareness curriculum."
+    summary: |
+      Glover School Principal Brian Oda presented three commendations:
+      
+      - **Origami grant**: Art teacher Tammy Nolte received a **$4,200 grant from the Mass Cultural Council**. An instructor named Motoko is teaching third-graders origami via Zoom, tied to geometry curriculum ahead of MCAS.
+      - **Kids Heart Challenge**: Glover's 12th consecutive year partnering with the American Heart Association. The event (formerly Jump Rope for Heart) runs May 17–21. The school has raised an estimated **$50,000 over 12 years**, averaging $5,000 per year.
+      - **Disability Awareness Month**: In April, special education chair Jessica Levensie and inclusion teachers Taylor Henry and Alex Minner led school-wide activities on recognizing ability, not labels. A grant from Friends of Marblehead Public Schools funded the book *Difference Is Awesome* and brought author Ryan Hack to speak to all grades.
+    key_speakers: ["Brian Oda (Glover School Principal)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 532
+    end_seconds: 891
+    headline: "School Committee commends Loden Rodriguez, named Gatorade Massachusetts Cross-Country Player of the Year"
+    dek: "Superintendent John Buckey recognized senior Loden Rodriguez, who was named Gatorade Massachusetts Cross-Country Player of the Year and will attend UMass next fall."
+    summary: "Committee member John (last name not captured clearly, likely the superintendent) presented a commendation for senior **Loden Rodriguez**, named **Gatorade Massachusetts Cross-Country Player of the Year**. Rodriguez attended the meeting briefly. Student representative Dan Howells also praised Rodriguez, noting he has been a standout runner all four years at Marblehead High School. Rodriguez will run cross-country at UMass Amherst next fall."
+    key_speakers: ["Loden Rodriguez (student athlete)", "Dan Howells (student representative)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 752
+    end_seconds: 1035
+    headline: "Student rep and committee recognize teachers, nurses; high school back full-time"
+    dek: "The committee recognized Nurse Appreciation Day and Teacher Appreciation, and the student representative reported students returned to school full-time for the first time in over a year."
+    summary: |
+      Student representative Dan Howells reported that students had their first full day of school in over a year and described an adjustment period. He also noted the mentor program held a meeting for freshmen on scheduling, AP exams underway, and upcoming senior events (prom, senior show, graduation).
+      
+      Committee members Sarah Gold and others recognized all district staff and school nurses on National Nurses Day (with School Nurses Day the following week).
+    key_speakers: ["Dan Howells (student representative)", "Sarah Gold (committee member)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 1035
+    end_seconds: 1046
+    headline: "No public comments received at the start of the meeting"
+    dek: "Chair called for public comment; no hands were raised."
+    summary: "The chair opened public comment at approximately 7:17 PM. No members of the public raised their hands, and the meeting moved on to the superintendent's report."
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1046
+    end_seconds: 1192
+    headline: "Superintendent updates committee on 'Planning for Success' community initiative"
+    dek: "Superintendent reported robust interest in the Planning for Success initiative and confirmed Jason Silva agreed to serve as the town's representative; two of four sessions will be held 3–5:30 PM."
+    summary: "The superintendent reported strong interest in the district's **Planning for Success** initiative. Jason Silva agreed to serve as the town representative. Two of the four planned sessions were rescheduled from 9–11:30 AM to **3–5:30 PM** to accommodate more participants. The facilitator and superintendent agreed the sessions should be held in-person; the superintendent noted the option to hold meetings outdoors under the district's tents was raised."
+    key_speakers: ["Superintendent (John, last name not clearly captured)"]
+  - topic: recreation-events
+    topic_confidence: 0.85
+    start_seconds: 1192
+    end_seconds: 1745
+    headline: "Graduation set for June 4 at Piper Field; prom and senior show planned for preceding evenings"
+    dek: "Principal Bauer outlined detailed COVID-safe graduation plans including four tickets per family, staggered arrival, outdoor ceremony with rain dates of June 5 and 6."
+    summary: |
+      High school principal Bauer presented graduation and senior week plans updated per DESE April 28 guidance:
+      
+      - **Graduation**: Friday, June 4 at 6 PM on **Piper Field** (outdoor). Rain dates: Saturday June 5 at 2 PM, Sunday June 6 at 2 PM. No indoor rain plan.
+      - **Capacity**: Currently planning **4 tickets per family**, in pods of 4 chairs spaced 6 feet apart. A Google Form will be sent for advance sign-up.
+      - **Arrival**: Staggered entry through multiple entrances. Diplomas placed on table; students wear gloves. A photo spot off-stage where students can briefly unmask.
+      - **Ceremony**: Professional sound system, band and a cappella with appropriate spacing, microphones wiped between speakers.
+      - **Graduation will be live-streamed** for those unable to attend.
+      - **Senior week schedule**: Wednesday evening—prom/formal event with red carpet, box dinner, dancing (updated DESE guidelines now allow dancing), and awards; Thursday—senior show and hypnotist at the PAC; Friday morning—mandatory graduation rehearsal at 9 AM; Friday evening—graduation.
+      - Assistant Principal Lindsey Page coordinating with class advisors and student officers.
+    key_speakers: ["Principal Bauer (MHS)", "Dan Howells (student representative)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1779
+    end_seconds: 2177
+    headline: "Athletic Director reports fall-2 season concluded successfully; spring sports begin with 367 athletes"
+    dek: "Athletic Director Greg Siglarski reported the football team went 7-0, volleyball went 6-6, boys track went 4-0, and spring sports launched with 367 registered student athletes."
+    summary: |
+      Athletic Director Greg Siglarski reported on the recently completed 'Fall 2' season:
+      
+      | Team | Record | Notable |
+      |---|---|---|
+      | Football | 7-0 | Beat Swampscott; beat Danvers (revenge game) |
+      | Volleyball | 6-6 | Beat powerhouse Masco 3-2 in rematch |
+      | Boys Track | 4-0 | Beat Beverly, Peabody, Masco, Danvers |
+      | Girls Track | 0-4 | Tight meets vs. Danvers and Masco |
+      | Cheerleading | — | Significant growth; brought in outside coach |
+      
+      The season completed **with no COVID-related shutdowns**. Over 220 student athletes participated. Spring sports launched the prior Monday with **367 registered athletes**. First games of the spring included baseball (lost 4-3 to Swampscott) and tennis vs. Masco. An annual powderpuff game vs. Swampscott is scheduled for Tuesday, May 25, with 81 girls signed up.
+    key_speakers: ["Greg Siglarski (Athletic Director)"]
+  - topic: public-safety
+    topic_confidence: 0.82
+    start_seconds: 2177
+    end_seconds: 2807
+    featured: true
+    headline: "Committee votes 3-0 to make athlete pool testing voluntary; DESE now discourages mandated testing"
+    dek: "After discussion of wrestling's unique close-contact risk and survey of neighboring district practices, the committee voted to end the mandate while strongly encouraging voluntary participation."
+    summary: |
+      The committee discussed COVID pool testing policy for spring student athletes. Key context:
+      
+      - **DESE guidance** now explicitly discourages districts from mandating pool testing.
+      - Neighboring districts: Salem mandates testing (~200 athletes weekly); Gloucester makes it entirely optional; Danvers confirmed they are **not** doing it; Saugus still in planning stages; Swampscott uses self-attestation only.
+      - The **Fall 2 season had zero positive pool tests**, and no COVID-related shutdowns.
+      - Discussion focused on wrestling as the highest-risk sport (indoor, face-to-face, masks may shift during competition; matches are max 6 minutes; one match per wrestler per meet).
+      - Committee member Deanna suggested using the **BioNex Now rapid antigen test** (15-minute results) voluntarily before wrestling meets as an additional safeguard.
+      - Superintendent recommended against mandating testing but urged **strongly encouraging** voluntary participation, with Greg Siglarski coordinating schedules.
+      
+      **Vote**: David Harris moved to amend the prior vote mandating pool testing for athletics; Emily Barron seconded. Roll call: Sarah Gold—yes; Emily Barron—yes; Sarah Fox—abstain; David Harris—yes. **Motion passed 3-0-1.**
+    key_speakers: ["Greg Siglarski (Athletic Director)", "David Harris (committee member)", "Emily Barron (committee member)", "Sarah Gold (committee member)", "Sarah Fox (committee member)", "Superintendent"]
+  - topic: public-safety
+    topic_confidence: 0.88
+    start_seconds: 2807
+    end_seconds: 3207
+    headline: "School nurse explains new DESE '3-to-6-foot masked exposure' quarantine exemption for classroom settings"
+    dek: "Nurse Deanna explained that masked students within 3–6 feet of a COVID case in class no longer need to quarantine, but the exemption does not apply to lunch, recess, clubs, or athletic buses."
+    summary: |
+      School nurse Deanna (last name not captured) briefed the committee on DESE's new **three-to-six-foot masked exposure quarantine exemption**, effective in classroom and home-to-school bus settings only:
+      
+      - **Definition of close contact unchanged**: within 6 feet for 15 cumulative minutes in 24 hours.
+      - If both the case and the contact are **masked** and within 3–6 feet during **class time or the home-to-school bus ride**, the contact is identified as a close contact but **does not need to quarantine**.
+      - If either person is unmasked, the exemption does not apply.
+      - **Does NOT apply to**: lunch, recess, clubs (e.g., debate team), athletic buses to sporting events, or co-curricular activities.
+      - Close contacts under the exemption are **still notified** and encouraged to get a PCR test on day 5 after last exposure; encouraged to stay home while awaiting results.
+      - Bus guidance (separate): K–12 students on masked buses with open windows have no distancing requirement for home-to-school buses, but contact tracing continues.
+      - All close contacts will be documented and the local board of health notified.
+      
+      Superintendent noted DESE guidelines sometimes appear contradictory (e.g., debate club exempt from exemption, biology class is not) and thanked the nurse for tracking the evolving guidance.
+    key_speakers: ["Deanna (school nurse)", "Superintendent"]
+  - topic: public-safety
+    topic_confidence: 0.8
+    start_seconds: 3207
+    end_seconds: 3578
+    headline: "Committee discusses outdoor mask policy review; policy subcommittee to take it up Monday"
+    dek: "Sarah Fox raised outdoor mask requirements and member vaccination rates; committee agreed the policy subcommittee should review relaxing outdoor masking on school property consistent with state guidance."
+    summary: |
+      Committee member Sarah Fox initiated a discussion about the current school policy requiring masks at all times on school property, noting the governor's April 30 guidance relaxing outdoor masking requirements and asking whether it was within the committee's purview to adjust the policy.
+      
+      Key points:
+      - The Marblehead Board of Health posted effective April 30 that face coverings are required outdoors only when social distancing is not possible.
+      - Current district policy still requires masks at all times on school property by all persons.
+      - DESE has stated graduation must be a masked event.
+      - The **policy subcommittee will meet Monday** with this as an agenda item, and a full committee vote could occur at the next Thursday meeting.
+      - The superintendent expressed hope that DESE/Governor Baker would provide further guidance rather than leaving decisions to local committees.
+      - Nurse Deanna noted she has vaccination records for approximately 20 of the 951 high school students (voluntary reporting only), but believes the actual vaccinated population is higher given Marblehead's high community vaccination rate.
+    key_speakers: ["Sarah Fox (committee member)", "Superintendent", "Deanna (school nurse)", "Emily Barron (committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 4576
+    end_seconds: 4669
+    headline: "Finance director reports 68% of operating budget spent through April; custodial overtime over budget"
+    dek: "Michelle (CFO/finance director) reported $27,642,144 spent through April—68% of the operating budget—with special education costs breaking even but custodial overtime significantly over budget."
+    summary: |
+      Finance director Michelle (last name not captured) presented the monthly financial report through April:
+      
+      - **Total spent**: $27,642,144, or **68% of the operating budget** through April (10 months into the school year). The lower-than-expected percentage is due to lump-sum payrolls paid in June for teachers on 26-pay schedules.
+      - **Special education**: Breaking even—no concerns reported.
+      - **Substitute teaching**: Approximately $70,000 spent, or **28% of the substitute budget**; actual substitute costs are partially captured under regular payroll lines (paraprofessionals and tutors working additional hours).
+      - **Custodial overtime**: Significantly over budget, in deficit by just over $27,000 (transcript cuts off).
+      - No other surprises reported.
+    key_speakers: ["Michelle (Finance Director/CFO)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 4714
+    end_seconds: 5382
+    headline: "COVID spending nears $2.4M; summer staffing shortage threatens learning-loss programs"
+    dek: "The district's business office reported approximately $1.6M in COVID-related expenditures as of April 30, with a preliminary ARP SR3 grant of approximately $796,000 expected but not yet received."
+    summary: |
+      The district's finance administrator reported on several budget areas:
+      
+      **Custodial overtime:** A projected deficit of approximately $27,000 currently, anticipated to reach approximately $55,000 by end of June due to custodial vacancies and bus driver overtime.
+      
+      **Unemployment compensation:** Approximately $36,000 spent through November; a deficit of $30,000–$60,000 anticipated, though fraudulent claims are slowing.
+      
+      **COVID funding:** As of April 30, the district has paid $1,611,507 and has $494,954 encumbered. Additional estimated funds of $269,664 bring the total to nearly $2.4 million. This does not include an anticipated SR3 grant of approximately $796,000, of which 20% must be spent on learning loss.
+      
+      **Summer staffing:** Committee members and administrators noted significant difficulty recruiting staff for summer programs due to staff burnout. DESE is offering options but with prescriptive professional development requirements that are discouraging participation.
+    key_speakers: ["Michelle (Business Administrator)", "Sarah (School Committee member)", "John (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 5382
+    end_seconds: 5425
+    headline: "Schedule of bills totaling ~$3.1M approved 3-1"
+    dek: "One member abstained due to not receiving packet materials via Dropbox."
+    summary: "The chair called for a motion to approve the schedule of bills totaling $3,109,281.57. David moved and Emily seconded. The vote passed 3 to 1, with one member abstaining because meeting documents had not synced to their Dropbox folder."
+    key_speakers: ["Sarah Fox (Chair)", "David Harris (member)", "Emily Barron (member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 5425
+    end_seconds: 5691
+    headline: "Sarah Fox and Megan Taylor appointed as Planning for Success representatives, 4-0"
+    dek: "The committee voted unanimously to designate two members to represent the school committee in a superintendent's advisory planning initiative."
+    summary: "The committee discussed filling two school committee slots on the Planning for Success initiative, a superintendent's advisory process. Members Sarah Fox and the absent Megan Taylor were identified as having strong interest. A member raised a question about contingency if either could not continue, and the superintendent indicated a second member could step in. The motion to appoint Fox and Taylor passed 4 to 0. Discussion also confirmed current seniors are eligible to participate and that parent representatives would be drawn from both PreK–6 and 7–12 demographic groups."
+    key_speakers: ["John (Superintendent)", "Sarah Gold (member)", "David Harris (member)", "Emily Barron (member)", "Sarah Fox (member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 5747
+    end_seconds: 6148
+    headline: "FY2021-22 meeting schedule approved with September dates shifted to 9th and 23rd"
+    dek: "The committee approved a first-and-third Thursday schedule for most months, adjusting September to the 9th and 23rd to avoid conflicts with the school year start and Yom Kippur."
+    summary: "The committee reviewed proposed meeting dates for the 2021-22 school year. Most months will follow a first-and-third Thursday pattern. September was adjusted to the 9th and 23rd because the first Thursday falls on September 2 (the second day of school) and the third Thursday falls on Yom Kippur. April was also flagged as requiring adjustment due to vacation week. A discussion arose about whether to shift the start time from 7:00 p.m. to 6:00 p.m.; members expressed concern about public participation and staff burden, and the chair indicated a preference to defer that decision to the summer. The dates as presented (with alternates noted) were approved 4 to 0."
+    key_speakers: ["Sarah Fox (Chair)", "David Harris (member)", "Emily Barron (member)", "Sarah Gold (member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.75
+    start_seconds: 6454
+    end_seconds: 6965
+    headline: "Brown School dedication plaque content approved 4-0 with addition of Dr. Eric Oxford"
+    dek: "The committee affirmed the text for the new school's bronze dedication plaque, modeled on the Glover School plaque, after a member noted the Director of Student Services had been omitted."
+    summary: |
+      As part of the Brown School building project punch list, the architect is responsible for supplying a dedication plaque to be mounted in the entryway adjacent to the administrative offices. Working with Todd Bloodgood, committee liaison David Harris developed content modeled on the Glover School plaque. The content includes a thank-you to Marblehead citizens and recognition of the owner's project manager, architect, and construction manager.
+      
+      Member Sarah Gold noted that Dr. Eric Oxford, Director of Student Services (Ed.D.), had been omitted from the administrators listed. The committee agreed to add him. The motion to approve the plaque content as amended passed 4 to 0. Gene (the architect) will present the final aesthetic design—likely bronze—to the building committee before ordering.
+    key_speakers: ["David Harris (member/building committee liaison)", "Sarah Gold (member)", "Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 6965
+    end_seconds: 7201
+    headline: "Building committee liaison shares photo slideshow of Brown School construction progress"
+    dek: "David Harris screened a 58-second video of construction progress; landscaping is set to begin the following Monday and interior skylights are the next anticipated milestone."
+    summary: "Committee liaison David Harris shared a brief video slideshow of Brown School construction photos set to Mozart. He noted that landscaping contractor Exquisite is scheduled to arrive on site the following Monday, and that installation of interior skylights will be the next significant visual milestone, as they will flood natural light into both floors of the building."
+    key_speakers: ["David Harris (member/building committee liaison)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 7248
+    end_seconds: 7463
+    headline: "Resident pediatrician shares teen vaccination data and urges continued 7 p.m. meeting start time"
+    dek: "Sandra Callahan reported that as of April 23, 82 Marblehead 16-to-19-year-olds were fully vaccinated and 261 had received a first dose, and encouraged the committee to publicize upcoming 12-to-15 vaccination clinics."
+    summary: |
+      Resident Sandra Callahan (self-identified pediatrician) offered two comments:
+      
+      1. **Meeting times:** She expressed support for retaining a 7:00 p.m. start, noting Zoom access has enabled more public participation and that six o'clock conflicts with dinner and commuting.
+      
+      2. **Vaccination update:** As of April 23 data reported at a May 4 Board of Health meeting, 82 Marblehead residents aged 16–19 were fully vaccinated and 261 had received a first dose. She noted her practice has been a COVID vaccine site since January, currently offering walk-in Moderna appointments open to non-patients, and encouraged the committee to help distribute information about upcoming clinics for the newly eligible 12–15 age group.
+    key_speakers: ["Sandra Callahan (Resident, pediatrician)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;
