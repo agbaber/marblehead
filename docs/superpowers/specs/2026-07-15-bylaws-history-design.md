@@ -1,9 +1,44 @@
 ---
 title: Marblehead Bylaws History (v1) — design
 date: 2026-07-15
-status: approved
+status: approved (revised 2026-07-16 after implementation findings — see "Revisions")
 scope: General Bylaws (Part I) only; Zoning (Ch. 200) deferred to phase 2
 ---
+
+## Revisions (2026-07-16, from implementing Tasks 9–11)
+
+Real data changed four assumptions. v1 is now **fully deterministic — no LLM, no
+API key.**
+
+1. **Acquisition solved with Playwright, not the Town Clerk.** eCode's Cloudflare
+   block is cleared by a real browser with a realistic UA. Its *print* view
+   (`ecode360.com/print/MA1991?guid=11769479`) returns all 44 Part I chapters —
+   bodies + amendment notes — in one request. The "escalate for a PDF" gate never
+   fired. See `acquire_ecode.mjs`.
+
+2. **The eCode blame backbone is richer and older than expected.** 212 note
+   brackets → **290 dated amendment events back to 1954**, every one attributed to
+   a section. Note formats needed hardening the plan couldn't foresee: semicolon
+   lists under one keyword, `TM`/`ATM`/`STM`, `Adopted`/`Added`/`Amended`, plural
+   `Arts. N and M`, and an eCode no-space typo.
+
+3. **Verbatim before/after text is NOT cleanly recoverable → deferred to phase 2.**
+   The annual reports print changes with strikethrough/underline, but our
+   `pdftotext` extraction flattened that formatting, leaving ambiguities like
+   `$10.00 15.00` with no machine-readable struck-vs-inserted marker. An LLM would
+   *infer*, not extract — lossy, worse for prose. True verbatim diffs need
+   re-extracting the source PDFs with style runs preserved. **Phase 2.**
+
+4. **Sponsor/section are deterministic; numeric tallies exist only for 2024–25.**
+   `Sponsored by the X` and `amending section NN-N` are regex-extractable 2006+.
+   `Voted Yes N No M` counts appear only in the 2024 and 2025 reports; 2006–2023
+   say `Voted: …` (passed, no count).
+
+**Net v1:** an eCode-driven git skeleton (every passed amendment, section-attributed,
+dated to 1954), enriched from the annual reports with **sponsor** (2006+),
+**disposition**, and **numeric tally** (2024–25). Every commit authored by the real
+sponsor where known. No verbatim line diffs yet, no per-voter data ever. The
+`fidelity` field stays the hook for the phase-2 verbatim upgrade.
 
 # Marblehead Bylaws History — v1 design
 
