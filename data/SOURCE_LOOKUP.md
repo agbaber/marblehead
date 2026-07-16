@@ -246,6 +246,15 @@ The town runs two Socrata-hosted portals that publish FY26 spending data. The la
 
 The checkbook total ($98.5M) and the budget portal's Actual rollup ($140.4M) intentionally don't match: the checkbook is AP-only, while Actual includes payroll runs, transfers, and intergovernmental remittances. The Electric Light Department ($13.16M of Actual) runs as a self-supporting enterprise with no appropriation, so it appears with $0 Revised Budget. Used by `charts/checkbook.html`.
 
+## Parcel Assessments (MassGIS Standardized Assessors' Parcels, FY2025)
+
+- Source: MassGIS "Massachusetts Property Tax Parcels" ArcGIS feature service (the Level 3 Standardized Assessors' Parcels extract), layer `FeatureServer/0`, filtered to `TOWN_ID=168` (Marblehead). Pulled 2026-07-16. Dataset home: [MassGIS Property Tax Parcels](https://www.mass.gov/info-details/massgis-data-property-tax-parcels).
+- `scripts/fetch_massgis_parcels.py` pages the service (2,000 rows per request, `resultOffset`, `returnGeometry=false`, ordered by OBJECTID) and writes `data/parcels.csv` (committed, de-identified) plus `data/parcels_raw/parcels_full.csv` (gitignored, adds `owner1` + mailing). Raw JSON pages are cached under `data/parcels_raw/` (gitignored) for provenance. One run is ~5 requests for all 8,805 parcels. Field mapping lives in `scripts/massgis_parcels.py` (unit-tested in `data/test_massgis_parcels.py`).
+- The gitignored full CSV is the input to `scripts/sync_parcel_owners.mjs`, which normalizes addresses and loads the `parcel_owners` D1 table behind the community-pulse self-serve verification feature. Its `buildRow` reads `site_addr`, `owner1`, `prop_id`, and `fy` from this CSV.
+- Vintage: MassGIS carries the prior fiscal year's certified values, so this is **FY2025** (the `fy` column records it per row). The town's live Patriot Properties database shows the FY2026 revaluation, ~20% higher on a sampled waterfront parcel; do not present these as current-year values without the vintage caveat.
+- Owner names and mailing addresses are public record but are deliberately kept out of the committed CSV: marbleheaddata.org is a public static site, so committing the bulk owner list would publish it. The de-identified file is what the site reads.
+- Note on sourcing: an earlier attempt scraped the town's live Patriot Properties WebPro database parcel-by-parcel; it got the IP rate-limited (403) after ~7,000 requests and only covered ~2% of parcels. MassGIS provides the same data (one fiscal year older) in one polite bulk pull, so that is the source of record here.
+
 ## Household Income Distribution (ACS 2020&ndash;2024, table B19001)
 - Source: US Census Bureau, ACS 2020&ndash;2024 5-year estimates, table B19001, Marblehead town, Essex County, MA (FIPS 25-009-38400)
 - API endpoint: `https://api.census.gov/data/2024/acs/acs5?get=NAME,B19001_001E,...,B19001_017E&for=county%20subdivision:38400&in=state:25%20county:009`
