@@ -89,6 +89,7 @@ og_url: https://marbleheaddata.org/departments.html
   }
   .dx-roster td:first-child { text-align: left; font-weight: 400; white-space: normal; }
   .dx-roster tbody tr:last-child td { border-bottom: none; }
+  .dx-roster td.dx-avg { color: var(--text-muted); font-weight: 400; }
   .dx-deepdive { margin: 4px 0 20px; font-weight: 600; }
   .dx-deepdive a { color: var(--c-teal); }
 
@@ -209,9 +210,11 @@ og_url: https://marbleheaddata.org/departments.html
       return;
     }
 
-    // 3. Who leads it.
+    // 3. Who leads it. (role_note is intentionally not shown — several org_chart
+    // notes are framed around the pre-override "no-override" budget, which is
+    // counterfactual now that the override passed.)
     if (d.role) {
-      p.push('<p>Led by the ' + esc(d.role) + '.' + (d.role_note ? ' ' + esc(d.role_note) : '') + '</p>');
+      p.push('<p>Led by the ' + esc(d.role) + '.</p>');
     }
 
     // 4. Who does it: the FY27 position roster.
@@ -230,11 +233,14 @@ og_url: https://marbleheaddata.org/departments.html
       if (ps.reduced) chg.push(ps.reduced + ' reduced');
       if (chg.length) p.push('<p class="dx-caveat"><small>FY27 position changes: ' + chg.join(', ') + '.</small></p>');
       p.push('<div class="table-wrap"><table class="dx-roster"><thead><tr>' +
-        '<th>Position</th><th>People</th><th>FY27 budgeted</th></tr></thead><tbody>');
+        '<th>Position</th><th>People</th><th>FY27 budgeted</th><th>Avg / person</th>' +
+        '</tr></thead><tbody>');
       s.positions.forEach(function (pos) {
+        var avg = (pos.count > 1 && pos.fy27 != null) ? fmtUSD(pos.fy27 / pos.count) : '';
         p.push('<tr><td>' + esc(pos.title) + '</td>' +
           '<td class="dx-amt">' + (pos.count != null ? pos.count : '') + '</td>' +
-          '<td class="dx-amt">' + fmtUSD(pos.fy27) + '</td></tr>');
+          '<td class="dx-amt">' + fmtUSD(pos.fy27) + '</td>' +
+          '<td class="dx-amt dx-avg">' + avg + '</td></tr>');
       });
       p.push('</tbody></table></div>');
     }
