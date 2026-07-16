@@ -80,7 +80,9 @@
         "fy26_budget": 100,
         "fy27_proposed": 100,
         "change_dollars": 0,
-        "change_pct": 0.0
+        "change_pct": 0.0,
+        "override_added": 0,
+        "fy27_adopted": 100
       },
       "line_items": [
         {
@@ -159,7 +161,9 @@
         "fy26_budget": 700051,
         "fy27_proposed": 723176,
         "change_dollars": 23125,
-        "change_pct": 0.03303330757330537
+        "change_pct": 0.033,
+        "override_added": 0,
+        "fy27_adopted": 723176
       },
       "line_items": [
         {
@@ -283,7 +287,9 @@
         "fy26_budget": 6375,
         "fy27_proposed": 6375,
         "change_dollars": 0,
-        "change_pct": 0.0
+        "change_pct": 0.0,
+        "override_added": 0,
+        "fy27_adopted": 6375
       },
       "line_items": [
         {
@@ -321,8 +327,10 @@
         "fy25_actual": 0,
         "fy26_budget": 444000,
         "fy27_proposed": 414000,
-        "change_dollars": -30000,
-        "change_pct": -0.06756756756756757
+        "change_dollars": -4000,
+        "change_pct": -0.009,
+        "override_added": 26000,
+        "fy27_adopted": 440000
       },
       "line_items": [
         {
@@ -394,8 +402,10 @@
         "fy25_actual": 1699903,
         "fy26_budget": 1688913,
         "fy27_proposed": 1778805,
-        "change_dollars": 89892,
-        "change_pct": 0.05322476646221564
+        "change_dollars": 436540,
+        "change_pct": 0.2585,
+        "override_added": 346648,
+        "fy27_adopted": 2125453
       },
       "line_items": [
         {
@@ -541,7 +551,9 @@
         "fy26_budget": 394221,
         "fy27_proposed": 388003,
         "change_dollars": -6218,
-        "change_pct": -0.01577287866450544
+        "change_pct": -0.0158,
+        "override_added": 0,
+        "fy27_adopted": 388003
       },
       "line_items": [
         {
@@ -665,7 +677,9 @@
         "fy26_budget": 115000,
         "fy27_proposed": 278000,
         "change_dollars": 163000,
-        "change_pct": 1.4173913043478261
+        "change_pct": 1.4174,
+        "override_added": 0,
+        "fy27_adopted": 278000
       },
       "line_items": [
         {
@@ -725,7 +739,9 @@
         "fy26_budget": 8400,
         "fy27_proposed": 8400,
         "change_dollars": 0,
-        "change_pct": 0.0
+        "change_pct": 0.0,
+        "override_added": 0,
+        "fy27_adopted": 8400
       },
       "line_items": [
         {
@@ -815,8 +831,10 @@
         "fy25_actual": 242680,
         "fy26_budget": 244733,
         "fy27_proposed": 201877,
-        "change_dollars": -42856,
-        "change_pct": -0.17511328672471632
+        "change_dollars": 23269,
+        "change_pct": 0.0951,
+        "override_added": 66125,
+        "fy27_adopted": 268002
       },
       "line_items": [
         {
@@ -992,7 +1010,9 @@
         "fy26_budget": 71015,
         "fy27_proposed": 132200,
         "change_dollars": 61185,
-        "change_pct": 0.8615785397451242
+        "change_pct": 0.8616,
+        "override_added": 0,
+        "fy27_adopted": 132200
       },
       "line_items": [
         {
@@ -1108,7 +1128,9 @@
         "fy26_budget": 5775,
         "fy27_proposed": 1775,
         "change_dollars": -4000,
-        "change_pct": -0.6926406926406926
+        "change_pct": -0.6926,
+        "override_added": 0,
+        "fy27_adopted": 1775
       },
       "line_items": [
         {
@@ -1162,8 +1184,10 @@
         "fy25_actual": 262340,
         "fy26_budget": 286826,
         "fy27_proposed": 178671,
-        "change_dollars": -108155,
-        "change_pct": -0.37707530000767014
+        "change_dollars": 464399,
+        "change_pct": 1.6191,
+        "override_added": 572554,
+        "fy27_adopted": 751225
       },
       "line_items": [
         {
@@ -1314,8 +1338,10 @@
         "fy25_actual": 358452,
         "fy26_budget": 294927,
         "fy27_proposed": 303480,
-        "change_dollars": 8553,
-        "change_pct": 0.029000396708337997
+        "change_dollars": 19553,
+        "change_pct": 0.0663,
+        "override_added": 11000,
+        "fy27_adopted": 314480
       },
       "line_items": [
         {
@@ -1416,8 +1442,10 @@
         "fy25_actual": 339182,
         "fy26_budget": 494402,
         "fy27_proposed": 203682,
-        "change_dollars": -290720,
-        "change_pct": -0.5880235112317507
+        "change_dollars": 87255,
+        "change_pct": 0.1765,
+        "override_added": 377975,
+        "fy27_adopted": 581657
       },
       "line_items": [
         {
@@ -1592,8 +1620,10 @@
         "fy25_actual": 4856175,
         "fy26_budget": 4984687,
         "fy27_proposed": 5216914,
-        "change_dollars": 232227,
-        "change_pct": 0.0465880806558165
+        "change_dollars": 430673,
+        "change_pct": 0.0864,
+        "override_added": 198446,
+        "fy27_adopted": 5415360
       },
       "line_items": [
         {
@@ -1754,8 +1784,10 @@
         "fy25_actual": 5449702,
         "fy26_budget": 5561260,
         "fy27_proposed": 6016967,
-        "change_dollars": 455707,
-        "change_pct": 0.08194312080355891
+        "change_dollars": 899707,
+        "change_pct": 0.1618,
+        "override_added": 444000,
+        "fy27_adopted": 6460967
       },
       "line_items": [
         {
@@ -1924,8 +1956,10 @@
         "fy25_actual": 553941,
         "fy26_budget": 687313,
         "fy27_proposed": 623330,
-        "change_dollars": -63983,
-        "change_pct": -0.0930915027069181
+        "change_dollars": -11483,
+        "change_pct": -0.0167,
+        "override_added": 52500,
+        "fy27_adopted": 675830
       },
       "line_items": [
         {
@@ -2041,7 +2075,9 @@
         "fy26_budget": 2100,
         "fy27_proposed": 2100,
         "change_dollars": 0,
-        "change_pct": 0.0
+        "change_pct": 0.0,
+        "override_added": 0,
+        "fy27_adopted": 2100
       },
       "line_items": [
         {
@@ -2072,7 +2108,9 @@
         "fy26_budget": 2400,
         "fy27_proposed": 2400,
         "change_dollars": 0,
-        "change_pct": 0.0
+        "change_pct": 0.0,
+        "override_added": 0,
+        "fy27_adopted": 2400
       },
       "line_items": [
         {
@@ -2251,8 +2289,10 @@
         "fy25_actual": 2064861,
         "fy26_budget": 2406042,
         "fy27_proposed": 2474771,
-        "change_dollars": 68729,
-        "change_pct": 0.028565170516557898
+        "change_dollars": 339323,
+        "change_pct": 0.141,
+        "override_added": 270594,
+        "fy27_adopted": 2745365
       },
       "line_items": [
         {
@@ -2361,7 +2401,9 @@
         "fy26_budget": 2943402,
         "fy27_proposed": 1790344,
         "change_dollars": -1153058,
-        "change_pct": -0.3917432956830226
+        "change_pct": -0.3917,
+        "override_added": 0,
+        "fy27_adopted": 1790344
       },
       "line_items": [
         {
@@ -2461,8 +2503,10 @@
         "fy25_actual": 0,
         "fy26_budget": 0,
         "fy27_proposed": 2186516,
-        "change_dollars": 2186516,
-        "change_pct": 0.0
+        "change_dollars": null,
+        "change_pct": null,
+        "override_added": 0,
+        "fy27_adopted": 2186516
       },
       "line_items": [
         {
@@ -2542,8 +2586,10 @@
         "fy25_actual": 468585,
         "fy26_budget": 495043,
         "fy27_proposed": 410539,
-        "change_dollars": -84504,
-        "change_pct": -0.17070032300224425
+        "change_dollars": -25812,
+        "change_pct": -0.0521,
+        "override_added": 58692,
+        "fy27_adopted": 469231
       },
       "line_items": [
         {
@@ -2696,8 +2742,10 @@
         "fy25_actual": 305794,
         "fy26_budget": 326041,
         "fy27_proposed": 339320,
-        "change_dollars": 13279,
-        "change_pct": 0.04072800660039688
+        "change_dollars": 73279,
+        "change_pct": 0.2248,
+        "override_added": 60000,
+        "fy27_adopted": 399320
       },
       "line_items": [
         {
@@ -2868,8 +2916,10 @@
         "fy25_actual": 406698,
         "fy26_budget": 423460,
         "fy27_proposed": 387377,
-        "change_dollars": -36083,
-        "change_pct": -0.08520993718414963
+        "change_dollars": 100088,
+        "change_pct": 0.2364,
+        "override_added": 136171,
+        "fy27_adopted": 523548
       },
       "line_items": [
         {
@@ -3003,7 +3053,9 @@
         "fy26_budget": 148525,
         "fy27_proposed": 154872,
         "change_dollars": 6347,
-        "change_pct": 0.042733546540986364
+        "change_pct": 0.0427,
+        "override_added": 0,
+        "fy27_adopted": 154872
       },
       "line_items": [
         {
@@ -3253,8 +3305,10 @@
         "fy25_actual": 1338401,
         "fy26_budget": 1493292,
         "fy27_proposed": 857633,
-        "change_dollars": -635659,
-        "change_pct": -0.42567629104019844
+        "change_dollars": 101282,
+        "change_pct": 0.0678,
+        "override_added": 736941,
+        "fy27_adopted": 1594574
       },
       "line_items": [
         {
@@ -3429,8 +3483,10 @@
         "fy25_actual": 904581,
         "fy26_budget": 1037027,
         "fy27_proposed": 1003034,
-        "change_dollars": -33993,
-        "change_pct": -0.03277928154233207
+        "change_dollars": 53007,
+        "change_pct": 0.0511,
+        "override_added": 87000,
+        "fy27_adopted": 1090034
       },
       "line_items": [
         {
@@ -3546,7 +3602,9 @@
         "fy26_budget": 7550,
         "fy27_proposed": 9500,
         "change_dollars": 1950,
-        "change_pct": 0.2582781456953642
+        "change_pct": 0.2583,
+        "override_added": 0,
+        "fy27_adopted": 9500
       },
       "line_items": [
         {
@@ -3577,7 +3635,9 @@
         "fy26_budget": 9314141,
         "fy27_proposed": 11098398,
         "change_dollars": 1784257,
-        "change_pct": 0.19156431065409038
+        "change_pct": 0.1916,
+        "override_added": 0,
+        "fy27_adopted": 11098398
       },
       "line_items": [
         {
@@ -3616,7 +3676,9 @@
         "fy26_budget": 22101072,
         "fy27_proposed": 24664754,
         "change_dollars": 2563682,
-        "change_pct": 0.11599808371286244
+        "change_pct": 0.116,
+        "override_added": 0,
+        "fy27_adopted": 24664754
       },
       "line_items": [
         {
@@ -3767,7 +3829,9 @@
         "fy26_budget": 5532269,
         "fy27_proposed": 4799291,
         "change_dollars": -732978,
-        "change_pct": -0.13249138825317425
+        "change_pct": -0.1325,
+        "override_added": 0,
+        "fy27_adopted": 4799291
       },
       "line_items": [
         {
@@ -3891,7 +3955,9 @@
         "fy26_budget": 6463957,
         "fy27_proposed": 6865301,
         "change_dollars": 401344,
-        "change_pct": 0.06208952194453026
+        "change_pct": 0.0621,
+        "override_added": 0,
+        "fy27_adopted": 6865301
       },
       "line_items": [
         {
@@ -4015,7 +4081,9 @@
         "fy26_budget": 1276874,
         "fy27_proposed": 1319500,
         "change_dollars": 42626,
-        "change_pct": 0.033383090265758406
+        "change_pct": 0.0334,
+        "override_added": 0,
+        "fy27_adopted": 1319500
       },
       "line_items": [
         {
@@ -4139,7 +4207,9 @@
         "fy26_budget": 5481505,
         "fy27_proposed": 5554252,
         "change_dollars": 72747,
-        "change_pct": 0.013271355220874559
+        "change_pct": 0.0133,
+        "override_added": 0,
+        "fy27_adopted": 5554252
       },
       "line_items": [
         {
@@ -4531,7 +4601,9 @@
         "fy26_budget": 4472968,
         "fy27_proposed": 4437815,
         "change_dollars": -35153,
-        "change_pct": -0.007858987589448438
+        "change_pct": -0.0079,
+        "override_added": 0,
+        "fy27_adopted": 4437815
       },
       "line_items": [
         {
@@ -4927,7 +4999,9 @@
         "fy26_budget": 7579771,
         "fy27_proposed": 7646853,
         "change_dollars": 67082,
-        "change_pct": 0.008850135446044478
+        "change_pct": 0.0089,
+        "override_added": 0,
+        "fy27_adopted": 7646853
       },
       "line_items": [
         {
@@ -5347,7 +5421,9 @@
         "fy26_budget": 5784165,
         "fy27_proposed": 5778193,
         "change_dollars": -5972,
-        "change_pct": -0.0010324740044587249
+        "change_pct": -0.001,
+        "override_added": 0,
+        "fy27_adopted": 5778193
       },
       "line_items": [
         {
@@ -5839,7 +5915,9 @@
         "fy26_budget": 10904809,
         "fy27_proposed": 11229153,
         "change_dollars": 324344,
-        "change_pct": 0.02974320779025107
+        "change_pct": 0.0297,
+        "override_added": 0,
+        "fy27_adopted": 11229153
       },
       "line_items": [
         {
@@ -6579,7 +6657,9 @@
         "fy26_budget": 646395,
         "fy27_proposed": 660030,
         "change_dollars": 13635,
-        "change_pct": 0.021093913164551087
+        "change_pct": 0.0211,
+        "override_added": 0,
+        "fy27_adopted": 660030
       },
       "line_items": [
         {

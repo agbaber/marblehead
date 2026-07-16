@@ -188,6 +188,51 @@ def _load_services() -> dict:
     return services
 
 
+# The FY27 budget rows are the *No Override* proposed budget. The override passed
+# (voters chose Tier 3), so the adopted per-department budget is the no-override
+# proposal plus that department's Tier-3 restorations. These ordered rules map an
+# override line to the department it funds (specific phrase first so "finance
+# committee reserve fund" resolves to reserve_fund, not finance). Town-wide lines
+# (OPEB/stabilization/workers-comp/recurring-capital/unemployment offset) match
+# nothing and are not attributed to a department.
+_OVERRIDE_RULES = [
+    ("finance committee reserve fund", "reserve_fund"),
+    ("school resource officer", "police"),
+    ("police", "police"),
+    ("fire", "fire"),
+    ("inspections", "building_inspection"),
+    ("department of public works", "public_works_ops"),
+    ("cemetery", "cemetery"),
+    ("abbot library", "library"),
+    ("recreation and parks", "rec_park"),
+    ("hr other technical", "human_resources"),
+    ("community development", "community_development"),
+    ("town clerk", "town_clerk"),
+    ("public buildings", "public_buildings"),
+    ("council on aging", "council_on_aging"),
+    ("health department", "health"),
+    ("finance", "finance"),
+]
+
+
+def _match_override_dept(description: str):
+    d = (description or "").lower()
+    for keyword, key in _OVERRIDE_RULES:
+        if keyword in d:
+            return key
+    return None
+
+
+def _override_added_by_dept(budget: dict) -> dict:
+    """{dept key: total Tier-3 override dollars restored to that department}."""
+    added = {}
+    for tier in budget["meta"]["override_tiers"]:
+        key = _match_override_dept(tier.get("description"))
+        if key:
+            added[key] = added.get(key, 0) + (tier.get("tier_3") or 0)
+    return added
+
+
 # Budget department key -> human display name shown on cards + profile headings.
 # The source budget JSON stores the same slug in both `id` and `department`, so
 # the raw value ("school_high", "public_works_ops") is unfit to display. School
@@ -332,6 +377,26 @@ def build_view() -> dict:
                 "source_label": svc["source_label"],
             }
         dept["deep_dive"] = svc.get("deep_dive")
+
+    # Adopted FY27 = No-Override proposed + this department's Tier-3 override
+    # restorations. The change figure is then adopted-vs-FY26 (the source data's
+    # change_dollars/change_pct were proposed-vs-FY26). fy27_proposed is kept so
+    # the page can show the derivation.
+    override_added = _override_added_by_dept(budget)
+    for key, dept in departments.items():
+        b = dept["budget"]
+        add = override_added.get(key, 0)
+        proposed = b.get("fy27_proposed") or 0
+        adopted = proposed + add
+        b["override_added"] = add
+        b["fy27_adopted"] = adopted
+        fy26 = b.get("fy26_budget")
+        if fy26:
+            b["change_dollars"] = adopted - fy26
+            b["change_pct"] = round((adopted - fy26) / fy26, 4)
+        else:
+            b["change_dollars"] = None
+            b["change_pct"] = None
 
     functions = []
     for r in budget["rows"]:

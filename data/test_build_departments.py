@@ -104,12 +104,30 @@ def test_role_note_and_source_url_present_for_finance():
     assert finance["role_source_url"] is not None
 
 
-def test_no_override_data_on_departments():
-    # Override restorations were removed from this view (they belong on the
-    # override pages, not a neutral department reference). Guard against re-adding.
+def test_no_override_list_on_departments():
+    # Override restorations are not shown as a "what the override would restore"
+    # section. The dollar amounts are folded into the adopted budget instead.
     view = build_view()
     for dept in view["departments"].values():
         assert "overrides" not in dept
+
+
+def test_police_adopted_budget_is_proposed_plus_override():
+    view = build_view()
+    b = view["departments"]["police"]["budget"]
+    assert b["fy27_proposed"] == 5_216_914
+    # SRO 65,482 + staffing 130,964 + equipment 2,000 (Tier 3).
+    assert b["override_added"] == 198_446
+    assert b["fy27_adopted"] == 5_216_914 + 198_446
+    # Change is adopted-vs-FY26, not proposed-vs-FY26.
+    assert b["change_dollars"] == b["fy27_adopted"] - b["fy26_budget"]
+
+
+def test_department_without_override_has_adopted_equal_proposed():
+    view = build_view()
+    b = view["departments"]["moderator"]["budget"]
+    assert b["override_added"] == 0
+    assert b["fy27_adopted"] == b["fy27_proposed"]
 
 
 def test_police_has_position_roster_from_org_chart():

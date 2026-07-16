@@ -135,7 +135,7 @@ og_url: https://marbleheaddata.org/departments.html
       var depts = Object.keys(DATA.departments)
         .filter(function (k) { return DATA.departments[k].function === fn.key; })
         .sort(function (a, b) {
-          return DATA.departments[b].budget.fy27_proposed - DATA.departments[a].budget.fy27_proposed;
+          return DATA.departments[b].budget.fy27_adopted - DATA.departments[a].budget.fy27_adopted;
         });
       if (!depts.length) return;
       parts.push('<h2 class="dx-func">' + esc(fn.label) + '</h2>');
@@ -145,7 +145,7 @@ og_url: https://marbleheaddata.org/departments.html
         parts.push(
           '<button class="dx-card" data-key="' + esc(k) + '">' +
           '<div class="dx-card-name">' + deptLabel(d) + '</div>' +
-          '<div class="dx-amt">' + fmtUSD(d.budget.fy27_proposed) + '</div>' +
+          '<div class="dx-amt">' + fmtUSD(d.budget.fy27_adopted) + '</div>' +
           '<div class="' + changeClass(d.budget.change_pct) + '">' +
           fmtPct(d.budget.change_pct) + ' vs FY26</div>' +
           '</button>'
@@ -162,15 +162,26 @@ og_url: https://marbleheaddata.org/departments.html
   }
 
   function budgetTable(d) {
-    return '<h3>Budget</h3><div class="table-wrap"><table class="dx-money"><thead><tr>' +
-      '<th>FY25 actual</th><th>FY26 budget</th><th>FY27 proposed</th><th>Change</th>' +
+    var b = d.budget;
+    var html = '<h3>Budget</h3><div class="table-wrap"><table class="dx-money"><thead><tr>' +
+      '<th>FY25 actual</th><th>FY26 budget</th><th>FY27 adopted</th><th>Change</th>' +
       '</tr></thead><tbody><tr>' +
-      '<td>' + fmtUSD(d.budget.fy25_actual) + '</td>' +
-      '<td>' + fmtUSD(d.budget.fy26_budget) + '</td>' +
-      '<td>' + fmtUSD(d.budget.fy27_proposed) + '</td>' +
-      '<td class="' + changeClass(d.budget.change_pct) + '">' +
-      fmtUSD(d.budget.change_dollars) + ' (' + fmtPct(d.budget.change_pct) + ')</td>' +
+      '<td>' + fmtUSD(b.fy25_actual) + '</td>' +
+      '<td>' + fmtUSD(b.fy26_budget) + '</td>' +
+      '<td>' + fmtUSD(b.fy27_adopted) + '</td>' +
+      '<td class="' + changeClass(b.change_pct) + '">' +
+      fmtUSD(b.change_dollars) + ' (' + fmtPct(b.change_pct) + ')</td>' +
       '</tr></tbody></table></div>';
+    // Adopted is derived: the town publishes a line-by-line budget only for the
+    // pre-override proposal, so show the reconstruction where the override moved it.
+    if (b.override_added) {
+      html += '<p class="dx-caveat"><small>FY27 adopted is derived: ' +
+        fmtUSD(b.fy27_proposed) + ' in the proposed (no-override) budget plus ' +
+        fmtUSD(b.override_added) + ' the override (Tier 3) restored to this department. ' +
+        'The town has not published a line-by-line adopted budget; other pages on this ' +
+        'site still show the pre-override figure.</small></p>';
+    }
+    return html;
   }
 
   function renderProfile(key) {
