@@ -41,6 +41,26 @@ test('no numeric tally in older reports leaves tally null', () => {
   assert.equal(meta.get(7).tally, null);
 });
 
+test('rejoins a sponsor name wrapped across report columns', () => {
+  const wrapped = [
+    'Article 5 Water and Sewer Rules',
+    'To see if the Town will amend section 155-1 ...',
+    'Sponsored by the Board of Water and Sewer',
+    'Commissioners.',
+  ].join('\n');
+  assert.equal(extractArticleMeta(wrapped).get(5).sponsor, 'Board of Water and Sewer Commissioners');
+});
+
+test('keeps a middle initial instead of truncating at it', () => {
+  const petition = 'Article 9 Citizen Petition\nSponsored by Walter W. Smith.';
+  assert.equal(extractArticleMeta(petition).get(9).sponsor, 'Walter W. Smith');
+});
+
+test('captures an "and others" citizen petitioner', () => {
+  const petition = 'Article 3 Citizen Petition\nSponsored by Megan Sweeney and others.';
+  assert.equal(extractArticleMeta(petition).get(3).sponsor, 'Megan Sweeney and others');
+});
+
 test('on a duplicate article number keeps the richer occurrence', () => {
   const dup = [
     'Article 7 Amend Recreation and Parks Revolving Fund',

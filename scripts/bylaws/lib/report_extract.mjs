@@ -23,8 +23,15 @@ export function extractArticleMeta(text) {
     const article = Number(head[1]);
     const title = head[2].trim();
 
-    const sponsorMatch = /Sponsored by (?:the )?([^.\n]+?)\s*\./i.exec(block);
-    const sponsor = sponsorMatch ? sponsorMatch[1].trim() : null;
+    // Sponsor names wrap across the report's columns, so flatten whitespace
+    // first, then stop at a sentence-ending period — but NOT a middle-initial
+    // period (the negative lookbehind skips "Walter W." to reach "Smith.").
+    // No /i flag: the [A-Z] lookbehind must stay uppercase-only, else it matches
+    // any letter and rejects every normal name. "Sponsored by" casing is stable.
+    const flat = block.replace(/\s+/g, ' ');
+    const sm = /[Ss]ponsored by (?:[Tt]he )?(.+?)(?<![A-Z])\.(?:\s|$)/.exec(flat + ' ');
+    let sponsor = sm ? sm[1].trim() : null;
+    if (sponsor && (sponsor.length > 60 || sponsor.length < 2)) sponsor = null;
 
     let tally = null;
     let disposition = null;
