@@ -10,7 +10,98 @@ duration_seconds: 3843
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "School Committee approves $47.6M FY27 budget and joins joint override planning"
+  summary: "The Marblehead School Committee voted 5-0 to approve a $47,620,287 FY27 operating budget, which includes a $462,000 health-insurance buffer as recommended by the town CFO and Finance Committee. The budget subcommittee presented two competing numbers — one with and one without the buffer — but the full committee sided with the higher figure that aligns with the Select Board's assumptions. The committee also voted 5-0 to participate in a joint town-schools override working group being organized by the Town Administrator, with a three-tier override structure (Restore, Stabilize and Build, Invest and Improve) under discussion."
+  decisions:
+    - "Approved FY27 school operating budget of $47,620,287"
+    - "Approved participation in joint town-schools override working group under Town Administrator coordination"
+  votes:
+    - motion: "Approve FY27 school budget of $47,620,287"
+      result: "in favor (unanimous)"
+    - motion: "Move forward with Select Board on joint override preparation and have chair coordinate committee participation in town administrator's advisory group"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 50
+    end_seconds: 118
+    headline: "Resident thanks board for budget work, urges override support"
+    dek: "Mary McCarristen of Pine Cliff Drive praised the committee's efforts and said she is encouraging senior citizens to support an override."
+    summary: "Mary McCarristen, Pine Cliff Drive, addressed the committee to express gratitude for their work managing a difficult budget situation and said she has been talking to senior citizens about the need for an override."
+    key_speakers: ["Mary McCarristen (resident)"]
+  - topic: health-insurance
+    topic_confidence: 0.92
+    start_seconds: 118
+    end_seconds: 2218
+    featured: true
+    headline: "Budget subcommittee splits on $462K health-insurance buffer; full committee keeps it in"
+    dek: "Independent analysis by the school CFO and town Finance Committee came within $45,000 of each other on a ~$10.2M health-insurance figure; the dispute centered on whether to require schools to absorb a $462,000 buffer held on the town side."
+    summary: |
+      The budget subcommittee (Jen and Melissa) reported on a Wednesday session that validated benefit costs across six line items condensed to five. Three independent analyses — school CFO Mike, town administration (Alicia), and Finance Committee — all landed within roughly $45,000–$50,000 of each other on the active and retired employee health-insurance cost, settling on approximately $10.7 million including the buffer.
+      
+      The core dispute:
+      - **School CFO Mike's recommendation**: Remove the $462,000 buffer from the school side; the town CFO recommended a 5% cushion as best practice and the buffer is held on the town's books. Mike argued the schools should not be held accountable for 63% of a buffer they don't control.
+      - **Melissa's position (keep buffer)**: The Select Board has already voted a budget assuming schools absorb the $462,000 cushion; $300,000 of the existing $630,000 cushion had been consumed by mid-March; removing the buffer would leave schools unprotected and risk the town relationship at a critical override moment.
+      - **Jen's position (remove buffer)**: Argued the budget is premature in attributing full benefit costs before reductions from layoffs are factored in; a $500,000 additional cut equals roughly eight jobs.
+      
+      Total benefit costs across all five buckets using Finance Committee figures: **$13.466 million** (dropping to **$13.3 million** after removing OPEB of $152,500 that Select Board/Fincom excluded from next year's budget).
+      
+      The superintendent's level-funded FY26 budget base was **$49,120,285**. Adding town-side benefit costs at the 63%/37% formula and using Finance Committee revenue projections of ~$60.948 million produced a gap of approximately **$1.486 million** — confirming the ~$1.5 million cut target requested by the Select Board.
+      
+      The Finance Committee also noted a reserve fund of roughly $500,000 the school committee could petition for overages.
+    key_speakers: ["Jen (budget subcommittee)", "Melissa (budget subcommittee)", "Mike (school CFO)"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 2218
+    end_seconds: 2442
+    headline: "School Committee votes 5-0 to approve $47.6M FY27 budget"
+    dek: "The committee approved the Select Board/Finance Committee recommended figure of $47,620,287, with the administration's preferred number of approximately $48,958,896 noted for the record."
+    summary: |
+      A motion was made to approve the FY27 budget at **$47,620,287** — the figure recommended by the Select Board and Finance Committee, which incorporates the $462,000 health-insurance buffer. The administration's preferred budget of approximately $48,958,896 was placed on the record by school CFO Mike but drew no additional support from other members.
+      
+      Roll call vote:
+      - Melissa: in favor
+      - Jen: in favor
+      - Henry: in favor
+      - Kate: in favor
+      - Al (chair): in favor
+      
+      **Result: 5-0**
+    key_speakers: ["Henry (school committee member)", "Kate (school committee member)", "Al (chair)", "Melissa", "Jen", "Mike (school CFO)"]
+  - topic: override
+    topic_confidence: 0.97
+    start_seconds: 2442
+    end_seconds: 3816
+    headline: "School Committee joins three-tier joint override working group; tier content to be determined"
+    dek: "The Select Board proposed a three-tier override structure (Restore / Stabilize and Build / Invest and Improve) with a working group to meet next week; the school committee voted 5-0 to participate."
+    summary: |
+      The committee discussed the override structure approved in concept by the Select Board at a recent meeting attended by Jen and Henry. Key elements:
+      
+      **Three-tier structure (rough outlines):**
+      | Tier | Label | Description |
+      |------|-------|-------------|
+      | 1 | Restore | Restore some prior cuts (details TBD) |
+      | 2 | Stabilize and Build | Tier 1 plus additional items (e.g., full-day kindergarten discussed) |
+      | 3 | Invest and Improve | Broadest scope; potentially beyond level services |
+      
+      **Mechanics**: The highest tier receiving more than 50% of the vote passes; higher tiers include everything in lower tiers.
+      
+      **Working group**: Town Administrator Thatcher tasked with forming a group of approximately 2 school committee members, 2 Select Board members, and Finance Committee members, aiming to meet next week. The group is expected to report override details around April 8th — after the April 6th warrant hearing.
+      
+      **Key outstanding questions** raised by committee members:
+      - What exactly does "restore" mean — back to level-service or level-funded baseline?
+      - The $47.6M approved budget reflects cumulative cuts of approximately $2.6M (January), plus $1.7M and $1.5M in subsequent rounds — totaling roughly $5.8M below prior projections.
+      - Capital outlay has been zeroed from the general fund for FY27; any capital spending would likely require override revenue. Schools confirmed to be included in town capital plans but scope unclear.
+      - Full-day kindergarten mentioned as a candidate for Tier 2.
+      - Special education in-district programming to reduce out-of-district tuition discussed as a fiscally self-justifying Tier 2/3 investment.
+      - Line-item budget detail for FY27 requested from administration by approximately the warrant hearing deadline.
+      
+      Vote on participation motion (Kate/Melissa): **5-0 in favor**.
+    key_speakers: ["Jen", "Melissa", "Henry", "Kate", "Al (chair)", "Mike (school CFO)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;
