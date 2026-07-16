@@ -1,0 +1,58 @@
+# What each department does — plain-language service descriptions for
+# departments.html, authored from the department's own Town of Marblehead page
+# (read at write time, not from memory). Each `summary` is a short factual list
+# of the services the page describes; `source_url` / `source_label` cite it.
+#
+# The functional breakdown (who does patrol vs dispatch vs crossings) is carried
+# by the FY27 position roster shown alongside on the page, sourced separately
+# from org_chart.yml. Keep summaries to what the cited page supports.
+#
+# `deep_dive` points a department at a fuller dedicated page on this site where
+# one exists (e.g. Abbot Public Library -> /library.html), so the explorer links
+# out rather than duplicating it.
+#
+# Pilot coverage: police, fire, public_works_ops, library. Remaining departments
+# are added one at a time as their pages are read.
+
+police:
+  # Core functions (patrol, dispatch, crossings, animal inspector) are shown in
+  # the FY27 roster below; this summary sticks to what the police page states.
+  summary: >-
+    The department describes its focus as community policing and the protection
+    of lives and property. It runs a free eight-week Citizens Police Academy for
+    residents, handles firearms licensing, takes crime reports, and operates
+    animal control through the Marblehead Animal Shelter.
+  source_url: https://marbleheadma.gov/police/
+  source_label: "Town of Marblehead, Police Department page (accessed 2026-07-16)"
+
+fire:
+  summary: >-
+    Fire suppression, emergency medical response, and rescue, staffed 24 hours.
+    All personnel are certified EMTs and both front-line engines double as
+    ambulances (defibrillators, Narcan, EpiPens). The department runs vehicle
+    extrication and water rescue with a public safety boat, fire-prevention
+    inspections, and public education. Its "First Night is On Us" program gives
+    any resident whose home is temporarily uninhabitable from fire or flood
+    complimentary first-night lodging.
+  source_url: https://marbleheadma.gov/fire/
+  source_label: "Town of Marblehead, Fire Department page (accessed 2026-07-16)"
+
+public_works_ops:
+  summary: >-
+    Maintains the town's public ways, storm-sewer (drainage) infrastructure,
+    public shade trees, and the municipal vehicle fleet, and coordinates road
+    snow and storm operations. Work is organized into Highway, Stormwater, Town
+    Engineer, and Tree divisions. (Water, sewer, cemetery, and curbside trash
+    are separate budget departments.)
+  source_url: https://marbleheadma.gov/dpw/
+  source_label: "Town of Marblehead, Department of Public Works page (accessed 2026-07-16)"
+
+library:
+  # Deferred to the dedicated /library.html page, which carries the sourced
+  # staffing / hours / funding detail. Keep the explorer summary generic-true.
+  summary: >-
+    Abbot Public Library lends books and media, runs public programs, and
+    provides public computers and study space.
+  deep_dive:
+    url: /library.html
+    label: "Abbot Public Library — full page (staffing, services, funding, peer comparison)"
