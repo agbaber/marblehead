@@ -53,13 +53,14 @@ og_url: https://marbleheaddata.org/departments.html
   .dx-sources h3 { font-size: 0.8125rem; color: var(--text-subtle); margin: 0 0 6px; }
   .dx-sources a { color: var(--c-teal); }
   .dx-caveat {
-    color: var(--text-muted); background: var(--surface);
-    border-radius: var(--radius-md); padding: 10px 12px; margin: 8px 0 12px;
+    color: var(--text-muted); background: var(--c-fog);
+    border: 1px solid var(--divider);
+    border-radius: 8px; padding: 9px 12px; margin: 10px 0;
   }
 
   .dx-money, .dx-lines {
     width: 100%; border-collapse: separate; border-spacing: 0;
-    font-size: 0.875rem; margin: 8px 0 20px;
+    font-size: 0.875rem; margin: 4px 0 0;
   }
   .dx-money th, .dx-lines th {
     padding: 8px; font-weight: 600; font-size: 0.6875rem;
@@ -80,7 +81,7 @@ og_url: https://marbleheaddata.org/departments.html
 
   .dx-roster {
     width: 100%; border-collapse: separate; border-spacing: 0;
-    font-size: 0.875rem; margin: 8px 0 20px;
+    font-size: 0.875rem; margin: 4px 0 0;
   }
   .dx-roster th {
     padding: 8px; font-weight: 600; font-size: 0.6875rem;
@@ -96,8 +97,59 @@ og_url: https://marbleheaddata.org/departments.html
   .dx-roster td:first-child { text-align: left; font-weight: 400; white-space: normal; }
   .dx-roster tbody tr:last-child td { border-bottom: none; }
   .dx-roster td.dx-avg { color: var(--text-muted); font-weight: 400; }
-  .dx-deepdive { margin: 4px 0 20px; font-weight: 600; }
+  .dx-deepdive { margin: 12px 0 0; font-weight: 600; }
   .dx-deepdive a { color: var(--c-teal); }
+
+  /* ---- Profile layout: header, stat tiles, section cards ---- */
+  .dx-profile-hd { margin: 4px 0 16px; }
+  .dx-eyebrow {
+    font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.4px; color: var(--c-teal); margin: 0 0 5px;
+  }
+  .dx-profile-hd h2 { margin: 0; }
+  .dx-profile-hd .dx-ledby { margin: 6px 0 0; color: var(--text-muted); font-size: 0.9375rem; }
+
+  .dx-stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+    gap: 10px; margin: 0 0 18px;
+  }
+  .dx-stat {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
+    padding: 12px 14px; display: flex; flex-direction: column; gap: 3px;
+    border-top: 3px solid var(--c-navy);
+  }
+  .dx-stat-label {
+    font-size: 0.625rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.9px; color: var(--text-subtle);
+  }
+  .dx-stat-value {
+    font-size: 1.375rem; font-weight: 700; color: var(--text);
+    font-variant-numeric: tabular-nums; line-height: 1.1;
+  }
+  .dx-stat-sub { font-size: 0.75rem; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+  .dx-block {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
+    padding: 16px 18px 18px; margin: 0 0 12px;
+  }
+  .dx-block > :first-child { margin-top: 0; }
+  .dx-block > :last-child { margin-bottom: 0; }
+  .dx-block p { margin: 0 0 10px; }
+  .dx-block-hd {
+    display: flex; align-items: baseline; gap: 8px;
+    font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--c-navy);
+    padding-bottom: 9px; margin: 0 0 12px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .dx-block-hd .dx-hd-note {
+    font-weight: 500; text-transform: none; letter-spacing: 0;
+    color: var(--text-subtle); font-size: 0.75rem; margin-left: auto;
+  }
+  .dx-block--sources { background: transparent; border: none; box-shadow: none; padding: 8px 0 0; }
+  .dx-block--sources .dx-block-hd { color: var(--text-subtle); }
 
   @media (max-width: 600px) {
     .dx-cards { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
@@ -167,9 +219,38 @@ og_url: https://marbleheaddata.org/departments.html
     });
   }
 
-  function budgetTable(d) {
+  function block(title, note, inner) {
+    return '<section class="dx-block"><div class="dx-block-hd">' + title +
+      (note ? '<span class="dx-hd-note">' + note + '</span>' : '') +
+      '</div>' + inner + '</section>';
+  }
+
+  function statTiles(d) {
+    var b = d.budget, s = d.staffing, tiles = [];
+    tiles.push('<div class="dx-stat"><span class="dx-stat-label">FY27 adopted</span>' +
+      '<span class="dx-stat-value">' + fmtUSD(b.fy27_adopted) + '</span>' +
+      '<span class="dx-stat-sub ' + changeClass(b.change_pct) + '">' + fmtPct(b.change_pct) + ' vs FY26</span></div>');
+    if (s && s.fte != null) {
+      tiles.push('<div class="dx-stat"><span class="dx-stat-label">Positions</span>' +
+        '<span class="dx-stat-value">' + s.fte + '</span>' +
+        '<span class="dx-stat-sub">FY27 budgeted</span></div>');
+    } else if (d.headcount && d.headcount.length) {
+      var lh = d.headcount[d.headcount.length - 1];
+      tiles.push('<div class="dx-stat"><span class="dx-stat-label">Headcount</span>' +
+        '<span class="dx-stat-value">' + lh.headcount + '</span>' +
+        '<span class="dx-stat-sub">FY' + String(lh.fy).slice(2) + ', incl. PT</span></div>');
+    }
+    if (s && s.salary_total != null) {
+      tiles.push('<div class="dx-stat"><span class="dx-stat-label">Salaries</span>' +
+        '<span class="dx-stat-value">' + fmtUSD(s.salary_total) + '</span>' +
+        '<span class="dx-stat-sub">FY27 budgeted</span></div>');
+    }
+    return '<div class="dx-stats">' + tiles.join('') + '</div>';
+  }
+
+  function budgetInner(d) {
     var b = d.budget;
-    var html = '<h3>Budget</h3><div class="table-wrap"><table class="dx-money"><thead><tr>' +
+    var html = '<div class="table-wrap"><table class="dx-money"><thead><tr>' +
       '<th>FY25 actual</th><th>FY26 budget</th><th>FY27 adopted</th><th>Change</th>' +
       '</tr></thead><tbody><tr>' +
       '<td>' + fmtUSD(b.fy25_actual) + '</td>' +
@@ -178,8 +259,6 @@ og_url: https://marbleheaddata.org/departments.html
       '<td class="' + changeClass(b.change_pct) + '">' +
       fmtUSD(b.change_dollars) + ' (' + fmtPct(b.change_pct) + ')</td>' +
       '</tr></tbody></table></div>';
-    // Adopted is derived: the town publishes a line-by-line budget only for the
-    // pre-override proposal, so show the reconstruction where the override moved it.
     if (b.override_added) {
       html += '<p class="dx-caveat"><small>FY27 adopted is derived: ' +
         fmtUSD(b.fy27_proposed) + ' in the proposed (no-override) budget plus ' +
@@ -188,6 +267,18 @@ og_url: https://marbleheaddata.org/departments.html
         'site still show the pre-override figure.</small></p>';
     }
     return html;
+  }
+
+  function sourcesBlock(d) {
+    function srcLink(url, label) {
+      return url ? '<a href="' + esc(url) + '">' + esc(label) + '</a>' : esc(label);
+    }
+    var sources = [];
+    if (d.services && d.services.source_label) sources.push('<li>What it does: ' + srcLink(d.services.source_url, d.services.source_label) + '</li>');
+    if (d.role_source) sources.push('<li>Staffing and budget detail: ' + srcLink(d.role_source_url, d.role_source) + '</li>');
+    if (!sources.length) return '';
+    return '<section class="dx-block dx-block--sources"><div class="dx-block-hd">Sources</div>' +
+      '<ul class="tldr"><small>' + sources.join('') + '</small></ul></section>';
   }
 
   function renderProfile(key) {
