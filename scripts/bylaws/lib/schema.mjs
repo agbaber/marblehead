@@ -1,6 +1,6 @@
 export const DISPOSITIONS = ['passed', 'defeated', 'withdrawn', 'referred'];
 export const FIDELITIES = ['verbatim', 'blame'];
-const MEETING_TYPES = ['ATM', 'STM'];
+const MEETING_TYPES = ['ATM', 'STM', 'TM']; // TM = pre-ATM/STM Town Meeting (eCode uses it for pre-1990s events)
 
 export function validateAmendment(a) {
   const errs = [];

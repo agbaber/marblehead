@@ -24,6 +24,11 @@ test('rejects missing source (citation discipline)', () => {
   assert.ok(errs.some(e => e.includes('source')));
 });
 
+test('accepts a bare TM meeting type (pre-ATM/STM events)', () => {
+  const tm = { ...valid, meeting: { date: '1954-03-11', type: 'TM' } };
+  assert.deepEqual(validateAmendment(tm), []);
+});
+
 test('rejects unknown disposition', () => {
   const bad = { ...valid, disposition: 'maybe' };
   assert.ok(validateAmendment(bad).some(e => e.includes('disposition')));
