@@ -61,6 +61,12 @@ test('captures an "and others" citizen petitioner', () => {
   assert.equal(extractArticleMeta(petition).get(3).sponsor, 'Megan Sweeney and others');
 });
 
+test('parses an indented / colon-style article header', () => {
+  const indented = '    Article 31 Amend Bylaw to Increase Building Fees\nSponsored by the Building Department.';
+  const meta = extractArticleMeta(indented);
+  assert.equal(meta.get(31).sponsor, 'Building Department');
+});
+
 test('on a duplicate article number keeps the richer occurrence', () => {
   const dup = [
     'Article 7 Amend Recreation and Parks Revolving Fund',

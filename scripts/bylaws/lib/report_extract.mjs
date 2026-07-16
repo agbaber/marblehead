@@ -10,15 +10,11 @@
 
 import { parseVoteLine } from './voteline.mjs';
 
-function scoreOf(meta) {
-  return (meta.sponsor ? 2 : 0) + (meta.tally ? 1 : 0);
-}
-
 export function extractArticleMeta(text) {
   const out = new Map();
-  const blocks = text.split(/\n(?=Article\s+\d+\b)/);
+  const blocks = text.split(/\n(?=\s*Article\s+\d+\b)/); // tolerate indented headers
   for (const block of blocks) {
-    const head = /^Article\s+(\d+)\s+(.*)/.exec(block);
+    const head = /^\s*Article\s+(\d+)\b[:.\s]*(.*)/.exec(block);
     if (!head) continue;
     const article = Number(head[1]);
     const title = head[2].trim();
@@ -42,9 +38,17 @@ export function extractArticleMeta(text) {
     if (tally) disposition = tally.met && tally.yes > tally.no ? 'passed' : 'defeated';
     else if (/^\s*Voted:/im.test(block)) disposition = 'passed';
 
-    const meta = { article, title, sponsor, tally, disposition };
-    const prev = out.get(article);
-    if (!prev || scoreOf(meta) > scoreOf(prev)) out.set(article, meta);
+    // An article appears in several sections of a report (warrant carries the
+    // sponsor, results carries the tally). Merge across occurrences rather than
+    // pick one, so we keep the first of each field we find.
+    const prev = out.get(article) || { article, title: null, sponsor: null, tally: null, disposition: null };
+    out.set(article, {
+      article,
+      title: prev.title || title || null,
+      sponsor: prev.sponsor || sponsor,
+      tally: prev.tally || tally,
+      disposition: prev.disposition || disposition,
+    });
   }
   return out;
 }
