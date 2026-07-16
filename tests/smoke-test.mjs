@@ -426,15 +426,29 @@ async function testDepartmentsExplorerPageLoads(page) {
   await page.goto(`${SITE}/departments.html#police`, { waitUntil: 'domcontentloaded' });
   await page.waitForSelector('.dx-money', { timeout: 5000 }).catch(() => null);
 
-  const hasRole = await page.$eval('body', el => el.textContent.includes('Chief of Police'));
-  hasRole
-    ? ok('Police profile shows cited role')
-    : fail('Police profile shows cited role', '"Chief of Police" text missing');
+  const policeText = await page.$eval('body', el => el.textContent);
+  policeText.includes('What it does') && policeText.includes('Citizens Police Academy')
+    ? ok('Police profile shows cited service description')
+    : fail('Police profile service description', '"What it does" / academy text missing');
+
+  const roster = await page.$('.dx-roster');
+  const rosterRows = await page.$$eval('.dx-roster tbody tr', els => els.length);
+  roster && rosterRows >= 10
+    ? ok(`Police profile shows position roster (${rosterRows} rows)`)
+    : fail('Police profile roster', `.dx-roster rows: ${rosterRows}`);
 
   const moneyTable = await page.$('.dx-money');
   moneyTable
     ? ok('Police profile budget table present')
     : fail('Police profile budget table', '.dx-money missing');
+
+  // Library defers to its dedicated page via a deep-dive link.
+  await page.goto(`${SITE}/departments.html#library`, { waitUntil: 'domcontentloaded' });
+  await page.waitForSelector('.dx-deepdive', { timeout: 5000 }).catch(() => null);
+  const libLink = await page.$eval('.dx-deepdive a', el => el.getAttribute('href')).catch(() => null);
+  libLink === '/library.html'
+    ? ok('Library profile links out to /library.html')
+    : fail('Library deep-dive link', `href: ${libLink}`);
 }
 
 async function testWhatIsActuallyFlexiblePageLoads(page) {

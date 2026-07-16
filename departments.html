@@ -72,6 +72,26 @@ og_url: https://marbleheaddata.org/departments.html
   .dx-money tbody tr:last-child td, .dx-lines tbody tr:last-child td { border-bottom: none; }
   .dx-lines td.dx-amt { font-weight: 600; }
 
+  .dx-roster {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    font-size: 0.875rem; margin: 8px 0 20px;
+  }
+  .dx-roster th {
+    padding: 8px; font-weight: 600; font-size: 0.6875rem;
+    color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--divider); text-align: right; white-space: nowrap;
+  }
+  .dx-roster th:first-child { text-align: left; }
+  .dx-roster td {
+    padding: 8px; text-align: right; color: var(--text);
+    font-variant-numeric: tabular-nums; font-size: 0.8125rem;
+    border-bottom: 1px solid var(--divider);
+  }
+  .dx-roster td:first-child { text-align: left; font-weight: 400; white-space: normal; }
+  .dx-roster tbody tr:last-child td { border-bottom: none; }
+  .dx-deepdive { margin: 4px 0 20px; font-weight: 600; }
+  .dx-deepdive a { color: var(--c-teal); }
+
   @media (max-width: 600px) {
     .dx-cards { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
     .dx-card { padding: 10px 12px; }
@@ -140,29 +160,8 @@ og_url: https://marbleheaddata.org/departments.html
     });
   }
 
-  function renderProfile(key) {
-    var d = DATA.departments[key];
-    var p = [];
-    p.push('<button class="dx-back" id="dx-back">&larr; All departments</button>');
-    p.push('<h2>' + deptLabel(d) + '</h2>');
-    p.push('<p class="subtitle">' + esc(d.function_label) + '</p>');
-
-    // `role` is the org_chart head_title (leadership), not a service
-    // description, so it is always paired with role_note.
-    if (d.role) {
-      p.push('<p>Led by the ' + esc(d.role) + '.' + (d.role_note ? ' ' + esc(d.role_note) : '') + '</p>');
-      if (d.role_source) {
-        var srcHtml = d.role_source_url
-          ? '<a href="' + esc(d.role_source_url) + '">' + esc(d.role_source) + '</a>'
-          : esc(d.role_source);
-        p.push('<p class="dx-src"><small>Source: ' + srcHtml + '</small></p>');
-      }
-    } else {
-      p.push('<p><em>A fuller description of this department is forthcoming.</em></p>');
-    }
-
-    p.push('<h3>Budget</h3>');
-    p.push('<div class="table-wrap"><table class="dx-money"><thead><tr>' +
+  function budgetTable(d) {
+    return '<h3>Budget</h3><div class="table-wrap"><table class="dx-money"><thead><tr>' +
       '<th>FY25 actual</th><th>FY26 budget</th><th>FY27 proposed</th><th>Change</th>' +
       '</tr></thead><tbody><tr>' +
       '<td>' + fmtUSD(d.budget.fy25_actual) + '</td>' +
@@ -170,8 +169,86 @@ og_url: https://marbleheaddata.org/departments.html
       '<td>' + fmtUSD(d.budget.fy27_proposed) + '</td>' +
       '<td class="' + changeClass(d.budget.change_pct) + '">' +
       fmtUSD(d.budget.change_dollars) + ' (' + fmtPct(d.budget.change_pct) + ')</td>' +
-      '</tr></tbody></table></div>');
+      '</tr></tbody></table></div>';
+  }
 
+  function renderProfile(key) {
+    var d = DATA.departments[key];
+    var p = [];
+    p.push('<button class="dx-back" id="dx-back">&larr; All departments</button>');
+    p.push('<h2>' + deptLabel(d) + '</h2>');
+    p.push('<p class="subtitle">' + esc(d.function_label) + '</p>');
+
+    // 1. What it does (cited service description), or a plain fallback.
+    if (d.services && d.services.summary) {
+      p.push('<h3>What it does</h3>');
+      p.push('<p>' + esc(d.services.summary) + '</p>');
+      if (d.services.source_label) {
+        var ssrc = d.services.source_url
+          ? '<a href="' + esc(d.services.source_url) + '">' + esc(d.services.source_label) + '</a>'
+          : esc(d.services.source_label);
+        p.push('<p class="dx-src"><small>Source: ' + ssrc + '</small></p>');
+      }
+    } else {
+      p.push('<p><em>A plain-language description of what this department does is forthcoming.</em></p>');
+    }
+
+    // 2. Deep-dive callout: departments with a dedicated page (e.g. Abbot
+    // Library -> /library.html) link out instead of duplicating it.
+    if (d.deep_dive && d.deep_dive.url) {
+      p.push('<p class="dx-deepdive"><a href="' + esc(d.deep_dive.url) + '">' +
+        esc(d.deep_dive.label || 'Full page') + ' &rarr;</a></p>');
+    }
+
+    // A department with its own full page shows only the summary + budget here;
+    // staffing/funding detail lives on that page.
+    if (d.deep_dive && d.deep_dive.url) {
+      p.push(budgetTable(d));
+      app.innerHTML = p.join('');
+      document.getElementById('dx-back').addEventListener('click', function () { location.hash = ''; });
+      return;
+    }
+
+    // 3. Who leads it.
+    if (d.role) {
+      p.push('<p>Led by the ' + esc(d.role) + '.' + (d.role_note ? ' ' + esc(d.role_note) : '') + '</p>');
+    }
+
+    // 4. Who does it: the FY27 position roster.
+    if (d.staffing && d.staffing.positions && d.staffing.positions.length) {
+      var s = d.staffing;
+      p.push('<h3>Staffing &amp; positions</h3>');
+      var line = 'FY27 roster';
+      if (s.fte != null) line += ': about ' + s.fte + ' positions';
+      if (s.fte_basis) line += ' (' + esc(s.fte_basis) + ')';
+      if (s.salary_total != null) line += ', ' + fmtUSD(s.salary_total) + ' in budgeted salaries';
+      line += '.';
+      p.push('<p>' + line + '</p>');
+      var ps = s.position_summary || {}, chg = [];
+      if (ps.new) chg.push(ps.new + ' new');
+      if (ps.eliminated) chg.push(ps.eliminated + ' eliminated');
+      if (ps.reduced) chg.push(ps.reduced + ' reduced');
+      if (chg.length) p.push('<p class="dx-caveat"><small>FY27 position changes: ' + chg.join(', ') + '.</small></p>');
+      p.push('<div class="table-wrap"><table class="dx-roster"><thead><tr>' +
+        '<th>Position</th><th>People</th><th>FY27 budgeted</th></tr></thead><tbody>');
+      s.positions.forEach(function (pos) {
+        p.push('<tr><td>' + esc(pos.title) + '</td>' +
+          '<td class="dx-amt">' + (pos.count != null ? pos.count : '') + '</td>' +
+          '<td class="dx-amt">' + fmtUSD(pos.fy27) + '</td></tr>');
+      });
+      p.push('</tbody></table></div>');
+    }
+
+    // 5. Headcount trend over time.
+    if (d.headcount && d.headcount.length) {
+      var first = d.headcount[0], last = d.headcount[d.headcount.length - 1];
+      p.push('<p>Headcount over time (includes part-time and seasonal, not <abbr class="g" title="Full-Time Equivalent">FTE</abbr>): ' +
+        first.headcount + ' in FY' + String(first.fy).slice(2) +
+        ' to ' + last.headcount + ' in FY' + String(last.fy).slice(2) + '.</p>');
+    }
+
+    // 6. Budget + line items.
+    p.push(budgetTable(d));
     if (d.line_items && d.line_items.length) {
       p.push('<h3>Line items</h3>');
       if (d.line_items_reconcile === false) {
@@ -185,12 +262,12 @@ og_url: https://marbleheaddata.org/departments.html
       p.push('</tbody></table></div>');
     }
 
-    if (d.headcount && d.headcount.length) {
-      var first = d.headcount[0], last = d.headcount[d.headcount.length - 1];
-      p.push('<h3>Staffing</h3>');
-      p.push('<p>Headcount (includes part-time and seasonal, not <abbr class="g" title="Full-Time Equivalent">FTE</abbr>): ' +
-        first.headcount + ' in FY' + String(first.fy).slice(2) +
-        ' to ' + last.headcount + ' in FY' + String(last.fy).slice(2) + '.</p>');
+    // Citation for the staffing roster + budget detail (org_chart / budget book).
+    if (d.role_source) {
+      var rsrc = d.role_source_url
+        ? '<a href="' + esc(d.role_source_url) + '">' + esc(d.role_source) + '</a>'
+        : esc(d.role_source);
+      p.push('<p class="dx-src"><small>Staffing and budget detail: ' + rsrc + '</small></p>');
     }
 
     app.innerHTML = p.join('');

@@ -112,6 +112,41 @@ def test_no_override_data_on_departments():
         assert "overrides" not in dept
 
 
+def test_police_has_position_roster_from_org_chart():
+    view = build_view()
+    st = view["departments"]["police"]["staffing"]
+    assert st is not None
+    assert st["fte"] == 68
+    assert st["salary_total"] > 0
+    titles = [pos["title"] for pos in st["positions"]]
+    assert any("Patrolman" in t for t in titles)
+    # Every roster row carries a people count and an FY27 figure.
+    for pos in st["positions"]:
+        assert pos["count"] is not None
+        assert "fy27" in pos
+
+
+def test_service_summary_present_for_pilot_departments():
+    view = build_view()
+    for key in ("police", "fire", "public_works_ops"):
+        svc = view["departments"][key]["services"]
+        assert svc is not None and svc["summary"]
+        assert svc["source_url"]  # cited to the department's own page
+
+
+def test_library_deep_dive_links_out_and_defers_detail():
+    view = build_view()
+    lib = view["departments"]["library"]
+    assert lib["deep_dive"] and lib["deep_dive"]["url"] == "/library.html"
+
+
+def test_unmapped_department_has_no_staffing_or_services():
+    view = build_view()
+    moderator = view["departments"]["moderator"]
+    assert moderator["staffing"] is None
+    assert moderator["services"] is None
+
+
 def test_role_crosswalk_targets_exist_in_org_chart():
     import yaml
     doc = yaml.safe_load((ROOT / "_data" / "org_chart.yml").read_text())

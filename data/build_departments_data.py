@@ -126,21 +126,66 @@ def _load_headcount() -> dict:
     return series
 
 
+def _staffing_from_org_entry(entry: dict) -> dict:
+    """FY27 position roster + summary for a department, from its org_chart entry."""
+    positions = []
+    for p in entry.get("positions", []) or []:
+        positions.append({
+            "title": p.get("title"),
+            # pool_count is the number of people in the title; a null pool_count
+            # is a single named position (Chief, Senior Clerk, etc.), so show 1.
+            "count": p.get("pool_count") if p.get("pool_count") else 1,
+            "fy27": p.get("fy27"),
+            "note": p.get("note"),
+        })
+    return {
+        "fte": entry.get("fte"),
+        "fte_basis": entry.get("fte_basis"),
+        "salary_total": entry.get("fy27_salary_total"),
+        "position_summary": entry.get("fy27_position_summary"),
+        "positions": positions,
+    }
+
+
 def _load_org_roles() -> dict:
-    """Return {org_chart "name": {role, role_note, role_source, role_source_url}}."""
+    """Return {org_chart "name": {role, role_note, role_source, role_source_url,
+    staffing}}."""
     doc = yaml.safe_load((ROOT / "_data" / "org_chart.yml").read_text())
     roles = {}
     for entry in doc.get("town", {}).get("departments", []):
         name = entry.get("name")
         if not name:
             continue
+        staffing = _staffing_from_org_entry(entry)
         roles[name] = {
             "role": entry.get("head_title"),
             "role_note": entry.get("note"),
             "role_source": entry.get("source_label"),
             "role_source_url": entry.get("source_url"),
+            # Only attach a roster when the entry actually lists positions.
+            "staffing": staffing if staffing["positions"] else None,
         }
     return roles
+
+
+def _load_services() -> dict:
+    """Return {budget dept key: {summary, source_url, source_label, deep_dive}}
+    from data/department_services.yml (authored, cited what-they-do text)."""
+    path = DATA / "department_services.yml"
+    if not path.exists():
+        return {}
+    doc = yaml.safe_load(path.read_text()) or {}
+    services = {}
+    for key, val in doc.items():
+        if not isinstance(val, dict):
+            continue
+        services[key] = {
+            "summary": val.get("summary"),
+            "source_url": val.get("source_url"),
+            "source_label": val.get("source_label"),
+            "deep_dive": val.get("deep_dive"),
+        }
+    return services
 
 
 # Budget department key -> human display name shown on cards + profile headings.
@@ -207,6 +252,9 @@ def _departments_from_budget(budget: dict) -> dict:
             "role_source": None,
             "role_note": None,
             "role_source_url": None,
+            "staffing": None,
+            "services": None,
+            "deep_dive": None,
             "budget": {k: r.get(k) for k in _BUDGET_KEYS},
             "line_items": [],
             "line_items_reconcile": True,
@@ -272,6 +320,19 @@ def build_view() -> dict:
         if org_name and org_name in org_roles:
             dept.update(org_roles[org_name])
 
+    services = _load_services()
+    for key, dept in departments.items():
+        svc = services.get(key)
+        if not svc:
+            continue
+        if svc.get("summary"):
+            dept["services"] = {
+                "summary": svc["summary"],
+                "source_url": svc["source_url"],
+                "source_label": svc["source_label"],
+            }
+        dept["deep_dive"] = svc.get("deep_dive")
+
     functions = []
     for r in budget["rows"]:
         if r.get("level") == "function":
@@ -285,9 +346,11 @@ def build_view() -> dict:
     return {
         "schema_version": 1,
         "source_note": ("Budget from FY27 Proposed Budget (No Override); "
-                        "headcount from town payroll FY08-26; roles from "
-                        "org_chart.yml. See town-budget.html and org-chart.html "
-                        "for full citations."),
+                        "headcount from town payroll FY08-26; roles and FY27 "
+                        "position roster from org_chart.yml; service descriptions "
+                        "from department_services.yml (each dept's town page). "
+                        "See town-budget.html and org-chart.html for full "
+                        "citations."),
         "functions": functions,
         "departments": departments,
     }
