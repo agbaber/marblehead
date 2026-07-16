@@ -1305,15 +1305,18 @@
         "top_vendors": [
           {
             "vendor": "MARCOTTE FORD SALES INC",
-            "amount": 57820.0
+            "amount": 57820.0,
+            "purpose": "Two 2025 Ford F-150 SuperCrew"
           },
           {
             "vendor": "S & S ABATEMENT LLC",
-            "amount": 6975.0
+            "amount": 6975.0,
+            "purpose": "S & S Abatement Hobbs House"
           },
           {
             "vendor": "OLGA VOYTAZH",
-            "amount": 500.0
+            "amount": 500.0,
+            "purpose": "ACA Environmental Lab 20250321"
           }
         ]
       }
@@ -1763,23 +1766,28 @@
         "top_vendors": [
           {
             "vendor": "CROSSROADS BANK",
-            "amount": 45592.35
+            "amount": 45592.35,
+            "purpose": "Lease for Ford Hybrid"
           },
           {
             "vendor": "AMCHAR WHOLESALE INC",
-            "amount": 34555.24
+            "amount": 34555.24,
+            "purpose": "firearms purchase"
           },
           {
             "vendor": "FIRST AMERICAN COMMERCIAL BANCORP INC",
-            "amount": 23759.97
+            "amount": 23759.97,
+            "purpose": "Cruiser Lease"
           },
           {
             "vendor": "TMDE CALIBRATION LAB,INC",
-            "amount": 21685.0
+            "amount": 21685.0,
+            "purpose": "Police Radar Replace"
           },
           {
             "vendor": "CN FINANCING INC",
-            "amount": 21537.25
+            "amount": 21537.25,
+            "purpose": "POLICE FORD INTERCEPTOR LEASE"
           }
         ]
       }
@@ -1955,19 +1963,23 @@
         "top_vendors": [
           {
             "vendor": "CROSSROADS BANK",
-            "amount": 15703.94
+            "amount": 15703.94,
+            "purpose": "LEASE CHIEF TRUCK"
           },
           {
             "vendor": "FIRE TECH & SAFETY",
-            "amount": 14898.35
+            "amount": 14898.35,
+            "purpose": "AMKUS LIGHT RESUE BATTERY COMB"
           },
           {
             "vendor": "COMMONWEALTH OF MA",
-            "amount": 8100.0
+            "amount": 8100.0,
+            "purpose": "REFUND GRANTOR"
           },
           {
             "vendor": "MAD PROMO LLC",
-            "amount": 3829.51
+            "amount": 3829.51,
+            "purpose": "SAFE GRANT"
           }
         ]
       }
@@ -2426,23 +2438,28 @@
         "top_vendors": [
           {
             "vendor": "WOODARD & CURRAN INC",
-            "amount": 305721.83
+            "amount": 305721.83,
+            "purpose": "MS4 Support (Woodard"
           },
           {
             "vendor": "COLONIAL FORD INC",
-            "amount": 84265.3
+            "amount": 84265.3,
+            "purpose": "F350  Utility Body"
           },
           {
             "vendor": "SEALCOATING INC  ( DBA INDUS)",
-            "amount": 67833.35
+            "amount": 67833.35,
+            "purpose": "Pavement Maintenance"
           },
           {
             "vendor": "ALL AMERICAN INVESTMENT GROUP LLC",
-            "amount": 67104.52
+            "amount": 67104.52,
+            "purpose": "delivery Lease payment Large P"
           },
           {
             "vendor": "CN FINANCING INC",
-            "amount": 63215.61
+            "amount": 63215.61,
+            "purpose": "Areal Bucket Truck lease"
           }
         ]
       }
@@ -2557,23 +2574,28 @@
         "top_vendors": [
           {
             "vendor": "DELULIS BROTHERS CONSTRUCTION CO INC",
-            "amount": 1525193.65
+            "amount": 1525193.65,
+            "purpose": "Deiulis Brothers Construction"
           },
           {
             "vendor": "WASTE MANAGEMENT OF MA INC.",
-            "amount": 343725.89
+            "amount": 343725.89,
+            "purpose": "Waste Management MSW"
           },
           {
             "vendor": "WINTER ST. ARCHITECTS INC",
-            "amount": 72313.76
+            "amount": 72313.76,
+            "purpose": "Winter Street Architects"
           },
           {
             "vendor": "MARCOTTE FORD SALES INC",
-            "amount": 57820.0
+            "amount": 57820.0,
+            "purpose": "Two 2025 Ford F-150 SuperCrew"
           },
           {
             "vendor": "JOHN DEERE FINANCIAL",
-            "amount": 55994.97
+            "amount": 55994.97,
+            "purpose": "Waste Dept. Backhoe 320P Annua"
           }
         ]
       }
@@ -2849,23 +2871,28 @@
         "top_vendors": [
           {
             "vendor": "RAFFAELE CONSTRUCTION",
-            "amount": 126706.25
+            "amount": 126706.25,
+            "purpose": "Cemetery Expansion"
           },
           {
             "vendor": "VILLAGE GREEN RESTORATION INC",
-            "amount": 9700.0
+            "amount": 9700.0,
+            "purpose": "Village Green OBH Gravestones"
           },
           {
             "vendor": "ONE TIME PAY",
-            "amount": 6000.0
+            "amount": 6000.0,
+            "purpose": "Lot return for refund"
           },
           {
             "vendor": "FALLON TREE CARE",
-            "amount": 5500.0
+            "amount": 5500.0,
+            "purpose": "OBH Tree - Fallon Tree"
           },
           {
             "vendor": "MARBLEHEAD NEWS GROUP",
-            "amount": 150.0
+            "amount": 150.0,
+            "purpose": "legal ad - cemetery expansion"
           }
         ]
       }
@@ -3033,23 +3060,28 @@
         "top_vendors": [
           {
             "vendor": "BETH ISRAEL LAHEY HEALTH PRIMARY",
-            "amount": 23691.86
+            "amount": 23691.86,
+            "purpose": "opiate funds clinician"
           },
           {
             "vendor": "UNIVERSITY OF MASSACHUSETTS",
-            "amount": 20000.0
+            "amount": 20000.0,
+            "purpose": "CAHM Survey with UMass"
           },
           {
             "vendor": "BLOOM ED INC",
-            "amount": 14500.0
+            "amount": 14500.0,
+            "purpose": "Bloom - Health"
           },
           {
             "vendor": "SANOFI PASTEUR INC",
-            "amount": 8390.31
+            "amount": 8390.31,
+            "purpose": "Vaccine flu"
           },
           {
             "vendor": "LAHEY CLINIC INC",
-            "amount": 5878.14
+            "amount": 5878.14,
+            "purpose": "opiate funds clinician jan, fe"
           }
         ]
       }
@@ -3227,23 +3259,28 @@
         "top_vendors": [
           {
             "vendor": "TAYLOR PRICE",
-            "amount": 46689.0
+            "amount": 46689.0,
+            "purpose": "Price Landscape Contract #2024"
           },
           {
             "vendor": "NEW GENERATION LANDSCAPING & FENCE INC",
-            "amount": 18500.0
+            "amount": 18500.0,
+            "purpose": "Bibbo Park Fence"
           },
           {
             "vendor": "ADVANTAGE SPORT & FITNESS INC",
-            "amount": 16717.5
+            "amount": 16717.5,
+            "purpose": "Fitness Equipment"
           },
           {
             "vendor": "KIMBERLY ANNE CROWLEY",
-            "amount": 14740.0
+            "amount": 14740.0,
+            "purpose": "Fitness Instructor"
           },
           {
             "vendor": "KAREN JANCSY",
-            "amount": 7515.0
+            "amount": 7515.0,
+            "purpose": "Instructor"
           }
         ]
       }
@@ -3399,23 +3436,28 @@
         "top_vendors": [
           {
             "vendor": "JOHN B MENDONCA",
-            "amount": 13160.18
+            "amount": 13160.18,
+            "purpose": "Chap. 115 Monthly Benefits"
           },
           {
             "vendor": "FREDERICK B HAGGETT",
-            "amount": 7560.0
+            "amount": 7560.0,
+            "purpose": "Chap. 115 Monthly Benefits"
           },
           {
             "vendor": "SCOTT M SANDERS",
-            "amount": 7020.0
+            "amount": 7020.0,
+            "purpose": "Chap. 115 Monthly Benefits"
           },
           {
             "vendor": "DONALD L ORNE JR",
-            "amount": 5926.0
+            "amount": 5926.0,
+            "purpose": "Chap. 115 Monthly Benefits"
           },
           {
             "vendor": "BOWDOIN B CROWNINSHIELD",
-            "amount": 3352.0
+            "amount": 3352.0,
+            "purpose": "Chap. 115 Monthly Benefits"
           }
         ]
       }
@@ -3851,23 +3893,28 @@
         "top_vendors": [
           {
             "vendor": "LEAH GOODMAN",
-            "amount": 90675.3
+            "amount": 90675.3,
+            "purpose": "SUP East Coast Style Programmi"
           },
           {
             "vendor": "DELANDE SUPPLY CO INC",
-            "amount": 57231.6
+            "amount": 57231.6,
+            "purpose": "New Lights for Gatchell's Ligh"
           },
           {
             "vendor": "ONE TIME PAY",
-            "amount": 38371.0
+            "amount": 38371.0,
+            "purpose": "summer refund"
           },
           {
             "vendor": "UNIVEST CAPITAL INC",
-            "amount": 38305.07
+            "amount": 38305.07,
+            "purpose": "Lease Payment Wide Area Mower"
           },
           {
             "vendor": "HAM ELECTRIC LLC",
-            "amount": 35290.12
+            "amount": 35290.12,
+            "purpose": "Gatchells Sport Light"
           }
         ]
       }
@@ -4235,23 +4282,28 @@
         "top_vendors": [
           {
             "vendor": "SOUTH ESSEX SEWERAGE DISTRICT",
-            "amount": 3267244.87
+            "amount": 3267244.87,
+            "purpose": "FY26 SESD EXPENSE AND DEBT ASS"
           },
           {
             "vendor": "CN WOOD CO INC",
-            "amount": 654565.0
+            "amount": 654565.0,
+            "purpose": "Vac Truck Sewer I/I"
           },
           {
             "vendor": "N GRANESE & SONS INC",
-            "amount": 236141.98
+            "amount": 236141.98,
+            "purpose": "Green Street Pump Station Upgr"
           },
           {
             "vendor": "DAGLE ELECTRICAL CONSTRUCTION CORP",
-            "amount": 49978.75
+            "amount": 49978.75,
+            "purpose": "Contract 184 FINAL PAY APP & R"
           },
           {
             "vendor": "HALEY WARD, INC",
-            "amount": 42585.0
+            "amount": 42585.0,
+            "purpose": "engineering services Cont 191"
           }
         ]
       }
@@ -4389,23 +4441,28 @@
         "top_vendors": [
           {
             "vendor": "MASSACHUSETTS WATER RESOURCES AUTHORITY",
-            "amount": 3756709.0
+            "amount": 3756709.0,
+            "purpose": "MWRA"
           },
           {
             "vendor": "N GRANESE & SONS INC",
-            "amount": 912978.61
+            "amount": 912978.61,
+            "purpose": "Contract 190 Multi Year Contra"
           },
           {
             "vendor": "ONE TIME PAY",
-            "amount": 733599.62
+            "amount": 733599.62,
+            "purpose": "Contract 190 Water Main Improv"
           },
           {
             "vendor": "HALEY WARD, INC",
-            "amount": 299937.75
+            "amount": 299937.75,
+            "purpose": "Contract 190 On Call Water Eng"
           },
           {
             "vendor": "EVERETT J PRESCOTT INC",
-            "amount": 28459.74
+            "amount": 28459.74,
+            "purpose": "Hydrant"
           }
         ]
       }
@@ -4543,23 +4600,28 @@
         "top_vendors": [
           {
             "vendor": "WILLIAM E MUNSON COMPANY INC",
-            "amount": 591015.0
+            "amount": 591015.0,
+            "purpose": "PO for Munson Marine Port Gran"
           },
           {
             "vendor": "LA  MANAGEMENT INC",
-            "amount": 90352.0
+            "amount": 90352.0,
+            "purpose": "19 230G MARINA BOAT BUILDERS P"
           },
           {
             "vendor": "COLLINS ENGINEERS INC",
-            "amount": 9957.5
+            "amount": 9957.5,
+            "purpose": "Shared Engineering cost with T"
           },
           {
             "vendor": "MAG RETAIL HOLDINGS - FBV LLC",
-            "amount": 6649.61
+            "amount": 6649.61,
+            "purpose": "Ford Dealer repairs"
           },
           {
             "vendor": "LAND N SEA DISTRIBUTING, INC",
-            "amount": 6560.85
+            "amount": 6560.85,
+            "purpose": "Marine Supplies Blanket PO Kel"
           }
         ]
       }

@@ -16,6 +16,7 @@ Usage:
 from __future__ import annotations
 import csv
 import json
+import re
 from pathlib import Path
 
 import yaml
@@ -298,6 +299,22 @@ _CHECKBOOK_FUNDS = {
 _CHECKBOOK_ENTERPRISE = {"water", "sewer", "harbor", "rec_park"}
 
 
+def _clean_purpose(cat) -> str | None:
+    """Turn a checkbook category/description into a short 'what for' label, or
+    None if it is blank or just a reference/invoice number. Leading article and
+    project codes are stripped; the town's own wording is otherwise kept."""
+    if not cat:
+        return None
+    c = str(cat).strip()
+    # Strip leading warrant-article / capital-project / CIP codes.
+    c = re.sub(r"^(ATM\S+\s*-?\s*|A\d+\s+20\d\d\s*-?\s*|20\d\d-\d+\s+|CIP\s+)",
+               "", c, flags=re.IGNORECASE).strip(" -")
+    # Skip values that are essentially a reference/invoice number, not a purpose.
+    if sum(ch.isalpha() for ch in c) < 3:
+        return None
+    return c[:52]
+
+
 def _load_checkbook() -> dict:
     """Per-department attributable checkbook payments (FY26) from the SQLite the
     /browse product uses. Returns {} if the DB is absent."""
@@ -316,11 +333,23 @@ def _load_checkbook() -> dict:
         count, total = cur.fetchone()
         if not count:
             continue
+        # Aggregate by vendor, keeping the description of each vendor's largest
+        # payment so the table can say what the money was FOR (a bare "CROSSROADS
+        # BANK" is opaque; "Ford Hybrid cruiser lease" is not).
         cur.execute(
-            f"SELECT vendor, SUM(amount) s FROM vendor_payments "
+            f"SELECT vendor, category, SUM(amount) s FROM vendor_payments "
             f"WHERE fiscal_year = 'FY26' AND department IN ({ph}) "
-            f"GROUP BY vendor ORDER BY s DESC LIMIT 5", funds)
-        top = [{"vendor": v, "amount": round(a, 2)} for v, a in cur.fetchall()]
+            f"GROUP BY vendor, category", funds)
+        agg = {}
+        for v, cat, s in cur.fetchall():
+            e = agg.setdefault(v, {"total": 0.0, "best_cat": None, "best_amt": 0.0})
+            e["total"] += s
+            if s > e["best_amt"]:
+                e["best_amt"] = s
+                e["best_cat"] = cat
+        ranked = sorted(agg.items(), key=lambda kv: kv[1]["total"], reverse=True)[:5]
+        top = [{"vendor": v, "amount": round(e["total"], 2),
+                "purpose": _clean_purpose(e["best_cat"])} for v, e in ranked]
         out[key] = {
             "kind": "enterprise" if key in _CHECKBOOK_ENTERPRISE else "grant_capital",
             "fiscal_year": "FY26",

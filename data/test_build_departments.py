@@ -139,6 +139,14 @@ def test_police_checkbook_is_grant_capital_with_vendors():
     assert cb["top_vendors"] and "vendor" in cb["top_vendors"][0]
 
 
+def test_checkbook_top_vendors_carry_a_purpose():
+    view = build_view()
+    tv = view["departments"]["police"]["checkbook"]["top_vendors"]
+    # At least the largest vendor should have a human "what for" label.
+    assert tv[0].get("purpose")
+    assert "vendor" in tv[0] and "amount" in tv[0]
+
+
 def test_sewer_checkbook_is_enterprise_and_material():
     view = build_view()
     cb = view["departments"]["sewer"]["checkbook"]

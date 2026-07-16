@@ -99,6 +99,7 @@ og_url: https://marbleheaddata.org/departments.html
   .dx-roster td.dx-avg { color: var(--text-muted); font-weight: 400; }
   .dx-deepdive { margin: 12px 0 0; font-weight: 600; }
   .dx-deepdive a { color: var(--c-teal); }
+  .dx-vpurpose { display: block; font-size: 0.6875rem; color: var(--text-muted); font-weight: 400; margin-top: 1px; }
 
   /* ---- Profile layout: header, stat tiles, section cards ---- */
   .dx-profile-hd { margin: 4px 0 16px; }
@@ -371,7 +372,9 @@ og_url: https://marbleheaddata.org/departments.html
       if (cb.top_vendors && cb.top_vendors.length) {
         cbInner += '<div class="table-wrap"><table class="dx-lines"><thead><tr><th>Top vendors</th><th>' + fy + ' paid</th></tr></thead><tbody>';
         cb.top_vendors.forEach(function (tv) {
-          cbInner += '<tr><td>' + esc(tv.vendor) + '</td><td class="dx-amt">' + fmtUSD(tv.amount) + '</td></tr>';
+          cbInner += '<tr><td>' + esc(tv.vendor) +
+            (tv.purpose ? '<span class="dx-vpurpose">' + esc(tv.purpose) + '</span>' : '') +
+            '</td><td class="dx-amt">' + fmtUSD(tv.amount) + '</td></tr>';
         });
         cbInner += '</tbody></table></div>';
       }
