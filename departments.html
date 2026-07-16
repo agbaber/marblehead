@@ -46,6 +46,12 @@ og_url: https://marbleheaddata.org/departments.html
     color: var(--text-subtle); margin: 4px 0 0;
   }
   .dx-src a { color: var(--c-teal); }
+  .dx-sources {
+    margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--divider);
+    color: var(--text-subtle);
+  }
+  .dx-sources h3 { font-size: 0.8125rem; color: var(--text-subtle); margin: 0 0 6px; }
+  .dx-sources a { color: var(--c-teal); }
   .dx-caveat {
     color: var(--text-muted); background: var(--surface);
     border-radius: var(--radius-md); padding: 10px 12px; margin: 8px 0 12px;
@@ -192,15 +198,10 @@ og_url: https://marbleheaddata.org/departments.html
     p.push('<p class="subtitle">' + esc(d.function_label) + '</p>');
 
     // 1. What it does (cited service description), or a plain fallback.
+    // Citations are collected and rendered together at the bottom (see below).
     if (d.services && d.services.summary) {
       p.push('<h3>What it does</h3>');
       p.push('<p>' + esc(d.services.summary) + '</p>');
-      if (d.services.source_label) {
-        var ssrc = d.services.source_url
-          ? '<a href="' + esc(d.services.source_url) + '">' + esc(d.services.source_label) + '</a>'
-          : esc(d.services.source_label);
-        p.push('<p class="dx-src"><small>Source: ' + ssrc + '</small></p>');
-      }
     } else {
       p.push('<p><em>A plain-language description of what this department does is forthcoming.</em></p>');
     }
@@ -279,12 +280,20 @@ og_url: https://marbleheaddata.org/departments.html
       p.push('</tbody></table></div>');
     }
 
-    // Citation for the staffing roster + budget detail (org_chart / budget book).
+    // All citations for the profile, collected in one place at the bottom.
+    function srcLink(url, label) {
+      return url ? '<a href="' + esc(url) + '">' + esc(label) + '</a>' : esc(label);
+    }
+    var sources = [];
+    if (d.services && d.services.source_label) {
+      sources.push('<li>What it does: ' + srcLink(d.services.source_url, d.services.source_label) + '</li>');
+    }
     if (d.role_source) {
-      var rsrc = d.role_source_url
-        ? '<a href="' + esc(d.role_source_url) + '">' + esc(d.role_source) + '</a>'
-        : esc(d.role_source);
-      p.push('<p class="dx-src"><small>Staffing and budget detail: ' + rsrc + '</small></p>');
+      sources.push('<li>Staffing and budget detail: ' + srcLink(d.role_source_url, d.role_source) + '</li>');
+    }
+    if (sources.length) {
+      p.push('<div class="dx-sources"><h3>Sources</h3><ul class="tldr"><small>' +
+        sources.join('') + '</small></ul></div>');
     }
 
     app.innerHTML = p.join('');
