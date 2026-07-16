@@ -9,7 +9,514 @@ video_url: "https://www.youtube.com/watch?v=nZAVXJ1VTNg"
 duration_seconds: 14378
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Marblehead schools propose $49.1M level-service FY26 budget, no override needed"
+  summary: "The Marblehead School Committee held a multi-session FY26 budget workshop in which Superintendent and department directors presented a proposed operating budget of approximately $49.1 million, a 5.05% increase over the current adopted budget of approximately $46.75 million. All building principals presented enrollment projections, class-size data, staffing rationale, and capital requests. Committee members questioned whether staffing levels were appropriate given enrollment declining from roughly 3,300 to about 2,500 students over the past decade, while the superintendent defended the level-service approach and noted the existing teacher contract — with 2% COLA in FY26 and 3%/3.5% in subsequent years — will likely require a Proposition 2½ override in future years, though not in FY26. The committee agreed to hold a public budget hearing on February 27 and to post the full budget book and slide deck on the district website."
+  decisions:
+    - "Agreed to schedule the public budget hearing for February 27"
+    - "Agreed to post the full budget book and slide deck on the district website"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 26
+    end_seconds: 720
+    featured: true
+    headline: "Superintendent proposes $49.1M level-service FY26 budget; no override required"
+    dek: "The FY26 budget request is $49,112,285, a $2,361,174 (5.05%) increase over the current adopted budget of approximately $46.75 million."
+    summary: |
+      Superintendent John Robidou opened the budget workshop by presenting the proposed FY26 school operating budget. Key points:
+      
+      - **Budget request:** $49,112,285 (level-service)
+      - **Current FY25 adopted budget:** approximately $46,750,000
+      - **Increase:** $2,361,174 or **5.05%**
+      - The budget was characterized as a level-service proposal, meaning it maintains all current staffing, programs, and services including contractually obligated salary increases.
+      - Superintendent stated the budget **does not require a Proposition 2½ override** for FY26, noting that higher-than-anticipated town revenues (certified free cash) allowed the town to allocate additional funds to schools.
+      - A $200,000 curriculum refresh cycle was embedded in the budget—described as a recurring investment rather than a one-time expense.
+      - Special education out-of-district tuitions and transportation were increased to reflect known expenses.
+      - Utilities were increased by 4%; supplies and contracted services by 2%.
+      - Non-represented employees received a 2% COLA.
+      
+      **Budget assumptions:**
+      > Salary steps and lanes increased per settled collective bargaining agreements; supply/contracted service lines increased 2% unless otherwise specified; principals permitted to move funds within their budgets provided net increase did not exceed 2%.
+      
+      **Budget allocation breakdown (by department):**
+      - ~75% goes directly to school buildings (salaries, student-focused supplies)
+      - ~85% of total budget is directly related to student learning and teaching
+      - Utilities: ~$2 million
+      - Salaries: ~79.5–80% of total budget
+      - Supplies: ~3.4%; Utilities: ~3.9%; Contracted services: ~5.25%; Tuitions: ~7%
+      
+      Administration confirmed the town side is aligned with the requested number, arrived at through extensive collaboration with the Finance Committee and town officials.
+    key_speakers: ["John Robidou (Superintendent)", "Mike Piffling (Assistant Superintendent of Finance and Operations)", "School Committee Chair (unnamed)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 26
+    end_seconds: 92
+    headline: "Scheduled bills item tabled; meeting order adjusted from posted agenda"
+    dek: "The chair noted the scheduled bills item was unavailable and would be moved to the next meeting, and that the presentation order would differ from the posted agenda."
+    summary: "The chair opened the meeting at 5:01 p.m. and noted that the first agenda item—scheduled bills—was not available and would be tabled to the next meeting. The chair also advised that the order of presentations would not follow the posted agenda exactly, as the budget slide deck was organized differently."
+    key_speakers: ["School Committee Chair (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.93
+    start_seconds: 720
+    end_seconds: 1393
+    headline: "Finance team details budget structure: 80% salaries, revenue streams, circuit breaker"
+    dek: "Assistant Superintendent Piffling walked through budget allocation by department and expenditure type, and explained circuit breaker and federal grant revenue streams."
+    summary: |
+      Mike Piffling presented detailed budget structure slides:
+      
+      **Expenditure breakdown by object code:**
+      - ~79.5–80% salaries
+      - 3.4% supplies
+      - 3.9% utilities
+      - 5.25% contracted services
+      - 7% tuitions
+      
+      **Outside-the-budget revenue streams (revolving accounts):**
+      - School lunch program (primarily federal/state reimbursements; all students receive free breakfast/lunch)
+      - User fees (athletics, after-school groups, half-day kindergarten/preschool tuition)
+      - Circuit breaker reimbursement: state reimburses 75% of special education costs above approximately $50,000 per student, paid the following year. District carries one full year of circuit breaker funds (~$1.53 million) as a reserve. Administration noted approximately 40–47 students will be claimable this year vs. 30 last year, potentially increasing reimbursement by roughly a third.
+      - Extraordinary relief: an additional circuit breaker mechanism for expenditures 125% above the prior year.
+      - Federal ESSA grants (Title I, II, III, IV) and IDEA special education grant (~$750,000): administration noted these grants were approved approximately one year ago and are expected to remain stable in the near term.
+      - Medicaid reimbursement: goes to the town generally; district works with a consultant to maximize claims through random moment time studies.
+      
+      **Staffing:**
+      - 302 FTE (approximately 310 employees)
+      - Unit A (licensed teachers/professionals): ~302 FTE; approximately 60% are at the top salary step; majority hold master's degrees or beyond.
+      
+      A committee member raised concern about federal grant risk given national funding uncertainty; Piffling noted current grants are already approved and education grants do not appear to be a primary federal target at this time.
+    key_speakers: ["Mike Piffling (Assistant Superintendent of Finance and Operations)", "School Committee members (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.91
+    start_seconds: 1393
+    end_seconds: 2065
+    headline: "District demographics, enrollment decline, and circuit breaker risk discussed"
+    dek: "Administration noted a statistically significant enrollment drop of more than 1% since mid-November and discussed vulnerability to circuit breaker revenue shortfalls."
+    summary: |
+      Continuing the budget overview, presenters covered:
+      
+      **District demographics:**
+      - 2,564 students enrolled (October 1 count)
+      - Enrollment is monitored weekly; district lost more than 1% of student body since mid-November—described as statistically significant, compared to prior years when the district typically gained 2–3 students in the same period.
+      - Declining enrollment is a statewide trend; drop will affect Chapter 70 state aid.
+      
+      **Circuit breaker risk discussion:**
+      - A committee member noted the 2019 special education funding crisis was triggered in part by circuit breaker reimbursement coming in significantly lower than projected (approximately 60% instead of 75%), compounded by mid-year state budget cuts.
+      - Piffling confirmed the district carries a full year (~$1.53 million) of circuit breaker carryover as a reserve and does not plan to draw it down further this year given uncertainty around federal funding pass-throughs to the state.
+      - The district projects 40–47 out-of-district placements for FY26, down from 50 currently, yielding an anticipated reduction in tuition costs.
+      
+      **Chapter 70 funding:**
+      - Chapter 70 state aid is embedded in the town's budget allocation to schools; not separately itemized in the presentation but detailed in the budget workbook.
+    key_speakers: ["Mike Piffling (Assistant Superintendent of Finance and Operations)", "School Committee members (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 2065
+    end_seconds: 3223
+    headline: "Teaching and learning priorities presented: curriculum refresh, literacy, MTSS, advanced learners"
+    dek: "Assistant Superintendent of Teaching and Learning Julia Ferrera outlined curriculum review cycles, new programs, and professional development investments."
+    summary: |
+      Julia Ferrera presented the teaching and learning section of the budget:
+      
+      **Key priorities:**
+      - Multi-tiered system of supports (MTSS) for all learners
+      - Curriculum review on a five-year cycle:
+        - Current year: science (K–12) and English language learners (ELL, mandated by DESE after tiered focus monitoring review)
+        - Prior years covered literacy, social studies, math
+        - Next year: languages, unified arts, allied arts, media literacy
+      - $200,000 earmarked for curriculum refresh; recognized as a recurring (not one-time) budget line
+      - New literacy program implemented district-wide; Wayfinder social-emotional learning curriculum launched successfully
+      - Assessment tools: iReady, DIBELS, ISELP added at Village School
+      - Professional development shifting toward in-house delivery using instructional coaches
+      
+      **Committee questions:**
+      - A committee member asked about programming for advanced/gifted learners, noting this had been raised in prior budget cycles; Ferrera acknowledged assessment tools now identify students surpassing grade-level expectations and connected this to instructional planning.
+      - A committee member asked whether science curriculum review would address alignment with state and national frameworks; Ferrera confirmed alignment is in place.
+      - A committee member expressed concern about instructional software budget line declining; Ferrera explained this reflected a vendor change and some software costs moved to school-level budgets.
+      - A committee member asked about STEAM integration; Ferrera confirmed engineering/technology is embedded in classroom science instruction, not a separate pull-out program at the K–6 level.
+      - High school science labs and block scheduling raised for a future deeper-dive discussion.
+    key_speakers: ["Julia Ferrera (Assistant Superintendent of Teaching and Learning)", "School Committee members (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.93
+    start_seconds: 3223
+    end_seconds: 3770
+    headline: "Student services budget: out-of-district placements projected to drop 6% after 79% six-year increase"
+    dek: "Assistant Superintendent Lisa Maria Palo presented special education goals and noted the district projects reducing out-of-district placements from 50 to approximately 47 students in FY26."
+    summary: |
+      Lisa Maria Palo presented the student services (special education) budget:
+      
+      **Out-of-district tuition costs:**
+      - FY26 projected total out-of-district tuition: approximately $5,125,865, an increase of $277,756 (5.7%) over FY25
+      - The OSD (out-of-district placement) rate set by the state increases 4.69% this year; transportation also increases 4%
+      - Current placements: 50 students; FY26 projection: approximately 47 students (a ~6% reduction in student count)
+      - A $100,000 offset from tuition-in students (students from other districts attending Marblehead's special education programs)
+      - Circuit breaker offset: $1.5 million
+      
+      **Historical context provided by a committee member:**
+      - In January 2019: 28 students out-placed at $2.7 million
+      - Over six years: 79% increase in number of students, 32% increase in cost
+      - New administration projected to reduce placements by 6% within six months of joining district
+      
+      **Goals:**
+      - In-district program development (revamping over approximately two years)
+      - Vertical alignment from 3K through age 22
+      - Staff professional development including Orton-Gillingham training and certification; Landmark Outreach for language-based programming
+      - Strengthening family/community communication
+      
+      A committee member praised the new student services team for rapidly identifying gaps and restoring processes that had lapsed.
+    key_speakers: ["Lisa Maria Palo (Assistant Superintendent of Student Services)", "School Committee members (unnamed)"]
+  - topic: recreation-events
+    topic_confidence: 0.82
+    start_seconds: 3770
+    end_seconds: 4530
+    headline: "Athletic Director presents: ~1,500 registrations, 70 teams, 32 sports; user fees held steady"
+    dek: "Athletic Director Ken Wheeler outlined department goals, participation data, and noted user fees will not be increased again after a large jump last year."
+    summary: |
+      Athletic Director Ken Wheeler (identified as the speaker) presented the athletics department budget section:
+      
+      **Department scale:**
+      - Approximately 1,500 student athletic registrations this year (consistent with prior year)
+      - 900 student athletes served from Marblehead High School and Marblehead Veterans Middle School
+      - 70 teams across 32 sports
+      - 98 paid coaches and 26 volunteer coaches
+      - Over 1,000 events per year managed by two-person athletic office staff (Wheeler and Mark Tarmy)
+      
+      **Three departmental goals:**
+      1. Participation — provide safe, enjoyable athletic programming for as many students as possible
+      2. Quality of competition — compete at a high level in the NEC and postseason tournaments
+      3. Culture — develop respect, teamwork, and integrity through initiatives including Captains' Leadership Council (met five times), NEC leadership conference (12 students attended), and upcoming female leadership conference
+      
+      **User fees:**
+      - Maximum user fee approximately $280 last year; approximately $260–$280 this year
+      - Last year saw a significant fee increase; administration does not plan to increase fees again this year given the magnitude of last year's jump
+      - Participation did not drop significantly following the fee increase
+      - A committee member asked about intramural or non-competitive athletic options; Wheeler noted space constraints in winter but acknowledged the issue of ensuring pathways for non-elite athletes
+      
+      **Budget note:** Athletic transportation for field trips, away games, and activities is handled by the district's in-house transportation department.
+    key_speakers: ["Ken Wheeler (Athletic Director)", "School Committee members (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 4604
+    end_seconds: 4852
+    headline: "Athletics director outlines unified-sports expansion and booster-club support"
+    dek: "The presenter highlighted inclusion goals, unified sports programs already in place for basketball, and the role of booster clubs and volunteer coaches in sustaining participation."
+    summary: |
+      A presenter described ambitions to grow unified sports programming and praised the All Sports Foundation and individual sport booster clubs as essential financial and volunteer contributors. The presenter also noted interest in better tracking students who go on to college athletics and creating formal Signing Day recognition.
+      
+      Key themes:
+      - Unified sports programs (basketball already in place) as inclusion vehicles
+      - Booster clubs and volunteer coaches cited as critical to broad student participation
+      - Desire for end-of-year reporting on student-athletes matriculating to college athletics
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 4852
+    end_seconds: 5334
+    headline: "Technology director reports district-wide device refresh, cybersecurity grant renewed"
+    dek: "The director described completing a K–12 device refresh, receiving a cybersecurity grant for the second consecutive year, and planning for wireless access-point replacement as warranties expire."
+    summary: |
+      The technology director summarized five years of infrastructure work including:
+      - One-to-one Chromebook/iPad deployment for grades K–8; BYOD policy for high school
+      - Upgrade of all school security cameras and card-access systems district-wide
+      - Cybersecurity awareness grant renewed for the coming year
+      - Smart-panel teacher training ongoing; one session cancelled this year due to a professional-development day move
+      - Upcoming challenge: wireless access points across all five buildings will come off warranty, triggering a replacement decision (new license vs. new hardware)
+      - 23,736 devices connected to the district network in the prior 30 days
+    key_speakers: ["Stephen (Technology Director)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 5334
+    end_seconds: 5532
+    headline: "Board questions IT hardware line items and building security access-control responsibility"
+    dek: "Committee members asked about the distinction between 'IT hardware' and 'IT equipment' budget lines and how responsibility is divided between IT and facilities when access-controlled doors need repair."
+    summary: "A committee member asked why the IT hardware line shows zero for the current budget request; the director explained prior ESSER-funded laptop refresh accounted for that spending. The committee also discussed the gray area between IT and facilities budgets when technology (such as card-access systems) is embedded in building infrastructure — a door repair falls to facilities, but a failed card reader falls to IT."
+    key_speakers: ["Stephen (Technology Director)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 5606
+    end_seconds: 6723
+    headline: "Facilities director presents goals; board questions 10% salary increase, landscaping, and bus cameras"
+    dek: "Facilities Director Todd Bloodgood outlined safety, cleanliness, and preventive-maintenance goals; the board probed a 10% base-salary increase driven by contract negotiations and a pending request for an in-house landscaping crew."
+    summary: |
+      Todd Bloodgood presented the facilities department's goals, emphasizing:
+      - Safety and security: door checks, access-card systems, camera upgrades, emergency protocol training for custodians and bus drivers
+      - Preventive maintenance and five-year equipment replacement schedule
+      - Full custodial staffing restored after post-COVID vacancies
+      
+      **Board discussion highlights:**
+      
+      | Topic | Detail |
+      |---|---|
+      | 10% salary increase | Attributed to contract negotiations, not headcount growth; reflects two years of wage increases against last year's approved budget baseline |
+      | In-house landscaping | Todd's multi-year request; not included in the level-services budget; Parks & Recreation currently assists informally but is not funded to maintain school grounds |
+      | Bus cameras | 3 of 4 large buses have cameras; 2 smaller buses do not; new RFPs will require 4 cameras per bus; Boston bus contractor (NRT) cameras have historically been unreliable |
+      | HVAC/roof project at one school | Delayed to June due to school calendar constraints; uses capital funds that can roll over, so no turnback risk |
+      | Budget assumptions | 2% inflation applied to most supply lines; utilities budgeted at 4%; fuel purchased through DPW at pre-tax rates |
+      
+      A committee member noted that Sustainable Marblehead and the Board of Health were supportive of the district's new district-wide composting program.
+    key_speakers: ["Todd Bloodgood (Facilities Director)", "John (Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 6723
+    end_seconds: 8206
+    headline: "Food Services director reports 21% lunch and 44% breakfast participation gains; board debates revenue surplus presentation"
+    dek: "Director John Constantino (appearing via Zoom) reported large participation increases and discussed plans to grow catering revenue and move toward more scratch cooking; the board debated how to present a projected food-service surplus without implying profit-taking."
+    summary: |
+      Key points from the food services presentation:
+      - Lunch participation up **21%** and breakfast up **44%** year-over-year (excluding November, which was disrupted)
+      - Food services is **entirely self-funded**, including the director's salary, which was moved into the revolving fund last year
+      - Federal and state reimbursement rates are driving the revenue surplus; the district cannot carry more than three months of operating expenses in reserve
+      - Catering revenue is a planned growth area to provide a buffer against federal reimbursement changes
+      - Staffing vacancies dropped from **13** to **1** following a new cafeteria wage agreement
+      - Increased scratch cooking this year; goal is to continue reducing reliance on pre-packaged foods using federal commodity (brown-box) items and fresh produce
+      
+      A committee member suggested that future presentations earmark projected surplus funds for specific equipment needs (e.g., replacing Village School serving lines, estimated at over **$125,000**) so the public does not interpret the surplus as general profit. The superintendent confirmed that food-service revenues must remain within the food-service revolving fund.
+      
+      The superintendent also highlighted the district's new composting program now operating in all Marblehead public schools.
+    key_speakers: ["John Constantino (Food Services Director, via Zoom)", "John (Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.91
+    start_seconds: 8206
+    end_seconds: 9149
+    headline: "Brown School principal says FY26 budget meets her needs; board asks about vacant positions and class sizes"
+    dek: "Principal Mary presented MTSS, literacy (Wisdom program), and social-emotional learning goals; a committee member asked directly whether the proposed budget is sufficient and raised the issue of long-vacant positions."
+    summary: |
+      Brown School Principal Mary outlined three building goals:
+      1. Strengthen multi-tier systems of support (MTSS) — now in year three, with tutor-to-teacher data sharing described as a 'game changer'
+      2. Fidelity to year-two implementation of the Wisdom literacy curriculum — further ahead than year one
+      3. Continued tier-one social-emotional learning through Wayfinder, Responsive Classroom, and Zones of Regulation
+      
+      When asked directly, the principal stated: **'I believe my needs are met with this budget.'**
+      
+      The committee raised concerns about:
+      - Positions vacant for the entire school year and who has been covering that work
+      - Class sizes: projected Brown kindergarten ~18–19, first grade ~21, second and third grade ~21–22
+      - A request that future budget books include prior-year FTE comparisons (Brown FY25: 81.5 FTE; FY26 proposal: 82.1 FTE — net change attributed to moving a position from another building, not new hiring)
+      - The superintendent noted the district is actively filling vacancies and no administrator has said a needed position should be eliminated
+    key_speakers: ["Mary (Brown School Principal)", "John (Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 9149
+    end_seconds: 9807
+    headline: "Glover School interim principal presents goals; board discusses class-size equity and redistricting"
+    dek: "Interim Principal Frank Kosi outlined relationship-building, professional development on behavior management, and social-emotional learning goals; the board compared Glover and Brown class sizes and discussed enrollment balancing."
+    summary: |
+      Interim Principal Frank Kosi, in his first year at Glover, described:
+      - Relationship-building as a day-one priority (guidance counselors and teachers greeting students at arrival)
+      - Renewed focus on professional development for positive behavior support and classroom management
+      - Continued emphasis on Wayfinder social-emotional learning; students responded positively
+      - Acknowledgment that special education department chair Lauren has been instrumental
+      
+      Board discussion on class sizes and redistricting:
+      - Projected Glover enrollment: ~327; Brown: ~460
+      - DESE capacity numbers from a prior feasibility study: Glover 325, Brown 450 — both buildings are near capacity
+      - The superintendent stated redistricting is not warranted because both buildings are full, not imbalanced
+      - When kindergarten numbers at Brown were elevated this year, the district redirected some students to Glover; this practice will continue
+      - State regulation allows up to an average of 27 students per class before a new section is required; the board noted 18–21 is manageable but 22–24 in kindergarten is 'a different animal'
+      - A committee member asked about the spreadsheet showing 'division by zero' errors in Glover's page three — noted as a cosmetic issue with no numeric impact
+    key_speakers: ["Frank Kosi (Glover School Interim Principal)", "John (Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.87
+    start_seconds: 9807
+    end_seconds: 10077
+    headline: "Village School principal presents PBS duck-dollar program and tier-one SEL goals"
+    dek: "Principal St. Williams introduced the Village Ducks identity and described PBS (positive behavior support) and Wayfinder implementation as central to the school's FY26 goals."
+    summary: |
+      Village School Principal St. Williams presented:
+      - School identity: 'Village Ducks' — acronym Dynamic, Unique, Courageous, Kind, Safe
+      - PBS incentive system: students earn 'duck dollars'; rubber-duck cylinders in the lobby track class progress toward goals; weekly announcements recognize on-target grades
+      - Wayfinder as the tier-one social-emotional learning vehicle for communication skills and conflict resolution
+      - MTSS data-driven differentiation: emerging learners, on-grade learners, and enrichment-seeking students all served through small-group wind blocks and coach collaboration
+      - School Advisory Council meeting planned in two weeks to develop the next School Improvement Plan
+      - Shout-out to education PTO for help branding the mascot and producing school apparel
+    key_speakers: ["St. Williams (Village School Principal)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 10037
+    end_seconds: 10077
+    headline: "Composting program now operating in all Marblehead public schools"
+    dek: "The superintendent highlighted that composting launched district-wide this year after years of advocacy, crediting a sister principal and student rangers at the cafeteria line."
+    summary: "The superintendent and a building principal noted that composting is now in place at all Marblehead public schools, accomplished in collaboration with the town and with support from Sustainable Marblehead and the Department of Health. A sister principal was credited with managing the daily cafeteria-line composting effort with student volunteers."
+    key_speakers: ["John (Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 10629
+    end_seconds: 11171
+    headline: "Village School principal presents literacy, data, and inclusionary practice updates"
+    dek: "Principal reviewed Year 3 of the Wit & Wisdom literacy program, benchmark data practices, and cross-school TAT (pre-referral) team work."
+    summary: |
+      The Village School principal highlighted several instructional priorities in place for FY26, including:
+      
+      - **Wit & Wisdom literacy program** (Year 3), used district-wide and at partner schools
+      - **Frequent data meetings** with instructional coaches focused on multi-point trend data rather than single MCAS snapshots
+      - **Inclusionary practices** in special education, with named staff (Ashley Leedman, Victoria Ryan, Lisa Marie) supporting in-district placement
+      - **TAT (Teacher Assistance Team)** — a pre-referral, general-education support structure — highlighted as a cost-effective intervention
+      - **Teacher-leader professional learning communities** meeting every other week
+      - **Student voice initiatives** including morning announcements, a composting program, and a school counselor appreciation shout-out
+    key_speakers: ["Village School Principal (unnamed in transcript)"]
+  - topic: school-budget
+    topic_confidence: 0.96
+    start_seconds: 11171
+    end_seconds: 11497
+    headline: "Committee presses Village School on staffing vs. enrollment mismatch"
+    dek: "A committee member questioned why 10 grade-level sections are maintained when enrollment math could support 8 sections at standard class sizes of 22–23 students."
+    summary: |
+      A committee member observed that Village School was running 10 sections per grade level despite enrollment numbers that, at the district's typical average of 22–23 students per class, would require only 8 sections. The exchange surfaced a recurring community challenge: when enrollment declines, residents and other town boards ask why staffing does not decline proportionally.
+      
+      Key points raised:
+      - The member was **not** advocating for larger class sizes or staff cuts, but asked for articulable justifications (e.g., IEP concentration in certain rooms, smaller cohort bubbles moving through) that could be used at town meeting and public hearings.
+      - The principal noted that classrooms rarely have just one adult; tutors, coaches, and special educators are routinely co-present.
+      - The superintendent noted that current class sizes of 18–23 in upper elementary are within normal ranges and that the budget is a level-service proposal — not a rollover budget — designed to meet identified needs.
+      - The district was noted to have had approximately **3,300 students less than 10 years ago** and now has approximately **2,500**, with staffing roughly flat or slightly higher.
+    key_speakers: ["School Committee member (unnamed)", "Superintendent (unnamed)", "Village School Principal (unnamed)"]
+  - topic: override
+    topic_confidence: 0.93
+    start_seconds: 11451
+    end_seconds: 11635
+    headline: "Superintendent: teacher contract will require override in future years at current staffing"
+    dek: "The superintendent stated FY26 does not require an override partly because the town provided approximately $1 million more than anticipated, but the contract's 3% and 3.5% COLA years will likely necessitate one."
+    summary: |
+      Discussion turned explicitly to whether an override would be needed. Key statements:
+      
+      - **FY26 does not require an override** at current staffing levels, partly because the town provided roughly **$1 million more** than anticipated during contract negotiations.
+      - The negotiated teacher contract carries:
+        - 2% COLA — FY26
+        - 3% COLA — FY27
+        - 3.5% COLA — FY28
+      - At **current staffing levels**, the contract is expected to require an override in one of those out-years.
+      - A committee member requested a single clear slide explaining this to combat what they described as widespread misinformation on social media and a dedicated website.
+      - The superintendent said the full budget book with line-level detail is being posted online the following day.
+    key_speakers: ["Superintendent (unnamed)", "School Committee member (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.94
+    start_seconds: 11635
+    end_seconds: 11811
+    headline: "Committee and superintendent debate staffing transparency and rollover-budget perception"
+    dek: "Members expressed concern that each year the community raises enrollment-vs.-staffing questions at town meeting, and the district needs better prepared talking points."
+    summary: "The committee debated the perception that the school district practices 'rollover budgeting.' The superintendent pushed back, saying the FY26 budget is a zero-based, level-service proposal that does not add staff and reflects actual identified need. A committee member acknowledged the superintendent's explanation but said the school committee needs concise talking points to deploy at public hearings and in response to community inquiries. The superintendent noted that line-item autonomy allows internal reallocation (e.g., moving a teacher from one building to another) without a committee vote, but that eliminating or adding sections requires committee discussion."
+    key_speakers: ["Superintendent (unnamed)", "School Committee members (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 11811
+    end_seconds: 12070
+    headline: "Marblehead Veterans Middle School principal presents goals, enrollment, and staffing"
+    dek: "MVMS principal Matt Fox outlined middle school model rationale, projected FY27 enrollment of 175 seventh-graders and 184 eighth-graders, and proposed converting a 0.4 FTE Spanish position to a full-time librarian."
+    summary: |
+      Principal Matt Fox presented MVMS's three overarching goals for FY26–27:
+      1. Develop a true middle school model — student-centered structure with cross-disciplinary team planning
+      2. Continue supporting student social-emotional growth through advisory, baseline strong in-class programs, and MTSS tiered support
+      3. Increase student voice and belonging through advisory, student council with a student representative chosen by lottery, and lunch conversations with the superintendent
+      
+      **Enrollment data:**
+      - Current year: 7th grade ~179, 8th grade ~226
+      - Projected next year: 7th grade 175, 8th grade 184 (the large 8th-grade cohort graduating)
+      
+      **Staffing note:** The principal proposed converting a 0.4 FTE Spanish position (unfilled after extensive recruiting) to a 1.0 FTE librarian position, describing the librarian as adding significant value to school culture and instruction.
+    key_speakers: ["Matt Fox (MVMS Principal)", "School Committee member (unnamed)", "Superintendent (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.91
+    start_seconds: 12070
+    end_seconds: 12307
+    headline: "Committee examines MVMS class-size reporting and middle school model justification"
+    dek: "A member asked why Monday Morning Reports show advisory-sized groups of roughly 10, and Fox explained small-group special education sections skew averages."
+    summary: |
+      A committee member noted that the Monday Morning enrollment report — which counts students by advisory — makes MVMS class sizes appear to be around 10, when actual instructional classes are larger. Fox acknowledged the reporting method and agreed to work with the data coordinator to report out by instructional section rather than advisory going forward.
+      
+      Fox also articulated the educational rationale for the middle school model: cross-disciplinary teacher teams share planning time to discuss individual students holistically, coordinate writing instruction across subjects, and build student-teacher relationships that research links to academic engagement and reduced attrition.
+    key_speakers: ["Matt Fox (MVMS Principal)", "School Committee member (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.89
+    start_seconds: 12307
+    end_seconds: 12422
+    headline: "MVMS notes 1.2% of students temporarily withdraw for ski-school programs each winter"
+    dek: "Fox explained that a portion of enrollment dip is attributable to students who withdraw briefly for ski-school and re-enroll in spring."
+    summary: "In response to a question about a projected enrollment drop, Fox clarified there had been a data error on the printed sheet (subsequently corrected on the slide). He also noted that approximately 1.2% of MVMS students — roughly 4–5 out of ~405 — withdraw temporarily each winter to attend ski school and re-enroll in spring, which affects November enrollment counts and can skew district-level metrics reported to DESE."
+    key_speakers: ["Matt Fox (MVMS Principal)", "School Committee member (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 12422
+    end_seconds: 12744
+    headline: "Marblehead High School principal presents enrollment projections and scheduling update"
+    dek: "Principal Carlson reported MHS enrollment is projected to stay roughly flat or increase by about five students, with scheduling driven by student elective choices."
+    summary: |
+      MHS Principal Carlson presented goals largely rolling over from the current year, including:
+      - Maintaining AP, honors, and standard course pathways
+      - Expanding a 'magic block' (extended advisory/support period) that launched this year
+      - Revising and aligning student progression and academic norms
+      - Continuing middle school–high school vertical alignment meetings among teachers
+      
+      **Enrollment:** Projected to stay roughly the same or increase by approximately 5 students next year, as a strong incoming class arrives from MVMS.
+      
+      **Scheduling:** Teacher course-level recommendations for 8th-graders began this week; a parent information night is planned for end of month. MHS uses a student-driven schedule — class offerings are determined by what students choose. Latin I may be reintroduced if incoming students request it.
+      
+      **Applied arts class sizes** (wood shop, culinary, marketing tech) are intentionally small due to equipment and safety constraints.
+    key_speakers: ["MHS Principal Carlson (unnamed first name in transcript)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 12744
+    end_seconds: 13024
+    headline: "Superintendent presents school capital improvement requests including $300K HVAC and playground items"
+    dek: "Capital requests include HVAC/cafeteria work (~$70K), Glover playground replacement (~$120K), a special education van (~$77K), and a feasibility study for an Early Childhood Center at the former Eveleth School site."
+    summary: |
+      The superintendent walked through capital improvement requests embedded within or adjacent to the FY26 operating budget:
+      
+      | Item | Estimated Cost |
+      |---|---|
+      | High school cafeteria HVAC/ventilation | ~$70K |
+      | Glover School playground replacement | ~$120K |
+      | Veterans Middle School small gym refinishing | ~$32K |
+      | Veterans AG facility | ~$10K |
+      | Special education van replacement | ~$77K |
+      | Small bus / transport trailer | TBD |
+      | High school fieldhouse fire alarm | TBD |
+      
+      A **feasibility study for an Early Childhood Center** — potentially siting pre-K programming at or near the former Eveleth School — was flagged as an important near-term planning item. The superintendent said it could be funded within the current operating budget by reprioritizing some capital items.
+      
+      The **Glover playground** (~10 years old) needs resurfacing coordinated with any new equipment installation to avoid cutting into new surfacing.
+      
+      The town's capital process asked each department to rank requests; the school district submitted five (one per building/entity).
+    key_speakers: ["Superintendent (unnamed)", "School Committee member (unnamed)"]
+  - topic: bonding-capital
+    topic_confidence: 0.92
+    start_seconds: 13024
+    end_seconds: 13235
+    headline: "Superintendent flags Marblehead High School roof replacement as urgent, separate from operating budget"
+    dek: "The MHS roof is at end of life and actively leaking; the superintendent said the project — which includes the rooftop HVAC system — must proceed through a separate capital/town meeting process."
+    summary: |
+      The superintendent explicitly raised the Marblehead High School roof as a capital need outside the operating budget. Key points:
+      
+      - The roof (and rooftop HVAC system) is **at the end of its service life**; there was active leaking during rain on the day of the meeting, with buckets deployed inside.
+      - The project scope includes the roof membrane, fascia, all rooftop HVAC equipment, and the building envelope.
+      - The project will require **public discussion and a town meeting article** (likely May).
+      - The superintendent declined to detail the cost publicly at this meeting but said the numbers previously reported publicly are accurate.
+      - This item is **separate from the FY26 operating budget** and will require a distinct capital appropriation.
+    key_speakers: ["Superintendent (unnamed)", "School Committee member (unnamed)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 13235
+    end_seconds: 13284
+    headline: "Custodial staff transfer from central office to buildings accounts for apparent budget increase"
+    dek: "A $257,000–$278,000 line increase at Veterans Middle School reflects moving custodians back into building budgets, not new hires."
+    summary: "A committee member noticed an approximately 11% budget increase at one school and questioned it. The superintendent explained that roughly $257,000–$278,000 of the apparent increase reflects the **reclassification of custodial staff from central office to individual building budgets** — not additional staffing. The custodians were previously counted under central administration, making that budget appear heavy; moving them back to buildings gives a more accurate picture of per-building costs."
+    key_speakers: ["Superintendent (unnamed)", "School Committee member (unnamed)"]
+  - topic: school-budget
+    topic_confidence: 0.87
+    start_seconds: 13284
+    end_seconds: 13635
+    headline: "Budget calendar outlined; public hearing targeted for February 27 school committee meeting"
+    dek: "The superintendent summarized next steps: budget subcommittee if needed, public hearing in February or March, Finance Committee review, and Town Meeting in May."
+    summary: |
+      The superintendent outlined the remaining budget calendar:
+      
+      - **February:** Budget workshop completed tonight; full budget book posted online tomorrow
+      - **February 27:** Next school committee meeting — targeted for public budget hearing
+      - **March:** School committee vote on superintendent's budget; possible additional budget subcommittee
+      - **April:** Warrant hearing if needed; additional subcommittee if needed
+      - **May:** Town Meeting
+      
+      The committee discussed the format of the public hearing: by statute it is a back-and-forth hearing, not a one-way public comment. Members debated whether to hold it on February 27 or a separate night. The superintendent expressed preference for sooner to allow time to respond to community feedback before Town Meeting. A committee member suggested a single clear summary slide explaining the override timeline and contract structure to counter community misinformation.
+    key_speakers: ["Superintendent (unnamed)", "School Committee members (unnamed)"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;
