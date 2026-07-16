@@ -442,6 +442,10 @@ async function testDepartmentsExplorerPageLoads(page) {
     ? ok('Police profile budget table present')
     : fail('Police profile budget table', '.dx-money missing');
 
+  policeText.includes('Checkbook') && policeText.includes('Browse the full checkbook')
+    ? ok('Police profile shows checkbook section')
+    : fail('Police profile checkbook', 'Checkbook section missing');
+
   // Library defers to its dedicated page via a deep-dive link.
   await page.goto(`${SITE}/departments.html#library`, { waitUntil: 'domcontentloaded' });
   await page.waitForSelector('.dx-deepdive', { timeout: 5000 }).catch(() => null);

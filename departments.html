@@ -280,6 +280,34 @@ og_url: https://marbleheaddata.org/departments.html
       p.push('</tbody></table></div>');
     }
 
+    // 7. Checkbook: attributable payments where the fund names the department,
+    // else a plain note that the town does not break operating spending out.
+    p.push('<h3>Checkbook</h3>');
+    var cb = d.checkbook;
+    if (cb) {
+      var fy = 'FY' + cb.fiscal_year.slice(2);
+      p.push('<p>' + fmtUSD(cb.total) + ' across ' + cb.count +
+        ' payments in ' + fy + ', in funds tagged to this department.</p>');
+      p.push('<p class="dx-caveat"><small>' + (cb.kind === 'enterprise'
+        ? 'These are the funds the checkbook tags to this department, mostly regional assessments and its own capital projects. Some routine operating costs may still sit in the general "Expenses" and "Salaries" buckets.'
+        : 'These are grant, capital, and donation funds the checkbook tags to this department. Its day-to-day operating budget is not broken out; it sits in the general "Expenses" and "Salaries" buckets.') +
+        '</small></p>');
+      if (cb.top_vendors && cb.top_vendors.length) {
+        p.push('<div class="table-wrap"><table class="dx-lines"><thead><tr>' +
+          '<th>Top vendors</th><th>' + fy + ' paid</th></tr></thead><tbody>');
+        cb.top_vendors.forEach(function (tv) {
+          p.push('<tr><td>' + esc(tv.vendor) + '</td>' +
+            '<td class="dx-amt">' + fmtUSD(tv.amount) + '</td></tr>');
+        });
+        p.push('</tbody></table></div>');
+      }
+      p.push('<p class="dx-deepdive"><a href="/checkbook/">Browse the full checkbook &rarr;</a></p>');
+    } else {
+      p.push('<p>The town’s published checkbook does not break payments out to this ' +
+        'department; its operating spending sits in the general "Expenses" and "Salaries" ' +
+        'buckets. <a href="/checkbook/">Browse the full checkbook &rarr;</a></p>');
+    }
+
     // All citations for the profile, collected in one place at the bottom.
     function srcLink(url, label) {
       return url ? '<a href="' + esc(url) + '">' + esc(label) + '</a>' : esc(label);

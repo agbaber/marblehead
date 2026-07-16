@@ -233,6 +233,105 @@ def _override_added_by_dept(budget: dict) -> dict:
     return added
 
 
+# Budget dept key -> checkbook fund names (SQLite vendor_payments.department).
+# HAND-CURATED: the fund taxonomy is messy and keyword-matching mis-attributes
+# (e.g. "FIREWORKS DONATION" is the July-4th fund, not the Fire Dept). Only funds
+# clearly named for the department are listed. IMPORTANT: the town's checkbook
+# does NOT tag general-fund operating spending by department; for most
+# departments these are grant/capital/donation funds only, not operating money.
+_CHECKBOOK_FUNDS = {
+    "water": [
+        "MASS WATER RESOURCES AUTHORITY", "MWRA PROJECT LWSAP26-3021",
+        "PRINCIPAL ON LONG TERM MWRA", "A36 2019 MWRA LOAN",
+        "ATM25A11A-WATER CONSTRCUTION", "ART 11 2024 WATER CONSTRUCTION",
+        "ART 14 2022 WATER CONSTRUCTION", "ART 15 2023 WATER CONSTRUCTION",
+        "WATER LEAD SERVICE GRANT",
+    ],
+    "sewer": [
+        "SOUTH ESSEX SEWER DISTRICT", "A11 2024 SEWER CONSTRUCTION",
+        "A15 2022 SEWER CONSTRUCTION", "A16 2023 SEWER CONSTRUCTION",
+        "ATM25A11B-SEWER CONSTRUCTION",
+    ],
+    "harbor": ["HARBOR ACCESS GRANT", "HARBOR CAPITAL OUTLAYS", "HARBOR ENTERPRISE OPERATING"],
+    "rec_park": [
+        "PARK REVOLVING FUND", "PARK FACILITY", "REC AND PARK DONATION FUND",
+        "GERRY PLAYGROUND DONATION", "GREEN ST BIKE PARK DONATION", "DOG PARK DONATION",
+        "YOUTH BASEBALL DONATION FUND", "SHATTUCK MEM FUND-PARK",
+        "ATM25A6-P&R-ELECTRIC MOWER", "ATM25A7-P&R-F-450 DUMP TRUCK",
+        "ATM25A7-P&R-WIDE AREA MOWER",
+    ],
+    "police": [
+        "POLICE DUTY FIREARMS GRANT", "DUE TO COMMONWEALTH-FIREARMS",
+        "ATM25A6-POL-PORTABLE RADIOS", "ATM25A7-POL-2 FORD HYBRIDS",
+        "ATM25A7-POL-CRUISER", "ATM25A7-POL-FORD INTERCEPTOR", "ATM25A8-POL-FLOOR REPLCE",
+    ],
+    "fire": ["FIRE EQUIPMENT GRANT", "FIRE SAFE GRANT", "ATM25A7-FIRE-TRAIN VEHICLE"],
+    "council_on_aging": [
+        "COA REVOLVING", "COA FORMULA SPENDING PLAN", "COA TRANSPORTATION GRANT",
+        "COUNCIL ON AGING DONATION FUND", "SHATTUCK MEM FUND-COA", "HARRY PARKER STEELE COA FUND",
+    ],
+    "cemetery": [
+        "ATM25A42,43-CEM-CEMETERY IMPRO", "SALE OF CEMETERY LOTS",
+        "PERPETUAL CARE DONATIONS", "OLD BURIAL HILL DONATION",
+    ],
+    "health": ["BOH DONATION FUND", "VACCINE REVOLVING FUND", "OPIOID SETTLEMENT FUND"],
+    "waste_collection": [
+        "COMMERCIAL WASTE COLL REVOLV", "ATM25A6-WASTE-F-150 CREW CAB",
+        "ATM25A7-WASTE-BACKHOE LEASE", "ATM25A7-WASTE-JD LOADER",
+        "LANDFILL MONITORING EXPENSE", "A34 2015 NEW TRANSF STATION",
+    ],
+    "public_works_ops": [
+        "PW MAINTAIN STREETS & SIDEWALK", "CHAPTER 90", "CH90 FAIR SHARE GRANT",
+        "ATM25A6-DPW-F350 W PLOW", "ATM25A7-DPW-BUCKET LIFT TRUCK",
+        "ATM25A7-DPW-F550 TRUCK W PLOW", "ATM25A7-DPW-INTERNATIONAL TRUC",
+        "ATM26A9-DPW -F55O W PLOW", "ATM26A9-DPW BUCKET LIFT TRUCK",
+        "STORMWATER CONSTRUCTION", "ART 14 DRAIN CONSTRUCTION", "A15 20 DRAIN CONSTRUCTION",
+        "STREET LIGHTING", "STREET OPENNING REVOLVING", "ROAD SAFETY GRANT",
+    ],
+    "public_buildings": ["ATM25A6-PB-F-150 CREW CAB", "HOBBS MEM BLDG REVOLVING"],
+    "veterans_benefits": ["VETERANS BENEFITS", "VETERANS DONATION FUND"],
+}
+# Departments whose named funds are their real spending (enterprise + regional
+# assessments + their own capital), vs those where the named funds are only
+# grants/capital/donations layered on an operating budget the checkbook lumps
+# into general buckets.
+_CHECKBOOK_ENTERPRISE = {"water", "sewer", "harbor", "rec_park"}
+
+
+def _load_checkbook() -> dict:
+    """Per-department attributable checkbook payments (FY26) from the SQLite the
+    /browse product uses. Returns {} if the DB is absent."""
+    import sqlite3
+    db = ROOT / "assets" / "data" / "marbleheaddata.sqlite"
+    if not db.exists():
+        return {}
+    con = sqlite3.connect(f"file:{db}?mode=ro", uri=True)
+    cur = con.cursor()
+    out = {}
+    for key, funds in _CHECKBOOK_FUNDS.items():
+        ph = ",".join("?" * len(funds))
+        cur.execute(
+            f"SELECT COUNT(*), COALESCE(SUM(amount), 0) FROM vendor_payments "
+            f"WHERE fiscal_year = 'FY26' AND department IN ({ph})", funds)
+        count, total = cur.fetchone()
+        if not count:
+            continue
+        cur.execute(
+            f"SELECT vendor, SUM(amount) s FROM vendor_payments "
+            f"WHERE fiscal_year = 'FY26' AND department IN ({ph}) "
+            f"GROUP BY vendor ORDER BY s DESC LIMIT 5", funds)
+        top = [{"vendor": v, "amount": round(a, 2)} for v, a in cur.fetchall()]
+        out[key] = {
+            "kind": "enterprise" if key in _CHECKBOOK_ENTERPRISE else "grant_capital",
+            "fiscal_year": "FY26",
+            "total": round(total, 2),
+            "count": count,
+            "top_vendors": top,
+        }
+    con.close()
+    return out
+
+
 # Budget department key -> human display name shown on cards + profile headings.
 # The source budget JSON stores the same slug in both `id` and `department`, so
 # the raw value ("school_high", "public_works_ops") is unfit to display. School
@@ -304,6 +403,7 @@ def _departments_from_budget(budget: dict) -> dict:
             "line_items": [],
             "line_items_reconcile": True,
             "headcount": None,
+            "checkbook": None,
         }
     # Lines are flat under their department: parent_id points directly at
     # the department row's id, there is no intermediate subgroup level in
@@ -377,6 +477,10 @@ def build_view() -> dict:
                 "source_label": svc["source_label"],
             }
         dept["deep_dive"] = svc.get("deep_dive")
+
+    checkbook = _load_checkbook()
+    for key, dept in departments.items():
+        dept["checkbook"] = checkbook.get(key)
 
     # Adopted FY27 = No-Override proposed + this department's Tier-3 override
     # restorations. The change figure is then adopted-vs-FY26 (the source data's

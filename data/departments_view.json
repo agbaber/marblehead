@@ -95,7 +95,8 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": null
     },
     "select_board": {
       "name": "Select Board",
@@ -269,7 +270,8 @@
           "fy": 2026,
           "headcount": 6
         }
-      ]
+      ],
+      "checkbook": null
     },
     "finance_committee": {
       "name": "Finance Committee",
@@ -310,7 +312,8 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": null
     },
     "reserve_fund": {
       "name": "Reserve Fund",
@@ -343,7 +346,8 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": null
     },
     "finance": {
       "name": "Finance Department",
@@ -503,7 +507,8 @@
           "fy": 2026,
           "headcount": 9
         }
-      ]
+      ],
+      "checkbook": null
     },
     "assessor": {
       "name": "Assessors' Office",
@@ -659,7 +664,8 @@
           "fy": 2026,
           "headcount": 3
         }
-      ]
+      ],
+      "checkbook": null
     },
     "town_counsel": {
       "name": "Town Counsel",
@@ -721,7 +727,8 @@
           "fy": 2013,
           "headcount": 1
         }
-      ]
+      ],
+      "checkbook": null
     },
     "parking_clerk": {
       "name": "Parking Clerk",
@@ -754,7 +761,8 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": null
     },
     "town_clerk": {
       "name": "Town Clerk",
@@ -932,7 +940,8 @@
           "fy": 2026,
           "headcount": 3
         }
-      ]
+      ],
+      "checkbook": null
     },
     "election_registration": {
       "name": "Elections & Registration",
@@ -1110,7 +1119,8 @@
           "fy": 2026,
           "headcount": 25
         }
-      ]
+      ],
+      "checkbook": null
     },
     "planning_board": {
       "name": "Planning Board",
@@ -1143,7 +1153,8 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": null
     },
     "public_buildings": {
       "name": "Public Buildings",
@@ -1285,7 +1296,27 @@
           "fy": 2026,
           "headcount": 6
         }
-      ]
+      ],
+      "checkbook": {
+        "kind": "grant_capital",
+        "fiscal_year": "FY26",
+        "total": 65295.0,
+        "count": 3,
+        "top_vendors": [
+          {
+            "vendor": "MARCOTTE FORD SALES INC",
+            "amount": 57820.0
+          },
+          {
+            "vendor": "S & S ABATEMENT LLC",
+            "amount": 6975.0
+          },
+          {
+            "vendor": "OLGA VOYTAZH",
+            "amount": 500.0
+          }
+        ]
+      }
     },
     "human_resources": {
       "name": "Human Resources",
@@ -1383,7 +1414,8 @@
           "fy": 2026,
           "headcount": 3
         }
-      ]
+      ],
+      "checkbook": null
     },
     "community_development": {
       "name": "Community Development & Planning",
@@ -1503,7 +1535,8 @@
           "fy": 2026,
           "headcount": 5
         }
-      ]
+      ],
+      "checkbook": null
     },
     "police": {
       "name": "Police Department",
@@ -1721,7 +1754,35 @@
           "fy": 2026,
           "headcount": 68
         }
-      ]
+      ],
+      "checkbook": {
+        "kind": "grant_capital",
+        "fiscal_year": "FY26",
+        "total": 199649.45,
+        "count": 17,
+        "top_vendors": [
+          {
+            "vendor": "CROSSROADS BANK",
+            "amount": 45592.35
+          },
+          {
+            "vendor": "AMCHAR WHOLESALE INC",
+            "amount": 34555.24
+          },
+          {
+            "vendor": "FIRST AMERICAN COMMERCIAL BANCORP INC",
+            "amount": 23759.97
+          },
+          {
+            "vendor": "TMDE CALIBRATION LAB,INC",
+            "amount": 21685.0
+          },
+          {
+            "vendor": "CN FINANCING INC",
+            "amount": 21537.25
+          }
+        ]
+      }
     },
     "fire": {
       "name": "Fire Department",
@@ -1885,7 +1946,31 @@
           "fy": 2026,
           "headcount": 40
         }
-      ]
+      ],
+      "checkbook": {
+        "kind": "grant_capital",
+        "fiscal_year": "FY26",
+        "total": 42531.8,
+        "count": 4,
+        "top_vendors": [
+          {
+            "vendor": "CROSSROADS BANK",
+            "amount": 15703.94
+          },
+          {
+            "vendor": "FIRE TECH & SAFETY",
+            "amount": 14898.35
+          },
+          {
+            "vendor": "COMMONWEALTH OF MA",
+            "amount": 8100.0
+          },
+          {
+            "vendor": "MAD PROMO LLC",
+            "amount": 3829.51
+          }
+        ]
+      }
     },
     "building_inspection": {
       "name": "Building Inspection",
@@ -2057,7 +2142,8 @@
           "fy": 2026,
           "headcount": 10
         }
-      ]
+      ],
+      "checkbook": null
     },
     "sealer_weights_measures": {
       "name": "Sealer of Weights & Measures",
@@ -2090,7 +2176,8 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": null
     },
     "animal_inspector": {
       "name": "Animal Inspector",
@@ -2160,7 +2247,8 @@
           "fy": 2016,
           "headcount": 1
         }
-      ]
+      ],
+      "checkbook": null
     },
     "public_works_ops": {
       "name": "Public Works Operations",
@@ -2329,7 +2417,35 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": {
+        "kind": "grant_capital",
+        "fiscal_year": "FY26",
+        "total": 894975.46,
+        "count": 148,
+        "top_vendors": [
+          {
+            "vendor": "WOODARD & CURRAN INC",
+            "amount": 305721.83
+          },
+          {
+            "vendor": "COLONIAL FORD INC",
+            "amount": 84265.3
+          },
+          {
+            "vendor": "SEALCOATING INC  ( DBA INDUS)",
+            "amount": 67833.35
+          },
+          {
+            "vendor": "ALL AMERICAN INVESTMENT GROUP LLC",
+            "amount": 67104.52
+          },
+          {
+            "vendor": "CN FINANCING INC",
+            "amount": 63215.61
+          }
+        ]
+      }
     },
     "waste_collection": {
       "name": "Waste Collection",
@@ -2432,7 +2548,35 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": {
+        "kind": "grant_capital",
+        "fiscal_year": "FY26",
+        "total": 2183889.21,
+        "count": 79,
+        "top_vendors": [
+          {
+            "vendor": "DELULIS BROTHERS CONSTRUCTION CO INC",
+            "amount": 1525193.65
+          },
+          {
+            "vendor": "WASTE MANAGEMENT OF MA INC.",
+            "amount": 343725.89
+          },
+          {
+            "vendor": "WINTER ST. ARCHITECTS INC",
+            "amount": 72313.76
+          },
+          {
+            "vendor": "MARCOTTE FORD SALES INC",
+            "amount": 57820.0
+          },
+          {
+            "vendor": "JOHN DEERE FINANCIAL",
+            "amount": 55994.97
+          }
+        ]
+      }
     },
     "curbside_collection": {
       "name": "Curbside Collection",
@@ -2527,7 +2671,8 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": null
     },
     "cemetery": {
       "name": "Cemetery",
@@ -2695,7 +2840,35 @@
           "fy": 2026,
           "headcount": 9
         }
-      ]
+      ],
+      "checkbook": {
+        "kind": "grant_capital",
+        "fiscal_year": "FY26",
+        "total": 148056.25,
+        "count": 12,
+        "top_vendors": [
+          {
+            "vendor": "RAFFAELE CONSTRUCTION",
+            "amount": 126706.25
+          },
+          {
+            "vendor": "VILLAGE GREEN RESTORATION INC",
+            "amount": 9700.0
+          },
+          {
+            "vendor": "ONE TIME PAY",
+            "amount": 6000.0
+          },
+          {
+            "vendor": "FALLON TREE CARE",
+            "amount": 5500.0
+          },
+          {
+            "vendor": "MARBLEHEAD NEWS GROUP",
+            "amount": 150.0
+          }
+        ]
+      }
     },
     "health": {
       "name": "Health Department",
@@ -2851,7 +3024,35 @@
           "fy": 2026,
           "headcount": 3
         }
-      ]
+      ],
+      "checkbook": {
+        "kind": "grant_capital",
+        "fiscal_year": "FY26",
+        "total": 76980.35,
+        "count": 25,
+        "top_vendors": [
+          {
+            "vendor": "BETH ISRAEL LAHEY HEALTH PRIMARY",
+            "amount": 23691.86
+          },
+          {
+            "vendor": "UNIVERSITY OF MASSACHUSETTS",
+            "amount": 20000.0
+          },
+          {
+            "vendor": "BLOOM ED INC",
+            "amount": 14500.0
+          },
+          {
+            "vendor": "SANOFI PASTEUR INC",
+            "amount": 8390.31
+          },
+          {
+            "vendor": "LAHEY CLINIC INC",
+            "amount": 5878.14
+          }
+        ]
+      }
     },
     "council_on_aging": {
       "name": "Council on Aging",
@@ -3017,7 +3218,35 @@
           "fy": 2026,
           "headcount": 12
         }
-      ]
+      ],
+      "checkbook": {
+        "kind": "grant_capital",
+        "fiscal_year": "FY26",
+        "total": 159844.9,
+        "count": 271,
+        "top_vendors": [
+          {
+            "vendor": "TAYLOR PRICE",
+            "amount": 46689.0
+          },
+          {
+            "vendor": "NEW GENERATION LANDSCAPING & FENCE INC",
+            "amount": 18500.0
+          },
+          {
+            "vendor": "ADVANTAGE SPORT & FITNESS INC",
+            "amount": 16717.5
+          },
+          {
+            "vendor": "KIMBERLY ANNE CROWLEY",
+            "amount": 14740.0
+          },
+          {
+            "vendor": "KAREN JANCSY",
+            "amount": 7515.0
+          }
+        ]
+      }
     },
     "veterans_benefits": {
       "name": "Veterans' Benefits",
@@ -3161,7 +3390,35 @@
           "fy": 2026,
           "headcount": 1
         }
-      ]
+      ],
+      "checkbook": {
+        "kind": "grant_capital",
+        "fiscal_year": "FY26",
+        "total": 37518.18,
+        "count": 55,
+        "top_vendors": [
+          {
+            "vendor": "JOHN B MENDONCA",
+            "amount": 13160.18
+          },
+          {
+            "vendor": "FREDERICK B HAGGETT",
+            "amount": 7560.0
+          },
+          {
+            "vendor": "SCOTT M SANDERS",
+            "amount": 7020.0
+          },
+          {
+            "vendor": "DONALD L ORNE JR",
+            "amount": 5926.0
+          },
+          {
+            "vendor": "BOWDOIN B CROWNINSHIELD",
+            "amount": 3352.0
+          }
+        ]
+      }
     },
     "library": {
       "name": "Abbot Public Library",
@@ -3406,7 +3663,8 @@
           "fy": 2026,
           "headcount": 27
         }
-      ]
+      ],
+      "checkbook": null
     },
     "rec_park": {
       "name": "Recreation & Parks",
@@ -3584,7 +3842,35 @@
           "fy": 2026,
           "headcount": 26
         }
-      ]
+      ],
+      "checkbook": {
+        "kind": "enterprise",
+        "fiscal_year": "FY26",
+        "total": 760089.24,
+        "count": 654,
+        "top_vendors": [
+          {
+            "vendor": "LEAH GOODMAN",
+            "amount": 90675.3
+          },
+          {
+            "vendor": "DELANDE SUPPLY CO INC",
+            "amount": 57231.6
+          },
+          {
+            "vendor": "ONE TIME PAY",
+            "amount": 38371.0
+          },
+          {
+            "vendor": "UNIVEST CAPITAL INC",
+            "amount": 38305.07
+          },
+          {
+            "vendor": "HAM ELECTRIC LLC",
+            "amount": 35290.12
+          }
+        ]
+      }
     },
     "memorial_veterans_day": {
       "name": "Memorial & Veterans Day",
@@ -3617,7 +3903,8 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": null
     },
     "debt_service": {
       "name": "Debt Service",
@@ -3658,7 +3945,8 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": null
     },
     "other_general_government_dept": {
       "name": "Other General Government",
@@ -3811,7 +4099,8 @@
         }
       ],
       "line_items_reconcile": true,
-      "headcount": null
+      "headcount": null,
+      "checkbook": null
     },
     "sewer": {
       "name": "Sewer Department",
@@ -3937,7 +4226,35 @@
           "fy": 2026,
           "headcount": 10
         }
-      ]
+      ],
+      "checkbook": {
+        "kind": "enterprise",
+        "fiscal_year": "FY26",
+        "total": 4280539.25,
+        "count": 48,
+        "top_vendors": [
+          {
+            "vendor": "SOUTH ESSEX SEWERAGE DISTRICT",
+            "amount": 3267244.87
+          },
+          {
+            "vendor": "CN WOOD CO INC",
+            "amount": 654565.0
+          },
+          {
+            "vendor": "N GRANESE & SONS INC",
+            "amount": 236141.98
+          },
+          {
+            "vendor": "DAGLE ELECTRICAL CONSTRUCTION CORP",
+            "amount": 49978.75
+          },
+          {
+            "vendor": "HALEY WARD, INC",
+            "amount": 42585.0
+          }
+        ]
+      }
     },
     "water": {
       "name": "Water Department",
@@ -4063,7 +4380,35 @@
           "fy": 2026,
           "headcount": 17
         }
-      ]
+      ],
+      "checkbook": {
+        "kind": "enterprise",
+        "fiscal_year": "FY26",
+        "total": 5750956.87,
+        "count": 72,
+        "top_vendors": [
+          {
+            "vendor": "MASSACHUSETTS WATER RESOURCES AUTHORITY",
+            "amount": 3756709.0
+          },
+          {
+            "vendor": "N GRANESE & SONS INC",
+            "amount": 912978.61
+          },
+          {
+            "vendor": "ONE TIME PAY",
+            "amount": 733599.62
+          },
+          {
+            "vendor": "HALEY WARD, INC",
+            "amount": 299937.75
+          },
+          {
+            "vendor": "EVERETT J PRESCOTT INC",
+            "amount": 28459.74
+          }
+        ]
+      }
     },
     "harbor": {
       "name": "Harbormaster",
@@ -4189,7 +4534,35 @@
           "fy": 2026,
           "headcount": 17
         }
-      ]
+      ],
+      "checkbook": {
+        "kind": "enterprise",
+        "fiscal_year": "FY26",
+        "total": 715734.59,
+        "count": 35,
+        "top_vendors": [
+          {
+            "vendor": "WILLIAM E MUNSON COMPANY INC",
+            "amount": 591015.0
+          },
+          {
+            "vendor": "LA  MANAGEMENT INC",
+            "amount": 90352.0
+          },
+          {
+            "vendor": "COLLINS ENGINEERS INC",
+            "amount": 9957.5
+          },
+          {
+            "vendor": "MAG RETAIL HOLDINGS - FBV LLC",
+            "amount": 6649.61
+          },
+          {
+            "vendor": "LAND N SEA DISTRIBUTING, INC",
+            "amount": 6560.85
+          }
+        ]
+      }
     },
     "school_brown": {
       "name": "Brown Elementary School",
@@ -4583,7 +4956,8 @@
           "fy": 2026,
           "headcount": 88
         }
-      ]
+      ],
+      "checkbook": null
     },
     "school_glover": {
       "name": "Glover Elementary School",
@@ -4981,7 +5355,8 @@
           "fy": 2026,
           "headcount": 66
         }
-      ]
+      ],
+      "checkbook": null
     },
     "school_village": {
       "name": "Village Elementary School",
@@ -5403,7 +5778,8 @@
           "fy": 2026,
           "headcount": 90
         }
-      ]
+      ],
+      "checkbook": null
     },
     "school_middle": {
       "name": "Marblehead Veterans Middle School",
@@ -5897,7 +6273,8 @@
           "fy": 2026,
           "headcount": 65
         }
-      ]
+      ],
+      "checkbook": null
     },
     "school_high": {
       "name": "Marblehead High School",
@@ -6639,7 +7016,8 @@
           "fy": 2026,
           "headcount": 125
         }
-      ]
+      ],
+      "checkbook": null
     },
     "school_athletics": {
       "name": "School Athletics",
@@ -6768,7 +7146,8 @@
         }
       ],
       "line_items_reconcile": false,
-      "headcount": null
+      "headcount": null,
+      "checkbook": null
     }
   }
 }

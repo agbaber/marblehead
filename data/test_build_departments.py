@@ -130,6 +130,41 @@ def test_department_without_override_has_adopted_equal_proposed():
     assert b["fy27_adopted"] == b["fy27_proposed"]
 
 
+def test_police_checkbook_is_grant_capital_with_vendors():
+    view = build_view()
+    cb = view["departments"]["police"]["checkbook"]
+    assert cb is not None
+    assert cb["kind"] == "grant_capital"
+    assert cb["total"] > 0 and cb["count"] > 0
+    assert cb["top_vendors"] and "vendor" in cb["top_vendors"][0]
+
+
+def test_sewer_checkbook_is_enterprise_and_material():
+    view = build_view()
+    cb = view["departments"]["sewer"]["checkbook"]
+    assert cb is not None and cb["kind"] == "enterprise"
+    # Dominated by the South Essex regional sewer assessment (~$3.27M).
+    assert cb["total"] > 3_000_000
+
+
+def test_general_fund_department_has_no_checkbook_attribution():
+    view = build_view()
+    assert view["departments"]["finance"]["checkbook"] is None
+
+
+def test_checkbook_fund_names_all_exist_in_the_db():
+    import sqlite3
+    from build_departments_data import _CHECKBOOK_FUNDS
+    db = ROOT / "assets" / "data" / "marbleheaddata.sqlite"
+    con = sqlite3.connect(f"file:{db}?mode=ro", uri=True)
+    real = {r[0] for r in con.execute(
+        "SELECT DISTINCT department FROM vendor_payments WHERE department IS NOT NULL")}
+    con.close()
+    for key, funds in _CHECKBOOK_FUNDS.items():
+        for fund in funds:
+            assert fund in real, f"{key}: fund {fund!r} not in checkbook DB (typo?)"
+
+
 def test_police_has_position_roster_from_org_chart():
     view = build_view()
     st = view["departments"]["police"]["staffing"]
