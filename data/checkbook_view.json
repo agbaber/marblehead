@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-07-14",
+    "date": "2026-07-16",
     "fiscal_year": "FY27",
-    "row_count": 97,
-    "total_paid": 19737097.83,
+    "row_count": 99,
+    "total_paid": 19736857.83,
     "interfund_total": 0,
-    "external_paid": 19737097.83,
+    "external_paid": 19736857.83,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-07-14",
-    "source_file": "checkbook_FY27_2026-07-14.csv"
+    "last_payment": "2026-07-16",
+    "source_file": "checkbook_FY27_2026-07-16.csv"
   },
   "buckets": [
     {
@@ -23,14 +23,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 17813886.64,
+      "amount": 17813646.64,
       "share": 0.9026,
       "fund_count": 2,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 17683566.51,
-          "row_count": 81
+          "amount": 17683326.51,
+          "row_count": 83
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -106,12 +106,12 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 17683566.51,
+    "total": 17683326.51,
     "fixed_total": 17374707.69,
     "fixed_share": 0.9825,
     "admin_contracts_total": 236328.16,
     "admin_contracts_share": 0.0134,
-    "other_recurring_total": 72530.66,
+    "other_recurring_total": 72290.66,
     "other_recurring_share": 0.0041,
     "segments": [
       {
@@ -190,9 +190,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 72530.66,
+        "amount": 72290.66,
         "share": 0.0041,
-        "row_count": 46,
+        "row_count": 48,
         "top_vendors": [
           {
             "name": "FIFTH ASSET, INC",
