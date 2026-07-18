@@ -350,6 +350,12 @@ og_url: https://marbleheaddata.org/departments.html
           '<td class="dx-amt dx-avg">' + avg + '</td></tr>';
       });
       inner += '</tbody></table></div>';
+      // Roster salaries come from the FY27 *proposed* (no-override) budget; where
+      // the override restored staffing cuts, some positions are funded higher in
+      // the adopted budget (e.g. a department head proposed for a part-time cut).
+      if (d.budget.override_added) {
+        inner += '<p class="dx-caveat"><small>These are the salaries in the FY27 proposed (no-override) budget. The override restored some of the proposed staffing cuts, so a few positions here &ndash; a department head reduced to part-time, an eliminated role &ndash; are funded higher in the adopted budget below.</small></p>';
+      }
       if (d.headcount && d.headcount.length) {
         var hf = d.headcount[0], hl = d.headcount[d.headcount.length - 1];
         inner += '<p class="dx-src"><small>Headcount over time (part-time and seasonal included, not <abbr class="g" title="Full-Time Equivalent">FTE</abbr>): ' +
@@ -392,6 +398,7 @@ og_url: https://marbleheaddata.org/departments.html
             '</td><td class="dx-amt">' + fmtUSD(tv.amount) + '</td></tr>';
         });
         cbInner += '</tbody></table></div>';
+        cbInner += '<p class="dx-src"><small>Descriptions are the town&rsquo;s own labels, sometimes abbreviated in the export.</small></p>';
       }
       cbInner += '<p class="dx-deepdive"><a href="/checkbook/">Browse the full checkbook &rarr;</a></p>';
     } else {
