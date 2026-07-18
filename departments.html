@@ -332,7 +332,7 @@ og_url: https://marbleheaddata.org/departments.html
       if (s.fte != null) line += ': about ' + s.fte + ' budgeted positions';
       if (s.salary_total != null) line += ', ' + fmtUSD(s.salary_total) + ' in salaries';
       line += '.';
-      if (s.fte_basis) line += ' Counts are ' + esc(s.fte_basis) + '.';
+      if (s.fte_basis) line += ' Counts are ' + esc(s.fte_basis).replace(/\.\s*$/, '') + '.';
       inner += '<p>' + line + '</p>';
       var ps = s.position_summary || {}, chg = [];
       if (ps.new) chg.push(ps.new + ' new');
