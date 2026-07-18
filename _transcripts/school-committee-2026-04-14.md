@@ -10,7 +10,20 @@ duration_seconds: 62
 date_approximate: true
 ai_generated: true
 status: published
-source: youtube-auto
+source: youtube-auto+llm
+
+summary_card:
+  headline: "Pre-meeting informal conversation captured before session began"
+  summary: "The transcript consists entirely of informal pre-meeting conversation among board members discussing personal topics such as Easter travel, family, and church attendance. No official business, votes, or decisions were recorded. The meeting's formal proceedings do not appear to have been captured in this transcript."
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.2
+    start_seconds: 1
+    end_seconds: 60
+    headline: "Informal pre-meeting chatter only — no official business recorded"
+    dek: "The recording captured only personal conversation before the formal session began."
+    summary: "The transcript contains no official meeting content. Participants discussed Easter vacation, family members, church attendance, and a son in graduate school. One participant noted they were about to start the recording at approximately the 50-second mark, suggesting the formal meeting had not yet begun when this segment was captured."
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;
