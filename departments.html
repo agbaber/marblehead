@@ -100,6 +100,19 @@ og_url: https://marbleheaddata.org/departments.html
   .dx-deepdive { margin: 12px 0 0; font-weight: 600; }
   .dx-deepdive a { color: var(--c-teal); }
   .dx-vpurpose { display: block; font-size: 0.6875rem; color: var(--text-muted); font-weight: 400; margin-top: 1px; }
+  /* Avg / person: its own column on desktop; folded under FY27 amount on mobile
+     so the roster never needs horizontal scroll. */
+  .dx-avg-inline { display: none; }
+  .dx-chg-inline { display: none; }
+  @media (max-width: 560px) {
+    .dx-roster th:nth-child(4), .dx-roster td:nth-child(4) { display: none; }
+    .dx-avg-inline {
+      display: block; font-size: 0.625rem; color: var(--text-muted);
+      font-weight: 400; margin-top: 1px;
+    }
+    .dx-money th:nth-child(4), .dx-money td:nth-child(4) { display: none; }
+    .dx-chg-inline { display: block; font-size: 0.625rem; font-weight: 400; margin-top: 1px; }
+  }
 
   /* ---- Profile layout: header, stat tiles, section cards ---- */
   .dx-profile-hd { margin: 4px 0 16px; }
@@ -256,7 +269,8 @@ og_url: https://marbleheaddata.org/departments.html
       '</tr></thead><tbody><tr>' +
       '<td>' + fmtUSD(b.fy25_actual) + '</td>' +
       '<td>' + fmtUSD(b.fy26_budget) + '</td>' +
-      '<td>' + fmtUSD(b.fy27_adopted) + '</td>' +
+      '<td>' + fmtUSD(b.fy27_adopted) +
+        '<span class="dx-chg-inline ' + changeClass(b.change_pct) + '">' + fmtPct(b.change_pct) + ' vs FY26</span></td>' +
       '<td class="' + changeClass(b.change_pct) + '">' +
       fmtUSD(b.change_dollars) + ' (' + fmtPct(b.change_pct) + ')</td>' +
       '</tr></tbody></table></div>';
@@ -331,7 +345,8 @@ og_url: https://marbleheaddata.org/departments.html
         var avg = (pos.count > 1 && pos.fy27 != null) ? fmtUSD(pos.fy27 / pos.count) : '';
         inner += '<tr><td>' + esc(pos.title) + '</td>' +
           '<td class="dx-amt">' + (pos.count != null ? pos.count : '') + '</td>' +
-          '<td class="dx-amt">' + fmtUSD(pos.fy27) + '</td>' +
+          '<td class="dx-amt">' + fmtUSD(pos.fy27) +
+            (avg ? '<span class="dx-avg-inline">' + avg + ' / person</span>' : '') + '</td>' +
           '<td class="dx-amt dx-avg">' + avg + '</td></tr>';
       });
       inner += '</tbody></table></div>';
