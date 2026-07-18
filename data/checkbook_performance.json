@@ -233,9 +233,9 @@
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 272744.02,
-        "delta": -1852708.98,
-        "pct": 12.83
+        "actual": 272504.02,
+        "delta": -1852948.98,
+        "pct": 12.82
       },
       {
         "name": "CURBSIDE COLLECTION",
@@ -281,9 +281,9 @@
       },
       {
         "name": "BROWN SCHOOL",
-        "revised": 5422623.26,
+        "revised": 5424062.26,
         "actual": 13035.9,
-        "delta": -5409587.36,
+        "delta": -5411026.36,
         "pct": 0.24
       },
       {
@@ -323,9 +323,9 @@
       },
       {
         "name": "DISTRICTWIDE",
-        "revised": 13090519.6,
+        "revised": 13089080.6,
         "actual": 114716.13,
-        "delta": -12975803.47,
+        "delta": -12974364.47,
         "pct": 0.88
       },
       {
@@ -346,9 +346,9 @@
       },
       {
         "name": "DISTRICTWIDE",
-        "revised": 13090519.6,
+        "revised": 13089080.6,
         "actual": 114716.13,
-        "delta": -12975803.47,
+        "delta": -12974364.47,
         "pct": 0.88
       },
       {
@@ -395,9 +395,9 @@
       },
       {
         "name": "BROWN SCHOOL",
-        "revised": 5422623.26,
+        "revised": 5424062.26,
         "actual": 13035.9,
-        "delta": -5409587.36,
+        "delta": -5411026.36,
         "pct": 0.24
       },
       {
@@ -445,9 +445,9 @@
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 272744.02,
-        "delta": -1852708.98,
-        "pct": 12.83
+        "actual": 272504.02,
+        "delta": -1852948.98,
+        "pct": 12.82
       },
       {
         "name": "WASTE COLLECTION",
