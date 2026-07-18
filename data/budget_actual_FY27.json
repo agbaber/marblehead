@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-07-17",
+  "as_of": "2026-07-18",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-07-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
@@ -31,7 +31,7 @@
       "revised_budget": 47620287.0,
       "actual": 194178.57,
       "original_budget": 47620287.0,
-      "encumbrance": 6454345.88
+      "encumbrance": 6455775.85
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -89,7 +89,7 @@
       "revised_budget": 11552590.13,
       "actual": 25072.23,
       "original_budget": 11552590.13,
-      "encumbrance": 662444.11
+      "encumbrance": 662520.58
     },
     {
       "name": "DEBT SERVICE",
@@ -103,7 +103,7 @@
       "revised_budget": 7545798.37,
       "actual": 16293.97,
       "original_budget": 7545798.37,
-      "encumbrance": 380860.63
+      "encumbrance": 381841.75
     },
     {
       "name": "WATER",
@@ -152,7 +152,7 @@
       "revised_budget": 4284992.96,
       "actual": 7906.56,
       "original_budget": 4284992.96,
-      "encumbrance": 199722.9
+      "encumbrance": 200095.28
     },
     {
       "name": "PUBLIC WORKS",
@@ -441,7 +441,7 @@
       "revised_budget": 2458724.0,
       "actual": 0.0,
       "original_budget": 2458724.0,
-      "encumbrance": 295128.67
+      "encumbrance": 296558.64
     },
     {
       "name": "CAPITAL",
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 194178.57,
       "original_budget": 47615287.0,
-      "encumbrance": 6454345.88
+      "encumbrance": 6455775.85
     },
     {
       "name": "SALARIES",
@@ -1180,7 +1180,7 @@
       "revised_budget": 616618.0,
       "actual": 0.0,
       "original_budget": 616618.0,
-      "encumbrance": 113782.35
+      "encumbrance": 114779.26
     },
     {
       "name": "OTHER PROF & TECHNICAL",
@@ -2076,7 +2076,7 @@
       "revised_budget": 56929.0,
       "actual": 0.0,
       "original_budget": 56929.0,
-      "encumbrance": 8567.56
+      "encumbrance": 8924.15
     },
     {
       "name": "MISC OFFICE SUPPLIES",
@@ -2223,7 +2223,7 @@
       "revised_budget": 35750.0,
       "actual": 0.0,
       "original_budget": 35750.0,
-      "encumbrance": 2886.18
+      "encumbrance": 2962.65
     },
     {
       "name": "POLICE POST STIPEND",
