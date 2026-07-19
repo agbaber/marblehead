@@ -22,13 +22,17 @@ export const ALIASES = {
   'reclassification and pay schedule (traffic supervisors)': 'proposed reclassification and pay schedule (traffic supervisors)',
   'proposed pay schedule and reclassification (traffic supervisors)': 'proposed reclassification and pay schedule (traffic supervisors)',
   'reclassification and pay schedule (seasonal and temporary)': 'proposed reclassification and pay schedule (seasonal and temporary personnel)',
-  'proposed reclassification and pay schedule (seasonal and temporary)': 'proposed reclassification and pay schedule (seasonal and temporary personnel)',
   'supplemental appropriation and expenses for the schools': 'supplemental appropriation for the schools',
   'supplemental appropriation for several departments': 'supplemental expenses of several departments',
   'supplemental appropriation and expenses of several departments': 'supplemental expenses of several departments',
-  'collective bargaining, police': 'collective bargaining (police)',
-  'mwra local water system assistance program (interest-free loan)': 'mwra local water system assistance program',
 };
+
+function rawNormalize(title) {
+  let t = String(title).toLowerCase().trim();
+  t = t.replace(/[^a-z0-9() ]+/g, ' ');
+  t = t.replace(/\s+/g, ' ').trim();
+  return t;
+}
 
 // Slug -> kind. Anything not listed is 'other_article'. budget_line
 // series (omnibus decomposition by department) are a later corpus pass.
@@ -117,9 +121,7 @@ export function parseCsv(text) {
 }
 
 export function normalizeTitle(rawTitle) {
-  let t = String(rawTitle).toLowerCase().trim();
-  t = t.replace(/[^a-z0-9() ]+/g, ' ');
-  t = t.replace(/\s+/g, ' ').trim();
+  const t = rawNormalize(rawTitle);
   return ALIASES[t] || t;
 }
 
@@ -143,9 +145,7 @@ export function buildSeries(resultRows) {
     const year = Number(row.meeting_year);
 
     // Raw normalize (without alias)
-    let rawNormalized = String(row.title).toLowerCase().trim();
-    rawNormalized = rawNormalized.replace(/[^a-z0-9() ]+/g, ' ');
-    rawNormalized = rawNormalized.replace(/\s+/g, ' ').trim();
+    const rawNormalized = rawNormalize(row.title);
 
     // Apply alias for canonical form
     const normalized = ALIASES[rawNormalized] || rawNormalized;

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  parseCsv, normalizeTitle, slugify, deriveKind, buildSeries
+  ALIASES, parseCsv, normalizeTitle, slugify, deriveKind, buildSeries
 } from '../../scripts/warrant_lib.mjs';
 
 describe('parseCsv', () => {
@@ -72,5 +72,18 @@ describe('buildSeries', () => {
       normalized_title: 'expense of several departments',
       slug: 'expenses-of-several-departments',
     });
+  });
+});
+
+describe('ALIASES hygiene', () => {
+  it('every alias key is in stripped form so lookups can actually fire', () => {
+    for (const [key, canonical] of Object.entries(ALIASES)) {
+      expect(normalizeTitle(key)).toBe(canonical);
+    }
+  });
+  it('every alias canonical is itself canonical (a normalization fixed point)', () => {
+    for (const canonical of new Set(Object.values(ALIASES))) {
+      expect(normalizeTitle(canonical)).toBe(canonical);
+    }
   });
 });
