@@ -1716,7 +1716,7 @@ svg.chart--stacked .end-label { display: block; }
    State is carried by shape and label, not by hue: a single dot marks a new
    function, a dashed grey ring a line that no longer appears. No green/red
    valence, so neither reads as good or bad. */
-svg.chart .dumbbell-connector   { stroke: var(--c-text-sub); stroke-width: 2; }
+svg.chart .dumbbell-connector   { stroke: var(--c-text-sub); stroke-width: 3; }
 svg.chart .dumbbell-dot--then   { fill: var(--c-surface); stroke: var(--c-navy); stroke-width: 1.5; }
 svg.chart .dumbbell-dot--now    { fill: var(--c-navy); }
 svg.chart .dumbbell-dot--new    { fill: var(--c-navy); }
@@ -1724,6 +1724,7 @@ svg.chart .dumbbell-dot--retired{ fill: none; stroke: var(--c-text-sub); stroke-
 svg.chart .dumbbell-label       { fill: var(--c-text); font-size: 11px; }
 svg.chart .dumbbell-value       { fill: var(--c-text-sub); font-size: 10px; }
 svg.chart .dumbbell-arrow       { fill: var(--c-navy); }
+svg.chart .dumbbell-delta       { fill: var(--c-navy); font-weight: 700; }
 
 /* Quarantine cards on town-staffing-over-time.html. Self-contained (not the
    org-chart .org-card details-widget, which carries its own padding on the
