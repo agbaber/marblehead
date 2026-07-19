@@ -64,3 +64,7 @@ _site_test/
 # Scratch worktree dirs created by sessions on the Hetzner box.
 # These are gitlinks to other local clones; never commit them.
 .dev/
+
+# Local raw cache + full CSV for the parcel dataset (committed CSV is de-identified).
+# The full file contains owner names + mailing addresses (public record, kept local).
+data/parcels_raw/
