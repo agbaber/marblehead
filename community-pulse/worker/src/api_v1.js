@@ -2,6 +2,8 @@
 // Open CORS by design: this is public-record data. Write endpoints do
 // not belong in this module; they stay session-authed elsewhere.
 
+import { OPENAPI } from './openapi.js';
+
 const V1_HEADERS = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, OPTIONS',
@@ -85,6 +87,20 @@ async function handleSeriesDetail(request, env, slug) {
   return jsonResponse(request, { ...series, instances });
 }
 
+async function handleMeetingYear(request, env, year) {
+  const { results } = await env.DB.prepare(
+    'SELECT series_slug, meeting_year, meeting_type, meeting_date, article_number, ' +
+    'title, tm_result, tm_vote_yes, tm_vote_no, in_effect, notes, source_doc, source_url ' +
+    'FROM article_instances WHERE meeting_year = ? ' +
+    'ORDER BY meeting_type ASC, article_number ASC'
+  ).bind(year).all();
+
+  if (results.length === 0) {
+    return jsonResponse(request, { error: 'not found' }, { status: 404, maxAge: 0 });
+  }
+  return jsonResponse(request, { year, articles: results });
+}
+
 export async function handleApiV1(request, env, url) {
   if (!url.pathname.startsWith('/api/v1/') && url.pathname !== '/api/v1') return null;
   if (request.method === 'OPTIONS') {
@@ -111,6 +127,15 @@ export async function handleApiV1(request, env, url) {
   const seriesMatch = path.match(/^\/api\/v1\/series\/([a-z0-9-]+)$/);
   if (seriesMatch) {
     return handleSeriesDetail(request, env, seriesMatch[1]);
+  }
+
+  if (path === '/api/v1/openapi.json') {
+    return jsonResponse(request, OPENAPI, { maxAge: 3600 });
+  }
+
+  const meetingsMatch = path.match(/^\/api\/v1\/meetings\/(\d{4})$/);
+  if (meetingsMatch) {
+    return handleMeetingYear(request, env, Number(meetingsMatch[1]));
   }
 
   return jsonResponse(request, { error: 'not found' }, { status: 404, maxAge: 0 });

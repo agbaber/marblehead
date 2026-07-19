@@ -129,3 +129,35 @@ describe('GET /api/v1/series/:slug', () => {
     expect(await res.json()).toEqual({ error: 'not found' });
   });
 });
+
+describe('GET /api/v1/meetings/:year', () => {
+  it('returns all articles for a year', async () => {
+    const res = await get('/api/v1/meetings/2025');
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    expect(body.year).toBe(2025);
+    expect(body.articles).toHaveLength(2);
+    expect(body.articles.map(a => a.series_slug).sort())
+      .toEqual(['consent-articles', 'walls-and-fences']);
+  });
+
+  it('404s a year with no data', async () => {
+    const res = await get('/api/v1/meetings/1999');
+    expect(res.status).toBe(404);
+  });
+
+  it('falls through to 404 for a non-numeric year', async () => {
+    const res = await get('/api/v1/meetings/abc');
+    expect(res.status).toBe(404);
+  });
+});
+
+describe('GET /api/v1/openapi.json', () => {
+  it('serves an OpenAPI 3.1 document listing the endpoints', async () => {
+    const res = await get('/api/v1/openapi.json');
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    expect(body.openapi).toBe('3.1.0');
+    expect(Object.keys(body.paths)).toContain('/api/v1/series/{slug}');
+  });
+});
