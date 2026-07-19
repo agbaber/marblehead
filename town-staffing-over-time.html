@@ -212,12 +212,12 @@ og_url: https://marbleheaddata.org/town-staffing-over-time.html
 
 <p>These payroll lines change for reasons other than town staffing decisions, so they sit apart from the chart above.</p>
 
-<div class="org-cluster-grid">
+<div class="sq-grid">
   {% for q in site.data.town_staffing.quarantine %}
-  <div class="org-card">
-    <span class="org-card-dept">{{ q.name }}</span>
-    <span class="org-card-fte">{{ q.fy08 }} to {{ q.fy26 }}</span>
-    <p class="org-card-note">{{ q.caveat }}</p>
+  <div class="sq-card">
+    <span class="sq-dept">{{ q.name }}</span>
+    <span class="sq-delta">{{ q.fy08 }} to {{ q.fy26 }}</span>
+    <p class="sq-note">{{ q.caveat }}</p>
   </div>
   {% endfor %}
 </div>

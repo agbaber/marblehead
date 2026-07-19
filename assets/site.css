@@ -1724,6 +1724,25 @@ svg.chart .dumbbell-dot--retired{ fill: none; stroke: var(--c-text-sub); stroke-
 svg.chart .dumbbell-label       { fill: var(--c-text); font-size: 11px; }
 svg.chart .dumbbell-value       { fill: var(--c-text-sub); font-size: 10px; }
 
+/* Quarantine cards on town-staffing-over-time.html. Self-contained (not the
+   org-chart .org-card details-widget, which carries its own padding on the
+   summary and would render edge-to-edge here). */
+.sq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin: 14px 0 4px;
+}
+.sq-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+.sq-dept  { display: block; font-weight: 700; font-size: 0.875rem; line-height: 1.25; }
+.sq-delta { display: block; margin: 3px 0 7px; font-size: 0.8125rem; color: var(--c-text-sub); font-feature-settings: "tnum"; }
+.sq-note  { margin: 0; font-size: 0.75rem; line-height: 1.45; color: var(--c-text-mid); }
+
 /* Series color assignments via `color` so currentColor cascades */
 svg.chart .s-marblehead { color: var(--series-marblehead); }
 svg.chart .s-swampscott { color: var(--series-swampscott); }
