@@ -1723,6 +1723,7 @@ svg.chart .dumbbell-dot--new    { fill: var(--c-navy); }
 svg.chart .dumbbell-dot--retired{ fill: none; stroke: var(--c-text-sub); stroke-width: 1.5; stroke-dasharray: 2 2; }
 svg.chart .dumbbell-label       { fill: var(--c-text); font-size: 11px; }
 svg.chart .dumbbell-value       { fill: var(--c-text-sub); font-size: 10px; }
+svg.chart .dumbbell-arrow       { fill: var(--c-navy); }
 
 /* Quarantine cards on town-staffing-over-time.html. Self-contained (not the
    org-chart .org-card details-widget, which carries its own padding on the
