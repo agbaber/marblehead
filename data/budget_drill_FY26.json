@@ -1,5 +1,5 @@
 {
- "as_of": "2026-07-18",
+ "as_of": "2026-07-19",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -321,7 +321,50 @@
      "original_budget": 0
     }
    ],
-   "by_category": []
+   "by_category": [
+    {
+     "name": "PROFESSIONAL SALARY",
+     "revised_budget": 30503799.96,
+     "actual": 29274306.3,
+     "original_budget": 30957452.0
+    },
+    {
+     "name": "CONTRACTED SERVICES",
+     "revised_budget": 7940853.0,
+     "actual": 7903813.61,
+     "original_budget": 7948732.0
+    },
+    {
+     "name": "OTHER SALARIES",
+     "revised_budget": 6571310.04,
+     "actual": 6158184.71,
+     "original_budget": 6449488.0
+    },
+    {
+     "name": "CLERICAL SALARIES",
+     "revised_budget": 1442995.0,
+     "actual": 1542753.34,
+     "original_budget": 1920239.0
+    },
+    {
+     "name": "OTHER EXPENSE",
+     "revised_budget": 1335568.47,
+     "actual": 1148635.91,
+     "original_budget": 815138.0
+    },
+    {
+     "name": "SUPPLIES AND MATL",
+     "revised_budget": 1219582.53,
+     "actual": 996470.64,
+     "original_budget": 934244.0
+    },
+    {
+     "name": "CAPITAL",
+     "revised_budget": 106178.0,
+     "actual": 79032.05,
+     "original_budget": 94994.0
+    }
+   ]
   },
   "WATER ENTERPRISE OPERATING": {
    "rollup": {
@@ -337,7 +380,50 @@
      "original_budget": 6463957.0
     }
    ],
-   "by_category": []
+   "by_category": [
+    {
+     "name": "GOVERNMENTAL",
+     "revised_budget": 3452362.0,
+     "actual": 3197743.29,
+     "original_budget": 3452362.0
+    },
+    {
+     "name": "OTHER EXPENSE",
+     "revised_budget": 1171721.0,
+     "actual": 1059739.89,
+     "original_budget": 1171721.0
+    },
+    {
+     "name": "PROFESSIONAL SALARY",
+     "revised_budget": 1162019.0,
+     "actual": 1117014.18,
+     "original_budget": 1149981.0
+    },
+    {
+     "name": "CONTRACTED SERVICES",
+     "revised_budget": 239600.0,
+     "actual": 128113.41,
+     "original_budget": 239600.0
+    },
+    {
+     "name": "CAPITAL",
+     "revised_budget": 153200.0,
+     "actual": 31538.88,
+     "original_budget": 153200.0
+    },
+    {
+     "name": "OFU",
+     "revised_budget": 151393.0,
+     "actual": 151393.0,
+     "original_budget": 151393.0
+    },
+    {
+     "name": "SUPPLIES AND MATL",
+     "revised_budget": 145700.0,
+     "actual": 105113.37,
+     "original_budget": 145700.0
+    }
+   ]
   },
   "SEWER ENTERPRISE OPERATING": {
    "rollup": {
@@ -404,7 +490,80 @@
     "actual": 2422583.58,
     "original_budget": 1854936.12
    },
-   "by_department": [],
+   "by_department": [
+    {
+     "name": "EDUCATION",
+     "revised_budget": 1275192.26,
+     "actual": 952869.27,
+     "original_budget": 254784.32
+    },
+    {
+     "name": "PUBLIC WORKS",
+     "revised_budget": 1151439.69,
+     "actual": 400694.36,
+     "original_budget": 345721.87
+    },
+    {
+     "name": "PUBLIC BUILDINGS",
+     "revised_budget": 555285.65,
+     "actual": 221637.54,
+     "original_budget": 485285.65
+    },
+    {
+     "name": "DRAINS",
+     "revised_budget": 434970.98,
+     "actual": 282954.33,
+     "original_budget": 434970.98
+    },
+    {
+     "name": "FINANCE",
+     "revised_budget": 253784.93,
+     "actual": 96375.0,
+     "original_budget": 253784.93
+    },
+    {
+     "name": "CEMETERY",
+     "revised_budget": 203000.0,
+     "actual": 135062.17,
+     "original_budget": 23000.0
+    },
+    {
+     "name": "POLICE",
+     "revised_budget": 151267.09,
+     "actual": 145669.21,
+     "original_budget": 3585.09
+    },
+    {
+     "name": "WASTE COLLECTION",
+     "revised_budget": 125996.09,
+     "actual": 113814.97,
+     "original_budget": 0.09
+    },
+    {
+     "name": "PARKS & RECREATION",
+     "revised_budget": 92534.26,
+     "actual": 84557.81,
+     "original_budget": 7975.26
+    },
+    {
+     "name": "FIRE",
+     "revised_budget": 41166.13,
+     "actual": 15703.94,
+     "original_budget": 25462.13
+    },
+    {
+     "name": "SELECT BOARD",
+     "revised_budget": 20265.8,
+     "actual": 2877.0,
+     "original_budget": 20265.8
+    },
+    {
+     "name": "HEALTH",
+     "revised_budget": 100.0,
+     "actual": 0,
+     "original_budget": 100.0
+    }
+   ],
    "by_category": [
     {
      "name": "CAPITAL",
@@ -485,8 +644,52 @@
     "actual": 14227459.21,
     "original_budget": 0.0
    },
-   "by_department": [],
-   "by_category": []
+   "by_department": [
+    {
+     "name": "LIGHT",
+     "revised_budget": 0,
+     "actual": 14789505.67,
+     "original_budget": 0
+    }
+   ],
+   "by_category": [
+    {
+     "name": "SUPPLIES AND MATL",
+     "revised_budget": 0,
+     "actual": 183355.98,
+     "original_budget": 0
+    },
+    {
+     "name": "PROFESSIONAL SALARY",
+     "revised_budget": 0,
+     "actual": 2990806.48,
+     "original_budget": 0
+    },
+    {
+     "name": "OTHER EXPENSE",
+     "revised_budget": 0,
+     "actual": 2290538.08,
+     "original_budget": 0
+    },
+    {
+     "name": "OFU",
+     "revised_budget": 0,
+     "actual": 368888.0,
+     "original_budget": 0
+    },
+    {
+     "name": "CONTRACTED SERVICES",
+     "revised_budget": 0,
+     "actual": 8820773.13,
+     "original_budget": 0
+    },
+    {
+     "name": "CAPITAL",
+     "revised_budget": 0,
+     "actual": 135144.0,
+     "original_budget": 0
+    }
+   ]
   }
  },
  "by_department": {
@@ -496,7 +699,26 @@
     "actual": 21402081.06,
     "original_budget": 21851072.0
    },
-   "by_category": [],
+   "by_category": [
+    {
+     "name": "OTHER EXPENSE",
+     "revised_budget": 21394850.0,
+     "actual": 21332258.93,
+     "original_budget": 21726072.0
+    },
+    {
+     "name": "PROFESSIONAL SALARY",
+     "revised_budget": 65000.0,
+     "actual": 10339.91,
+     "original_budget": 65000.0
+    },
+    {
+     "name": "CONTRACTED SERVICES",
+     "revised_budget": 60000.0,
+     "actual": 56893.81,
+     "original_budget": 60000.0
+    }
+   ],
    "by_division": [
     {
      "name": "GROUP INSURANCE",
@@ -598,7 +820,14 @@
      "original_budget": 85100.0
     }
    ],
-   "by_division": []
+   "by_division": [
+    {
+     "name": "UNDEFINED",
+     "revised_budget": 14574494.16,
+     "actual": 13983281.53,
+     "original_budget": 17832596.0
+    }
+   ]
   },
   "HIGH SCHOOL": {
    "rollup": {
@@ -862,7 +1091,14 @@
      "original_budget": 13107.0
     }
    ],
-   "by_division": []
+   "by_division": [
+    {
+     "name": "UNDEFINED",
+     "revised_budget": 5857003.0,
+     "actual": 5530474.74,
+     "original_budget": 5569396.0
+    }
+   ]
   },
   "FIRE": {
    "rollup": {
@@ -1077,8 +1313,106 @@
     "actual": 5187666.15,
     "original_budget": 4988272.09
    },
-   "by_category": [],
-   "by_division": []
+   "by_category": [
+    {
+     "name": "PROFESSIONAL SALARY",
+     "revised_budget": 4888382.0,
+     "actual": 4844000.16,
+     "original_budget": 4728160.0
+    },
+    {
+     "name": "CAPITAL",
+     "revised_budget": 151267.09,
+     "actual": 145669.21,
+     "original_budget": 3585.09
+    },
+    {
+     "name": "CONTRACTED SERVICES",
+     "revised_budget": 126797.75,
+     "actual": 114350.33,
+     "original_budget": 108738.0
+    },
+    {
+     "name": "SUPPLIES AND MATL",
+     "revised_budget": 87788.0,
+     "actual": 77601.95,
+     "original_budget": 97113.0
+    },
+    {
+     "name": "OTHER EXPENSE",
+     "revised_budget": 49202.25,
+     "actual": 44340.02,
+     "original_budget": 50676.0
+    }
+   ],
+   "by_division": [
+    {
+     "name": "SALARIES",
+     "revised_budget": 4918382.0,
+     "actual": 4874000.16,
+     "original_budget": 4763160.0
+    },
+    {
+     "name": "EXPENSES",
+     "revised_budget": 233788.0,
+     "actual": 206292.3,
+     "original_budget": 221527.0
+    },
+    {
+     "name": "ATM25A7-POL-2 FORD HYBRIDS",
+     "revised_budget": 45593.0,
+     "actual": 45592.35,
+     "original_budget": 0
+    },
+    {
+     "name": "ATM25A7-POL-CRUISER",
+     "revised_budget": 25000.0,
+     "actual": 23759.97,
+     "original_budget": 0
+    },
+    {
+     "name": "ATM25A6-POL-RADAR REPLACEMENT",
+     "revised_budget": 21690.0,
+     "actual": 0,
+     "original_budget": 0
+    },
+    {
+     "name": "ATM25A7-POL-FORD INTERCEPTOR",
+     "revised_budget": 21538.0,
+     "actual": 21537.25,
+     "original_budget": 0
+    },
+    {
+     "name": "ATM25A6-POL-PORTABLE RADIOS",
+     "revised_budget": 18861.0,
+     "actual": 40545.64,
+     "original_budget": 0
+    },
+    {
+     "name": "ATM25A8-POL-FLOOR REPLCE",
+     "revised_budget": 15000.0,
+     "actual": 14234.0,
+     "original_budget": 0
+    },
+    {
+     "name": "ART 6 2024 PURCHASE OF EQUIP",
+     "revised_budget": 2514.88,
+     "actual": 0,
+     "original_budget": 2514.88
+    },
+    {
+     "name": "ART 7 2024 LEASE PURCHASE",
+     "revised_budget": 650.21,
+     "actual": 0,
+     "original_budget": 650.21
+    },
+    {
+     "name": "A9 2022 PURCHASE OF EQUIP",
+     "revised_budget": 420.0,
+     "actual": 0,
+     "original_budget": 420.0
+    }
+   ]
   },
   "GLOVER SCHOOL": {
    "rollup": {
