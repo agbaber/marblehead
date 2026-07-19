@@ -236,7 +236,7 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Confidence:** Medium-high for article numbers and core titles. Re-verify any individual title against the source PDF before quoting it.
 
 ### Town Meeting Results (398 articles, 2019-2025, 8 meetings)
-- **What it is:** Every warrant article and its voted disposition for the Annual Town Meetings of 2019 through 2025 plus the October 17, 2020 Special Town Meeting. Counted Yes/No tallies where one was recorded (every article from 2024 on, via electronic keypad voting; selected articles earlier).
+- **What it is:** Every warrant article and its voted disposition for the Annual Town Meetings of 2019 through 2025 plus the October 17, 2020 Special Town Meeting. Counted Yes/No tallies where one was recorded (counted tallies for nearly every article from 2024 on via electronic keypad voting; a few omnibus or amended articles carry their tallies in notes instead).
 - **Source:** Annual Town Reports (which reprint each warrant with a "Results of Annual Town Meeting" section) and official Town Meeting minutes PDFs on marbleheadma.gov. Per-row `source_doc` and `source_url` columns.
 - **File:** `town_meeting_results.csv`
 - **Dispositions:** `adopted`, `defeated`, `indefinitely_postponed`, `withdrawn`, `not_taken_up` (the last only for the COVID-trimmed June 29, 2020 session, which acted on Articles 7-31 and passed over the rest; most were re-warranted to the October STM).

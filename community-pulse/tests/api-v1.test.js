@@ -44,7 +44,8 @@ beforeEach(async () => {
   await env.DB.prepare(
     "INSERT INTO article_series (slug, title, kind, first_year, last_year, notes) VALUES " +
     "('walls-and-fences','Walls and Fences','money_article',2019,2025,NULL)," +
-    "('consent-articles','Consent Articles','consent',2024,2025,NULL)"
+    "('consent-articles','Consent Articles','consent',2024,2025,NULL)," +
+    "('empty-series','Empty Series','other_article',2020,2020,NULL)"
   ).run();
   await env.DB.prepare(
     "INSERT INTO article_instances (series_slug, meeting_year, meeting_type, meeting_date, article_number, title, tm_result, tm_vote_yes, tm_vote_no, in_effect, notes, source_doc, source_url) VALUES " +
@@ -94,6 +95,16 @@ describe('GET /api/v1/series', () => {
     expect(walls).toEqual({
       slug: 'walls-and-fences', title: 'Walls and Fences', kind: 'money_article',
       first_year: 2019, last_year: 2025, instance_count: 2,
+    });
+  });
+
+  it('includes series with zero instances', async () => {
+    const res = await get('/api/v1/series');
+    const body = await res.json();
+    const empty = body.series.find(s => s.slug === 'empty-series');
+    expect(empty).toEqual({
+      slug: 'empty-series', title: 'Empty Series', kind: 'other_article',
+      first_year: 2020, last_year: 2020, instance_count: 0,
     });
   });
 

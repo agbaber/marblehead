@@ -1,7 +1,11 @@
 import { describe, it, expect } from 'vitest';
 import {
-  ALIASES, parseCsv, normalizeTitle, slugify, deriveKind, buildSeries
+  ALIASES, KIND_BY_SLUG, parseCsv, normalizeTitle, slugify, deriveKind, buildSeries
 } from '../../scripts/warrant_lib.mjs';
+// Raw import (not readFileSync): tests run inside the vitest-pool-workers
+// sandbox, which has no real host filesystem access, so this reads the
+// corpus at Vite transform time instead.
+import corpusCsv from '../../data/town_meeting_results.csv?raw';
 
 describe('parseCsv', () => {
   it('handles quoted fields containing commas and escaped quotes', () => {
@@ -32,6 +36,8 @@ describe('normalizeTitle', () => {
       .toBe('financial assistance for conservation');
     expect(normalizeTitle('Supplemental Appropriation and Expenses for the Schools'))
       .toBe('supplemental appropriation for the schools');
+    expect(normalizeTitle('Transfer funds to the Special Education Stabilization Account'))
+      .toBe('transfer funds to special education stabilization account');
   });
   it('keeps genuinely different proposals separate', () => {
     expect(normalizeTitle('Ban use of gas-powered Leaf Blowers'))
@@ -84,6 +90,16 @@ describe('ALIASES hygiene', () => {
   it('every alias canonical is itself canonical (a normalization fixed point)', () => {
     for (const canonical of new Set(Object.values(ALIASES))) {
       expect(normalizeTitle(canonical)).toBe(canonical);
+    }
+  });
+});
+
+describe('KIND_BY_SLUG hygiene', () => {
+  it('every kind key is a slug the corpus actually generates', () => {
+    const rows = parseCsv(corpusCsv);
+    const slugs = new Set(buildSeries(rows).series.map(s => s.slug));
+    for (const key of Object.keys(KIND_BY_SLUG)) {
+      expect(slugs.has(key), 'dead KIND_BY_SLUG key: ' + key).toBe(true);
     }
   });
 });
