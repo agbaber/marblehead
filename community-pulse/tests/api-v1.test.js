@@ -84,3 +84,48 @@ describe('ETag handling', () => {
     expect(second.status).toBe(304);
   });
 });
+
+describe('GET /api/v1/series', () => {
+  it('lists series with instance counts', async () => {
+    const res = await get('/api/v1/series');
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    const walls = body.series.find(s => s.slug === 'walls-and-fences');
+    expect(walls).toEqual({
+      slug: 'walls-and-fences', title: 'Walls and Fences', kind: 'money_article',
+      first_year: 2019, last_year: 2025, instance_count: 2,
+    });
+  });
+
+  it('filters by kind', async () => {
+    const res = await get('/api/v1/series?kind=consent');
+    const body = await res.json();
+    expect(body.series.map(s => s.slug)).toEqual(['consent-articles']);
+  });
+
+  it('rejects an unknown kind', async () => {
+    const res = await get('/api/v1/series?kind=bogus');
+    expect(res.status).toBe(400);
+    expect(await res.json()).toEqual({ error: 'invalid kind' });
+  });
+});
+
+describe('GET /api/v1/series/:slug', () => {
+  it('returns the series with its instances oldest first', async () => {
+    const res = await get('/api/v1/series/walls-and-fences');
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    expect(body.slug).toBe('walls-and-fences');
+    expect(body.instances).toHaveLength(2);
+    expect(body.instances[0].meeting_year).toBe(2024);
+    expect(body.instances[1].meeting_year).toBe(2025);
+    expect(body.instances[1].tm_vote_yes).toBe(392);
+    expect(body.instances[1].source_url).toBe('https://example.com/atr2025.pdf');
+  });
+
+  it('404s an unknown slug', async () => {
+    const res = await get('/api/v1/series/not-a-series');
+    expect(res.status).toBe(404);
+    expect(await res.json()).toEqual({ error: 'not found' });
+  });
+});
