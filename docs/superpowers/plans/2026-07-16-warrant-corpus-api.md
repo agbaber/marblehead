@@ -474,8 +474,8 @@ Expected: alphabetical slugs; `expenses-of-several-departments` has `first_year`
 
 Spot-check that no known rename produced two series:
 
-Run: `grep -c "storm" data/article_series.csv`
-Expected: 1 (only `storm-drainage-construction`; the 2025 `Stormwater Construction` and pre-2023 `Storm Drain Construction` variants merged into it). If this returns more than 1, a rename is missing from `ALIASES` in `scripts/warrant_lib.mjs`; add it there (with a test) rather than editing the generated CSV.
+Run: `grep -c '\-construction' data/article_series.csv` and `grep 'storm' data/article_series_map.csv`
+Expected: exactly one storm construction slug (`storm-drainage-construction`) among the construction series, and the map shows all three title variants (`storm drain construction`, `storm drainage construction`, `stormwater construction`) pointing at that one slug. Other legitimate storm series exist (`stormwater-enterprise-fund`, two stormwater bylaw amendments), so a bare count of "storm" matches is not the invariant. (Plan errata: an earlier revision expected `grep -c "storm"` to return 1, which is unsatisfiable; Task 3's review corrected it.) If a construction variant maps to its own slug, the rename is missing from `ALIASES` in `scripts/warrant_lib.mjs`; add it there (with a test) rather than editing the generated CSV.
 
 - [ ] **Step 3: Add the DATA_CATALOG entry**
 
