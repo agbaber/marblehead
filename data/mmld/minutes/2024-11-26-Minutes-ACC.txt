@@ -1,0 +1,400 @@
+Light Commission November 26, 2024 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           December 15, 2024
+Re:             Light Commission Public Meeting, November 26, 2024
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:03 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+Participated in meeting:
+     Commissioners:        Commissioners Frechette, Hull and Wolf participated in person, commissioner
+                           Yarmoff participated remotely.
+      Light Department:    General Manager, J. Kowalik.
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Approval of minutes
+
+
+Vote #2024-20 Motion to approve the minutes of the November 21, 2024 pubic session was moved by
+              Commissioner Frechette and seconded by Commissioner Hull. Unanimous.
+
+Vote #2024-21 Motion to approve the minutes of the November 21, 2024 executive session was moved
+              by Commissioner Frechette and seconded by Commissioner Hull. All commissioners
+              present on November 21: Yes, Wolf abstained.
+
+Vote #2024-22 Motion to approve the minutes of the November 14, 2024 joint public meeting with the
+              Marblehead Charter Committee was moved by Commissioner Frechette, seconded by
+              Commissioner Hull. All commissioners present on November 14: Yes, Frechette abstained.
+
+Comments from the Public
+There were no comments from the public, whether in person or from remote participants.
+
+Outstanding items from previous meetings
+Polco Employee Survey. Commissioner Wolf reported that after recent conversations, Polco has provided
+us with their standard survey, we have given our edits. We should be ready to launch the survey soon.
+
+Chargers
+The company that was manufacturing the chargers that were provided in the MMLD NextZero program,
+JuiceBox, is going out of business. MMWEC and Virtual Peaker are managing the large majority of the
+chargers via direct interaction with the EV telematics interface. Seven customers do not have a
+
+
+                                                                                                 1/8
+telematics interface. Their chargers could be changed for another model. The situation is still being
+assessed, and MMLD so far has not yet communicated with these customers. See slide p 3.
+Legislative actions
+State representative Jenny Armini received on October 17 requests from a lobbyist asking for her to sign
+letters to be sent to the Executive Branch (DOER and DEP). Representative Armini is part of the Municipal
+Caucus, the group of legislators with Municipal Light Plants in their territories. She contacted the secretary
+of the Commission to understand whether these letters, relating to the Clean Heat Standard and Large
+Building Energy reporting, were reflective of the position of the Commission. Checking with other Light
+Commissioners in the Commonwealth, it became clear that the letters originated with MEAM, the
+organization of General Managers, and that even though policy is the responsibility of Commissioners,
+none of the Commissions had been contacted about these policy positions.
+It would make sense for the General Managers to make Commissioners aware of lobbying actions, and
+when these happen, to clearly mention whether they have been brought to the attention and are
+supported by their Commission. Hence the two proposed motions listed in the agenda for this meeting.
+A discussion took place, highlighting the differences between legislation and regulation, the timing for
+collecting feedback from Commissions and the difficulty of getting 41 systems to agree, or represent a
+diversity of opinions. Circulating these policy proposals through MLCA, the Massachusetts Light
+Commissioners Association, to all the Commissions in the Commonwealth would facilitate this process.
+MMLD’s General Manager mentioned that he had a conversation with Joe Sollecito, current MEAM
+president and general manager in Mansfield on this subject.
+
+Vote #2024-23           Motion to direct MMLD’s General Manager to request that MEAM share all
+                        letters related to draft regulations and legislation with Commissioners prior to
+                        sending to legislators was moved by Commissioner Wolf, seconded by
+                        Commissioner Frechette. Unanimous.
+
+General Manager Updates
+Village 13 substation upgrades: Bid documents for the civil engineering work have been published, the
+Department held a vendor’s conference where 12 venders participated. We anticipate bid amount to
+come in at around $1.5M. Given the volume of the documents (~ 250 pages), some of the bidders
+requested more time to provide a quality bid: MMLD extended the bid submission deadline to 10:00 am
+on December 11, from the original timeline of December 3.
+Mass CZM Grant: all the work that was planned for 2024 has been done, the $161K grant approved.
+
+Preliminary 2025 Operating and Capital Budget: The forecast operating budget for Year 2024 is shown
+on page 5, as MMLD can best estimate it with the actual data thru October and forecast for RoY: F10.
+Bulk Power expenses came under budget as, so far, we have had rather clement weather this year in
+Marblehead. This sets the basis for the preliminary operating budget for 2025, factoring in power costs
+as forecasted by MMWEC, shown on pages 5 and 6.
+The forecast for the Capital Budget is shown on the slides on page 6: we will have more capital spending
+in 2025 than we have had in recent years. This will be mainly driven by the Village 13 substation update,
+and the upgrades to the feeder line into Marblehead. A discussion on vehicles replacement plan took
+place. Discussions on Wilkins upgrades will come at a future meeting.
+
+
+
+
+                                                                                                        2/8
+Ocean Ave underground service: MMLD has built the underground service and owns it, as part of the
+agreement with the residents who have paid for this undergrounding. The remaining step is MMLD
+getting the appropriate easements for the transformers which are on private land, see the slides p 7.
+
+Clifton Substation parcel: An issue has come up with the exits from the MMLD land parcel. MMLD
+surveyed the land at its expense in 2023. The General Manager will try to resolve the issue with the
+relevant town departments. See slides p 8.
+
+IT upgrades: MMLD has upgraded its internet connection to the 80 Commercial Street building. Chris
+Dunbar is reviewing options for implementation of the GIS system, see slide p 8.
+
+Executive Session
+During the Light Commission Meeting of November 26, 2024, Chair Lisa Wolf proposed a motion to
+meet in Executive Session to discuss confidential, competitively-sensitive or other proprietary
+information when such disclosure will adversely affect our ability to conduct business, and to consider
+the purchase, exchange, lease or value of real property if open meeting may have a detrimental effect
+on the negotiating position of the public body. Motion was seconded by Commissioner Frechette.
+Votes: Simon Frechette: Yes; Mike Hull: Yes; Lisa Wolf: Yes; Jean-Jacques Yarmoff: Yes.
+
+Executive Session started at 5:11 pm.
+
+The Executive Session concluded at 6:00 pm at which point a motion to adjourn was proposed,
+seconded and, after a roll call of the commissioners voting unanimously in favor, adopted.
+
+                                               ----****----
+
+
+
+           Documents presented during the November 26, 2024 Light Commission Meeting
+
+
+
+                              Agenda
+
+                4:00 Call to Order, Land Acknowledgement,        Minutes, and Public
+                Comments
+                4:10 Outstanding items and requests from last meeting
+                      - Employee survey, Juicebox EV charger customers
+                4:15 WRT Municipal Electric Assoc of Mass legislative actions­
+                    Two Board votes requested
+                4:30 General Manager Updates
+                5 :30 Executive Session
+
+
+
+
+                                                                                                       3/8
+            Status of JuiceBox EV chargers in our NextZero
+            Scheduled EV charging program (Outstanding item)
+
+• 27 Enel X Way JuiceBox chargers in Marblehead
+  - 4 customers (2020-21) have completed their 3-year program term
+  - 23 customers will complete their term within 6 months: 12/2024-
+    5/2025
+• MMWEC and Virtual Peaker have determined that the Ju icebox
+  chargers can be interfaced & managed via direct EV telematics
+  interface (to EVs that support telematics).
+• MMWEC contacted MMLD customers. 7 do not have a
+  te/ematics interface
+
+
+
+
+            General Manager updates
+
+• Village 13 Update
+• Mass Coastal Zone Management grant payment - $161,000
+• Preliminary 2025 Operating Budget
+• Preliminary 2025 Capital Budget
+• Ocean Ave underground service -easements needed
+• Land ownership confusion at Clifton Substation parcel
+• IT upgrades
+
+
+
+
+            Village 13 update
+
+• Construction bidding is underway
+• 12 contractors attended the mandatory site visit on Nov 14
+• Bids opening is Tuesday, Dec 11 at 10 AM, 80 Commercial St
+
+
+
+
+                                                                      4/8
+ 2024 Operating Budget YTD
+                                                                  2024            2024     Budget-F10       Budget-F10
+                                                                Budget       F10 Actual      Variance         Variance
+
+                                                                  Total            Total               $             %
+kWh Sales (millions)                                              101.0            99.9            -1.1           -1.1%
+Operating Revenue:                                          $20,549,000     $21,178,719      $629,719             3.1%
+  Power Expenses:
+  Energy                                                     $3,927,900      $4,263,790      $335,890             8.6%
+  Capacity                                                   $3,233,902      $3,581,056      $347,154            10.7%
+  Transmission                                               $3,655,980      $3,377,956      -$278,024            -7.6%
+  Other Power                                                  $624,171       $586,517        -$37,654            -6.0%
+Total Power Expense:                                        $11,441,953     $11,809,319      $367,366             3.2%
+Net Income before Operating Expenses:                        $9,107,047      $9,369,399      $262,352             2.9%
+Operating Expenses:
+  Payroll & Benefits                                         $4,217,000      $3,940,360      -$276,640            -6.6%
+  Depreciation                                               $2,139,828      $2,139,828                $0         0.0%
+  Maintenance                                                  $853,000       $808,238        -$44,762            -5.2%
+  Admin & General                                              $715,992       $695,100        -$20,892            -2.9%
+  Outside Services                                             $423,000       $378,043        -$44,957          -10.6%
+  Bond & Interest                                              $428,000       $427,800           -$200            0.0"/4
+
+Total Operating Expenses:                                    $8,776,820      $8,389,368      -$387,452            -4.4%
+
+Net Operating Income                                           $330,227       $979,851       $649,624           196.7%
+Non Operating Income                                           $540,000       $859,932       $319,932            59.2%
+Net Income Before Town Payment                                 $870,227      $1,839,783      $969,556           111.4%
+Town Payment                                                   $330,000       $330,000                 $0         0.0"/4
+
+Total Net Income                                              $540,227       $1,509,783      $969,556           179.5%
+
+
+
+
+        Preliminary 2025 Operating Budget
+
+                            (OO0's) Using 5% Depreciation                                  Proposed
+
+                                                                   Budget    F-10 Actual     Budget
+
+                 Items                                               2024          2024        2025
+
+
+
+
+Total Operating & Maintenence Expense Budget                      $20,910       $20,198     $21,351
+
+Surplus Revenues returned to Town of Marblehead                     .illQ          .illQ       .illQ
+
+   Revenue Requirement                                            $21,240       $20,528     $21,681
+
+
+
+
+   Projected Sales (Kwh)                                         $101,000       $99,900    $101,000
+
+
+
+   Average Rate Required per Kwh Sold                              0.2103        0.2055      0.2147
+
+
+
+
+                                                                                                                    5/8
+                MMLD Proposed 2025 Operating Budget
+                           $21,681,000
+
+                                  All Other OpEx,
+                                     2.647, 12%
+
+          Employee Benefits &
+           OPEB*, 1.770, 8%-
+                                                          Bulk Power,
+                                                       /12.491,   58%
+                 Depreciation,   _
+                  2.175, 10%
+
+
+
+
+                    Payroll, 2.598,
+                        12%
+
+
+
+
+            2025 Capital Projects Budget
+
+• Several large 2025 items will be determined in December:
+  - Village 13 Substation Construction bids to opened Dec 11- estimated
+    at $1.S million
+  - MassCEC/DOE404019(d) grant - MMLD contribution - $645,000;
+    Salem OH- $106,000; Lead Mills toward W. Shore Drive UG -
+    $539,000
+
+
+
+
+             2025 Capital Projects Budget
+
+• Other Known projects
+  -   Village 13 substation switchgear $1.1 million
+  -   Department vehicles $160K
+  -   Wilkins upgrades - $2S0K-S00K
+  -   Dept. General upgrades - $400-G00K
+
+
+
+
+                                                                          6/8
+            Ocean Ave Underground Project wrap-up
+
+
+Two open items remain - MMLD atty Rick Holland working with
+the project attorney to close
+1. An asset transfer agreement that details the distribution
+   system assets that MMLD agrees to "operate, maintain, repair,
+   and replace".
+  - Based on the PLM "As Built" drawings and Bill of Materials
+2. Easement agreements @ 220 and 232 Ocean Ave, for assets
+   located in their front yards.
+
+
+
+             Ocean Ave Underground service
+
+
+
+
+                                                                 &......11.l
+
+
+
+
+             Ocean Ave Underground service
+                                                     t
+
+                                        .:;      \
+                                 ':('   . ~.. --
+                     ~=,,_~                   \, •
+                       •.,. \\      •           )
+
+
+
+
+                                                                    &l!1l.I
+                                                           PIM---
+                                                           :-==~
+
+
+
+
+                                                                               7/8
+             Land ownership confusion at Clifton substation -
+             MMLD view of the land area- Town GIS parcel map
+               wl          +                                                   llT"!"=-=!
+
+
+
+
+                                                                      ✓/,-
+                                                     ,.. ,•           ~ •J.r        t   #   I
+
+
+
+                                                                    ~...        ,               !.,"
+
+
+
+
+             Atlantic Ave homeowners' view of the land area
+                                                                           - July 2024 survey by homeowners'
+                                                                            surveyor
+         I
+                                                                           - Surveyor uses survey points set by
+                                                                           MMLD surveyor in 2023
+                                               m½----~•·
+                                               •n.• .. ··-··-·
+                                               h"'l."TilO,...,,,,.         - Area in question is not shown as a
+                                               Hl."l7;flf<i .......,.,.
+                                                                           section of the MMLD parcel 26-17-0
+                                               li~i£~
+
+
+                                                                           - Availability of the land, per Town
+                                                                           Counsel, is based on a 1990 Town
+                                                                           Meeting vote declaring the land as
+                                                                           abandoned/surplus
+
+                 -!;T          -t,
+               ':'\ .. 'fl'_..,.,
+                                                                           - The Town Planning board did not
+                _.. _          ..'Ii.                                      contact MMLD before signing off
+                                                                           10/8/2024
+
+
+
+
+              IT Systems update
+
+• Upgraded 1,000 MB Comcast internet connection to 80
+  Commercial completed
+• Met with Town officials to integrate with the town's upgraded fiber
+  system when it comes online
+• MMLD team met with ESRIaccount team for specifications on
+  MMLD ESRIproduct plan moving forward ...two options.
+  - Visited Peabody MLP to review their implementation of one option
+  - Plan to visit Mansfield MLP to review their implementation of the second
+    option
+• Testing new a server switch to replace aging switches in the server
+  room and field
+
+
+
+                                        ----****----
+
+                                                                                                                  8/8
+

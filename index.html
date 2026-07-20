@@ -6,77 +6,32 @@ og_description: "Open data on Marblehead's town and school finances. Spending, d
 og_url: https://marbleheaddata.org/
 ---
 <style>
-  /* Hero block */
-  .home-hero {
+  /* Identity block */
+  .home-intro {
     box-sizing: border-box;
     padding: 48px 0 32px;
-    display: flex;
-    flex-direction: column;
   }
   @media (min-width: 700px) {
-    .home-hero { padding: 64px 0 48px; }
+    .home-intro { padding: 64px 0 48px; }
   }
-
-  .home-eye {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-    color: var(--text-subtle);
-    margin: 0 0 18px;
-  }
-  .home-eye .dot { color: var(--c-buoy); margin: 0 6px; }
-
-  .home-big {
-    font-size: clamp(64px, 12vw, 144px);
-    line-height: 0.98;
+  .home-intro h1 {
+    font-family: 'Libre Franklin', system-ui, sans-serif;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.05;
     font-weight: 800;
-    letter-spacing: -0.04em;
-    margin: 0 0 22px;
+    letter-spacing: -0.025em;
+    margin: 0 0 16px;
     color: var(--text);
-    font-variant-numeric: tabular-nums;
   }
-  .home-big--cost { color: var(--c-buoy); }
-
-  .home-cap {
-    font-size: clamp(17px, 2.4vw, 22px);
-    line-height: 1.35;
-    color: var(--text);
-    margin: 0 0 14px;
-    max-width: 640px;
-    font-weight: 500;
-  }
-  .home-cap-sub {
-    font-size: clamp(13px, 1.6vw, 15px);
+  .home-intro p {
+    font-size: clamp(16px, 1.9vw, 20px);
     color: var(--text-muted);
-    line-height: 1.55;
-    margin: 0 0 22px;
+    line-height: 1.45;
+    margin: 0;
     max-width: 620px;
   }
 
-  .home-deeper {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    background: var(--c-teal);
-    border-radius: 999px;
-    padding: 10px 18px;
-    text-decoration: none;
-    align-self: flex-start;
-    transition: filter 0.15s ease, transform 0.12s ease;
-  }
-  .home-deeper:hover { filter: brightness(1.08); }
-  .home-deeper:active { transform: scale(0.98); }
-  .home-deeper::after {
-    content: "\2192";
-    transition: transform 0.15s ease;
-  }
-  .home-deeper:hover::after { transform: translateX(3px); }
-
-  /* Five-tile block */
+  /* Tile band */
   .home-stop {
     box-sizing: border-box;
     padding: 40px 0;
@@ -141,18 +96,37 @@ og_url: https://marbleheaddata.org/
     line-height: 1.5;
     margin: 0;
   }
+
+  /* Divider between the section row and the notable-pieces row */
+  .home-divider {
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .home-divider h2 {
+    font-family: 'Libre Franklin', system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0;
+  }
+  .home-divider .rule {
+    flex: 1;
+    height: 1px;
+    background: color-mix(in srgb, var(--c-navy) 12%, transparent);
+  }
 </style>
 
-<section class="home-hero">
-  <p class="home-eye">FY26 spending so far <span class="dot">&middot;</span> as of May 29</p>
-  <p class="home-big home-big--cost">$98.1M</p>
-  <p class="home-cap">paid out across departments, vendors, and capital projects this fiscal year.</p>
-  <p class="home-cap-sub">$127.3M annual operating budget. Drill into every line, by fund, department, category, division, or object.</p>
-  <a class="home-deeper" href="/checkbook/">Open the Checkbook</a>
+<section class="home-intro">
+  <h1>Marblehead Budget Data</h1>
+  <p>Open data on the town's and schools' finances. Spending, debt, meetings, and how to take part.</p>
 </section>
 
 <section class="home-stop home-stop--tinted">
-  <div class="home-tiles">
+  <div class="home-tiles" data-home-row="sections">
     <a class="home-tile" href="/marblehead-101/">
       <div class="tile-eye">PRIMER</div>
       <h3>How Marblehead's budget works</h3>
@@ -161,7 +135,7 @@ og_url: https://marbleheaddata.org/
     <a class="home-tile" href="/checkbook/">
       <div class="tile-eye">CHECKBOOK</div>
       <h3>What the town is spending</h3>
-      <p>FY26 vendor checks and budget pacing, drill-down by department.</p>
+      <p>{{ site.data.checkbook.fiscal_year }} vendor checks and budget pacing, drill-down by department.</p>
     </a>
     <a class="home-tile" href="/data/">
       <div class="tile-eye">DATA</div>
@@ -182,6 +156,54 @@ og_url: https://marbleheaddata.org/
       <div class="tile-eye">2026 OVERRIDE</div>
       <h3>What passed on June 9</h3>
       <p>All four ballot questions passed; the $15M operating tier governs FY27. The full record of the campaign, the candidates, and the result.</p>
+    </a>
+    <a class="home-tile" href="/org-chart">
+      <div class="tile-eye">STRUCTURE</div>
+      <h3>Who runs Marblehead?</h3>
+      <p>The two parallel administrations, the 18 elected and appointed boards above them, and the levers residents actually have. Click any department to see FY27 staffing and salary lines.</p>
+    </a>
+  </div>
+
+  <div class="home-divider">
+    <h2>Notable pieces</h2>
+    <span class="rule"></span>
+  </div>
+
+  <div class="home-tiles" data-home-row="notable">
+    <a class="home-tile" href="/override-tracker.html">
+      <div class="tile-eye">TRACKER</div>
+      <h3>Is the override delivering?</h3>
+      <p>Twenty-eight commitments the boards made on the way to the June 9 vote: dollar allocations, staffing restorations, and process promises, each with a status and a source. Updates after each quarterly review.</p>
+    </a>
+    <a class="home-tile" href="/library.html">
+      <div class="tile-eye">LIBRARY</div>
+      <h3>What the library does, and what the cut would have meant</h3>
+      <p>Abbot Public Library employs about two dozen people and is open 52 hours a week. The no-override budget would have cut it 43%; voters restored it in June. How its funding compares to four other towns.</p>
+    </a>
+    <a class="home-tile" href="/school-building-maintenance.html">
+      <div class="tile-eye">SCHOOL BUILDINGS</div>
+      <h3>What's getting fixed at the schools?</h3>
+      <p>The 2021 EBI condition report is the only district-wide baseline. What's been done since, what's still on the list, and what the override added.</p>
+    </a>
+    <a class="home-tile" href="/schools-budget.html">
+      <div class="tile-eye">SCHOOLS BUDGET</div>
+      <h3>Where the schools money goes</h3>
+      <p>Twenty-four years of audited education spending, plus the superintendent's proposed FY26 and FY27 budget broken out by category. Peer comparison at the bottom.</p>
+    </a>
+    <a class="home-tile" href="/the-insurance-surplus.html">
+      <div class="tile-eye">GROUP INSURANCE</div>
+      <h3>11 years, $28M, one budget line</h3>
+      <p>Group Insurance came in 19% under budget every year for eleven years running. Peer towns book 0&ndash;5%. The unspent money has a destination.</p>
+    </a>
+    <a class="home-tile" href="/legal-fees.html">
+      <div class="tile-eye">LEGAL FEES</div>
+      <h3>What the town spends on lawyers</h3>
+      <p>Town Counsel, the schools' own legal budget, and the Light Department's firm sit in three different funds. Pulled together: about $364,000 to five firms in FY26.</p>
+    </a>
+    <a class="home-tile" href="/town-debt.html">
+      <div class="tile-eye">TOWN DEBT</div>
+      <h3>$107.4M of debt. Voters approved every dollar.</h3>
+      <p>51 debt-exclusion ballot questions since 1988. Voters said yes 50 times. As of FY25, $9.1M paid down net of new issuance.</p>
     </a>
   </div>
 </section>

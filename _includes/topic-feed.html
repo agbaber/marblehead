@@ -17,7 +17,13 @@ parallel scalars per hit and step through them in groups of 9.
 {% for t in site.transcripts %}
   {% for seg in t.topic_segments %}
     {% if seg.topic == page.topic_slug %}
-      {% assign hits = hits | push: t.date | push: t.url | push: t.title | push: t.board_display | push: seg.start_seconds | push: seg.headline | push: seg.dek | push: seg.summary | push: t.vimeo_url %}
+      {%- comment -%}
+        Hit slot 8: prefer t.video_url (newer transcripts emit this for both
+        sources) and fall back to t.vimeo_url for legacy entries written
+        before the field existed.
+      {%- endcomment -%}
+      {% assign t_watch = t.video_url | default: t.vimeo_url %}
+      {% assign hits = hits | push: t.date | push: t.url | push: t.title | push: t.board_display | push: seg.start_seconds | push: seg.headline | push: seg.dek | push: seg.summary | push: t_watch %}
     {% endif %}
   {% endfor %}
 {% endfor %}
@@ -62,7 +68,12 @@ parallel scalars per hit and step through them in groups of 9.
     {% assign s_headline = hits[i5] %}
     {% assign s_dek = hits[i6] %}
     {% assign s_summary = hits[i7] %}
-    {% assign t_vimeo = hits[i8] %}
+    {% assign t_watch = hits[i8] %}
+    {% if t_watch contains "youtube.com" or t_watch contains "youtu.be" %}
+      {% assign t_jump_sep = "&t=" %}
+    {% else %}
+      {% assign t_jump_sep = "#t=" %}
+    {% endif %}
 
     <article class="topic-hit">
       <p class="topic-hit-eyebrow">
@@ -82,8 +93,8 @@ parallel scalars per hit and step through them in groups of 9.
       {% endif %}
       <p class="topic-hit-actions">
         <a href="{{ t_url | relative_url }}" class="topic-hit-link">Open meeting transcript &rarr;</a>
-        {% if t_vimeo and s_start %}
-        <a href="{{ t_vimeo }}#t={{ s_start }}s" rel="noopener" class="topic-hit-link">&#9654; Jump to this point in the video</a>
+        {% if t_watch and s_start %}
+        <a href="{{ t_watch }}{{ t_jump_sep }}{{ s_start }}s" rel="noopener" class="topic-hit-link">&#9654; Jump to this point in the video</a>
         {% endif %}
       </p>
     </article>

@@ -1,0 +1,908 @@
+Light Commission March 7, 2023 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           March 16, 2023
+Re:             Commission Meeting March 7, 2022
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:03 pm, the meeting
+being held both in person and with remote access available to the public. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:           Hull, Frechette, Smith, Wolf and Yarmoff participated in person
+        Light Department:        General Manager, J. Kowalik and Manager of Tech. Operations, C. Coleman
+        Invited:                 Barbara Warren, Executive Director, Salem Sound CoastWatch
+                                 Ryan McCoy, Senior Project Manager, Collins Engineering
+                                 Ed Sprenkle, Project Manager, GRL Architects
+                                 Matt Ide, Exec. Director, Energy and Financial Markets, MMWEC
+                                 Justin Connell, Director of Energy Markets, MMWEC
+
+Approval of January 31, 2023 minutes.
+Vote #2023-10 Commissioner Wolf moved to approve the minutes of the January 31, commission
+              meeting, as amended. Seconded by Commissioner Frechette. Unanimous.
+
+Seawall project: 80 Commercial Street.
+Ryan McCoy from Collins Engineering is working with the Town of Marblehead and Salem Sound
+CoastWatch on the Municipal Shipyard Resiliency Improvements Project. The scope of the project,
+started in 2019, is shown on the slides page 5: to assess the current conditions, and plan for sea level
+rise and analyze the risk of storm surge and wave flooding. Flood barriers have already been installed to
+protect the Light Department building on the short term, while long term strategies to protect the
+shoreline are on-going. The current grant allows for work through June 2024, which should bring the
+project to a permitted, construction-ready phase. In the short term, environmental permit applications
+are being prepared, draft will be submitted by end of May. The work will consist of raising the seawall
+from 8.5’ to 11’ and installing wave attenuating floats. This project will allow continued use of the
+various parcels and ensure continuous and safe access to the waterfront. While alternative options were
+explored, the recommended solution is to raise the sea will with a similar stone wall, in phases, first to
+11‘ as shown on slide 1, p 8. The concrete stabilization on the inside of the wall will allow further raising
+at a later date to 13’ as may be needed. The estimated costs over time show the impact of doing nothing
+(red curve) or the recommended option (brown) compared to flood barriers and steel sheet pile wall.
+Total project construction costs, once that phase is decided, will be around $4.355M. State and Federal
+funds exists, but the appropriate mix of sources of funding have not yet been determined.
+
+
+                                                                                                        1/18
+Perimeter fence around 80 Commercial Street
+Ed Sprenkle, Project Manager at GRL Architects presented the proposed perimeter fences intended to
+secure the site. Screen shots of the presentation are shown from page 9. The proposal includes two
+cantilevered gates systems (given the topography of the site) and a separation of the parking lot with
+manual barriers, which will give complete perimeter security. The proposed perimeter will be a polymer
+chain-link 6’ fence to resist rusting. Gates are operated by MMLD drivers’ phones, but a buried sensor
+would allow for any vehicle to come out, whatever the time might be. There will not be pedestrian
+access afterhours, however. Access to emergency vehicles will be provided. Total project cost is
+anticipated to be about $220K. Bids will be published soon, construction is expected to start mid-July.
+One of the gates is going to block the access to the public chargers, with no plan to provide access
+afterhours. While the board has not discussed these details, it would be good to keep access to the
+public EV chargers, which could be relocated on a nearby street in a completely public space.
+
+Behind-the-Meter Utility-scale Battery storage
+Documentation on this project has been provided to the board last week: the project is a 5MW / 20
+MWh lithium iron phosphate battery, organized as a PPA shared savings agreement with no significant
+capital investment by MMLD. The final site remains to be chosen, with either Village 13 or the Tioga
+Way sites being possible, both controlled by MMLD. The project has a positive NPV of $9.8M (calculated
+for the Village 13 site). This benefit to MMLD comes from avoided capacity and transmission charges. In
+2023, MMLD’s capacity charge is projected to be $3.3M, while the transmission charge will be: $3.1M. In
+the future, with this project, one can anticipate a reduction of about 11% of these charges every year.
+Slides presented are shown from page 11. In today’s meeting, the General Manager is asking board
+authorization to participate in the project. This means two actions: 1) agreeing that MMWEC will work
+on behalf of MMLD, and 2) authorizing the General Manager to execute the necessary agreements to
+participate in the project. The agreements with Delorean will be reviewed at a separate meeting.
+
+Vote #2023-11 Commissioner Yarmoff moved for the Commission - to agree to have MMWEC represent
+              MMLD in this project and - to give the General Manager the authority to enter into the
+              necessary agreements to participate in the project. Seconded by Commissioner Wolf.
+              Unanimous.
+
+While a broad agreement has been struck by MMWEC with Delorean, some details will be specific to
+each MLP and need to be decided by each system: as an example: how to handle decommissioning of
+the battery? Can a system of different capacity be installed? Answ: possibly, but in this project, Delorean
+owns the battery. A different sized battery would reopen the shared savings calculation, as the need for
+deployed capital would be different. One also needs to take into account regulations that may prevent
+“reconstitution”, i.e. would prevent the financial benefits that were just described on the avoided
+capacity and transmission charges. This maximum may be 5 MW, but should be checked.
+Delorean assume all the liabilities based on this asset they would own. The agreement covers the
+minimal insurance that Delorean needs to carry for this project.
+The project complies with the position of MMLD as an exclusive supplier of electricity in Marblehead
+(part of MGL Chap. 164), as MMLD would be in essence creating a new rate for this project, whereby
+Delorean is purchasing power from MMLD to charge the battery and would discharge at another. This is
+completely consistent with the provisions of Chapter 164.
+
+
+                                                                                                      2/18
+The capacity savings can be precisely calculated for the next three years, as the cleared forward auctions
+have already set the charges for the next three years, which vary between $2.61 and $2.59 per
+kWh.month; projections beyond that time window come from S&P Global. The capacity charge of $3.80
+shown on the slide for illustration purposes is for the period that ends May ‘23. The proforma for our
+agreement includes capacity charges stated above.
+
+Next steps: finalizing the location and planning the engineering work to prepare the site. If the Tioga
+Way location were chosen, the financial evaluation for that site needs to be updated.
+
+
+General Manager Updates
+Village 13 update. The contract with Virginia Transformer has been finalized. This is an important step
+for the rebuild of the substation.
+
+NexGrid server: All the hardware has been installed, data has been migrated, archive data loaded.
+We have confirmed that the data transferred from the new hardware and software can be accurately
+transferred to the billing system.
+Next steps: After resolving some communications issues with the last software version, generation of
+historical monthly data for demand analysis. By aggregating the meter data, we can also now sum up
+the total energy flowing through a part of the system, specific transformers, circuits or substations (not
+measured at these points, but calculated from meter data). We should be able to do this with the new
+version of NexGrid software. A web interface / mobile app is available for the public.
+
+Distribution Transformer supply. Four types of transformers account for over 80% of the transformers in
+the field. The inventory is presented on slide #3 on page 14. The replacement rate of these transformers
+will give us useful data, important in view of the supply constraints we currently experience, which are a
+new situation. We used to be able to call the supplier and have delivery of new transformers in the next
+several weeks: the quotes for delivery are is now many months, sometimes years.
+
+GIS update. MMLD is currently evaluating the company Patrick Engineering, for them to use our old
+MMLD distribution system data, and update our systems for systematic use in the future. This will allow
+us to plan circuit upgrades for increased residential load and to prioritize needed capital improvements
+such as transformer fusing to protect transformers. The more visibility we have on the system at a very
+granular level the better we can plan. The next step is to put in place a project description for the
+company. Eventually, this data can be the foundation of digital twins, allowing to simulate our network
+and predict current quality. While we are far from this stage, we are taking a first step.
+
+Hiring updates. Distribution Manager: 2 internal candidates, 9 external candidates. External candidates
+are being interviewed. Business Assistant: reviewing scope of job responsibilities. Sustainability
+Manager: Position has been posted 3/3, 6 candidates have applied. Additional web sites for posting will
+be proposed to the General Manager.
+
+Brown School Solar PV project: Scheduling vendor visit for detailed measurements to prepare estimate.
+Also early meeting with Clean Watts, mobile focused, to discuss how their mobile app might help
+residents with a community solar project.
+
+                                                                                                      3/18
+Second feeder lines: No update.
+
+Solar PV and Battery: If a battery is dispatched by MMLD is different than if MMLD has no say in
+dispatch. MMLD does not care how the energy in the battery is provided, whether it is from solar or
+from the grid. So this is what the rates should reflect.
+
+EV Chargers: Comments to frame the discussion at a later date: some points that should be considered
+in setting a public charger rate include: managing peak demand, by having differentiated energy prices
+during the day, not only volumetric pricing, and possibly dialing back charging rate during peak events.
+We need to maximize usage, and charging a parking fee from the time the charger is idle (with a possible
+grace period of 30 mn) will encourage people to make the charger available to other residents in need of
+public charging. Some examples of Muni charging rates were shown, all below the UFS proposed rates.
+
+Land acknowledgement. As per Article 32 of 2022 Annual Town Meeting, Commissioner Adam read the
+following text: “We acknowledge that the land on which we reside, now known as the Town of
+Marblehead, is the ancestral homeland of the Naumkeag Band of the Massachusetts and Pawtucket
+tribes. Since time immemorial, they maintained this land and surrounding water with the utmost
+respect. We honor the Naumkeag people, past and present, as the original stewards of this land and
+pledge to include their history in the history of our Town.”
+
+Executive session Chair Mike Hull proposed a motion to go into Executive Session in order to:
+- discuss trade secrets or proprietary information regarding activities by a governmental body as energy
+supplier, municipal aggregator or energy cooperative, if an Open Session will adversely affect conducting
+business relative to other entities making, selling or distributing energy; and
+- conduct strategy sessions in preparation for negotiations with non-union personnel General Manager
+Joe Kowalik, seconded by Commissioner Wolf.
+
+Vote #2023-12 Motion proposed by Chair Hull, seconded by Commissioner Wolf. Frechette: yes; Hull:
+              yes; Smith: yes; Yarmoff: yes.
+
+The Light Commission entered into Executive Session at 5:26 pm. The Executive Session concluded at
+6:00 pm after a roll call of commissioners voted to return to open session at which point a motion to
+adjourn was proposed, seconded and unanimously adopted.
+
+                                               ----****----
+
+
+
+
+                                                                                                      4/18
+Documents shown during the March 7 Light Commission meeting
+
+
+                                80 CommercialSt/Hammond ParkSeawall
+
+         • Barbara Warren - Executive Director, Salem Seacoast
+           Soundwatch; Project Lead
+         • Becky Curran, Marblehead Town Planner
+         • Ryan McCoy, P.E.,Senior Project Manager, Collins Engineering
+
+
+
+
+                                     MUNICIPAL SHIPYARD RESILIENCY
+                                     IMPROVEMENTS PROJECT
+                                     COLUNS
+                                     ENGINEERS~
+                                                WOOOSHOL.t.~
+                                                      GROUP
+                                                                 ~
+                                                               SalcmSornd
+                                                                            Iill!
+
+
+
+
+     Town Properties:
+     1. Parker's Boat Yard
+
+     2. Marblehead Municipal Light
+         Department
+
+     3. Hammond Park
+     4. Commercial Street
+         Pier/O'Brien Landing
+     5   Marblehead Yacht Club
+
+     6. Cliff Street Boat Yard
+
+
+
+
+                                                                                    5/18
+                            BUILDING ON PRIOR CZM GRANT-SUPPORTED WORK
+
+
+                2019 - 2021
+                   Condition assessment found seawalls to be mostly poor/fair
+                » Potential future resiliency options identified - for project sites generally to replace
+                   structures and raise incrementally
+
+
+                2021 - 2022
+                • Sea level rise, storm surge, and wave flood risk analysis
+                   Near-term: MMLD procured and installed flood barriers for basement
+                ,. Long-term: conceptual strategies for improving coastal resilience, industrial uses, public
+                   access
+                             Carried out public and stakeholder engagement
+                             Performed survey, wetlands delineation, geotechnical borings
+                             Considered alternative strategies
+                             Developed conceptual plan (2050)
+                             Completed 25% design drawings, cost estimates, and pre-permitting analysis
+                             for seawall resiliency alternatives
+
+
+
+
+$692K Budget
+• $523k grant, the remainder cash and
+   in-kind
+
+FY23 Scope
+(through June 30, 2023
+• Continuepublicand stakeholderengagement
+• Advancedesignof improvementsto 75%
+• Implement publicaccessimprovementsfrom
+    Commercial St to Hammond Park
+• Submitfirst environmentalpermit application
+    IMEPA)
+
+
+FY24 Scope                          ~
+(July 1, 2023-June      30, 2024)
+  Continuepublicand stakeholderengagement
+• Completeenvironmentalpermitting(MEPA,
+    ConCom, Army Corps, Chapter 91, CZM)
+•   Implementadditionalpublicaccess
+    improvementsfrom CommercialSt to CliffSt
+    and improvesignage
+
+
+
+
+                               DESIGN OBJECTIVES AND ANTICIPATED BENEFITS
+
+
+
+     Mitigate long-term risks from sea level rise, storm surge, and waves
+        Includes raising seawalls to State recommended levels, installing wave attenuating floats, and relocating
+        and raising buildings and equipment to mitigate residual wave overtopping risks.
+
+     Provide for continued, improved, and resilient water-dependent industrial uses
+     and electrical facilities
+     • Includes floodproofed renewable energy equipment, raised boatyards, new lifting equipment, new
+        maintenance and storage buildings, a new conveyor system, expanded dockage, and improved commercial
+        vehicle access.
+
+     Enhance waterfront                 ublic access and recreation
+        Includes a continuous, safe, and accessible waterfront pathway connecting Parker's Boatyard to Cliff Street
+        Boatyard, a raised waterfront park, enhanced amenities, space and a lift for community boating uses, and
+        expanded dockage.
+
+
+
+
+                                                                                                                      6/18
+                                                               Sinkholes & depressions routinely filled
+                                                               Public park space
+                                                               Top of wall: Elevation 8.5'
+
+
+
+
+                                   ALTERNATIVES ANALYSIS
+
+
+
+• Cost
+   • capital vs. Maintenance
+
+• Aesthetics
+• Maintenance
+• Usability
+   • Loading, berthing, accessibility
+
+• Environmental Impacts
+   • Permit application must describe and analyze all feasible alternatives, in light of the project
+     objectives, comp ring short- and long-term environmental impacts
+   • Must show that the proposed project avoids, minimizes, and/or mitigates impacts to extent
+     feasible/practicable
+
+
+
+
+                                                                                                          7/18
+                                                                                                           RECOMMENDED SOLUTION
+
+
+
+
+                                                                                                 Excavate to remediate sinkhole issue
+                                                                                                 Install concrete for additional capacity
+                                                                                               • Raise wall incrementally
+                                                                                                 Top of wall: Elevation 11' / 13'
+
+
+
+
+ COST BREAKDOWN                                                                    RELATIVE PROJECTCOSTSOVER DESIGN LIFE
+
+
+
+
+               HAMMONDPARK
+Reconstruct   and Raise Wall        $2,970,000
+
+
+                                                                                                                                          ......
+Boardwalk                            $540,000
+                                                                                                                                              •'
+Wave Attenuators                     $845,000                          ..                                                             .
+                      TOTAL:       $4,355,000•
+                                                                       ·::...
+                                                                          ,.                                               ...•······...··••• ...
+• indudes contractormobilizationand a 15%contingency
+                                                                   •.•··...·.•.      ..···•• ..;.
+                                                                            •·.••........   ...
+                                                                            ···•   .........       , ...   ♦:. ······••"
+                                                                   .
+                                                               •·······••·•••r::··
+                                                                                                           DESIGNLIFE
+
+
+
+
+                                                 NEXT STEPS AND SCHEDULE
+
+
+
+
+                        MMLD                              EJ
+                        Board                          Outreach                                 File MEPA
+                       Meeting                          Process                                    EENF
+                        Mar7                           (Ongoing)
+
+
+
+                          !,_,T ! T·-·1--T
+                                     FEEDBACK                            75%                                                Receive
+                                       FROM                             Design/                                             MEPA
+                                       H&W                             EENFDraft                                           Comments
+                                   ~ Mar14                              Mayl                                                July 12
+
+
+
+
+                                                                                                                                                    8/18
+THANK
+        QUESTIONS?
+ YOU
+
+
+
+
+                     9/18
+                     1O' VEHICLEA<c.~tH
+                    1THLOCKABLE
+
+
+
+
+       ADD ALTERNATE#1
+~ SEAWALLGAURDRAIL
+                    ANC.E
+       MIH,T ·6· DIST   FROM
+                     HTERUNEFACE
+                           OF   Of
+                              FENCE.
+       SEAWAU..
+             TOCE
+
+
+                EXtSTIHG
+                       SEAWALL
+       LINEOF             ED£TA1Ll/51.2
+       SEAWAU.
+            GUARDRAIL,
+                   SE
+
+         EXtsTINC,
+                SEAWALL
+                     GUARDRAIL
+
+         TO ROMIH        FIHCETO SU.WALL
+         EXT[HDCHAINL:!_TE 11 IS HOT
+         RAILING
+               IF'AL.TE
+         ACCEPTED
+
+
+
+
+                                      [HEAD HARBOR
+                                  MARBL
+
+
+
+
+                                                     10/18
+o,~~
+       1
+                   i
+Rn "'""11
+ ....                    ____        _
+                                                 TA.Kll.»11lLOt11
+
+            I      I                             """'"'"""""""
+                                                 ltAIIIICWlANOWATCMIO,,JIO
+                                                 tfUlfflNIE
+                                                 M.IJUll.£HLt,I), ~ 01.. 5
+                                                 I.NIOCOi.MT
+                                                           OOCOIIOTll'07l
+
+
+
+
+            "J,
+
+                        •
+                        #ff
+                   ,/         /.i
+
+
+
+
+                                                                                                                                             /
+                                                                       I     I
+                                                                                 (Z}CVCHAIIGINGST4TJOHS                              -'1·"
+                                                                      GA.t Of'UATOlt                      ~VISITOl:'AIKING
+                                                                                                                                         I
+   I                                                                                                                                 I
+                                                                             :         0~
+   I                                                                                                         EXISTKYOCWM.A
+
+                                                                                                                    "'"""'       i
+   L-----,-----0
+                                    @
+                                                                                 ...............
+                                                                                        ·-...___                             (
+
+
+                              Behind-the-Meter Battery Electric Storage
+
+           • Matt Ide, Executive Director, Energy & Financial Markets,
+             MMWEC
+           • Need an MMLD Board Authorization to Participate vote­
+                  -Authorize        MMWEC as our agent working on our behalf
+                  - Authorize the GM to execute the necessary agreements to participate
+                    in the project.
+           • MMLD's financial exposure of these two agreements is small;
+             consequential agreements come later.
+
+
+
+
+                                                                                                                                                 11/18
+                          The BTM Battery Storage Project
+
+     • 5 MW /20 MWH battery system
+             '
+     • LFP(lithium iron phosphate) batteries - safer chemistry
+     • PPAshared savings agreement, no significant capital
+       investment
+     • Forecast 20-year NPV of $9.8 million in cost avoidance savings
+       at Village 13 site.
+     • Final site of battery is still tbd; both are MMLD-owned sites
+
+
+
+
+                          Two sites: Village 13 and Tioga Way
+
+
+
+
+     Generation/Capacity:                 Transmission:                       Distribution:
+     ISO-NEruns a Forward                 Transmission owners are             MLPmust operate and
+     Capacity Auction annually to         allowed to recover Investment       maintain the distribution
+     ensure sufficient generation         In transmission assets. On          network and the rates are
+     capacity for the next three          their behalf, ISO-NEcharges         set up to recover this cost
+     year period.                         load serving entities a monthly     from customers. A
+     This charge Is included in MLP's     regional network services           generator placed on the
+     ISO bill each month based on         (Schedules 1 and 9) charge          distribution system help
+     the previous year's peak             based on the. For 2021, these       offset capacity and
+     demand in kW.                        monthly rates were $.14/kW­         transmission usage during
+     For 2021 this monthly charge         mo and $11. 75/kW-mo.               peak grid events in 2021.
+     was $3.80/kWmo.
+
+
+
+
+                                                       1-GiYOlTAU.
+--c.. ________
+HM      POWER
+            PIANT                       ...__________
+                                                  TIIANSMISSIONTOWtR        ....._______                    ..1--_   HOME
+
+
+
+
+                                                                                                                            12/18
+                      Behind the Meter Battery Projects
+                               Interested MLPs:
+
+                  •       Boylston           •        Marblehead
+                      •    Paxton                     •    Hull
+      •   West Boylston-voted            •       Wakefield-voted
+          •       Princeton-voted                 •       Ipswich
+          •       Peabody-voted                   •       Rowley
+              •       Holden-voted   •       Georgetown-voted
+                  •       Chicopee           •        Shrewsbury
+
+
+                                                                      7
+
+
+
+
+                  Village 13 update - March 4, 2023
+
+• Virginia Transformer contract signed 3/3 - $2.63 million (2
+  units)
+• Switchgear vendor MCP -factory cyberattack is being managed
+• Salem ROW-0.6 mile from West Shore Drive to Village 13
+  - 4 bids submitted
+  - Quoted prices vary based on varying services offered.
+  - Question: should the improvements include a .6-mile Underground
+    Conduit bank (6" conduit, qty 3 or 4)
+  - Question: Is this resiliency improvement Fed grant eligible?
+• Tioga Way site improvements next contract
+• Need to finalize Site for BTM Battery Storage System
+
+
+
+
+                      General Manager Topics
+
+  • Nexgrid server and software interface upgrades
+  • Transformer Updates
+  • Hiring Updates
+  • Solar on School Updates
+  • 2nd Feeder from Swampscott
+
+
+
+
+                                                                          13/18
+                           Nexgrid Server and S/W interface upgrade plan
+
+
+      Completed Steps
+      • New Server Hardware installed - Feb 16 - 18
+      • Data migrated from old to new servers
+      • Archive server data loaded
+      • Confirm accurate meter read file transfers to the NOSbilling
+        system
+
+
+
+
+                           Nexgrid Server and S/W interface upgrade plan
+
+
+       Ongoing and Next Steps as of 3/3
+       • Chasing and resolving extraneous gremlins
+       • Generate historical monthly residential & small commercial
+         account peak demand & energy data (for UFSdemand analysis)
+       • Verify the accuracy of transformer, circuit & substation-level 15-
+         minute load and peak demand data
+       • Test customer-facing lntelahome web-app & mobile app
+         (relaunch)
+
+
+
+                                   Distribution Transformer Status
+    MMLO Distribution SystemInstalled Base                              Inventory                           Sort by Highest% of Installed Base
+
+                                              Pad mount                      OH Pad mount    Pad mount
+                                                                      eov...,.                              Sb.e(KVA)
+    Sb:e(KVA)
+            9
+                Quantity
+                       2       "
+                            0.2%
+                                     OH Trans      Trans   OH Trans
+                                                                 0
+                                                                             °"
+                                                                                     Trans    C.Overa1e
+                                                                                                NA                 25
+                                                                                                                        Quantity
+                                                                                                                             460       "
+                                                                                                                                   38.5%
+                                                                                                                                            Cum"
+                                                                                                                                            38.5%
+                       7    0.6 ..          7                                                                                287
+           10
+                            3.0!<
+                                                                 0
+                                                                             °"                 NA                 50
+                                                                                                                37.5         179
+                                                                                                                                   24.0%     63"
+           15         36
+                                                                             °"                      °"                            15.0%
+
+
+
+
+                                                                                                   -
+                                           34                                                                                                78"
+           25        460    38.5%         384         76        20           5"                      9"           75          57    4.8%     82"
+                                                                                                                              41
+           30         25     2.1%          23          2                  26"
+                                                                                                     °"          150                3.4%     86"
+!
+                                                                                                                                             ..,.
+         37.5        179    15.0%         156         23        17        11"                                     15          36    3.0!<    89"
+           45         27    2.3%           25                    4        16"                                    112          34    2.8%     92"
+i          50        287    24.0%         249         38        23           9"                       5"          45          27    2.3%
+           75         57    4.8%           36         21                     8"                      10!<         30          25    2.1%     %"
+                       4    0.3%
+          100
+        112.S         34    2-8"           22         u
+                                                       1                 100!<
+                                                                             5"
+                                                                                                     °"
+                                                                                                     8"
+                                                                                                                 300
+                                                                                                                 225
+                                                                                                                              13
+                                                                                                                              11
+                                                                                                                                    1.1%
+                                                                                                                                    0.9"
+                                                                                                                                              97"
+                                                                                                                                              98"
+          150
+          167
+                      41
+                       5
+                            3.4%
+                            0.4%
+                                           32
+                                                                           °"
+                                                                          40!<           0      NA
+                                                                                                     22"          10
+                                                                                                                 167
+                                                                                                                               7    0.6%
+                                                                                                                                    0.4%
+                                                                                                                                              99"
+                                                                                                                                              99"
+                            0.9%
+          225
+          300
+                      11
+                      13    1.1%                      13         0      NA
+                                                                           °"                       °"
+                                                                                                     15"
+                                                                                                                 100
+                                                                                                                 750
+                                                                                                                                    0.3%
+                                                                                                                                    0.3%
+                                                                                                                                              99"
+                                                                                                                                             100!<
+          500
+          750
+                       2    0.2%
+                            0.3%
+                                                       1
+                                                                        NA
+                                                                           °"                       °"
+                                                                                                   33"           500
+                                                                                                                                    0.2%
+                                                                                                                                    0.2%
+                                                                                                                                             100!<
+                                                                                                                                             100!<
+        1000
+        Total       1194
+                             0.1%
+                           100.0%        985        209         79
+                                                                        NA
+                                                                             8"         25          °"
+                                                                                                   u"
+                                                                                                                1000
+                                                                                                                Total       1194
+                                                                                                                                     0.1"
+                                                                                                                                   100.0%
+                                                                                                                                             100!<
+
+
+
+
+                                                                                                                                                     14/18
+             Distribution System - GIS
+
+• Work with Engineering/GIS firm Patrick Engineering, to make­
+  ready old MMLD distribution system GIS maps for extensive
+  field updating.
+• Develop distribution system GIScapability in support of
+  prioritizing capital improvement plans, addressing
+  - Aging system components as poles' and wires
+  - New components to protect transformers against failure e.g.
+    transformer fusing
+  - New system upgrades to support increased residential loads
+  - Any power quality/reliability concerns from distributed generation
+
+
+
+
+          Hiring Updates
+
+• Distribution Manager -
+  - 2 internal candidates; 9 external candidates - continuing interviews
+  - Two Working Foremen setting priorities and leading crews on interim
+    basis
+• Business Assistant
+  - Reviewing scope of job responsibilities, no posting yet
+• Sustainability Manager
+  - Job posted on Zip Recruiter 3/3, 6 candidates
+
+
+
+
+             Brown School Solar PV
+
+• Scheduling a vendor visit to the Brown school roof to take
+  detailed measurements to prepare a design and estimate
+• Working with an outside vendor to provide a mobile app that
+  will integrate customer electricity khw and demand kw, with
+  any solar PV from an MMLD community solar project, and
+  home remote controls of electric devices.
+                                          '
+• Anticipating a Memo of Understanding from each vendor
+
+
+
+
+                                                                           15/18
+            Second Feeder Line- Resiliency Initiative
+
+• No Updates on second feeder line from Swampscott
+
+
+
+
+            Rate-setting: Policy Considerations
+
+• Data driven rates, based on the actual costs of delivering
+  electric service
+• Transparent, use available public/objective data sources
+• Leverage the expertise and broad US and international
+  perspective of UFS
+• Align rates to support adoption of energy efficiency and clean
+  energy best practices
+
+
+
+            Solar PV and Battery
+
+• Proposed Approach: All battery storage discharge, when
+   dispatched by MMLD or MMWEC, is considered demand
+   response. Credit calculation based on prior year average LMP
+  for each peak hour, plus capacity and transmission avoidance.
+• MMLD is indifferent to the source of energy from a customer's
+   dispatched battery ...solar PV-generated or energy provided
+  from the MMLD distribution system. ,
+• Battery charging during a peak, aka the Storm Mode issue- still
+   an issue, until TOU pricing is implemented.
+
+
+
+
+                                                                    16/18
+                   MMLD Public EV Charger Port Utilization
+                     December 2022                              Q4 20222
+      Port Utilization: 24 Hours          Port Utilization: 24 Hours
+
+
+
+
+                                                                  95.85 ..
+                                                                       □
+
+
+
+
+                   EV Public Charger Pricing GOALS
+
+• Maximize revenues to recover operating and maintenance costs
+• Manage peak grid demand
+• Maximize utilization/vehicle turnover
+• Delay investment in additional charging infrastructure
+• Drivers move their vehicle when done charging
+• Set pricing competitive with residential and other charging options
+• Discourage use by Marblehead drivers with residential access;
+  encourage use by others without access or non-residents
+
+
+
+
+                   Solar PV and Battery
+
+• Proposed Approach: All battery storage discharge, when
+   dispatched by MMLD or MMWEC, is considered demand
+   response. Credit calculation based on prior year average LMP
+  for each peak hour, plus capacity and transmission avoidance.
+• MMLD is indifferent to the source of energy from a customer's
+   dispatched battery ...solar PV-generated or energy provided
+  from the MMLD distribution system.
+• Battery charging during a peak, aka the Storm Mode issue- still
+   an issue, until TOU pricing is implemented.
+
+
+
+
+                                                                             17/18
+             Pricing OPTIONS
+
+• Time-based ($/hr)
+• Volumetric pricing($/ kWh)
+• Peak/off-peak rates
+• Dial back or disable stations during peak times or peak events
+• Use ChargePoint app for payment
+
+
+
+
+              Pricing EXAMPLES
+
+• LEWLD- $0.12/kWh; $2 parking fee
+• HMLP - $0.22/KWh
+• Wellesley - $0.25/kWh off peak; $0.50 peak; $10/hr idle fee
+• Braintree (Toyota Dealer) - $0.2O/kWh off peak; $0.40 peak;
+  After 2 hours $2/hr idle fee
+
+
+
+
+              MMLD owned Public EV Chargers
+                                                                   Rate
+            ChargePoint Rate for Utility Owned 7 .3 kW, level 2    - Project current 3% Load
+                        electric vehicle charger
+                                                                      Factor to a future target LF
+                                                                     of20%
+          Monthly kWh           LF               $per kWh          - $.036 per kwh all hours, on
+                  160             ~$                        1.00
+                  533                  10% $                0.47
+                                                                     all three sites
+                  799                  15% $                0.40   - After 4 hours add $5.00
+                1,066                  20% $                0.36     parking
+                1,599                  30% $                0.32
+                2,132                  40% $                0.30   - Annual maintenance fees
+                2,665                  50% $                0.29     average $850 per port or
+                3,197                  60% $                0.28
+                                                                     $8500 total;
+                3,730                  70% $                0.28
+                4,263                  80% $                0.27   - 2022 revenue was $5000.
+                4,796                  90% $                0.27
+                5,329                  100% $               0.27
+                                        20% $               0.36
+
+
+
+                                             ----****----
+
+
+
+
+                                                                                                     18/18
+

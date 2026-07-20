@@ -1,0 +1,919 @@
+Light Commission November 21, 2023 meeting minutes
+To:                Light Commission: Commissioners
+                   Light Department: J. Kowalik, General Manager
+From:              Jean-Jacques Yarmoff, Secretary
+Date:              December 14, 2023
+Re:                Commission Meeting November 21, 2023: Public Session
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:02 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:           Commissioners Frechette, Hull, Smith and Wolf participated in person.
+                                 Commissioner Yarmoff was excused.
+        Light Department:        General Manager, J. Kowalik; Financial Manager, Matt Barrett; Distribution
+                                 Manager, Greg Chane; Manager of Technical Operations, C. Coleman
+        Invited:                 Utility Financial Solutions (UFS): Chris Lund;
+                                 Massachusetts Municipal Wholesale Electric Company (MMWEC):
+                                 Justin Connell, Director Energy Markets;
+                                 Zoe Eckert, Sustainable Energy Policy & Program Senior Manager.
+
+Remembrance: The remembrance of a devoted and beloved public servant, Karl Johnson, was led by
+Commissioner Hull.
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Approval of minutes from previous meetings
+Vote #2023-44             Motion to approve the minutes of the 9/05 Commission public meeting was moved
+                          by Commissioner Frechette, seconded by Commissioner Smith. Commissioner Hull,
+                          absent on 9/5, abstained. Three votes in favor.
+
+Comments from the Public No public comments or questions were made or asked, either by the public
+present at the meeting or participating remotely.
+
+Outstanding items
+Critical peak cost/benefit analysis and strategic plan for maximizing avoided capacity costs: General
+Manager acknowledged this will be a key responsibility for new energy manager.
+Safety protocols - Wilkins Plant: discussion postponed.
+Status of recruiting firm hiring to assist MMLD
+General Manager Kowalik exchanged with the firm Stanton Chase, got a proposal, and is discussing
+some terms of the proposal: this is moving forward. The proposal would cover recruiting for the three
+identified positions, discussions are around carve-outs for candidates we might be bringing to their
+
+                                                                                                    1/16
+process and there seems to be agreement on how to move forward. Job descriptions drafting is on-
+going, process should start in December. The board will look forward to an update at the next meeting.
+Rate Restructure
+Two years ago we contracted with UFS to conduct a review of the rates in Marblehead. This review
+highlighted an imbalance: the fixed costs that MMLD pays represent 35% of its expenses, while the fixed
+revenues from the base rate represented only 3% of revenues, a very small fraction. See slides on page 9.
+The Commission voted in 2022 for and MMLD implemented a changed rate structure in 2023 and as
+agreed with the previous vote, MMLD proposes to continue the adjustment at the beginning of 2024
+following the recommendation of UFS for the base rates and for the energy rates changes. As a result of
+these changes, the fixed revenues will represent 11% of total revenues.
+The evolution of the Residential Energy rates since January 2023 is shown in the slide page 10, with – the
+rate restructure energy changes, as well as – the changes in the procurement cost of energy (which
+translates for Marblehead residents in a PPA charge). With mild weather, the PPA has dropped over the
+course of the year. With the proposed second phase of the rate restructure, the energy rates will go down
+again, to $0.1895 / kWh. The differential impact on customers is shown, depending on whether customers
+are an Average, a Light Use or a Heavy Use customer. The General Manager proposes to start 2024 with
+PPA set at 0. Depending on the evolution of purchased and planned energy prices and volumes, the PPA
+may be adjusted accordingly to ensure the match between expenses and revenues. The energy rates have
+to be filed with DPU; the PPA variations caused by price of energy are not filed.
+With these changes, the projected 2024 revenues for MMLD will be around $21.26 M. Projected expenses
+depend on energy forecasts and will be finalized when MMLD receives a new forecast from MMWEC.
+Commissioner Hull asked whether MMLD could clarify its policy with regards to Dual meters. The
+General Manager mentioned that there are a number of customers with two meters on their property,
+and proposes, at the time these new rates are filed, to reach out to customers to propose a “Second
+Meter Credit/Discount”. This will require some manual handling at MMLD, but the General Manager
+recommends this is an equitable way forward. Note that if the second meter corresponds to running a
+home business, it would not qualify for a discount.
+Communication and implementation will include a notice in the December bill statements, a notice in
+the local newspapers, and filing with DPU. There is no plan to hold a public meeting about this subject.
+Vote #2023-45           Motion to ratify the rate changes by January 2024 as previously discussed was
+                        moved by Commissioner Frechette, seconded by Commissioner Smith. Unanimous
+
+
+Finance Manager Update
+The September Year-to-Date financials show a surplus of around $2M. As the financial results of the last
+months of the year are typically negative and the PPA set to 0, the overall surplus at end of 2024 is
+expected to be around $1M. The main variances leading to this surplus are: - Power Costs, where a
+$2.2M difference between actuals and forecasts is observed, and – Unfilled positions, leading to lower
+payrolls actuals compared to forecast. Interest income, with rising rates, also shows a substantial
+positive variance over budget.
+The draft 2024 Operating budget is introduced with expenses for the year of $21.3 M (slide on page 12).
+
+
+
+                                                                                                     2/16
+Time of Use, Demand Charges rates discussion
+[Post meeting note: The following paragraphs memorialize the subjects that the Light Commission discussed
+during the meeting. They have been re-organized to facilitate understanding of the conversation. Headings
+have been added for clarity, they were not part of the discussion. Readers interested in the actual discussions
+are invited to refer to the video from recording time 0h52 to 1h41, to listen to the actual interventions of
+participants in the meeting.]
+MMWEC’s Justin Connell and Zoe Eckert participated in this discussion, as MMWEC is actively studying
+Time of Use charges: ToU intersects with several programs of MMWEC and many municipalities are
+interested and evaluating. As such MMWEC is very interested in the Marblehead Light Commission
+discussions.
+Technical capability. The introduction of Time of Use or Demand charges depends on the ability of
+MMLD to reliably gather the appropriate, frequent metering data. A technical meeting to review
+Nexgrid’s system capabilities and business aspects will be scheduled. To protect confidentiality, this
+meeting will take place in an Executive Session. It is proposed that this meeting take place December 12.
+Digital vs Analog meters. Collecting data more than once a month means meters with the capability of
+digital communication. However, there are still about 30 old analog meters in town. Our digital meters
+have wireless communication system embedded. Some residents have not accepted the newer meters.
+The analog meters represent an operating burden on the Department, and prevent implementation of
+the rate changes contemplated. Technology considerations. At the time when these meters were
+introduced Wi-Fi and cell phone, which are now ubiquitous, were much less prevalent. Electromagnetic
+fields created by the meters are minimal: The meters use the ZigBee protocol, which operates on a similar
+frequency (2.4 GHz) but is much weaker than home Wi-Fi systems and broadcasts over a narrow range.
+The electromagnetic field created by the meters is also much smaller than that of a microwave oven or a
+cell phone (data not shown). Other sources of electromagnetic fields: MMLD is operating a network and
+collecting data from 10,291 meters and communication nodes creating a town wide MESH network (see
+page 13): anybody living is the town is exposed to this electromagnetic field (which is very low). Whether
+a resident has a digital meter or not, any town resident (and residents of almost every place in
+Massachusetts and the country) is exposed to ambient ubiquitous electromagnetic fields, from diverse
+sources, an important one being cell phone towers. The electromagnetic field generated by meters,
+which is much lower, is at a level where there is no cause for concern. Regulatory Authority with regards
+to electromagnetic waves does not rest with the Town, or with the Commonwealth, but is a federal
+competency, the responsibility of which lays with the FCC.
+The Light Commission is unanimously in favor of the Light Department’s proposed policy to retire all
+analogue meters pending:
+     - the creation of a communication document explaining the situation to residents (including
+        possible mitigation strategies for concerned residents), and
+     - a legal review of the Department’s authority to do so. It is anticipated that this policy will be put in
+        place at the beginning of 2024.
+
+
+
+
+                                                                                                          3/16
+Distribution Demand Charges (DDC). According to UFS’ Chris Lund, a DDC represents an “equitable way
+to increase the proportion of fixed revenue” based on a relatively fixed monthly peak power usage.
+MMLD rate for Large Commercial customers currently includes a Distribution Demand Charge, set at
+$6.00/kW, determined by the peak power consumption in a 15 minute interval. Large Commercial
+customers’ meters store this information locally, in the meter. Residential meters do not have that
+capability. Rather, the meter transmits the information on consumption regularly, every 15 minutes, and
+storing and interpretation of the data is done centrally. We have been testing the software to make sure
+that we can capture consumption accurately at every point in time and have the capability for
+residential Distribution Demand or Time of Use Charge.
+There are many ways to structure a Distribution Demand Charge. MMLD does not want to discourage
+strategic electrification by residents. A Demand Charge should be seen as a different way to structure
+rates and increased the proportion fixed revenues to meet MMLD’s fixed expenses.
+As an example of a possible DDC, UFS’ Chris Lund reviewed a proposed $1/kW residential Demand
+Charge. The impact on MMLD’s revenue structure, if such a charge were implemented, would be to shift
+about 2% of revenues. This could be a way to move MMLD from 11% to 15 or 17% of fixed revenues and
+get the fixed revenues more in line with the fixed expenses. (Using data for the month of October: total
+residential demand was 36,000 kW for the month, so a charge of $1/kW would bring in $36,000 x 12 =
+2% of our revenue.)
+Some utilities have introduced Peak Distribution Demand Charge, and Time-Based Demand Charge in
+addition to Time of Use charges. You can have an on-peak or critical peak demand charge separated
+from a distribution demand charge and pull it out of ToU which is KWh based.
+Commissioner Smith asked “how do you handle the objection that a DDC is a disincentive to electrify?”
+Chris Lund explained that “all of that money is recouped in your rates, but buried in your energy kWh
+charge. The people who are consuming more energy are actually paying more of the fixed costs, and it is
+not being called out. It is a fairness aspect for the various customers, but also, as the kW distribution
+charge increases, the energy kWh charge is reduced: it is not a disincentive to these users who electrify.”
+If a Distribution Charge were adopted, all the points above (structure, trigger and actual levels) need to
+be discussed and worked out.
+
+Time of Use (ToU) Charges have two main interests:
+   - ToU charges are a way to ensure that retail price of energy correlates more closely with the actual
+      wholesale power costs: MMLD buys energy at market prices for a portion of its portfolio and ToU
+      charges will put MMLD on a better financial footing.
+   - In addition, ToU charges give customers a clear price signal, which MMLD and other utilities have
+      not done to date. “If you use energy during this time period, it costs more.”
+This last point is important because, as customers change their usage pattern, there is a positive
+multiplier effect. Not only does the individual customer benefit from lower prices of energy, but the
+wholesale costs for Marblehead as a whole are lower (not only because of lower price of energy although
+that is one component, but also because of lower transmission and capacity charges for the whole town).
+The individual customer benefits, as do the other residents, in a win-win situation. All these benefits
+come from changing resident’s behavior and encouraging consumption when wholesale costs are low.
+
+
+
+                                                                                                       4/16
+Equity and adoption of ToU Charges. Are rates seen as equitable by a great majority of customers? With
+regards to low-income customers, we want to make sure that possible implementation of ToU rates
+causes no undue burden. This means that customers need to be able to manage their demand and to
+implement technologies to shift loads in time. This will allow customers to get access to the cheapest
+power that now is typically available at night or in the morning: EV chargers programmed to charge EVs
+at night. In this light, one implementation strategy can be to structure ToU so that “average customers”
+do not notice a change in the bill. A slowly progressive change, over a number of years, may give
+customers time to adapt.
+Justin Connell remarked that the tools exist. If somebody is enrolled in the EV Charging program, or the
+Connected Homes program, there already is a managed charging period.
+The General Manager remarked that “it becomes second nature after a while, like seat bells.”
+Commissioner Wolf remarked that the “European experience shows this can become engrained and
+automatic so that people do not have to even think about it.”
+Implementation considerations. Number of different rates. A ToU system could have two tier or three
+tier pricing scheme: two rates rates with “On-peak / Off-peak” rates or three time periods “Critical-peak
+/ On-peak / Off-peak”.
+With regards to the Critical peak discussion: it is important to understand that there are three elements
+to MMLD electricity bills: Energy, Capacity and Transmission. The Capacity peak charges happen typically
+in the late afternoon or early evening during the summer months, while the Transmission peak charges
+are calculated every month, and typically occur again in the late afternoon early evening. 50% of
+MMLD’s wholesale costs are driven by the consumption during these 13 one-hour period a year, which
+determine the capacity and transmission charges.
+Justin Connell explained that the impact for MMLD is very important. On average, Municipal Light Plants
+buy power at $60/MWh during the year. But during the transmission peaks power can be 250 times
+more expensive at $15,000/ MWh while during the capacity peak it is even more expensive: $35-
+50,000/MWh. As the price MMLD pays is so different, it is easy to justify a 10 times differential that
+resident might pay during critical peak. The question becomes: how concentrated do you want to make
+these peak period to recover the costs and to efficiently modify behavior. If you tighten the hours too
+much, you might miss the peak.
+Commissioner Wolf asked for an estimate of how much money can be saved by modifying behavior?
+Justin Connell: Of course, it depends on adoption rate. But every kW avoided at peak transmission leads
+to $15 saved, and every kW avoided at peak capacity, $35 – 40 are avoided. A house with a potential
+10kW load, could generate savings of $350 to $500 (capacity and transmission) if it’s consumption were
+to go to zero during peak, and it is linear with every kW avoided. It is not insignificant.
+MMWEC has a track record of predicting peak times, and MMLD has started communicating about peaks.
+But are you better off to introduce a “critical peak” maybe 6 times a month where you communicate with
+customers, or a broader peak period “On peak” which happens every day?
+
+With regards to two periods ToU with On peak vs Off peak: Given the price of power MMLD buys,
+sensible time periods for “On peak” could be between 4 pm to 9 - 10 pm. Currently, this is the time
+period when MMLD buys electricity at more expensive rate, while electricity is cheapest from 11 pm to
+early morning, while late morning and early afternoon is at intermediate price.
+
+
+                                                                                                     5/16
+This is a method to more fairly charge the customers than having a flat rate, but it is also a way to
+encourage customers to benefit from lower energy cost by shifting their usage. Commissioner Wolf
+remarked that we want to have customers change their behavior. We want to have people to pay attention
+to critical peak; ultimately, we want to flatten demand across the board, not only the transmission and
+capacity critical peaks.
+
+
+The General Manager remarked that these two aspects can be independent: whatever we do on ToU, we
+can continue to call “Critical peak” times with the support of MMWEC. We might give around 6 warnings
+a month, with probably up to one day notice. Call it 4 or 5 pm the day before. It can become part of the
+routine of calling out “Peak” but customers have to be aware of the issue and act accordingly.
+
+Opt-in vs Opt-out vs Compulsory rates. As part of the design of rates that vary during the day, one must
+consider whether they would be Compulsory (everybody is affected no matter what) or Opt-out (rate
+structure will apply unless the resident specifically choses a different system) or Opt-in (nothing changes
+for a resident unless they chose to participate in the program). The impact of the rates chosen will
+depend greatly on the option chosen: the economics of ToU change.
+Commissioner Smith remarked that with regards to Critical peak with Opt-out option maybe a relatively
+straightforward path to our community: Critical peaks affect 50% of our energy costs in a year, we have
+already started communicating and maybe observing some behavior changes. Lowering critical peak
+consumption is good financially, it makes things easier on our infrastructure, which everybody is nervous
+about. For it to be considered, the program has to be “opt out”. Commissioner Frechette observed that
+it is hard to get an automatic response when customers have to be on the lookout for MMLD
+communications. Commissioner Smith made his comment more explicit: he would like to have a
+program which is “opt out” from the start, as we can see that Opt in programs like EV charger or
+Connected Homes have few participants at this stage.
+In all situations, we will need a lot of consumer education
+
+
+Are there examples from other towns?
+Commissioner Smith asked MMWEC if there are other municipalities with ToU programs in
+Massachusetts. We are aware of several pilots, with seemingly low participation.
+Zoe Eckert: Groton is implementing a mandatory time of use rate. A few municipalities have EV specific
+time of use rate. Marblehead would be ahead of the curve by implementing this, compared to most
+other Munis. Groton, has a mandatory 7c/kWh off peak rate / 70c/kWh on-peak rate for the period 4-8
+pm, mandatory, with some exceptions. It certainly is a case study for everybody to look at, with a large
+differential in rates.
+Commissioner Smith: “what about critical peak?” Zoe Eckert: it is part of the conversation, other Munis
+are thinking about it. Everybody is looking at it.
+Commissioner Smith: “Did they have a period of double billing?” Zoe Eckert: “Yes they did.”
+The town of Marblehead implemented a peak pricing pilot twelve years ago. This exists. The General
+Manager who implemented that at the time is willing to come to a board meeting to describe his
+experience with implementation. There is a 40 page electronic report. The General Manager will share
+the report with the Commission members. Of course, since that time, things have changed quite a bit.
+We have to think about the ability to make any pilot work and its interest.
+                                                                                                      6/16
+ToU and Demand management programs
+Demand Management programs like “Connected homes” and “ToU rates” are both tools, to achieve the
+same objective which is shaping the load curve. ToU is driven by electricity costs, but you can also take
+into consideration other aspects like emissions costs, emissions. With connected homes, you can get
+ready for that peak; and there is the incentive of receiving a check for appropriate participation in the
+program. With Time of Use rates, you can incentivize customer behavior by directly affecting their bills.
+The psychology of the programs are different.
+All of these tools have different characteristics and a combination of both will be necessary to maximize
+effect. ToU it is a necessary and important tool in the tool box to modify consumer behavior. And
+demand response programs like a Storage project could be compensated more adequately by displacing
+load during those times while keeping household activities unchanged.
+Commissioner Smith: “this goes to Justin’s comments on different tools in the tool box: Time of Use and
+Demand Response. Can you double dip into a Connected Homes program and participate in a critical
+peak rate program, is that correct? One does not ruin the economies of the other?” Zoe Eckert: “We
+have to evaluate how much more the Air Conditioning or the EV chargers can be pulled back during a
+critical peak period, to ensure there is no double dipping on the programs. But the tools are in place. For
+critical peak, yes, you can do both. But for ToU, the check you would get from a Connected Homes
+program reflects the savings the Light Department realizes from shifting the energy usage.”
+Commissioner Smith: “It sounds like a Time of Use might affect the economics of the demand response
+program.” Zoe Eckert: “not sure we can answer that, we need to model it out.”
+
+Next steps. Chris Lund: Given the data in hand, UFS is close to providing information on a possible
+Distribution Charge Program, but is quite some ways from being able to give you information on ToU.
+UFS can conduct sensitivity analysis on the peaks, the duration of the on-peak period which will dictate
+the off-peak / on-peak spread.
+General Manager: A next step, from an operation point of view, is to give guidance to our vendors, some
+directions on what we want. Some of these rate changes may be easier to implement than others and
+that should be a factor.
+Chair Lisa Wolf summarized the conversation: “Stay tuned”.
+
+
+General Manager’s items
+Implementation of Nexgrid new software. With the new version of the Nexgrid software (ecoOne v4)
+MMLD is able to measure data on an hourly basis, and the aggregation is correct. When we tried to
+aggregate before, the data was not correct. This allows MMLD to study load at the meter level, but also
+at the transformer or circuit or substation level. An example is shown at the bottom of page 15.
+Each transformers had be characterized in the system for this to work correctly, which it now does. This
+data is very useful to monitor outages, it can also be used for preventive maintenance and to plan for
+strategic electrification.
+Goals of the General Manager have been circulated back to the board. Some are clearly multiyear
+objectives. The Chair highlighted that out of the goals, many should really be handled by the new hires.
+The fact that we are late in hiring is pushing back the work on these important points. This will be
+reviewed by board members out of the meeting as we prepare next years’ objectives.
+                                                                                                     7/16
+Residential battery programs. The Light department elects which MMWEC demand management
+programs to sign up for: anticipating that we will have an Energy Resource manager, the General
+Manager signed up to both consumer and commercial / industrial programs. This program will be
+limited to the batteries that participate in the Connected Homes program. The list of brands is growing
+with the Duracell brand part of the program. Commissioner Hull will meet with Duracell to become a
+certified installer of Duracell batteries later this month.
+Discussions are on-going with Duracell, which commercializes Li-ion iron phosphate batteries, for a
+program similar to Vermont Green Mountain’s. Who owns the batteries will depend on pricing. The
+program could include some installation commitments. MMLD is already talking with some possible
+location owners. Do the owner have to get solar? Answer no. Duracell wants to move batteries, and if
+MMLD can do this in a responsible way, then this is something we need to look at. It would be good
+marketing for Duracell as well as sales, as they want to show usage cases. In the case where MMLD
+owns it, what benefit would the resident get? There can be different models for customers: one could
+have price of battery and reasonable cost of installation be paid for over time on electric bills.
+Directionally, this could be an interesting program for the department. It will depend on what the
+reasonable installation costs are. And we need to do this responsibly and have the appropriate
+interaction with the Fire Chief. People want these. If everybody is onboard, this will be of interest.
+Iron phosphate runaway characteristics are different from Li Ion, they are even safer, runaway time is
+slower. This is important to design a containment strategy. The town will follow the State Fire Marshall
+guidance to install any battery. Installation authorization, will involve multiple actors: interconnection
+permit with MMLD, ensuring that installation is up to code to the satisfaction of the Building Inspector
+and Fire Chief by the building inspector. And if there is a new structure, shed or building in old town, the
+Old and Historic District Commission will have purview on how it looks from a public way.
+Village 13 substation. MMLD has received a design proposal for the concrete protection of the forced
+sewer pipe and electrical buried conduits. MMLD will review, as will the water and sewer department,
+which will involve the South Essex Sewer district and their engineering firm. Once the design is set, the
+proposal will be put out for competitive bids and work will take place in the spring.
+MMLD insurance policy review. The General Manager, the Town Insurance administrator,
+Commissioners Smith and Yarmoff participated in the review of MMLD insurance policies. Further
+review will be necessary in the coming years when MMLD introduces different types of equipment
+(batteries, solar arrays …).
+Fence and Gate of the 80 Commercial Street property. The vendor has been selected and was on site
+last week. Work will start in mid-March for a possible 6 to 10 weeks-duration. The work will include a
+child proof gate for Hammond Park, and a new sidewalk down Commercial Street will provide access to
+Hammond Park, adding drainage. This plan has been reviewed with the Office of Coastal Zone
+Management and other stakeholders.
+
+
+Motion for adjournment was moved by Commissioner Frechette, seconded by Commissioner Smith,
+unanimously approved. The meeting concluded at 6:06 pm.
+Next meetings of the Light Commission are: December 12, 2023, which will be mainly an Executive
+Session, and December 19, 2023 for the next regular Commission meeting.
+
+                                                ----****----
+                                                                                                       8/16
+Documents presented during November 21 Light Commission Meeting
+
+
+
+
+                  2024 Rate Chan,geReview·
+
+
+
+
+               MMLD 2022 Revenuevs. Expenses
+
+               Comparing Fixed vs Variable Revenue & Expenses
+         100%
+
+          80%
+                                                               Base Rate
+          60%
+                                                             Revenue does
+          40%                                                 not capture
+                                                              Fixed Costs
+          20%
+
+           0%
+                  2022 Expense 2022 Revenue
+                      ■ Energy-kwh (Variable)       ■ All Other (Fixed)
+
+
+
+
+           MMLD 2022 Revenuevs Expenses
+
+           Comparing Fixed vs Variable Revenue & Expenses
+        100%
+         80%
+         60%
+         40%
+         20%
+          0%
+                2022 Expense 2022 Revenue 2023 Revenue 2024 Revenue
+                    ■ Energy-kwh (Variable)     ■ All Other (Fixed)
+
+
+
+
+                                                                            9/16
+                        BaseRate PlannedChanges
+
+
+                                                      Total               Current                 2023 Base 2024 Base
+        Customer Class                          Customers Base Rate                                   Rate                     Rate
+Residential                                          8,915      $4.25                                  $11.25                    $18.50
+Small Commercial                                     1,268      $5.00                                  $18.50                    $32.25
+Large Commercial                                        56     $10.00                                  $61.75                   $113.50
+Off Peak Water Heating {G)*                             87      $4.25                                   $8.25                    $12.00
+Storage Heating {S)*                                    10      $4.25                                  $11.00                    $17.75
+
+*{G) & {S) - Grandfathered                 rates
+
+
+
+
+                       January 2024 ResidentialRate Changes
+
+                                                                                                              Planned
+                                                                       Rate       Rate PPA     Rate PPA           Rate
+                                                                Restructure        Olange         Olange Restructure
+
+                                                                     Jan-23         Jun-23        Nov-23         Jan-24
+             MMLD residential rate (kwh)                            $0.1969       $0.1969         $0.1969     $0.1895
+             PPA(wholesale power cost adjustment)                   SQ.lliQ       ~            SlLlHl!ll2 SlLlHl!ll2
+                                 Total energy cost (per kwh>r       $0.2219       $0.20.~)'       $0.1969     $0.1895
+
+             Avg residentialcustomermonthyenergy use- kwh               662           662             662         662
+                       averagemonthlyresidentialenergycost          $146.90       $133.66         $130.35     $125.45
+                                                 Baserate            $11.25        $11.25          $11.25      $18.50
+                                         NYPAHydrocredit             :S.2..ll       :S.2..ll       :S.2..ll      :S.2..ll
+                            Averageresidentialmonthly bill          $155.90       $142.66         $139.35     $141.70
+                                     "change from Jan 2023          na              -8.5%          -10.6%       -9.1%
+
+
+
+
+                     January 2024 ResidentialRate Changes
+                                                         Average Customer              light Use Customer             Heavy Use Customer
+
+                                                                      Planned                          Planned                      Planned
+                                                            Rate        Rate              Rate        Rate                 Rate        Rate
+                                                      Restructure Restructure       Restructure Restructure          Restructure Restructure
+                                                          Jan-23      Jan-24             Jan-23     Jan-24               Jan-23      Jan-24
+  MMLD re~dential rate (kwh)                             $0.1969      $0.1895          $0.1969         $0.1895            $0.1969   $0.1895
+  PPA(wholesale power cost adjustment)                   SQ..Q2SQ     SQ.QQQQ          SQ..Q2SQ        SQ.QQQQ            SQ.lliQ   SQ.l!QQQ
+                       Total energy cost (per kwh)'      $0.2219      $0.1895          $0.2219'        $0.1895            $0.2219   $0.1895
+
+  Avg residential customer monthly kwh uSE                   662          662               300            300              1,100     1,100
+           Average monthly residential energy cost       $146.90      $125.45            $66.57         $56.85            $244.09   $208.45
+                                      Baserate            $11.25       $18.50            $11.25         $18.50             $11.25    $18.50
+                                NYPAHydrocredit           ~            :S.2..ll          ~              :R1>.              ~         :R1>.
+                  Average residential monthty bill       $155.90      $141.70            $75.57         $73.10            $253.09   $224. 70
+                         O,ange from Jan 2023 %          na             -9.1%           na               -3.3%            na         -11.2%
+                          O,ange from Jan 2023 $                      -$14.20                           -$2.47                      -$28.39
+
+  300 to 1,100 kwh/mo range represents 72% of customers
+
+
+
+
+                                                                                                                                               10/16
+                        Proposed 2024 Revenue with New Rates
+
+                                 Base Rate     2024         UFS      UFS                                           Estimated
+                                 Proposed    Increase     New2024    Rate     Estimated        Estimated             Total         2 year avg
+                     customers     2024      Revenue        Rate     +PPA Base charge          Rate charge         Revenue      AnnualMHW
+ Reidential               8869       18.50    Snl,603       0.1895   0.1895     $1,968,918       $14,023,000        $15,991,918       74,000
+ Off PeakHot Water          82       12.00      $3,690      0.1351   0.1351        $11,808           $29,992            $41,800          222
+ Storage Heat               11       17.75        $891      0.1560   0.1560         $2,343            $9,360            Sll,703           60
+ Small commercial         1267       32.25    $209,055      0.1812   0.1812       $490,329        $1,993,200         $2,483,529       11,000
+ Largecommercial            54      113.50     $33,534      0.1722   0.1722        $73,548        $2,651,880         $2,725,428       15,400
+                                             $1,018,773                         $2,546,946        $18,707,432       $21,254,378        100,682
+
+                                                                                             Street Lights              $53,000
+                                                                                             SolarO-edits              ($23,400}
+                                                                                             PASNVCredit               ~
+                                                                                             Total Revenue          $21,263,978
+
+                                                                                             2024 buda;et           $21,695,800
+
+                                                                                             Dlff (rev - budget)      ($431,822}
+
+
+
+
+                        Jan 2024 Rate Changes Implementation Plan
+
+
+• December 2023 steps
+   - Insert notice in Dec monthly bills to inform/remind customers
+   - Advertise legal notice in local newspapers
+   - Update MMLDwebsite
+   - File with MA DPU
+• No public information meeting planned
+• In effect with January 2024 bills
+
+
+
+
+                             Financial Update
+
+ 1. YTD Sept Operating Statement
+ 2. 2024 Operating Budget draft
+
+
+
+
+                                                                                                                                                 11/16
+                     Sept YTDFinancial Update
+                                         CurTfllt Month                                      (OOO's)                        YHrTo Date
+
+                            .......A<MI             ....  Vatlance                                                              Budget       Variance
+                               ... ,..,.,, ...............                                                         """''
+                          u
+                             un.,   l.MS.O
+
+
+                                     ""'
+                                                  .,..
+                                                              Ill.II
+
+                                                             .....,     --
+                                                                        --
+                                                                                                                     ""
+                                                                                                                16,721.0
+                                                                                                                   ...,. u.m.,
+                                                                                                                                     DJ.
+                                                                                                                                ..... u
+                                                                                                                                                   Ill!
+                                                                                                                                              (1.ll2..l\
+
+                                                                                                                                              IUWll
+
+
+                                  1..l.lll
+
+                                     1110
+                                     r~.o
+                                               J..llU
+
+                                           .....
+                                           ,,.., ....
+                                      .... ....          - --
+                                                           tllUJ
+                                                      ..,.,.
+                                                      .....
+                                            ... ,., ....
+                                                             0401
+                                                                                              ""                LW.2
+
+                                                                                                                   ...... ......
+                                                                                                                    ...... -·
+                                                                                                                   ""'
+                                                                                                                                =
+                                                                                                                          .........
+                                                                                                                                  ,,.,.,
+                                                                                                                                 ..
+                                                                                                                                                J!!!2.Z
+
+
+
+
+                                                  ... ..                                                                   ..... ..
+                                                              (-4.CII                                               435.0                        IU.O,
+                                                                                                                    ,,.
+                                      ....
+                                      "·'  ....       .,_,                                                                          2lS.O
+
+                                                                                                                                    •=
+
+                                                                        --
+                                                                                                                    '"-'
+                                     165.0
+                                                   no           .. .,,,,........
+                                                             11..       lolllrot.Supplle
+
+                                                                                                                    =•              .,,.
+                                                                                                                                                (11U)
+
+
+
+
+                                       .. .. ,,.,,
+                                                              ~
+                                       ,.•
+                                                                                                                              ..
+                                                                        -
+                                                                                                                                    ,.,.
+                                                   ....                                                                  ... """
+                                                   ZUI       11'.0I                                                 lllO
+
+
+                                      ...      ..
+                                               ,.,
+                                                    u
+
+                                                   .......                                                           ...
+                                                                                                                     JLO
+
+
+                                                                                                                         ,,.
+                                                                                                                             ,,.,
+                                                                                                                              ..
+                                                                                                                                     ll.S
+
+
+                                       J.O
+
+                                      n.o
+                                      ....
+                                           ...      J.O
+
+                                                              t•Q       N, ....
+                                                                                                                     "'
+                                                                                                                    U:1.0    ...
+                                                                                                                              ..    mo
+
+                                    ID.:Q
+                                                   "-I
+
+                                                ffiJ.
+                                                                Q.J
+
+                                                             ll,l
+                                                                        londsP~'"-""
+
+                                                                        Totitl Operat. Costs
+                                                                                                                  ""
+                                                                                                                lAill!
+                                                                                                                                    .l2lJZ
+
+                                                                                                                                Ylli1         IIB&I
+
+                                    361.0
+
+
+                                     .... .. ...
+                                     ... ....    560.9     1199.9)      Ope:ratinalncOfflll!
+                                                                        lnc,lnt./{(Jcp.)
+
+                                                                        S...-foul
+                                                                                                                1)119.0
+
+
+                                                                                                                    ""'
+                                                                                                                   .....,
+                                                                                                                                 425.l
+                                                                                                                                     ,..,
+                                                                                                                                    ,w
+                                                                                                                                              1,393.7
+
+
+                                                                                                                                               URI
+                                                                                                                                                  llUI
+
+
+
+
+                                       .. .. ..
+                                    !ZllJ2
+                                              """'
+                                                liU        l.W.2l
+                                                                        MMWl:Crlulh~
+
+
+                                                                        Net lncome/(Loss)                       lJ!W1
+                                                                                                                      .. .. ..   ID..1        W!.Z
+
+
+
+
+                    2024 Draft Operating Budget
+
+                                                                                                                           Projected               Proposed
+
+                                                                                       Budget          Budget               Actual                   Budget
+
+                          Items                                                            2022        2023                  2023                  2024***
+
+
+
+Total Operating & Maintenance Expense Budget                                               19,510.0     22,996.0              21,085.0                     21,357.4
+
+Surplus Revenues returned to Town of Marblehead                                            ____TIQ,Q   ____TIQ,Q             ____lThQ                  _____TIQ,Q
+
+  RevenueRequirement                                                                        $19,840      $23,326               $21,415                     $21,687
+
+
+
+  Projected Sales (Kwh)                                                                     101,000      101,000               101,000                     101,000
+
+
+
+                 ••• Assumes 5% Contribution to Depreciation Account
+
+
+
+
+                     Agenda
+
+5:00 New Rate Discussion - Demand & Time of Use
+    - Define the goals, strategies, metrics
+    - Data needs - Nexgrid status
+    - Board VOTE-End use of residential analog meters in Marblehead
+
+
+
+
+                                                                                                                                                                      12/16
+          ZigBee is a weeker signal than Wi-Fi
+               Variable               Wi-Fi       Z-Wave        ZigBee
+               Year first launched
+                                                    2003          2003
+               1nMarket
+               PHY/MAC                IEEE                        IEEE
+                                                 ITU-T G.9959
+               Standard              802.111                    802.15 4
+
+               Frequency Band        2.4 GHz      900 MHz'       2.4 GHz
+
+               Nominal Range
+                                      100m       30-100m        10- I00m
+               (0dBm)
+               MaXlIT'lun Data
+                                     54 ttb1Vs   40-100 kbl~S   250 kbl~S
+               Rate
+
+               Topology                Star         Mesh          Mesh
+
+               Power Usage             High          Low           Low
+
+                                                   Z-Wave        ZlgBee
+               Alllence
+                                                   Alliance      Alliance
+
+
+
+
+          We're running a townwide MESH network
+
+
+
+
+          Goals of New Rate Changes
+
+Distribution Demand Charge - Residential& Small
+Commercial
+• An equitable, cost-of-service based way to increase the%
+  of MMLD revenue based on relatively fixed monthly
+  metric (peak power usage, measured by peak kw), not a
+  variable month-to-month metric (measured by total kwh
+  used)
+
+
+
+
+                                                                            13/16
+            Goals of New Rate Changes
+
+
+Time of Use Charge - All rate classes
+• Price of retail energy correlates more closely to actual
+  wholesale power costs
+• Give customers clear retail energy price signals that can
+  financially incentivize customers to save money by changing
+  their energy usage patterns
+• In successfully changing customer retail usage patterns,
+  utilities unlock a multiplier effect in realized lower wholesale
+  costs, through lower capacity and transmission costs
+
+
+
+
+             New Rates Discussion ...
+
+ Implementation Considerations
+ • Cost and ease of ensuring reliable implementation in AMI
+   metering and billing systems
+ • Consumer comprehension and acceptance of rates
+ • Implementation approach? - opt-in, opt-out, or compulsory.
+ • Generally seen as equitable by a great majority of customers
+ • Other?
+
+
+
+
+          Distribution Demand Charge considerations
+
+• MMLD 2023 Large Commercial Demand Charge is $6.00/kw,
+  determined by peak 15-minute highest registration in the
+  billing period.
+• Residential demand (using GE/Adara i20+ meters) would be
+  based on highest hourly kw demand in the billing period.
+  Recommend low-rate at introduction e.g. $1/kw
+• In October 2023 the average residential demand was 4.1 kw.
+  Total October residential demand was 36,000 kw/mo
+
+
+
+
+                                                                     14/16
+              Distribution Demand Charge considerations
+
+• Assuming annual residential demand of 432,000 kw (Oct
+  36,000 x 12) @$1/kw = $432,000/year.
+• $430,000 equates to 1.2% of a $20 million MMLD annual
+  revenue
+• Widespread customer understanding of demand will be critical
+  to minimizing and mitigating energy price increases, as
+  residential electrification increases peak demand in
+  Marblehead.
+
+
+
+
+                     Time of Use Considerations
+
+• 2 Tier (On Peak & Off Peak) or 3 Tier (On Peak, Off Peak, and
+  Critical Peak)
+• 2 Tier Cost of Service pricing ... is it based on:
+  - (time of day and day of week Real time Localized Marginal Price (RT
+    LMP) of energy or
+  - Include an added differential for the including the impact of Capacity
+    Cost and Transmission Cost avoidance
+• Is the impact on various household cohorts equitable? e.g. all
+  electric homes, households with children, other?
+
+
+              MMLD Substation & Circuit level kw Demand data
+              Generated from meter data in Nexgrid ecoOne v4
+                                                                    Marblehead Light Dept.
+                                                                               Sys/em
+                                                                               10.44 MW
+
+
+
+
+        El             -
+                     COMMERC1AL
+                                             El             YUAGE
+                                                                                    El          Cl.FTOff
+                                                                                                              ·-El            IIEAC<JN
+                                                                                                                                            '"'
+       t':l DEVEREUX
+       t':l HARBOR
+                                  0_51WW
+
+
+                                  0.57 WW
+
+                                  O.JllltW
+                                             t;l    ANDERSON
+
+
+                                             t':l COVE
+                                                                       0.4SMW
+
+
+                                                                       0.52w,
+
+
+                                                                       0.61ww
+                                                                                    t.t ATUNTIC
+                                                                                    r!f CLIFTON
+                                                                                                           O.JIMW
+
+
+                                                                                                           0.31MW
+
+                                                                                                           0.41MW
+                                                                                                                    !/;¥ BEACON
+                                                                                                                    t.t JERSEY           ....
+                                                                                                                                         0.4111/W
+
+                                                                                                                                          ...,
+                                                                                                                                         0.14 MW
+       t\! DEPOT                             t\! CREESY                             r!f GARDEN                      r!f NAUGUS
+                                  0.34ww                                0.51M                              0.21MW
+       r;';l "-"                             1,;t LAFAYETTE                         t\! HUMPHREY
+       i;1l   NECK                0.59~
+                                             i;1l   MAPLE              ,,._
+                                                                       0.741hr
+                                                                                    i;1l   TEDESCO         ,,._
+                                                                                                           0.31MW
+
+
+       1,;t PLEASANT              0.41-
+                                             i;1l PONO                 0.12-
+                                                                                    r!f WESTMINSTER        .......
+                                                                       0.59MW
+                                             r;;i SMITH
+                                             ~      STOCK
+                                                                          --~
+
+
+                                                                                                                                                    15/16
+5:30 General Manager Items
+  - FY2024 Draft GM/Dept. Objectives
+  - 2024 NextZero/Connected Homes Energy Efficiency & Rebate elections
+  - Duracell battery project proposal
+  - Village 13 substation update
+  - MMLD insurance policy review
+  - 80 Commercial Fence & Gate contract
+
+
+
+                              ----****----
+
+
+
+
+                                                                         16/16
+

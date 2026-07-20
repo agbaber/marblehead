@@ -1,0 +1,791 @@
+Light Commission June 27, 2023 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           July 19, 2023
+Re:             Commission Meeting June 27, 2023
+
+
+
+A quorum being present, the meeting was brought to order at 4:01 pm. The meeting was held in person
+and with remote access, both available to public participation. A recording of the meeting is made
+available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:          Frechette, Hull, Smith, Wolf and Yarmoff participated in person;
+        Light Department:       General Manager, J. Kowalik; Distribution Manager, Greg Chane and
+                                Manager of Technical Operations, C. Coleman
+
+Organization of the Commission
+Vote #2023-24 A motion to elect Commissioner Wolf as Chair of the Light Commission was moved by
+                Commissioner Smith, seconded by Commissioner Yarmoff. Four in favor, one abstention.
+
+Vote #2023-25 A motion to elect Commissioner Frechette as Vice-Chair of the Commission was moved
+              by Commissioner Yarmoff, seconded by Commissioner Smith. Four in favor, one abstention.
+
+Approval of Minutes of previous meeting.
+Vote #2023-26 A motion to approve the minutes of the Light Commission meetings of May 4 was
+               moved by Commissioner Wolf and seconded by Commissioner Smith. Unanimous.
+
+Comments from the Public
+Eileen Mathieu commented that she has been participating to the meetings of a state-wide group: the
+Building Electrification Accelerator. This group debates issues that are affecting all communities and has
+creative ideas on gathering information, which could be useful to this Commission.
+
+Financial updates
+Monthly Operating financials: Reduction of Energy Costs. With a milder winter than expected and
+decreasing energy costs, MMLD has lowered the PPA charge from 2.5 to 0.5c.
+Hedging of open positions. With regards to energy procurement, our open positions for 2024 currently
+represent around 40% of energy load forecast. MMLD wants to reduce the open positions to about 20%.
+The market for forward contracts is changing, and some of the new contracts come with carbon
+attributes, which is new. MMWEC is in discussions for some of these contracts, which may be longer term
+than current hedges. MMWEC will present new options to MMLD in August. At this time, MMLD is aiming
+to close half of its open positions now, with financial instruments that will start January 2024, leaving
+30% of open positions. A review will take place when new contracts become available in the coming
+months, at which time the General Manager will reduce the remaining open positions to 20% of the total.
+
+                                                                                                      1/15
+Other Variances. Tree-trimming activities with Meyer only started mid-May, leading to a seasonal
+variance that will be offset in coming months. Payroll variance comes from personnel changes:
+distribution manager and office manager. MMLD is reviewing the office manager role, and is planning
+new hires over the summer. Greg Chane is actively looking to fill positions in the line crew. MMLD has
+not yet been able to close the 2022 books as we are still waiting for final numbers from the town, which
+we should be receiving this week. We will report to DPU as soon as we close the books.
+Commissioner Yarmoff asked about the accounts that MMLD uses, which financial institutions are they
+with, are they interest bearing accounts. While MMLD does not have control of some of these accounts,
+the capital depreciation fund for example is under its control. This will be reviewed at the next meeting.
+
+Village 13 Update
+Transformer and Switch Gear update. MMLD received design drawings for the transformers, they were
+approved on June 22nd, which triggered a milestone payment under the contract with Virginia
+Transformers. Delivery of the transformers is confirmed for end of 2nd quarter of 2024. We need to be
+ready to receive them at that time. Switchgear drawings have been received from Myers Controlled
+Power on 6/22 and are being reviewed.
+Site preparation and access. Preparations are on-going with the cleaning up of the Village 13 site: this
+activity will not be rate limiting. Bay Side Engineering is the specialized engineering firm that our
+vendors use to plan the transportation of heavy or exceptional loads in Massachusetts. The transformers
+represent a load of 100,000 lbs, while the switchgear load size will be 15 ft. wide. The access road to the
+site will receive a number of truck loads: the transformers will come in two loads, the switchgear in 5 or
+6 loads, the crane to install the equipment will be another two loads, and several concrete mixers loads
+also need to be planned for. The ROW from Bessom Street to Village 13 will be used to convey these
+loads to the site and needs to be adapted for heavy and wide loads. This includes the straightening of
+the path and chiseling away some rocks (to be done by the Highway Department), removal of the fence
+of the Sewer Department plot. During this work, the path will probably not be available as heavy trucks
+will be using the ROW. We do not yet have a precise timetable of when this will affect the use of the
+footpath by the public.
+Protecting the sewer line. The trucks will cross over the buried forced sewer pipe in order to get to the
+gate of Village 13. The sewer pipe precise location needs to be located with vacuum digging, and a
+below-the-grade “bridge” will be built to protect the sewer pipe from the load. A service contract with
+Bayside Engineering will allow the preparation of a RFP. This document will allow MMLD to put out the
+project for bids. The General Manager is therefore asking the Commission to approve an expense of
+$25,500 with Bayside Engineering Inc., of Woburn, Mass for Engineering Design Services related to the
+installation of a new culvert to protect the Town’s forced sewer main pipe, located in front of the Village
+13 substation, from heavy equipment loads that will be delivered to the substation.
+
+Vote #2023-27 Motion to approve an expense of $25,500 with Bayside Engineering Inc., of Woburn, MA,
+              for Engineering Design Services related to the installation of a new culvert to protect the
+              town’s forced sewer main pipe, located in front of the Village 13 substation, from heavy
+              equipment loads that will be delivered to the substation was moved by Commissioner
+              moved by Commissioner Yarmoff and seconded by Commissioner Frechette. Unanimous.
+
+
+
+
+                                                                                                      2/15
+Project 2023A.
+Decision to sign PPA for 2023A. This Power Purchase Agreement (PPA) is a contract with NextEra Energy
+for the supply of 3MW of firm, around-the-clock carbon-free power, from 2028 to 2049. This contract is
+backed by the Seabrook Nuclear power plant, but if Seabrook can’t generate power, NextEra is obligated
+to supply energy and environmental attributes from another source in their portfolio. This carbon-free
+power will be provided at a very attractive price, with low rates of increases over the life of the contract
+reflecting inflation. Commissioner Yarmoff remarked that the price of the energy is such that, if it were
+to be introduced into MMLD’s portfolio today (rather than in 2028, as it will be), the bill that MMLD pays
+for power would decrease by 12%. We will receive 26,280 MWh/yr, which equals to 25% of our planned
+2023 wholesale power purchases. This contract represents a major addition to MMLD’s supply portfolio.
+Contract documents have been sent on June 22 for signature before the end of the month. At previous
+meetings, the Commission empowered the General Manager to discuss with MMWEC entering into this
+contract, and needs to formally approve the signature of the contract.
+Vote #2023-28 Motion to approve the decision to enter into a 22-year PPA Agreement for the purchase
+                  of 3MW firm around-the-clock power from NextEra Energy Marketing LLC that includes
+                  environmental attributes associated with the energy generated was moved by
+                  Commissioner Frechette and seconded by Commissioner Yarmoff. Unanimous.
+
+Implications of 2023A in MMLD portfolio. The slides from the bottom of page 9 present the evolution of
+Marblehead’s Power Portfolio following the decisions the Light Commission has taken at the last two
+meetings. The first slide shows the evolution of power needs in Marblehead (grey area) and the part of
+energy provided under long-term contracts (colored area). The slides also shows the Commonwealth
+emission constraints (in black), and the Town targets to reach Net-Zero by 2040 (in red). The Commission
+also established carbon-free power targets for MMLD of 70% by 2028 and 85% by 2033 (shown in red
+circles on the slide at the top of page 10).
+The second slide page 10 shows that the 2023A PPA goes a long way for MMLD to reach its carbon-free
+power target in 2028, while at the same time reducing the cost of the energy purchased. With other
+projects on-going, such as MMLD’s participation in the Ludlow solar field as well as solar projects on
+schools, MMLD should be able to meet the 2028 target.
+
+Distribution System
+Catching up on deferred maintenance. As maintenance has been deferred for a long time, the Light
+Department is organizing a thrust to update the distribution system and some key distribution assets. To
+the question: “Did the rate payers enjoy artificially low rates for long periods while the maintenance was
+not being done?” asked by Com-missioner Frechette, the General Manager’s reply is an unequivocal:
+“Yes, there is no way around it.” The General Manager presented and discussed a document that
+describes the distribution system upgrade priorities and timing (which may evolve). This lists all major
+items that need to be dealt with in the short term to keep the integrity of the existing distribution
+system, but is not a comprehensive list of issues that need to be addressed for the middle or long term.
+The document is shown on page 11, timeline for each of the projects is proposed on page 13. Readers
+interested in the detailed discussion are invited to refer to the recording of the meeting.
+The work to be done includes:
+- Review of all poles, lines and transformers, with Osmose, a specialized firm;
+- Evaluation of poles for the 23 kV line, replace one 13 kV distribution line (Village 13 to West Shore Dr.)
+- Replacement of Village 13 principal substation (as discussed above);
+
+                                                                                                       3/15
+- Substations: Replace the JCC substation; upgrade the Beacon street switchgear substation;
+- Installation of utility scale battery: the General Manager asked for help of Commission Members to
+   discuss with other department boards possible siting options: MMLD needs additional space,
+   especially as additional batteries (possibly long duration) will likely be installed in the future (e.g.
+   discussions with Form Energy; see also DOER study of long duration BESS in Massachusetts).
+- Communication: replace some components of the EcoOne Data communication system;
+- Security upgrades (cameras and lights, linked by fiber optic link);
+- Commercial projects. In addition, major commercial projects need to be accommodated on the
+   distribution system (Vinnin Square, Intrepid Circle).
+In addition, while not strictly a distribution issue, building capacity and people skills of MMLD for
+emergency response on solar projects will be considered.
+Commissioner Hull leaves the meeting at 6:19 pm.
+
+Underground wires. As part of the upgrade of failing lines, the general manager highlighted the specific
+issue of underground lines, which were not properly laid down in conduits, but rather just buried. As they
+fail, there is no easy way to replace these lines, and new trenches and pipes have to be laid. This is about
+10 times as expensive as setting up overhead lines. Commissioner Yarmoff remarked that MMLD needs
+to have a clear policy for burying wires: there are situations where, for reliability or other purposes, it
+makes sense to bury wires and where MMLD will carry the cost. Outage data can guide us for ensuring
+the appropriate policy is in place. Where residents want distribution lines to be buried outside of this
+policy, appropriate cost sharing by residents will need to be discussed as was done in the case of Ocean
+Avenue. The MMLD policy for undergrounding distribution lines will be reviewed at a later meeting.
+
+EV charging policy. Charging of EVs has the potential to add considerably to the load served by MMLD’s
+distribution system. In addition, not all residents can install EV charging where they live. The Light
+Department will be affected by, and needs to have an opinion on, the public charging policy in
+Marblehead. This should be part of a demand management plan.
+As of mid-May, there are 430 EVs registered in Marblehead, but only 87 level-2 chargers have been
+provided by MMLD; a new public website with regularly updated DMV data should be available soon.
+
+Whole system replacement. The previous analysis is a bottoms-up update of the current system,
+focusing on areas where deferred maintenance causes immediate reliability risks. While very important
+work, this does not address the fact that in a not very distant future, the distribution system will have to
+be able to deliver much more electricity to residents, possibly twice as much. If we project ourselves 25
+years ahead, most of the current system will have been replaced: either because it is currently obsolete,
+or because it will become obsolete over the course of these 25 years. A very rough estimate of the cost
+of replacement of the system shows that the total expense is about $50M, or $2M a year (see page 14).
+This is in line with current depreciation account accrual, but this number is an underestimate as 1) the
+new system will need additional assets not taken into account in this rough calculation, and 2) important
+costs drivers, such as labor, are not included. This raises several questions:
+- will we have the financial resources to update the distribution system? Should the amounts we add to
+   the depreciation account be increased again (they were increased from 3% to 5% last year, and could
+   reach up to 8%)?
+- Equally important is: What is the optimal system we will need in 25 years? What distribution voltage?
+
+
+                                                                                                          4/15
+The Chair recommended that this conversation be taken up by the Strategy Working group and results
+be brought back to this board.
+
+Solar on schools
+As an update, MMLD met with Solect, visited each site and identified sites for batteries at each school
+location. Size of battery remains tbd, Solect is looking at numbers and will come back to us. They are
+also looking at a PPA (where MMLD would purchase the power) as well as a PSA, where MMLD would
+own the installation. A more in depth update will take place after hearing back from Solect.
+
+Interconnection process
+The proposed process for interconnection of Distributed Resources (Solar PV array, or Battery Electric
+Storage System) in Marblehead is shown on the graph on page 15. This document will eventually be
+published, it is being reviewed by the Building department and the Fire chief: it was set up as a team
+effort. Not included in this flow chart is the Old Historic District Commission steps that may be necessary.
+
+It would be appropriate, during this process that residents be encouraged to enroll in the Connected
+Homes program and get incentives for doing so. This part, which needs to be further discussed, is shown
+with the dotted lines at the bottom of the chart. Commissioner Wolf stated that our current battery
+policy does not allow customers to install the batteries of their choice. We should reword the policy, as
+there should be no restriction on the type of battery that customer can install. It would be appropriate,
+however, for the incentives MMLD provides to only be available to residents participating in the
+Connected Homes program. A new policy for batteries will be proposed at the next board meeting.
+
+The Light Commission meeting ended at 6:52 pm after a motion to adjourn was proposed, seconded and
+unanimously adopted.
+
+
+                                                ----****----
+
+
+
+
+                                                                                                      5/15
+   Documents presented during May 30 Light Commission Meeting
+
+
+
+             Agenda
+
+• Reorganization Vote
+• Approve minutes of May 30th
+• Public Comments
+• GM Updates
+
+
+
+            Village 13 upgrade
+
+• Transformer- Virginia Transformer:
+  - Engineering Design Drawings received 6/9, approved 6/22
+  - MMLD 50% payment milestone payment now in process -$1.3 MM
+  - Contract Schedule for Delivery ...May-June 2024
+• Switchgear- Myers Controlled Power (MCP)
+  - Engineering Design Drawings received 6/22
+• Clean-up of the Village 13 site is underway
+• Approve BaysideEngineeringDesignServicesContract to ensure
+  safe heavy load transit over force main sewer pipe - $25.5 K
+
+
+
+
+            Monthly Operating Statements
+
+• Lower energy costs and moderate winter and spring
+  temperatures and have created a significant positive YTD
+  variance ...
+• PPAwas reduced in June, from 2.5 cents/kwh to 0.5 cents/kwh
+• MMWEC is recommending reducing our open positions
+• See April and May, separate financial statements
+
+
+
+
+                                                                 6/15
+                                                                      IIC!lp I
+
+
+                                                                               nC
+
+
+
+
+                                                                OOO'llt                          Y•ar    0 0a
+
+                         . nc;,e
+ Actulll     ud ot Va                                                 m               141;
+                                                                                                         ~' 'Ila nc;,
+    72                       (Q.!)    K~         C!.    t.lilc--.is                    12 1              J3!i        t.1.!J
+
+t,7 Go     1,T~6 9           0.9)                                                   7 543.0         7,826 4       1285 ◄)
+
+1.0 1 0    t t!!,· 0    ~l            PoWl!r •                                      ....lli-       ~
+
+ 705-0      M!19         99.1                                     Net               2.672.          1,nl.<I        IIH.
+
+                                                       Oporii ngCos
+
+  1280       1S60        (58.0)       p y,o                                           6620              791.0     1129 )
+
+ 1750        175             t'011                                                    1 '1              ,02.1        107J
+
+  410         52             50)      641n Ill                                        19t30             2()8 0     (1     01
+
+  :n,         26 0           0.0      OPE8                                            100 0             100.0           00
+
+    60        68             00        1:·1s,on9                                      2720              272.0           00
+
+  26.0        64 5       (~!IJ             m.S         pl&'~                          114 0                 0     11      :>t
+
+    4         23.0             0               Suppl                                   760               92 0      11I ►
+
+   130        21             9 {)J    Out      ttS     Mee                             680               84 0      (26 O ►
+
+    00          25           '2 :>1    ual                                               ) 0             10 0             .O►
+
+
+    0.0         5.0          1501     lna.ir.tf'OCI                                    :.?4 ti           2 0            4.0
+
+    JD          '.l 0        0.0      B911 bl                                           12               120            0.0
+
+  260              0         3.0      AllOlhtt                                         74.0             1000       C2 .o
+
+
+  1M          !U             u                             ~lnl           ;t          ~                 142 7           2..1
+
+ !l7          8~1.-4    [111.4)       TOGI Opct111tCosts                                            2.7'9 .4      135 .4)
+
+   3 .0      ◄ &O $I    2 G,5         0po1'11tln1JI
+                                                 COfflt                               23 .          1,019.        1,2~0
+
+   llJl         40           270        t lr,c I xp I                                   !li              .!!.9.     _3_
+
+
+             1!Yl       237 5           ub•TO'la                                      ll1J.        u..uuJ         1=Ll
+
+    00          00           (I •            "1:C F\J          In IIE,,p I               ~                00            ~
+
+                                      N t lfliCOfne"J(Loss)
+
+
+
+
+                                                                                                                                7/15
+                                                                            00'                  '(            0     •
+
+
+     C               I         911 v rl nee
+
+              :::,                         0 3)                                          ~                   122.                i,
+
+,553.6                   1,570 5       (16 7)                                          9,09 .8        9,           90            2 2)
+
+     57 7                 8880        @!U            Fo      rco t                                    ~                  11,41 .3)
+
+L..!.!                     815        lH                                     e                        ~                  11112.1
+
+                                                            Opera 'ng Co!S
+
+         3.                     0      1410          p                                  00 .0              977.0           (172           )
+
+     7 .ll                • 75 6                                                        878 0              S783                  (0.• )
+
+     4                       - 0           Ii        Bo      fits                       23 .0              2        0          21 0)
+
+     ZS                    2 0             n         OPEB                                25.0              125 0                 00
+
+         8.                     0          0         P n~        II                     3-1-0.                     00            0
+
+                                ,:,    (55 S}                                            2 11              3 2             (1.        !))
+
+
+                           2 0             :t 0                                          02.0              ., 5                t 3 )
+
+     1 .                   21 0                 0                                                                  50          ◄330
+
+         C.                 2.5                 5)   fu                                    3.0                     2.5                . )
+
+         4 I,                   .0      (Hll                                             280                 2!1
+
+         3                      0                    8.     Debts                          5.0                 15 0                   0
+
+     20.                   2 0                           JI0th                             4.0             125 0               13 0
+
+
+                           _6                   F.                  ,       blc In e                       .!.!.2                i;,13I
+
+r.       9.               H2          (llW           To&alOpe lCOI                     ~
+
+:s .,                           .l)        08                                              CS.
+                                                                                            I         1, ll.8J            I,      U
+
+     .1ll                       0                                                       11"0                   :....!t                U
+
+
+W-1                                                  S b-To             I               llL1.         ul~-
+
+
+         00                  00                                                            O.O
+
+)6           ,.,               03                           lncomef Loll                678 1
+
+
+
+
+                                                                                                                                              8/15
+                     Project 2023 (Seabrook Nuclear PPA)
+
+      • Marblehead share is 3 MW firm, Around The Clock, starting in 2028
+        to 2049. (an increase from 2 MW earlier)
+      • Pricing is very attractive vs other carbon-free options under
+        consideration and includes environmental attributes. (Exact pricing
+        to remain confidential for now.)
+      • Pricing is 3 MW firm ...if Seabrook can't generate, NextEra is
+        obligated to supply energy and environmental attributes from
+        elsewhere.
+      • We will receive 26,280 MWh/year ...equal to 25% of our planned
+        2023 wholesale power purchases.
+      • PPAdocs sent out June 22 for signing by June 31.
+
+
+
+
+                     MMLD Power Portfolio
+                                       June 27, 2023
+
+
+
+
+Power Portfollio: April 2023 S~tuation
+• P,ower need foreca~t to, grow 2.4% / Yr.        USO-NECELTrl!port 2023)
+
+• 2021 State Law target, non-carbon emitfng power:
+    • 50% by W.30;       75% by 2040
+• 2023 Mar lehead target
+    • Net-Zero by 2040
+
+
+
+
+                                                                              9/15
+Power IPortfollio: May 2023 Situation
+• P,ower need forecast to, grow 2.4% / Yr.              (ISO-NECELTr,eport 2023}
+
+• 2021 State Law target, non-carbon emitting power:
+    • 50% by 2030;           75% by 2040
+
+• 2023 Marblehead target
+    • Net-Zero by 2040
+  MIMLD carbon-free targets
+      70% by 2028
+    • as,%by 203.3
+
+
+
+
+                                                           =
+
+
+
+Power IPortfollio: June 2023 Situation
+• P,ower need forecast to, grow 2 .4% / Yr.             (ISO-NECELTr,e,port2023}
+
+• 2021 State Law target, non-carbon emitting power:
+    • 50% by W.30;           75% by 2.040
+
+• 2023 Marblehead target                                       M.. bloheod Flower Puotk>lic,- C-arll<lln-fr••,oneoet   211tl-2~0
+    • Net-Zero by 2040
+• MIMLD carbon-free targets
+    • 70% by 2028
+    • a5% by 20.3.3
+• Project 2023A PPA
+    ·• 3 MW cl!lrbon•f~ee,powl!-r supply ~greem l!-nt
+    • Reduce$MMLO'~OO$tof ener,v by 12%
+
+
+                                                                                                           -
+                                                                                                           - --'- -- ------
+
+
+
+
+                                                                                                                                   10/15
+MMLD Distribution System Improvement Priorities – June 1, 2023
+
+v2 Draft for Internal Discussion
+
+
+
+    1. Operation Timber
+          • Contract Osmose Utility Services Inc. to evaluate ~4,200 wood utility poles in
+              Marblehead (MMLD and Verizon poles – separate contracts)
+          • Record all results in ArcGIS DB
+          • Schedule MMLD crews to do street-by-street replacement work, based on pole
+              condition evaluations
+
+
+    2. Operation Clean Sweep
+          • Simultaneous with Operation Timber, field evaluate capacity and condition of all
+              conductor wire, transformers, and circuit tie points. Make appropriate edits to ArcGIS
+              and EcoOne.
+          • Develop a program with the Town to remove wire no longer in use, including
+              communications wires and old Mhd Fire Dept fire alarm wires.
+
+
+    3. Operation Keystone
+          • Separately evaluate the condition of all poles from Railyard Station in Salem to Village
+              13
+          • MMLD line crew or contract repairs or replacement work for all issues identified,
+              minimizing down time.
+
+
+    4. Operation Double-Take
+          • Inventory all double poles in Mhd (location and photos) in Marblehead, and record in
+              ArcGIS
+          • Outreach to Verizon and Comcast
+          • Share updates with Town
+
+
+    5. Operation Wild West
+          • Record all backlot poles in ArcGIS
+          • Cross-reference with Osmose pole-condition assessment
+          • Determine feasibility of getting a NERAC grant to purchase back-lot digger to share with
+              other participating NERAC-based MLDs in Northeast Mass
+
+
+    6. Operation Lower Deck (Foster St) and
+          • Written outreach to all customers in areas served by old underground service
+          • Determine willingness of customers to pay the incremental cost of installing a new
+              underground service, versus a new OH service
+          • Offer on-bill financing of the incremental UG cost, assuming tax-free MMWEC bond
+              payment of the incremental project costs
+          • Coordinate with communications companies servicing customers in the impacted areas
+
+                                                                                                 11/15
+7. Operation Lower Deck – Crowninshield, Davenport, Davis, and Eustis Roads
+
+
+8. Operation Transformation
+        • Analyze recent distribution transformer load data, transformer age and condition.
+        • Anticipate load increases to prioritize transformer replacement plans:
+                 i. Review Mhd Building Dept. permits for significant changes to customer electric
+                    load: EV Charger, Solar PV, air source heat pump (ASHP), customer battery
+                    storage and to better anticipate transformer level load growth.
+                ii. Identify MMLD role(s) in promoting and integrating Vehicle-to-Grid (VTG)
+                    connected EVs
+• Establish MMLD residential TOU EV charger policy on requesting/requiring customer registration
+   in a Next Zero/Connected Homes-like program.
+
+
+9. Operation Fuel Pump
+      • Formalize and publicize MMLD-customer EV charging program – confirm Fed and State
+          incentives for the design, development, installation, and operation of public and
+          customer/private EV charging.
+
+
+10. Operation Peak Shave
+       • Provide 15 KVA electric service to an agreed-to location at the site of the Battery Electric
+           Storage System to be installed and maintained by DeLorean.
+
+
+11. Operation Sunrise
+       • Determine MMLD line crew and substation personnel roles, responsibilities and
+           required training for solar PV system maintenance on Mhd schools and other public
+           buildings
+       • Participate in the design, installation, and training of emergency response plans
+
+
+12. Operation Battery Pack
+       • Determine MMLD line crew and substation personnel roles in the ongoing monitoring
+           and maintenance of MMLD and customer battery installations.
+       • Determine line crew and substation personnel roles in the development of emergency
+           response plans
+
+
+13. Operation Backbone
+       • Replace 1304 line from Village 13 substation to Beacon substation
+
+
+14. Operation Close the Book - on Open Wire
+       • 3-Phase: Bradley Road
+       • Jersey St
+       • Dodge Road
+       • Gregory St
+       • Front St to Circle St
+
+                                                                                               12/15
+   15. Operation Outdoors
+          • Replace and relocate the JCC transformer to a new outdoor location
+
+
+   16. Operation Switch - Replace G&W switchgear at the Beacon substation
+
+
+   17. Operation Clear Talk - Analyze EcoOne Data communications system in support of higher peak
+       demand and TOU data collection needs (prioritize replacing Econet system components)
+
+
+   18. Assess and expand town-wide fiber optics network - as part of a Town-wide effort
+
+
+   19. Improve Substation site security – add security cameras & lighting
+
+
+   20. Village 13 upgrade project-
+            • Relocate overhead supply lines within substation footprint to new location
+            • Pole Yard relocation
+                     i. Clifton substation area
+                    ii. Beacon substation
+
+
+   21. Operation Welcome - New residential service -Hoods Lane/Intrepid Circle area– Pond Circuit ~40
+       units
+           • Specify transformer needs based on load analysis
+           • Locate, order, and install a new distribution transformer
+
+
+   22. Operation Welcome - New residential service– Vinan Square - Tedesco circuit ~ 120 units
+          • Specify transformer needs based on load analysis
+          • Locate, order, and install a new distribution transformer
+
+
+MMLD Distribution System Improvement Priorities: Timeline
+                                                                   2023H2                             2024Ht                                          2024H2                             202SH1
+                  lnrtiettvt / ~ration               Priority   RPCRl'WKibility Efrort   Priority   Rsootn1bil1h            Effort   PrlOfitv   Res......,,.lbi5ty Effort   Priority   Ress:,Msibilrty
+     0Mratlon Timber                                    X       0-IMMU)
+     Ooeratlon Oean Sweeo                               X           MMLD
+     l'\No,rtition   r....-ttone                        X        ContraaOf
+     n.v.,auonOouble--leke
+                                                                                                                                        X             MMLO
+     Operation WMdWe!t                                  X
+     Operation Lower Deck foSter St                                                         X        115_1,_,
+                                                                                                                                                                     X
+     Operation Lower Deck Crownin:shiekt/Dav/Davls
+                                                                                                                                        X       IE!lorw~-·-
+     Operation TransformatiOn                                                               X               MMLO
+     Operation Fuel purnn                                                                   X               MMLO
+     Ooertillon Peak Shave                                                                  X               MMLO
+     Ooeratlon Sunrise                                                                                                                 X              MMLO
+     ON>-ritionBattery Pack                                                                                                            X              MMLD
+     n.vi,ation Backbone                                X          MMLD
+     Op. Close the Boo« on Open Wire                    X          MMLO
+     I000utd000t'S                                                                         X                MMLD
+     Op Switch
+                                                                                                                                                                              X          MMLO
+     OpOearTalk                                                                            X                MMLO
+     Op Fiber Run                                                                          X        Vado,f.MMI..D
+      • in Substation Sea.lMV                                                                       e...-..,.., .. o.u,
+                                                                                           X
+      OOVlllaRe13                                      X        W!ldou&MMLO                X        a.,,.    ............
+      00 Welcome Hoods Lane/lntre1)1d Orde                                                                                             X             MMLO
+     IOp Wflcoine V'inanSquare
+                                                                                                                                                                              X          MMLO
+
+
+
+                                                                                                                                                                                                         13/15
+  MMLD Infrastructure needs
+                                                June 27, 2023
+
+
+
+
+ By 2048, most of the distribution system will have been replaced.
+     Assumption:Parts of the system are obsolete, the rest will be obsolete in 25 years.
+
+
+                                                                                        % that will need
+                           Item                 Numbers in Mbhd   Unit cost($)                              Total     ($ 000)
+                                                                                       upgrading by 2048
+
+
+    Meters                                           10500            400                    lQOSj                  4,200
+
+    Poles                                            4200             800                    75'6                   2,520
+
+    Transformers larger than 50 kVA                   522             3312                   90'6                   1,557
+    Pole transformers 50 kVA                          480             3312                   90'6                   1,431
+
+    Pole transformers 37 .5 kVA                       500             3130                   90'6                   1,409
+
+    Pole transformers 25 kVA                          50              2850                   90'6                    128
+
+    13.8 kV line (mile)                               50?            100000                  75'6                   3,750
+
+    Substations                                                     5000000                  83'6               25,000
+
+    Second 23kV line                                  10            1000000                  lQOSj              10,000
+
+                                        Total                                                                  49,994
+    Grants
+
+    Net                                                                                                         49,994
+
+    Net per year                                                                                               2,000
+
+  Caution!!          Cost estimates are not MMLD figures!!                       List incomplete!!         June 27, 2023
+
+
+
+
+                          Solaron Schools
+
+• Solect visited Mhd again June 15 ... to site batteries at schools
+• Updated proforma financials for solar plus battery and PPA
+  option are in process now
+
+
+
+
+                                                                                                                                14/15
+                                         Marblehead Permitting Prooess for an Interconnected Distributed Energy Resource
+                                                  (DER): Solar PV Array, Battery Electric Storage System, or Both
+                                                               PRAf'TV'1 FOR INTERNAi-DEPT PISCU55ION                            ONl-Y .;JUNE D. 202'3
+
+
+Mai blohead Bwld01g0epl Respo-11         ty                                          (If needed) Modify
+                                                                                       construction 1or
+                                                                                     pern,il compliance
+
+                                                                                                   +
+                                    Instill er riles lhe                                           '
+                                 "-Pl'.NOpr10.tcB~s11{ht\ij&                                                                          Bl1k11ngDept/Wi1e
+                                  le-ctnc pe1nuts et M"ld -                          11\Sli'..'IIICI
+                                                                                                  Reqllests     Flt,3J                       ls.<;.ues
+                                                                                                                                                     F:-ir,al
+                                                                                                                         ~
+                                      Buik.lirtJ Dept                                  lns{)ec:11011 anpro..,al                      lr,.spee!ion AppmvaJs
+                                                                                                                                         (c.1ig1Lal
+                                                                                                                                                 & po.per}
+
+                                                                               '                   +
+                                                                                                   I
+                                                                               'I'
+Customer & Installer Responsib ity
+                                                                               ...
+                                                                               '       fr.sLaller continues
+                                                                                      work to comp1etmn
+                                                                                                                                                                                   FINISH HERE:
+      START HERE:
+                                                                                                                                                                                  Customer enjoys
+     Select a reliable                                                                             I                                                                                  their new
+  l•1stalle:r lo de.sign"
+code-compliant     sY5tem                                                             lnstatler begins work                                                                         in,tallatlon!
+                                                                                       11.asod
+                                                                                             on ti.Pr)!
+                                                                                                     ovc-.::t
+                                                                                               perm1:s
+
+
+
+
+                                                                                                                 M MlD Distrn Mgr                               o
+                            -
+   ln:s.1.3.1101
+             comp orns          MMLO Tech Services                                                                                                    \1 ti I Mete• Dept           M ti LO CS updt'llOS
+ MMLD 1ntc1c011mccuon
+     App1ica11on
+    URL: XXICXX)[)(
+                                  levtCWS Cl~n    &
+                                 issue$ Apprn...a :Cl
+                                        tnstall
+                                                                  MM_D Custome1
+                                                                 SC'VfCO(CS) s:1gm;
+                                                                 A.pJ)!0V0.1
+                                                                          to IJ"SU\11    -                    QCOOIiltt'S SC.f'VICO01 Lier
+                                                                                                              [O 1rsl311
+                                                                                                                       CICClilCmmc-•& -
+                                                                                                               i' 11eectecl,
+                                                                                                                          to 11porad'e
+                                                                                                                     conrect1ons
+                                                                                                                                                       selects & ins1aJls
+                                                                                                                                                          appropr.a.te
+                                                                                                                                                      b1-dircc1mnalmcl.C'r
+                                                                                                                                                                             ~
+                                                                                                                                                                                  Cusw,.,e, AccolJ'"lt&
+                                                                                                                                                                                     commu'lica:es
+                                                                                                                                                                                 approved Autlmrization
+                                                                                                                                                                                 to Activate to customer
+                                                                                                                           J
+              ''                                                                                     ''
+               '                                                                                      ''
+               ''                 CllStomcr con11trrs
+                '                    enrollmem
+                                                                                                       ''
+             '~-------------------·
+                                  appropr.ate MMLD
+                                                                    111
+                                                                             ■ ---------------------J
+                                                     E:nergylDEn: Programs
+
+
+Marblehead Plunicip,!jil Liglu Oept Responsibiliry
+
+
+
+
+                                                                                       ----****----
+
+
+
+
+                                                                                                                                                                                                           15/15
+

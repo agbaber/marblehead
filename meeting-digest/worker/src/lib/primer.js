@@ -6,7 +6,9 @@
 //   ---
 //   week_index: 1                       (required integer)
 //   title: "..."                        (required string)
-//   link_url: /about/                   (required string)
+//   link_url: /the-debate               (required string; plain site pages take
+//                                        no trailing slash. A trailing slash is
+//                                        tolerated and dropped at render time.)
 //   link_label: "..."                   (required string)
 //   ---
 //   Body paragraph 1.

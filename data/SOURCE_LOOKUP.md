@@ -10,10 +10,12 @@ Use this to trace any chart number back to its original document and page. For p
 
 Document links below point at the [primary source archive](archive), a GitHub release of this repository that mirrors every town document cited. State-agency links (MA DOR, mass.gov, PERAC) remain on their live upstream URLs.
 
-## Tax Levy ($30.2M in FY01 to $82.2M in FY24)
+## Tax Levy ($30.2M in FY01 to $83.9M in FY25)
 - FY01-FY10: [FY10 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY10_ACFR.pdf) page 121, "Property Tax Levies and Collections"
 - FY05-FY14: [FY14 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY14_ACFR.pdf) page 117, same table
-- FY15-FY24: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 129, same table
+- FY16-FY25: [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 122, same table
+- FY15: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 129 (the FY25 ACFR's 10-year window starts at FY16)
+- FY25 first-year collection rate is **99.11%** per the audited statistical schedule on page 122; the MD&A narrative on page 3 quotes "approximately 97.18%," which does not reconcile from the schedule's columns and is likely a typo. Use the schedule.
 
 ## Tax Rate ($8.42 in FY03 to $8.56 in FY26)
 - All years: [MA DOR Tax Rates by Class](https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=PropertyTaxInformation.taxratesbyclass.taxratesbyclass_main) (select Marblehead, All Years)
@@ -21,18 +23,24 @@ Document links below point at the [primary source archive](archive), a GitHub re
 ## Average Single Family Tax Bill ($11,055 in FY26)
 - All years, all four towns: [MA DOR Average Single Family Tax Bill](https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=averagesingletaxbill.singlefamtaxbill_wrange)
 
-## Total FTE (599.6 in FY01 to 706.0 in FY24)
+## Total FTE (599.6 in FY01 to 684.0 in FY25)
 - FY01-FY10: [FY10 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY10_ACFR.pdf) page 127, "Full-time Equivalent Town Employees by Function"
 - FY05-FY14: [FY14 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY14_ACFR.pdf) page 123, same table
-- FY15-FY24: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 136, same table
+- FY16-FY25: [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 129, same table
+- FY15: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 136 (FY25 ACFR window starts at FY16)
+- CAUTION: The FY25 ACFR retroactively restated FY20-FY23 totals upward (FY20 667.71 -> 730.41; FY23 709.00 -> 751.00). The restatement only affects the Education row; other functions carry identical values in both ACFRs. See [inside-school-staffing.html](/inside-school-staffing.html#the-fy23-mystery) for the full reconciliation.
 
-## Education FTE (400.1 in FY01 to 537.0 in FY24)
+## Education FTE (489.8 in FY15 to 512.0 in FY25)
+- FY25 ACFR table (restated): FY16 489.17, FY17 493.17, FY18 504.20, FY19 483.90, FY20 543.00, FY21 543.00, FY22 540.00, FY23 579.00, FY24 538.00, FY25 512.00
 - Same ACFR pages as Total FTE, "Education" row
+- For the pre-restatement values (FY20-FY24 as originally reported in FY24 ACFR), use the FY24 ACFR table directly.
 
 ## Population and School Enrollment
 - FY01-FY10: [FY10 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY10_ACFR.pdf) page 125, "Demographic and Economic Statistics"
 - FY05-FY14: [FY14 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY14_ACFR.pdf) page 121, same table
-- FY15-FY24: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 134, same table
+- FY16-FY25: [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 127, same table; school enrollment also on page 130 (Operating Indicators by Function)
+- FY15: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 134 (FY25 ACFR window starts at FY16)
+- FY25 population 20,583; FY25 enrollment 2,564
 
 ## Group Insurance Spending ($8.0M in FY06 to $16.8M in FY27)
 - FY06: [FY06 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY06_ACFR.pdf) page 82, budget schedule, "Group Insurance" line
@@ -47,19 +55,21 @@ Document links below point at the [primary source archive](archive), a GitHub re
 - FY17-FY19: [2019 FinCom Report](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2019_FinCom_Report.pdf) page 14, Line 221
 - FY21-FY23: [2022 FinCom Report](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2022_FinCom_Report.pdf) page 17, Line 221
 - FY24-FY25: [2025 FinCom Report](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2025_FinCom_Report.pdf) page 23, Line 221
+- FY25 (audited actual, $13,007,996): [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 96, General Fund Budget and Actual schedule, Group Insurance line. Original budget $14,473,518; mid-year de-appropriation of $1,106,382 to final $13,367,136; actual $13,007,996 (2.7% under final). First year in 12 to break the 12-22% structural pad pattern. See [the-insurance-surplus.html](/the-insurance-surplus.html).
 - FY26-FY27: [FY27 Proposed Budget](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY27_Proposed_Budget_No_Override.pdf) page 4, Line 221
 
-## Pension Expenditure ($5.1M in FY01 to $12.5M in FY24)
+## Pension Expenditure ($5.1M in FY01 to $11.4M in FY25)
 - FY01-FY10: [FY10 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY10_ACFR.pdf) page 118, "Changes in Fund Balances," "Pension benefits" row
 - FY05-FY14: [FY14 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY14_ACFR.pdf) page 114, same table
-- FY15-FY24: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 126, same table
+- FY16-FY25: [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 119, same table; FY25 Pension benefits row = $11,402,956
+- FY15: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 126 (FY25 ACFR window starts at FY16)
 - CAUTION: This line is volatile due to GASB accounting changes. Not a clean trend.
 
 ## Pension Assessment - Budget Line ($5,380,625 in FY26)
 - FY26-FY27: [FY27 Proposed Budget](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY27_Proposed_Budget_No_Override.pdf) page 4, Line 217 "Contributory Retirement Fund"
 - FY27: $5,843,360 (same document)
 
-## OPEB Insurance Membership (642-748 active, FY11-FY24)
+## OPEB Insurance Membership (642-748 retired, FY11-FY25)
 - FY11: [FY11 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY11_ACFR.pdf) page 93
 - FY12: [FY12 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY12_ACFR.pdf) page 95
 - FY13: [FY13 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY13_ACFR.pdf) page 72 (also [FY14 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY14_ACFR.pdf) page 73)
@@ -68,6 +78,7 @@ Document links below point at the [primary source archive](archive), a GitHub re
 - FY20: [FY20 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY20_ACFR.pdf) page 82
 - FY22: [FY22 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY22_ACFR.pdf) page 81
 - FY24: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 78
+- FY25: [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 67. Town OPEB plan: 748 retirees and beneficiaries + 645 active employees = 1,393 total covered. Municipal Light Department plan (separate): 44 retirees + 18 active = 62.
 
 ## GIC Premium Rates ($24,107 in FY19 to $38,562 in FY26)
 - FY19: [Wayback Machine archive](https://web.archive.org/web/20181127081902/https://www.mass.gov/doc/rate-chart-1-2018-active-employee-basic-life-health-insurance-coverage-non-medicare-plans-and/download) of mass.gov GIC rate chart 1
@@ -77,6 +88,27 @@ Document links below point at the [primary source archive](archive), a GitHub re
 - FY25: [mass.gov rate sheet](https://www.mass.gov/doc/2025-monthly-insurance-rates-for-active-employee-basic-life-health-insurance-coverage-non-medicare-plans-and-dentalvision-coverage/download)
 - FY26: [mass.gov rate sheet](https://www.mass.gov/doc/monthly-insurance-rates-for-active-employee-basic-life-health-insurance-coverage-non-medicare-plans-and-dentalvision-coverage/download)
 - Plan: Harvard Pilgrim Independence Plan (FY19-FY23) / Access America (FY24-FY26), Family coverage, Full Cost column
+
+## Net Pension Liability ($40.1M at 6/30/2025)
+- [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 31 (Reconciliation, Net Pension Liability line in long-term liabilities) and pages 86-90 (Required Supplementary Information, pension schedules)
+- Town's proportionate share: $40,112,618 (was $42,840,952 at 6/30/2024)
+- System funded ratio improved 69.77% (FY23) -> 72.49% (FY24 measurement date)
+- Town contributions: see Schedule of Contributions on page 88
+
+## Net OPEB Liability ($136.3M at 6/30/2025, Town only)
+- [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 31 (Reconciliation, Net OPEB Liability line) and pages 91-94 (Required Supplementary Information, OPEB schedules)
+- Total OPEB liability $146,998,774 minus Plan fiduciary net position $4,954,123 = Net OPEB liability $142,044,651 (Town); funded ratio 3.37% (was 3.00% at 6/30/2024). The "$136.3M" figure in the long-term liabilities note is the change-in-long-term-liabilities row total which already nets some items differently.
+- ADC vs contribution gap: $9.93M actuarially determined; $6.91M contributed; $3.0M under-funded for FY25 (was $4.1M under-funded for FY24)
+- Discount rate changed from 5.74% to 5.51%; investment return assumption from 6.97% to 6.09%; mortality tables updated. These assumption changes plus favorable actual-vs-plan experience (-$10.4M) drove the net deficit improvement noted elsewhere.
+- Municipal Light Department OPEB plan (separate): Total $6,130,047 - $2,789,560 fiduciary = Net OPEB liability $3,340,487; funded ratio 45.51%
+
+## Cash Reserves History (FY16&ndash;FY25 year-end balances)
+- File: `data/cash_reserves_history.csv` &mdash; used by [/monthly-pacing/](/monthly-pacing/) section 3
+- General Fund balance by category (Committed / Assigned / Unassigned, plus Restricted and Nonspendable in Other Governmental Funds): [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 118, "Fund Balances, Governmental Funds &mdash; Last Ten Fiscal Years"
+- Pension Trust fiduciary net position (10-year trend): [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 115, RSI Schedule of Changes in Town's Net Pension Liability and Related Ratios
+- OPEB Trust fiduciary net position, Town plan (FY18&ndash;FY25): [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 123, RSI Schedule of Changes in Town's Net OPEB Liability and Related Ratios
+- OPEB Trust fiduciary net position, Municipal Light Department plan (FY19&ndash;FY25): [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 124, same schedule for MMLD
+- General Stabilization Fund balance ($557,204 at 6/30/2025; $532,368 at 6/30/2024): [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) Note III.J (Fund Balances). The dedicated stabilization fund (MGL Ch.40 &sect;5B; 2/3 Town Meeting vote required to draw) is reported as part of the General Fund Unassigned line in the audited statements, not separately on the balance sheet.
 
 ## PERAC Retirement System (358 active, 339 retired in FY24)
 - [PERAC Marblehead Valuation Report 2024](https://www.mass.gov/doc/marblehead-retirement-board-valuation-report-2024/download), page 5 (Executive Summary) and page 14 (Section 8A)
@@ -101,24 +133,25 @@ Document links below point at the [primary source archive](archive), a GitHub re
 - Series 2015 General Obligation Municipal Purpose Loan Bonds, due 08/01/2035
 - Archived PDF contains the rating-action letter only. The supporting rationale (research update with reserve ratios, debt figures, and downgrade triggers) is referenced as an enclosure but is not included in the publicly distributed letter. Secondary coverage: Marblehead Independent, ["S&amp;P affirms Marblehead's AAA bond rating, shifts outlook to negative"](https://www.marbleheadindependent.com/s-p-affirms-marbleheads-aaa-bond-rating-shifts-outlook-to-negative/). That article paraphrases the rationale as citing a "~$7.7 million" FY27 structural deficit, which predates the $8,471,823 figure presented at the January 28, 2026 State of the Town; use the Town Administrator figure for site-wide deficit references.
 
-## Long-Term Debt Outstanding ($116.5M at 6/30/2024)
-- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 60 (Long-Term Debt note, summary of outstanding obligations)
-- 10-year trend: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 121, "Ratios of Outstanding Debt by Type"
-- Changes in long-term liabilities: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 59
-- Local copy of ACFR: `data/town_docs/FY24_Town_of_Marblehead_ACFR.pdf`
+## Long-Term Debt Outstanding ($107.4M at 6/30/2025)
+- [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 59 (Note F, summary of outstanding long-term obligations)
+- 10-year trend: [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 123, "Ratios of Outstanding Debt by Type"
+- Changes in long-term liabilities: [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 57
+- Local copies of ACFRs: `data/town_docs/FY24_Town_of_Marblehead_ACFR.pdf`, `data/town_docs/FY25_Town_of_Marblehead_ACFR.pdf`
 - Structured digest used by `town-debt.html`: `data/debt_summary.json`
 
 ## GO Bond Maturity Schedule (through FY2044)
-- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 61, "Payments on outstanding bond balances due in future years"
-- Governmental Activities general obligation bonds only: principal $101,065,000 + interest $25,002,755 = $126,067,755 total
+- [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 59, "Payments on outstanding bond balances due in future years"
+- Governmental Activities general obligation bonds only: principal $93,525,000 + interest $21,549,675 = $115,074,675 total (FY26-FY44 remaining)
 
-## Legal Debt Limit and Margin ($475.2M limit, 12.46% used FY24)
-- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 123, "Computation of Legal Debt Margin, Last Ten Fiscal Years"
+## Legal Debt Limit and Margin ($475.2M limit, 13.87% used FY25)
+- [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 125, "Computation of Legal Debt Margin, Last Ten Fiscal Years"
 - Limit = 5% of equalized valuation per M.G.L. c. 44 § 10
 
-## Authorized But Unissued Debt ($12.23M at 6/30/2024)
-- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 59
-- Breakdown: roads/sidewalks $8.98M, Gerry School $1.62M, water projects $1.02M, Mary Alley roof $480K, Franklin St Fire Station roof $131K
+## Authorized But Unissued Debt ($23.78M at 6/30/2025)
+- [FY25 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf) page 57
+- Breakdown: High School roof and HVAC $8.61M, Roads and sidewalks $6.98M, Mary Alley building HVAC $5.75M, Gerry School construction $1.62M, Water projects $0.82M
+- Up from $12.23M at 6/30/2024; the FY25 ATM added the HS roof+HVAC ($8.61M new) and expanded Mary Alley from roof-only ($480K) to building HVAC ($5.75M). Franklin Street Fire Station roof ($131K) is no longer on the list, presumably bonded or completed during FY25.
 
 ## Debt-Exclusion Ballot History (50 WIN / 1 LOSS, 1988&ndash;2025)
 - MA DOR Division of Local Services debt-exclusion file: `data/dor_debt_exclusion_all.csv`
@@ -212,6 +245,15 @@ The town runs two Socrata-hosted portals that publish FY26 spending data. The la
 - [Budget portal](https://townofmarblehead-ma-ob.budget.socrata.com/) &ndash; revised/actual/original budget by Fund Group, Fund, Department, Category, Division, and Object. The `fund_source_data.json` endpoint (no cookie required, no CORS) gave the 317-fund all-funds rollup ($206,063,591.63) saved as `data/budget_FY26_by_fund.json`. The portal's CSV-export buttons on the Budgeted Annual Funds view gave five drill-downs (by Fund / Department / Category / Division / Object) for the $127,338,097.88 Budgeted Annual envelope; these and the top-level Adopted Budget rollup were merged via `scripts/build_budget_actual.py` into `data/budget_actual_FY26.json`.
 
 The checkbook total ($98.5M) and the budget portal's Actual rollup ($140.4M) intentionally don't match: the checkbook is AP-only, while Actual includes payroll runs, transfers, and intergovernmental remittances. The Electric Light Department ($13.16M of Actual) runs as a self-supporting enterprise with no appropriation, so it appears with $0 Revised Budget. Used by `charts/checkbook.html`.
+
+## Parcel Assessments (MassGIS Standardized Assessors' Parcels, FY2025)
+
+- Source: MassGIS "Massachusetts Property Tax Parcels" ArcGIS feature service (the Level 3 Standardized Assessors' Parcels extract), layer `FeatureServer/0`, filtered to `TOWN_ID=168` (Marblehead). Pulled 2026-07-16. Dataset home: [MassGIS Property Tax Parcels](https://www.mass.gov/info-details/massgis-data-property-tax-parcels).
+- `scripts/fetch_massgis_parcels.py` pages the service (2,000 rows per request, `resultOffset`, `returnGeometry=false`, ordered by OBJECTID) and writes `data/parcels.csv` (committed, de-identified) plus `data/parcels_raw/parcels_full.csv` (gitignored, adds `owner1` + mailing). Raw JSON pages are cached under `data/parcels_raw/` (gitignored) for provenance. One run is ~5 requests for all 8,805 parcels. Field mapping lives in `scripts/massgis_parcels.py` (unit-tested in `data/test_massgis_parcels.py`).
+- The gitignored full CSV is the input to `scripts/sync_parcel_owners.mjs`, which normalizes addresses and loads the `parcel_owners` D1 table behind the community-pulse self-serve verification feature. Its `buildRow` reads `site_addr`, `owner1`, `prop_id`, and `fy` from this CSV.
+- Vintage: MassGIS carries the prior fiscal year's certified values, so this is **FY2025** (the `fy` column records it per row). The town's live Patriot Properties database shows the FY2026 revaluation, ~20% higher on a sampled waterfront parcel; do not present these as current-year values without the vintage caveat.
+- Owner names and mailing addresses are public record but are deliberately kept out of the committed CSV: marbleheaddata.org is a public static site, so committing the bulk owner list would publish it. The de-identified file is what the site reads.
+- Note on sourcing: an earlier attempt scraped the town's live Patriot Properties WebPro database parcel-by-parcel; it got the IP rate-limited (403) after ~7,000 requests and only covered ~2% of parcels. MassGIS provides the same data (one fiscal year older) in one polite bulk pull, so that is the source of record here.
 
 ## Household Income Distribution (ACS 2020&ndash;2024, table B19001)
 - Source: US Census Bureau, ACS 2020&ndash;2024 5-year estimates, table B19001, Marblehead town, Essex County, MA (FIPS 25-009-38400)

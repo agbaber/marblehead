@@ -1,0 +1,767 @@
+---
+layout: page
+title: Schools budget history
+description: Marblehead schools spending over 24 years, plus what the district has proposed by category.
+body_class: chart-page
+scripts: [citations]
+og_title: Schools budget history
+og_description: Marblehead schools spending 2001-2024 audited, plus 2018-2027 proposed by category.
+og_url: https://marbleheaddata.org/schools-budget.html
+---
+<style>
+  .lede {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 60ch;
+  }
+  .chart-panel {
+    margin: 1.5rem 0 2.5rem;
+    padding: 1rem 0;
+  }
+  .chart-panel svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: color-mix(in srgb, var(--surface) 95%, var(--c-navy) 5%);
+  }
+  .chart-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .chart-toggle button {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    font: inherit;
+    line-height: 1.2;
+  }
+  .chart-toggle button[aria-selected="true"] {
+    background: var(--c-navy);
+    color: var(--surface);
+    border-color: var(--c-navy);
+  }
+  .chart-line {
+    fill: none;
+    stroke: var(--c-buoy);
+    stroke-width: 2.5;
+  }
+  .chart-axis {
+    stroke: var(--chart-axis);
+    stroke-width: 1;
+  }
+  .chart-tick {
+    fill: var(--text-muted);
+    font-size: 11px;
+    font-family: inherit;
+  }
+  .chart-ylabel {
+    fill: var(--text-muted);
+    font-size: 11px;
+    font-family: inherit;
+  }
+  figcaption {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin-top: 10px;
+    max-width: 70ch;
+  }
+  .chart-anomaly {
+    fill: var(--c-brass);
+    stroke: var(--surface);
+    stroke-width: 1.5;
+  }
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 12px 0 8px;
+  }
+  .budget-table th, .budget-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .budget-table th {
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--text);
+  }
+  .budget-table .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .budget-table tfoot th, .budget-table tfoot td {
+    font-weight: 700;
+    border-top: 2px solid var(--text);
+    border-bottom: none;
+  }
+  .budget-table .bar-col {
+    width: 30%;
+    padding-left: 12px;
+  }
+  .budget-table .bar {
+    display: block;
+    height: 14px;
+    background: var(--c-buoy);
+    border-radius: 2px;
+  }
+  .budget-table .delta-up,
+  .budget-table .delta-down { font-weight: 600; }
+  .budget-table .delta-flat { color: var(--text-muted); }
+  @media (max-width: 600px) {
+    .budget-table { font-size: 13px; }
+    .budget-table th, .budget-table td { padding: 6px 6px; }
+    .budget-table .bar-col { display: none; }
+  }
+  .peer-block table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 12px 0 8px;
+  }
+  .peer-block th {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 2px solid var(--text);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .peer-block td {
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .peer-block td:not(:first-child), .peer-block th:not(:first-child) {
+    text-align: right;
+  }
+  .peer-block .peer-highlight {
+    background: color-mix(in srgb, var(--c-navy) 6%, transparent);
+    font-weight: 600;
+  }
+</style>
+
+<h1>Schools budget history</h1>
+
+<p class="lede">
+  Two numbers get called "the schools budget." Audited actuals from the town's ACFRs go
+  back to fiscal year 2001. The superintendent's proposed budget, by category, goes back
+  to fiscal year 2018, from School Committee meeting packets. Both are below.
+</p>
+
+<h2 id="acfr-actuals">What actually got spent, fiscal year 2001 to fiscal year 2024</h2>
+
+<figure class="chart-panel" id="panel1">
+  <div class="chart-toggle" role="tablist" aria-label="View">
+    <button type="button" role="tab" aria-selected="true" data-view="nominal">Nominal dollars</button>
+    <button type="button" role="tab" aria-selected="false" data-view="per-pupil">Per pupil</button>
+    <button type="button" role="tab" aria-selected="false" data-view="real">Inflation-adjusted</button>
+  </div>
+  <svg id="panel1-svg" viewBox="0 0 800 420" preserveAspectRatio="xMidYMid meet" aria-label="Marblehead education spending by fiscal year, 2001 to 2024"></svg>
+  <figcaption>
+    Source: fiscal year 2024 ACFR, page 129, Schedule of Expenditures by Function.
+    <sup class="cite" data-src="fy24-acfr" data-page="129">1</sup>
+    The highlighted fiscal year 2022 and fiscal year 2023 points are reporting
+    anomalies, not operating spending. Fiscal year 2022 reflects a likely
+    Governmental Accounting Standards Board pension or OPEB liability
+    adjustment; fiscal year 2023 includes prior-year adjustments per the
+    auditor's note. Neither is a trend point.
+  </figcaption>
+</figure>
+
+<h2 id="proposed-by-category">Superintendent's proposed budget by category, fiscal year 2026 and fiscal year 2027</h2>
+
+<figure class="chart-panel" id="panel2">
+  <table class="budget-table" aria-label="Proposed schools budget by category">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th class="num">FY26</th>
+        <th class="num">FY27</th>
+        <th class="num">Change</th>
+        <th class="bar-col" aria-hidden="true"></th>
+      </tr>
+    </thead>
+    <tbody id="panel2-body"></tbody>
+    <tfoot id="panel2-foot"></tfoot>
+  </table>
+  <figcaption>
+    Level-funded, pre-reduction. February 5, 2026 School Committee packet.<sup class="cite" data-src="mps-fy27-packet" data-page="9-40">2</sup>
+    Fixed Charges (health insurance, retirement) are budgeted town-side and excluded.
+  </figcaption>
+</figure>
+
+<h2 id="peers">How Marblehead compares to peers, fiscal year 2024</h2>
+
+<p>
+  Fiscal year 2024 education spending across 17 Massachusetts municipalities, sorted by
+  per capita. Marblehead is highlighted.
+  <sup class="cite" data-src="dor-schedule-a" data-page="fy24">3</sup>
+</p>
+
+<figure class="peer-block" id="peer-block">
+  <table>
+    <thead>
+      <tr>
+        <th>Town</th>
+        <th>Education (fiscal year 2024)</th>
+        <th>Population</th>
+        <th>Per capita</th>
+        <th>Per student</th>
+      </tr>
+    </thead>
+    <tbody id="peer-block-body"></tbody>
+  </table>
+</figure>
+
+<details class="notes">
+  <summary>Sources and notes</summary>
+  <p>
+    Panel 1 comes from
+    <a href="/data/education_expenditure_FY01-24.csv"><code>education_expenditure_FY01-24.csv</code></a>
+    (each year's Education line from that fiscal year's ACFR). FY22 and FY23 are one-time reporting anomalies (GASB liability adjustment and prior-year adjustments); excluding them the underlying trend 2015 to 2024 is broadly linear.
+  </p>
+  <p>
+    Panel 2 comes from
+    <a href="/data/mps_proposed_budget_by_category.csv"><code>mps_proposed_budget_by_category.csv</code></a>,
+    extracted by
+    <a href="https://github.com/agbaber/marblehead/blob/main/scripts/extract_mps_proposed_budget.mjs"><code>extract_mps_proposed_budget.mjs</code></a>
+    from the February 5, 2026 packet. Bucket sums total $48.6M in FY26 and $50.0M in FY27; the packet's headline of $49.1M for both years reflects town-side Fixed Charges (about $883K, not shown here) plus roughly $1.6M in entity-level reductions taken to hit the level-funded target. FY18 through FY25 land in follow-up updates.
+  </p>
+  <p>
+    Peer block totals from
+    <a href="/data/peer_schedule_a_expenditures.csv"><code>peer_schedule_a_expenditures.csv</code></a>
+    (DOR Schedule A). Population from
+    <a href="/data/dor_income_eqv_pop_FY27.csv"><code>dor_income_eqv_pop_FY27.csv</code></a>.
+    Enrollment from
+    <a href="/data/dese_peer_enrollment_FY24.csv"><code>dese_peer_enrollment_FY24.csv</code></a>
+    (DESE E2C Hub). Sorted by per-capita because sorting by raw dollars just ranks by town size.
+  </p>
+</details>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ═══════════════════════════════════════════
+     CSV PARSER
+     ═══════════════════════════════════════════ */
+  function parseCsv(text) {
+    var lines = text.trim().split('\n');
+    var headers = lines[0].split(',').map(function (h) { return h.trim(); });
+    return lines.slice(1).map(function (line) {
+      var cells = line.split(',');
+      var row = {};
+      headers.forEach(function (h, i) {
+        row[h] = cells[i] !== undefined ? cells[i].trim() : '';
+      });
+      return row;
+    });
+  }
+
+  /* ═══════════════════════════════════════════
+     MODULE-LEVEL DATA CACHE
+     ═══════════════════════════════════════════ */
+  var nominalData = null;   // [{fy, value}]
+  var perPupilData = null;  // [{fy, value}]
+  var realData = null;      // [{fy, value}]
+  var currentView = 'nominal';
+
+  /* ═══════════════════════════════════════════
+     SVG HELPERS
+     ═══════════════════════════════════════════ */
+  var NS = 'http://www.w3.org/2000/svg';
+
+  function svgEl(tag, attrs) {
+    var el = document.createElementNS(NS, tag);
+    Object.keys(attrs).forEach(function (k) { el.setAttribute(k, attrs[k]); });
+    return el;
+  }
+
+  /* ═══════════════════════════════════════════
+     FORMAT HELPERS
+     ═══════════════════════════════════════════ */
+  function fmtDollarM(v) {
+    return '$' + (v / 1e6).toFixed(1) + 'M';
+  }
+
+  function fmtDollarK(v) {
+    return '$' + Math.round(v / 1000) + 'k';
+  }
+
+  /* ═══════════════════════════════════════════
+     CHART DIMENSIONS
+     ═══════════════════════════════════════════ */
+  var VW = 800;
+  var VH = 420;
+  var PAD = { top: 28, right: 28, bottom: 44, left: 68 };
+  var W = VW - PAD.left - PAD.right;   // plot width
+  var H = VH - PAD.top - PAD.bottom;   // plot height
+
+  /* ═══════════════════════════════════════════
+     DRAW
+     ═══════════════════════════════════════════ */
+  function draw(svg, points, viewMode) {
+    /* Clear previous content */
+    while (svg.firstChild) { svg.removeChild(svg.firstChild); }
+
+    if (!points || points.length === 0) { return; }
+
+    var fyMin = points[0].fy;
+    var fyMax = points[points.length - 1].fy;
+    var valMin = 0;
+    var valMax = Math.max.apply(null, points.map(function (p) { return p.value; }));
+
+    /* Add 5% headroom above max */
+    valMax = valMax * 1.05;
+
+    /* ── Scale functions ── */
+    function xScale(fy) {
+      return PAD.left + ((fy - fyMin) / (fyMax - fyMin)) * W;
+    }
+
+    function yScale(val) {
+      return PAD.top + H - (val / valMax) * H;
+    }
+
+    /* ── X axis line ── */
+    var xAxisLine = svgEl('line', {
+      x1: PAD.left,
+      y1: PAD.top + H,
+      x2: PAD.left + W,
+      y2: PAD.top + H,
+      'class': 'chart-axis'
+    });
+    svg.appendChild(xAxisLine);
+
+    /* ── Y axis line ── */
+    var yAxisLine = svgEl('line', {
+      x1: PAD.left,
+      y1: PAD.top,
+      x2: PAD.left,
+      y2: PAD.top + H,
+      'class': 'chart-axis'
+    });
+    svg.appendChild(yAxisLine);
+
+    /* ── X tick labels: every 5 FYs ── */
+    var xTicks = [];
+    for (var fy = 2005; fy <= 2024; fy += 5) {
+      xTicks.push(fy);
+    }
+    /* Always include first and last year */
+    if (xTicks[0] !== fyMin) { xTicks.unshift(fyMin); }
+    if (xTicks[xTicks.length - 1] !== fyMax) { xTicks.push(fyMax); }
+
+    xTicks.forEach(function (fy) {
+      var x = xScale(fy);
+      /* tick mark */
+      var tick = svgEl('line', {
+        x1: x, y1: PAD.top + H,
+        x2: x, y2: PAD.top + H + 5,
+        'class': 'chart-axis'
+      });
+      svg.appendChild(tick);
+      /* label */
+      var label = svgEl('text', {
+        x: x,
+        y: PAD.top + H + 18,
+        'text-anchor': 'middle',
+        'class': 'chart-tick'
+      });
+      label.textContent = '\'' + String(fy).slice(2);
+      svg.appendChild(label);
+    });
+
+    /* ── Y tick labels: 4 evenly spaced values ── */
+    var yTickCount = 4;
+    var isPerPupil = (viewMode === 'per-pupil');
+    var fmtY = isPerPupil ? fmtDollarK : fmtDollarM;
+
+    for (var i = 0; i <= yTickCount; i++) {
+      var val = (valMax / yTickCount) * i;
+      var y = yScale(val);
+
+      /* tick mark */
+      var yTick = svgEl('line', {
+        x1: PAD.left - 5, y1: y,
+        x2: PAD.left,     y2: y,
+        'class': 'chart-axis'
+      });
+      svg.appendChild(yTick);
+
+      /* gridline (light) */
+      if (i > 0) {
+        var grid = svgEl('line', {
+          x1: PAD.left,       y1: y,
+          x2: PAD.left + W,   y2: y,
+          stroke: 'var(--border)',
+          'stroke-width': '0.5',
+          'stroke-dasharray': '3 3'
+        });
+        svg.appendChild(grid);
+      }
+
+      /* label */
+      var yLabel = svgEl('text', {
+        x: PAD.left - 8,
+        y: y + 4,
+        'text-anchor': 'end',
+        'class': 'chart-tick'
+      });
+      yLabel.textContent = fmtY(val);
+      svg.appendChild(yLabel);
+    }
+
+    /* ── Y axis unit label (rotated) ── */
+    var unitLabel = isPerPupil ? 'Dollars per pupil' : 'Millions of dollars';
+    var axisLabel = svgEl('text', {
+      x: -(PAD.top + H / 2),
+      y: 14,
+      transform: 'rotate(-90)',
+      'text-anchor': 'middle',
+      'class': 'chart-ylabel'
+    });
+    axisLabel.textContent = unitLabel;
+    svg.appendChild(axisLabel);
+
+    /* ── Line path ── */
+    var d = '';
+    points.forEach(function (p, idx) {
+      var px = xScale(p.fy);
+      var py = yScale(p.value);
+      if (idx === 0) {
+        d += 'M ' + px + ' ' + py;
+      } else {
+        d += ' L ' + px + ' ' + py;
+      }
+    });
+
+    var path = svgEl('path', {
+      d: d,
+      'class': 'chart-line'
+    });
+    svg.appendChild(path);
+
+    /* ── Anomaly markers (only in nominal view) ── */
+    if (viewMode === 'nominal') {
+      var ANOMALIES = [2022, 2023];
+      ANOMALIES.forEach(function (fy) {
+        var pt = null;
+        for (var i = 0; i < points.length; i++) {
+          if (points[i].fy === fy) {
+            pt = points[i];
+            break;
+          }
+        }
+        if (!pt) return;
+        var dot = svgEl('circle', {
+          cx: xScale(pt.fy),
+          cy: yScale(pt.value),
+          r: 6,
+          'class': 'chart-anomaly'
+        });
+        svg.appendChild(dot);
+      });
+    }
+  }
+
+  /* ═══════════════════════════════════════════
+     RENDER CURRENT VIEW
+     ═══════════════════════════════════════════ */
+  function renderView(view) {
+    var svg = document.getElementById('panel1-svg');
+    var points;
+    if (view === 'nominal') {
+      points = nominalData;
+    } else if (view === 'per-pupil') {
+      points = perPupilData;
+    } else {
+      points = realData;
+    }
+    draw(svg, points, view);
+  }
+
+  /* ═══════════════════════════════════════════
+     TOGGLE BUTTON WIRING
+     ═══════════════════════════════════════════ */
+  function wireToggles() {
+    var buttons = document.querySelectorAll('#panel1 .chart-toggle button');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        buttons.forEach(function (b) { b.setAttribute('aria-selected', 'false'); });
+        btn.setAttribute('aria-selected', 'true');
+        currentView = btn.getAttribute('data-view');
+        renderView(currentView);
+      });
+    });
+  }
+
+  /* ═══════════════════════════════════════════
+     DATA LOADING
+     ═══════════════════════════════════════════ */
+  function buildNominal(rows) {
+    return rows.map(function (r) {
+      var fy = parseInt(r.FY, 10);
+      var val = parseFloat(r.Education_Expenditure);
+      if (isNaN(fy) || isNaN(val)) { return null; }
+      return { fy: fy, value: val };
+    }).filter(Boolean);
+  }
+
+  function buildPerPupil(rows) {
+    return rows.map(function (r) {
+      var fy = parseInt(r.FY, 10);
+      var val = parseFloat(r.Per_Student);
+      if (isNaN(fy) || isNaN(val)) { return null; }
+      return { fy: fy, value: val };
+    }).filter(Boolean);
+  }
+
+  function buildReal(nomRows, ipdMap) {
+    var base = ipdMap[2024];
+    if (!base) { return []; }
+    return nomRows.map(function (r) {
+      var fy = parseInt(r.FY, 10);
+      var nom = parseFloat(r.Education_Expenditure);
+      var ipd = ipdMap[fy];
+      if (isNaN(fy) || isNaN(nom) || !ipd) { return null; }
+      return { fy: fy, value: nom * base / ipd };
+    }).filter(Boolean);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    wireToggles();
+
+    Promise.all([
+      fetch('/data/education_expenditure_FY01-24.csv').then(function (r) { return r.text(); }),
+      fetch('/data/education_per_student_FY01-24.csv').then(function (r) { return r.text(); }),
+      fetch('/data/bea_state_local_ipd.csv').then(function (r) { return r.text(); })
+    ]).then(function (texts) {
+      var nomRows = parseCsv(texts[0]);
+      var ppRows  = parseCsv(texts[1]);
+      var ipdRows = parseCsv(texts[2]);
+
+      /* Build IPD lookup: calendar_year -> index value */
+      var ipdMap = {};
+      ipdRows.forEach(function (r) {
+        var yr = parseInt(r.calendar_year, 10);
+        var idx = parseFloat(r.index_2017_100);
+        if (!isNaN(yr) && !isNaN(idx)) { ipdMap[yr] = idx; }
+      });
+
+      nominalData  = buildNominal(nomRows);
+      perPupilData = buildPerPupil(ppRows);
+      realData     = buildReal(nomRows, ipdMap);
+
+      renderView(currentView);
+    }).catch(function (err) {
+      console.error('Panel 1 chart data load failed:', err);
+    });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  var BUCKET_ORDER = ['Regular instruction', 'Special education', 'Student services',
+                      'Operations', 'Administration', 'Capital'];
+
+  function parseCsv(text) {
+    var lines = text.trim().split('\n');
+    var headers = lines[0].split(',');
+    return lines.slice(1).map(function (line) {
+      var out = [];
+      var cur = '';
+      var inQuote = false;
+      for (var i = 0; i < line.length; i++) {
+        var c = line[i];
+        if (c === '"') { inQuote = !inQuote; continue; }
+        if (c === ',' && !inQuote) { out.push(cur); cur = ''; continue; }
+        cur += c;
+      }
+      out.push(cur);
+      var row = {};
+      headers.forEach(function (h, i) { row[h.trim()] = (out[i] || '').trim(); });
+      return row;
+    });
+  }
+
+  function fmtDollar(v) {
+    if (Math.abs(v) >= 1e6) return '$' + (v / 1e6).toFixed(1) + 'M';
+    return '$' + Math.round(v / 1000).toLocaleString() + 'k';
+  }
+
+  function fmtDelta(v) {
+    var sign = v > 0 ? '+' : (v < 0 ? '−' : '');
+    var abs = Math.abs(v);
+    var mag = abs >= 1e6 ? '$' + (abs / 1e6).toFixed(1) + 'M'
+                          : '$' + Math.round(abs / 1000).toLocaleString() + 'k';
+    return sign + mag;
+  }
+
+  function deltaClass(v) {
+    if (v > 0) return 'delta-up';
+    if (v < 0) return 'delta-down';
+    return 'delta-flat';
+  }
+
+  function render(rows) {
+    var body = document.getElementById('panel2-body');
+    var foot = document.getElementById('panel2-foot');
+    if (!body || !foot) return;
+
+    // Group by FY x bucket.
+    var byFy = { 2026: {}, 2027: {} };
+    rows.forEach(function (r) {
+      var fy = Number(r.FY);
+      if (!byFy[fy]) return;
+      byFy[fy][r.bucket] = Number(r.amount);
+    });
+
+    // Max bucket value across both FYs for the inline bar scale.
+    var maxBucket = 0;
+    BUCKET_ORDER.forEach(function (b) {
+      maxBucket = Math.max(maxBucket, byFy[2026][b] || 0, byFy[2027][b] || 0);
+    });
+
+    body.innerHTML = BUCKET_ORDER.map(function (bucket) {
+      var v26 = byFy[2026][bucket] || 0;
+      var v27 = byFy[2027][bucket] || 0;
+      var delta = v27 - v26;
+      var pct = v26 ? Math.round(delta / v26 * 100) : 0;
+      var barW = maxBucket ? (v27 / maxBucket * 100) : 0;
+      var pctStr = (pct > 0 ? '+' : (pct < 0 ? '−' : '')) + Math.abs(pct) + '%';
+      return '<tr>' +
+        '<td>' + bucket + '</td>' +
+        '<td class="num">' + fmtDollar(v26) + '</td>' +
+        '<td class="num">' + fmtDollar(v27) + '</td>' +
+        '<td class="num ' + deltaClass(delta) + '">' + fmtDelta(delta) + ' (' + pctStr + ')</td>' +
+        '<td class="bar-col"><span class="bar" style="width:' + barW.toFixed(1) + '%" aria-hidden="true"></span></td>' +
+      '</tr>';
+    }).join('');
+
+    var t26 = BUCKET_ORDER.reduce(function (s, b) { return s + (byFy[2026][b] || 0); }, 0);
+    var t27 = BUCKET_ORDER.reduce(function (s, b) { return s + (byFy[2027][b] || 0); }, 0);
+    var tDelta = t27 - t26;
+    var tPct = t26 ? Math.round(tDelta / t26 * 100) : 0;
+    var tPctStr = (tPct > 0 ? '+' : (tPct < 0 ? '−' : '')) + Math.abs(tPct) + '%';
+    foot.innerHTML = '<tr>' +
+      '<th>Total</th>' +
+      '<td class="num">' + fmtDollar(t26) + '</td>' +
+      '<td class="num">' + fmtDollar(t27) + '</td>' +
+      '<td class="num ' + deltaClass(tDelta) + '">' + fmtDelta(tDelta) + ' (' + tPctStr + ')</td>' +
+      '<td class="bar-col"></td>' +
+    '</tr>';
+  }
+
+  function loadAndRender() {
+    fetch('/data/mps_proposed_budget_by_category.csv')
+      .then(function (r) { return r.text(); })
+      .then(parseCsv)
+      .then(render);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadAndRender);
+  } else {
+    loadAndRender();
+  }
+})();
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  function parseCsv(text) {
+    var lines = text.trim().split('\n');
+    var headers = lines[0].split(',');
+    return lines.slice(1).map(function (line) {
+      var out = [];
+      var cur = '';
+      var inQuote = false;
+      for (var i = 0; i < line.length; i++) {
+        var c = line[i];
+        if (c === '"') { inQuote = !inQuote; continue; }
+        if (c === ',' && !inQuote) { out.push(cur); cur = ''; continue; }
+        cur += c;
+      }
+      out.push(cur);
+      var row = {};
+      headers.forEach(function (h, i) { row[h.trim()] = (out[i] || '').trim(); });
+      return row;
+    });
+  }
+
+  function fmtDollarM(v) {
+    if (v >= 1e6) return '$' + (v / 1e6).toFixed(1) + 'M';
+    return '$' + Math.round(v / 1000) + 'k';
+  }
+  function fmtInt(v) {
+    return v.toLocaleString();
+  }
+  function fmtDollarWhole(v) {
+    return '$' + Math.round(v).toLocaleString();
+  }
+
+  function render(peerRows, popRows, enrollRows) {
+    var body = document.getElementById('peer-block-body');
+    if (!body) return;
+    var popByTown = {};
+    popRows.forEach(function (r) { popByTown[r.municipality] = Number(r.population); });
+    var enrollByTown = {};
+    enrollRows.filter(function (r) { return r.fiscal_year === '2024'; })
+      .forEach(function (r) { enrollByTown[r.district] = Number(r.total_enrollment); });
+
+    var fy24 = peerRows.filter(function (r) { return r.fiscal_year === '2024'; });
+    fy24.forEach(function (r) {
+      r.eduNum = Number(r.education.replace(/[",]/g, ''));
+      r.pop = popByTown[r.municipality] || 0;
+      r.perCapita = r.pop ? r.eduNum / r.pop : 0;
+      r.enroll = enrollByTown[r.municipality] || 0;
+      r.perStudent = r.enroll ? r.eduNum / r.enroll : 0;
+    });
+    fy24.sort(function (a, b) { return b.perCapita - a.perCapita; });
+
+    body.innerHTML = fy24.map(function (r) {
+      var isMhd = r.municipality === 'Marblehead';
+      var cls = isMhd ? ' class="peer-highlight"' : '';
+      var perStudent = r.perStudent ? fmtDollarWhole(r.perStudent) : '&ndash;';
+      return '<tr' + cls + '>' +
+        '<td>' + r.municipality + '</td>' +
+        '<td>' + fmtDollarM(r.eduNum) + '</td>' +
+        '<td>' + fmtInt(r.pop) + '</td>' +
+        '<td>' + fmtDollarWhole(r.perCapita) + '</td>' +
+        '<td>' + perStudent + '</td>' +
+        '</tr>';
+    }).join('');
+  }
+
+  function load() {
+    Promise.all([
+      fetch('/data/peer_schedule_a_expenditures.csv').then(function (r) { return r.text(); }).then(parseCsv),
+      fetch('/data/dor_income_eqv_pop_FY27.csv').then(function (r) { return r.text(); }).then(parseCsv),
+      fetch('/data/dese_peer_enrollment_FY24.csv').then(function (r) { return r.text(); }).then(parseCsv)
+    ]).then(function (results) {
+      render(results[0], results[1], results[2]);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', load);
+  } else {
+    load();
+  }
+})();
+</script>

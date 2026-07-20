@@ -109,13 +109,18 @@
     // Where to put the sources section, in order of preference:
     //   1. Before the first .notes block (methodology-footnote convention)
     //   2. Appended inside the m101 chapter column, after the pager (course pages)
-    //   3. Appended to the document body (fallback)
+    //   3. Before the in-page footer, so it stays inside the styled container
+    //   4. Appended to the document body (last resort; renders unstyled below
+    //      the footer, which is a bug in the page, not a layout choice)
     var notes = document.querySelector('.notes');
     var m101Main = document.querySelector('.m101-main');
+    var footer = document.querySelector('.page footer.footer, footer.footer');
     if (notes && notes.parentNode) {
       notes.parentNode.insertBefore(section, notes);
     } else if (m101Main) {
       m101Main.appendChild(section);
+    } else if (footer && footer.parentNode) {
+      footer.parentNode.insertBefore(section, footer);
     } else {
       document.body.appendChild(section);
     }

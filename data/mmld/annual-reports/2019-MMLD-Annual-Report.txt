@@ -1,0 +1,431 @@
+     MARBLEHEAD MUNICIPAL LIGHT DEPARTMENT
+To the citizens of Marblehead,
+
+The Marblehead Municipal Light Department (MMLD) is pleased to share its 125th
+annual report and financial statements for the calendar year ending December 31,
+2019.
+
+Top-line Results:
+In 2019 MMLD delivered 99,658 megawatt-hours (MWh) of electricity to 10,434
+Marblehead customers (meters), generating revenue of $16,905,077. The 2019
+annual load is a 4.6% decline from the 2018 load of 104,440 MWh and a 3.9%
+decline from the prior five-year (2014-18) average of 103,750 MWh. The 2019
+annual power sales revenue is a 2.8% decrease versus the 2018 revenue of
+$17,390,445, yet a 3.1% increase from the prior five-year (2014-18) average of
+$16,393,494. The months with the greatest year-on-year decline in power usage
+were January, with a 13.2% decline versus January 2018 and September with a
+14.8% decline versus September 2018.
+The 2019 Marblehead winter peak load of 22.5 MW occurred on January 21st at 6-7
+p.m. The 2019 winter peak load was 5.7% lower than the 2018 winter peak load of
+23.9 MW. The 2019 Marblehead summer peak load of 30.6 MW occurred on July
+30th, at 5-6 p.m. The 2019 summer peak load was 1.0% higher than the 2018
+summer peak load of 30.3 MW.
+July was the only month in 2019 when our energy usage exceeded 10,000 MWh,
+compared to three months in 2018: January, July and August.
+The ISO-NE 2019 system peak load of 24,361 MWh was on July 30th, at 5-6 p.m.
+In 2019, 73% of the electric power supplied to Marblehead residents was carbon-
+free, compared to 70% carbon-free in 2018.
+
+
+2019 Weather Conditions & Impacts on Electric Power Distribution
+ISO-NE Report: New England weather remains a primary driver of electricity
+demand in New England. The temperatures during the 2018-2019 winter months –
+December, January, and February – averaged 30°F, less than a degree higher than
+the previous winter’s average temperature. But the difference in 2019 was the
+region was not hit by any prolonged periods of extreme cold. The winter of 2017-18
+included two weeks of bitter cold that challenged ISO power systems operations,
+while the winter of 2018-19 saw more moderate winter temperatures.
+July was the 2019’s hottest summer month. The New England average temperature
+during July was 76˚ Fahrenheit (F) an increase of one degree from the previous
+July. The average dew point, a measure of humidity, was 63˚F in July, the same as
+in July 2018. There were 175 Cooling Degree Days (CDD) during July 2019, while
+120 is the normal July CDD in New England. In July 2018, there were 169 CDD.
+(A degree day is a measure of heating or cooling, with 65 degrees F as the base
+temperature for calculating degree days. Each degree above a daily average
+temperature of 65 degrees is counted as one cooling degree day, while each degree
+below a day's average temperature of 65 degrees is counted as one heating degree
+day.)
+Marblehead Specific: Marblehead experienced two extreme weather events in
+2019. Each event caused significant damage and disruption throughout our town,
+and resulted in widespread power outages that continued for many hours, and in
+some extreme cases, multiple days. The first was Wednesday afternoon, July 17th,
+beginning around 3:30 p.m. Remnants of Hurricane Barry hit Marblehead with high
+winds reaching 50-60 mph and driving rain. Electrical power was knocked out in
+communities throughout Massachusetts. The Mass. Emergency Management
+Agency (MEMA) estimated that 227,000 Massachusetts customers were without
+power. MEMA communicated the largest concentration of outages was in Essex
+County, with an estimated 45,000 customers without electrical power. Marblehead
+received the full force of what has been described as a microburst storm…with large
+trees and branches falling on roadways and private property throughout town. The
+size and number of downed trees delayed the department’s ability to access
+damaged utility wires and poles. In the 48 hours that followed, MMLD’s outage-
+tracking software logged 20 distinct outages that impacted 1,670 customers…16%
+of our customers. The outages occurred throughout town, on 13 of the Town’s 22
+circuits. Given the scope of the damage, department management declared a
+department emergency. We triggered: (1) an immediate shift to an emergency work
+schedule of 16 hours on and 8 hours off until electric power was restored townwide
+and (2) a mutual aid request to other Massachusetts municipal electric light
+departments for additional linecrew assistance. Municipal electric utilities from
+Groton, Groveland, Middleton and Wakefield responded to our request for
+additional line crews. With their help and the ongoing co-operation and assistance
+of the Marblehead Police, Fire, Public Works and Tree Departments we were able
+to restore electrical service to 284 customers in the first five hours, 980 additional
+customers in 5-10 hours, 68 more customers in 10-20 hours, 255 more customers in
+20-24 hours and the remaining 83 customers in 24-30 hours.
+
+On Thursday, October 17th at 2:30 a.m., a weather pattern described as a “bomb
+cyclone” hit eastern Massachusetts, bringing high winds and driving rain. (Some
+residents will also remember this day as the one-year anniversary of the October 17,
+2018 microburst that took down two poles in the Gerry School area of Elm St. and
+left 133 customers without power.) Given the severity of this storm and the late
+night arrival, this damage from this storm was even more extensive than the July
+31st storm. MEMA estimated 217,000 customers without power, with the highest
+concentrations in Essex and Plymouth Counties. Five towns were reported to be
+completely without power. MMLD’s outage tracking software logged 64 distinct
+outages due to the storm, impacting 2,124 customers. The storm hit fast and hard,
+with the first 37 outages logged in a short 15-minute time period from 2:30 to 2:45
+a.m. The outage count increased to 47 by 7:00 a.m. sunrise. (For comparison, during
+the FEMA declared storms of March 2018, we logged a total of 11 outage events,
+involving 265 customers. In all of March 2018 we saw 13 outages, which was the
+highest number of outage events in a single month that year.) The severity of the
+storm made travel around town next to impossible for the several hours. With the
+morning sun, the full extent of the damage was more clearly understood…1,400
+customers without power. As the day continued, that number rose to 2,124
+customers, representing 20% of all MMLD customers. Outages were
+widespread…logged on 14 of the town’s 22 circuits. At 2:30 a.m. MMLD declared
+a department emergency. We triggered: (1) an immediate shift of all MMLD line
+and substation crew to a staggered 16 hour on/8 hour off work schedule until power
+was restored townwide, and (3) office staff to a staggered, extended-day schedule
+until power was restored townwide, and (3) a Mutual Aid request to municipal
+electric utilities for available line crews ASAP. Given the large size and number of
+trees and branches on the ground and against power lines, the initial pace of
+restoration was slow. Working with the Marblehead Police, Fire, Public Works and
+Tree Departments, and supported by municipal electric utility line crews from
+Georgetown, Groveland, Littleton and Sterling, and multiple private tree companies,
+we were able to restore power to 950 customers in the first 5 hours, 150 additional
+customers in 5-10 hours, 560 more customers in 10-24 hours, 375 more customers
+in 24-36 hours, 60 more customers in 36-48 hours, and 18 remaining customers in
+48-72 hours. Fortunately no injuries were reported. However too many Marblehead
+residents needlessly exposed themselves to serious personal injury or death by
+walking on Marblehead’s local streets while live high voltage utility lines lay on the
+ground or tangled in fallen trees and branches.
+2019 The Changing Fuel Mix of our Power Supply
+With the growing awareness and concern regarding climate change, MMLD: (1)
+closely monitors where we source our wholesale electricity, and (2) continues to
+evaluate new options for increasing the percentage of our power supply generated
+by carbon-free generation. MMLD is pleased to report that 73% of the 99,658
+megawatt-hours of electrical power we sold to our Marblehead customers in 2019 is
+carbon-free. Our carbon-free power sources include nuclear: 45%, hydro: 16%,
+wind: 8%, solar: 1%, and other renewables: 3%. 47% of our power was supplied via
+pre-existing power purchase agreements, and the remaining 53% was purchased in
+open ISO-NE energy markets. In 2018 our carbon-free percentage was 70%. For
+additional details on how we calculate this number, please visit our website at
+marbleheadelectric.com
+
+2019 Accomplishments and Major Activities
+• In January, MMLD signed an agreement with the National Renewable Energy
+    Lab (NREL), a US Dept. of Energy national research lab located in Golden,
+    Colorado, to undertake a technical and economic feasibility analysis of
+    installing renewable energy assets, with a primary focus on community-scale
+    solar PV arrays, to generate carbon-free electricity within the MMLD service
+    area. The potential solar PV evaluation sites were selected from a list consisting
+    of all 320 tax-exempt parcels located within Marblehead town limits, and two
+    Marblehead Water and Sewer Commission-owned parcels in Salem. This
+    town-wide study utilizes the NREL REopt renewable energy integration and
+    optimization software. The output of the study will include a prioritized list of
+    potential sites for solar PV arrays, based on the estimated power capacity and
+    total cost of ownership at each site. For details see https://reopt.nrel.gov/
+• In March, the Mass DEP notified MMLD that our additional sound dampening
+    measures had resolved their concerns regarding noise levels at the 5 MW
+    Wilkins Plant in Marblehead, and gave us formal approval to resume normal
+    operations in the ISO-NE forward capacity market.
+• In March, MMLD coordinated the filing of eight applications with the Mass
+    DEP EVIP Program, to receive 50% grant reimbursement for the purchase and
+    installation of commercial Level 2 Electric Vehicle (EV) chargers. MMLD
+    proposed ChargePoint commercial Level 2 EV chargers, to enable EV charging
+    at an average of 25 miles of driving range per hour charged. The proposed
+    town-owned EV charger sites include the Mary Alley Building, the Community
+    Center, Roundhouse Road, and Devereux Beach.
+•   In March the MMLD Board voted to make a $330,000 payment in lieu of taxes
+    (pilot payment) to the Town of Marblehead.
+•   From 2018 through September 2019, MMLD employees Matt Barrett, Colin
+    Coleman, Didi Rubano and Cheryl Stone coordinated the detailed reporting of
+    MMLD expenses incurred in the March 2018, for eventual FEMA
+    reimbursement. Eligible expenses totaled over $200,000.
+•   In May, voters in Marblehead re-elected Board member Mike Hull to his third
+    three-year term, and re-elected Board member Walter Homan to his fifth three-
+    year term.
+•   In May, MMLD publicly announced our participation in a new Mass. Dept. of
+    Energy Resources (DOER) Solar PV rebate program for residential customers
+    living in municipal electric utility communities. The new program offers
+    rebates of up to 50% on the purchase and installation of solar PV arrays, to
+    maximum of 5 kW at $1.20/watt. Program restrictions do apply. For full details
+    visit https://www.marbleheadelectric.com/
+•   In May, members of the National Renewable Energy Lab’s REopt team,
+    MMLD, and the Mass Municipal Wholesale Electric Company (MMWEC), our
+    power supply management and financing partner, formally kicked-off the
+    Marblehead REopt Project to identify the optimal sites for future solar PV
+    arrays in Marblehead.
+•   In July, MMLD’s long-held minority ownership in the Wyman 4 Plant, a 610
+    MW oil-fired power generator in Yarmouth, Maine was sold to majority owner
+    NextEra. MMWEC negotiated the sale on behalf of MMLD and 11 other
+    municipal electric utilities. The 12 MMWEC participants together owned 3.7%,
+    equal to ~22 MW in capacity. When Wyman first came online in 1976 it was
+    base-load generation unit. The MMLD Board agreed with MMWEC’s press
+    release statement, that the sale reflects, “changes in wholesale electric markets
+    and the evolving power supply strategies and policies that create a need for a
+    different power supply mix.”
+•   In July, the final debt service payments were made on the MMWEC-issued
+    bonds that funded MMLD’s ownership position in the Seabrook and Millstone
+    nuclear power plants…43 years after they were issued.
+•   In July, MMLD line crews, with support from a Tree Dept. crew, began a
+    Saturday tree-trimming program along the Town’s railroad right-of-ways that
+    carry our main electrical supply lines from Salem. The program will continue
+    through 2019 and into 2020, weather permitting.
+•   In November, Berkshire Wind Phase 2 successfully completed final testing to
+    become recognized as commercially available by ISO-NE. With Phase 2
+    online, MMLD’s total Berkshire Wind nameplate capacity ownership increased
+    to 1.62 MW.
+•   In November a commercial-grade, two-car EV charger was installed in the
+    MMLD main office parking lot at 80 Commercial St. It is configured for public
+    use, with an electric power price of $ 0.20 per kWh, a rate based on MMLD’s
+    standard residential electric rate plus a credit card service charge. (To
+    discourage extended-stay parking an additional charge of $5.00/hour is added
+    after four hours.) We estimate our EV charging price is around half the price of
+    gasoline. We note that there are now more public EV chargers than gas
+    stations in Marblehead!
+•   In December Mass DEP informed MMLD they approved our EV Charger
+    grants applications for seven locations in Marblehead.
+•   MMLD distribution system preventive maintenance and troubleshooting by
+    MMLD line crews is a year-round responsibility. In 2019, 68 new utility poles
+    were set, a significant increase from 23 set in 2018. 50 new poles were
+    preventive maintenance replacements, 16 were storm-damaged replacements,
+    and 2 set at new pole locations.
+•   In 2019 50 MMLD customers with solar panels on their home or business sold
+    their excess renewable energy to MMLD. The 50 solar PV customers are an
+    increase from 48 customers in 2018. The combined nameplate capacity of the
+    50 installations is .425 MW. The 2019 power purchased from these customers
+    was 192 MWh, a 3.8% increase from 185 MWh in 2018
+•   In 2019 eight Marblehead EV owners received a FREE residential ChargePoint
+    Level 2 charger from MMLD by enrolling in our Smart Charging Program. The
+    eight 2019 participants represents an increase from five in 2018 and three in
+    2017, for a total enrollment of 16. However 16 is low compared to the 94
+    Marblehead EV owners registered in the Mass MOR-EV program. If you are a
+    Marblehead EV owner, learn how you can get a free ChargePoint Level 2
+    charger. Visit https://www.marbleheadelectric.com/ev-vehicles-chargers.html
+•   Under the guidance of Lead Customer Services Rep. Megan Milan, MMLD
+    participates in the MMWEC-sponsored Home Energy Loss Prevention Services
+    (HELPS) Program. In 2019, 47 homeowners received free HELPS home
+    energy efficiency audits. HELPS also provides Marblehead residents with cash
+    rebates of up to $500 on the purchase of a variety of energy efficient
+    appliances, heat pumps, smart thermostats and home efficiency upgrades. For
+    details visit: https://www.marbleheadelectric.com/rebates-incentives.html
+MMLD Employee Recognition
+MMLD’s most important asset is our highly skilled workforce. The focus and
+dedication of our employees is essential to our mission…
+
+We deliver reliable, cost competitive and environmentally responsible electric
+power to Marblehead customers, while ensuring a safe and healthy work
+environment for employees and customers alike.
+
+We’re pleased to recognize the following MMLD employees in 2019:
+   • We congratulate two employees who received promotions: Greg Chane
+        was promoted to Working Foreman from Lead Lineman, Kirk Blaisdell
+        was promoted to Lead Lineman from First Class Lineman.
+   • We welcome three new employees hired in 2019: Second Class Lineman
+        Adam Bernard, Second Class Lineman Shane Hogan, and Customer
+        Service Representative Lori Whalen.
+   • We recognize three employees who celebrated a work anniversary in 2019:
+        Working Foreman Paul Camarda celebrated his 20 year anniversary at
+        MMLD; Kyle Larson, First Class Lineman, and Colin Coleman, Technical
+        Services Manager, celebrated their 5 year anniversary at MMLD.
+   • We honor Distribution Manager Bill Jackson, the 2019 recipient of the
+        Francis “Skip” Wiley Individual Achievement Award, presented by the
+        New England Public Power Association (NEPPA). NEPPA is New
+        England’s largest municipal utility association, with 80 utility members
+        from six New England states. Bill’s award, presented at the NEPPA
+        Annual Convention, is given to a New England utility employee who best
+        demonstrates a professional commitment to public power through personal
+        development and participation in NEPPA’s educational programs and other
+        association activities. Congratulations to Bill.
+   • We say goodbye to Working Foreman Joe Walker who retired in 2019,
+        after 15 years as an MMLD employee. We wish him well in his retirement.
+
+Respectfully submitted,
+
+Joseph T. Kowalik, General Manager
+Michael A. Hull, Commission Chairman
+Walter E. Homan, Commissioner
+Michael A. Tumulty, Commissioner
+Michael J. Maccario, Commissioner
+Karl A. Johnson, Commissioner
+                       MUNICIPAL LIGHT DEPARTMENT
+
+                                  STATEMENT OF INCOME
+
+                            For the year ending December 31, 2019
+
+
+
+Operating Revenue                                                        17,019,763.50
+
+Less Expenses:
+   Operating                                             13,403,925.16
+   Maintenance                                            1,410,976.84
+   Depreciation                                           1,175,178.05
+      Total Expenses                                                     15,990,080.05
+
+Operating Income                                                          1,029,683.45
+
+Interest Income                                                              73,998.38
+
+Other Income                                                                       0.00
+
+Less Interest on Long Term Debt                                             160,063.63
+
+Net Income Transferred to Surplus                                           943,618.20
+
+
+
+
+                                  STATEMENT OF SURPLUS
+
+                            For the year ending December 31, 2019
+
+
+
+Balance December 31, 2018                                                31,844,756.94
+
+Add: Credit balance transferred from income                                 943,618.20
+    Adjustment to transfer prior years
+    Power Refunds to surplus                                                       0.00
+
+Subtotal                                                                 32,788,375.14
+
+Deduct: Amount transferred to Town Treasurer
+         to reduce the Tax Levy                                            (330,000.00)
+       In Lieu Of Tax Payment to City Of Salem                               (4,054.38)
+        adjusting entries for year
+         ended December 2018                                             (17,523,424.76)
+
+Balance December 31, 2019                                                14,930,896.00
+                       MUNICIPAL LIGHT DEPARTMENT
+
+                                OPERATING EXPENSES
+
+                           For the year ending December 31, 2019
+
+Power Generation Expenses:
+  Fuel                                                        1,357.74
+  Generating Expense - Lubricants                                 0.00
+  Misc. Other Power Generating Expense                        4,506.85
+  Maint. of Other Power Generation                          106,525.91
+     Total Power Generation Expense                                        112,390.50
+
+Power Supply Expenses:
+  Electric Energy Purchased                               7,668,119.18
+  Misc. Purchased Power Expense                           2,289,178.79
+     Total Power Supply Expenses                                          9,957,297.97
+
+Transmission Expense:
+   Maintenance of Overhead Lines                                                  0.00
+
+Distribution Expenses:
+   Station Expense - Labor & Other                           13,305.50
+   Station Expense - Heat & Electricity                      56,207.52
+   Street Lighting                                            7,721.62
+   Meter Expense - Inspection, Testing,
+                    Removing, Resetting                      81,477.08
+   Customer Installation Expense                             36,619.06
+   Misc. Distribution Expense                               212,750.09
+   Maintenance of Structures                                      0.00
+   Maintenance of Station Equipment                          87,981.02
+   Maint. of Overhead & Underground Lines                 1,084,268.06
+   Maintenance of Line Transformers                          25,140.90
+   Maintenance of Meters                                     16,155.76
+      Total Distribution Expenses                                         1,621,626.61
+
+Customer Account Expenses:
+  Supervision of Customer Accounting                        108,444.22
+  Meter Reading - Labor & Expenses                           36,619.06
+  Customer Records & Collections                            231,268.56
+  Uncollectible Accounts                                     53,438.18
+  Interest Paid on Consumer Deposits                          4,523.47
+     Total Customer Account Expenses                                       434,293.49
+
+Advertising, Conservation, Energy Audits                                    114,661.11
+
+Administrative & General Expenses:
+   Administrative Salaries                                  181,935.25
+   Office Supplies & Expenses                               252,909.93
+   Outside Services Employed                                186,228.07
+   Property Insurance                                        37,646.86
+   Injuries & Damages                                         1,384.23
+   Rents                                                      5,793.88
+   Employee's Pensions & Benefits                         1,764,745.18
+   Maintenance of General Plant                              26,217.39
+   Transportation                                            64,687.80
+   Miscellaneous General Expense                             53,083.73
+      Total Administrative & Gen. Expenses                                2,574,632.32
+Total Operating Expenses less power costs                                                4,745,213.53
+
+     Total Operating & Maintenance Expenses                              14,814,902.00
+                      MUNICIPAL LIGHT DEPARTMENT
+
+                                    BALANCE SHEET
+
+                            For the year ending December 31, 2019
+
+                                           Assets
+
+Plant Investments                                                           19,235,632.80
+
+Current Assets:
+  Cash - Operating                                           4,259,046.62
+         Petty Cash                                                500.00
+         Construction                                           18,908.88
+  Accounts Receivable                                        2,777,296.31
+  Interest Receivable                                                0.00
+  Materials & Supplies                                         133,583.20
+     Total Current Assets                                                    7,189,335.01
+
+
+Depreciation Fund                                                            6,671,639.15
+Insurance Escrow Account                                                       990,524.74
+Hydro Savings Reserve                                                           42,108.77
+MMWEC - NEPEX Reserve Trust                                                    530,735.88
+Rate Stabilization Reserve                                                     900,000.00
+Consumer Deposits                                                              205,244.50
+Prepayments                                                                  1,465,644.09
+Pooled Financing Reserve-MMWEC                                                 553,505.85
+MMWEC 2015A Peabody Project                                                    373,538.01
+Deferred Outflows-Pensions                                                   1,482,411.00
+Deferred Outflows-Opeb                                                         509,392.00
+     Total Assets                                                           40,149,711.80
+
+
+
+
+                                   Liabilities And Surplus
+
+Accounts Payable:
+  Depreciation                                                  37,826.50
+  Operating                                                  1,619,781.23
+  Construction                                                       0.00
+  Consumer Deposits                                              4,200.00
+     Total Accounts Payable                                                  1,661,807.73
+
+Consumer Deposits                                                              201,044.50
+Bonds Payable                                                                4,855,394.69
+Accumulated Provision For Rate Stabilization                                   900,000.00
+Reserve-MMWEC Reserve Trust                                                    530,735.88
+Net Pension Liability                                                        7,092,308.00
+Deferred Inflows-Pensions                                                      461,101.00
+Deferred Inflows-Opeb                                                          341,547.00
+Reserve for Uncollectible Accounts                                             320,481.60
+Reserve for Future Compensated Absences                                         74,628.62
+Opeb Liability                                                               8,575,873.00
+Contribution In Aid For Construction                                           203,893.78
+Unappropriated Earned Surplus                                               14,930,896.00
+      Total Liabilities And Surplus                                         40,149,711.80
+

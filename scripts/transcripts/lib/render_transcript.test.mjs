@@ -65,3 +65,56 @@ test('renderTranscript places body after disclaimer', () => {
   const disclaimerIndex = md.indexOf('Vimeo');
   assert.ok(disclaimerIndex >= 0 && bodyIndex > disclaimerIndex);
 });
+
+// --- YouTube source ----------------------------------------------------------
+// Transcripts rendered from the MPS YouTube channel get a YouTube-flavoured
+// disclaimer and a youtube.com watch link. The site layouts read `video_url`
+// (with `vimeo_url` as fallback) so both sources render uniformly.
+
+test('renderTranscript emits youtube-auto source and disclaimer for YouTube', () => {
+  const md = renderTranscript({
+    board_slug: 'school-committee',
+    board_display: 'School Committee',
+    date: '2026-04-09',
+    youtube_id: 'UMABNnY3zeQ',
+    duration_seconds: 10800,
+    body: '**[0:00](https://www.youtube.com/watch?v=UMABNnY3zeQ&t=0s)** Hello.',
+    source: 'youtube-auto',
+  });
+  assert.match(md, /\nsource: youtube-auto\n/);
+  assert.match(md, /\nyoutube_id: UMABNnY3zeQ\n/);
+  assert.match(md, /\nvideo_url: "https:\/\/www\.youtube\.com\/watch\?v=UMABNnY3zeQ"\n/);
+  assert.match(md, /YouTube.*auto-?captioning/i);
+  assert.doesNotMatch(md, /MHTV/);
+  assert.doesNotMatch(md, /\nvimeo_id:/);
+  assert.doesNotMatch(md, /\nvimeo_url:/);
+});
+
+test('renderTranscript emits both video_url and vimeo_url for Vimeo (back-compat)', () => {
+  const md = renderTranscript({
+    board_slug: 'select-board',
+    board_display: 'Select Board',
+    date: '2026-04-22',
+    vimeo_id: '1185906675',
+    duration_seconds: 2969,
+    body: 'x',
+  });
+  assert.match(md, /\nvimeo_url: "https:\/\/vimeo\.com\/1185906675"\n/);
+  assert.match(md, /\nvideo_url: "https:\/\/vimeo\.com\/1185906675"\n/);
+});
+
+test('renderTranscript marks date_approximate when set', () => {
+  // A dateless MPS YouTube title (like gYE7TlHvW9o) gets dated from
+  // upload_date, with a flag the layout can surface.
+  const md = renderTranscript({
+    board_slug: 'school-committee',
+    board_display: 'School Committee',
+    date: '2024-03-15',
+    youtube_id: 'gYE7TlHvW9o',
+    duration_seconds: 7200,
+    body: 'x',
+    source: 'youtube-auto',
+    date_approximate: true,
+  });
+  assert.match(md, /\ndate_approximate: true\n/);
+});

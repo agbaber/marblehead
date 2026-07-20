@@ -1,0 +1,699 @@
+Light Commission November 29, 2022 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           December 14, 2022
+Re:             Commission Meeting November 29, 2022
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:03 pm, the meeting
+being held both in person and with remote access available to the public. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:          Hull, Frechette, Smith and Yarmoff participated in person.
+                                Commissioner Wolf is excused.
+        Light Department:       General Manager Joe Kowalik and Business Manager Matt Barrett.
+
+Financial Updates
+The financial updates will cover both the 2022 year-end plans, the rate restructure planned to come into
+effect in 2023, as well as the 2023 budget of MMLD: all of these plan for a coherent whole.
+
+
+Planned Year End Results
+The current forecast is that we will have an operating surplus of $75K. We are obligated by law to have a
+surplus. This result comes from the following assumptions.
+The PPA energy charge of 9c per kWh that was set in October will remain unchanged for the rest of the
+year. There is no plan to increase the PPA charge in December, nor did we increase it in November (as we
+planned to do and reported at the October Commission meeting). This stabilization of the rates is achieved
+by using $450K from the Rate Stabilization fund, half of the amount in the fund, to avoid having to raise
+rates further this year.
+The results take into account a non-recurring $50K payment from an APPA DEED grant related to the NREL
+study, only received this year. The result further assumes the 2022 charges for benefits and retirement
+come as per budget: $300K for the OPEB benefits charge, and a Pension contribution of $816K. While
+actuals are usually received by November 15, we do not have the current numbers. If the actuals that the
+town sends change materially from these numbers, this will affect our final result.
+The result also assumes a payment of $330K to the town that we refer to as a Payment In Lieu Of Taxes
+(PILOT payment) as a short cut. We should note that as every Town Department, MMLD is exempt from
+paying taxes, nor are there any obligations under Chapter 164 of MGL, which governs the organization of
+Municipal Light Plants, to pay taxes or PILOT payments.
+
+
+
+
+                                                                                                    1/14
+PILOT Payment discussion
+The General Manager asked the Commission if this PILOT payment was appropriate in view of the current
+situation of high rates caused by fossil fuel price increases. While a formal decision is not requested at this
+meeting, the fact that not making this payment is under serious consideration should be mentioned as
+appropriate to the town: Chair Hull will talk to Select Board Chair Moses, while General Manager Kowalik
+will talk with the Town Administrator Kezer.
+The policy for the payment of the PILOT amount was set a dozen years ago and has been adhered to ever
+since; it is predicated on MMLD ending the year with a surplus. The fact that MMLD generally ends each
+exercise with a surplus is predicated by our setting the appropriate rates and adhering to the law.
+But MMLD has many other pressing needs to best serve Marblehead residents: we need to upgrade our
+systems, and we pay for these upgrades from the Depreciation Fund. To avoid too abrupt rate increases,
+we use the Rate Stabilization Fund. The $330K PILOT could be used to replenish the Stabilization Fund, or
+could bolster the Depreciation Fund. Commissioner Yarmoff remarked that the investments needed to
+upgrade the network are one order of magnitude greater than the PILOT payments, which means that the
+Depreciation Fund must be funded appropriately through regular depreciation throughout the year, and
+not through opportunistic payments. In the same vein, it is anticipated that as the price of energy starts to
+fall in 2023, we can replenish partially the Rate Stabilization Fund. A line item may have to be added to the
+2023 budget, maybe on the order of $300K to replenish the RSF over the year. The Commission concurred
+that this would be a prudent thing to plan for.
+The options for using the expected $75K surplus, if it materializes, are to – keep it as Operating Cash;
+– move the money to the Stabilization Fund (usual use of end of year surplus), or – add to the
+Depreciation Fund. If the PILOT were not made, end of year operating surplus would be around $400K
+with the current assumptions. If the end of year results were negative, we could either roll this over into
+2023, or lower the PILOT payment.
+
+
+2023 Budget
+The 2023 budget takes MMWEC energy forecast (essentially flat) of 101 000 kWh, assumes a PILOT
+payment for calendar year 2023 and includes two critical hires, an Assistant General Manager and a
+Sustainability Manager, in addition to new items to support system capabilities for data acquisition, fiber
+optics network upkeep and GIS software. Planned capital expenditures include a major critical item
+(previously approved by the Commission) in the Village 13 substation upgrade for $6M for the year 2023
+fraction. Details are showed on the tables, page 6.
+The Commission approves the budget, with the recommendation of adding an extra line for partial reple-
+nishment of the Rate Stabilization Fund over the year, as discussed above. This budget also assumes selling
+class I RECs generated by the Berkshire Wind project. A review of this policy is needed in the near future.
+
+
+Rate projections for 2023; Implementation of rate structure changes
+Given the previous budget and the new rate structure, the projected energy rates for each class of
+customers is shown at the bottom of page 6. These rates need to be filed with DPU by December 15 to
+implement them by January 1st. The rates shown lead to a projected revenue of over $22.6M, in line with
+the budget for the calendar year 2023.
+
+                                                                                                        2/14
+The slide shows a change in rate for Photovoltaic uptake, which has not been discussed before. A review
+of the residential Solar Policy of the Department is needed before we implement any rate change on this
+class of customer. Keeping the rate steady for now is not material to the revenue of MMLD for 2023.
+Vote #2022-36 Motion to approve the restructure of the rates as shown on the table at bottom of page 6
+              (except for Photovoltaic rate which shall remain unchanged) for implementation by
+              January 1, 2023 is moved by Commissioner Smith, seconded by Commissioner Yarmoff.
+              Unanimous.
+
+
+Communications
+A communication insert has been included with bills for four waves of the paper bills, as well as with the
+electronic bills. So far, there has been no customer question. MMLD is organizing to have similar
+communications regularly.
+A public information session is planned, potentially on Thursday December 15 rather than December 6,
+to allow preparation of the load shedding scenarios.
+
+
+Winter reliability issue
+The slides presented from page 7 to 9 have been shared with Marblehead’s Departments heads last
+week. An MMWEC explanatory document is attached at the end of these minutes.
+In summary, in the low-probability situation where a long cold snap affects New England this winter, ISO-NE,
+the grid regulator, may order load shedding. In Marblehead, where we have no other adjustment possibi-
+lities, this would mean rolling black-outs. Marblehead needs to be prepared for this low probability event.
+The Department has to organize to have operators able to both operate the Wilkins plant (MMLD ordered
+an extra 5,000 gallons of fuel to run for prolonged periods) and to physically action switches to cut off
+some of the 22 circuits, in turn, to organize the load shedding in an orderly manner. Essential facilities
+need to check back-up power plans. The only exception to the load shedding will be for schools, which will
+not experience a black-out while in session.
+Customers are encouraged to know what circuit they are part of, and most importantly to register for
+CODE RED, and to sign up for both Text, email and voicemail. While there may be some warning that an
+event is possible, when a load-shedding event is ordered, it is likely that there will be only a few minutes
+forewarning. MMLD will communicate using CODE RED messages.
+
+
+Support for residents with low incomes
+DPU answered the query of the General Manager regarding “rates for low-income residents” with the
+example of another Muni which has implemented such rates: it is clearly allowed under DPU’s
+interpretation of MGL Chap 164. MMLD has been working with the North Shore Community Action
+Program (NSCAP, www.nscap.org) to administer the plan put in place during COVID. The General
+Manager proposes to expand this program: low-income residents who qualify will get a fixed amount of
+their energy bill paid for by the program.
+
+
+
+                                                                                                       3/14
+Recognition of MMLD staff, APPA Reliability Award
+Marblehead submitted information on the reliability of our system to the American Public Power
+Association: duration, frequency and extent of outages. The APPA keeps a database of these events. This
+is important as in the case of a FEMA-qualifying storm, only the entities able to track the reliability of
+their system can qualify for assistance. The award from APPA for reliability (see page 10) is a recognition
+by this national third party of the work of the whole Marblehead Municipal Light Department and the
+work of the whole team.
+MMLD staff, Paul Camarda and Adam Bernard, were also recognized and thanked for their work
+contributing to the recovery following hurricane Ian by Florida Public Power (page 10).
+
+
+Strategy Working Group update
+The long term load forecasts will be used for two major uses: an understanding of the long term energy
+needs (and therefore the contracts that we need to enter into to serve the expected load), and – if
+granular enough – guidance on grid upgrades. The types of data sets that we will need are described in
+the enclosed slides (page XX). We met with the Town Administrator, Thatcher Kezer, to explain the
+exercise that MMLD is entering into. As we discuss the actual data sets at the next meeting, it will be
+useful to have additional staff from MMLD (Colin X).
+
+
+The agenda for the meeting having been exhausted, a motion was made to adjourn and adopted
+unanimously at 6:17 pm.
+
+
+
+                                               ----****----
+
+
+
+
+                                                                                                      4/14
+Documents and slides shown during Light Commission Meeting 11/29
+
+                   Financial Situation - Nov 2022
+
+  • With our current $0.090 PPA,our year-end expenses will exceed
+    revenue by $75K.
+  • NO NEED to adjust PPAadjustment
+  • Still waiting on final 2022 OPEB($300K in budget) and Pension
+    contribution ($816 in budget) charges...typically provided in Nov
+  • Includes $330 Pilot Payment...better used to replenish our Rate
+    Stabilization Fund or added Depreciation (open Village 13
+    transformer bids on 12/15
+  • Our operating cash position remains solid - $5.4 million
+
+
+
+
+                  Financial Situation YTD 2022
+                                                                                                 (S000's)
+                  Total Projected kwh Sales Revenue                                              $19,845
+                  Street Lighting                                                                    $98
+                  Misc Revenue                                                                        22
+                  Total Revenue                                                                  $19,965 '
+
+                  Total Projected Expense & Pilot                                                $20,389
+                  Net Income                                                                       -$425
+                  Adjustments:
+                  Rate Stabilization Fund Transfer                               $450
+                  APPA DEED Grant proceeds                                         50
+                                Total Adjustments:                                                     50
+
+                  Adj Net Income                                                                       $75
+
+
+
+
+                 2023 MMLD proposed budget
+                               Marblehead Munlclpal Light Department
+                             Revenue & Rate Requirement Profectlon 2023
+                                             Uaing 3% Depredation
+                                              (000'•)
+                                                                                         Projected    Proposed
+                                                                 Budget      Budget       Actual      Budget
+                                  ill11ll                         20.21      mz            2Q22        20ll
+         Total Oporamg & Malntenonco
+                                   ExpenseBudget                  16,760.0    18,677.0     20,077.0     22,048.5
+         SUfl)M Revenuesrewmedto Townof -head                        330.0       330.0        330.0        330.0
+                                                                       0.0         0.0          0.0          0.0
+                                                                       0.0         0.0          0.0          0.0
+                                                                       0.0         0.0          0.0          0.0
+                                                                       QJl         QJl          QJl           QJl
+           Revenue Requirement                                    17.090.0    19,007.0     20,407.0    22,378.5
+
+           Projected Sain (Kwh)                                  101,000.0   101,000.0    101,000.0    101,000.0
+
+           Average Rate Required per Kwh Sokl                     0.16921     0.18819      0.20205      0.22157
+
+              lncreae / (OecrNH) In MIiis                                     0.01898      0.01386      0.01952
+
+             % lnerNM I Deer.au Projected Actual to Budget                                   7.37%        9.66%
+
+             % lncrNH / Decrease Budget to Budget                              11.22%                    17.74%
+
+
+
+
+                                                                                                                    5/14
+                                                            New Elements for 2023 budget
+J.:,
+
+20 GIS mapping installation & upgrade consulting                                                                                           $20,000 op ex
+21 Nexgrid OSServer onsite installation                                                                                                      $2,000 op ex
+       I
+22 Ne)(grid annual software license upgrade to enable residential TOU & demand                                                          $10,0001
+23 UFSc:{}5lterestructuring analysis                                                                                                    $20,000 op ex
+24 Nortern Data Systems - custom development                                                                                            $20,000 op ex
+25 Sustainability Manager                                                                                                              $100,000 op ex
+26 Asst GM/IT/GIS Manager                                                                                                              $130,000 op ex
+27 Professional Training,Meetings & Travel                                                                                                 $25,000 op ex
+28 MMLD newsletter                                                                                                                         $10,000 op ex
+29 Sertex fiber optic backbone as-built survey and map layer creation                                                                      $25,000
+30 Sertex fiber optic backbone monthly monitoring & maintenance                                                                            $10,000
+31                                                                                                             Subtotal                $372,000
+
+
+                                                             A                                                                         B                             C
+1 MMLD 2023 Budget- New items
+2
+3      Nexgrid Data Server h/w                                                                                                              $5,500
+4      Nexgrid Archive Server h/w                                                                                                           $7,000
+5      Nexgrid ecoSync Server Licenses/w                                                                                                    $9,000
+6      Nexgrid Archive Server license s/w                                                                                                   $9,000
+7      ESRIGIS software license                                                                                                        $30,000 capital
+8      ESRIhardware                                                                                                                    $20,000 capital
+9      new Nexgrid OSServer                                                                                                            $10,000 capital
+10 new truck                                                                                                                        $270,000
+11 Village 13 upgrade multiple items -2023                                                                                        $6,000,000
+12 Sertex - fiber optic backbone install new managed edge switches (18)                                                                $85,000
+13 80 Commercial St. roof & widow repairs                                                      c(J:,
+14 80 Commercial St fence and gates
+15 80 Commericial St new/relocated gutters & downspouts
+
+
+
+
+       0                            2023 Rate Restructuring
+
+                                                                         RateStudyA11alysl1
+
+
+
+
+R~id,ntQI
+                       lot•!
+                    Cu.c:l'!fl¥n
+                           8911
+                                    l'WHS.1•4
+                                     74.000.000
+                                                   0.M
+                                                  Chua•
+                                                    11.?S
+                                                                 0.M
+                                                             ·•-l•
+                                                              1.203.52:i
+                                                                               ......
+                                                                                ....
+                                                                                 0,:1385
+                                                                                            tn•av
+                                                                                           11-u•
+                                                                                              ll.949.000
+                                                                                                            ... ...•••_. ...... .......•
+                                                                                                            0021
+                                                                                                                               O•dt:
+                                                                                                                    USO.GOO 1210,0001
+                                                                                                                                           Ur1eCoP"lm
+                                                                                                                                            l»fu"d
+                                                                                                                                             0.00
+                                                                                                                                                        &tlniate,d
+
+
+                                                                                                                                                        16,762.5-25
+                                                                                                                                                                         tr,.flA•nt»
+                                                                                                                                                                              74.06K
+SmallCommer~               1268      lO.S00.000      185       !SIA%             0,1890         1.984500    0.02S     262.500       0,00     0.00        Z.528.496            11.17"
+Lar8e
+    Ccunmtrclal              S6      LS,200,000     61.15          41,496        0.1640         2,492.800   O.O?S     180.000        ODO 28!,000         l,l-02,J-96          H.tSK
+Of Ptik Waler                87         245,000      8.?S              8,6H      0.1400            34)00    0021        6,121           0       0           49,038             0.2.a
+Stxaie Hea1ln,                 10        SlDOO      11.00              ].320     0.1510            12S31    0.025       2,01S           0       0            lS,928            0,07"
+PrivateArHUghtlng           20!         10,DOO          0              0         0.0000            33.SOO   0021        3,671           0       0            35,COO    USM.
+StreetUghti-.g             2011         lll,811         0              0         0.0000            62,000      0             0          0       0            !2,COO    0.2'7"
+Pl-otcvoblc                  6S        !l40PGO!         0              0         0.0887           j21l81!      0             0          0       0           !ll,l88)  -0.090<
+                                    100,24881)                l,IJ6.4SO                       lS,147)41             2;04,m      (210,000) 288,000       2!,633,S9S   100,00.
+                                                                    S.7S%                           Bl-                 ll.06!<    ·l.06'-   L2"'
+
+
+
+
+                                                                                                                                                                             6/14
+            Winter 2022-23 Electric Service Reliability
+                      November 29, 2022
+
+
+
+                          Jo., l(o,nhk G     r 1 Mar,a Pr
+                          www.marbleheadelectrlc,com
+                               1kowalt l<ilm~dld,t m
+
+
+
+
+             Why Are We Here?
+
+• "ISO New England has advised the region that ew England faces a
+  precarious fuel supply risk that could necessitate emergency actions
+                                     T
+  if a severe prolonged cold snap hits the region this winter."
+• "ISO-NEstatements and presentations acknowledge that under the
+  low probabilityof a prolongedcold snapthis winter, load shedding
+  may occur."
+• This situation is caused by an inadequate supply of natural gas to
+  N.E. to meet the increased needs for home heating and electric
+  power generation.
+     • MMWEC Buftetin to member MLPs, including MMLD
+
+
+
+
+           MMLD's objective ...to be prepared
+
+We want everyone to understand a rolling blackout:
+• is a low probability event
+• WILL be an annoyance and an inconvenience, but NOT a
+  reason for panic.
+
+• may become a lower concern than the extreme weather
+  events experienced in recent Octobers.
+
+
+
+
+                                                                         7/14
+              What is (compulsory) Load Shedding?
+
+• MMLD relies on the ISO-NEgrid for our electric power. Under
+  extreme conditions, ISO may direct us to reduce our
+  customers' demand for electricity, by disconnecting customers.
+• Load shed simulations are conducted monthly. The amount to
+  shed is communicated as % of the current load, e . . shed 10%
+  of 15 MW.
+• In monthly simulations, the amount of time we have execute
+  the load shed is short ...10 minutes.
+
+
+
+
+                How much warning would we get?
+
+Considering accurate weather forecasts and ISO'sescalating steps - it's
+reasonable to assume we'll get one or more days of advanced warning
+
+• Most likely to happen during a sustained,multi-day cold spell.
+• ISOwill communicate escalatingabnormal operating conditions
+                                                             l
+   - M/LCC2- Master Local Control Procedure 112{MLCC2)- early, lo       ~
+     warning. Stop non-essential work on generators, prepare to run
+   - OP-4 (Operating Procedure 4) - ISO-NEto begin multiple early steps:
+     widespread public alerts, start-up reserve plants as Wilkins, prepare
+     emergency energy transactions, and ask for voluntary load shed
+   - OP-7- ISO-NEemergencyactionsincluding communicating compulsory load
+     shedding
+
+
+
+
+             So what can we do?
+
+• Review set(s) of likely conditions that leads up a situation
+  where ISO-NE/National Grid directs us to shed load
+• Document the actions MMLD proposes to take
+• Identify and review the complementary actions taken by other
+  town departments to mitigate the negative consequences
+• Identify any gaps in the plan and the depts to address them
+• Develop an appropriate communications plan to the public
+• Follow-through on the pre-event communications
+
+
+
+
+                                                                             8/14
+              An example Load Shed plan
+
+• 14.2 MWh Load at HE 15 on day 3 of frigid cold temps
+• ISO-dispatched our Wilkins plant to run, starting on day 2. (So not
+  available for MMLD self-dispatch.) Two substation, employees are
+  assigned to run Wilkin,s
+• ISO-NE/National Grid contacts MMLD to shed 10% of load
+• MMlD sets target to ;hed 14.2 MW x 10% = 1.42 MW.
+• Begin rolling blackouts, on 2-3 hour intervals throughout Town. 2 to
+  3 Circuits are shut off during each interval.
+• Each Circuit should be out for 2 hours over an 18-hour period
+• ISO gives NO indication how long the load shed will be needed.
+
+
+
+
+              Communications Plan
+
+PRE-EVENTPlan:
+   -There are 22 circuits in Marblehead
+   - Customers will learn which electric circuit they're one .. Atlantic,
+     Harbor, or Lafayette ...MMLD will communicate that on monthly bills,
+     and by dedicated email and/or US mail.
+   - All residents to Registerfor CodeREDNOW: sign-up for text, email
+     and voicemail
+   - For per onal and public utility security reasons we are NOTplanning
+     to publish a town-wide directory of addresseswith circuit names or
+     circuit maps
+
+
+
+
+              Communications Plan
+
+DAY-OF-EVENT:
+  - We will use CodeREDto communicate to customers:
+      • Whlc Circuits wmbe shut off
+      • How long they will be shut off e.. 2 or 3 hours
+   - We will continue CodeREDmessagesuntil the Load Shed is lifted
+   - Call MMLD at 781-631-5600 if you don't know your circuit
+   - Getting through to MMLD might take time, best to know beforehand
+   - For public and personal security reasons we will not be publishing a
+     town-wide directory of circuits or circuit map
+
+
+
+
+                                                                            9/14
+                        CERTIFICATE OF
+                    EXCELLENCEIN RELIABILITY
+
+                    Marblehead Municipal Light Department
+
+
+
+
+                         /\~CH JI 10ll
+
+
+
+
+           MMLD/NEPPA Response to Hurricane Ian
+
+
+                                                   t ttESPO,vs.
+
+• Paul Camarda - Working Foreman
+• Adam Bernard- 2nd Class Lineman
+
+
+
+
+                                                                  10/14
+      MMLD StrategyWorking Group
+                     11/29/22 Light Commission Meeting: update
+                                  Load demand Forecast
+
+
+     Forecast Uses
+     Information needed for Forecast
+
+
+
+
+Long-term load forecast uses
+
+• Long-term load forecasts will be used to
+
+   • Understand the long-term energy needs of Marblehead
+      • Need aggregated data at the town level
+
+
+   • Guide planning for future infrastructure needs
+      • Granular data needed, at the distribution circuit level
+
+
+
+
+Trends affecting electric energy changes
+
+• Transportation electrification
+
+
+• Building electrification
+
+
+• Energy efficiency changes
+
+
+• Local energy production/ storage
+
+
+
+
+                                                                  11/14
+Essentialdata for overall load forecast
+ • ISO-NEforecasts
+ • M MWEC forecasts
+
+ • Marblehead population past evolution/ forecasts
+
+ • # of cars registered in Marblehead
+ • # of new cars per year
+ • EV penetration over time in other states/ countries
+ • US/ New England charging information, load trends {Charge Point data)
+ • Charge pattern during day in New England / other states
+
+ • # of new house constructions
+ • # of large renovations
+ • # of houses with solar over time
+
+ • Others
+
+
+
+
+Essentialdata for local load forecast
+ • # of meters,# meters per circuit
+ • Service level per meter
+ • # of changes in service over time (increase from 100 Amps to higher)
+ • Change in power use over time in meters that change service level
+
+ • Peak load per transformer
+ • Peak load per substation
+
+ • # of level 2/3 chargers (of which: known Connected Homes chargers)
+
+
+
+ • Others
+
+
+
+
+                                                                           12/14
+                                       1.1~iiuchui11:u Mun'ldpal \\'kct~al11 E!11eu1c
+                                                                                    CC<'l'lp:,11•1
+                                                                                                   _  ........... _.
+                                                                                                   ...... 1.......... ..
+                                                                                                                   ~
+                                                                                                                           ..
+                                                     Wint~ R1!!il1bility Vvd,ll!
+
+       •   A ltelbblhy <:oncern • {IS,;:;    ,li~'1,,,~.:nWullillc4.,Jl;~ei;oG..;.1:,:.l,JYcQ,,Ei'fifj~
+           ,J>rturl~Vl fvtl~Upj::i,, {~I: tf•fTiufd 11,o~ltolololo    .i11,;r5.ior..::v
+                                                                                     i<:UO.UIf olo:.t,:t" F•'Ole,,,tta eo.(b
+           fup hit~ :h! :-c~i,r th•~ \·,ir,ter. Ouroi~ ~he IIG-,cmbcr 2, 21)22, P.irt..:i~t: Comll".1t~
+           ,n,c:.tms, ~ ~,1:111.
+                             i:r~11r,Utto11Bklll'I btf ISO r,111,·,£11cl11ndE)(ii>C'Jtl,•t   V((a Pr11,~l:l11nt111\dChltf
+           "'""""""t                               ....,t,;d 11,~1 du,;n~ /I .....1,,1,;, *'""~
+                  om~,;, V,or.,~ (:l\oo:lio!,O·,,Odlo                                         h> t013·l01".
+           "i!C,\rf:Urt       c: o11!111•111t!11blt
+                             Uillt-1        e11p;elh•d'1!cotnc',' 11ct10ru-.:cn&rOP-4 (1neh1dlt1@                  pi.obi~ O'l)PQIII
+           lldi,Yo,)      ,.u.; ""' nloMl-VloUhol~       ,.,1o
+                                            ,:.,:,.-.;;(1ol  ..kt, i,it.l:odi,'if ...... """' (If op.; lo:)'l)~ttlovio,iol mr, ......
+       •   Wh;,l ()o,i11 Tloi11 M,i"u? Simply l>"t.. IS() N,i•,1, Et1::l;,nd·i. 11l>,l,:,,,..n1 "n:.1 l"•ooitol;,lil,,r.:,
+           ~e~r.owlcd~c ~Mt 11ndc-:tli, o,·, r;b:il: li:y of .i l;i"Ol~n.c~ :old snn t~,s \·,ir,ter. lNd ~hcdit:nil
+             '"'t ,,._,,.., Thlt rid it fun:lio,'lo,>•\lloUyd1o,iv1o(tt,y lhio olo!ill"'"' 01, e1oi-li,.._,1t:"'flloololiM I() /11/olol
+          d"m&r.d ro"cdi dwi11, t::.'Tlcsof hid'i d"m&r.d nused by exu"mcll' co:d ..~t"r ....~1rtllc,r. Durin.:
+          the:c ~r•~d:, 1111tur:il            (i>$;w:11!.lblt'f 1: oft~n r~tuec::I for clettne ~ne.-~tor: .i,: rt 1: needed 10
+                   l!.lillllllt, dlll'l'llll'l:I1111Qd~frol'l'Ie,a uU:1!~. Th'iA l11d: of f-..,111to, 111,;,,ec,icj!lll'liifll!fon.0:11
+          1'1'111.;.t
+          rc-du:e cle:me ,pncuuon $\lpl)I•, .lt the mne wh:n 1t'$ needed 'the mc$t. Tiu~I$ '!he 111hcr«1t
+          d11,,11r  hc:.hlr.dISO l~11wU1t,!1111d·1,;      flll!ahUlty~11Clltn$fo, thlt. Wln!Q,r.
+       • "'"°'' Would Lll.iodSh"ddlo\8 HllpP"n'I ISO liio•.-.•              Enf:1111'1:Iita, 11~U?lthh11dpllllcl11tl\llld O(l....t~lt'l!l
+          p1ec"du•~ flX'"''""'h th"·, 1!1r·,~"xpco,st-ed ll!li,bci1•, tone"'"'' about, ill" f<t.rtindieirtien ih~t
+          thll powo11,!11:I may b11 ""~1,,s hlto lllllfa U 1h11l~S;olln(IIof 1M.1,n~, LOCIICAl'll(AICtl\l,u
+         •£ol>(Wvo"_ll· .'1!,nQ1m11I              Condition~ l,!"ot (r;1lCt2), Mo~ MMW£C t,1e.-nb,:,1~          11r,:,nol 1,:,q11i11!d
+          to perform~,.,,. :ict,or.~ und~r Ml.CC?. Ml.CO p,-,rn:iril•:irnp:m~ ~cncr:it~ ~r,d tr~i:n,i$~1on
+          Ol'llt~r; 11nd not dimlwlllln $'f~IIIMS.For dlO~~ ,~n'1'~tou 111\dt1:in~m~;1011CW"ll'i, ,...¥111,1\
+          MLCC'li$ •~?Je4 eurt:iilmel\l ofr\'1orl: o:, «111.110merr.              ,i rc-Q~d.lt~:=t.i: doe: .1dic:ite:::~rorm:ib
+                 'lloni:.,ui:;t Ct'I tlic: :ic,·..,•:ir6~ Th11-~o
+         (C:C.'11:                                                     eoo\::llt!OMr;nga from :ieh1:i 10 for11u:tcd 1uor.-.i
+          dcfr:ic,r,c,o:,, 10',...tr&Mmii~on \'olt.:i,c-i, iro.:ib,lirf to ~~idc                 1..: ec;nt,ro;cro~f p:o"ct>OM.
+          (IIOM.lgnoto: d1m.1rb~nca,cr11dll:t!t$10rm forao:t: or thruH to the ~.,-~t.imthrcugh $~trot:i._;i
+          llild l>fllllillibl\al111att1~s.hCrtllle,,uthrnu.ehbut '"" (MtiM. ISO ''"'~ E"'l!'..aildluui,,e a MLCCl -
+          t,bnor,r.,ll C-:ir..dlllcn:nt.11i1t:.t1on'11.'1:ul:I        be the iir:~ 11'1~~:,on th:il thcr.i lt\.l'' bi troub~
+           COl'l'l10\!.
+       •   r,,,.:;,1.\llliun 1n,pl,.n,;or1t111ic,,.   bl (Q:11~,dineP«1oi1 ..... 4)- OJ)11,1otintl',·01)0,dufa~uvr➔-ot'l" ~,u:n
+           ~c-i:1 1$0 ti'!'W Cn;l11ndt&l:c-~to conuc;I and IToll~f~ the- 110-.,.'"',rid ir. llew Cr,!tuoct Under
+           Mtr.:Cl•/<bnor~I Conditoon~, ~11d/er ·,,:hen the $'~tc!l'I 1: n.,nn1r,g out of gct'l:1~t,ct'I c..:ip~c•h'.
+           ~-"ld/o• .,;t,~ lo,d plul rc-~r,·c- ~;i,..irc-inl!nll c-~ec-c-df'lfil11blc- rc-sourlle, 11ttioro1u.-a\Jc-r
+           O~r111tng Proc-:d'u1e .a. :11:~1on~              ·,:, !ic ~.:illcn t· 1~() ric.-.• t. -~           Opcna:,n;; l'ro.:cdurc- ~
+           idl!nt;Jin 11.,,ttionl Hr,t ISO t~""" £1'1tllind~ t,~" to ,4'd,"n ti--" ~'(JI~ d"fi~m;ii,l, M,n; IX
+           th::c :iction~ e~n I>-: tll:er. b•1 tt:c 1$0 liew [njlj~n~ eOJ'ltrol toC<TJ dircctl',-, ,·1h.:eh ,,ciae:
+           rie:1f1u11on~to w,,1orht p.:iru"p.:in:~ .:tt'l::Ithe 1111101.:il              p11b!I; eorio1o1t1«1r,a,;11rv11 dlip.:itch .:ind
+            ~rrleCJlir..s;d c-mc-r,-ene'I'cncr,v ~r.:in:~ction~. (The rnort c•,nm~n .:ictoln r.t?ll\'.'(('/emt"'«;l
+           ,fil'ltili,:i7r-tc ,•:i!u11to11111:,;:m       :l~i:!Qntlf~,         l:ir,g.:ilnllu:tri:il l ld t·lMn,,m,i; 1 U!~Oll":ir~~ncb
+           ~l,irn!lh              .. ,., ..1,., ::.,,...,..1,.,n riiv.ii!,oli.o.
+
+
+
+
+MAHACIIUStTTS       HUNl(lrAl            WIIOUSAL[        CLCCTl:IC COM,AHY JU Ho... , s....~, ro r,.,,.,,u w, .... HAfll5t
+                                 """"      1'-1 ','J'"H    r,.,   HJ \llt 111".o WWWJ,fMW[C.Ok(,           -------------
+
+
+
+
+                                                                                                                                            13/14
+    ~cndn11 froccclurc 7];.f¼don,Jr,_AA,,,.tmcrgc~'t-Thi~                •~ th: o,:cmin;: pt0cedur,: th~ ISO
+    New Er.;l.111d,·,itl u:c ~o$fp!ctr!nl 0.1d :hcd ng. The .1ction~~11dcommur-c.1:ion: ISO lie,.,
+     t,,~.i,,d will t(ll,e, v11(1e,Ope,-ati,,e PY<iee,:h;f"; - :.cuo,:·, 1,, A11E,flete"•""Y ...,m•,e ll!•l'liti~, l<i
+     MMw,c Mcmbu~ ,1:; d:.o,•;i~ tho~ Uken \Sl'ldet the month',• lo.11!':had ta:.~. MMWGCwJI{ be
+    provtdfri,g mo~/llfotm'1tkm n.."T}otdJ.'19   food $l1t:ddJ119 ortlo,u u,'td(:t Qp(:rott11gPtoccd11rc'i OJa
+    {J~/1~((,I/   ,c-1,~11''1'(.
+
+     MMV/£( & Pu.blk Pow"r's ActionJ Tah•n To Ad'dr"n Cunwt Wint"r R'l'liability Ri,!o • i-,sW'I'
+    ;:u, on th.:.cuip oftha •.-.•lflt~u~::;011,
+                                             mer,; .1o,•,.:.ra1\a1:;
+                                                                 of th.:. pc,.,.:argrtd't. w111t.1tr
+                                                                                                  ,·u•n~.abl!lt'f ti
+    b.:.coMlflt l:!\oO'"'fltc tha e.:.nar,alp11blit. HO\',.:.','-lr,for Ml,1WEC ~nd our C~.it~f.ua:; U\ tha pub'k
+    po·.,,c.-:c-:~or, thi~ i: 11ot r.e,•,~. ,\~ c:itl•r~: M.1~of thi:~~siring,MM\'/EC .1M otMr Public Sc-:~or
+    (11,lft;etP<11tieipa11t$ 1<1ise.:J«ir,oe,~ to ISO New f••el<md th<lt $1(1,M Ivel ifl~etilor't(!$ l(lil, ,'l<lhtf<II
+    e;is & llv3J ·,,,en:, 11t hi$le<iol low re-,·els in the ,eei(m Md th.II. 111<1·\elco11ditio11$we,e ••<it
+    fa•10ubl11 tor ~nrc-::!'I~ 1ap!.1Ut1\Ct1:of the~, tn\'Qt'lttt'~:. MMWtC ~11g;~::~d th~: th11
+    r,:ir.sti,t~etlt of th,: ',\'int,:r 11,,:lii,bilit~•P10,;lll'm 1ho\1ldI>,: conid:,:1"d .;i,·'l'nth'I' OC\rm~,.nc,:~.
+    ih:'S me,~:" <0t1l:::.'l\1'1'd to b,: cot1·~,•"d ne-1onlv to ISO Ii,:·,., i:t1Jll~ndi,nd it~ k,:-d of Oi,'l'cton
+    but to o1h~ 1,'a,•; Er.gl~nd St;.ta1' r.:.gu!~tou. ISO 11,;,;,1::11g:;rnd1',upo11d.:.dto our And othar
+    m.arbt p;rrt1,1pA.'IHcot1unu II\ Julv ht; ,-~,u~1ne ~ ~tud>•dilotaunrn1neth" 11np.1oct                  of 111~tltutrne
+    the Wint,:r Rc!i¢.bitiwPrcsr~m for th,: wi:.iter •soulcl be :oo co~'!l•r(;,p~x. $!€OM to !,170"1)
+    $11(111(1t  11<'¢•,ide$ie11ilie<1rot            l(I W&lel'lln!lliilb,llly, W?li!e.M'/iME.C ~()O,J •'<11IIC:'<lew'lh
+                                       1:ie.'lo;.lit$
+    ISO tltw f••t,°<U•d·$OO!lCuSl()r'I.the n,'<!lih(IVC°      ¢-! $u(ees.&fol1•; <1d·l$'ldl't th~ 1)(¢e(i'l!!'Ith<:oeh tho,
+    ~IEPOOl :t.1kohol6;i1 p10:e::. ;ind u!tirn;.t.il\' obuttn111g;,, ord11r fx.t1, HRC to tmplornant tho
+    pro~1i,m ·.~'M d,e:r.'l'd to hll'~'I'a \.'i'l'I IOJ.' p1obi,bilitf of ~V(C'i'~J.
+
+      MMV/£( (.~tiouu             To b~ A (0¥1ition of Public Pow"' To find loni: Term Sol11tiot1, -
+     MMW€C OOl'oli11\1e$              11(:(l<!liti(m()1 ,ee;o,1<11l,)Vtitie90-..,er erolitie$ (CMUC, 11/H[leet,ie COOi),
+                                1;,11.:J
+     V£PSA~nd VELCO)t~ ~i•,or~t-: for » 1.1tio11~                to th: re;::.ooi:-wi:.1ter«!i~bilit.- \'u!ntrUilkie:. In
+     ~pl,:m~r.         l,U,1'/,'EC ~tl'l'ndetl Fo,:·) C-J"w E11t::'Md\'/inter Gn~El,:octric for,.,m ,,md on
+     NO\'.Qfflb.Qr  71' :;ibmrtt-:d the p11blicpow.::r co:t!<t,eo,':;C•:<Tlmcnt:.           to FHtC ~ddr.::::;111g :ohrtion: to
+      the "'iinur te!i;,bi!ih' p1cblern. The t~mmen:~ i.:cu:ed on th, enc,· :>f m~rlti                                J!c: :h.1t
+                   ~io o~,:or'"'1;,r,1'':'01,t_;lll~
+    '$1'1'·•'1'k;.U'l"d                            rr-:1L::""'"'lll\on ,·rill';;,1l ",'i'\'Urini,:
+                                                                                                \id~1u~l,:0J.v,:ol
+                                                                                                                 w_;,p i,:o~,(I,.,
+     fileffor ccmpc111·,ck :011r~c.:I":>"~11:;r1::;,~n          b11ild0Jt~c ,:11',c~;ifffJ(i ;011r,c:c:;     ~cd to gcncr~t~
+       lffifltlt ', .r'<Ultl~t'lll-1 r,rnp.ilit~l:~tormt                    to if(;~Juti.'' ·.•.ah.1Vi ,11clf,,iJiir7ifll'<y
+     'fim~: t ~ re; f~•ne;~". 1·,.•(n~orl1!lc!L.:l!l)l u- :on:1•,"C>~     to F· ·,:rc11r.r firm fJe, ;t1l! '!I\Co:~;6h~ ,m,nf)
+     of.: rc;ion;I fuel r:~r•,cJ 'llhi e the~,: :o!utioru e.1n11otbe c.,.:cted to ~lldrc~: ri:~ fo1 th,:
+     w1n~.ir. tha•; do pr.w1d.i $,,c'.lh.suc,u    10 lh.:i ,.~1ct1'1<,.,1ntar\'u'.nar.ablllt1~ eJ).'n!' foN,.ard. MM'/.'EC
+     will bo :.Wf\ik .1d,•cc;:m5 for tho:c n-.u~urG: tn th.a wo11b ;i.-.dmonth:. t-:tcom111ntht Nl:PO.)l
+     $lil~e~Ol;!e,, 1lf'<iCe$,11,1.:JatffRC,
+
+•   $ufl1fl1.A1y• {MM°W[t::d,;,a<, ~~ r;J•·:. ,"'1fl11,vl'<.ft>llf••'I       ll~h•               '"£•""
+                                                                                                    !ill1 II r1>!lM1itit•1
+    1                   :he ·,,:inter. F-or thb winter, r.ot much m~ on b, done, .1: MMWE( oiled
+    ~.t-t'l'nlionto thi, rilk. i11th~ :Jptin::, MMWE( v:ill ,till rn"ant,·n ih 1o!e in th" loi,'111h,:od\l;n1:
+    prot,:,Vi .:ind rc,fr.:::.lll,lem~cr: Cfl thc11role: ,11d r.::~pon~,t,Ltoe:l.::;'ldHOp.::r.1tin,;:Protcture~ 4
+    i=11d7 I() b.:. (aady II'>th .. lo,,., fl(Ob.itbltlt)'th~t \cad 1h..dd1ne Ii tlt-;:adad.l,lr...WiF.C,,.,.ua,;-'<\tht­
+    to,,g-t.llln :;o!-J:1or4to ma v,111ur 141i;billt•fml: ~•a co1\t~1r...a6    1n our pl.an th~, wo ~ubmittad to
+    HRC ,r.d ISO Nc•x Engl~nc:I,but ;i~ \'t:th ~11·1long·tcrm :o!ution, rt will ul:c t,tr.ceto ,Mic-.'¢
+    t.i.,?pcrt .itfldIMP amat11. Thil ii th" ft>eul t>fMM\\•Ec's 01\fOlllt .itdlo,u It>Add(,;U:.th.:. rae-or.'~
+    win:er 1'1'1h1l:litit<t
+                         ri~l..
+
+
+
+
+                                                                                                                                     14/14
+

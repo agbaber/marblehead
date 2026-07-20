@@ -1,6 +1,8 @@
 // /profile.html controller. Renders the verified-resident identity card,
 // or a signed-out prompt when no JWT is present.
 
+import { mountPasskeySaveCard, shouldPromptPasskeySave } from './passkey-save.js';
+
 const VERIFY_API = (location.hostname === 'localhost')
   ? 'http://localhost:8787'
   : 'https://marblehead-community-pulse.agbaber.workers.dev';
@@ -8,7 +10,32 @@ const VERIFY_API = (location.hostname === 'localhost')
 const JWT_KEY = 'verify_jwt';
 
 function readJwt() { return localStorage.getItem(JWT_KEY); }
+function setJwt(jwt) { localStorage.setItem(JWT_KEY, jwt); }
 function clearJwt() { localStorage.removeItem(JWT_KEY); }
+
+/**
+ * The FB callback redirects returning users straight to
+ * /profile.html#token=<jwt>. Pull the JWT out, stash it in localStorage
+ * so subsequent /api/profile calls can authenticate via Bearer, and
+ * strip the fragment so the token does not linger in the URL bar.
+ */
+function consumeOAuthFragment() {
+  if (!location.hash || !location.hash.includes('token=')) return false;
+  const params = new URLSearchParams(location.hash.slice(1));
+  const token = params.get('token');
+  if (!token) return false;
+  setJwt(token);
+  history.replaceState(null, '', location.pathname + location.search);
+  return true;
+}
+
+function track(event, props) {
+  try {
+    if (window.posthog && window.posthog.capture) {
+      window.posthog.capture(event, props || {});
+    }
+  } catch (e) { /* analytics never blocks the user */ }
+}
 
 async function fetchProfile() {
   const jwt = readJwt();
@@ -60,8 +87,11 @@ function renderSignedOut(root) {
     <div class="pf-signedout">
       <h1>Profile</h1>
       <p>You are not signed in. Sign in to manage your verified-resident identity, the ideas you've backed, and how you appear on the site.</p>
-      <a class="pf-signin" href="/verify-me.html">Sign in</a>
+      <a class="pf-signin" id="pf-signin-link" href="/verify-me.html">Sign in</a>
     </div>`;
+  track('verify_profile_viewed', { state: 'signed_out' });
+  document.getElementById('pf-signin-link')
+    ?.addEventListener('click', () => track('verify_signin_clicked', { from: 'profile_page' }));
 }
 
 function renderProfile(root, profile) {
@@ -121,9 +151,10 @@ function renderProfile(root, profile) {
         <span class="pf-method-state">
           ${profile.has_passkey
             ? '<span class="pf-method-state--on">Connected</span>'
-            : '<a href="/verify.html#add-passkey">Add for faster sign-in</a>'}
+            : '<span class="pf-method-state">Not connected</span>'}
         </span>
       </div>
+      <div id="pf-passkey-save" style="margin-top:18px"></div>
     </section>
 
     <div class="pf-danger">
@@ -143,21 +174,51 @@ function renderProfile(root, profile) {
   document.getElementById('pf-save-name').addEventListener('click', async () => {
     const v = nameInput.value.trim();
     const r = await postProfile({ display_name: v });
-    if (r.ok) showSaved();
+    if (r.ok) {
+      showSaved();
+      track('verify_display_name_saved', { is_empty: v.length === 0 });
+    }
   });
   const toggle = document.getElementById('pf-public-toggle');
   toggle.addEventListener('change', async (e) => {
-    await postProfile({ public_identity: e.target.checked ? 1 : 0 });
+    const value = e.target.checked ? 1 : 0;
+    await postProfile({ public_identity: value });
     e.target.parentElement.querySelector('.pf-toggle-label').textContent =
       e.target.checked ? 'On' : 'Off';
+    track('verify_public_identity_changed', { value });
   });
   document.getElementById('pf-release').addEventListener('click', async () => {
-    if (confirm('Release this claim and sign out?')) await releaseClaim();
+    if (confirm('Release this claim and sign out?')) {
+      track('verify_claim_released');
+      await releaseClaim();
+    }
   });
+
+  track('verify_profile_viewed', {
+    state: 'signed_in',
+    claim_source: profile.claim_source,
+    auth_source: profile.auth_source,
+    has_facebook: !!profile.has_facebook,
+    has_passkey: !!profile.has_passkey,
+    public_identity: profile.public_identity === 1,
+  });
+
+  // Offer to save a passkey if the user does not have one yet and has not
+  // recently skipped the prompt.
+  if (!profile.has_passkey && shouldPromptPasskeySave()) {
+    const container = document.getElementById('pf-passkey-save');
+    mountPasskeySaveCard(container, {
+      onSaved: () => { /* card replaces itself with success state */ },
+      onSkipped: () => { /* card clears itself */ },
+    });
+  }
 }
 
 async function init() {
   const root = document.getElementById('profile-root');
+  // Consume any OAuth JWT in the URL fragment first (returning users
+  // land here via the FB callback's redirect to /profile.html#token=...).
+  consumeOAuthFragment();
   const profile = await fetchProfile();
   if (!profile || !profile.identity_hash) {
     renderSignedOut(root);

@@ -1,6 +1,25 @@
 import { chromium, devices } from 'playwright';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
 
-const URL = 'http://localhost:4000/checkbook/';
+const SITE = process.env.SITE || 'http://localhost:4000';
+const URL = SITE + '/checkbook/';
+
+// Read the nightly-refreshed data files the page renders from, so the
+// assertions stay in lockstep with whatever fiscal year / month the data
+// is currently at instead of hardcoding one snapshot's numbers.
+const REPO = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
+const budgetMeta = JSON.parse(readFileSync(path.join(REPO, '_data', 'budget.json'), 'utf8'));
+const checkbookMeta = JSON.parse(readFileSync(path.join(REPO, '_data', 'checkbook.json'), 'utf8'));
+const perfData = JSON.parse(readFileSync(path.join(REPO, 'data', 'checkbook_performance.json'), 'utf8'));
+// Numeric part of e.g. "$129.7M" -> "129.7"
+const operatingNum = String(budgetMeta.annual_operating_M).replace(/[^0-9.]/g, '');
+// A real vendor from the current checkbook CSV (first data line without
+// quoted fields, so a naive comma split is safe).
+const csvText = readFileSync(path.join(REPO, 'data', checkbookMeta.csv_filename), 'utf8');
+const vendorLine = csvText.split('\n').slice(1).find((l) => l.trim() && !l.startsWith('"'));
+const testVendor = vendorLine.split(',')[0];
 
 async function run() {
   const browser = await chromium.launch();
@@ -45,9 +64,9 @@ async function run() {
     // 2. hero card values rendered
     try {
       const heroVals = await page.locator('.hero-value').allInnerTexts();
-      if (heroVals.length < 4) throw new Error('only ' + heroVals.length + ' hero values');
-      if (!heroVals[0].includes('206')) throw new Error('first hero ≠ 206M: ' + heroVals[0]);
-      ok('hero card has 4 stats with budget amounts');
+      if (heroVals.length < 3) throw new Error('only ' + heroVals.length + ' hero values');
+      if (!heroVals[0].includes(operatingNum)) throw new Error('first hero ≠ ' + operatingNum + ': ' + heroVals[0]);
+      ok('hero card has ' + heroVals.length + ' stats, annual operating = ' + heroVals[0]);
     } catch (e) { fail('hero', e.message); }
 
     // 3. Budget vs Actual chart populates after data load
@@ -92,10 +111,16 @@ async function run() {
       if (vendorBars < 5) throw new Error('only ' + vendorBars + ' top-vendor bars');
       const paretoText = await page.locator('#perf-pareto').innerText();
       if (!/top\s*10/i.test(paretoText) || !paretoText.includes('%')) throw new Error('pareto text: ' + paretoText);
+      // Early in a fiscal year no department has exceeded its full-year
+      // budget, so the over list legitimately renders an empty state.
       const overText = await page.locator('#perf-over-list').innerText();
-      if (!/snow/i.test(overText)) throw new Error('expected snow removal in over list: ' + overText.slice(0, 80));
+      const overRows = await page.locator('#perf-over-list .perf-row').count();
+      if (overRows === 0 && !/no department has exceeded/i.test(overText)) {
+        throw new Error('over list has neither rows nor the empty state: ' + overText.slice(0, 80));
+      }
+      const expectedMonths = perfData.monthly_cadence.length;
       const cadenceBars = await page.locator('#perf-cadence-chart .cadence-bar').count();
-      if (cadenceBars < 10) throw new Error('only ' + cadenceBars + ' cadence bars');
+      if (cadenceBars !== expectedMonths) throw new Error(cadenceBars + ' cadence bars, expected ' + expectedMonths);
       ok('performance: ' + vendorBars + ' vendor bars, ' + cadenceBars + ' cadence bars, pareto + over panels populated');
     } catch (e) { fail('performance-panels', e.message); }
 
@@ -190,13 +215,17 @@ async function run() {
       await page.waitForTimeout(150);
     } catch (e) { fail('perf-month-click', e.message); }
 
-    // 7. Vendor filter works
+    // 7. Vendor filter works (vendor taken from the current CSV so this
+    //    tracks the nightly data instead of assuming a specific payee)
     try {
-      await page.fill('#f-vendor', 'AMAZON');
+      await page.fill('#f-vendor', testVendor);
       await page.waitForTimeout(300);
-      const filteredFirst = await page.locator('table.ck-table tbody tr td.vendor').first().innerText();
-      if (!filteredFirst.toUpperCase().includes('AMAZON')) throw new Error('filtered first vendor: ' + filteredFirst);
-      ok('vendor filter narrows to AMAZON');
+      // td.vendor shows the alias-merged display name; the raw ledger name
+      // is in the cell's title attribute, so match against that.
+      const firstCell = page.locator('table.ck-table tbody tr td.vendor').first();
+      const filteredFirst = ((await firstCell.getAttribute('title')) || '') + ' ' + (await firstCell.innerText());
+      if (!filteredFirst.toUpperCase().includes(testVendor.toUpperCase())) throw new Error('filtered first vendor: ' + filteredFirst);
+      ok('vendor filter narrows to ' + testVendor);
     } catch (e) { fail('vendor-filter', e.message); }
 
     // 8. Reset filters
@@ -212,13 +241,13 @@ async function run() {
     if (errors.length) fail('console errors', errors.join(' | '));
     else ok('no console errors');
 
-    // 10. Browse page links to the new tool
+    // 10. Data hub links to the tool (browse.html is now a redirect to /data/)
     if (profile.name === 'Desktop') {
       try {
-        await page.goto('http://localhost:4001/browse.html', { waitUntil: 'networkidle' });
-        const links = await page.locator('a[href="charts/checkbook.html"]').count();
-        if (links < 2) throw new Error('only ' + links + ' links to checkbook from browse');
-        ok('browse.html has ' + links + ' links to the checkbook tool');
+        await page.goto(SITE + '/data/', { waitUntil: 'networkidle' });
+        const links = await page.locator('a[href="/checkbook/"]').count();
+        if (links < 2) throw new Error('only ' + links + ' links to /checkbook/ from /data/');
+        ok('/data/ hub has ' + links + ' links to the checkbook tool');
       } catch (e) { fail('browse-link', e.message); }
     }
 

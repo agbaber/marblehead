@@ -1,0 +1,190 @@
+                                                  Critical repair
+School    Status     Item                            estimate        Condition / Issue                                        Age   Expected Life Span        2022          2023         2024          2025        2026          2027         2028          2029         2030         2031
+                                                                   Numerous roof leaks reported and observed. Several
+                                                                   locations of loose and hanging lightning protection
+MHS       CRITICAL Roof                                $768,029.00 along perimeter, especially at gym.                              20 years                          $768,029.00
+MHS                Roof                                            PMP ongoning roof maintenance                                    20 years              $7,343.00     $7,343.00    $7,343.00     $7,343.00   $7,343.00     $7,343.00    $7,343.00     $7,343.00    $7,343.00    $7,343.00
+MHS                Facades                                         renew / recaulk expansion and control joints                     15 years                                                                                                                                      $8,447.00
+                                                                   Signs of water infiltration at glass block windows at
+MHS       CRITICAL Windows & Doors                       $3,600.00 east gym area.                                                                         $3,600.00
+                                                                   Repair insulated windows and failed seals. Prepare,
+MHS                  Windows & Doors                               prime, and paint gymnasium doors                                                                     $3,760.32
+MHS                  Windows & Doors                               Replace exterior metal insulated common doors                    30 years                                                                                 $4,632.00
+MHS                  Windows & Doors                               Overhead service door replacement 12' x 16'                      30 years                                                      $11,707.00
+MHS                  Windows & Doors                               renew / recaulk windows and doors                                15 years                                                                                                           $28,156.00
+MHS                  Windows & Doors                               Commercial window replacement                                    25 years                                                                               $512,550.00
+MHS                  Landscaping / improvements                    Signage / entrance monument                                                                                                                              $23,782.00
+MHS                  Landscaping / improvements                    routine concrete and asphalt sidewalk repairs                    5 years                                         $28,190.00                                                         $28,190.00
+MHS                  Landscaping / improvements                    replacement of exterior light fixtures                           15 years                                                                                                          $120,000.00
+MHS                  Landscaping / improvements                    replace interlocking block retaining wall                        25 years                                                                                $14,171.00
+MHS                  Pavement / parking                            New asphalt overlay, repair, and restriping.                     25 years                                                                               $208,232.00
+                                                                   routine patching, crack sealing, sealing and striping of
+MHS                  Pavement / parking                            asphalt pavement                                                 6 years                                                                                 $66,634.00
+MHS                  Building Interiors                            Corridor finish and kitchrn refurbishment                        8 years                                                      $836,736.00
+MHS                  Plumbing                                      Replace commercial gas-fired hot water heater                    15 years                           $57,731.00   $57,731.00
+                                                                   Through wall packaged or split unity replacement 2
+MHS                  HVAC                                          ton                                                              12 years                                                       $7,099.00
+                                                                   Replace R-410a air cooled condensing unit and
+MHS                  HVAC                                          rooftop units                                                    18 years                          $465,493.00
+MHS                  HVAC                                          Replace AHU - built up indoor unit                               20 years                           $16,361.00
+MHS                  HVAC                                          Heat recovery ventilater                                         25 years                                                                               $444,000.00
+MHS                  HVAC                                          Replace MAU- Heating only, gas fired                             20 years                                                      $32,919.00
+MHS                  HVAC                                          Replace compressor / condenser unit - air cooled                 25 years                                                                                $68,263.00
+MHS                  HVAC                                          Replace VAV boxes                                                25 years                                                                                             $18,000.00    $18,000.00   $18,000.00   $18,000.00
+MHS                  HVAC                                          Replace VFD                                                                                                                                              $17,834.00
+MHS                  Electric                                      Diesel-fired emergency generator                                                                                                                         $76,097.00
+MHS                  Electric                                      Perform IR survey                                                5 years                                                        $3,000.00                                                         $3,000.00
+                                                                   Replace fire alarm control panel with addressable w/o
+MHS                  Safety                                        voice                                                            20 years                           $30,000.00
+MHS                  Elevators                                     Renovations to elevator cab                                      20 years                           $54,672.00
+MHS                  Elevators                                     Elevator modernizations 3-story hydraulic                        20 years                          $601,392.00
+
+Village              Roof                                            TPD 60 mil roof replacement - low rise                         20 years                                                                                                          $647,863.00
+                                                                     Extend condensation drain at roof top units. Establish
+Village              Roof                                            roof maintenance program                                                                           $7,200.00
+
+                                                                    Remove delaminated concrete at entrance canopy
+Village   Critical   Facades                             $10,200.00 (falling hazard)                                                                     $10,200.00
+Village              Facades                                        Renew / recaulk expansion & control joints                      15 years                                         $3,660.00
+Village              Windows & doors                                Renew / recaulk windows & doors                                 15 years                                        $14,641.00
+Village              Windows & doors                                Overhead service door replacement 12' x 16'                     15 years                                         $3,902.00
+Village              Landscaping                                    Routine concrete sidewalk repairs                               20 years                                                                                                            $3,280.00
+Village   Critical   Landscaping                           $300.00 Repair chain link fence; damage adjacent to fields                                      $300.00
+Village              Landscaping                                    Repair chasin link fence - routine                                                                                             $2,611.00
+Village              Landscaping                                    Replace pole mounted light fixrures                             20 years                                                                                                            $1,209.00
+Village              Pavement / Parking                             Patching, crack sealing, sealing & striping of asphalt                                                                        $17,495.04
+Village              Amenitites                                     Field house refurbishment                                                                          $42,000.00
+Village              Amenitites                                     Replace playground loose surfacing                              6 years                                         $12,916.00                                                                      $12,916.00
+                                                                    Replace stained acoutical ceiling tiles and cracked
+Village   Critical   Building Interiors                    $720.00 vinyl flooring at east entrace                                                          $720.00
+Village              Building Interiors                             Corridor finish refurbishment                                   8 years                           $312,000.00
+Village              Building Interiors                             Kitchen Refurbishment                                           8 years                            $27,336.00
+Village   Critical   Building Systems                     $2,050.00 Perform IR survey                                                                     $2,050.00
+Village   Critical   Building Systems                    $24,000.00 Replace security System - not working properly                                       $24,000.00
+Village              Plumbing                                       Replace commercial gas fired hot water heaters                  15 years                                        $37,135.00
+Village              HVAC                                           Through wall packaged/ split unit replacement 2-ton                                  $17,748.00
+Village              HVAC                                      Replace rooftop package unit (6 ton)                              20 years                                                                                   $69,733.00
+Village              Elevators                                 Elevator modernization 3 story hydraulic                          20 years                                                                                                $150,348.00
+
+                                                              EPDM 60 mil roof replacement - low rise (past
+Vets      Critical   Roof                         $153,533.00 expected leak and has active leaks over D wing)                               $153,533.00
+Vets                 Roof                                     Extend Condensation drain line at roof top units                                              $1,800.00
+Vets                 Roof                                     Ongoing Roof Maintenance                                                                      $4,650.00
+Vets                 Roof                                     EPDM 60 mil roof replacement                                       20 years                 $349,846.00
+Vets      Critical   Facades                        $2,400.00 Repair bowed brick                                                              $2,400.00
+Vets                 Facades                                  Repair / recaulk expansion & control joints                                                   $4,054.48
+Vets                 WIndows and Doors                        Commercial window replacement                                                                                                                                $174,267.00
+Vets                 WIndows and Doors                        Overhead service door replacement 12' x 16'                                                   $3,904.00
+                                                              Renew/ recaulk windows and doors (sealants are
+Vets                 wIndows and Doors                        cracked throughout)                                                                          $11,262.43
+                                                              Repair trip hazards - concrete sidewalks (settled area
+                                                              of sidealk north of C-wing, also repair priority #2
+Vets      Critical   Landscape & Site improvent      $444.00 cracks)                                                                           $621.68
+Vets                 Landscape & Site improvent               SIgnage, entrance / monument                                       25 years                                                                                    $7,927.00
+Vets                 Landscape & Site improvent               Routine concrete sidewalk repairs                                  20 years                  $13,121.00
+Vets                 Landscape & Site improvent               replace pole mounted light fixture                                 20 years                   $1,395.00
+Vets                 Pavement & Parking                       Patching, crack sealing, sealing & stripping of asphalt                                                               $39,363.84                                                         $39,363.84
+Vets                 Pavement & Parking                       Mill & overlay asphalt pavement                                    25 years                                                                                  $135,313.00
+                                                              Seal concrete cracks at basement (floor slap and wall
+Vets      Critical   Building Interiors             $6,000.00 cracks in basement in A wing)                                                   $6,000.00
+Vets                 Building Interiors                       Corridor Finish refurbishment                                      8 years                  $360,000.00                                                                                               $360,000.00
+Vets                 Building Interiors                       Kitchen refurbishment                                              8 years                   $27,336.00                                                                                                $27,336.00
+                                                              Repair vinyl flooring / trip hazards (Cracking at
+Vets      Critical   Building Interiors            $24,000.00 flooring expansion area between school wings)                                  $24,000.00
+                                                              Repair stained ceiling (water staining in auditorium
+Vets                 Building Interiors                       ceiling from prior leaks)                                                                     $1,200.00
+Vets      Critical   Building Systems                         update inspection certificates
+Vets                 Plumbing                                 Replace residentrial electric water heater                                                                                                                                                $4,744.00
+Vets                 Plumbing                                 Replace gas fired hot water heater                                                                                                                                                       $23,116.00
+Vets                 HVAC                                     Replace R-410a air cooled condensing unit                          18 years                                            $5,644.00
+                                                              Replace rooftop package unit (80-ton) single zone,
+Vets                 HVAC                                     VAV, DX cooling, gas heat                                          20 years                                                                    $182,652.00 $182,652.00     $182,652.00 $182,652.00    $182,652.00
+                                                              Replace MAU (150-200 MBH Input) heating only, gas
+Vets                 HVAC                                     fired                                                              20 years                                                                     $44,749.00
+Vets                 Fire Life safety                         Replace fire alarm control panel with new devices                  20 years                 $105,000.00
+Vets                 Elevators                                Elevator modernization - 3 story hydraulic                                                  $300,696.00
+
+Eveleth   Critical   Landscape improvements             1,896 Repair areas deteriorated/ damaged asphalt sidewalks                            $1,896.00
+Eveleth              Landscape improvements                   Patching, crack sealing, sealing striping of aspalt pavements                   $9,359.00
+Eveleth              Landscape improvements                   Replace building-mounted light fixtures                            20 years      $900.00
+Eveleth              Pavement/ Parking                        Asphalt overlay                                                    30 years                                           $32,100.00
+Eveleth              Amenities                                Replace playground equipment                                       20 years
+Eveleth              Amenities                                Replace playground loose surfacing                                 6 years                                             $6,602.00                                                                        $6,602.00
+Eveleth              Amenities                                Signage, Entrance/ Monument                                        25 years                                                                                                               $7,927.00
+Eveleth   Critical   Roof                             161,514 EPDM 60 mil roof repalcement                                                  $161,514.00
+Eveleth              Facades                                  Renew/ recaulk expansion & control joints                          15 years                                             $118.00
+Eveleth              Windows and Door                         Repalce exterior metal insulated common doors                                    $463.00
+Eveleth              Windows and Door                         Window glazing                                                                  $1,879.00
+Eveleth              Windows and Door                         Window glazing                                                     12 years     $3,007.00
+Eveleth              Windows and Door                         Periodic repair of broken windows                                  2 years      $1,440.00                 $1,440.00                $1,440.00                   $1,440.00                  $1,440.00
+Eveleth              Interior F&C                             Acoustial ceiling tile                                                           $234.00
+Eveleth              Interior F&C                             Common area refurbishment- psf                                     8 years                                            $30,000.00
+Eveleth              Acessibility                             Complete accessibility compliance upgrades                                      $6,000.00
+Eveleth              Plumbing                                 Evalutioan of galvanized supply piping by qualified professional                $3,000.00
+Eveleth              Plumbing                                 Replace submersible sump pump, Cast Iron (1/2 HP)                  10 years     $1,412.00
+Eveleth              Plumbing                                 Plumbing fixture replacement                                       20 years     $8,640.00
+Eveleth              Plumbing                                 Replace commercial gas-fired water heater (<200 MBH)               15 years                                           $11,558.00
+Eveleth              HVAC                                     Replace gas/oil-fired steam boiler (2040 MBH)                      30 years                 $186,900.00
+Eveleth              Electric                                 Replace Circuit Breaker (30 Amp)                                   60 years     $8,693.00
+Eveleth              Electric                                 Replace Circuit Breaker (60 Amp)                                   60 years     $7,709.00
+Eveleth              Electric                                 Replace Circuit Breaker (200 Amp)                                  60 years     $2,734.00
+Coffin   Critical   Landscaping/ Improvements          2,665 Repair trip hazards- asphalt sidewalks                                                   2665
+Coffin              Pavement / Parking                       Patching, crack sealing, sealing and striping of asphalt pavement                        9,315
+Coffin              Pavement / Parking                       Patching, crack sealing, sealing and striping of asphalt pavement      5 years                                                   9,316                                                            9,316
+Coffin              Pavement / Parking                       Asphalt overlay                                                        30 years                       31,950
+Coffin              Amenities                                Replace wood storage shed                                              30 years          1,503
+Coffin              Amenities                                Replace metal storage shed                                             20 years                                                                                                                   1,503
+Coffin              Amenities                                Playground loose surfacing replacement.                                6 years           7,170                                                                        7,170
+Coffin              Amenities                                Playground equipment                                                   20 years                                                                                                                  21,600
+Coffin              Amenities                                Replace metal tables/ benches                                          15 years                                                  8,640
+Coffin   Critical   Substructure                       6,600 Inspection adn report by structural engineer                                             6600
+Coffin              Roof                                     Gutter and downspout replacement                                       20 years          2757
+Coffin              Roof                                     Built- up roof replacement                                             59 years         49,756
+Coffin              Roof                                     Slate Shingle roof repairs (minor)                                     59 years         17,033
+Coffin              Facades                                  Renew/ recaulk expansion & control joints                              15 years          1,183
+Coffin              Facades                                  Refinish concrete steps                                                59 years          1,382
+Coffin              Facades                                  Replace concrete/ steel stair tread                                    59 years          1,680
+Coffin              Windows and Doors                        Replace exterior solid wood common doors                                                 2,700
+Coffin              Windows and Doors                        Replace exterior solid wood common doors                               59 years          1080
+Coffin              Windows and Doors                        Replace common area interior wood fire doors                                             2,268
+Coffin              Windows and Doors                        Replace operable aluminum-framed insulated windows (large)                             200,000
+Coffin              Windows and Doors                        Commercial window replacement                                                            8,200
+Coffin              Windows and Doors                        Commercial window replacement                                          59 years         66,632
+Coffin              Windows and Doors                        Window glazing                                                                          13,230
+Coffin              Interior F&C                             Common are refurbishment -psf                                          8 years          75,072
+Coffin              Interior F&C                             Acoustical ceiling tile                                                20 years            577
+Coffin              Accessibility                            Complete accessibility compliance upgrades                                                            12,000
+Coffin   Critical   Plumbing                           3000 Evalutiaon of piping                                                                      3,000
+Coffin              Plumbing                                 Plumbing fixture replacement                                           25 years         11,520        11,520
+Coffin              HVAC                                     Steam piping partial replacement
+Coffin              HVAC                                     Steam piping partial replacement                                       59 years         10,000        10,000      10,000        10,000     10,000        10,000
+Coffin              HVAC                                     Replace gas/oil-fired steam boiler (1600 MBH)                          59 years        349,198
+Coffin              Electric                                 Perform IR survey low-rise                                                               4,783
+Coffin              Electric                                 Replace Main Circuit Breaker, single phase (400 amp)                   59 years          5,126
+Coffin              Electric                                 Replace Circuit Breaker (100 amp)                                      59 years          5,877
+
+
+
+
+Glover              Landscaping/ Improvements                   Routine concrete sidewalk repair                                    5 years           1,093                                                            1,093
+Glover              Landscaping/ Improvements                   Routine Asphalt sidewalk repair                                     5 years           1,333                                                            1,333
+Glover              Pavement / parking                          patching, crack sealing, sealing and striping of asphalt pavement   5 years                                    13,121                                                           13,121
+Glover              Roof                                        Extend gutter downspouts to drains                                                      600
+Glover              Roof                                        Proactive Maintenance program (PMP)- general                                           6000
+Glover              Facades                                     Renew/ recaulk expansion joint & control joints                     15 years                                                                           2,027
+Glover              Facades                                     Periodic masonry repair and maintenance                             10 years                                                  9,000
+Glover              Windows / Doors                             Renew / recaulk windows and doors                                   15 years                                                                           8,447
+Glover              Interior F & C                              Corridor Refurbishment                                              8 years                                   134,400
+Glover              Interior F & C                              Kitchen refurbishment (commercial)                                  8 years                                     6,834
+Glover              Plumbing                                    Replace commercial gas-fired water heater (<200 MBH)                15 years                                                                          11,558
+Glover              HVAC                                        Replace rooftop package unit (15-ton)- 100% OA, single zone         20 years                       42,139
+Glover              HVAC                                        Boiler and HVAC component replacement and repair allowance          25 years                       15,000                    15,000                   15,000                    15,000                        15,000
+Glover              F/L Safety                                  Sprinkler system 5 year test                                                           5400
+
+
+
+
+Total                                           $1,170,951.00                                                                                  $1,340,728.68 $3,887,091.23 $331,313.00 $1,096,251.88 $18,783.00 $1,720,397.00 $603,845.00 $1,215,162.00 $332,920.84      $625,380.00
+
+                                                                                                                                                                                                                                                         10 Year Total $11,171,872.63
+

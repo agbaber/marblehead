@@ -1,0 +1,476 @@
+                                                                Marblehead Public Schools
+                                                                   FY24 Budget Summary
+                                                                                                              Increase                           Increase (Decrease)
+                                                                                                         (Decrease) FY23 to                        FY23 to Reduced
+                                                                                        FY24 Budget -      Level Funded        FY24 Budget -       Services Budget
+ Account Number            Account Description                          FY23 Budget     Level Service         Request         Reduced Services         Request
+Base Salaries/Wages
+ 01.101.2.1210.10.99.800   Cent Admin Supt Salaries                           193,418          193,418                 -               193,418                  -
+ 01.101.2.1210.20.99.800   Sec to Supt., Admin Salaries                        70,000           71,400               1,400              71,400                1,400
+ 01.101.2.1230.10.90.420   Technology Director Salary                         127,500          140,000              12,500             140,000               12,500
+ 01.101.2.1230.10.90.700   Facility Director Salary                           105,080          110,080               5,000             110,080                5,000
+ 01.101.2.1410.10.99.800   Business Manager Salaries                          154,156          154,156                 -               154,156                  -
+ 01.101.2.1410.20.99.800   Cent Admin Sec & clerical Salaries                 301,483          315,116              13,632             238,840              (62,644)
+ 01.101.2.1420.10.99.800   Director - Human Resources                         127,500           77,500             (50,000)             77,500              (50,000)
+ 01.101.2.1450.10.99.800   Database Specialist                                 70,326           71,733               1,407              71,733                1,407
+ 01.101.2.2110.10.90.510   ELL Coordinator Salaries                            20,336           20,336                 -                20,336                  -
+ 01.101.2.2110.10.99.800   Assistant Superintendent                           145,656          154,156               8,500             154,156                8,500
+ 01.101.2.2110.10.99.901   K-6 Literacy Coor Sal                               92,515           94,824               2,308              94,824                2,308
+ 01.101.2.2110.20.99.500   Student Services Director Salaries                 216,342          216,342                 -               216,342                  -
+ 01.101.2.2111.10.99.800   Student Services Admin Salaries                     57,124           58,030                 906              58,030                  906
+ 01.101.2.2112.20.12.500   Brown SPED Secretary Salaries                       35,448           38,258               2,810              38,258                2,810
+ 01.101.2.2112.20.18.500   Village Sped Secretary                              21,269           22,955               1,686              22,955                1,686
+ 01.101.2.2112.20.21.500   MS Sped Sec Sal                                     14,179           15,303               1,124              15,303                1,124
+ 01.101.2.2112.20.31.500   HS Sped Secretary                                   33,461           36,198               2,737              36,198                2,737
+ 01.101.2.2210.10.12.100   Brown Principal Salaries                           115,000          115,000                 -               115,000                  -
+ 01.101.2.2210.10.16.100   Glover Principal Salaries                          105,000          105,000                 -               105,000                  -
+ 01.101.2.2210.10.18.100   Village Principal Salaries                         220,187          230,753              10,566             230,753               10,566
+ 01.101.2.2210.10.21.300   MS Principal Salaries                              268,313          270,560               2,247             270,560                2,247
+ 01.101.2.2210.10.31.300   HS Principal Salaries                              381,805          384,180               2,375             384,180                2,375
+ 01.101.2.2210.20.12.100   Brown Secretarial Salaries                         103,875          107,994               4,119             107,994                4,119
+ 01.101.2.2210.20.16.100   Glover Secretarial Salaries                        103,775          107,794               4,019              54,247              (49,528)
+ 01.101.2.2210.20.18.100   Village Secretaries Salaries                       106,198          108,594               2,396             108,594                2,396
+ 01.101.2.2210.20.21.200   MS Secretarial/clerical Salaries                    78,587           81,020               2,434              81,020                2,434
+ 01.101.2.2210.20.31.300   HS Admin Secretarial Salaries                      118,083          128,208              10,125             128,208               10,125
+ 01.101.2.2210.30.21.200   MS Clerical Para Salaries                           19,899           20,398                 499              20,398                  499
+ 01.101.2.2305.10.12.100   Brown Teachers Salaries                          2,046,774        2,192,529             145,755           2,192,529              145,755
+ 01.101.2.2305.10.16.100   Glover Teachers Salaries                         1,627,899        1,664,254              36,356           1,589,955              (37,943)
+ 01.101.2.2305.10.18.100   Village Faculty Salaries                         3,660,655        3,714,878              54,223           3,469,497             (191,158)
+ 01.101.2.2305.10.21.200   MS Teachers Salaries                             2,077,898        2,166,114              88,215           2,166,114               88,215
+ 01.101.2.2305.10.21.400   MS Fine Arts Teachers Salaries                     218,057          205,864             (12,193)            205,864              (12,193)
+ 01.101.2.2305.10.21.410   MS Health/pe Teachers Salaries                     364,934          374,050               9,115             374,050                9,115
+ 01.101.2.2305.10.31.400   HS Fine Arts Teachers Salaries                     537,968          565,512              27,544             565,512               27,544
+ 01.101.2.2305.10.31.401   HS Tech Ed Salaries                                218,871          229,602              10,731             229,602               10,731
+ 01.101.2.2305.10.31.410   HS Health/pe Teachers Salaries                     360,438          369,540               9,101             369,540                9,101
+ 01.101.2.2305.10.31.450   HS English Teachers Salaries                       926,055          981,252              55,197             981,253               55,198
+
+
+
+3/17/2023                                                                                                                                           Summary - page 1
+                                                                                                        Increase                            Increase (Decrease)
+                                                                                                   (Decrease) FY23 to                         FY23 to Reduced
+                                                                                 FY24 Budget -       Level Funded         FY24 Budget -       Services Budget
+ Account Number            Account Description                   FY23 Budget     Level Service          Request          Reduced Services         Request
+ 01.101.2.2305.10.31.455   HS Math Teachers Salaries                   829,843           891,644              61,801              891,644                61,801
+ 01.101.2.2305.10.31.457   HS Business Ed Salaries                      75,983            77,877                1,894              77,877                 1,894
+ 01.101.2.2305.10.31.460   HS Science Teachers Salaries                955,659         1,007,350              51,691              940,088               (15,571)
+ 01.101.2.2305.10.31.465   HS World Language Teacher Salaries          786,594           812,864              26,271              796,079                 9,486
+ 01.101.2.2305.10.31.480   HS Social Studies Teachers Salaries         775,975           809,118              33,143              809,118                33,143
+ 01.101.2.2310.10.12.100   Brown EL Teachers Salaries                  214,187           222,252                8,066             222,252                 8,066
+ 01.101.2.2310.10.12.500   Brown Sped Faculty Salaries                 954,364         1,059,159             104,795              984,860                30,496
+ 01.101.2.2310.10.16.100   Glover EL Teachers Salaries                  64,471            68,862                4,391              68,862                 4,391
+ 01.101.2.2310.10.16.500   Glover Sped Faculty Salaries                817,869           790,309             (27,560)             790,309               (27,560)
+ 01.101.2.2310.10.18.100   Village EL Faculty Salaries                 146,425           156,144                9,718             156,144                 9,718
+ 01.101.2.2310.10.18.500   Village Sped Faculty Salaries             1,486,802         1,570,786              83,984            1,570,786                83,984
+ 01.101.2.2310.10.21.200   MS EL Teachers Salaries                      80,092            85,392                5,301              85,392                 5,301
+ 01.101.2.2310.10.21.500   MS Sped Teachers Salaries                   734,325           724,598               (9,726)            724,598                (9,726)
+ 01.101.2.2310.10.31.300   HS EL Teachers Salaries                      72,040            76,565                4,525              76,565                 4,525
+ 01.101.2.2310.10.31.500   HS Sped Teachers Salaries                 1,911,316         1,447,349            (463,968)           1,373,050              (538,267)
+ 01.101.2.2310.10.90.100   K-12 Literacy Specialist                    198,566           272,212              73,646              197,913                  (653)
+ 01.101.2.2315.10.12.500   Brown IEP Chair Salaries                     93,840            95,717                1,877              95,717                 1,877
+ 01.101.2.2315.10.18.500   Village IEP Chair Salaries                   92,820            94,676                1,856              94,676                 1,856
+ 01.101.2.2315.10.21.500   Middle School IEP Chair Salaries             96,718            98,652                1,934              98,652                 1,934
+ 01.101.2.2315.10.31.500   High School IEP Chair Salaries               87,500            89,250                1,750              89,250                 1,750
+ 01.101.2.2320.10.12.500   Brown Med/Ther Prof Salaries                205,770           220,664              14,894              220,664                14,894
+ 01.101.2.2320.10.16.500   Glover Med/Ther Prof Salaries               207,571           214,509                6,937             140,881               (66,691)
+ 01.101.2.2320.10.18.500   Village Med/Therapeutic Prof Salari         126,248           134,949                8,701             134,949                 8,701
+ 01.101.2.2320.10.21.500   Middle Sch Med/Ther Prof Salaries            89,784            92,285                2,501              92,285                 2,501
+ 01.101.2.2320.10.31.500   HS Med/Ther Prof Salaries                    59,002            63,327                4,324              63,327                 4,324
+ 01.101.2.2320.10.90.500   Systemwide K-12 Sped Faculty Salari         172,125           171,372                 (753)             97,073               (75,052)
+ 01.101.2.2320.14.90.500   Sys Med/Ther Non Lic Salaries               746,796           809,990              63,193              748,790                 1,993
+ 01.101.2.2325.12.21.200   MS Perm Sub Teacher                          60,894            63,468                2,575              63,468                 2,575
+ 01.101.2.2325.12.31.300   HS Perm Sub Teacher                          24,798            28,494                3,697                   0               (24,797)
+ 01.101.2.2330.14.12.100   Brown Tutors Salaries                       222,615           228,197                5,582             206,876               (15,739)
+ 01.101.2.2330.14.12.500   Brown Sped Tutors Salaries                  345,955           349,490                3,535             349,490                 3,535
+ 01.101.2.2330.14.16.100   Glover Tutors Salaries                      168,649           172,876                4,228             154,724               (13,924)
+ 01.101.2.2330.14.16.500   Glover Sped Tutors Salaries                 177,308           211,189              33,882              211,189                33,882
+ 01.101.2.2330.14.18.100   Village Tutors Salaries                      66,795            69,151                2,356              69,151                 2,356
+ 01.101.2.2330.14.18.500   Village Sped Paras/Tutors Salaries          586,788           577,808               (8,980)            557,808               (28,980)
+ 01.101.2.2330.14.21.500   MS Sped Tutoring Salaries                   276,051           250,904             (25,147)             250,904               (25,147)
+ 01.101.2.2330.14.31.500   HS Sped Tutoring Salaries                   432,104           418,641             (13,463)             418,641               (13,463)
+ 01.101.2.2330.30.12.100   Brown Teacher Para Salaries                 130,179           132,630                2,452             121,318                (8,860)
+ 01.101.2.2330.30.12.500   Brown Sped Para Salaries                     39,535            42,376                2,841              42,376                 2,841
+ 01.101.2.2330.30.16.100   Glover Teacher Para Salaries                 96,467           114,414              17,947              106,873                10,406
+ 01.101.2.2330.30.16.500   Glover Sped Para Salaries                    43,181            60,394              17,212               52,289                 9,107
+ 01.101.2.2330.30.18.100   Village Teacher Para Salaries                36,345            37,459                1,114              25,393               (10,952)
+
+
+3/17/2023                                                                                                                                       Summary - page 2
+                                                                                                            Increase                          Increase (Decrease)
+                                                                                                       (Decrease) FY23 to                       FY23 to Reduced
+                                                                                     FY24 Budget -       Level Funded        FY24 Budget -      Services Budget
+ Account Number                Account Description                   FY23 Budget     Level Service          Request         Reduced Services        Request
+ 01.101.2.2330.30.31.500       HS Sped Teacher Para Salaries                40,123            41,522               1,400              21,259              (18,863)
+ 01.101.2.2330.33.31.460       HS Para Salaries                             50,820            58,332               7,512               6,238              (44,582)
+ 01.101.2.2340.10.12.430       Brown Library Media Spec Salaries            96,316            98,683               2,367              98,683                2,367
+ 01.101.2.2340.10.16.430       Glover Library Media Spec Salaries           90,034            92,285               2,251              92,285                2,251
+ 01.101.2.2340.10.18.430       Village Library Media Spec Salaries          93,466            95,801               2,335              95,801                2,335
+ 01.101.2.2340.10.21.430       MS Librarian Salaries                        92,315            74,299             (18,017)                 (0)             (92,316)
+ 01.101.2.2340.10.31.430       HS Librarian Salaries                        73,655            78,752               5,097              78,752                5,097
+ 01.101.2.2710.10.12.525       Brown Guidance Salaries                     189,432           204,786              15,355             204,786               15,355
+ 01.101.2.2710.10.16.525       Glover Guidance Salaries                    161,051           177,224              16,173             177,224               16,173
+ 01.101.2.2710.10.18.525       Village Guidance Salaries                   244,666           267,285              22,619             267,285               22,619
+ 01.101.2.2710.10.21.525       MS Guidance Counselors                      155,243           170,667              15,424             170,667               15,424
+ 01.101.2.2710.10.31.525       HS Guidance Counselors                      760,622           854,403              93,781             854,403               93,781
+ 01.101.2.2710.20.31.525       HS Guid Clerk Salaries                       46,812            47,565                 753              47,565                  753
+ 01.101.2.2801.10.12.500       Brown Psychologist Salaries                  90,851            93,129               2,278              93,129                2,278
+ 01.101.2.2801.10.16.500       Glover Psychologist Salaries                 78,670            83,926               5,256              83,926                5,256
+ 01.101.2.2801.10.18.500       Village Psychologist Salaries               187,081           191,757               4,676             191,757                4,676
+ 01.101.2.2801.10.21.500       Veterans Psychologist Salaries              166,051           172,979               6,928             172,979                6,928
+ 01.101.2.2801.10.31.500       HS Psychologist Salaries                    168,732           176,273               7,540             176,273                7,540
+ 01.101.2.3200.18.12.530       Brown Nurse Salaries                         65,617            72,033               6,416              72,033                6,416
+ 01.101.2.3200.18.16.530       Glover Nurses Salaries                       58,061            85,426              27,365              85,426               27,365
+ 01.101.2.3200.18.18.530       Village Nurse Salaries                      153,550           160,380               6,830             160,380                6,830
+ 01.101.2.3200.18.21.530       MS School Nurses Salaries                    74,646            82,142               7,497              82,142                7,497
+ 01.101.2.3200.18.31.530       HS Health Nurses Salaries                   141,856           127,532             (14,324)            127,532              (14,324)
+ 01.101.2.3300.33.95.535       Bus Driver/Monitor Salaries                 249,359           266,230              16,871             266,230               16,871
+ 01.101.2.3301.30.90.500       Bus Monitor, Special Education Sala          12,017            23,529              11,512              23,529               11,512
+ 01.101.2.3400.10.90.440       Food Services Salaries                       77,500            90,000              12,500              90,000               12,500
+ 01.101.2.3510.10.90.445       Athletic Director Salary                    167,541           168,792               1,251             168,792                1,251
+ 01.101.2.3520.13.31.300       HS Student Activities Salary                 52,699            53,547                 848              53,547                  848
+ 01.101.2.3600.30.31.360       HS Security Monitor Salaries                 28,000            57,120              29,120              57,120               29,120
+ 01.101.2.4110.33.96.700       Custodians Salary                         1,289,273         1,343,340              54,068           1,297,560                8,288
+ 01.101.2.4220.33.97.705       Maint Staff Salaries                        313,076           324,295              11,220             324,295               11,220
+ 01.101.2.4450.35.90.420       Technology Para Salaries                    341,292           348,567               7,275             257,777              (83,515)
+ 01.101.2.2315.10.16.500       Glover IEP Chair Salaries                   108,173            96,900             (11,273)             96,900              (11,273)
+Subtotal Base Salaries/Wages                                            36,155,009       37,107,765              952,756          35,731,974             (423,034)
+
+
+
+
+3/17/2023                                                                                                                                         Summary - page 3
+                                                                                                                       Increase                           Increase (Decrease)
+                                                                                                                  (Decrease) FY23 to                        FY23 to Reduced
+                                                                                                 FY24 Budget -      Level Funded        FY24 Budget -       Services Budget
+ Account Number                 Account Description                              FY23 Budget     Level Service         Request         Reduced Services         Request
+Other Salaries/Wages
+ 01.101.2.1110.39.99.900        Cent Admin SC Sec Salaries                               4,500            7,500               3,000               7,500                3,000
+ 01.101.2.2315.10.21.200        Middle School Teacher Leaders                           32,795           29,750              (3,045)             29,750               (3,045)
+ 01.101.2.2315.10.31.300        HS Teacher Leaders                                      67,519           61,250              (6,269)             61,250               (6,269)
+ 01.101.2.2315.10.91.100        Elementery Teacher Leaders                              92,598           84,000              (8,598)             84,000               (8,598)
+ 01.101.2.3510.10.31.445        Athletics Coaches                                      149,792          169,331              19,540             152,905                3,114
+ 01.101.2.3510.32.31.445        Athletics Custodial Duty Salaries                       18,000           20,000               2,000              20,000                2,000
+ 01.101.2.3510.33.31.445        Athletics Medical Salaries                              23,000           38,784              15,784              38,784               15,784
+ 01.101.2.3510.39.31.445        Athletics Officials Salaries                            48,000           50,000               2,000              50,000                2,000
+ 01.101.2.3510.31.31.445        Athletics Police Duty Salaries                           4,000            6,000               2,000               6,000                2,000
+ 01.101.2.5200.39.99.800        Cent Admin Unemp Comp Salaries                         120,000          120,000                 -               420,000              300,000
+ 01.101.2.4110.34.96.700        Custodian Night Differential                            20,000           20,000                 -                20,000                  -
+ 01.101.2.4110.32.96.700        Custodian Overtime                                      75,000           85,000              10,000              85,000               10,000
+ 01.101.2.5100.20.99.800        Central Admin, Retirement & Separation Expense          10,000           10,000                 -                10,000                  -
+ 01.101.2.3200.18.90.530        Head Nurse/ Systemwide Salaries                          5,693            4,984                (709)              4,984                 (709)
+ 01.101.2.2330.14.90.410        Home/Hosp Tutoring Salaries                             15,000           15,000                 -                15,000                  -
+ 01.101.2.3510.19.31.410        Intramurals Salaries                                     3,620           10,140               6,520              10,140                6,520
+ 01.101.2.3520.13.31.300        Student Activities Salaries                             90,000           95,000               5,000              95,000                5,000
+ 01.101.2.2210.11.31.300        HS Suspension Supervison                                 5,000            5,000                 -                 5,000                  -
+ 01.101.2.2305.10.90.900        Lane Changes / Salary Reserve                          100,000          100,000                 -               100,000                  -
+ 01.101.2.2305.10.90.800        Summer Special Ed Program                              150,000          150,000                 -               150,000                  -
+ 01.101.2.2325.12.90.901        Systemwide Substitute Wages                            232,000          262,000              30,000             262,000               30,000
+ 01.101.2.3510.30.95.535        Transp Athletic Driver Salaries                         61,000           69,000               8,000              69,000                8,000
+ 01.101.2.5100.10.90.901        TSA/403b Match                                          64,000           65,000               1,000              65,000                1,000
+ 01.101.2.3300.33.95.535        Transportation Coordinator                                 -             10,000              10,000              10,000               10,000
+Subtotal Other Salaries/Wages                                                        1,391,517        1,487,739              96,223           1,771,313              379,797
+
+Total Salaries/ Wages                                                              37,546,525       38,595,504           1,048,979          37,503,287               (43,238)
+
+Non- Salary Expenses
+ 01.101.3.2210.50.12.100        Brown Office Supplies                                   2,000             2,000                 -                 2,000                  -
+ 01.101.3.2350.40.12.100        Brown Professional Development                          2,000             2,000                 -                 2,000                  -
+ 01.101.3.2357.60.12.100        Brown In-state Travel                                   2,000             2,000                 -                 2,000                  -
+ 01.101.3.2357.69.12.100        Brown Princ Conferences & Membership                    2,000             2,000                 -                 2,000                  -
+ 01.101.3.2410.51.12.100        Brown Textbooks                                         5,000             5,000                 -                 5,000                  -
+ 01.101.3.2410.51.12.430        Brown Instructional Software                            5,000             5,000                 -                 5,000                  -
+ 01.101.3.2415.59.12.430        Brown Books & Periodicals                               7,700             7,700                 -                 7,700                  -
+ 01.101.3.2420.51.12.100        Brown Paper and Printer Supplies                        7,400             9,900               2,500               9,900                2,500
+ 01.101.3.2420.81.12.100        Brown Equipment Maint & Replacement                     6,000             6,000                 -                 6,000                  -
+ 01.101.3.2430.51.12.100        Brown Instructional Supplies                           41,000            42,000               1,000              41,000                  -
+ 01.101.3.2440.49.12.100        Brown Contracted Services                                 900               900                 -                   900                  -
+ 01.101.3.2720.55.12.100        Brown Testing & Assessment                              4,000             4,000                 -                 4,000                  -
+
+
+3/17/2023                                                                                                                                                    Summary - page 4
+                                                                                                                  Increase                            Increase (Decrease)
+                                                                                                             (Decrease) FY23 to                         FY23 to Reduced
+                                                                                           FY24 Budget -       Level Funded         FY24 Budget -       Services Budget
+ Account Number            Account Description                             FY23 Budget     Level Service          Request          Reduced Services         Request
+ 01.101.3.3200.59.12.410   Brown Medical Supplies                                  2,000             2,000                  -                 2,000                   -
+ 01.101.3.2210.50.16.100   Glover Office Supplies                                  2,000             2,200                  200               2,200                   200
+ 01.101.3.2350.40.16.100   Glover Professional Development                         2,000             4,000                2,000               2,200                   200
+ 01.101.3.2357.60.16.100   Glover In-state Travel                                  2,000               -                 (2,000)                -                  (2,000)
+ 01.101.3.2357.69.16.100   Glover Princ Conferences & Membership                   2,000             2,000                  -                 2,000                   -
+ 01.101.3.2410.51.16.430   Glover Instructional Software                           5,000             6,600                1,600               6,600                 1,600
+ 01.101.3.2415.59.16.430   Glover Books and Periodicals                            7,700             8,200                  500               8,200                   500
+ 01.101.3.2420.51.16.100   Glover Paper and Printer Supplies                       6,000             7,500                1,500               7,500                 1,500
+ 01.101.3.1420.81.16.100   Glover Replacement Equipment                            3,800             3,800                  -                 3,800                   -
+ 01.101.3.2430.51.16.100   Glover Instructional Supplies                          36,084            36,804                  720              36,804                   720
+ 01.101.3.2430.51.16.460   Glover Science Instructional Supplies                   4,165             4,500                  335               4,500                   335
+ 01.101.3.2440.49.16.100   Glover Contracted Services                              1,301               -                 (1,301)                -                  (1,301)
+ 01.101.3.2710.55.16.100   Glover Testing                                          1,200             1,200                  -                 1,200                   -
+ 01.101.3.3200.59.16.410   Glover Medical Supplies                                 1,400             1,400                  -                 1,400                   -
+ 01.101.3.2210.50.18.100   Village Office Supplies                                 2,500             2,100                 (400)              2,100                  (400)
+ 01.101.3.2350.40.18.100   Village Professional Development                        3,000             3,000                  -                 3,000                   -
+ 01.101.3.2357.60.18.100   Village In-state Travel                                 2,000             2,000                  -                 2,000                   -
+ 01.101.3.2357.69.18.100   Village Princ Conferences & Membership                  2,000             2,000                  -                 2,000                   -
+ 01.101.3.2410.51.18.430   Village Instructional Software                            667               667                  -                   667                   -
+ 01.101.3.2410.51.18.100   Village Textbooks                                       6,500             7,000                  500               7,000                   500
+ 01.101.3.2415.59.18.430   Village Books and Periodicals                           8,000             8,000                  -                 8,000                   -
+ 01.101.3.2420.81.18.100   Village Equipment                                      18,235            20,000                1,765              20,000                 1,765
+ 01.101.3.2430.51.18.100   Village Instructional Supplies                         27,000            27,000                  -                27,000                   -
+ 01.101.3.2430.51.18.400   Village Fine Arts Supplies                             12,000             6,000               (6,000)              6,000                (6,000)
+ 01.101.3.2430.51.18.410   Village PE Supplies                                     2,500             2,500                  -                 2,500                   -
+ 01.101.3.2430.51.18.430   Village Library Instructional Supplies                  5,500             6,000                  500               6,000                   500
+ 01.101.3.2430.51.18.450   Village ELA Instructional Supplies                     15,000            16,000                1,000              16,000                 1,000
+ 01.101.3.2430.51.18.455   Village Math Instructional Supplies                     4,000             4,500                  500               4,500                   500
+ 01.101.3.2430.51.18.460   Village Science Instructional Supplies                  4,000             4,500                  500               4,500                   500
+ 01.101.3.2430.51.18.480   Village Social Studies Instructional Supplies           7,000             7,700                  700               7,700                   700
+ 01.101.3.2430.51.18.500   Village Special Education Supplies                      2,500               -                 (2,500)                -                  (2,500)
+ 01.101.3.2430.51.18.525   Village Guidance Instructional Supplies                   500               500                  -                   500                   -
+ 01.101.3.2440.40.18.100   Village Contracted Services                             1,000               -                 (1,000)                -                  (1,000)
+ 01.101.3.3200.59.18.410   Village Medical Supplies                                3,000             3,000                  -                 3,000                   -
+ 01.101.3.4230.43.18.100   Village Maintenance of Equipment                        3,703               -                 (3,703)                -                  (3,703)
+ TBD - New Account         Village Music Supplies                                    -               6,000                6,000               6,000                 6,000
+ 01.101.3.2210.40.21.200   Vets Principal Printing Services                        3,000             3,000                  -                 3,000                   -
+ 01.101.3.2210.50.21.200   Vets Principals Office Supplies                         5,000             5,000                  -                 5,000                   -
+ 01.101.3.2210.59.21.200   Vets Postage                                            3,600             2,000               (1,600)              2,000                (1,600)
+ 01.101.3.2350.40.21.100   Vets Prof Development                                   5,000             5,000                  -                 5,000                   -
+ 01.101.3.2357.60.21.200   Vets Staff In-state Travel                              2,752             2,752                  -                 2,752                   -
+ 01.101.3.2357.69.21.200   Vets Principal In State Travel                            500               500                  -                   500                   -
+
+
+3/17/2023                                                                                                                                                 Summary - page 5
+                                                                                                            Increase                            Increase (Decrease)
+                                                                                                       (Decrease) FY23 to                         FY23 to Reduced
+                                                                                     FY24 Budget -       Level Funded         FY24 Budget -       Services Budget
+ Account Number            Account Description                       FY23 Budget     Level Service          Request          Reduced Services         Request
+ 01.101.3.2410.51.21.200   Vets Replacement Texts                            2,000             2,000                  -                 2,000                   -
+ 01.101.3.2410.51.21.450   Vets Language Arts Textbooks                      3,000             3,000                  -                 3,000                   -
+ 01.101.3.2410.51.21.455   Vets Math Textbooks                               3,700               -                 (3,700)                -                  (3,700)
+ 01.101.3.2415.49.21.430   Vets Library Contracted Services                 13,950               -               (13,950)                 -                 (13,950)
+ 01.101.3.2415.50.21.430   Vets Library Services Supplies                      410               250                 (160)                250                  (160)
+ 01.101.3.2415.59.21.430   Vets Library Books & Periodical                   5,765             5,000                 (765)              5,000                  (765)
+ 01.101.3.2430.50.21.530   Vets Medical Supplies                             2,200             2,200                  -                 2,200                   -
+ 01.101.3.2430.51.21.200   Vets General Instructional Supplies              15,000            15,000                  -                15,000                   -
+ 01.101.3.2430.51.21.400   Vets Unified Arts Supplies                        6,160             6,160                  -                 6,160                   -
+ 01.101.3.2430.51.21.410   Vets Physical Education Inst Supplies             3,520             3,520                  -                 3,520                   -
+ 01.101.3.2430.51.21.450   Vets Language Arts Supplies                       1,925             1,925                  -                 1,925                   -
+ 01.101.3.2430.51.21.455   Vets Math Supplies                                1,750             1,750                  -                 1,750                   -
+ 01.101.3.2430.51.21.460   Vets Science Supplies                             4,400             4,400                  -                 4,400                   -
+ 01.101.3.2430.51.21.465   Vets World Language Supplies                      1,400             1,400                  -                 1,400                   -
+ 01.101.3.2430.51.21.480   Vets Social Studies Supplies                      1,485             1,485                  -                 1,485                   -
+ 01.101.3.2430.51.21.525   Vets Guidance Supplies                              300               300                  -                   300                   -
+ 01.101.3.2440.40.21.450   Vets Language Arts Contracted Services              200               200                  -                   200                   -
+ 01.101.3.2440.40.21.465   Vets World Language Contracted Services           2,700             2,700                  -                 2,700                   -
+ 01.101.3.2440.40.21.480   Vets Social Studies Contracted Services             300               300                  -                   300                   -
+ 01.101.3.2440.49.21.400   Vets Unified Arts Contracted Services               750               750                  -                   750                   -
+ 01.101.3.2440.49.21.460   Vets Science Contracted Services                    900               900                  -                   900                   -
+ 01.101.3.2415.50.21.420   Vets Technology                                  13,828            13,828                  -                13,828                   -
+ 01.101.3.4230.43.21.200   Vets Maintenance of Equipment                     3,389             3,389                  -                 3,389                   -
+ 01.101.3.2430.51.21.500   Vets Special Education Supplies                   2,500             2,500                  -                 2,500                   -
+ TBD - New Account         Vets Instructional Software                         -              13,000              13,000               13,000                13,000
+ TBD - New Account         Vets Social Studies Textbooks                       -               7,000                7,000               7,000                 7,000
+ 01.101.3.2210.40.31.300   HS Principal Printing Expense                     2,500             2,500                  -                 2,500                   -
+ 01.101.3.2210.50.31.300   HS Principal Office Supplies & Postage           18,000            18,000                  -                18,000                   -
+ 01.101.3.2350.40.31.100   HS Professional Development                       8,000             8,000                  -                 8,000                   -
+ 01.101.3.2350.69.31.300   HS Membership & Dues                              5,020             5,020                  -                 5,020                   -
+ 01.101.3.2351.60.31.300   HS In State Conferences                           2,500             2,500                  -                 2,500                   -
+ 01.101.3.2357.60.31.300   HS Principal In-state Travel                      1,480             1,000                 (480)              1,000                  (480)
+ 01.101.3.2357.60.31.400   HS Fine Arts In State Travel                        800               800                  -                   800                   -
+ 01.101.3.2410.51.31.450   HS ELA Textbooks                                 13,600            13,600                  -                13,600                   -
+ 01.101.3.2410.51.31.465   HS World Language Textbooks                       4,000             4,000                  -                 4,000                   -
+ 01.101.3.2410.51.31.480   HS Soc Studies Textbooks                         10,300            10,300                  -                10,300                   -
+ 01.101.3.2415.40.31.300   HS Senior Project Expenses                          700               700                  -                   700                   -
+ 01.101.3.2415.40.31.400   HS TV/Theater/Studio Maintenance                  8,400             8,400                  -                 8,400                   -
+ 01.101.3.2415.50.31.410   HS Health Instructional Supplies                  1,500             1,500                  -                 1,500                   -
+ 01.101.3.2415.50.31.411   HS Consumer Science Supplies                      9,750            11,250                1,500              11,250                 1,500
+ 01.101.3.2415.50.31.430   HS Library Office Supplies                        2,300             2,300                  -                 2,300                   -
+ 01.101.3.2415.50.31.480   HS Social Studies Supplies                        1,500             1,500                  -                 1,500                   -
+
+
+3/17/2023                                                                                                                                           Summary - page 6
+                                                                                                                             Increase                            Increase (Decrease)
+                                                                                                                        (Decrease) FY23 to                         FY23 to Reduced
+                                                                                                      FY24 Budget -       Level Funded         FY24 Budget -       Services Budget
+ Account Number            Account Description                                        FY23 Budget     Level Service          Request          Reduced Services         Request
+ 01.101.3.2415.59.31.430   HS Library Books & Periodical                                      9,200             9,200                  -                 9,200                   -
+ 01.101.3.2420.50.31.300   HS Copier Supplies                                                 4,000             4,000                  -                 4,000                   -
+ 01.101.3.2420.81.31.300   HS Replacement of Equipment                                        2,000             2,000                  -                 2,000                   -
+ 01.101.3.2420.81.31.410   HS PE Replacement of Equipment                                       700               700                  -                   700                   -
+ 01.101.3.2430.51.31.300   HS Instructional Supplies                                         10,000            10,000                  -                10,000                   -
+ 01.101.3.2430.51.31.326   HS Marine Technology                                               2,000             2,000                  -                 2,000                   -
+ 01.101.3.2430.51.31.400   HS Visual Arts Supplies (Formerly Unified Arts Inst Supp          27,400            18,900               (8,500)             18,900                (8,500)
+ TBD - New Account         HS Performing Arts Supplies                                                          5,900                5,900               5,900                 5,900
+ TBD - New Account         HS Applied Arts Supplies                                                             2,600                2,600               2,600                 2,600
+ 01.101.3.2430.51.31.401   HS Industrial Arts Supplies                                       11,000            11,000                  -                11,000                   -
+ 01.101.3.2430.51.31.410   HS PE Instructional Supplies                                       1,100             1,100                  -                 1,100                   -
+ 01.101.3.2430.51.31.430   HS Library Digital Media                                           9,000             9,000                  -                 9,000                   -
+ 01.101.3.2430.59.31.455   HS Business Supplies                                               3,200             3,200                  -                 3,200                   -
+ 01.101.3.2430.59.31.460   HS Science Supplies                                               16,800            16,800                  -                16,800                   -
+ 01.101.3.2430.59.31.465   HS World Language Supplies                                         1,500             1,500                  -                 1,500                   -
+ 01.101.3.2440.49.31.400   HS Performing Arts Contract Services                              11,300            13,600                2,300              13,600                 2,300
+ 01.101.3.2450.50.31.420   HS Technology Replacement of Equipment                             1,000             1,000                  -                 1,000                   -
+ 01.101.3.2451.49.31.300   HS Instructional Software                                         24,000            24,000                  -                24,000                   -
+ 01.101.3.2451.51.31.455   HS Math Instructional Software                                    16,000            16,000                  -                16,000                   -
+ 01.101.3.2452.50.31.420   HS Technology Supplies                                             6,000             6,000                  -                 6,000                   -
+ 01.101.3.2710.41.31.525   HS Guidance Contract Services                                      1,200             1,000                 (200)              1,000                  (200)
+ 01.101.3.2710.51.31.525   HS Guidance Supplies                                               2,500             2,000                 (500)              2,000                  (500)
+ 01.101.3.3200.59.31.410   HS Health Medical Supplies                                         1,600             1,600                  -                 1,600                   -
+ 01.101.3.3520.40.31.300   HS Graduation Expenses                                            12,000            12,000                  -                12,000                   -
+ 01.101.3.3520.42.31.300   HS Student Activities Transportation                               2,500             2,500                  -                   -                  (2,500)
+ 01.101.3.3520.51.31.455   HS Math Student Act Supplies                                         500               500                  -                   500                   -
+ 01.101.3.3520.51.31.460   HS Science Student Act Supplies                                    1,000             1,000                  -                 1,000                   -
+ 01.101.3.3520.69.31.300   HS Student Activity Dues/Membership                                1,000             1,000                  -                 1,000                   -
+ 01.101.3.4230.43.31.400   HS Fine Arts Maintenance Of Equipment                              2,000             2,000                  -                 2,000                   -
+ 01.101.3.4230.43.31.410   HS Health/PE Maintenance Of Equipment                                800               800                  -                   800                   -
+ 01.101.3.3504.49.31.445   Athletics Contracted Services                                     17,330            21,595                4,265              21,595                 4,265
+ 01.101.3.3510.49.31.445   Athletics Rental of Facility                                      63,600            68,100                4,500              68,100                 4,500
+ 01.101.3.3510.54.31.445   Athletics Supplies                                                48,700            48,700                  -                48,700                   -
+ 01.101.3.3510.59.31.445   Athletics Medical Supplies                                         4,950             5,200                  250               5,200                   250
+ 01.101.3.5260.49.31.445   Athletics Insurance                                                7,500            10,000                2,500              10,000                 2,500
+ 01.101.3.3510.42.95.535   Athletic Transportation Contract Services                         40,000            40,000                  -                40,000                   -
+ 01.101.3.2357.49.99.800   Curriculum Contracted Services                                    40,000            40,000                  -                40,000                   -
+ 01.101.3.2110.51.99.901   Curriculum Instructional Supplies                                 20,000           138,000             118,000              138,000               118,000
+ 01.101.3.2455.59.90.901   Curriculum Instructional Software                                  5,000           115,000             110,000              115,000               110,000
+ 01.101.3.2358.49.99.901   Curriculum Professional Development                                8,000             8,000                  -                 8,000                   -
+ 01.101.3.2110.49.99.901   Student Opportunity Act Expenditures                              90,690            90,690                  -                90,690                   -
+ 01.101.3.4230.43.99.800   Maint of Equip (Copiers/Postage Meter)                            98,271            98,271                  -                98,271                   -
+
+
+3/17/2023                                                                                                                                                            Summary - page 7
+                                                                                                           Increase                            Increase (Decrease)
+                                                                                                      (Decrease) FY23 to                         FY23 to Reduced
+                                                                                    FY24 Budget -       Level Funded         FY24 Budget -       Services Budget
+ Account Number            Account Description                      FY23 Budget     Level Service          Request          Reduced Services         Request
+ 01.101.3.2451.69.90.420   IT Hardware Exp                                 15,000            15,000                  -                15,000                   -
+ 01.101.3.2455.59.90.420   IT Software Exp                                113,316           119,620                6,304             119,620                 6,304
+ 01.101.3.4450.40.90.420   IT Contract Services                            88,454           112,279              23,825              112,279                23,825
+ 01.101.3.4450.50.90.420   IT Supplies                                     31,000            31,000                  -                31,000                   -
+ 01.101.3.4450.60.90.420   IT Travel Exp                                      600               600                  -                   600                   -
+ 01.101.3.4450.80.90.420   IT Equipment                                    67,400            60,000               (7,400)             60,000                (7,400)
+ 01.101.3.9400.64.90.500   Collaborative Tuitions                         633,000           692,935              59,935              692,935                59,935
+ 01.101.3.9401.64.90.500   Private Day Tuitions                           967,628         1,146,339             178,711            1,146,339               178,711
+ 01.101.3.9402.64.90.500   Residential Tuitions                           800,000           607,000            (193,000)             607,000              (193,000)
+ 01.101.3.3302.42.95.500   Special Ed Transportation                      290,000           480,000             190,000              480,000               190,000
+ 01.101.3.9400.64.31.300   Other Tuitions/Recovery HS                      12,000            12,000                  -                12,000                   -
+ 01.101.3.3303.42.95.535   Homeless Transportation                         10,000            10,000                  -                10,000                   -
+ 01.101.3.2440.40.90.510   Interpretation Services                         24,000            24,000                  -                24,000                   -
+ 01.101.3.2110.51.90.500   Special Ed Supplies                             35,000            25,000             (10,000)              25,000               (10,000)
+ 01.101.3.2440.49.90.526   504 Services                                     2,000             2,500                  500               2,500                   500
+ 01.101.3.2415.51.90.510   ELL Supplies                                     1,000             1,000                  -                 1,000                   -
+ 01.101.3.2330.40.90.500   Fellows Program                                 36,803               -               (36,803)                 -                 (36,803)
+ 01.101.3.2720.40.90.350   Testing & Assessment                             3,000             5,000                2,000               5,000                 2,000
+ 01.101.3.2415.40.90.500   K-12 Contracted Services                        20,000            45,000              25,000               45,000                25,000
+ 01.101.3.3304.42.95.435   Foster Transportation                            5,000             5,000                  -                 5,000                   -
+ 01.101.3.2351.60.90.800   Sch Comm Conference & Membership                 7,400             7,400                  -                 7,400                   -
+ 01.101.3.2350.69.99.800   Central Admin Professional Expenses             11,500            11,500                  -                11,500                   -
+ 01.101.3.2357.69.99.800   Central Admin Prof Reimb                        39,000            39,000                  -                39,000                   -
+ 01.101.3.3520.40.90.400   DW Fine Arts Contract Services                   7,000               -                 (7,000)                -                  (7,000)
+ 01.101.3.1210.63.99.800   Legal Counsel                                  105,000           115,000              10,000              115,000                10,000
+ 01.101.3.1210.44.99.800   Legal Advertising                                2,000             2,000                  -                 2,000                   -
+ 01.101.3.7300.80.90.900   Districtwide Equipment                           5,000             5,000                  -                 5,000                   -
+ 01.101.3.4130.65.94.710   Districtwide Telephone                          48,300            50,000                1,700              50,000                 1,700
+ 01.101.3.1210.40.99.800   Central Admin Contract Services                120,842           125,100                4,258             125,100                 4,258
+ 01.101.3.1210.50.99.800   Central Admin Office Supplies                   13,000            13,000                  -                13,000                   -
+ 01.101.3.1210.69.99.800   Central Admin Other Expense                     32,000            32,000                  -                32,000                   -
+ 01.101.3.1210.62.99.800   Central Admin Mileage Reimb                      2,000             2,000                  -                 2,000                   -
+ 01.101.3.2351.60.99.800   Central Admin In State Conf/Membership           8,985             8,985                  -                 8,985                   -
+ 01.101.3.1420.40.99.800   Human Resources Contract Services                8,500             8,500                  -                 8,500                   -
+ 01.101.3.1420.47.99.800   Employee Physicals                              12,000            12,000                  -                12,000                   -
+ 01.101.3.5260.49.99.800   Central Admin Insurance                         23,500            25,500                2,000              25,500                 2,000
+ 01.101.3.4130.67.90.710   Electricity                                    528,000           882,000             354,000              790,000               262,000
+ 01.101.3.4130.66.90.710   Gas                                            341,000           351,000              10,000              351,000                10,000
+ 01.101.3.4130.68.90.710   Water & Sewer                                  108,000           115,000                7,000             115,000                 7,000
+ 01.101.3.4220.43.90.705   Districtwide Maint Contract Services           349,690           397,996              48,306              397,996                48,306
+ 01.101.3.4220.53.90.705   Districtwide Maint Supplies                    130,000           136,500                6,500             136,500                 6,500
+ 01.101.3.4110.52.90.700   Districtwide Custodial Supplies                126,500           132,826                6,326             132,826                 6,326
+
+
+3/17/2023                                                                                                                                          Summary - page 8
+                                                                                                         Increase                           Increase (Decrease)
+                                                                                                    (Decrease) FY23 to                        FY23 to Reduced
+                                                                                  FY24 Budget -       Level Funded        FY24 Budget -       Services Budget
+ Account Number              Account Description                  FY23 Budget     Level Service          Request         Reduced Services         Request
+ 01.101.3.4230.43.95.535     Repair of Vehicles                          55,000            55,000                  -               55,000                   -
+ 01.101.3.4231.57.95.535     Fuel - Unleaded Gas                         12,000            12,000                  -               12,000                   -
+ 01.101.3.4232.57.95.535     Fuel - Diesel Gas                            8,000             8,000                  -                8,000                   -
+ 01.101.3.4230.57.95.535     Other Transportation Exp                       500               500                  -                  500                   -
+ 01.101.3.7400.81.90.705     Districtwide Equipment/Replacement          38,500            50,000              11,500              50,000                11,500
+ 01.101.3.3600.49.90.901     Security Contract Services                   9,000             9,000                  -                9,000                   -
+ 01.101.3.4220.49.99.705     Staff Safety Training                        9,000             9,000                  -                9,000                   -
+Total Non- Salary Expenses                                           6,435,748         7,376,286              940,538          7,278,986               843,238
+
+Total Budget                                                        43,982,273       45,971,790            1,989,517          44,782,273              800,000
+
+
+
+
+3/17/2023                                                                                                                                      Summary - page 9
+                                                                                                               Increase                           Increase (Decrease)
+                                                                                                          (Decrease) FY23 to                        FY23 to Reduced
+                                                                                          FY24 Budget -     Level Funded        FY24 Budget -       Services Budget
+ Account Number   Account Description                                   FY23 Budget       Level Service        Request         Reduced Services         Request
+
+                                                                                               Level Services Budget                 Reduced Services Budget
+                                              Total Percent Increase Over FY23 Budget                  4.52%                                 1.82%
+                                         Percent Increase In Salaries Over FY23 Budget                 2.79%                                 -0.12%
+                                         Percent Increase In Utilities Over FY23 Budget               37.97%                                 28.56%
+                                   Percent Increase In OOD Tuitions Over FY23 Budget                   1.90%                                  1.90%
+                            Percent Increase In OOD Transportation Over FY23 Budget                   65.52%                                 65.52%
+                       Percent Increase In Other Operating Expenses Over FY23 Budget                  12.06%                                 11.87%
+
+
+
+
+3/17/2023                                                                                                                                           Summary - page 10
+                                                  MARBLEHEAD PUBLIC SCHOOLS
+                                                        FY24 BUDGET
+                                                    BUDGET TRACKING SHEET
+
+                                                                                                           Adjustment               Running Total
+      Date                                        Change                                                    Amount                   FY24 Budget
+
+  1/20/2023   FY24 Initial Budget Request                                                                                          $      49,335,000
+  2/9/2023    Elimination of most staffing requests                                                    $      (2,287,133)          $      47,047,867
+  2/9/2023    Reduction of supply/service requests                                                     $        (556,517)          $      46,491,350
+  2/9/2023    Positions proposed to be cut                                                             $        (539,426)          $      45,951,924
+  2/9/2023    Contractual obligation calculation error                                                 $        (584,000)          $      45,367,924
+  3/1/2023    Additional staffing cuts to get to $800k budget                                          $        (585,651)          $      44,782,273
+
+
+
+
+              Changes to Date                                                                          $      (4,552,727)
+              Running Total                                                                                                        $      44,782,273
+
+
+                                                                                                             FIXED*                INITIAL REQUEST
+              FY23 Budget                                                                              $     43,982,273
+              FY24 Payroll Contractual Obligations (after ret. savings)                                $      1,939,802
+              FY24 Contractula Obligation Correction                                                   $       (584,000)           $         (584,000)
+              FY24 Special Education OOD Increase/Decrease                                             $        235,646
+              FY24 Utilities Increase/Decrease                                                         $        364,000
+              TOTAL                                                                                    $     45,937,721            $      48,751,000
+              FY24 Budget Increase $                                                                           $1,955,448                  $4,768,727
+              FY24 Budget Increase %                                                                               4.45%                      10.84%
+              * only includes payroll, utility, and OOD tuition contractual obligations, not vendor contractual obligations and cost of level service
+              operations
+
+
+
+                                                                                                                                       FY24 LEVEL
+                                        LEVEL SERVICES BUDGET                                                                           SERVICES
+              FY24 Level Services Budget Request                                                                                   $      45,971,790
+              FY23 Budget                                                                                                          $      43,982,273
+              Increase                                                                                                             $       1,989,517
+              FY24 Budget Increase %                                                                                                           4.52%
+
+
+                                                                                                                                     FY24 REDUCED
+                            REDUCED SERVICES BUDGET (No Override)                                                                      SERVICES
+              FY24 Reduced Budget Request                                                                                          $      44,782,273
+              FY23 Budget                                                                                                          $      43,982,273
+              Increase                                                                                                             $         800,000
+              FY24 Budget Increase %                                                                                                           1.82%
+
+
+
+3/17/2023                                                                                                                   Budget Tracking - Page 1
+

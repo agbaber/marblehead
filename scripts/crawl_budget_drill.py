@@ -9,9 +9,17 @@ Fields: org1=Fund Group, org2=Fund, org3=Department, org4=Division,
 
 For each Fund in the Budgeted Annual envelope: pull dept/category/object
 breakdown.  For each Department: pull category/object/division breakdown.
-Writes data/budget_drill_FY26.json.
+Reads data/budget_actual_FY<N>.json (build_budget_actual.py) for the
+rollup scaffolding and writes data/budget_drill_FY<N>.json.
+
+Usage:
+  scripts/crawl_budget_drill.py              # current fiscal year
+  scripts/crawl_budget_drill.py --year 2026  # recrawl a prior FY
 """
-import json, urllib.request, urllib.parse, time, sys, os, ssl
+import argparse, json, urllib.request, urllib.parse, time, sys, os, ssl
+from datetime import UTC, datetime
+
+import fylib
 
 # macOS bundled Python often can't validate Socrata's chain via the system store.
 # Build a context backed by certifi if available, otherwise fall back to unverified.
@@ -22,14 +30,13 @@ except ImportError:
     SSL_CTX = ssl._create_unverified_context()
 
 BASE = 'https://townofmarblehead-ma-ob.budget.socrata.com/api/opex/chart_data.json'
-YEAR = 2026
 ENVELOPE = 'BUDGETED ANNUAL FUNDS'
 
-def fetch(child_entity, filters=None, retries=3):
+def fetch(year, child_entity, filters=None, retries=3):
     # `limit=100` forces the API to return all rows rather than truncating to 15.
     # Verified against Police x Professional Salary: 41 line items returned, summing
     # to the published $4.88M total.
-    params = {'year': YEAR, 'child_entity': child_entity, 'limit': 100}
+    params = {'year': year, 'child_entity': child_entity, 'limit': 100}
     if filters:
         params.update(filters)
     url = BASE + '?' + urllib.parse.urlencode(params)
@@ -55,12 +62,19 @@ def norm(entities):
     )
 
 def main():
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[1])
+    ap.add_argument('--year', type=int, default=fylib.current_fiscal_year(),
+                    help='fiscal year to crawl (default: current fiscal year)')
+    args = ap.parse_args()
+    year = args.year
+    label = fylib.fy_label(year)
+
     os.chdir(os.path.join(os.path.dirname(__file__), '..'))
-    b = json.load(open('data/budget_actual_FY26.json'))
+    b = json.load(open(f'data/budget_actual_{label}.json'))
 
     drill = {
-        'as_of': '2026-06-08',
-        'fiscal_year': 'FY26',
+        'as_of': datetime.now(UTC).date().isoformat(),
+        'fiscal_year': label,
         'envelope': ENVELOPE,
         'envelope_totals': b['totals']['budgeted_annual'],
         'by_fund': {},
@@ -125,7 +139,7 @@ def main():
         }
         for dim, child in DIMS_FROM_FUND:
             try:
-                data = fetch(child, {'org1': ENVELOPE, 'org2': name})
+                data = fetch(year, child, {'org1': ENVELOPE, 'org2': name})
                 drill['by_fund'][name][dim] = norm(data.get('entities', []))
             except Exception as e:
                 print(f'  ERR fund={name} dim={dim}: {e}', file=sys.stderr)
@@ -146,7 +160,7 @@ def main():
         }
         for dim, child in DIMS_FROM_DEPT:
             try:
-                data = fetch(child, {'org1': ENVELOPE, 'org3': name})
+                data = fetch(year, child, {'org1': ENVELOPE, 'org3': name})
                 drill['by_department'][name][dim] = norm(data.get('entities', []))
             except Exception as e:
                 print(f'  ERR dept={name} dim={dim}: {e}', file=sys.stderr)
@@ -167,7 +181,7 @@ def main():
         }
         for dim, child in DIMS_FROM_CATEGORY:
             try:
-                data = fetch(child, {'org1': ENVELOPE, 'org5': name})
+                data = fetch(year, child, {'org1': ENVELOPE, 'org5': name})
                 drill['by_category'][name][dim] = norm(data.get('entities', []))
             except Exception as e:
                 print(f'  ERR cat={name} dim={dim}: {e}', file=sys.stderr)
@@ -188,7 +202,7 @@ def main():
         }
         for dim, child in DIMS_FROM_DIVISION:
             try:
-                data = fetch(child, {'org1': ENVELOPE, 'org4': name})
+                data = fetch(year, child, {'org1': ENVELOPE, 'org4': name})
                 drill['by_division'][name][dim] = norm(data.get('entities', []))
             except Exception as e:
                 print(f'  ERR div={name} dim={dim}: {e}', file=sys.stderr)
@@ -201,7 +215,7 @@ def main():
     # Line items: Department x Category -> positions/object detail
     for dept, cat in dept_cat_combos:
         try:
-            data = fetch('org6', {'org1': ENVELOPE, 'org3': dept, 'org5': cat})
+            data = fetch(year, 'org6', {'org1': ENVELOPE, 'org3': dept, 'org5': cat})
             items = norm(data.get('entities', []))
             if items:  # only store non-empty combos
                 drill['by_dept_category'][dept + '||' + cat] = items
@@ -215,7 +229,7 @@ def main():
     # Line items: Fund x Category -> positions/object detail
     for fund, cat in fund_cat_combos:
         try:
-            data = fetch('org6', {'org1': ENVELOPE, 'org2': fund, 'org5': cat})
+            data = fetch(year, 'org6', {'org1': ENVELOPE, 'org2': fund, 'org5': cat})
             items = norm(data.get('entities', []))
             if items:
                 drill['by_fund_category'][fund + '||' + cat] = items
@@ -226,7 +240,7 @@ def main():
             print(f'  {done}/{total_calls} ...')
         time.sleep(0.15)
 
-    out = 'data/budget_drill_FY26.json'
+    out = f'data/budget_drill_{label}.json'
     with open(out, 'w') as f:
         json.dump(drill, f, indent=1)
     size_kb = os.path.getsize(out) / 1024

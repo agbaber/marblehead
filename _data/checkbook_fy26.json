@@ -1,0 +1,16 @@
+{
+ "as_of": "2026-06-30",
+ "as_of_human": "Jun 30",
+ "fiscal_year": "FY26",
+ "year": 2026,
+ "fy_start": "2025-07-01",
+ "fy_end": "2026-06-30",
+ "months_elapsed": 12,
+ "total_amount": 108129021.77,
+ "total_M": "$108.1M",
+ "row_count": 17298,
+ "row_count_human": "17,298",
+ "csv_filename": "checkbook_FY26_2026-06-30.csv",
+ "performance_filename": "checkbook_performance_FY26.json",
+ "generated_by": "scripts/build_checkbook_csv.py"
+}

@@ -1,5 +1,5 @@
-const PARAGRAPH_TARGET_SECONDS = 45;
-const PAUSE_BREAK_SECONDS = 2.0;
+const PARAGRAPH_TARGET_SECONDS = 90;
+const PAUSE_BREAK_SECONDS = 4.0;
 
 const ENTITIES = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'", '&apos;': "'" };
 
@@ -73,11 +73,22 @@ function formatTimecode(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`;
 }
 
-export function vttToProse(vtt, vimeoUrl, opts) {
+// Build a deep-link to a specific second of the source video. Vimeo and
+// MHTV-style URLs use a `#t=Ns` fragment; YouTube uses a `?t=Ns` or `&t=Ns`
+// query parameter.
+function jumpLink(videoUrl, seconds) {
+  if (videoUrl.includes('youtube.com/watch') || videoUrl.includes('youtu.be/')) {
+    const sep = videoUrl.includes('?') ? '&' : '?';
+    return `${videoUrl}${sep}t=${seconds}s`;
+  }
+  return `${videoUrl}#t=${seconds}s`;
+}
+
+export function vttToProse(vtt, videoUrl, opts) {
   const cues = parseVtt(vtt);
   if (cues.length === 0) return '';
   const paragraphs = coalesceCues(cues, opts);
   return paragraphs
-    .map(p => `**[${formatTimecode(p.start_seconds)}](${vimeoUrl}#t=${Math.floor(p.start_seconds)}s)** ${p.text}`)
+    .map(p => `**[${formatTimecode(p.start_seconds)}](${jumpLink(videoUrl, Math.floor(p.start_seconds))})** ${p.text}`)
     .join('\n\n');
 }

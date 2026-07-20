@@ -54,3 +54,35 @@ node scripts/sync_parcel_owners.mjs --db community-pulse-staging --remote
 This truncates and reinserts `parcel_owners` in the named D1. Run it
 any time the assessor CSV is refreshed. Omit `--remote` to sync the
 local D1 instead.
+
+## PostHog events captured for the verify flow
+
+Client-side via `assets/community-pulse/claim.js` + `profile.js`. All
+events use the `verify_` prefix. No PII (no addresses, names, or
+identity hashes) is sent as event properties -- only status enums,
+boolean flags, and HTTP status codes.
+
+### `/verify-me.html` flow
+
+| Event | Fires when | Properties |
+|---|---|---|
+| `verify_fb_start_clicked` | User clicks "Continue with Facebook" | -- |
+| `verify_oauth_returned` | FB callback redirects back with a JWT in the URL fragment | `claim_intent` (bool) |
+| `verify_claim_submitted` | User submits the claim form | -- |
+| `verify_claim_result` | API returns a response | `status` (`match` / `first_initial_mismatch` / `name_mismatch` / `no_match` / `rate_limited` / `http_error` / `network_error`), `had_alternatives` (bool), `http_status` (number, on http_error only) |
+
+### `/profile.html` flow
+
+| Event | Fires when | Properties |
+|---|---|---|
+| `verify_profile_viewed` | Page loads | `state` (`signed_in` / `signed_out`), and when signed in: `claim_source`, `auth_source`, `has_facebook` (bool), `has_passkey` (bool), `public_identity` (bool) |
+| `verify_signin_clicked` | Signed-out user clicks Sign in | `from` (`profile_page`) |
+| `verify_display_name_saved` | User saves their display name | `is_empty` (bool) |
+| `verify_public_identity_changed` | User toggles public/private | `value` (0 / 1) |
+| `verify_claim_released` | User releases their claim | -- |
+
+### Suggested funnels in PostHog
+
+- **Landing -> verified**: `$pageview` (path=/verify-me.html) -> `verify_fb_start_clicked` -> `verify_oauth_returned` -> `verify_claim_submitted` -> `verify_claim_result` (status=match)
+- **Assessor match rate**: `verify_claim_result` breakdown by `status`
+- **Drop-off after OAuth**: `verify_oauth_returned` (claim_intent=true) -> `verify_claim_submitted` (cohort delta)

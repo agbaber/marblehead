@@ -1,0 +1,1393 @@
+a,
+dif
+MOH DEC -2 PM & 14
+
+a
+
+WAvig
+~ Town Clerk Us:
+
+MEETING NOTICE
+
+POSTED IN ACCORDANCE WITII THE PROVISIONS OF MGL 30A § 20 Act relative to extending certain COVID-19 measures
+adopted during the state of emergency
+
+Marblehead School Committee — Facilities Subcommittee
+
+Name of Board or Committee
+
+Zoom Conference join via the web link or Dial in
+
+https://marbleheadschools-org.zoom.us/j/9997549363 1°pwd=Y OpHWVM2YitBZXNOU2ZyTk1OMzh4dz09
+Meeting ID: 999 7549 3631
+
+Password: 873255
+
+Dial in Phone #1 646 931 3860
+
+Thursday December Sth 2024 9:00 AM
+Day of Week Month Date Year Time
+
+Agenda or Topics to be discussed listed below (That the chair reasonably anticipates will be discussed)
+
+I. Initial Business
+
+a. Call to Order
+
+b. Public Comment
+II. Facilities Update
+
+a. District wide
+
+b. Marblehead Highschool Roof
+
+¢. Marblehead Highschool Green House Project
+III. Capital Projects Update and Planning
+IV, School Owned Properties
+
+V. Closing Business
+a. New Business- Subcommittee Announcements and Requests
+
+THIS AGENDA IS SUBJECT TO CHANGE
+
+Chairperson; _ Sarah Fox
+Posted by: Sarah Fox
+Date: 12/2/2024
+RAYMOND DESIGN
+
+ASSOCIATES
+PY pYAN |) ARCHITECTURE & PLANNING
+
+MARBLEHEAD HIGH SCHOOL
+Roofing Replacement Feasibility Study
+
+Presented by
+Raymond Design Associates, Inc.
+
+For
+
+Marblehead Public Schools
+November 1, 2024
+
+Mechanical, Electrical & Plumbing Engineers: Professional Cost Estimator: Moisture Testing Consultant:
+GGD Consulting Engineers, Inc. PM&C IR Analyzers, Inc.
+
+375 Faunce Corner Road, Suite D 20 Downer Street 65 Lyman Drive
+
+North Dartmouth, MA 02747 Hingham, MA 02043 Town, MA 00000
+508.998.5700 781.740.8007 800.879.1964
+
+60 Ledgewood Place, Rockland, Massachusetts 02370 www.rda-design.com
+Marblehead High School November 1, 2024
+Roofing Replacement Feasibility Study
+Marblehead Public Schools
+
+Table of Contents
+
+EXECUTIVE SUIMINIARLY.......1..00me ne RTT 1
+Existing CONCILIONS iescsesseccssssisveresscassenmareressayeresransviesssrnemare cme enarssrersussavesssaeees 2
+RECOMMENALIONS sievvessesssvescncesssenesvesesaveescsssvesevesvevevesnetveesevbensevsnwesastanteacesaretenseevees 4
+Construction SCOPe Options... cccseesesessesensceescseescsssscssecsesesssesssseeesssseeseseneses 6
+Appendix A: Scope Options A and B Feasibility Cost Estimate 8
+Appendix B: Scope Option C Cost Estimate SUMMALY........ccceceeseesesetersereteeeteeeeeeee 18
+Appendix:Cr Existing: Roof Plan Diagram ..isscscssovecssoveevvenseonevscsstosasssensavereseoecnsoeveers 19
+Appendix D: Infrared Thermographic Roof Moisture Analysis .............cccceceeeees 20
+Appendix E: HVAC Existing Conditions RepOrt.....c.ccccscseseeserecsestesssssscstsssssessseees 54
+Appendix.E: Photo INA OX srcssscsspssanessreccsserenevecrnevecrneversiressawsnnssecseassseesrseseseass 62
+
+Table of Contents
+RAYMOND DESIGN
+
+ASSOCIATES
+R DA ARCHITECTURE & PLANNING
+
+EXECUTIVE SUMMARY
+
+Raymond Design Associates, Inc. (RDA) is pleased to present this Roofing Replacement Feasibility Study to
+Marblehead Public Schools (MPS) for the Marblehead High School, located in Marblehead, Massachusetts. MPS
+engaged RDA to assess existing conditions, recommend repairs and replacement of existing systems, and propose
+a “menu” of scope options with varying estimated construction costs. We understand the primary focus of this
+Feasibility Study is replacement of existing membrane and asphalt shingle roofing in order to preserve and protect
+the Marblehead High School building.
+
+RDA engaged GGD Consulting Engineers, Inc. (GGD) to evaluate the condition of existing rooftop HVAC equipment
+in order to better understand what effect the equipment might have on roofing replacement work, and to inform
+MPS of any immediate functional concerns related to rooftop equipment. RDA understands that mechanical
+equipment upgrades were not originally intended to be part of this roofing replacement project, but rooftop units
+are often interlinked with the roofing system due to curb flashings and penetrations. Verification of their condition
+is a matter of due diligence as they relate to roofing work, and also provides MPS with critical information for future
+capital improvement planning.
+
+Generally, existing roofing systems and HVAC rooftop equipment have reached the end of their useful life spans.
+Replacement of roofing and rooftop HVAC equipment is recommended. We understand the current construction
+budget and funding allocation for this project will not support roofing and HVAC work, so we have developed several
+scope Options for consideration by MPS. Our intent for this report is to inform MPS about the condition of existing
+roofing systems and to support a proposal to the Marblehead School Committee and/or Town of Marblehead
+should MPS choose to request additional funding.
+
+RDA also engaged PM&C, Inc. for professional cost estimating services and IR Analyzers, Inc. for moisture testing.
+Please refer to Appendices A and B for detailed cost estimates. Approximately 5% of the total square foot area of
+existing rigid insulation was documented as “wet” by infrared moisture testing performed by IR Analyzers. To avoid
+trapped moisture within new sealed roofing, wet and damp insulation must be removed and replaced prior to
+installation of a new membrane. For feasibility planning, we recommend including about 10% insulation
+replacement to account for margin of error and unforeseen conditions. To better understand the level of saturation
+and extent of damaged insulation, RDA will perform sample roofing test cuts at various locations throughout all
+roof areas with professional contractor assistance.
+
+Test cuts will also allow RDA to confirm as-built roofing conditions, and our Environmental Consultant to collect
+samples for hazardous materials testing. Based on the age of the building and available original construction details,
+asbestos-containing materials are not expected. However, it is best industry practice to sample and test any suspect
+materials, using the services of a certified industrial hygienist.
+
+We understand the current construction budget for this project to be approximately $4,250,000. This budget will
+support Option C (Partial Roof Re-cover to fit current budget) is feasible but is less ideal due to widespread water
+infiltration documented by infrared testing and suspected interior leaks reported by the MPS. Option A (Re-cover
+only, no HVAC— $5,491,300 estimated construction cost) is recommended, at minimum, to secure the roof envelope
+without duplicate soft costs and general conditions required for separate procurements. Option Al (Re-cover and
+replace all HVAC rooftop equipment - $11,087,779 estimated construction cost) is highly recommended for the
+same reasons of economy, based on existing HVAC equipment condition described herein, to allow for full
+
+Page 1 of 7
+Marblehead High School November 1, 2024
+Roofing Replacement Feasibility Study
+Marblehead Public Schools
+
+coordination of roofing and mechanical detailing, and to prevent cutting and patching of new roofing should HVAC
+equipment be replaced at a later date.
+
+RDA remains Marblehead Public School’s trusted partner, in full cooperation with LeftField Project Management,
+in representation of this project to the MPS School Committee and Town of Marblehead. Upon approval of this
+Feasibility Study and phase deliverables, RDA is prepared to move forward with Design Development and
+Construction Documents in preparation for Spring 2025 public bidding.
+
+EXISTING CONDITIONS
+
+PROPERTY DESCRIPTION
+
+Construction of Marblehead High School, located at 2 Humphrey Street in Marblehead, Massachusetts, was
+completed and the school opened in 2002. The property is approximately 18.6 acres and includes soccer and
+baseball fields, tennis courts, and a newly installed turf football field hosting the Marblehead Magicians.
+Surrounded by densely settled residential neighborhoods consisting of mainly one and two family homes, the school
+is an important community resource and well-known public investment.
+
+The school building is generally constructed of exterior masonry walls, brick masonry facade, steel framing, and flat
+membrane roofing. There is one asphalt-shingled gable roof and also a seventy-foot tall tower overlooking the
+coastal neighborhood. The site is located less than one half mile from the closest shoreline and therefore the
+building is subjected to coastal environmental conditions year-round including but not limited to corrosive salt,
+increased humidity, and high winds.
+
+ROOFING
+
+Membrane Roofing: There are a total of nine (9) membrane roof areas totaling approximately 116,800 square feet.
+Areas are delineated by elevation change and most are accessible by full height exterior service doors and roof
+ladders (Photo 1 of Appendix F: Photo Index). According to original 2001 construction drawings, all membrane
+roofing is composed of single-ply TPO (thermoplastic polyolefin) membrane over 3-inch thick rigid polyiso board
+insulation, continuous vapor barrier between the insulation and roof deck, and corrugated steel roof deck. Lighting
+protection with surface wiring is installed throughout all roof areas and connected to rooftop mechanical
+equipment (Photo 2). Flat roof drainage consists of cast iron area drains at most roof areas (Photo 3), and scupper
+boxes with downspouts at Areas E and | (tower), (Photo 4). Based on the original drawings, most roof decking is
+flat, but decking over the Gymnasium (Roof Are D) appears to be sloped.
+
+Marblehead Public Schools (MPS) reported recent repairs to several leaks in membrane roofing prior to the
+commencement of this study and have reported remaining concerns possible active leaks below Roof Area ‘D’
+(Gymnasium). Staining and water damage to interior finishes resulting from these leaks is evident in several
+common areas within the school (Photo 5). From the surface, the membrane is generally clean and free of debris
+and large ponding areas. However, we observed signs that the membrane, walk pads, and various finishes have
+reached or are reaching the end of their expected life spans such as brittle membrane surfaces (Photo 6), rippling
+and delamination (Photo 7), apparent seam repairs (Photos 8 through 11), and limited ponding (Photo 12). Based
+on the number of apparent seam repairs observed, welded seams are generally compromised and susceptible to
+age-related failure.
+
+Existing TPO membrane roofing is terminated at vertical masonry sidewalls by means of lead-coated copper (LCC)
+
+through-wall flashing and LCC counterflashing. Regularly spaced weep slots are visible along the brick masonry
+Page 2 of 7
+
+Marblehead High School November 1, 2024
+Roofing Replacement Feasibility Study
+Marblehead Public Schools
+
+courses above all through-wall flashing which is in line with best industry practices for masonry cavity walls (Photo
+13). Roofing sealant along the top edge of most through-wall flashing is worn, faded, and appears to have reached
+the end of its useful life span (Photo 14). TPO flashings appear to be loosening with aging seals that may be
+compromised (Photo 15). LCC flashings appear to be in stable condition with exception of minor bending and dents
+in some areas. Flat roof fasciae are terminated with white color-coated aluminum edge metal with gravel stop
+profile and hemmed drip edge (Photo 16).
+
+Infrared moisture testing performed by IR Analyzers, Inc. indicated approximately 5,500 square feet of wet rigid
+insulation, mainly scattered throughout Roof Areas ‘A’ and ‘B’. Wet areas range in size from 6 square feet to 800
+square feet and appear to be in locations that suggest leaks at roof drains and penetration flashings. Generally,
+infrared moisture testing works by using infrared imaging to mark contrasts in roof temperature which indicate
+where moisture is trapped within insulation below the roof membrane. Because damp/wet insulation gains and
+radiates heat at different rates than dry insulation, wet areas appear as “warm” compared to dry areas that appear
+“cool”. Please refer to Infrared Thermographic Roof Moisture Analysis included in this report for detailed
+descriptions of infrared testing methodology and results.
+
+Asphalt Shingle Roofing: Roof Area ‘J’ is located above the Library and is the only roof area with an asphalt-shingle
+sloped gable roof (Photo 17). There are approximately 8,430 square feet of asphalt shingle roofing, with 6:12 slope
+factor applied. Based on original 2001 construction documents, the roofing assembly consists of architectural
+fiberglass-reinforced asphalt shingles, building felt, plywood sheathing, 1-1/2 inch +/- ventilating air space, 3-inch
+thick nailable rigid insulation board, and vapor barrier over corrugated metal decking. There is a continuous clear
+air space along each eave for intake ventilation and continuous shingle-over roof vent for exhaust ventilation.
+Fasciae and rakes are clad in white color-coated aluminum sheet metal that matches flat roof edge metal color.
+
+Existing asphalt shingles are faded, beginning to loose surface granules, and at 22 years old are approaching the
+end of an expected 25-30 year life span with coastal conditions considered. However, we did not observe damage,
+missing or cupped shingles, or substantial wear that would suggest the shingles are close to failure. Loss of surface
+granules is often a primary indicator of shingle integrity because the granules help resist UV radiation and protect
+the asphalt impregnated shingle body from damage, lichen growth, and moisture absorption. Once these granules
+wear away, water can begin to soak and pass through the shingle body, resulting in interior leaks. In contrast, the
+existing shingles at Marblehead High School are true to color, uniform, and do not appear to be absorbing water
+(Photo 18).
+
+Intersections with vertical masonry walls are flashed with LCC through-wall flashing similar to membrane roofing
+termination flashing, with LCC counterflashing. Weep slots are visible along the flashing lines, including at step
+flashing which is in line with recommended building practices. LCC flashing appears to be in fair to good condition
+at asphalt shingle roofing, with some patina coming through on counterflashing (Photo 19).
+
+Asphalt shingle roof drainage consists of continuous, white color-coated aluminum, custom-formed gutters,
+matching the typical edge metal at rakes and flat roof edges (Photo 20). Downspouts along the north eave are
+copper pipe-style (Photo 21) and downspouts along the south eave are rectangular white color-coated aluminum
+(Photo 22). All downspouts drain onto small splash mats adhered to TPO membrane roofing below and ultimately
+to cast-iron area drains within the flat roofing field. Gutters and downspouts appear to be in fair to good condition.
+
+HEATING, VENTILATION, AND AIR CONDITIONING
+
+While roofing is the primary focus of the Feasibility Study, RDA engaged GGD Consulting Engineers, Inc. (GGD) to
+
+evaluate the general condition of existing rooftop Heating, Ventilation, and Air Conditioning (HVAC) equipment.
+
+Roofing replacements are often an ideal time to replace, repair, and/or update rooftop equipment due to
+Page 3 of 7
+
+Marblehead High School November 1, 2024
+Roofing Replacement Feasibility Study
+Marblehead Public Schools
+
+interconnection between roof flashings and equipment curbs, wiring, penetrations, etc. HVAC work can be quite
+costly in relation to re-roofing costs, especially when rigging and hoisting is required to lift large units onto the roof.
+Generally, the existing Marblehead High School rooftop equipment consists of over forty (40) exhaust fans, twenty
+(20) compact condensing units, eight (8) large RTU’s (roof-top unit), five (5) large HRV’s (heat recovery ventilator),
+and one (1) medium sized MAU (make-up air unit). Please refer to Appendix E to review GGD’s HVAC Report which
+details their professional observations and recommendations.
+
+Generally, all HVAC rooftop units and exhaust fans have reached and/or passed the end of their useful life spans.
+Selective equipment is not functioning properly, and substantial corrosion of interior components were
+documented. At least nineteen (19) compact condensers supported by membrane-wrapped sleepers must be
+disconnected, lifted, and then re-connected as part of a roofing replacement project in order to flash and wrap the
+sleepers with new membrane. These units use now defunct R-22 refrigerant. Re-charging with R-22 refrigerant is
+very costly because it is no longer manufactured but is still available (at the time of this study) at a premium cost.
+For feasibility analysis, all nineteen (19) units should be assumed to require this purge/re-charge work.
+
+RECOMMENDATIONS
+
+Based on observations of existing roofing conditions and review of moisture testing results, replacement of all TPO
+membrane roof areas with new membrane roofing is recommended at this time. Replacement of asphalt shingle
+roofing is also recommended, but the condition of existing shingles does not appear to be as severe as membrane
+roof areas. Based on findings and recommendations by GGD pertaining to rooftop HVAC equipment, replacement
+of all rooftop units with new equipment is recommended. Because the currently funded construction budget of
+approximately $4,250,000 will not support both roofing and HVAC work, we have developed a “menu” of Scope of
+Work Options with varying estimated construction costs.
+
+First, roofing replacement is recommended to include overlay of existing membrane and insulation with a new
+membrane and cover board, as opposed to removal of the entire existing roofing system down to steel decking.
+This approach is referred to as roofing “Re-Cover” and is appropriate when there are no major concerns regarding
+thermal performance and the membrane has simply reached the end of its life span. The rigid insulation below the
+membrane, when dry and intact, retains insulative value for many decades and typically has a considerably longer
+life span than the membrane itself. Full replacement (stripping down to the deck and replacing with all new
+materials) will require increasing insulation thickness to meet the newest energy code requirements which are
+substantially more stringent than 2001 codes. New codes will likely result in raising the height of all through-wall
+flashings, fascia edge metals, cheek wall window sills, access door sills, roof drains, equipment curbs, and vent pipes
+as much as 12-inches or more. At Marblehead High School, increasing insulation to such a degree will substantially
+increase construction costs, and without performing extensive energy modeling, utility cost savings over time are
+unclear. Roofing re-cover is permitted by code and allows for re-use of existing through-wall flashings and curbs.
+Therefore, with an understanding of MPS’ budget and reported needs, roof re-cover is recommended.
+
+The new roofing membrane is recommended to be either EPDM (ethylene propylene diene monomer) or PVC
+(polyvinyl chloride) due to their availability, economy, and durability. EPDM roofing has better walkability in wet
+conditions, relatively simple repairability, and seam sealing technology has improved in recent years. PVC roofing
+uses heat-welded seams that require welded patching for repairs and is less walkable when wet, but its light color
+helps reduce unwanted heat gain and it does not fade over time. Membrane type can be determined during Design.
+
+Existing wet and damp rigid insulation, as identified by infrared testing and uncovered during construction, should
+be replaced in kind with new dry material prior to installation of new cover board and roofing membrane. Based
+
+Page 4 of 7
+Marblehead High School November 1, 2024
+Roofing Replacement Feasibility Study
+Marblehead Public Schools
+
+on infrared moisture testing results, for planning purposes, and to account for any margin of error we have included
+11,000 square feet of insulation replacement in the Feasibility Cost Estimate. This quantity can be included in future
+bidding documents under unit pricing to allow MPS a refund for any unused quantities.
+
+If MPS is interested in increasing insulation value without triggering full compliance with the latest energy codes,
+we recommend that an additional 3-inches of new rigid board insulation be installed over the existing TPO
+membrane, below the new cover board and EPDM membrane. Most existing membrane roofing terminations are
+located 12-inches or more above the roof surface. The minimum standard is 8-inches, therefore 3” of additional
+roof thickness plus 1/2-inch thick cover board without demolishing existing through-wall flashing. Selective
+through-wall flashing repairs and curb adjustments may be required but are expected to be minor in nature.
+
+During early planning of any major renovation to a public building, it is critical to confirm whether or not any
+accessibility compliance thresholds will be passed that might expand the Scope of Work. 521 CMR, the
+Commonwealth of Massachusetts’ Architectural Access Board (MAAB) code, requires building owners to upgrade
+public facilities to be fully compliant with all sections of its latest edition when the cost of renovations within any
+three-year period exceeds 30% of the building’s full and fair cash value. The full and fair cash value is determined
+by dividing the assessed building value (not including land assessment) by the Commonwealth of Massachusetts’
+assigned Equalized Value Ratio for the Town of Marblehead, which is .95. According to the Town of Marblehead
+Assessor’s Database, the 2024 assessed building value is $19,133,400. Therefore, the equalized value is
+$20,140,421. This means that if renovation costs related to any and all permitted work within the present three-
+year period exceeds $6,042,126, the whole building must be brought up to full compliance. At the time of 2002
+construction many accessibility requirements enforced today were in place, so major structural modifications are
+not expected. However, should the project budget increase beyond the 30% equalized value, a full facility 521 CMR
+review is recommended along with research to quantify costs of all permitted work within the last 3-year period.
+MPS may also request a revised town assessment to verify whether or not the current assessed value can be
+increased, therefore raising the 30% equalized value threshold. Lastly, the MAAB has an established variance
+process for relief of upgrades with costs substantially disproportionate to the level of accessibility improvement, as
+determined by the MAAB.
+
+Please refer to the Scope Options Outline on the following page for detailed schematic descriptions and preliminary
+estimated construction costs of each proposed option. Based on GGD’s findings regarding the condition of HVAC
+equipment, we do not recommend selective replacement of units as they are all in generally similar disrepair.
+Generally, Options include A (Roof Re-Cover), A1 (Roof Re-Cover with HVAC rooftop equipment replacement), B
+(Roof Re-Cover with 3-inches added insulation), B1 (Roof Re-Cover with 3-inches added insulation and HVAC
+rooftop equipment replacement), and C (Partial Roof Re-Cover to fit original construction budget).
+
+For planning purposes, Options A and B include replacement of asphalt shingle roofing, but sloped roofing could be
+completed as Phase II depending on available budget. Existing shingle roofing does not appear to have failed and
+is separate from membrane roofing in terms of intersections and flashings. However, savings associated with
+eliminating sloped roofing from the Scope may be negated by increased costs associated with a second design
+phase, separate procurement, and separate contractor mobilization costs. It is typically more economical to avoid
+phasing for these reasons if funding is available to complete all roof areas.
+
+Based on the age of the building, no hazardous materials are expected to be present within the existing roofing
+systems. Asbestos was prohibited from use in manufacturing in 1980, but it is sometimes still detected in newer
+imported materials such as mastic sealants, ceiling tiles and floor tiles. As RDA moves into Design Development
+and now that infrared moisture testing is complete, RDA will coordinate contractor-assisted roofing test cuts to
+confirm existing construction, verify (as practicable) extent of “wet” insulation detected by infrared scanning, and
+collect material samples for asbestos testing.
+
+Page 5 of 7
+Marblehead High School November 1, 2024
+Roofing Replacement Feasibility Study
+Marblehead Public Schools
+
+SCOPE OPTIONS OUTLINE
+
+Option A: Roof Re-Cover
+Construction Cost: $5,491,304
+
+Perforate existing TPO per new membrane manufacturer’s requirements, strip all edges and penetrations.
+Install high density cover board over existing membrane, mechanically attached.
+
+Fully adhere new EPDM membrane over cover board, with new membrane flashing at all edges, penetrations and
+base flashings.
+
+Base flashing/through-wall flashing repair allowance and masonry walls.
+
+Remove and replace roof edge fascia/edge metal.
+
+Extend plumbing vents per GGD’s recommendations.
+
+Disconnect and purge ACC Rooftop Units, lift for new membrane installation; reset, re-connect, re-charge.
+ACC-1 through ACC-19 use R-22 Refrigerant = High Cost
+
+New lightning protection connected to existing downleads.
+
+Lift and reset all exhaust fans on existing re-flashed curbs. Include 3/4” blocking to raise curbs slightly.
+
+Re-flash all other rooftop equipment in place.
+Remove and replace (1) 3’x5’ roof hatch, and (2) 5’x8’ hatches.
+Replace shingle roofing with new architectural asphalt shingles, underlayment, adhered leak barrier, and drip edge.
+
+Option A1: Roof Re-Cover and Replace All HVAC Rooftop Units. (Alt. #2 in Cost Estimate)
+Construction Cost: $11,087,779
+
+Perforate existing TPO per new membrane manufacturer's requirements, strip all edges and penetrations.
+
+Install high density cover board over existing membrane, mechanically attached.
+
+Fully adhere new PVC membrane over cover board, with new membrane flashing at all edges, penetrations and base
+flashings.
+
+Base flashing/through-wall flashing repair allowance and masonry walls.
+
+Remove and replace roof edge fascia/edge metal.
+
+Extend plumbing vents.
+
+New lightning protection connected to existing downleads.
+
+Remove and replace (1) 3’x5’ roof hatch, and (2) 5’x8’ hatches.
+
+Remove and replace all Rooftop HVAC equipment including exhaust fans.
+
+Replace interior refrigerant lines associated with ACC-1 through ACC-19 due to R-22 refrigerant. Include associated
+acoustic tile ceiling and GWB patching/repairs/repaint.
+
+Replace interior ACU-1 through ACU-19 (interior mini-splits using R-22).
+Raise MAU-1 curb plus allowance for misc. curbs.
+Replace shingle roofing with new architectural asphalt shingles, underlayment, adhered leak barrier, and drip edge.
+
+Page 6 of 7
+Marblehead High School November 1, 2024
+Roofing Replacement Feasibility Study
+Marblehead Public Schools
+
+Option B: Roof Re-Cover with 3” Added Insulation
+Construction Cost: $7,958,876
+e Same as Option A, Except:
+
+* Add blocking to raise curbs 6” at all Exhaust Fans.
+
+* — Extend all plumbing vent pipes.
+
+e Edge metal/fascia detail will be higher cost than Option A due to increased thickness.
+
+Option B1: Roof Re-Cover with 3” Added Insulation and Replace All HVAC Rooftop Units (Alt. #2 in Cost
+Estimate)
+
+Construction Cost: $12,224,085
+
+e@ Same as Option A1, with added cost for insulation.
+
+© dge metal/fascia detail higher cost similar to Option B.
+
+Option C: Partial Roof Re-Cover to Fit Existing Construction Budget
+Construction Cost: $4,250,000
+
+© Same as Option A1, but limit scope areas to fit base budget. Roof Areas D and J N.I.C. (not in contract) or bid as
+alternates.
+
+End of Feasibility Narrative
+
+Please refer to Appendices A through F for supporting reports and documentation.
+
+Page 7 of 7
+-
+
+a,
+
+PM&C LLC
+
+20 Downer Ave, Suite 5
+Hingham, MA 02043
+(T) 781-740-8007
+
+(F) 781-740-1012
+
+APPENDIX A
+
+Feasibility
+Estimate
+
+Marblehead HS
+
+Roof Replacement
+Marblehead, MA
+
+Prepared for:
+
+RDA, Inc.
+
+October 28, 2024
+
+Study Page 8
+PM &C
+
+Marblehead HS
+Roof Replacement 10/28/2024
+Marblehead, MA
+MAIN CONSTRUCTION COST SUMMARY
+Construction Start Gross Floor $/sf Estimated Cost
+Area
+OPTION A TRADE COSTS
+Roof Replacement Option A Jul-25 $4,024,172
+HazMat removals allowance budget NIC
+SUBTOTAL TRADE COSTS Jul-25 $4,024,172
+Design and Estimating Contingency 15.0% $603,626
+Escalation to Bid 4.7% $189,136
+SUBTOTAL $4,816,934
+Subcontractor Bonds In rates
+General Conditions 7.0% $337,185
+General Requirements 3.0% $144,508
+Winter Conditions excl
+Insurances - GLI/Builders Risk 1.40% Included
+Bond 0.70% Included
+Building Permit Included
+Overhead & Profit 4.0% $192,677
+TOTAL ESTIMATED CONSTRUCTION COST $5,491,304
+Alternates (Markedup) :
+ALTi MEP Alternate 1- RTU Replacement @ Gym ADD $ 922,185
+ALT2 MEP Alternate 2 - All RTU Replacement ADD $ 5,596,475
+Study Page 9
+Executive Summary Page 2 PMC - Project Management Cost
+PM&c
+
+Marblehead HS
+Roof Replacement 10/28/2024
+Marblehead, MA
+MAIN CONSTRUCTION COST SUMMARY
+Construction Start Gross Floor $/sf Estimated Cost
+Area
+OPTION B TRADE COSTS
+Roof Replacement Option B Jul-25 $5,832,473
+HazMat removals allowance budget NIC
+SUBTOTAL TRADE COSTS Jul-25 $5,832,473
+Design and Estimating Contingency 15.0% $874,871
+Escalation to Bid 4.7% $274,126
+SUBTOTAL $6,981,470
+Subcontractor Bonds In rates
+General Conditions 7.0% $488,703
+General Requirements 3.0% $209,444
+Winter Conditions excl
+Insurances - GLI/Builders Risk 1.40% Included
+Bond 0.70% Included
+Building Permit 0.0% Waived
+Overhead & Profit 4.0% $279,259
+TOTAL ESTIMATED CONSTRUCTION COST $7,958,876
+Alternates (Markedup) :
+ALT1 MEP Alternate 1 - RTU Replacement @ Gym ADD $ 922,185
+ALT2 MEP Alternate 2 - All RTU Replacement ADD $ 4,265,209
+Study Page 10
+Executive Summary Page 3 PMC - Project Management Cost
+PMs
+
+Marblehead HS
+Roof Replacement 10/28/2024
+Marblehead, MA
+
+BASIS OF ESTIMATE
+
+This cost estimate was produced from Feasibility drawings, specifications and other documentation prepared by RDA, Inc. and their
+design team dated 09/17/24 . Design and engineering changes occurring subsequent to the issue of these documents have not been
+incorporated in this estimate.
+
+This estimate includes all direct construction costs, general contractor’s profit and design contingency. Cost escalation assumes start
+dates indicated.
+
+Bidding conditions are expected to be under:
+
+Chapter 149 of the Massachusetts General Laws to roofing contractors as prime, and pre-qualified sub-contractors, open specifications
+for materials and manufacturers.
+
+Ifa CM at risk CH149a procurement is used costs will increase from the costs presented in this report.
+
+The estimate is based on prevailing wage rates for construction in this market and represents a reasonable opinion of cost. It is not a
+prediction of the successful bid from a contractor as bids will vary due to fluctuating market conditions, errors and omissions, proprietary
+specifications, lack or surplus of bidders, perception of risk, etc. Consequently the estimate is expected to fall within the range of bids
+from a number of competitive contractors or subcontractors, however we do not warrant that bids or negotiated prices will not vary from
+the final construction cost estimate.
+
+ITEMS NOT INCLUDED IN THIS ESTIMATE
+
+Items not included in this estimate are:
+All professional fees and insurance
+Site or existing conditions surveys investigations costs, including to determine subsoil conditions
+Items identified in the design as Not In Contract (NIC)
+Items identified in the design as by others
+Owner supplied and/or installed items (e.g. technology, furniture and equipment, etc.)
+
+Study Page 11
+
+Executive Summary Page 4 PMC - Project Management Cost
+PM&C
+
+Marblehead HS 10/28/2024
+Roof Replacement
+Marblehead, MA
+CONSTRUCTION COST SUMMARY IN CSI FORMAT
+Option A Backup Option B Backup
+DIVISION Subtotal Total Subtotal Total
+DIV. 2 EXISTING CONDITIONS
+024100 Demolition
+028000 Facility Remediation See summary See summary
+DIV.5 METALS
+051000 _ Structural Framing
+055000 Metal Fabrications
+DIV.6 WOODS & PLASTICS $82,432 $103,040
+061000 Rough Carpentry $82,432 $103,040
+DIV. 7 THERMAL & MOISTURE PROTECTION $3,352,842 $4,161,663
+075000 Roofing $2,978,043 $3,786,864
+077000 Roof & Wall Specialties / Accessories $124,193 $124,193
+079200 Joint Sealants $250,606 $250,606
+DIV. 21 FIRE PROTECTION
+210000 Fire Protection
+DIV. 22 PLUMBING $101,750 $101,750
+220000 Plumbing $101,750 $101,750
+DIV. 23 HVAC $324,648 $1,252,520
+230000 HVAC $324,648 $1,252,520
+DIV. 26 ELECTRICAL $162,500 $213,500
+260000 Electrical $162,500 $213,500
+SUBTOTAL DIRECT (TRADE) COST Option 1 $4,024,172 Option 2 $5,832,473
+
+CSI Summary
+
+Page 5
+
+Study Page 12
+
+PMC - Project Management Cost
+PM&.c
+
+Marblehead HS
+Roof Replacement
+Marblehead, MA
+
+28-Oct-24
+
+re ‘DESCRIPTION l QrY | UNIT. | UNIT COST COST | SUBTOTAL COST TOTAL COST
+Option A Backup
+[ o2 EXISTING CONDITIONS
+024100 Demolition
+Demolition w/ Div 7
+eiaaans SUBTOTAL: $ -
+[ToTar, DIVISION 2 - EXISTING CONDITIONS
+[05 METALS
+055000 Metal Fabrications
+Misc. metals as req'd at roof, allowance 116,866 sf NR
+ee SUBTOTAL: $ -
+[TOTAL, DIVISION 5 - METALS
+[06 WOOD & PLASTICS
+061000 Rough Carpentry
+Rough blocking at roofing 11,776 If 7.00 82,432
+atone SUBTOTAL: $ 82,432
+[LOTAL, DIVISION 6 - WOOD & PLASTICS $82,432 |
+[ 07 THERMAL & MOISTURE PROTECTION:
+075000 Roofing
+Roof Qty Summary -
+Roof 1 Area - PVC 116,866 sf -
+Roof 1 - Edge Perimeter 2,044 If -
+Roof 1 - Roof to Wall 1,109 If -
+Roof 2 Area - Shingle 8,437 sf *
+ROOFING AND FLASHING -
+Roof 1, PVC 116,866 sf -
+Fully adhere new PVC roof to cover board. 116,866 sf 16.00 1,869,856
+Slice existing TPO roof membrane and overlay with 116,866 sf 3.00 350,598
+mechanically fastened 5/8” dens deck cover board.
+Replace damaged insulation as indicated in designer 11,000 sf 6.00 66,000
+infrared scan. (Assume 11,000 sf of damaged insulation,
+4” thick)
+Roof 2, Shingle 8,437 sf -
+Provide new shingles over existing substrate. 8,437 sf 20.00 168,740
+Roof edge fascia & flashing assembly 2,044 If 75.00 220,800
+Wall to roof edge flashing 1,109 If 50.00 55,450
+Reflash & Re-Curb Roof Penetrations
+Roof component, RTU 10 ea 1,000.00 10,000
+Roof component, RD 40 ea 150.00 6,000
+Roof component, heat & smoke vent 1 ea 125.00 125
+Roof component, elevator vent 3 ea 125.00 375
+Roof component, EF 43° ea 200.00 8,600
+Roof component, CU 8B ea 500.00 4,000
+Roof component, IH 11 ea 200.00 2,200
+Miscellaneous flashings @ other penetrations 116,866 sf 1.50 175,299
+Staging at tower roof 1 Is 40,000.00 40,000
+tia SUBTOTAL: $ 2,978,043
+077000 Roof & Wall Specialties / Accessories
+Roof accessory, walk pads 4,384 sf 15.00 65,760
+Reinstall extg accessories after roof work, allowance 116,866 sf 0.50 58,433
+e7;00 SUBTOTAL: $ 124,193
+079200 Joint Sealants
+Joint sealants as req'd @ roof 125,303 sf 2.00 250,606
+aye: SUBTOTAL: $ 250,606
+[LOTAL, DIVISION 7 - THERMAL AND MOISTURE PROTECTION $3,352,842 |
+Study Page 13
+Option A Backup Page 6 PMC - Project Management Cost
+105
+
+106
+
+PM&.~
+
+Marblehead HS
+Roof Replacement
+Marblehead, MA
+
+28-Oct-24
+
+DESCRIPTION
+
+ee"
+
+"|
+
+UNIT COST cosT ‘SUBTOTAL COST | _TOTALCOST
+
+Option A Backup
+
+[ 22 PLUMBING
+
+220000 Plumbing
+Extend roofing drains; modify piping
+Extend vent piping
+SUBTOTAL
+
+220000
+
+40
+
+loc
+loc
+
+80,000
+21,750
+
+2,000.00
+750.00
+$ 101,750
+
+(TOTAL, DIVISION 22
+
+$101,750 |
+
+[23 HVAC
+
+230000 HVAC
+HVAC Equipment
+Remove & reset existing exhaust fans & fresh air intakes
+Remove & reset existing roof mounted exhaust fans, EF-1
+through EF-45
+Remove & reset existing roof mounted fresh air intakes IH-1
+through TH-11
+Automatic Temperature Controls
+Automatic temperature controls DDC
+Balancing
+System testing & balancing, pre-conditions
+Miscellaneous
+
+Disconnect + purge ACC RTU's + reconnect, re-charge using
+R-22 Refrigerant; ACC-1 to ACC-19
+
+Coordination & Supervision
+Equipment start-up and inspection
+Rigging & equipment rental
+Vibration & seismic restraints
+Permits & Fees
+
+SUBTOTAL
+
+230000
+
+43
+
+te
+
+19
+
+ea
+
+ea
+
+1,150.00 49,450
+
+800.00 8,800
+
+Assume no work required
+
+4,200.00 4,200
+
+12,500.00 237,500
+
+5,000.00 5,000
+2,400.00
+10,000.00
+
+2,400
+10,000
+2,500.00
+
+4,797-75,
+
+2,500
+4,798
+$ 324,648
+
+[fOTAL, DIVISION 23
+
+$324,648 |
+
+[26 ELECTRICAL
+
+Electrical
+Gear & Distribution
+
+Disconnect electrical and reconnect (including extension if
+needed) to Roof top equipment
+
+260000
+
+Lighting & Power
+No items in this section
+
+Communication & Security Systems
+No items in this section
+
+Other Electrical Systems
+
+Lightning Protection System connected to existing downleads
+Fees & Permits & coordination and management
+
+SUBTOTAL
+
+‘260000
+
+54
+
+ea
+
+1,500.00 81,000
+
+70,000
+11,500
+
+70,000.00
+11,500.00
+$ 162,500
+
+[FOTAL, DIVISION 26
+
+$162,500
+
+Option A Backup
+
+Page 7
+
+Study Page 14
+
+PMC - Project Maragemert Cost
+38
+
+PM&-
+
+Marblehead HS 28-Oct-24
+Roof Replacement
+Marblehead, MA
+[cone | DESCRIPTION Qry | UNIT | UNIT COST l COST SUBTOTAL COST | TOTAL COST
+Option B Backup
+[02 EXISTING CONDITIONS
+024100 Demolition
+Demolition w/ Div 7
+ae SUBTOTAL: $ -
+[fOTAL, DIVISION 2 - EXISTING CONDITIONS
+[05 METALS
+055000 Metal Fabrications
+Misc. metals as req'd at roof, allowance 116,866 sf NR
+Cal SUBTOTAL: $ -
+[POTAL, DIVISION 5 - METALS ]
+[ 06 WOOD & PLASTICS
+061000 Rough Carpentry
+Rough blocking at roofing 14,720 If 7.00 103,040
+‘51000 SUBTOTAL: 103,040
+TOTAL, DIVISION 6 - WOOD & PLASTICS $103,040 ]
+[ 07 THERMAL & MOISTURE PROTECTION
+075000 Roofing
+Roof Qty Summary =
+Roof 1 Area - PVC 116,866 sf -
+Roof 1 - Edge Perimeter 2,944 If -
+Roof 1 - Roof to Wall Edge 1,109 If -
+Roof 2 Area - Shingle 8,437 sf -
+ROOFING AND FLASHING =
+Roof 1, PVC 116,866 sf = .
+Fully adhere new PVC roof to cover board. 116,866 sf 16.00 1,869,856
+Slice existing TPO roof membrane and overlay with 116,866 sf 4.00 467,464
+mechanically fastened 5/8” dens deck cover board.
+Replace damaged insulation as indicated in designer 11,000 sf 9.00 99,000
+infrared scan. (Assume 11,000 sf of damaged insulation,
+4” thick)
+Roof 2, Shingle 8,437 sf - -
+Provide new shingles over existing substrate. 8,437 sf 20.00 168,740
+Provide New 3” layer of insulation over entire roof surface 125,303 sf 5.00 626,515
+(including shingled area)
+Roof edge fascia & flashing assembly 2,044 If 85.00 250,240
+Wall to roof edge flashing 1,109 If 50.00 55.450
+Reflash & Re-Curb Roof Penetrations
+Roof component, RTU 13° ea 1,000.00 13,000
+Roof component, RD 4o ea 150.00, 6,000
+Roof component, heat & smoke vent ea 125.00 125
+Roof component, elevator vent 3 ea 125.00 375
+Roof component, EF 43° ca 200.00 8,600
+Roof component, CU 8 ea 500.00 4,000
+Roof component, IH i ea 200.00 2,200
+Miscellaneous flashings @ other penetrations 116,866 sf 1.50 175,299
+Staging at tower roof 1 Is 40,000.00 40,000
+975000, SUBTOTAL: $ 3,786,864
+077000 Roof & Wall Specialties / Accessories
+Roof accessory, walk pads 4,384 sf 15.00 65,760
+Reinstall extg accessories after roof work, allowance 116,866 sf 0.50 58,433
+ay000 SUBTOTAL: $ 124,193
+079200 Joint Sealants
+Joint sealants as req'd @ roof 125,303 sf 2.00 250,606
+079200 SUBTOTAL: $ 250,606
+[TOTAL, DIVISION 7 - THERMAL AND MOISTURE PROTECTION: $4,161,663 |
+Study Page 15
+Option B Backup Page 8 PMC - Project Manazemert Cost
+
+85
+
+86
+
+7
+
+89
+
+50
+
+2
+
+102
+
+103
+10g
+105
+106
+107
+
+108
+
+109
+
+13
+m4
+5
+16
+"7
+13
+19
+
+mm
+
+PM&—
+
+Marblehead HS
+
+Roof Replacement
+
+Marblehead, MA
+
+28-Oct-24
+
+[eePe |
+
+DESCRIPTION, |
+
+Qiy
+
+| UNE | UNIT COST
+
+COST
+
+[senrorat COST
+
+TOTAL COST
+
+Option B Backup
+
+[22
+
+PLUMBING |
+
+220000 Plumbing
+
+Extend roofing drains; modify piping
+Extend vent piping
+SUBTOTAL
+
+2,000.00
+750.00
+
+80,000
+21,750
+
+$
+
+101,750
+
+[TOTAL, DIVISION 22
+
+$101,750 |
+
+[2s
+
+HVAC
+
+230000 HVAC
+
+239000
+
+HVAC
+Remove & reset existing RTU's, exhaust fans & fresh air
+intakes
+
+Remove & reset existing RTU's & HRV rooftop units on new
+curb
+
+Remove & reset existing roof mounted MUA Unit
+
+uipment
+
+Remove & reset existing roof mounted exhaust fans, EF-1
+through EF-45
+
+Remove & reset existing roof mounted fresh air intakes IH-1
+through TH-11
+
+Add ACC Unit including replacement of refrigerant piping
+
+Automatic Temperature Controls
+Automatic temperature controls DDC
+Pre-Construction Testing + Balancing
+
+System testing & balancing, pre-conditions
+Miscellaneous
+
+Replace ceilings
+
+Coordination & Supervision
+
+Equipment start-up and inspection
+Rigging & equipment rental
+
+Vibration & seismic restraints
+
+Permits & Fees
+
+SUBTOTAL
+
+13 ea 11,200.00
+
+8,000.00
+
+43° ea 1,150.00
+
+cg ea 800.00
+
+20 ea 40,000.00
+70,000.00
+20,000.00
+37,600.00
+993 sf 20.00
+10,000.00
+
+7,200.00
+Is 54,000.00
+3,500.00
+Is 18,510.15
+
+oo
+
+145,600
+8,000
+
+49,450
+8,800
+
+800,000
+
+70,000
+20,000
+37,600
+
+19,860
+10,000
+7,200
+54,000
+3,500
+18,510
+
+$
+
+1,252,520
+
+[ TOTAL, DIVISION 23
+
+$1,252,520 |
+
+[26
+
+ELECTRICAL
+
+260000 Electrical
+
+Gear & Distribution
+Disconnect electrical and reconnect (including extension if
+needed) to Roof top equipment
+
+Lighting & Power
+No items in this section
+
+Communication & Security Systems
+No items in this section
+
+Other Electrical Systems
+
+Lightning Protection System connected to existing downleads
+Fees & Permits & coordination and management
+
+SUBTOTAL
+
+88 ea 1,500.00
+
+70,000.00
+11,500.00
+
+132,000
+
+70,000
+11,500
+
+$
+
+213,500
+
+TOTAL, DIVISION 26
+
+$213,500
+
+Option B Backup
+
+Page 9
+
+Study Page 16
+
+PMC - Project Maragereet Cost
+PM&-
+
+Marblehead HS 28-Oct-24
+Roof Replacement
+
+Marblehead, MA
+
+(7 l DESCRIPTION or l TNT UNIT COST cosT ‘SUBTOTALCOST | _ TOTALCOST
+MEP Alternates
+
+[_AET1 REPLACE (2) RTU @ GYM ]
+
+051000 Structural Framing
+
+Additional Structural Reinforcing to be carried 1 bay in each 2 ea 40,000.00 80,000
+direction around replaced units.
+
+Allowance for roofing + ceiling work 2 ea 30,000.00 60,000
+
+SUBTOTAL: $ 140,000
+
+230000 HVAC
+HVAC Equipment
+Replace (2) RTU on Gymnasium, & include 36" new curbs
+Replace (2) RTU on Gymnasium, 18,000 cfm ea, based on 18,000 cfm 26.00 468,000
+existing schedule page Mo.4
+
+Automatic Temperature Controls.
+
+Automatic temperature controls DDC 2 ea 19,200.00 38,400
+Balancing
+
+System testing & balancing, pre-conditions 1 ds 2,800.00 2,800
+Miscellaneous
+
+Coordination & Supervision 1 1s 5,000.00 5,000
+Equipment start-up and inspection, 1 1s 2,400.00 2,400
+Rigging & equipment rental 1 1s 8,500.00 8,500
+Permits & Fees 1 1s 9,976.50 9,977
+
+239000 SUBTOTAL $ 535,077
+
+260000 Electrical
+Gear & Distribution
+
+Disconnect electrical and reconnect (including extension if 2 ea 1,500.00 3,000
+needed) to Roof top equipment
+260200 SUBTOTAL $ 3,000
+[FOTAT, ALTERNATE 1 $678,077 |
+[[AlT2 REPLACE ALL RTUs ]
+
+051000 Structural Framing
+Additional Structural Reinforcing to be carried 1 bay in each 12 ea 40,000.00 480,000
+direction around replaced units.
+
+Allowance for roofing + ceiling work 12 ea 30,000.00 360,000
+1000 SUBTOTAL: $ 840,000
+230000
+men
+Replace All RTU’s on roof and include 36" new curbs
+Replace (2) RTU on Gymnasium, 18,000 cfm ea, based on 18,000 cfm 26.00 468,000
+existing schedule page Mo.4
+Replace RTU 1, serving Admin 5,770 cfm 26.00 150,020
+Replace RTU 2, serving Library 12,290 cfm 26.00 319,540
+Replace RTU 3, serving Auditorium 6,445 cfm 26.00 167,570
+Replace RTU 4, serving Auditorium 11,350 cfm 26.00 295,100
+Replace HRV units HRV-1, through HRV-5 48,620 cfm 22.00 1,069,640
+Replace MAU-1, Kitchen Make-up air unit 4,680 cfm 18.00 84,240
+Add ACC Unit including replacement of refrigerant piping 20 ea 40,000.00 800,000
+Automatic Temperature Controls
+Automatic temperature controls DDC 12 ea 16,000.00 192,000
+Balancing
+System testing & balancing, pre-conditions 1 Is 14,000.00 14,000
+Miscellaneous
+Replace ceilings 993 sf 20.00 19,860
+Coordination & Supervision 1 4b 35,000.00 35,000
+Equipment start-up and inspection 1 1s 14,400.00 14,400
+Rigging & equipment rental 1 Is 59,500.00 59,500
+Permits & Fees 1 os 55,333.05 55.333
+agnsco SUBTOTAL $ 3,744,203
+260000 Electrical
+Gear & Distribution
+Disconnect electrical and reconnect (including extension if 12 ea 1,500.00 18,000
+needed) to Roof top equipment
+260200 SUBTOTAL $ 18,000
+TOTAL, ALTERNATE 2 $4,602,203 |
+
+Study Page 17
+
+‘MEP Altemates Page 10 PIC -Preis
+Marblehead High School
+Roofing Replacement
+Feasibility Study
+
+APPENDIX B November 1, 2024
+
+PRICING OPTION C
+
+Feasibility Construction Cost Estimate Summary
+
+Scope Option C: Partial roof re-cover to fit within current construction budget of
+$4,250,000. Option C does not include HVAC upgrades.
+
+Estimated Running Cost Total
+Roof Area ,
+a Construction Cost by Roof Area
+ROOF AREA 'A' $ 1,407,338 $ 1,407,338
+ROOF AREA 'B' $ 2,206,916 $ 3,614,254
+ROOF AREA 'C' $ 298,278 $ 3,912,532
+$ 55,214 $ 3,967,746
+$ 10,101 $ 3,977,846
+$ 13,457 $ 3,991,304
+ROOF AREA 'H' $ 114,091 $ 4,105,395
+ROOF AREA 'I' $ 85,415 $ 4,190,810
+ROOF AREA 'D' (Gym) $ 1,131,754
+Total with Roof Areas 'D'
+ROOF AREA '‘J' (Asphalt Shingle) $ 168,740 &J' NOT included in
+Scope:
+ESTIMATED CONSTRUCTION COSTTOTAL: $ 5,491,304 $ 4,190,810
+CONSTRUCTION BUDGET: $ 4,250,000 $ 4,250,000
+BALANCE: $ (1,241,304) $ 59,190
+
+Study Page 18
+61 98eg Apnas
+
+2 XIGNAddV
+
+OLV
+
+rus Areva
+wate N
+
+sr = .b 319s,
+NV1d JOO ONILSIXS
+
+L
+
+TET em
+
+NV1d 4OOU SNOILIGNOS ONILSIXA
+‘SH610 Vi GVEHATEUVAN 1ARULS AREHAINH Z
+ANAW39V1dau ONIZOOU
+“IOOHOS HOIH GVaHATEHVW
+
+LUNA ONnaNWH IV anKMH aw vO LoIMION! CER)
+
+INA ONINOWIANOSTONANYH wiv doLsooN [a]
+
+AINA HOLWIUNGA ANAODIH LVI Ee)
+ASVAGIZIG'OOOH VIN
+
+dia ann
+
+va soon
+
+Nvos aauMLiNI An cauosiaa
+NOLIN E3M.40 VaR ALVATKOM AY
+
+Nouvnoteae vaNv 4004
+
+=) Ms:
+i
+o
+
+12/5/24, 8:27 AM MHS Fire Doors - To Do
+
+(A) Tasks Wed, December 4, 2024
+
+O
+
+Brown Stairs Painting
+
+Greenhouse Electric / Water / Heat
+
+Plow Truck Maintenance - Ready for winter?
+
+Brown Fence along Parking Lot Needed
+
+Evasive Plants at Brown School
+
+Vets / MHS Mechanical Estimates to replace aging equipment
+Brown Wood Paneling in Cafe
+
+Business Office Kitchen Sink Replacement
+
+MHS Fire Doors
+
+MHS Boiler Replacement
+
+Veterans D-Wing Roof Replacement - bid with alt/add for 2 rooftop units at same time
+Field House HVAC Replacement
+
+Village Fire Panel Upgrade - waiting on an antenna
+
+Glover HVAC / LG Replacement - going out to bid week of 10/28/24
+Brown OPM Visit
+
+Brown Windows
+
+Oe 0 O 00 0 0O 00 00000 0
+
+MHS Roof Project
+
+Completed
+
+© MHSMotcHsstre
+
+© RamprorWidgerRoactentrance
+
+Ff Printed with Microsoft To Do
+
+https://outlook.office.com/host/Od5c9 1 ee-5be2-4b79-8 1 ed-23e6c4580427/ToDold 113
+12/5/24, 8:27 AM MHS Fire Doors - To Do
+
+A Tasks Wed, December 4, 2024
+
+© Vets BeanrReptacerrent
+
+© srowmtighti
+
+ore . sth-feminine-hye
+© . —
+
+Gh einaceaihe
+
+QO Gtover-Boitertsstre Overdue, Fri, October 11.
+@é rer
+
+© PiverFielet-turt
+
+or a
+
+© teed .
+
+© Facititiestist
+
+© ;
+
+ff Printed with Microsoft To Do
+
+https://outlook.office.com/host/0d5c91ee-5be2-4b79-8 1 ed-23e6c4580427/ToDold 213

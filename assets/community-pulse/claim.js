@@ -2,6 +2,9 @@
 // Drives FB OAuth bootstrap, the claim form, the custom street autocomplete,
 // and result branching.
 
+import { tryConditionalPasskey } from './passkey-signin.js';
+import { mountPasskeySaveCard, shouldPromptPasskeySave } from './passkey-save.js';
+
 const VERIFY_API = (location.hostname === 'localhost')
   ? 'http://localhost:8787'
   : 'https://marblehead-community-pulse.agbaber.workers.dev';
@@ -27,6 +30,7 @@ function consumeOAuthFragment() {
   setJwt(token);
   const cleanHash = claim ? '#claim' : '';
   history.replaceState(null, '', location.pathname + location.search + cleanHash);
+  track('verify_oauth_returned', { claim_intent: claim });
   return { token, claim };
 }
 
@@ -60,6 +64,16 @@ async function fetchPreResident() {
     if (!res.ok) return null;
     return res.json();
   } catch (e) { return null; }
+}
+
+// --- PostHog event helper --------------------------------------------
+
+function track(event, props) {
+  try {
+    if (window.posthog && window.posthog.capture) {
+      window.posthog.capture(event, props || {});
+    }
+  } catch (e) { /* analytics never blocks the user */ }
 }
 
 // --- DOM helpers ------------------------------------------------------
@@ -227,6 +241,8 @@ async function onSubmit(e) {
   submit.disabled = true;
   submitText.textContent = 'Checking';
   result.innerHTML = `<p class="vm-loading">Matching against the assessor record</p>`;
+  // Track the submit -- count attempts independently of result.
+  track('verify_claim_submitted');
 
   let res;
   try {
@@ -243,6 +259,7 @@ async function onSubmit(e) {
     submit.disabled = false;
     submitText.textContent = 'Claim this address';
     result.innerHTML = renderGenericError('network');
+    track('verify_claim_result', { status: 'network_error' });
     return;
   }
 
@@ -251,19 +268,38 @@ async function onSubmit(e) {
 
   if (res.status === 429) {
     result.innerHTML = renderRateLimit();
+    track('verify_claim_result', { status: 'rate_limited' });
     return;
   }
   if (!res.ok) {
     result.innerHTML = renderGenericError(res.status);
+    track('verify_claim_result', { status: 'http_error', http_status: res.status });
     return;
   }
 
   const body = await res.json();
+  track('verify_claim_result', {
+    status: body.status,
+    had_alternatives: !!(body.alternatives && body.alternatives.length),
+  });
   switch (body.status) {
     case 'match':
       if (body.session_jwt) setJwt(body.session_jwt);
       result.innerHTML = renderSuccess(claimed);
-      setTimeout(() => { location.href = '/profile.html'; }, 1500);
+      // Offer to save a passkey before redirecting.
+      if (shouldPromptPasskeySave()) {
+        const container = document.getElementById('claim-passkey-save');
+        await mountPasskeySaveCard(container, {
+          onSaved: () => { setTimeout(() => { location.href = '/profile.html'; }, 1200); },
+          onSkipped: () => { setTimeout(() => { location.href = '/profile.html'; }, 800); },
+        });
+        // If the card was suppressed (unsupported device), still redirect.
+        if (!container.innerHTML) {
+          setTimeout(() => { location.href = '/profile.html'; }, 1500);
+        }
+      } else {
+        setTimeout(() => { location.href = '/profile.html'; }, 1500);
+      }
       break;
     case 'first_initial_mismatch':
       result.innerHTML = renderFirstInitialMismatch(claimed, body.alternatives || []);
@@ -285,6 +321,23 @@ async function init() {
   const oauth = consumeOAuthFragment();
   const isClaimStep = (oauth && oauth.claim) || location.hash === '#claim';
 
+  // Wire FB CTA click tracking on the landing.
+  const fbLink = document.getElementById('fb-start-link');
+  if (fbLink && !fbLink.__verifyTracked) {
+    fbLink.__verifyTracked = true;
+    fbLink.addEventListener('click', () => track('verify_fb_start_clicked'));
+  }
+
+  // If we don't have a session and we're not handling an OAuth callback,
+  // try conditional-UI passkey sign-in in parallel. The browser surfaces
+  // a biometric prompt only if a passkey exists for this origin; otherwise
+  // it does nothing visible.
+  if (!readJwt() && !oauth) {
+    tryConditionalPasskey().then(r => {
+      if (r && r.token) location.href = '/profile.html';
+    });
+  }
+
   const profile = await fetchSelf();
   if (profile && profile.identity_hash) {
     location.href = '/profile.html';
@@ -298,9 +351,8 @@ async function init() {
   if (primary) primary.hidden = true;
   const or = document.querySelector('.vm-or');
   if (or) or.hidden = true;
-  const fallback = document.querySelector('.vm-fallback');
-  if (fallback) fallback.hidden = true;
-  // Trim the hero copy in the claim step -- the form has its own context.
+  const fallback = document.querySelectorAll('.vm-fallback');
+  fallback.forEach(el => { el.hidden = true; });
   document.querySelectorAll('.vm-hero .vm-cap, .vm-hero .vm-cap-sub')
     .forEach(el => { el.hidden = true; });
 

@@ -7,8 +7,8 @@ name: Ingest meetings
 #      (yt-dlp --flat-playlist).
 #   2. Download the en-x-autogen VTT for any meeting that has no
 #      _transcripts/<slug>.md yet and write the stub markdown file.
-#   3. LLM-enrich each new transcript with summary_card + topic_segments
-#      via scripts/transcripts/enrich_one.mjs (Anthropic Messages API).
+#   3. LLM-enrich new transcripts in one Message Batches API job via
+#      scripts/transcripts/enrich_batch.mjs run (50% cheaper than real-time).
 #   4. Open a PR labeled `auto-meetings` with auto-merge enabled. The
 #      smoke + Secret-scan + Content-guardrails required checks gate the
 #      merge; if any fails, the PR stays open for inspection.
@@ -21,7 +21,7 @@ name: Ingest meetings
 #                      not fire pull_request / push events (GitHub's
 #                      recursion guard), which would block auto-merge forever
 #                      since required status checks would never run.
-#   ANTHROPIC_API_KEY  Used by scripts/transcripts/enrich_one.mjs.
+#   ANTHROPIC_API_KEY  Used by scripts/transcripts/enrich_batch.mjs.
 #
 # Manual trigger: `gh workflow run ingest-meetings.yml`.
 
@@ -44,7 +44,10 @@ permissions:
 jobs:
   ingest:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 60 min: the enrich step polls its Message Batch up to 40 min
+    # (--max-wait-sec 2400); the remaining ~20 min covers checkout, npm/yt-dlp
+    # install, index refresh, VTT backfill, and the commit/PR steps.
+    timeout-minutes: 60
 
     steps:
       - uses: actions/checkout@v4
@@ -93,6 +96,17 @@ jobs:
         if: steps.gate.outputs.skip == 'false'
         run: node scripts/transcripts/pull_vimeo.mjs
 
+      - name: Refresh MPS YouTube index
+        if: steps.gate.outputs.skip == 'false'
+        # Marblehead Public Schools' YouTube channel covers School Committee
+        # meetings and subcommittees (Policy, Facilities, Goals, Roof, etc.)
+        # that MHTV does not always post to Vimeo. backfill_auto.mjs dedupes
+        # against the Vimeo index by (board_slug, date), Vimeo wins.
+        # Tolerant of failure: if YouTube bot-blocks this run we still ship
+        # whatever Vimeo backfilled.
+        run: node scripts/transcripts/pull_youtube.mjs
+        continue-on-error: true
+
       - name: Backfill new transcripts
         if: steps.gate.outputs.skip == 'false'
         # --limit caps per-run work so a one-off backlog (e.g. yt-dlp outage
@@ -105,24 +119,15 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           set -eu
-          shopt -s nullglob
-          enriched=0
-          failed=0
-          for f in _transcripts/*.md; do
-            # Already enriched on a previous run.
-            if grep -q '^summary_card:' "$f"; then continue; fi
-            # Hand-crafted entries (frontmatter starts with `ingest:`) are
-            # author-owned and never enriched by the pipeline.
-            if grep -q '^ingest:' "$f"; then continue; fi
-            echo "Enriching $f"
-            if node scripts/transcripts/enrich_one.mjs "$f"; then
-              enriched=$((enriched + 1))
-            else
-              echo "  enrichment failed; transcript will retry on the next run"
-              failed=$((failed + 1))
-            fi
-          done
-          echo "Enriched: $enriched. Failed: $failed."
+          # Enrich all unenriched transcripts via the Message Batches API
+          # (50% cheaper than real-time). One batch per run; polls up to
+          # 40 min, inside this job's 60-min timeout. If the batch does not
+          # finish in time the job fails and the next scheduled run submits
+          # a fresh batch (the orphaned batch's results are simply never
+          # collected). --max-batch caps a single run so a very large
+          # backfill splits across runs; for a big one-off backfill, run
+          # `enrich_batch.mjs submit`/`collect` manually instead (no timeout).
+          node scripts/transcripts/enrich_batch.mjs run --max-batch 150 --max-wait-sec 2400
 
       - name: Detect changes
         if: steps.gate.outputs.skip == 'false'
@@ -139,6 +144,9 @@ jobs:
             exit 0
           fi
           git add data/vimeo_meetings.json
+          # data/youtube_meetings.json may not exist if pull_youtube was rate-
+          # limited; -- ignored if missing.
+          git add data/youtube_meetings.json 2>/dev/null || true
           new_files=$(git diff --cached --name-only --diff-filter=A -- _transcripts/ || true)
           {
             echo "changed=true"
@@ -173,7 +181,7 @@ jobs:
           **Pipeline:**
           1. \`scripts/transcripts/pull_vimeo.mjs\` refreshed the Vimeo channel index.
           2. \`scripts/transcripts/backfill_auto.mjs\` downloaded the \`en-x-autogen\` VTT for each new meeting and wrote the stub markdown.
-          3. \`scripts/transcripts/enrich_one.mjs\` added \`summary_card\` + \`topic_segments\` to each.
+          3. \`scripts/transcripts/enrich_batch.mjs run\` added \`summary_card\` + \`topic_segments\` in one Message Batches API job.
 
           Auto-merge is enabled. The PR will land as soon as the required checks (smoke, Secret scan, Content guardrails) pass. If a check fails, this PR stays open for inspection and the next daily run is skipped (gated on the \`auto-meetings\` label) so the failure does not get buried.
           EOF

@@ -1,0 +1,35 @@
+date,contract,price,notes
+2017-01-25,Special Project 2015A PSA approved after executive session (Vote #2017-4); GM authorized to execute,[no price printed; discussed in executive session],Unanimous; votes released at a time deemed appropriate by counsel
+2018-03-20,"Berkshire Wind Power Purchase Agreement Phase 2, MMLD and MMWEC (Vote #2018-10)",[no price printed in minutes],GM authorized to execute PPA and Phase 2 financing; All in favor
+2019-10-30,Berkshire Wind RECs (Mass Class 1) sold on open market,2012-2018 average price $43/MWH; 2020 projected REC price $45/MWH,Basis for proposed 100% renewable opt-in program
+2021-06-08,Project 2015A (Peabody peaking plant),"paid approximately $430,000 to date; estimated withdrawal cost approximately $900,000","Ratification passed; Homan yes, Johnson yes, Burke yes, Wolf abstained, Hull yes"
+2021-06-17,Peabody Peaker / Project 2015A (per Sustainable Marblehead remarks),"""projected to cost more than $84 million dollars, with Marblehead responsible for 4.4% of the cost""",Public hearing at Marblehead High School
+2021-09-28,Project 2015A bond financing,Peabody permit fee of $1.2 million (lingering issue),MMWEC proceeding after favorable DPU ruling
+2021-11-30,Project 2015A bond close,$61 million raised; rate came under the pro forma assumption,MMWEC close December 1
+2022-06-07,Berkshire Wind Class 1 REC sales (Commissioner Wolf memo),"$120,000 in 2021","REC sale + avoided Green Communities surcharge = $170,000"
+2022-06-07,"MMWEC 2021A Offshore Wind PPA (MMLD 3.8%, 16,000 MWh annually)",estimated price per kWh not to exceed $.0774/kWh,"20-year PPA, est. start Q1 2028; includes Mass Class 1 RECs and Clean Peak certificates"
+2022-09-27,Everett Gas terminal reliability-must-run charge (ISO-NE/Exelon),"$11K in July, up to $47K in August",unexpected charge on all load-serving entities
+2022-10-25,"Cotton Memorial Solar Array, Ludlow (6.9 MW AC)","10.87% MMLD ownership; 1,500 MWh/yr",~1.5% of MMLD 2021 retail sales
+2023-03-01,Ludlow solar levelized cost of energy,$0.0875/kWh,benchmark in solar feed-in credit discussion
+2023-03-07,Delorean Power 5 MW / 20 MWh behind-the-meter battery (LFP),forecast 20-year NPV $9.8 million cost avoidance (Village 13 site),"shared-savings PPA, no significant MMLD capital; Marblehead share 56.3%, highest among 13 MLPs"
+2023-03-07,ISO-NE charges cited in battery analysis,capacity $3.80/kW-mo (2021); transmission $11.75/kW-mo (2021),"MMLD 2023 projected capacity charge $3.3M, transmission $3.1M"
+2023-05-30,MMLD 2022 actual portfolio levelized cost table,"Millstone $43.75/MWh; Seabrook $28.99; NYPA $18.80; Hydro-Quebec $38.50; Berkshire Wind 1 $183.51; Berkshire Wind 2 $174.02; Hancock Wind $69.88; Eagle Creek Hydro $58.13; Stony Brook Intermediate $244.01; hedged contracts $89.95; ISO spot $103.78; total supply $76.95/MWh ($8,203,959.42 / 106,610 MWh)",2022 actuals
+2023-05-30,Solar-on-schools vendor (Solect) proposal,"LCOE ~14c/kWh; per-school $130-$150/MWh; ~2,500 MWh/yr total",vendor assumes stable $40 RECs; MMWEC/S&P forecast decline to $5 from 2026
+2023-06-27,"Project 2023A Seabrook nuclear PPA with NextEra, Vote #2023-28 (Unanimous)","price ""Commercially Sensitive""; would cut MMLD cost of energy 12% if in portfolio today; listed at $83.00/MWh in 5/30 comparison table","3 MW around-the-clock, 22-year term 2028-2049; 26,280 MWh/yr"
+2023-11-21,Wholesale peak pricing context for time-of-use design (MMWEC),"average $60/MWh; transmission peak ~$15,000/MWh; capacity peak $35-50,000/MWh",13 one-hour peaks/year drive 50% of MMLD wholesale costs
+2023-12-19,ISO-NE Inventoried Energy Program (Wilkins fuel-on-site),"$3,500 for each event; 10-12 events expected per winter",new participation decision
+2024-02-27,2023 wholesale power cost (portfolio result),declined 6.3% from $0.12 in 2022 to $.113 in 2023,capacity charge down 16.9%
+2024-06-25,ISO-NE spot LMP during June 19 2024 scarcity event,$758/MWh for hour 18,"""25 times higher than normal"""
+2024-06-25,"New carbon-free ""Option B"" (firm hydro-backed power with RECs)","7.5 cents/kwh; 19,627 MWh (2024-26 average)",vs Option A intermittent at 9.9 cents
+2024-09-10,Hedge swap to hydro agreements with environmental attributes,"Firstlight Hydro est. +7,567 RECs, Brookfield Hydro est. +7,123 RECs",brings carbon-free portfolio to 58%
+2024-09-10,"Hydro Quebec transmission line asset rights, National Grid cash call",$247K capital over 10 years,"forecast dividends 2034-65 $472K, net $225K; prior agreement returned 16% IRR"
+2024-10-01,Bilateral hedge market prices as of 9/18/24,Jan-25 peak $115.56 / off-peak $107.81; Sep-24 peak $37.34 / off-peak $28.72 per MWh,"policy ""aim for 80% hedges"""
+2024-10-29,Master Sgt Cotton Solar PV (Project 2020A),$0.12/kWh 2024-26; $0.10/kWh 2027; settling $0.08-0.09/kWh net with IRA credits,$2.5 million IRA credit filing
+2025-01-21,Cotton Solar IRA credit received,$2.3M check; LCOE cut from $0.076/kWh to $0.057/kWh; net $0.021/kWh if RECs sold at $0.036,vs MMLD average total cost $0.107/kWh (Jan-Nov 2024)
+2025-03-04,2024 wholesale average power cost,"10.9 cents/kwh, down 3.4% from 11.28 cents in 2023",carbon-free portfolio 65.1% in 2024
+2025-03-04,MMLD-NextEra Seabrook certificate trade,"surrendered 3,377 CES-Es, received 10,131 EFECs",three-year deal 2024-2026
+2025-03-25,BESS value analysis (2023 peak data),"combined savings $1,099,200 for 5 MWh reduction",basis for utility-scale battery pursuit
+2025-11-24,Lightshift 5 MW / 20 MWh BESS proposal (via MMWEC),"""about $1 million in annual savings, shared evenly""; going alone ""roughly $1 million per MW""",Village 13 leading site
+2025-12-16,Lightshift BESS (updated),~$500K/year value to MMLD (~45% of total savings),agreements to govern
+2026-01-27,Wilkins Power Plant capacity revenue (ISO-NE Forward Capacity Market),~$100K/year for 5 MW of capacity,Capacity market reforms targeted for 2028 may favor seasonal structures and utility-scale batteries
+2026-03-31,"MA Class I Renewable Energy Certificates (RECs), basis for Go Green Now rate",around $40/MWh ($0.04/kWh),RECs fluctuate quarterly; rate = consumption x $0.04/kWh x 25% carbon share = $0.01/kWh

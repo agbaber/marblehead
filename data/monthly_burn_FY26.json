@@ -1,0 +1,420 @@
+{
+  "as_of": "2026-06-30",
+  "latest_fiscal_month": "2026-06-01",
+  "generated_at": "2026-06-30T11:42:41+00:00",
+  "fiscal_year": "FY26",
+  "fy_months": [
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "funds": [
+    {
+      "fund": "GENERAL FUND - TOWN",
+      "total_through_as_of": 57094363.1,
+      "series": [
+        {
+          "month": "2025-07",
+          "cumulative": 16834772.58,
+          "monthly": 16834772.58
+        },
+        {
+          "month": "2025-08",
+          "cumulative": 20694572.28,
+          "monthly": 3859799.7
+        },
+        {
+          "month": "2025-09",
+          "cumulative": 24059180.67,
+          "monthly": 3364608.39
+        },
+        {
+          "month": "2025-10",
+          "cumulative": 27597642.06,
+          "monthly": 3538461.39
+        },
+        {
+          "month": "2025-11",
+          "cumulative": 31012572.96,
+          "monthly": 3414930.9
+        },
+        {
+          "month": "2025-12",
+          "cumulative": 35396743.1,
+          "monthly": 4384170.14
+        },
+        {
+          "month": "2026-01",
+          "cumulative": 40040842.09,
+          "monthly": 4644098.99
+        },
+        {
+          "month": "2026-02",
+          "cumulative": 44122446.47,
+          "monthly": 4081604.38
+        },
+        {
+          "month": "2026-03",
+          "cumulative": 47726230.86,
+          "monthly": 3603784.39
+        },
+        {
+          "month": "2026-04",
+          "cumulative": 50713354.19,
+          "monthly": 2987123.33
+        },
+        {
+          "month": "2026-05",
+          "cumulative": 53917519.37,
+          "monthly": 3204165.18
+        },
+        {
+          "month": "2026-06",
+          "cumulative": 57094363.1,
+          "monthly": 3176843.73
+        }
+      ]
+    },
+    {
+      "fund": "GENERAL FUND - SCHOOL",
+      "total_through_as_of": 46970271.36,
+      "series": [
+        {
+          "month": "2025-07",
+          "cumulative": 616497.07,
+          "monthly": 616497.07
+        },
+        {
+          "month": "2025-08",
+          "cumulative": 1691750.65,
+          "monthly": 1075253.58
+        },
+        {
+          "month": "2025-09",
+          "cumulative": 5451682.62,
+          "monthly": 3759931.97
+        },
+        {
+          "month": "2025-10",
+          "cumulative": 9665748.09,
+          "monthly": 4214065.47
+        },
+        {
+          "month": "2025-11",
+          "cumulative": 13270213.37,
+          "monthly": 3604465.28
+        },
+        {
+          "month": "2025-12",
+          "cumulative": 18561565.38,
+          "monthly": 5291352.01
+        },
+        {
+          "month": "2026-01",
+          "cumulative": 22436546.35,
+          "monthly": 3874980.97
+        },
+        {
+          "month": "2026-02",
+          "cumulative": 25616576.26,
+          "monthly": 3180029.91
+        },
+        {
+          "month": "2026-03",
+          "cumulative": 29730309.59,
+          "monthly": 4113733.33
+        },
+        {
+          "month": "2026-04",
+          "cumulative": 33597797.06,
+          "monthly": 3867487.47
+        },
+        {
+          "month": "2026-05",
+          "cumulative": 37673299.13,
+          "monthly": 4075502.07
+        },
+        {
+          "month": "2026-06",
+          "cumulative": 46970271.36,
+          "monthly": 9296972.23
+        }
+      ]
+    },
+    {
+      "fund": "ELECTRIC ENTERPRISE",
+      "total_through_as_of": 14227459.21,
+      "series": [
+        {
+          "month": "2025-07",
+          "cumulative": 1155285.3,
+          "monthly": 1155285.3
+        },
+        {
+          "month": "2025-08",
+          "cumulative": 3205147.41,
+          "monthly": 2049862.11
+        },
+        {
+          "month": "2025-09",
+          "cumulative": 4855519.5,
+          "monthly": 1650372.09
+        },
+        {
+          "month": "2025-10",
+          "cumulative": 5302500.27,
+          "monthly": 446980.77
+        },
+        {
+          "month": "2025-11",
+          "cumulative": 6893795.55,
+          "monthly": 1591295.28
+        },
+        {
+          "month": "2025-12",
+          "cumulative": 7381995.5,
+          "monthly": 488199.95
+        },
+        {
+          "month": "2026-01",
+          "cumulative": 9136370.37,
+          "monthly": 1754374.87
+        },
+        {
+          "month": "2026-02",
+          "cumulative": 10268717.83,
+          "monthly": 1132347.46
+        },
+        {
+          "month": "2026-03",
+          "cumulative": 11411913.3,
+          "monthly": 1143195.47
+        },
+        {
+          "month": "2026-04",
+          "cumulative": 12450262.84,
+          "monthly": 1038349.54
+        },
+        {
+          "month": "2026-05",
+          "cumulative": 13799839.14,
+          "monthly": 1349576.3
+        },
+        {
+          "month": "2026-06",
+          "cumulative": 14227459.21,
+          "monthly": 427620.07
+        }
+      ]
+    },
+    {
+      "fund": "WATER ENTERPRISE OPERATING",
+      "total_through_as_of": 5775719.25,
+      "series": [
+        {
+          "month": "2025-07",
+          "cumulative": 748938.57,
+          "monthly": 748938.57
+        },
+        {
+          "month": "2025-08",
+          "cumulative": 1214567.83,
+          "monthly": 465629.26
+        },
+        {
+          "month": "2025-09",
+          "cumulative": 1714212.49,
+          "monthly": 499644.66
+        },
+        {
+          "month": "2025-10",
+          "cumulative": 2195255.96,
+          "monthly": 481043.47
+        },
+        {
+          "month": "2025-11",
+          "cumulative": 2653050.27,
+          "monthly": 457794.31
+        },
+        {
+          "month": "2025-12",
+          "cumulative": 2822533.58,
+          "monthly": 169483.31
+        },
+        {
+          "month": "2026-01",
+          "cumulative": 3491318.34,
+          "monthly": 668784.76
+        },
+        {
+          "month": "2026-02",
+          "cumulative": 3929354.47,
+          "monthly": 438036.13
+        },
+        {
+          "month": "2026-03",
+          "cumulative": 4425886.16,
+          "monthly": 496531.69
+        },
+        {
+          "month": "2026-04",
+          "cumulative": 5197910.46,
+          "monthly": 772024.3
+        },
+        {
+          "month": "2026-05",
+          "cumulative": 5643994.9,
+          "monthly": 446084.44
+        },
+        {
+          "month": "2026-06",
+          "cumulative": 5775719.25,
+          "monthly": 131724.35
+        }
+      ]
+    },
+    {
+      "fund": "A11 2022 CAPITAL IMPROVEMENT",
+      "total_through_as_of": 5251678.86,
+      "series": [
+        {
+          "month": "2025-07",
+          "cumulative": 0.0,
+          "monthly": 0.0
+        },
+        {
+          "month": "2025-08",
+          "cumulative": 271526.0,
+          "monthly": 271526.0
+        },
+        {
+          "month": "2025-09",
+          "cumulative": 498326.71,
+          "monthly": 226800.71
+        },
+        {
+          "month": "2025-10",
+          "cumulative": 776237.98,
+          "monthly": 277911.27
+        },
+        {
+          "month": "2025-11",
+          "cumulative": 984429.54,
+          "monthly": 208191.56
+        },
+        {
+          "month": "2025-12",
+          "cumulative": 2300586.55,
+          "monthly": 1316157.01
+        },
+        {
+          "month": "2026-01",
+          "cumulative": 3249135.0,
+          "monthly": 948548.45
+        },
+        {
+          "month": "2026-02",
+          "cumulative": 3674391.27,
+          "monthly": 425256.27
+        },
+        {
+          "month": "2026-03",
+          "cumulative": 3763367.23,
+          "monthly": 88975.96
+        },
+        {
+          "month": "2026-04",
+          "cumulative": 4114944.23,
+          "monthly": 351577.0
+        },
+        {
+          "month": "2026-05",
+          "cumulative": 5063238.76,
+          "monthly": 948294.53
+        },
+        {
+          "month": "2026-06",
+          "cumulative": 5251678.86,
+          "monthly": 188440.1
+        }
+      ]
+    },
+    {
+      "fund": "SEWER ENTERPRISE OPERATING",
+      "total_through_as_of": 5145799.32,
+      "series": [
+        {
+          "month": "2025-07",
+          "cumulative": 889210.92,
+          "monthly": 889210.92
+        },
+        {
+          "month": "2025-08",
+          "cumulative": 1397543.84,
+          "monthly": 508332.92
+        },
+        {
+          "month": "2025-09",
+          "cumulative": 1526900.47,
+          "monthly": 129356.63
+        },
+        {
+          "month": "2025-10",
+          "cumulative": 2601890.69,
+          "monthly": 1074990.22
+        },
+        {
+          "month": "2025-11",
+          "cumulative": 2722539.16,
+          "monthly": 120648.47
+        },
+        {
+          "month": "2025-12",
+          "cumulative": 3416453.48,
+          "monthly": 693914.32
+        },
+        {
+          "month": "2026-01",
+          "cumulative": 3924588.78,
+          "monthly": 508135.3
+        },
+        {
+          "month": "2026-02",
+          "cumulative": 4042780.62,
+          "monthly": 118191.84
+        },
+        {
+          "month": "2026-03",
+          "cumulative": 4740236.56,
+          "monthly": 697455.94
+        },
+        {
+          "month": "2026-04",
+          "cumulative": 4869438.64,
+          "monthly": 129202.08
+        },
+        {
+          "month": "2026-05",
+          "cumulative": 5001415.88,
+          "monthly": 131977.24
+        },
+        {
+          "month": "2026-06",
+          "cumulative": 5145799.32,
+          "monthly": 144383.44
+        }
+      ]
+    }
+  ],
+  "source": "data/operating_budget_FY26.csv (Open Budget portal, payroll included)",
+  "generated_by": "scripts/build_monthly_burn.py"
+}

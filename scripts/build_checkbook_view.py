@@ -5,16 +5,20 @@ sketch reads to fill in every dollar amount, percentage, project status
 card, carve-out segment, and what-moved-this-week row.
 
 Inputs:
-  - The latest data/checkbook_FY26_<date>.csv  (current snapshot)
-  - The previous data/checkbook_FY26_<date>.csv (prior snapshot, optional)
+  - The latest data/checkbook_FY<N>_<date>.csv  (current snapshot)
+  - The previous data/checkbook_FY<N>_<date>.csv (prior snapshot, optional)
     Used for the "what moved this week" panel. If missing, the panel
     data is omitted and the sketch will hide that section.
+
+The fiscal year defaults to the current one (fylib.current_fiscal_year);
+pass --year to build from another year's snapshots.
 
 Output:
   - data/checkbook_view.json
 
 Usage:
   scripts/build_checkbook_view.py              # auto-detect current + prior
+  scripts/build_checkbook_view.py --year 2026  # build from FY26 snapshots
   scripts/build_checkbook_view.py --current data/checkbook_FY26_2026-06-11.csv \\
                                   --prior   data/checkbook_FY26_2026-06-09.csv
 
@@ -33,6 +37,8 @@ import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
+
+import fylib
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
@@ -130,15 +136,51 @@ def load_csv(path: Path) -> list[dict]:
         return list(csv.DictReader(fp))
 
 
-def latest_snapshot() -> Path:
-    candidates = sorted(DATA.glob("checkbook_FY26_*.csv"))
+# ---- Vendor display + interfund classification ---------------------------
+#
+# Two ledger oddities the page should hide from the reader rather than
+# surface as confusing top-line entries:
+#
+#   1) "ONE TIME PAY" — Munis' placeholder for payees that don't have a
+#      master-vendor record. The actual recipient is in the row's
+#      Description (e.g. "Contract 190 Water Main Improv" for the
+#      $733K-class rows). We substitute the description so the displayed
+#      vendor is informative instead of anonymous.
+#
+#   2) "TOWN OF MARBLEHEAD" as vendor — these are interfund transfers
+#      (the town paying itself across funds: GF-School → HS Student
+#      Activity, etc.). Real economic shuffles, but NOT external spend;
+#      they shouldn't appear in "top vendor" or "top mover" lists where
+#      the implicit framing is "money that went out the door".
+
+INTERFUND_VENDORS = {"TOWN OF MARBLEHEAD"}
+
+def is_interfund(row: dict) -> bool:
+    return row["Vendor"].upper().strip() in INTERFUND_VENDORS
+
+
+def display_vendor(row: dict) -> str:
+    """The vendor name to show to a reader (not the raw ledger string)."""
+    v = row["Vendor"].strip()
+    if v == "ONE TIME PAY":
+        desc = (row.get("Description") or "").strip()
+        if desc and desc != "[withheld]":
+            # Description is the actual payee/purpose
+            return desc[:60]
+    return v
+
+
+def latest_snapshot(year: int) -> Path:
+    prefix = f"checkbook_{fylib.fy_label(year)}_"
+    candidates = sorted(DATA.glob(prefix + "*.csv"))
     if not candidates:
-        sys.exit("error: no data/checkbook_FY26_*.csv snapshots found")
+        sys.exit(f"error: no data/{prefix}*.csv snapshots found")
     return candidates[-1]
 
 
-def prior_snapshot(current: Path) -> Path | None:
-    candidates = sorted(DATA.glob("checkbook_FY26_*.csv"))
+def prior_snapshot(current: Path, year: int) -> Path | None:
+    prefix = f"checkbook_{fylib.fy_label(year)}_"
+    candidates = sorted(DATA.glob(prefix + "*.csv"))
     if current not in candidates:
         return None
     idx = candidates.index(current)
@@ -148,12 +190,12 @@ def prior_snapshot(current: Path) -> Path | None:
 
 
 def snapshot_date_from_filename(path: Path) -> str:
-    """data/checkbook_FY26_2026-06-11.csv  →  '2026-06-11'."""
-    m = re.search(r"checkbook_FY26_(\d{4}-\d{2}-\d{2})", path.name)
+    """data/checkbook_FY27_2026-07-01.csv  →  '2026-07-01'."""
+    m = re.search(r"checkbook_FY\d+_(\d{4}-\d{2}-\d{2})", path.name)
     return m.group(1) if m else ""
 
 
-def build(current_path: Path, prior_path: Path | None) -> dict:
+def build(current_path: Path, prior_path: Path | None, year: int) -> dict:
     current_rows = load_csv(current_path)
     if not current_rows:
         sys.exit(f"error: no rows in {current_path}")
@@ -212,7 +254,11 @@ def build(current_path: Path, prior_path: Path | None) -> dict:
         amt = float(r["Amount"])
         carve_totals[seg] += amt
         carve_rows[seg] += 1
-        carve_top_vendors[seg][r["Vendor"]] += amt
+        # Skip interfund (TOWN OF MARBLEHEAD) from the visible top-vendor list;
+        # rewrite ONE TIME PAY rows to use their description as the vendor name.
+        if is_interfund(r):
+            continue
+        carve_top_vendors[seg][display_vendor(r)] += amt
 
     carve_order = ["gic_insurance", "debt_us_bank", "pension", "cherry_sheet",
                    "admin_contracts", "other_recurring"]
@@ -300,7 +346,11 @@ def build(current_path: Path, prior_path: Path | None) -> dict:
         last_paid = fund_dates[-1] if fund_dates else ""
         vendor_totals = defaultdict(float)
         for r in fund_rows:
-            vendor_totals[r["Vendor"]] += float(r["Amount"])
+            # Skip interfund + use ONE TIME PAY's description (same treatment
+            # as the carve-out top-vendor list above).
+            if is_interfund(r):
+                continue
+            vendor_totals[display_vendor(r)] += float(r["Amount"])
         vmix = sorted(((v, a / amount) for v, a in vendor_totals.items()
                        if amount), key=lambda x: -x[1])
         top_vendors = [{"name": v, "amount": round(vendor_totals[v], 2),
@@ -342,10 +392,15 @@ def build(current_path: Path, prior_path: Path | None) -> dict:
         added = [r for r in current_rows if key(r) not in prior_keys]
         removed_count = len(prior_keys - current_keys)
         added_amount = sum(float(r["Amount"]) for r in added)
+        added_interfund = sum(float(r["Amount"]) for r in added if is_interfund(r))
         mover_totals = defaultdict(lambda: [0, 0.0])
         for r in added:
-            mover_totals[r["Vendor"]][0] += 1
-            mover_totals[r["Vendor"]][1] += float(r["Amount"])
+            # Hide interfund + collapse ONE TIME PAY into description.
+            if is_interfund(r):
+                continue
+            v = display_vendor(r)
+            mover_totals[v][0] += 1
+            mover_totals[v][1] += float(r["Amount"])
         top_movers = sorted(mover_totals.items(),
                             key=lambda kv: -kv[1][1])[:8]
         what_moved = {
@@ -353,6 +408,7 @@ def build(current_path: Path, prior_path: Path | None) -> dict:
             "current_snapshot_date": snap_date,
             "new_rows":   len(added),
             "new_amount": round(added_amount, 2),
+            "new_interfund_amount": round(added_interfund, 2),
             "edited_or_removed_rows": removed_count,
             "top_movers": [{
                 "vendor":    v,
@@ -361,13 +417,19 @@ def build(current_path: Path, prior_path: Path | None) -> dict:
             } for v, (c, amt) in top_movers],
         }
 
+    # Pre-compute the interfund total so the page can show
+    # "$total_paid (of which $interfund_total is internal accounting)".
+    interfund_total = sum(float(r["Amount"]) for r in current_rows if is_interfund(r))
+
     return {
         "schema_version": 1,
         "snapshot": {
             "date":           snap_date,
-            "fiscal_year":    "FY26",
+            "fiscal_year":    fylib.fy_label(year),
             "row_count":      len(current_rows),
             "total_paid":     round(total_paid, 2),
+            "interfund_total": round(interfund_total, 2),
+            "external_paid":  round(total_paid - interfund_total, 2),
             "first_payment":  min(dates) if dates else "",
             "last_payment":   max(dates) if dates else "",
             "source_file":    current_path.name,
@@ -381,6 +443,8 @@ def build(current_path: Path, prior_path: Path | None) -> dict:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--year", type=int, default=fylib.current_fiscal_year(),
+                    help="Fiscal year to build (default: current fiscal year)")
     ap.add_argument("--current", type=Path,
                     help="Current checkbook CSV (defaults to newest)")
     ap.add_argument("--prior", type=Path,
@@ -388,10 +452,10 @@ def main() -> None:
     ap.add_argument("--out", type=Path, default=DATA / "checkbook_view.json")
     args = ap.parse_args()
 
-    current = args.current or latest_snapshot()
-    prior = args.prior or prior_snapshot(current)
+    current = args.current or latest_snapshot(args.year)
+    prior = args.prior or prior_snapshot(current, args.year)
 
-    view = build(current, prior)
+    view = build(current, prior, args.year)
     args.out.write_text(json.dumps(view, indent=2) + "\n")
     print(f"wrote {args.out.relative_to(REPO)} from {current.name}"
           + (f" (diffed vs {prior.name})" if prior else " (no prior diff)"))

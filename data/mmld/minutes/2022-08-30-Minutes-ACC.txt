@@ -1,0 +1,676 @@
+Light Commission 8/30/22 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           September 23, 2022
+Re:             Commission Meeting August 30, 2022
+
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:30 pm, the meeting
+being held both in person and with remote access available to the public.
+
+Participated in meeting:
+        Commissioners:         Hull, Wolf and Yarmoff in person, Frechette participating remotely.
+        Light Department:      General Manager Joe Kowalik.
+
+Approval of 7/26 minutes to be deferred after questions from Chair Hull have been resolved.
+
+Rate Structure Changes: UFS Update
+
+UFS principals Dawn and Chris Lund reviewed the updated recommendation for rate changes across all
+classes of services, based on updated financial assumptions with recent major changes. The proposal
+aligns base rates with MMLD fixed costs structure in a revenue neutral change over a two year period
+starting January 2023, and proposes a first rate increase of energy costs of 1.5 c/kWh to come into
+effect January 2024.
+
+The summary of the proposed combined changes to residential rates is shown in the table below, details
+of the proposal and proposed changes for other rate classes can be found in the discussion section and
+in the slides below.
+
+Table 1. Residential rate proposed evolution 2022 - 2024
+
+        Rate components        Current rates 2022     Proposed 2023 rates    Proposed 2024 rates
+
+ Base Rate:
+                                      $ 4.25                $ 11.25                 $ 18.50
+ Monthly Facility Charge
+
+ Total Energy Charge:
+ (power cost + power cost            $ 0.1985               $ 0.1880               $ 0.1800
+ adjustment)
+
+
+The General Manager reviewed the impact of the rate structure changes for rate payers. The change is
+revenue neutral to MMLD, and will result in no change in the bill of the average rate payer consuming
+                                                                                                     1/11
+663 kWh per year. Rate payers that consume more will see a slight decrease in their bills. Rate payers
+that consume less, will see a slight increase, insuring that they pay their fair share of the facilities to
+distribute power.
+
+Responding to previous concerns raised by the Commission on the impact of the changes to low income
+rate payers, the General Manager gave details of the North Shore Community Action Program that
+MMLD works with (NSCAP, www.nscap.org) on an on-going basis. The program is funded by the Federal
+Government through grants to the State, which in turn provides funds to NSCAP, which covers several
+towns around Marblehead, including Peabody, Beverly and Salem. Two situations may arise:
+   - If low income households use electricity as heating source, they can benefit from a subsidy to their
+   electric bills. These customers are going to use more than the average of 663kWh/yr and the changes
+   considered will result in lower total electric bills.
+   - Low income households that do not heat with electricity, will on average consume less than
+   663 kWh/yr, and their bills may increase slightly. NSCAP provides MMLD with moneys to subsidize
+   these specific customers, the number of which is currently 75 in Marblehead. When checking a
+   sample of these accounts, MMLD has found that these households get on average a 30% discount on
+   their electric bill, largely above any increases in their bills. Participants have to apply annually,
+   NASCAP will help the applicants through the initial application process.
+
+MMLD refers people who may be facing a hardship situation to this program and rate payers who are
+facing a difficult situation should contact MMLD.
+
+Sustainability Working Group report
+
+The Sustainability Working Group met twice since the previous Commission Meeting on alternate
+Tuesdays. Current group is composed of Commissioners Frechette and Wolf, and of General Manager
+Kowalik. Additional members of the community will be encouraged to participate. The group will work
+off-line and report back to the commission, focusing on 6 areas/goals:
+         - Sustainability coordinator                   - Accelerate strategic electrification
+         - Communication strategy                       - Sustainability fund
+         - Decarbonization policy and timeline          - Demand response capability
+
+
+MMLD Residential Battery Policy change proposal
+
+Enabling residential battery (Battery Energy Storage Systems or BESS) interconnection has many benefits
+to MMLD as battery storage is a way to reduce costs and increase reliability for community members.
+1. Cost Savings: Batteries allow power to be deployed at the most strategic times, insulating MMLD
+    against rising wholesale demand and energy costs. Batteries can store electricity from home PV and
+    dispatch it when electricity is most expensive, reducing costs for MMLD and customers.
+2. Reliability: Batteries improve the reliability of electricity by storing surplus power produced by solar
+    energy and injecting it back onto the grid when there is a deficit or when energy prices are high.
+3. Capacity: Battery storage increases the capacity by providing stored electricity to the grid at the
+    times of highest demand.
+4. Deferral of Transmission Upgrades: Energy storage can be used as a Non-Wires Alternative (NWA)
+    to increase capacity and defer the need for costly capital transmission and infrastructure upgrades.
+5. Backup Power during Outages: Provides residents emergency backup power when the grid fails.
+6. Carbon Reduction: In addition, batteries paired directly with solar energy enable more renewable,
+    carbon-free energy to be deployed on the grid.
+                                                                                                         2/11
+The General Manager insisted on the strategic importance of the Connected Homes program.
+Electrification of transportation and heating will create a much higher load, but how much higher?
+Town-wide consumption has been basically flat making predictions difficult. The rebuilding of the Village
+13 Substation will allow up to 50% more power to flow to the distribution grid of Marblehead, this
+project is underway. But load could double with strategic electrification and it is important to be both
+more energy efficient and to control devices so that load can be managed: this is where Connected
+Homes will help. An open question is whether participation should be voluntary or mandatory. Solar
+behind the meter has been a revolution, in both lowering the peak, and also shifting it later in the day.
+Batteries will help as well. Two residential battery makers participate in the Connected Home program:
+Sonnen and Generec, while Tesla has another demand-response program and does not yet participate in
+Connected Homes run by MMWEC: discussions are on-going.
+
+Another important consideration is safety, and ensuring all the stakeholders in town are familiar with
+the technology: an installation needs to be inspected (wiring) and conform to fire regulations. Fire Chief
+Jason Gilliland proposes a number of recommendations for installation of BESS, as lithium-ion battery
+fires pose a unique set of challenges. He will come to present safety considerations from the Fire
+Department perspective at a later Commission meeting. Commissioner Yarmoff stated that each
+department had its own responsibility, and we are only responsible for the policy of the Light
+Department. Chair Hull stressed that while there is no issue with the Commission taking a vote to move
+ahead on this issue, it was important for all stakeholders from other departments in town to participate
+in this conversation.
+
+Commissioner Wolf proposed the following motion, seconded by Commissioner Frechette:
+
+Motion #2022-29: To promote residential battery storage, MMLD will discontinue its practice of denying
+interconnection permits, and allow batteries to connect, provided customers participate in a demand-
+response program allowing MMLD or its agent to control dispatch to and charging from the grid.
+
+Vote #2022-29: Frechette: yes; Hull: no; Wolf: yes; Yarmoff: yes
+
+
+
+
+Utility-scale battery update
+
+Chair Mike Hull updated the Commission on his conversation with MMWEC about the utility scale 5 MW
+battery initially considered for the Village Street location. MMWEC is aggregating the interest of 14
+MLPs which will help achieve economies of scale. Vendors proposals are expected by September 15. A
+location other than Village 13 would allow work to process in parallel rather than sequentially with the
+rebuilding of the substation, the Tioga Way site may be a possibility, the Beacon street substation is not.
+
+
+Vote #2022-30: Chair Hull asked for a motion to go to an Executive Session of the Commission to
+discuss confidential, competitively-sensitive information provided by MMWEC, a municipal aggregator,
+to MMLD, an entity making, selling and distributing electric power and energy, regarding project 2021A,
+not to return to open session. Motion proposed by Commissioner Wolf, seconded by Yarmoff.
+
+Frechette: Yes; Hull: Yes; Wolf: Yes; Yarmoff: Yes
+
+Executive session started at 6:25 pm.
+
+                                                                                                      3/11
+Discussions of rate changes and Slides presented
+
+MMLD has been working with UFS for the last few months. As there have been some changes in the
+financial assumptions recently (Slide 4), this is an update on the projections and recommendations that
+were shared with the Light Commission at the beginning of the year and on July 12.
+
+Dawn Lund presented the updates. UFS focuses on three critical financial targets to ensure the financial
+health of the utility: - Debt Coverage Ratios, - Minimum Cash Reserves, and Target Operating Income.
+Changed assumptions include the PPA charge, the capital investment plan and power supply forecast.
+
+Financial projections without rate changes (Slide 5) show that adjusted income projections are lower
+than recommended, decreasing and projected to be negative by 2026, showing that the operating
+income needs to be stabilized. In addition, Cash balance should be around $10.5M for MMLD to cover
+the risk of the business we are in, and we are below the recommended amount during the whole
+projected period if no rate changes are implemented. Slide 6 shows stabilization of the financial
+indicators with the rate increases projected from 2024.
+
+Target operating income has changed from $2M in an earlier recommendation to current $1.5M: why?
+This is a function of interest expense and inflationary effect on assets: the result has changed since the
+level of investments changed. The Cash on hand column depends on 5 key items: operating expenses,
+power supply, historical investment in system, debt service payments and capital improvement
+program. Capital improvement changed, power supply changed, this is what affected the targets.
+
+If capital improvement is higher than $1M in ‘25 and ‘26, operating income will be affected by the extra
+depreciation, expenses will go up, adjusted income will deteriorate slightly, and the cash reserve will
+decrease accordingly: it is important to update this with the budget process.
+
+Assuming that PPA changes are done appropriately when the cost of power purchased by MMLD
+increases, as they have been in the past, smoothing out the Operating Income means that it is only
+necessary to increase the rates in the outer years, from January 2024. IF PPA changes were not done in
+a timely manner, UFS would recommend higher rate increases. This would be the case for the many
+utilities which do not have the PPA mechanism used by Marblehead to adapt to energy costs changes.
+Cash balances are appropriate with these rate adjustments. These adjustments are very minimal
+compared to changes observed in other utilities in the country and in Massachusetts. They are lower
+than the increase in inflation.
+
+As a result, UFS is recommending changes in two steps: a revenue neutral rate structure change in 2023,
+followed by rate adjustments. Given current environment, the projections show the necessity of three
+consecutive 1.5% rate adjustments. However, UFS recommends that MMLD initiate the process with
+one 1.5% rate increase in 2024, with further increases to be adjusted as conditions and budget warrant.
+
+Looking at the various classes of service (Slide 8): both class A and B rates are very close to cost of
+service already. G, S and F are grandfathered in with a very small number of customers. Slides 9 and 11
+give the details per class of service. Slide 10 shows studies UFS could do that are currently on hold.
+
+The adjustment of the rates in a revenue neutral fashion to reflect true cost of service is given in slides
+showing the rate design, slides 13 through 18.
+
+Street lighting rates are set by contract in a formula set by statute, and will not be affected by the
+proposed structure changes or rate increases.
+
+                                                                                                         4/11
+Slides presented by UFS during 8/30 meeting
+
+
+
+
+                    Marblehead Municipal
+                    Light Department
+                    Electric Financial Projection and Cost of Service Study
+                    Revised PPA,capital improvement budgets, power supply forecast as of 08-30-2022
+
+
+                    Dawn Lund - Vice President, Utility Financial Solutions, LLC
+                    Chris Lund • Financial Consultant, Utility Financial Solutions, LLC
+
+
+
+
+                        Utility Financial Solutions, LLC
+
+                • International consulting firm providing cost of service and financial
+                  plans and services to utilities across the country, Canada, Guam and the
+                  Caribbean
+
+                • Instructors for cost of service and financial planning for APPA, speakers
+                  for organizations across the country.
+
+                • Hometown Connections preferred Vendor for Financial and rate
+                  services
+
+
+
+
+                                              Presentation Objectives
+
+                    Review Step One for Electric Department:
+                       RevisedAssumptions
+                           PPAHistory
+                         • Capital Improvements Plan
+                         • PowerSupplyForecast
+                       FinancialProjection& Targets
+                         • Debt CoverageRatios
+                         • Minimum CashReserves
+                         • Target Operating Income
+                       ReviewCostof ServiceResults
+                         • Cost to serviceeach classof customers
+                         • Monthly CustomerCharges
+                      Additional Steps
+                       ProposedRate Designs
+
+
+
+
+                                                                                                      5/11
+                                           Revised Assumptions
+
+           Revised Assumptions
+              PPA History
+              Capital Improvements Plan
+                  Power Supply Forecast
+
+                    PPA History                                         Capital                                 MMLD
+                         Prior        0.016                        Improvements                                 Revised
+                    1/1/2018          0.020       Fiscal Year               Plan                              Power Supply
+                    3/1/2018          0.027               2022      s 3,784,000              Fiscal Year        Total$
+                                                                                                     2022 $12,448,244
+                    8/1/2020          0.031               2023          5,935,000
+                                                                                                     2023 12,492,683
+                    4/1/2022          0.041               2024          4,103,000                    2024 10,643,441
+                    8/1/2022
+               Plan 1/1/2023
+                                      0.056
+                                      0.010
+                                                          2025
+                                                          2026
+                                                                        1,078,000
+                                                                        1,078,000
+                                                                                                     202S 10,521,986
+                                                                                                     2026 10,757,796
+                                                                                                                               -
+                                                                                                                              FS   UTIUlY(ON.O,N(IAl
+                                                                                                                                   SOI.UTIONS, LLC
+
+
+
+
+         Financial Projection
+        Projected Rate Track (without rate adjustments)
+
+
+                                                                 Adjusted
+                                                                Operating                                                                              MMLD
+                                                               Income (After                          Oebt      Capital                  Revised
+                 Projected Rate    Projected      Projected      Payment in     Projected Cash      Coverage Improvements   Annual     Power Supply
+ FiscalYear       Adjustments       Expenses      Revenues     Lieu ofTaxes)       Balances          Ratio       Plan     Depreciation   Total S
+        2022         0.0%         $ 18,873,972   $19,925,361    s 721,389              12,536,737      6.00       3,784,000   $1,443,687        $12,448,244
+        2023         0.0%           19,847,302    20,968,728       791,426              9,460,587      7.68       5,935,000    2,102,500          12,492,683
+        2024         0.0%           18,318,390    19,113,787       465,397              7,902,528      6.95       4,103,000    2,130,000          10,643,441
+      2025       0.0%         18,565,335          18,976,473         81,138             9,027,419      6.15       1,078,000    2,180,000          10,521,986
+      2026       0.0%         19,184,276          19,214,894        299,381             9,827,416      5.39       1,078,000    2,230 000          10,757,796
+Recommended Minimum Tar et 2022                                 $ 1,344,262             9,140,902       1.45
+Recommended Minimum Tar et 2026                                 $ 1,757 366            10,356,289       1.45
+
+
+
+
+        Financial Projection
+        Projected Rate Track (with rate adjustments)
+
+
+                                                                 Adjusted
+                                                                 Operating                                                                MMLD
+                                                               Income (After                          Debt      Capital                  Revised
+                 Projected Rate    Projected      Projected      Payment in        Projected Cash   Coverage Improvements   Annual     Power Supply
+ Fiscal Year      Adjustments      Expenses       Revenues     Lieu of Taxes)         Balances       Ratio       Plan     Depreciation   Total$
+      2022       0.0%       $ 18,873,972         $19,925,361    s 721,389              12,536,737      6.00       3,784,000   $1,443,687        $12,448,244
+      2023       0.0%         19,847,302          20,968,728       791,426              9,460,587      7.68       5,935,000    2,102,500         12,492,683
+      2024       1.5%         18,318,390          19,413,668       765,277              8,202,408      7.65       4,103,000    2,130,000         10,643,441
+      2025       1.5%         18,565,335          19,580,569       685,233              9,932,894      7.57       1,078,000    2,180,000         10,521,986
+      2026       1.5%         19,184,276          20,131,015        616,739            11,653,539      7.54       1,078,000    2,230,000         10,757,796
+Recommended Minimum Tar et 2022                                 $ 1,344,262             9,140,902       1.45
+Recommended Minimum Tar et 2026                                 $ 1,757,366            10,356,289       1.45
+
+
+
+
+                                                                                                                                                               6/11
+ Electric Cost of Service Results
+
+
+
+                                                                              Projected
+     Customer dass                                     Cost of Service        Revenues      % Change
+     Residential (A)                                        14,396,861    $   14,094,428          2.1%
+     Small Commercial (B)                                    2,348,191         2,329,887          0.8%
+     Off-Peak Water-Heating (G - Grandfathered)                 55,651            45,487         22.3%
+     Domestic Storage Heating (S - Grandfathered)               22,827            17,598         29.7%
+     Private Area Lighting (F)                                  24,105            35,814        -32.7%
+     Street Lighting                                           151,220           184,444        -18.0%
+     LargeCommercial (C)                                     3,472,035         3,140,359         10.6%
+     Total                                                  20,470,890    $   19,848,017          3.1%
+
+
+
+                                                                                            uFS~~~i~:~J•L
+
+
+
+Monthly                Customer Charge
+
+❖ Designed to recover a portion of the fixed distribution   costs of the utility such as:
+       Meter Costs
+       Meter Reading Costs
+       Billing Costs
+       Customer Service
+       Service Drop
+       Portion of Distribution System
+
+❖ Movement toward cost-based customer charges to help stabilize revenues
+❖   Helps to reduce subsidy between year-round customers and seasonal customers
+
+
+
+
+                                                                                                            7/11
+  Additional                 Steps
+
+   2023 Revenue neutral rate adjustment for the system
+       Phase in customer charges over 2 years (2023 and 2024 rates)
+     • Balance PPAinto rates with a target 1 cent PPA base for start of 2023
+     • 2024 rates target an overall 1.5% increase in rates
+   Additional studies (Chris Lund): Time of Use & Demand charges,
+   customer solar and customer battery credits, EV charging, multi-meter
+   for single family home review
+     • These studies will help us refine the rate structure over time
+     • Phase in mid-year 2023 or after 2024 rates implemented
+   EV Charging Rates (typical TOU & Demand charges)
+       Residential (typical level 1 or level 2) 2 to 20 kW
+       Commercial (typical level 2 or DCFC)20 to 350 kW
+       City or Utility Owned (station equipment, maintenance, transactions cost)
+
+
+
+
+  Monthly Charge
+  Movement toward COSover time
+
+                                                                                           Current
+                                                                               cos         Average
+                                                                           Customer      Customer
+             Customer Class                                                 Charge        Charge
+             Residential (A)                                              $      18.43 $        4.25
+             Small Commercial (B)                                               32.10           5.00
+             Off-Peak Water-Heating (G - Grandfathered)                          11.95          4.25
+             Domestic Storage Heating (5 - Grandfathered)                        17.65          4.25
+             Private Area Lighting (F)                                            1.32
+             Street Lighting                                                      2.20
+             Large Commercial (C)                                               113.20         10.00
+
+
+
+
+Proposed Rate Designs
+Two-year plan moving toward COS Customer Charge
+
+
+
+
+                                                                                                       8/11
+             Residential Rate Design
+
+                                                                          tents ~r kWh Energy Charge+                                     Change by Monthly Energy (kWh) U~ge (")
+                                                                          Power Cost Adjustmtnt Change
+Resident/al (A)
+
+Energycharge•PowerCostAdjustment         S                  0.l98SO
+                                                                                       from Current
+                                                                                        (1.1) S
+                                                                                  0.18800       $      0.18000
+                                                                                                              (1.9)   ..~~-•--·
+                                                                                                                      ""'
+
+
+RatH                                              Current                       YHr 1                Ytar 2
+                              -----=~---=~-~=-
+       7Fo""'tilc,itie-,""cha-,-
+~M~~",<h-,-ly            .. -,                                                                                        - f----;;;~-;
+  Monthly Char11e                                              4.25       $            11.25 $           18.S0        :_::'f" •~              i
+Energy Charge:                                                                                                        "'-O!'l
+
+ AIIEner11v                                                  0.1425       $        0.1780       $       0.1700
+Hydro Credit                                                                                                          -
+  Arinu.al Credit                                           (360,787) $           (360,787) $          1360,787)                                                  l,...r,(l,.Wh)
+Power Cost Adjustment:
+  AIIEnergy                             .s                   0.0560       $        0.0100       $       001001
+                       Revenue from Aate S             14,094,428 $             14,099,584 $         U,307,729        Average Usage                                   662
+----~',..~              -••~"~=~•~"~'
+                        0      1
+                               ~~~•--------~'~·"'~--~,.                                                        5~" Monthly Customers
+                                                                                                                                                                 8,879
+                                                                                                                      Current Average Bill                      132.28
+                                                                                                                      Year l Average Bill                       132.33
+                                                                                                                      Average % Change                            0.0%
+                                                                                                                      Monthly Change                               o.os
+
+
+
+
+             Small Commercial                                                      Rate Design
+
+                                                                    cents per kWh EnergyCharge•                                       Change by Monthly Energy {kWh) Usage(%)
+                                                                    Power Cost Adjustment Change
+Small Commercial (BJ                                                        from Current
+                                                                                   (1.8) $               (3.41
+Energy Charge+ Power Cost Adjustment $   0.20600                               0.18810 $             0.17200
+Rates                                  Current                                Vear 1                Vear 2
+Monthly Facilities Charge:
+ Monthly Charge                                             5.00                  18.50                 32.25
+Energy Charge:
+ All Energy                                            0.1500                   0.1781                 0.1620
+Power Cost Adjustment:
+  All Energy                                 I$      0.05600 ■ $ _ 0.01000                           0.01000]
+                            Revenue from Rate S    2,329,887 $ 2,330,433                            2,354,343
+                      Change from Previous                                         0.0%                    1.0%
+                                                                                                                                                                   752
+                                Revenue Goal                                  2,330,433     $       2 354
+                                                                                                     ,    •:.~~ ~v:~:~1: ~:::mers                                1,214
+                            Cumulative Change                                      0.0%
+                                                                                                                      Current Average Bill                      159.93
+                                                                                                                      Vear 1 Average Bill                       159.97
+                                                                                                                      Average % Change                            0.0%
+                                                                                                                      Monthly Change
+                                                                                                                                                                  o.o4       uFS~~;:a::;~~-~
+
+
+
+              Large Commercial                                                     Rate Design
+
+ Lorge Commercial (CJ                                               Power Co,t Adju,tment Chang•                                        Change by Monthly Energy !kWh) Usage'"'
+                                                                    $         (0.l) $       (O.l)
+ Energy Charge+ Power Cost Adjustment $              0.16600          S        0.16300      S        0.16260
+ Rates                                             Current                    Year 1                Year 2
+ Monthly Facilities Charge:
+  Monthly Charge                                        10.00                     61.75                113.50
+ Energy Charie:
+                                                                                                                          ,~
+                                                                                                                          2.o,lO.OO   U.SOO   JS.Im   17,500    l'Q.000     2:1.500   lS,000   J7,'i00   lQ.000   .U.500
+  All Energy                                           0.1100                    0.1S30                0.1526
+ Demand Ch;;ree
+  All Demand                                                 5.70                  6.00                  6.25
+ Power Cost Adjustment:
+   All Energy                                        0.0S600                    0.01000                                                                          lMrgy(kWhl
+                                                                                                     0.0lOOOJ
+                         Revenue from Rate $       3,140,359                  3,148,395             3,197,957
+                       Change from Previous                                         0.3%                  1.6%
+                                                                                                                      Average Usage                      20,545
+                                                                                                                      Average Demand                       65.3
+                                                                                                                      Aver.igeLF                          43.1%
+                                                                                                                      Moothly Cuslomers                     69
+                                                                                                                      Current Average Bill             3,792.70
+                                                                                                                      Year l Average Bill              3,802.41
+                                                                                                                      Average % Change                         0.3%
+                                                                                                                      Moolhly Chante                           9.71                                                        IS
+
+
+
+
+                                                                                                                                                                                                                                9/11
+        Water Heating Rate Design
+
+                                                   cents per kWhEnergy Charge•
+                                                                                                                             Change by Monthl)' Energy (kWh) Usage (%)
+                                                   Power Cost Adjustment Change
+
+
+
+
+                                                                                                         'f~~-·-·
+Off-Peak Water-Heating (G - Grandfathered}                  from Current
+                                                              {1.8) $        (3.2)
+Energy Charge+ Power Cost Adjustment S     0.15700       0.13920 $       0.12540
+Rates                                    Current             Year1                  Year2
+Monthly Facilities Charge:
+                                                                                                                                                       •so_
+
+                                                                                                         ::                                                  --_
+                                                                                                                                                               -_
+                                                                                                                                                                -_
+                                                                                                                                                                 -_
+                                                                                                                                                                  -_
+                                                                                                                                                                   -_
+                                                                                                                                                                    -_
+                                                                                                                                                                     -_
+                                                                                                                                                                      -_
+                                                                                                                                                                       --==
+ Monthly Charge                                4.25                   8.25                 12.00          l.OK2                               400
+
+Energy Charse:
+ All Energy                                 0.1010      S        0.1292         s        0.1154
+Power Cost Adjustment:
+                                                                                                         -»~
+ All Energy                                0.05600             0.01000                  0.01000
+                     Revenue from Rate $    45,487              45,493                   46,245
+                   Changefrom Previo!.A                            0.0%                     1.7%
+                       RevenueGoal                               45,493         s        46,245          Average Usage                          224
+                   Cumulative Change                               0.0%                     1.7%         Monthly Customers                       96
+                                                                                                         Current Average Bill                 39.49
+                                                                                                         Year l A11erage
+                                                                                                                       Bill                   39.49
+                                                                                                         Average % Change                       0.0%
+                                                                                                         Monthly Change
+
+
+
+
+        Storage Heating Rate Design
+
+                                                        cents per kWh Energy Charge•                                          Change by Monthly Energy(kWh) Usage(")
+                                                        Power Cost Adjustment Change
+Domestic Storage Heating (S • Grandfathered)                     from Current
+                                                                     (0.7) $                 11.1)
+Energy Charge• Power Cost Adjustment S      0.15700              0.15030 S               0.14630
+Rates                                     Current             Year 1                    Year 2
+Monthly Facilities Charge:
+ Monthly Charge                                 4.25                  11.00                 17.75
+Energy Charge:
+ All Energy                                  0.1010      S          0.1403      $         0.1363
+Power Cost Adjustment:
+  All Energy                           Is 0.05600                0.01000                 o.oi"oool                                             {Mtift{kWh)
+
+                    RevenuefromRate S        17,598               17,596                  17,888
+                  Changefrom Previous
+                        Revenue Goal
+                                                                     0.0%
+                                                                    17,596 $
+                                                                                             '·"'
+                                                                                          17,888
+                                                                                                          Average Usage                        1,011
+                                                                                                          Monthly Customers
+                    Cumulative Change                                 0.0%                   1.6%
+                                                                                                          Current Average Bill                162.94
+                                                                                                          Year 1 Average Bill                 162.92
+                                                                                                          Average % Change                      0.0%
+                                                                                                          Monthly Change
+
+
+
+
+        Lighting Rate Design
+                                           Prlvat~Arral/glltlr19(FJ
+                                                                                                               Round to nearest
+
+                                           RilH
+                                           Monlhly FKili11~ O...r1•:
+                                            70WHPS
+                                            lSOWHPS
+                                                                                              5.30 S
+                                                                                            ll.25 S
+                                                                                            18.60    S
+                                                                                                                                    '"
+                                                                                                                                   l"-15
+
+                                            400WHPS                                         2U5      S          36.75              37.JS
+                                            t75WMH                                          11.65    S          16.90 S            17,15
+                                            2SOWMH                                          20.15    S          Z'-.95 S           25.35
+                                            400WMH                                          H.65     S          39.20    S         39.85
+                                            SOOWQ(lrandfat~rfld)                            1280     S          '-0.65   $         "130
+                                            175WMV(1rindfathe<ed)                           12.00    S          l"-85    S         15.10
+                                            400W MVhlrandfatti.rfld)                        27.30    S          H.80     $
+                                            1000W MV(1randfit~rfld)                         65.50    $          81.IS    $         82"S
+                                            60WIN(gruldfatti.red)                            4.00    S            •. 95 S           s.os
+                                            75WIN{gmldfat!wrfld)                             '-.95   S            6.15$             6.ZS
+                                            lSOWIN.(irindfitli.rtdl                         10.75    S          13.30 S            13.SO
+                                            lEOSmirtUght                                    78.00 S                      s         98.20
+                                           Er1«gyCNrg•:
+                                            A.IICncrn
+                                           Power Cos! Adj~tm..-.t:
+                                            AIIEnerp                                S     0.0S600 I$        0.01000      S     001000J
+                                                             Revenuefr...,Rue       S      35,814 S          3S,839      S        36,354
+                                                         cNrcefromPrevious                                                          1.4"
+
+                                                                                                                                                                         "
+
+
+
+
+                                                                                                                                                                              10/11
+                        Lighting Rate Design
+       (Contract              Rate Formula)
+
+                           Street Lighting
+                            Contract Rate
+
+
+                            Rates                                   Current         Year 1          Year 2
+                            Energy Charge:
+                             All Energy                         $     0.15469   $    0.15469    $    0.15469
+                            Power Cost Adjustment:
+                             All Energy                         $               $               $
+                                              Revenue from Rate $     135,419   $    135,419    $    135,419
+                                            Change from Previous                         0.0%            0.0%
+
+
+
+
+                                                                                                                                       19
+
+
+
+
+Slide presented by the General Manager
+
+
+
+                              Rate Change Schedule - updates from July 12
+
+     Date                                              Action
+
+     August1, 2022 - Step 0                            DONE-Implemented 1.S cent increase to PPA; PPAis$ 0.056. Forecast
+                                                       $635K increase in net income
+
+     Jan 1, 2023- Step 1                               Intent is to be revenue neutral in first two years; begin residential base
+                                                       rate increase to $18.50 on 2-year timetable: increase residential base
+                                                       rate to $11.25 from $4.25; New kwh rate calculated by reducing PPA
+                                                       from $0.056 to $0.01
+     April 1, 2023 - Step 2                            If technically feasible - implement demand and/or TOU rates
+
+
+     Jan 1, 2024 - Step 3                              Implement second year increase of residential base rate to $18.50 from
+                                                       $11.25
+
+
+
+
+                                                                                                                                    11/11
+

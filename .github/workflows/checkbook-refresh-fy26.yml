@@ -1,0 +1,104 @@
+name: Refresh checkbook CSV (FY26 archive)
+
+# Daily refresh of the FY26 checkbook archive until the town closes its
+# FY26 books (expected fall 2026, at which point delete this workflow).
+# Kept separate from checkbook-refresh.yml so a stuck FY26 PR never
+# blocks the live current-year refresh.
+
+on:
+  schedule:
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: checkbook-refresh-fy26
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INGEST_PAT }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Skip if an open FY26 auto PR already exists
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+        run: |
+          set -euo pipefail
+          gh label create auto-checkbook-fy26 --color d62728 \
+            --description "Daily auto-refresh of the FY26 checkbook archive" 2>/dev/null || true
+          open_count=$(gh pr list --label auto-checkbook-fy26 --state open --json number --jq 'length')
+          if [ "$open_count" -gt 0 ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch + redact FY26 export, rebuild artifacts
+        if: steps.gate.outputs.skip == 'false'
+        run: |
+          set -euo pipefail
+          python3 scripts/fetch_checkbook_export.py --year 2026
+          python3 scripts/build_checkbook_performance.py --year 2026 --out data/checkbook_performance_FY26.json
+          python3 scripts/build_budget_actual.py --year 2026
+          python3 scripts/crawl_budget_drill.py --year 2026
+          # data/checkbook_redaction_disclosure.json is a single shared file
+          # that the live FY27 daily job also rewrites. Leave it to that job
+          # so the two workflows don't flip-flop it into daily no-op PRs.
+          git checkout -- data/checkbook_redaction_disclosure.json
+
+      - name: Prune superseded FY26 dated CSVs
+        if: steps.gate.outputs.skip == 'false'
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json
+          from pathlib import Path
+          dash = json.loads(Path('_data/checkbook_fy26.json').read_text())
+          keep = Path('data') / dash['csv_filename']
+          for old in Path('data').glob('checkbook_FY26_*.csv'):
+              if old != keep:
+                  old.unlink(); print(f'removed {old}')
+          PY
+
+      - name: Detect changes
+        if: steps.gate.outputs.skip == 'false'
+        id: changes
+        run: |
+          set -euo pipefail
+          git add -A data/ _data/
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit, push, open PR, auto-merge
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+        run: |
+          set -euo pipefail
+          as_of=$(python3 -c "import json;print(json.load(open('_data/checkbook_fy26.json'))['as_of'])")
+          branch="bot/checkbook-fy26-$(date -u +%Y-%m-%d-%H%M)"
+          git config user.name "marblehead-bot"
+          git config user.email "noreply@marbleheaddata.org"
+          git checkout -b "$branch"
+          git commit -m "Refresh FY26 checkbook archive through ${as_of}"
+          git push -u origin "$branch"
+          pr_url=$(gh pr create \
+            --title "Refresh FY26 checkbook archive through ${as_of}" \
+            --body "Daily FY26 archive refresh. Auto-merged; same redaction + required checks as the live job. Delete this workflow once FY26 books close." \
+            --label auto-checkbook-fy26 --base main --head "$branch")
+          gh pr merge "$pr_url" --auto --squash --delete-branch

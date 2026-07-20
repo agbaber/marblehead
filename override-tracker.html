@@ -1,0 +1,448 @@
+---
+title: "Override tracker"
+og_title: "Marblehead override tracker: what the town committed to"
+og_description: "Twenty-eight named commitments tied to the $15M operating override and $2.3M trash override approved June 9, 2026. Updated quarterly. Every line traces to a primary source."
+og_url: https://marbleheaddata.org/override-tracker.html
+scripts: [citations]
+---
+<style>
+  /* === Scrolling stops, homepage-style === */
+  .tk-hero,
+  .tk-stop {
+    box-sizing: border-box;
+    padding: 64px 0 56px;
+    position: relative;
+  }
+  .tk-hero { padding-top: 48px; padding-bottom: 32px; }
+  @media (max-width: 600px) {
+    .tk-hero,
+    .tk-stop { padding: 44px 0 36px; }
+  }
+
+  .tk-stop--tinted {
+    background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
+    border-top: 1px solid color-mix(in srgb, var(--c-navy) 10%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--c-navy) 10%, transparent);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+  }
+
+  /* Eyebrow */
+  .tk-eye {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 22px;
+  }
+  .tk-eye .dot { color: var(--c-buoy); margin: 0 6px; }
+
+  /* Hero */
+  .tk-hero h1 {
+    font-size: clamp(40px, 7vw, 84px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+    margin: 0 0 20px;
+    max-width: 820px;
+  }
+  .tk-hero-sub {
+    font-size: clamp(17px, 2.2vw, 22px);
+    line-height: 1.45;
+    color: var(--text-muted);
+    margin: 0 0 28px;
+    max-width: 720px;
+    font-weight: 500;
+  }
+  .tk-hero-sub strong { color: var(--text); font-weight: 700; }
+
+  /* Section heading */
+  .tk-section-h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.1;
+    letter-spacing: -0.018em;
+    font-weight: 800;
+    margin: 0 0 14px;
+    max-width: 760px;
+  }
+  .tk-section-lead {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0 0 8px;
+    max-width: 680px;
+  }
+
+  /* Status legend */
+  .tk-legend {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    margin: 20px 0 6px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .tk-legend > span { display: inline-flex; align-items: center; gap: 6px; }
+
+  /* Status pills — neutral chrome only */
+  .tk-status {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .tk-status[data-s="pending"]  { /* default neutral */ }
+  .tk-status[data-s="phase-in"] {
+    border-color: color-mix(in srgb, var(--c-navy) 35%, transparent);
+    color: var(--c-navy);
+  }
+  .tk-status[data-s="met"] {
+    border-color: color-mix(in srgb, var(--c-navy) 50%, transparent);
+    color: var(--c-navy);
+    background: color-mix(in srgb, var(--c-navy) 6%, var(--surface));
+  }
+  .tk-status[data-s="standing"] {
+    border-color: color-mix(in srgb, var(--text-subtle) 40%, transparent);
+    color: var(--text-subtle);
+  }
+  .tk-status[data-s="dropped"] {
+    border-color: color-mix(in srgb, var(--text-subtle) 50%, transparent);
+    color: var(--text-subtle);
+    text-decoration: line-through;
+  }
+
+  /* Card grid */
+  .tk-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 28px;
+  }
+  @media (min-width: 720px) {
+    .tk-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .tk-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    background: var(--surface);
+  }
+  .tk-card-h {
+    display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap;
+    margin: 0 0 8px;
+  }
+  .tk-card-num {
+    font-variant-numeric: tabular-nums;
+    color: var(--text-subtle);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+  }
+  .tk-card-title {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 700;
+    flex: 1 1 auto;
+  }
+  .tk-card-body  {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 4px 0 0;
+  }
+  .tk-card-src {
+    font-size: 12px;
+    color: var(--text-subtle);
+    margin: 10px 0 0;
+  }
+  .tk-card-src a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--border);
+  }
+  .tk-card-src a:hover { text-decoration-color: var(--c-buoy); }
+
+  /* Unfunded list */
+  .tk-unlist {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+    display: grid;
+    gap: 10px;
+  }
+  @media (min-width: 720px) {
+    .tk-unlist { grid-template-columns: 1fr 1fr; }
+  }
+  .tk-unlist li {
+    padding: 12px 14px;
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    background: transparent;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  .tk-unlist li strong { color: var(--text); font-weight: 700; }
+
+  /* Quarterly placeholder */
+  .tk-placeholder {
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: 28px;
+    margin-top: 22px;
+    background: transparent;
+    text-align: center;
+    color: var(--text-subtle);
+    font-size: 15px;
+  }
+  .tk-placeholder strong { color: var(--text); font-weight: 700; }
+
+  /* Changelog (renders once site.data.override_tracker.changelog has entries) */
+  .tk-changelog {
+    list-style: none;
+    padding: 0;
+    margin: 22px 0 0;
+    display: grid;
+    gap: 10px;
+  }
+  .tk-changelog li {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    font-size: 14px;
+  }
+  .tk-changelog-date {
+    font-variant-numeric: tabular-nums;
+    color: var(--text-subtle);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .tk-changelog-item { font-weight: 700; }
+  .tk-changelog-arrow { color: var(--text-subtle); }
+  .tk-changelog-note { color: var(--text-muted); flex-basis: 100%; }
+
+  /* Close cards */
+  .tk-close-cards {
+    display: grid; gap: 14px;
+    grid-template-columns: 1fr;
+    margin-top: 26px;
+  }
+  @media (min-width: 720px) {
+    .tk-close-cards { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .tk-close-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    background: var(--surface);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .tk-close-card:hover { border-color: var(--c-buoy); }
+  .tk-close-card h3 { margin: 6px 0 8px; font-size: 17px; }
+  .tk-close-card-eye {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0;
+  }
+  .tk-close-card p:not(.tk-close-card-eye) {
+    font-size: 14px; line-height: 1.5;
+    color: var(--text-muted); margin: 0;
+  }
+</style>
+
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<section class="tk-hero">
+  <p class="tk-eye">Override tracker <span class="dot">&bull;</span> First publish, June 2026</p>
+  <h1>What Marblehead committed to when the override passed.</h1>
+  <p class="tk-hero-sub">Voters approved a <strong>$15 million operating override</strong> 4,278&ndash;3,594 on June 9, 2026, and a separate <strong>$2.3 million trash override</strong> at 67.4%. The boards made a list of specific promises on the way to that vote. This page tracks them.</p>
+
+  <p class="tk-section-lead" style="font-size:15px;">Every line cites a primary source. Status updates each quarter, after the joint Select Board / School Committee / Finance Committee review.</p>
+
+  <div class="tk-legend" aria-label="Status legend">
+    <span><span class="tk-status" data-s="met">Met</span> Action complete</span>
+    <span><span class="tk-status" data-s="phase-in">Phase-in</span> Multi-year rollout underway</span>
+    <span><span class="tk-status" data-s="pending">Pending</span> Promised but not yet started</span>
+    <span><span class="tk-status" data-s="standing">Standing</span> Kept unless broken; runs through FY2030</span>
+    <span><span class="tk-status" data-s="dropped">Dropped</span> Pulled off the list</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION A — DOLLAR ALLOCATIONS -->
+<!-- ============================================================ -->
+<section class="tk-stop">
+  <p class="tk-eye">Section A <span class="dot">&bull;</span> Dollar allocations</p>
+  <h2 class="tk-section-h2">What the money is for.</h2>
+  <p class="tk-section-lead">The override is phased in over three years and split among three buckets. The Select Board acknowledged on June 10 that roughly $7.7 million of the $15 million is for restorations the public can readily identify, and the remaining $9.6 million still needs clearer articulation.</p>
+
+  {% assign cards = site.data.override_tracker.items | where: "section", "allocations" %}
+  <div class="tk-grid">
+    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION B — MOU -->
+<!-- ============================================================ -->
+<section class="tk-stop tk-stop--tinted">
+  <p class="tk-eye">Section B <span class="dot">&bull;</span> The Memorandum of Understanding</p>
+  <h2 class="tk-section-h2">Five promises signed by the Select Board, School Committee, and Finance Committee.</h2>
+  <p class="tk-section-lead">From the final page of the April 15 override presentation. Each item runs through at least FY2030. Whether the numbers hold depends heavily on the union contracts that reset in 2027 and 2028; <a href="/labor-contracts.html">which contracts expire when</a> tracks that calendar.</p>
+
+  {% assign cards = site.data.override_tracker.items | where: "section", "mou" %}
+  <div class="tk-grid">
+    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION C — MUNICIPAL RESTORATIONS -->
+<!-- ============================================================ -->
+<section class="tk-stop">
+  <p class="tk-eye">Section C <span class="dot">&bull;</span> Municipal restorations and additions</p>
+  <h2 class="tk-section-h2">28 staff positions and named program commitments.</h2>
+  <p class="tk-section-lead">Tier 3 covers 15 restored positions (Tier 1), 7 new positions (Tier 2), and 6 additional new positions (Tier 3 add-ons) &mdash; 28 FTEs total. Specific named items below.</p>
+
+  {% assign cards = site.data.override_tracker.items | where: "section", "municipal" %}
+  <div class="tk-grid">
+    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION D — SCHOOL COMMITMENTS -->
+<!-- ============================================================ -->
+<section class="tk-stop tk-stop--tinted">
+  <p class="tk-eye">Section D <span class="dot">&bull;</span> School Committee proclamation</p>
+  <h2 class="tk-section-h2">Five school-side commitments from the May 21 vote.</h2>
+  <p class="tk-section-lead">The School Committee voted 4&ndash;0 on May 21, 2026 to officially support Tier 3. The proclamation laid out what each tier funds. Voters chose Tier 3, locking in all of the items below.</p>
+
+  {% assign cards = site.data.override_tracker.items | where: "section", "schools" %}
+  <div class="tk-grid">
+    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION E — PROCESS COMMITMENTS -->
+<!-- ============================================================ -->
+<section class="tk-stop">
+  <p class="tk-eye">Section E <span class="dot">&bull;</span> Process and accountability</p>
+  <h2 class="tk-section-h2">Six process commitments made on June 10, after the vote.</h2>
+  <p class="tk-section-lead">At its first meeting following the ballot, the Select Board named six items that govern how it intends to handle the override over time.</p>
+
+  {% assign cards = site.data.override_tracker.items | where: "section", "process" %}
+  <div class="tk-grid">
+    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION F — NOT YET COMMITTED -->
+<!-- ============================================================ -->
+<section class="tk-stop tk-stop--tinted">
+  <p class="tk-eye">Section F <span class="dot">&bull;</span> Not yet committed</p>
+  <h2 class="tk-section-h2">Cost-side items the boards have not put on the record.</h2>
+  <p class="tk-section-lead">These ideas appear on <a href="/what-can-we-do.html">what can we do</a>. None has been promised. They are listed here so the question &mdash; when, if ever? &mdash; has a permanent home.</p>
+
+  <ul class="tk-unlist">
+    <li><strong>Group Medicare Advantage migration</strong> for retirees (item 06)</li>
+    <li><strong>Energy Savings Performance Contract</strong> on schools and town buildings (item 07)</li>
+    <li><strong>Town &amp; school shared back office</strong> (item 08)</li>
+    <li><strong>Inter-municipal agreement</strong> with a neighbor town (item 09)</li>
+    <li><strong>Permitting modernization</strong> (item 10)</li>
+    <li><strong>Active-employee premium-share renegotiation</strong> (item 11)</li>
+    <li><strong>Spousal surcharge or carve-out</strong> on the health plan (item 12)</li>
+    <li><strong>Overtime audit</strong> in police, fire, and DPW (item 13)</li>
+    <li><strong>Health-plan opt-out buyout</strong> (item 15)</li>
+    <li><strong>Room and short-term rental excise</strong> adoption &mdash; earliest ATM 2027 (item 01)</li>
+    <li><strong>STR Community Impact Fee</strong> &mdash; earliest ATM 2027 (item 02)</li>
+    <li><strong>Mooring waitlist transfer fee</strong> (item 05)</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<!-- QUARTERLY CHECKPOINT -->
+<!-- ============================================================ -->
+<section class="tk-stop">
+  <p class="tk-eye">Quarterly checkpoint</p>
+  <h2 class="tk-section-h2">First check-in: early October 2026.</h2>
+  <p class="tk-section-lead">Under the MOU and the June 10 Select Board commitment, the first joint financial review with the School Committee and Finance Committee is scheduled for the first weeks of October, after the close of Q1. This section updates after each quarterly meeting with what changed on the list above. The <a href="/subscribe/">Monday email digest</a> covers those meetings when they happen.</p>
+
+  {% assign log = site.data.override_tracker.changelog %}
+  {% if log.size > 0 %}
+  <ul class="tk-changelog">
+    {% assign log_sorted = log | sort: "date" | reverse %}
+    {% for entry in log_sorted %}
+    <li>
+      <span class="tk-changelog-date">{{ entry.date }}</span>
+      <span class="tk-changelog-item">Item {{ entry.item }}</span>
+      <span class="tk-status" data-s="{{ entry.from }}">{{ entry.from | capitalize }}</span>
+      <span class="tk-changelog-arrow">&rarr;</span>
+      <span class="tk-status" data-s="{{ entry.to }}">{{ entry.to | capitalize }}</span>
+      <span class="tk-changelog-note">{{ entry.note_html }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div class="tk-placeholder">
+    <p style="margin:0;"><strong>Q1 FY27 review &mdash; awaiting October 2026</strong></p>
+    <p style="margin:8px 0 0;">Status changes, new commitments, and items pulled off the list will be logged here after the meeting.</p>
+  </div>
+  {% endif %}
+</section>
+
+<!-- ============================================================ -->
+<!-- CLOSE -->
+<!-- ============================================================ -->
+<section class="tk-stop tk-stop--tinted">
+  <p class="tk-eye">Companion pages and corrections</p>
+  <h2 class="tk-section-h2">Help us tighten this.</h2>
+  <p class="tk-section-lead">If a primary source contradicts a row, if a commitment is missing, or if you've watched a meeting where the boards moved an item on this list, please write.</p>
+
+  <div class="tk-close-cards">
+    <a class="tk-close-card" href="/what-can-we-do.html">
+      <p class="tk-close-card-eye">Reference</p>
+      <h3>What can we do?</h3>
+      <p>The eighteen-idea working list this tracker reads against, including the cost-side items not yet promised.</p>
+    </a>
+    <a class="tk-close-card" href="/meetings/">
+      <p class="tk-close-card-eye">Watch the boards</p>
+      <h3>Recent meetings &amp; transcripts</h3>
+      <p>Select Board, School Committee, and Finance Committee meetings with AI summaries and primary-source transcripts.</p>
+    </a>
+    <a class="tk-close-card" href="mailto:agbaber@gmail.com?subject=override-tracker.html correction">
+      <p class="tk-close-card-eye">Send a correction</p>
+      <h3>Email the maintainer</h3>
+      <p>Send the primary source. Updates are logged in the quarterly checkpoint section above.</p>
+    </a>
+  </div>
+</section>
+
+<details class="notes">
+  <summary>Sources and methodology</summary>
+  <p><strong>Where the commitments come from.</strong> Sections A&ndash;C draw on the April 15, 2026 override presentation (dollar allocations, MOU, tier tables); Section D on the School Committee's May 21, 2026 proclamation; Section E on the June 10, 2026 Select Board meeting, cited to the transcript with approximate timestamps. Each card footnotes its source.</p>
+  <p><strong>How statuses are maintained.</strong> The list lives in <code>_data/override_tracker.yml</code> in the site's public repository. A status changes only when a primary source documents the change; every change appends a dated entry that renders in the quarterly checkpoint section, so the page's own history is auditable.</p>
+</details>

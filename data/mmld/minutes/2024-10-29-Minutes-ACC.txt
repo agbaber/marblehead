@@ -1,0 +1,325 @@
+Light Commission October 29, 2024 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           January 7, 2025
+Re:             Light Commission Public Meeting, October 29, 2024
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:06 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link (sound track starts at 10 mn 20 sec).
+
+Participated in meeting:
+     Commissioners:          Commissioners Hull, Wolf and Yarmoff participated in person.
+                             Commissioner Smith participated by phone until he arrived at 4:50, time from
+                             which he participated in person.
+                             Commissioner Frechette was excused.
+      Light Department:      General Manager, J. Kowalik; Finance Manager, M. Barrett.
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Wolf.
+
+Request to participate in a Town Charter meeting
+The Light Commission and the General Manager have been invited to participate in a meeting with the
+Town Charter Commission. This meeting will take place on November 14. It will be an opportunity to
+share with other town departments the activities of the Light Department, which is run independently
+from the Select Board and the Town Manager’s purview, as per the MGL Chapter 164.
+
+Outstanding items from previous meetings
+EV Charger, JuiceBox. The company that made the JuiceBox EV Chargers, Enel X Way, has suspended its
+operations in North America and is no longer supporting the app and the chargers can’t be controlled as
+they were before. There are 27 of the 123 participants in the MMLD program that have these EV
+chargers, all will complete their participation in the 3-year compulsory program by May 2025. The future
+for these chargers depends on the results of the company auction which will happen later this year.
+MMWEC is communicating with the impacted customers, and as possible will work with them to use the
+telematics programming of the car to have their continued participation in the program.
+
+General Manager Updates
+Q3 Goal review. The General Manager sent to the board a status update / achievements regarding the
+yearly goals. This document can also be found in the shared files on Dropbox.
+
+Offshore Wind Opportunity update. While this will also be discussed in Executive Session, the General
+Manager wanted to make the following public statements about the Avangrid wind farm being
+developed: out of the 791 MW of the project, MMWEC has partnered with Avangrid to take up to
+50MW of the project. Pricing is not known yet. It will be disclosed confidentially for Municipal Light Plant
+to evaluate their participation.
+                                                                                                        1/7
+Ludlow Solar Farm, Master Sgt Cotton Solar PV Project: This large solar array built by MMWEC has
+started producing earlier in the year. Results are presented for the first 7 months of operations on page
+5, as are the current estimates for LCOE. The project is performing as designed, and is expected to
+produce nearly 14,000 MWh over the course of a year. LCOE is being calculated and will be positively
+impacted (will be lower!) if a $2.5M IRA tax credit is received, as expected. The LCOE will be reported
+when available, it will be a useful point of comparison for possible future Off-Shore Wind contracts.
+
+Village 13 Update. The General Manager gave an update on the schedule of the project. On the slide
+page 6, the dates in black are actual, in red is the current plan. The switchgear delivery time has slipped
+to the end of 2024 at the earliest, while the civil engineering work for the base of the switchgear has
+also been delayed. Whether the construction can take place during the winter will depend on the
+weather. What is concerning is that the bidding process has been delayed, the production of the bidding
+documents has slipped. The result of these delays is that the new substation will not be operational this
+summer, but probably in the fall at the earliest, if one believes this timeline which is based on shaky
+assumptions. This means we will have to go through the hot summer months with the existing
+equipment.
+At this stage, there are two important moving parts in the project:
+- One is the Civil Engineering work: because the bidding documents are not ready, the bidding is going to
+be late and the civil engineering work is going to be delayed.
+- A second moving part is the availability of the switch gear, which is in the hands of the manufacturer. It
+is now possible, however, that the civil engineering work will become the rate limiting aspect of the
+project. This would mean the switchgear has to be warehoused, possibly at the manufacturer.
+
+The board requested an updated Gantt Chart for this project.
+
+Rate Review Working group update.
+MMLD’s IT Manager, Chris Dunbar, has been leading the process of setting up a new AWS database and
+extracting the data from NexGrid. We are confident that we are getting good data reads from the
+meters, that the data are transferred to the Northern data customer information system which
+translates that to bills and addresses. But we do not want to interfere with that production system
+which is working well. Hence the new database, a development environment that has similar data and
+will allow us to conduct analyses to look at historical data and model different scenarios. See slides p 6-
+7. We now need to decide the questions we want to see answered. The ToU subcommittee will further
+discuss these issues off-line, at its meeting in two weeks. Chris is working with various consultants and
+vendors to make progress on this subject. It should be noted that this database will help us get answers
+useful for other work besides Variable Rates decisions, including better understanding of the Clean Heat
+Standards impact for MMLD.
+
+Open Positions Recruiting. The search for the Engineering Project Manager position has been reopened,
+with different parameters to draw a wider net. MMLD has closed the window for the Energy Efficiency
+Marketing Program Manager position after receiving 115 resumes. The town’s HR director has helped
+screen through the resumes and a first pass screening yielded about 30 candidates. Next steps are
+scheduling interviews. The goal is to fill the position before the end of the year.
+
+
+Executive Session
+During the Light Commission Meeting of October 29, 2024, Chair Lisa Wolf proposed to vote on a
+motion to meet in Executive Session to discuss confidential, competitively-sensitive or other proprietary
+                                                                                                      2/7
+information when such disclosure will adversely affect our ability to conduct business, and to consider
+the purchase, exchange, lease or value of real property if open meeting may have a detrimental effect
+on the negotiating position of the public body, with the intent not to return to open session.
+
+Motion was moved by Commissioner Yarmoff and seconded by Commissioner Smith.
+Votes: Yes; Mike Hull: Yes; Adam Smith, Yes; Lisa Wolf: Yes; Jean-Jacques Yarmoff: Yes.
+
+Executive Session started at 5:27 pm.
+
+The Executive Session concluded at 6:26 pm at which point a motion to adjourn was proposed,
+seconded and, after a roll call of the commissioners voting unanimously in favor, adopted.
+
+                                                   ----****----
+
+
+            Documents presented during the October 29, 2024 Light Commission Meeting
+
+
+
+                              Agenda
+
+                4:00 Call to Order, Land Acknowledgement, Minutes, and Public
+                Comments
+                4:10 Outstanding items and requests from last meeting
+                      - Communications to NextZero Scheduled Charging Customers
+                         with Juicebox EV chargers
+                4:30 General Manager updates
+                5:30 Move to Executive Session. Not to return to Open Session
+                Adjourn
+
+
+
+
+                               Status of JuiceBox EV chargers
+                              in our NextZero Scheduled EV charging program
+
+                • MMLD total participating customers: 123
+                   - ChargePoint Flex chargers: 96
+                   - Enel X Way JuiceBox chargers: 27
+                      • 4 customers (2020-21) have completed their 3-year program participation term
+                      • 23 customers will complete their term within 6 months: 12/2024-5/2025
+                   - Oct 11, 2024 Enel X announces decision to shut down their US retail
+                     business that includes (not a bankruptcy announcement)
+                   - Enel X states JuiceBox charger h/w and s/w will work for "an extended
+                     period" while a new buyer for the business is sought; auction is 10/29
+
+
+
+
+                                                                                                       3/7
+                 Status of JuiceBox EV chargers
+                in our NextZero Scheduled EV charging program
+
+• MMWEC and Virtual Peaker have determined that the Juicebox
+  chargers can be interfaced & managed via direct EV telematics
+  interface (to EVsthat support telematics).
+• MMWEC is directly contacting MMLD customers to determine if
+  their EV will support telematics
+
+
+
+
+               General Manager updates
+
+• Q3 Goal review
+• Offshore wind opportunity           update
+• Sgt Cotton Solar PV array in Ludlow update
+• Village 13 - major milestones update
+• Rate Review Working Group update
+• Open position recruiting update
+
+
+
+
+                Offshore Wind Opportunity
+
+• Avangrid Renewables, LLC was selected by the Commonwealth of Massachusetts
+
+  to develop a 791-megawatt offshore wind project, as part of the multi-state New
+
+  England Wind 1 solicitation.
+
+• Massachusetts Municipal Wholesale Electric Company ("MMWEC") partnered with
+  Avangrid for MMWEC to take up to 50 MW of the project. Pricing information will be
+  confidentially disclosed to MLDs so that we can evaluate participating.
+
+  Until the Comm. of Mass and Avangrid publicly disclose pricing, MLDs must treat the
+  pricing data as confidential.
+
+
+
+
+                                                                                        4/7
+               Master Sgt Cotton Solar PV Project (2020A)
+               First Year Operational Update
+
+•   March:          1,033 MWH
+• April:           1,116 MWH
+•   May:           1,363 MWH
+• June:             1,453 MWH
+• July:            1,429 MWH
+• August:           1,238 MWH
+• September:         1,017 MWH
+• Total 7 Month=       8,650 MWH            Yearly Forecast 13,800 MWH
+
+
+
+              Master Sgt Cotton Array Operational Update
+
+
+•   No significant issues or damage in first year of operation
+• One-year service inspection found six panels out of 23,000
+  needed replacing because of defects or damage
+•   (I) production meter currently awaiting replacement (local
+    only; does not affect settlement)
+•   Fall maintenance completed late Sept./early Oct. 2024
+• Array is slated to operate fully till next spring when inverter
+  maintenance is planned
+
+
+
+               Master Sgt Cotton Array - Financial Update
+
+• Power costs ...
+    - Operating at $0.12/kWh 2024-26, includes set-asides for spare parts
+      and operating reserves
+    - Drop in 2027 to$ 0.10/kWh after reserves are funded
+    - Early Nov 2024 project filing for $2.5 million in IRA investment credits
+    - Ultimately settle at$ 0.08 - $0.09/kWh net, with IRA credits applied
+    - These costs assume retention/retirement of the RECs
+
+
+
+
+                                                                                 5/7
+                       Village 13 updated major milestones
+
+                                                                                                 Plan/Actual as of Oct 17
+ Village 13 Major Milestones - Oct 24, 2023                                  Oct 24, 2023 plan                      2024
+   - Construction Contract out to bid                                             March 2024                   Nov 2024
+   - Site construction starts May 2024                                              May 2024                    Dec 2024
+   - Transformers delivered to temp pads May/June 2024                         May/June 2024                   June 2024
+   - Switchgeardelivered August/September2024                                  Aug/Sept 2024                  Dec 2024*
+   - 23 kV moved to the new 23 kV Switchgear in October 2024                         Oct 2024             March/April 25
+
+   - Site work on hold till March 2025 due to winter (optional, depends on    Dec 2024-March              Dec 24 through
+ weather)                                                                               2025             September 2025
+
+
+   - 13 kV feeders cut over to new 13 kV Switchgear in May/June 2025           May/June 2025                   Sept2025
+
+
+ • subject to change
+
+
+
+
+                       General Manager updates
+
+• Q3 Goal review
+• Offshore wind opportunity                            update
+• Sgt Cotton Solar PV array in Ludlow update
+• V 1 lage 13 - maJor m··estones update
+• Rate Review Working Group update
+• Open position recruiting update
+
+
+
+
+                       Rate Review Working Group
+
+• Created a SQLServer Database on Amazon Web Service for reporting
+  and data analytics.
+• Developed a mechanism - MS Data Integration service - for transferring
+  data into AWS SQLServer reporting database. Currently have workflows
+  for:
+   • Meter level Peak Monthly Demand
+   • Rates
+   • Meter Level hourly Demand by month - planned
+
+
+
+
+                                                                                                                            6/7
+               Rate Review Working Group
+
+• Developed draft scope of work with Kilo for development of a dashboard to
+  understand potential rate schedules
+   • Market prices module (NEMASSBOSTnode): present historical market energy
+     and transmission costs across selected years, months, days, and holidays.
+   • Rate design module (TOU and demand charges): quantify the impact of various
+     rate designs - such as TOU, demand charges, and TOU + demand charges - to
+     Marblehead and individual residential consumers.
+   • Residential customer segmentation module: grouping similar residential
+     customers based on usage behavior to discover various customer segments
+     within Marblehead's grid.
+
+
+
+
+              Rate Review Working Group
+
+• Met with Nexgrid to understand what data is available via EcoOne
+• Submitted formal request with Nextgrid for hourly meter data (historic
+  and ongoing)
+• Met with Jackie Lemmerhirt to discuss data structures, meter data
+  management systems, possible approaches.
+• Investigated options for upgrades to AMI: Met with Nova Power, PLM,
+  Infrared and Siemens.
+
+
+
+              Open Position Recruiting
+
+• Engineering Project Manager- search is reopened
+• Energy Efficiency Marketing Program Manager
+   -Application   window closed in mid Oct
+   - 115 resumes received
+   - ~30 candidates first pass favorable- contacting this week to confirm
+     interest and schedule interviews
+
+
+                                  ----****----
+
+
+
+
+                                                                                   7/7
+

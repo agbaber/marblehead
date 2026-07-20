@@ -1,0 +1,767 @@
+Light Commission September 5, 2023 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           October 20, 2023
+Re:             Commission Meeting September 5, 2023: Public Session
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:02 pm. The meeting was held in
+person and with remote internet access, both available to public participation. A recording of the
+meeting is made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:      Frechette, Smith, Wolf and Yarmoff participated in person;
+                            Commissioner Hull was excused.
+        Light Department:   General Manager, J. Kowalik; Financial Manager, Matt Barrett; Distribution
+                            Manager, Greg Chane and Manager of Technical Operations, C. Coleman.
+        Invited from MMWEC: Ron DeCurzio, CEO,Justin Connell, Director Energy Markets,
+                            Zoe Eckert, Sustainable Energy Policy & Program Senior Manager.
+
+
+Marblehead Land Acknowledgment declaration was read prior to the start of business.
+
+
+Approval of Minutes of previous meetings.
+Vote #2023-35 A motion to approve the minutes of the three Light Commission meetings of:
+               December 19, 2022 Executive session; July 26, 2023, Public Session; and July 26, 2023
+               Executive session was moved by Commissioner Frechette and seconded by
+               Commissioner Yarmoff. Unanimous.
+
+Comments from the Public
+Jim Zisson, 2 Mound Road, brought to the attention of the board that Danvers had implemented solar
+projects on some of their schools, with possible learnings for Marblehead.
+
+Outstanding items from previous meetings
+Residential Batteries
+Commissioner Frechette proposed to rescind motion #2022-29 and moved to replace it with the following
+text: “The Board recommends that to promote residential battery storage, MMLD allow connection of UL
+Certified batteries installed following the requirements of the appropriate codes (Massachusetts building
+and fire codes as they may apply, and specific Marblehead requirements, if any). Batteries enrolled in the
+Connected Homes Program should receive a financial incentive as recommended by MMWEC for its
+members to implement.” The motion was seconded by Commissioner Yarmoff.
+
+Discussion: As background, on August 30, 2022 the Light Commission approved motion #2022-29 which
+reads: “To promote residential battery storage, MMLD will discontinue its practice of denying
+
+                                                                                                    1/14
+interconnection permits, and allow batteries to connect, provided customers participate in a demand-
+response program allowing MMLD or its agent to control dispatch to and charging from the grid.”
+A question was previously raised about whether Tesla would be able to bid retail customers aggregated
+demand response into the forward capacity market. Commissioner Wolf was able to resolve that
+question and the answer to that interrogation is “No”, Tesla cannot aggregate Marblehead batteries,
+because of ISO-NE rules concerning Muni territories. Hopefully, Tesla will participate in the future to
+Connected Homes program. It is the battery of choice by consumers.
+Commissioner Yarmoff remarked that the MMLD interconnection agreement can (and should) state
+language that reinforces that residents that want to participate in an aggregation program must be part
+of the Connected Homes program. This would bring an additional level of legal protection to MMLD in
+asserting its MGL Chapter 164 privilege. A discussion ensued on the likelihood that a third party would
+violate the ISO-NE rules and the Massachusetts law and the possibility to detect such violations in a
+hypothetical situation. General Manager Joe Kowalik agreed that such a clause in the interconnection
+agreement (preventing a resident from participating in an aggregation program not approved by MMLD
+in view of Chap. 164 exclusivity clauses) would be a good protection to have. Justin Connell of MMWEC
+added that this clause would prevent the monetization by any potential aggregator not authorized by
+MMLD, and take away any potential incentives for residents to participate.
+The General Manager pointed out that the proposed motion does two things: authorize batteries on the
+one hand, recommend incentives for the batteries participating in an aggregation program on the other.
+Shouldn’t these two aspects be dissociated and the motion amended? He reviewed the status of MLPs
+participation in MMWEC’s incentives programs, shown on the first slide page 7. The level of participation
+by MLPs and by residents is low, the program cannot be characterized as a success to date, why do we
+want to join? Administration of the program for potentially only very few customers is a burden on
+MMLD. Commissioner Smith remarked that these administrative costs are already incurred as we are
+providing residents with a $30 monthly incentive. We are also providing incentives to residents
+participating in the heat pump program. There would be only very limited additional administrative
+burden to add the upfront incentive. With this motion, stating “… should receive a financial incentive …”,
+the Commission recommends that as a matter of policy MMLD additionally provide rebates to battery
+owners, to make the program a success.
+
+Vote #2023-36 Motion was made by Commissioner Yarmoff and seconded by Commissioner Smith to
+              vote and approve the following text: “The Board recommends that to promote
+              residential battery storage, MMLD allow connection of UL Certified batteries installed
+              following the requirements of the appropriate codes (Massachusetts building and fire
+              codes as they may apply, and specific Marblehead requirements, if any). Batteries
+              enrolled in the Connected Homes Program should receive a financial incentive as
+              recommended by MMWEC for its members to implement.” Unanimous
+
+Battery Program recommended incentives: This agenda item was discussed with the previous one.
+
+Summary of EV Charging program
+There have been changes in the EV Charger program administered by MMWEC that MMLD participates
+in, which prompted a review of the program. MMWEC initially worked with ChargePoint, but the
+program is now administered by the company Virtual Peaker. This shift created some unexpected
+changes, such as preventing some of the 27 JuiceBox chargers from charging during peak hours rather
+                                                                                                     2/14
+than the anticipated Level 1 slower charging during these periods. The review also highlighted that while
+residents could benefit from the incentive of a free charger in consideration of a 3 years participation in
+the load management program, not all participants rolled over in the longer term program.
+EV Chargers can also be enrolled in different programs: - either in the EV Scheduled Charging program,
+in which case they are curtailed to Level 1 charging from 5 pm to 9 pm on non-holidays week days, daily;
+or, - if they participate in the Connected Homes program curtailed during peak events, happening
+several times a summer. Going forward, the program will distribute Charge Point chargers, and
+curtailment can be to level 1. This is what the program is supposed to be now. Yet, some MMLD
+documents on the web site seem to indicate curtailment to zero.
+MMLD needs to clarify the details of the proposed program going forward: Frequency of curtailment,
+(curtailing every day or only during peaks), level of curtailment. It would be beneficial for the program to
+be organized so that the participants stay in it for longer than three years, unless they chose to drop out.
+The discussion is postponed until a written description of the EV Charging program is presented to the
+Commission.
+
+NEPPA Conference Overview
+In the interest of time, the chair proposes to forego the presentation and that commissioners interested
+refer to the slides that have been distributed.
+Several Commissioners participated in the conference, and their participation was paid for by MMLD.
+Commissioner Yarmoff proposes that, for transparency purposes, a budget dedicated to the professional
+development of Commissioners be authorized by the Commission on a yearly basis, and that at the end
+of the year there should be a report on the use of such funds. Similarly, a budget for legal advice and
+expenses of the board should be identified as well. Commissioner Yarmoff will propose a motion for the
+board’s consideration at the next meeting.
+
+Amendment to the General Manager Contract
+It was agreed during the December 12, 2022 executive session meeting that the calendar for the goals of
+the General Manager should be aligned with the calendar year (also the fiscal year of MMLD). Currently
+the General Manager’s contract states that the timing for the goals is on an April to April basis. A simple
+amendment to the contract is necessary to adjust the timelines. The Secretary of the Commission has
+sent a draft version of this amendment to the General Manager, who indicated that he has reviewed the
+proposed amendment, and that it is acceptable. From a process perspective, it is proposed that both the
+General Manager and the Chair (on behalf of the board) sign the amendment at a later time.
+
+Letter to DOER
+DOER is conducting a study of Long Duration Energy Storage (LDES), as directed by law: an update to the
+“State of charge” study that was conducted 7 years ago. DOER and MassCEC held two public sessions to
+review the progress of the study, and asked for stakeholders comments. After discussions with MMLD’s
+General Manager and with Reading’s General Manager, we wrote a joint letter to highlight three points,
+sent to DOER on August 31:
+  - Climate is not static, and future climate conditions should be taken into consideration, not only the
+    harshest historical events;
+  - EVs are going to represent a large amount of potential storage over the time horizon covered by the
+    study, and options to mobilize that storage should be evaluated at;
+  - Munis represent an exceptional way to test different business cases of Long Duration storage.
+                                                                                                       3/14
+Further, the Federal DOE has published a study on use cases of Long Duration storage, and the General
+Manager and Commissioner Yarmoff are talking with one supplier of LDES to evaluate whether this
+could be useful to Marblehead.
+
+General Manager Updates
+Solar on Schools
+MMLD is evaluating installing solar panels on six schools in Marblehead (either solar alone or in
+combination with storage). The potential benefit is not limited to electricity production: local solar
+production also alleviates transmission and capacity charges, bills that MMLD has to pay. All costs savings
+are directly passed on to all Marblehead customers. The potential for solar production from these sites is
+summarized in the slide shown page 8. At a total of 2.3% of Marblehead’s total electricity consumption, this
+is not negligible production, especially given the non-emitting and local nature of the electricity produced,
+which has financial advantages noted above.
+Due diligence is on-going, with a proposal to start with the Brown school. Commissioner Smith remarked
+that it would be good to have MMLD’s Financial Director’s take on the project, given the various
+spreadsheets that have been distributed to the Commissioners. As part of this due diligence, what
+assumptions will make the numbers change? Total investment for a solar array with battery option is
+around $2.5M. The vendor is also proposing a PPA option, which might make the project attractive from a
+financing perspective, and that we need to evaluate separately. The financial benefits are not completely
+captured by the “Net Levelized Cost of Energy”, NCOE, which does not incorporate the avoided costs of
+transmission and capacity. While the NCOE allows to compare energy costs from different production
+methods, the location where the electricity is produced is important and has an impact as well. This would
+be “home-grown” energy that will alleviate costs that MMLD would have to pay.
+- One of the most impactful of these is the evolution of the price of RECs over time. This evolution is
+tricky to assess as the evolution of prices will depend on policies of the New England states, which are
+getting stricter meaning that there are more buyers for RECs (with New Hampshire potentially setting
+new policies), while on-shore and off-shore wind projects will generate more RECs. We are evaluating
+the project with both current prices continuing over the life of the project, or much more conservative
+assumptions if early large scale production of RECs from wind farms does take place.
+- Another impactful assumption is the level of interest rates moving forward, as the project economics
+will depend on financing possibilities. A community solar type of program might allow to lower the
+financing costs.
+The timeline of the project depends on meetings with the School Committee and Select Board, when we
+have a finalized proposal. The last formal meeting with the School was in August 2021, and MMLD has
+been moving forward under the oral agreement that was reached at the time. Construction on the roof
+does not have to take place during the summer. Whether MMLD go to bid on this project, if a decision
+to move forward is taken, is the subject of legal considerations that will be discussed in Executive
+session. Separately, we should make sure the Select Board is aware of these projects as – these activities
+will benefit the town as a whole; - but also, there are several public buildings (not schools) where solar
+panels could also be installed.
+Next steps:
+- scheduling a meeting with the school board, ideally before Thanksgiving;
+- reviewing all options in writing, with an opinion from the finance director of MMLD, by next meeting.
+
+                                                                                                     4/14
+Utility-Scale Battery Electric Storage System (BESS)
+The objectives of this project is to lower our transmission and capacity payments to ISO-NE, which will
+generate savings to ratepayers estimated as a Net Present Value of $9.8M. An ancillary benefit is lower
+GHG emissions coming from lower reliance on emitting peaker plants. We are currently looking for the
+best site suitable for this 5 MW / 20 MWh battery (a site of roughly 15,000 square feet). Proximity to the
+Village 13 substation will lower connection costs as there are positions in the switch gear to directly
+interconnect the battery to the distribution backbone. It is also of interest to Delorean as expressed in
+contractual terms: Marblehead has the highest financial share among participating MLPs in similar
+projects (page 11). MMLD is evaluating whether a site on Vine Street under the Recreation and Park
+jurisdiction might be a possibility (see aerial view, possible connection and foot print on site, p 9). The
+Tioga Way site remains a possibility. The red areas on the Tioga Way plot could host the battery, see p 10.
+There are several contractual agreements that need to be put in place to make this project work, as
+shown on page 9. At this stage, the GM has been focusing on the site agreement, and selecting the site,
+as without a site we do not have a project. MMLD has received drafts for the other agreements.
+
+Fence around 80 Commercial Street
+Bids were received, Premier Fence is the lowest bid, and MMLD will enter into a contract with the
+company. See page 11.
+
+Financial Operations – July 2023
+Energy sales (kWh) were on line with forecast and budget, but total $ sales were lower because of the 2
+cent reduction of the PPA in June. MMLD continue to have a good operating cash position of $5.7M at
+the end of July. See slides page 11 and 12. Adjusted Net Income at the end of July is $1.115M.
+Because of the variations in investments results between 2021 and 2022, we can expect the expenses
+for pensions and OPEB for 2023 to be higher than the numbers we received from the town for the 2022
+exercise (and expect 2023 numbers to be in line with what we have forecasted). Looking at the financials
+for July 2023, one can notice a sizable increase of interest income: the treasurer has moved some of
+MMLD funds from the National Grand Bank to the Eastern Banks and we are receiving higher returns on
+our funds as a result.
+A discussion of MMLD capital expenses took place: there are still some uncertainties with regards to
+some of the contracts for the Village 13 substation upgrade, but if one takes into account the funds
+which will be needed for all coming expenses, the Capital Expenditure fund is not so largely endowed. As
+we are putting in place a plan to catch up on deferred maintenance of our distribution network, the
+Commission will be attentive to the capital needed. MMLD is currently accruing into the Capital
+Expenditure fund at 5% depreciation rate, which is the maximum we can as per DPU rules. Another
+constraint is that net income cannot exceed 8% of MMLD’s plant equipment value. This number is
+around $3.2M, is a big number: we are not close. Projecting to Year end of 2023, and including the PILOT
+payment to the town of $330K, we are anticipating Adjusted Net Income at year end to reach $331K.
+
+Vote #2023-37 Chair Wolf moved the motion to transfer $330,000 from MMLD 2022 operating revenue
+Surplus to the Town of Marblehead, motion seconded by Commissioner Yarmoff. Unanimous.
+
+
+
+
+                                                                                                     5/14
+Organization
+The current organization chart is shown on page 13. MMLD is organized with one Finance Manager, one
+Distribution Manager and one Technical Services Manager reporting to the General Manager, as shown.
+Since 2022, we have had two positions budgeted for staff increase. With one extra departure this year,
+we have now three open positions.
+New organization: At this stage, MMLD is proposing the following organization with three new positions,
+keeping the organization flat, as shown below (p 13).
+Capital Improvements Project Manager: MMLD is facing many projects, some on-going and more that
+need to be managed. We have also new categories of assets coming in town that need to be managed
+appropriately. This person could have engineering qualifications.
+Energy services Manager: This position is turned towards customers rather than infrastructure, and it
+will have a strong marketing component. MMLD has many programs that are geared towards residents,
+such as the EV charging program. The responsibility of looking for and following up on grants will also be
+with this person.
+GIS/IT Tech Specialist: MMLD has an acute need of a GIS system expert, as well as for a person
+responsible for the maintenance and integration of our IS and communication systems.
+Next steps: The proposed new organization was shared with MMLD staff today. Position descriptions
+need to be developed for these positions. Energy Services position is an evolution from the previous
+position we were considering (Sustainability Manager), and is essentially ready. For the other two
+positions, MMLD needs to build the job descriptions.
+Commissioner Smith remarked that the plan seems to be well thought through. Implementation is
+launched, starting with discussions with the staff. But we need to have commitment to make this
+happen and an end date: having the new organization in place by the end of the year would be a
+reasonable deadline. Otherwise, as we have seen in the past, things can slip, these positions have been
+discussed for over a year. A recruitment agency will be very useful to both source candidates and sort
+through the first steps of the process. Commissioner Yarmoff strongly encouraged the General Manager
+to get outside help for this process, and offered to vote on a budget to this end. Chair Wolf gave the
+General Manager the name of a firm that has already worked on recruiting people of this caliber and
+would be turnkey for this process. Having a recruitment agency on board will help make sure the
+process is on track in a timely manner.
+
+Town Right of Way Improvement Project
+The General Manager explained MMLD’s position with regards to the Right of Way improvement
+project, summarized on the last two slides below.
+
+Go Green Now rate
+Given the market value of RECs and the evolution of the power portfolio of MMLD, the General
+Manager proposes to reduce the opt-in rate charge for all Go Green Now participants from 2.2 cents to
+2.0 cents per kilowatt-hour. Go Green Now is considered an official rate by the Department, and as for
+every rate change, a vote of the Commission is requested prior to filing the new rate with DPU. This new
+rate is to be effective October 1, 2023. At this stage, there are 56 customers of which one commercial
+customer, who pay on average about $160 a year to participating.
+
+Vote #2023-38 Commissioner Smith moved the motion to reduce the opt-in rate for all Go Green Now!
+              Participants from 2.2 cents to 2.0 cents per kwh, effective October 1, 2023, seconded by
+              Commissioner Frechette. Unanimous.
+                                                                                                     6/14
+Executive Session
+Chair Lisa Wolf proposed a motion to enter Executive Session Motion to discuss trade secrets or
+confidential or proprietary information regarding activities of a governmental body as energy supplier,
+municipal aggregator or energy cooperative, if an Open Session will adversely affect conducting business
+relative to other entities making, selling or distributing energy. Not to return to Open Session. Motion
+moved by Commissioner Yarmoff and seconded by Commissioner Frechette.
+Vote: Simon Frechette: Yes; Adam Smith: Yes; Lisa Wolf: Yes; Jean-Jacques Yarmoff: Yes.
+Executive Session started at 6:05 pm.
+
+The Executive Session concluded at 7:12 pm at which point a motion to adjourn was proposed,
+seconded and after a roll call of commissioners with unanimous result, adopted.
+
+                                                   ----****----
+
+                Documents presented during September 5 Light Commission Meeting
+
+
+
+
+                             MMWEC Residential Battery Programs
+               Number of MLDs in 2023 MMWEC Energy Efficiency
+               Programs                                                 21
+
+               Number of MLDs in NextZero Connected Homes ( CH)                       I
+               Program                                                  14
+
+               Number of MLD's offering a Residential Battery Rebate
+               ($100/kWh; eligible size range 7.5 kWh to 20 kWh)         s
+                                                                       2now;
+               ParticipatingBatteryManufacturers                       4 soon   =:;.=.,~   <l'·
+
+               Number of CustomersReceivinga ResidentialBattery
+               Rebate                                                    0
+               Number of Customersw/ a ResidentialBatteryEnrolled
+               in NCH($30/mo)                                            2
+
+
+
+
+                              Agenda - General Manager Items
+
+               5:00 General Manager Items
+               1. Solar on Schools
+               2. Utility Scale Battery update
+               3. 80 Commercial St- Fence and Gates
+               4. YTD Financial Update - Matt Barrett ...lnclude VOTEon Surplus
+                  Payment to the Town
+               5. Current MMLD Organization Chart & Proposed Changes
+               6. Town ROW improvements, Salem ROW bridges & Access Control
+               7. BOARDVOTE: Go Green Now! Rate reduction 2.2 to 2.0 cents/kWh
+
+
+
+                                                                                                   7/14
+                  Solar on Schools
+
+• 6 Schools total under evaluation for solar PV-only, and 4 Schools
+  total for solar PV plus on-site battery
+• Solar PV plus on-site battery option significantly increases cost per
+  site, but also increases the economic benefits generated at the
+  site ...carbon-free energy plus the potential to lower the MMLD
+  monthly ISO-NEtransmission bill and lower the monthly charge for
+  capacity payments for a year. All such cost savings are directly
+    passed on to all Marblehead customers.
+• Continuing due diligence on analyzing the model assumptions and
+  financial forecasts ...
+• Process for gaining Town agreement next...
+
+
+
+
+                    Solar PV on Schools
+                                                        Solar P
+                                                      Nameplate   25-year Average Energy
+                  olar PV                        Ca aci  KW de       Production (kWh/ r)
+                 Brown Elementary                           247                 260,959
+                 Marblehead HS                              749                 784,690
+                 Village School                             695                 703,293
+                 Veterans Middle School                     389                 401,123
+                 Glover School                              216                 217,097
+                 Marblehead Charter                          88                  90,467
+                                                          2,384               2,457,629
+
+
+                 2022 MMLD Actual Wholesale Energy Supply (kWh)              106,610,000
+                 Percent of 2022 Actual Energy Supply                              2.3%
+
+
+
+
+              Utility-Scale Battery Electric Storage System (BESS)
+
+•   Project objective: to lower our transmission and capacity payments to ISO-NEfor
+    the next 20 years
+• MMWEC analysis indicates we can save ratepayers $9.8 million over 20 years
+•   Additional benefit: Reduce run-time of higher polluting peaker plants
+• We need a site suitable for the 5 MW/20 MWh bat't~ry...
+    - An area 150 feet x 100 feet = 15,000 square feet
+•   Preferred location: Proximity to Village 13 substation, to directly connect to new
+    switchgear. Evaluating a storage/open space site under Rec and Park Dept. control
+•   Next Step: Rec and Park Board meeting on Weds 9/6 will discuss giving MMLD
+    approval to access the site to determine the feasibility of a battery installation.
+
+
+
+
+                                                                                           8/14
+                     MMWEC BESSDeal Structure
+
+
+I
+1
+
+
+2
+              Document
+
+         Memo of Understanding
+    Definitive Agreement (Board Vote-
+             GM Authorization)
+    Administrative Services Agreement
+                                          Status
+                                        Completed-
+                                         late 2022
+                                        Completed-
+                                          1/2023
+                                        Completed-
+                                                     MMWEC
+
+                                                       xx
+
+                                                       xx
+                                                             --
+                                                             xx
+                                                                              Battery Vendor -
+                                                                              Delorean Power
+
+                                                                                        xx
+
+
+
+3                  (ASA)                  1/2023       xx         xx
+    Energy Storage Services Agreement
+3                 (ESSA)                               X     X    xx                    xx
+s            Site Agreement                            X     X    xx                    xx
+6      Interconnection Agreeemnt                       X     X    xx                    xx
+
+            XX - Signing Party
+           X - Supporting Party
+
+
+
+
+                                                                            MeasurementResutt
+
+                                                                       Total : 450.2 Feet
+                                                                       Segment : 0 Feet
+                                                                           ment azimuth : o•
+
+
+
+
+                                                                                                 9/14
+    Area need ~1so ft xlOO ft = 15,000 sq ft
+                                            -~    acama•mo
+                                               ~,•a■a  I ......,,.,,,.,,,_,.
+                                                                     I
+                                                                              SqFee~
+
+
+
+                                                           15,377.3 Sq Feet             I
+                                                                              11:11
+                                                                              •         I
+                     ,•                                                           . 11
+                ,•
+                                                                              .._,.
+                                                                                 , I
+                                                                                       YI
+                                                 }"                               •     I
+                               .,                                                       j
+
+
+                     '
+                           .., 'I
+
+                          ~l         '·/
+           Utility Scale Battery Storage System
+
+• Tioga Way remains a second preference location, due to
+  distance from Village 13 and tE!rrain
+
+
+
+
+                MMLD Parcel on Tioga Way/Hood's Lane
+
+
+
+
+                                                  ,_
+                                               02550     100
+                                               w.J..u..J
+
+
+
+
+                                                                                            10/14
+               MMWEC Behind the Meter Battery
+               Program Participants and Shared Savings
+                                                                   MW      MWh       MLP Share
+                                                   Boylston•        3       8.1           54.2%
+                                                   Chicopee         5      20.3           52.8%
+                                                  Georgetown        3       8.1           54.2%
+                                                    Holden          3       8.1           54.8%
+                                                     Hull           4      16.3           48.8%
+                                                    Ipswich         5      20.3           52.8%
+                                                  Marblehead        5      20.3           56.3%
+                                                    Paxton•         2       6.1           43.6%
+                                                   Peabody          5      20.3           50.1%
+                                                  Princeton•        2       6.1           42.9%
+                                                    Rowley          3       8.1           54.8%
+                                                  Shrewsbury        5      20.3           50.1%
+                                                  Wakefield         5      20.3           54.3%
+
+
+
+
+                 80 Commercial St Fence & Gates Rebid
+
+• Premier Fence LLC.,Canton, MA is the lowest price bidder
+
+                                                                           Alternatives
+
+                                                  Percent
+                                 Variation from    from          1- Deduct chain 2-Add Seawall
+        Vendor        Bid           Average       Average        link fence      Railing
+
+ 1   GVW              $406,080         $39,622           11%             -$6,000              $50,000
+
+ 2   Parker Fence     $384,500         $18,042              5%           -$9,000              $89,400
+
+     Premier
+ 3   Fence           $308,795        -$57,663          -16%             -$3,572             $43,772
+
+
+
+
+                 Financial Operations- July 2023
+
+• kWh sales of 9.4 million were in line with the budget of 9.5
+  million
+• Sales were off $190.9K due to the .02 cent PPAreduction in
+  June (beginning with the June billing, PPAwas reduced from
+  .025 cents to .005 cent)
+• Power costs continue to come in lower than the actual budget
+  and MMWEC's subsequent updates.
+• Our operating cash position: $5.7 million as of 7/31/2023
+
+
+
+
+                                                                                                        11/14
+           JULY2023 YTD Actual Financials
+                                                                           ~
+                 Total kWh Revenue                                         $12,575
+                 Street Lighting                                               $29
+                 Misc Revenue                                                  $22
+                 Interest Income                                              lli5.
+                                        Total Revenue                       $12,781
+
+                 Operations Expense                           $4,391
+                 Power Costs                                  Sl.lli
+                                        Total Expenses                      $11666
+                                            Net Income                       $1,115
+                 Adjustments:
+                 Rate Stabilization Fund Transfer                  $0
+                 Grant Proceeds                                    $Q
+                                   Total Adjustments                             $0
+                                Adjusted Net Income                          $1,115
+
+
+
+
+           Projected Year-end* 2023 Operating Statement
+                                                                        (S000'sl
+            Total Projected kwh Revenue..                               $21,475
+            Street Lighting                                                 $52
+            Misc Revenue                                                    $32
+            Interest Income                                               $ill_
+                                   Total Revenue                        $21,824
+
+            Total Projected Expenses•                    $21,163
+            PILOTPayment to Town                           ill.Q
+                               Total Expenses                           $21,493
+                                  Net Income                               $331
+            Adjustments:
+            Rate Stabilization Fund Transfer                 $0
+            Grant Proceeds                                   $Q
+                                Total Adjustments                           $0
+                              Adjusted Net Income                         $331
+
+            • Does Not Include final Pension and OPEBexpenses
+            •• Continue with the current .00S cent PPA
+
+
+
+
+           YTD FinancialUpdate - Matt Barrett
+
+• VOTE:to transfer $330,000 from MMLD 2022 operating
+  revenue surplus to the Town of Marblehead.
+• (Normally done in March, but delayed due to Town delays in
+  calculating MMLD OPEBand Retirement obligations.)
+
+
+
+
+                                                                                      12/14
+                                                                                         JoeK-iik
+
+                                                                                       """'"-
+
+
+                                                  ...
+                                               MeganMilan
+                                          leadCUSIOITlefSetvice
+                                                                                           __
+                                                                                         Gr-VChane
+                                                                                      Dlstrb.cloo ManAgeJ
+
+
+                                                                                                      ...
+                                                                                             Paul camatd,,
+                                                                                                                     1Tech~~1
+
+
+
+
+                                                                                                                                    -
+                                                                                                                                  JKkRavagno
+                                                                                                                                SubstallOOS,Mainl
+
+
+
+                                                                                                                                    DktiRubano
+                                                                                                                                 lffdMel:erTech
+
+
+
+
+                                                                  i
+                                                                                           Man Katakoudas
+                                                                                            LHdls1eman
+
+
+                                                                                              .,,.u..on
+                                                                                           Lineman 1st Class
+                                                                                                                            ---
+                                                                                                                             -     PaulSOrette
+
+
+
+
+                                                                                                                              Nale Kobialka
+                                                                                                                          lNd Elec Wily Gen Tech
+      Marblehead Municipal Light Department
+                                                                                              s.cottKent
+               Current Organization                                                        lnmantstClass
+                 September 2023
+                                                                                             Adam Bernard
+                                                                                           L>,eman2ndC1a>,
+
+
+                                                                                             John Ragusa
+                                                                                           """""''""a.,,
+
+
+                                                                                                ,...,...
+                                                                                           .........
+                                                                                             T't'evo,Conroy
+
+
+
+
+                                                              I
+                                                              .
+                                                                        JoeK-iik
+                                                                      ~,ilM.-.ager
+
+
+
+  ......... I                                                                                  __             ., I
+FNnee........   .
+                                                        1-~-1                                GISIITTechSpeoellisl
+
+
+
+
+i""~~1                    --, .. c.m-o.
+
+
+                                                                       -
+                                                                    .JaekRav-ono
+                                                                  ~Sr         .....
+
+
+                                                                    Didi Rubano
+                                                                   LeedMetefTec::11
+
+                                                                      .........
+                             ,,,.......
+                                                                  ---
+                                                                   -
+                          """""'"'°"'
+                                                                                              r        Marblehead Municipal Light Department
+                                                                                                              Proposed Organization
+                                                                                                                 September 2023
+                            --M
+                          Unlm;in2ndCla$$
+
+
+                           -co-,
+                          ""'"'"""'au,
+
+                              ...,,._
+                          """""""'"""
+
+
+
+0                   Town Right of Way Improvement Project
+
+• MMLD sees no benefit to widening Lead Mills' two bridges,
+  only additional risk of unauthorized 4-wheel motorized
+  vehicles crossing the bridges ...
+• One bollard at each end of the two bridges is sufficient ...while
+  ensuring widest passable opening is maximum of 64 inches
+• MMLD sees a public safety and MMLD employee benefit by
+  replacing the culvert on the Salem ROW between West Shore
+  Drive and Lead Mills, currently covered by two (unstable) metal
+  plates
+
+
+
+                                                                                                                                                    13/14
+MMLD   Proposed New Gate Design for the Salem and Swampscott                       ROWs protecting
+                   critical MMLD Distribution System Assets
+
+Design approach:
+• A 5-foot center opening, wide enough for walkers, joggers, bikers, wheel chairs and
+  baby carriages, but too narrow for a car to drive through
+• Highly visible yellow metal gates locked into position, that can be unlocked and
+  swung open when authorized MMLD and other Town vehicles need quick access to
+  the ROW. Gates are to be set back 40-80 feet from the street or sidewalks
+     o Village 13 Substation - 3 gates: placed at West Shore Drive, Maverick St., and
+        Bessom St.
+     o Riser Poles at Lead Mills- 2 gates: 1 gate at West Shore Drive, 1 gate at
+        Lafayette St entrance at Lead Mills
+• Also, remove one existing bollard from each end of the Lead Mills Wet Bridge
+                                   Consistent 5-foot center
+                                   opening for walkers,
+                                   runners and bikers
+
+       6-9 foot left gate varies                              6-9 foot right gate varies
+       based on ROW width                                     based on ROW width
+
+
+
+
+                     Go Green Now! Rate Reduction VOTE
+
+
+                                                   • Given the current mkt value of
+                                                     RECsand MMLD's 2022
+                                                     percentage of carbon-free
+                                                     electricity, the rate we charge
+                                                     for opt-in participants can be
+                                                     reduced from 2.2 cents to 2
+                                                     cents per kilowatt-hour.
+
+
+
+                                           ----****----
+
+
+
+
+                                                                                                     14/14
+

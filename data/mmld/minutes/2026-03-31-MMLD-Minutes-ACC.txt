@@ -1,0 +1,206 @@
+Light Commission March 31, 2026, Open Meeting Minutes
+To:                 Light Commission: Commissioners
+                    Light Department: J. Blair, General Manager
+From:               Matt Harrington
+Date:               June 14, 2026
+
+
+
+A quorum being present, Chair Yarmoff brought the meeting to order at 4:02 pm. The meeting was held in
+person at MMLD HQ and with remote internet access, both available to public participation. A recording of
+the meeting is made available to the public at the following link.
+
+Participated in meeting:
+     Commissioners:                Present: Commissioners Frechette, Harrington, Hull, Smith, and Chair Yarmoff
+                                   participated in person.
+          Light Department:                 General Manager, Jon Blair; Energy Programs Manager, Michael Hall
+
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Smith
+
+Public Comments:
+
+      -     Albert Jordan discussed an incident in Revere with a lineman injury, and wondering what the
+            cause was so that we can learn from it.
+
+
+
+Board Meetings
+
+      -     Next Scheduled meetings at 4:00 pm, at the MMLD Headquarters, 80 Commercial Street:
+               o April 28
+               o May 26
+
+Legal Complaint
+
+      -     Chair Yarmoff provided an update on the ongoing legal complaint from former GM Kowalik. The
+            organization of our defense was discussed.
+      -     MMLD has retained an Attorney from KP Law to defend the Department.
+      -     MMLD’s next steps are to reply to the complaint, a step for which an extension request has
+            been filed.
+
+Vote 2026-5: Motion to empower Chair Yarmoff, Vice Chair Frechette, and GM Blair to interact with
+KP Law. Moved by Chair Yarmoff, Seconded by Commissioner Smith.
+
+      -     Hull recommended that Board members are all updated individually to avoid open meetings,
+            and to have GM join on calls with Counsel.
+
+                                                                                                          1/5
+   -   All in Favor. Motion Passes.
+
+Voluntary Payment to town
+
+   -   Formula being used that was approved on Dec 16, 2025
+   -   MMLD sold 102,469 MWh in 2025
+          o $3.60/MWh per MWh sold will be given to the Town
+   -   Formula determines that a payment of $368,888 will be made to the Town
+
+VOTE 2026-6: Motion by Chair to make a voluntary payment of $368,888 to the Town, seconded by
+Frechette.
+
+           o     Commissioner Hull questioned why funds cannot be designated for a specific purpose
+                 instead of going to the General Fund.
+           o     Commissioner Smith asked whether the current formula is functioning as intended.
+                     ▪ Chair Yarmoff confirmed payments are consistent with historical ranges
+                         ($330K–$360K).
+                     ▪   Commissioner Smith expressed satisfaction that the formula is working as
+                         expected.
+           o     Yes votes: Frechette, Harrington, Smith, Yarmoff
+           o     No Votes: Hull (see comment on designated purpose)
+           o     Motion Passes
+
+
+
+EV Charging Policy Update- Presented by Michael Hall from MMLD
+
+Proposed Changes
+   -   Increase peak period rates.
+   -   Eliminate overstay fees from 11:00 PM – 7:00 AM, with fees resuming at 7:00 AM.
+
+Feasibility & System Constraints
+   -   Differentiating rates between residents and non-residents were considered but deemed
+       administratively burdensome to verify users.
+   -   Adding tiered overstay fees is not supported by the current ChargePoint system.
+   -   Adjustments to overnight overstay rules are feasible.
+Board Questions & Clarifications
+   -   Secretary Harrington confirmed that rates can be adjusted at any time.
+   -   Commissioner Smith and Commissioner Hull requested clarification on overnight overstay
+       timing:
+           o     If a session begins before the overnight window, standard overstay rules apply.
+           o     Overnight fee waivers apply during the designated hours, with fees beginning again at
+                 7:00 AM.
+
+                                                                                                     2/5
+VOTE 2026-7: Motion by Chair to approve new EV policy seconded by Smith
+
+   -   All in favor. Motion Passes
+   -   Smith expressed his appreciation to Hall for proposing, adjusting with feedback, and getting a
+       policy approved within 1 month.
+
+
+
+Go Green Rate Revision- Presented by GM Blair
+
+Program Overview
+   •   MMLD reported that its portfolio was approximately 75% non-carbon in 2025.
+   •   The Go Green program allows customers to opt for 100% non-carbon energy.
+
+Proposed Changes
+   •   Rate is being recalibrated to reflect the higher baseline of non-carbon energy in the portfolio.
+   •   The new proposed rate is $0.01/kWh.
+   •   Pricing is based on the cost of Renewable Energy Certificates (RECs) (see slides for details).
+
+Participation & Cost Structure
+   •   The program currently has about 50 participants.
+   •   GM Blair indicated the rate is essentially a pass-through cost, with only minimal administrative
+       expense.
+
+Board Question
+   •   Secretary Harrington asked whether the rate includes administrative markups or is purely pass-
+       through; confirmed to be largely pass-through.
+
+
+Vote 2026-8: Motion by Chair to update the GoGreen Rate seconded by Frechette
+
+   -   All in Favor. Motion Passes
+
+
+
+Updated Goals for the GM
+
+   -   When GM was hired, he was given goals for 6 months and it is now time to propose new goals.
+   -   Goals will be discussed in the Executive Session, following this open session.
+
+
+
+
+GM Update
+
+
+
+                                                                                                          3/5
+Safety & Utility Corridor Update
+   •   Safety Minute emphasized contacting DigSafe.
+   •   Undergrounding of the 23 kV lines is being planned in several phases in the utility corridor.
+   •   Planned paving of the utility corridor from Village 13 to Lead Mills driven by safety concerns
+       around erosion near manholes and Fire Department access needs. The final decision regarding
+       the surface of the utility corridor is not determined by MMLD.
+   •   Project timeline estimated at 3–5 years (before 2030).
+   •   Coordination required with DPW and other stakeholders (e.g., Village Street Bridge, access
+       control via bollards or gates).
+   •   Paving is expected to reduce future excavation needs if designed properly.
+   •   Lead Mills bridges are likely to remain pedestrian-focused.
+   •   Alternative surface materials have been tested successfully, but asphalt may be required due to
+       manhole infrastructure.
+
+Tioga Way Laydown Area
+   •   Site identified for temporary use to consolidate equipment, poles, and transformers.
+   •   Plan includes clearing, gravel placement, and temporary fencing.
+   •   Enables improved inventory management and disposal of old equipment.
+   •   Temporary approach allows flexibility for future permanent use and neighborhood input.
+   •   Some abutter concerns are noted and addressed in planning.
+
+Aerial Thermal Efficiency Survey
+   •   Drone-based survey (via Kestrix) to identify heat loss and efficiency opportunities for homes.
+   •   Pilot project (~800 homes) in partnership with West Boylston, partially grant-funded.
+   •   Data to support energy savings and rebate programs.
+   •   Non-intrusive approach; no personal data collected, with option to request data removal.
+   •   Survey flights planned for mid-April, with homeowner notifications in advance.
+
+Customer Collections
+   •   Collection efforts to increase following the Nov–Apr shutoff moratorium.
+   •   Prior inconsistencies in enforcement contributed to rising bad debt expenses.
+   •   Updated policies and internal coordination aim to ensure consistent and proactive collections.
+   •   Requests made to review current policy.
+
+
+Community Program
+   •   “Library of Things” initiative provides energy monitoring devices (Kill A Watt) through the
+       library.
+
+
+                                                                                                        4/5
+    •   Designed to support renters and others not eligible for rebates.
+
+
+Workforce & Labor Update
+    •   MMLD employees have dissolved their union.
+    •   Exploring a new or self-organized structure for future agreements.
+    •   Existing collective bargaining agreement is no longer enforceable but may guide interim
+        practices.
+    •   Transition is expected to take up to one year and viewed as an opportunity to align
+        management and staff.
+
+
+Chair Yarmoff proposes a motion to move to an executive session to conduct strategy with non-union
+personnel, and we will not return to open session. Second by Frechette.
+
+Roll Call Vote: Frechette: Yes, Harrington: Yes, Hull: Yes, Smith: Yes, Yarmoff: Yes
+
+The Executive Session started at 5:27 pm and concluded at 6:26 pm.
+
+
+
+
+                                                                                                  5/5
+

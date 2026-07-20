@@ -1,0 +1,605 @@
+Light Commission December 17, 2024 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           December 20, 2024
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:04 pm. The meeting was held in
+person and with remote internet access, both available to public participation. For technical reasons,
+there was no recording of the meeting.
+
+Participated in meeting:
+     Commissioners:        Commissioners Frechette, Hull, Wolf and Yarmoff participated in person,
+                           commissioner Smith participated first remotely, in person from 4:11 pm.
+      Light Department:    General Manager, J. Kowalik; Business Manager M. Barrett.
+
+Marblehead Land Acknowledgment declaration was read by Commissioner Frechette.
+
+Approval of minutes
+Vote #2024-24 Motion to approve the minutes of the October 1st, 2024 meeting, Executive Session was
+              moved by Commissioner Hull and seconded by Commissioner Frechette. Unanimous.
+Vote #2024-25 Motion to approve the minutes of the November 21, 2024 public meeting was moved by
+              Commissioner Hull and seconded by Commissioner Frechette. Unanimous
+Vote #2024-26 Motion to approve the minutes of the November 21, 2024 executive session meeting
+              was moved by Commissioner Hull and seconded by Commissioner Frechette. All
+              commissioners who participated in the Executive Session: Yes, Wolf abstained.
+Vote #2024-27 Motion to approve the minutes of the November 26, 2024 public meeting was moved by
+              Commissioner Hull and seconded by Commissioner Frechette. All commissioners
+              present on November 26: Yes, Smith abstained.
+Vote #2024-28 Motion to approve the minutes of the November 26, 2024 executive session meeting
+              was moved by Commissioner Hull and seconded by Commissioner Frechette. All
+              commissioners present on November 26: Yes, Smith abstained.
+Vote #2024-29 Motion to approve the minutes of the December 10, 2024 public session meeting was
+              moved by Commissioner Hull and seconded by Commissioner Frechette. All
+              commissioners present on December 10: Yes, Wolf abstained.
+Vote #2024-30 Motion to approve the minutes of the December 10, 2024 executive session meeting
+              was moved by Commissioner Hull and seconded by Commissioner Frechette. All
+              commissioners present on December 10: Yes, Wolf abstained.
+
+Upcoming Meetings of the Light Commission
+The Light Commission meetings will continue to be held, usually on the last Tuesday of the month, at 80
+Commercial Street, from 4:00 to 6:00 pm. [Post meeting note: as an exception, the January meeting will be
+                                                                                                   1/13
+held one week early.] The meetings for the first quarter of 2025 will be held on: January 21, February 25,
+and March 25, 2025.
+
+Comments from the Public
+Naomi Caselli, Marblehead resident living on High Street and a member of the board of the non-profit
+“The Friends of the Park on Elm Street” explained the status of the project and presented a request to
+the Light Department. The park will have a number of public parking spaces for neighboring residents
+after its reconfiguration, as it currently does. Planning for EV chargers at that location will be useful, as
+many neighbors do not have off-street parking and have no place to charge electric cars. The work to
+resurface the parking spaces will start early in 2025. Would it be possible for the Light Department to lay
+conduits that will be used in the future to connect EV charging stations?
+The General Manager confirmed that laying conduits is not a very expensive proposition and that could
+be done in time for the planned work to proceed on time. A simple interconnection study, to evaluate
+the transformers ability to supply future charging stations, would also need to be conducted.
+
+Write Offs
+The Business Manager Matt Barrett explained that the Department recommends writing off outstanding
+debts for accounts inactive during the period November 1, 2022 to October 31, 2023, a smaller amount
+than previous years.
+
+Vote #2024-31 Motion to write off the balance due to inactive accounts with no activity between
+              November 1, 2022 and October 31, 2023 in the amount of $ $38,807.56 was moved by
+              Commissioner Hull and seconded by Commissioner Frechette. Unanimous
+
+
+Outstanding items from previous meetings
+Polco Employee Survey. Commissioner Wolf commented that at the Light Commission October 2023
+meeting, the board recommended a baseline employee survey be undertaken. The intent was to establish
+a baseline for what would become a periodic tool to better understand department strengths, and identify
+and track areas for improvement. This was considered especially prudent as the department began to
+recruit staff for several new positions. A contract with Polco was executed in March of this year but has
+yet to be implemented. This is still unresolved, so remains on the outstanding items list.
+
+General Manager Updates
+Village 13 substation upgrades, Civil Engineering bid. The process to select a firm for the civil
+engineering work that needs to be conducted as part of the upgrade of the Village 13 Substation was
+successful. Seven qualified contractors participated in the mandatory visits of the site, 3 qualified bids
+were received before the submission deadline on December 11, see slide p 6. The Department is
+finalizing the review and the contractualization of the work, but pending this process is recommending
+funding the work from the capital account for the winning bid of $2,719,860, submitted by Fischbach &
+Moore of Boston, Massachusetts. This is more than the anticipated $1.5M, but all three qualified
+bidders were relatively close. The Department will further analyze the variance, likely reflecting the
+substantial price increases throughout the industry.
+
+
+
+                                                                                                        2/13
+Vote #2024-32 Motion to approve the capital account funding for the Village 13 upgrade - site
+              construction project, in the amount of $2,719,860 submitted by Fischbach & Moore, of
+              Boston, Massachusetts, subject to a final bid review and approval by the Village 13
+              technical team, was moved by Commissioner Yarmoff and seconded by Commissioner
+              Frechette. Unanimous
+Village 13 substation upgrades: Next steps and Financial Impact The work to upgrade the substation is
+complicated by the fact that the equipment will be continually energized, and that the space to work is
+very constrained. Civil engineering work will start as soon as possible after the contract is signed,
+depending on the weather conditions. After this work is completed, the switchgear will be installed.
+Expected delivery of the switchgear is currently March/April. The major steps that will take place as the
+substation is upgraded are detailed in slides p 7-8. Of note, step 2, removal of the ledge at the new
+switchgear location might necessitate the temporary closure of the public right of way, for safe
+operations of the workers.
+The slides on page 8 present the current projected capital investment budget for the Village 13
+substation upgrades: the total project investment is now estimated to reach $10.025 M. The financial
+impact of the substation coming online in the summer of 2025 will be felt in 2026 with an increase in
+depreciation expenses, as shown on slide at bottom of page 8, with two depreciation rate assumptions.
+
+Salem – Marblehead Transmission Line Resiliency upgrades The Department has applied to a MassCEC
+program organized under DOE’s authority and the bipartisan infrastructure bill’s section 40101(d).
+MMLD’s application covers the first two phases of an upgrade to the 23 kV transmission line bringing
+power into Marblehead from Salem on the public Right of Way to increase resiliency of this critical
+infrastructure into Marblehead:
+    - in the first phase, MMLD would replace wood by steel poles on the Salem part of the RoW;
+    - in the second phase, the line would be buried from Lead Mills to a place close to West Shore Drive;
+    - in a future third phase, hardening of the line all the way to Village 13 will be contemplated.
+MassCEC has approved MMLD’s application, and we are currently waiting for DOE’s final approval. If the
+final approval comes through, MMLD will commit to funding its matching minority share of the capital
+expense, and this share would be $655K. The General Manager is asking for the board confirm
+agreement to this capital expense:
+
+Vote #2024-33 Motion to approve the capital account funding of $654,214 as the grant match
+              commitment required in the $1.98 million grant proposal submitted by MMLD to
+              MassCEC, acting as the U.S. Department of Energy Grid Resilience administrator, was
+              moved by Commissioner Frechette and seconded by Commissioner Smith. Unanimous
+
+Real Estate Needs of MMLD: For the Light Department to pursue its mission of bringing reliable, clean
+and cheap electricity to the residents of Marblehead, the appropriate space to install equipment is
+needed. MMLD will need to install new equipment over the coming years. It does not currently have the
+appropriate real estate for this new equipment. A discussion took place with regard to the best way to
+engage with the Town’s administration to study this question.
+
+Operating budget for 2025: As previously presented, the Department has prepared a 2025 budget
+based on the based information available currently, which is based on forecasts made at the end of
+October for the remainder of 2024 and for 2025, especially for the power purchases which are
+forecasted to represent about 60% of operating expenses. The current projections for full year 2024 are
+shown on slide 2 page 10. The positive variance comes from relatively “mild weather” this past year that
+led to power expenses slightly below budget, and from two open staff positions carried from 2023. The
+                                                                                                    3/13
+General Manager asked for a vote from the board to approve MMLD’s 2025 operating and maintenance
+budget of $21,681,000.
+
+Vote #2024-34 Motion to approve the 2025 Light Department operating and maintenance budget
+              of $21,681,000 was moved by Commissioner Yarmoff and seconded by Commissioner
+              Frechette. Unanimous
+
+Staffing: In view of the positions which have been opened and budgeted for two years, Commissioner
+Yarmoff presented an analysis of the staffing of 6 other Municipal Light Plants, 3 with sales slightly
+smaller, 3 with sales slightly larger than MMLD. See slide 3 p 11. While the circumstances and operations
+of each are different from MMLD’s, on average, these Municipal Light Plants employ 10 staff members
+more than Marblehead does. This led Commissioner Yarmoff to propose to set up a Sub-Committee to
+study the appropriate size and composition of the team, while being mindful and respectful of the
+restrictions imposed by MGL Chapter 164 on the Commission.
+
+Vote #2024-35 A motion that the Light Commission form a Human Resources Sub-Committee of the
+              Commission, composed of two Commissioners and the General Manager, to study the
+              appropriate size and composition of the team. The HR Sub-Committee will report
+              regularly to the Light Commission and make recommendations to the Commission and
+              to the General Manager, was moved by Commissioner Yarmoff and seconded by
+              Commissioner Frechette. Four in favor, one opposed.
+
+Capital Expense budget for 2025: The General Manager presented the known large capital budget
+projects planned for 2025, which include the Village 13 substation upgrade, the possible upgrade to the
+transmission line into Marblehead (depending on DOE approval of the grant), possible upgrades to the
+Wilkins plant, vehicle replacements and on-going routine capital projects. The total for the planned
+capital expenses is $4.73M. See p 12.
+
+Land ownership confusion: The confusion regarding the land ownership of a parcel giving access to the
+Clifton substation has not been cleared up and will be taken up with the Town management.
+
+At 6:16, with the agenda for the meeting being exhausted, Chair Wolf recused herself from the
+conversations to come and left the meeting, ceding the chair of the meeting to Vice Chair Frechette.
+
+Executive Session
+During the Light Commission Meeting of December 17, 2024, Vice Chair Simon Frechette proposed a
+motion to meet in Executive Session to conduct strategy sessions in preparation for negotiations with
+nonunion personnel. Not to return to open session. Motion was seconded by Commissioner Smith.
+Votes: Simon Frechette: Yes; Mike Hull: Yes; Adam Smith: Yes; Jean-Jacques Yarmoff: Yes.
+
+Executive Session started at 6:17 pm.
+
+The Executive Session concluded at 7:05 pm at which point a motion to adjourn was proposed,
+seconded and, after a roll call of the commissioners voting unanimously in favor, adopted.
+
+                                              ----****----
+
+
+
+
+                                                                                                    4/13
+Documents presented during the December 17, 2024 Light Commission Meeting
+
+
+               Agenda
+
+  4:00 Call to Order, Land Acknowledgement, and Public Comments
+  4:15 Outstanding items and requests from last meeting
+         - Employee survey
+  4:20: Year-End accounting vote
+  4:30 General Manager Updates - including three votes & draft
+  budget reviews
+  5:30 Executive Session - To conduct strategy discussionin preparation
+  for negotiation with nonunion personnel. Not to return to open session
+
+
+
+
+              Year-end account vote ...bad debt write-off
+
+  VOTE
+
+
+  "Write off the balance due to inactive account with no payment
+  activity between November 1, 2022 and October 31,2023, in the
+  amount of $38,807.56."
+
+
+
+
+              General Manager updates
+
+  • Village 13 Update - and vote
+  • MassCEC-DOE40101(d) resiliency grant update - and vote
+  • Preliminary 2025 Operating Budget - and vote
+  • Preliminary 2025 Capital Budget
+  • Ocean Ave underground service - easements
+  • Clifton Substation parcel- Atlantic Ave extension
+
+
+
+
+                                                                            5/13
+              Village 13 Update -
+              Substation Construction Contract
+
+• 7 qualified electrical contractors (bidders) attend the Nov 14th
+  mandatory site visit
+• 3 qualified bids submitted & opened on Dec 11th
+    - Fischbach & Moore, Boston, MA - $2.72 million
+    - Power Line Contractors, Wakefield, MA - $2.74 million
+    - E.S.Boulos, Auburn, Maine - $2.82
+• Board vote to ratify Village 13 tech team recommendation to
+  proceed with Fischbach & Moore
+
+
+
+
+              Village 13 Substation Construction Contract
+
+
+VOTE:
+    "Motion to approve capital account funding for the Village 13
+    substation construction project, for $2,719,860 to Fischbach &
+    Moore, Boston, Mass, subject to a final bid review and
+    approval by the Village 13 technical team."
+
+
+
+
+              Village 13 Substation next steps
+
+•    Approve and sign contract ~30 days
+•    Begin switchgear foundation site work asap, subject to
+     weather conditions
+•    Switchgear manufacturer delivery schedule is slipping,
+     delivery date is tbd.
+
+
+
+
+                                                                     6/13
+             Village 13 Substation construction
+
+"A simple substation with a complicated upgrade."
+     Small area in which to operate
+     Existing substation to remain energized during the entire
+     project
+     Goal remains: MMLD customers will experience no
+     outages during this upgrade
+     11-step construction project
+
+
+
+
+                                            r<>-   Construction Project Steps
+                                                   1. Deliver new transformers to
+                                                   temporary location
+
+                                                   2. Remove ledge & grade open
+                                                   area
+
+                                                   3. Construct new switchgear
+                                                   foundation & lay UG conduits
+
+                                                   4. Deliver, assemble & install
+                                                   new switchgear on new
+                                                   foundation; make all electrical
+     --   _..,_
+             -New Transformecs-__   _              connections
+              Il:_m_porary
+                         location       -
+
+           rl    --------=-==-=:                   5. Cutover & energize new
+                                                   switchgear & de-energize old
+                                                   switchgear
+
+
+
+
+                                                                                     7/13
+                                                                                                 Construction Project Steps
+                                                                                              6. Disconnect, remove, & scrap OH 23KV
+                                                                                              lattice structure & feeder lines
+
+                                                                                              7. Construct new transformer foundations
+                                                                                              In old switchgear area
+
+                                                                                              8. Position crane to lift & place new
+                                                                                              transformers onto new foundations. Make
+                                                                                              all electrical connections                       I
+                                                                                                                                               \
+
+
+                                                                                              9. Energize & cutover to new transformers
+                                                                                              and de-energize old transformers
+
+                                                                                              10. Dlsconnnect, remove, & scrap old
+                                                                                              transformers & old switchgear
+
+                                                                                              11. Reinstall & replace perimeter fencing.
+
+"'.,                                                                                           Substation upgrade complete
+
+
+
+
+                                Updated Village 13 upgrade project budget
+
+                                                                       2022          2023              2024           2025            Total
+       PLM (Power Eneineerine)                                       $82,145       $26,991           $31,937         $75,000       $216,073
+
+       Virginia Transformer (Transformers)                                       $1,316,223      $1,377,141               $0      $2,693,364
+
+       Myers Controlled Power (Switcheear)                                       $3,297,362                $0     $1,098,930      $4,396,292
+
+       Fischbach & Moore (Construction)                                                                           $2,720,000      $2,720,000
+
+                                       Total Project              $84,167      $4,642,599      $1,411,102       $3,895,955     $10,025,729
+
+
+       Sewer Main Landbridge Project
+
+       Concrete Systems (precast concrete)                                                           $82,635
+
+       Cairns Construction                                                                           $74,783
+
+       Holcim (fill material)                                                                         $3,090
+
+       Bayside Engineering (brdge design)                                                            $51 910
+
+                                          Total Project                                           $212,418
+
+
+
+
+                                Village 13 Upgrade impact on Depreciation
+                                       Year          Vendor                                           Total
+                                       2022          PLM                                          82,145.00
+                                       2023          PlM                                          26,991.13
+                                       2024          PlM                                          31937.00
+                                       Total                                                     141,073.13
+
+                                       2023          Virsinia Transformer                       1,316,223.00
+                                       2024          Vi11ln1aTransformer                        1377141.00
+                                       Total                                                    2,693,364.00
+
+
+                                       2023          M~rs Controlled                            3,297,362.00
+
+                                  Total Actual Ekpenses (current)                                               6,131,799.13
+
+                                  Remaining ekpenses :
+                                      2025      Myers Controlled                                  1,098,930
+                                      2025      Fischbach & Moore                                 2720000
+                                  Total Remaining Expenses                                                         3,818,930
+
+                                  Total Addition to Plant & Equipment                                              9,950,729
+                                  2025 Retirements                                                                   lliMQQJ
+                                  Net Plant & Equipment                                                            9,753,729
+
+                                  2026 Additional Depreciation expense allowance@3%                                292,612
+                                  2026 Additional Depreciation expense allowance @5%                               487,686
+
+
+
+
+                                                                                                                                                   8/13
+           Salem-Mhd Subtransmission line Resiliency
+           Grant update
+
+• MassCECis the Mass agency responsible for distributing US
+  DOE 40101(d) resiliency grants
+• MMLD has applied for a MassCECgrant to improve the
+  resiliency of the electric lines connecting Marblehead to the
+  ISO-NEgrid in Salem (2323 and 2374)
+• The grant will improve the resiliency by replacing wood poles
+  with steel poles in Salem and putting OH lines UG at Lead Mills
+• The $1.98 M project requires a 1/3 local contribution
+  $654,000
+
+
+
+                                        MMLD Subtransmission Feeder Line
+                                         Resiliency Improvement Project
+
+
+
+
+                                3,000                        6,000 It
+
+
+
+
+           MassCEC Resiliency Grant update & Vote
+
+• Mass CEChas approved our application and is forwarding to
+  DOE for their final approval
+• Pending DOE approval, MMLD will sign a contract with MassCEC
+
+
+
+
+                                                                           9/13
+              MassCEC Resiliency Grant update & Vote
+
+VOTE:
+ "Approve the capital funding of $654,214 as the grant match
+ commitment required in the MMLD $1.98 Million proposal to
+ the MassCEC,acting as US DOE Grid Resilience grant
+ administrator".
+
+
+                 2024 Operating Budget YTD
+                                                                           2024           2024     Budget-HO      Budget-FlO
+                                                                       Budget        FlO Actual       Variance      Variance
+                                                                           Total          Total              $             %
+                kWh SalH (millions)                                      101.0             99.9            -1.1        -1.1%
+                Operating Revenue:                              $20,549,000 $21,178,719             $629,719           3.1%
+                  Power Expenses:
+                  Energy                                            $3,927,900       $4,263,790       $335,890          8.6%
+                  Capacity                                          $3,233,902       $3,581,056       $347,154         10.7%
+                  Transmission                                      $3,655,980       $3,377,956      -$278,024         -7.6%
+                  Other Power                                         $624,171         $586,517       -$37,654         -6.0%
+                Total Power Expense:                               $11,441,953      $11,809,319       $367,366          3.2%
+                Net Income before Operating EKpenSl;!s:             $9,107,047       $9,369,399       $262,352          2.9'6
+                Operating Expenses:
+                  Payroll & Benefits                                $4,217,000       $3,940,360      -$276,640         -6.6%
+                  Depreciation                                      $2,139,828       $2,139,828             so          0.0%
+                  Maintenance                                         $853,000        $808,238        -$44,762         -5,2%
+                  Admin & General                                     $715,992        $695,100        -$20,892         -2.9'6
+                  Outside SeJVices                                   $423,000         $378,043        -$44,957        -10,6%
+                  Bond & Interest                                     $428,000        $427,800           -$200          0.0%
+                Total Operating Expenses:                           $8,776,820       $8,389,368      -$387,452         -4,4%
+                Net Operating Income                                 $330,227         $979,851        $649,624        196.7%
+                Non-Operating Income                                 $540,000         $859,932        $319,932         59.2%
+                Net Income Before Town Payment                        $870,227       $1,839,783       $969,556        111.4%
+                Town Payment                                          $330,000        $330,000              $0          0.0%
+                Total Net Income                                   $540,227        $1,509,783       $969,556        179.5%
+
+
+
+
+               Preliminary 2025 Operating Budget
+
+                                            (OOO's)Using 5% Depreciation                                            Proposed
+
+                                                                                    Budget        F-10 Actual          Budget
+
+                       Items                                                           2024              2024            2025
+
+
+
+
+        Total Operating & Maintenence Expense Budget                                $20,910          $20,198          $21,351
+
+        Surplus Revenues returned to Town of Marblehead                                illQ             illQ             illQ
+
+          Revenue Requirement                                                       s21.240          $20,528          $21,681
+
+
+
+          Projected Sales (Kwh)                                                    $101,000          $99,900        $101,000
+
+
+          Average Rate Required per Kwh Sold                                         0.2103           0.2055           0.2147
+
+
+
+
+                                                                                                                                10/13
+               MMLD 2025 Operating Budget $21,681,000
+
+                                    All Other OpEx,
+                                       2.647, 12%
+
+           Employee Benefits &
+            OPEB*, 1.770, 8%
+                                                             Bulk Power,
+                                                             12.491, 58%
+                  Depreciation,
+                   2.175, 10%
+
+
+
+
+                      Payroll, 2.598,
+                          12%
+
+
+
+
+               2025 Operating BudgetVote
+
+VOTE:
+"Motion to approve the 2025 department operating and
+maintenance budget of $21,681,000."
+
+
+What is the rightsize of the team?
+
+Systems closest in sales to Marblehead:
+         System        Number of Employees
+
+
+       Concord                           35
+       Belmont                           29
+       Hudson                            26
+       Marblehead                        18
+       Ipswich                           21
+       Holden                            28
+       South Hadley                      26
+
+Average Number of Employees:             27.5         1O more than Marblehead
+
+
+
+
+                                                                                11/13
+Propose a Motion that the Light Commission form a Human
+Resources Sub-committee of the Commission, composed of two
+Commissioners and the General Manager, to study the appropriate
+size and composition of the team.
+The HR Sub-Committee will report regularly to the Light
+Commission and make recommendations to the Commission and
+to the General Manager.
+
+
+
+
+               2025 Capital Projects Budget
+
+• Large 2025 capital budget items determined in December:
+  - Village 13 Substation Construction bid Dec 11- $2.72 M (not $1.5 M)
+  - MMLD contribution         MassCEC/DOE grant award - $654,000 (now in
+    2026, not 2025);
+• Other capital project items
+  -    Village 13 switchgear balance $1.1 million
+  -    Ongoing Routine capital projects - $SOOK
+  -    Wilkins Plant - $2S0K
+  -    Department vehicles $160K
+
+
+
+
+               2025 Capital Projects Budget
+
+      Village 13
+                   Switchgear remaining due            $1,100,000
+                   Construction                        $2,720,000
+                                  Total Village 13                  $3,820,000
+      Subtransmission Resiliency Project                                     0
+      Ongoing Routine capital projects                               $500,000
+      Wilkins Plant (rough estimate)                                 $250,000
+      Dept. Vehicles                                                 $160,000
+                                       Total Capital                $4,730,000
+
+
+
+
+                                                                                 12/13
+Land ownership confusion at Clifton substation -
+MMLD view of the land area- Town GIS parcel map
+ ~   +                        1!11-t=o
+
+
+
+
+              ----****----
+
+
+
+
+                                                   13/13
+

@@ -54,7 +54,7 @@ body_class: subscribe-page
         ph('subscribe_submit', { outcome: 'error', status: r.status, error: d.error || null });
         return;
       }
-      msg.textContent = 'Check your inbox — a confirmation link is on its way (24h expiry).';
+      msg.textContent = 'Check your inbox for a confirmation link (it expires in 24 hours). Not there in a few minutes? Check your spam folder, then submit again and we will send a fresh one.';
       ph('subscribe_submit', { outcome: 'success' });
     } catch {
       msg.textContent = 'Network error. Try again?';

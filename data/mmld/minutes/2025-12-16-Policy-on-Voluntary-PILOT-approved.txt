@@ -1,0 +1,152 @@
+    Policy on Voluntary Payment-in-Lieu-of-Taxes (PILOT)
+Policy Number:
+Adopted by: MMLD Board of Commissioners
+Effective date:
+
+
+
+Purpose and Background
+The Marblehead Municipal Light Department (“MMLD” or “the Department”) is a municipal light plant
+operating pursuant to Massachusetts General Law, Chapter 164. As a locally owned not-for-profit utility,
+MMLD exists to provide safe, reliable, clean and reasonably priced electricity to the residents and
+businesses of Marblehead. Consistent with common practice among public power utilities nationwide,
+municipal light plants often provide voluntary financial contributions to their host communities as a
+recognition of the community benefits of public ownership. National analysis from the American Public
+Power Association notes that approximately 91% of public power utilities make such voluntary
+payments.
+
+Under Massachusetts law, any transfer of funds from a municipal light plant to its host municipality is
+strictly voluntary. The Department of Public Utilities (DPU) has consistently held that (a) municipal light
+plants have no legal obligation to make in-lieu-of-tax payments, and (b) any such payments must be
+funded only from below-the-line surplus, defined as the plant’s income remaining after accounting for
+all statutory expenses and up to an 8% return on net plant.
+
+MMLD has historically provided to the Town a flat annual Expected PILOT amount of $330,000; in 2025
+the Actual PILOT was $360,000.
+
+     Year        Electric Sales (MWh)    PILOT Payment        PILOT Payment ($/MWh)
+     2020        100,625                 $330,000             $3.28
+     2021        102,374                 $330,000             $3.22
+     2022        100,689                 $330,000             $3.28
+     2023        96,828                  $330,000             $3.41
+     2024        98,811                  $330,000             $3.34
+     2025        99,865                  $360,000             $3.60                         Estimated
+
+
+
+The purpose of this policy is to formalize a clear, transparent, and predictable structure for determining,
+approving, and transferring any voluntary Payment-in-Lieu-of-Taxes (“PILOT”) from MMLD to the Town
+of Marblehead (“the Town”) in the future.
+Definitions
+For purposes of this policy:
+
+    •   MMLD: The Marblehead Municipal Light Department
+    •   Town: The Town of Marblehead
+    •   Fiscal year: MMLD’s fiscal year, January 1 – December 31.
+    •   Payment in lieu of taxes (“PILOT”): A discretionary transfer of Department funds to the Town,
+        made in accordance with this policy and Massachusetts law.
+    •   Surplus: Below-the-line income available after all operating expenses, depreciation, interest,
+        debt payments, and the allowed statutory return on net plant have been satisfied.
+    •   Expected PILOT: The anticipated amount used for Town and MMLD budgeting purposes.
+    •   Actual PILOT: The amount transferred from the MMLD to the Town.
+    •   General Manager: The General Manager of MMLD or designee.
+    •   Board: The MMLD Board of Commissioners.
+
+
+
+
+3. Legal Framework
+PILOT payments must comply with Massachusetts General Laws and DPU precedent, including the
+following principles:
+
+    1. PILOT payments are not required and cannot be treated as taxes or utility operating expenses.
+       They must be made, if at all, from below-the-line surplus funds
+    2. MMLD may not raise rates or include PILOT as an above-the-line cost for the purpose of
+       generating funds to support such payments.
+    3. The Board must exercise prudent management discretion, ensuring that any PILOT does not
+       impair MMLD’s ability to maintain reliable service, invest in infrastructure, and meet future
+       financial obligations
+    4. The Department may adjust the PILOT in any year in which sufficient surplus is not available.
+
+
+
+
+4. PILOT Determination Method
+MMLD intends to maintain a simple, transparent, and predictable PILOT structure based on power sales
+of the prior fiscal year.
+
+4.1 Actual PILOT Amount
+
+    •   The actual PILOT shall be calculated as $3.60/MWh of power sales occurring in the previous
+        fiscal year, unless explicitly modified by the Board through a policy update.
+    •   The actual PILOT shall not be less than $360,000 annually, unless explicitly directed by the
+        Board.
+    •   Any modification to the actual PILOT shall be communicated to the Town Administrator.
+4.2 Expected PILOT Amount
+
+    •    The Expected PILOT used for Town budgeting purpose shall be $360,000 annually, unless
+         modified by the Board through a policy update.
+    •    Any modification to the Expected PILOT shall be communicated to the Town Administrator as
+         soon as MMLD becomes aware of the change.
+
+4.3 Annual Review
+
+Each March, after year-end financials are available, the Board shall evaluate whether sufficient Surplus
+exists to support the Expected PILOT. The Board may approve:
+
+    •    The actual PILOT;
+    •    The Expected PILOT; or
+    •    A reduced PILOT, if financial conditions warrant.
+
+In conducting this annual evaluation, the Board will consider:
+
+    1.   The availability of Surplus funds;
+    2.   Cash reserves and liquidity needs;
+    3.   Capital investment requirements;
+    4.   Risk exposure (e.g., volatile energy markets, storm costs);
+    5.   Recommendations of the General Manager.
+
+
+
+
+5. Timeline
+    1. Budgeting (Start of Fiscal Year): Expected PILOT incorporated into both Town and MMLD
+       budgeting as a planning figure.
+    2. Fiscal Year Close (December 31): Surplus is calculated after closing books.
+    3. Board Approval (By March 31): MMLD Board votes on actual PILOT amount.
+    4. Transfer (By June 30): Upon approval, MMLD transfers the PILOT amount to the Town
+       Treasurer.
+
+
+
+
+6. Conditions for Payment
+MMLD may transfer a PILOT only when the following conditions are met:
+
+    •    The Department has a positive Surplus after fully accounting for depreciation, debt service,
+         operating costs, and the statutory return on net plant.
+    •    The payment does not create or contribute to financial instability, rate increases, or insufficient
+         reserves.
+    •    The Board has voted affirmatively, in public session, to authorize the transfer.
+7. Early Warning Provision
+If, during any Fiscal Year, the General Manager determines that revenue reductions, extreme market
+volatility, storm-related expenses, or other financial risks may impair MMLD’s ability to meet the
+Expected PILOT, the General Manager shall notify the Town Administrator promptly.
+
+
+
+
+8. Transparency and Reporting
+To support accountability and public understanding:
+
+    •   The Board’s annual PILOT vote shall occur in an open public meeting.
+    •   MMLD will publish the approved PILOT amount in its annual report and on its website.
+    •   The Department will track and report PILOT payments as part of the annual budget cycle.
+
+
+
+9. Policy Review
+This policy shall be reviewed by the Board at least every five (5) years, or more frequently if required by
+changes in legal or financial conditions, or as requested by the General Manager or the Town
+Administrator.
+

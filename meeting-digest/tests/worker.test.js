@@ -1,6 +1,26 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { env, fetchMock, SELF, applyD1Migrations } from 'cloudflare:test';
 import { runScheduled } from '../worker/src/scheduled.js';
+import * as renderModule from '../worker/src/lib/render.js';
+import * as adminStatsModule from '../worker/src/lib/admin-stats.js';
+import { vi } from 'vitest';
+
+vi.mock('../worker/src/lib/render.js', async (importOriginal) => {
+  const actual = await importOriginal();
+  return {
+    ...actual,
+    renderHtml: vi.fn(actual.renderHtml),
+    renderText: vi.fn(actual.renderText)
+  };
+});
+
+vi.mock('../worker/src/lib/admin-stats.js', async (importOriginal) => {
+  const actual = await importOriginal();
+  return {
+    ...actual,
+    fetchSubscriberStats: vi.fn(actual.fetchSubscriberStats)
+  };
+});
 
 // Migration SQL split into individual statements for applyD1Migrations.
 // Each entry must be a non-empty string (no blanks, no semicolons trailing).
@@ -278,17 +298,40 @@ describe('POST /api/unsubscribe', () => {
 });
 
 describe('POST /api/mail-event', () => {
+  // Mirrors RESEND_WEBHOOK_SECRET in vitest.config.js.
+  const WEBHOOK_SECRET = 'whsec_' + btoa('0123456789abcdef0123456789abcdef');
+
+  async function svixHeaders(payload) {
+    const id = 'msg_worker_test';
+    const ts = String(Math.floor(Date.now() / 1000));
+    const raw = Uint8Array.from(atob(WEBHOOK_SECRET.slice('whsec_'.length)), c => c.charCodeAt(0));
+    const key = await crypto.subtle.importKey('raw', raw, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+    const mac = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(`${id}.${ts}.${payload}`));
+    const sig = 'v1,' + btoa(String.fromCharCode(...new Uint8Array(mac)));
+    return { 'svix-id': id, 'svix-timestamp': ts, 'svix-signature': sig };
+  }
+
   it('marks bounced subscriber on hard bounce', async () => {
     const row = await confirmedSubscriber('bounced@example.com');
     await env.DB.prepare('INSERT INTO delivery_log (id, subscriber_id, sent_at, n_meetings, provider_message_id, status) VALUES (?, ?, ?, ?, ?, ?)')
       .bind('dl1', row.id, Date.now(), 1, 'pmid-1', 'queued').run();
+    const payload = JSON.stringify({ type: 'email.bounced', data: { email_id: 'pmid-1' } });
     const r = await SELF.fetch('https://worker/api/mail-event', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ type: 'email.bounced', data: { email_id: 'pmid-1' } })
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...(await svixHeaders(payload)) },
+      body: payload
     });
     expect(r.status).toBe(200);
     const after = await env.DB.prepare('SELECT status FROM subscriber WHERE id = ?').bind(row.id).first();
     expect(after.status).toBe('bounced');
+  });
+
+  it('rejects an unsigned request', async () => {
+    const r = await SELF.fetch('https://worker/api/mail-event', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'email.bounced', data: { email_id: 'pmid-1' } })
+    });
+    expect(r.status).toBe(401);
   });
 });
 
@@ -551,6 +594,81 @@ topic_segments:
     expect(after.drip_week_index).toBe(0);
   });
 
+  it('passes adminStats to renderHtml only for the subscriber matching env.ADMIN_EMAIL', async () => {
+    await confirmedSubscriber('admin@example.com', { boards: ['select-board'], topics: [] });
+    await confirmedSubscriber('normal@example.com', { boards: ['select-board'], topics: [] });
+    env.ADMIN_EMAIL = 'admin@example.com';
+
+    stubGithubPrimersEmpty();
+    const today = new Date().toISOString().slice(0, 10);
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([{ type: 'file', name: `select-board-${today}.md`, download_url: 'https://example.com/sb.md' }]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/sb.md', method: 'GET' })
+      .reply(200, `---
+slug: select-board-${today}
+board: select-board
+board_display: "Select Board"
+date: ${today}
+title: "Select Board"
+vimeo_url: "https://vimeo.com/0"
+summary_card:
+  headline: "Test"
+  summary: "Test"
+topic_segments:
+---
+`);
+
+    renderModule.renderHtml.mockClear();
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.sent).toBe(2);
+
+    // renderHtml is called once per subscriber. Find the call for each address.
+    // Args: (matches, subscriber, env, weekEndingIso, primer, maxPrimerIndex, adminStats)
+    const adminCall = renderModule.renderHtml.mock.calls.find(args => args[1].email === 'admin@example.com');
+    const normalCall = renderModule.renderHtml.mock.calls.find(args => args[1].email === 'normal@example.com');
+    expect(adminCall).toBeTruthy();
+    expect(normalCall).toBeTruthy();
+    expect(adminCall[6]).not.toBeNull();
+    expect(adminCall[6].confirmed.n).toBe(2);  // both subscribers are confirmed
+    expect(normalCall[6]).toBeNull();
+  });
+
+  it('passes null adminStats when no subscriber matches env.ADMIN_EMAIL', async () => {
+    await confirmedSubscriber('normal@example.com', { boards: ['select-board'], topics: [] });
+    env.ADMIN_EMAIL = 'not-subscribed@example.com';
+
+    stubGithubPrimersEmpty();
+    const today = new Date().toISOString().slice(0, 10);
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([{ type: 'file', name: `select-board-${today}.md`, download_url: 'https://example.com/sb.md' }]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/sb.md', method: 'GET' })
+      .reply(200, `---
+slug: select-board-${today}
+board: select-board
+board_display: "Select Board"
+date: ${today}
+title: "Select Board"
+vimeo_url: "https://vimeo.com/0"
+summary_card:
+  headline: "Test"
+  summary: "Test"
+topic_segments:
+---
+`);
+
+    renderModule.renderHtml.mockClear();
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.sent).toBe(1);
+
+    const normalCall = renderModule.renderHtml.mock.calls.find(args => args[1].email === 'normal@example.com');
+    expect(normalCall).toBeTruthy();
+    expect(normalCall[6]).toBeNull();
+  });
+
   it('does not bump drip_week_index when Resend send fails', async () => {
     const row = await confirmedSubscriber('fail@example.com', { boards: ['select-board'], topics: [] });
     // The beforeEach registers a persist()ed 200 stub. Clear it so we can
@@ -590,5 +708,40 @@ topic_segments:
     // last_sent_at stays NULL — failure branch does not update it either
     const afterFull = await env.DB.prepare('SELECT last_sent_at FROM subscriber WHERE id = ?').bind(row.id).first();
     expect(afterFull.last_sent_at).toBeNull();
+  });
+
+  it('fetches subscriber stats exactly once per cron, not per subscriber', async () => {
+    // Three confirmed subscribers — all should receive the digest, but
+    // fetchSubscriberStats should fire only once.
+    await confirmedSubscriber('one@example.com', { boards: ['select-board'], topics: [] });
+    await confirmedSubscriber('two@example.com', { boards: ['select-board'], topics: [] });
+    await confirmedSubscriber('three@example.com', { boards: ['select-board'], topics: [] });
+    env.ADMIN_EMAIL = 'one@example.com';
+
+    stubGithubPrimersEmpty();
+    const today = new Date().toISOString().slice(0, 10);
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([{ type: 'file', name: `select-board-${today}.md`, download_url: 'https://example.com/sb.md' }]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/sb.md', method: 'GET' })
+      .reply(200, `---
+slug: select-board-${today}
+board: select-board
+board_display: "Select Board"
+date: ${today}
+title: "Select Board"
+vimeo_url: "https://vimeo.com/0"
+summary_card:
+  headline: "Test"
+  summary: "Test"
+topic_segments:
+---
+`);
+
+    adminStatsModule.fetchSubscriberStats.mockClear();
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.sent).toBe(3);
+    expect(adminStatsModule.fetchSubscriberStats.mock.calls.length).toBe(1);
   });
 });

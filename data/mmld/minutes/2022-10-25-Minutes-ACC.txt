@@ -1,0 +1,471 @@
+Light Commission October 25, 2022 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager, M. Barett, Business Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           November 28, 2022
+Re:             Commission Meeting October 25, 2022
+
+
+
+A quorum being present, Light Commission Chair Mike Hull opened the meeting at 4:35 pm, the meeting
+being held both in person and with remote access available to the public. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:          Hull, Frechette, Smith, Wolf and Yarmoff participated in person.
+        Light Department:       General Manager Joe Kowalik and Business Manager Matt Barrett.
+
+Approval of minutes of previous meetings of August 30, September 8 and September 14, 2022.
+
+Vote #2022-34 Motion to approve minutes moved by Commissioner Wolf and seconded by
+              Commissioner Frechette. Unanimous.
+
+
+Vote #2022-35 Motion to change the meeting time of the Commission regular meetings to 4:00 pm
+              moved by Commissioner Wolf and seconded by Commissioner Yarmoff. Unanimous.
+
+
+Commissioner Wolf requested that the agenda of this 10/25 meeting also include the review of the
+timing of the Goals for the General Manager, in line with the memo that was distributed at the previous
+Commission meeting.
+
+
+Residential and Utility Battery Storage (BESS) Update: The Commission reviewed a number of potential
+issues related to residential battery storage systems.
+
+BESS Permitting Process: A meeting took place during week 42 (week of 10/17), which gathered
+representatives from Marblehead’s Town Departments - the Battery Storage Working Group: Building,
+Wire Inspector, Fire Department, Board of Health and MMLD representatives all participated. The
+attendees received a list of relevant documents to review (list presented in this 10/25 meeting is enclosed,
+page 6). The MA Fire Marshal will issue an updated fire code in January 2023, with new guidelines that
+should specifically address BESS. This may have to wait until the new Governor administration is installed,
+after January 20. The Fire Chief will wait for the new guidelines to be issued before taking a position on
+how Marblehead authorizes residential batteries. MMLD will take the lead regarding recommendations
+for safety of Utility Scale BESS. The final permitting process can be modelled on the solar permit process.
+
+Eventually, the process to permit residential BESS should be part of the town on-line permitting process,
+with access from the Town website: https://marbleheadma.viewpointcloud.com/
+
+                                                                                                     1/13
+BESS Connection Process: For safety reason, it will be necessary to have the possibility to disconnect
+/isolate a battery from the grid, which would otherwise energize a line that may have been isolated from
+the rest of the grid for repairs, for example. The Wiring Inspector inspects connections as per the
+manufacturer’s specifications. It would be useful to have some standard connection templates to ensure
+safety and the possibility of this safety disconnect.
+
+Incentives for BESS: MMWEC is in the process of revising its recommendations for incentives for
+residential BESS participating in the Connected Homes program, and will likely recommend increasing the
+incentives, as the BESS benefit both the residents and the utilities. Whether Tesla batteries will participate
+in the Connected Homes program seems to be a Tesla commercial issue.
+
+Type of BESS allowable in Marblehead: Any residential battery will provide overall benefits to the town,
+in terms of peak shaving, in addition to the economic benefits to the home owner. Batteries which
+participate in the Connected Homes program bring direct economic benefits to the utility, hence the
+incentives described above that MMWEC recommends to all the municipal light plants. As we resolve the
+permitting process, we should also make clear which residential batteries are allowed, and which in
+addition, receive financial incentives.
+
+BESS: Other issues/discussion points.
+    Hurricane Ian (9/22) highlighted both potential risks and benefits of BESS: vehicles that had been
+       submerged in salt water have been shown to catch fire. On the other hand, when communities
+       lost power, residential BESS allowed both homes and communities to recover much faster.
+    Homeowners wishing to install BESS should be aware of the possible implications for their
+       insurance policies.
+    If Tesla batteries installed in Muni towns were to be dispatched by Tesla in a virtual power facility
+       system, as they do with PG&E (CA) and Green Mountain Power (VT), Tesla might find itself in
+       breach of the Massachusetts general law chapter 164.
+    Distributed resources, such as solar, residential batteries, and more importantly for the future
+       EV2G (Electric to Grid vehicle charging) all impact current quality, which will become an important
+       issue in the future.
+
+It should be noted that, to the best of our knowledge, Marblehead is the only town in New England that
+does not currently allow residential BESS.
+
+General Manager Updates: Slides presented are shown from page 7, below.
+
+Financial / Rates updates
+
+MMLD’s open position of about 30% of our portfolio is exposing us to the fluctuations of energy prices
+on the markets. As a result, we have had to increase the PPA in the adjustment mechanism, to ensure
+that we end the calendar year with a result at equilibrium. This is not a cash flow problem, as MMLD
+financial position is and remains solid, rather it is a reflection of the legal obligation to show a financial
+result that is not a loss.
+
+In mid-October, MMWEC published the energy costs forecasts moving forward. With this new forecast,
+we see a $573K shortfall, causing us to increase the PPA by another $0.036.
+
+
+                                                                                                           2/13
+A new forecast will come next month, and we will review the PPA charge monthly to take into account
+both increases and eventual decreases when these materialize next year, possibly after March. While we
+have enjoyed stable rates over the last years, the current market conditions are unprecedented and are
+causing the rapid rate changes. All of MMLD’s operating expenses are stable and under control, at or
+under budget, and the single reason for the changes are the fossil fuel induced energy price changes’
+impact on our open position. We will review the 2023 budget at the next board meeting.
+
+The current situation is summarized in the slide “Residential Rate Changes” page 8: where energy costs
+stood at $0.1735 in January, they are now at $0.2685 for November. This is not specific to Marblehead,
+and neighboring towns have actually higher increases as their exposure to the fossil fuels is larger. For
+MMLD, roughly half of our power rates are locked in long-term contracts. About 20% is hedged at
+various forward prices, the details of which will be shared with the Commission. The rest, about 30%, is
+exposed to market fluctuations.
+
+The rate restructuring that MMLD has planned is independent from these evolving market conditions
+and should go forward as planned. MMLD is currently planning to “reset the PPA” to 4 cents at the same
+time, which will allow to dial down the PPA as market conditions allow.
+
+To better communicate about these issues, MMLD is looking at adding a communication insert page to
+the bills, this is work in progress. MMLD is also planning to hold a public meeting to explain the on-going
+changes to all residents.
+
+Solar project dedication in Ludlow
+
+MMLD is a participant in the largest single solar field in Massachusetts, a 35 acres, 23,000 panels,
+6.9 MW AC array. The dedication took place on October 17 in presence of the family of Master Sergeant
+Cotton who served on the base and advocated for a solar field. A Marblehead resident serving in the Air
+Force reserve at the base, Mike Lewis, also participate with his unit in the dedication ceremony.
+
+Marblehead has a little over 10% ownership of the array, which is expected to produce 1,500 MWh per
+year, and will add 1.5% of clean power to our portfolio. This solar plant qualifies for an IRA investment,
+when it finally comes online at the beginning of 2023.
+
+MMWEC Television commercials: Joe Kowalik showed the MMWEC commercials which explains what
+the Municipal Light Department bring to their communities.
+
+
+Strategy Working Group update
+The Strategy Working Group met two weeks ago: Joe Kowalik, Mike Hull, JJ Yarmoff and Kevin Colcord, a
+Marblehead resident, management consultant helping on strategy. The group reached a consensus to
+generate a long-term demand forecast as a first step. We will meet again next Thursday.
+
+
+Sustainability Working Group update
+In the two meetings since the last board meeting, the Sustainability Working Group has focused on
+putting in place a “Customer journey map” which identifies how a customer goes through a process of
+awareness to strategic electrification, an end goal important from the Light Plant perspective. This
+allows to identify where the touch points with the customers are to help them along that journey. Bill
+
+                                                                                                       3/13
+Bullock at MMWEC is familiar with and has been helping the group think through this process. Peter
+Barnett, a resident and marketing expert, also joined this meeting. Several action items were decided,
+the first one of which is a customer survey, to better understand customer segments and who we are
+marketing to. This has been discussed with Great Blue, which has made a proposal for such a survey and
+has experience with MLPs. We have decided to proceed, and the next step is to come up with a set of
+questions for the survey. The survey will be digital, the goal is to have about 400 answers; the survey will
+be presented through two billing cycles, to have information early next year. Some questions/answers
+could benefit the strategic plan as well.
+
+Goals of the General Manager: Timing of goals
+
+We need to reconcile the time periods for the General Manager’s goals, given a contractual year April to
+April, and MMLD operations on a calendar year and clarify the process around setting goals and review
+period. As these are contractual matters, we should be precise about it. Jean-Jacques Yarmoff, Simon
+Frechette and J. Kowalik will meet off line to propose a process and review the various goal proposals.
+
+
+The agenda for the meeting having been exhausted, a motion was made to adjourn and adopted
+unanimously at 7:10 pm.
+
+
+
+
+                                                                                                       4/13
+      Documents and slides shown during Light Commission Meeting 10/25
+
+
+
+
+        Agenda
+        1. Approve minutes of Sept 27th meeting
+        2. Residential & Utility Battery energy storage updates-
+        3. MMLD financial update
+        4. Ludlow, MA Solar PV dedication
+        5. Tree trimming update
+        6. MMWEC- municipal power video
+        7. Strategy Committee update
+        8. Sustainability Committee update
+        9. Public Comments
+
+
+
+             Battery Storage Working Group -10/13/22
+
+• Building Dept. - Wiring (electrical) Inspectors Ron Marks & Eric
+  Chisholm
+• Fire Dept.- Chief Jason Gilliland, Capt./Fire Prevention Gregg
+  McLaughlin
+• Dept. of Health- Director Andrew Petty
+• MMLD Board and licensed electrician - Mike Hull
+• MMLD Dept- GM Joe Kowalik, Tech Services Mgr-Colin Coleman
+
+
+
+
+                                                                         5/13
+     Lithium-Ion Battery Electric Storage System (BESS) – Relevant documents for review
+                                       October 19, 2022
+
+1. MMLD Terms and Conditions for Electric Service – see highlighted sections 3, 15F, 15L, 15M, 17B,
+   and 19B, which may apply to customer BESS installations.
+2. Joint Memorandum from Mass State Fire Marshal and Dept. of Fire Services, Div. of Professional
+   Licensure – Superseding Guidance for Energy Storage System (ESS) Installations in One and Two-
+   Family Dwellings – June 7, 2021
+3. MMLD insurance company AEGIS (Associated Electric & Gas Insurance Services Limited). –
+   white paper Nov 2021 Loss Control Lithium-ion Battery Energy Storage Systems. A well-written,
+   thorough, non-technical risk analysis with measures to mitigate risks. Includes a reference page
+   with additional sources sited.
+4. UL Research Institute- The Challenges of Ensuring Safety for Battery Energy Storage Systems.
+   January 2021. Watch a good 30-minute overview of BESS and EV benefits, fire risks, and the
+   recent evolution of relevant UL standards
+5. Fire Safety Research Institute (FSRI) & UL – Fire Service Considerations Investigation of the Az Li-
+   Ion ESS Incident– a 2019 2.16 MW Lithium-Ion BESS explosion in Surprise, Az. that resulted in
+   serious injuries to four first responders. A detailed 40-minute video of the incident investigation
+   and recommendations. (The first speaker may be difficult to understand, but her role is to
+   provide a 90-second introduction to the main speakers.)
+6. UL 9540 – BESS standards overview webpage.
+7. UL540A – Test methods for BESS thermal runaway. Watch the 2 minute video
+8. UL webpage - Environmental Impacts of Lithium-Ion Batteries March 16, 2022.
+   https://ul.org/research/electrochemical-safety/getting-started-electrochemical-
+   safety/environmental-impacts. (Watch the two short videos on this webpage.)
+9. Seattle Times- Tesla’s Big Batteries Aren’t the Fire Problem – Lithium Is. 10/2/2022.
+   https://www.seattletimes.com/business/teslas-big-batteries-arent-the-fire-problem-lithium-is/
+10. Fire at PG&E’s Tesla battery in California is now under control. 9/22/2022. https://www.pv-
+    magazine.com/2022/09/22/fire-at-pges-tesla-battery-in-california-is-now-under-control/
+11. Types of Lithium-Ion Batteries – the battery chemistry determines the level of thermal runaway
+    risk https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
+12. APPA Public Power Current – October 17, 2022. Recent California Energy Storage Battery Fire
+    Draws Renewed Attention to Storage Safety Issues. A good overview article of recent BESS
+    incidents and the continuing need for safety standards.
+Source: BESS regulation reading list 2022-10-20 v3.doc
+
+
+
+
+                                                                                                  6/13
+             Financial Situation - Sept 2022
+
+• With our current $0.056 PPAour year-end expenses will
+  exceed revenue by $778K
+• The gap is due to increased wholesale energy costs in the ISO­
+  NE "day ahead" market, from plants powered by natural gas.
+  Open power represents ~30% of our portfolio.
+• To close the gap we need to increase the PPAin October by
+  $0.034 ...average residential bill increase of 22.31
+• Our operating cash position remains solid - $5.4 million
+
+
+
+            Financial Situation - Oct 2022
+
+• The $0.056 PPAwent into effect with October bills
+• In mid-Oct MMWEC published new, higher priced 2022-6 power
+  forecasts.
+• Sept actuals and the new forecasts show a new $573,000 shortfall.
+  We need to increase the PPAin November by $0.036...average
+  residential bill increase of $23.83
+• Our operating cash position remains solid - $5.3 million
+• MMWEC will update their forecasts in mid-Nov.
+• We will review and adjust PPAmonthly;
+• Still plan Jan rate restructuring
+• Non-energy 2022 YTD expenses below budget
+
+
+
+
+                                                                      7/13
+                    Residential Rate Changes- Recent History
+
+•                   via Power Cost Adjustments
+
+MMLD residential rate                                          $0.1425
+                                                                      Jan-22             Mar-22
+                                                                                         $0.1425
+                                                                                                                   Aug-22
+                                                                                                                 $0.1425
+                                                                                                                                         Oct-22
+                                                                                                                                        $0.1425
+                                                                                                                                                  Nov-22
+                                                                                                                                                  $0.1425
+PPA(wholesale power cost adjustment)                           SQ,_Q.ll.Q                so.0410                 ~                      ~         ~
+                 Total energy cost (per kwh)                   $0.1735                   $0.1835                 $0.1985                $0.2325   $0.2685
+
+average residential monthy use - kwh                               662                       662                     662                    662       662
+             monthly residential energy cost                   $114.86                   $121.48                 $131.41                $153.92   $177.75
+                                   Base rate                     $4.25                     $4.25                   $4.25                  $4.25     $4.25
+                                Hydro credit                          ~                    ~                        ~                    ~         ~
+             Average residential monthly bill                  $116.61                   $123.23                 $133.16                $155.67   $179.50
+                  % increase from Jan 2022                                                    6%                    14%                    33%       54%
+
+
+
+
+                                                      --
+                                                       --...
+                                                       --
+                                                       ..........
+                                                           - - ..
+•
+                                                                                           ,_,
+         .                                  -
+                                            .....-·-.. --
+                                                      ""'--                                                      Y-T•O..
+                                                                                                                    ._..v.,._
+
+
+
+                                                   = --
+                                                 ~              !.!         !!!                           :!!!        l!!        l.!
+                                                                        ,                                          ,._.,
+
+                                                       ---...                                         u.1110
+                                                          1,7111                                                               IUI
+
+                                           12!12              l'fil                                   U!!!.2 !.!8..2          !!12
+                                               !!!!           !!!!      1!!.!I                        !.!!!!       !.!!!a!    @!!,!I
+
+
+
+                                                     .... ..--- .....
+                                                                                      _.,__
+                                               ,..,, ....
+                                               210.0
+
+
+
+                                                ... .,.          .........
+                                                               00.0
+                                                                           ~·-
+                                                                            0.0                         "'70
+                                                                                                                    t,&1'10
+
+                                                                                                                     1310        10
+
+                                                                                                                               C,,4
+                                                .... ,.,
+                                                ... ...
+                                                ••  ... --    -  ....
+                                                                 ...-·
+                                                                          00
+
+                                                                          00
+
+                                                                        p, ..
+                                                                                  OPel
+                                                                                                        ""'
+                                                                                                        et:t.D
+                                                                                                                     mo
+                                                                                                                     1120
+
+                                                                                                                              cm•
+                                                                                                                                 OJ>
+
+
+                                                                                                                                 '"
+
+                                                .. .. -- -·
+                                                                                                                               .,._,,
+                                                "'' ,.,
+                                                »o      ...    22.0               a..-                               ,OU
+
+                                                                                                                     uu
+                                                                                                                               ""
+                                                 00
+
+                                                    .. ...
+                                                ... ...
+                                                 u          - ...
+                                                                u
+                                                                         .... ""'
+                                                                         (UI
+
+
+
+
+                                                                          '"          ,_
+                                                                                                         ,..
+                                                                                                         »o
+                                                                                                         ,,. ""
+                                                                                                             ru ""
+                                                                                                                      zu        CUI
+
+
+                                                                                                                                l'-OI
+
+
+                                               ... ,... ..
+                                                                          u
+
+                                                                                  ---                                            ..
+                                                                                                                                .....
+
+                                               ....
+                                                                                                                     IIU
+                                                                                  '"'""
+                                                                                                        mo
+                                               ....            lU                                                    m2
+
+
+
+
+                                                                                  --
+                                                                         !!:!     Toal O.,.,lll C..   !.!!!a! !ru..!.         <all
+                                                        ....,,JIU                                      1,11
+                                                                                                          ...        4tU      _.,
+                                                 J.O            JR        u       ...
+                                                                                    ..._,                 Q9           u       lllJII
+                                                                                      ....
+                                                                                  ... ,
+
+
+
+                                                                                                                    -
+                                               JIii           llU       (!!,!I                         WI.II        >II.I     I!!!!!
+                                                 u              u         u                               u            u
+                                               !!!.!          !!!:!     (!!,!I    ..._._
+                                                                                  ~AwM~:
+
+                                                                                                       I!!!!)
+                                                                                                                                 u
+                                                                                                                              l!!!c!I
+
+
+
+
+                                                                                                                                                            8/13
+      MMWEC/MMLD   Solar PV Array dedication
+
+                   • The largest single solar field in
+ MMWEC/MASTERSER     Mass - 35 acres, 23,000 panels
+ALEXANDERCOTTONM
+                   • The largest municipally-owned
+                     solar project in Mass
+                   • A 6.9 MW ACarray
+                   • Named in honor of Master
+                     Sergeant Alexander Cotton
+                   • Sited on the MMWEC campus
+                     Ludlow, Mass
+
+
+
+
+                                                         9/13
+10/13
+        .
+        ,.IJJY
+         MMLD ownership at Cotton Memorial Solar Array
+
+
+• 10.87% ownership
+• 1,500 M HW per year
+• Equates to 1.5% of MMLD's 2021 retail sales
+• Could power 160 homes for one year
+• Displace over 700 tons of CO2 emissions per year, based on
+  current ISO-New England averages.
+
+
+
+
+                                                               11/13
+12/13
+13/13
+

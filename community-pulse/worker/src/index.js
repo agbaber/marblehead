@@ -7,11 +7,13 @@
 // Backed by a D1 database. No auth, no sessions.
 
 import { handleVerify } from './verify.js';
+import { handleEngagement } from './engagement.js';
 import { serveVerifyPage, serveBranchesPage } from './pages.js';
 import { STREETS } from './streets.js';
 import { handleFbStart, handleFbCallback } from './fb.js';
 import { handleClaimAddress } from './claim.js';
 import { handleProfileGet, handleProfilePost, handleClaimRelease, handleMePre } from './profile.js';
+import { handleVouchRequest, handleVouchStatus, handleVouchRespond } from './vouch.js';
 
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 const RATE_LIMIT_MAX = 5; // per section per window per ip
@@ -46,6 +48,16 @@ export async function handleRequest(request, env) {
     if (request.method === 'POST') return handleVotePost(request, env);
   }
 
+  if (url.pathname === '/api/verify/vouch-request' && request.method === 'POST') {
+    return handleVouchRequest(request, env);
+  }
+  if (url.pathname === '/api/verify/vouch-status' && request.method === 'GET') {
+    return handleVouchStatus(request, env, env.JWT_SECRET || 'dev-secret-not-for-production');
+  }
+  if (url.pathname === '/api/verify/vouch-respond' && request.method === 'POST') {
+    return handleVouchRespond(request, env, env.JWT_SECRET || 'dev-secret-not-for-production');
+  }
+
   // Neighbor verification network endpoints.
   if (url.pathname.startsWith('/api/verify/')) {
     const verifyResponse = await handleVerify(request, env, url);
@@ -74,6 +86,12 @@ export async function handleRequest(request, env) {
 
   if (url.pathname === '/api/me/pre' && request.method === 'GET') {
     return handleMePre(request, env);
+  }
+
+  // Backing and reps: residents endorse ideas on what-can-we-do.html.
+  if (url.pathname === '/api/engagement') {
+    const engagementResponse = await handleEngagement(request, env, url);
+    if (engagementResponse) return engagementResponse;
   }
 
   // Street list for address typeahead.

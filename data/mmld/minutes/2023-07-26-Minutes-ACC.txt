@@ -1,0 +1,516 @@
+Light Commission July 26, 2023 meeting minutes
+To:             Light Commission: Commissioners
+                Light Department: J. Kowalik, General Manager
+From:           Jean-Jacques Yarmoff, Secretary
+Date:           August 26, 2023
+Re:             Commission Meeting July 26, 2023
+
+
+
+A quorum being present, Chair Wolf brought the meeting to order at 4:02 pm. The meeting was held in
+person and with remote access, both available to public participation. A recording of the meeting is
+made available to the public at the following link.
+
+Participated in meeting:
+        Commissioners:       Frechette, Hull, Wolf and Yarmoff participated in person; Smith
+                             participated remotely.
+        Light Department:    General Manager, J. Kowalik; Financial Manager, Matt Barrett; Distribution
+                             Manager, Greg Chane and Manager of Technical Operations, C. Coleman.
+        Invited, from MMWEC: Matt Ide, Executive Director, Energy & Financial Markets,
+                             Justin Connell, Director Energy Markets,
+                             Zoe Eckert, Sustainable Energy Policy & Program Senior Manager.
+Approval of Minutes of previous meetings.
+Vote #2023-29 A motion to approve the minutes of the Light Commission meeting of January 10, 2023,
+               Executive session was moved by Commissioner Frechette and seconded by
+               Commissioner Yarmoff. Unanimous.
+
+Vote #2023-30 A motion to approve the minutes of the Light Commission meetings of June 27, 2023,
+              was moved by Commissioner Frechette and seconded by Commissioner Yarmoff. Four in
+              favor, one abstention.
+
+Comments from the Public
+Joe Rydzweski, 1 Chestnut Street, reported that his Charge Point Level 2 charger was not charging at all
+during the period 5 to 9 pm. He was under the understanding that during peak periods, the chargers
+enrolled in the Connected Homes program would charge at the Level 1, but this is not the case.
+See further discussion with MMWEC representatives below, bottom of Page 4.
+
+Quarterly Review of Department Goals and Objectives
+General Manager Kowalik presented a status update of the GM’s and Department’s goals for the year,
+shown from Page 8.
+Goal A4: Safety dashboard. Commissioner Yarmoff suggested that as a safety dashboard is being
+developed, it could potentially include three components: 1) an indicator of the training and safety
+procedures for Department staff members, as they may be updated from time to time; 2) an indicator
+tracking the courses and safety classes taken by staff; 3) an indicator of incidents.
+
+Commissioner Wolf mentioned that the board would like to hear from staff members on a quarterly
+basis, and this topic could come up at that time.
+
+                                                                                                     1/11
+Goal B3: Meter and Billing IT update. Commissioner Smith wondered whether the technology issues
+had been resolved, are our first generation smart meters up to reading data every 15 mn? The General
+Manager explained that there are two aspects: the measurements done by the meter on the one hand
+and the communication of that data. The department is currently checking data integrity. Time of Use
+(TOU) means going from 10,300 data points once a month to a million data points a day. While the
+system is very accurate, with several 100 million data points per year, there will be some data missing or
+wrong. The department is currently chasing the various issues that cause some faulty data transmission
+in order to increase accuracy of data collection. This includes issues with meters inside apartment
+complexes (40 or so) that we cannot access, or meters which are still being read by hand because of
+customer choice. So to sum up: - we are on version 4 with Nexgrid; - we are working on data post
+processing on the server and making progress with the vendor; - we feel good about the technology to
+read the meters; and - there are some known physical difficulties to read some meters that we are
+working through.
+Goals C6 and D4. Commissioner Yarmoff remarked that goals C.6. or D.4. show board participation.
+While commissioners will help where they can with their contacts, MMLD should not depend on board
+members for the realization of these goals. Grant writing, and more importantly execution of the project
+submitted for a grant, needs to be integrated into the work flow of the department.
+Goal D2. Commissioner Frechette asked whether the Utility Scale battery timing was slipping (Goal D.2.):
+the General Manager explained that the timing of this goals depends on siting of the battery which is
+still not decided. Review of siting of the battery will take place at a subsequent meeting.
+
+Proposed revision to Residential Battery Policy
+It makes a lot of sense for the Department to be promoting residential batteries for resiliency, price
+stability, it reduces transmission costs, and enables a larger amount of solar energy to be used.
+Commissioner Frechette proposed a modified Residential Battery policy that could replace the one
+adopted by the Commission on August 30, 2022. In addition, MMWEC has a recommended policy for
+incentives that other departments are adopting and it would make sense for MMLD to offer it as well.
+This implies that Tesla power walls would be allowed, but not incentivized. See the proposed
+modification on page 6. The details of the incentive program should be reviewed at a next meeting.
+
+The General Manager has a concern with regards to the possibility of Tesla “generating” power by
+aggregating discharge of Power Walls into our territory, which would be in contradiction with MMLD’s
+exclusivity for power generation (MA GL Chap. 164). MMWEC’s Matt Ide commented that FERC order
+2222 makes a specific exemption for Municipal Light Plants (MLPs): they do not have to open up their
+territory to the aggregation model, they can control this and offer their own aggregation. This is what a
+program like Connected Homes offers to MLPs like MMLD: MLPs can make sure that customers benefit
+from aggregation, but doing it in a way that protects the franchise of the MLPs. If a MLP did open up to
+aggregation not under their control, one should be careful about the implication. MMWEC sees
+FERC2222 exemption as encouraging MLPs to provide the appropriate aggregation programs for their
+customers, under their control. We do not want to replicate what happened a few years ago with
+rooftop solar installation which left a lot of people unsatisfied. Commissioner Yarmoff proposed that this
+restriction could be written into the legal interconnection agreement between MMLD and the customer,
+which could allow any make of battery to be connected (pursuant to appropriate engineering review) as
+long as they only participate in aggregation programs run by MMLD.
+Commissioner Frechette pointed out that, as far as we know, other MLPs are allowing Tesla Power Wall
+installation. Residents in these territories are using batteries in many different ways, and if they are
+participating into an aggregation program, this is actually useful to the distribution system and to the
+economic situation of their MLP. Would MMLD be the only MLP that is preventing this beneficial use of
+batteries?
+
+                                                                                                     2/11
+The General Manager pointed to a concern this un-managed use of Power Wall aggregation could imply:
+if an aggregator manages a substantial number of batteries behind the MMLD meter, they may claim
+the capacity reduction to ISO-NE (in a way which is beyond our control), while we also claim the capacity
+benefit as we see the consumption at MMLD meter dipping. How would this double counting be avoided
+or managed by ISO-NE?
+
+Chair Wolf concluded the exchanges by stating that we need to collect more information: - regarding the
+ability of Tesla to aggregate behind the meter of MLPs; further legal review to be provided by MMWEC
+by the next Board meeting. The Chair requested Commissioner Frechette to re-propose a (potentially
+modified) motion once the data is available, hopefully at the next meeting.
+
+General Manager Updates
+Operating Financials: Latest Operating Statement for June 2023 is enclosed, see page 10. So far, a mild
+winter has been followed by a mild summer, and this is reflected in both the energy consumption
+(actuals lower than budget) and in a lower cost of energy purchased. With the PPA reduction of June,
+the current forecast is for MMLD to end the year with a Net Income of $843K (taking into account the
+$330K Pilot payment). The OPEB and Pensions numbers in these financials are still place holders with
+realistic numbers until we receive finals for 2022 from the Town’s new Financial Manager, which should
+happen very soon.
+Hedging and Open positions: MMWEC has implemented MMLD’s decision to close half of the 2024
+open positions, leaving the possibility of MMLD purchasing further hedges with environmental
+attributes in a few months, as discussed at the last board meeting.
+October / November actions: we should anticipate a further review of the then current PPA rate, as well
+as implementation of the phase 2 of the base rate/energy rate adjustments.
+MMLD accounts: MMLD uses 8 different cash accounts for distinct uses. Five are under the custody of
+the Town Treasurer, one each under the custody of MMWEC, Mass PRIM board, and the Retirement
+Board. The institutions holding the cash are either MMDT, Rockland or MMWEC. Each account bears
+interest (currently, MMDT’s account bear 5% where the investments are not US treasuries). See page
+11. Commissioner Yarmoff remarked that this review of our cash accounts shows that they are well
+managed, with a balance of yield and security, keeping in mind the purpose of each of these accounts.
+Project 2023A. MMLD participation agreement has been signed. This secures long term cheap power for
+the town in a contract with NextEra Energy, see discussion at the previous board meeting.
+80 Commercial Street: Building repairs. This is an issue that has been on-going for all the duration of the
+General Manager’s tenure, with work that has been on-going since the Department moved back into the
+building at 80 Commercial street, and more work needs to be done. MMLD has been assisted by an
+outside firm, GRL Associates, to work through these issues. Whether these issues are design error,
+construction errors or customer reception errors is difficult to determine, and asking for damages
+through litigation seems a likely nonproductive course of action, which is not recommended.
+Vote #2023-31 A motion to approve the construction of a specific building envelope repairs to 80
+                 Commercial St exterior walls, windows and gutters awarded to the lowest-price
+                 qualified bidder in a public bidding session, with a total bid award amount not to exceed
+                 $240,000 was moved by Commissioner Yarmoff, seconded by Commissioner Frechette.
+                 Unanimous.
+80 Commercial Street: fencing around property. The bids are due today, we have not yet opened them.
+
+
+                                                                                                      3/11
+The General Manager anticipates that part of CZM grant can be used for this construction, which should
+allow to keep the expense well under $400K. Hence the proposal for this vote, considering that the work
+has to start promptly.
+Vote #2023-32 A motion to approve the construction of a new fence and gate system at 80 Commercial
+                Street, awarded to the lowest-price qualified bidder in a public bidding session that ends
+                July 26, 2023, with an MMLD net bid award amount not to exceed $380,000 was moved
+                by Commissioner Yarmoff, seconded by Commissioner Frechette. Unanimous.
+Substation Meters. Work on replacing and upgrading the meters for the substations which will allow MMLD
+to get more precise data. After this upgrade, only the Clifton substation will not have this capabilities.
+Vote #2023-33 A motion to approve the spending of an amount not to exceed $50,000 to existing
+               MMLD vendor United Power Group, Stoughton, Mass., to replace the end-of-design-life
+               circuit-level meters at the Commercial Substation was moved by Commissioner Yarmoff,
+               seconded by Commissioner Frechette. Unanimous.
+GIS mapping. This is to launch the work of inputting detailed data in the GIS system, and to acquire the
+licenses for cloud-based software. The work done will be compatible with what the town is doing in
+upgrading its own information. MMLD’s data will be in the cloud, town’s data on a local server, we will
+exchange and update each other’s data.
+Vote #2023-34 A motion to approve the spending of an amount not to exceed $25,000 for GIS technical
+                 support focused on updating MMLD distribution system maps, and an amount not to
+                 exceed $30,000/year for three years for an ESRI SaaS license for cloud-based utility
+                 mapping software was moved by Commissioner Yarmoff, seconded by Commissioner
+                 Frechette. Unanimous.
+Review of MMLD Insurance. The General Manager is proposing to review MMLD insurance coverage
+with PURMA and specifically question the cyber insurance policy, and would appreciate board member
+participation. Commissioners Frechette, Smith and Yarmoff proposed to assist as necessary.
+EV charger program review. The Light Department provides free chargers to residents in a program
+organized by MMWEC. The third party company used to run the program for MMWEC has recently
+changed, from Charge Point to Virtual Peaker. Virtual Peaker also administers the Connected Homes
+program, which remains distinct from the EV Scheduled Charging program.
+The main characteristics of the program are: In exchange for a free charger, participants agree to stay in
+the program for three years, during which charging occurs at Level 2 except during peak hours of 5 pm
+to 9 pm, when charging is curtailed to level 1 charging speeds. At the end of the three years, participants
+can opt-out of the program, or continue with the program: there is a financial incentive to do so.
+Participants who want to un-enroll during the three year contract duration can do so, but would have to
+pay part of the cost of the charger pro rata temporis. MMWEC is currently contacting all participants in
+the program to inform them of the change of company: the majority of the 33 Marblehead participants
+has accepted the roll over to the new company without any problem.
+With the goal of increasing enrollment and facilitating extended participation beyond the three year of
+contract, if that is the duration that should remain in the future, the terms of the program should be
+reviewed.
+
+MMWEC will prepare a short document defining the terms of the current program for future review by
+the board.
+
+Additionally, MMWEC will investigate why during peak hours, some people now experience the
+impossibility to charge, where the expectation was to charge at Level 1 speeds.
+
+                                                                                                      4/11
+Update on key MMLD hires
+Utility Scale Battery siting
+These two agenda items will be tabled for a later session in view of the time, as the board will address
+the next agenda item in executive session, a review of the Solar on School project, including a review of
+confidential MMWEC pricing data, considering several MMWEC guests are present for this agenda item.
+
+
+Executive Session
+Chair Lisa Wolf proposed a motion to enter Executive Session Motion to discuss trade secrets or
+confidential or proprietary information regarding activities of a governmental body as energy supplier,
+municipal aggregator or energy cooperative, if an Open Session will adversely affect conducting business
+relative to other entities making, selling or distributing energy. Not to return to Open Session. Motion
+seconded by Commissioner Frechette.
+Vote: Simon Frechette: Yes; Mike Hull: Yes; Adam Smith: Yes; Lisa Wolf: Yes; Jean-Jacques Yarmoff: Yes.
+Executive Session started at 5:55 pm.
+
+The Executive Session concluded at 6:34 pm at which point a motion to adjourn was proposed,
+seconded and after a roll call of commissioners with unanimous result, adopted.
+
+
+                                               ----****----
+
+
+
+
+                                                                                                     5/11
+                 Documents presented during July 26 Light Commission Meeting
+
+
+
+                           Agenda
+
+             4:00 Call to Order & Approve minutes of June 27, 2023
+             4:05 Public Comments
+             4:15 Quarterly review of GM/Dept Objectives - JK & Board
+             4:45 Proposed Revision to Residential Battery Policy - LW
+             4:50 GM Items
+             5:35 Executive session - Solar on Schools review, includin~
+                  confidential pricing with MMWEC representatives
+
+
+MEMO
+
+Date: July 26, 2023
+To: MMLD Board, staff
+From: Commissioner Frechette
+Re: Revised battery interconnection policy
+
+Background:
+On Aug 30, 2022 the Board approved the following motion:
+
+Motion #2022-29: To promote residential battery storage, MMLD will discontirue its practice of
+denying interconnection permits, and allow batteries to connect, provided customers
+participate in a demand-response program allowing MMLD or its agent to control dispatch to
+and charging from the grid ..
+
+I would like to make a motion to rescind Motion #2022-29 and replace it with the following:
+
+Motion:
+The Board recommends that to promote residential battery storage, MMLD allow connection of
+UL Certified batteries installed following the requirements of the appropriate codes
+(Massachusetts building and fire codes as they may apply, and specific Marblehead
+requirements, if any). Batteries enrolled in the Connected Homes Program should receive a
+financial incentive as recommended by MMWEC for its members to implement.
+
+
+
+
+                                                                                                 6/11
+             Monthly Operating Statement
+
+• Mild June weather continued lower YTD energy usage.
+• Lower actual energy costs is the biggest factor behind the positive
+  YTD variance.
+• With June PPAreduction, current MMLD end of year net income is
+  forecast to be $843K after $330K Pilot payment
+• MMWEC implemented MMLD's decision to close 2024 open
+  position by 50%...
+• Anticipate PPAreview/adjustment for Oct bills
+• October-Nov Board decision on phase 2 of base rate
+  increase/energy rate decrease
+
+
+
+
+              GM Updates
+
+1. MMLD operating financials -June YTD- Matt Barrett
+2. Capital account balance review - Matt Barrett
+3. Project 2023A MMLD Participation Agreement- MMLD signed
+4. VOTE:80 Commercial St building envelope capital improvements
+   $23SK estimate
+5. VOTE:80 Commercial Fence & Gates - bid opening July 26
+   -   Board vote not to exceed $380K, net expense to MMLD
+6. VOTE:Replace Commercial Substation circuit meters - $SOK
+7. VOTE:Electric utility GIS mapping restart - $2SKtech support & up
+   to $30K/year, 3-year ESRIcloud s/w licenses
+
+
+
+
+              GM Updates
+
+
+
+8. Insurance coverage review committee - Board participation
+9. Personnel updates
+10.Residential EV Charger policy update -discussion
+11.Battery siting update - evaluating multiple locations
+                  I
+
+
+
+
+                                                                        7/11
+                              MMLD General Manager Objectives
+                                                Yoar2023, QZ
+                                              Quarterty Tracking
+
+                   PIE--ase
+                          com1)!~t~ current s.Mtus '111thone of following indluuons:
+                              • Comp'eted (C); • On·going (OGJ; ·Tobe initiotcd (TB1>
+
+
+                        Human Resources and Safety                                        Status
+         Dlllfin,1dl:,in of comm:,nd within org:,ni::ition        ch:irt; cra.:itlll   OG· JK/M3:
+A.I.
+         ;u«.l;$iOn pt11n                                                              181 • JK
+         £xp:,nd c::ip:,cit•( :,nd do\'olop robu:;t :;u:;t:,in;;bi1it•( :ind
+A.2.                                                                                   TBI ·JK
+         oommuniutions        proer:im;
+
+;...s.   Ellpand C'<ll)<l-CltV
+                           ,1nd de-\•elop robust ene;1neer1ngd;?partrne1\t             181• JK/CC
+A.~.     Dlll•/a!op $.:,fat•( D:,:;hbo;iord                                            OG • GC/CC
+
+
+
+                         Op♦ration.s & Infrastructure                                    Status
+
+         Continue Vitl:,gc U Sub:totion c:,pihl impro,,•cmerit upgrade
+                                                                                       OG·
+8.1.
+                                                                                       JK/CC/GC
+
+         Cre;;t&oOper.iti<>n..11
+                              wQrl: p!11nfor di.nribution $~;em c.ipit.11              OG·
+&.2.     impro•temcnt:;                                                                JK/GC/CCjMB
+
+         rmplernet1t 1111-te,
+                           ud billing IT svstem upgur1dH to e-nel>!eI\@\\'             OG·
+S.S.
+         OUttibution Oem11nd11ndTime of U;~ r11te;tructur&c.S                          lk'/CC/M8
+
+         ln.,-e:tig:,te optiol'I: ond draft :, p!;>nto supp!emcn: the cxi:ti~          T81•
+a.,.     l\e'.l•,-a1·d
+                     wl>S-taUon'sdual 23kV sub•tl"3Mmiss!on su,)pl~•lines and/or       IK/CC/GC
+         to 010·1idetemoorar.- emer,::,lli'n-· su--1,.-
+6.S.     Continue Uee trimming proir:,m                                                OG • GC/JK
+
+         Design and Implement d1strll>ut1on$•,-stemG1S$Oft'm1re                        OG·
+a.6.
+         c:.:ip;:,bi1it•f                                                              IK/CC/GC
+
+
+
+
+                                                                                                     8/11
+                              MMLDGeneral Manaa:er Objectives
+                                   Calendar Year 2023
+
+           Ensur• Financial Stability & Compttitivt Rates                                    Status
+C.1.    lmpl'l'1tl~t1l n!-W 1al~ s-huctu1~                                                OG· JK,IMB
+        £$t.lbli&h a ba~line of priorye.nr'         demclnd to com1><1re
+                                                                      ~nd
+c.z.    mo,uurc fllturo intor;;ntion                                                      OG· JK/CC
+
+        Ocw-:lopand implement a ~t,ong eommunketiori program to materi:!1lly
+C.3.    r,i,duc,i,<:onsumpuon dut1ne;hi5;h comum1>tion hours, mcludin5; lik,i,!y OG·JK
+        i::~ak
+        c,e8te <l'eMandmaMgeMent plan draft with demand ,eduction
+C.4.                                                                                      l81·JK
+        targets
+        Implement Strategic: Elcc:trific:.:itionand Energ•; Effi.c:ienc:y                 OG·
+c.s.    p<'Ogr:im:;                                                                       JK/CC/MB
+
+C.6.    ldentif'{ three rclC'\/:tnt grant pro&ram:;, :ipply to :it lc:i~ h,o gr.,nt:::,   OG • JK/80:ird
+        p<epa,e foll<W,-u,o.and ,eportll\g
+
+C.7.
+        Prepclre ColPit.ii irwutment       p!.;n cllie:~d w;th ()perclt'IOncll            OG·
+        uperade plan                                                                      Jr:./GC/CC/M8
+                                                                                          OG·
+C.8.    Pilot loU PfOSrl!.m
+                                                                                          Jl:/t,1B/CC
+
+
+
+                           Dec.arbonize Power Supply                                         Status
+D,1.    ln$t.lll Solar PVon 81own S(;h-ool                                                OG· JK
+D.2.    Utility scale batter( S"loreg.-:.target 5"larto.,.-.:rationdete fonoe2024         OG·JK
+
+O.l.    Stream Un~p1?nnittme;1>r¢~$Sfor t@$rdentialPY,re<SJdE'ntfel
+                                                                 $torac,i,;               OG • JK/CC
+        pub!i:h policy and in,c,1ritivo: ori MMLO •,iob ~it-,
+        Ei1p10,~with MMWEC or othe, •/et1<10,s  the f)<>S1il>ilitv
+                                                                 to P-IOCU(t u.pto
+0.:1.   50,000 MWh/Yr .idclinoncll cle,clrbonized po•11erl>v2030 .incl 1>re$ent OG • JK/8o~rd
+        cption: to the Commi~~ion
+
+
+          Communicate with Stakeholders, Improve Customer                                    Status
+                      Service and Education
+E.1.    Creclt,i,intefratE'd commun1u.tion pl•n                                           T81•JK
+
+E,2.     L:iunch month}y q1Jatt~n'ycommunication:; with cu~torr.,a: (biB~                 TBl•JK
+        in:-!!rbj e·meil/ :.odel media)
+£,3.    Implement ~Fl-,tten the peak" communic:.tiori prog.r:,m                           OG ·JK
+
+E.4.    Sur-1eycustcmers to ~stsblhh basellrw of cuitomE"t sausfacuon.                    OG·JK
+        tE'~di11Hslot tt1ate.11;ce!eetOfiulion
+E.5.    Condutt ConM«e<I Homes enrollment<;arnp•ie:n                                      OG·JK:'MS
+E.~.    P:irticip:ito in rolo•t:int To,,:n initiati\';;   that unlock Fod :ind State fund~ OG· JK
+
+
+
+                                                                                                           212
+
+
+
+                                                                                                           9/11
+                               Marblehead Municipal Light Department
+                                  Operating Statement JUNE 2023
+
+
+    Current Month                        (000's)                       Year To Date
+                                  Energy Sales &
+ Actual   Budget Variance         Expenses                    Actual    Budget     Variance % Variance
+   7.1       7.7      (0.6)       KWH Sales-Millons            45.7       48.4          (2.7)    -5.6%
+1,530.2   1,777.7   (247.5)       Sales Revenue             10,627.0   11,176.7      (549.7)     -4.9%
+  752.1     992.0   (239.9)       Power costs                6,280.8    7,935.0    (1,654.2)    ~
+ 778.1     785.7      (7.6)                           Net    4,346.2   3,241.7      1,104.5     34.1%
+
+                                  Operating Costs
+ 199.0     233.0     (34.0)       Payroll                    1,004.0    1,210.0      (206.0)    -17.0%
+ 176.0     175.7       0.3        Depreciation               1,054.0    1,054.0         0.0       0.0%
+  48.0      52.0      (4.0)       Benefits                     287.0      312.0       (25.0)     -8.0%
+  25.0      25.0       0.0        OPES                         150.0      150.0         0.0       0.0%
+  68.0      68.0       0.0        Pensions                     408.0      408.0         0.0       0.0%
+
+ 108.0      64.5     43.5         Ma int. Supplies            231.0      387.0       (156.0)    -40.3%
+  26.0      23.0      3.0         Office Supplies             128.0      138.0        (10.0)     -7.2%
+  29.0      21.0      8.0         Outside Services            101.0      126.0        (25.0)    -19.8%
+   9.0       2.5      6.5         Fuel                         12.0       15.0          (3.0)   -20.0%
+
+   0.0       5.0      (5.0)       Insurance                    28.0       30.0         (2.0)     -6.7%
+   3.0       3.0       0.0        Bad Debts                    18.0       18.0          0.0       0.0%
+  13.0      25.0     (12.0)       All Other                   107.0      150.0        (43.0)    -28.7%
+  36.0      35.7         0.3      Bonds Payable Interest      214.0      214.0          0.0       0.0%
+ 740.0     733.4         6.6         Total Operat. Costs     3,742.0    4,212.0      (470.0)    -11.2%
+
+
+ 38.1       52.3    (14.2)        Operating Income           604.2     (970.3) 1,574.5
+
+  29.0        4.0    25.0         Interest lncome/(Exp.)      141.0        24.0      117.0
+  67.1      ~         10.8        Sub· Total                  745.2      (946.3)    1,691.5
+    0.0       0.0        0.0      MMWEC Flush lnc./(Exp          0.0        0.0         0.0
+ 67.1      56.3      10.8          Net lncome/(Loss)         745.2      (946.3) 1,691.5
+ --        --       --
+
+
+
+
+                                                                                                  10/11
+                                                                                                                                                                       11/11
+    MMLD Cash Account Overview - June 2023
+
+                                                                                                                  Interest     Deposit       Interest
+    Description                                                                  Balance        Custodian           rate      Institution   Recipient
+
+    Operating Cash Account-131000                                              $6,561,720.21   Town Treasurer       5%       MMDT           Town/MMLD
+    Used for operation expenses with the excep1ion of capital
+    improvements.
+    Quarterly transfers are made from Operating Account 131000 to
+    Depreciation Account 126000
+    for 2023, 5% depreciation was budgeted into rates, so a qtrly transfer
+    of $527,082 ($42, 166,560*.05/4) or $2, 108,328
+
+2   Depreciation Account - 126000                                              $9,544,017.24   Town Treasurer       5%       MMDT           MMLD
+    Used for capital improvemenrts
+
+3   Insurance Escrow Account-128100                                            $1,009,741.83   Town Treasurer       5%       MMDT           MMLD
+    Reserved for insurance claims against MMLD
+
+
+
+
+                                                                                                                                                        ----****----
+4   Rate Stabilization Account - #128500                                        $900,000.00    Town Treasurer       4%       Rockland       MMLD
+    Reserved for power expense
+
+5   NEPEX Reserve Trust Account-128400                                          $520,244.14        MMWEC           various   MMWEC          MMLD
+    This account is under MMWEC's control; reserved for power expense if
+    necessary
+
+6   OPEB Trust Fund                                                            $2,452,642.23        PRIM
+    This account is under the control of PRIM (Mass Pension Reserve
+    Investment Management Board.
+    Reserved to fund future payments for retiree health insurance
+    The OPEB liability is shown as a net liability on our books.
+
+
+                                                                                                                  12 mo US
+7   New Customer Deposits - Escow Accounts                                      $200,000.00    Town Treasurer      Treas%  MMDT             Customer
+    Deposits paid by customers to MMLD, varies by rate class; residential is
+    $200.
+
+8   Marblehead Contributary Retirement Board                                                   Retirement Board
+    Note: The Marblehead Contributory Retirement Board controls all
+    pension funding and the annual appropriation schedule.
+    The pension liability is shown as a net liability on our books
+
