@@ -28,9 +28,9 @@ async function testHomepageLoads(page) {
   const h1 = await page.$('.home-intro h1');
   if (h1) {
     const h1Text = (await h1.textContent()).trim();
-    h1Text === 'Marblehead Budget Data'
+    h1Text === 'Marblehead Data'
       ? ok(`Identity H1: "${h1Text}"`)
-      : fail('Identity H1', `expected "Marblehead Budget Data", got "${h1Text}"`);
+      : fail('Identity H1', `expected "Marblehead Data", got "${h1Text}"`);
   } else {
     fail('Identity H1', '.home-intro h1 missing');
   }
