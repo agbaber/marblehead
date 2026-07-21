@@ -1,5 +1,5 @@
 {
- "as_of": "2026-07-19",
+ "as_of": "2026-07-21",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -18,7 +18,7 @@
     {
      "name": "OTHER GOVERNMENTAL",
      "revised_budget": 21519850.0,
-     "actual": 21399492.65,
+     "actual": 21403391.17,
      "original_budget": 21851072.0
     },
     {
@@ -30,7 +30,7 @@
     {
      "name": "FIRE",
      "revised_budget": 5711260.0,
-     "actual": 5615096.34,
+     "actual": 5619711.36,
      "original_budget": 5561260.0
     },
     {
@@ -54,19 +54,19 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 2213842.0,
-     "actual": 1930362.4,
+     "actual": 1938150.89,
      "original_budget": 2301042.0
     },
     {
      "name": "FINANCE",
      "revised_budget": 1845746.0,
-     "actual": 1770924.31,
+     "actual": 1786521.04,
      "original_budget": 1688913.0
     },
     {
      "name": "ABBOT LIBRARY",
      "revised_budget": 1501292.0,
-     "actual": 1383972.91,
+     "actual": 1412107.9,
      "original_budget": 1493292.0
     },
     {
@@ -78,19 +78,19 @@
     {
      "name": "PARKS & RECREATION",
      "revised_budget": 1056607.0,
-     "actual": 993529.85,
+     "actual": 994072.27,
      "original_budget": 1037027.0
     },
     {
      "name": "SELECT BOARD",
      "revised_budget": 700051.0,
-     "actual": 539798.86,
+     "actual": 539985.86,
      "original_budget": 700051.0
     },
     {
      "name": "BUILDING INSPECTION",
      "revised_budget": 691113.0,
-     "actual": 604851.0,
+     "actual": 606923.5,
      "original_budget": 687313.0
     },
     {
@@ -102,7 +102,7 @@
     {
      "name": "CEMETERY",
      "revised_budget": 500243.0,
-     "actual": 479020.26,
+     "actual": 479163.0,
      "original_budget": 495043.0
     },
     {
@@ -120,19 +120,19 @@
     {
      "name": "ASSESSORS",
      "revised_budget": 370821.0,
-     "actual": 358226.69,
+     "actual": 358244.09,
      "original_budget": 394221.0
     },
     {
      "name": "PUBLIC BUILDINGS",
      "revised_budget": 363026.0,
-     "actual": 313520.0,
+     "actual": 313655.46,
      "original_budget": 286826.0
     },
     {
      "name": "HEALTH",
      "revised_budget": 335541.0,
-     "actual": 313048.2,
+     "actual": 321042.13,
      "original_budget": 326041.0
     },
     {
@@ -156,7 +156,7 @@
     {
      "name": "TOWN COUNSEL",
      "revised_budget": 115000.0,
-     "actual": 109867.23,
+     "actual": 117069.73,
      "original_budget": 115000.0
     },
     {
@@ -174,7 +174,7 @@
     {
      "name": "PLANNING BOARD",
      "revised_budget": 12742.0,
-     "actual": 6627.57,
+     "actual": 9702.07,
      "original_budget": 5775.0
     },
     {
@@ -224,19 +224,19 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 31124624.8,
-     "actual": 30910041.48,
+     "actual": 30910075.18,
      "original_budget": 31798623.0
     },
     {
      "name": "PROFESSIONAL SALARY",
      "revised_budget": 19395757.42,
-     "actual": 18729623.1,
+     "actual": 18729723.1,
      "original_budget": 18869713.0
     },
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 5152427.8,
-     "actual": 4370708.74,
+     "actual": 4427798.39,
      "original_budget": 4814460.0
     },
     {
@@ -254,7 +254,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 1123966.27,
-     "actual": 892635.94,
+     "actual": 916814.79,
      "original_budget": 913370.0
     },
     {
@@ -281,7 +281,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 13983281.53,
+     "actual": 14611367.12,
      "original_budget": 17832596.0
     },
     {
@@ -331,7 +331,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 7940853.0,
-     "actual": 7903813.61,
+     "actual": 8514608.82,
      "original_budget": 7948732.0
     },
     {
@@ -355,7 +355,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 1219582.53,
-     "actual": 996470.64,
+     "actual": 1013761.02,
      "original_budget": 934244.0
     },
     {
@@ -376,7 +376,7 @@
     {
      "name": "WATER",
      "revised_budget": 6475995.0,
-     "actual": 5790656.02,
+     "actual": 5809790.82,
      "original_budget": 6463957.0
     }
    ],
@@ -390,25 +390,25 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 1171721.0,
-     "actual": 1059739.89,
+     "actual": 1060127.0,
      "original_budget": 1171721.0
     },
     {
      "name": "PROFESSIONAL SALARY",
      "revised_budget": 1162019.0,
-     "actual": 1117014.18,
+     "actual": 1117109.5,
      "original_budget": 1149981.0
     },
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 239600.0,
-     "actual": 128113.41,
+     "actual": 130797.26,
      "original_budget": 239600.0
     },
     {
      "name": "CAPITAL",
      "revised_budget": 153200.0,
-     "actual": 31538.88,
+     "actual": 46330.97,
      "original_budget": 153200.0
     },
     {
@@ -420,7 +420,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 145700.0,
-     "actual": 105113.37,
+     "actual": 106289.8,
      "original_budget": 145700.0
     }
    ]
@@ -435,7 +435,7 @@
     {
      "name": "SEWER",
      "revised_budget": 5544161.0,
-     "actual": 5165597.72,
+     "actual": 5198180.98,
      "original_budget": 5532269.0
     }
    ],
@@ -461,13 +461,13 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 293192.0,
-     "actual": 191086.4,
+     "actual": 202770.32,
      "original_budget": 293192.0
     },
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 133400.0,
-     "actual": 75523.87,
+     "actual": 76700.3,
      "original_budget": 133400.0
     },
     {
@@ -479,7 +479,7 @@
     {
      "name": "CAPITAL",
      "revised_budget": 75500.0,
-     "actual": 25354.5,
+     "actual": 45077.41,
      "original_budget": 75500.0
     }
    ]
@@ -500,13 +500,13 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 1151439.69,
-     "actual": 400694.36,
+     "actual": 401278.11,
      "original_budget": 345721.87
     },
     {
      "name": "PUBLIC BUILDINGS",
      "revised_budget": 555285.65,
-     "actual": 221637.54,
+     "actual": 222230.54,
      "original_budget": 485285.65
     },
     {
@@ -568,13 +568,13 @@
     {
      "name": "CAPITAL",
      "revised_budget": 2934470.11,
-     "actual": 1656207.14,
+     "actual": 1656790.89,
      "original_budget": 1111726.35
     },
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 1370532.77,
-     "actual": 796008.46,
+     "actual": 796601.46,
      "original_budget": 743209.77
     }
    ]
@@ -715,7 +715,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 60000.0,
-     "actual": 56893.81,
+     "actual": 60792.33,
      "original_budget": 60000.0
     }
    ],
@@ -747,7 +747,7 @@
     {
      "name": "STREET LIGHTING",
      "revised_budget": 60000.0,
-     "actual": 56893.81,
+     "actual": 60792.33,
      "original_budget": 60000.0
     },
     {
@@ -780,7 +780,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 7735892.0,
-     "actual": 7744698.98,
+     "actual": 8355494.19,
      "original_budget": 9309954.0
     },
     {
@@ -804,7 +804,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 699769.25,
-     "actual": 597975.48,
+     "actual": 615265.86,
      "original_budget": 395068.0
     },
     {
@@ -824,7 +824,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 14574494.16,
-     "actual": 13983281.53,
+     "actual": 14611367.12,
      "original_budget": 17832596.0
     }
    ]
@@ -986,25 +986,25 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 1171721.0,
-     "actual": 1059739.89,
+     "actual": 1060127.0,
      "original_budget": 1171721.0
     },
     {
      "name": "PROFESSIONAL SALARY",
      "revised_budget": 1162019.0,
-     "actual": 1117014.18,
+     "actual": 1117109.5,
      "original_budget": 1149981.0
     },
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 239600.0,
-     "actual": 128113.41,
+     "actual": 130797.26,
      "original_budget": 239600.0
     },
     {
      "name": "CAPITAL",
      "revised_budget": 153200.0,
-     "actual": 31538.88,
+     "actual": 46330.97,
      "original_budget": 153200.0
     },
     {
@@ -1016,7 +1016,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 145700.0,
-     "actual": 105113.37,
+     "actual": 106289.8,
      "original_budget": 145700.0
     }
    ],
@@ -1030,13 +1030,13 @@
     {
      "name": "SALARIES",
      "revised_budget": 1620300.0,
-     "actual": 1577860.13,
+     "actual": 1577955.45,
      "original_budget": 1608262.0
     },
     {
      "name": "EXPENSES",
      "revised_budget": 781393.0,
-     "actual": 456086.89,
+     "actual": 475126.37,
      "original_budget": 781393.0
     },
     {
@@ -1116,7 +1116,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 211425.59,
-     "actual": 200405.0,
+     "actual": 205003.72,
      "original_budget": 146891.0
     },
     {
@@ -1128,7 +1128,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 29004.74,
-     "actual": 20340.64,
+     "actual": 20356.94,
      "original_budget": 46327.0
     },
     {
@@ -1148,7 +1148,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 340645.0,
-     "actual": 328263.97,
+     "actual": 332878.99,
      "original_budget": 340645.0
     },
     {
@@ -1211,13 +1211,13 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 293192.0,
-     "actual": 191086.4,
+     "actual": 202770.32,
      "original_budget": 293192.0
     },
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 133400.0,
-     "actual": 75523.87,
+     "actual": 76700.3,
      "original_budget": 133400.0
     },
     {
@@ -1229,7 +1229,7 @@
     {
      "name": "CAPITAL",
      "revised_budget": 75500.0,
-     "actual": 25354.5,
+     "actual": 45077.41,
      "original_budget": 75500.0
     }
    ],
@@ -1249,7 +1249,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 705285.0,
-     "actual": 444064.06,
+     "actual": 476647.32,
      "original_budget": 705285.0
     }
    ]
@@ -1483,19 +1483,19 @@
     {
      "name": "CAPITAL",
      "revised_budget": 928870.48,
-     "actual": 397274.36,
+     "actual": 397858.11,
      "original_budget": 123152.66
     },
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 461701.91,
-     "actual": 137671.89,
+     "actual": 145273.38,
      "original_budget": 461349.21
     },
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 194993.3,
-     "actual": 130001.29,
+     "actual": 130188.29,
      "original_budget": 196346.0
     },
     {
@@ -1521,13 +1521,13 @@
     {
      "name": "STORMWATER CONSTRUCTION",
      "revised_budget": 400000.0,
-     "actual": 115372.0,
+     "actual": 115955.75,
      "original_budget": 0
     },
     {
      "name": "EXPENSES",
      "revised_budget": 375680.0,
-     "actual": 227190.6,
+     "actual": 234979.09,
      "original_budget": 399680.0
     },
     {
@@ -1702,7 +1702,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 918600.0,
-     "actual": 935158.48,
+     "actual": 950654.06,
      "original_budget": 768600.0
     },
     {
@@ -1726,7 +1726,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 14100.0,
-     "actual": 8599.63,
+     "actual": 8700.78,
      "original_budget": 14100.0
     }
    ],
@@ -1734,7 +1734,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 997127.0,
-     "actual": 964163.46,
+     "actual": 979760.19,
      "original_budget": 847127.0
     },
     {
@@ -1791,13 +1791,13 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 176408.32,
-     "actual": 169138.55,
+     "actual": 174238.83,
      "original_budget": 173139.0
     },
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 173280.68,
-     "actual": 144457.79,
+     "actual": 167492.5,
      "original_budget": 170675.0
     },
     {
@@ -1817,7 +1817,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 350289.0,
-     "actual": 313596.34,
+     "actual": 341731.33,
      "original_budget": 345239.0
     }
    ]
@@ -2003,7 +2003,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 209729.09,
-     "actual": 179182.11,
+     "actual": 179724.53,
      "original_budget": 190831.0
     },
     {
@@ -2035,13 +2035,13 @@
     {
      "name": "EXPENSES",
      "revised_budget": 236750.0,
-     "actual": 210572.98,
+     "actual": 211034.92,
      "original_budget": 236750.0
     },
     {
      "name": "PARK FACILITY",
      "revised_budget": 66730.0,
-     "actual": 63336.9,
+     "actual": 63417.38,
      "original_budget": 50750.0
     },
     {
@@ -2086,7 +2086,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 660466.01,
-     "actual": 330081.85,
+     "actual": 330810.31,
      "original_budget": 589263.76
     },
     {
@@ -2118,13 +2118,13 @@
     {
      "name": "EXPENSES",
      "revised_budget": 222895.0,
-     "actual": 186173.85,
+     "actual": 186309.31,
      "original_budget": 149895.0
     },
     {
      "name": "ART 11 2023 CAPITAL IMPROV",
      "revised_budget": 185076.3,
-     "actual": 78068.72,
+     "actual": 78661.72,
      "original_budget": 185076.3
     },
     {
@@ -2187,7 +2187,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 181482.83,
-     "actual": 84205.21,
+     "actual": 84392.21,
      "original_budget": 183115.8
     },
     {
@@ -2213,7 +2213,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 196163.0,
-     "actual": 109768.3,
+     "actual": 109955.3,
      "original_budget": 196163.0
     },
     {
@@ -2258,7 +2258,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 37077.7,
-     "actual": 22125.71,
+     "actual": 22268.45,
      "original_budget": 38289.0
     },
     {
@@ -2290,7 +2290,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 35373.0,
-     "actual": 26257.95,
+     "actual": 26400.69,
      "original_budget": 35373.0
     },
     {
@@ -2317,7 +2317,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 71165.4,
-     "actual": 47269.98,
+     "actual": 49342.48,
      "original_budget": 72517.0
     },
     {
@@ -2343,7 +2343,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 87959.0,
-     "actual": 57632.71,
+     "actual": 59705.21,
      "original_budget": 87959.0
     }
    ]
@@ -2493,7 +2493,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 14138.0,
-     "actual": 6560.08,
+     "actual": 6577.48,
      "original_budget": 10250.0
     },
     {
@@ -2513,7 +2513,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 110525.0,
-     "actual": 99081.73,
+     "actual": 99099.13,
      "original_budget": 135525.0
     }
    ]
@@ -2528,19 +2528,19 @@
     {
      "name": "PROFESSIONAL SALARY",
      "revised_budget": 248202.38,
-     "actual": 236167.96,
+     "actual": 236267.96,
      "original_budget": 238560.0
     },
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 77528.62,
-     "actual": 71854.85,
+     "actual": 78892.79,
      "original_budget": 77899.0
     },
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 6878.0,
-     "actual": 4618.49,
+     "actual": 5474.48,
      "original_budget": 6650.0
     },
     {
@@ -2566,7 +2566,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 87481.0,
-     "actual": 77022.62,
+     "actual": 85016.55,
      "original_budget": 87481.0
     },
     {
@@ -2757,7 +2757,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 113000.0,
-     "actual": 107867.23,
+     "actual": 115069.73,
      "original_budget": 113000.0
     },
     {
@@ -2771,7 +2771,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 113000.0,
-     "actual": 107867.23,
+     "actual": 115069.73,
      "original_budget": 113000.0
     },
     {
@@ -2967,7 +2967,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 12642.0,
-     "actual": 6627.57,
+     "actual": 9702.07,
      "original_budget": 5675.0
     },
     {
@@ -2981,7 +2981,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 12742.0,
-     "actual": 6627.57,
+     "actual": 9702.07,
      "original_budget": 5775.0
     }
    ]
@@ -3155,7 +3155,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19395757.42,
-     "actual": 18729623.1,
+     "actual": 18729723.1,
      "original_budget": 18869713.0
     },
     {
@@ -3167,7 +3167,7 @@
     {
      "name": "WATER ENTERPRISE OPERATING",
      "revised_budget": 1162019.0,
-     "actual": 1117014.18,
+     "actual": 1117109.5,
      "original_budget": 1149981.0
     },
     {
@@ -3247,7 +3247,7 @@
     {
      "name": "WATER",
      "revised_budget": 1162019.0,
-     "actual": 1117014.18,
+     "actual": 1117109.5,
      "original_budget": 1149981.0
     },
     {
@@ -3331,7 +3331,7 @@
     {
      "name": "HEALTH",
      "revised_budget": 248202.38,
-     "actual": 236167.96,
+     "actual": 236267.96,
      "original_budget": 238560.0
     },
     {
@@ -3394,7 +3394,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 31124624.8,
-     "actual": 30910041.48,
+     "actual": 30910075.18,
      "original_budget": 31798623.0
     },
     {
@@ -3406,7 +3406,7 @@
     {
      "name": "WATER ENTERPRISE OPERATING",
      "revised_budget": 1171721.0,
-     "actual": 1059739.89,
+     "actual": 1060127.0,
      "original_budget": 1171721.0
     },
     {
@@ -3450,7 +3450,7 @@
     {
      "name": "WATER",
      "revised_budget": 1171721.0,
-     "actual": 1059739.89,
+     "actual": 1060127.0,
      "original_budget": 1171721.0
     },
     {
@@ -3498,7 +3498,7 @@
     {
      "name": "FIRE",
      "revised_budget": 29004.74,
-     "actual": 20340.64,
+     "actual": 20356.94,
      "original_budget": 46327.0
     },
     {
@@ -3534,7 +3534,7 @@
     {
      "name": "ASSESSORS",
      "revised_budget": 14138.0,
-     "actual": 6560.08,
+     "actual": 6577.48,
      "original_budget": 10250.0
     },
     {
@@ -3651,19 +3651,19 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 7940853.0,
-     "actual": 7903813.61,
+     "actual": 8514608.82,
      "original_budget": 7948732.0
     },
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 5152427.8,
-     "actual": 4370708.74,
+     "actual": 4427798.39,
      "original_budget": 4814460.0
     },
     {
      "name": "GENERAL FUND - TAX ARTICLES",
      "revised_budget": 1370532.77,
-     "actual": 796008.46,
+     "actual": 796601.46,
      "original_budget": 743209.77
     },
     {
@@ -3675,13 +3675,13 @@
     {
      "name": "SEWER ENTERPRISE OPERATING",
      "revised_budget": 293192.0,
-     "actual": 191086.4,
+     "actual": 202770.32,
      "original_budget": 293192.0
     },
     {
      "name": "WATER ENTERPRISE OPERATING",
      "revised_budget": 239600.0,
-     "actual": 128113.41,
+     "actual": 130797.26,
      "original_budget": 239600.0
     },
     {
@@ -3695,7 +3695,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 7735892.0,
-     "actual": 7744698.98,
+     "actual": 8355494.19,
      "original_budget": 9309954.0
     },
     {
@@ -3707,13 +3707,13 @@
     {
      "name": "FINANCE",
      "revised_budget": 918600.0,
-     "actual": 935158.48,
+     "actual": 950654.06,
      "original_budget": 768600.0
     },
     {
      "name": "PUBLIC BUILDINGS",
      "revised_budget": 660466.01,
-     "actual": 330081.85,
+     "actual": 330810.31,
      "original_budget": 589263.76
     },
     {
@@ -3725,7 +3725,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 461701.91,
-     "actual": 137671.89,
+     "actual": 145273.38,
      "original_budget": 461349.21
     },
     {
@@ -3737,25 +3737,25 @@
     {
      "name": "SEWER",
      "revised_budget": 293192.0,
-     "actual": 191086.4,
+     "actual": 202770.32,
      "original_budget": 293192.0
     },
     {
      "name": "WATER",
      "revised_budget": 239600.0,
-     "actual": 128113.41,
+     "actual": 130797.26,
      "original_budget": 239600.0
     },
     {
      "name": "FIRE",
      "revised_budget": 211425.59,
-     "actual": 200405.0,
+     "actual": 205003.72,
      "original_budget": 146891.0
     },
     {
      "name": "PARKS & RECREATION",
      "revised_budget": 209729.09,
-     "actual": 179182.11,
+     "actual": 179724.53,
      "original_budget": 190831.0
     },
     {
@@ -3767,13 +3767,13 @@
     {
      "name": "SELECT BOARD",
      "revised_budget": 181482.83,
-     "actual": 84205.21,
+     "actual": 84392.21,
      "original_budget": 183115.8
     },
     {
      "name": "ABBOT LIBRARY",
      "revised_budget": 176408.32,
-     "actual": 169138.55,
+     "actual": 174238.83,
      "original_budget": 173139.0
     },
     {
@@ -3785,7 +3785,7 @@
     {
      "name": "TOWN COUNSEL",
      "revised_budget": 113000.0,
-     "actual": 107867.23,
+     "actual": 115069.73,
      "original_budget": 113000.0
     },
     {
@@ -3797,19 +3797,19 @@
     {
      "name": "HEALTH",
      "revised_budget": 77528.62,
-     "actual": 71854.85,
+     "actual": 78892.79,
      "original_budget": 77899.0
     },
     {
      "name": "BUILDING INSPECTION",
      "revised_budget": 71165.4,
-     "actual": 47269.98,
+     "actual": 49342.48,
      "original_budget": 72517.0
     },
     {
      "name": "OTHER GOVERNMENTAL",
      "revised_budget": 60000.0,
-     "actual": 56893.81,
+     "actual": 60792.33,
      "original_budget": 60000.0
     },
     {
@@ -3827,7 +3827,7 @@
     {
      "name": "CEMETERY",
      "revised_budget": 37077.7,
-     "actual": 22125.71,
+     "actual": 22268.45,
      "original_budget": 38289.0
     },
     {
@@ -3851,7 +3851,7 @@
     {
      "name": "PLANNING BOARD",
      "revised_budget": 12642.0,
-     "actual": 6627.57,
+     "actual": 9702.07,
      "original_budget": 5675.0
     },
     {
@@ -4044,13 +4044,13 @@
     {
      "name": "GENERAL FUND - TAX ARTICLES",
      "revised_budget": 2934470.11,
-     "actual": 1656207.14,
+     "actual": 1656790.89,
      "original_budget": 1111726.35
     },
     {
      "name": "WATER ENTERPRISE OPERATING",
      "revised_budget": 153200.0,
-     "actual": 31538.88,
+     "actual": 46330.97,
      "original_budget": 153200.0
     },
     {
@@ -4062,7 +4062,7 @@
     {
      "name": "SEWER ENTERPRISE OPERATING",
      "revised_budget": 75500.0,
-     "actual": 25354.5,
+     "actual": 45077.41,
      "original_budget": 75500.0
     },
     {
@@ -4082,7 +4082,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 928870.48,
-     "actual": 397274.36,
+     "actual": 397858.11,
      "original_budget": 123152.66
     },
     {
@@ -4112,7 +4112,7 @@
     {
      "name": "WATER",
      "revised_budget": 153200.0,
-     "actual": 31538.88,
+     "actual": 46330.97,
      "original_budget": 153200.0
     },
     {
@@ -4148,7 +4148,7 @@
     {
      "name": "SEWER",
      "revised_budget": 75500.0,
-     "actual": 25354.5,
+     "actual": 45077.41,
      "original_budget": 75500.0
     },
     {
@@ -4193,25 +4193,25 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 1219582.53,
-     "actual": 996470.64,
+     "actual": 1013761.02,
      "original_budget": 934244.0
     },
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 1123966.27,
-     "actual": 892635.94,
+     "actual": 916814.79,
      "original_budget": 913370.0
     },
     {
      "name": "WATER ENTERPRISE OPERATING",
      "revised_budget": 145700.0,
-     "actual": 105113.37,
+     "actual": 106289.8,
      "original_budget": 145700.0
     },
     {
      "name": "SEWER ENTERPRISE OPERATING",
      "revised_budget": 133400.0,
-     "actual": 75523.87,
+     "actual": 76700.3,
      "original_budget": 133400.0
     },
     {
@@ -4231,7 +4231,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 699769.25,
-     "actual": 597975.48,
+     "actual": 615265.86,
      "original_budget": 395068.0
     },
     {
@@ -4249,25 +4249,25 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 194993.3,
-     "actual": 130001.29,
+     "actual": 130188.29,
      "original_budget": 196346.0
     },
     {
      "name": "ABBOT LIBRARY",
      "revised_budget": 173280.68,
-     "actual": 144457.79,
+     "actual": 167492.5,
      "original_budget": 170675.0
     },
     {
      "name": "WATER",
      "revised_budget": 145700.0,
-     "actual": 105113.37,
+     "actual": 106289.8,
      "original_budget": 145700.0
     },
     {
      "name": "SEWER",
      "revised_budget": 133400.0,
-     "actual": 75523.87,
+     "actual": 76700.3,
      "original_budget": 133400.0
     },
     {
@@ -4345,7 +4345,7 @@
     {
      "name": "FINANCE",
      "revised_budget": 14100.0,
-     "actual": 8599.63,
+     "actual": 8700.78,
      "original_budget": 14100.0
     },
     {
@@ -4363,7 +4363,7 @@
     {
      "name": "HEALTH",
      "revised_budget": 6878.0,
-     "actual": 4618.49,
+     "actual": 5474.48,
      "original_budget": 6650.0
     },
     {
@@ -4599,7 +4599,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 49120287.0,
-     "actual": 47103196.56,
+     "actual": 47731282.15,
      "original_budget": 49120287.0
     }
    ],
@@ -4607,7 +4607,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 13983281.53,
+     "actual": 14611367.12,
      "original_budget": 17832596.0
     },
     {
@@ -4664,7 +4664,7 @@
     {
      "name": "WATER ENTERPRISE OPERATING",
      "revised_budget": 1620300.0,
-     "actual": 1577860.13,
+     "actual": 1577955.45,
      "original_budget": 1608262.0
     },
     {
@@ -4708,7 +4708,7 @@
     {
      "name": "WATER",
      "revised_budget": 1620300.0,
-     "actual": 1577860.13,
+     "actual": 1577955.45,
      "original_budget": 1608262.0
     },
     {
@@ -4855,19 +4855,19 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19400687.6,
-     "actual": 17617384.14,
+     "actual": 17694807.34,
      "original_budget": 18599491.0
     },
     {
      "name": "WATER ENTERPRISE OPERATING",
      "revised_budget": 781393.0,
-     "actual": 456086.89,
+     "actual": 475126.37,
      "original_budget": 781393.0
     },
     {
      "name": "SEWER ENTERPRISE OPERATING",
      "revised_budget": 705285.0,
-     "actual": 444064.06,
+     "actual": 476647.32,
      "original_budget": 705285.0
     },
     {
@@ -4911,37 +4911,37 @@
     {
      "name": "FINANCE",
      "revised_budget": 997127.0,
-     "actual": 964163.46,
+     "actual": 979760.19,
      "original_budget": 847127.0
     },
     {
      "name": "WATER",
      "revised_budget": 781393.0,
-     "actual": 456086.89,
+     "actual": 475126.37,
      "original_budget": 781393.0
     },
     {
      "name": "SEWER",
      "revised_budget": 705285.0,
-     "actual": 444064.06,
+     "actual": 476647.32,
      "original_budget": 705285.0
     },
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 375680.0,
-     "actual": 227190.6,
+     "actual": 234979.09,
      "original_budget": 399680.0
     },
     {
      "name": "ABBOT LIBRARY",
      "revised_budget": 350289.0,
-     "actual": 313596.34,
+     "actual": 341731.33,
      "original_budget": 345239.0
     },
     {
      "name": "FIRE",
      "revised_budget": 340645.0,
-     "actual": 328263.97,
+     "actual": 332878.99,
      "original_budget": 340645.0
     },
     {
@@ -4959,7 +4959,7 @@
     {
      "name": "PARKS & RECREATION",
      "revised_budget": 236750.0,
-     "actual": 210572.98,
+     "actual": 211034.92,
      "original_budget": 236750.0
     },
     {
@@ -4971,25 +4971,25 @@
     {
      "name": "PUBLIC BUILDINGS",
      "revised_budget": 222895.0,
-     "actual": 186173.85,
+     "actual": 186309.31,
      "original_budget": 149895.0
     },
     {
      "name": "SELECT BOARD",
      "revised_budget": 196163.0,
-     "actual": 109768.3,
+     "actual": 109955.3,
      "original_budget": 196163.0
     },
     {
      "name": "TOWN COUNSEL",
      "revised_budget": 113000.0,
-     "actual": 107867.23,
+     "actual": 115069.73,
      "original_budget": 113000.0
     },
     {
      "name": "ASSESSORS",
      "revised_budget": 110525.0,
-     "actual": 99081.73,
+     "actual": 99099.13,
      "original_budget": 135525.0
     },
     {
@@ -5001,13 +5001,13 @@
     {
      "name": "BUILDING INSPECTION",
      "revised_budget": 87959.0,
-     "actual": 57632.71,
+     "actual": 59705.21,
      "original_budget": 87959.0
     },
     {
      "name": "HEALTH",
      "revised_budget": 87481.0,
-     "actual": 77022.62,
+     "actual": 85016.55,
      "original_budget": 87481.0
     },
     {
@@ -5031,7 +5031,7 @@
     {
      "name": "CEMETERY",
      "revised_budget": 35373.0,
-     "actual": 26257.95,
+     "actual": 26400.69,
      "original_budget": 35373.0
     },
     {
@@ -5049,7 +5049,7 @@
     {
      "name": "PLANNING BOARD",
      "revised_budget": 12742.0,
-     "actual": 6627.57,
+     "actual": 9702.07,
      "original_budget": 5775.0
     },
     {
@@ -5296,7 +5296,7 @@
     {
      "name": "GENERAL FUND - TAX ARTICLES",
      "revised_budget": 400000.0,
-     "actual": 115372.0,
+     "actual": 115955.75,
      "original_budget": 0
     }
    ],
@@ -5304,7 +5304,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 400000.0,
-     "actual": 115372.0,
+     "actual": 115955.75,
      "original_budget": 0
     }
    ]
@@ -5441,7 +5441,7 @@
     {
      "name": "GENERAL FUND - TAX ARTICLES",
      "revised_budget": 185076.3,
-     "actual": 78068.72,
+     "actual": 78661.72,
      "original_budget": 185076.3
     }
    ],
@@ -5449,7 +5449,7 @@
     {
      "name": "PUBLIC BUILDINGS",
      "revised_budget": 185076.3,
-     "actual": 78068.72,
+     "actual": 78661.72,
      "original_budget": 185076.3
     }
    ]
@@ -5862,7 +5862,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 60000.0,
-     "actual": 56893.81,
+     "actual": 60792.33,
      "original_budget": 60000.0
     }
    ],
@@ -5870,7 +5870,7 @@
     {
      "name": "OTHER GOVERNMENTAL",
      "revised_budget": 60000.0,
-     "actual": 56893.81,
+     "actual": 60792.33,
      "original_budget": 60000.0
     }
    ]
@@ -5885,7 +5885,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 66730.0,
-     "actual": 63336.9,
+     "actual": 63417.38,
      "original_budget": 50750.0
     }
    ],
@@ -5893,7 +5893,7 @@
     {
      "name": "PARKS & RECREATION",
      "revised_budget": 66730.0,
-     "actual": 63336.9,
+     "actual": 63417.38,
      "original_budget": 50750.0
     }
    ]
@@ -6671,7 +6671,7 @@
    {
     "name": "STREET LIGHTING",
     "revised_budget": 60000.0,
-    "actual": 56893.81,
+    "actual": 60792.33,
     "original_budget": 60000.0
    }
   ],
@@ -6767,7 +6767,7 @@
    {
     "name": "TUITION-PRIVATE SCHOOLS",
     "revised_budget": 1973105.63,
-    "actual": 2293003.47,
+    "actual": 2470351.06,
     "original_budget": 2454757.0
    },
    {
@@ -6779,25 +6779,25 @@
    {
     "name": "PUPIL TRANSPORTATION",
     "revised_budget": 1148760.0,
-    "actual": 1113106.69,
+    "actual": 1135318.69,
     "original_budget": 1158760.0
    },
    {
     "name": "TUITION-RESIDENTIAL",
     "revised_budget": 1026993.0,
-    "actual": 891988.57,
+    "actual": 1024736.11,
     "original_budget": 1548227.0
    },
    {
     "name": "TUITION-COLLABORATIVES",
     "revised_budget": 562064.37,
-    "actual": 601089.72,
+    "actual": 737782.89,
     "original_budget": 1122881.0
    },
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 557089.0,
-    "actual": 634084.57,
+    "actual": 767912.68,
     "original_budget": 557089.0
    },
    {
@@ -6815,13 +6815,13 @@
    {
     "name": "LEGAL SERVICES",
     "revised_budget": 170300.0,
-    "actual": 177073.7,
+    "actual": 181790.5,
     "original_budget": 170300.0
    },
    {
     "name": "OTHER PROF & TECHNICAL",
     "revised_budget": 167838.0,
-    "actual": 320194.57,
+    "actual": 323444.57,
     "original_budget": 18000.0
    },
    {
@@ -6989,13 +6989,13 @@
    {
     "name": "BLDG & EQUIP R&M SUPPLIES",
     "revised_budget": 165262.0,
-    "actual": 111612.86,
+    "actual": 114664.93,
     "original_budget": 180262.0
    },
    {
     "name": "CUSTODIAL SUPPLIES",
     "revised_budget": 142256.0,
-    "actual": 138358.65,
+    "actual": 152596.96,
     "original_budget": 142256.0
    },
    {
@@ -7611,7 +7611,7 @@
    {
     "name": "INSIDE DETAIL",
     "revised_budget": 5900.0,
-    "actual": 95229.72,
+    "actual": 95325.04,
     "original_budget": 5900.0
    },
    {
@@ -7685,7 +7685,7 @@
    {
     "name": "LICENSE/PERMITS EXPENSE",
     "revised_budget": 14000.0,
-    "actual": 8449.36,
+    "actual": 8836.47,
     "original_budget": 14000.0
    },
    {
@@ -7735,7 +7735,7 @@
    {
     "name": "ELECT PWR-PUMPING STATIONS",
     "revised_budget": 31000.0,
-    "actual": 26823.57,
+    "actual": 27027.59,
     "original_budget": 31000.0
    },
    {
@@ -7777,7 +7777,7 @@
    {
     "name": "ENGINEERING/ARCHITECTURAL",
     "revised_budget": 15000.0,
-    "actual": 14120.0,
+    "actual": 14498.04,
     "original_budget": 15000.0
    },
    {
@@ -7801,7 +7801,7 @@
    {
     "name": "CELLULAR PHONES",
     "revised_budget": 4200.0,
-    "actual": 1741.36,
+    "actual": 1956.38,
     "original_budget": 4200.0
    },
    {
@@ -7849,7 +7849,7 @@
    {
     "name": "TELEPHONE",
     "revised_budget": 1800.0,
-    "actual": 535.77,
+    "actual": 557.88,
     "original_budget": 1800.0
    },
    {
@@ -7861,7 +7861,7 @@
    {
     "name": "ADVERTISING",
     "revised_budget": 1000.0,
-    "actual": 200.0,
+    "actual": 300.0,
     "original_budget": 1000.0
    },
    {
@@ -7873,7 +7873,7 @@
    {
     "name": "INFORMATION TECHNOLOGY",
     "revised_budget": 500.0,
-    "actual": 9719.23,
+    "actual": 11483.89,
     "original_budget": 500.0
    },
    {
@@ -7907,7 +7907,7 @@
    {
     "name": "WATER METERS",
     "revised_budget": 50000.0,
-    "actual": 17133.12,
+    "actual": 31925.21,
     "original_budget": 50000.0
    },
    {
@@ -7981,7 +7981,7 @@
    {
     "name": "MAPS",
     "revised_budget": 3000.0,
-    "actual": 5995.84,
+    "actual": 7172.27,
     "original_budget": 3000.0
    },
    {
@@ -8341,7 +8341,7 @@
    {
     "name": "IN-STATE TRAVEL",
     "revised_budget": 507.7,
-    "actual": 520.0,
+    "actual": 536.3,
     "original_budget": 202.0
    },
    {
@@ -8361,7 +8361,7 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 32616.27,
-    "actual": 18341.17,
+    "actual": 18591.17,
     "original_budget": 27400.0
    },
    {
@@ -8373,7 +8373,7 @@
    {
     "name": "GAS USED FOR HEAT",
     "revised_budget": 20460.77,
-    "actual": 20491.14,
+    "actual": 21551.23,
     "original_budget": 11000.0
    },
    {
@@ -8385,7 +8385,7 @@
    {
     "name": "ELECTRICITY",
     "revised_budget": 10331.07,
-    "actual": 10331.07,
+    "actual": 11895.0,
     "original_budget": 21872.0
    },
    {
@@ -8397,7 +8397,7 @@
    {
     "name": "WATER/SEWER",
     "revised_budget": 3207.7,
-    "actual": 3207.7,
+    "actual": 3995.4,
     "original_budget": 5989.0
    },
    {
@@ -8439,7 +8439,7 @@
    {
     "name": "MEDICAL/DOCTOR SERVICES",
     "revised_budget": 0,
-    "actual": 1002.0,
+    "actual": 1939.0,
     "original_budget": 3833.0
    }
   ],
@@ -8833,7 +8833,7 @@
    {
     "name": "R&M MOTOR VEHICLES",
     "revised_budget": 23325.0,
-    "actual": 7040.69,
+    "actual": 7230.69,
     "original_budget": 23325.0
    },
    {
@@ -8845,7 +8845,7 @@
    {
     "name": "ENGINEERING/ARCHITECTURAL",
     "revised_budget": 15000.0,
-    "actual": 2653.75,
+    "actual": 12068.0,
     "original_budget": 15000.0
    },
    {
@@ -8869,13 +8869,13 @@
    {
     "name": "INFORMATION TECHNOLOGY",
     "revised_budget": 5500.0,
-    "actual": 11011.63,
+    "actual": 12776.28,
     "original_budget": 5500.0
    },
    {
     "name": "CELLULAR PHONES",
     "revised_budget": 4600.0,
-    "actual": 1741.35,
+    "actual": 1956.37,
     "original_budget": 4600.0
    },
    {
@@ -8941,7 +8941,7 @@
    {
     "name": "ADVERTISING",
     "revised_budget": 1000.0,
-    "actual": 200.0,
+    "actual": 300.0,
     "original_budget": 1000.0
    },
    {
@@ -8975,7 +8975,7 @@
    {
     "name": "WATER METERS",
     "revised_budget": 45000.0,
-    "actual": 13206.2,
+    "actual": 32929.11,
     "original_budget": 45000.0
    },
    {
@@ -9061,7 +9061,7 @@
    {
     "name": "MAPS",
     "revised_budget": 3000.0,
-    "actual": 5791.43,
+    "actual": 6967.86,
     "original_budget": 3000.0
    },
    {
@@ -10189,13 +10189,13 @@
    {
     "name": "OTHER PROF & TECHNICAL",
     "revised_budget": 57480.0,
-    "actual": 28730.25,
+    "actual": 35330.25,
     "original_budget": 57480.0
    },
    {
     "name": "R&M MOTOR VEHICLES",
     "revised_budget": 57000.0,
-    "actual": 21640.45,
+    "actual": 22641.94,
     "original_budget": 57000.0
    },
    {
@@ -10281,7 +10281,7 @@
    {
     "name": "DRAINS IMPROVEMENTS",
     "revised_budget": 400000.0,
-    "actual": 115372.0,
+    "actual": 115955.75,
     "original_budget": 0
    },
    {
@@ -10391,7 +10391,7 @@
    {
     "name": "PHOTOCOPYING SUPPLIES",
     "revised_budget": 3540.0,
-    "actual": 3027.09,
+    "actual": 3214.09,
     "original_budget": 3540.0
    },
    {
@@ -10897,7 +10897,7 @@
    {
     "name": "INFORMATION TECHNOLOGY",
     "revised_budget": 455271.0,
-    "actual": 448091.62,
+    "actual": 448635.62,
     "original_budget": 400271.0
    },
    {
@@ -10909,13 +10909,13 @@
    {
     "name": "OTHER PROF & TECHNICAL",
     "revised_budget": 135000.0,
-    "actual": 193066.13,
+    "actual": 193291.13,
     "original_budget": 40000.0
    },
    {
     "name": "POSTAGE",
     "revised_budget": 40000.0,
-    "actual": 42299.35,
+    "actual": 51397.96,
     "original_budget": 40000.0
    },
    {
@@ -10933,7 +10933,7 @@
    {
     "name": "LEGAL SERVICES",
     "revised_budget": 10000.0,
-    "actual": 0,
+    "actual": 4563.75,
     "original_budget": 10000.0
    },
    {
@@ -10945,7 +10945,7 @@
    {
     "name": "MEDICAID SERVICES",
     "revised_budget": 3200.0,
-    "actual": 790.69,
+    "actual": 1165.16,
     "original_budget": 3200.0
    },
    {
@@ -10975,7 +10975,7 @@
    {
     "name": "BANKING SERVICES",
     "revised_budget": 0,
-    "actual": 5365.46,
+    "actual": 6055.21,
     "original_budget": 0
    }
   ],
@@ -11021,7 +11021,7 @@
    {
     "name": "MISC OFFICE SUPPLIES",
     "revised_budget": 5500.0,
-    "actual": 5935.67,
+    "actual": 6036.82,
     "original_budget": 5500.0
    },
    {
@@ -11225,7 +11225,7 @@
    {
     "name": "ELECTRICITY",
     "revised_budget": 58460.81,
-    "actual": 52493.33,
+    "actual": 56323.41,
     "original_budget": 46751.0
    },
    {
@@ -11237,7 +11237,7 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 38956.65,
-    "actual": 36907.65,
+    "actual": 37852.65,
     "original_budget": 42187.0
    },
    {
@@ -11249,7 +11249,7 @@
    {
     "name": "GAS USED FOR HEAT",
     "revised_budget": 7046.92,
-    "actual": 7597.9,
+    "actual": 7879.88,
     "original_budget": 13000.0
    },
    {
@@ -11291,7 +11291,7 @@
    {
     "name": "POSTAGE",
     "revised_budget": 383.18,
-    "actual": 383.18,
+    "actual": 426.4,
     "original_budget": 725.0
    },
    {
@@ -11305,19 +11305,19 @@
    {
     "name": "LIBRARY MATERIALS",
     "revised_budget": 160946.2,
-    "actual": 133764.97,
+    "actual": 156327.12,
     "original_budget": 160000.0
    },
    {
     "name": "LIBRARY SUPPLIES",
     "revised_budget": 8075.0,
-    "actual": 7070.17,
+    "actual": 7471.57,
     "original_budget": 8075.0
    },
    {
     "name": "MISC BLDG R&M SUPPLIES",
     "revised_budget": 4059.48,
-    "actual": 3562.65,
+    "actual": 3633.81,
     "original_budget": 2400.0
    },
    {
@@ -11871,13 +11871,13 @@
    {
     "name": "GAS USED FOR HEAT",
     "revised_budget": 47298.54,
-    "actual": 40810.94,
+    "actual": 40891.42,
     "original_budget": 26500.0
    },
    {
     "name": "OTHER PROF & TECHNICAL",
     "revised_budget": 45000.0,
-    "actual": 42583.29,
+    "actual": 42733.29,
     "original_budget": 45000.0
    },
    {
@@ -11889,13 +11889,13 @@
    {
     "name": "ELECTRICITY",
     "revised_budget": 25250.0,
-    "actual": 23981.61,
+    "actual": 24258.81,
     "original_budget": 25250.0
    },
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 21693.42,
-    "actual": 11551.97,
+    "actual": 11574.98,
     "original_budget": 22331.0
    },
    {
@@ -11931,7 +11931,7 @@
    {
     "name": "CELLULAR PHONES",
     "revised_budget": 978.06,
-    "actual": 840.02,
+    "actual": 851.75,
     "original_budget": 700.0
    },
    {
@@ -12103,7 +12103,7 @@
    {
     "name": "REPAIRS & MAINTENANCE",
     "revised_budget": 445517.76,
-    "actual": 143481.54,
+    "actual": 144074.54,
     "original_budget": 445517.76
    },
    {
@@ -12115,7 +12115,7 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 60527.98,
-    "actual": 45491.64,
+    "actual": 45627.1,
     "original_budget": 31276.0
    },
    {
@@ -12365,7 +12365,7 @@
    {
     "name": "R&M OFFICE EQUIPMENT",
     "revised_budget": 3000.0,
-    "actual": 2057.0,
+    "actual": 2244.0,
     "original_budget": 3000.0
    },
    {
@@ -12547,7 +12547,7 @@
    {
     "name": "WATER/SEWER",
     "revised_budget": 989.0,
-    "actual": 635.22,
+    "actual": 777.96,
     "original_budget": 989.0
    },
    {
@@ -12773,13 +12773,13 @@
    {
     "name": "R&M TRAFFIC CONTROL EQUIP",
     "revised_budget": 11358.92,
-    "actual": 9737.48,
+    "actual": 11589.48,
     "original_budget": 15000.0
    },
    {
     "name": "TELEPHONE",
     "revised_budget": 3005.26,
-    "actual": 3005.26,
+    "actual": 3225.76,
     "original_budget": 0
    },
    {
@@ -13151,7 +13151,7 @@
    {
     "name": "IN-STATE TRAVEL",
     "revised_budget": 8300.0,
-    "actual": 4181.08,
+    "actual": 4198.48,
     "original_budget": 8300.0
    },
    {
@@ -13259,7 +13259,7 @@
    {
     "name": "IN-SERVICE TRAINING",
     "revised_budget": 1142.38,
-    "actual": 142.38,
+    "actual": 242.38,
     "original_budget": 1000.0
    },
    {
@@ -13293,7 +13293,7 @@
    {
     "name": "PSYCHOLOGICAL COUNSELING",
     "revised_budget": 60000.0,
-    "actual": 59019.39,
+    "actual": 65914.76,
     "original_budget": 60000.0
    },
    {
@@ -13323,19 +13323,19 @@
    {
     "name": "INTERNET ACCESS",
     "revised_budget": 1336.0,
-    "actual": 824.5,
+    "actual": 890.48,
     "original_budget": 1336.0
    },
    {
     "name": "TELEPHONE",
     "revised_budget": 1300.0,
-    "actual": 41.37,
+    "actual": 107.48,
     "original_budget": 1300.0
    },
    {
     "name": "POSTAGE",
     "revised_budget": 1224.92,
-    "actual": 1224.92,
+    "actual": 1235.4,
     "original_budget": 1000.0
    },
    {
@@ -13393,7 +13393,7 @@
    {
     "name": "MISC MEDICAL & SURGICAL",
     "revised_budget": 4028.0,
-    "actual": 3175.0,
+    "actual": 4030.99,
     "original_budget": 3800.0
    },
    {
@@ -13687,7 +13687,7 @@
    {
     "name": "LEGAL SERVICES",
     "revised_budget": 113000.0,
-    "actual": 107867.23,
+    "actual": 115069.73,
     "original_budget": 113000.0
    }
   ],
@@ -14033,7 +14033,7 @@
    {
     "name": "LEGAL SERVICES",
     "revised_budget": 10350.0,
-    "actual": 5633.0,
+    "actual": 8707.5,
     "original_budget": 4000.0
    },
    {
@@ -14405,7 +14405,7 @@
    {
     "name": "IN-SERVICE TRAINING",
     "revised_budget": 50973.55,
-    "actual": 35034.8,
+    "actual": 35134.8,
     "original_budget": 71499.0
    },
    {
@@ -14773,7 +14773,7 @@
    {
     "name": "IN-STATE TRAVEL",
     "revised_budget": 42546.23,
-    "actual": 20349.68,
+    "actual": 20383.38,
     "original_budget": 41484.0
    },
    {
@@ -14901,19 +14901,19 @@
    {
     "name": "OTHER PROF & TECHNICAL",
     "revised_budget": 557131.39,
-    "actual": 459125.59,
+    "actual": 466100.59,
     "original_budget": 380106.0
    },
    {
     "name": "INFORMATION TECHNOLOGY",
     "revised_budget": 502417.14,
-    "actual": 479972.65,
+    "actual": 480516.65,
     "original_budget": 457705.0
    },
    {
     "name": "R&M MOTOR VEHICLES",
     "revised_budget": 227775.97,
-    "actual": 193150.69,
+    "actual": 194152.18,
     "original_budget": 152225.0
    },
    {
@@ -14931,13 +14931,13 @@
    {
     "name": "GAS USED FOR HEAT",
     "revised_budget": 198022.68,
-    "actual": 182941.57,
+    "actual": 184364.12,
     "original_budget": 120208.0
    },
    {
     "name": "ELECTRICITY",
     "revised_budget": 195286.53,
-    "actual": 184403.69,
+    "actual": 190074.9,
     "original_budget": 206243.0
    },
    {
@@ -14949,13 +14949,13 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 176929.3,
-    "actual": 130497.27,
+    "actual": 131850.74,
     "original_budget": 106916.0
    },
    {
     "name": "LEGAL SERVICES",
     "revised_budget": 157432.48,
-    "actual": 136206.21,
+    "actual": 151046.96,
     "original_budget": 133500.0
    },
    {
@@ -14973,19 +14973,19 @@
    {
     "name": "POSTAGE",
     "revised_budget": 64125.6,
-    "actual": 55158.86,
+    "actual": 64311.17,
     "original_budget": 66033.0
    },
    {
     "name": "PSYCHOLOGICAL COUNSELING",
     "revised_budget": 60780.0,
-    "actual": 59019.39,
+    "actual": 65914.76,
     "original_budget": 60780.0
    },
    {
     "name": "STREET LIGHTING",
     "revised_budget": 60000.0,
-    "actual": 56893.81,
+    "actual": 60792.33,
     "original_budget": 60000.0
    },
    {
@@ -14997,13 +14997,13 @@
    {
     "name": "WATER/SEWER",
     "revised_budget": 53406.4,
-    "actual": 49843.2,
+    "actual": 50773.64,
     "original_budget": 54829.0
    },
    {
     "name": "TELEPHONE",
     "revised_budget": 51135.21,
-    "actual": 13781.96,
+    "actual": 14068.57,
     "original_budget": 54742.0
    },
    {
@@ -15033,31 +15033,31 @@
    {
     "name": "CELLULAR PHONES",
     "revised_budget": 20787.06,
-    "actual": 16371.56,
+    "actual": 16383.29,
     "original_budget": 20509.0
    },
    {
     "name": "INTERNET ACCESS",
     "revised_budget": 19970.77,
-    "actual": 18388.46,
+    "actual": 18454.44,
     "original_budget": 12388.0
    },
    {
     "name": "R&M OFFICE EQUIPMENT",
     "revised_budget": 19776.59,
-    "actual": 7320.83,
+    "actual": 7507.83,
     "original_budget": 12600.0
    },
    {
     "name": "R&M TRAFFIC CONTROL EQUIP",
     "revised_budget": 11358.92,
-    "actual": 9737.48,
+    "actual": 11589.48,
     "original_budget": 15000.0
    },
    {
     "name": "MEDICAL/DOCTOR SERVICES",
     "revised_budget": 9801.0,
-    "actual": 5988.0,
+    "actual": 6925.0,
     "original_budget": 12570.0
    },
    {
@@ -15129,7 +15129,7 @@
    {
     "name": "MEDICAID SERVICES",
     "revised_budget": 3200.0,
-    "actual": 790.69,
+    "actual": 1165.16,
     "original_budget": 3200.0
    },
    {
@@ -15231,7 +15231,7 @@
    {
     "name": "BANKING SERVICES",
     "revised_budget": 0,
-    "actual": 5365.46,
+    "actual": 6055.21,
     "original_budget": 0
    }
   ],
@@ -15303,7 +15303,7 @@
    {
     "name": "LIBRARY MATERIALS",
     "revised_budget": 160946.2,
-    "actual": 133764.97,
+    "actual": 156327.12,
     "original_budget": 160000.0
    },
    {
@@ -15333,7 +15333,7 @@
    {
     "name": "MISC OFFICE SUPPLIES",
     "revised_budget": 48962.07,
-    "actual": 30656.5,
+    "actual": 30757.65,
     "original_budget": 44800.0
    },
    {
@@ -15357,7 +15357,7 @@
    {
     "name": "MISC BLDG R&M SUPPLIES",
     "revised_budget": 22868.87,
-    "actual": 5086.48,
+    "actual": 5157.64,
     "original_budget": 15415.0
    },
    {
@@ -15375,7 +15375,7 @@
    {
     "name": "MISC MEDICAL & SURGICAL",
     "revised_budget": 18141.21,
-    "actual": 17227.01,
+    "actual": 18083.0,
     "original_budget": 23865.0
    },
    {
@@ -15447,7 +15447,7 @@
    {
     "name": "LIBRARY SUPPLIES",
     "revised_budget": 8075.0,
-    "actual": 7070.17,
+    "actual": 7471.57,
     "original_budget": 8075.0
    },
    {
@@ -15489,7 +15489,7 @@
    {
     "name": "PHOTOCOPYING SUPPLIES",
     "revised_budget": 5140.0,
-    "actual": 3363.98,
+    "actual": 3550.98,
     "original_budget": 4860.0
    },
    {
@@ -15769,7 +15769,7 @@
    {
     "name": "TUITION-PRIVATE SCHOOLS",
     "revised_budget": 1973105.63,
-    "actual": 2293003.47,
+    "actual": 2470351.06,
     "original_budget": 2454757.0
    },
    {
@@ -15781,25 +15781,25 @@
    {
     "name": "PUPIL TRANSPORTATION",
     "revised_budget": 1148760.0,
-    "actual": 1113106.69,
+    "actual": 1135318.69,
     "original_budget": 1158760.0
    },
    {
     "name": "TUITION-RESIDENTIAL",
     "revised_budget": 1026993.0,
-    "actual": 891988.57,
+    "actual": 1024736.11,
     "original_budget": 1548227.0
    },
    {
     "name": "TUITION-COLLABORATIVES",
     "revised_budget": 584064.37,
-    "actual": 610494.4,
+    "actual": 747187.57,
     "original_budget": -418821.0
    },
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 557089.0,
-    "actual": 634084.57,
+    "actual": 767912.68,
     "original_budget": 557089.0
    },
    {
@@ -15817,13 +15817,13 @@
    {
     "name": "LEGAL SERVICES",
     "revised_budget": 170300.0,
-    "actual": 177073.7,
+    "actual": 181790.5,
     "original_budget": 170300.0
    },
    {
     "name": "OTHER PROF & TECHNICAL",
     "revised_budget": 167838.0,
-    "actual": 320194.57,
+    "actual": 323444.57,
     "original_budget": 18000.0
    },
    {
@@ -16045,13 +16045,13 @@
    {
     "name": "BLDG & EQUIP R&M SUPPLIES",
     "revised_budget": 165262.0,
-    "actual": 111612.86,
+    "actual": 114664.93,
     "original_budget": 180262.0
    },
    {
     "name": "CUSTODIAL SUPPLIES",
     "revised_budget": 142256.0,
-    "actual": 138358.65,
+    "actual": 152596.96,
     "original_budget": 142256.0
    },
    {
@@ -16313,7 +16313,7 @@
    {
     "name": "INSIDE DETAIL",
     "revised_budget": 5900.0,
-    "actual": 95229.72,
+    "actual": 95325.04,
     "original_budget": 5900.0
    },
    {
@@ -16387,7 +16387,7 @@
    {
     "name": "LICENSE/PERMITS EXPENSE",
     "revised_budget": 14000.0,
-    "actual": 8449.36,
+    "actual": 8836.47,
     "original_budget": 14000.0
    },
    {
@@ -16437,7 +16437,7 @@
    {
     "name": "ELECT PWR-PUMPING STATIONS",
     "revised_budget": 31000.0,
-    "actual": 26823.57,
+    "actual": 27027.59,
     "original_budget": 31000.0
    },
    {
@@ -16479,7 +16479,7 @@
    {
     "name": "ENGINEERING/ARCHITECTURAL",
     "revised_budget": 15000.0,
-    "actual": 14120.0,
+    "actual": 14498.04,
     "original_budget": 15000.0
    },
    {
@@ -16503,7 +16503,7 @@
    {
     "name": "CELLULAR PHONES",
     "revised_budget": 4200.0,
-    "actual": 1741.36,
+    "actual": 1956.38,
     "original_budget": 4200.0
    },
    {
@@ -16551,7 +16551,7 @@
    {
     "name": "TELEPHONE",
     "revised_budget": 1800.0,
-    "actual": 535.77,
+    "actual": 557.88,
     "original_budget": 1800.0
    },
    {
@@ -16563,7 +16563,7 @@
    {
     "name": "ADVERTISING",
     "revised_budget": 1000.0,
-    "actual": 200.0,
+    "actual": 300.0,
     "original_budget": 1000.0
    },
    {
@@ -16575,7 +16575,7 @@
    {
     "name": "INFORMATION TECHNOLOGY",
     "revised_budget": 500.0,
-    "actual": 9719.23,
+    "actual": 11483.89,
     "original_budget": 500.0
    },
    {
@@ -16609,7 +16609,7 @@
    {
     "name": "WATER METERS",
     "revised_budget": 50000.0,
-    "actual": 17133.12,
+    "actual": 31925.21,
     "original_budget": 50000.0
    },
    {
@@ -16683,7 +16683,7 @@
    {
     "name": "MAPS",
     "revised_budget": 3000.0,
-    "actual": 5995.84,
+    "actual": 7172.27,
     "original_budget": 3000.0
    },
    {
@@ -17009,7 +17009,7 @@
    {
     "name": "R&M MOTOR VEHICLES",
     "revised_budget": 23325.0,
-    "actual": 7040.69,
+    "actual": 7230.69,
     "original_budget": 23325.0
    },
    {
@@ -17021,7 +17021,7 @@
    {
     "name": "ENGINEERING/ARCHITECTURAL",
     "revised_budget": 15000.0,
-    "actual": 2653.75,
+    "actual": 12068.0,
     "original_budget": 15000.0
    },
    {
@@ -17045,13 +17045,13 @@
    {
     "name": "INFORMATION TECHNOLOGY",
     "revised_budget": 5500.0,
-    "actual": 11011.63,
+    "actual": 12776.28,
     "original_budget": 5500.0
    },
    {
     "name": "CELLULAR PHONES",
     "revised_budget": 4600.0,
-    "actual": 1741.35,
+    "actual": 1956.37,
     "original_budget": 4600.0
    },
    {
@@ -17117,7 +17117,7 @@
    {
     "name": "ADVERTISING",
     "revised_budget": 1000.0,
-    "actual": 200.0,
+    "actual": 300.0,
     "original_budget": 1000.0
    },
    {
@@ -17151,7 +17151,7 @@
    {
     "name": "WATER METERS",
     "revised_budget": 45000.0,
-    "actual": 13206.2,
+    "actual": 32929.11,
     "original_budget": 45000.0
    },
    {
@@ -17237,7 +17237,7 @@
    {
     "name": "MAPS",
     "revised_budget": 3000.0,
-    "actual": 5791.43,
+    "actual": 6967.86,
     "original_budget": 3000.0
    },
    {
@@ -17283,7 +17283,7 @@
    {
     "name": "REPAIRS & MAINTENANCE",
     "revised_budget": 445517.76,
-    "actual": 143481.54,
+    "actual": 144074.54,
     "original_budget": 445517.76
    },
    {
@@ -17309,7 +17309,7 @@
    {
     "name": "DRAINS IMPROVEMENTS",
     "revised_budget": 834970.98,
-    "actual": 398326.33,
+    "actual": 398910.08,
     "original_budget": 434970.98
    },
    {
