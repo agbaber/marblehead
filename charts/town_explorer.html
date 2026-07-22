@@ -315,6 +315,29 @@ scripts: [citations]
   }
   .compare-clear:hover { color: var(--text); }
 
+  /* Typeahead dropdown (custom, so it works on iOS Safari where <datalist>
+     renders nothing) */
+  .cmp-suggest {
+    position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 20;
+    margin: 0; padding: 4px; list-style: none;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-md, var(--shadow-sm));
+    max-height: 260px; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  }
+  .cmp-suggest li { margin: 0; }
+  .cmp-suggest button {
+    display: block; width: 100%; text-align: left;
+    padding: 9px 12px; border: none; background: none; cursor: pointer;
+    font-size: 14px; color: var(--text); border-radius: var(--radius-sm);
+  }
+  .cmp-suggest button:hover, .cmp-suggest button.active {
+    background: color-mix(in srgb, var(--c-teal) 12%, var(--surface));
+    color: var(--c-teal);
+  }
+  .cmp-suggest .cmp-empty {
+    padding: 9px 12px; font-size: 13px; color: var(--text-subtle);
+  }
+
   /* Sort buttons: transparent wrapper on desktop, swipeable row on mobile */
   .sort-btns { display: contents; }
 
@@ -323,12 +346,15 @@ scripts: [citations]
   @media (max-width: 600px) {
     .filter-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .filter-count { margin-left: 0; width: 100%; text-align: center; margin-top: 4px; }
-    .sort-bar { flex-direction: column; align-items: stretch; gap: 6px; }
+    .sort-bar { flex-direction: column; align-items: stretch; gap: 6px; min-width: 0; }
     .sort-bar-label { font-size: 12px; }
     .sort-btns {
       display: flex; flex-wrap: nowrap; gap: 6px;
       overflow-x: auto; -webkit-overflow-scrolling: touch;
       padding-bottom: 4px; scrollbar-width: none;
+      /* min-width:0 lets the flex row shrink to the viewport so overflow-x
+         scrolls internally instead of widening the page. */
+      min-width: 0; max-width: 100%;
     }
     .sort-btns::-webkit-scrollbar { display: none; }
     .sort-btn, .ovr-select { flex: 0 0 auto; }
@@ -488,10 +514,10 @@ scripts: [citations]
 <div class="compare-search">
   <label class="compare-label" for="cmp-input">Pin a town to compare:</label>
   <div class="compare-input-wrap">
-    <input type="text" id="cmp-input" list="town-list" autocomplete="off" placeholder="Search 351 towns&hellip;" aria-label="Search for a town to pin next to Marblehead">
+    <input type="text" id="cmp-input" autocomplete="off" spellcheck="false" placeholder="Search 351 towns&hellip;" aria-label="Search for a town to pin next to Marblehead" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="cmp-suggest">
     <button type="button" class="compare-clear" id="cmp-clear" aria-label="Clear comparison town" hidden>&times;</button>
+    <ul class="cmp-suggest" id="cmp-suggest" role="listbox" hidden></ul>
   </div>
-  <datalist id="town-list"></datalist>
 </div>
 
 <div class="table-wrap">
@@ -936,33 +962,92 @@ scripts: [citations]
     });
   });
 
-  // --- Compare-town search ---
+  // --- Compare-town search (custom typeahead; native <datalist> renders
+  // nothing on iOS Safari, so build our own tap-friendly dropdown) ---
   var cmpInput = document.getElementById('cmp-input');
   var cmpClear = document.getElementById('cmp-clear');
-  var townList = document.getElementById('town-list');
-  townList.innerHTML = DATA.map(function (t) {
-    return '<option value="' + t.n + '"></option>';
-  }).join('');
-  function isTown(name) { return DATA.some(function (t) { return t.n === name; }); }
+  var cmpSuggest = document.getElementById('cmp-suggest');
+  var TOWN_NAMES = DATA.map(function (t) { return t.n; })
+    .filter(function (n) { return n !== 'Marblehead'; })
+    .sort();
+  var suggestItems = [], suggestActive = -1;
+
+  function findTown(name) {
+    var lc = String(name == null ? '' : name).trim().toLowerCase();
+    if (!lc) return null;
+    return DATA.filter(function (t) { return t.n.toLowerCase() === lc; })[0] || null;
+  }
+  function hideSuggest() {
+    cmpSuggest.hidden = true; cmpSuggest.innerHTML = '';
+    suggestItems = []; suggestActive = -1;
+    cmpInput.setAttribute('aria-expanded', 'false');
+  }
+  function showSuggest() {
+    var q = cmpInput.value.trim().toLowerCase();
+    suggestActive = -1;
+    if (!q) { hideSuggest(); return; }
+    var starts = [], contains = [];
+    for (var i = 0; i < TOWN_NAMES.length; i++) {
+      var lc = TOWN_NAMES[i].toLowerCase();
+      var at = lc.indexOf(q);
+      if (at === 0) starts.push(TOWN_NAMES[i]);
+      else if (at > 0) contains.push(TOWN_NAMES[i]);
+    }
+    suggestItems = starts.concat(contains).slice(0, 8);
+    if (!suggestItems.length) {
+      cmpSuggest.innerHTML = '<li class="cmp-empty">No town matches</li>';
+    } else {
+      cmpSuggest.innerHTML = suggestItems.map(function (n) {
+        return '<li role="option"><button type="button" data-name="' + n + '">' + n + '</button></li>';
+      }).join('');
+    }
+    cmpSuggest.hidden = false;
+    cmpInput.setAttribute('aria-expanded', 'true');
+  }
   function setCompare(name, fromUrl) {
-    if (name && name !== 'Marblehead' && isTown(name)) {
-      compareTown = name;
-      cmpInput.value = name;
+    var match = findTown(name);
+    if (match && match.n !== 'Marblehead') {
+      compareTown = match.n;
+      cmpInput.value = match.n;
       cmpClear.hidden = false;
     } else {
       compareTown = '';
       cmpClear.hidden = true;
-      if (name === 'Marblehead') cmpInput.value = '';
+      if (match && match.n === 'Marblehead') cmpInput.value = '';
     }
+    hideSuggest();
     if (!fromUrl) { render(); updateUrl(); }
   }
-  // Fires on datalist pick and Enter; input fires when text exactly matches a town
-  cmpInput.addEventListener('change', function () { setCompare(cmpInput.value.trim()); });
-  cmpInput.addEventListener('input', function () {
-    var v = cmpInput.value.trim();
-    if (isTown(v)) setCompare(v);
+
+  cmpInput.addEventListener('input', showSuggest);
+  cmpInput.addEventListener('focus', function () { if (cmpInput.value.trim()) showSuggest(); });
+  // mousedown (fires before blur, and is emulated on tap) so the pick registers
+  cmpSuggest.addEventListener('mousedown', function (e) {
+    var btn = e.target.closest('button[data-name]');
+    if (!btn) return;
+    e.preventDefault();
+    setCompare(btn.getAttribute('data-name'));
   });
-  cmpClear.addEventListener('click', function () { cmpInput.value = ''; setCompare(''); });
+  cmpInput.addEventListener('keydown', function (e) {
+    if (cmpSuggest.hidden || !suggestItems.length) {
+      if (e.key === 'Enter') e.preventDefault();
+      return;
+    }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      suggestActive = Math.max(0, Math.min(suggestItems.length - 1,
+        suggestActive + (e.key === 'ArrowDown' ? 1 : -1)));
+      var btns = cmpSuggest.querySelectorAll('button');
+      for (var i = 0; i < btns.length; i++) btns[i].classList.toggle('active', i === suggestActive);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      setCompare(suggestActive >= 0 ? suggestItems[suggestActive] : suggestItems[0]);
+    } else if (e.key === 'Escape') {
+      hideSuggest();
+    }
+  });
+  cmpInput.addEventListener('blur', function () { setTimeout(hideSuggest, 150); });
+  cmpClear.addEventListener('click', function () { cmpInput.value = ''; setCompare(''); cmpInput.focus(); });
 
   var filterDetails = document.getElementById('filter-details');
   var filterStatusEl = document.getElementById('filter-summary-status');
