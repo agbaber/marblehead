@@ -260,14 +260,81 @@ scripts: [citations]
     border-bottom: 2px solid var(--border); padding: 0; height: 0;
   }
 
+  /* Pin the reference rows below the sticky header so they stay visible
+     while the list scrolls. Offsets are measured in JS (thead + ref heights)
+     and written to --ref-top / --cmp-top on the table element. */
+  table.explorer tr.mh-ref td,
+  table.explorer tr.cmp-ref td { position: sticky; z-index: 1; }
+  table.explorer tr.mh-ref td { top: var(--ref-top, 34px); }
+  table.explorer tr.cmp-ref td { top: var(--cmp-top, 66px); }
+  table.explorer tr.mh-ref td:first-child,
+  table.explorer tr.cmp-ref td:first-child { z-index: 2; }
+
+  /* Comparison town: pinned ref row + in-list highlight (teal, distinct
+     from Marblehead's series color) */
+  table.explorer tr.cmp-ref td {
+    background: color-mix(in srgb, var(--c-teal) 7%, var(--surface));
+    color: var(--text-muted); font-weight: 500; font-size: 12px;
+  }
+  table.explorer tr.cmp-ref td:first-child {
+    border-left: 3px solid var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 7%, var(--surface));
+  }
+  table.explorer tr.cmp td {
+    background: color-mix(in srgb, var(--c-teal) 5%, var(--surface));
+    color: var(--c-teal); font-weight: 600;
+  }
+  table.explorer tr.cmp td:first-child {
+    font-weight: 700; border-left: 3px solid var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 5%, var(--surface));
+  }
+  .cmp-tag { color: var(--c-teal); }
+
+  /* Compare-town search */
+  .compare-search {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    margin: 0 0 12px;
+  }
+  .compare-label { font-size: 12px; font-weight: 600; color: var(--text-muted); }
+  .compare-input-wrap {
+    position: relative; flex: 1 1 200px; max-width: 340px; display: flex;
+  }
+  .compare-input-wrap input {
+    width: 100%; padding: 8px 32px 8px 14px; font-size: 14px;
+    border: 1px solid var(--border); border-radius: 20px;
+    background: var(--bg); color: var(--text);
+  }
+  .compare-input-wrap input:focus {
+    outline: none; border-color: var(--c-teal);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--c-teal) 20%, transparent);
+  }
+  .compare-clear {
+    position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+    border: none; background: none; cursor: pointer;
+    font-size: 20px; line-height: 1; color: var(--text-subtle); padding: 4px 8px;
+  }
+  .compare-clear:hover { color: var(--text); }
+
+  /* Sort buttons: transparent wrapper on desktop, swipeable row on mobile */
+  .sort-btns { display: contents; }
+
   .no-results { text-align: center; padding: 40px 20px; color: var(--text-subtle); font-size: 14px; }
 
   @media (max-width: 600px) {
     .filter-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .filter-count { margin-left: 0; width: 100%; text-align: center; margin-top: 4px; }
-    .sort-bar { gap: 5px; }
-    .sort-bar-label { font-size: 12px; width: 100%; margin-bottom: 2px; }
-    .sort-btn { font-size: 11px; padding: 5px 10px; }
+    .sort-bar { flex-direction: column; align-items: stretch; gap: 6px; }
+    .sort-bar-label { font-size: 12px; }
+    .sort-btns {
+      display: flex; flex-wrap: nowrap; gap: 6px;
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      padding-bottom: 4px; scrollbar-width: none;
+    }
+    .sort-btns::-webkit-scrollbar { display: none; }
+    .sort-btn, .ovr-select { flex: 0 0 auto; }
+    .sort-btn { font-size: 12px; padding: 7px 14px; }
+    .compare-search { gap: 6px; }
+    .compare-input-wrap { max-width: none; }
     .bar-chart { height: 100px; gap: 0; }
     .bar-chart .bar { max-width: none; min-width: 0; border-radius: 0; }
     table.explorer { font-size: 11px; }
@@ -388,6 +455,7 @@ scripts: [citations]
 
 <div class="sort-bar">
   <span class="sort-bar-label">Compare by:</span>
+  <span class="sort-btns">
   <button type="button" class="sort-btn" data-sort="rate">Tax rate</button>
   <button type="button" class="sort-btn" data-sort="bill">Tax bill</button>
   <button type="button" class="sort-btn active" data-sort="bpi">Bill / income</button>
@@ -407,6 +475,7 @@ scripts: [citations]
     <option value="o">Operating only</option>
     <option value="d">Debt exclusions</option>
   </select>
+  </span>
 </div>
 <p class="sort-explainer" id="sort-explainer"></p>
 
@@ -414,6 +483,15 @@ scripts: [citations]
   <div class="bar-chart-label" id="bar-chart-label"></div>
   <div class="bar-chart" id="bar-chart"></div>
   <div class="bar-tip" id="bar-tip"></div>
+</div>
+
+<div class="compare-search">
+  <label class="compare-label" for="cmp-input">Pin a town to compare:</label>
+  <div class="compare-input-wrap">
+    <input type="text" id="cmp-input" list="town-list" autocomplete="off" placeholder="Search 351 towns&hellip;" aria-label="Search for a town to pin next to Marblehead">
+    <button type="button" class="compare-clear" id="cmp-clear" aria-label="Clear comparison town" hidden>&times;</button>
+  </div>
+  <datalist id="town-list"></datalist>
 </div>
 
 <div class="table-wrap">
@@ -527,6 +605,7 @@ scripts: [citations]
     3: { label: 'Adopted ($15M)', rate: 10.06, bill: 12991, ceil: 42.6 }
   };
   var activeTier = 3;
+  var compareTown = '';
   // Compute per-sq-mi metrics from area
   DATA.forEach(function (t) {
     if (t.area > 0) {
@@ -648,10 +727,22 @@ scripts: [citations]
       if (filtered[r].n === 'Marblehead') { mhdRank = r + 1; break; }
     }
 
-    var html = renderRow(mhd, 'ref', '');
+    var html = renderRow(mhd, 'ref', (mhdInList && mhdRank > 0) ? mhdRank : '');
+    if (compareTown) {
+      var cmpObj = DATA.filter(function (t) { return t.n === compareTown; })[0];
+      if (cmpObj) {
+        var cmpRank = '';
+        for (var cr = 0; cr < filtered.length; cr++) {
+          if (filtered[cr].n === compareTown) { cmpRank = cr + 1; break; }
+        }
+        html += renderRow(cmpObj, 'cmp', cmpRank);
+      }
+    }
     html += '<tr class="mh-divider"><td colspan="' + NCOLS + '"></td></tr>';
     for (var i = 0; i < filtered.length; i++) {
-      html += renderRow(filtered[i], filtered[i].n === 'Marblehead' ? 'mh' : '', i + 1);
+      var rowMode = filtered[i].n === 'Marblehead' ? 'mh'
+        : (filtered[i].n === compareTown ? 'cmpmh' : '');
+      html += renderRow(filtered[i], rowMode, i + 1);
     }
     if (!filtered.length) {
       html += '<tr><td colspan="' + NCOLS + '" class="no-results">No communities match. Try widening the ranges.</td></tr>';
@@ -694,7 +785,23 @@ scripts: [citations]
     document.querySelectorAll('.tier-btn').forEach(function (b) {
       b.classList.toggle('active', parseInt(b.getAttribute('data-tier')) === activeTier);
     });
+
+    updateStickyOffsets();
   }
+
+  // Measure header + Marblehead ref-row heights so the pinned rows stick
+  // flush beneath the sticky column header on any viewport / font size.
+  var explorerTable = document.getElementById('explorer-table');
+  function updateStickyOffsets() {
+    var thead = explorerTable.querySelector('thead');
+    if (!thead) return;
+    var headH = thead.offsetHeight;
+    explorerTable.style.setProperty('--ref-top', headH + 'px');
+    var refRow = tbody.querySelector('tr.mh-ref');
+    var refH = refRow ? refRow.offsetHeight : 34;
+    explorerTable.style.setProperty('--cmp-top', (headH + refH) + 'px');
+  }
+  window.addEventListener('resize', updateStickyOffsets);
 
   function fmtVal(col, v) {
     if (col === 'bpi' || col === 'rpct' || col === 'ceil' || col === 'esh') return v.toFixed(1) + '%';
@@ -752,8 +859,12 @@ scripts: [citations]
   }
 
   function renderRow(t, mode, rank) {
-    var cls = mode === 'mh' ? ' class="mh"' : mode === 'ref' ? ' class="mh-ref"' : '';
-    var extra = mode === 'ref' ? '<span class="mh-ref-label">ref</span>' : '';
+    var cls = mode === 'mh' ? ' class="mh"'
+      : mode === 'cmpmh' ? ' class="cmp"'
+      : mode === 'ref' ? ' class="mh-ref"'
+      : mode === 'cmp' ? ' class="cmp-ref"' : '';
+    var extra = mode === 'ref' ? '<span class="mh-ref-label">ref</span>'
+      : mode === 'cmp' ? '<span class="mh-ref-label cmp-tag">compare</span>' : '';
     return '<tr' + cls + '>' +
       '<td>' + t.n + extra + '</td>' +
       '<td>' + (rank || '') + '</td>' +
@@ -824,6 +935,34 @@ scripts: [citations]
       if (v !== null) inputs[key].value = fN(v);
     });
   });
+
+  // --- Compare-town search ---
+  var cmpInput = document.getElementById('cmp-input');
+  var cmpClear = document.getElementById('cmp-clear');
+  var townList = document.getElementById('town-list');
+  townList.innerHTML = DATA.map(function (t) {
+    return '<option value="' + t.n + '"></option>';
+  }).join('');
+  function isTown(name) { return DATA.some(function (t) { return t.n === name; }); }
+  function setCompare(name, fromUrl) {
+    if (name && name !== 'Marblehead' && isTown(name)) {
+      compareTown = name;
+      cmpInput.value = name;
+      cmpClear.hidden = false;
+    } else {
+      compareTown = '';
+      cmpClear.hidden = true;
+      if (name === 'Marblehead') cmpInput.value = '';
+    }
+    if (!fromUrl) { render(); updateUrl(); }
+  }
+  // Fires on datalist pick and Enter; input fires when text exactly matches a town
+  cmpInput.addEventListener('change', function () { setCompare(cmpInput.value.trim()); });
+  cmpInput.addEventListener('input', function () {
+    var v = cmpInput.value.trim();
+    if (isTown(v)) setCompare(v);
+  });
+  cmpClear.addEventListener('click', function () { cmpInput.value = ''; setCompare(''); });
 
   var filterDetails = document.getElementById('filter-details');
   var filterStatusEl = document.getElementById('filter-summary-status');
@@ -898,6 +1037,7 @@ scripts: [citations]
     if (!sortAsc !== !!DESC_DEFAULT[sortCol]) params.set('dir', sortAsc ? 'asc' : 'desc');
     if (activeCohort) params.set('cohort', activeCohort);
     if (activeTier > 0) params.set('tier', activeTier);
+    if (compareTown) params.set('cmp', compareTown);
     var qs = params.toString();
     var url = window.location.pathname + (qs ? '?' + qs : '');
     history.replaceState(null, '', url);
@@ -920,6 +1060,9 @@ scripts: [citations]
     if (params.has('tier')) {
       var t = parseInt(params.get('tier'));
       if (TIERS[t]) activeTier = t;
+    }
+    if (params.has('cmp')) {
+      setCompare(params.get('cmp'), true);
     }
   }
 
