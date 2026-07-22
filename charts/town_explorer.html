@@ -346,19 +346,11 @@ scripts: [citations]
   @media (max-width: 600px) {
     .filter-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .filter-count { margin-left: 0; width: 100%; text-align: center; margin-top: 4px; }
-    .sort-bar { flex-direction: column; align-items: stretch; gap: 6px; min-width: 0; }
-    .sort-bar-label { font-size: 12px; }
-    .sort-btns {
-      display: flex; flex-wrap: nowrap; gap: 6px;
-      overflow-x: auto; -webkit-overflow-scrolling: touch;
-      padding-bottom: 4px; scrollbar-width: none;
-      /* min-width:0 lets the flex row shrink to the viewport so overflow-x
-         scrolls internally instead of widening the page. */
-      min-width: 0; max-width: 100%;
-    }
-    .sort-btns::-webkit-scrollbar { display: none; }
-    .sort-btn, .ovr-select { flex: 0 0 auto; }
-    .sort-btn { font-size: 12px; padding: 7px 14px; }
+    .sort-bar { gap: 5px; }
+    .sort-bar-label { font-size: 12px; width: 100%; margin-bottom: 2px; }
+    /* .sort-btns is display:contents, so the buttons wrap as direct flex
+       children of .sort-bar (flex-wrap:wrap) instead of scrolling. */
+    .sort-btn { font-size: 11px; padding: 5px 10px; }
     .compare-search { gap: 6px; }
     .compare-input-wrap { max-width: none; }
     .bar-chart { height: 100px; gap: 0; }
