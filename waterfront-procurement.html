@@ -38,6 +38,12 @@ community_pulse: off-sections
   .wf-trade h3 { margin: 0 0 6px; font-size: 0.8rem; text-transform: uppercase;
                  letter-spacing: 0.5px; color: var(--text-muted); }
   .wf-trade p { margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+
+  /* Numbered list: the global reset zeros list padding, so give it its own
+     so markers don't hang into the container edge (clips on mobile). */
+  ol.wf-list { list-style: decimal; padding-left: 1.5em; margin: 14px 0; }
+  ol.wf-list li { margin: 0 0 12px; line-height: 1.55; padding-left: 4px; }
+  ol.wf-list li strong { color: var(--text); }
 </style>
 
 <h1>Fixing the Crocker Park dock</h1>
@@ -124,7 +130,7 @@ dock-maintenance contract once, so future repairs draw on an agreement already i
 
 <h2>What is still unknown</h2>
 
-<ol>
+<ol class="wf-list">
   <li><strong>Whether the float work should be bid as one service.</strong> The current
   repair is being quoted competitively. The ~$48,000-a-year blanket order is a separate
   question: whether it is one recurring service the town should procure as a whole, or a
