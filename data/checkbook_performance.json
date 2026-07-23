@@ -245,18 +245,18 @@
         "pct": 0.0
       },
       {
-        "name": "PUBLIC WORKS",
-        "revised": 2918686.0,
-        "actual": 210148.49,
-        "delta": -2708537.51,
-        "pct": 7.2
-      },
-      {
         "name": "STATE ASSESSMENTS",
         "revised": 2783125.0,
         "actual": 0,
         "delta": -2783125.0,
         "pct": 0.0
+      },
+      {
+        "name": "PUBLIC WORKS",
+        "revised": 3143686.0,
+        "actual": 210148.49,
+        "delta": -2933537.51,
+        "pct": 6.68
       },
       {
         "name": "SEWER",
@@ -331,8 +331,8 @@
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 7281853.19,
-        "delta": -16790539.81,
+        "actual": 7282442.69,
+        "delta": -16789950.31,
         "pct": 30.25
       }
     ],
@@ -340,8 +340,8 @@
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 7281853.19,
-        "delta": -16790539.81,
+        "actual": 7282442.69,
+        "delta": -16789950.31,
         "pct": 30.25
       },
       {
@@ -423,10 +423,10 @@
       },
       {
         "name": "PUBLIC WORKS",
-        "revised": 2918686.0,
+        "revised": 3143686.0,
         "actual": 210148.49,
-        "delta": -2708537.51,
-        "pct": 7.2
+        "delta": -2933537.51,
+        "pct": 6.68
       },
       {
         "name": "STATE ASSESSMENTS",
