@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-07-23",
+  "as_of": "2026-07-24",
   "latest_fiscal_month": "2026-07-01",
-  "generated_at": "2026-07-23T11:25:29+00:00",
+  "generated_at": "2026-07-24T11:21:17+00:00",
   "fiscal_year": "FY27",
   "fy_months": [
     "2026-07",
@@ -80,6 +80,72 @@
         {
           "month": "2027-06",
           "cumulative": 18544350.33,
+          "monthly": 0.0
+        }
+      ]
+    },
+    {
+      "fund": "WATER ENTERPRISE OPERATING",
+      "total_through_as_of": 2646836.07,
+      "series": [
+        {
+          "month": "2026-07",
+          "cumulative": 2646836.07,
+          "monthly": 2646836.07
+        },
+        {
+          "month": "2026-08",
+          "cumulative": 2646836.07,
+          "monthly": 0.0
+        },
+        {
+          "month": "2026-09",
+          "cumulative": 2646836.07,
+          "monthly": 0.0
+        },
+        {
+          "month": "2026-10",
+          "cumulative": 2646836.07,
+          "monthly": 0.0
+        },
+        {
+          "month": "2026-11",
+          "cumulative": 2646836.07,
+          "monthly": 0.0
+        },
+        {
+          "month": "2026-12",
+          "cumulative": 2646836.07,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-01",
+          "cumulative": 2646836.07,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-02",
+          "cumulative": 2646836.07,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-03",
+          "cumulative": 2646836.07,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-04",
+          "cumulative": 2646836.07,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-05",
+          "cumulative": 2646836.07,
+          "monthly": 0.0
+        },
+        {
+          "month": "2027-06",
+          "cumulative": 2646836.07,
           "monthly": 0.0
         }
       ]
@@ -212,72 +278,6 @@
         {
           "month": "2027-06",
           "cumulative": 758456.87,
-          "monthly": 0.0
-        }
-      ]
-    },
-    {
-      "fund": "WATER ENTERPRISE OPERATING",
-      "total_through_as_of": 246836.07,
-      "series": [
-        {
-          "month": "2026-07",
-          "cumulative": 246836.07,
-          "monthly": 246836.07
-        },
-        {
-          "month": "2026-08",
-          "cumulative": 246836.07,
-          "monthly": 0.0
-        },
-        {
-          "month": "2026-09",
-          "cumulative": 246836.07,
-          "monthly": 0.0
-        },
-        {
-          "month": "2026-10",
-          "cumulative": 246836.07,
-          "monthly": 0.0
-        },
-        {
-          "month": "2026-11",
-          "cumulative": 246836.07,
-          "monthly": 0.0
-        },
-        {
-          "month": "2026-12",
-          "cumulative": 246836.07,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-01",
-          "cumulative": 246836.07,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-02",
-          "cumulative": 246836.07,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-03",
-          "cumulative": 246836.07,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-04",
-          "cumulative": 246836.07,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-05",
-          "cumulative": 246836.07,
-          "monthly": 0.0
-        },
-        {
-          "month": "2027-06",
-          "cumulative": 246836.07,
           "monthly": 0.0
         }
       ]
