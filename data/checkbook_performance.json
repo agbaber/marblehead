@@ -112,13 +112,6 @@
         "pct": 0.0
       },
       {
-        "name": "PUBLIC BUILDINGS",
-        "revised": 301225.0,
-        "actual": 9098.58,
-        "delta": -292126.42,
-        "pct": 3.02
-      },
-      {
         "name": "HUMAN RESOURCES",
         "revised": 314480.0,
         "actual": 14784.88,
@@ -180,6 +173,13 @@
         "actual": 25467.78,
         "delta": -697708.22,
         "pct": 3.52
+      },
+      {
+        "name": "PUBLIC BUILDINGS",
+        "revised": 751225.0,
+        "actual": 9098.58,
+        "delta": -742126.42,
+        "pct": 1.21
       },
       {
         "name": "INTERFUND TRANSFERS",
@@ -245,13 +245,6 @@
         "pct": 0.0
       },
       {
-        "name": "STATE ASSESSMENTS",
-        "revised": 2783125.0,
-        "actual": 0,
-        "delta": -2783125.0,
-        "pct": 0.0
-      },
-      {
         "name": "PUBLIC WORKS",
         "revised": 3143686.0,
         "actual": 210148.49,
@@ -259,11 +252,25 @@
         "pct": 6.68
       },
       {
+        "name": "STATE ASSESSMENTS",
+        "revised": 3004090.0,
+        "actual": 0,
+        "delta": -3004090.0,
+        "pct": 0.0
+      },
+      {
         "name": "SEWER",
         "revised": 4799291.0,
         "actual": 758456.87,
         "delta": -4040834.13,
         "pct": 15.8
+      },
+      {
+        "name": "WATER",
+        "revised": 6865301.0,
+        "actual": 2646836.07,
+        "delta": -4218464.93,
+        "pct": 38.55
       },
       {
         "name": "GLOVER SCHOOL",
@@ -299,13 +306,6 @@
         "actual": 377991.94,
         "delta": -5950679.06,
         "pct": 5.97
-      },
-      {
-        "name": "WATER",
-        "revised": 6865301.0,
-        "actual": 246836.07,
-        "delta": -6618464.93,
-        "pct": 3.6
       },
       {
         "name": "VILLAGE SCHOOL",
@@ -375,9 +375,9 @@
       {
         "name": "WATER",
         "revised": 6865301.0,
-        "actual": 246836.07,
-        "delta": -6618464.93,
-        "pct": 3.6
+        "actual": 2646836.07,
+        "delta": -4218464.93,
+        "pct": 38.55
       },
       {
         "name": "FIRE",
@@ -430,9 +430,9 @@
       },
       {
         "name": "STATE ASSESSMENTS",
-        "revised": 2783125.0,
+        "revised": 3004090.0,
         "actual": 0,
-        "delta": -2783125.0,
+        "delta": -3004090.0,
         "pct": 0.0
       },
       {
@@ -483,6 +483,13 @@
         "actual": 0,
         "delta": -1000000.0,
         "pct": 0.0
+      },
+      {
+        "name": "PUBLIC BUILDINGS",
+        "revised": 751225.0,
+        "actual": 9098.58,
+        "delta": -742126.42,
+        "pct": 1.21
       },
       {
         "name": "INTERFUND TRANSFERS",
@@ -553,13 +560,6 @@
         "actual": 14784.88,
         "delta": -299695.12,
         "pct": 4.7
-      },
-      {
-        "name": "PUBLIC BUILDINGS",
-        "revised": 301225.0,
-        "actual": 9098.58,
-        "delta": -292126.42,
-        "pct": 3.02
       },
       {
         "name": "TOWN COUNSEL",
