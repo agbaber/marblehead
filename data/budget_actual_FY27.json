@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-07-24",
+  "as_of": "2026-07-25",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-07-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
@@ -31,7 +31,7 @@
       "revised_budget": 47620287.0,
       "actual": 194178.57,
       "original_budget": 47620287.0,
-      "encumbrance": 6821735.71
+      "encumbrance": 6850294.08
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -82,7 +82,7 @@
       "revised_budget": 13089080.6,
       "actual": 114716.13,
       "original_budget": 13090519.6,
-      "encumbrance": 4687851.42
+      "encumbrance": 4716085.86
     },
     {
       "name": "HIGH SCHOOL",
@@ -103,7 +103,7 @@
       "revised_budget": 7545798.37,
       "actual": 16293.97,
       "original_budget": 7545798.37,
-      "encumbrance": 383065.46
+      "encumbrance": 383389.39
     },
     {
       "name": "WATER",
@@ -420,7 +420,7 @@
       "revised_budget": 13932700.0,
       "actual": 244181.01,
       "original_budget": 13931261.0,
-      "encumbrance": 2696313.52
+      "encumbrance": 2720300.56
     },
     {
       "name": "GOVERNMENTAL",
@@ -441,7 +441,7 @@
       "revised_budget": 2458724.0,
       "actual": 0.0,
       "original_budget": 2458724.0,
-      "encumbrance": 515847.22
+      "encumbrance": 520418.55
     },
     {
       "name": "CAPITAL",
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 194178.57,
       "original_budget": 47615287.0,
-      "encumbrance": 6821735.71
+      "encumbrance": 6850294.08
     },
     {
       "name": "EXPENSES",
@@ -1271,14 +1271,14 @@
       "revised_budget": 616618.0,
       "actual": 0.0,
       "original_budget": 616618.0,
-      "encumbrance": 194509.33
+      "encumbrance": 194801.58
     },
     {
       "name": "OTHER PROF & TECHNICAL",
       "revised_budget": 574322.0,
       "actual": 0.0,
       "original_budget": 574322.0,
-      "encumbrance": 49149.2
+      "encumbrance": 59636.24
     },
     {
       "name": "SUBSTITUTES",
@@ -1663,7 +1663,7 @@
       "revised_budget": 142256.0,
       "actual": 0.0,
       "original_budget": 142256.0,
-      "encumbrance": 10000.0
+      "encumbrance": 14247.4
     },
     {
       "name": "SCHEDULED OT",
@@ -1719,7 +1719,7 @@
       "revised_budget": 122188.0,
       "actual": 0.0,
       "original_budget": 122188.0,
-      "encumbrance": 5442.72
+      "encumbrance": 18942.72
     },
     {
       "name": "TRAFFIC SUPERS",
@@ -2349,7 +2349,7 @@
       "revised_budget": 35750.0,
       "actual": 0.0,
       "original_budget": 35750.0,
-      "encumbrance": 5704.73
+      "encumbrance": 5736.41
     },
     {
       "name": "POLICE POST STIPEND",
