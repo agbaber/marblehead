@@ -1,5 +1,5 @@
 {
- "as_of": "2026-07-24",
+ "as_of": "2026-07-26",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -48,7 +48,7 @@
     {
      "name": "STATE ASSESSMENTS",
      "revised_budget": 2475615.0,
-     "actual": 2378203.0,
+     "actual": 2541095.0,
      "original_budget": 2475615.0
     },
     {
@@ -242,7 +242,7 @@
     {
      "name": "GOVERNMENTAL",
      "revised_budget": 2475615.0,
-     "actual": 2378203.0,
+     "actual": 2541095.0,
      "original_budget": 2475615.0
     },
     {
@@ -1679,7 +1679,7 @@
     {
      "name": "GOVERNMENTAL",
      "revised_budget": 2475615.0,
-     "actual": 2378203.0,
+     "actual": 2541095.0,
      "original_budget": 2475615.0
     }
    ],
@@ -1687,7 +1687,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 2475615.0,
-     "actual": 2378203.0,
+     "actual": 2541095.0,
      "original_budget": 2475615.0
     }
    ]
@@ -3944,7 +3944,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 2475615.0,
-     "actual": 2378203.0,
+     "actual": 2541095.0,
      "original_budget": 2475615.0
     },
     {
@@ -3970,7 +3970,7 @@
     {
      "name": "STATE ASSESSMENTS",
      "revised_budget": 2475615.0,
-     "actual": 2378203.0,
+     "actual": 2541095.0,
      "original_budget": 2475615.0
     },
     {
@@ -4855,7 +4855,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19400687.6,
-     "actual": 18043064.25,
+     "actual": 18205956.25,
      "original_budget": 18599491.0
     },
     {
@@ -4893,7 +4893,7 @@
     {
      "name": "STATE ASSESSMENTS",
      "revised_budget": 2475615.0,
-     "actual": 2378203.0,
+     "actual": 2541095.0,
      "original_budget": 2475615.0
     },
     {
@@ -10771,44 +10771,50 @@
    {
     "name": "CHARTER SCHOOL ASSESSMENT",
     "revised_budget": 1805693.0,
-    "actual": 1727784.0,
+    "actual": 1826576.0,
     "original_budget": 1805693.0
    },
    {
     "name": "MBTA",
     "revised_budget": 519241.0,
-    "actual": 475915.0,
+    "actual": 519178.0,
     "original_budget": 519241.0
    },
    {
     "name": "SCHOOL CHOICE ASSESSMENT",
     "revised_budget": 66431.0,
-    "actual": 97273.0,
+    "actual": 110481.0,
     "original_budget": 66431.0
    },
    {
     "name": "MOSQUITO CONTROL PROJECTS",
     "revised_budget": 46138.0,
-    "actual": 42295.0,
+    "actual": 46126.0,
     "original_budget": 46138.0
    },
    {
     "name": "RMV NONRENEWAL SURCHARGE",
     "revised_budget": 15200.0,
-    "actual": 13937.0,
+    "actual": 15200.0,
     "original_budget": 15200.0
    },
    {
     "name": "METRO AREA PLANNING COUNC",
     "revised_budget": 12327.0,
-    "actual": 10260.0,
+    "actual": 11283.0,
     "original_budget": 12327.0
    },
    {
     "name": "AIR POLUTION CONTROL",
     "revised_budget": 10585.0,
-    "actual": 10739.0,
+    "actual": 11611.0,
     "original_budget": 10585.0
+   },
+   {
+    "name": "SPECIAL EDUCATION",
+    "revised_budget": 0,
+    "actual": 640.0,
+    "original_budget": 0
    }
   ],
   "FINANCE||PROFESSIONAL SALARY": [
@@ -15239,44 +15245,50 @@
    {
     "name": "CHARTER SCHOOL ASSESSMENT",
     "revised_budget": 1805693.0,
-    "actual": 1727784.0,
+    "actual": 1826576.0,
     "original_budget": 1805693.0
    },
    {
     "name": "MBTA",
     "revised_budget": 519241.0,
-    "actual": 475915.0,
+    "actual": 519178.0,
     "original_budget": 519241.0
    },
    {
     "name": "SCHOOL CHOICE ASSESSMENT",
     "revised_budget": 66431.0,
-    "actual": 97273.0,
+    "actual": 110481.0,
     "original_budget": 66431.0
    },
    {
     "name": "MOSQUITO CONTROL PROJECTS",
     "revised_budget": 46138.0,
-    "actual": 42295.0,
+    "actual": 46126.0,
     "original_budget": 46138.0
    },
    {
     "name": "RMV NONRENEWAL SURCHARGE",
     "revised_budget": 15200.0,
-    "actual": 13937.0,
+    "actual": 15200.0,
     "original_budget": 15200.0
    },
    {
     "name": "METRO AREA PLANNING COUNC",
     "revised_budget": 12327.0,
-    "actual": 10260.0,
+    "actual": 11283.0,
     "original_budget": 12327.0
    },
    {
     "name": "AIR POLUTION CONTROL",
     "revised_budget": 10585.0,
-    "actual": 10739.0,
+    "actual": 11611.0,
     "original_budget": 10585.0
+   },
+   {
+    "name": "SPECIAL EDUCATION",
+    "revised_budget": 0,
+    "actual": 640.0,
+    "original_budget": 0
    }
   ],
   "GENERAL FUND - TOWN||CAPITAL": [
