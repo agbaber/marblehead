@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-07-21",
+  "as_of": "2026-07-27",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 1,
-  "fy_pct_elapsed": 5.8,
+  "fy_pct_elapsed": 7.4,
   "budget_execution": {
     "by_department": [
       {
@@ -671,12 +671,28 @@
   "monthly_cadence": [
     {
       "month": "2026-07",
-      "amount": 19742932.9,
-      "count": 101
+      "amount": 20750283.16,
+      "count": 172
     }
   ],
   "drill": {
     "by_fund": {
+      "EARL N REYNOLDS HISTORICAL FD": {
+        "top_vendors": [
+          {
+            "name": "VERIZON INC",
+            "amount": 6.76,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 6.76,
+            "count": 1
+          }
+        ]
+      },
       "ELECTRIC ENTERPRISE": {
         "top_vendors": [
           {
@@ -688,13 +704,84 @@
             "name": "COMMONWEALTH OF MA",
             "amount": 50929.87,
             "count": 1
+          },
+          {
+            "name": "MIIA HEALTH BENEFITS TRUST",
+            "amount": 9872.0,
+            "count": 1
+          },
+          {
+            "name": "RICHARD D AMBROSIA INC",
+            "amount": 4750.0,
+            "count": 1
+          },
+          {
+            "name": "TOWN OF BRAINTREE",
+            "amount": 4151.4,
+            "count": 1
+          },
+          {
+            "name": "NORTH EAST TECHNOLOGY",
+            "amount": 3310.67,
+            "count": 1
+          },
+          {
+            "name": "PLM ELECTRIC POWER ENGINEERING",
+            "amount": 1540.0,
+            "count": 1
+          },
+          {
+            "name": "COMCAST HOLDINGS CORPORATION",
+            "amount": 1218.71,
+            "count": 1
+          },
+          {
+            "name": "NATIONAL GRAND BANK OF MARBLEHEAD",
+            "amount": 983.02,
+            "count": 9
+          },
+          {
+            "name": "SYSTEMS DESIGN AND TECHNOLOGY LLC",
+            "amount": 742.5,
+            "count": 1
+          },
+          {
+            "name": "TIGHE & BOND, INC",
+            "amount": 491.8,
+            "count": 1
+          },
+          {
+            "name": "VERIZON INC",
+            "amount": 481.43,
+            "count": 2
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 889180.87,
+            "amount": 917134.23,
+            "count": 23
+          }
+        ]
+      },
+      "GENERAL FUND - SCHOOL": {
+        "top_vendors": [
+          {
+            "name": "MIIA HEALTH BENEFITS TRUST",
+            "amount": 29819.0,
             "count": 2
+          },
+          {
+            "name": "KRISTIN B PETTY",
+            "amount": 8249.6,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 38068.6,
+            "count": 3
           }
         ]
       },
@@ -737,8 +824,18 @@
             "count": 6
           },
           {
+            "name": "MIIA HEALTH BENEFITS TRUST",
+            "amount": 790359.0,
+            "count": 1
+          },
+          {
             "name": "TYLER TECHNOLOGIES INC",
             "amount": 221452.35,
+            "count": 1
+          },
+          {
+            "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
+            "amount": 39358.68,
             "count": 1
           },
           {
@@ -752,41 +849,31 @@
             "count": 1
           },
           {
+            "name": "REHRIG PACIFIC COMPANY",
+            "amount": 15378.83,
+            "count": 1
+          },
+          {
+            "name": "DENNIS K BURKE INC",
+            "amount": 13089.55,
+            "count": 2
+          },
+          {
+            "name": "SBRK FINANCE HOLDINGS INC",
+            "amount": 7514.96,
+            "count": 1
+          },
+          {
             "name": "THE PITNEY BOWES RESERVE ACCOUNT",
             "amount": 5000.0,
-            "count": 1
-          },
-          {
-            "name": "TRAVELERS INSURANCE",
-            "amount": 2116.0,
-            "count": 1
-          },
-          {
-            "name": "ADAM J HATFIELD",
-            "amount": 1300.0,
-            "count": 1
-          },
-          {
-            "name": "AIDAN GILLIS",
-            "amount": 1300.0,
-            "count": 1
-          },
-          {
-            "name": "ARTHUR BOARDWAY",
-            "amount": 1300.0,
-            "count": 1
-          },
-          {
-            "name": "BRENT TARASUIK",
-            "amount": 1300.0,
             "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 17689401.58,
-            "count": 85
+            "amount": 18566603.02,
+            "count": 120
           }
         ]
       },
@@ -798,16 +885,26 @@
             "count": 1
           },
           {
+            "name": "MIIA HEALTH BENEFITS TRUST",
+            "amount": 16058.0,
+            "count": 1
+          },
+          {
             "name": "COMMONWEALTH OF MA",
             "amount": 12286.72,
+            "count": 1
+          },
+          {
+            "name": "VERIZON INC",
+            "amount": 6.77,
             "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 96714.72,
-            "count": 2
+            "amount": 112779.49,
+            "count": 4
           }
         ]
       },
@@ -866,16 +963,31 @@
             "count": 1
           },
           {
+            "name": "MIIA HEALTH BENEFITS TRUST",
+            "amount": 18226.0,
+            "count": 1
+          },
+          {
             "name": "COMMONWEALTH OF MA",
             "amount": 17237.53,
+            "count": 1
+          },
+          {
+            "name": "CITY OF SALEM",
+            "amount": 382.56,
+            "count": 2
+          },
+          {
+            "name": "VERIZON INC",
+            "amount": 3.38,
             "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 704399.53,
-            "count": 3
+            "amount": 723011.47,
+            "count": 7
           }
         ]
       },
@@ -887,16 +999,31 @@
             "count": 1
           },
           {
+            "name": "MIIA HEALTH BENEFITS TRUST",
+            "amount": 28794.0,
+            "count": 1
+          },
+          {
             "name": "COMMONWEALTH OF MA",
             "amount": 26280.28,
+            "count": 1
+          },
+          {
+            "name": "CITY OF SALEM",
+            "amount": 646.01,
+            "count": 3
+          },
+          {
+            "name": "VERIZON INC",
+            "amount": 3.38,
             "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 197267.28,
-            "count": 2
+            "amount": 226710.67,
+            "count": 7
           }
         ]
       }
