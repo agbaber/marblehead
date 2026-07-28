@@ -44,6 +44,54 @@ og_url: https://marbleheaddata.org/retirement.html
   }
   .tldr li:first-child::before { top: 10px; }
   .tldr li strong { color: var(--text); }
+
+  /* Page-scoped: light track behind the funded-ratio bars, showing the
+     full 100% each bar is measured against. */
+  svg.chart .fund-track { fill: var(--divider); }
+
+  .source {
+    font-size: 12.5px;
+    color: var(--text-subtle);
+    line-height: 1.5;
+    margin: 6px 0 22px;
+  }
+
+  /* Page-scoped: two-column case-for/case-against comparison (shared pattern) */
+  .ba {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0 24px;
+  }
+  .ba-col {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 16px 18px;
+  }
+  .ba-col--after { border-top: 3px solid var(--c-buoy); }
+  .ba-col--now { border-top: 3px solid var(--c-navy); }
+  .ba-h {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+    margin-bottom: 10px;
+  }
+  .ba-col ul { list-style: none; padding: 0; margin: 0; }
+  .ba-col li {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 7px 0;
+    border-top: 1px solid var(--divider);
+    color: var(--text-muted);
+  }
+  .ba-col li:first-child { border-top: none; }
+  .ba-col li strong { color: var(--text); }
+  @media (max-width: 600px) {
+    .ba { grid-template-columns: 1fr; }
+  }
 </style>
 
 <h1>What Marblehead spends on retirement</h1>
@@ -58,3 +106,131 @@ og_url: https://marbleheaddata.org/retirement.html
     <li>One promise is being pre-funded on a plan. The other is largely paid year to year, as the bills come due, with almost nothing set aside for the retirees still to come.</li>
   </ul>
 </div>
+
+<h2 id="how-we-got-here">How did we get here</h2>
+
+<p>Marblehead runs its own pension system for town and municipal employees, the Marblehead Contributory Retirement System. Every year the town appropriates money into a pension fund that invests it and pays retirees their monthly checks. In the general fund that payment was <strong>$5,380,625</strong> in FY26 and is proposed at <strong>$5,843,360</strong> for FY27, and it has climbed steadily for years.<sup class="cite" data-href="data/FY27_Proposed_Budget_No_Override.txt" data-source="Town of Marblehead FY2027 Proposed Budget, p.4, Line 217 &quot;Contributory Retirement Fund&quot;: FY26 general-fund appropriation $5,380,625; FY27 proposed $5,843,360. Town-wide including water, sewer, electric, and harbor enterprise shares is $6,528,003; the general-fund tax-supported figure is $5,380,625."></sup></p>
+
+<p>Retiree health insurance is the mirror image. For decades the town paid its share of retirees' health premiums out of each year's budget and set almost nothing aside in advance for the retirees still to come. That deferred promise, <abbr class="g" title="Other Post-Employment Benefits">OPEB</abbr>, has piled up into a large liability that sits off to the side of the operating budget. The result is one promise that is mostly funded and one that is barely funded at all.</p>
+
+<div class="chart-wrapper">
+  <svg class="chart" viewBox="0 0 760 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart comparing how much of each Marblehead retirement promise has money set aside, as of June 30, 2025. The pension is 72.5 percent funded. Retiree health insurance, OPEB, is 3.4 percent funded. Each bar is measured against a full 100 percent.">
+    <!-- x scale: 0% = x60, 100% = x700, 6.4 px per percentage point -->
+    <line class="grid-minor" x1="60"  y1="30" x2="60"  y2="175"/>
+    <line class="grid-minor" x1="220" y1="30" x2="220" y2="175"/>
+    <line class="grid-minor" x1="380" y1="30" x2="380" y2="175"/>
+    <line class="grid-minor" x1="540" y1="30" x2="540" y2="175"/>
+    <line class="grid-minor" x1="700" y1="30" x2="700" y2="175"/>
+
+    <!-- Pension: 72.5% funded -> width 464 -->
+    <text class="tick-label--major" x="60" y="42" text-anchor="start">Pension</text>
+    <rect class="fund-track" x="60" y="48" width="640" height="30"/>
+    <rect class="data-bar s-marblehead" x="60" y="48" width="464" height="30"/>
+    <text class="value-label" x="532" y="68">72.5% funded</text>
+
+    <!-- Retiree health (OPEB): 3.4% funded -> width 22 -->
+    <text class="tick-label--major" x="60" y="104" text-anchor="start">Retiree health (OPEB)</text>
+    <rect class="fund-track" x="60" y="110" width="640" height="30"/>
+    <rect class="data-bar s-tier-2" x="60" y="110" width="22" height="30"/>
+    <text class="value-label" x="92" y="130">3.4% funded</text>
+
+    <line class="axis-base" x1="60" y1="175" x2="700" y2="175"/>
+    <text class="tick-label" x="60"  y="193" text-anchor="middle">0%</text>
+    <text class="tick-label" x="220" y="193" text-anchor="middle">25%</text>
+    <text class="tick-label" x="380" y="193" text-anchor="middle">50%</text>
+    <text class="tick-label" x="540" y="193" text-anchor="middle">75%</text>
+    <text class="tick-label" x="700" y="193" text-anchor="middle">100%</text>
+  </svg>
+</div>
+
+<p class="source">Share of each promise that has money set aside, as of June 30, 2025. The pension carried a net unfunded liability of about <strong>$40.1 million</strong> at a <strong>72.49%</strong> funded ratio; retiree health carried a net unfunded liability of about <strong>$142.0 million</strong> at a <strong>3.37%</strong> funded ratio. Both are the town's own plans.<sup class="cite" data-href="data/town_docs/FY25_Town_of_Marblehead_ACFR.pdf" data-source="Town of Marblehead FY25 ACFR, p.31 (summary) with detail at pp.86-90 (pension) and pp.91-94 (OPEB): Net Pension Liability $40,112,618 at 72.49% funded; Net OPEB Liability $142,044,651 (total OPEB liability $146,998,774 less plan fiduciary net position $4,954,123) at 3.37% funded. The Marblehead Municipal Light Department OPEB is a separate plan ($3.34M net, 45.5% funded) and is not included."></sup></p>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="why-pension-climbed">Why the pension bill climbed</h2>
+    <p class="deep-dive-teaser">Investment losses in 2008 left the pension fund short of what it owed. State rules then put the town on a catch-up payment schedule that rises every year until the gap closes.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>A pension fund invests the money it holds, and market losses can leave it owing more than it has. The 2008 financial crisis did exactly that to public pension funds across Massachusetts, including Marblehead's. Once a system falls behind, state rules require it to pay the shortfall back on a fixed schedule, much like an amortized loan, which is why the annual appropriation has kept climbing even as the underlying benefits stayed the same.</p>
+    <p>Marblehead's schedule, set by its most recent actuarial valuation, raises the total pension appropriation <strong>8.6% each year through FY35</strong>, with a final amortization payment in FY36. After that the catch-up portion goes away.<sup class="cite" data-href="https://www.mass.gov/lists/perac-actuarial-valuation-reports" data-source="PERAC, Marblehead Retirement System Actuarial Valuation Report as of January 1, 2024, printed p.6: &quot;The total appropriation increases 8.6% each year through FY35 with a final amortization payment in FY36.&quot; Funding schedule detail at p.13."></sup></p>
+  </div>
+</details>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="teachers">Wait, aren't teachers in this?</h2>
+    <p class="deep-dive-teaser">Teacher pensions are paid by the state, not the town, so they do not appear in this appropriation. That does not make them free to residents.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>Marblehead's pension system covers town and municipal employees but not teachers. Teacher pensions run through the <abbr class="g" title="Massachusetts Teachers Retirement System">MTRS</abbr> (Massachusetts Teachers Retirement System), which the state funds directly, so they cost the town general fund <strong>$0</strong>.<sup class="cite" data-href="what-is-actually-flexible.html" data-source="Teacher pensions are paid by the Commonwealth through the Massachusetts Teachers Retirement System (MTRS), not the Marblehead general fund. Consistent with the framing on marbleheaddata.org/what-is-actually-flexible.html."></sup></p>
+    <p>That is not the same as free. The state pays for MTRS out of tax revenue that Marblehead residents also contribute to, so the cost lands on the same taxpayers by a different route. It simply does not run through the town budget on this page.</p>
+  </div>
+</details>
+
+<h2 id="sustainable">Is it sustainable?</h2>
+
+<p>The pension side is on track. It costs about <strong>5 cents of every general-fund dollar</strong> and is on a fixed schedule to be fully funded by <strong>2036</strong>, after which the catch-up payments end.<sup class="cite" data-href="https://www.mass.gov/lists/perac-actuarial-valuation-reports" data-source="PERAC, Marblehead Retirement System Actuarial Valuation Report as of January 1, 2024, p.6 and p.13: appropriation rises 8.6% per year through FY35 with a final amortization payment in FY36, fully funding the system by FY2036. The ~5% share is the FY26 general-fund pension appropriation of $5,380,625 measured against the general-fund budget."></sup> The harder problem is retiree health: a promise of about <strong>$142 million</strong> that is roughly <strong>3.4% funded</strong>, and one the town has consistently paid into below the level actuaries say is needed. In FY25 the annual determined contribution was <strong>$9.93 million</strong> and the town contributed <strong>$6.91 million</strong>, about <strong>$3.0 million</strong> short of the target for that single year.<sup class="cite" data-href="data/town_docs/FY25_Town_of_Marblehead_ACFR.pdf" data-source="Town of Marblehead FY25 ACFR, pp.91-94: OPEB annual determined contribution (ADC) for FY25 $9.93M versus $6.91M actually contributed, a shortfall of roughly $3.0M that year; Net OPEB Liability $142,044,651 at 3.37% funded."></sup></p>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="not-the-bill">The $11 million that is not the bill</h2>
+    <p class="deep-dive-teaser">The town's financial statements report a pension "expense" near $11 million that swings by millions year to year. It is an accounting figure, not the check the town writes.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>Marblehead's audited statements report a pension <strong>expense</strong> of <strong>$11,402,956</strong> for FY25 under the government accounting rule known as <abbr class="g" title="Governmental Accounting Standards Board Statement No. 68, which governs how pensions appear in a government's financial statements">GASB 68</abbr>. That is more than double the roughly <strong>$5.4 million</strong> the town actually appropriated into the pension fund that year.<sup class="cite" data-href="data/town_docs/FY25_Town_of_Marblehead_ACFR.pdf" data-source="Town of Marblehead FY25 ACFR, p.119, &quot;Pension benefits&quot; row: pension expense $11,402,956 for FY25. The general-fund cash appropriation for the same period was $5,380,625 (FY27 Proposed Budget, Line 217)."></sup></p>
+    <p>The two numbers measure different things. The appropriation is cash out the door. The GASB 68 expense re-measures the plan's investment returns and assumptions each year and books the change as an accounting cost, which is why it lurches around: it was about <strong>$14.6 million</strong> in FY20, <strong>$16.0 million</strong> in FY21, and <strong>$10.4 million</strong> in FY22.<sup class="cite" data-href="data/town_docs/FY25_Town_of_Marblehead_ACFR.pdf" data-source="Town of Marblehead ACFRs, pension expense (GASB 68) by year: approximately $14.6M FY20, $16.0M FY21, $10.4M FY22, $11.4M FY25. The figure re-measures market returns and actuarial assumptions annually and is not the cash appropriation."></sup> Because it is driven by market swings, it is not a spending figure and does not tell a resident what the pension costs. The number the town budgets and pays is the roughly $5.4 million appropriation.</p>
+  </div>
+</details>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="unfunded-meaning">What "unfunded" means for you</h2>
+    <p class="deep-dive-teaser">An unfunded promise is one with no money set aside now. Whoever is paying property taxes when the bill comes due pays it out of that year's budget.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>Setting money aside in advance lets investment returns cover part of a future obligation, so today's taxpayers pre-pay some of tomorrow's promise. When a promise is unfunded, none of that happens. Each year's retiree health premiums are paid from that year's taxes, and the roughly $142 million of promises already made to current and future retirees is a bill that future budgets absorb as it comes due. Deferring it does not cancel it; it moves it forward in time and forgoes the investment returns that pre-funding would have earned.</p>
+  </div>
+</details>
+
+<h2 id="can-we-change-it">Can we change it? Should we?</h2>
+
+<p>Pension and retiree-health benefit levels are set by state law (Chapter 32) and by union contracts, so the town cannot cut what it has promised current and future retirees. The one real local lever is timing: whether to <strong>pre-fund</strong> retiree health now by putting money into an OPEB trust, or to keep <strong>paying the bills as they come</strong> and leave a larger tab for later. Both are defensible, and residents weigh them differently.</p>
+
+<div class="ba">
+  <div class="ba-col ba-col--now">
+    <div class="ba-h">The case for pre-funding now</div>
+    <ul>
+      <li>Money set aside earns investment returns, so a dollar now offsets more than a dollar of future bills.</li>
+      <li>It spreads the cost across the taxpayers who received the employees' service, rather than loading it onto future residents.</li>
+      <li>A funded ratio near 3% has a long way to climb; starting sooner makes the climb gentler.</li>
+    </ul>
+  </div>
+  <div class="ba-col ba-col--after">
+    <div class="ba-h">The case for paying as you go</div>
+    <ul>
+      <li>Every dollar into an OPEB trust is a dollar not available for schools, roads, or public safety this year.</li>
+      <li>The pension catch-up already claims a rising share of the budget through FY36, competing for the same room.</li>
+      <li>Retiree health costs and rules can change, so some argue against locking large sums away against a moving target.</li>
+    </ul>
+  </div>
+</div>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="other-towns-opeb">What other towns do about OPEB</h2>
+    <p class="deep-dive-teaser">Some Massachusetts towns have set up OPEB trust funds and pre-fund part of the promise each year. Many, like Marblehead, defer it.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>Massachusetts lets municipalities establish a dedicated OPEB trust and appropriate money into it each year, where it can be invested for the long term. Some communities do this and have built funded ratios well above single digits; many others fund little or nothing and pay retiree premiums year to year, as Marblehead does. The specific peer figures are in the comparison further down this page.</p>
+  </div>
+</details>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="who-decides">Who decides this</h2>
+    <p class="deep-dive-teaser">The retirement board and the state set the pension schedule. Town Meeting decides whether to put money into an OPEB trust.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>The pension schedule is not a local choice year to year: the Marblehead Retirement Board and <abbr class="g" title="Public Employee Retirement Administration Commission, the state agency that oversees Massachusetts public pension systems">PERAC</abbr> (Public Employee Retirement Administration Commission) set the funding schedule through the actuarial valuation, and the town appropriates what that schedule requires.<sup class="cite" data-href="https://www.mass.gov/lists/perac-actuarial-valuation-reports" data-source="PERAC oversees Massachusetts public pension systems and, with the local retirement board, sets each system's funding schedule through the periodic actuarial valuation (Marblehead valuation as of January 1, 2024)."></sup> Retiree health is where local discretion lives: whether to appropriate money into an OPEB trust, and how much, is a decision Town Meeting makes.</p>
+  </div>
+</details>
