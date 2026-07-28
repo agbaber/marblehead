@@ -353,3 +353,49 @@ Caveats per the underlying CSV's `notes` column: appropriated values for FY15&nd
 - ["From ADUs to a $120M budget"](https://marbleheadcurrent.org/2025/05/08/adus-120m-budget-pass-as-town-meeting-heads-to-another-night/) (Marblehead Current)
 - ["Marblehead loses its first sustainability coordinator"](https://itemlive.com/2026/03/12/marblehead-loses-its-first-sustainability-coordinator/) (Itemlive)
 - ["Marblehead library at risk of closure amid $7 million budget deficit"](https://www.bostonglobe.com/2026/03/17/metro/marblehead-budget-deficit-risks-library-closure/) (Boston Globe)
+
+## PERAC Pension Funded Ratios (peer comparison)
+
+`data/perac_funded_ratios_peers.csv` &ndash; pension funded ratios for Marblehead and
+its nine peer towns (Arlington, Brookline, Cohasset, Duxbury, Easton, Framingham,
+Hingham, Lexington, Melrose), plus a statewide reference row.
+
+- **Source:** [PERAC Funded Ratios list](https://www.mass.gov/info-details/funded-ratios)
+  (Public Employee Retirement Administration Commission), a sortable table of every
+  Massachusetts contributory retirement system. Version used: published 2026-07-02, data
+  as of 07/01/26 (105 systems). The funded ratio is the actuarial value of plan assets
+  divided by the actuarial accrued liability &ndash; PERAC's funding basis, consistent
+  across all boards.
+- **Not all peers run their own board.** Seven do (Arlington, Brookline, Framingham,
+  Hingham, Lexington, Marblehead, Melrose). Three are member units of a pooled regional
+  system and take that system's funded ratio, not a town-specific one:
+  - **Cohasset &rarr; Norfolk County Retirement System** (71.9%). Confirmed via the
+    [Norfolk County Retirement System member-towns page](https://www.norfolkcountyretirement.org/general/page/towns).
+  - **Duxbury &rarr; Plymouth County Retirement Association** (67.5%). Confirmed via the
+    Town of Duxbury HR "Plymouth County Retirement Information" page.
+  - **Easton &rarr; Bristol County Retirement System** (66.0%). Confirmed via the
+    [Town of Easton personnel-management page](https://www.easton.ma.us/departments/town_administrator/personnel_management.php)
+    ("you must enroll in the Bristol County Retirement Program").
+- **Marblehead cross-check.** PERAC lists Marblehead at **71.5%** on the actuarial-value
+  basis, valuation date 1/1/2024. This matches the [PERAC Marblehead Actuarial Valuation
+  Report, January 1, 2024](https://www.mass.gov/doc/marblehead-retirement-board-valuation-report-2024/download)
+  p.2 (market-value basis 69.8%, p.3). Note this differs from the **72.49%** in the FY25
+  ACFR, which is the GASB-67 fiduciary-net-position ratio at the 6/30/2024 measurement
+  date. Both are correct on their own basis; the peer table uses PERAC's 71.5% so every
+  town is compared on the same actuarial-funding basis.
+- **Valuation-vintage caveat.** Systems are valued on staggered two-year cycles, so the
+  funded ratios in this file are NOT all measured on the same date. Peers used here span
+  valuation dates of **1/1/2024 and 1/1/2025** (the full PERAC list also includes a few
+  1/1/2026 systems). A one-year gap in a rising or falling market can move a ratio a few
+  points, so treat small differences between towns valued in different years as noise, not
+  signal. Each row's `valuation_date` column records its own vintage.
+- **Statewide row (derived).** The `STATEWIDE` row is the **median funded ratio of all 105
+  systems** in the PERAC list (76.3%; range 48.6%&ndash;110.7%, mean 78.1%), computed from
+  the primary list rather than a value PERAC prints. PERAC's own stated group median may
+  differ slightly depending on which systems it includes. The two Commonwealth systems in
+  the same list are State Employees (SERS) 73.9% and State Teachers (MTRS) 63.3%, both
+  valued 1/1/2025.
+- **Funding-schedule confirmation (bonus).** The same PERAC Marblehead 1/1/2024 valuation
+  (p.6, Executive Summary, "Funding Schedule") states verbatim: "The total appropriation
+  increases 8.6% each year through FY35 with a final amortization payment in FY36." This
+  confirms the 8.6%/yr through FY35 and FY36 payoff figures the site already cites.

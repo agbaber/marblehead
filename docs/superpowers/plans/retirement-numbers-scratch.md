@@ -97,6 +97,41 @@ recorded from secondary/internal sources; **live PERAC PDF UNVERIFIED (bot-block
   these as previously-cited-and-published, or (b) re-fetch the PERAC report from a
   residential IP to confirm page 13 before making it a new headline claim.
 
+### CONFIRMED 2026-07-28 (Task 2) — PERAC PDF fetched via Playwright, read directly
+
+The full PERAC **Marblehead Retirement System Actuarial Valuation Report, January 1,
+2024** was downloaded (Playwright/Chromium reaches mass.gov where curl/WebFetch 403) and
+read with the Read tool. The 8.6%/yr and FY35/FY36 figures are now CONFIRMED against the
+primary source (verbatim quote):
+
+- **Printed page 6** (Section 2, Executive Summary B, "Funding Schedule" heading):
+  > "The funding schedule presented in this report was recently adopted by the Board. The
+  > FY25 payment was maintained from the prior schedule. **The total appropriation
+  > increases 8.6% each year through FY35 with a final amortization payment in FY36.** The
+  > appropriation for FY25 is $6,127,331."
+- So: **appropriation +8.6%/yr through FY35, final amortization payment FY36** — matches
+  `where-has-the-money-gone.html` line 580 exactly. No correction needed.
+- FY25 pension appropriation per PERAC funding schedule = **$6,127,331** (this is the
+  full system-wide amortization payment; distinct from the $5.38M general-fund budget
+  line — the difference is the enterprise-fund shares).
+
+### CONFIRMED 2026-07-28 (Task 2) — PERAC funded ratio, valuation basis (differs from ACFR)
+
+- **PERAC funded ratio = 71.5%** on the **actuarial value of assets** basis, as of the
+  **1/1/2024 valuation** (printed page 2, Executive Summary A comparison table; was 71.4%
+  at 1/1/2022). On a **market value** basis the funded ratio is **69.8%** and UAL is
+  $54.0M (printed page 3).
+- Underlying figures (printed page 2): Total Actuarial Liability $178,632,621; Actuarial
+  Value of Assets $127,797,039; Unfunded Actuarial Liability $50,835,582 → 71.5% funded.
+- **RECONCILE with the 72.49% in the scratch note above:** these are two different
+  measurements. 72.49% is the GASB-67/68 fiduciary-net-position funded ratio at the
+  **6/30/2024** measurement date (from the FY25 ACFR RSI). 71.5% is PERAC's
+  actuarial-funding-basis ratio at the **1/1/2024** valuation date. Both are correct for
+  their own basis. For the PEER COMPARISON use the PERAC actuarial-basis number (71.5%,
+  1/1/2024), because that is the basis on which every other MA board is listed in PERAC's
+  aggregate funded-ratio list — apples to apples. If the page instead reports the town's
+  own GASB funded ratio, use 72.49% (6/30/2024) and cite the ACFR, not PERAC.
+
 ---
 
 ## 4. GASB-68 EXPENSE FIGURE (the "huge number trap" — NOT the appropriation)
