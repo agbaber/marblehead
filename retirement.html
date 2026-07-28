@@ -92,6 +92,23 @@ og_url: https://marbleheaddata.org/retirement.html
   @media (max-width: 600px) {
     .ba { grid-template-columns: 1fr; }
   }
+
+  /* Page-scoped: peer-comparison bar charts. Marblehead in navy stands
+     against peers in muted gray; the statewide median is a dashed
+     reference line. Neutral throughout (no good/bad coloring). */
+  svg.chart .s-peer { color: var(--text-subtle); }
+  svg.chart .row-label {
+    font-size: 0.6875rem; font-weight: 600; fill: var(--text-muted);
+  }
+  svg.chart .row-label--me { fill: var(--series-marblehead); }
+  svg.chart .value-label--me { fill: var(--series-marblehead); }
+  svg.chart .peer-ref-line {
+    stroke: var(--c-text-sub); stroke-width: 1.25;
+    stroke-dasharray: 6 4; fill: none;
+  }
+  svg.chart .peer-ref-label {
+    font-size: 0.625rem; font-weight: 600; fill: var(--text-subtle);
+  }
 </style>
 
 <h1>What Marblehead spends on retirement</h1>
@@ -234,3 +251,143 @@ og_url: https://marbleheaddata.org/retirement.html
     <p>The pension schedule is not a local choice year to year: the Marblehead Retirement Board and <abbr class="g" title="Public Employee Retirement Administration Commission, the state agency that oversees Massachusetts public pension systems">PERAC</abbr> (Public Employee Retirement Administration Commission) set the funding schedule through the actuarial valuation, and the town appropriates what that schedule requires.<sup class="cite" data-href="https://www.mass.gov/lists/perac-actuarial-valuation-reports" data-source="PERAC oversees Massachusetts public pension systems and, with the local retirement board, sets each system's funding schedule through the periodic actuarial valuation (Marblehead valuation as of January 1, 2024)."></sup> Retiree health is where local discretion lives: whether to appropriate money into an OPEB trust, and how much, is a decision Town Meeting makes.</p>
   </div>
 </details>
+
+<h2 id="how-marblehead-compares">How Marblehead compares</h2>
+
+<p>Every Massachusetts town makes these same two promises under the same state pension law, which makes other Massachusetts communities the natural yardstick. Marblehead's pension is funded near the middle of a group of comparable towns; its retiree-health plan is funded below that group's median.</p>
+
+<h3 id="compare-pension">Pension funded ratio</h3>
+
+<div class="chart-wrapper">
+  <svg class="chart" viewBox="0 0 760 366" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizontal bar chart of pension funded ratios for Marblehead and nine Massachusetts peer towns, sorted lowest to highest. Easton 66.0 percent, Melrose 66.9, Duxbury 67.5, Arlington 69.8, Marblehead 71.5, Cohasset 71.9, Brookline 74.4, Hingham 78.8, Framingham 83.4, Lexington 86.5. The statewide median of 76.3 percent is marked with a dashed reference line. Marblehead is highlighted.">
+    <!-- x scale: 0% = x110, 100% = x700, 5.9 px per point -->
+    <line class="grid-minor" x1="110"   y1="34" x2="110"   y2="336"/>
+    <line class="grid-minor" x1="257.5" y1="34" x2="257.5" y2="336"/>
+    <line class="grid-minor" x1="405"   y1="34" x2="405"   y2="336"/>
+    <line class="grid-minor" x1="552.5" y1="34" x2="552.5" y2="336"/>
+    <line class="grid-minor" x1="700"   y1="34" x2="700"   y2="336"/>
+
+    <!-- Easton 66.0% -->
+    <text class="row-label" x="100" y="55" text-anchor="end">Easton</text>
+    <rect class="data-bar s-peer" x="110" y="40" width="389.4" height="22"/>
+    <text class="value-label" x="505.4" y="55" text-anchor="start">66.0%</text>
+    <!-- Melrose 66.9% -->
+    <text class="row-label" x="100" y="85" text-anchor="end">Melrose</text>
+    <rect class="data-bar s-peer" x="110" y="70" width="394.71" height="22"/>
+    <text class="value-label" x="510.7" y="85" text-anchor="start">66.9%</text>
+    <!-- Duxbury 67.5% -->
+    <text class="row-label" x="100" y="115" text-anchor="end">Duxbury</text>
+    <rect class="data-bar s-peer" x="110" y="100" width="398.25" height="22"/>
+    <text class="value-label" x="514.3" y="115" text-anchor="start">67.5%</text>
+    <!-- Arlington 69.8% -->
+    <text class="row-label" x="100" y="145" text-anchor="end">Arlington</text>
+    <rect class="data-bar s-peer" x="110" y="130" width="411.82" height="22"/>
+    <text class="value-label" x="527.8" y="145" text-anchor="start">69.8%</text>
+    <!-- Marblehead 71.5% (highlighted) -->
+    <text class="row-label row-label--me" x="100" y="175" text-anchor="end">Marblehead</text>
+    <rect class="data-bar s-marblehead" x="110" y="160" width="421.85" height="22"/>
+    <text class="value-label value-label--me" x="537.9" y="175" text-anchor="start">71.5%</text>
+    <!-- Cohasset 71.9% -->
+    <text class="row-label" x="100" y="205" text-anchor="end">Cohasset</text>
+    <rect class="data-bar s-peer" x="110" y="190" width="424.21" height="22"/>
+    <text class="value-label" x="540.2" y="205" text-anchor="start">71.9%</text>
+    <!-- Brookline 74.4% -->
+    <text class="row-label" x="100" y="235" text-anchor="end">Brookline</text>
+    <rect class="data-bar s-peer" x="110" y="220" width="438.96" height="22"/>
+    <text class="value-label" x="554.96" y="235" text-anchor="start">74.4%</text>
+    <!-- Hingham 78.8% -->
+    <text class="row-label" x="100" y="265" text-anchor="end">Hingham</text>
+    <rect class="data-bar s-peer" x="110" y="250" width="464.92" height="22"/>
+    <text class="value-label" x="580.9" y="265" text-anchor="start">78.8%</text>
+    <!-- Framingham 83.4% -->
+    <text class="row-label" x="100" y="295" text-anchor="end">Framingham</text>
+    <rect class="data-bar s-peer" x="110" y="280" width="492.06" height="22"/>
+    <text class="value-label" x="608.1" y="295" text-anchor="start">83.4%</text>
+    <!-- Lexington 86.5% -->
+    <text class="row-label" x="100" y="325" text-anchor="end">Lexington</text>
+    <rect class="data-bar s-peer" x="110" y="310" width="510.35" height="22"/>
+    <text class="value-label" x="626.4" y="325" text-anchor="start">86.5%</text>
+
+    <!-- Statewide median reference: 76.3% -> x560.17 -->
+    <line class="peer-ref-line" x1="560.17" y1="30" x2="560.17" y2="336"/>
+    <text class="peer-ref-label" x="560.17" y="26" text-anchor="middle">MA median 76.3%</text>
+
+    <line class="axis-base" x1="110" y1="336" x2="700" y2="336"/>
+    <text class="tick-label" x="110"   y="352" text-anchor="middle">0%</text>
+    <text class="tick-label" x="257.5" y="352" text-anchor="middle">25%</text>
+    <text class="tick-label" x="405"   y="352" text-anchor="middle">50%</text>
+    <text class="tick-label" x="552.5" y="352" text-anchor="middle">75%</text>
+    <text class="tick-label" x="700"   y="352" text-anchor="middle">100%</text>
+  </svg>
+</div>
+
+<p class="source">PERAC actuarial-basis funded ratios (actuarial value of assets divided by actuarial accrued liability). Systems are valued in different years, 2024 or 2025, so a gap of a few points between two towns is closer to noise than to a real difference. Cohasset, Duxbury, and Easton have no town-specific number here: each is a member of a regional system (Norfolk County, Plymouth County, and Bristol County respectively), so its bar shows the pooled county system's ratio, not the town's alone. Every Massachusetts system is on a state-mandated schedule toward full funding, and Marblehead sits mid-pack among these peers.<sup class="cite" data-href="https://www.mass.gov/info-details/funded-ratios" data-source="PERAC Funded Ratios list (published 2026-07-02, data as of 07/01/26): Easton (Bristol County) 66.0%, Melrose 66.9%, Duxbury (Plymouth County) 67.5%, Arlington 69.8%, Marblehead 71.5%, Cohasset (Norfolk County) 71.9%, Brookline 74.4%, Hingham 78.8%, Framingham 83.4%, Lexington 86.5%. Statewide median 76.3% is the median of all 105 systems in the list. Values are actuarial value of assets divided by actuarial accrued liability; valuation dates are 1/1/2024 or 1/1/2025 depending on the system. Cohasset, Duxbury, and Easton have no own retirement board and show their regional county system's pooled ratio, not a town-specific figure. Marblehead 71.5% cross-checked against the PERAC Marblehead Actuarial Valuation Report as of January 1, 2024, p.2."></sup></p>
+
+<h3 id="compare-opeb">Retiree health (OPEB) funded ratio</h3>
+
+<div class="chart-wrapper">
+  <svg class="chart" viewBox="0 0 760 366" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizontal bar chart of retiree-health, OPEB, funded ratios for Marblehead and nine Massachusetts peer towns, sorted lowest to highest. Easton 0.3 percent, Melrose 0.7, Marblehead 3.4, Framingham 3.7, Arlington 10.1, Duxbury 11.7, Lexington 12.8, Cohasset 22.0, Hingham 30.9, Brookline 32.6. The statewide median of 7.45 percent is marked with a dashed reference line. Marblehead is highlighted.">
+    <!-- x scale: 0% = x110, 35% = x700, 16.857 px per point -->
+    <line class="grid-minor" x1="110"    y1="34" x2="110"    y2="336"/>
+    <line class="grid-minor" x1="278.57" y1="34" x2="278.57" y2="336"/>
+    <line class="grid-minor" x1="447.14" y1="34" x2="447.14" y2="336"/>
+    <line class="grid-minor" x1="615.71" y1="34" x2="615.71" y2="336"/>
+
+    <!-- Easton 0.3% -->
+    <text class="row-label" x="100" y="55" text-anchor="end">Easton</text>
+    <rect class="data-bar s-peer" x="110" y="40" width="5.06" height="22"/>
+    <text class="value-label" x="121.06" y="55" text-anchor="start">0.3%</text>
+    <!-- Melrose 0.7% -->
+    <text class="row-label" x="100" y="85" text-anchor="end">Melrose</text>
+    <rect class="data-bar s-peer" x="110" y="70" width="11.8" height="22"/>
+    <text class="value-label" x="127.8" y="85" text-anchor="start">0.7%</text>
+    <!-- Marblehead 3.4% (highlighted) -->
+    <text class="row-label row-label--me" x="100" y="115" text-anchor="end">Marblehead</text>
+    <rect class="data-bar s-marblehead" x="110" y="100" width="56.81" height="22"/>
+    <text class="value-label value-label--me" x="172.81" y="115" text-anchor="start">3.4%</text>
+    <!-- Framingham 3.7% -->
+    <text class="row-label" x="100" y="145" text-anchor="end">Framingham</text>
+    <rect class="data-bar s-peer" x="110" y="130" width="62.37" height="22"/>
+    <text class="value-label" x="178.37" y="145" text-anchor="start">3.7%</text>
+    <!-- Arlington 10.1% -->
+    <text class="row-label" x="100" y="175" text-anchor="end">Arlington</text>
+    <rect class="data-bar s-peer" x="110" y="160" width="170.26" height="22"/>
+    <text class="value-label" x="286.26" y="175" text-anchor="start">10.1%</text>
+    <!-- Duxbury 11.7% -->
+    <text class="row-label" x="100" y="205" text-anchor="end">Duxbury</text>
+    <rect class="data-bar s-peer" x="110" y="190" width="197.23" height="22"/>
+    <text class="value-label" x="313.23" y="205" text-anchor="start">11.7%</text>
+    <!-- Lexington 12.8% -->
+    <text class="row-label" x="100" y="235" text-anchor="end">Lexington</text>
+    <rect class="data-bar s-peer" x="110" y="220" width="215.77" height="22"/>
+    <text class="value-label" x="331.77" y="235" text-anchor="start">12.8%</text>
+    <!-- Cohasset 22.0% -->
+    <text class="row-label" x="100" y="265" text-anchor="end">Cohasset</text>
+    <rect class="data-bar s-peer" x="110" y="250" width="370.86" height="22"/>
+    <text class="value-label" x="486.86" y="265" text-anchor="start">22.0%</text>
+    <!-- Hingham 30.9% -->
+    <text class="row-label" x="100" y="295" text-anchor="end">Hingham</text>
+    <rect class="data-bar s-peer" x="110" y="280" width="520.89" height="22"/>
+    <text class="value-label" x="636.89" y="295" text-anchor="start">30.9%</text>
+    <!-- Brookline 32.6% -->
+    <text class="row-label" x="100" y="325" text-anchor="end">Brookline</text>
+    <rect class="data-bar s-peer" x="110" y="310" width="549.74" height="22"/>
+    <text class="value-label" x="665.74" y="325" text-anchor="start">32.6%</text>
+
+    <!-- Statewide median reference: 7.45% -> x235.59 -->
+    <line class="peer-ref-line" x1="235.59" y1="30" x2="235.59" y2="336"/>
+    <text class="peer-ref-label" x="235.59" y="26" text-anchor="middle">MA median 7.45%</text>
+
+    <line class="axis-base" x1="110" y1="336" x2="700" y2="336"/>
+    <text class="tick-label" x="110"    y="352" text-anchor="middle">0%</text>
+    <text class="tick-label" x="278.57" y="352" text-anchor="middle">10%</text>
+    <text class="tick-label" x="447.14" y="352" text-anchor="middle">20%</text>
+    <text class="tick-label" x="615.71" y="352" text-anchor="middle">30%</text>
+  </svg>
+</div>
+
+<p class="source">Retiree-health (OPEB) funded ratios from the PERAC May 2026 OPEB Summary Report (Commonwealth, Cities, and Towns), each town at its own most recent measurement date, which ranges from June 30, 2023 to June 30, 2025. Marblehead's figure is its June 30, 2025 ACFR value. Most Massachusetts towns fund retiree health at very low levels: about 57 percent of the roughly 300 cities and towns in the report are under 10 percent funded. Marblehead's 3.4 percent is below the median of these peers and within the near-zero range common across the state.<sup class="cite" data-href="https://www.mass.gov/doc/may-2026-opeb-summary-report-download/download" data-source="PERAC May 2026 OPEB Summary Report (Commonwealth, Cities, and Towns), funded ratio by town at each town's measurement date: Easton 0.3% (6/30/2024), Melrose 0.7% (6/30/2023), Marblehead 3.37% (6/30/2025, from Town of Marblehead FY25 ACFR; PERAC lists the same 3.4%), Framingham 3.7% (6/30/2024), Arlington 10.1% (6/30/2023), Duxbury 11.7% (6/30/2024), Lexington 12.8% (6/30/2024), Cohasset 22.0% (6/30/2025), Hingham 30.9% (6/30/2024), Brookline 32.6% (6/30/2023). Statewide median 7.45% is the median of the 302 individual cities-and-towns rows; 173 of 302 (about 57%) are under 10% funded, matching the report's stated 'a little more than one-half.'"></sup></p>
+
+<p>The Marblehead Municipal Light Department runs a separate retiree-health plan that is better funded, at about 45 percent, and is not part of the town figures above.<sup class="cite" data-href="data/town_docs/FY25_Town_of_Marblehead_ACFR.pdf" data-source="Town of Marblehead FY25 ACFR: the Marblehead Municipal Light Department OPEB is a separate plan from the town's, with a net OPEB liability of about $3.34M at a 45.5% funded ratio, and is not included in the town's 3.37% figure."></sup></p>
+
+<p>There is no state-by-state comparison here on purpose. Massachusetts public pensions run on a state-specific framework, Chapter 32 of the General Laws, that does not line up with how other states structure or fund their public retirement systems, so the comparison that carries meaning is Marblehead against other Massachusetts towns.<sup class="cite" data-href="https://www.mass.gov/lists/perac-actuarial-valuation-reports" data-source="Massachusetts public employee retirement systems, including Marblehead's, are governed by Chapter 32 of the Massachusetts General Laws and overseen by PERAC. Because contribution rules, benefit structures, and funding schedules are set by Chapter 32, cross-state funded-ratio comparisons are not like-for-like; the like-for-like comparison is against other Massachusetts municipalities."></sup></p>
