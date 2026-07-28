@@ -439,3 +439,15 @@ statewide median.
   OPEB because they never pre-funded retiree health, so Marblehead's 3.37% sits
   below the ~7.5% median but is not an outlier. State facts; the CSV carries no
   value judgment.
+
+## Retiree Health Pay-Go as Share of General Fund (FY18-FY25)
+- `data/retiree_health_paygo_FY18-25.csv` — the town's own retiree health cost (OPEB
+  pay-as-you-go, net of the retirees' premium share) as a percent of general-fund spending.
+- Numerator: FY25 ACFR, "Schedule of Town Contributions to OPEB Plan," p.92,
+  "Contributions in Relation to the Actuarially Determined Contribution" column
+  (FY18 $4,414,972 through FY25 $6,914,651). This is the town's actual pay-go spending on
+  retiree premiums, NOT the gross GIC invoice retiree line (which includes the retirees'
+  own share and runs roughly 2x the town's net cost).
+- Denominator: `data/general_fund_spending_FY15-26.csv` (site money-went GF series; chart-decoded, +/-$50K; FY25 expended-not-audited).
+- FY25 share ~6.9% on the site GF series, ~6.6% against the audited FY25 ACFR GF total of
+  $104.15M. Both round to "about 7 cents of every general-fund dollar."

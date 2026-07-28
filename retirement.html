@@ -110,6 +110,35 @@ og_url: https://marbleheaddata.org/retirement.html
     font-size: 0.625rem; font-weight: 600; fill: var(--text-subtle);
   }
 
+  /* Page-scoped: headline stat callout */
+  .stat-callout {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--c-navy);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 22px;
+    margin: 22px 0;
+  }
+  .stat-num {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--c-navy);
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .stat-label {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+  @media (max-width: 520px) {
+    .stat-callout { flex-direction: column; gap: 6px; }
+    .stat-num { font-size: 2.2rem; }
+  }
+
   /* Page-scoped: make the deep-dive expanders read clearly as clickable
      drill-downs. Caret sits inline to the left of the heading, the summary
      row gets a tinted, button-like surface with a hover state, and an
@@ -221,6 +250,47 @@ og_url: https://marbleheaddata.org/retirement.html
     <p>That is not the same as free. The state pays for MTRS out of tax revenue that Marblehead residents also contribute to, so the cost lands on the same taxpayers by a different route. It simply does not run through the town budget on this page.</p>
   </div>
 </details>
+
+<h2 id="former-employees">How much goes to people who no longer work here?</h2>
+
+<p>The clean answer is retiree health insurance. In FY25 the town spent about <strong>$6.9 million</strong> of its own money covering health premiums for its retirees, roughly <strong>7 cents of every general-fund dollar</strong>. That share was about 5 cents in FY18, and most of the climb came after FY22.<sup class="cite" data-href="data/town_docs/FY25_Town_of_Marblehead_ACFR.pdf" data-source="Town-net retiree health cost from the FY25 ACFR, Schedule of Town Contributions to OPEB Plan, p.92, &quot;Contributions in Relation to the Actuarially Determined Contribution&quot; column (the town's own pay-as-you-go spending on retiree premiums, net of the retirees' share): FY18 $4,414,972; FY25 $6,914,651. Measured against general-fund spending from data/general_fund_spending_FY15-26.csv. See data/retiree_health_paygo_FY18-25.csv."></sup></p>
+
+<div class="stat-callout">
+  <span class="stat-num">~7&cent;</span>
+  <span class="stat-label">of every general-fund dollar pays for health insurance for people who no longer work for the town, up from about 5&cent; in FY18.</span>
+</div>
+
+<div class="chart-wrapper">
+  <svg class="chart" viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart of the town's own retiree health cost as a share of general-fund spending, fiscal 2018 through 2025. The share dips from about 5.4 percent in 2018 to about 4.8 percent in 2020, then climbs to about 6.9 percent in 2025, with the steepest rise between 2022 and 2023.">
+    <line class="grid-minor" x1="60" y1="56"  x2="720" y2="56"/>
+    <line class="grid-minor" x1="60" y1="159" x2="720" y2="159"/>
+    <text class="tick-label" x="48" y="60"  text-anchor="end">7%</text>
+    <text class="tick-label" x="48" y="163" text-anchor="end">5%</text>
+
+    <polyline class="data-line s-marblehead" points="80,138 169,153 257,171 346,162 434,143 523,82 611,88 700,62"/>
+    <circle class="data-dot s-marblehead" cx="80"  cy="138" r="4"/>
+    <circle class="data-dot s-marblehead" cx="169" cy="153" r="4"/>
+    <circle class="data-dot s-marblehead" cx="257" cy="171" r="4"/>
+    <circle class="data-dot s-marblehead" cx="346" cy="162" r="4"/>
+    <circle class="data-dot s-marblehead" cx="434" cy="143" r="4"/>
+    <circle class="data-dot s-marblehead" cx="523" cy="82"  r="4"/>
+    <circle class="data-dot s-marblehead" cx="611" cy="88"  r="4"/>
+    <circle class="data-dot s-marblehead" cx="700" cy="62"  r="5"/>
+
+    <text class="end-label s-marblehead" x="80"  y="126" text-anchor="start">5.4%</text>
+    <text class="end-label s-marblehead" x="700" y="50"  text-anchor="end">6.9%</text>
+
+    <line class="axis-base" x1="60" y1="210" x2="720" y2="210"/>
+    <text class="tick-label" x="80"  y="230" text-anchor="middle">FY18</text>
+    <text class="tick-label" x="257" y="230" text-anchor="middle">FY20</text>
+    <text class="tick-label" x="434" y="230" text-anchor="middle">FY22</text>
+    <text class="tick-label" x="611" y="230" text-anchor="middle">FY24</text>
+    <text class="tick-label" x="700" y="230" text-anchor="middle">FY25</text>
+  </svg>
+</div>
+<p class="source">The town's own retiree health cost (its pay-as-you-go share of retiree premiums, net of what retirees pay) as a percentage of general-fund spending, FY18 to FY25. The general-fund totals are the same series used across this site and carry a small margin; FY25 general-fund spending is expended, not yet audited.<sup class="cite" data-href="data/retiree_health_paygo_FY18-25.csv" data-source="data/retiree_health_paygo_FY18-25.csv: town-net OPEB pay-go from FY25 ACFR p.92 divided by general-fund spending from data/general_fund_spending_FY15-26.csv. FY25 share about 6.9% on the site GF series, about 6.6% against the audited FY25 ACFR GF total of $104.15M; both round to about 7 cents."></sup></p>
+
+<p>Pension is a separate story, and it is tempting but wrong to add it in. The pension appropriation is about another 5 cents of every dollar, but it is not cleanly money spent on former employees: it funds benefits still being earned by people who work for the town today, and it pays down past shortfalls, while the checks to current retirees come out of the accumulated pension fund rather than this year's taxes. Folding it into the retiree-health figure would blur three different things into one inflated number, so the honest measure of what the town spends on people who no longer work here is the retiree-health share.</p>
 
 <h2 id="sustainable">Is it sustainable?</h2>
 

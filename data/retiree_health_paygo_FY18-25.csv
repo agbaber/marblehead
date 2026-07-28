@@ -1,0 +1,9 @@
+fiscal_year,retiree_health_town_net,general_fund_spending,pct_of_general_fund,source
+FY18,4414972,81766667,5.40,"Town-net OPEB pay-go = FY25 ACFR Schedule of Town Contributions to OPEB Plan, ""Contributions in Relation to the Actuarially Determined Contribution"" column (p.92). GF total from data/general_fund_spending_FY15-26.csv (site money-went series; +/-$50K, chart-decoded)."
+FY19,4249988,83279167,5.10,"FY25 ACFR OPEB contributions schedule p.92; GF from general_fund_spending_FY15-26.csv."
+FY20,4055705,85204167,4.76,"FY25 ACFR OPEB contributions schedule p.92; GF from general_fund_spending_FY15-26.csv."
+FY21,4235758,85800000,4.94,"FY25 ACFR OPEB contributions schedule p.92; GF from general_fund_spending_FY15-26.csv."
+FY22,4974015,93591667,5.31,"FY25 ACFR OPEB contributions schedule p.92; GF from general_fund_spending_FY15-26.csv."
+FY23,6280237,96845833,6.48,"FY25 ACFR OPEB contributions schedule p.92; GF from general_fund_spending_FY15-26.csv."
+FY24,6524640,102254167,6.38,"FY25 ACFR OPEB contributions schedule p.92; GF from general_fund_spending_FY15-26.csv."
+FY25,6914651,100466667,6.88,"FY25 ACFR OPEB contributions schedule p.92 (town contribution $6,914,651); GF FY25 expended-not-audited from general_fund_spending_FY15-26.csv. Against the audited FY25 ACFR GF total of $104.15M the share is ~6.6%. Either basis rounds to about 7 cents."
