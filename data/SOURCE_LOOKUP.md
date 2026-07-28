@@ -399,3 +399,43 @@ Hingham, Lexington, Melrose), plus a statewide reference row.
   (p.6, Executive Summary, "Funding Schedule") states verbatim: "The total appropriation
   increases 8.6% each year through FY35 with a final amortization payment in FY36." This
   confirms the 8.6%/yr through FY35 and FY36 payoff figures the site already cites.
+
+## OPEB Funded Ratios (peer comparison)
+
+`data/dls_opeb_funded_ratios_peers.csv` &ndash; retiree-health (OPEB) funded
+ratios for Marblehead and nine peer towns (Arlington, Brookline, Cohasset,
+Duxbury, Easton, Framingham, Hingham, Lexington, Melrose), plus a derived
+statewide median.
+
+- **Source (peers + statewide):** [PERAC OPEB Summary Report &ndash;
+  Commonwealth, Cities, and Towns, May 2026](https://www.mass.gov/doc/may-2026-opeb-summary-report-download/download)
+  (Public Employee Retirement Administration Commission). Reflects the most
+  recent actuarial valuation or disclosure each community provided to PERAC as
+  of 04/01/2026; individual rows carry their own measurement date (6/30/2019
+  through 6/30/2025). Columns used: Total OPEB Liability, Net OPEB Liability,
+  Funded Ratio (Fiduciary Net Position / Total OPEB Liability). All dollar
+  amounts in the report are stated in thousands; the CSV stores them as full
+  dollars (report value x1000), so treat sub-thousand precision as rounded.
+  Note: PERAC splits this report by entity type &ndash; this is the **Cities
+  and Towns** edition, NOT the separate May 2024 "School Districts, Other
+  Districts and Authorities, Counties, and Educational Collaboratives" edition,
+  which contains no towns.
+- **Marblehead row.** Uses the exact FY25 ACFR figures (6/30/2025): Total OPEB
+  Liability $146,998,774; Plan Fiduciary Net Position $4,954,123; Net OPEB
+  Liability $142,044,651; funded ratio 3.37%. **Cross-check:** the PERAC May
+  2026 report independently lists Marblehead at the same measurement date
+  (6/30/2025) with TOL $146,999K, FNP $4,954K, NOL $142,045K, funded ratio 3.4%
+  &ndash; identical to the ACFR once PERAC's rounding to the nearest $1,000 and
+  one decimal is applied. No discrepancy between the two sources.
+- **Statewide row (derived).** The `STATEWIDE_MEDIAN` row is the **median funded
+  ratio of the 302 individual cities-and-towns rows** in the May 2026 report
+  (Commonwealth row excluded), computed from the primary rows rather than a value
+  PERAC prints: **7.45%**. 173 of 302 towns (57.3%) are under 10% funded, which
+  matches the report intro's stated "a little more than one-half." For context,
+  the report intro also states a **cumulative** city/town funded ratio of 9.8%
+  ($30.9B aggregate Total OPEB Liability, $3.0B aggregate Fiduciary Net Position
+  across ~300 towns) &ndash; an asset-weighted figure, distinct from the median.
+- **Editorial note.** Most Massachusetts cities and towns are near-zero funded on
+  OPEB because they never pre-funded retiree health, so Marblehead's 3.37% sits
+  below the ~7.5% median but is not an outlier. State facts; the CSV carries no
+  value judgment.
