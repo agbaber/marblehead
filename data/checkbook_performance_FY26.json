@@ -712,8 +712,8 @@
     },
     {
       "month": "2026-06",
-      "amount": 14174172.27,
-      "count": 2462
+      "amount": 14175817.88,
+      "count": 2463
     }
   ],
   "drill": {
@@ -3213,8 +3213,8 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 343108.14,
-            "count": 82
+            "amount": 344753.75,
+            "count": 83
           },
           {
             "name": "ONE TIME PAY",
@@ -3295,8 +3295,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 2707596.36,
-            "count": 881
+            "amount": 2709241.97,
+            "count": 882
           }
         ]
       },
