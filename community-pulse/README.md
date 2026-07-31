@@ -86,3 +86,20 @@ boolean flags, and HTTP status codes.
 - **Landing -> verified**: `$pageview` (path=/verify-me.html) -> `verify_fb_start_clicked` -> `verify_oauth_returned` -> `verify_claim_submitted` -> `verify_claim_result` (status=match)
 - **Assessor match rate**: `verify_claim_result` breakdown by `status`
 - **Drop-off after OAuth**: `verify_oauth_returned` (claim_intent=true) -> `verify_claim_submitted` (cohort delta)
+
+## Public read API (/api/v1)
+
+Read-only warrant corpus endpoints, open CORS, no auth:
+
+- `GET /api/v1/` endpoint index
+- `GET /api/v1/series?kind=money_article` series list with instance counts
+- `GET /api/v1/series/<slug>` one series plus all instances, oldest first
+- `GET /api/v1/meetings/<year>` every article in that year's meetings
+- `GET /api/v1/openapi.json` machine-readable description
+
+Data pipeline: `data/town_meeting_results.csv` (hand-verified, per-row
+provenance) plus generated `data/article_series.csv` and
+`data/article_series_map.csv` (regenerate with
+`node scripts/build_warrant_series.mjs`), loaded into D1 with
+`node scripts/sync_warrant_corpus.mjs [--prod] [--remote]` from the
+repo root. Rerun the sync after any corpus CSV change.
