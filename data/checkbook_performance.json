@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-07-28",
+  "as_of": "2026-07-30",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 1,
-  "fy_pct_elapsed": 7.7,
+  "fy_pct_elapsed": 8.2,
   "budget_execution": {
     "by_department": [
       {
@@ -671,12 +671,91 @@
   "monthly_cadence": [
     {
       "month": "2026-07",
-      "amount": 21106522.85,
-      "count": 175
+      "amount": 21534880.48,
+      "count": 362
     }
   ],
   "drill": {
     "by_fund": {
+      "A11 2022 CAPITAL IMPROVEMENT": {
+        "top_vendors": [
+          {
+            "name": "RICHARD D AMBROSIA INC",
+            "amount": 28395.5,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 28395.5,
+            "count": 1
+          }
+        ]
+      },
+      "CH90 FAIR SHARE GRANT": {
+        "top_vendors": [
+          {
+            "name": "TYLER EQUIPMENT CORPORATION",
+            "amount": 3114.72,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 3114.72,
+            "count": 1
+          }
+        ]
+      },
+      "COA FORMULA SPENDING PLAN": {
+        "top_vendors": [
+          {
+            "name": "MA COUNCIL ON AGING ASSOC",
+            "amount": 1790.04,
+            "count": 1
+          },
+          {
+            "name": "CHRIS MIHALI",
+            "amount": 450.0,
+            "count": 1
+          },
+          {
+            "name": "CENTURY TIRE OF PEABODY",
+            "amount": 160.95,
+            "count": 1
+          },
+          {
+            "name": "SHARON DOLIBER",
+            "amount": 46.58,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 2447.57,
+            "count": 4
+          }
+        ]
+      },
+      "COA REVOLVING": {
+        "top_vendors": [
+          {
+            "name": "KEVIN FIGUERA",
+            "amount": 80.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 80.0,
+            "count": 1
+          }
+        ]
+      },
       "EARL N REYNOLDS HISTORICAL FD": {
         "top_vendors": [
           {
@@ -701,8 +780,33 @@
             "count": 1
           },
           {
+            "name": "MAYER TREE SERVICE",
+            "amount": 116310.5,
+            "count": 4
+          },
+          {
             "name": "COMMONWEALTH OF MA",
             "amount": 50929.87,
+            "count": 1
+          },
+          {
+            "name": "NORTHERN DATA SYSTEMS INC",
+            "amount": 40401.75,
+            "count": 2
+          },
+          {
+            "name": "EVERY ELECTRIC INC",
+            "amount": 24000.0,
+            "count": 1
+          },
+          {
+            "name": "NATIONAL GRID",
+            "amount": 17227.84,
+            "count": 2
+          },
+          {
+            "name": "DENNIS K BURKE INC",
+            "amount": 14654.72,
             "count": 1
           },
           {
@@ -716,51 +820,26 @@
             "count": 1
           },
           {
-            "name": "RICHARD D AMBROSIA INC",
-            "amount": 4750.0,
-            "count": 1
-          },
-          {
-            "name": "TOWN OF BRAINTREE",
-            "amount": 4151.4,
-            "count": 1
+            "name": "KP LAW, PC",
+            "amount": 9646.0,
+            "count": 2
           },
           {
             "name": "NORTH EAST TECHNOLOGY",
-            "amount": 3310.67,
-            "count": 1
-          },
-          {
-            "name": "PLM ELECTRIC POWER ENGINEERING",
-            "amount": 1540.0,
-            "count": 1
-          },
-          {
-            "name": "COMCAST HOLDINGS CORPORATION",
-            "amount": 1218.71,
-            "count": 1
-          },
-          {
-            "name": "SYSTEMS DESIGN AND TECHNOLOGY LLC",
-            "amount": 742.5,
-            "count": 1
-          },
-          {
-            "name": "TIGHE & BOND, INC",
-            "amount": 491.8,
-            "count": 1
-          },
-          {
-            "name": "VERIZON INC",
-            "amount": 481.43,
+            "amount": 9234.76,
             "count": 2
+          },
+          {
+            "name": "RITE-HITE CO LLC",
+            "amount": 8750.0,
+            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 928889.86,
-            "count": 24
+            "amount": 1223853.1,
+            "count": 99
           }
         ]
       },
@@ -796,13 +875,18 @@
             "name": "CN FINANCING INC",
             "amount": 63215.61,
             "count": 2
+          },
+          {
+            "name": "WOODARD & CURRAN INC",
+            "amount": 31250.0,
+            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 130320.13,
-            "count": 3
+            "amount": 161570.13,
+            "count": 4
           }
         ]
       },
@@ -820,8 +904,8 @@
           },
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 1594597.3,
-            "count": 6
+            "amount": 1600537.66,
+            "count": 7
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
@@ -859,21 +943,21 @@
             "count": 2
           },
           {
-            "name": "SBRK FINANCE HOLDINGS INC",
-            "amount": 7514.96,
-            "count": 1
+            "name": "CATALIS TAX & CAMA INC",
+            "amount": 12750.0,
+            "count": 2
           },
           {
-            "name": "THE PITNEY BOWES RESERVE ACCOUNT",
-            "amount": 5000.0,
+            "name": "SBRK FINANCE HOLDINGS INC",
+            "amount": 7514.96,
             "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 18576798.28,
-            "count": 121
+            "amount": 18622633.3,
+            "count": 195
           }
         ]
       },
@@ -895,6 +979,46 @@
             "count": 1
           },
           {
+            "name": "TOWN OF MARBLEHEAD",
+            "amount": 609.72,
+            "count": 5
+          },
+          {
+            "name": "AMAZON CAPITAL SERVICES",
+            "amount": 533.81,
+            "count": 1
+          },
+          {
+            "name": "J & L WELDING AND MACHINE",
+            "amount": 469.9,
+            "count": 1
+          },
+          {
+            "name": "THE WANDERLUST GROUP INC",
+            "amount": 435.63,
+            "count": 1
+          },
+          {
+            "name": "AT&T SUPPOENA CENTER",
+            "amount": 219.7,
+            "count": 1
+          },
+          {
+            "name": "MEAD TALERMAN & COSTA LLC",
+            "amount": 86.0,
+            "count": 1
+          },
+          {
+            "name": "F & S HARDWARE, INC",
+            "amount": 82.48,
+            "count": 4
+          },
+          {
+            "name": "GILBERT & COLE",
+            "amount": 29.51,
+            "count": 3
+          },
+          {
             "name": "VERIZON INC",
             "amount": 6.77,
             "count": 1
@@ -903,8 +1027,8 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 112779.49,
-            "count": 4
+            "amount": 115246.24,
+            "count": 21
           }
         ]
       },
@@ -916,21 +1040,41 @@
             "count": 1
           },
           {
+            "name": "LEAH GOODMAN",
+            "amount": 15926.4,
+            "count": 2
+          },
+          {
             "name": "CHRISTOPHER FIELDS",
-            "amount": 6069.6,
+            "amount": 10365.84,
+            "count": 2
+          },
+          {
+            "name": "CHESS WIZARDS",
+            "amount": 1830.0,
             "count": 1
           },
           {
-            "name": "LEAH GOODMAN",
-            "amount": 5029.2,
+            "name": "AMAZON CAPITAL SERVICES INC",
+            "amount": 1620.39,
+            "count": 4
+          },
+          {
+            "name": "ONE TIME PAY",
+            "amount": 951.0,
+            "count": 5
+          },
+          {
+            "name": "MARTHA POTVIN",
+            "amount": 210.0,
             "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 31672.8,
-            "count": 3
+            "amount": 51477.63,
+            "count": 16
           }
         ]
       },

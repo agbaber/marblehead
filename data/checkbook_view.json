@@ -1,41 +1,47 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-07-28",
+    "date": "2026-07-30",
     "fiscal_year": "FY27",
-    "row_count": 175,
-    "total_paid": 21106522.85,
-    "interfund_total": 0,
-    "external_paid": 21106522.85,
+    "row_count": 362,
+    "total_paid": 21534880.48,
+    "interfund_total": 3549.74,
+    "external_paid": 21531330.74,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-07-28",
-    "source_file": "checkbook_FY27_2026-07-28.csv"
+    "last_payment": "2026-07-30",
+    "source_file": "checkbook_FY27_2026-07-30.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
-      "amount": 0.0,
-      "share": 0.0,
-      "fund_count": 0,
-      "top_funds": []
+      "amount": 28395.5,
+      "share": 0.0013,
+      "fund_count": 1,
+      "top_funds": [
+        {
+          "name": "A11 2022 CAPITAL IMPROVEMENT",
+          "amount": 28395.5,
+          "row_count": 1
+        }
+      ]
     },
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 18745187.01,
-      "share": 0.8881,
+      "amount": 18822272.03,
+      "share": 0.874,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 18576798.28,
-          "row_count": 121
+          "amount": 18622633.3,
+          "row_count": 195
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
-          "amount": 130320.13,
-          "row_count": 3
+          "amount": 161570.13,
+          "row_count": 4
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -47,14 +53,14 @@
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 2325680.29,
-      "share": 0.1102,
+      "amount": 2623110.28,
+      "share": 0.1218,
       "fund_count": 4,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 928889.86,
-          "row_count": 24
+          "amount": 1223853.1,
+          "row_count": 99
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
@@ -68,21 +74,26 @@
         },
         {
           "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 112779.49,
-          "row_count": 4
+          "amount": 115246.24,
+          "row_count": 21
         }
       ]
     },
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 3975.99,
-      "share": 0.0002,
-      "fund_count": 1,
+      "amount": 7090.71,
+      "share": 0.0003,
+      "fund_count": 2,
       "top_funds": [
         {
           "name": "SCHOOL LUNCH",
           "amount": 3975.99,
+          "row_count": 1
+        },
+        {
+          "name": "CH90 FAIR SHARE GRANT",
+          "amount": 3114.72,
           "row_count": 1
         }
       ]
@@ -90,24 +101,34 @@
     {
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
-      "amount": 31672.8,
-      "share": 0.0015,
-      "fund_count": 1,
+      "amount": 51557.63,
+      "share": 0.0024,
+      "fund_count": 2,
       "top_funds": [
         {
           "name": "PARK REVOLVING FUND",
-          "amount": 31672.8,
-          "row_count": 3
+          "amount": 51477.63,
+          "row_count": 16
+        },
+        {
+          "name": "COA REVOLVING",
+          "amount": 80.0,
+          "row_count": 1
         }
       ]
     },
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 6.76,
-      "share": 0.0,
-      "fund_count": 1,
+      "amount": 2454.33,
+      "share": 0.0001,
+      "fund_count": 2,
       "top_funds": [
+        {
+          "name": "COA FORMULA SPENDING PLAN",
+          "amount": 2447.57,
+          "row_count": 4
+        },
         {
           "name": "EARL N REYNOLDS HISTORICAL FD",
           "amount": 6.76,
@@ -117,19 +138,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 18576798.28,
-    "fixed_total": 18165656.19,
-    "fixed_share": 0.9779,
+    "total": 18622633.3,
+    "fixed_total": 18171596.55,
+    "fixed_share": 0.9758,
     "admin_contracts_total": 291367.67,
-    "admin_contracts_share": 0.0157,
-    "other_recurring_total": 119774.42,
-    "other_recurring_share": 0.0064,
+    "admin_contracts_share": 0.0156,
+    "other_recurring_total": 159669.08,
+    "other_recurring_share": 0.0086,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 2061557.49,
-        "share": 0.111,
+        "share": 0.1107,
         "row_count": 6,
         "top_vendors": [
           {
@@ -154,7 +175,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 9934634.39,
-        "share": 0.5348,
+        "share": 0.5335,
         "row_count": 24,
         "top_vendors": [
           {
@@ -167,7 +188,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.3146,
+        "share": 0.3138,
         "row_count": 1,
         "top_vendors": [
           {
@@ -179,13 +200,13 @@
       {
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
-        "amount": 326104.31,
-        "share": 0.0176,
-        "row_count": 3,
+        "amount": 332044.67,
+        "share": 0.0178,
+        "row_count": 4,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 326104.31
+            "amount": 332044.67
           }
         ]
       },
@@ -193,7 +214,7 @@
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
         "amount": 291367.67,
-        "share": 0.0157,
+        "share": 0.0156,
         "row_count": 6,
         "top_vendors": [
           {
@@ -213,9 +234,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 119774.42,
-        "share": 0.0064,
-        "row_count": 81,
+        "amount": 159669.08,
+        "share": 0.0086,
+        "row_count": 154,
         "top_vendors": [
           {
             "name": "FIFTH ASSET, INC",
@@ -230,29 +251,50 @@
             "amount": 13089.55
           },
           {
+            "name": "CATALIS TAX & CAMA INC",
+            "amount": 12750.0
+          },
+          {
             "name": "SBRK FINANCE HOLDINGS INC",
             "amount": 7514.96
+          },
+          {
+            "name": "NORTHEASTERN MASSACHUSETTS LAW ENFORCEMENT COUNCIL",
+            "amount": 5500.0
           },
           {
             "name": "THE PITNEY BOWES RESERVE ACCOUNT",
             "amount": 5000.0
           },
           {
-            "name": "UNITED STATES POSTAL SERVICE",
-            "amount": 3522.0
-          },
-          {
-            "name": "COMCAST",
-            "amount": 1478.66
-          },
-          {
-            "name": "JOHN B MENDONCA",
-            "amount": 1378.15
+            "name": "SINCLAIR CLEANING SERVICES",
+            "amount": 3673.0
           }
         ]
       }
     ]
   },
-  "ballot_projects": [],
+  "ballot_projects": [
+    {
+      "fund_id": "A11 2022 CAPITAL IMPROVEMENT",
+      "display": "A11 2022 Capital Improvement (omnibus)",
+      "ballot_date": "2022-06-21",
+      "purpose": "roofs, roads/sidewalks, smart panels, HVAC, salt shed, HS boiler",
+      "context": "Bonds run 10-20 years; debt service appears in U.S. Bank rows through the late 2030s.",
+      "amount": 28395.5,
+      "row_count": 1,
+      "first_paid": "2026-07-30",
+      "last_paid": "2026-07-30",
+      "days_since_last_paid": 0,
+      "status": "engineering",
+      "top_vendors": [
+        {
+          "name": "RICHARD D AMBROSIA INC",
+          "amount": 28395.5,
+          "share": 1.0
+        }
+      ]
+    }
+  ],
   "what_moved": null
 }
