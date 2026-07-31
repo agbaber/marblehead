@@ -1726,6 +1726,15 @@ svg.chart .dumbbell-value       { fill: var(--c-text-sub); font-size: 10px; }
 svg.chart .dumbbell-arrow       { fill: var(--c-navy); }
 svg.chart .dumbbell-delta       { fill: var(--c-navy); font-weight: 700; }
 
+/* Structural timeline on town-staffing-over-time.html: bar spans the years a
+   function existed; a dot marks the year it was added or retired. */
+svg.chart .tl-bar  { fill: var(--c-navy); }
+svg.chart .tl-dot  { fill: var(--c-navy); }
+svg.chart .tl-grid { stroke: var(--c-border); stroke-width: 1; }
+svg.chart .tl-name { fill: var(--c-text); font-size: 11px; }
+svg.chart .tl-cap  { fill: var(--c-text-sub); font-size: 10px; }
+svg.chart .tl-tick { fill: var(--c-text-sub); font-size: 10px; }
+
 /* Quarantine cards on town-staffing-over-time.html. Self-contained (not the
    org-chart .org-card details-widget, which carries its own padding on the
    summary and would render edge-to-edge here). */
