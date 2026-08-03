@@ -37,3 +37,28 @@ og_url: https://marbleheaddata.org/roads.html
   <a href="#override">Roads and the override</a>
   <a href="#unknown">What we can't see yet</a>
 </nav>
+
+<h2 id="ownership">There is no state road to blame</h2>
+
+<p>The 2024 state Road Inventory records zero state-maintained centerline miles in Marblehead. Of the town's roughly 80 centerline miles, about 69 are town-accepted public ways and about 11 are unaccepted, meaning private or never formally accepted by the town. A community with a state highway or numbered route running through it can attribute some of its road condition to the state. Marblehead cannot: every mile is the town's to maintain, so how much is spent on roads is a local choice.<sup class="cite" data-href="data/roads/road_ownership_2024.csv" data-source="2024 Road Inventory Year-End Report, MassDOT, Table 5, Marblehead (municipality #168). State-maintained 0.00 centerline miles; town-accepted 68.99; unaccepted 11.24; town total 80.22 (per-column rounding makes the parts sum to 80.23). Compiled in data/roads/road_ownership_2024.csv."></sup></p>
+
+<div class="chart-wrapper">
+  <svg class="chart" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Segmented horizontal bar of Marblehead road ownership by centerline miles: zero state-maintained, about 69 town-accepted, and about 11 unaccepted, out of about 80 town total.">
+    <!-- Segment width = miles / 80.22 * 760 usable px (x from 20 to 780).
+         Town-accepted 68.99 -> 653.5; unaccepted 11.24 -> 106.5.
+         A 4px gap between segments is cosmetic separation only. -->
+    <!-- Segment labels above the bar -->
+    <text class="value-label" x="346" y="52" text-anchor="middle">Town-accepted: 69 mi</text>
+    <text class="value-label" x="727" y="52" text-anchor="middle">Unaccepted: 11 mi</text>
+
+    <!-- The bar: two visible segments; the state segment is zero-width -->
+    <rect class="data-bar s-marblehead" x="20" y="62" width="651" height="44"/>
+    <rect class="data-bar s-neutral" x="675" y="62" width="105" height="44"/>
+
+    <!-- The zero point, stated explicitly -->
+    <text class="value-label" x="20" y="132" text-anchor="start">State-maintained by MassDOT: 0 miles</text>
+    <text class="tick-label" x="780" y="132" text-anchor="end">Total: about 80 centerline miles</text>
+  </svg>
+</div>
+
+<p class="source">2024 Road Inventory Year-End Report (MassDOT), Table 5, Marblehead (municipality #168): state-maintained 0.00 centerline miles, town-accepted 68.99, unaccepted 11.24. The town total is 80.22; the parts sum to 80.23 because MassDOT rounds each column independently. Segments in the bar are drawn in proportion to their mileage.</p>
