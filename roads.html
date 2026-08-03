@@ -62,3 +62,78 @@ og_url: https://marbleheaddata.org/roads.html
 </div>
 
 <p class="source">2024 Road Inventory Year-End Report (MassDOT), Table 5, Marblehead (municipality #168): state-maintained 0.00 centerline miles, town-accepted 68.99, unaccepted 11.24. The town total is 80.22; the parts sum to 80.23 because MassDOT rounds each column independently. Segments in the bar are drawn in proportion to their mileage.</p>
+
+<h2 id="gap">The funding gap</h2>
+
+<p>For most of the last quarter century, state <abbr class="g" title="the state program that reimburses cities and towns for local road and bridge work">Chapter 90</abbr> aid was effectively the entire road budget. It held between roughly $445,000 and $457,000 a year from FY2012 through FY2025, close to the $449,000 the town cites.<sup class="cite" data-href="data/roads/chapter90_apportionment_MHD.csv" data-source="MassDOT Chapter 90 apportionment, Marblehead, FY2010-FY2027; compiled in data/roads/chapter90_apportionment_MHD.csv. FY2020-FY2022 not shown (no apportionment figure sourced)."></sup> The town's own guide puts the amount it needs at roughly $3 million a year, an estimate of what it can effectively spend rather than an independent needs assessment.<sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead Roads Information Guide (town voter's guide). The ~$3M/yr figure is the town's own estimate of what it can effectively spend, not an independent needs assessment."></sup> The state figure rose sharply in the last two years, to $858,599 in FY2026 and $678,732 in FY2027, from a statewide Chapter 90 program increase plus a Fair Share supplement. Even those higher amounts sit far below the $3 million the town cites.<sup class="cite" data-href="data/roads/chapter90_apportionment_MHD.csv" data-source="MassDOT Chapter 90 apportionment, Marblehead. FY2026 $858,599 = $300M program $677,383 plus $80M Fair Share supplemental $181,215. FY2027 $678,732 = $200M standard formula $450,392 plus $100M mileage-only $228,340. Compiled in data/roads/chapter90_apportionment_MHD.csv."></sup></p>
+
+<div class="chart-wrapper">
+  <svg class="chart" viewBox="0 0 800 360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Bar chart of Marblehead's Chapter 90 state road aid by fiscal year. Aid held near $350,000 to $460,000 from FY2010 through FY2025, with a one-year spike to $671,040 in FY2015, then rose to $858,599 in FY2026 and $678,732 in FY2027. Every bar sits far below a dashed line at $3 million a year, the amount the town says it needs. FY2020 through FY2022 have no sourced figure and are shown as a gap.">
+    <!-- Coordinate system. Plot area x 62..782, baseline (value 0) y=300, top of scale ($3M) y=45.
+         Y scale: y = 300 - value * (255 / 3,000,000) = 300 - value * 0.000085; bar height = value * 0.000085.
+         X: 16 slots of 45px from x=62; slot i left = 62 + 45*i; bar width 28, left = slot + 8.5; center = slot + 22.5.
+         Slot 10 (FY2020-2022) is left blank on purpose: no apportionment figure sourced. -->
+
+    <!-- Y grid, ticks and labels: $0, $1M, $2M, $3M -->
+    <line class="axis-base" x1="62" y1="300" x2="782" y2="300"/>
+    <line class="tick" x1="56" y1="215" x2="62" y2="215"/>
+    <text class="tick-label" x="52" y="219" text-anchor="end">$1M</text>
+    <line class="tick" x1="56" y1="130" x2="62" y2="130"/>
+    <text class="tick-label" x="52" y="134" text-anchor="end">$2M</text>
+    <text class="tick-label" x="52" y="304" text-anchor="end">$0</text>
+
+    <!-- Town's stated need: dashed neutral reference line at $3,000,000 (y=45) -->
+    <line class="data-line data-line--dashed s-neutral" x1="62" y1="45" x2="782" y2="45"/>
+    <text class="annotation" x="782" y="39" text-anchor="end">Town's stated need (~$3M/yr)</text>
+
+    <!-- Bars: Chapter 90 apportionment, one per available fiscal year -->
+    <g class="s-marblehead">
+      <rect class="data-bar" x="70.5"  y="270.45" width="28" height="29.55"/>
+      <rect class="data-bar" x="115.5" y="269.51" width="28" height="30.49"/>
+      <rect class="data-bar" x="160.5" y="261.34" width="28" height="38.66"/>
+      <rect class="data-bar" x="205.5" y="261.82" width="28" height="38.18"/>
+      <rect class="data-bar" x="250.5" y="262.02" width="28" height="37.98"/>
+      <rect class="data-bar" x="295.5" y="242.96" width="28" height="57.04"/>
+      <rect class="data-bar" x="340.5" y="261.90" width="28" height="38.10"/>
+      <rect class="data-bar" x="385.5" y="261.93" width="28" height="38.07"/>
+      <rect class="data-bar" x="430.5" y="261.27" width="28" height="38.73"/>
+      <rect class="data-bar" x="475.5" y="261.11" width="28" height="38.89"/>
+      <rect class="data-bar" x="565.5" y="262.16" width="28" height="37.84"/>
+      <rect class="data-bar" x="610.5" y="261.89" width="28" height="38.11"/>
+      <rect class="data-bar" x="655.5" y="261.93" width="28" height="38.07"/>
+      <rect class="data-bar" x="700.5" y="227.02" width="28" height="72.98"/>
+      <rect class="data-bar" x="745.5" y="242.31" width="28" height="57.69"/>
+    </g>
+
+    <!-- Value labels on the notable bars -->
+    <text class="value-label" x="84.5"  y="264" text-anchor="middle">$348K</text>
+    <text class="value-label" x="309.5" y="237" text-anchor="middle">$671K</text>
+    <text class="value-label" x="714.5" y="221" text-anchor="middle">$859K</text>
+    <text class="value-label" x="759.5" y="236" text-anchor="middle">$679K</text>
+
+    <!-- Base-era annotation over the flat run of bars -->
+    <text class="annotation" x="300" y="200" text-anchor="middle">About $445K to $457K per year, FY2012 to FY2025</text>
+
+    <!-- Gap slot: FY2020-FY2022 not sourced -->
+    <text class="annotation" transform="rotate(-90 534.5 250)" x="534.5" y="250" text-anchor="middle">FY2020-FY2022 not sourced</text>
+
+    <!-- X-axis year labels -->
+    <text class="tick-label tick-label--major" x="84.5"  y="316" text-anchor="middle">FY10</text>
+    <text class="tick-label tick-label--minor annotation--hide-sm" x="129.5" y="316" text-anchor="middle">FY11</text>
+    <text class="tick-label tick-label--minor annotation--hide-sm" x="174.5" y="316" text-anchor="middle">FY12</text>
+    <text class="tick-label tick-label--minor annotation--hide-sm" x="219.5" y="316" text-anchor="middle">FY13</text>
+    <text class="tick-label tick-label--minor annotation--hide-sm" x="264.5" y="316" text-anchor="middle">FY14</text>
+    <text class="tick-label tick-label--major" x="309.5" y="316" text-anchor="middle">FY15</text>
+    <text class="tick-label tick-label--minor annotation--hide-sm" x="354.5" y="316" text-anchor="middle">FY16</text>
+    <text class="tick-label tick-label--minor annotation--hide-sm" x="399.5" y="316" text-anchor="middle">FY17</text>
+    <text class="tick-label tick-label--minor annotation--hide-sm" x="444.5" y="316" text-anchor="middle">FY18</text>
+    <text class="tick-label tick-label--minor annotation--hide-sm" x="489.5" y="316" text-anchor="middle">FY19</text>
+    <text class="tick-label tick-label--major" x="579.5" y="316" text-anchor="middle">FY23</text>
+    <text class="tick-label tick-label--minor annotation--hide-sm" x="624.5" y="316" text-anchor="middle">FY24</text>
+    <text class="tick-label tick-label--minor annotation--hide-sm" x="669.5" y="316" text-anchor="middle">FY25</text>
+    <text class="tick-label tick-label--major" x="714.5" y="316" text-anchor="middle">FY26</text>
+    <text class="tick-label tick-label--major" x="759.5" y="316" text-anchor="middle">FY27</text>
+  </svg>
+</div>
+
+<p class="chart-note">The dashed line is the town's own estimate of roughly $3 million a year, not an independent needs assessment. FY2020 through FY2022 are omitted because no Chapter 90 apportionment figure for those years was sourced.</p>
