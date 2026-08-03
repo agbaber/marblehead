@@ -1,5 +1,5 @@
 {
- "as_of": "2026-07-28",
+ "as_of": "2026-08-02",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -281,7 +281,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 15000597.56,
+     "actual": 14992917.84,
      "original_budget": 17832596.0
     },
     {
@@ -331,7 +331,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 7940853.0,
-     "actual": 8694614.4,
+     "actual": 8686934.68,
      "original_budget": 7948732.0
     },
     {
@@ -648,7 +648,7 @@
     {
      "name": "LIGHT",
      "revised_budget": 0,
-     "actual": 14789505.67,
+     "actual": 15149505.67,
      "original_budget": 0
     }
    ],
@@ -674,7 +674,7 @@
     {
      "name": "OFU",
      "revised_budget": 0,
-     "actual": 368888.0,
+     "actual": 728888.0,
      "original_budget": 0
     },
     {
@@ -780,7 +780,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 7735892.0,
-     "actual": 8534436.29,
+     "actual": 8526756.57,
      "original_budget": 9309954.0
     },
     {
@@ -824,7 +824,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 14574494.16,
-     "actual": 15000597.56,
+     "actual": 14992917.84,
      "original_budget": 17832596.0
     }
    ]
@@ -3083,7 +3083,7 @@
     {
      "name": "OFU",
      "revised_budget": 0,
-     "actual": 368888.0,
+     "actual": 728888.0,
      "original_budget": 0
     },
     {
@@ -3109,7 +3109,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 0,
-     "actual": 11079887.41,
+     "actual": 11439887.41,
      "original_budget": 0
     }
    ]
@@ -3651,7 +3651,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 7940853.0,
-     "actual": 8694614.4,
+     "actual": 8686934.68,
      "original_budget": 7948732.0
     },
     {
@@ -3695,7 +3695,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 7735892.0,
-     "actual": 8534436.29,
+     "actual": 8526756.57,
      "original_budget": 9309954.0
     },
     {
@@ -4462,7 +4462,7 @@
     {
      "name": "ELECTRIC ENTERPRISE",
      "revised_budget": 0,
-     "actual": 368888.0,
+     "actual": 728888.0,
      "original_budget": 0
     }
    ],
@@ -4494,7 +4494,7 @@
     {
      "name": "LIGHT",
      "revised_budget": 0,
-     "actual": 368888.0,
+     "actual": 728888.0,
      "original_budget": 0
     }
    ]
@@ -4599,7 +4599,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 49120287.0,
-     "actual": 48133248.39,
+     "actual": 48125568.67,
      "original_budget": 49120287.0
     }
    ],
@@ -4607,7 +4607,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 15000597.56,
+     "actual": 14992917.84,
      "original_budget": 17832596.0
     },
     {
@@ -4879,7 +4879,7 @@
     {
      "name": "ELECTRIC ENTERPRISE",
      "revised_budget": 0,
-     "actual": 11079887.41,
+     "actual": 11439887.41,
      "original_budget": 0
     }
    ],
@@ -5091,7 +5091,7 @@
     {
      "name": "LIGHT",
      "revised_budget": 0,
-     "actual": 11079887.41,
+     "actual": 11439887.41,
      "original_budget": 0
     },
     {
@@ -6767,7 +6767,7 @@
    {
     "name": "TUITION-PRIVATE SCHOOLS",
     "revised_budget": 1973105.63,
-    "actual": 2470351.06,
+    "actual": 2462671.34,
     "original_budget": 2454757.0
    },
    {
@@ -15781,7 +15781,7 @@
    {
     "name": "TUITION-PRIVATE SCHOOLS",
     "revised_budget": 1973105.63,
-    "actual": 2470351.06,
+    "actual": 2462671.34,
     "original_budget": 2454757.0
    },
    {

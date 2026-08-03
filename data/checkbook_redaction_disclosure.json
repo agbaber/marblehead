@@ -1,18 +1,25 @@
 {
- "as_of": "2026-07-27",
+ "as_of": "2026-07-30",
  "generated_by": "scripts/build_checkbook_csv.py",
  "excluded_funds": [
   {
+   "name": "111F INJURY LEAVE FUND",
+   "reason": "Pays for medical care of named police/fire employees injured on duty under MGL c.41 \u00a7111F. Vendor + amount + employee identity combine to form identifiable medical claim data.",
+   "row_count": 10,
+   "total_amount": 1040.4,
+   "distinct_vendors": 3
+  },
+  {
    "name": "WORKERS COMPENSATION FUND",
    "reason": "Pays for medical care of named town employees with workers-compensation claims. Same identifiability concern as 111F.",
-   "row_count": 28,
-   "total_amount": 18620.31,
-   "distinct_vendors": 11
+   "row_count": 38,
+   "total_amount": 22996.92,
+   "distinct_vendors": 13
   }
  ],
  "columns_dropped": [],
  "description_masking": {
-  "masked_row_count": 1,
+  "masked_row_count": 2,
   "placeholder": "[withheld]",
   "reason": "The source export's Description field includes employee surnames tied to medical claims and student initials tied to out-of-district special-ed placements. Descriptions matching those patterns are replaced with the placeholder; vendor, fund, date, and amount are unchanged. All other descriptions are published as exported."
  }

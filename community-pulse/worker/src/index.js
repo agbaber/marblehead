@@ -14,6 +14,7 @@ import { handleFbStart, handleFbCallback } from './fb.js';
 import { handleClaimAddress } from './claim.js';
 import { handleProfileGet, handleProfilePost, handleClaimRelease, handleMePre } from './profile.js';
 import { handleVouchRequest, handleVouchStatus, handleVouchRespond } from './vouch.js';
+import { handleApiV1 } from './api_v1.js';
 
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 const RATE_LIMIT_MAX = 5; // per section per window per ip
@@ -33,6 +34,12 @@ export default {
  */
 export async function handleRequest(request, env) {
   const url = new URL(request.url);
+
+  // Public versioned API (open CORS, handles its own preflight).
+  if (url.pathname === '/api/v1' || url.pathname.startsWith('/api/v1/')) {
+    const v1Response = await handleApiV1(request, env, url);
+    if (v1Response) return v1Response;
+  }
 
   // CORS preflight.
   if (request.method === 'OPTIONS') {

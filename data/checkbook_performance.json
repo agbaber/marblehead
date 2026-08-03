@@ -1,16 +1,16 @@
 {
-  "as_of": "2026-07-27",
+  "as_of": "2026-07-30",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 1,
-  "fy_pct_elapsed": 7.4,
+  "fy_pct_elapsed": 8.2,
   "budget_execution": {
     "by_department": [
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 1035247.71,
-        "delta": 1035247.71,
+        "actual": 1412759.09,
+        "delta": 1412759.09,
         "pct": null
       },
       {
@@ -28,11 +28,18 @@
         "pct": 0.0
       },
       {
+        "name": "ANIMAL INSPECTOR",
+        "revised": 2400.0,
+        "actual": 1068.5,
+        "delta": -1331.5,
+        "pct": 44.52
+      },
+      {
         "name": "PLANNING BOARD",
         "revised": 1775.0,
-        "actual": 0,
-        "delta": -1775.0,
-        "pct": 0.0
+        "actual": 6.77,
+        "delta": -1768.23,
+        "pct": 0.38
       },
       {
         "name": "SEALER OF WEIGHTS & MEASURES",
@@ -40,13 +47,6 @@
         "actual": 0,
         "delta": -2100.0,
         "pct": 0.0
-      },
-      {
-        "name": "ANIMAL INSPECTOR",
-        "revised": 2400.0,
-        "actual": 200.0,
-        "delta": -2200.0,
-        "pct": 8.33
       },
       {
         "name": "FINANCE COMMITTEE",
@@ -72,9 +72,9 @@
       {
         "name": "EDUCATION",
         "revised": 43207.0,
-        "actual": 0,
-        "delta": -43207.0,
-        "pct": 0.0
+        "actual": 185.0,
+        "delta": -43022.0,
+        "pct": 0.43
       },
       {
         "name": "SNOW REMOVAL",
@@ -86,23 +86,23 @@
       {
         "name": "ELECTION & REGISTRATION",
         "revised": 132200.0,
-        "actual": 0,
-        "delta": -132200.0,
-        "pct": 0.0
+        "actual": 3000.0,
+        "delta": -129200.0,
+        "pct": 2.27
       },
       {
         "name": "VETERANS SERVICES",
         "revised": 154872.0,
-        "actual": 4028.54,
-        "delta": -150843.46,
-        "pct": 2.6
+        "actual": 8702.13,
+        "delta": -146169.87,
+        "pct": 5.62
       },
       {
         "name": "TOWN CLERK",
         "revised": 268002.0,
-        "actual": 11747.31,
-        "delta": -256254.69,
-        "pct": 4.38
+        "actual": 17099.0,
+        "delta": -250903.0,
+        "pct": 6.38
       },
       {
         "name": "TOWN COUNSEL",
@@ -114,23 +114,23 @@
       {
         "name": "HUMAN RESOURCES",
         "revised": 314480.0,
-        "actual": 14784.88,
-        "delta": -299695.12,
-        "pct": 4.7
+        "actual": 20471.37,
+        "delta": -294008.63,
+        "pct": 6.51
       },
       {
         "name": "ASSESSORS",
         "revised": 388003.0,
-        "actual": 13252.12,
-        "delta": -374750.88,
-        "pct": 3.42
+        "actual": 32120.25,
+        "delta": -355882.75,
+        "pct": 8.28
       },
       {
         "name": "HEALTH",
         "revised": 399320.0,
-        "actual": 7862.54,
-        "delta": -391457.46,
-        "pct": 1.97
+        "actual": 10802.6,
+        "delta": -388517.4,
+        "pct": 2.71
       },
       {
         "name": "RESERVE FUND",
@@ -142,44 +142,44 @@
       {
         "name": "CEMETERY",
         "revised": 468931.0,
-        "actual": 22664.48,
-        "delta": -446266.52,
-        "pct": 4.83
+        "actual": 31337.42,
+        "delta": -437593.58,
+        "pct": 6.68
       },
       {
         "name": "COUNCIL ON AGING",
         "revised": 508548.0,
-        "actual": 20990.08,
-        "delta": -487557.92,
-        "pct": 4.13
+        "actual": 32147.14,
+        "delta": -476400.86,
+        "pct": 6.32
       },
       {
         "name": "COMMUNITY DEVELOP AND PLANNING",
         "revised": 581657.0,
-        "actual": 15051.5,
-        "delta": -566605.5,
-        "pct": 2.59
+        "actual": 21310.15,
+        "delta": -560346.85,
+        "pct": 3.66
       },
       {
         "name": "BUILDING INSPECTION",
         "revised": 676519.0,
-        "actual": 29040.58,
-        "delta": -647478.42,
-        "pct": 4.29
+        "actual": 39844.75,
+        "delta": -636674.25,
+        "pct": 5.89
       },
       {
         "name": "SELECT BOARD",
         "revised": 723176.0,
-        "actual": 25467.78,
-        "delta": -697708.22,
-        "pct": 3.52
+        "actual": 33116.14,
+        "delta": -690059.86,
+        "pct": 4.58
       },
       {
         "name": "PUBLIC BUILDINGS",
         "revised": 751225.0,
-        "actual": 9098.58,
-        "delta": -742126.42,
-        "pct": 1.21
+        "actual": 12372.65,
+        "delta": -738852.35,
+        "pct": 1.65
       },
       {
         "name": "INTERFUND TRANSFERS",
@@ -189,6 +189,13 @@
         "pct": 0.0
       },
       {
+        "name": "PARKS & RECREATION",
+        "revised": 1069193.0,
+        "actual": 74433.18,
+        "delta": -994759.82,
+        "pct": 6.96
+      },
+      {
         "name": "CAPITAL ADMINISTRATION",
         "revised": 1000000.0,
         "actual": 0,
@@ -196,25 +203,25 @@
         "pct": 0.0
       },
       {
-        "name": "PARKS & RECREATION",
-        "revised": 1069193.0,
-        "actual": 48131.1,
-        "delta": -1021061.9,
-        "pct": 4.5
-      },
-      {
         "name": "HARBOR",
         "revised": 1319500.0,
-        "actual": 130126.31,
-        "delta": -1189373.69,
-        "pct": 9.86
+        "actual": 161429.72,
+        "delta": -1158070.28,
+        "pct": 12.23
+      },
+      {
+        "name": "WATER",
+        "revised": 4465301.0,
+        "actual": 3030515.94,
+        "delta": -1434785.06,
+        "pct": 67.87
       },
       {
         "name": "ABBOT LIBRARY",
         "revised": 1595790.0,
-        "actual": 53014.2,
-        "delta": -1542775.8,
-        "pct": 3.32
+        "actual": 72631.14,
+        "delta": -1523158.86,
+        "pct": 4.55
       },
       {
         "name": "DEBT SERVICE",
@@ -226,16 +233,23 @@
       {
         "name": "WASTE COLLECTION",
         "revised": 1846337.0,
-        "actual": 28492.3,
-        "delta": -1817844.7,
-        "pct": 1.54
+        "actual": 38520.55,
+        "delta": -1807816.45,
+        "pct": 2.09
       },
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 289290.59,
-        "delta": -1836162.41,
-        "pct": 13.61
+        "actual": 317269.33,
+        "delta": -1808183.67,
+        "pct": 14.93
+      },
+      {
+        "name": "SEWER",
+        "revised": 2699291.0,
+        "actual": 801383.99,
+        "delta": -1897907.01,
+        "pct": 29.69
       },
       {
         "name": "CURBSIDE COLLECTION",
@@ -247,9 +261,9 @@
       {
         "name": "PUBLIC WORKS",
         "revised": 3143686.0,
-        "actual": 210148.49,
-        "delta": -2933537.51,
-        "pct": 6.68
+        "actual": 288177.57,
+        "delta": -2855508.43,
+        "pct": 9.17
       },
       {
         "name": "STATE ASSESSMENTS",
@@ -259,104 +273,90 @@
         "pct": 0.0
       },
       {
-        "name": "SEWER",
-        "revised": 4799291.0,
-        "actual": 758456.87,
-        "delta": -4040834.13,
-        "pct": 15.8
-      },
-      {
-        "name": "WATER",
-        "revised": 6865301.0,
-        "actual": 2646836.07,
-        "delta": -4218464.93,
-        "pct": 38.55
-      },
-      {
         "name": "GLOVER SCHOOL",
-        "revised": 4284992.96,
-        "actual": 7906.56,
-        "delta": -4277086.4,
-        "pct": 0.18
+        "revised": 4285463.96,
+        "actual": 30420.02,
+        "delta": -4255043.94,
+        "pct": 0.71
       },
       {
         "name": "POLICE",
         "revised": 5460658.0,
-        "actual": 276336.37,
-        "delta": -5184321.63,
-        "pct": 5.06
+        "actual": 414951.9,
+        "delta": -5045706.1,
+        "pct": 7.6
       },
       {
         "name": "BROWN SCHOOL",
         "revised": 5424062.26,
-        "actual": 13035.9,
-        "delta": -5411026.36,
-        "pct": 0.24
+        "actual": 28516.24,
+        "delta": -5395546.02,
+        "pct": 0.53
       },
       {
         "name": "MIDDLE SCHOOL",
-        "revised": 5712762.68,
-        "actual": 17153.78,
-        "delta": -5695608.9,
-        "pct": 0.3
+        "revised": 5713564.68,
+        "actual": 37801.74,
+        "delta": -5675762.94,
+        "pct": 0.66
       },
       {
         "name": "FIRE",
-        "revised": 6328671.0,
-        "actual": 377991.94,
-        "delta": -5950679.06,
-        "pct": 5.97
+        "revised": 6471909.0,
+        "actual": 488299.84,
+        "delta": -5983609.16,
+        "pct": 7.54
       },
       {
         "name": "VILLAGE SCHOOL",
-        "revised": 7545798.37,
-        "actual": 16293.97,
-        "delta": -7529504.4,
-        "pct": 0.22
+        "revised": 7545998.37,
+        "actual": 40760.11,
+        "delta": -7505238.26,
+        "pct": 0.54
       },
       {
         "name": "HIGH SCHOOL",
-        "revised": 11552590.13,
-        "actual": 25072.23,
-        "delta": -11527517.9,
-        "pct": 0.22
+        "revised": 11556464.13,
+        "actual": 75685.5,
+        "delta": -11480778.63,
+        "pct": 0.65
       },
       {
         "name": "DISTRICTWIDE",
-        "revised": 13089080.6,
-        "actual": 114716.13,
-        "delta": -12974364.47,
-        "pct": 0.88
+        "revised": 13083733.6,
+        "actual": 379587.59,
+        "delta": -12704146.01,
+        "pct": 2.9
       },
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 7282442.69,
-        "delta": -16789950.31,
-        "pct": 30.25
+        "actual": 8080444.27,
+        "delta": -15991948.73,
+        "pct": 33.57
       }
     ],
     "all_departments": [
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 7282442.69,
-        "delta": -16789950.31,
-        "pct": 30.25
+        "actual": 8080444.27,
+        "delta": -15991948.73,
+        "pct": 33.57
       },
       {
         "name": "DISTRICTWIDE",
-        "revised": 13089080.6,
-        "actual": 114716.13,
-        "delta": -12974364.47,
-        "pct": 0.88
+        "revised": 13083733.6,
+        "actual": 379587.59,
+        "delta": -12704146.01,
+        "pct": 2.9
       },
       {
         "name": "HIGH SCHOOL",
-        "revised": 11552590.13,
-        "actual": 25072.23,
-        "delta": -11527517.9,
-        "pct": 0.22
+        "revised": 11556464.13,
+        "actual": 75685.5,
+        "delta": -11480778.63,
+        "pct": 0.65
       },
       {
         "name": "DEBT SERVICE",
@@ -367,66 +367,59 @@
       },
       {
         "name": "VILLAGE SCHOOL",
-        "revised": 7545798.37,
-        "actual": 16293.97,
-        "delta": -7529504.4,
-        "pct": 0.22
-      },
-      {
-        "name": "WATER",
-        "revised": 6865301.0,
-        "actual": 2646836.07,
-        "delta": -4218464.93,
-        "pct": 38.55
+        "revised": 7545998.37,
+        "actual": 40760.11,
+        "delta": -7505238.26,
+        "pct": 0.54
       },
       {
         "name": "FIRE",
-        "revised": 6328671.0,
-        "actual": 377991.94,
-        "delta": -5950679.06,
-        "pct": 5.97
+        "revised": 6471909.0,
+        "actual": 488299.84,
+        "delta": -5983609.16,
+        "pct": 7.54
       },
       {
         "name": "MIDDLE SCHOOL",
-        "revised": 5712762.68,
-        "actual": 17153.78,
-        "delta": -5695608.9,
-        "pct": 0.3
+        "revised": 5713564.68,
+        "actual": 37801.74,
+        "delta": -5675762.94,
+        "pct": 0.66
       },
       {
         "name": "POLICE",
         "revised": 5460658.0,
-        "actual": 276336.37,
-        "delta": -5184321.63,
-        "pct": 5.06
+        "actual": 414951.9,
+        "delta": -5045706.1,
+        "pct": 7.6
       },
       {
         "name": "BROWN SCHOOL",
         "revised": 5424062.26,
-        "actual": 13035.9,
-        "delta": -5411026.36,
-        "pct": 0.24
+        "actual": 28516.24,
+        "delta": -5395546.02,
+        "pct": 0.53
       },
       {
-        "name": "SEWER",
-        "revised": 4799291.0,
-        "actual": 758456.87,
-        "delta": -4040834.13,
-        "pct": 15.8
+        "name": "WATER",
+        "revised": 4465301.0,
+        "actual": 3030515.94,
+        "delta": -1434785.06,
+        "pct": 67.87
       },
       {
         "name": "GLOVER SCHOOL",
-        "revised": 4284992.96,
-        "actual": 7906.56,
-        "delta": -4277086.4,
-        "pct": 0.18
+        "revised": 4285463.96,
+        "actual": 30420.02,
+        "delta": -4255043.94,
+        "pct": 0.71
       },
       {
         "name": "PUBLIC WORKS",
         "revised": 3143686.0,
-        "actual": 210148.49,
-        "delta": -2933537.51,
-        "pct": 6.68
+        "actual": 288177.57,
+        "delta": -2855508.43,
+        "pct": 9.17
       },
       {
         "name": "STATE ASSESSMENTS",
@@ -434,6 +427,13 @@
         "actual": 0,
         "delta": -3004090.0,
         "pct": 0.0
+      },
+      {
+        "name": "SEWER",
+        "revised": 2699291.0,
+        "actual": 801383.99,
+        "delta": -1897907.01,
+        "pct": 29.69
       },
       {
         "name": "CURBSIDE COLLECTION",
@@ -445,37 +445,37 @@
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 289290.59,
-        "delta": -1836162.41,
-        "pct": 13.61
+        "actual": 317269.33,
+        "delta": -1808183.67,
+        "pct": 14.93
       },
       {
         "name": "WASTE COLLECTION",
         "revised": 1846337.0,
-        "actual": 28492.3,
-        "delta": -1817844.7,
-        "pct": 1.54
+        "actual": 38520.55,
+        "delta": -1807816.45,
+        "pct": 2.09
       },
       {
         "name": "ABBOT LIBRARY",
         "revised": 1595790.0,
-        "actual": 53014.2,
-        "delta": -1542775.8,
-        "pct": 3.32
+        "actual": 72631.14,
+        "delta": -1523158.86,
+        "pct": 4.55
       },
       {
         "name": "HARBOR",
         "revised": 1319500.0,
-        "actual": 130126.31,
-        "delta": -1189373.69,
-        "pct": 9.86
+        "actual": 161429.72,
+        "delta": -1158070.28,
+        "pct": 12.23
       },
       {
         "name": "PARKS & RECREATION",
         "revised": 1069193.0,
-        "actual": 48131.1,
-        "delta": -1021061.9,
-        "pct": 4.5
+        "actual": 74433.18,
+        "delta": -994759.82,
+        "pct": 6.96
       },
       {
         "name": "CAPITAL ADMINISTRATION",
@@ -487,9 +487,9 @@
       {
         "name": "PUBLIC BUILDINGS",
         "revised": 751225.0,
-        "actual": 9098.58,
-        "delta": -742126.42,
-        "pct": 1.21
+        "actual": 12372.65,
+        "delta": -738852.35,
+        "pct": 1.65
       },
       {
         "name": "INTERFUND TRANSFERS",
@@ -501,37 +501,37 @@
       {
         "name": "SELECT BOARD",
         "revised": 723176.0,
-        "actual": 25467.78,
-        "delta": -697708.22,
-        "pct": 3.52
+        "actual": 33116.14,
+        "delta": -690059.86,
+        "pct": 4.58
       },
       {
         "name": "BUILDING INSPECTION",
         "revised": 676519.0,
-        "actual": 29040.58,
-        "delta": -647478.42,
-        "pct": 4.29
+        "actual": 39844.75,
+        "delta": -636674.25,
+        "pct": 5.89
       },
       {
         "name": "COMMUNITY DEVELOP AND PLANNING",
         "revised": 581657.0,
-        "actual": 15051.5,
-        "delta": -566605.5,
-        "pct": 2.59
+        "actual": 21310.15,
+        "delta": -560346.85,
+        "pct": 3.66
       },
       {
         "name": "COUNCIL ON AGING",
         "revised": 508548.0,
-        "actual": 20990.08,
-        "delta": -487557.92,
-        "pct": 4.13
+        "actual": 32147.14,
+        "delta": -476400.86,
+        "pct": 6.32
       },
       {
         "name": "CEMETERY",
         "revised": 468931.0,
-        "actual": 22664.48,
-        "delta": -446266.52,
-        "pct": 4.83
+        "actual": 31337.42,
+        "delta": -437593.58,
+        "pct": 6.68
       },
       {
         "name": "RESERVE FUND",
@@ -543,23 +543,23 @@
       {
         "name": "HEALTH",
         "revised": 399320.0,
-        "actual": 7862.54,
-        "delta": -391457.46,
-        "pct": 1.97
+        "actual": 10802.6,
+        "delta": -388517.4,
+        "pct": 2.71
       },
       {
         "name": "ASSESSORS",
         "revised": 388003.0,
-        "actual": 13252.12,
-        "delta": -374750.88,
-        "pct": 3.42
+        "actual": 32120.25,
+        "delta": -355882.75,
+        "pct": 8.28
       },
       {
         "name": "HUMAN RESOURCES",
         "revised": 314480.0,
-        "actual": 14784.88,
-        "delta": -299695.12,
-        "pct": 4.7
+        "actual": 20471.37,
+        "delta": -294008.63,
+        "pct": 6.51
       },
       {
         "name": "TOWN COUNSEL",
@@ -571,23 +571,23 @@
       {
         "name": "TOWN CLERK",
         "revised": 268002.0,
-        "actual": 11747.31,
-        "delta": -256254.69,
-        "pct": 4.38
+        "actual": 17099.0,
+        "delta": -250903.0,
+        "pct": 6.38
       },
       {
         "name": "VETERANS SERVICES",
         "revised": 154872.0,
-        "actual": 4028.54,
-        "delta": -150843.46,
-        "pct": 2.6
+        "actual": 8702.13,
+        "delta": -146169.87,
+        "pct": 5.62
       },
       {
         "name": "ELECTION & REGISTRATION",
         "revised": 132200.0,
-        "actual": 0,
-        "delta": -132200.0,
-        "pct": 0.0
+        "actual": 3000.0,
+        "delta": -129200.0,
+        "pct": 2.27
       },
       {
         "name": "SNOW REMOVAL",
@@ -599,9 +599,9 @@
       {
         "name": "EDUCATION",
         "revised": 43207.0,
-        "actual": 0,
-        "delta": -43207.0,
-        "pct": 0.0
+        "actual": 185.0,
+        "delta": -43022.0,
+        "pct": 0.43
       },
       {
         "name": "MEMORIAL & VETERANS DAY",
@@ -627,9 +627,9 @@
       {
         "name": "ANIMAL INSPECTOR",
         "revised": 2400.0,
-        "actual": 200.0,
-        "delta": -2200.0,
-        "pct": 8.33
+        "actual": 1068.5,
+        "delta": -1331.5,
+        "pct": 44.52
       },
       {
         "name": "SEALER OF WEIGHTS & MEASURES",
@@ -641,9 +641,9 @@
       {
         "name": "PLANNING BOARD",
         "revised": 1775.0,
-        "actual": 0,
-        "delta": -1775.0,
-        "pct": 0.0
+        "actual": 6.77,
+        "delta": -1768.23,
+        "pct": 0.38
       },
       {
         "name": "MODERATOR",
@@ -662,8 +662,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 1035247.71,
-        "delta": 1035247.71,
+        "actual": 1412759.09,
+        "delta": 1412759.09,
         "pct": null
       }
     ]
@@ -671,12 +671,112 @@
   "monthly_cadence": [
     {
       "month": "2026-07",
-      "amount": 20750283.16,
-      "count": 172
+      "amount": 21895055.13,
+      "count": 479
     }
   ],
   "drill": {
     "by_fund": {
+      "A11 2022 CAPITAL IMPROVEMENT": {
+        "top_vendors": [
+          {
+            "name": "PAQCON LLC",
+            "amount": 144476.0,
+            "count": 1
+          },
+          {
+            "name": "RICHARD D AMBROSIA INC",
+            "amount": 28395.5,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 172871.5,
+            "count": 2
+          }
+        ]
+      },
+      "A33 2025-ALLEY BLDG IMPROV": {
+        "top_vendors": [
+          {
+            "name": "TODD FLANNERY",
+            "amount": 3357.8,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 3357.8,
+            "count": 1
+          }
+        ]
+      },
+      "CH90 FAIR SHARE GRANT": {
+        "top_vendors": [
+          {
+            "name": "TYLER EQUIPMENT CORPORATION",
+            "amount": 3114.72,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 3114.72,
+            "count": 1
+          }
+        ]
+      },
+      "COA FORMULA SPENDING PLAN": {
+        "top_vendors": [
+          {
+            "name": "MA COUNCIL ON AGING ASSOC",
+            "amount": 1790.04,
+            "count": 1
+          },
+          {
+            "name": "CHRIS MIHALI",
+            "amount": 450.0,
+            "count": 1
+          },
+          {
+            "name": "CENTURY TIRE OF PEABODY",
+            "amount": 160.95,
+            "count": 1
+          },
+          {
+            "name": "SHARON DOLIBER",
+            "amount": 46.58,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 2447.57,
+            "count": 4
+          }
+        ]
+      },
+      "COA REVOLVING": {
+        "top_vendors": [
+          {
+            "name": "KEVIN FIGUERA",
+            "amount": 80.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 80.0,
+            "count": 1
+          }
+        ]
+      },
       "EARL N REYNOLDS HISTORICAL FD": {
         "top_vendors": [
           {
@@ -701,9 +801,39 @@
             "count": 1
           },
           {
+            "name": "MAYER TREE SERVICE",
+            "amount": 116310.5,
+            "count": 4
+          },
+          {
             "name": "COMMONWEALTH OF MA",
             "amount": 50929.87,
             "count": 1
+          },
+          {
+            "name": "NORTHERN DATA SYSTEMS INC",
+            "amount": 40401.75,
+            "count": 2
+          },
+          {
+            "name": "EVERY ELECTRIC INC",
+            "amount": 24000.0,
+            "count": 1
+          },
+          {
+            "name": "NATIONAL GRID",
+            "amount": 17227.84,
+            "count": 2
+          },
+          {
+            "name": "DENNIS K BURKE INC",
+            "amount": 14654.72,
+            "count": 1
+          },
+          {
+            "name": "NATIONAL GRAND BANK OF MARBLEHEAD",
+            "amount": 12738.65,
+            "count": 10
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
@@ -711,56 +841,42 @@
             "count": 1
           },
           {
-            "name": "RICHARD D AMBROSIA INC",
-            "amount": 4750.0,
-            "count": 1
-          },
-          {
-            "name": "TOWN OF BRAINTREE",
-            "amount": 4151.4,
-            "count": 1
+            "name": "KP LAW, PC",
+            "amount": 9646.0,
+            "count": 2
           },
           {
             "name": "NORTH EAST TECHNOLOGY",
-            "amount": 3310.67,
-            "count": 1
-          },
-          {
-            "name": "PLM ELECTRIC POWER ENGINEERING",
-            "amount": 1540.0,
-            "count": 1
-          },
-          {
-            "name": "COMCAST HOLDINGS CORPORATION",
-            "amount": 1218.71,
-            "count": 1
-          },
-          {
-            "name": "NATIONAL GRAND BANK OF MARBLEHEAD",
-            "amount": 983.02,
-            "count": 9
-          },
-          {
-            "name": "SYSTEMS DESIGN AND TECHNOLOGY LLC",
-            "amount": 742.5,
-            "count": 1
-          },
-          {
-            "name": "TIGHE & BOND, INC",
-            "amount": 491.8,
-            "count": 1
-          },
-          {
-            "name": "VERIZON INC",
-            "amount": 481.43,
+            "amount": 9234.76,
             "count": 2
+          },
+          {
+            "name": "RITE-HITE CO LLC",
+            "amount": 8750.0,
+            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 917134.23,
-            "count": 23
+            "amount": 1223853.1,
+            "count": 99
+          }
+        ]
+      },
+      "FIRE SAFE GRANT": {
+        "top_vendors": [
+          {
+            "name": "MARK TENTINDO",
+            "amount": 196.81,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 196.81,
+            "count": 1
           }
         ]
       },
@@ -772,16 +888,66 @@
             "count": 2
           },
           {
+            "name": "INCIDENT IQ, LLC",
+            "amount": 14293.81,
+            "count": 2
+          },
+          {
+            "name": "JAMF HOLDINGS INC & SUBSIDIARIES",
+            "amount": 12069.0,
+            "count": 1
+          },
+          {
+            "name": "ACTIVE INTERNET TECHNOLOGIES LLC",
+            "amount": 11795.0,
+            "count": 1
+          },
+          {
+            "name": "ARBITERPAY TRUST ACCOUNT",
+            "amount": 10005.0,
+            "count": 1
+          },
+          {
+            "name": "VARSITY BRANDS INC",
+            "amount": 9511.0,
+            "count": 3
+          },
+          {
+            "name": "WILSON LANGUAGE TRAINING",
+            "amount": 9294.56,
+            "count": 3
+          },
+          {
+            "name": "JATHEON TECHNOLGIES INC",
+            "amount": 8535.0,
+            "count": 1
+          },
+          {
             "name": "KRISTIN B PETTY",
             "amount": 8249.6,
+            "count": 1
+          },
+          {
+            "name": "AVIDEX INDUSTRIES, LLC",
+            "amount": 7967.47,
+            "count": 1
+          },
+          {
+            "name": "QUIZIZZ INC",
+            "amount": 6150.0,
+            "count": 1
+          },
+          {
+            "name": "FOLLETT SCHOOL SOLUTIONS, INC",
+            "amount": 5551.1,
             "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 38068.6,
-            "count": 3
+            "amount": 174941.82,
+            "count": 60
           }
         ]
       },
@@ -796,13 +962,23 @@
             "name": "CN FINANCING INC",
             "amount": 63215.61,
             "count": 2
+          },
+          {
+            "name": "WOODARD & CURRAN INC",
+            "amount": 31250.0,
+            "count": 1
+          },
+          {
+            "name": "LEFTFIELD LLC",
+            "amount": 185.0,
+            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 130320.13,
-            "count": 3
+            "amount": 161755.13,
+            "count": 5
           }
         ]
       },
@@ -820,8 +996,8 @@
           },
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 1594597.3,
-            "count": 6
+            "amount": 1600537.66,
+            "count": 7
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
@@ -840,8 +1016,13 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 20950.88,
-            "count": 4
+            "amount": 31146.14,
+            "count": 5
+          },
+          {
+            "name": "CENTRALSQUARE TECHNOLOGIES LLC",
+            "amount": 25259.18,
+            "count": 1
           },
           {
             "name": "FIFTH ASSET, INC",
@@ -859,21 +1040,16 @@
             "count": 2
           },
           {
-            "name": "SBRK FINANCE HOLDINGS INC",
-            "amount": 7514.96,
-            "count": 1
-          },
-          {
-            "name": "THE PITNEY BOWES RESERVE ACCOUNT",
-            "amount": 5000.0,
-            "count": 1
+            "name": "CATALIS TAX & CAMA INC",
+            "amount": 12750.0,
+            "count": 2
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 18566603.02,
-            "count": 120
+            "amount": 18656769.72,
+            "count": 214
           }
         ]
       },
@@ -895,6 +1071,46 @@
             "count": 1
           },
           {
+            "name": "TOWN OF MARBLEHEAD",
+            "amount": 609.72,
+            "count": 5
+          },
+          {
+            "name": "AMAZON CAPITAL SERVICES",
+            "amount": 533.81,
+            "count": 1
+          },
+          {
+            "name": "J & L WELDING AND MACHINE",
+            "amount": 469.9,
+            "count": 1
+          },
+          {
+            "name": "THE WANDERLUST GROUP INC",
+            "amount": 435.63,
+            "count": 1
+          },
+          {
+            "name": "AT&T SUPPOENA CENTER",
+            "amount": 219.7,
+            "count": 1
+          },
+          {
+            "name": "MEAD TALERMAN & COSTA LLC",
+            "amount": 86.0,
+            "count": 1
+          },
+          {
+            "name": "F & S HARDWARE, INC",
+            "amount": 82.48,
+            "count": 4
+          },
+          {
+            "name": "GILBERT & COLE",
+            "amount": 29.51,
+            "count": 3
+          },
+          {
             "name": "VERIZON INC",
             "amount": 6.77,
             "count": 1
@@ -903,8 +1119,8 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 112779.49,
-            "count": 4
+            "amount": 115246.24,
+            "count": 21
           }
         ]
       },
@@ -916,21 +1132,66 @@
             "count": 1
           },
           {
+            "name": "LEAH GOODMAN",
+            "amount": 16722.0,
+            "count": 3
+          },
+          {
             "name": "CHRISTOPHER FIELDS",
-            "amount": 6069.6,
+            "amount": 10365.84,
+            "count": 2
+          },
+          {
+            "name": "CAPTUREPOINT",
+            "amount": 6850.0,
             "count": 1
           },
           {
-            "name": "LEAH GOODMAN",
-            "amount": 5029.2,
+            "name": "KEVIN HUSSON",
+            "amount": 6588.0,
+            "count": 1
+          },
+          {
+            "name": "MEGAN WHITE",
+            "amount": 3918.75,
+            "count": 1
+          },
+          {
+            "name": "ONE TIME PAY",
+            "amount": 3364.0,
+            "count": 25
+          },
+          {
+            "name": "AMAZON CAPITAL SERVICES INC",
+            "amount": 2196.48,
+            "count": 11
+          },
+          {
+            "name": "CHESS WIZARDS",
+            "amount": 1830.0,
+            "count": 1
+          },
+          {
+            "name": "MARTHA POTVIN",
+            "amount": 584.4,
+            "count": 3
+          },
+          {
+            "name": "THE THRONE DEPOT",
+            "amount": 254.63,
+            "count": 1
+          },
+          {
+            "name": "DEMOULAS SUPER MARKET",
+            "amount": 34.0,
             "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 31672.8,
-            "count": 3
+            "amount": 73282.1,
+            "count": 51
           }
         ]
       },
@@ -947,6 +1208,27 @@
             "month": "2026-07",
             "amount": 3975.99,
             "count": 1
+          }
+        ]
+      },
+      "SCHOOL USER FEES": {
+        "top_vendors": [
+          {
+            "name": "NORTHEASTERN CONFERENCE",
+            "amount": 15297.43,
+            "count": 1
+          },
+          {
+            "name": "ARBITERSPORTS LLC",
+            "amount": 3847.5,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 19144.93,
+            "count": 2
           }
         ]
       },
@@ -994,6 +1276,11 @@
       "WATER ENTERPRISE OPERATING": {
         "top_vendors": [
           {
+            "name": "MASSACHUSETTS WATER RESOURCES AUTHORITY",
+            "amount": 334288.8,
+            "count": 1
+          },
+          {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
             "amount": 170987.0,
             "count": 1
@@ -1022,8 +1309,8 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 226710.67,
-            "count": 7
+            "amount": 560999.47,
+            "count": 8
           }
         ]
       }
