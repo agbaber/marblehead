@@ -36,9 +36,9 @@ async function testHomepageLoads(page) {
   }
 
   const tiles = await page.$$('.home-tile');
-  tiles.length === 14
-    ? ok('14 tiles on homepage')
-    : fail('Homepage tiles', `expected 14 .home-tile, got ${tiles.length}`);
+  tiles.length === 15
+    ? ok('15 tiles on homepage')
+    : fail('Homepage tiles', `expected 15 .home-tile, got ${tiles.length}`);
 
   const sectionTiles = await page.$$('.home-tiles[data-home-row="sections"] .home-tile');
   sectionTiles.length === 7
@@ -46,9 +46,9 @@ async function testHomepageLoads(page) {
     : fail('Section tiles', `expected 7, got ${sectionTiles.length}`);
 
   const notableTiles = await page.$$('.home-tiles[data-home-row="notable"] .home-tile');
-  notableTiles.length === 7
-    ? ok('7 notable-piece tiles')
-    : fail('Notable tiles', `expected 7, got ${notableTiles.length}`);
+  notableTiles.length === 8
+    ? ok('8 notable-piece tiles')
+    : fail('Notable tiles', `expected 8, got ${notableTiles.length}`);
 
   const divider = await page.$('.home-divider');
   divider ? ok('Notable-pieces divider present') : fail('Divider', '.home-divider missing');
@@ -638,6 +638,20 @@ async function testTermsPageLoads(page) {
     : fail('terms h1', `expected "Terms of Use", got "${h1Text}"`);
 }
 
+async function testRoadsPage(page) {
+  console.log('\n── /roads.html ──');
+  const resp = await page.goto(`${SITE}/roads.html`, { waitUntil: 'domcontentloaded' });
+  if (resp.status() !== 200) { fail('roads.html load', `HTTP ${resp.status()}`); return; }
+  ok('roads.html returns 200');
+  const h1 = await page.$('h1');
+  const h1Text = h1 ? (await h1.textContent()).trim() : '';
+  /roads/i.test(h1Text) ? ok(`roads h1: "${h1Text}"`) : fail('roads h1', `got "${h1Text}"`);
+  const charts = await page.$$('svg.chart');
+  charts.length >= 2 ? ok(`${charts.length} charts render`) : fail('roads charts', `expected >=2, got ${charts.length}`);
+  const cites = await page.$$('sup.cite');
+  cites.length > 0 ? ok(`${cites.length} citation markers`) : fail('roads citations', 'none');
+}
+
 // ── /browse/ ───────────────────────────────────────────────────────────
 
 async function testBrowseIndex(page) {
@@ -755,6 +769,7 @@ async function testTopicMeetingCounts(page) {
     await testVouchRequestPageLoads(page1);
     await testVouchPageLoads(page1);
     await testTermsPageLoads(page1);
+    await testRoadsPage(page1);
     await testBrowseIndex(page1);
     await testBrowseEntity(page1, 'topics', 10);
     await testBrowseEntity(page1, 'meetings', 30);
