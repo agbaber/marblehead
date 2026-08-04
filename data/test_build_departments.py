@@ -26,7 +26,7 @@ def test_every_department_has_a_human_display_name():
 def test_specific_display_names_are_grammatical():
     view = build_view()
     d = view["departments"]
-    assert d["select_board"]["name"] == "Select Board"
+    assert d["select_board"]["name"] == "Select Board Office"
     assert d["school_high"]["name"] == "Marblehead High School"
     assert d["public_works_ops"]["name"] == "Public Works Operations"
     assert d["rec_park"]["name"] == "Recreation & Parks"

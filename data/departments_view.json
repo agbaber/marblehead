@@ -103,7 +103,7 @@
       "checkbook": null
     },
     "select_board": {
-      "name": "Select Board",
+      "name": "Select Board Office",
       "function": "general_government",
       "function_label": "General Government",
       "role": "Town Administrator",
@@ -160,7 +160,7 @@
         ]
       },
       "services": {
-        "summary": "The executive arm of town government, coordinating the town's departments and providing centralized administrative services. The office houses the Town Administrator and handles business licensing, procurement oversight, public-records requests, and accessibility (ADA) coordination.",
+        "summary": "This is the town's administrative office, led by the Town Administrator, who carries out the policies of the elected Select Board and coordinates the town's departments. The office handles business licensing, procurement (a Chief Procurement Officer), public-records requests, and accessibility (ADA) coordination. The elected Select Board itself is five members who set policy and appoint the Town Administrator; this budget covers the office and its staff, not the board members.",
         "source_url": "https://marbleheadma.gov/selectboard-office/",
         "source_label": "Town of Marblehead, Select Board Office page (accessed 2026-08-04)"
       },

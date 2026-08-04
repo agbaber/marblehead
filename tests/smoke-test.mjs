@@ -428,10 +428,10 @@ async function testDepartmentsExplorerPageLoads(page) {
   // Cards must show human names, not raw slugs (regression guard).
   const cardNames = await page.$$eval('.dx-card-name', els => els.map(e => e.textContent));
   const hasSlug = cardNames.some(n => n.includes('_'));
-  const hasSelectBoard = cardNames.includes('Select Board');
+  const hasSelectBoard = cardNames.includes('Select Board Office');
   !hasSlug && hasSelectBoard
     ? ok('Departments cards show human names')
-    : fail('Departments cards show human names', `slug seen: ${hasSlug}, "Select Board" present: ${hasSelectBoard}`);
+    : fail('Departments cards show human names', `slug seen: ${hasSlug}, "Select Board Office" present: ${hasSelectBoard}`);
 
   await page.goto(`${SITE}/departments.html#police`, { waitUntil: 'domcontentloaded' });
   await page.waitForSelector('.dx-money', { timeout: 5000 }).catch(() => null);

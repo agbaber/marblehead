@@ -368,7 +368,7 @@ def _load_checkbook() -> dict:
 # follow org_chart.yml's town.departments where one exists.
 _DISPLAY_NAMES = {
     "moderator": "Town Moderator",
-    "select_board": "Select Board",
+    "select_board": "Select Board Office",
     "finance_committee": "Finance Committee",
     "reserve_fund": "Reserve Fund",
     "finance": "Finance Department",
