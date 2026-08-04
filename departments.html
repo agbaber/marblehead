@@ -114,6 +114,8 @@ og_url: https://marbleheaddata.org/departments.html
   .dx-roster td:first-child { text-align: left; font-weight: 400; white-space: normal; }
   .dx-roster tbody tr:last-child td { border-bottom: none; }
   .dx-roster td.dx-avg { color: var(--text-muted); font-weight: 400; }
+  .dx-row-elim td { color: var(--text-muted); }
+  .dx-elim-tag { font-style: italic; font-weight: 400; font-size: 0.75rem; color: var(--text-subtle); }
   .dx-deepdive { margin: 12px 0 0; font-weight: 600; }
   .dx-deepdive a { color: var(--c-teal); }
   .dx-vpurpose { display: block; font-size: 0.6875rem; color: var(--text-muted); font-weight: 400; margin-top: 1px; }
@@ -368,7 +370,7 @@ og_url: https://marbleheaddata.org/departments.html
         if (gone) {
           hasElim = true;
           inner += '<tr class="dx-row-elim"><td>' + esc(pos.title) + '</td>' +
-            '<td class="dx-amt">&mdash;</td>' +
+            '<td class="dx-amt">&ndash;</td>' +
             '<td class="dx-amt"><span class="dx-elim-tag">not funded in FY27</span></td>' +
             '<td class="dx-amt dx-avg"></td></tr>';
           return;
