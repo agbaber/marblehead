@@ -125,36 +125,42 @@
             "title": "Town Administrator",
             "count": 1,
             "fy27": 223176,
+            "status": "continuing",
             "note": "MUNIS labels this as Dept Head in the Select Board cost center."
           },
           {
             "title": "Assistant Town Administrator (Assistant Department Head)",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": "Position eliminated in FY27 balanced budget. The secondary Asst Dept Head (#2) line remains funded."
           },
           {
             "title": "Assistant Department Head #2",
             "count": 1,
             "fy27": 93210,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Chief Procurement Officer",
             "count": 1,
             "fy27": 120487,
+            "status": "new",
             "note": "New budget line in FY27. Position itself existed in FY26 (per payroll roster) but moved from a different cost center per Article 20 of 2026 ATM warrant."
           },
           {
             "title": "Senior Clerk",
             "count": 1,
             "fy27": 56121,
+            "status": "reduced",
             "note": "Reduced ~12.7%. Article 20 of 2026 ATM warrant reclassifies this position."
           },
           {
             "title": "Town Counsel (stipend; contracted)",
             "count": 1,
             "fy27": 2000,
+            "status": "continuing",
             "note": "Separate Town Counsel cost center; contracted role, not salaried. Bulk of cost flows through Expense ($276K FY27 vs $113K FY26)."
           }
         ]
@@ -388,30 +394,35 @@
             "title": "Finance Director / CFO",
             "count": 1,
             "fy27": 168000,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Division Head (Treasurer/Collector and Town Accountant)",
             "count": 2,
             "fy27": 307161,
+            "status": "continuing",
             "note": "Net dollar increase reflects a position shifted in from the eliminated Asst Department Head line. The two Division Head roles are Treasurer/Collector and Town Accountant."
           },
           {
             "title": "Assistant Department Head",
             "count": 3,
             "fy27": 0,
+            "status": "eliminated",
             "note": "Eliminated as a separate object code; functions consolidated into Division Head and Assistant Division Head. FY26 funded 3 positions (Asst Treasurer/Tax Collector + 2 Asst Acct). Reclassification, not a layoff."
           },
           {
             "title": "Assistant Division Head",
             "count": 2,
             "fy27": 197376,
+            "status": "new",
             "note": "FY27 reorganization places the two Asst Accountants here."
           },
           {
             "title": "Senior Clerk",
             "count": 2,
             "fy27": 150858,
+            "status": "continuing",
             "note": "FY26 roster: 2 Senior Clerks. Override Presentation narrates a Senior Clerk cut here; the MUNIS dollar figure went up. Likely affects a Treasurer/Collector sub-pool that stays funded as a line."
           }
         ]
@@ -553,18 +564,21 @@
             "title": "Chief Assessor",
             "count": 1,
             "fy27": 120951,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Senior Clerk II (Administrative Assessor)",
             "count": 1,
             "fy27": 73766,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Senior Clerk",
             "count": 1,
             "fy27": 71085,
+            "status": "continuing",
             "note": null
           }
         ]
@@ -819,48 +833,56 @@
             "title": "Town Clerk",
             "count": 1,
             "fy27": 97460,
+            "status": "continuing",
             "note": "Elected position; Article 18 of 2026 ATM warrant sets FY27 compensation at $97,460."
           },
           {
             "title": "Special Clerk",
             "count": 2,
             "fy27": 66125,
+            "status": "reduced",
             "note": "FY26 had 2 Special Clerks; ~48% dollar drop matches the Override Presentation cut from 3 to 2 employees."
           },
           {
             "title": "Board / Commission (Election Commissioners)",
             "count": 1,
             "fy27": 450,
+            "status": "continuing",
             "note": "Stipend line (Elections cost center)."
           },
           {
             "title": "Register of Voters",
             "count": 1,
             "fy27": 700,
+            "status": "continuing",
             "note": "Stipend line (Elections cost center)."
           },
           {
             "title": "Town Election poll workers",
             "count": 1,
             "fy27": 7500,
+            "status": "continuing",
             "note": "Pool line (Elections cost center); paid only during election cycles."
           },
           {
             "title": "Override Election poll workers",
             "count": 1,
             "fy27": 7500,
+            "status": "continuing",
             "note": "Pool line (Elections cost center)."
           },
           {
             "title": "State Primary poll workers",
             "count": 1,
             "fy27": 15000,
+            "status": "new",
             "note": "Pool line (Elections cost center); presidential cycle."
           },
           {
             "title": "November Election poll workers",
             "count": 1,
             "fy27": 10000,
+            "status": "new",
             "note": "Pool line (Elections cost center); presidential cycle."
           }
         ]
@@ -1002,48 +1024,56 @@
             "title": "Town Clerk",
             "count": 1,
             "fy27": 97460,
+            "status": "continuing",
             "note": "Elected position; Article 18 of 2026 ATM warrant sets FY27 compensation at $97,460."
           },
           {
             "title": "Special Clerk",
             "count": 2,
             "fy27": 66125,
+            "status": "reduced",
             "note": "FY26 had 2 Special Clerks; ~48% dollar drop matches the Override Presentation cut from 3 to 2 employees."
           },
           {
             "title": "Board / Commission (Election Commissioners)",
             "count": 1,
             "fy27": 450,
+            "status": "continuing",
             "note": "Stipend line (Elections cost center)."
           },
           {
             "title": "Register of Voters",
             "count": 1,
             "fy27": 700,
+            "status": "continuing",
             "note": "Stipend line (Elections cost center)."
           },
           {
             "title": "Town Election poll workers",
             "count": 1,
             "fy27": 7500,
+            "status": "continuing",
             "note": "Pool line (Elections cost center); paid only during election cycles."
           },
           {
             "title": "Override Election poll workers",
             "count": 1,
             "fy27": 7500,
+            "status": "continuing",
             "note": "Pool line (Elections cost center)."
           },
           {
             "title": "State Primary poll workers",
             "count": 1,
             "fy27": 15000,
+            "status": "new",
             "note": "Pool line (Elections cost center); presidential cycle."
           },
           {
             "title": "November Election poll workers",
             "count": 1,
             "fy27": 10000,
+            "status": "new",
             "note": "Pool line (Elections cost center); presidential cycle."
           }
         ]
@@ -1223,12 +1253,14 @@
             "title": "Special Labor I (Custodian)",
             "count": 2,
             "fy27": 0,
+            "status": "eliminated",
             "note": "Both custodians eliminated; FY26 served Mary Alley and Abbot Hall."
           },
           {
             "title": "Seasonal Docent (Fort Sewall)",
             "count": 3,
             "fy27": 11226,
+            "status": "continuing",
             "note": "FY26 filled count: 1 year-round, 2 seasonal."
           }
         ]
@@ -1392,24 +1424,28 @@
             "title": "HR Director",
             "count": 1,
             "fy27": 120500,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Payroll Manager",
             "count": 1,
             "fy27": 104655,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Benefits Coordinator",
             "count": 1,
             "fy27": 74336,
+            "status": "new",
             "note": "Position existed in FY26 under a different object code; reclassified per Article 20 of 2026 ATM warrant."
           },
           {
             "title": "Senior Clerk",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           }
         ]
@@ -1495,30 +1531,35 @@
             "title": "Director, CD&P",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           },
           {
             "title": "Town Planner",
             "count": 1,
             "fy27": 97048,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Town Planner / Conservation Agent",
             "count": 1,
             "fy27": 76423,
+            "status": "continuing",
             "note": "Title clarified per Article 20 of 2026 ATM warrant."
           },
           {
             "title": "Sustainability Coordinator",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           },
           {
             "title": "Grant Coordinator",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           }
         ]
@@ -1620,84 +1661,98 @@
             "title": "Chief of Police",
             "count": 1,
             "fy27": 195750,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Acting Captain (Assistant Department Head #2)",
             "count": 1,
             "fy27": 80881,
+            "status": "continuing",
             "note": "MUNIS labels this Asst Dept Head; Annual Report 2025 maps it to Acting Captain."
           },
           {
             "title": "Captain",
             "count": 1,
             "fy27": 118000,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Lieutenant",
             "count": 4,
             "fy27": 408344,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Sergeant",
             "count": 4,
             "fy27": 341641,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Patrolman",
             "count": 20,
             "fy27": 1434570,
+            "status": "continuing",
             "note": "Override Presentation: SRO eliminated under no-override; cut appears as reduced Patrolman headcount (FY27 staffing falls to ~29 officers vs ~33 historical). Patrol Officer + Detective titles roll into this MUNIS pool."
           },
           {
             "title": "Senior Clerk",
             "count": 1,
             "fy27": 71085,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Telecommunicator / E-911 Dispatcher",
             "count": 8,
             "fy27": 557496,
+            "status": "continuing",
             "note": "FY26 filled count combines E-911 Dispatch / Dispatcher / Telecommunicator titles."
           },
           {
             "title": "Telecommunicator Supervisor",
             "count": 1,
             "fy27": 85105,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Special I (Special Police Officer)",
             "count": 1,
             "fy27": 61512,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Temporary Officer",
             "count": 1,
             "fy27": 24198,
+            "status": "continuing",
             "note": "Pool line."
           },
           {
             "title": "Temporary Dispatcher",
             "count": 1,
             "fy27": 28227,
+            "status": "continuing",
             "note": "Pool line."
           },
           {
             "title": "Traffic Supervisor",
             "count": 17,
             "fy27": 122000,
+            "status": "continuing",
             "note": "All part-time school traffic supervisors; Annual Report 2025 lists 16 PT supervisors."
           },
           {
             "title": "Animal Inspector",
             "count": 1,
             "fy27": 2400,
+            "status": "continuing",
             "note": "Stipend-only line (separate MUNIS cost center); PT appointment under Police."
           }
         ]
@@ -1871,30 +1926,35 @@
             "title": "Fire Chief",
             "count": 1,
             "fy27": 151719,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Administrative Captain / Deputy Chief (Assistant Department Head #2)",
             "count": 1,
             "fy27": 71936,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Captain",
             "count": 4,
             "fy27": 504600,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Lieutenant",
             "count": 3,
             "fy27": 345732,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Firefighter",
             "count": 30,
             "fy27": 2244087,
+            "status": "continuing",
             "note": "FY26 filled count combines Fire Fighter and Firefighter titles. 'Down 1 full shift' in the Override Presentation refers to staffing per shift, not a single position."
           }
         ]
@@ -2063,42 +2123,49 @@
             "title": "Building Commissioner",
             "count": 1,
             "fy27": 132508,
+            "status": "continuing",
             "note": "Also serves as Superintendent of Public Buildings."
           },
           {
             "title": "Assistant Department Head",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": "MUNIS reorg; functions distributed across the new Local / Electrical / Plumbing Inspector pool lines."
           },
           {
             "title": "Assistant Department Head #2",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           },
           {
             "title": "Local Inspectors",
             "count": 2,
             "fy27": 122437,
+            "status": "new",
             "note": "FY26 filled count: 2 Local Building Inspectors."
           },
           {
             "title": "Electrical Inspectors",
             "count": 2,
             "fy27": 145000,
+            "status": "new",
             "note": "FY26 filled count: 1 Head + 1 Assistant Electrical Inspector."
           },
           {
             "title": "Plumbing Inspectors",
             "count": 2,
             "fy27": 106388,
+            "status": "new",
             "note": "FY26 filled count: 1 Plumbing Inspector + 1 Assistant. Plumbing & Gas Inspector also functions as Assistant Wire Inspector per Annual Report 2025."
           },
           {
             "title": "Senior Clerk",
             "count": 1,
             "fy27": 70813,
+            "status": "continuing",
             "note": null
           }
         ]
@@ -2353,96 +2420,112 @@
             "title": "DPW Director",
             "count": 1,
             "fy27": 33448,
+            "status": "reduced",
             "note": "Override Presentation: 'Reduce dept. head to part time.' ~72% dollar drop is consistent with a switch from FT to PT, day-to-day operations devolved to Assistant Directors."
           },
           {
             "title": "Assistant Directors",
             "count": 3,
             "fy27": 300788,
+            "status": "reduced",
             "note": "FY26 had three Assistant Director roles (Highway/Tree/Snow, Storm Sewer/Mechanics/Utility, Asst Director-Utility Coord); FY27 retains a smaller pool."
           },
           {
             "title": "Senior Clerk",
             "count": 1,
             "fy27": 73767,
+            "status": "reduced",
             "note": null
           },
           {
             "title": "Special Clerk",
             "count": 1,
             "fy27": 67031,
+            "status": "new",
             "note": "Article 20 of 2026 ATM warrant introduces 'Special Clerk (DPW)' as a new position grading."
           },
           {
             "title": "Town Engineer",
             "count": 1,
             "fy27": 123609,
+            "status": "new",
             "note": "New separate object code in FY27. FY26 had a Town Engineer position funded under a different line."
           },
           {
             "title": "Assistant Engineer",
             "count": 1,
             "fy27": 73988,
+            "status": "new",
             "note": null
           },
           {
             "title": "Mechanic Supervisor",
             "count": 1,
             "fy27": 78841,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Mechanic",
             "count": 2,
             "fy27": 142787,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Staff Engineer",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           },
           {
             "title": "Lead Heavy Equipment Operator",
             "count": 2,
             "fy27": 214660,
+            "status": "reduced",
             "note": "Pool line ~39% reduction; one position eliminated, remainder shifted into the new Working Foreman lines."
           },
           {
             "title": "Special Labor I",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": "Override Presentation: 'No Laborer.'"
           },
           {
             "title": "Heavy Equipment Operator",
             "count": 2,
             "fy27": 189874,
+            "status": "reduced",
             "note": "Pool line ~47% reduction. The eliminated HEO is one of the three positions in the '2.5 positions cut' narrative."
           },
           {
             "title": "Foreman / Tree Surgeon",
             "count": 1,
             "fy27": 79786,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Specialized Heavy Equipment Operator",
             "count": 3,
             "fy27": 138508,
+            "status": "new",
             "note": "New object code; absorbs the FY26 Specialized HEO pool previously billed against Heavy Equipment Operator."
           },
           {
             "title": "Working Foreman, Construction",
             "count": 1,
             "fy27": 83004,
+            "status": "new",
             "note": null
           },
           {
             "title": "Working Foreman, Maintenance",
             "count": 1,
             "fy27": 72595,
+            "status": "new",
             "note": null
           }
         ]
@@ -2555,42 +2638,49 @@
             "title": "Assistant Director of Waste",
             "count": 1,
             "fy27": 98640,
+            "status": "continuing",
             "note": "Article 20 of 2026 ATM warrant reclassifies this title on the Administrative Pay Scale."
           },
           {
             "title": "Senior Clerk (transfer station)",
             "count": 1,
             "fy27": 38506,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Special Clerk",
             "count": 1,
             "fy27": 66377,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Crew Leader Operator (Leader HEO)",
             "count": 1,
             "fy27": 77011,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Heavy Equipment Operator",
             "count": 2,
             "fy27": 133080,
+            "status": "continuing",
             "note": "FY26 filled count includes 1 Specialized HEO + 1 HEO equivalent under this MUNIS line."
           },
           {
             "title": "Transfer Station Operator",
             "count": 2,
             "fy27": 58000,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Senior Clerk (curbside billing)",
             "count": 1,
             "fy27": 69000,
+            "status": "new",
             "note": "Curbside billing cost center; brand-new General Fund line in FY27 funded via the new annual fee (Article 23). Hauler contract and truck operators flow through Expense, not Salary."
           }
         ]
@@ -2695,42 +2785,49 @@
             "title": "Assistant Director of Waste",
             "count": 1,
             "fy27": 98640,
+            "status": "continuing",
             "note": "Article 20 of 2026 ATM warrant reclassifies this title on the Administrative Pay Scale."
           },
           {
             "title": "Senior Clerk (transfer station)",
             "count": 1,
             "fy27": 38506,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Special Clerk",
             "count": 1,
             "fy27": 66377,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Crew Leader Operator (Leader HEO)",
             "count": 1,
             "fy27": 77011,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Heavy Equipment Operator",
             "count": 2,
             "fy27": 133080,
+            "status": "continuing",
             "note": "FY26 filled count includes 1 Specialized HEO + 1 HEO equivalent under this MUNIS line."
           },
           {
             "title": "Transfer Station Operator",
             "count": 2,
             "fy27": 58000,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Senior Clerk (curbside billing)",
             "count": 1,
             "fy27": 69000,
+            "status": "new",
             "note": "Curbside billing cost center; brand-new General Fund line in FY27 funded via the new annual fee (Article 23). Hauler contract and truck operators flow through Expense, not Salary."
           }
         ]
@@ -2795,30 +2892,35 @@
             "title": "Cemetery Superintendent",
             "count": 1,
             "fy27": 59978,
+            "status": "reduced",
             "note": "Reduced ~47%; consistent with the 'reduce to part time' narrative."
           },
           {
             "title": "Senior Clerk",
             "count": 1,
             "fy27": 71086,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Mechanic",
             "count": 1,
             "fy27": 70391,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Heavy Equipment Operator",
             "count": 1,
             "fy27": 71086,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "General Labor IV",
             "count": 2,
             "fy27": 66125,
+            "status": "reduced",
             "note": "Pool line ~43% reduction is the 'Cut 1 laborer' narrative."
           }
         ]
@@ -3000,18 +3102,21 @@
             "title": "Director of Public Health (stipend portion)",
             "count": 1,
             "fy27": 42604,
+            "status": "continuing",
             "note": "Dollar amount unusually low for a director; likely a stipend or shared-position arrangement. Worth verifying with HR."
           },
           {
             "title": "Health Inspector + Public Health Nurse",
             "count": 2,
             "fy27": 161707,
+            "status": "continuing",
             "note": "One MUNIS line funds both the Health Inspector and Public Health Nurse positions per the FY26 roster."
           },
           {
             "title": "Senior Clerk",
             "count": 1,
             "fy27": 38506,
+            "status": "continuing",
             "note": null
           }
         ]
@@ -3193,36 +3298,42 @@
             "title": "COA Director",
             "count": 1,
             "fy27": 116978,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Program Manager",
             "count": 1,
             "fy27": 79480,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Transportation Coordinator",
             "count": 1,
             "fy27": 70813,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Outreach Worker",
             "count": 1,
             "fy27": 74647,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Temporary Special Clerk",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           },
           {
             "title": "General Laborer / Nutrition Coordinator",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           }
         ]
@@ -3396,6 +3507,7 @@
             "title": "Veterans' Agent",
             "count": 1,
             "fy27": 80572,
+            "status": "continuing",
             "note": "Single-position office. Also serves as Flag Officer and Veterans' Graves Officer per Annual Report 2025."
           }
         ]
@@ -3577,108 +3689,126 @@
             "title": "Library Director",
             "count": 1,
             "fy27": 119940,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Assistant Director (Assistant Department Head)",
             "count": 1,
             "fy27": 93080,
+            "status": "new",
             "note": "New explicit object code in FY27; FY26 payroll did not list an Assistant Director as a separate title."
           },
           {
             "title": "Program Volunteer Coordinator",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           },
           {
             "title": "Senior Clerk",
             "count": 1,
             "fy27": 71085,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Library Technician",
             "count": 2,
             "fy27": 39230,
+            "status": "reduced",
             "note": "FY26 roster: 2 Library Technical Assistants. Reduced ~32%; likely PT hours cut."
           },
           {
             "title": "Library Tech Admin",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           },
           {
             "title": "Senior Library Assistant",
             "count": 2,
             "fy27": 58388,
+            "status": "continuing",
             "note": "FY26 roster: 2 Senior Library Assistants (SR LIBRARY ASST + SENIOR LIBRARY ASSISTANT)."
           },
           {
             "title": "Coordinator of Circulation",
             "count": 2,
             "fy27": 40603,
+            "status": "reduced",
             "note": "FY26 roster: 2 Library Circulation Supervisors. Reduced ~37%; likely PT hours cut."
           },
           {
             "title": "Library Tech Service Assistant",
             "count": 1,
             "fy27": 35779,
+            "status": "reduced",
             "note": "Article 20 of 2026 ATM warrant updates the job description."
           },
           {
             "title": "Technical Services Supervisor",
             "count": 1,
             "fy27": 75573,
+            "status": "reduced",
             "note": "New position grading per Article 20 of 2026 ATM warrant."
           },
           {
             "title": "Adult Librarian",
             "count": 1,
             "fy27": 41646,
+            "status": "reduced",
             "note": "Reduced ~35%; likely PT hours cut."
           },
           {
             "title": "Children's Librarian",
             "count": 1,
             "fy27": 40429,
+            "status": "reduced",
             "note": "Reduced ~45%; likely PT hours cut."
           },
           {
             "title": "Young Adult Librarian",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           },
           {
             "title": "Library Para-Professional",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           },
           {
             "title": "Special Labor I (Custodian)",
             "count": 2,
             "fy27": 39368,
+            "status": "reduced",
             "note": "Pool line ~53% reduction."
           },
           {
             "title": "Temporary Library Assistant",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           },
           {
             "title": "Head of Public Services",
             "count": 1,
             "fy27": 0,
+            "status": "eliminated",
             "note": null
           },
           {
             "title": "Adult Page",
             "count": 4,
             "fy27": 5955,
+            "status": "reduced",
             "note": "Pool line ~81% reduction."
           }
         ]
@@ -3823,48 +3953,56 @@
             "title": "Superintendent of Parks",
             "count": 1,
             "fy27": 112543,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Superintendent of Recreation (Assistant Department Head #2)",
             "count": 1,
             "fy27": 89600,
+            "status": "continuing",
             "note": "Article 20 of 2026 ATM warrant reclassifies this title on the Administrative Pay Scale."
           },
           {
             "title": "Park Maintenance Groundskeeper",
             "count": 11,
             "fy27": 185828,
+            "status": "reduced",
             "note": "Pool reduced ~17%; consistent with the 'Cut Groundskeeper' narrative (one of several positions on the line) via PT-hour reductions rather than a clean elimination."
           },
           {
             "title": "Field Craftsman Mechanic",
             "count": 1,
             "fy27": 61767,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Park Turf Specialist",
             "count": 1,
             "fy27": 73767,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Working Foreman, Building & Grounds",
             "count": 1,
             "fy27": 68635,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Seasonal Beach Supervisor",
             "count": 1,
             "fy27": 8972,
+            "status": "continuing",
             "note": null
           },
           {
             "title": "Seasonal Grounds Caretaker",
             "count": 1,
             "fy27": 72154,
+            "status": "continuing",
             "note": null
           }
         ]
