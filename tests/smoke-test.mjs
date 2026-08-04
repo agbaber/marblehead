@@ -36,9 +36,9 @@ async function testHomepageLoads(page) {
   }
 
   const tiles = await page.$$('.home-tile');
-  tiles.length === 15
-    ? ok('15 tiles on homepage')
-    : fail('Homepage tiles', `expected 15 .home-tile, got ${tiles.length}`);
+  tiles.length === 16
+    ? ok('16 tiles on homepage')
+    : fail('Homepage tiles', `expected 16 .home-tile, got ${tiles.length}`);
 
   const sectionTiles = await page.$$('.home-tiles[data-home-row="sections"] .home-tile');
   sectionTiles.length === 7
@@ -46,9 +46,9 @@ async function testHomepageLoads(page) {
     : fail('Section tiles', `expected 7, got ${sectionTiles.length}`);
 
   const notableTiles = await page.$$('.home-tiles[data-home-row="notable"] .home-tile');
-  notableTiles.length === 8
-    ? ok('8 notable-piece tiles')
-    : fail('Notable tiles', `expected 8, got ${notableTiles.length}`);
+  notableTiles.length === 9
+    ? ok('9 notable-piece tiles')
+    : fail('Notable tiles', `expected 9, got ${notableTiles.length}`);
 
   const divider = await page.$('.home-divider');
   divider ? ok('Notable-pieces divider present') : fail('Divider', '.home-divider missing');
