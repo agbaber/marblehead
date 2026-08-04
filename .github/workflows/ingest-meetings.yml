@@ -64,7 +64,10 @@ jobs:
 
       - name: Install yt-dlp
         run: |
-          pip install --user yt-dlp
+          # curl_cffi gives vimeo_embed_fetch.py a browser TLS fingerprint;
+          # player.vimeo.com 401s non-browser clients. Pinned to yt-dlp's
+          # supported range (0.10-0.15) so yt-dlp can also use it if needed.
+          pip install --user yt-dlp 'curl_cffi>=0.10,<0.16'
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Install Node deps

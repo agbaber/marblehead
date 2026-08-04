@@ -23,6 +23,8 @@ import { buildSlug, renderTranscript } from './lib/render_transcript.mjs';
 import { vttToProse } from './lib/vtt_to_prose.mjs';
 
 const YT_DLP = process.env.YT_DLP ?? `${process.env.HOME}/.local/bin/yt-dlp`;
+const PYTHON = process.env.PYTHON ?? 'python3';
+const VIMEO_FETCH = new URL('./vimeo_embed_fetch.py', import.meta.url).pathname;
 const TRANSCRIPTS_DIR = '_transcripts';
 const CACHE_DIR = '/tmp/vtt-cache';
 const VIMEO_INDEX = 'data/vimeo_meetings.json';
@@ -46,24 +48,40 @@ function ytdlpFailureHint(res) {
   return line ? line.trim().slice(0, 200) : null;
 }
 
+// Fetch the en-x-autogen VTT and duration for a Vimeo meeting via the embed
+// player config. yt-dlp's Vimeo extractor can no longer do this: since ~July
+// 2026 Vimeo returns HTTP 401 on the anonymous OAuth token endpoint it relies
+// on, so it reports "no caption track" for every MHTV video. The captions are
+// still public through player.vimeo.com; vimeo_embed_fetch.py pulls them.
+// Returns { vttPath, duration } — vttPath is null when no caption track exists.
 function downloadVimeoVtt(vimeoId) {
   const cachePath = join(CACHE_DIR, `vimeo-${vimeoId}.en-x-autogen.vtt`);
+  const durationPath = join(CACHE_DIR, `vimeo-${vimeoId}.duration`);
   if (existsSync(cachePath)) {
     console.error(`  - cache hit: ${cachePath}`);
-    return cachePath;
+    const cachedDuration = existsSync(durationPath)
+      ? Number(readFileSync(durationPath, 'utf8').trim()) || 0
+      : 0;
+    return { vttPath: cachePath, duration: cachedDuration };
   }
-  const res = spawnSync(YT_DLP, [
-    '--write-subs',
-    '--sub-langs', 'en-x-autogen',
-    '--skip-download',
-    '--sub-format', 'vtt',
-    '-o', join(CACHE_DIR, `vimeo-${vimeoId}.%(ext)s`),
-    `https://vimeo.com/${vimeoId}`,
-  ], { encoding: 'utf8' });
-  if (existsSync(cachePath)) return cachePath;
-  const hint = ytdlpFailureHint(res);
-  if (hint) console.error(`  - yt-dlp: ${hint}`);
-  return null;
+  const res = spawnSync(PYTHON, [VIMEO_FETCH, String(vimeoId), '--out', cachePath], {
+    encoding: 'utf8',
+  });
+  if (existsSync(cachePath)) {
+    let duration = 0;
+    try {
+      const meta = JSON.parse((res.stdout ?? '').trim().split('\n').pop() || '{}');
+      duration = Number(meta.duration) || 0;
+    } catch { /* stdout not JSON; leave duration 0 */ }
+    if (duration > 0) writeFileSync(durationPath, String(duration));
+    return { vttPath: cachePath, duration };
+  }
+  // The helper prints a JSON reason on stdout ({"ok":false,"error":...}); its
+  // curl_cffi transport errors land on stderr. Surface whichever explains why.
+  const reason = ((res.stdout ?? '') + (res.stderr ?? ''))
+    .split('\n').map(l => l.trim()).filter(Boolean).pop();
+  if (reason) console.error(`  - vimeo_embed_fetch: ${reason}`);
+  return { vttPath: null, duration: 0 };
 }
 
 function downloadYouTubeVtt(youtubeId) {
@@ -93,16 +111,6 @@ function downloadYouTubeVtt(youtubeId) {
   const hint = ytdlpFailureHint(res);
   if (hint) console.error(`  - yt-dlp: ${hint}`);
   return null;
-}
-
-function getVimeoDurationSeconds(vimeoId) {
-  const res = spawnSync(YT_DLP, [
-    '--print', '%(duration)s',
-    '--skip-download',
-    `https://vimeo.com/${vimeoId}`,
-  ], { encoding: 'utf8' });
-  const n = Number(res.stdout.trim());
-  return Number.isFinite(n) ? n : 0;
 }
 
 function loadIndex(path) {
@@ -152,10 +160,9 @@ function processMeeting(m) {
 
   let vttPath, videoUrl, vidId, duration, source;
   if (m.source === 'vimeo') {
-    vttPath = downloadVimeoVtt(m.vimeo_id);
+    ({ vttPath, duration } = downloadVimeoVtt(m.vimeo_id));
     videoUrl = `https://vimeo.com/${m.vimeo_id}`;
     vidId = m.vimeo_id;
-    duration = getVimeoDurationSeconds(m.vimeo_id);
     source = 'vimeo-auto';
   } else {
     vttPath = downloadYouTubeVtt(m.youtube_id);
