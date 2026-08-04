@@ -354,6 +354,16 @@ Caveats per the underlying CSV's `notes` column: appropriated values for FY15&nd
 - ["Marblehead loses its first sustainability coordinator"](https://itemlive.com/2026/03/12/marblehead-loses-its-first-sustainability-coordinator/) (Itemlive)
 - ["Marblehead library at risk of closure amid $7 million budget deficit"](https://www.bostonglobe.com/2026/03/17/metro/marblehead-budget-deficit-risks-library-closure/) (Boston Globe)
 
+## Roads / DPW (roads.html)
+- Chapter 90 state aid time series: `data/roads/chapter90_apportionment_MHD.csv` (MassDOT Chapter 90 apportionment, Marblehead row, FY2010&ndash;FY2027; FY2020&ndash;FY2022 not sourced)
+- Road ownership by centerline miles: `data/roads/road_ownership_2024.csv` (2024 MassDOT Road Inventory Year-End Report, Table 5, Marblehead municipality #168: state-maintained 0.00, town-accepted 68.99, unaccepted 11.24)
+- Complete Streets Prioritization Plan (2019): `data/town_docs/Complete-Streets-Prioritization-Plan-2019.pdf` (extracted text at `.txt`). Complete Streets Funding Program Project Prioritization Plan, dated 4/19/2019, prepared by Rebecca Curran Cutting / Town Planner, MassDOT District 4. Ranked list of 28 safety/ADA/sidewalk/bike projects with cost estimates. This is a safety and accessibility prioritization, NOT a pavement-condition ranking.
+- Pavement condition grading (2016): `data/town_docs/annual_reports/Annual-Report-2016.txt`, DPW/Engineering section &ndash; BETA Group Inc. hired to "evaluate and grade the public streets in town" for a long-term paving program; report also notes new pavement management software.
+- Pavement Management Program contract (2021): `data/minutes/select_board/2021-08-25.txt` &ndash; contract awarded to Environmental Partners for $29,500.00. The resulting **Pavement Management Plan itself is NOT public** (town-wide PCI and per-street scores would require a public-records request to the Town Engineer / DPW).
+- DPW paving/coordination and funding (2025): `data/town_docs/annual_reports/Annual-Report-2025.txt`, DPW "Message from the Director" &ndash; Master Transportation Plan in development, quarterly coordination with Water and Sewer Commission and National Grid "in conjunction with the Town's pavement management plan"; after the 2025 override failed, a one-time Street Opening Revolving Fund transfer funded FY26 road work (Section 116), called "not sustainable."
+- Street and utility sequencing example (2025): `data/minutes/select_board/2025-09-10.txt` &ndash; September 2025 Street and Utility Project Update: full-depth reclamation paving of West, Mystic, and Florence Streets alongside water and gas utility work elsewhere.
+- Town roads voter guide (advocacy, secondary): `data/town_docs/Marblehead-Roads-Information-Guide.txt` &ndash; Article 11 program, seven-step "how each road is fixed" sequence, three real-world constraints, the ~$3M/yr figure (town's own estimate), and the Pavement Management System 0-to-100 mention.
+
 ## PERAC Pension Funded Ratios (peer comparison)
 
 `data/perac_funded_ratios_peers.csv` &ndash; pension funded ratios for Marblehead and
