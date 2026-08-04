@@ -1,0 +1,96 @@
+---
+layout: default
+title: "Sentence-case headline goes here"
+body_class: feature-article
+og_title: "Sentence-case headline goes here"
+og_description: "One-sentence summary for social cards. No em-dashes."
+og_type: article
+---
+{% comment %}
+  FEATURE ARTICLE SKELETON  (docs/templates/ is excluded from the Jekyll build)
+
+  Copy this file to the repo root as <your-slug>.html, then replace the copy.
+  Do NOT paste any <style> block on the page: setting `body_class: feature-article`
+  above makes head.html load assets/feature-article.css + assets/feature-article.js.
+
+  See STYLE_GUIDE.md -> "Feature article" for the full block reference.
+  Editorial rules still apply: sentence-case headline, no em-dashes in body copy,
+  every fact traced to a primary source in the endmatter.
+{% endcomment %}
+
+{% include nav.html %}
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <figure>
+    <!-- Public-domain / CC0 image. onerror hides the figure if the source 404s. -->
+    <img src="IMAGE_URL" alt="Descriptive alt text"
+         onerror="this.closest('figure').style.opacity=0;">
+  </figure>
+  <div class="hero-inner">
+    <p class="kicker">Section label &middot; a short orienting phrase</p>
+    <h1>Your headline with one <em>accent</em> word</h1>
+    <p class="dek">A one- or two-sentence deck that sets up the story.</p>
+  </div>
+</header>
+
+<!-- ============ ARTICLE ============ -->
+<article>
+
+  <p class="lede"><span class="drop">F</span>irst paragraph. The drop-cap letter
+  is just the first character wrapped in a span. Set the scene here.</p>
+
+  <section class="chapter reveal">
+    <span class="dot"></span>
+    <p class="era">DATE RANGE <span>Chapter label</span></p>
+    <h2>Chapter headline</h2>
+    <p>Body paragraph. Link out with <a href="/some-page/">plain links</a>.</p>
+    <p>Another paragraph.</p>
+  </section>
+
+  <div class="pull reveal">
+    <q>"A memorable quote that earns the space."</q>
+    <cite>Who said it, and when</cite>
+  </div>
+
+  <section class="chapter reveal">
+    <span class="dot"></span>
+    <p class="era">DATE RANGE <span>Chapter label</span></p>
+    <h2>Next chapter</h2>
+    <p>Body paragraph.</p>
+    <figure class="plate">
+      <img src="IMAGE_URL" alt="Descriptive alt text" loading="lazy"
+           onerror="this.closest('figure').style.display='none';">
+      <figcaption><b>Caption lead.</b> Source and licensing note.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Optional image grids: <div class="portraits reveal"> (2-up) or
+       <div class="seats reveal"> (2x2). Each holds <figure><img><figcaption>. -->
+
+</article>
+
+<!-- ============ CLOSER ============ -->
+<section class="closer reveal">
+  <div class="inner">
+    <p class="era">TODAY <span>Where it stands now</span></p>
+    <h2>Closing headline</h2>
+    <p>Bring the story to the present. <em>A final italic accent line can land here.</em></p>
+  </div>
+</section>
+
+<!-- ============ ENDMATTER ============ -->
+<section class="endmatter">
+  <div class="inner">
+    <h3>Images</h3>
+    <ul>
+      <li><b>Hero image.</b> Source. <span class="pd">Public domain</span></li>
+    </ul>
+    <h3>Sources</h3>
+    <ul>
+      <li><b>Primary source.</b> Document, page, year.</li>
+    </ul>
+  </div>
+</section>
+
+{% include footer.html %}

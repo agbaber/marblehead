@@ -17,8 +17,58 @@ One shared stylesheet (`assets/site.css`) with CSS custom properties. All pages 
 | **Index** | `.page--home` on wrapper | `--chart-max` (880px) | `index.html` |
 | **Explainer** | (none) | `--page-max` (720px) | `what-is-the-override.html`, `no-override-budget.html` |
 | **Chart** | `chart-page` | `--chart-max` (880px) | All files in `charts/` |
+| **Feature article** | `feature-article` | `--fa-maxw` (720px) | `town-history.html` |
 
 The home page uses the wider `--chart-max` container to accommodate a 2-column question-card grid on desktop (&ge;720px). Below that breakpoint the cards stack single-column. A lone `.question` in a `.question-list` spans both grid columns via `:only-child`, so sections with a single card don't leave an empty right column.
+
+### Feature article (magazine long-read)
+
+The **feature-article** format is the site's "magazine feature" long-read
+treatment &ndash; the one used by `town-history.html` ("The town that
+argued itself into existence"). Reach for it when a topic is a *narrative*
+(history, a multi-act story, a person or place over time) rather than a
+data page or explainer. It is deliberately more visual than the plain
+`page` layout: a photo hero, big display type, pull quotes, image plates,
+and a scroll-reveal.
+
+**To use it, set two things in the front matter and write the semantic
+HTML below.** The stylesheet and reveal script load automatically:
+
+```yaml
+---
+layout: default
+title: "Your sentence-case headline"
+body_class: feature-article
+og_type: article
+---
+```
+
+Setting `body_class: feature-article` makes `head.html` pull in
+`assets/feature-article.css` and `assets/feature-article.js` &ndash; do
+**not** paste the CSS inline on the page (the whole point of the extract
+is that there is one copy).
+
+**Building blocks** (all class names are scoped under
+`body.feature-article`, and all colors come from site tokens so
+light/dark theme work automatically):
+
+| Block | Markup | What it is |
+|-------|--------|-----------|
+| Hero | `<header class="hero"><figure><img ...></figure><div class="hero-inner"><p class="kicker">&hellip;</p><h1>&hellip; <em>accent</em> &hellip;</h1><p class="dek">&hellip;</p></div></header>` | Full-bleed dark photo hero. `h1 em` is the gold accent word. |
+| Lede | `<p class="lede"><span class="drop">M</span>&hellip;</p>` inside `<article>` | Opening paragraph with a drop cap. |
+| Chapter | `<section class="chapter reveal"><span class="dot"></span><p class="era">1629&ndash;1649 <span>label</span></p><h2>&hellip;</h2><p>&hellip;</p></section>` | A scene on the left-rail timeline. |
+| Pull quote | `<div class="pull reveal"><q>&hellip;</q><cite>&hellip;</cite></div>` | Large italic quote between chapters. |
+| Image plate | `<figure class="plate"><img ...><figcaption><b>Label.</b> &hellip;</figcaption></figure>` | Full-width figure. |
+| Image grids | `<div class="portraits reveal">` (2-up) or `<div class="seats reveal">` (2&times;2) | Grids of captioned figures. |
+| Closer | `<section class="closer reveal"><div class="inner">&hellip;</div></section>` | Dark full-bleed closing section that echoes the hero. |
+| Endmatter | `<section class="endmatter"><div class="inner"><h3>Sources</h3><ul>&hellip;</ul></div></section>` | Image credits + sources. |
+| Reveal | add `reveal` to any block | Fades the block up as it scrolls into view (respects `prefers-reduced-motion`). |
+
+A ready-to-fill skeleton lives at
+`docs/templates/feature-article.html` (excluded from the build). Copy it,
+keep the class structure, replace the copy. Editorial rules still apply:
+sentence-case headline, no em-dashes in body copy, every fact traced to a
+primary source in the endmatter.
 
 ### Title casing convention
 
