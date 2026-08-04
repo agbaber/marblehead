@@ -35,6 +35,7 @@ og_image: /assets/og/roads.png
   <a href="#fixed">How a road gets fixed</a>
   <a href="#pay">Who pays for it</a>
   <a href="#reasonable">Is $3 million a lot?</a>
+  <a href="#why-costly">Why roads here are expensive</a>
   <a href="#history">How we got here</a>
   <a href="#unknown">What we can't see yet</a>
 </nav>
@@ -96,58 +97,78 @@ og_image: /assets/og/roads.png
 
 <details class="deep-dive">
   <summary>
-    <h3 id="pay-detail">Go deeper: the funding gap, year by year</h3>
-    <p class="deep-dive-teaser">Chapter 90 aid against the town's stated need, plus Article 11 and the override.</p>
+    <h3 id="pay-detail">Go deeper: road funding by year, state and local</h3>
+    <p class="deep-dive-teaser">Chapter 90 state aid, the Article 11 local program stacked on top, and the override.</p>
   </summary>
   <div class="deep-dive-body">
-    <p>For most of the last quarter century, Chapter 90 aid was effectively the entire road budget. It held between roughly $445,000 and $457,000 a year from FY2012 through FY2025, close to the $449,000 the town cites.<sup class="cite" data-href="data/roads/chapter90_apportionment_MHD.csv" data-source="MassDOT Chapter 90 apportionment, Marblehead, FY2010-FY2027; compiled in data/roads/chapter90_apportionment_MHD.csv. FY2020-FY2022 not shown (no apportionment figure sourced)."></sup> The town's own guide puts the amount it needs at roughly $3 million a year, an estimate of what it can effectively spend rather than an independent needs assessment.<sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead Roads Information Guide (town voter's guide). The ~$3M/yr figure is the town's own estimate of what it can effectively spend, not an independent needs assessment."></sup> The state figure rose sharply in the last two years, to $858,599 in FY2026 and $678,732 in FY2027, from a statewide Chapter 90 program increase plus a Fair Share supplement. Even those higher amounts sit far below the $3 million the town cites.<sup class="cite" data-href="data/roads/chapter90_apportionment_MHD.csv" data-source="MassDOT Chapter 90 apportionment, Marblehead. FY2026 $858,599 = $300M program $677,383 plus $80M Fair Share supplemental $181,215. FY2027 $678,732 = $200M standard formula $450,392 plus $100M mileage-only $228,340. Compiled in data/roads/chapter90_apportionment_MHD.csv."></sup></p>
+    <p>For most of the last quarter century, Chapter 90 aid was effectively the entire road budget. It held between roughly $445,000 and $457,000 a year from FY2012 through FY2025, close to the $449,000 the town cites.<sup class="cite" data-href="data/roads/chapter90_apportionment_MHD.csv" data-source="MassDOT Chapter 90 apportionment, Marblehead, FY2010-FY2027; compiled in data/roads/chapter90_apportionment_MHD.csv. FY2020-FY2022 not shown (no apportionment figure sourced)."></sup> The town's own guide puts the amount it needs at roughly $3 million a year, an estimate of what it can effectively spend rather than an independent needs assessment.<sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead Roads Information Guide (town voter's guide). The ~$3M/yr figure is the town's own estimate of what it can effectively spend, not an independent needs assessment."></sup> The state figure rose sharply in the last two years, to $858,599 in FY2026 and $678,732 in FY2027, from a statewide Chapter 90 program increase plus a Fair Share supplement. On its own, Chapter 90 sits far below the $3 million the town cites.<sup class="cite" data-href="data/roads/chapter90_apportionment_MHD.csv" data-source="MassDOT Chapter 90 apportionment, Marblehead. FY2026 $858,599 = $300M program $677,383 plus $80M Fair Share supplemental $181,215. FY2027 $678,732 = $200M standard formula $450,392 plus $100M mileage-only $228,340. Compiled in data/roads/chapter90_apportionment_MHD.csv."></sup> What changed the picture is Article 11: starting in FY2023 the chart stacks the town's own road money on top of Chapter 90, which is what brings combined funding up toward the $3 million line.</p>
 
     <div class="chart-wrapper">
-      <svg class="chart" viewBox="0 0 800 360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Bar chart of Marblehead's Chapter 90 state road aid by fiscal year. Aid held near $350,000 to $460,000 from FY2010 through FY2025, with a one-year spike to $671,040 in FY2015, then rose to $858,599 in FY2026 and $678,732 in FY2027. Every bar sits far below a dashed line at $3 million a year, the amount the town says it needs. FY2020 through FY2022 have no sourced figure and are shown as a gap.">
-        <!-- Coordinate system. Plot area x 62..782, baseline (value 0) y=300, top of scale ($3M) y=45.
-             Y scale: y = 300 - value * (255 / 3,000,000) = 300 - value * 0.000085; bar height = value * 0.000085.
+      <svg class="chart" viewBox="0 0 800 360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Stacked bar chart of Marblehead road funding by fiscal year. From FY2010 to FY2019 funding was almost entirely Chapter 90 state aid, about $350,000 to $460,000 a year, far below the town's stated $3 million target. Starting FY2023 the Article 11 local program, about $2.5 million a year (its authorization averaged over five years), is stacked on top of Chapter 90, bringing combined funding to about $2.9 million in FY2023 through FY2025 and about $3.2 to $3.4 million in FY2026 and FY2027, at or above the $3 million line. FY2020 to FY2022 are shown as a gap.">
+        <!-- Coordinate system. Plot area x 62..782, baseline (value 0) y=300.
+             Y scale: y = 300 - value * 0.000065; bar height = value * 0.000065.
+             Ticks: $1M y=235, $2M y=170, $3M y=105. Reference line ($3M) at y=105.
              X: 16 slots of 45px from x=62; slot i left = 62 + 45*i; bar width 28, left = slot + 8.5; center = slot + 22.5.
-             Slot 10 (FY2020-2022) is left blank on purpose: no apportionment figure sourced. -->
+             Slot 10 (FY2020-2022) blank: no Chapter 90 figure sourced.
+             FY2023-FY2027 (slots 11-15): Chapter 90 (s-marblehead) base with Article 11
+             (s-tier-2, $2,495,000 = $12,475,000 / 5 yr) stacked on top. -->
 
         <!-- Y grid, ticks and labels: $0, $1M, $2M, $3M -->
         <line class="axis-base" x1="62" y1="300" x2="782" y2="300"/>
-        <line class="tick" x1="56" y1="215" x2="62" y2="215"/>
-        <text class="tick-label" x="52" y="219" text-anchor="end">$1M</text>
-        <line class="tick" x1="56" y1="130" x2="62" y2="130"/>
-        <text class="tick-label" x="52" y="134" text-anchor="end">$2M</text>
+        <line class="tick" x1="56" y1="235" x2="62" y2="235"/>
+        <text class="tick-label" x="52" y="239" text-anchor="end">$1M</text>
+        <line class="tick" x1="56" y1="170" x2="62" y2="170"/>
+        <text class="tick-label" x="52" y="174" text-anchor="end">$2M</text>
+        <line class="tick" x1="56" y1="105" x2="62" y2="105"/>
+        <text class="tick-label" x="52" y="109" text-anchor="end">$3M</text>
         <text class="tick-label" x="52" y="304" text-anchor="end">$0</text>
 
-        <!-- Town's stated need: dashed neutral reference line at $3,000,000 (y=45) -->
-        <line class="data-line data-line--dashed s-neutral" x1="62" y1="45" x2="782" y2="45"/>
-        <text class="annotation" x="782" y="39" text-anchor="end">Town's stated need (~$3M/yr)</text>
+        <!-- Town's stated need: dashed neutral reference line at $3,000,000 (y=105) -->
+        <line class="data-line data-line--dashed s-neutral" x1="62" y1="105" x2="782" y2="105"/>
+        <text class="annotation" x="66" y="99" text-anchor="start">Town's stated need (~$3M/yr)</text>
 
-        <!-- Bars: Chapter 90 apportionment, one per available fiscal year -->
+        <!-- Legend -->
+        <rect class="data-bar s-tier-2" x="360" y="52" width="13" height="13"/>
+        <text class="annotation" x="379" y="62" text-anchor="start">Article 11 (local, 5-yr average)</text>
+        <rect class="data-bar s-marblehead" x="360" y="72" width="13" height="13"/>
+        <text class="annotation" x="379" y="82" text-anchor="start">Chapter 90 (state aid, actual)</text>
+
+        <!-- Chapter 90 apportionment (actual), one bar per available fiscal year -->
         <g class="s-marblehead">
-          <rect class="data-bar" x="70.5"  y="270.45" width="28" height="29.55"/>
-          <rect class="data-bar" x="115.5" y="269.51" width="28" height="30.49"/>
-          <rect class="data-bar" x="160.5" y="261.34" width="28" height="38.66"/>
-          <rect class="data-bar" x="205.5" y="261.82" width="28" height="38.18"/>
-          <rect class="data-bar" x="250.5" y="262.02" width="28" height="37.98"/>
-          <rect class="data-bar" x="295.5" y="242.96" width="28" height="57.04"/>
-          <rect class="data-bar" x="340.5" y="261.90" width="28" height="38.10"/>
-          <rect class="data-bar" x="385.5" y="261.93" width="28" height="38.07"/>
-          <rect class="data-bar" x="430.5" y="261.27" width="28" height="38.73"/>
-          <rect class="data-bar" x="475.5" y="261.11" width="28" height="38.89"/>
-          <rect class="data-bar" x="565.5" y="262.16" width="28" height="37.84"/>
-          <rect class="data-bar" x="610.5" y="261.89" width="28" height="38.11"/>
-          <rect class="data-bar" x="655.5" y="261.93" width="28" height="38.07"/>
-          <rect class="data-bar" x="700.5" y="227.02" width="28" height="72.98"/>
-          <rect class="data-bar" x="745.5" y="242.31" width="28" height="57.69"/>
+          <rect class="data-bar" x="70.5"  y="277.40" width="28" height="22.60"/>
+          <rect class="data-bar" x="115.5" y="276.69" width="28" height="23.31"/>
+          <rect class="data-bar" x="160.5" y="270.44" width="28" height="29.56"/>
+          <rect class="data-bar" x="205.5" y="270.80" width="28" height="29.20"/>
+          <rect class="data-bar" x="250.5" y="270.95" width="28" height="29.05"/>
+          <rect class="data-bar" x="295.5" y="256.38" width="28" height="43.62"/>
+          <rect class="data-bar" x="340.5" y="270.86" width="28" height="29.14"/>
+          <rect class="data-bar" x="385.5" y="270.89" width="28" height="29.11"/>
+          <rect class="data-bar" x="430.5" y="270.39" width="28" height="29.61"/>
+          <rect class="data-bar" x="475.5" y="270.26" width="28" height="29.74"/>
+          <rect class="data-bar" x="565.5" y="271.06" width="28" height="28.94"/>
+          <rect class="data-bar" x="610.5" y="270.86" width="28" height="29.14"/>
+          <rect class="data-bar" x="655.5" y="270.89" width="28" height="29.11"/>
+          <rect class="data-bar" x="700.5" y="244.19" width="28" height="55.81"/>
+          <rect class="data-bar" x="745.5" y="255.88" width="28" height="44.12"/>
         </g>
 
-        <!-- Value labels on the notable bars -->
-        <text class="value-label" x="84.5"  y="264" text-anchor="middle">$348K</text>
-        <text class="value-label" x="309.5" y="237" text-anchor="middle">$671K</text>
-        <text class="value-label" x="714.5" y="221" text-anchor="middle">$859K</text>
-        <text class="value-label" x="759.5" y="236" text-anchor="middle">$679K</text>
+        <!-- Article 11 local capital (~$2.5M/yr = $12.475M / 5 yr), stacked on FY2023-FY2027 -->
+        <g class="s-tier-2">
+          <rect class="data-bar" x="565.5" y="108.88" width="28" height="162.18"/>
+          <rect class="data-bar" x="610.5" y="108.68" width="28" height="162.18"/>
+          <rect class="data-bar" x="655.5" y="108.71" width="28" height="162.18"/>
+          <rect class="data-bar" x="700.5" y="82.01"  width="28" height="162.18"/>
+          <rect class="data-bar" x="745.5" y="93.70"  width="28" height="162.18"/>
+        </g>
 
-        <!-- Base-era annotation over the flat run of bars -->
-        <text class="annotation" x="300" y="200" text-anchor="middle">About $445K to $457K per year, FY2012 to FY2025</text>
+        <!-- Value labels: Chapter-90 era amounts, and combined totals for the stacked years -->
+        <text class="value-label" x="84.5"  y="271" text-anchor="middle">$348K</text>
+        <text class="value-label" x="309.5" y="250" text-anchor="middle">$671K</text>
+        <text class="value-label" x="579.5" y="103" text-anchor="middle">~$2.9M</text>
+        <text class="value-label" x="714.5" y="76"  text-anchor="middle">~$3.4M</text>
+
+        <!-- Chapter-90-era annotation over the flat early run -->
+        <text class="annotation" x="240" y="222" text-anchor="middle">Chapter 90 alone: about $450K per year</text>
 
         <!-- Gap slot: FY2020-FY2022 not sourced -->
         <text class="annotation" transform="rotate(-90 534.5 250)" x="534.5" y="250" text-anchor="middle">FY2020-FY2022 not sourced</text>
@@ -171,9 +192,9 @@ og_image: /assets/og/roads.png
       </svg>
     </div>
 
-    <p class="chart-note">The dashed line is the town's own estimate of roughly $3 million a year, not an independent needs assessment. FY2020 through FY2022 are omitted because no Chapter 90 apportionment figure for those years was sourced.</p>
+    <p class="chart-note">Chapter 90 (navy) is actual apportionment. Article 11 (teal) is shown at its five-year average rate ($12,475,000 divided by five); actual borrowing has lagged, with $6.98 million of the $12,475,000 still unissued as of the FY25 audit, so the teal bars reflect the program's planned pace rather than audited annual spending. The dashed line is the town's own roughly $3 million estimate, not an independent needs assessment. FY2020 through FY2022 are omitted because no Chapter 90 figure for those years was sourced.</p>
 
-    <p>"Article 11" is just warrant item number 11 on the 2022 Annual Town Meeting agenda, the item voters took up when they reached it. It authorized $12,475,000 "to pay costs to fund a road and sidewalk repair for the next five (5) years," the appropriation the town describes as Marblehead's first local capital investment for roads and sidewalks.<sup class="cite" data-href="data/town_docs/annual_reports/Annual-Report-2022.txt" data-source="Marblehead Annual Report 2022, which reproduces the 2022 Annual Town Meeting warrant. Article 11 (Capital Improvements), item (a): '$12,475,000 to pay costs to fund a road and sidewalk repair for the next five (5) years, for the payment of all other costs incidental and related thereto including engineering and design.' Voted by paper ballot, Yes 406 No 114, two-thirds vote achieved."></sup><sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead's Roads: What Voters Need to Know (town-authored voter's guide, advocacy). States that in 2022 voters approved Article 11, Marblehead's first-ever local capital investment for roads and sidewalks."></sup> The warrant says five years; the town's own guide calls it a three-year program, a discrepancy the town does not explain.<sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead's Roads: What Voters Need to Know (town-authored voter's guide). The guide describes 'the three-year Capital Improvement Road Program' funded through Article 11, while the 2022 Town Meeting warrant authorizing the $12,475,000 states 'for the next five (5) years.'"></sup> As of the FY25 audited financial statements, $6.98 million of that authorization remained authorized but unissued for roads and sidewalks, the unspent remainder of the $12.475 million, part of $23.78 million in authorized but unissued debt the town had approved but not yet borrowed against.<sup class="cite" data-href="data/SOURCE_LOOKUP.md" data-source="FY25 ACFR page 57, authorized but unissued debt ($23.78M total at 6/30/2025). Roads and sidewalks line: $6.98M. Compiled in data/SOURCE_LOOKUP.md."></sup> The three-year Capital Improvement Road Program funded through Article 11 covers six corridors, with design and engineering underway on Washington, Pleasant, Atlantic, Humphrey, Village, and West Shore Drive.<sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead's Roads: What Voters Need to Know (town-authored voter's guide). The three-year Capital Improvement Road Program is described as fully funded through Article 11, with design and engineering active on Washington, Pleasant, Atlantic, Humphrey, Village, and West Shore Drive."></sup> That is the gap beginning to close, but $6.98 million spread across a multi-year program is still modest against the roughly $3 million a year the town says roads need.</p>
+    <p>"Article 11" is just warrant item number 11 on the 2022 Annual Town Meeting agenda, the item voters took up when they reached it. It authorized $12,475,000 "to pay costs to fund a road and sidewalk repair for the next five (5) years," the appropriation the town describes as Marblehead's first local capital investment for roads and sidewalks.<sup class="cite" data-href="data/town_docs/annual_reports/Annual-Report-2022.txt" data-source="Marblehead Annual Report 2022, which reproduces the 2022 Annual Town Meeting warrant. Article 11 (Capital Improvements), item (a): '$12,475,000 to pay costs to fund a road and sidewalk repair for the next five (5) years, for the payment of all other costs incidental and related thereto including engineering and design.' Voted by paper ballot, Yes 406 No 114, two-thirds vote achieved."></sup><sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead's Roads: What Voters Need to Know (town-authored voter's guide, advocacy). States that in 2022 voters approved Article 11, Marblehead's first-ever local capital investment for roads and sidewalks."></sup> The warrant says five years; the town's own guide calls it a three-year program, a discrepancy the town does not explain.<sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead's Roads: What Voters Need to Know (town-authored voter's guide). The guide describes 'the three-year Capital Improvement Road Program' funded through Article 11, while the 2022 Town Meeting warrant authorizing the $12,475,000 states 'for the next five (5) years.'"></sup> As of the FY25 audited financial statements, $6.98 million of that authorization remained authorized but unissued for roads and sidewalks, the unspent remainder of the $12.475 million, part of $23.78 million in authorized but unissued debt the town had approved but not yet borrowed against.<sup class="cite" data-href="data/SOURCE_LOOKUP.md" data-source="FY25 ACFR page 57, authorized but unissued debt ($23.78M total at 6/30/2025). Roads and sidewalks line: $6.98M. Compiled in data/SOURCE_LOOKUP.md."></sup> The three-year Capital Improvement Road Program funded through Article 11 covers six corridors, with design and engineering underway on Washington, Pleasant, Atlantic, Humphrey, Village, and West Shore Drive.<sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead's Roads: What Voters Need to Know (town-authored voter's guide). The three-year Capital Improvement Road Program is described as fully funded through Article 11, with design and engineering active on Washington, Pleasant, Atlantic, Humphrey, Village, and West Shore Drive."></sup> On paper this brings annual road funding close to the roughly $3 million the town cites, as the chart above shows, though the money is being borrowed more slowly than the five-year schedule implies: $6.98 million of the $12.475 million was still unissued as of the FY25 audit.</p>
 
     <p>A common shorthand holds that roads were left out of the 2026 <a href="/2026-override/">Invest Marblehead override</a>. The town's guide draws a narrower distinction. It says the override does not include road capital funds, and that this is intentional, because the three-year Capital Improvement Road Program is already fully funded through Article 11, with design and engineering underway on the six named corridors.<sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead's Roads: What Voters Need to Know (town-authored voter's guide, advocacy), 'Why No Road Funding In The Override?': 'The Invest Marblehead Override does not include road capital funds, and that is intentional. The three-year Capital Improvement Road Program is already fully funded through Article 11.' Corridors underway: Washington, Pleasant, Atlantic, Humphrey, Village, and West Shore Drive."></sup> The same guide says the override does fund something the Capital Plan does not: repairs to roadway sections not scheduled in the next five or more years, filling gaps beyond the current plan.<sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead's Roads: What Voters Need to Know (town-authored voter's guide, advocacy), 'What The Override Does Include': 'The Invest Marblehead Override provides funding to address roadway sections needing repairs not scheduled in the next five or more years, filling gaps beyond the current Capital Plan.'"></sup> Voters approved the override in June 2026.</p>
   </div>
@@ -186,21 +207,24 @@ og_image: /assets/og/roads.png
 
 <details class="deep-dive">
   <summary>
-    <h3 id="reasonable-detail">Go deeper: what $3 million buys, and why New England roads cost more</h3>
-    <p class="deep-dive-teaser">Miles per year at Massachusetts unit costs, the deferral trap, and the climate drivers behind higher New England paving bills.</p>
+    <h3 id="reasonable-detail">Go deeper: what $3 million buys</h3>
+    <p class="deep-dive-teaser">Miles per year at Massachusetts unit costs, and the deferral trap that makes waiting expensive.</p>
   </summary>
   <div class="deep-dive-body">
     <p>At Massachusetts unit costs, $3 million a year covers a meaningful stretch of road. A mill-and-overlay resurfacing runs about $190,000 a mile, so $3 million is roughly 15 miles a year; a full-depth reclamation, the tier used on badly deteriorated roads, runs about $634,000 a mile, or roughly 5 miles a year. Spread over Marblehead's roughly 69 to 80 town miles, that sustains something like a 15-to-20-year resurfacing cycle, faster if the work is mostly overlay, slower if it is heavy reclamation.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'What $3M/yr buys: MA treatment unit costs (Randolph, MA PMP, BETA Group, 2020)': mill & overlay ~$190,000/mi, full-depth reclamation ~$634,000/mi (reclamation $40/SY row); at ~$190K/mi ~15 mi/yr, at ~$634K/mi ~4.7 mi/yr; over ~69-80 town miles sustains roughly a 15-20 year resurfacing cycle. Figures are 2020 dollars; per-mile is derived at ~15,840 SY/mile."></sup> The treatments themselves span a wide range, from crack sealing at about $0.50 a square yard up to full reconstruction near $50 a square yard, roughly a hundredfold spread from the cheapest preventive work to the most expensive rebuild.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md): crack seal $0.50/SY up to full reconstruction $50/SY (Randolph, MA PMP, BETA Group, Jan 2020, 2020 dollars); corroborated by Amherst, MA town engineer 2026 at ~$1/SY to ~$100/SY, a roughly 100x cheap-to-expensive spread."></sup></p>
     <p>That spread is why timing matters. Every $1 spent to keep a road in good condition avoids an estimated $6 to $14 needed later to rebuild it once it has badly deteriorated, because a road loses its first 40 percent of quality slowly, over roughly three-quarters of its life, then falls apart quickly after that.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'Pavement preservation / deferral cost curve': $1 to keep a road in good condition avoids ~$6 to $14 to rebuild it later (AASHTO, via Smart Growth America & Taxpayers for Common Sense, Repair Priorities 2014; conservative FHWA floor 'up to $6', GAO-13-32R, Nov 2012). Deterioration curve: ~40% of quality lost over first ~75% of life, next ~40% in ~12% (APWA Pothole Fact Sheet, 2015)."></sup> That is the mechanism behind the town's own account that surface patches had masked deeper structural failures.<sup class="cite" data-href="data/town_docs/Marblehead-Roads-Information-Guide.txt" data-source="Marblehead's Roads: What Voters Need to Know (town-authored voter's guide, advocacy): describes how surface patches masked deeper structural failures and that deferring maintenance makes repairs more expensive."></sup></p>
-    <p>New England roads carry cost drivers that milder regions do not:</p>
-    <ul class="tldr">
-      <li>Freeze-thaw and frost heave: water freezes in the roadbed, heaves and cracks the pavement, and in the spring thaw roads lose roughly 45 to 50 percent of their bearing capacity, which is why towns post load limits.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'New England / coastal cost drivers': freeze-thaw / frost heave, roads lose ~45-50% of bearing capacity in spring thaw (why towns post load limits). Source cited there: Pavement Interactive, Frost Action. Flagged well-sourced."></sup></li>
-      <li>Road salt and deicing: winter maintenance is about 20 percent of state transportation maintenance budgets nationally, and deicing chlorides accelerate pavement deterioration.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'New England / coastal cost drivers': winter maintenance is ~20% of state DOT maintenance budgets; deicing chlorides accelerate pavement and rebar deterioration. Source cited there: FHWA Road Weather Management. Flagged well-sourced."></sup> Coastal salt air adds further corrosion and moisture exposure.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'New England / coastal cost drivers': coastal salt air, airborne chloride plus moisture corrode embedded steel; flagged mechanism-only, stated qualitatively with no hard number."></sup></li>
-      <li>A short paving season: hot-mix asphalt must compact before it cools, so most work compresses into roughly mid-spring to mid-fall.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'New England / coastal cost drivers': short paving season, hot-mix asphalt is placed hot and must compact before it cools, compressing work into ~mid-spring to mid-fall. Source cited there: Pavement Interactive, Cold Weather Paving. Flagged well-sourced."></sup></li>
-    </ul>
     <p>One caveat on the comparison: national "road maintenance" benchmarks measured per lane-mile capture routine upkeep like patching and sweeping, a different category from Marblehead's capital resurfacing program. That is why another town's capital paving program, Natick's, is the right yardstick rather than the per-lane-mile maintenance figure.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'Category caveat (do not conflate on the page)': national/state road-maintenance per-lane-mile benchmarks measure routine operations and maintenance (patching, sweeping, drainage, striping); Marblehead's ~$3M is a capital resurfacing/reconstruction program, a different category, so the apples-to-apples comparator is another town's capital paving program (Natick)."></sup></p>
   </div>
 </details>
+
+<h2 id="why-costly">Why roads here are expensive to maintain</h2>
+<p>Part of why Marblehead spends more per mile than an inland town is the climate and the coast. New England roads carry cost drivers that milder regions do not:</p>
+<ul class="tldr">
+  <li>Freeze-thaw and frost heave: water freezes in the roadbed, heaves and cracks the pavement, and in the spring thaw roads lose roughly 45 to 50 percent of their bearing capacity, which is why towns post load limits.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'New England / coastal cost drivers': freeze-thaw / frost heave, roads lose ~45-50% of bearing capacity in spring thaw (why towns post load limits). Source cited there: Pavement Interactive, Frost Action. Flagged well-sourced."></sup></li>
+  <li>Road salt and deicing: winter maintenance is about 20 percent of state transportation maintenance budgets nationally, and deicing chlorides accelerate pavement deterioration.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'New England / coastal cost drivers': winter maintenance is ~20% of state DOT maintenance budgets; deicing chlorides accelerate pavement and rebar deterioration. Source cited there: FHWA Road Weather Management. Flagged well-sourced."></sup> Coastal salt air adds further corrosion and moisture exposure.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'New England / coastal cost drivers': coastal salt air, airborne chloride plus moisture corrode embedded steel; flagged mechanism-only, stated qualitatively with no hard number."></sup></li>
+  <li>A short paving season: hot-mix asphalt must be compacted before it cools, so most work compresses into roughly mid-spring to mid-fall.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'New England / coastal cost drivers': short paving season, hot-mix asphalt is placed hot and must compact before it cools, compressing work into ~mid-spring to mid-fall. Source cited there: Pavement Interactive, Cold Weather Paving. Flagged well-sourced."></sup></li>
+</ul>
+<p>These are also why deferring work is costly: every winter a neglected road sits through more freeze-thaw damage, so a street left past its repair point falls apart faster and reaches the expensive reclamation tier sooner.<sup class="cite" data-href="data/roads/road_cost_benchmarks.md" data-source="Road cost benchmarks (data/roads/road_cost_benchmarks.md), 'Pavement preservation / deferral cost curve': deterioration accelerates late in pavement life (APWA curve), and $1 of timely preservation avoids ~$6 to $14 of later reconstruction (AASHTO, Repair Priorities 2014)."></sup></p>
 
 <h2 id="history">How we got here</h2>
 <p>A common assumption is that the town used to pave its own streets and now hires the work out. The record does not support that. Town crews have long done patching and maintenance, while the large repaving jobs have long been outside work paid for with Chapter 90. Pre-2016 annual reports list the streets "resurfaced under the Chapter 90 Program" each year with no contractor named, and describe in-house work as patching potholes, repairing trenches, and street sweeping.<sup class="cite" data-href="data/town_docs/annual_reports/Annual-Report-2006.txt" data-source="Marblehead Annual Report 2006, Department of Public Works, Roads and Sidewalks: 'Under the Chapter 90 Program for which the Town of Marblehead Receives 100% reimbursement from the State, the following streets were resurfaced during the year' (streets listed, no contractor named). In-house work described as 'repairing trenches and patching potholes, etc., street sweeping, trimming of tree roots' funded in the regular DPW budget. The 2016 report follows the same pattern: streets 'resurfaced' under Chapter 90 with no contractor named, in-house work is trench/pothole/sweeping."></sup> What changed is not who swings the hammer; it is how deliberately the town plans and documents the work.</p>
