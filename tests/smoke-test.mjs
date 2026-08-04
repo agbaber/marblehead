@@ -22,26 +22,36 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
 
 async function testHomepageLoads(page) {
   console.log('\n── Homepage ──');
-  const hero = await page.$('.home-hero');
-  hero ? ok('Homepage renders .home-hero') : fail('Homepage', '.home-hero missing');
+  const intro = await page.$('.home-intro');
+  intro ? ok('Homepage renders .home-intro') : fail('Homepage', '.home-intro missing');
 
-  const big = await page.$('.home-big');
-  if (big) {
-    const bigText = (await big.textContent()).trim();
-    bigText.length > 0
-      ? ok(`Hero number visible: ${bigText}`)
-      : fail('Hero number', 'home-big text empty');
+  const h1 = await page.$('.home-intro h1');
+  if (h1) {
+    const h1Text = (await h1.textContent()).trim();
+    h1Text === 'Marblehead Data'
+      ? ok(`Identity H1: "${h1Text}"`)
+      : fail('Identity H1', `expected "Marblehead Data", got "${h1Text}"`);
   } else {
-    fail('Hero number', '.home-big missing');
+    fail('Identity H1', '.home-intro h1 missing');
   }
 
   const tiles = await page.$$('.home-tile');
-  tiles.length === 14
-    ? ok(`14 pillar tiles on homepage (incl. override-tracker, schools-budget, library, legal-fees, departments)`)
-    : fail('Homepage tiles', `expected 14 .home-tile, got ${tiles.length}`);
+  tiles.length === 16
+    ? ok('16 tiles on homepage (incl. departments)')
+    : fail('Homepage tiles', `expected 16 .home-tile, got ${tiles.length}`);
 
-  const deeper = await page.$('.home-deeper');
-  deeper ? ok('Homepage has Checkbook CTA') : fail('Homepage CTA', '.home-deeper missing');
+  const sectionTiles = await page.$$('.home-tiles[data-home-row="sections"] .home-tile');
+  sectionTiles.length === 7
+    ? ok('7 section tiles')
+    : fail('Section tiles', `expected 7, got ${sectionTiles.length}`);
+
+  const notableTiles = await page.$$('.home-tiles[data-home-row="notable"] .home-tile');
+  notableTiles.length === 8
+    ? ok('8 notable-piece tiles')
+    : fail('Notable tiles', `expected 8, got ${notableTiles.length}`);
+
+  const divider = await page.$('.home-divider');
+  divider ? ok('Notable-pieces divider present') : fail('Divider', '.home-divider missing');
 }
 
 async function testCheckbookPageLoads(page) {

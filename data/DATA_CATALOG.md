@@ -26,6 +26,34 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Also available for:** Swampscott, Melrose, Stoneham (separate files)
 - **Confidence:** High. Official state data.
 
+### Parcel Assessments (`parcels.csv`, 8,805 parcels, FY2025)
+- **What it is:** Parcel-level FY2025 assessed values and property
+  characteristics for every Marblehead parcel. A point-in-time snapshot, not a
+  time series, so it is a standalone CSV (not part of `MASTER_DATA.csv`).
+- **Source:** MassGIS Standardized Assessors' Parcels (Level 3), the statewide
+  authoritative assessor extract, via the "Massachusetts Property Tax Parcels"
+  ArcGIS feature service (`TOWN_ID=168`). Pulled 2026-07-16. See
+  [MassGIS Property Tax Parcels](https://www.mass.gov/info-details/massgis-data-property-tax-parcels).
+- **Columns:** loc_id, map_par_id, prop_id, site_addr, city, zip, use_code,
+  zoning, total_val, bldg_val, land_val, other_val, fy, lot_size, lot_units,
+  year_built, style, stories, num_rooms, units, bld_area, res_area, ls_date,
+  ls_price, ls_book, ls_page.
+- **Vintage caveat:** MassGIS publishes the prior fiscal year's certified
+  values, so this snapshot is **FY2025**. The town's live Patriot Properties
+  database runs roughly 20% higher (FY2026 revaluation) on a sample of
+  waterfront parcels, so use `fy` and don't present these as current-year
+  values without noting the vintage.
+- **De-identification:** owner names and mailing addresses (`OWNER1`,
+  `OWN_ADDR`, etc.) are deliberately excluded from this committed CSV. The data
+  is public record, but the bulk owner list is kept out of the public repo; it
+  exists only in the gitignored `data/parcels_raw/parcels_full.csv` (which the
+  community-pulse worker's `scripts/sync_parcel_owners.mjs` consumes to build
+  the `parcel_owners` D1 table for self-serve verification).
+- **Refresh:** `python3 scripts/fetch_massgis_parcels.py`
+- **Confidence:** High. Statewide standardized dataset; `use_code` is the MA DOR
+  state class code (101 = single family). Town-wide total assessed value in this
+  snapshot is $9.30B across 8,805 parcels.
+
 ### Total FTE (24 data points, FY01-FY24)
 - **What it is:** Full-time equivalent employees across all town departments. Part-time employees counted as fractions (e.g., 20 hrs/wk = 0.5 FTE).
 - **Source:** ACFR Statistical Section, "Full-time Equivalent Town Employees by Function"
@@ -226,6 +254,29 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Fetch script:** `scripts/fetch_dese_school_attending_children.py`
 - **Caveats:** SY 2020 missing from source. SY 2007 and SY 2008 have anomalous `total_cnt` values; for non-<abbr class="g" title="Marblehead Public Schools">MPS</abbr> calculations, sum the individual non-`loc_pub` category counts rather than subtracting from `total_cnt`.
 - **Confidence:** High for individual category counts.
+
+### Town Meeting Warrant Articles (348 articles, 7 meeting years)
+- **What it is:** Every article (number and title) in the Annual Town Meeting warrant for meeting years 2016, 2019, 2021, 2022, 2023, 2025, and 2026.
+- **Source:** Finance Committee Reports, which reprint the full warrant article by article. All source PDFs are in the `source-archive-v1` GitHub release; the 2026 list is cross-checkable against the 2026 Annual Town Meeting Warrant PDF in the same release.
+- **File:** `town_meeting_warrant_articles.csv`
+- **Provenance:** each row carries `source_doc`, `source_location`, and `extraction_method` columns.
+- **Caveats:** First-pass extraction. Titles that wrap across two lines in the PDF may be truncated, and a few rows carry artifact titles (for example "-43" from a zoning bylaw section number). Meeting years 2017, 2018, 2020, and 2024 are gaps: no FinCom report for those years in the source archive yet. Years are Town Meeting calendar years, not fiscal years (the May 2026 meeting appropriates for FY27).
+- **Confidence:** Medium-high for article numbers and core titles. Re-verify any individual title against the source PDF before quoting it.
+
+### Town Meeting Results (398 articles, 2019-2025, 8 meetings)
+- **What it is:** Every warrant article and its voted disposition for the Annual Town Meetings of 2019 through 2025 plus the October 17, 2020 Special Town Meeting. Counted Yes/No tallies where one was recorded (counted tallies for nearly every article from 2024 on via electronic keypad voting; a few omnibus or amended articles carry their tallies in notes instead).
+- **Source:** Annual Town Reports (which reprint each warrant with a "Results of Annual Town Meeting" section) and official Town Meeting minutes PDFs on marbleheadma.gov. Per-row `source_doc` and `source_url` columns.
+- **File:** `town_meeting_results.csv`
+- **Dispositions:** `adopted`, `defeated`, `indefinitely_postponed`, `withdrawn`, `not_taken_up` (the last only for the COVID-trimmed June 29, 2020 session, which acted on Articles 7-31 and passed over the rest; most were re-warranted to the October STM).
+- **Caveats:** Where an article was postponed or withdrawn by a counted motion (common in 2024-2025), the tally is on that motion, not the article; those rows say so in `notes`. 2025 Article 23 (3A overlay) was adopted 951-759 but overturned by the July 8, 2025 town-wide referendum; "adopted at Town Meeting" and "in effect" differ there. Dollar amounts are deliberately not transcribed here; take them from FinCom reports. Titles are normalized to ASCII (hyphens for the town's dashes). 2016 and 2026 dispositions are not yet included (2016 not gathered; 2026 results await the next Annual Town Report or posted minutes). Article counts here are authoritative where they differ from the first-pass `town_meeting_warrant_articles.csv` extraction (2025: 52 articles, not 54).
+- **Confidence:** High for dispositions and tallies (read from official results sections); transcribed by research agents and spot-checkable against the linked PDFs.
+
+### Warrant Article Series (generated)
+- **What it is:** The recurring-article identity layer over `town_meeting_results.csv`: one row per article series (e.g. the omnibus operating budget, whatever its title that year), plus a normalized-title-to-slug map covering every observed title variant.
+- **Files:** `article_series.csv`, `article_series_map.csv`
+- **Generated by:** `node scripts/build_warrant_series.mjs` (deterministic; regenerate and commit after any change to `town_meeting_results.csv` or to the alias/kind maps in `scripts/warrant_lib.mjs`).
+- **Caveats:** Rename merges (aliases) and kind assignments are curated code in `scripts/warrant_lib.mjs`, observed from the corpus, not invented. `budget_line` series (omnibus decomposed by department) are not yet generated.
+- **Confidence:** Derived data; as good as the results CSV plus the alias map.
 
 ## What We Don't Have (identified gaps)
 

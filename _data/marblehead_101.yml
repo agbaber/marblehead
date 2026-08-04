@@ -127,6 +127,10 @@ chapters:
         href: "charts/budget_flow.html"
         title: "Budget flow diagram"
         desc: "Visual of revenue sources mapping to spending categories."
+      - tag: "Page"
+        href: "retirement.html"
+        title: "Retirement spending"
+        desc: "Pensions and retiree health: the bill, funded ratios, and payoff schedule."
 
   - num: "05"
     slug: "05-how-the-budget-gets-made"

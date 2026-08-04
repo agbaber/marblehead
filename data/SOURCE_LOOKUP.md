@@ -246,6 +246,15 @@ The town runs two Socrata-hosted portals that publish FY26 spending data. The la
 
 The checkbook total ($98.5M) and the budget portal's Actual rollup ($140.4M) intentionally don't match: the checkbook is AP-only, while Actual includes payroll runs, transfers, and intergovernmental remittances. The Electric Light Department ($13.16M of Actual) runs as a self-supporting enterprise with no appropriation, so it appears with $0 Revised Budget. Used by `charts/checkbook.html`.
 
+## Parcel Assessments (MassGIS Standardized Assessors' Parcels, FY2025)
+
+- Source: MassGIS "Massachusetts Property Tax Parcels" ArcGIS feature service (the Level 3 Standardized Assessors' Parcels extract), layer `FeatureServer/0`, filtered to `TOWN_ID=168` (Marblehead). Pulled 2026-07-16. Dataset home: [MassGIS Property Tax Parcels](https://www.mass.gov/info-details/massgis-data-property-tax-parcels).
+- `scripts/fetch_massgis_parcels.py` pages the service (2,000 rows per request, `resultOffset`, `returnGeometry=false`, ordered by OBJECTID) and writes `data/parcels.csv` (committed, de-identified) plus `data/parcels_raw/parcels_full.csv` (gitignored, adds `owner1` + mailing). Raw JSON pages are cached under `data/parcels_raw/` (gitignored) for provenance. One run is ~5 requests for all 8,805 parcels. Field mapping lives in `scripts/massgis_parcels.py` (unit-tested in `data/test_massgis_parcels.py`).
+- The gitignored full CSV is the input to `scripts/sync_parcel_owners.mjs`, which normalizes addresses and loads the `parcel_owners` D1 table behind the community-pulse self-serve verification feature. Its `buildRow` reads `site_addr`, `owner1`, `prop_id`, and `fy` from this CSV.
+- Vintage: MassGIS carries the prior fiscal year's certified values, so this is **FY2025** (the `fy` column records it per row). The town's live Patriot Properties database shows the FY2026 revaluation, ~20% higher on a sampled waterfront parcel; do not present these as current-year values without the vintage caveat.
+- Owner names and mailing addresses are public record but are deliberately kept out of the committed CSV: marbleheaddata.org is a public static site, so committing the bulk owner list would publish it. The de-identified file is what the site reads.
+- Note on sourcing: an earlier attempt scraped the town's live Patriot Properties WebPro database parcel-by-parcel; it got the IP rate-limited (403) after ~7,000 requests and only covered ~2% of parcels. MassGIS provides the same data (one fiscal year older) in one polite bulk pull, so that is the source of record here.
+
 ## Household Income Distribution (ACS 2020&ndash;2024, table B19001)
 - Source: US Census Bureau, ACS 2020&ndash;2024 5-year estimates, table B19001, Marblehead town, Essex County, MA (FIPS 25-009-38400)
 - API endpoint: `https://api.census.gov/data/2024/acs/acs5?get=NAME,B19001_001E,...,B19001_017E&for=county%20subdivision:38400&in=state:25%20county:009`
@@ -344,3 +353,101 @@ Caveats per the underlying CSV's `notes` column: appropriated values for FY15&nd
 - ["From ADUs to a $120M budget"](https://marbleheadcurrent.org/2025/05/08/adus-120m-budget-pass-as-town-meeting-heads-to-another-night/) (Marblehead Current)
 - ["Marblehead loses its first sustainability coordinator"](https://itemlive.com/2026/03/12/marblehead-loses-its-first-sustainability-coordinator/) (Itemlive)
 - ["Marblehead library at risk of closure amid $7 million budget deficit"](https://www.bostonglobe.com/2026/03/17/metro/marblehead-budget-deficit-risks-library-closure/) (Boston Globe)
+
+## PERAC Pension Funded Ratios (peer comparison)
+
+`data/perac_funded_ratios_peers.csv` &ndash; pension funded ratios for Marblehead and
+its nine peer towns (Arlington, Brookline, Cohasset, Duxbury, Easton, Framingham,
+Hingham, Lexington, Melrose), plus a statewide reference row.
+
+- **Source:** [PERAC Funded Ratios list](https://www.mass.gov/info-details/funded-ratios)
+  (Public Employee Retirement Administration Commission), a sortable table of every
+  Massachusetts contributory retirement system. Version used: published 2026-07-02, data
+  as of 07/01/26 (105 systems). The funded ratio is the actuarial value of plan assets
+  divided by the actuarial accrued liability &ndash; PERAC's funding basis, consistent
+  across all boards.
+- **Not all peers run their own board.** Seven do (Arlington, Brookline, Framingham,
+  Hingham, Lexington, Marblehead, Melrose). Three are member units of a pooled regional
+  system and take that system's funded ratio, not a town-specific one:
+  - **Cohasset &rarr; Norfolk County Retirement System** (71.9%). Confirmed via the
+    [Norfolk County Retirement System member-towns page](https://www.norfolkcountyretirement.org/general/page/towns).
+  - **Duxbury &rarr; Plymouth County Retirement Association** (67.5%). Confirmed via the
+    Town of Duxbury HR "Plymouth County Retirement Information" page.
+  - **Easton &rarr; Bristol County Retirement System** (66.0%). Confirmed via the
+    [Town of Easton personnel-management page](https://www.easton.ma.us/departments/town_administrator/personnel_management.php)
+    ("you must enroll in the Bristol County Retirement Program").
+- **Marblehead cross-check.** PERAC lists Marblehead at **71.5%** on the actuarial-value
+  basis, valuation date 1/1/2024. This matches the [PERAC Marblehead Actuarial Valuation
+  Report, January 1, 2024](https://www.mass.gov/doc/marblehead-retirement-board-valuation-report-2024/download)
+  p.2 (market-value basis 69.8%, p.3). Note this differs from the **72.49%** in the FY25
+  ACFR, which is the GASB-67 fiduciary-net-position ratio at the 6/30/2024 measurement
+  date. Both are correct on their own basis; the peer table uses PERAC's 71.5% so every
+  town is compared on the same actuarial-funding basis.
+- **Valuation-vintage caveat.** Systems are valued on staggered two-year cycles, so the
+  funded ratios in this file are NOT all measured on the same date. Peers used here span
+  valuation dates of **1/1/2024 and 1/1/2025** (the full PERAC list also includes a few
+  1/1/2026 systems). A one-year gap in a rising or falling market can move a ratio a few
+  points, so treat small differences between towns valued in different years as noise, not
+  signal. Each row's `valuation_date` column records its own vintage.
+- **Statewide row (derived).** The `STATEWIDE` row is the **median funded ratio of all 105
+  systems** in the PERAC list (76.3%; range 48.6%&ndash;110.7%, mean 78.1%), computed from
+  the primary list rather than a value PERAC prints. PERAC's own stated group median may
+  differ slightly depending on which systems it includes. The two Commonwealth systems in
+  the same list are State Employees (SERS) 73.9% and State Teachers (MTRS) 63.3%, both
+  valued 1/1/2025.
+- **Funding-schedule confirmation (bonus).** The same PERAC Marblehead 1/1/2024 valuation
+  (p.6, Executive Summary, "Funding Schedule") states verbatim: "The total appropriation
+  increases 8.6% each year through FY35 with a final amortization payment in FY36." This
+  confirms the 8.6%/yr through FY35 and FY36 payoff figures the site already cites.
+
+## OPEB Funded Ratios (peer comparison)
+
+`data/dls_opeb_funded_ratios_peers.csv` &ndash; retiree-health (OPEB) funded
+ratios for Marblehead and nine peer towns (Arlington, Brookline, Cohasset,
+Duxbury, Easton, Framingham, Hingham, Lexington, Melrose), plus a derived
+statewide median.
+
+- **Source (peers + statewide):** [PERAC OPEB Summary Report &ndash;
+  Commonwealth, Cities, and Towns, May 2026](https://www.mass.gov/doc/may-2026-opeb-summary-report-download/download)
+  (Public Employee Retirement Administration Commission). Reflects the most
+  recent actuarial valuation or disclosure each community provided to PERAC as
+  of 04/01/2026; individual rows carry their own measurement date (6/30/2019
+  through 6/30/2025). Columns used: Total OPEB Liability, Net OPEB Liability,
+  Funded Ratio (Fiduciary Net Position / Total OPEB Liability). All dollar
+  amounts in the report are stated in thousands; the CSV stores them as full
+  dollars (report value x1000), so treat sub-thousand precision as rounded.
+  Note: PERAC splits this report by entity type &ndash; this is the **Cities
+  and Towns** edition, NOT the separate May 2024 "School Districts, Other
+  Districts and Authorities, Counties, and Educational Collaboratives" edition,
+  which contains no towns.
+- **Marblehead row.** Uses the exact FY25 ACFR figures (6/30/2025): Total OPEB
+  Liability $146,998,774; Plan Fiduciary Net Position $4,954,123; Net OPEB
+  Liability $142,044,651; funded ratio 3.37%. **Cross-check:** the PERAC May
+  2026 report independently lists Marblehead at the same measurement date
+  (6/30/2025) with TOL $146,999K, FNP $4,954K, NOL $142,045K, funded ratio 3.4%
+  &ndash; identical to the ACFR once PERAC's rounding to the nearest $1,000 and
+  one decimal is applied. No discrepancy between the two sources.
+- **Statewide row (derived).** The `STATEWIDE_MEDIAN` row is the **median funded
+  ratio of the 302 individual cities-and-towns rows** in the May 2026 report
+  (Commonwealth row excluded), computed from the primary rows rather than a value
+  PERAC prints: **7.45%**. 173 of 302 towns (57.3%) are under 10% funded, which
+  matches the report intro's stated "a little more than one-half." For context,
+  the report intro also states a **cumulative** city/town funded ratio of 9.8%
+  ($30.9B aggregate Total OPEB Liability, $3.0B aggregate Fiduciary Net Position
+  across ~300 towns) &ndash; an asset-weighted figure, distinct from the median.
+- **Editorial note.** Most Massachusetts cities and towns are near-zero funded on
+  OPEB because they never pre-funded retiree health, so Marblehead's 3.37% sits
+  below the ~7.5% median but is not an outlier. State facts; the CSV carries no
+  value judgment.
+
+## Retiree Health Pay-Go as Share of General Fund (FY18-FY25)
+- `data/retiree_health_paygo_FY18-25.csv` — the town's own retiree health cost (OPEB
+  pay-as-you-go, net of the retirees' premium share) as a percent of general-fund spending.
+- Numerator: FY25 ACFR, "Schedule of Town Contributions to OPEB Plan," p.92,
+  "Contributions in Relation to the Actuarially Determined Contribution" column
+  (FY18 $4,414,972 through FY25 $6,914,651). This is the town's actual pay-go spending on
+  retiree premiums, NOT the gross GIC invoice retiree line (which includes the retirees'
+  own share and runs roughly 2x the town's net cost).
+- Denominator: `data/general_fund_spending_FY15-26.csv` (site money-went GF series; chart-decoded, +/-$50K; FY25 expended-not-audited).
+- FY25 share ~6.9% on the site GF series, ~6.6% against the audited FY25 ACFR GF total of
+  $104.15M. Both round to "about 7 cents of every general-fund dollar."
