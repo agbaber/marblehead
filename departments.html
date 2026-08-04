@@ -129,6 +129,8 @@ og_url: https://marbleheaddata.org/departments.html
     }
     .dx-money th:nth-child(4), .dx-money td:nth-child(4) { display: none; }
     .dx-chg-inline { display: block; font-size: 0.625rem; font-weight: 400; margin-top: 1px; }
+    /* One card per row on phones so the descriptions stay readable. */
+    .dx-cards { grid-template-columns: 1fr; }
   }
 
   /* ---- Profile layout: header, stat tiles, section cards ---- */
