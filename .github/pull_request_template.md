@@ -13,12 +13,16 @@
   - <case 2>
 
 ## Proof of Work
-<required — see Definition of Done in box CLAUDE.md>
+<required>
 
-- [ ] Screenshot / curl output / test output captured against the actual change
-- [ ] Committed to the branch (e.g. `proof/<branch>.png`) and referenced below
+- [ ] Verified against the actual change, not just "it should work"
+- [ ] Evidence pasted below: test output, `curl` response, before/after numbers, or the preview URL showing the change live
 
-<paste / embed proof here>
+Do not commit screenshots to the repo. The preview deploy is the visual
+record, and pasted output is the rest. Images uploaded directly to a PR
+comment are fine when a picture genuinely helps.
+
+<paste proof here>
 
 ## Risk
 <what could break and how I would notice>

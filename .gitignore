@@ -72,3 +72,7 @@ data/parcels_raw/
 # Raw eCode text snapshot (normalized JSON is canonical)
 data/bylaws-history/raw/*.txt
 dist/
+
+# One-off screenshot artifacts. Proof of work lives in the PR preview
+# deploy and pasted test output, not committed binaries. See PR template.
+proof/
