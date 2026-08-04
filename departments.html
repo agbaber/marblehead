@@ -1,0 +1,454 @@
+---
+title: "Department explorer"
+og_title: "What each Marblehead department does and costs"
+og_description: "Browse all 40 town departments: who leads each, its three-year budget and line items, and staffing since 2008. From the town's own budget and payroll."
+og_url: https://marbleheaddata.org/departments.html
+---
+<style>
+  /* ---- Index: function groups + department cards ---- */
+  .dx-funchd {
+    display: flex; align-items: baseline; gap: 10px;
+    margin: 34px 0 13px; padding-bottom: 7px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .dx-funchd:first-of-type { margin-top: 18px; }
+  .dx-func { margin: 0; font-size: 1.125rem; }
+  .dx-func-count {
+    font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--text-subtle);
+  }
+  .dx-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(252px, 1fr));
+    gap: 12px; margin-bottom: 8px;
+  }
+  .dx-card {
+    display: flex; flex-direction: column; gap: 7px;
+    text-align: left; cursor: pointer;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
+    padding: 14px 15px; font: inherit; color: var(--text);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .dx-card:hover {
+    border-color: var(--c-teal);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  .dx-card-name { font-weight: 700; font-size: 0.9375rem; line-height: 1.25; }
+  .dx-card-desc {
+    font-size: 0.8125rem; line-height: 1.45; color: var(--text-muted);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .dx-card-foot {
+    margin-top: auto; display: flex; align-items: baseline;
+    justify-content: space-between; gap: 8px;
+    padding-top: 9px; border-top: 1px solid var(--divider);
+  }
+  .dx-card-amt {
+    font-variant-numeric: tabular-nums; font-size: 1.0625rem; font-weight: 700;
+    color: var(--text); letter-spacing: -0.01em;
+  }
+  .dx-card-chg { font-size: 0.75rem; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .dx-amt { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .dx-change-up { color: var(--c-teal); }
+  .dx-change-down { color: var(--c-navy); }
+
+  .dx-back {
+    background: none; border: none; cursor: pointer; padding: 0;
+    font-size: 0.8125rem; color: var(--c-teal); margin-bottom: 12px;
+  }
+  .dx-back:hover { text-decoration: underline; }
+  .dx-src {
+    color: var(--text-subtle); margin: 4px 0 0;
+  }
+  .dx-src a { color: var(--c-teal); }
+  .dx-sources {
+    margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--divider);
+    color: var(--text-subtle);
+  }
+  .dx-sources h3 { font-size: 0.8125rem; color: var(--text-subtle); margin: 0 0 6px; }
+  .dx-sources a { color: var(--c-teal); }
+  .dx-caveat {
+    color: var(--text-muted); background: var(--c-fog);
+    border: 1px solid var(--divider);
+    border-radius: 8px; padding: 9px 12px; margin: 10px 0;
+  }
+
+  .dx-money, .dx-lines {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    font-size: 0.875rem; margin: 4px 0 0;
+  }
+  .dx-money th, .dx-lines th {
+    padding: 8px; font-weight: 600; font-size: 0.6875rem;
+    color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--divider); text-align: right; white-space: nowrap;
+  }
+  .dx-money th:first-child, .dx-lines th:first-child { text-align: left; }
+  .dx-money td, .dx-lines td {
+    padding: 8px; text-align: right; color: var(--text);
+    font-variant-numeric: tabular-nums; font-weight: 600; font-size: 0.8125rem;
+    border-bottom: 1px solid var(--divider);
+  }
+  .dx-money td:first-child, .dx-lines td:first-child {
+    text-align: left; font-weight: 400; white-space: normal;
+  }
+  .dx-money tbody tr:last-child td, .dx-lines tbody tr:last-child td { border-bottom: none; }
+  .dx-lines td.dx-amt { font-weight: 600; }
+
+  .dx-roster {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    font-size: 0.875rem; margin: 4px 0 0;
+  }
+  .dx-roster th {
+    padding: 8px; font-weight: 600; font-size: 0.6875rem;
+    color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--divider); text-align: right; white-space: nowrap;
+  }
+  .dx-roster th:first-child { text-align: left; }
+  .dx-roster td {
+    padding: 8px; text-align: right; color: var(--text);
+    font-variant-numeric: tabular-nums; font-size: 0.8125rem;
+    border-bottom: 1px solid var(--divider);
+  }
+  .dx-roster td:first-child { text-align: left; font-weight: 400; white-space: normal; }
+  .dx-roster tbody tr:last-child td { border-bottom: none; }
+  .dx-roster td.dx-avg { color: var(--text-muted); font-weight: 400; }
+  .dx-deepdive { margin: 12px 0 0; font-weight: 600; }
+  .dx-deepdive a { color: var(--c-teal); }
+  .dx-vpurpose { display: block; font-size: 0.6875rem; color: var(--text-muted); font-weight: 400; margin-top: 1px; }
+  /* Avg / person: its own column on desktop; folded under FY27 amount on mobile
+     so the roster never needs horizontal scroll. */
+  .dx-avg-inline { display: none; }
+  .dx-chg-inline { display: none; }
+  @media (max-width: 560px) {
+    .dx-roster th:nth-child(4), .dx-roster td:nth-child(4) { display: none; }
+    .dx-avg-inline {
+      display: block; font-size: 0.625rem; color: var(--text-muted);
+      font-weight: 400; margin-top: 1px;
+    }
+    .dx-money th:nth-child(4), .dx-money td:nth-child(4) { display: none; }
+    .dx-chg-inline { display: block; font-size: 0.625rem; font-weight: 400; margin-top: 1px; }
+  }
+
+  /* ---- Profile layout: header, stat tiles, section cards ---- */
+  .dx-profile-hd { margin: 4px 0 16px; }
+  .dx-eyebrow {
+    font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.4px; color: var(--c-teal); margin: 0 0 5px;
+  }
+  .dx-profile-hd h2 { margin: 0; }
+  .dx-profile-hd .dx-ledby { margin: 6px 0 0; color: var(--text-muted); font-size: 0.9375rem; }
+
+  .dx-stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+    gap: 10px; margin: 0 0 18px;
+  }
+  .dx-stat {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
+    padding: 12px 14px; display: flex; flex-direction: column; gap: 3px;
+    border-top: 3px solid var(--c-navy);
+  }
+  .dx-stat-label {
+    font-size: 0.625rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.9px; color: var(--text-subtle);
+  }
+  .dx-stat-value {
+    font-size: 1.375rem; font-weight: 700; color: var(--text);
+    font-variant-numeric: tabular-nums; line-height: 1.1;
+  }
+  .dx-stat-sub { font-size: 0.75rem; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+  .dx-block {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
+    padding: 16px 18px 18px; margin: 0 0 12px;
+  }
+  .dx-block > :first-child { margin-top: 0; }
+  .dx-block > :last-child { margin-bottom: 0; }
+  .dx-block p { margin: 0 0 10px; }
+  .dx-block-hd {
+    display: flex; align-items: baseline; gap: 8px;
+    font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--c-navy);
+    padding-bottom: 9px; margin: 0 0 12px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .dx-block-hd .dx-hd-note {
+    font-weight: 500; text-transform: none; letter-spacing: 0;
+    color: var(--text-subtle); font-size: 0.75rem; margin-left: auto;
+  }
+  .dx-block--sources { background: transparent; border: none; box-shadow: none; padding: 8px 0 0; }
+  .dx-block--sources .dx-block-hd { color: var(--text-subtle); }
+
+  @media (max-width: 600px) {
+    /* One card per row on phones so the descriptions stay readable. */
+    .dx-cards { grid-template-columns: 1fr; gap: 10px; }
+  }
+</style>
+
+<h1 class="h-center">Department explorer</h1>
+<p class="subtitle h-center">All 40 town departments, by role, staffing, and budget.</p>
+
+<div id="dept-app" aria-live="polite">Loading department data...</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var app = document.getElementById('dept-app');
+  var DATA = null;
+
+  function esc(s) {
+    if (s == null) return '';
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function fmtUSD(n) {
+    if (n == null) return 'n/a';
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+  function fmtPct(p) {
+    if (p == null) return '';
+    return (p >= 0 ? '+' : '') + (p * 100).toFixed(1) + '%';
+  }
+  function changeClass(p) { return p == null ? '' : (p >= 0 ? 'dx-change-up' : 'dx-change-down'); }
+
+  function deptLabel(d) { return esc(d.name); }
+
+  function renderIndex() {
+    var parts = [];
+    DATA.functions.forEach(function (fn) {
+      var depts = Object.keys(DATA.departments)
+        .filter(function (k) { return DATA.departments[k].function === fn.key; })
+        .sort(function (a, b) {
+          return DATA.departments[b].budget.fy27_adopted - DATA.departments[a].budget.fy27_adopted;
+        });
+      if (!depts.length) return;
+      parts.push('<div class="dx-funchd"><h2 class="dx-func">' + esc(fn.label) + '</h2>' +
+        '<span class="dx-func-count">' + depts.length + (depts.length === 1 ? ' department' : ' departments') + '</span></div>');
+      parts.push('<div class="dx-cards">');
+      depts.forEach(function (k) {
+        var d = DATA.departments[k];
+        var desc = (d.services && d.services.summary) ? d.services.summary : '';
+        parts.push(
+          '<button class="dx-card" data-key="' + esc(k) + '">' +
+          '<div class="dx-card-name">' + deptLabel(d) + '</div>' +
+          (desc ? '<div class="dx-card-desc">' + esc(desc) + '</div>' : '') +
+          '<div class="dx-card-foot">' +
+          '<span class="dx-card-amt">' + fmtUSD(d.budget.fy27_adopted) + '</span>' +
+          '<span class="dx-card-chg ' + changeClass(d.budget.change_pct) + '">' + fmtPct(d.budget.change_pct) + '</span>' +
+          '</div>' +
+          '</button>'
+        );
+      });
+      parts.push('</div>');
+    });
+    app.innerHTML = parts.join('');
+    app.querySelectorAll('.dx-card').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        location.hash = btn.getAttribute('data-key');
+      });
+    });
+  }
+
+  function block(title, note, inner) {
+    return '<section class="dx-block"><div class="dx-block-hd">' + title +
+      (note ? '<span class="dx-hd-note">' + note + '</span>' : '') +
+      '</div>' + inner + '</section>';
+  }
+
+  function statTiles(d) {
+    var b = d.budget, s = d.staffing, tiles = [];
+    tiles.push('<div class="dx-stat"><span class="dx-stat-label">FY27 adopted</span>' +
+      '<span class="dx-stat-value">' + fmtUSD(b.fy27_adopted) + '</span>' +
+      '<span class="dx-stat-sub ' + changeClass(b.change_pct) + '">' + fmtPct(b.change_pct) + ' vs FY26</span></div>');
+    if (s && s.fte != null) {
+      tiles.push('<div class="dx-stat"><span class="dx-stat-label">Positions</span>' +
+        '<span class="dx-stat-value">' + s.fte + '</span>' +
+        '<span class="dx-stat-sub">FY27 budgeted</span></div>');
+    } else if (d.headcount && d.headcount.length) {
+      var lh = d.headcount[d.headcount.length - 1];
+      tiles.push('<div class="dx-stat"><span class="dx-stat-label">Headcount</span>' +
+        '<span class="dx-stat-value">' + lh.headcount + '</span>' +
+        '<span class="dx-stat-sub">FY' + String(lh.fy).slice(2) + ', incl. PT</span></div>');
+    }
+    if (s && s.salary_total != null) {
+      tiles.push('<div class="dx-stat"><span class="dx-stat-label">Salaries</span>' +
+        '<span class="dx-stat-value">' + fmtUSD(s.salary_total) + '</span>' +
+        '<span class="dx-stat-sub">FY27 budgeted</span></div>');
+    }
+    return '<div class="dx-stats">' + tiles.join('') + '</div>';
+  }
+
+  function budgetInner(d) {
+    var b = d.budget;
+    var html = '<div class="table-wrap"><table class="dx-money"><thead><tr>' +
+      '<th>FY25 actual</th><th>FY26 budget</th><th>FY27 adopted</th><th>Change</th>' +
+      '</tr></thead><tbody><tr>' +
+      '<td>' + fmtUSD(b.fy25_actual) + '</td>' +
+      '<td>' + fmtUSD(b.fy26_budget) + '</td>' +
+      '<td>' + fmtUSD(b.fy27_adopted) +
+        '<span class="dx-chg-inline ' + changeClass(b.change_pct) + '">' + fmtPct(b.change_pct) + ' vs FY26</span></td>' +
+      '<td class="' + changeClass(b.change_pct) + '">' +
+      fmtUSD(b.change_dollars) + ' (' + fmtPct(b.change_pct) + ')</td>' +
+      '</tr></tbody></table></div>';
+    if (b.override_added) {
+      html += '<p class="dx-caveat"><small>FY27 adopted is derived: ' +
+        fmtUSD(b.fy27_proposed) + ' in the proposed (no-override) budget plus ' +
+        fmtUSD(b.override_added) + ' the override (Tier 3) restored to this department. ' +
+        'The town has not published a line-by-line adopted budget; other pages on this ' +
+        'site still show the pre-override figure.</small></p>';
+    }
+    return html;
+  }
+
+  function sourcesBlock(d) {
+    function srcLink(url, label) {
+      return url ? '<a href="' + esc(url) + '">' + esc(label) + '</a>' : esc(label);
+    }
+    var sources = [];
+    if (d.services && d.services.source_label) sources.push('<li>What it does: ' + srcLink(d.services.source_url, d.services.source_label) + '</li>');
+    if (d.role_source) sources.push('<li>Staffing and budget detail: ' + srcLink(d.role_source_url, d.role_source) + '</li>');
+    if (!sources.length) return '';
+    return '<section class="dx-block dx-block--sources"><div class="dx-block-hd">Sources</div>' +
+      '<ul class="tldr"><small>' + sources.join('') + '</small></ul></section>';
+  }
+
+  function renderProfile(key) {
+    var d = DATA.departments[key];
+    var p = [];
+    p.push('<button class="dx-back" id="dx-back">&larr; All departments</button>');
+    p.push('<div class="dx-profile-hd"><div class="dx-eyebrow">' + esc(d.function_label) + '</div>' +
+      '<h2>' + deptLabel(d) + '</h2>' +
+      (d.role ? '<p class="dx-ledby">Led by the ' + esc(d.role) + '.</p>' : '') + '</div>');
+
+    p.push(statTiles(d));
+
+    // What it does (cited), plus a deep-dive link-out where a dedicated page exists.
+    var whatInner = (d.services && d.services.summary)
+      ? '<p>' + esc(d.services.summary) + '</p>'
+      : '<p><em>A plain-language description of what this department does is forthcoming.</em></p>';
+    if (d.deep_dive && d.deep_dive.url) {
+      whatInner += '<p class="dx-deepdive"><a href="' + esc(d.deep_dive.url) + '">' +
+        esc(d.deep_dive.label || 'Full page') + ' &rarr;</a></p>';
+    }
+    p.push(block('What it does', null, whatInner));
+
+    // Departments with their own full page defer detail there: show budget, stop.
+    if (d.deep_dive && d.deep_dive.url) {
+      p.push(block('Budget', null, budgetInner(d)));
+      p.push(sourcesBlock(d));
+      app.innerHTML = p.join('');
+      document.getElementById('dx-back').addEventListener('click', function () { location.hash = ''; });
+      return;
+    }
+
+    // Staffing & positions: the FY27 roster + headcount trend.
+    if (d.staffing && d.staffing.positions && d.staffing.positions.length) {
+      var s = d.staffing, inner = '';
+      var line = 'FY27 roster';
+      if (s.fte != null) line += ': about ' + s.fte + ' budgeted positions';
+      if (s.salary_total != null) line += ', ' + fmtUSD(s.salary_total) + ' in salaries';
+      line += '.';
+      if (s.fte_basis) line += ' Counts are ' + esc(s.fte_basis).replace(/\.\s*$/, '') + '.';
+      inner += '<p>' + line + '</p>';
+      var ps = s.position_summary || {}, chg = [];
+      if (ps.new) chg.push(ps.new + ' new');
+      if (ps.eliminated) chg.push(ps.eliminated + ' eliminated');
+      if (ps.reduced) chg.push(ps.reduced + ' reduced');
+      if (chg.length) inner += '<p class="dx-caveat"><small>FY27 position changes: ' + chg.join(', ') + '.</small></p>';
+      inner += '<div class="table-wrap"><table class="dx-roster"><thead><tr>' +
+        '<th>Position</th><th>People</th><th>FY27 budgeted</th><th>Avg / person</th></tr></thead><tbody>';
+      s.positions.forEach(function (pos) {
+        var avg = (pos.count > 1 && pos.fy27 != null) ? fmtUSD(pos.fy27 / pos.count) : '';
+        inner += '<tr><td>' + esc(pos.title) + '</td>' +
+          '<td class="dx-amt">' + (pos.count != null ? pos.count : '') + '</td>' +
+          '<td class="dx-amt">' + fmtUSD(pos.fy27) +
+            (avg ? '<span class="dx-avg-inline">' + avg + ' / person</span>' : '') + '</td>' +
+          '<td class="dx-amt dx-avg">' + avg + '</td></tr>';
+      });
+      inner += '</tbody></table></div>';
+      // Roster salaries come from the FY27 *proposed* (no-override) budget; where
+      // the override restored staffing cuts, some positions are funded higher in
+      // the adopted budget (e.g. a department head proposed for a part-time cut).
+      if (d.budget.override_added) {
+        inner += '<p class="dx-caveat"><small>These are the salaries in the FY27 proposed (no-override) budget. The override restored some of the proposed staffing cuts, so a few positions here &ndash; a department head reduced to part-time, an eliminated role &ndash; are funded higher in the adopted budget below.</small></p>';
+      }
+      if (d.headcount && d.headcount.length) {
+        var hf = d.headcount[0], hl = d.headcount[d.headcount.length - 1];
+        inner += '<p class="dx-src"><small>Headcount over time (part-time and seasonal included, not <abbr class="g" title="Full-Time Equivalent">FTE</abbr>): ' +
+          hf.headcount + ' in FY' + String(hf.fy).slice(2) + ' to ' + hl.headcount + ' in FY' + String(hl.fy).slice(2) + '.</small></p>';
+      }
+      p.push(block('Staffing &amp; positions', s.fte != null ? s.fte + ' positions' : null, inner));
+    } else if (d.headcount && d.headcount.length) {
+      var f0 = d.headcount[0], l0 = d.headcount[d.headcount.length - 1];
+      p.push(block('Staffing', null, '<p>Headcount over time (part-time and seasonal included, not <abbr class="g" title="Full-Time Equivalent">FTE</abbr>): ' +
+        f0.headcount + ' in FY' + String(f0.fy).slice(2) + ' to ' + l0.headcount + ' in FY' + String(l0.fy).slice(2) + '.</p>'));
+    }
+
+    // Budget + line items.
+    var budInner = budgetInner(d);
+    if (d.line_items && d.line_items.length) {
+      if (d.line_items_reconcile === false) {
+        budInner += '<p class="dx-caveat"><small>These are the level-funded (pre-reduction) request lines from the school committee packet. They sum to more than the department total above, which reflects later negotiated reductions not allocated back to individual lines.</small></p>';
+      }
+      budInner += '<div class="table-wrap"><table class="dx-lines"><thead><tr><th>Line item</th><th>FY27</th></tr></thead><tbody>';
+      d.line_items.forEach(function (li) {
+        budInner += '<tr><td>' + esc(li.description) + '</td><td class="dx-amt">' + fmtUSD(li.fy27_proposed) + '</td></tr>';
+      });
+      budInner += '</tbody></table></div>';
+    }
+    p.push(block('Budget', null, budInner));
+
+    // Checkbook: attributable payments where a fund names the department.
+    var cb = d.checkbook, cbInner;
+    if (cb) {
+      var fy = 'FY' + cb.fiscal_year.slice(2);
+      cbInner = '<p>' + fmtUSD(cb.total) + ' across ' + cb.count + ' payments in ' + fy + ', in funds tagged to this department.</p>';
+      cbInner += '<p class="dx-caveat"><small>' + (cb.kind === 'enterprise'
+        ? 'These are the funds the checkbook tags to this department, mostly regional assessments and its own capital projects. Some routine operating costs may still sit in the general "Expenses" and "Salaries" buckets.'
+        : 'These are grant, capital, and donation funds the checkbook tags to this department. Its day-to-day operating budget is not broken out; it sits in the general "Expenses" and "Salaries" buckets.') + '</small></p>';
+      if (cb.top_vendors && cb.top_vendors.length) {
+        cbInner += '<div class="table-wrap"><table class="dx-lines"><thead><tr><th>Top vendors</th><th>' + fy + ' paid</th></tr></thead><tbody>';
+        cb.top_vendors.forEach(function (tv) {
+          cbInner += '<tr><td>' + esc(tv.vendor) +
+            (tv.purpose ? '<span class="dx-vpurpose">' + esc(tv.purpose) + '</span>' : '') +
+            '</td><td class="dx-amt">' + fmtUSD(tv.amount) + '</td></tr>';
+        });
+        cbInner += '</tbody></table></div>';
+        cbInner += '<p class="dx-src"><small>Descriptions are the town&rsquo;s own labels, sometimes abbreviated in the export.</small></p>';
+      }
+      cbInner += '<p class="dx-deepdive"><a href="/checkbook/">Browse the full checkbook &rarr;</a></p>';
+    } else {
+      cbInner = '<p>The town’s published checkbook does not break payments out to this department; its operating spending sits in the general "Expenses" and "Salaries" buckets.</p>' +
+        '<p class="dx-deepdive"><a href="/checkbook/">Browse the full checkbook &rarr;</a></p>';
+    }
+    p.push(block('Checkbook', cb ? cb.fiscal_year : null, cbInner));
+
+    p.push(sourcesBlock(d));
+
+    app.innerHTML = p.join('');
+    document.getElementById('dx-back').addEventListener('click', function () {
+      location.hash = '';
+    });
+  }
+
+  function route() {
+    var key = location.hash.replace(/^#/, '');
+    if (key && Object.prototype.hasOwnProperty.call(DATA.departments, key)) { renderProfile(key); }
+    else { renderIndex(); }
+  }
+
+  fetch('{{ "/data/departments_view.json" | relative_url }}')
+    .then(function (r) { return r.json(); })
+    .then(function (json) {
+      DATA = json;
+      window.addEventListener('hashchange', route);
+      route();
+    })
+    .catch(function () { app.textContent = 'Department data is unavailable right now.'; });
+})();
+</script>

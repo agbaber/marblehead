@@ -36,9 +36,9 @@ async function testHomepageLoads(page) {
   }
 
   const tiles = await page.$$('.home-tile');
-  tiles.length === 16
-    ? ok('16 tiles on homepage')
-    : fail('Homepage tiles', `expected 16 .home-tile, got ${tiles.length}`);
+  tiles.length === 17
+    ? ok('17 tiles on homepage (incl. departments and roads)')
+    : fail('Homepage tiles', `expected 17 .home-tile, got ${tiles.length}`);
 
   const sectionTiles = await page.$$('.home-tiles[data-home-row="sections"] .home-tile');
   sectionTiles.length === 7
@@ -46,9 +46,9 @@ async function testHomepageLoads(page) {
     : fail('Section tiles', `expected 7, got ${sectionTiles.length}`);
 
   const notableTiles = await page.$$('.home-tiles[data-home-row="notable"] .home-tile');
-  notableTiles.length === 9
-    ? ok('9 notable-piece tiles')
-    : fail('Notable tiles', `expected 9, got ${notableTiles.length}`);
+  notableTiles.length === 10
+    ? ok('10 notable-piece tiles (incl. departments and roads)')
+    : fail('Notable tiles', `expected 10, got ${notableTiles.length}`);
 
   const divider = await page.$('.home-divider');
   divider ? ok('Notable-pieces divider present') : fail('Divider', '.home-divider missing');
@@ -407,6 +407,64 @@ async function testTownBudgetPageLoads(page) {
   }
 }
 
+async function testDepartmentsExplorerPageLoads(page) {
+  console.log('\n── Department Explorer ──');
+  const resp = await page.goto(`${SITE}/departments.html`, { waitUntil: 'domcontentloaded' });
+  resp && resp.ok()
+    ? ok('Departments page loads')
+    : fail('Departments page loads', `status ${resp ? resp.status() : 'no response'}`);
+
+  await page.waitForSelector('.dx-card', { timeout: 5000 }).catch(() => null);
+  const cards = await page.$$eval('.dx-card', els => els.length);
+  cards === 40
+    ? ok('Departments index card count')
+    : fail('Departments index card count', `expected 40, got ${cards}`);
+
+  const funcs = await page.$$eval('.dx-func', els => els.length);
+  funcs === 10
+    ? ok('Departments function groups')
+    : fail('Departments function groups', `expected 10, got ${funcs}`);
+
+  // Cards must show human names, not raw slugs (regression guard).
+  const cardNames = await page.$$eval('.dx-card-name', els => els.map(e => e.textContent));
+  const hasSlug = cardNames.some(n => n.includes('_'));
+  const hasSelectBoard = cardNames.includes('Select Board Office');
+  !hasSlug && hasSelectBoard
+    ? ok('Departments cards show human names')
+    : fail('Departments cards show human names', `slug seen: ${hasSlug}, "Select Board Office" present: ${hasSelectBoard}`);
+
+  await page.goto(`${SITE}/departments.html#police`, { waitUntil: 'domcontentloaded' });
+  await page.waitForSelector('.dx-money', { timeout: 5000 }).catch(() => null);
+
+  const policeText = await page.$eval('body', el => el.textContent);
+  policeText.includes('What it does') && policeText.includes('Citizens Police Academy')
+    ? ok('Police profile shows cited service description')
+    : fail('Police profile service description', '"What it does" / academy text missing');
+
+  const roster = await page.$('.dx-roster');
+  const rosterRows = await page.$$eval('.dx-roster tbody tr', els => els.length);
+  roster && rosterRows >= 10
+    ? ok(`Police profile shows position roster (${rosterRows} rows)`)
+    : fail('Police profile roster', `.dx-roster rows: ${rosterRows}`);
+
+  const moneyTable = await page.$('.dx-money');
+  moneyTable
+    ? ok('Police profile budget table present')
+    : fail('Police profile budget table', '.dx-money missing');
+
+  policeText.includes('Checkbook') && policeText.includes('Browse the full checkbook')
+    ? ok('Police profile shows checkbook section')
+    : fail('Police profile checkbook', 'Checkbook section missing');
+
+  // Library defers to its dedicated page via a deep-dive link.
+  await page.goto(`${SITE}/departments.html#library`, { waitUntil: 'domcontentloaded' });
+  await page.waitForSelector('.dx-deepdive', { timeout: 5000 }).catch(() => null);
+  const libLink = await page.$eval('.dx-deepdive a', el => el.getAttribute('href')).catch(() => null);
+  libLink === '/library.html'
+    ? ok('Library profile links out to /library.html')
+    : fail('Library deep-dive link', `href: ${libLink}`);
+}
+
 async function testWhatIsActuallyFlexiblePageLoads(page) {
   console.log('\n── What is Actually Flexible page ──');
   const resp = await page.goto(`${SITE}/what-is-actually-flexible.html`, { waitUntil: 'domcontentloaded' });
@@ -760,6 +818,7 @@ async function testTopicMeetingCounts(page) {
     await testGeneralGovernmentPeerChart(page1);
     await testSchoolAgeVsEnrollment(page1);
     await testTownBudgetPageLoads(page1);
+    await testDepartmentsExplorerPageLoads(page1);
     await testWhatIsActuallyFlexiblePageLoads(page1);
     await testM101Landing(page1);
     await testM101ChapterPages(page1);
