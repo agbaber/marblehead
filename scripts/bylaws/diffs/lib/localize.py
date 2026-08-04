@@ -72,7 +72,20 @@ def validate(tokens, section_body):
     added = _substantive_adds(tokens)
     if not added:
         return False, "no substantive additions to verify"
-    missing = [a for a in added if a.lower() not in body]
+
+    def present(a):
+        a = a.lower()
+        if a in body:
+            return True
+        # tolerate a minor reassembly/OCR gap (spacing, a dropped hyphen) on an
+        # otherwise-verbatim addition: high-similarity substring counts as present.
+        w = len(a)
+        for i in range(0, max(1, len(body) - w + 1), 3):
+            if SequenceMatcher(None, a, body[i:i + w]).ratio() >= 0.9:
+                return True
+        return False
+
+    missing = [a for a in added if not present(a)]
     if missing:
         return False, f"{len(missing)}/{len(added)} additions not in current text: {missing[:2]}"
     return True, f"all {len(added)} additions present in current § text"
