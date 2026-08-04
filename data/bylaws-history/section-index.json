@@ -1,0 +1,4264 @@
+{
+  "1-1": {
+    "chapter": "1",
+    "heading": "Title.",
+    "file": "001-general-provisions.md",
+    "notes": []
+  },
+  "1-2": {
+    "chapter": "1",
+    "heading": "Repeal of conflicting provisions.",
+    "file": "001-general-provisions.md",
+    "notes": []
+  },
+  "1-3": {
+    "chapter": "1",
+    "heading": "Rules of construction.",
+    "file": "001-general-provisions.md",
+    "notes": []
+  },
+  "1-4": {
+    "chapter": "1",
+    "heading": "General penalty.",
+    "file": "001-general-provisions.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1972-03-14",
+        "type": "ATM",
+        "article": 30
+      },
+      {
+        "action": "added",
+        "date": "1997-05-05",
+        "type": "ATM",
+        "article": 41
+      }
+    ]
+  },
+  "1-5": {
+    "chapter": "1",
+    "heading": "Authority to issue licenses and permits.",
+    "file": "001-general-provisions.md",
+    "notes": []
+  },
+  "1-6": {
+    "chapter": "1",
+    "heading": "Amendments.",
+    "file": "001-general-provisions.md",
+    "notes": []
+  },
+  "6-1": {
+    "chapter": "6",
+    "heading": "Purpose.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-2": {
+    "chapter": "6",
+    "heading": "Definitions.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-3": {
+    "chapter": "6",
+    "heading": "Permit required; application; fee; transferability; false statements.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-4": {
+    "chapter": "6",
+    "heading": "Permit duration and renewal.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-5": {
+    "chapter": "6",
+    "heading": "Proper alarm system operation and maintenance.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-6": {
+    "chapter": "6",
+    "heading": "Manual reset required.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-7": {
+    "chapter": "6",
+    "heading": "Reporting of alarm signals.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-8": {
+    "chapter": "6",
+    "heading": "Indirect alarm reporting.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-9": {
+    "chapter": "6",
+    "heading": "Direct alarm reporting; automatic alarm notifications.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-10": {
+    "chapter": "6",
+    "heading": "Alarm system operating instructions.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-11": {
+    "chapter": "6",
+    "heading": "Alarm dispatch records.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-12": {
+    "chapter": "6",
+    "heading": "System performance reviews.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-13": {
+    "chapter": "6",
+    "heading": "Service fees; new installations.",
+    "file": "006-alarm-systems.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2001-05-07",
+        "type": "ATM",
+        "article": 33
+      }
+    ]
+  },
+  "6-14": {
+    "chapter": "6",
+    "heading": "Revocation of alarm permit.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-15": {
+    "chapter": "6",
+    "heading": "Appeal from denial or revocation of a permit.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-16": {
+    "chapter": "6",
+    "heading": "Reinstatement of permit.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-17": {
+    "chapter": "6",
+    "heading": "Violations; penalty.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-18": {
+    "chapter": "6",
+    "heading": "Nuisance alarms.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-19": {
+    "chapter": "6",
+    "heading": "Administrative rules.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "6-20": {
+    "chapter": "6",
+    "heading": "Responsibility for alarm systems.",
+    "file": "006-alarm-systems.md",
+    "notes": []
+  },
+  "9-1": {
+    "chapter": "9",
+    "heading": "Prohibited acts.",
+    "file": "009-alcoholic-beverages.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1962-03-13",
+        "type": "TM",
+        "article": 37
+      },
+      {
+        "action": "amended",
+        "date": "1972-03-14",
+        "type": "ATM",
+        "article": 30
+      },
+      {
+        "action": "amended",
+        "date": "1974-03-14",
+        "type": "ATM",
+        "article": 85
+      }
+    ]
+  },
+  "9-2": {
+    "chapter": "9",
+    "heading": "Violations and penalties.",
+    "file": "009-alcoholic-beverages.md",
+    "notes": []
+  },
+  "9-3": {
+    "chapter": "9",
+    "heading": "Persons have custody of minors.",
+    "file": "009-alcoholic-beverages.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1995-05-01",
+        "type": "ATM",
+        "article": 43
+      }
+    ]
+  },
+  "9-4": {
+    "chapter": "9",
+    "heading": "Persons in control of residential premises.",
+    "file": "009-alcoholic-beverages.md",
+    "notes": []
+  },
+  "9-5": {
+    "chapter": "9",
+    "heading": "Defense.",
+    "file": "009-alcoholic-beverages.md",
+    "notes": []
+  },
+  "9-6": {
+    "chapter": "9",
+    "heading": "Enforcement.",
+    "file": "009-alcoholic-beverages.md",
+    "notes": []
+  },
+  "9-7": {
+    "chapter": "9",
+    "heading": "Notice of violation.",
+    "file": "009-alcoholic-beverages.md",
+    "notes": []
+  },
+  "9-8": {
+    "chapter": "9",
+    "heading": "Records; disposition of funds.",
+    "file": "009-alcoholic-beverages.md",
+    "notes": []
+  },
+  "9-9": {
+    "chapter": "9",
+    "heading": "Effect on state law.",
+    "file": "009-alcoholic-beverages.md",
+    "notes": []
+  },
+  "9-10": {
+    "chapter": "9",
+    "heading": "Severability.",
+    "file": "009-alcoholic-beverages.md",
+    "notes": []
+  },
+  "13-1": {
+    "chapter": "13",
+    "heading": "Keeping of swine prohibited.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1954-03-11",
+        "type": "TM",
+        "article": 73
+      }
+    ]
+  },
+  "13-2": {
+    "chapter": "13",
+    "heading": "Violations and penalties.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1972-03-14",
+        "type": "ATM",
+        "article": 30
+      }
+    ]
+  },
+  "13-3": {
+    "chapter": "13",
+    "heading": "Horses on public sidewalks.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1965-03-10",
+        "type": "TM",
+        "article": 62
+      },
+      {
+        "action": "amended",
+        "date": "1972-03-14",
+        "type": "ATM",
+        "article": 30
+      }
+    ]
+  },
+  "13-4": {
+    "chapter": "13",
+    "heading": "Registration of horses.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1968-03-12",
+        "type": "ATM",
+        "article": 30
+      },
+      {
+        "action": "amended",
+        "date": "1972-03-14",
+        "type": "ATM",
+        "article": 30
+      }
+    ]
+  },
+  "13-5": {
+    "chapter": "13",
+    "heading": "Running at large.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1965-03-16",
+        "type": "TM",
+        "article": 104
+      },
+      {
+        "action": "added",
+        "date": "1971-03-10",
+        "type": "ATM",
+        "article": 74
+      },
+      {
+        "action": "amended",
+        "date": "1973-03-12",
+        "type": "ATM",
+        "article": 26,
+        "articles": [
+          26,
+          27
+        ]
+      },
+      {
+        "action": "amended",
+        "date": "1977-06-27",
+        "type": "STM",
+        "article": 21
+      },
+      {
+        "action": "amended",
+        "date": "1988-05-02",
+        "type": "STM",
+        "article": 9
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-01",
+        "type": "ATM",
+        "article": 56
+      },
+      {
+        "action": "amended",
+        "date": "2004-05-03",
+        "type": "ATM",
+        "article": 55
+      },
+      {
+        "action": "amended",
+        "date": "2007-05-07",
+        "type": "ATM",
+        "article": 31
+      }
+    ]
+  },
+  "13-6": {
+    "chapter": "13",
+    "heading": "Dog bites.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 32
+      }
+    ]
+  },
+  "13-7": {
+    "chapter": "13",
+    "heading": "Female dogs in heat.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1983-05-02",
+        "type": "ATM",
+        "article": 37
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 32
+      }
+    ]
+  },
+  "13-8": {
+    "chapter": "13",
+    "heading": "Confinement of dogs running at large; disposition; fees.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1979-05-07",
+        "type": "ATM",
+        "article": 9
+      },
+      {
+        "action": "added",
+        "date": "1988-05-02",
+        "type": "STM",
+        "article": 9
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 32
+      }
+    ]
+  },
+  "13-9": {
+    "chapter": "13",
+    "heading": "Disposal of fecal matter.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1986-05-07",
+        "type": "ATM",
+        "article": 103
+      }
+    ]
+  },
+  "13-10": {
+    "chapter": "13",
+    "heading": "Licensing and registration of dogs.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1989-05-01",
+        "type": "ATM",
+        "article": 52
+      },
+      {
+        "action": "amended",
+        "date": "1990-05-07",
+        "type": "ATM",
+        "article": 18
+      },
+      {
+        "action": "amended",
+        "date": "2001-05-07",
+        "type": "ATM",
+        "article": 32
+      },
+      {
+        "action": "amended",
+        "date": "2004-05-03",
+        "type": "ATM",
+        "article": 54
+      },
+      {
+        "action": "amended",
+        "date": "2006-05-01",
+        "type": "ATM",
+        "article": 40
+      },
+      {
+        "action": "amended",
+        "date": "2010-05-03",
+        "type": "ATM",
+        "article": 45
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 32
+      },
+      {
+        "action": "amended",
+        "date": "2024-05-06",
+        "type": "ATM",
+        "article": 33
+      }
+    ]
+  },
+  "13-11": {
+    "chapter": "13",
+    "heading": "Seasonal prohibition of dogs from certain areas.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1992-05-04",
+        "type": "ATM",
+        "article": 51
+      },
+      {
+        "action": "amended",
+        "date": "2006-05-01",
+        "type": "ATM",
+        "article": 39
+      },
+      {
+        "action": "amended",
+        "date": "2007-05-07",
+        "type": "ATM",
+        "article": 31
+      }
+    ]
+  },
+  "13-12": {
+    "chapter": "13",
+    "heading": "Excessive barking prohibited.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1993-05-03",
+        "type": "ATM",
+        "article": 36
+      }
+    ]
+  },
+  "13-13": {
+    "chapter": "13",
+    "heading": "Permit required to keep live fowl.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1977-05-02",
+        "type": "ATM",
+        "article": 27
+      },
+      {
+        "action": "adopted",
+        "date": "2004-05-03",
+        "type": "ATM",
+        "article": 14
+      }
+    ]
+  },
+  "13-14": {
+    "chapter": "13",
+    "heading": "(Reserved)",
+    "file": "013-animals.md",
+    "notes": []
+  },
+  "13-15": {
+    "chapter": "13",
+    "heading": "Vaccination of dogs and cats required.",
+    "file": "013-animals.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1992-05-04",
+        "type": "ATM",
+        "article": 53
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 32
+      }
+    ]
+  },
+  "13-16": {
+    "chapter": "13",
+    "heading": "Violations and penalties.",
+    "file": "013-animals.md",
+    "notes": []
+  },
+  "20-1": {
+    "chapter": "20",
+    "heading": "Pre-blast survey.",
+    "file": "020-blasting.md",
+    "notes": []
+  },
+  "24-1": {
+    "chapter": "24",
+    "heading": "Notice of public hearing.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-2": {
+    "chapter": "24",
+    "heading": "Records; notification of abatements.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-3": {
+    "chapter": "24",
+    "heading": "Valuation of estates.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-4": {
+    "chapter": "24",
+    "heading": "Appointments; vacancies; terms of office.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-5": {
+    "chapter": "24",
+    "heading": "Duties.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-6": {
+    "chapter": "24",
+    "heading": "Membership.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-7": {
+    "chapter": "24",
+    "heading": "Creation; appointments and terms of service.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1968-03-12",
+        "type": "ATM",
+        "article": 9
+      }
+    ]
+  },
+  "24-8": {
+    "chapter": "24",
+    "heading": "Definitions.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-9": {
+    "chapter": "24",
+    "heading": "Duties.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-10": {
+    "chapter": "24",
+    "heading": "Grievance procedure.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1969-03-10",
+        "type": "ATM",
+        "article": 10
+      },
+      {
+        "action": "amended",
+        "date": "1969-03-10",
+        "type": "ATM",
+        "article": 10
+      }
+    ]
+  },
+  "24-11": {
+    "chapter": "24",
+    "heading": "Purpose.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1969-03-11",
+        "type": "ATM",
+        "article": 74
+      }
+    ]
+  },
+  "24-12": {
+    "chapter": "24",
+    "heading": "Appointments; term of office.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1979-02-05",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "2020-10-17",
+        "type": "STM",
+        "article": 21
+      }
+    ]
+  },
+  "24-13": {
+    "chapter": "24",
+    "heading": "Vacancies.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-14": {
+    "chapter": "24",
+    "heading": "Annual report.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-15": {
+    "chapter": "24",
+    "heading": "Membership; officers; report; duties.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1970-03-09",
+        "type": "ATM",
+        "article": 20
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "24-16": {
+    "chapter": "24",
+    "heading": "Purpose; membership; appointment.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1989-05-01",
+        "type": "ATM",
+        "article": 65
+      },
+      {
+        "action": "adopted",
+        "date": "1998-05-05",
+        "type": "ATM",
+        "article": 23
+      },
+      {
+        "action": "amended",
+        "date": "2024-05-06",
+        "type": "ATM",
+        "article": 39
+      }
+    ]
+  },
+  "24-17": {
+    "chapter": "24",
+    "heading": "Review of proposed capital projects.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-18": {
+    "chapter": "24",
+    "heading": "Information provided to Committee.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-19": {
+    "chapter": "24",
+    "heading": "Recommendations.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-20": {
+    "chapter": "24",
+    "heading": "Review of warrant articles.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-21": {
+    "chapter": "24",
+    "heading": "Report to Town Meeting.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-22": {
+    "chapter": "24",
+    "heading": "Appropriations by Town Meeting.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-23": {
+    "chapter": "24",
+    "heading": "Purpose; membership; appointment.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "2008-05-04",
+        "type": "ATM",
+        "article": 34
+      }
+    ]
+  },
+  "24-24": {
+    "chapter": "24",
+    "heading": "Powers.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "24-25": {
+    "chapter": "24",
+    "heading": "Purpose.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "2023-05-01",
+        "type": "ATM",
+        "article": 49
+      }
+    ]
+  },
+  "24-26": {
+    "chapter": "24",
+    "heading": "Meetings.",
+    "file": "024-boards-commissions-and-committees.md",
+    "notes": []
+  },
+  "30-1": {
+    "chapter": "30",
+    "heading": "Title.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-2": {
+    "chapter": "30",
+    "heading": "Purpose.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-3": {
+    "chapter": "30",
+    "heading": "Scope.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-4": {
+    "chapter": "30",
+    "heading": "Penalty for violation.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-5": {
+    "chapter": "30",
+    "heading": "Designation of Building Code administrator.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 4,
+        "articles": [
+          4,
+          6
+        ]
+      }
+    ]
+  },
+  "30-6": {
+    "chapter": "30",
+    "heading": "Qualifications and compensation of Building Commissioner.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 4,
+        "articles": [
+          4,
+          6
+        ]
+      }
+    ]
+  },
+  "30-7": {
+    "chapter": "30",
+    "heading": "Duties of Building Commissioner.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-8": {
+    "chapter": "30",
+    "heading": "Determination of safety specifications.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-9": {
+    "chapter": "30",
+    "heading": "Permit required; issuance; filing of plot plan.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-10": {
+    "chapter": "30",
+    "heading": "Commencement of work under permit.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-11": {
+    "chapter": "30",
+    "heading": "Term of permit; extension.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-12": {
+    "chapter": "30",
+    "heading": "Special permits.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-13": {
+    "chapter": "30",
+    "heading": "Excavations; revocation of permit; appeals.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-14": {
+    "chapter": "30",
+    "heading": "Connection to water main.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-15": {
+    "chapter": "30",
+    "heading": "Fees.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1980-05-06",
+        "type": "ATM",
+        "article": 20
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-01",
+        "type": "ATM",
+        "article": 54
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "1981-05-04",
+        "type": "ATM",
+        "article": 10
+      },
+      {
+        "action": "amended",
+        "date": "1991-05-06",
+        "type": "ATM",
+        "article": 20
+      },
+      {
+        "action": "amended",
+        "date": "2017-05-01",
+        "type": "ATM",
+        "article": 12
+      },
+      {
+        "action": "amended",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 17
+      },
+      {
+        "action": "amended",
+        "date": "2024-05-06",
+        "type": "ATM",
+        "article": 31
+      }
+    ]
+  },
+  "30-16": {
+    "chapter": "30",
+    "heading": "Plumbing and gas permit fees.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1991-05-06",
+        "type": "ATM",
+        "article": 22
+      },
+      {
+        "action": "amended",
+        "date": "2004-05-03",
+        "type": "ATM",
+        "article": 41
+      },
+      {
+        "action": "amended",
+        "date": "2024-05-06",
+        "type": "ATM",
+        "article": 31
+      }
+    ]
+  },
+  "30-17": {
+    "chapter": "30",
+    "heading": "Definitions.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-18": {
+    "chapter": "30",
+    "heading": "Approval of buildings.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-19": {
+    "chapter": "30",
+    "heading": "Garages in dwellings.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "1968-03-12",
+        "type": "ATM",
+        "article": 70
+      }
+    ]
+  },
+  "30-20": {
+    "chapter": "30",
+    "heading": "Foundations.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-21": {
+    "chapter": "30",
+    "heading": "Mortar proportions.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-22": {
+    "chapter": "30",
+    "heading": "Concrete proportions.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-23": {
+    "chapter": "30",
+    "heading": "Concrete block proportions.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-24": {
+    "chapter": "30",
+    "heading": "Building supports.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-25": {
+    "chapter": "30",
+    "heading": "Piers.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-26": {
+    "chapter": "30",
+    "heading": "Exterior walls.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-27": {
+    "chapter": "30",
+    "heading": "Sills, girders, headers and trimmers.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-28": {
+    "chapter": "30",
+    "heading": "Floor supports.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-29": {
+    "chapter": "30",
+    "heading": "Plates.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-30": {
+    "chapter": "30",
+    "heading": "Party walls.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-31": {
+    "chapter": "30",
+    "heading": "Fire stopping.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-32": {
+    "chapter": "30",
+    "heading": "Roof covering.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1969-03-11",
+        "type": "ATM",
+        "article": 73
+      }
+    ]
+  },
+  "30-33": {
+    "chapter": "30",
+    "heading": "Chimneys and fireplaces.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-34": {
+    "chapter": "30",
+    "heading": "Fire protection of woodwork.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-35": {
+    "chapter": "30",
+    "heading": "Fire escapes.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "1972-03-14",
+        "type": "ATM",
+        "article": 30
+      }
+    ]
+  },
+  "30-36": {
+    "chapter": "30",
+    "heading": "Appeals.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "30-37": {
+    "chapter": "30",
+    "heading": "through § 30-39. (Reserved)",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-38": {
+    "chapter": "30",
+    "heading": "Purpose.",
+    "file": "030-building-construction.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "2018-05-07",
+        "type": "ATM",
+        "article": 44
+      }
+    ]
+  },
+  "30-39": {
+    "chapter": "30",
+    "heading": "Definitions.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-40": {
+    "chapter": "30",
+    "heading": "Applicability.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-41": {
+    "chapter": "30",
+    "heading": "Authority.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-42": {
+    "chapter": "30",
+    "heading": "Stretch Code.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "30-43": {
+    "chapter": "30",
+    "heading": "Enforcement; when effective.",
+    "file": "030-building-construction.md",
+    "notes": []
+  },
+  "34-1": {
+    "chapter": "34",
+    "heading": "Permit required; restrictions.",
+    "file": "034-buildings-moving-of.md",
+    "notes": []
+  },
+  "37-1": {
+    "chapter": "37",
+    "heading": "Enforcement.",
+    "file": "037-buildings-numbering-of.md",
+    "notes": []
+  },
+  "37-2": {
+    "chapter": "37",
+    "heading": "Responsibility to place numbers.",
+    "file": "037-buildings-numbering-of.md",
+    "notes": []
+  },
+  "37-3": {
+    "chapter": "37",
+    "heading": "Size, color and location of numbers.",
+    "file": "037-buildings-numbering-of.md",
+    "notes": []
+  },
+  "37-4": {
+    "chapter": "37",
+    "heading": "Issuance of certificate of use and occupancy.",
+    "file": "037-buildings-numbering-of.md",
+    "notes": []
+  },
+  "37-5": {
+    "chapter": "37",
+    "heading": "Violations and penalties.",
+    "file": "037-buildings-numbering-of.md",
+    "notes": []
+  },
+  "45-1": {
+    "chapter": "45",
+    "heading": "Police Chief.",
+    "file": "045-departments.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2011-05-02",
+        "type": "ATM",
+        "article": 31
+      }
+    ]
+  },
+  "45-2": {
+    "chapter": "45",
+    "heading": "Rules and regulations.",
+    "file": "045-departments.md",
+    "notes": []
+  },
+  "45-3": {
+    "chapter": "45",
+    "heading": "General duty.",
+    "file": "045-departments.md",
+    "notes": []
+  },
+  "45-4": {
+    "chapter": "45",
+    "heading": "Creation.",
+    "file": "045-departments.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1992-05-04",
+        "type": "ATM",
+        "article": 9
+      }
+    ]
+  },
+  "45-5": {
+    "chapter": "45",
+    "heading": "Composition.",
+    "file": "045-departments.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2023-05-01",
+        "type": "ATM",
+        "article": 41
+      }
+    ]
+  },
+  "52-1": {
+    "chapter": "52",
+    "heading": "Inspector of Wires.",
+    "file": "052-electrical-installations.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1974-03-14",
+        "type": "ATM",
+        "article": 67
+      }
+    ]
+  },
+  "52-2": {
+    "chapter": "52",
+    "heading": "Information to be furnished to Inspector on request.",
+    "file": "052-electrical-installations.md",
+    "notes": []
+  },
+  "52-3": {
+    "chapter": "52",
+    "heading": "Access for inspection; connection of wires.",
+    "file": "052-electrical-installations.md",
+    "notes": []
+  },
+  "52-4": {
+    "chapter": "52",
+    "heading": "Attachment of wires or lines.",
+    "file": "052-electrical-installations.md",
+    "notes": []
+  },
+  "52-5": {
+    "chapter": "52",
+    "heading": "Permit required.",
+    "file": "052-electrical-installations.md",
+    "notes": []
+  },
+  "52-6": {
+    "chapter": "52",
+    "heading": "Fees.",
+    "file": "052-electrical-installations.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1980-05-06",
+        "type": "ATM",
+        "article": 21
+      },
+      {
+        "action": "amended",
+        "date": "1986-05-05",
+        "type": "ATM",
+        "article": 20
+      },
+      {
+        "action": "amended",
+        "date": "1991-05-06",
+        "type": "ATM",
+        "article": 21
+      },
+      {
+        "action": "amended",
+        "date": "1990-05-07",
+        "type": "ATM",
+        "article": 17
+      },
+      {
+        "action": "amended",
+        "date": "2001-05-07",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "2004-05-03",
+        "type": "ATM",
+        "article": 42
+      },
+      {
+        "action": "amended",
+        "date": "2024-05-06",
+        "type": "ATM",
+        "article": 32
+      }
+    ]
+  },
+  "57-1": {
+    "chapter": "57",
+    "heading": "Protection of public from hazards.",
+    "file": "057-excavations-and-grading.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1962-03-13",
+        "type": "TM",
+        "article": 38
+      }
+    ]
+  },
+  "57-2": {
+    "chapter": "57",
+    "heading": "Permit required for removal of soil, loam, sand or gravel.",
+    "file": "057-excavations-and-grading.md",
+    "notes": []
+  },
+  "63-1": {
+    "chapter": "63",
+    "heading": "Financial year.",
+    "file": "063-finance-and-contracts.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1974-03-14",
+        "type": "ATM",
+        "article": 67
+      }
+    ]
+  },
+  "63-2": {
+    "chapter": "63",
+    "heading": "Town warrants.",
+    "file": "063-finance-and-contracts.md",
+    "notes": []
+  },
+  "63-3": {
+    "chapter": "63",
+    "heading": "Unexpended year-end balances.",
+    "file": "063-finance-and-contracts.md",
+    "notes": []
+  },
+  "63-4": {
+    "chapter": "63",
+    "heading": "Deposit of funds into treasury prior to performance of work.",
+    "file": "063-finance-and-contracts.md",
+    "notes": []
+  },
+  "63-5": {
+    "chapter": "63",
+    "heading": "(Reserved)",
+    "file": "063-finance-and-contracts.md",
+    "notes": []
+  },
+  "63-6": {
+    "chapter": "63",
+    "heading": "Affirmative action policy regarding contractors.",
+    "file": "063-finance-and-contracts.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1970-03-10",
+        "type": "ATM",
+        "article": 28
+      }
+    ]
+  },
+  "63-7": {
+    "chapter": "63",
+    "heading": "Purchases.",
+    "file": "063-finance-and-contracts.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1976-02-09",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "63-8": {
+    "chapter": "63",
+    "heading": "Interest on outstanding water and sewer accounts.",
+    "file": "063-finance-and-contracts.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1991-05-06",
+        "type": "ATM",
+        "article": 42
+      },
+      {
+        "action": "amended",
+        "date": "2014-05-05",
+        "type": "ATM",
+        "article": 31
+      }
+    ]
+  },
+  "63-9": {
+    "chapter": "63",
+    "heading": "Departmental revolving funds.",
+    "file": "063-finance-and-contracts.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "2017-05-01",
+        "type": "ATM",
+        "article": 7
+      },
+      {
+        "action": "amended",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 7
+      },
+      {
+        "action": "amended",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 7
+      },
+      {
+        "action": "amended",
+        "date": "2024-05-06",
+        "type": "ATM",
+        "article": 5
+      },
+      {
+        "action": "added",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 7
+      },
+      {
+        "action": "added",
+        "date": "2023-05-01",
+        "type": "ATM",
+        "article": 8
+      }
+    ]
+  },
+  "67-1": {
+    "chapter": "67",
+    "heading": "Use prohibited; exceptions.",
+    "file": "067-firearms.md",
+    "notes": []
+  },
+  "67-2": {
+    "chapter": "67",
+    "heading": "Permits for target practice.",
+    "file": "067-firearms.md",
+    "notes": []
+  },
+  "70-1": {
+    "chapter": "70",
+    "heading": "Designation of inspectors.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-2": {
+    "chapter": "70",
+    "heading": "Adoption of code.",
+    "file": "070-fire-prevention.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1969-03-11",
+        "type": "ATM",
+        "article": 71
+      },
+      {
+        "action": "amended",
+        "date": "1971-03-10",
+        "type": "ATM",
+        "article": 56
+      },
+      {
+        "action": "amended",
+        "date": "1977-06-27",
+        "type": "ATM",
+        "article": 2
+      }
+    ]
+  },
+  "70-3": {
+    "chapter": "70",
+    "heading": "Enforcement.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-4": {
+    "chapter": "70",
+    "heading": "Definitions.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-5": {
+    "chapter": "70",
+    "heading": "Storage of flammable liquids.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-6": {
+    "chapter": "70",
+    "heading": "Storage of liquefied petroleum gas.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-7": {
+    "chapter": "70",
+    "heading": "Storage of explosives and blasting agents.",
+    "file": "070-fire-prevention.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1969-03-11",
+        "type": "ATM",
+        "article": 71
+      }
+    ]
+  },
+  "70-8": {
+    "chapter": "70",
+    "heading": "Modifications.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-9": {
+    "chapter": "70",
+    "heading": "Appeals.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-10": {
+    "chapter": "70",
+    "heading": "New materials, processes or occupancies which may require permits.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-11": {
+    "chapter": "70",
+    "heading": "Penalties.",
+    "file": "070-fire-prevention.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1972-03-14",
+        "type": "ATM",
+        "article": 30
+      }
+    ]
+  },
+  "70-12": {
+    "chapter": "70",
+    "heading": "Repeal of conflicting By-Laws.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-13": {
+    "chapter": "70",
+    "heading": "Definitions.",
+    "file": "070-fire-prevention.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1987-05-06",
+        "type": "ATM",
+        "article": 90
+      },
+      {
+        "action": "amended",
+        "date": "2018-05-07",
+        "type": "ATM",
+        "article": 43
+      }
+    ]
+  },
+  "70-14": {
+    "chapter": "70",
+    "heading": "Authority.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-15": {
+    "chapter": "70",
+    "heading": "Location of fire lanes.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-16": {
+    "chapter": "70",
+    "heading": "Notice of fire lanes.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-17": {
+    "chapter": "70",
+    "heading": "Obstruction of fire lanes.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-18": {
+    "chapter": "70",
+    "heading": "Removal of vehicles or other obstructions.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-19": {
+    "chapter": "70",
+    "heading": "Violations and penalties.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "70-20": {
+    "chapter": "70",
+    "heading": "Enforcement.",
+    "file": "070-fire-prevention.md",
+    "notes": []
+  },
+  "75-1": {
+    "chapter": "75",
+    "heading": "Gas-powered leaf blowers prohibited at certain times.",
+    "file": "075-gas-powered-leaf-blowers.md",
+    "notes": []
+  },
+  "75-2": {
+    "chapter": "75",
+    "heading": "Exceptions.",
+    "file": "075-gas-powered-leaf-blowers.md",
+    "notes": []
+  },
+  "75-3": {
+    "chapter": "75",
+    "heading": "Enforcement.",
+    "file": "075-gas-powered-leaf-blowers.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "2023-05-01",
+        "type": "ATM",
+        "article": 48
+      }
+    ]
+  },
+  "83-1": {
+    "chapter": "83",
+    "heading": "License required for shop.",
+    "file": "083-junk-dealers-and-collectors.md",
+    "notes": []
+  },
+  "83-2": {
+    "chapter": "83",
+    "heading": "License required for buyers or collectors.",
+    "file": "083-junk-dealers-and-collectors.md",
+    "notes": []
+  },
+  "83-3": {
+    "chapter": "83",
+    "heading": "Keeping of records; inspections.",
+    "file": "083-junk-dealers-and-collectors.md",
+    "notes": []
+  },
+  "83-4": {
+    "chapter": "83",
+    "heading": "Posting of sign; examination of premises.",
+    "file": "083-junk-dealers-and-collectors.md",
+    "notes": []
+  },
+  "83-5": {
+    "chapter": "83",
+    "heading": "Examination of vehicles; display of badges.",
+    "file": "083-junk-dealers-and-collectors.md",
+    "notes": []
+  },
+  "83-6": {
+    "chapter": "83",
+    "heading": "Closing hours.",
+    "file": "083-junk-dealers-and-collectors.md",
+    "notes": []
+  },
+  "83-7": {
+    "chapter": "83",
+    "heading": "Penalty.",
+    "file": "083-junk-dealers-and-collectors.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1972-03-14",
+        "type": "ATM",
+        "article": 30
+      }
+    ]
+  },
+  "88-1": {
+    "chapter": "88",
+    "heading": "Library hours.",
+    "file": "088-library.md",
+    "notes": []
+  },
+  "88-2": {
+    "chapter": "88",
+    "heading": "Rules and regulations.",
+    "file": "088-library.md",
+    "notes": []
+  },
+  "90-1": {
+    "chapter": "90",
+    "heading": "Delinquent taxpayer list.",
+    "file": "090-licenses-and-permits.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1994-05-02",
+        "type": "ATM",
+        "article": 17
+      },
+      {
+        "action": "amended",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 34
+      }
+    ]
+  },
+  "90-2": {
+    "chapter": "90",
+    "heading": "Denial, revocation or suspension of license or permit.",
+    "file": "090-licenses-and-permits.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 34
+      }
+    ]
+  },
+  "90-3": {
+    "chapter": "90",
+    "heading": "Payment agreement.",
+    "file": "090-licenses-and-permits.md",
+    "notes": []
+  },
+  "90-4": {
+    "chapter": "90",
+    "heading": "Waiver of denial, suspension or revocation.",
+    "file": "090-licenses-and-permits.md",
+    "notes": []
+  },
+  "90-5": {
+    "chapter": "90",
+    "heading": "Exceptions.",
+    "file": "090-licenses-and-permits.md",
+    "notes": []
+  },
+  "94-1": {
+    "chapter": "94",
+    "heading": "Littering public ways.",
+    "file": "094-littering.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1986-05-06",
+        "type": "STM",
+        "article": 2
+      }
+    ]
+  },
+  "94-2": {
+    "chapter": "94",
+    "heading": "Littering public property.",
+    "file": "094-littering.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1989-05-01",
+        "type": "ATM",
+        "article": 35
+      }
+    ]
+  },
+  "97-1": {
+    "chapter": "97",
+    "heading": "Limitation on number of licenses issued.",
+    "file": "097-marijuana.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 33
+      }
+    ]
+  },
+  "106-1": {
+    "chapter": "106",
+    "heading": "Physical examination required.",
+    "file": "106-officers-and-employees.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1954-03-10",
+        "type": "TM",
+        "article": 12
+      },
+      {
+        "action": "amended",
+        "date": "2023-05-01",
+        "type": "ATM",
+        "article": 35
+      }
+    ]
+  },
+  "106-2": {
+    "chapter": "106",
+    "heading": "Town moneys.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-3": {
+    "chapter": "106",
+    "heading": "Office hours.",
+    "file": "106-officers-and-employees.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1976-05-03",
+        "type": "ATM",
+        "article": 29
+      },
+      {
+        "action": "amended",
+        "date": "1977-05-03",
+        "type": "ATM",
+        "article": 52
+      }
+    ]
+  },
+  "106-4": {
+    "chapter": "106",
+    "heading": "Town documents.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-5": {
+    "chapter": "106",
+    "heading": "Town Seal.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-6": {
+    "chapter": "106",
+    "heading": "Copies of deeds and other instruments.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-7": {
+    "chapter": "106",
+    "heading": "Book of records; notification of Town Meeting votes.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-8": {
+    "chapter": "106",
+    "heading": "Registry of Deeds.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-9": {
+    "chapter": "106",
+    "heading": "Safekeeping of documents.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-10": {
+    "chapter": "106",
+    "heading": "Forms to be furnished.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-11": {
+    "chapter": "106",
+    "heading": "Endorsing and filing of documents.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-12": {
+    "chapter": "106",
+    "heading": "Filing of materials related to Town Meetings.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-13": {
+    "chapter": "106",
+    "heading": "Book of reports.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-14": {
+    "chapter": "106",
+    "heading": "Annual report.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-15": {
+    "chapter": "106",
+    "heading": "Appointment; duties.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-16": {
+    "chapter": "106",
+    "heading": "Annual report.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-17": {
+    "chapter": "106",
+    "heading": "Salary; disposition of fees.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-18": {
+    "chapter": "106",
+    "heading": "Appointment; powers and duties; annual report.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-19": {
+    "chapter": "106",
+    "heading": "Annual report.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-20": {
+    "chapter": "106",
+    "heading": "Disposition of moneys.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-21": {
+    "chapter": "106",
+    "heading": "Office hours.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-22": {
+    "chapter": "106",
+    "heading": "Appointment; removal; records.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-23": {
+    "chapter": "106",
+    "heading": "Duties.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-24": {
+    "chapter": "106",
+    "heading": "Appointment.",
+    "file": "106-officers-and-employees.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "2023-05-01",
+        "type": "ATM",
+        "article": 24
+      }
+    ]
+  },
+  "106-25": {
+    "chapter": "106",
+    "heading": "Duties.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "106-26": {
+    "chapter": "106",
+    "heading": "Appointment.",
+    "file": "106-officers-and-employees.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "2024-05-06",
+        "type": "ATM",
+        "article": 34
+      }
+    ]
+  },
+  "106-27": {
+    "chapter": "106",
+    "heading": "Duties.",
+    "file": "106-officers-and-employees.md",
+    "notes": []
+  },
+  "110-1": {
+    "chapter": "110",
+    "heading": "Authority; amendments.",
+    "file": "110-old-and-historic-districts.md",
+    "notes": []
+  },
+  "110-2": {
+    "chapter": "110",
+    "heading": "Establishment of districts.",
+    "file": "110-old-and-historic-districts.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1976-05-05",
+        "type": "ATM",
+        "article": 72,
+        "articles": [
+          72,
+          73
+        ]
+      },
+      {
+        "action": "added",
+        "date": "1986-05-05",
+        "type": "ATM",
+        "article": 28
+      },
+      {
+        "action": "added",
+        "date": "1986-05-05",
+        "type": "ATM",
+        "article": 28
+      },
+      {
+        "action": "added",
+        "date": "1986-05-05",
+        "type": "ATM",
+        "article": 28
+      },
+      {
+        "action": "added",
+        "date": "2002-05-06",
+        "type": "ATM",
+        "article": 37
+      }
+    ]
+  },
+  "110-3": {
+    "chapter": "110",
+    "heading": "Old and Historic Marblehead Districts Commission.",
+    "file": "110-old-and-historic-districts.md",
+    "notes": []
+  },
+  "110-4": {
+    "chapter": "110",
+    "heading": "Structures and features not requiring certificates of appropriateness.",
+    "file": "110-old-and-historic-districts.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1976-05-05",
+        "type": "ATM",
+        "article": 73
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 34
+      },
+      {
+        "action": "amended",
+        "date": "1976-05-05",
+        "type": "ATM",
+        "article": 73
+      }
+    ]
+  },
+  "110-5": {
+    "chapter": "110",
+    "heading": "Determinations against issuance of certificates of appropriateness.",
+    "file": "110-old-and-historic-districts.md",
+    "notes": []
+  },
+  "110-6": {
+    "chapter": "110",
+    "heading": "Regulatory provisions.",
+    "file": "110-old-and-historic-districts.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1993-05-04",
+        "type": "ATM",
+        "article": 54
+      }
+    ]
+  },
+  "110-7": {
+    "chapter": "110",
+    "heading": "Definitions.",
+    "file": "110-old-and-historic-districts.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2000-05-01",
+        "type": "ATM",
+        "article": 26
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 34
+      }
+    ]
+  },
+  "110-8": {
+    "chapter": "110",
+    "heading": "Severability; conflict.",
+    "file": "110-old-and-historic-districts.md",
+    "notes": []
+  },
+  "111-1": {
+    "chapter": "111",
+    "heading": "Authority.",
+    "file": "111-demolition-by-neglect.md",
+    "notes": []
+  },
+  "111-2": {
+    "chapter": "111",
+    "heading": "Purpose.",
+    "file": "111-demolition-by-neglect.md",
+    "notes": []
+  },
+  "111-3": {
+    "chapter": "111",
+    "heading": "Definitions.",
+    "file": "111-demolition-by-neglect.md",
+    "notes": []
+  },
+  "111-4": {
+    "chapter": "111",
+    "heading": "Determination of Demolition by Neglect.",
+    "file": "111-demolition-by-neglect.md",
+    "notes": []
+  },
+  "111-5": {
+    "chapter": "111",
+    "heading": "Demolition by Neglect Prohibited.",
+    "file": "111-demolition-by-neglect.md",
+    "notes": []
+  },
+  "111-6": {
+    "chapter": "111",
+    "heading": "Enforcement and remedies.",
+    "file": "111-demolition-by-neglect.md",
+    "notes": []
+  },
+  "111-7": {
+    "chapter": "111",
+    "heading": "Demolition on account of threat to public safety.",
+    "file": "111-demolition-by-neglect.md",
+    "notes": []
+  },
+  "111-8": {
+    "chapter": "111",
+    "heading": "Adoption of regulations.",
+    "file": "111-demolition-by-neglect.md",
+    "notes": []
+  },
+  "111-9": {
+    "chapter": "111",
+    "heading": "Severability.",
+    "file": "111-demolition-by-neglect.md",
+    "notes": []
+  },
+  "115-1": {
+    "chapter": "115",
+    "heading": "Purpose.",
+    "file": "115-pawnbrokers.md",
+    "notes": []
+  },
+  "115-2": {
+    "chapter": "115",
+    "heading": "Grant of license; term; revocation.",
+    "file": "115-pawnbrokers.md",
+    "notes": []
+  },
+  "115-3": {
+    "chapter": "115",
+    "heading": "Issuance of license.",
+    "file": "115-pawnbrokers.md",
+    "notes": []
+  },
+  "115-4": {
+    "chapter": "115",
+    "heading": "Fee.",
+    "file": "115-pawnbrokers.md",
+    "notes": []
+  },
+  "115-5": {
+    "chapter": "115",
+    "heading": "Records.",
+    "file": "115-pawnbrokers.md",
+    "notes": []
+  },
+  "115-6": {
+    "chapter": "115",
+    "heading": "Regulations.",
+    "file": "115-pawnbrokers.md",
+    "notes": []
+  },
+  "119-1": {
+    "chapter": "119",
+    "heading": "Prohibited acts.",
+    "file": "119-peace-and-good-order.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1954-03-10",
+        "type": "TM",
+        "article": 16
+      }
+    ]
+  },
+  "119-2": {
+    "chapter": "119",
+    "heading": "Conduct in public places; obstructing streets and sidewalks.",
+    "file": "119-peace-and-good-order.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1964-03-09",
+        "type": "TM",
+        "article": 22
+      },
+      {
+        "action": "amended",
+        "date": "1972-03-14",
+        "type": "ATM",
+        "article": 30
+      }
+    ]
+  },
+  "119-3": {
+    "chapter": "119",
+    "heading": "Posting notices.",
+    "file": "119-peace-and-good-order.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1986-05-06",
+        "type": "STM",
+        "article": 2
+      }
+    ]
+  },
+  "119-4": {
+    "chapter": "119",
+    "heading": "Prohibited use; violations and penalties; enforcement.",
+    "file": "119-peace-and-good-order.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "2009-05-04",
+        "type": "ATM",
+        "article": 31
+      }
+    ]
+  },
+  "119-5": {
+    "chapter": "119",
+    "heading": "Standing or leaving of vehicles prohibited.",
+    "file": "119-peace-and-good-order.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "2011-05-02",
+        "type": "ATM",
+        "article": 27
+      }
+    ]
+  },
+  "119-6": {
+    "chapter": "119",
+    "heading": "Violations and penalties.",
+    "file": "119-peace-and-good-order.md",
+    "notes": []
+  },
+  "119-7": {
+    "chapter": "119",
+    "heading": "Enforcement.",
+    "file": "119-peace-and-good-order.md",
+    "notes": []
+  },
+  "119-8": {
+    "chapter": "119",
+    "heading": "Devereux Beach.",
+    "file": "119-peace-and-good-order.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "2011-05-02",
+        "type": "ATM",
+        "article": 29
+      }
+    ]
+  },
+  "124-1": {
+    "chapter": "124",
+    "heading": "Definitions.",
+    "file": "124-poles-and-overhead-wires.md",
+    "notes": []
+  },
+  "124-2": {
+    "chapter": "124",
+    "heading": "Prohibited installations.",
+    "file": "124-poles-and-overhead-wires.md",
+    "notes": []
+  },
+  "124-3": {
+    "chapter": "124",
+    "heading": "Applicability.",
+    "file": "124-poles-and-overhead-wires.md",
+    "notes": []
+  },
+  "124-4": {
+    "chapter": "124",
+    "heading": "Violations and penalties.",
+    "file": "124-poles-and-overhead-wires.md",
+    "notes": []
+  },
+  "124-5": {
+    "chapter": "124",
+    "heading": "Authority.",
+    "file": "124-poles-and-overhead-wires.md",
+    "notes": []
+  },
+  "124-6": {
+    "chapter": "124",
+    "heading": "Definitions.",
+    "file": "124-poles-and-overhead-wires.md",
+    "notes": []
+  },
+  "124-7": {
+    "chapter": "124",
+    "heading": "Duty of utility to remove poles and wires.",
+    "file": "124-poles-and-overhead-wires.md",
+    "notes": []
+  },
+  "124-8": {
+    "chapter": "124",
+    "heading": "Violations and penalties.",
+    "file": "124-poles-and-overhead-wires.md",
+    "notes": []
+  },
+  "128-1": {
+    "chapter": "128",
+    "heading": "Reflectors required during certain hours.",
+    "file": "128-public-ways-use-of.md",
+    "notes": []
+  },
+  "128-2": {
+    "chapter": "128",
+    "heading": "Violations and penalties.",
+    "file": "128-public-ways-use-of.md",
+    "notes": []
+  },
+  "135-1": {
+    "chapter": "135",
+    "heading": "Publication of reports.",
+    "file": "135-reports.md",
+    "notes": []
+  },
+  "135-2": {
+    "chapter": "135",
+    "heading": "Financial reports.",
+    "file": "135-reports.md",
+    "notes": []
+  },
+  "135-3": {
+    "chapter": "135",
+    "heading": "Annual Report.",
+    "file": "135-reports.md",
+    "notes": []
+  },
+  "135-4": {
+    "chapter": "135",
+    "heading": "Delivery of reports to Select Board.",
+    "file": "135-reports.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1974-03-14",
+        "type": "ATM",
+        "article": 67
+      },
+      {
+        "action": "amended",
+        "date": "1985-05-07",
+        "type": "ATM",
+        "article": 59
+      }
+    ]
+  },
+  "135-5": {
+    "chapter": "135",
+    "heading": "Publication of Finance Committee's report.",
+    "file": "135-reports.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1991-05-06",
+        "type": "ATM",
+        "article": 15
+      }
+    ]
+  },
+  "135-6": {
+    "chapter": "135",
+    "heading": "Board of Health report.",
+    "file": "135-reports.md",
+    "notes": []
+  },
+  "141-1": {
+    "chapter": "141",
+    "heading": "License required.",
+    "file": "141-secondhand-dealers.md",
+    "notes": []
+  },
+  "141-2": {
+    "chapter": "141",
+    "heading": "Record required.",
+    "file": "141-secondhand-dealers.md",
+    "notes": []
+  },
+  "141-3": {
+    "chapter": "141",
+    "heading": "Penalty.",
+    "file": "141-secondhand-dealers.md",
+    "notes": []
+  },
+  "144-1": {
+    "chapter": "144",
+    "heading": "Supervisory powers.",
+    "file": "144-select-board.md",
+    "notes": []
+  },
+  "144-2": {
+    "chapter": "144",
+    "heading": "Appearances before legislature.",
+    "file": "144-select-board.md",
+    "notes": []
+  },
+  "144-3": {
+    "chapter": "144",
+    "heading": "Legal proceedings.",
+    "file": "144-select-board.md",
+    "notes": []
+  },
+  "144-4": {
+    "chapter": "144",
+    "heading": "Sale of Town property.",
+    "file": "144-select-board.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1980-05-07",
+        "type": "ATM",
+        "article": 63
+      },
+      {
+        "action": "amended",
+        "date": "1985-05-07",
+        "type": "ATM",
+        "article": 71
+      }
+    ]
+  },
+  "144-5": {
+    "chapter": "144",
+    "heading": "Insurance allocation.",
+    "file": "144-select-board.md",
+    "notes": []
+  },
+  "144-6": {
+    "chapter": "144",
+    "heading": "Term of office.",
+    "file": "144-select-board.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "2023-05-01",
+        "type": "ATM",
+        "article": 44
+      }
+    ]
+  },
+  "148-1": {
+    "chapter": "148",
+    "heading": "Purpose.",
+    "file": "148-signs.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      }
+    ]
+  },
+  "148-2": {
+    "chapter": "148",
+    "heading": "Permit requirements.",
+    "file": "148-signs.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "added",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "added",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      }
+    ]
+  },
+  "148-3": {
+    "chapter": "148",
+    "heading": "Penalty for violation.",
+    "file": "148-signs.md",
+    "notes": []
+  },
+  "148-4": {
+    "chapter": "148",
+    "heading": "Severability.",
+    "file": "148-signs.md",
+    "notes": []
+  },
+  "148-5": {
+    "chapter": "148",
+    "heading": "Definitions.",
+    "file": "148-signs.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1978-05-03",
+        "type": "ATM",
+        "article": 31
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "1997-05-05",
+        "type": "ATM",
+        "article": 25
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "added",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "added",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "added",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "added",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "added",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "added",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      }
+    ]
+  },
+  "148-6": {
+    "chapter": "148",
+    "heading": "Residential areas.",
+    "file": "148-signs.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1978-05-03",
+        "type": "ATM",
+        "article": 31
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "1997-05-05",
+        "type": "ATM",
+        "article": 25
+      }
+    ]
+  },
+  "148-7": {
+    "chapter": "148",
+    "heading": "Business areas.",
+    "file": "148-signs.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1978-05-03",
+        "type": "ATM",
+        "article": 31
+      },
+      {
+        "action": "amended",
+        "date": "1984-05-07",
+        "type": "ATM",
+        "article": 19
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "1984-05-07",
+        "type": "ATM",
+        "article": 19
+      },
+      {
+        "action": "amended",
+        "date": "1997-05-05",
+        "type": "ATM",
+        "article": 25
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "1978-05-03",
+        "type": "ATM",
+        "article": 31
+      },
+      {
+        "action": "amended",
+        "date": "1997-05-05",
+        "type": "ATM",
+        "article": 25
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "1978-05-03",
+        "type": "ATM",
+        "article": 31
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "1997-05-05",
+        "type": "ATM",
+        "article": 25
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "amended",
+        "date": "1997-05-05",
+        "type": "ATM",
+        "article": 25
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "added",
+        "date": "1984-05-07",
+        "type": "ATM",
+        "article": 19
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      }
+    ]
+  },
+  "148-8": {
+    "chapter": "148",
+    "heading": "Illuminated signs.",
+    "file": "148-signs.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1978-05-03",
+        "type": "ATM",
+        "article": 31
+      },
+      {
+        "action": "added",
+        "date": "1978-05-03",
+        "type": "ATM",
+        "article": 31
+      },
+      {
+        "action": "added",
+        "date": "1997-05-05",
+        "type": "ATM",
+        "article": 25
+      }
+    ]
+  },
+  "148-9": {
+    "chapter": "148",
+    "heading": "Permits.",
+    "file": "148-signs.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-01",
+        "type": "ATM",
+        "article": 53
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "added",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      },
+      {
+        "action": "added",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      }
+    ]
+  },
+  "148-10": {
+    "chapter": "148",
+    "heading": "Appeal.",
+    "file": "148-signs.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "148-11": {
+    "chapter": "148",
+    "heading": "Special permits.",
+    "file": "148-signs.md",
+    "notes": []
+  },
+  "148-12": {
+    "chapter": "148",
+    "heading": "Enforcement.",
+    "file": "148-signs.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "148-13": {
+    "chapter": "148",
+    "heading": "Obsolete signs and nonconforming signs.",
+    "file": "148-signs.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1977-05-02",
+        "type": "ATM",
+        "article": 20
+      },
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      },
+      {
+        "action": "amended",
+        "date": "1997-05-05",
+        "type": "ATM",
+        "article": 25
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 33
+      }
+    ]
+  },
+  "153-1": {
+    "chapter": "153",
+    "heading": "Statement of purpose.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-2": {
+    "chapter": "153",
+    "heading": "Definitions.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-3": {
+    "chapter": "153",
+    "heading": "Prohibition and requirements.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-4": {
+    "chapter": "153",
+    "heading": "Registration.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-5": {
+    "chapter": "153",
+    "heading": "Investigation and issuance.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-6": {
+    "chapter": "153",
+    "heading": "Contents of certificate.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-7": {
+    "chapter": "153",
+    "heading": "Appeal.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-8": {
+    "chapter": "153",
+    "heading": "Expiration of certificate.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-9": {
+    "chapter": "153",
+    "heading": "Transfer of certificate.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-10": {
+    "chapter": "153",
+    "heading": "Revocation of certificate.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-11": {
+    "chapter": "153",
+    "heading": "Duties of Police Department.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-12": {
+    "chapter": "153",
+    "heading": "Exception.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-13": {
+    "chapter": "153",
+    "heading": "Severability.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "153-14": {
+    "chapter": "153",
+    "heading": "Penalty.",
+    "file": "153-solicitations-and-canvassing.md",
+    "notes": []
+  },
+  "156-1": {
+    "chapter": "156",
+    "heading": "Title.",
+    "file": "156-solid-waste.md",
+    "notes": []
+  },
+  "156-2": {
+    "chapter": "156",
+    "heading": "Board of Health regulations.",
+    "file": "156-solid-waste.md",
+    "notes": []
+  },
+  "157-1": {
+    "chapter": "157",
+    "heading": "Purpose.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "2014-05-05",
+        "type": "ATM",
+        "article": 28
+      }
+    ]
+  },
+  "157-2": {
+    "chapter": "157",
+    "heading": "Definitions.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-3": {
+    "chapter": "157",
+    "heading": "Thin-film, single-use plastic bags prohibited.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-4": {
+    "chapter": "157",
+    "heading": "(Reserved)",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-5": {
+    "chapter": "157",
+    "heading": "Enforcement; violations and penalties.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-6": {
+    "chapter": "157",
+    "heading": "Severability; effective date.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-7": {
+    "chapter": "157",
+    "heading": "Regulations.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-8": {
+    "chapter": "157",
+    "heading": "Findings and purpose.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "2014-05-05",
+        "type": "ATM",
+        "article": 29
+      }
+    ]
+  },
+  "157-9": {
+    "chapter": "157",
+    "heading": "Definitions.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-10": {
+    "chapter": "157",
+    "heading": "Expanded polystyrene food or beverage containers prohibited.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-11": {
+    "chapter": "157",
+    "heading": "(Reserved)",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-12": {
+    "chapter": "157",
+    "heading": "List of available alternatives.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-13": {
+    "chapter": "157",
+    "heading": "Enforcement; violations and penalties.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-14": {
+    "chapter": "157",
+    "heading": "Severability; effective date.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "157-15": {
+    "chapter": "157",
+    "heading": "Regulations.",
+    "file": "157-environmental-hazards-reduction-of-waste.md",
+    "notes": []
+  },
+  "162-1": {
+    "chapter": "162",
+    "heading": "Placement of building materials or rubbish.",
+    "file": "162-streets-and-sidewalks.md",
+    "notes": []
+  },
+  "162-2": {
+    "chapter": "162",
+    "heading": "Excavations.",
+    "file": "162-streets-and-sidewalks.md",
+    "notes": []
+  },
+  "162-3": {
+    "chapter": "162",
+    "heading": "Obstructions.",
+    "file": "162-streets-and-sidewalks.md",
+    "notes": []
+  },
+  "162-4": {
+    "chapter": "162",
+    "heading": "Solicitation permit.",
+    "file": "162-streets-and-sidewalks.md",
+    "notes": []
+  },
+  "162-5": {
+    "chapter": "162",
+    "heading": "Conditions.",
+    "file": "162-streets-and-sidewalks.md",
+    "notes": []
+  },
+  "162-6": {
+    "chapter": "162",
+    "heading": "Penalty.",
+    "file": "162-streets-and-sidewalks.md",
+    "notes": []
+  },
+  "162-7": {
+    "chapter": "162",
+    "heading": "Notice.",
+    "file": "162-streets-and-sidewalks.md",
+    "notes": []
+  },
+  "162-8": {
+    "chapter": "162",
+    "heading": "Definitions.",
+    "file": "162-streets-and-sidewalks.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1967-03-14",
+        "type": "ATM",
+        "article": 34
+      }
+    ]
+  },
+  "162-9": {
+    "chapter": "162",
+    "heading": "Depositing of snow and ice restricted.",
+    "file": "162-streets-and-sidewalks.md",
+    "notes": []
+  },
+  "162-10": {
+    "chapter": "162",
+    "heading": "Penalty.",
+    "file": "162-streets-and-sidewalks.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1972-03-14",
+        "type": "ATM",
+        "article": 30
+      }
+    ]
+  },
+  "167-1": {
+    "chapter": "167",
+    "heading": "Definitions.",
+    "file": "167-swimming-pools.md",
+    "notes": []
+  },
+  "167-2": {
+    "chapter": "167",
+    "heading": "Requirements.",
+    "file": "167-swimming-pools.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1973-03-14",
+        "type": "ATM",
+        "article": 62
+      }
+    ]
+  },
+  "167-3": {
+    "chapter": "167",
+    "heading": "Failure to enclose swimming pools unlawful.",
+    "file": "167-swimming-pools.md",
+    "notes": []
+  },
+  "167-4": {
+    "chapter": "167",
+    "heading": "Penalty.",
+    "file": "167-swimming-pools.md",
+    "notes": []
+  },
+  "174-1": {
+    "chapter": "174",
+    "heading": "Annual meeting dates.",
+    "file": "174-town-meeting.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1974-03-14",
+        "type": "ATM",
+        "article": 67
+      },
+      {
+        "action": "amended",
+        "date": "2013-05-06",
+        "type": "ATM",
+        "article": 38
+      },
+      {
+        "action": "amended",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 38
+      },
+      {
+        "action": "amended",
+        "date": "2023-05-01",
+        "type": "ATM",
+        "article": 38
+      }
+    ]
+  },
+  "174-2": {
+    "chapter": "174",
+    "heading": "Town Meeting warrants.",
+    "file": "174-town-meeting.md",
+    "notes": []
+  },
+  "174-3": {
+    "chapter": "174",
+    "heading": "Notice.",
+    "file": "174-town-meeting.md",
+    "notes": []
+  },
+  "174-4": {
+    "chapter": "174",
+    "heading": "Service.",
+    "file": "174-town-meeting.md",
+    "notes": []
+  },
+  "174-5": {
+    "chapter": "174",
+    "heading": "Quorum.",
+    "file": "174-town-meeting.md",
+    "notes": []
+  },
+  "174-6": {
+    "chapter": "174",
+    "heading": "Voting lists; administration of oaths; participation.",
+    "file": "174-town-meeting.md",
+    "notes": []
+  },
+  "174-7": {
+    "chapter": "174",
+    "heading": "Speaking procedures; disclosure of interest.",
+    "file": "174-town-meeting.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "1971-05-10",
+        "type": "STM",
+        "article": 8
+      }
+    ]
+  },
+  "174-8": {
+    "chapter": "174",
+    "heading": "Questions.",
+    "file": "174-town-meeting.md",
+    "notes": []
+  },
+  "174-9": {
+    "chapter": "174",
+    "heading": "Points of order.",
+    "file": "174-town-meeting.md",
+    "notes": []
+  },
+  "174-10": {
+    "chapter": "174",
+    "heading": "Voting.",
+    "file": "174-town-meeting.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "2023-05-01",
+        "type": "ATM",
+        "article": 36
+      }
+    ]
+  },
+  "174-11": {
+    "chapter": "174",
+    "heading": "Motions precedent.",
+    "file": "174-town-meeting.md",
+    "notes": []
+  },
+  "174-12": {
+    "chapter": "174",
+    "heading": "Motion to adjourn.",
+    "file": "174-town-meeting.md",
+    "notes": []
+  },
+  "174-13": {
+    "chapter": "174",
+    "heading": "Motion to reconsider.",
+    "file": "174-town-meeting.md",
+    "notes": []
+  },
+  "174-14": {
+    "chapter": "174",
+    "heading": "Pledge of Allegiance.",
+    "file": "174-town-meeting.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "2014-05-05",
+        "type": "ATM",
+        "article": 1
+      }
+    ]
+  },
+  "177-1": {
+    "chapter": "177",
+    "heading": "Reward for information.",
+    "file": "177-town-property.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1959-03-10",
+        "type": "TM",
+        "article": 34
+      }
+    ]
+  },
+  "177-2": {
+    "chapter": "177",
+    "heading": "Power to rent.",
+    "file": "177-town-property.md",
+    "notes": []
+  },
+  "177-3": {
+    "chapter": "177",
+    "heading": "Insurance.",
+    "file": "177-town-property.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1974-03-14",
+        "type": "STM",
+        "article": 67
+      }
+    ]
+  },
+  "177-4": {
+    "chapter": "177",
+    "heading": "Disposition of used equipment.",
+    "file": "177-town-property.md",
+    "notes": []
+  },
+  "177-5": {
+    "chapter": "177",
+    "heading": "Authority.",
+    "file": "177-town-property.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "1975-05-07",
+        "type": "ATM",
+        "article": 49
+      }
+    ]
+  },
+  "177-6": {
+    "chapter": "177",
+    "heading": "Notice.",
+    "file": "177-town-property.md",
+    "notes": []
+  },
+  "177-7": {
+    "chapter": "177",
+    "heading": "Repeal.",
+    "file": "177-town-property.md",
+    "notes": []
+  },
+  "177-8": {
+    "chapter": "177",
+    "heading": "Violations and penalties.",
+    "file": "177-town-property.md",
+    "notes": [
+      {
+        "action": "adopted",
+        "date": "2007-05-07",
+        "type": "ATM",
+        "article": 23
+      }
+    ]
+  },
+  "177-9": {
+    "chapter": "177",
+    "heading": "Setback tree planting.",
+    "file": "177-town-property.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "2023-05-01",
+        "type": "ATM",
+        "article": 42
+      }
+    ]
+  },
+  "185-1": {
+    "chapter": "185",
+    "heading": "Prohibited acts.",
+    "file": "185-vehicles-abandoned.md",
+    "notes": []
+  },
+  "185-2": {
+    "chapter": "185",
+    "heading": "Penalty.",
+    "file": "185-vehicles-abandoned.md",
+    "notes": []
+  },
+  "190-1": {
+    "chapter": "190",
+    "heading": "Territorial boundaries.",
+    "file": "190-waterways.md",
+    "notes": []
+  },
+  "190-2": {
+    "chapter": "190",
+    "heading": "Definitions and general provisions.",
+    "file": "190-waterways.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1983-10-17",
+        "type": "STM",
+        "article": 9
+      }
+    ]
+  },
+  "190-3": {
+    "chapter": "190",
+    "heading": "Harbormaster.",
+    "file": "190-waterways.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1984-05-07",
+        "type": "ATM",
+        "article": 43
+      }
+    ]
+  },
+  "190-4": {
+    "chapter": "190",
+    "heading": "General regulations for Marblehead Waters.",
+    "file": "190-waterways.md",
+    "notes": []
+  },
+  "190-5": {
+    "chapter": "190",
+    "heading": "Mooring permits and fees.",
+    "file": "190-waterways.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1988-05-02",
+        "type": "STM",
+        "article": 11
+      },
+      {
+        "action": "amended",
+        "date": "1983-05-02",
+        "type": "ATM",
+        "article": 62
+      },
+      {
+        "action": "amended",
+        "date": "1987-05-05",
+        "type": "ATM",
+        "article": 55
+      },
+      {
+        "action": "amended",
+        "date": "1990-05-07",
+        "type": "ATM",
+        "article": 10
+      },
+      {
+        "action": "amended",
+        "date": "1990-07-30",
+        "type": "STM",
+        "article": 6,
+        "articles": [
+          6,
+          7
+        ]
+      },
+      {
+        "action": "amended",
+        "date": "1998-05-05",
+        "type": "ATM",
+        "article": 31
+      },
+      {
+        "action": "amended",
+        "date": "2014-05-05",
+        "type": "ATM",
+        "article": 25
+      },
+      {
+        "action": "amended",
+        "date": "2018-05-07",
+        "type": "ATM",
+        "article": 29
+      },
+      {
+        "action": "amended",
+        "date": "2022-05-02",
+        "type": "ATM",
+        "article": 34
+      },
+      {
+        "action": "amended",
+        "date": "1983-10-17",
+        "type": "STM",
+        "article": 9
+      },
+      {
+        "action": "amended",
+        "date": "1984-05-07",
+        "type": "ATM",
+        "article": 42
+      },
+      {
+        "action": "amended",
+        "date": "1988-05-02",
+        "type": "STM",
+        "article": 10
+      },
+      {
+        "action": "added",
+        "date": "1997-05-05",
+        "type": "ATM",
+        "article": 41
+      }
+    ]
+  },
+  "190-6": {
+    "chapter": "190",
+    "heading": "Severability.",
+    "file": "190-waterways.md",
+    "notes": []
+  },
+  "190-7": {
+    "chapter": "190",
+    "heading": "Abandoned property.",
+    "file": "190-waterways.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "2000-05-01",
+        "type": "ATM",
+        "article": 42
+      }
+    ]
+  },
+  "194-1": {
+    "chapter": "194",
+    "heading": "Purpose.",
+    "file": "194-wetlands-protection.md",
+    "notes": []
+  },
+  "194-2": {
+    "chapter": "194",
+    "heading": "Jurisdiction.",
+    "file": "194-wetlands-protection.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2001-05-07",
+        "type": "ATM",
+        "article": 38
+      }
+    ]
+  },
+  "194-3": {
+    "chapter": "194",
+    "heading": "Exceptions.",
+    "file": "194-wetlands-protection.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2001-05-07",
+        "type": "ATM",
+        "article": 38
+      }
+    ]
+  },
+  "194-4": {
+    "chapter": "194",
+    "heading": "Applications for permits and requests for determination.",
+    "file": "194-wetlands-protection.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2001-05-07",
+        "type": "ATM",
+        "article": 38
+      },
+      {
+        "action": "amended",
+        "date": "2001-05-07",
+        "type": "ATM",
+        "article": 38
+      },
+      {
+        "action": "amended",
+        "date": "2004-05-03",
+        "type": "ATM",
+        "article": 47
+      },
+      {
+        "action": "added",
+        "date": "2004-05-03",
+        "type": "ATM",
+        "article": 47
+      }
+    ]
+  },
+  "194-5": {
+    "chapter": "194",
+    "heading": "Notice and hearings.",
+    "file": "194-wetlands-protection.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2001-05-07",
+        "type": "ATM",
+        "article": 38
+      },
+      {
+        "action": "amended",
+        "date": "2001-07-05",
+        "type": "ATM",
+        "article": 38
+      },
+      {
+        "action": "amended",
+        "date": "2001-05-07",
+        "type": "ATM",
+        "article": 38
+      }
+    ]
+  },
+  "194-6": {
+    "chapter": "194",
+    "heading": "Coordination with other boards.",
+    "file": "194-wetlands-protection.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "1989-05-02",
+        "type": "STM",
+        "article": 6
+      }
+    ]
+  },
+  "194-7": {
+    "chapter": "194",
+    "heading": "Permits, determinations and conditions.",
+    "file": "194-wetlands-protection.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2001-05-07",
+        "type": "ATM",
+        "article": 38
+      },
+      {
+        "action": "amended",
+        "date": "2004-05-03",
+        "type": "ATM",
+        "article": 46
+      },
+      {
+        "action": "added",
+        "date": "1991-05-06",
+        "type": "ATM",
+        "article": 52
+      }
+    ]
+  },
+  "194-8": {
+    "chapter": "194",
+    "heading": "Regulations.",
+    "file": "194-wetlands-protection.md",
+    "notes": []
+  },
+  "194-9": {
+    "chapter": "194",
+    "heading": "Definitions.",
+    "file": "194-wetlands-protection.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2001-05-07",
+        "type": "ATM",
+        "article": 38
+      }
+    ]
+  },
+  "194-10": {
+    "chapter": "194",
+    "heading": "Security.",
+    "file": "194-wetlands-protection.md",
+    "notes": []
+  },
+  "194-11": {
+    "chapter": "194",
+    "heading": "Enforcement.",
+    "file": "194-wetlands-protection.md",
+    "notes": []
+  },
+  "194-12": {
+    "chapter": "194",
+    "heading": "Burden of proof.",
+    "file": "194-wetlands-protection.md",
+    "notes": []
+  },
+  "194-13": {
+    "chapter": "194",
+    "heading": "Relation to the Wetlands Protection Act.",
+    "file": "194-wetlands-protection.md",
+    "notes": []
+  },
+  "194-14": {
+    "chapter": "194",
+    "heading": "Severability.",
+    "file": "194-wetlands-protection.md",
+    "notes": []
+  },
+  "195-1": {
+    "chapter": "195",
+    "heading": "Purpose.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 35
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      }
+    ]
+  },
+  "195-2": {
+    "chapter": "195",
+    "heading": "Definitions.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 35
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      },
+      {
+        "action": "added",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 35
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      },
+      {
+        "action": "added",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 35
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      },
+      {
+        "action": "added",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      },
+      {
+        "action": "added",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      }
+    ]
+  },
+  "195-3": {
+    "chapter": "195",
+    "heading": "Authority.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": []
+  },
+  "195-4": {
+    "chapter": "195",
+    "heading": "Applicability.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 35
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      }
+    ]
+  },
+  "195-5": {
+    "chapter": "195",
+    "heading": "Administration.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      }
+    ]
+  },
+  "195-6": {
+    "chapter": "195",
+    "heading": "Regulations.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 35
+      }
+    ]
+  },
+  "195-7": {
+    "chapter": "195",
+    "heading": "Permits/prohibitions.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 35
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      }
+    ]
+  },
+  "195-8": {
+    "chapter": "195",
+    "heading": "Erosion and sedimentation control plan.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": []
+  },
+  "195-9": {
+    "chapter": "195",
+    "heading": "Stormwater management plan.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": []
+  },
+  "195-10": {
+    "chapter": "195",
+    "heading": "Operation and maintenance plan.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": []
+  },
+  "195-11": {
+    "chapter": "195",
+    "heading": "Inspection and site supervision.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": [
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      }
+    ]
+  },
+  "195-12": {
+    "chapter": "195",
+    "heading": "Surety.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": []
+  },
+  "195-13": {
+    "chapter": "195",
+    "heading": "Final reports.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": []
+  },
+  "195-14": {
+    "chapter": "195",
+    "heading": "Enforcement.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": [
+      {
+        "action": "added",
+        "date": "2019-05-06",
+        "type": "ATM",
+        "article": 35
+      },
+      {
+        "action": "amended",
+        "date": "2021-05-03",
+        "type": "ATM",
+        "article": 46
+      }
+    ]
+  },
+  "195-15": {
+    "chapter": "195",
+    "heading": "Certificate of completion.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": []
+  },
+  "195-16": {
+    "chapter": "195",
+    "heading": "Severability.",
+    "file": "195-stormwater-management-and-erosion-control.md",
+    "notes": []
+  }
+}

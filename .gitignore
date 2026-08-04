@@ -68,3 +68,7 @@ _site_test/
 # Local raw cache + full CSV for the parcel dataset (committed CSV is de-identified).
 # The full file contains owner names + mailing addresses (public record, kept local).
 data/parcels_raw/
+
+# Raw eCode text snapshot (normalized JSON is canonical)
+data/bylaws-history/raw/*.txt
+dist/
