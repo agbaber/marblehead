@@ -201,11 +201,20 @@ def test_library_deep_dive_links_out_and_defers_detail():
     assert lib["deep_dive"] and lib["deep_dive"]["url"] == "/library.html"
 
 
-def test_unmapped_department_has_no_staffing_or_services():
+def test_department_without_org_chart_has_no_staffing_roster():
+    # moderator is not an org_chart department, so it has no position roster,
+    # but it now carries a factual service description like every department.
     view = build_view()
     moderator = view["departments"]["moderator"]
     assert moderator["staffing"] is None
-    assert moderator["services"] is None
+    assert moderator["services"] and moderator["services"]["summary"]
+
+
+def test_all_forty_departments_have_a_description():
+    view = build_view()
+    missing = [k for k, d in view["departments"].items()
+               if not (d["services"] and d["services"]["summary"])]
+    assert missing == [], f"departments still missing a description: {missing}"
 
 
 def test_role_crosswalk_targets_exist_in_org_chart():

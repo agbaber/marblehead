@@ -73,7 +73,11 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "The annually elected official who presides over Annual and Special Town Meetings, rules on questions of order, and declares the outcome of all votes. The Moderator also appoints residents to certain committees when Town Meeting directs.",
+        "source_url": "https://marbleheadma.gov/moderator/",
+        "source_label": "Town of Marblehead, Town Moderator page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 100,
@@ -155,7 +159,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "The executive arm of town government, coordinating the town's departments and providing centralized administrative services. The office houses the Town Administrator and handles business licensing, procurement oversight, public-records requests, and accessibility (ADA) coordination.",
+        "source_url": "https://marbleheadma.gov/selectboard-office/",
+        "source_label": "Town of Marblehead, Select Board Office page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 581924,
@@ -282,7 +290,11 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "The town's advisory body on financial matters. It reviews every department's budget and holds public hearings on warrant articles that involve spending, then issues a published report recommending for or against each financial article before Town Meeting. It also administers the town's Reserve Fund.",
+        "source_url": "https://marbleheadma.gov/finance-committee/",
+        "source_label": "Town of Marblehead, Finance Committee page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 2985,
@@ -324,7 +336,11 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "A contingency fund the Finance Committee can transfer from during the year to cover extraordinary or unforeseen costs, so departments do not have to wait for Town Meeting. Not a staffed department.",
+        "source_url": null,
+        "source_label": "Municipal budget line (FY27 Proposed Budget)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 0,
@@ -400,7 +416,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Runs the town's financial operations: accounting and the general ledger, payroll, and treasury and collections (billing and collecting for town services). It also oversees the Assessors and the town's information systems, and publishes the Open Finance portal where residents can view budget-versus-actual data, vendor payments, and payroll.",
+        "source_url": "https://marbleheadma.gov/finance-department/",
+        "source_label": "Town of Marblehead, Finance Department page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 1699903,
@@ -549,7 +569,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Values and taxes all real estate, motor vehicles, and boats in town, and prepares the data used to set the annual tax rate. It processes abatement applications from taxpayers who believe their property was overvalued and administers exemptions for seniors, veterans, blind residents, and surviving families of police officers and firefighters. Roughly 8,400 parcels are appraised through field inspections and deed processing, with records on an online property portal.",
+        "source_url": "https://marbleheadma.gov/assessors-office/",
+        "source_label": "Town of Marblehead, Assessor's Office page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 385405,
@@ -676,7 +700,11 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "Provides legal advice and representation to the town's boards, officials, and departments, and handles the town's litigation and contract review.",
+        "source_url": null,
+        "source_label": "Standard municipal role; no dedicated Marblehead department page found (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 172352,
@@ -739,7 +767,11 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "Processes and adjudicates parking tickets: residents can appeal a citation within 21 days and the office schedules hearings, accepts fine payments in person and online, and manages snow-emergency towing, tracking impound locations and coordinating vehicle release with the tow contractor.",
+        "source_url": "https://marbleheadma.gov/parking-clerk/",
+        "source_label": "Town of Marblehead, Parking Clerk page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 4080,
@@ -833,7 +865,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Maintains the town's birth, death, and marriage records and issues certified copies of vital records, plus burial permits, business certificates, dog licenses, and shellfish permits. The office keeps the town seal and attests documents that require town certification.",
+        "source_url": "https://marbleheadma.gov/town-clerk/",
+        "source_label": "Town of Marblehead, Town Clerk page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 242680,
@@ -1012,7 +1048,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "As the town's chief election official, the Town Clerk supervises voter registration and runs all elections, including polling places, ballots, and voting equipment. The office maintains the voting list, certifies nomination papers, administers campaign-finance filings, and staffs the Board of Registrars.",
+        "source_url": "https://marbleheadma.gov/town-clerk/",
+        "source_label": "Town of Marblehead, Town Clerk page, elections section (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 80947,
@@ -1131,7 +1171,11 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "The five-member elected board that approves land divisions creating new lots and reviews larger nonresidential and shoreline-area construction. It issues site-plan approvals and special permits under state and local zoning and subdivision law, meeting monthly with support from the Town Planner's office.",
+        "source_url": "https://marbleheadma.gov/town-planning-board/",
+        "source_label": "Town of Marblehead, Planning Board page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 7835,
@@ -1189,7 +1233,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Maintains the town's municipal buildings, handling custodial services, heating and utilities, and repairs. (School buildings are maintained separately by the school district.)",
+        "source_url": "https://marbleheadma.gov/town-administrator/",
+        "source_label": "Town of Marblehead, Town Administrator page (Public Buildings listed under departments overseen); no dedicated page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 262340,
@@ -1366,7 +1414,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Assists town departments with personnel management, including labor relations, union contract administration, and hiring, working under the Town Administrator.",
+        "source_url": "https://marbleheadma.gov/hr/",
+        "source_label": "Town of Marblehead, Human Resources page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 358452,
@@ -1471,7 +1523,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Handles land-use planning, economic development, housing, historic preservation, and environmental conservation, and coordinates with state and regional agencies. It staffs five regulatory boards, the Zoning Board of Appeals, Planning Board, Conservation Commission, Old and Historic Districts Commission, and Design Review Board, and manages projects such as the Five Corners intersection improvement, the Rail Trail, and coastal-resilience work.",
+        "source_url": "https://marbleheadma.gov/development-planning/",
+        "source_label": "Town of Marblehead, Community Development and Planning page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 339182,
@@ -2047,7 +2103,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Reviews and inspects construction for compliance with the State Building Code, accessibility codes, and local zoning. It issues building, plumbing, electrical, and gas permits (filed online), performs the associated inspections, and handles code enforcement, coordinating with the Board of Health, Conservation Commission, Planning Board, and Zoning Board of Appeals.",
+        "source_url": "https://marbleheadma.gov/building-inspection/",
+        "source_label": "Town of Marblehead, Building Inspection page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 553941,
@@ -2166,7 +2226,11 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "Tests and certifies the accuracy of commercial measuring devices used in local businesses, such as retail scales and gas-station pumps, a role required of municipalities under state law.",
+        "source_url": null,
+        "source_label": "State-mandated role under M.G.L. c. 98; no dedicated Marblehead department page found (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 1050,
@@ -2200,7 +2264,11 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "Animal control is run as a division of the Police Department. The Inspector of Animals keeps records on horses, dogs, goats, and poultry to ensure proper housing, and orders quarantine after the Animal Control Officer investigates a reported bite. Dog licensing is handled by the Town Clerk and requires a current rabies vaccination.",
+        "source_url": "https://marbleheadma.gov/animal-control/",
+        "source_label": "Town of Marblehead, Animal Control page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 2400,
@@ -2527,7 +2595,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Operates the town's Transfer Station, including a commercial pay-by-weight trash scale, and accepts certain recyclables such as marine shrink wrap.",
+        "source_url": "https://marbleheadma.gov/transfer-station/",
+        "source_label": "Town of Marblehead, Transfer Station page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 2819542,
@@ -2663,7 +2735,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Curbside trash and recycling are collected at the curb under contract by a private hauler (Republic Services), rather than by town crews.",
+        "source_url": "https://marbleheadma.gov/trash-recycling/",
+        "source_label": "Town of Marblehead, Trash and Recycling page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 0,
@@ -2747,7 +2823,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Handles burials and maintains Waterside and Harbor View cemeteries, sells burial plots and chapel niches to resident taxpayers, and processes marker foundations and lot transfers. It also keeps genealogical and historical gravestone records, including an 1873 gravestone inventory.",
+        "source_url": "https://marbleheadma.gov/cemetery/",
+        "source_label": "Town of Marblehead, Cemetery Department page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 468585,
@@ -2936,7 +3016,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "The Board of Health department runs immunization and flu clinics, investigates communicable disease, and inspects food establishments, camps, and rental housing (including lead-paint inspection). It enforces tobacco and body-art rules, runs medication, sharps, and mercury disposal programs, tests beach water quality weekly in summer, and handles health education and emergency preparedness.",
+        "source_url": "https://marbleheadma.gov/health/",
+        "source_label": "Town of Marblehead, Health Department page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 305794,
@@ -3143,7 +3227,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Serves Marblehead seniors with meal programs (a Tuesday sit-down lunch, Grab 'n Go lunches, and Meals on Wheels), SHINE health-insurance counseling, outreach connecting residents to housing, home care, and transportation, and fitness, arts, and recreation programming including day and overnight trips.",
+        "source_url": "https://marbleheadma.gov/coa/",
+        "source_label": "Town of Marblehead, Council on Aging page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 406698,
@@ -3312,7 +3400,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Helps Marblehead veterans and their families apply for federal VA benefits (pension, disability, and health care) and Massachusetts Chapter 115 benefits, and assists with low-cost VA prescriptions. The office also supports families at a veteran's death, coordinating military honors and flag presentation at burial, and collects worn flags for proper disposal.",
+        "source_url": "https://marbleheadma.gov/veterans-services/",
+        "source_label": "Town of Marblehead, Veterans Services page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 129048,
@@ -3598,7 +3690,7 @@
       },
       "deep_dive": {
         "url": "/library.html",
-        "label": "Abbot Public Library \u2014 full page (staffing, services, funding, peer comparison)"
+        "label": "Abbot Public Library: full page (staffing, services, funding, peer comparison)"
       },
       "budget": {
         "fy25_actual": 1338401,
@@ -3777,7 +3869,11 @@
           }
         ]
       },
-      "services": null,
+      "services": {
+        "summary": "Develops and runs recreation programs and operates the Judy and Gene Jacobi Community Center. It manages athletic fields and sports facilities, handles court reservations and room-rental permits, and maintains beaches, playgrounds, and public parks, under a Superintendent appointed by the Recreation and Parks Commission.",
+        "source_url": "https://marbleheadma.gov/recreation-parks/",
+        "source_label": "Town of Marblehead, Recreation and Parks page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 904581,
@@ -3928,7 +4024,11 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "The budget line that funds the town's Memorial Day and Veterans Day observances, including parades, ceremonies, and flags.",
+        "source_url": null,
+        "source_label": "Municipal budget line (FY27 Proposed Budget)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 4488,
@@ -3962,7 +4062,11 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "The town's scheduled principal and interest payments on money it has borrowed (bonds and notes) for capital projects. Not a staffed department.",
+        "source_url": null,
+        "source_label": "Municipal budget line (FY27 Proposed Budget)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 11085298,
@@ -4004,7 +4108,11 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "A catch-all budget line for miscellaneous general-government costs not assigned to a specific department.",
+        "source_url": null,
+        "source_label": "Municipal budget line (FY27 Proposed Budget)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 19180387,
@@ -4158,7 +4266,11 @@
       "role_note": "Office and administrative staff are shared with the Water Department under the joint commission.",
       "role_source_url": "https://marbleheadma.gov/sewer/",
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "Maintains more than 100 miles of sewer mains, over 3,000 structures, and 28 pump stations serving about 7,800 buildings, pumping sewage to the South Essex Sewerage District treatment plant in Salem (Marblehead has been a member since 1972). It issues drain-layer licenses, administers sewer deduct meters, and bills sewer user fees.",
+        "source_url": "https://marbleheadma.gov/sewer/",
+        "source_label": "Town of Marblehead, Sewer Department page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 4981960,
@@ -4317,7 +4429,11 @@
       "role_note": "Water and Sewer share an elected commission (5 members, 3-year staggered terms) and a combined office staff.",
       "role_source_url": "https://marbleheadma.gov/water/",
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "Delivers water to roughly 8,000 customers through two pump stations and two storage tanks, all supplied by the MWRA (originating from the Quabbin and Wachusett reservoirs). It runs cross-connection control, fluoridation monitoring, and lead testing in schools, and bills customers by the amount of water passing through their meter.",
+        "source_url": "https://marbleheadma.gov/water/",
+        "source_label": "Town of Marblehead, Water Department page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 5444730,
@@ -4476,7 +4592,11 @@
       "role_note": "Reports jointly to the Town Administrator and the appointed Harbors & Waters Board.",
       "role_source_url": "https://marbleheadma.gov/harbormaster/",
       "staffing": null,
-      "services": null,
+      "services": {
+        "summary": "Operates four town vessels for patrol, firefighting, rescue, and environmental response during a May-through-October season, and assists the Coast Guard in water rescues. The office issues mooring permits and runs the mooring waiting lists, oversees public landings and floats at seven locations and dockage at Tucker's Wharf, runs a weekend pump-out service, and reviews pier-construction permits.",
+        "source_url": "https://marbleheadma.gov/harbormaster/",
+        "source_label": "Town of Marblehead, Harbormaster page (accessed 2026-08-04)"
+      },
       "deep_dive": null,
       "budget": {
         "fy25_actual": 1120418,
@@ -4635,8 +4755,15 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
-      "deep_dive": null,
+      "services": {
+        "summary": "Brown Elementary School serves grades Pre-K through 3, one of Marblehead Public Schools' two Pre-K-3 elementary schools.",
+        "source_url": "https://brown.marbleheadschools.org",
+        "source_label": "Marblehead Public Schools, Brown Elementary (accessed 2026-08-04)"
+      },
+      "deep_dive": {
+        "url": "/schools-budget.html",
+        "label": "Marblehead schools budget: 24 years of spending and the FY27 breakdown"
+      },
       "budget": {
         "fy25_actual": null,
         "fy26_budget": 5481505,
@@ -5030,8 +5157,15 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
-      "deep_dive": null,
+      "services": {
+        "summary": "Glover Elementary School serves grades Pre-K through 3, one of Marblehead Public Schools' two Pre-K-3 elementary schools.",
+        "source_url": "https://glover.marbleheadschools.org",
+        "source_label": "Marblehead Public Schools, Glover Elementary (accessed 2026-08-04)"
+      },
+      "deep_dive": {
+        "url": "/schools-budget.html",
+        "label": "Marblehead schools budget: 24 years of spending and the FY27 breakdown"
+      },
       "budget": {
         "fy25_actual": null,
         "fy26_budget": 4472968,
@@ -5429,8 +5563,15 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
-      "deep_dive": null,
+      "services": {
+        "summary": "Village Elementary School serves grades 4 through 6, taking students after Brown or Glover, and is part of Marblehead Public Schools.",
+        "source_url": "https://village.marbleheadschools.org",
+        "source_label": "Marblehead Public Schools, Village Elementary (accessed 2026-08-04)"
+      },
+      "deep_dive": {
+        "url": "/schools-budget.html",
+        "label": "Marblehead schools budget: 24 years of spending and the FY27 breakdown"
+      },
       "budget": {
         "fy25_actual": null,
         "fy26_budget": 7579771,
@@ -5852,8 +5993,15 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
-      "deep_dive": null,
+      "services": {
+        "summary": "Marblehead Veterans Middle School serves grades 7 and 8 and is part of Marblehead Public Schools.",
+        "source_url": "https://mvms.marbleheadschools.org",
+        "source_label": "Marblehead Public Schools, Veterans Middle School (accessed 2026-08-04)"
+      },
+      "deep_dive": {
+        "url": "/schools-budget.html",
+        "label": "Marblehead schools budget: 24 years of spending and the FY27 breakdown"
+      },
       "budget": {
         "fy25_actual": null,
         "fy26_budget": 5784165,
@@ -6347,8 +6495,15 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
-      "deep_dive": null,
+      "services": {
+        "summary": "Marblehead High School serves grades 9 through 12 and is part of Marblehead Public Schools.",
+        "source_url": "https://mhs.marbleheadschools.org",
+        "source_label": "Marblehead Public Schools, Marblehead High School (accessed 2026-08-04)"
+      },
+      "deep_dive": {
+        "url": "/schools-budget.html",
+        "label": "Marblehead schools budget: 24 years of spending and the FY27 breakdown"
+      },
       "budget": {
         "fy25_actual": null,
         "fy26_budget": 10904809,
@@ -7090,8 +7245,15 @@
       "role_note": null,
       "role_source_url": null,
       "staffing": null,
-      "services": null,
-      "deep_dive": null,
+      "services": {
+        "summary": "The district's athletics and sports program budget line for Marblehead Public Schools, rather than a single school building.",
+        "source_url": "https://www.marbleheadschools.org/",
+        "source_label": "Marblehead Public Schools (accessed 2026-08-04)"
+      },
+      "deep_dive": {
+        "url": "/schools-budget.html",
+        "label": "Marblehead schools budget: 24 years of spending and the FY27 breakdown"
+      },
       "budget": {
         "fy25_actual": null,
         "fy26_budget": 646395,
