@@ -59,6 +59,36 @@ mileage, 21% population, 21% employment) keeps per-town shares roughly stable.
 | Melrose | $528,665 | 71.72 | $7,372 |
 | Stoneham | $475,948 | 63.61 | $7,483 |
 - Marblehead sits ~11-13% below Melrose/Stoneham on state aid per accepted mile.
+
+### Why Marblehead is lowest per mile (the formula)
+Chapter 90 is NOT a per-mile grant. The apportionment formula is **58.33% road
+mileage, 20.83% population, 20.83% employment** (mileage from MassDOT's Road
+Inventory File; population from the decennial U.S. Census; employment from the
+Massachusetts Department of Unemployment Assistance). Source: MassDOT Chapter 90
+Program, https://www.mass.gov/chapter-90-program (formula and data sources).
+The mileage component gives every town a roughly flat per-mile base; the
+population and employment components (~42% together) create the per-mile spread,
+rewarding towns with more people and jobs relative to their road length.
+
+Population per accepted centerline mile (2020 Census population / 2024 accepted
+miles) — Marblehead is the LOWEST of the peer set:
+| Town | 2020 pop | Accepted mi | Residents / mile |
+|---|---|---|---|
+| Marblehead | 20,441 | 68.99 | **296** |
+| Swampscott | 15,111 | 42.87 | 352 |
+| Stoneham | 23,244 | 63.61 | 365 |
+| Melrose | 29,817 | 71.72 | 416 |
+- Populations: 2020 U.S. Census (Marblehead 20,441; Swampscott 15,111; Stoneham
+  23,244; Melrose 29,817). Accepted miles: 2024 Road Inventory Year-End Report.
+- So on the 20.83% population component alone, Marblehead earns less per mile
+  than all three peers. It also has a comparatively small in-town employment base
+  as a residential community, so the equally-weighted 20.83% employment component
+  adds little as well. (The exact per-town DUA employment inputs the formula uses
+  were not obtainable from here; population-per-mile alone accounts for
+  Marblehead ranking lowest.)
+- Takeaway: the lower per-mile aid is the formula working as designed (it
+  deliberately routes ~42% by people and jobs, not pavement), not evidence the
+  town is shortchanged.
 - Sources: Chapter 90 FY2019 apportionment distribution (MassDOT),
   https://www.mass.gov/doc/fiscal-year-2019-apportionment-distribution/download ;
   accepted centerline miles from 2024 Road Inventory Year-End Report, Table 5,
