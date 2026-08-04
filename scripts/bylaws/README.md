@@ -12,6 +12,13 @@ vote tally. See `docs/superpowers/specs/2026-07-15-bylaws-history-design.md`.
 5. `node scripts/bylaws/build_repo.mjs`         # -> generated git repo
 6. `node scripts/bylaws/verify_golden.mjs`      # master check: replay == current text
 
+## Publish
+`node scripts/bylaws/publish.mjs` runs steps 2-6 and force-pushes the generated
+`dist/bylaws-repo` to the public repo (github.com/agbaber/marblehead-bylaws), so
+the browsable history never drifts from this pipeline. It aborts before pushing
+if `verify_golden` fails. Flags: `--refresh` (re-fetch eCode first, needs network
++ Playwright), `--dry-run` (build + verify, no push), `--remote <url>`.
+
 ## Test
 `node --test scripts/bylaws/lib/*.test.mjs`
 
