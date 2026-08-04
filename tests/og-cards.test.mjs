@@ -17,6 +17,7 @@ const PAGES = [
   'town-debt.html',
   'where-has-the-money-gone.html',
   'senior-tax-relief.html',
+  'senior-exemption.html',
   'inside-school-staffing.html',
   'school-building-maintenance.html',
   'org-chart.html',
