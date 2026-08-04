@@ -5,35 +5,52 @@ og_description: "Browse all 40 town departments: who leads each, its three-year 
 og_url: https://marbleheaddata.org/departments.html
 ---
 <style>
-  .dx-func {
-    margin: 32px 0 12px;
+  /* ---- Index: function groups + department cards ---- */
+  .dx-funchd {
+    display: flex; align-items: baseline; gap: 10px;
+    margin: 34px 0 13px; padding-bottom: 7px;
+    border-bottom: 1px solid var(--divider);
   }
-  .dx-func:first-of-type { margin-top: 20px; }
+  .dx-funchd:first-of-type { margin-top: 18px; }
+  .dx-func { margin: 0; font-size: 1.125rem; }
+  .dx-func-count {
+    font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--text-subtle);
+  }
   .dx-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    margin-bottom: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(252px, 1fr));
+    gap: 12px; margin-bottom: 8px;
   }
   .dx-card {
-    display: flex; flex-direction: column; gap: 4px;
+    display: flex; flex-direction: column; gap: 7px;
     text-align: left; cursor: pointer;
     background: var(--surface); border: 1px solid var(--border);
     border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
-    padding: 12px 14px; font: inherit; color: var(--text);
+    padding: 14px 15px; font: inherit; color: var(--text);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
   }
   .dx-card:hover {
     border-color: var(--c-teal);
-    background: var(--surface-hover, color-mix(in srgb, var(--c-teal) 5%, transparent));
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
   }
-  .dx-card-name { font-weight: 700; font-size: 0.875rem; }
-  .dx-amt {
-    font-variant-numeric: tabular-nums; font-size: 0.9375rem; font-weight: 700;
-    color: var(--text);
+  .dx-card-name { font-weight: 700; font-size: 0.9375rem; line-height: 1.25; }
+  .dx-card-desc {
+    font-size: 0.8125rem; line-height: 1.45; color: var(--text-muted);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
   }
-  .dx-change-up, .dx-change-down {
-    font-size: 0.75rem; font-variant-numeric: tabular-nums;
+  .dx-card-foot {
+    margin-top: auto; display: flex; align-items: baseline;
+    justify-content: space-between; gap: 8px;
+    padding-top: 9px; border-top: 1px solid var(--divider);
   }
+  .dx-card-amt {
+    font-variant-numeric: tabular-nums; font-size: 1.0625rem; font-weight: 700;
+    color: var(--text); letter-spacing: -0.01em;
+  }
+  .dx-card-chg { font-size: 0.75rem; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .dx-amt { font-variant-numeric: tabular-nums; font-weight: 600; }
   .dx-change-up { color: var(--c-teal); }
   .dx-change-down { color: var(--c-navy); }
 
@@ -210,16 +227,20 @@ og_url: https://marbleheaddata.org/departments.html
           return DATA.departments[b].budget.fy27_adopted - DATA.departments[a].budget.fy27_adopted;
         });
       if (!depts.length) return;
-      parts.push('<h2 class="dx-func">' + esc(fn.label) + '</h2>');
+      parts.push('<div class="dx-funchd"><h2 class="dx-func">' + esc(fn.label) + '</h2>' +
+        '<span class="dx-func-count">' + depts.length + (depts.length === 1 ? ' department' : ' departments') + '</span></div>');
       parts.push('<div class="dx-cards">');
       depts.forEach(function (k) {
         var d = DATA.departments[k];
+        var desc = (d.services && d.services.summary) ? d.services.summary : '';
         parts.push(
           '<button class="dx-card" data-key="' + esc(k) + '">' +
           '<div class="dx-card-name">' + deptLabel(d) + '</div>' +
-          '<div class="dx-amt">' + fmtUSD(d.budget.fy27_adopted) + '</div>' +
-          '<div class="' + changeClass(d.budget.change_pct) + '">' +
-          fmtPct(d.budget.change_pct) + ' vs FY26</div>' +
+          (desc ? '<div class="dx-card-desc">' + esc(desc) + '</div>' : '') +
+          '<div class="dx-card-foot">' +
+          '<span class="dx-card-amt">' + fmtUSD(d.budget.fy27_adopted) + '</span>' +
+          '<span class="dx-card-chg ' + changeClass(d.budget.change_pct) + '">' + fmtPct(d.budget.change_pct) + '</span>' +
+          '</div>' +
           '</button>'
         );
       });
