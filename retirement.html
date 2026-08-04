@@ -154,11 +154,27 @@ og_url: https://marbleheaddata.org/retirement.html
   }
   .deep-dive > summary:hover { background: var(--divider); }
   .deep-dive > summary::before {
+    content: "\276F";
     grid-column: 1;
     grid-row: 1 / span 2;
     align-self: center;
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    background: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--c-teal);
     margin-bottom: 0;
+    transition: transform 0.2s ease;
   }
+  .deep-dive[open] > summary::before {
+    transform: rotate(90deg);
+    background: none;
+    color: var(--c-teal);
+  }
+  .deep-dive > .deep-dive-body { padding-top: 16px; }
   .deep-dive > summary h2 { grid-column: 2; grid-row: 1; }
   .deep-dive > summary .deep-dive-teaser { grid-column: 2; grid-row: 2; }
   .deep-dive > summary::after {
@@ -235,7 +251,7 @@ og_url: https://marbleheaddata.org/retirement.html
     <p class="deep-dive-teaser">Investment losses in 2008 left the pension fund short of what it owed. State rules then put the town on a catch-up payment schedule that rises every year until the gap closes.</p>
   </summary>
   <div class="deep-dive-body">
-    <p>A pension fund invests the money it holds, and market losses can leave it owing more than it has. The 2008 financial crisis did exactly that to public pension funds across Massachusetts, including Marblehead's. Once a system falls behind, state rules require it to pay the shortfall back on a fixed schedule, much like an amortized loan, which is why the annual appropriation has kept climbing even as the underlying benefits stayed the same.</p>
+    <p>A pension fund holds and invests money set aside to pay future retirees. When markets drop, the fund can be left holding less than the benefits it has already promised. The 2008 financial crisis did exactly that to public pension funds across Massachusetts, including Marblehead's. Once a system falls behind, state rules require it to pay the shortfall back on a fixed schedule, much like an amortized loan, which is why the annual appropriation has kept climbing even as the underlying benefits stayed the same.</p>
     <p>Marblehead's schedule, set by its most recent actuarial valuation, raises the total pension appropriation <strong>8.6% each year through FY35</strong>, with a final amortization payment in FY36. After that the catch-up portion goes away.<sup class="cite" data-href="https://www.mass.gov/lists/retirement-board-valuation-reports-perac" data-source="PERAC, Marblehead Retirement System Actuarial Valuation Report as of January 1, 2024, printed p.6: &quot;The total appropriation increases 8.6% each year through FY35 with a final amortization payment in FY36.&quot; Funding schedule detail at p.13."></sup></p>
   </div>
 </details>
