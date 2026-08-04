@@ -3,10 +3,10 @@
   "snapshot": {
     "date": "2026-07-30",
     "fiscal_year": "FY27",
-    "row_count": 479,
-    "total_paid": 21895055.13,
+    "row_count": 483,
+    "total_paid": 18895405.13,
     "interfund_total": 3549.74,
-    "external_paid": 21891505.39,
+    "external_paid": 18891855.39,
     "first_payment": "2026-07-01",
     "last_payment": "2026-07-30",
     "source_file": "checkbook_FY27_2026-07-30.csv"
@@ -16,7 +16,7 @@
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 176229.3,
-      "share": 0.008,
+      "share": 0.0093,
       "fund_count": 2,
       "top_funds": [
         {
@@ -34,14 +34,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 18993466.67,
-      "share": 0.8675,
+      "amount": 15993816.67,
+      "share": 0.8464,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 18656769.72,
-          "row_count": 214
+          "amount": 15657119.72,
+          "row_count": 218
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -59,7 +59,7 @@
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
       "amount": 2623110.28,
-      "share": 0.1198,
+      "share": 0.1388,
       "fund_count": 4,
       "top_funds": [
         {
@@ -88,7 +88,7 @@
       "key": "state_fed",
       "label": "State & federal restricted grants",
       "amount": 7287.52,
-      "share": 0.0003,
+      "share": 0.0004,
       "fund_count": 3,
       "top_funds": [
         {
@@ -112,7 +112,7 @@
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
       "amount": 73362.1,
-      "share": 0.0034,
+      "share": 0.0039,
       "fund_count": 2,
       "top_funds": [
         {
@@ -131,7 +131,7 @@
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
       "amount": 21599.26,
-      "share": 0.001,
+      "share": 0.0011,
       "fund_count": 3,
       "top_funds": [
         {
@@ -153,19 +153,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 18656769.72,
-    "fixed_total": 18171596.55,
-    "fixed_share": 0.974,
+    "total": 15657119.72,
+    "fixed_total": 15171946.55,
+    "fixed_share": 0.969,
     "admin_contracts_total": 291367.67,
-    "admin_contracts_share": 0.0156,
+    "admin_contracts_share": 0.0186,
     "other_recurring_total": 193805.5,
-    "other_recurring_share": 0.0104,
+    "other_recurring_share": 0.0124,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 2061557.49,
-        "share": 0.1105,
+        "share": 0.1317,
         "row_count": 6,
         "top_vendors": [
           {
@@ -189,13 +189,13 @@
       {
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
-        "amount": 9934634.39,
-        "share": 0.5325,
-        "row_count": 24,
+        "amount": 6934984.39,
+        "share": 0.4429,
+        "row_count": 28,
         "top_vendors": [
           {
             "name": "U.S. BANK",
-            "amount": 9934634.39
+            "amount": 6934984.39
           }
         ]
       },
@@ -203,7 +203,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.3132,
+        "share": 0.3732,
         "row_count": 1,
         "top_vendors": [
           {
@@ -216,7 +216,7 @@
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
         "amount": 332044.67,
-        "share": 0.0178,
+        "share": 0.0212,
         "row_count": 4,
         "top_vendors": [
           {
@@ -229,7 +229,7 @@
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
         "amount": 291367.67,
-        "share": 0.0156,
+        "share": 0.0186,
         "row_count": 6,
         "top_vendors": [
           {
@@ -250,7 +250,7 @@
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
         "amount": 193805.5,
-        "share": 0.0104,
+        "share": 0.0124,
         "row_count": 173,
         "top_vendors": [
           {
