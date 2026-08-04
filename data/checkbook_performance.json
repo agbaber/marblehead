@@ -671,8 +671,8 @@
   "monthly_cadence": [
     {
       "month": "2026-07",
-      "amount": 21895055.13,
-      "count": 479
+      "amount": 18895405.13,
+      "count": 483
     }
   ],
   "drill": {
@@ -986,8 +986,8 @@
         "top_vendors": [
           {
             "name": "U.S. BANK",
-            "amount": 9934634.39,
-            "count": 24
+            "amount": 6934984.39,
+            "count": 28
           },
           {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
@@ -1048,8 +1048,8 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 18656769.72,
-            "count": 214
+            "amount": 15657119.72,
+            "count": 218
           }
         ]
       },
