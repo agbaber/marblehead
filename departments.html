@@ -362,8 +362,18 @@ og_url: https://marbleheaddata.org/departments.html
       if (chg.length) inner += '<p class="dx-caveat"><small>FY27 position changes: ' + chg.join(', ') + '.</small></p>';
       inner += '<div class="table-wrap"><table class="dx-roster"><thead><tr>' +
         '<th>Position</th><th>People</th><th>FY27 budgeted</th><th>Avg / person</th></tr></thead><tbody>';
+      var hasElim = false;
       s.positions.forEach(function (pos) {
-        var avg = (pos.count > 1 && pos.fy27 != null) ? fmtUSD(pos.fy27 / pos.count) : '';
+        var gone = (pos.status === 'eliminated') || !pos.fy27;
+        if (gone) {
+          hasElim = true;
+          inner += '<tr class="dx-row-elim"><td>' + esc(pos.title) + '</td>' +
+            '<td class="dx-amt">&mdash;</td>' +
+            '<td class="dx-amt"><span class="dx-elim-tag">not funded in FY27</span></td>' +
+            '<td class="dx-amt dx-avg"></td></tr>';
+          return;
+        }
+        var avg = (pos.count > 1) ? fmtUSD(pos.fy27 / pos.count) : '';
         inner += '<tr><td>' + esc(pos.title) + '</td>' +
           '<td class="dx-amt">' + (pos.count != null ? pos.count : '') + '</td>' +
           '<td class="dx-amt">' + fmtUSD(pos.fy27) +
@@ -371,6 +381,9 @@ og_url: https://marbleheaddata.org/departments.html
           '<td class="dx-amt dx-avg">' + avg + '</td></tr>';
       });
       inner += '</tbody></table></div>';
+      if (hasElim) {
+        inner += '<p class="dx-caveat"><small>Positions marked "not funded in FY27" were removed as separate budget lines. Depending on the department, those staff were reclassified into other lines or the position was cut; the budget below reflects the net change.</small></p>';
+      }
       // Roster salaries come from the FY27 *proposed* (no-override) budget; where
       // the override restored staffing cuts, some positions are funded higher in
       // the adopted budget (e.g. a department head proposed for a part-time cut).

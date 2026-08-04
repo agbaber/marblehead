@@ -137,6 +137,10 @@ def _staffing_from_org_entry(entry: dict) -> dict:
             # is a single named position (Chief, Senior Clerk, etc.), so show 1.
             "count": p.get("pool_count") if p.get("pool_count") else 1,
             "fy27": p.get("fy27"),
+            # continuing / new / eliminated / reduced. An "eliminated" line is a
+            # removed budget code (fy27 = 0), shown as such so a prior-year count
+            # next to $0 does not read as unpaid staff.
+            "status": p.get("status"),
             "note": p.get("note"),
         })
     return {
