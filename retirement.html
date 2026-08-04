@@ -152,13 +152,29 @@ og_url: https://marbleheaddata.org/retirement.html
     border-radius: inherit;
     transition: background 0.15s ease;
   }
-  .deep-dive > summary:hover { background: var(--hover, var(--surface-2, #eef2f6)); }
+  .deep-dive > summary:hover { background: var(--divider); }
   .deep-dive > summary::before {
+    content: "\276F";
     grid-column: 1;
     grid-row: 1 / span 2;
     align-self: center;
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    background: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--c-teal);
     margin-bottom: 0;
+    transition: transform 0.2s ease;
   }
+  .deep-dive[open] > summary::before {
+    transform: rotate(90deg);
+    background: none;
+    color: var(--c-teal);
+  }
+  .deep-dive > .deep-dive-body { padding-top: 16px; }
   .deep-dive > summary h2 { grid-column: 2; grid-row: 1; }
   .deep-dive > summary .deep-dive-teaser { grid-column: 2; grid-row: 2; }
   .deep-dive > summary::after {
@@ -227,7 +243,7 @@ og_url: https://marbleheaddata.org/retirement.html
   </svg>
 </div>
 
-<p class="source">Share of each promise that has money set aside, as of June 30, 2025. The pension carried a net unfunded liability of about <strong>$40.1 million</strong> at a <strong>72.49%</strong> funded ratio; retiree health carried a net unfunded liability of about <strong>$142.0 million</strong> at a <strong>3.37%</strong> funded ratio. Both are the town's own plans.<sup class="cite" data-href="data/town_docs/FY25_Town_of_Marblehead_ACFR.pdf" data-source="Town of Marblehead FY25 ACFR, p.31 (summary) with detail at pp.86-90 (pension) and pp.91-94 (OPEB): Net Pension Liability $40,112,618 at 72.49% funded; Net OPEB Liability $142,044,651 (total OPEB liability $146,998,774 less plan fiduciary net position $4,954,123) at 3.37% funded. The Marblehead Municipal Light Department OPEB is a separate plan ($3.34M net, 45.5% funded) and is not included."></sup></p>
+<p class="source">Share of each promise that has money set aside, as of June 30, 2025. In today's dollars the pension was short about <strong>$40.1 million</strong> (a <strong>72.49%</strong> funded ratio) and retiree health was short about <strong>$142.0 million</strong> (a <strong>3.37%</strong> funded ratio), where "short" means benefits already promised minus what has been saved to pay them. Both are the town's own plans.<sup class="cite" data-href="data/town_docs/FY25_Town_of_Marblehead_ACFR.pdf" data-source="Town of Marblehead FY25 ACFR, p.31 (summary) with detail at pp.86-90 (pension) and pp.91-94 (OPEB): Net Pension Liability $40,112,618 at 72.49% funded; Net OPEB Liability $142,044,651 (total OPEB liability $146,998,774 less plan fiduciary net position $4,954,123) at 3.37% funded. The Marblehead Municipal Light Department OPEB is a separate plan ($3.34M net, 45.5% funded) and is not included."></sup></p>
 
 <details class="deep-dive">
   <summary>
@@ -235,7 +251,7 @@ og_url: https://marbleheaddata.org/retirement.html
     <p class="deep-dive-teaser">Investment losses in 2008 left the pension fund short of what it owed. State rules then put the town on a catch-up payment schedule that rises every year until the gap closes.</p>
   </summary>
   <div class="deep-dive-body">
-    <p>A pension fund invests the money it holds, and market losses can leave it owing more than it has. The 2008 financial crisis did exactly that to public pension funds across Massachusetts, including Marblehead's. Once a system falls behind, state rules require it to pay the shortfall back on a fixed schedule, much like an amortized loan, which is why the annual appropriation has kept climbing even as the underlying benefits stayed the same.</p>
+    <p>A pension fund holds and invests money set aside to pay future retirees. When markets drop, the fund can be left holding less than the benefits it has already promised. The 2008 financial crisis did exactly that to public pension funds across Massachusetts, including Marblehead's. Once a system falls behind, state rules require it to pay the shortfall back on a fixed schedule, much like an amortized loan, which is why the annual appropriation has kept climbing even as the underlying benefits stayed the same.</p>
     <p>Marblehead's schedule, set by its most recent actuarial valuation, raises the total pension appropriation <strong>8.6% each year through FY35</strong>, with a final amortization payment in FY36. After that the catch-up portion goes away.<sup class="cite" data-href="https://www.mass.gov/lists/retirement-board-valuation-reports-perac" data-source="PERAC, Marblehead Retirement System Actuarial Valuation Report as of January 1, 2024, printed p.6: &quot;The total appropriation increases 8.6% each year through FY35 with a final amortization payment in FY36.&quot; Funding schedule detail at p.13."></sup></p>
   </div>
 </details>
@@ -248,6 +264,53 @@ og_url: https://marbleheaddata.org/retirement.html
   <div class="deep-dive-body">
     <p>Marblehead's pension system covers town and municipal employees but not teachers. Teacher pensions run through the <abbr class="g" title="Massachusetts Teachers Retirement System">MTRS</abbr> (Massachusetts Teachers Retirement System), which the state funds directly, so they cost the town general fund <strong>$0</strong>.<sup class="cite" data-href="what-is-actually-flexible.html" data-source="Teacher pensions are paid by the Commonwealth through the Massachusetts Teachers Retirement System (MTRS), not the Marblehead general fund. Consistent with the framing on marbleheaddata.org/what-is-actually-flexible.html."></sup></p>
     <p>That is not the same as free. The state pays for MTRS out of tax revenue that Marblehead residents also contribute to, so the cost lands on the same taxpayers by a different route. It simply does not run through the town budget on this page.</p>
+    <p>Their health insurance is a different story. Retired teachers generally stay on the town's health plan, so while their pensions are the state's cost, their retiree health is part of the town's bill. It shows up in the <abbr class="g" title="Other Post-Employment Benefits">OPEB</abbr> figures on this page: the town's retiree-health plan covered <strong>748 retirees</strong> as of mid-2025, more than double the <strong>339</strong> in the town pension, and the gap is largely school employees whose pensions run through the state but whose health coverage does not.<sup class="cite" data-href="data/town_docs/FY25_Town_of_Marblehead_ACFR.pdf" data-source="Town of Marblehead FY25 ACFR: the Town OPEB plan covered 748 retired members and beneficiaries and 645 active employee members (measurement date 6/30/2025); the Town Contributory Retirement System covered 339 retired and 358 active members. The difference reflects school employees, including teachers, who receive town retiree health insurance under Chapter 32B but whose pensions are paid by the state Massachusetts Teachers Retirement System."></sup></p>
+  </div>
+</details>
+
+<h2 id="how-benefits-work">What are these benefits, and how do you earn them?</h2>
+
+<p>The pension is a defined benefit: a lifetime monthly check set by a formula, not a savings account. A worker earns it by putting in years of service and a share of every paycheck, and the town guarantees the result.</p>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="earning-pension">What an employee does to earn a pension</h2>
+    <p class="deep-dive-teaser">Pay in about 9 percent of every paycheck, work at least 10 years to qualify, and collect a formula based on salary, age, and years of service.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>Membership is mandatory for full-time town employees. They contribute <strong>9 percent</strong> of their regular pay, a rate set by state law, plus an extra 2 percent on pay above $30,000, deducted from every paycheck.<sup class="cite" data-href="https://www.mass.gov/lists/retirement-board-valuation-reports-perac" data-source="PERAC, Marblehead Retirement System Actuarial Valuation Report as of January 1, 2024, pp.27-29 (Summary of Plan Provisions): participation mandatory for full-time employees; member contribution 9% of regular compensation for those joining 7/1/1996 or later, plus an additional 2% of regular compensation over $30,000."></sup></p>
+    <p>A worker must complete at least <strong>10 years of service</strong> to qualify for a lifetime pension; leaving earlier returns only the worker's own contributions with interest. The pension is then a formula: average salary times an age-and-job factor times years worked, capped at 80 percent of the highest few years' average salary.<sup class="cite" data-href="https://www.mass.gov/lists/retirement-board-valuation-reports-perac" data-source="PERAC Marblehead valuation Jan 1 2024, pp.28-29: superannuation eligibility (age 55 or 60 with 10 years of creditable service, depending on hire date and group); benefit = average salary x age/group benefit rate x creditable service, capped at 80% of the high 3-year (members before 4/2/2012) or 5-year (members on or after 4/2/2012) average salary."></sup></p>
+  </div>
+</details>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="still-offered">Are new hires still getting this?</h2>
+    <p class="deep-dive-teaser">Yes. The pension is not being phased out. New employees join automatically, though those hired since 2012 get a somewhat less generous version.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>State law makes the pension mandatory for eligible town employees, so new hires enroll automatically and the town cannot offer a different plan in its place. A 2012 state reform did trim the terms for anyone hired on or after April 2, 2012: they must reach a higher age to retire at the full rate (age 60 rather than 55 to become eligible, and the top benefit rate at age 67 rather than 65 for general employees), and their pension is figured on a five-year salary average instead of three.<sup class="cite" data-href="https://www.mass.gov/lists/retirement-board-valuation-reports-perac" data-source="PERAC Marblehead valuation Jan 1 2024, pp.27-29: participation mandatory; members joining on or after April 2, 2012 face higher superannuation ages (Group 1: age 60 with 10 years to be eligible; top 2.5% benefit rate at age 67) and a 5-year average-salary basis versus the 3-year basis for earlier members."></sup></p>
+  </div>
+</details>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="no-social-security">Why these workers aren't in Social Security</h2>
+    <p class="deep-dive-teaser">Massachusetts public employees pay nothing into Social Security for this job. The pension is the federally approved substitute.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>Federal law lets state and local governments keep employees out of Social Security if they provide a pension at least as generous. Massachusetts does that: town employees pay no Social Security tax on this work and earn no Social Security credit for it, and the Chapter 32 pension takes its place.<sup class="cite" data-href="https://www.ssa.gov/policy/docs/ssb/v80n3/v80n3p1.html" data-source="U.S. Social Security Administration: state and local government employees may be excluded from mandatory Social Security coverage where they are covered by a sufficiently generous public pension (noncovered employment). Massachusetts Chapter 32 members are in noncovered employment."></sup></p>
+    <p>For decades two federal rules, the Windfall Elimination Provision and the Government Pension Offset, reduced any Social Security a public retiree had earned from other work or as a spouse. Both were <strong>repealed</strong> by the Social Security Fairness Act, signed January 5, 2025, for benefits payable after December 2023.<sup class="cite" data-href="https://www.ssa.gov/benefits/retirement/social-security-fairness-act.html" data-source="U.S. Social Security Administration, Social Security Fairness Act: signed into law January 5, 2025; repeals the Windfall Elimination Provision (WEP) and Government Pension Offset (GPO) for benefits payable after December 2023. Also documented in PERAC Memo #2 (2025), mass.gov."></sup></p>
+  </div>
+</details>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="qualify-retiree-health">How you qualify for retiree health insurance</h2>
+    <p class="deep-dive-teaser">Retirees who meet the pension's age and service rules can carry town health insurance into retirement, with the town paying a share of the premium set by contract.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>Retiree health, dental, and life insurance are offered under state law (Chapter 32B, Section 20) to employees who retire from the town, along with their dependents. Eligibility tracks the pension: a worker generally has to reach the required age and years of service, retire, and carry the coverage forward. How much the town pays toward the premium, versus what the retiree pays, is set by collective bargaining and town ordinance. In practice retirees pay <strong>17 to 35 percent</strong> of the cost of pre-Medicare plans and <strong>25 percent</strong> of Medicare-related plans, and the town covers the rest.<sup class="cite" data-href="data/town_docs/FY25_Town_of_Marblehead_ACFR.pdf" data-source="Town of Marblehead FY25 ACFR, OPEB note: the Town's OPEB plan provides health, dental and life insurance to current and future retirees, their dependents and beneficiaries under Massachusetts General Law Chapter 32B, Section 20; specific provisions and contribution rates are established by collective bargaining, state law, and Town ordinance. Contributions: retirees contribute 17-35% of the cost of pre-Medicare plans and 25% of the cost of Medex plans and Medicare Part B; the Town pays the remainder."></sup></p>
   </div>
 </details>
 
@@ -313,7 +376,8 @@ og_url: https://marbleheaddata.org/retirement.html
     <p class="deep-dive-teaser">An unfunded promise is one with no money set aside now. Whoever is paying property taxes when the bill comes due pays it out of that year's budget.</p>
   </summary>
   <div class="deep-dive-body">
-    <p>Setting money aside in advance lets investment returns cover part of a future obligation, so today's taxpayers pre-pay some of tomorrow's promise. When a promise is unfunded, none of that happens. Each year's retiree health premiums are paid from that year's taxes, and the roughly $142 million of promises already made to current and future retirees is a bill that future budgets absorb as it comes due. Deferring it does not cancel it; it moves it forward in time and forgoes the investment returns that pre-funding would have earned.</p>
+    <p>Setting money aside in advance lets investment returns cover part of a future obligation, so today's taxpayers pre-pay some of tomorrow's promise. When a promise is unfunded, none of that happens. Each year's retiree health premiums are paid from that year's taxes, and the roughly $142 million already promised is a bill that future budgets absorb as it comes due. Deferring it does not cancel it; it moves it forward in time and forgoes the investment returns that pre-funding would have earned.</p>
+    <p>What the $142 million (and the pension's $40 million) actually measures is worth being precise about. It is a present value: the amount, in today's dollars, needed to cover the benefits people have <strong>already earned for years already worked</strong>, current employees and retirees alike, minus what has been set aside. It is not a bill due now, it is paid out over decades, and it does not count the future years current employees have yet to work or anyone the town has not hired. As people keep working and the fund earns returns, both the promise and the savings grow, and the gap between them shifts each year.</p>
   </div>
 </details>
 
@@ -339,6 +403,17 @@ og_url: https://marbleheaddata.org/retirement.html
     </ul>
   </div>
 </div>
+
+<details class="deep-dive">
+  <summary>
+    <h2 id="switch-401k">Could the town switch to a 401(k)?</h2>
+    <p class="deep-dive-teaser">Not on its own. The pension is set by state law, so a switch would take action on Beacon Hill, and it would not erase the money already owed.</p>
+  </summary>
+  <div class="deep-dive-body">
+    <p>A pension and a 401(k) split the risk differently. The pension is a <strong>defined benefit</strong>: the town promises a set monthly amount for life and carries the investment risk, which is why a bad market can leave it owing more, as happened after 2008. A 401(k) is a <strong>defined contribution</strong> plan: the employer pays in a fixed amount, and the worker's benefit is whatever the account grows to, so the worker carries the investment risk.</p>
+    <p>Marblehead cannot make that switch by itself. Chapter 32 is state law and makes the defined-benefit pension mandatory for municipal employees, so a change would run through the Legislature, not Town Meeting.<sup class="cite" data-href="https://www.mass.gov/lists/retirement-board-valuation-reports-perac" data-source="M.G.L. Chapter 32 (administered with PERAC oversight): participation in the defined-benefit contributory retirement system is mandatory for eligible municipal employees, and the plan structure is set by state statute, not by local option."></sup> A switch also would not touch the roughly $40 million pension gap or the $142 million retiree-health promise, both already earned for past service. Closing a pension to new hires can even raise required payments in the near term, because the existing shortfall then has to be paid off over a shorter stretch of years.</p>
+  </div>
+</details>
 
 <details class="deep-dive">
   <summary>
