@@ -47,8 +47,19 @@ writeFileSync(`${REPO}/README.md`,
   'planned phase 2.\n');
 initRepo(REPO);
 execFileSync('git', ['-C', REPO, 'add', '-A']);
+// Fixed author + date on the import commit so the whole generated history is
+// deterministic: rebuilding an unchanged dataset yields identical commit SHAs,
+// making a republish a true no-op instead of rewriting every commit.
+const IMPORT_DATE = '2024-05-06T12:00:00'; // the eCode edition date
+const importEnv = {
+  ...process.env,
+  GIT_AUTHOR_NAME: 'eCode360 import', GIT_AUTHOR_EMAIL: 'ecode-import@marblehead.town',
+  GIT_AUTHOR_DATE: IMPORT_DATE,
+  GIT_COMMITTER_NAME: 'eCode360 import', GIT_COMMITTER_EMAIL: 'ecode-import@marblehead.town',
+  GIT_COMMITTER_DATE: IMPORT_DATE,
+};
 execFileSync('git', ['-C', REPO, 'commit', '-q', '-m',
-  'Import current codified General Bylaws (Part I) from eCode (2024-05-06)']);
+  'Import current codified General Bylaws (Part I) from eCode (2024-05-06)'], { env: importEnv });
 
 // Replay amendments oldest -> newest.
 const tagged = new Set();
