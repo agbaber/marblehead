@@ -32,16 +32,37 @@ spread over fewer miles, and because a deferred, coastal network needs more of
 the expensive reclamation tier. Conclusion for the page: ~$3M is in a normal
 range for a Massachusetts town of this type, not an outlier.
 
-## Pavement preservation / deferral cost curve (FHWA)
-- Every $1 spent on timely pavement preservation saves roughly **$6 to $10** in
-  later reconstruction.
-- Letting pavement deteriorate ~2-3 years past its optimal rehabilitation point
-  raises restoration cost roughly **4 to 5 times**.
-- Source: Federal Highway Administration, Pavement Preservation.
-  https://www.fhwa.dot.gov/preservation/
-- Ties to Marblehead's own guide language that "surface patches masked deeper
-  structural failures" and that skipping maintenance makes repairs ~50% more
-  expensive (Marblehead Roads Information Guide).
+## Pavement preservation / deferral cost curve (authoritative)
+- Every $1 spent to keep a road in good condition avoids an estimated **$6 to
+  $14** needed later to rebuild it once badly deteriorated (AASHTO, as cited in
+  Smart Growth America & Taxpayers for Common Sense, Repair Priorities 2014).
+  https://smartgrowthamerica.org/resources/repair-priorities-2014-transportation-strategies-to-improve-road-conditions-and-state-fiscal-outlooks/
+  Conservative floor: FHWA puts it at "up to $6" (GAO-13-32R, Nov 2012).
+- Deterioration curve: pavement loses ~40% of its quality over the first ~75% of
+  its life, then the next ~40% in only ~12% of its life, which is why catching a
+  road before the curve turns down is far cheaper. Source: APWA Pothole Fact
+  Sheet, 2015. https://mtc.ca.gov/sites/default/files/APWA_Pothole_Fact_Sheet.pdf
+- These are inflation-neutral ratios. Ties to Marblehead's own guide language
+  that "surface patches masked deeper structural failures" and that skipping
+  maintenance makes repairs more expensive (Marblehead Roads Information Guide).
+
+## Chapter 90 state aid per accepted mile: Marblehead vs peers (FY2019)
+Marblehead receives the LEAST Chapter 90 per accepted road-mile of its usual
+peer set. Uses FY2019 apportionment (most recent full per-town list cleanly
+retrievable) over 2024 accepted centerline miles; the two datasets are 5 years
+apart, so treat as directional, not same-year. Chapter 90's formula (58% road
+mileage, 21% population, 21% employment) keeps per-town shares roughly stable.
+| Town | Ch.90 FY2019 | Accepted mi (2024) | $/accepted mi |
+|---|---|---|---|
+| Marblehead | $457,541 | 68.99 | **$6,633** |
+| Swampscott | $295,475 | 42.87 | $6,892 |
+| Melrose | $528,665 | 71.72 | $7,372 |
+| Stoneham | $475,948 | 63.61 | $7,483 |
+- Marblehead sits ~11-13% below Melrose/Stoneham on state aid per accepted mile.
+- Sources: Chapter 90 FY2019 apportionment distribution (MassDOT),
+  https://www.mass.gov/doc/fiscal-year-2019-apportionment-distribution/download ;
+  accepted centerline miles from 2024 Road Inventory Year-End Report, Table 5,
+  https://gis.massdot.state.ma.us/reports/RoadInventory2024.pdf
 
 ## Category caveat (do not conflate on the page)
 National/state "road maintenance" benchmarks (~$14,500-$18,700 per lane-mile/yr;
