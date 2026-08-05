@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-04",
+ "as_of": "2026-08-05",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -18,7 +18,7 @@
     {
      "name": "OTHER GOVERNMENTAL",
      "revised_budget": 21519850.0,
-     "actual": 21403391.17,
+     "actual": 21401498.28,
      "original_budget": 21851072.0
     },
     {
@@ -224,7 +224,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 31124624.8,
-     "actual": 30843023.38,
+     "actual": 30841130.49,
      "original_budget": 31798623.0
     },
     {
@@ -703,7 +703,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 21394850.0,
-     "actual": 21332258.93,
+     "actual": 21330366.04,
      "original_budget": 21726072.0
     },
     {
@@ -723,7 +723,7 @@
     {
      "name": "GROUP INSURANCE",
      "revised_budget": 14819169.0,
-     "actual": 14780502.75,
+     "actual": 14778609.86,
      "original_budget": 15200391.0
     },
     {
@@ -3394,7 +3394,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 31124624.8,
-     "actual": 30843023.38,
+     "actual": 30841130.49,
      "original_budget": 31798623.0
     },
     {
@@ -3432,7 +3432,7 @@
     {
      "name": "OTHER GOVERNMENTAL",
      "revised_budget": 21394850.0,
-     "actual": 21332258.93,
+     "actual": 21330366.04,
      "original_budget": 21726072.0
     },
     {
@@ -5112,7 +5112,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 14819169.0,
-     "actual": 14780502.75,
+     "actual": 14778609.86,
      "original_budget": 15200391.0
     }
    ],
@@ -5120,7 +5120,7 @@
     {
      "name": "OTHER GOVERNMENTAL",
      "revised_budget": 14819169.0,
-     "actual": 14780502.75,
+     "actual": 14778609.86,
      "original_budget": 15200391.0
     }
    ]
@@ -6609,7 +6609,7 @@
    {
     "name": "HEALTH INSURANCE",
     "revised_budget": 11463487.0,
-    "actual": 11455292.65,
+    "actual": 11453420.0,
     "original_budget": 11828487.0
    },
    {
@@ -6645,7 +6645,7 @@
    {
     "name": "LIFE INSURANCE",
     "revised_budget": 90998.0,
-    "actual": 68618.44,
+    "actual": 68598.2,
     "original_budget": 90998.0
    },
    {
@@ -14701,7 +14701,7 @@
    {
     "name": "HEALTH INSURANCE",
     "revised_budget": 11463487.0,
-    "actual": 11455292.65,
+    "actual": 11453420.0,
     "original_budget": 11828487.0
    },
    {
@@ -14761,7 +14761,7 @@
    {
     "name": "LIFE INSURANCE",
     "revised_budget": 90998.0,
-    "actual": 68618.44,
+    "actual": 68598.2,
     "original_budget": 90998.0
    },
    {
