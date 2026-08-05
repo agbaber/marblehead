@@ -9,8 +9,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 1412759.09,
-        "delta": 1412759.09,
+        "actual": 1464465.53,
+        "delta": 1464465.53,
         "pct": null
       },
       {
@@ -30,9 +30,9 @@
       {
         "name": "ANIMAL INSPECTOR",
         "revised": 2400.0,
-        "actual": 1068.5,
-        "delta": -1331.5,
-        "pct": 44.52
+        "actual": 1502.75,
+        "delta": -897.25,
+        "pct": 62.61
       },
       {
         "name": "PLANNING BOARD",
@@ -93,16 +93,16 @@
       {
         "name": "VETERANS SERVICES",
         "revised": 154872.0,
-        "actual": 8702.13,
-        "delta": -146169.87,
-        "pct": 5.62
+        "actual": 10251.57,
+        "delta": -144620.43,
+        "pct": 6.62
       },
       {
         "name": "TOWN CLERK",
         "revised": 268002.0,
-        "actual": 17099.0,
-        "delta": -250903.0,
-        "pct": 6.38
+        "actual": 21658.59,
+        "delta": -246343.41,
+        "pct": 8.08
       },
       {
         "name": "TOWN COUNSEL",
@@ -114,23 +114,23 @@
       {
         "name": "HUMAN RESOURCES",
         "revised": 314480.0,
-        "actual": 20471.37,
-        "delta": -294008.63,
-        "pct": 6.51
+        "actual": 26157.86,
+        "delta": -288322.14,
+        "pct": 8.32
       },
       {
         "name": "ASSESSORS",
         "revised": 388003.0,
-        "actual": 32120.25,
-        "delta": -355882.75,
-        "pct": 8.28
+        "actual": 37212.22,
+        "delta": -350790.78,
+        "pct": 9.59
       },
       {
         "name": "HEALTH",
         "revised": 399320.0,
-        "actual": 10802.6,
-        "delta": -388517.4,
-        "pct": 2.71
+        "actual": 15369.58,
+        "delta": -383950.42,
+        "pct": 3.85
       },
       {
         "name": "RESERVE FUND",
@@ -142,44 +142,44 @@
       {
         "name": "CEMETERY",
         "revised": 468931.0,
-        "actual": 31337.42,
-        "delta": -437593.58,
-        "pct": 6.68
+        "actual": 40163.38,
+        "delta": -428767.62,
+        "pct": 8.56
       },
       {
         "name": "COUNCIL ON AGING",
         "revised": 508548.0,
-        "actual": 32147.14,
-        "delta": -476400.86,
-        "pct": 6.32
+        "actual": 39996.43,
+        "delta": -468551.57,
+        "pct": 7.86
       },
       {
         "name": "COMMUNITY DEVELOP AND PLANNING",
         "revised": 581657.0,
-        "actual": 21310.15,
-        "delta": -560346.85,
-        "pct": 3.66
+        "actual": 27161.16,
+        "delta": -554495.84,
+        "pct": 4.67
       },
       {
         "name": "BUILDING INSPECTION",
         "revised": 676519.0,
-        "actual": 39844.75,
-        "delta": -636674.25,
-        "pct": 5.89
+        "actual": 50517.91,
+        "delta": -626001.09,
+        "pct": 7.47
       },
       {
         "name": "SELECT BOARD",
         "revised": 723176.0,
-        "actual": 33116.14,
-        "delta": -690059.86,
-        "pct": 4.58
+        "actual": 40964.5,
+        "delta": -682211.5,
+        "pct": 5.66
       },
       {
         "name": "PUBLIC BUILDINGS",
         "revised": 751225.0,
-        "actual": 12372.65,
-        "delta": -738852.35,
-        "pct": 1.65
+        "actual": 15006.73,
+        "delta": -736218.27,
+        "pct": 2.0
       },
       {
         "name": "INTERFUND TRANSFERS",
@@ -191,9 +191,9 @@
       {
         "name": "PARKS & RECREATION",
         "revised": 1069193.0,
-        "actual": 74433.18,
-        "delta": -994759.82,
-        "pct": 6.96
+        "actual": 91860.99,
+        "delta": -977332.01,
+        "pct": 8.59
       },
       {
         "name": "CAPITAL ADMINISTRATION",
@@ -205,51 +205,44 @@
       {
         "name": "HARBOR",
         "revised": 1319500.0,
-        "actual": 161429.72,
-        "delta": -1158070.28,
-        "pct": 12.23
+        "actual": 173682.91,
+        "delta": -1145817.09,
+        "pct": 13.16
       },
       {
         "name": "WATER",
         "revised": 4465301.0,
-        "actual": 3030515.94,
-        "delta": -1434785.06,
-        "pct": 67.87
+        "actual": 3057956.12,
+        "delta": -1407344.88,
+        "pct": 68.48
       },
       {
         "name": "ABBOT LIBRARY",
         "revised": 1595790.0,
-        "actual": 72631.14,
-        "delta": -1523158.86,
-        "pct": 4.55
-      },
-      {
-        "name": "DEBT SERVICE",
-        "revised": 11496957.0,
-        "actual": 9934634.39,
-        "delta": -1562322.61,
-        "pct": 86.41
-      },
-      {
-        "name": "WASTE COLLECTION",
-        "revised": 1846337.0,
-        "actual": 38520.55,
-        "delta": -1807816.45,
-        "pct": 2.09
+        "actual": 91687.17,
+        "delta": -1504102.83,
+        "pct": 5.75
       },
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 317269.33,
-        "delta": -1808183.67,
-        "pct": 14.93
+        "actual": 334440.51,
+        "delta": -1791012.49,
+        "pct": 15.74
+      },
+      {
+        "name": "WASTE COLLECTION",
+        "revised": 1846337.0,
+        "actual": 48960.68,
+        "delta": -1797376.32,
+        "pct": 2.65
       },
       {
         "name": "SEWER",
         "revised": 2699291.0,
-        "actual": 801383.99,
-        "delta": -1897907.01,
-        "pct": 29.69
+        "actual": 825663.01,
+        "delta": -1873627.99,
+        "pct": 30.59
       },
       {
         "name": "CURBSIDE COLLECTION",
@@ -261,9 +254,9 @@
       {
         "name": "PUBLIC WORKS",
         "revised": 3143686.0,
-        "actual": 288177.57,
-        "delta": -2855508.43,
-        "pct": 9.17
+        "actual": 317187.81,
+        "delta": -2826498.19,
+        "pct": 10.09
       },
       {
         "name": "STATE ASSESSMENTS",
@@ -280,11 +273,18 @@
         "pct": 0.71
       },
       {
+        "name": "DEBT SERVICE",
+        "revised": 11496957.0,
+        "actual": 6934984.39,
+        "delta": -4561972.61,
+        "pct": 60.32
+      },
+      {
         "name": "POLICE",
         "revised": 5460658.0,
-        "actual": 414951.9,
-        "delta": -5045706.1,
-        "pct": 7.6
+        "actual": 502206.76,
+        "delta": -4958451.24,
+        "pct": 9.2
       },
       {
         "name": "BROWN SCHOOL",
@@ -303,9 +303,9 @@
       {
         "name": "FIRE",
         "revised": 6471909.0,
-        "actual": 488299.84,
-        "delta": -5983609.16,
-        "pct": 7.54
+        "actual": 604258.01,
+        "delta": -5867650.99,
+        "pct": 9.34
       },
       {
         "name": "VILLAGE SCHOOL",
@@ -331,18 +331,18 @@
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 8080444.27,
-        "delta": -15991948.73,
-        "pct": 33.57
+        "actual": 8087790.25,
+        "delta": -15984602.75,
+        "pct": 33.6
       }
     ],
     "all_departments": [
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 8080444.27,
-        "delta": -15991948.73,
-        "pct": 33.57
+        "actual": 8087790.25,
+        "delta": -15984602.75,
+        "pct": 33.6
       },
       {
         "name": "DISTRICTWIDE",
@@ -361,9 +361,9 @@
       {
         "name": "DEBT SERVICE",
         "revised": 11496957.0,
-        "actual": 9934634.39,
-        "delta": -1562322.61,
-        "pct": 86.41
+        "actual": 6934984.39,
+        "delta": -4561972.61,
+        "pct": 60.32
       },
       {
         "name": "VILLAGE SCHOOL",
@@ -375,9 +375,9 @@
       {
         "name": "FIRE",
         "revised": 6471909.0,
-        "actual": 488299.84,
-        "delta": -5983609.16,
-        "pct": 7.54
+        "actual": 604258.01,
+        "delta": -5867650.99,
+        "pct": 9.34
       },
       {
         "name": "MIDDLE SCHOOL",
@@ -389,9 +389,9 @@
       {
         "name": "POLICE",
         "revised": 5460658.0,
-        "actual": 414951.9,
-        "delta": -5045706.1,
-        "pct": 7.6
+        "actual": 502206.76,
+        "delta": -4958451.24,
+        "pct": 9.2
       },
       {
         "name": "BROWN SCHOOL",
@@ -403,9 +403,9 @@
       {
         "name": "WATER",
         "revised": 4465301.0,
-        "actual": 3030515.94,
-        "delta": -1434785.06,
-        "pct": 67.87
+        "actual": 3057956.12,
+        "delta": -1407344.88,
+        "pct": 68.48
       },
       {
         "name": "GLOVER SCHOOL",
@@ -417,9 +417,9 @@
       {
         "name": "PUBLIC WORKS",
         "revised": 3143686.0,
-        "actual": 288177.57,
-        "delta": -2855508.43,
-        "pct": 9.17
+        "actual": 317187.81,
+        "delta": -2826498.19,
+        "pct": 10.09
       },
       {
         "name": "STATE ASSESSMENTS",
@@ -431,9 +431,9 @@
       {
         "name": "SEWER",
         "revised": 2699291.0,
-        "actual": 801383.99,
-        "delta": -1897907.01,
-        "pct": 29.69
+        "actual": 825663.01,
+        "delta": -1873627.99,
+        "pct": 30.59
       },
       {
         "name": "CURBSIDE COLLECTION",
@@ -445,37 +445,37 @@
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 317269.33,
-        "delta": -1808183.67,
-        "pct": 14.93
+        "actual": 334440.51,
+        "delta": -1791012.49,
+        "pct": 15.74
       },
       {
         "name": "WASTE COLLECTION",
         "revised": 1846337.0,
-        "actual": 38520.55,
-        "delta": -1807816.45,
-        "pct": 2.09
+        "actual": 48960.68,
+        "delta": -1797376.32,
+        "pct": 2.65
       },
       {
         "name": "ABBOT LIBRARY",
         "revised": 1595790.0,
-        "actual": 72631.14,
-        "delta": -1523158.86,
-        "pct": 4.55
+        "actual": 91687.17,
+        "delta": -1504102.83,
+        "pct": 5.75
       },
       {
         "name": "HARBOR",
         "revised": 1319500.0,
-        "actual": 161429.72,
-        "delta": -1158070.28,
-        "pct": 12.23
+        "actual": 173682.91,
+        "delta": -1145817.09,
+        "pct": 13.16
       },
       {
         "name": "PARKS & RECREATION",
         "revised": 1069193.0,
-        "actual": 74433.18,
-        "delta": -994759.82,
-        "pct": 6.96
+        "actual": 91860.99,
+        "delta": -977332.01,
+        "pct": 8.59
       },
       {
         "name": "CAPITAL ADMINISTRATION",
@@ -487,9 +487,9 @@
       {
         "name": "PUBLIC BUILDINGS",
         "revised": 751225.0,
-        "actual": 12372.65,
-        "delta": -738852.35,
-        "pct": 1.65
+        "actual": 15006.73,
+        "delta": -736218.27,
+        "pct": 2.0
       },
       {
         "name": "INTERFUND TRANSFERS",
@@ -501,37 +501,37 @@
       {
         "name": "SELECT BOARD",
         "revised": 723176.0,
-        "actual": 33116.14,
-        "delta": -690059.86,
-        "pct": 4.58
+        "actual": 40964.5,
+        "delta": -682211.5,
+        "pct": 5.66
       },
       {
         "name": "BUILDING INSPECTION",
         "revised": 676519.0,
-        "actual": 39844.75,
-        "delta": -636674.25,
-        "pct": 5.89
+        "actual": 50517.91,
+        "delta": -626001.09,
+        "pct": 7.47
       },
       {
         "name": "COMMUNITY DEVELOP AND PLANNING",
         "revised": 581657.0,
-        "actual": 21310.15,
-        "delta": -560346.85,
-        "pct": 3.66
+        "actual": 27161.16,
+        "delta": -554495.84,
+        "pct": 4.67
       },
       {
         "name": "COUNCIL ON AGING",
         "revised": 508548.0,
-        "actual": 32147.14,
-        "delta": -476400.86,
-        "pct": 6.32
+        "actual": 39996.43,
+        "delta": -468551.57,
+        "pct": 7.86
       },
       {
         "name": "CEMETERY",
         "revised": 468931.0,
-        "actual": 31337.42,
-        "delta": -437593.58,
-        "pct": 6.68
+        "actual": 40163.38,
+        "delta": -428767.62,
+        "pct": 8.56
       },
       {
         "name": "RESERVE FUND",
@@ -543,23 +543,23 @@
       {
         "name": "HEALTH",
         "revised": 399320.0,
-        "actual": 10802.6,
-        "delta": -388517.4,
-        "pct": 2.71
+        "actual": 15369.58,
+        "delta": -383950.42,
+        "pct": 3.85
       },
       {
         "name": "ASSESSORS",
         "revised": 388003.0,
-        "actual": 32120.25,
-        "delta": -355882.75,
-        "pct": 8.28
+        "actual": 37212.22,
+        "delta": -350790.78,
+        "pct": 9.59
       },
       {
         "name": "HUMAN RESOURCES",
         "revised": 314480.0,
-        "actual": 20471.37,
-        "delta": -294008.63,
-        "pct": 6.51
+        "actual": 26157.86,
+        "delta": -288322.14,
+        "pct": 8.32
       },
       {
         "name": "TOWN COUNSEL",
@@ -571,16 +571,16 @@
       {
         "name": "TOWN CLERK",
         "revised": 268002.0,
-        "actual": 17099.0,
-        "delta": -250903.0,
-        "pct": 6.38
+        "actual": 21658.59,
+        "delta": -246343.41,
+        "pct": 8.08
       },
       {
         "name": "VETERANS SERVICES",
         "revised": 154872.0,
-        "actual": 8702.13,
-        "delta": -146169.87,
-        "pct": 5.62
+        "actual": 10251.57,
+        "delta": -144620.43,
+        "pct": 6.62
       },
       {
         "name": "ELECTION & REGISTRATION",
@@ -627,9 +627,9 @@
       {
         "name": "ANIMAL INSPECTOR",
         "revised": 2400.0,
-        "actual": 1068.5,
-        "delta": -1331.5,
-        "pct": 44.52
+        "actual": 1502.75,
+        "delta": -897.25,
+        "pct": 62.61
       },
       {
         "name": "SEALER OF WEIGHTS & MEASURES",
@@ -662,8 +662,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 1412759.09,
-        "delta": 1412759.09,
+        "actual": 1464465.53,
+        "delta": 1464465.53,
         "pct": null
       }
     ]
