@@ -712,8 +712,8 @@
     },
     {
       "month": "2026-06",
-      "amount": 14052277.91,
-      "count": 2467
+      "amount": 14052021.76,
+      "count": 2468
     }
   ],
   "drill": {
@@ -918,7 +918,7 @@
             "count": 2
           },
           {
-            "name": "CARLTON ELECTRICAL COSTRUCTION",
+            "name": "CARLTON ELECTRICAL CONSTRUCTION",
             "amount": 8255.0,
             "count": 1
           },
@@ -2284,7 +2284,7 @@
             "count": 2
           },
           {
-            "name": "CARLTON ELECTRICAL COSTRUCTION",
+            "name": "CARLTON ELECTRICAL CONSTRUCTION",
             "amount": 14989.5,
             "count": 2
           }
@@ -2899,7 +2899,7 @@
             "count": 1
           },
           {
-            "name": "CARLTON ELECTRICAL COSTRUCTION",
+            "name": "CARLTON ELECTRICAL CONSTRUCTION",
             "amount": 635.0,
             "count": 1
           },
@@ -3295,8 +3295,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 2642091.0,
-            "count": 885
+            "amount": 2641834.85,
+            "count": 886
           }
         ]
       },
