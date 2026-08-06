@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-05",
+ "as_of": "2026-08-06",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -30,7 +30,7 @@
     {
      "name": "FIRE",
      "revised_budget": 5711260.0,
-     "actual": 5619711.36,
+     "actual": 5619455.21,
      "original_budget": 5561260.0
     },
     {
@@ -254,7 +254,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 1123966.27,
-     "actual": 943704.85,
+     "actual": 943448.7,
      "original_budget": 913370.0
     },
     {
@@ -1122,7 +1122,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 71172.77,
-     "actual": 65726.43,
+     "actual": 65470.28,
      "original_budget": 106133.0
     },
     {
@@ -1148,7 +1148,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 340645.0,
-     "actual": 332878.99,
+     "actual": 332622.84,
      "original_budget": 340645.0
     },
     {
@@ -4199,7 +4199,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 1123966.27,
-     "actual": 943704.85,
+     "actual": 943448.7,
      "original_budget": 913370.0
     },
     {
@@ -4303,7 +4303,7 @@
     {
      "name": "FIRE",
      "revised_budget": 71172.77,
-     "actual": 65726.43,
+     "actual": 65470.28,
      "original_budget": 106133.0
     },
     {
@@ -4855,7 +4855,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19400687.6,
-     "actual": 18138805.28,
+     "actual": 18138549.13,
      "original_budget": 18599491.0
     },
     {
@@ -4941,7 +4941,7 @@
     {
      "name": "FIRE",
      "revised_budget": 340645.0,
-     "actual": 332878.99,
+     "actual": 332622.84,
      "original_budget": 340645.0
     },
     {
@@ -8479,7 +8479,7 @@
    {
     "name": "MISC MEDICAL & SURGICAL",
     "revised_budget": 13547.21,
-    "actual": 13902.01,
+    "actual": 13645.86,
     "original_budget": 19649.0
    },
    {
@@ -15387,7 +15387,7 @@
    {
     "name": "MISC MEDICAL & SURGICAL",
     "revised_budget": 18141.21,
-    "actual": 18083.0,
+    "actual": 17826.85,
     "original_budget": 23865.0
    },
    {
