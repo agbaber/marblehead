@@ -1,11 +1,11 @@
 {
-  "as_of": "2026-08-06",
+  "as_of": "2026-08-07",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-08-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
-    "all_funds_revised_budget": 128953519.2,
+    "all_funds_revised_budget": 128974359.95,
     "all_funds_actual": 24164321.03,
     "budgeted_annual": {
       "revised_budget": 126548922.0,
@@ -13,7 +13,7 @@
       "original_budget": 130605002.0
     },
     "other_funds": {
-      "revised_budget": 2404597.2,
+      "revised_budget": 2425437.95,
       "actual": 707251.24,
       "original_budget": 2400000.0
     }
@@ -24,14 +24,14 @@
       "revised_budget": 69918861.0,
       "actual": 17180775.89,
       "original_budget": 69775623.0,
-      "encumbrance": 16427540.25
+      "encumbrance": 16472092.89
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
       "actual": 592771.2,
       "original_budget": 47620287.0,
-      "encumbrance": 9041074.04
+      "encumbrance": 9096281.54
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -82,7 +82,7 @@
       "revised_budget": 13083733.6,
       "actual": 379587.59,
       "original_budget": 13090519.6,
-      "encumbrance": 6572072.0
+      "encumbrance": 6626427.0
     },
     {
       "name": "HIGH SCHOOL",
@@ -103,7 +103,7 @@
       "revised_budget": 7545998.37,
       "actual": 40760.11,
       "original_budget": 7545798.37,
-      "encumbrance": 499225.31
+      "encumbrance": 500077.81
     },
     {
       "name": "FIRE",
@@ -180,14 +180,14 @@
       "revised_budget": 2125453.0,
       "actual": 334440.51,
       "original_budget": 2125453.0,
-      "encumbrance": 1083901.22
+      "encumbrance": 1091704.13
     },
     {
       "name": "WASTE COLLECTION",
       "revised_budget": 1846337.0,
       "actual": 48960.68,
       "original_budget": 1790344.0,
-      "encumbrance": 544819.23
+      "encumbrance": 545551.63
     },
     {
       "name": "ABBOT LIBRARY",
@@ -222,7 +222,7 @@
       "revised_budget": 751225.0,
       "actual": 15006.73,
       "original_budget": 751225.0,
-      "encumbrance": 297201.65
+      "encumbrance": 300476.09
     },
     {
       "name": "INTERFUND TRANSFERS",
@@ -243,7 +243,7 @@
       "revised_budget": 676519.0,
       "actual": 50517.91,
       "original_budget": 676519.0,
-      "encumbrance": 815695.78
+      "encumbrance": 848438.67
     },
     {
       "name": "COMMUNITY DEVELOP AND PLANNING",
@@ -420,7 +420,7 @@
       "revised_budget": 13938847.0,
       "actual": 606374.83,
       "original_budget": 13931261.0,
-      "encumbrance": 4878277.38
+      "encumbrance": 4969476.35
     },
     {
       "name": "GOVERNMENTAL",
@@ -441,14 +441,14 @@
       "revised_budget": 2461324.0,
       "actual": 69105.13,
       "original_budget": 2458724.0,
-      "encumbrance": 653207.14
+      "encumbrance": 656081.88
     },
     {
       "name": "CAPITAL",
       "revised_budget": 1957576.0,
       "actual": 162687.07,
       "original_budget": 1656894.0,
-      "encumbrance": 818492.93
+      "encumbrance": 824179.36
     },
     {
       "name": "CLERICAL SALARIES",
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 592771.2,
       "original_budget": 47615287.0,
-      "encumbrance": 9041074.04
+      "encumbrance": 9096281.54
     },
     {
       "name": "SALARIES",
@@ -492,7 +492,7 @@
       "revised_budget": 20824715.0,
       "actual": 10955853.58,
       "original_budget": 25324715.0,
-      "encumbrance": 1552097.57
+      "encumbrance": 1595917.81
     },
     {
       "name": "GROUP INSURANCE",
@@ -583,7 +583,7 @@
       "revised_budget": 114600.0,
       "actual": 0.0,
       "original_budget": 114600.0,
-      "encumbrance": 0.0
+      "encumbrance": 732.4
     },
     {
       "name": "ATM DPW PLOW LEASE",
@@ -1124,7 +1124,7 @@
       "revised_budget": 1362938.0,
       "actual": 18023.81,
       "original_budget": 1362938.0,
-      "encumbrance": 1137424.1
+      "encumbrance": 1134698.54
     },
     {
       "name": "OTHER SALARIES",
@@ -1201,7 +1201,7 @@
       "revised_budget": 862784.0,
       "actual": 18559.97,
       "original_budget": 862784.0,
-      "encumbrance": 105685.49
+      "encumbrance": 132159.49
     },
     {
       "name": "HEALTH REIMB MEDICARE",
@@ -1278,7 +1278,7 @@
       "revised_budget": 564197.0,
       "actual": 157407.86,
       "original_budget": 574322.0,
-      "encumbrance": 75363.54
+      "encumbrance": 108933.07
     },
     {
       "name": "TELECOMMUNICATOR",
@@ -1572,7 +1572,7 @@
       "revised_budget": 182374.0,
       "actual": 0.0,
       "original_budget": 182374.0,
-      "encumbrance": 115723.2
+      "encumbrance": 116575.7
     },
     {
       "name": "BLDG & EQUIP R&M SUPPLIES",
@@ -1607,7 +1607,7 @@
       "revised_budget": 155000.0,
       "actual": 0.0,
       "original_budget": 155000.0,
-      "encumbrance": 103537.53
+      "encumbrance": 109223.96
     },
     {
       "name": "LONGEVITY",
@@ -1712,7 +1712,7 @@
       "revised_budget": 122188.0,
       "actual": 341.46,
       "original_budget": 122188.0,
-      "encumbrance": 19159.11
+      "encumbrance": 53040.11
     },
     {
       "name": "TRAFFIC SUPERS",
@@ -2195,7 +2195,7 @@
       "revised_budget": 56240.0,
       "actual": 9300.87,
       "original_budget": 56240.0,
-      "encumbrance": 12225.96
+      "encumbrance": 14248.2
     },
     {
       "name": "LIBRARY TECH SVCS ASSISTANT",
