@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-07-30",
+  "as_of": "2026-08-06",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
-  "fy_months_elapsed": 1,
-  "fy_pct_elapsed": 8.2,
+  "fy_months_elapsed": 2,
+  "fy_pct_elapsed": 10.1,
   "budget_execution": {
     "by_department": [
       {
@@ -671,8 +671,13 @@
   "monthly_cadence": [
     {
       "month": "2026-07",
-      "amount": 18895405.13,
-      "count": 483
+      "amount": 20447066.88,
+      "count": 684
+    },
+    {
+      "month": "2026-08",
+      "amount": 12262.63,
+      "count": 28
     }
   ],
   "drill": {
@@ -688,18 +693,38 @@
             "name": "RICHARD D AMBROSIA INC",
             "amount": 28395.5,
             "count": 1
+          },
+          {
+            "name": "MDM ENGINEERING COMPANY INC",
+            "amount": 20726.22,
+            "count": 2
+          },
+          {
+            "name": "PURVIS SYSTEMS INC",
+            "amount": 0.95,
+            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 172871.5,
-            "count": 2
+            "amount": 193597.72,
+            "count": 4
+          },
+          {
+            "month": "2026-08",
+            "amount": 0.95,
+            "count": 1
           }
         ]
       },
       "A33 2025-ALLEY BLDG IMPROV": {
         "top_vendors": [
+          {
+            "name": "NV5",
+            "amount": 33586.0,
+            "count": 1
+          },
           {
             "name": "TODD FLANNERY",
             "amount": 3357.8,
@@ -709,8 +734,39 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 3357.8,
+            "amount": 36943.8,
+            "count": 2
+          }
+        ]
+      },
+      "APLF FUND": {
+        "top_vendors": [
+          {
+            "name": "DEBBIE LEIBOWITZ",
+            "amount": 200.0,
+            "count": 4
+          },
+          {
+            "name": "RANDI D LEBAR",
+            "amount": 200.0,
             "count": 1
+          },
+          {
+            "name": "DARA VANREMOORTEL",
+            "amount": 175.0,
+            "count": 1
+          },
+          {
+            "name": "AMAZON CAPITAL SERVICES",
+            "amount": 34.29,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 609.29,
+            "count": 7
           }
         ]
       },
@@ -743,6 +799,11 @@
             "count": 1
           },
           {
+            "name": "AMAZON",
+            "amount": 427.87,
+            "count": 1
+          },
+          {
             "name": "CENTURY TIRE OF PEABODY",
             "amount": 160.95,
             "count": 1
@@ -756,13 +817,38 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 2447.57,
-            "count": 4
+            "amount": 2875.44,
+            "count": 5
           }
         ]
       },
       "COA REVOLVING": {
         "top_vendors": [
+          {
+            "name": "KIMBERLY ANNE CROWLEY",
+            "amount": 1430.0,
+            "count": 3
+          },
+          {
+            "name": "KAREN JANCSY",
+            "amount": 715.0,
+            "count": 1
+          },
+          {
+            "name": "AMAZON",
+            "amount": 633.9,
+            "count": 2
+          },
+          {
+            "name": "VIVIEN CLAIRE CONSALVO",
+            "amount": 400.0,
+            "count": 1
+          },
+          {
+            "name": "LIVING FIT LLC",
+            "amount": 195.0,
+            "count": 1
+          },
           {
             "name": "KEVIN FIGUERA",
             "amount": 80.0,
@@ -772,13 +858,18 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 80.0,
-            "count": 1
+            "amount": 3453.9,
+            "count": 9
           }
         ]
       },
       "EARL N REYNOLDS HISTORICAL FD": {
         "top_vendors": [
+          {
+            "name": "PAST PERFECT SOFTWARE",
+            "amount": 432.0,
+            "count": 1
+          },
           {
             "name": "VERIZON INC",
             "amount": 6.76,
@@ -788,16 +879,26 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 6.76,
-            "count": 1
+            "amount": 438.76,
+            "count": 2
           }
         ]
       },
       "ELECTRIC ENTERPRISE": {
         "top_vendors": [
           {
+            "name": "BERKSHIRE WIND POWER COOPERATIVE CORP",
+            "amount": 1119637.61,
+            "count": 24
+          },
+          {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
             "amount": 838251.0,
+            "count": 1
+          },
+          {
+            "name": "FISCHBACH & MOORE ELECTRIC GROUP LCC",
+            "amount": 195362.59,
             "count": 1
           },
           {
@@ -813,6 +914,11 @@
           {
             "name": "NORTHERN DATA SYSTEMS INC",
             "amount": 40401.75,
+            "count": 2
+          },
+          {
+            "name": "WESCO",
+            "amount": 32395.18,
             "count": 2
           },
           {
@@ -839,28 +945,13 @@
             "name": "MIIA HEALTH BENEFITS TRUST",
             "amount": 9872.0,
             "count": 1
-          },
-          {
-            "name": "KP LAW, PC",
-            "amount": 9646.0,
-            "count": 2
-          },
-          {
-            "name": "NORTH EAST TECHNOLOGY",
-            "amount": 9234.76,
-            "count": 2
-          },
-          {
-            "name": "RITE-HITE CO LLC",
-            "amount": 8750.0,
-            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 1223853.1,
-            "count": 99
+            "amount": 2581226.6,
+            "count": 136
           }
         ]
       },
@@ -969,16 +1060,41 @@
             "count": 1
           },
           {
+            "name": "R B ALLEN CO INC",
+            "amount": 11850.0,
+            "count": 1
+          },
+          {
+            "name": "INDEPENDENT CONCRETE PUMPING CORP",
+            "amount": 1250.0,
+            "count": 1
+          },
+          {
+            "name": "DELANDE SUPPLY CO INC",
+            "amount": 471.0,
+            "count": 2
+          },
+          {
             "name": "LEFTFIELD LLC",
             "amount": 185.0,
+            "count": 1
+          },
+          {
+            "name": "PURVIS SYSTEMS INC",
+            "amount": 0.55,
             "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 161755.13,
-            "count": 5
+            "amount": 175326.13,
+            "count": 9
+          },
+          {
+            "month": "2026-08",
+            "amount": 0.55,
+            "count": 1
           }
         ]
       },
@@ -1001,8 +1117,8 @@
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
-            "amount": 790359.0,
-            "count": 1
+            "amount": 794330.0,
+            "count": 2
           },
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -1048,8 +1164,13 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 15657119.72,
-            "count": 218
+            "amount": 15712259.28,
+            "count": 285
+          },
+          {
+            "month": "2026-08",
+            "amount": 12261.13,
+            "count": 26
           }
         ]
       },
@@ -1124,22 +1245,86 @@
           }
         ]
       },
+      "HISTORCIAL COMM GIFT SHOP": {
+        "top_vendors": [
+          {
+            "name": "RAYMOND BATES",
+            "amount": 72.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 72.0,
+            "count": 1
+          }
+        ]
+      },
+      "LIBRARY MUNICIPAL EQUAL GRANT": {
+        "top_vendors": [
+          {
+            "name": "TOSHIBA AMERICA BUSINESS SOLUTIONS INC",
+            "amount": 392.15,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 392.15,
+            "count": 1
+          }
+        ]
+      },
+      "MEMORIAL PARK BENCH DONATION": {
+        "top_vendors": [
+          {
+            "name": "M.E. O'BRIEN & SONS, INC",
+            "amount": 1985.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 1985.0,
+            "count": 1
+          }
+        ]
+      },
+      "OPIOID SETTLEMENT FUND": {
+        "top_vendors": [
+          {
+            "name": "MICHELLE SIMONS",
+            "amount": 4541.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 4541.0,
+            "count": 1
+          }
+        ]
+      },
       "PARK REVOLVING FUND": {
         "top_vendors": [
+          {
+            "name": "LEAH GOODMAN",
+            "amount": 24476.4,
+            "count": 4
+          },
           {
             "name": "MATT CORREIA",
             "amount": 20574.0,
             "count": 1
           },
           {
-            "name": "LEAH GOODMAN",
-            "amount": 16722.0,
-            "count": 3
-          },
-          {
             "name": "CHRISTOPHER FIELDS",
-            "amount": 10365.84,
-            "count": 2
+            "amount": 17394.33,
+            "count": 3
           },
           {
             "name": "CAPTUREPOINT",
@@ -1152,19 +1337,29 @@
             "count": 1
           },
           {
+            "name": "VERMONT RECREATIONAL SURFACING",
+            "amount": 4401.59,
+            "count": 1
+          },
+          {
+            "name": "ONE TIME PAY",
+            "amount": 4271.0,
+            "count": 29
+          },
+          {
             "name": "MEGAN WHITE",
             "amount": 3918.75,
             "count": 1
           },
           {
-            "name": "ONE TIME PAY",
-            "amount": 3364.0,
-            "count": 25
+            "name": "TIMOTHY D BOWEN",
+            "amount": 3750.0,
+            "count": 1
           },
           {
             "name": "AMAZON CAPITAL SERVICES INC",
-            "amount": 2196.48,
-            "count": 11
+            "amount": 2528.46,
+            "count": 21
           },
           {
             "name": "CHESS WIZARDS",
@@ -1175,23 +1370,13 @@
             "name": "MARTHA POTVIN",
             "amount": 584.4,
             "count": 3
-          },
-          {
-            "name": "THE THRONE DEPOT",
-            "amount": 254.63,
-            "count": 1
-          },
-          {
-            "name": "DEMOULAS SUPER MARKET",
-            "amount": 34.0,
-            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 73282.1,
-            "count": 51
+            "amount": 97455.56,
+            "count": 69
           }
         ]
       },
@@ -1236,8 +1421,8 @@
         "top_vendors": [
           {
             "name": "SOUTH ESSEX SEWERAGE DISTRICT",
-            "amount": 534776.0,
-            "count": 1
+            "amount": 562204.0,
+            "count": 2
           },
           {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
@@ -1255,21 +1440,41 @@
             "count": 1
           },
           {
+            "name": "TOWN OF MARBLEHEAD",
+            "amount": 4273.88,
+            "count": 25
+          },
+          {
+            "name": "DELANDE SUPPLY CO INC",
+            "amount": 713.41,
+            "count": 2
+          },
+          {
+            "name": "GENUINE PARTS COMPANY INC",
+            "amount": 559.0,
+            "count": 3
+          },
+          {
             "name": "CITY OF SALEM",
             "amount": 382.56,
             "count": 2
           },
           {
             "name": "VERIZON INC",
-            "amount": 3.38,
+            "amount": 214.79,
+            "count": 11
+          },
+          {
+            "name": "MAG RETAIL HOLDINGS - FBV LLC",
+            "amount": 40.08,
             "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 723011.47,
-            "count": 7
+            "amount": 756237.25,
+            "count": 49
           }
         ]
       },
@@ -1296,9 +1501,39 @@
             "count": 1
           },
           {
+            "name": "TOWN OF MARBLEHEAD",
+            "amount": 1005.83,
+            "count": 4
+          },
+          {
             "name": "CITY OF SALEM",
             "amount": 646.01,
             "count": 3
+          },
+          {
+            "name": "SECI",
+            "amount": 309.97,
+            "count": 1
+          },
+          {
+            "name": "GENUINE PARTS COMPANY INC",
+            "amount": 282.96,
+            "count": 1
+          },
+          {
+            "name": "ATLANTIC ASPHALT & EQUIPMENT CO INC",
+            "amount": 167.4,
+            "count": 1
+          },
+          {
+            "name": "B & B PEST CONTROL",
+            "amount": 150.0,
+            "count": 1
+          },
+          {
+            "name": "UPS STORE #0630",
+            "amount": 116.86,
+            "count": 1
           },
           {
             "name": "VERIZON INC",
@@ -1309,8 +1544,8 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 560999.47,
-            "count": 8
+            "amount": 563032.49,
+            "count": 17
           }
         ]
       }
