@@ -712,8 +712,8 @@
     },
     {
       "month": "2026-06",
-      "amount": 14052021.76,
-      "count": 2468
+      "amount": 14052617.16,
+      "count": 2469
     }
   ],
   "drill": {
@@ -3218,8 +3218,8 @@
           },
           {
             "name": "ONE TIME PAY",
-            "amount": 278443.05,
-            "count": 418
+            "amount": 279038.45,
+            "count": 419
           },
           {
             "name": "TOWN OF MARBLEHEAD",
@@ -3295,8 +3295,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 2641834.85,
-            "count": 886
+            "amount": 2642430.25,
+            "count": 887
           }
         ]
       },
