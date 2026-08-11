@@ -3,10 +3,10 @@
   "snapshot": {
     "date": "2026-08-06",
     "fiscal_year": "FY27",
-    "row_count": 712,
-    "total_paid": 20459329.51,
-    "interfund_total": 13790.75,
-    "external_paid": 20445538.76,
+    "row_count": 892,
+    "total_paid": 20770122.4,
+    "interfund_total": 28449.82,
+    "external_paid": 20741672.58,
     "first_payment": "2026-07-01",
     "last_payment": "2026-08-06",
     "source_file": "checkbook_FY27_2026-08-06.csv"
@@ -15,14 +15,14 @@
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
-      "amount": 230542.47,
-      "share": 0.0113,
+      "amount": 275439.27,
+      "share": 0.0133,
       "fund_count": 2,
       "top_funds": [
         {
           "name": "A11 2022 CAPITAL IMPROVEMENT",
-          "amount": 193598.67,
-          "row_count": 5
+          "amount": 238495.47,
+          "row_count": 7
         },
         {
           "name": "A33 2025-ALLEY BLDG IMPROV",
@@ -34,32 +34,32 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 16074788.91,
-      "share": 0.7857,
+      "amount": 16282873.4,
+      "share": 0.784,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 15724520.41,
-          "row_count": 311
+          "amount": 15862059.06,
+          "row_count": 403
+        },
+        {
+          "name": "GENERAL FUND - SCHOOL",
+          "amount": 245487.66,
+          "row_count": 130
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
           "amount": 175326.68,
           "row_count": 10
-        },
-        {
-          "name": "GENERAL FUND - SCHOOL",
-          "amount": 174941.82,
-          "row_count": 60
         }
       ]
     },
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 4015742.58,
-      "share": 0.1963,
+      "amount": 4015761.91,
+      "share": 0.1933,
       "fund_count": 4,
       "top_funds": [
         {
@@ -69,32 +69,42 @@
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
-          "amount": 756237.25,
-          "row_count": 49
+          "amount": 756242.08,
+          "row_count": 50
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 563032.49,
-          "row_count": 17
+          "amount": 563037.32,
+          "row_count": 18
         },
         {
           "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 115246.24,
-          "row_count": 21
+          "amount": 115255.91,
+          "row_count": 22
         }
       ]
     },
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 7679.67,
-      "share": 0.0004,
-      "fund_count": 4,
+      "amount": 28010.34,
+      "share": 0.0013,
+      "fund_count": 6,
       "top_funds": [
         {
-          "name": "SCHOOL LUNCH",
-          "amount": 3975.99,
+          "name": "COVID 19 ARPA (FED)",
+          "amount": 10850.0,
+          "row_count": 2
+        },
+        {
+          "name": "JAIL DIVERSION GRANT (FED)",
+          "amount": 9295.67,
           "row_count": 1
+        },
+        {
+          "name": "SCHOOL LUNCH",
+          "amount": 4160.99,
+          "row_count": 2
         },
         {
           "name": "CH90 FAIR SHARE GRANT",
@@ -135,18 +145,33 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 29666.42,
-      "share": 0.0015,
-      "fund_count": 7,
+      "amount": 67128.02,
+      "share": 0.0032,
+      "fund_count": 12,
       "top_funds": [
         {
           "name": "SCHOOL USER FEES",
-          "amount": 19144.93,
+          "amount": 25321.93,
+          "row_count": 3
+        },
+        {
+          "name": "MIDDLE SCHOOL STUDENT ACTIVITY",
+          "amount": 12950.0,
           "row_count": 2
         },
         {
+          "name": "INSURANCE REIMBURS <$150,000",
+          "amount": 7797.85,
+          "row_count": 1
+        },
+        {
           "name": "OPIOID SETTLEMENT FUND",
-          "amount": 4541.0,
+          "amount": 6718.09,
+          "row_count": 2
+        },
+        {
+          "name": "ROSS & RITA TERRIEN-HISTORIC",
+          "amount": 6400.0,
           "row_count": 1
         },
         {
@@ -160,37 +185,27 @@
           "row_count": 1
         },
         {
-          "name": "APLF FUND",
-          "amount": 609.29,
-          "row_count": 7
-        },
-        {
-          "name": "EARL N REYNOLDS HISTORICAL FD",
-          "amount": 438.76,
-          "row_count": 2
-        },
-        {
-          "name": "HISTORCIAL COMM GIFT SHOP",
-          "amount": 72.0,
+          "name": "GLOVER SCHOOL DONATION",
+          "amount": 1455.0,
           "row_count": 1
         }
       ]
     }
   ],
   "gf_town_carveout": {
-    "total": 15724520.41,
+    "total": 15862059.06,
     "fixed_total": 15175917.55,
-    "fixed_share": 0.9651,
+    "fixed_share": 0.9567,
     "admin_contracts_total": 298051.67,
-    "admin_contracts_share": 0.019,
-    "other_recurring_total": 250551.19,
-    "other_recurring_share": 0.0159,
+    "admin_contracts_share": 0.0188,
+    "other_recurring_total": 388089.84,
+    "other_recurring_share": 0.0245,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 2065528.49,
-        "share": 0.1314,
+        "share": 0.1302,
         "row_count": 7,
         "top_vendors": [
           {
@@ -215,7 +230,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 6934984.39,
-        "share": 0.441,
+        "share": 0.4372,
         "row_count": 28,
         "top_vendors": [
           {
@@ -228,7 +243,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.3716,
+        "share": 0.3684,
         "row_count": 1,
         "top_vendors": [
           {
@@ -241,7 +256,7 @@
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
         "amount": 332044.67,
-        "share": 0.0211,
+        "share": 0.0209,
         "row_count": 4,
         "top_vendors": [
           {
@@ -254,7 +269,7 @@
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
         "amount": 298051.67,
-        "share": 0.019,
+        "share": 0.0188,
         "row_count": 11,
         "top_vendors": [
           {
@@ -278,10 +293,18 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 250551.19,
-        "share": 0.0159,
-        "row_count": 260,
+        "amount": 388089.84,
+        "share": 0.0245,
+        "row_count": 352,
         "top_vendors": [
+          {
+            "name": "ROSELLI & CLARK PTR",
+            "amount": 72000.0
+          },
+          {
+            "name": "CARAHSOFT TECHNOLOGY CORPORATION",
+            "amount": 27450.53
+          },
           {
             "name": "CENTRALSQUARE TECHNOLOGIES LLC",
             "amount": 25259.18
@@ -295,24 +318,16 @@
             "amount": 15378.83
           },
           {
+            "name": "KASCADE LLC",
+            "amount": 13775.0
+          },
+          {
             "name": "DENNIS K BURKE INC",
             "amount": 13089.55
           },
           {
             "name": "CATALIS TAX & CAMA INC",
             "amount": 12750.0
-          },
-          {
-            "name": "SBRK FINANCE HOLDINGS INC",
-            "amount": 7514.96
-          },
-          {
-            "name": "BONSAI LOGIC LLC",
-            "amount": 7500.0
-          },
-          {
-            "name": "PURVIS SYSTEMS INC",
-            "amount": 7191.8
           }
         ]
       }
@@ -325,8 +340,8 @@
       "ballot_date": "2022-06-21",
       "purpose": "roofs, roads/sidewalks, smart panels, HVAC, salt shed, HS boiler",
       "context": "Bonds run 10-20 years; debt service appears in U.S. Bank rows through the late 2030s.",
-      "amount": 193598.67,
-      "row_count": 5,
+      "amount": 238495.47,
+      "row_count": 7,
       "first_paid": "2026-07-20",
       "last_paid": "2026-08-04",
       "days_since_last_paid": 2,
@@ -335,17 +350,22 @@
         {
           "name": "PAQCON LLC",
           "amount": 144476.0,
-          "share": 0.7463
+          "share": 0.6058
+        },
+        {
+          "name": "MDM ENGINEERING COMPANY INC",
+          "amount": 60723.02,
+          "share": 0.2546
         },
         {
           "name": "RICHARD D AMBROSIA INC",
           "amount": 28395.5,
-          "share": 0.1467
+          "share": 0.1191
         },
         {
-          "name": "MDM ENGINEERING COMPANY INC",
-          "amount": 20726.22,
-          "share": 0.1071
+          "name": "EJ ORFANOS PAINTING INC",
+          "amount": 4900.0,
+          "share": 0.0205
         },
         {
           "name": "PURVIS SYSTEMS INC",

@@ -5,9 +5,9 @@
   {
    "name": "111F INJURY LEAVE FUND",
    "reason": "Pays for medical care of named police/fire employees injured on duty under MGL c.41 \u00a7111F. Vendor + amount + employee identity combine to form identifiable medical claim data.",
-   "row_count": 10,
-   "total_amount": 1040.4,
-   "distinct_vendors": 3
+   "row_count": 18,
+   "total_amount": 12940.97,
+   "distinct_vendors": 7
   },
   {
    "name": "WORKERS COMPENSATION FUND",
@@ -19,7 +19,7 @@
  ],
  "columns_dropped": [],
  "description_masking": {
-  "masked_row_count": 2,
+  "masked_row_count": 5,
   "placeholder": "[withheld]",
   "reason": "The source export's Description field includes employee surnames tied to medical claims and student initials tied to out-of-district special-ed placements. Descriptions matching those patterns are replaced with the placeholder; vendor, fund, date, and amount are unchanged. All other descriptions are published as exported."
  }

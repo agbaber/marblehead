@@ -671,13 +671,13 @@
   "monthly_cadence": [
     {
       "month": "2026-07",
-      "amount": 20447066.88,
-      "count": 684
+      "amount": 20628927.55,
+      "count": 781
     },
     {
       "month": "2026-08",
-      "amount": 12262.63,
-      "count": 28
+      "amount": 141194.85,
+      "count": 111
     }
   ],
   "drill": {
@@ -690,14 +690,19 @@
             "count": 1
           },
           {
+            "name": "MDM ENGINEERING COMPANY INC",
+            "amount": 60723.02,
+            "count": 3
+          },
+          {
             "name": "RICHARD D AMBROSIA INC",
             "amount": 28395.5,
             "count": 1
           },
           {
-            "name": "MDM ENGINEERING COMPANY INC",
-            "amount": 20726.22,
-            "count": 2
+            "name": "EJ ORFANOS PAINTING INC",
+            "amount": 4900.0,
+            "count": 1
           },
           {
             "name": "PURVIS SYSTEMS INC",
@@ -708,8 +713,8 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 193597.72,
-            "count": 4
+            "amount": 238494.52,
+            "count": 6
           },
           {
             "month": "2026-08",
@@ -863,6 +868,22 @@
           }
         ]
       },
+      "COVID 19 ARPA (FED)": {
+        "top_vendors": [
+          {
+            "name": "TYLER TECHNOLOGIES INC",
+            "amount": 10850.0,
+            "count": 2
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-08",
+            "amount": 10850.0,
+            "count": 2
+          }
+        ]
+      },
       "EARL N REYNOLDS HISTORICAL FD": {
         "top_vendors": [
           {
@@ -872,8 +893,8 @@
           },
           {
             "name": "VERIZON INC",
-            "amount": 6.76,
-            "count": 1
+            "amount": 16.42,
+            "count": 2
           }
         ],
         "monthly": [
@@ -881,6 +902,11 @@
             "month": "2026-07",
             "amount": 438.76,
             "count": 2
+          },
+          {
+            "month": "2026-08",
+            "amount": 9.66,
+            "count": 1
           }
         ]
       },
@@ -979,6 +1005,11 @@
             "count": 2
           },
           {
+            "name": "MARBLEHEAD WATER AND SEWER",
+            "amount": 18276.1,
+            "count": 6
+          },
+          {
             "name": "INCIDENT IQ, LLC",
             "amount": 14293.81,
             "count": 2
@@ -994,6 +1025,16 @@
             "count": 1
           },
           {
+            "name": "SCENARIO LEARNING LLC",
+            "amount": 10487.04,
+            "count": 1
+          },
+          {
+            "name": "WILSON LANGUAGE TRAINING",
+            "amount": 10133.72,
+            "count": 4
+          },
+          {
             "name": "ARBITERPAY TRUST ACCOUNT",
             "amount": 10005.0,
             "count": 1
@@ -1004,9 +1045,9 @@
             "count": 3
           },
           {
-            "name": "WILSON LANGUAGE TRAINING",
-            "amount": 9294.56,
-            "count": 3
+            "name": "W B MASON CO INC",
+            "amount": 8574.5,
+            "count": 26
           },
           {
             "name": "JATHEON TECHNOLGIES INC",
@@ -1017,28 +1058,13 @@
             "name": "KRISTIN B PETTY",
             "amount": 8249.6,
             "count": 1
-          },
-          {
-            "name": "AVIDEX INDUSTRIES, LLC",
-            "amount": 7967.47,
-            "count": 1
-          },
-          {
-            "name": "QUIZIZZ INC",
-            "amount": 6150.0,
-            "count": 1
-          },
-          {
-            "name": "FOLLETT SCHOOL SOLUTIONS, INC",
-            "amount": 5551.1,
-            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 174941.82,
-            "count": 60
+            "amount": 245487.66,
+            "count": 130
           }
         ]
       },
@@ -1126,6 +1152,11 @@
             "count": 1
           },
           {
+            "name": "ROSELLI & CLARK PTR",
+            "amount": 72000.0,
+            "count": 2
+          },
+          {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
             "amount": 39358.68,
             "count": 1
@@ -1134,6 +1165,11 @@
             "name": "VOYA HOLDINGS INC",
             "amount": 31146.14,
             "count": 5
+          },
+          {
+            "name": "CARAHSOFT TECHNOLOGY CORPORATION",
+            "amount": 27450.53,
+            "count": 1
           },
           {
             "name": "CENTRALSQUARE TECHNOLOGIES LLC",
@@ -1149,28 +1185,34 @@
             "name": "REHRIG PACIFIC COMPANY",
             "amount": 15378.83,
             "count": 1
-          },
-          {
-            "name": "DENNIS K BURKE INC",
-            "amount": 13089.55,
-            "count": 2
-          },
-          {
-            "name": "CATALIS TAX & CAMA INC",
-            "amount": 12750.0,
-            "count": 2
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 15712259.28,
-            "count": 285
+            "amount": 15750112.46,
+            "count": 304
           },
           {
             "month": "2026-08",
-            "amount": 12261.13,
-            "count": 26
+            "amount": 111946.6,
+            "count": 99
+          }
+        ]
+      },
+      "GLOVER SCHOOL DONATION": {
+        "top_vendors": [
+          {
+            "name": "THE SENSORY PATH INC",
+            "amount": 1455.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 1455.0,
+            "count": 1
           }
         ]
       },
@@ -1233,8 +1275,8 @@
           },
           {
             "name": "VERIZON INC",
-            "amount": 6.77,
-            "count": 1
+            "amount": 16.44,
+            "count": 2
           }
         ],
         "monthly": [
@@ -1242,6 +1284,11 @@
             "month": "2026-07",
             "amount": 115246.24,
             "count": 21
+          },
+          {
+            "month": "2026-08",
+            "amount": 9.67,
+            "count": 1
           }
         ]
       },
@@ -1257,6 +1304,54 @@
           {
             "month": "2026-07",
             "amount": 72.0,
+            "count": 1
+          }
+        ]
+      },
+      "HISTORIC DONATION FUND": {
+        "top_vendors": [
+          {
+            "name": "REBECCA CURRAN",
+            "amount": 495.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-08",
+            "amount": 495.0,
+            "count": 1
+          }
+        ]
+      },
+      "INSURANCE REIMBURS <$150,000": {
+        "top_vendors": [
+          {
+            "name": "MARBLEHEAD COLLISION",
+            "amount": 7797.85,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 7797.85,
+            "count": 1
+          }
+        ]
+      },
+      "JAIL DIVERSION GRANT (FED)": {
+        "top_vendors": [
+          {
+            "name": "LAHEY CLINIC INC",
+            "amount": 9295.67,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-08",
+            "amount": 9295.67,
             "count": 1
           }
         ]
@@ -1293,11 +1388,32 @@
           }
         ]
       },
+      "MIDDLE SCHOOL STUDENT ACTIVITY": {
+        "top_vendors": [
+          {
+            "name": "TOWN OF MARBLEHEAD",
+            "amount": 12950.0,
+            "count": 2
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-07",
+            "amount": 12950.0,
+            "count": 2
+          }
+        ]
+      },
       "OPIOID SETTLEMENT FUND": {
         "top_vendors": [
           {
             "name": "MICHELLE SIMONS",
             "amount": 4541.0,
+            "count": 1
+          },
+          {
+            "name": "LAHEY CLINIC INC",
+            "amount": 2177.09,
             "count": 1
           }
         ],
@@ -1305,6 +1421,11 @@
           {
             "month": "2026-07",
             "amount": 4541.0,
+            "count": 1
+          },
+          {
+            "month": "2026-08",
+            "amount": 2177.09,
             "count": 1
           }
         ]
@@ -1380,19 +1501,40 @@
           }
         ]
       },
+      "ROSS & RITA TERRIEN-HISTORIC": {
+        "top_vendors": [
+          {
+            "name": "GROUND PENETRATING RADAR SYSTEMS LLC",
+            "amount": 6400.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-08",
+            "amount": 6400.0,
+            "count": 1
+          }
+        ]
+      },
       "SCHOOL LUNCH": {
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
             "amount": 3975.99,
             "count": 1
+          },
+          {
+            "name": "EMG",
+            "amount": 185.0,
+            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 3975.99,
-            "count": 1
+            "amount": 4160.99,
+            "count": 2
           }
         ]
       },
@@ -1404,6 +1546,11 @@
             "count": 1
           },
           {
+            "name": "MASS INTERSCHOL ATH ASSN",
+            "amount": 6177.0,
+            "count": 1
+          },
+          {
             "name": "ARBITERSPORTS LLC",
             "amount": 3847.5,
             "count": 1
@@ -1412,8 +1559,8 @@
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 19144.93,
-            "count": 2
+            "amount": 25321.93,
+            "count": 3
           }
         ]
       },
@@ -1461,8 +1608,8 @@
           },
           {
             "name": "VERIZON INC",
-            "amount": 214.79,
-            "count": 11
+            "amount": 219.62,
+            "count": 12
           },
           {
             "name": "MAG RETAIL HOLDINGS - FBV LLC",
@@ -1475,6 +1622,11 @@
             "month": "2026-07",
             "amount": 756237.25,
             "count": 49
+          },
+          {
+            "month": "2026-08",
+            "amount": 4.83,
+            "count": 1
           }
         ]
       },
@@ -1537,8 +1689,8 @@
           },
           {
             "name": "VERIZON INC",
-            "amount": 3.38,
-            "count": 1
+            "amount": 8.21,
+            "count": 2
           }
         ],
         "monthly": [
@@ -1546,6 +1698,11 @@
             "month": "2026-07",
             "amount": 563032.49,
             "count": 17
+          },
+          {
+            "month": "2026-08",
+            "amount": 4.83,
+            "count": 1
           }
         ]
       }
