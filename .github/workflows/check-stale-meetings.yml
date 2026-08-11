@@ -1,0 +1,86 @@
+# Watchdog: fail loudly when a recently-published MHTV Vimeo meeting has no
+# transcript. This is the guard against the July 2026 failure, where the caption
+# fetch silently returned "no caption track" for every new meeting and the daily
+# ingest kept exiting 0 while adding nothing for three weeks.
+#
+# It enumerates the LIVE Vimeo channel (that still works from GitHub Actions —
+# only per-video caption fetch is IP-blocked) and compares against committed
+# transcripts, then opens / updates / closes a single tracking issue.
+name: Check stale meetings
+
+on:
+  schedule:
+    # 13:00 UTC daily, ~2h after the ingest job's 11:00 UTC run.
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ISSUE_TITLE: '⚠️ MHTV meetings not ingested (watchdog)'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install yt-dlp
+        run: |
+          pip install --user yt-dlp
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Enumerate the live Vimeo channel
+        run: node scripts/transcripts/pull_vimeo.mjs
+
+      - name: Check for stale meetings
+        id: check
+        run: node scripts/transcripts/check_stale_meetings.mjs
+
+      - name: Open or update the tracking issue
+        if: steps.check.outputs.stale_count != '0'
+        env:
+          STALE_JSON: ${{ steps.check.outputs.stale_json }}
+        run: |
+          set -euo pipefail
+          body="$(node -e '
+            const s = JSON.parse(process.env.STALE_JSON);
+            const rows = s.map(m => `| ${m.date} | ${m.slug} | ${m.ageDays}d | https://vimeo.com/${m.vimeo_id} |`).join("\n");
+            process.stdout.write(
+              `Recently-published MHTV meetings that still have **no transcript**. ` +
+              `The caption fetch is failing silently for these.\n\n` +
+              `| Meeting date | Slug | Age | Video |\n|---|---|---|---|\n${rows}\n\n` +
+              `_Backfill from a non-GitHub-Actions IP:_\n` +
+              "```\nnode scripts/transcripts/pull_vimeo.mjs\nPYTHON=python3 node scripts/transcripts/backfill_auto.mjs --source vimeo --limit 5\n```\n\n" +
+              `<sub>Auto-managed by check-stale-meetings.yml; closes itself when clear.</sub>`
+            );
+          ')"
+          num="$(gh issue list --state open --search "in:title $ISSUE_TITLE" \
+                 --json number,title -q ".[] | select(.title==\"$ISSUE_TITLE\") | .number" | head -1)"
+          if [ -n "$num" ]; then
+            echo "Updating issue #$num"
+            gh issue edit "$num" --body "$body"
+          else
+            echo "Opening new tracking issue"
+            gh issue create --title "$ISSUE_TITLE" --body "$body"
+          fi
+
+      - name: Close the tracking issue when clear
+        if: steps.check.outputs.stale_count == '0'
+        run: |
+          set -euo pipefail
+          num="$(gh issue list --state open --search "in:title $ISSUE_TITLE" \
+                 --json number,title -q ".[] | select(.title==\"$ISSUE_TITLE\") | .number" | head -1)"
+          if [ -n "$num" ]; then
+            echo "All caught up; closing issue #$num"
+            gh issue close "$num" --comment "All recent meetings now have transcripts. ✅"
+          else
+            echo "No stale meetings and no open issue. Nothing to do."
+          fi
