@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-10",
+ "as_of": "2026-08-11",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -54,7 +54,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 2213842.0,
-     "actual": 1938150.89,
+     "actual": 1938272.59,
      "original_budget": 2301042.0
     },
     {
@@ -216,7 +216,7 @@
     {
      "name": "ENGINEERING",
      "revised_budget": 0,
-     "actual": 121.7,
+     "actual": 0,
      "original_budget": 0
     }
    ],
@@ -648,7 +648,7 @@
     {
      "name": "LIGHT",
      "revised_budget": 0,
-     "actual": 15149505.67,
+     "actual": 14789505.67,
      "original_budget": 0
     }
    ],
@@ -674,7 +674,7 @@
     {
      "name": "OFU",
      "revised_budget": 0,
-     "actual": 728888.0,
+     "actual": 368888.0,
      "original_budget": 0
     },
     {
@@ -1489,7 +1489,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 461701.91,
-     "actual": 145273.38,
+     "actual": 145395.08,
      "original_budget": 461349.21
     },
     {
@@ -1527,7 +1527,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 375680.0,
-     "actual": 234979.09,
+     "actual": 235100.79,
      "original_budget": 399680.0
     },
     {
@@ -3083,7 +3083,7 @@
     {
      "name": "OFU",
      "revised_budget": 0,
-     "actual": 728888.0,
+     "actual": 368888.0,
      "original_budget": 0
     },
     {
@@ -3109,7 +3109,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 0,
-     "actual": 11439887.41,
+     "actual": 11079887.41,
      "original_budget": 0
     }
    ]
@@ -3124,7 +3124,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 0,
-     "actual": 121.7,
+     "actual": 0,
      "original_budget": 0
     }
    ],
@@ -3132,7 +3132,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 0,
-     "actual": 121.7,
+     "actual": 0,
      "original_budget": 0
     }
    ]
@@ -3725,7 +3725,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 461701.91,
-     "actual": 145273.38,
+     "actual": 145395.08,
      "original_budget": 461349.21
     },
     {
@@ -3911,7 +3911,7 @@
     {
      "name": "ENGINEERING",
      "revised_budget": 0,
-     "actual": 121.7,
+     "actual": 0,
      "original_budget": 0
     },
     {
@@ -4462,7 +4462,7 @@
     {
      "name": "ELECTRIC ENTERPRISE",
      "revised_budget": 0,
-     "actual": 728888.0,
+     "actual": 368888.0,
      "original_budget": 0
     }
    ],
@@ -4494,7 +4494,7 @@
     {
      "name": "LIGHT",
      "revised_budget": 0,
-     "actual": 728888.0,
+     "actual": 368888.0,
      "original_budget": 0
     }
    ]
@@ -4879,7 +4879,7 @@
     {
      "name": "ELECTRIC ENTERPRISE",
      "revised_budget": 0,
-     "actual": 11439887.41,
+     "actual": 11079887.41,
      "original_budget": 0
     }
    ],
@@ -4929,7 +4929,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 375680.0,
-     "actual": 234979.09,
+     "actual": 235100.79,
      "original_budget": 399680.0
     },
     {
@@ -5091,13 +5091,13 @@
     {
      "name": "LIGHT",
      "revised_budget": 0,
-     "actual": 11439887.41,
+     "actual": 11079887.41,
      "original_budget": 0
     },
     {
      "name": "ENGINEERING",
      "revised_budget": 0,
-     "actual": 121.7,
+     "actual": 0,
      "original_budget": 0
     }
    ]
@@ -10261,7 +10261,7 @@
    {
     "name": "TELEPHONE",
     "revised_budget": 442.0,
-    "actual": 441.41,
+    "actual": 563.11,
     "original_budget": 0
    },
    {
@@ -12314,15 +12314,15 @@
    },
    {
     "name": "ELECTED OFFICIAL EXPENSES",
-    "revised_budget": 5500.0,
+    "revised_budget": 4500.0,
     "actual": 4500.0,
     "original_budget": 5500.0
    },
    {
-    "name": "OTHER MISC EXPENSE",
-    "revised_budget": 3000.0,
-    "actual": 500.0,
-    "original_budget": 3000.0
+    "name": "IN SERVICE TRAINING",
+    "revised_budget": 3125.0,
+    "actual": 3125.0,
+    "original_budget": 0
    },
    {
     "name": "SETTLEMENT CLAIMS",
@@ -12331,10 +12331,10 @@
     "original_budget": 2000.0
    },
    {
-    "name": "IN SERVICE TRAINING",
-    "revised_budget": 0,
-    "actual": 3125.0,
-    "original_budget": 0
+    "name": "OTHER MISC EXPENSE",
+    "revised_budget": 875.0,
+    "actual": 500.0,
+    "original_budget": 3000.0
    }
   ],
   "SELECT BOARD||CONTRACTED SERVICES": [
@@ -14754,7 +14754,7 @@
    },
    {
     "name": "OTHER MISC EXPENSE",
-    "revised_budget": 108259.36,
+    "revised_budget": 106134.36,
     "actual": 106017.95,
     "original_budget": 26152.0
    },
@@ -14813,21 +14813,27 @@
     "original_budget": 16530.0
    },
    {
-    "name": "ELECTED OFFICIAL EXPENSES",
-    "revised_budget": 7050.0,
-    "actual": 4879.98,
-    "original_budget": 7050.0
-   },
-   {
     "name": "MEDICARE PENALTY",
     "revised_budget": 6986.0,
     "actual": 1542.0,
     "original_budget": 6986.0
    },
    {
+    "name": "ELECTED OFFICIAL EXPENSES",
+    "revised_budget": 6050.0,
+    "actual": 4879.98,
+    "original_budget": 7050.0
+   },
+   {
     "name": "UNEMPLOYMENT COMP SALARIES",
     "revised_budget": 5520.0,
     "actual": 5520.0,
+    "original_budget": 0
+   },
+   {
+    "name": "IN SERVICE TRAINING",
+    "revised_budget": 3180.0,
+    "actual": 3180.0,
     "original_budget": 0
    },
    {
@@ -14870,12 +14876,6 @@
     "name": "CEMETERY PCARD",
     "revised_budget": 207.42,
     "actual": 207.42,
-    "original_budget": 0
-   },
-   {
-    "name": "IN SERVICE TRAINING",
-    "revised_budget": 55.0,
-    "actual": 3180.0,
     "original_budget": 0
    },
    {
