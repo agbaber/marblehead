@@ -29,6 +29,7 @@ import html
 import json
 import re
 import sys
+import time
 
 try:
     from curl_cffi import requests
@@ -36,7 +37,26 @@ except ImportError:
     print(json.dumps({"ok": False, "error": "curl_cffi not installed"}))
     sys.exit(3)
 
-IMPERSONATE = "chrome"
+# Explicit, version-pinned TLS fingerprints, tried in order until one gets a
+# 200 out of player.vimeo.com. Never use curl_cffi's bare aliases ("chrome",
+# "safari"): those resolve to DEFAULT_CHROME / DEFAULT_SAFARI, which advance
+# with every curl_cffi release. Vimeo's edge blocklists the newest Chrome
+# fingerprints, so a bare alias works the day it is written and silently 401s
+# months later when the dependency ships a newer default. That is exactly how
+# this broke: "chrome" resolved to chrome146 on curl_cffi 0.15/0.16, which
+# Vimeo rejects, and the ingest reported "no caption track" for every meeting.
+# Vimeo will eventually blocklist these too; when it does, add a newer pin at
+# the front rather than reaching for an alias.
+IMPERSONATE_TARGETS = ("chrome124", "safari17_0", "chrome120")
+
+# Pause between fingerprint attempts. Vimeo throttles per IP, so consecutive
+# embed requests can 401 regardless of fingerprint.
+RETRY_SLEEP_SEC = 3
+
+assert all(any(ch.isdigit() for ch in t) for t in IMPERSONATE_TARGETS), (
+    "impersonate targets must be version-pinned (e.g. 'chrome124'), not "
+    "floating aliases like 'chrome'"
+)
 
 
 def extract_balanced_object(text, anchor):
@@ -87,28 +107,48 @@ def main():
     ap.add_argument("--referer", default="https://vimeo.com/")
     a = ap.parse_args()
 
-    session = requests.Session(impersonate=IMPERSONATE)
+    # Steps 1 and 2 are retried per fingerprint: the share page can 200 while
+    # the embed 401s, and only the fingerprint distinguishes the two outcomes.
+    session = pr = None
+    attempts = []
+    for i, target in enumerate(IMPERSONATE_TARGETS):
+        # Vimeo also throttles per IP: three back-to-back embed requests can
+        # all 401 even on a fingerprint that works before and after. Without
+        # this pause the chain defeats itself and reports every target dead.
+        if i:
+            time.sleep(RETRY_SLEEP_SEC)
+        session = requests.Session(impersonate=target)
 
-    # 1. The public share page carries the signed embed URL (with the video's
-    #    privacy hash) in its twitter:player card. Fall back to the bare embed
-    #    URL if the tag is missing (public, non-hashed videos).
-    try:
-        og = session.get(f"https://vimeo.com/{a.vimeo_id}", timeout=30)
-    except Exception as e:  # noqa: BLE001 - surface the transport error verbatim
-        fail(f"share page fetch failed: {e}")
-    m = re.search(r'"twitter:player" content="([^"]+)"', og.text)
-    player_url = html.unescape(m.group(1)) if m else (
-        f"https://player.vimeo.com/video/{a.vimeo_id}"
-    )
+        # 1. The public share page carries the signed embed URL (with the
+        #    video's privacy hash) in its twitter:player card. Fall back to the
+        #    bare embed URL if the tag is missing (public, non-hashed videos).
+        try:
+            og = session.get(f"https://vimeo.com/{a.vimeo_id}", timeout=30)
+        except Exception as e:  # noqa: BLE001 - surface the transport error
+            attempts.append(f"{target}: share page fetch failed: {e}")
+            continue
+        m = re.search(r'"twitter:player" content="([^"]+)"', og.text)
+        player_url = html.unescape(m.group(1)) if m else (
+            f"https://player.vimeo.com/video/{a.vimeo_id}"
+        )
 
-    # 2. The embed player page inlines window.playerConfig with the caption
-    #    tracks and duration.
-    try:
-        pr = session.get(player_url, headers={"Referer": a.referer}, timeout=30)
-    except Exception as e:  # noqa: BLE001
-        fail(f"embed fetch failed: {e}")
-    if pr.status_code != 200:
-        fail(f"embed HTTP {pr.status_code}", 1)
+        # 2. The embed player page inlines window.playerConfig with the caption
+        #    tracks and duration.
+        try:
+            pr = session.get(
+                player_url, headers={"Referer": a.referer}, timeout=30
+            )
+        except Exception as e:  # noqa: BLE001
+            attempts.append(f"{target}: embed fetch failed: {e}")
+            continue
+        if pr.status_code == 200:
+            break
+        attempts.append(f"{target}: embed HTTP {pr.status_code}")
+        pr = None
+
+    if pr is None:
+        fail("embed unreachable with every impersonate target", 1,
+             attempts=attempts)
     raw = extract_balanced_object(pr.text, "playerConfig")
     if not raw:
         fail("playerConfig not found in embed page", 1)
