@@ -9,8 +9,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 2213949.83,
-        "delta": 2213949.83,
+        "actual": 2281936.94,
+        "delta": 2281936.94,
         "pct": null
       },
       {
@@ -205,16 +205,16 @@
       {
         "name": "HARBOR",
         "revised": 1319500.0,
-        "actual": 186382.54,
-        "delta": -1133117.46,
-        "pct": 14.13
+        "actual": 198669.26,
+        "delta": -1120830.74,
+        "pct": 15.06
       },
       {
         "name": "WATER",
         "revised": 4465301.0,
-        "actual": 3078686.51,
-        "delta": -1386614.49,
-        "pct": 68.95
+        "actual": 3104966.79,
+        "delta": -1360334.21,
+        "pct": 69.54
       },
       {
         "name": "ABBOT LIBRARY",
@@ -240,9 +240,9 @@
       {
         "name": "SEWER",
         "revised": 2699291.0,
-        "actual": 879074.77,
-        "delta": -1820216.23,
-        "pct": 32.57
+        "actual": 896312.3,
+        "delta": -1802978.7,
+        "pct": 33.21
       },
       {
         "name": "CURBSIDE COLLECTION",
@@ -275,9 +275,9 @@
       {
         "name": "GLOVER SCHOOL",
         "revised": 4285463.96,
-        "actual": 34811.13,
-        "delta": -4250652.83,
-        "pct": 0.81
+        "actual": 48987.17,
+        "delta": -4236476.79,
+        "pct": 1.14
       },
       {
         "name": "POLICE",
@@ -289,9 +289,9 @@
       {
         "name": "BROWN SCHOOL",
         "revised": 5424062.26,
-        "actual": 32037.0,
-        "delta": -5392025.26,
-        "pct": 0.59
+        "actual": 45811.62,
+        "delta": -5378250.64,
+        "pct": 0.84
       },
       {
         "name": "FIRE",
@@ -303,60 +303,60 @@
       {
         "name": "MIDDLE SCHOOL",
         "revised": 5713564.68,
-        "actual": 40702.81,
-        "delta": -5672861.87,
-        "pct": 0.71
+        "actual": 61056.37,
+        "delta": -5652508.31,
+        "pct": 1.07
       },
       {
         "name": "VILLAGE SCHOOL",
         "revised": 7545998.37,
-        "actual": 42027.69,
-        "delta": -7503970.68,
-        "pct": 0.56
+        "actual": 62677.11,
+        "delta": -7483321.26,
+        "pct": 0.83
       },
       {
         "name": "HIGH SCHOOL",
         "revised": 11556464.13,
-        "actual": 90175.22,
-        "delta": -11466288.91,
-        "pct": 0.78
+        "actual": 119608.94,
+        "delta": -11436855.19,
+        "pct": 1.03
       },
       {
         "name": "DISTRICTWIDE",
         "revised": 13083733.6,
-        "actual": 423563.19,
-        "delta": -12660170.41,
-        "pct": 3.24
+        "actual": 545961.39,
+        "delta": -12537772.21,
+        "pct": 4.17
       },
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 8100236.9,
-        "delta": -15972156.1,
-        "pct": 33.65
+        "actual": 9376131.55,
+        "delta": -14696261.45,
+        "pct": 38.95
       }
     ],
     "all_departments": [
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 8100236.9,
-        "delta": -15972156.1,
-        "pct": 33.65
+        "actual": 9376131.55,
+        "delta": -14696261.45,
+        "pct": 38.95
       },
       {
         "name": "DISTRICTWIDE",
         "revised": 13083733.6,
-        "actual": 423563.19,
-        "delta": -12660170.41,
-        "pct": 3.24
+        "actual": 545961.39,
+        "delta": -12537772.21,
+        "pct": 4.17
       },
       {
         "name": "HIGH SCHOOL",
         "revised": 11556464.13,
-        "actual": 90175.22,
-        "delta": -11466288.91,
-        "pct": 0.78
+        "actual": 119608.94,
+        "delta": -11436855.19,
+        "pct": 1.03
       },
       {
         "name": "DEBT SERVICE",
@@ -368,9 +368,9 @@
       {
         "name": "VILLAGE SCHOOL",
         "revised": 7545998.37,
-        "actual": 42027.69,
-        "delta": -7503970.68,
-        "pct": 0.56
+        "actual": 62677.11,
+        "delta": -7483321.26,
+        "pct": 0.83
       },
       {
         "name": "FIRE",
@@ -382,9 +382,9 @@
       {
         "name": "MIDDLE SCHOOL",
         "revised": 5713564.68,
-        "actual": 40702.81,
-        "delta": -5672861.87,
-        "pct": 0.71
+        "actual": 61056.37,
+        "delta": -5652508.31,
+        "pct": 1.07
       },
       {
         "name": "POLICE",
@@ -396,23 +396,23 @@
       {
         "name": "BROWN SCHOOL",
         "revised": 5424062.26,
-        "actual": 32037.0,
-        "delta": -5392025.26,
-        "pct": 0.59
+        "actual": 45811.62,
+        "delta": -5378250.64,
+        "pct": 0.84
       },
       {
         "name": "WATER",
         "revised": 4465301.0,
-        "actual": 3078686.51,
-        "delta": -1386614.49,
-        "pct": 68.95
+        "actual": 3104966.79,
+        "delta": -1360334.21,
+        "pct": 69.54
       },
       {
         "name": "GLOVER SCHOOL",
         "revised": 4285463.96,
-        "actual": 34811.13,
-        "delta": -4250652.83,
-        "pct": 0.81
+        "actual": 48987.17,
+        "delta": -4236476.79,
+        "pct": 1.14
       },
       {
         "name": "PUBLIC WORKS",
@@ -431,9 +431,9 @@
       {
         "name": "SEWER",
         "revised": 2699291.0,
-        "actual": 879074.77,
-        "delta": -1820216.23,
-        "pct": 32.57
+        "actual": 896312.3,
+        "delta": -1802978.7,
+        "pct": 33.21
       },
       {
         "name": "CURBSIDE COLLECTION",
@@ -466,9 +466,9 @@
       {
         "name": "HARBOR",
         "revised": 1319500.0,
-        "actual": 186382.54,
-        "delta": -1133117.46,
-        "pct": 14.13
+        "actual": 198669.26,
+        "delta": -1120830.74,
+        "pct": 15.06
       },
       {
         "name": "PARKS & RECREATION",
@@ -662,8 +662,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 2213949.83,
-        "delta": 2213949.83,
+        "actual": 2281936.94,
+        "delta": 2281936.94,
         "pct": null
       }
     ]
