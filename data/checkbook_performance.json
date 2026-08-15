@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-08-11",
+  "as_of": "2026-08-14",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 2,
-  "fy_pct_elapsed": 11.5,
+  "fy_pct_elapsed": 12.3,
   "budget_execution": {
     "by_department": [
       {
@@ -126,11 +126,18 @@
         "pct": 10.91
       },
       {
+        "name": "RESERVE FUND",
+        "revised": 373000.0,
+        "actual": 0,
+        "delta": -373000.0,
+        "pct": 0.0
+      },
+      {
         "name": "HEALTH",
         "revised": 399320.0,
-        "actual": 22632.98,
-        "delta": -376687.02,
-        "pct": 5.67
+        "actual": 22599.92,
+        "delta": -376720.08,
+        "pct": 5.66
       },
       {
         "name": "CEMETERY",
@@ -138,13 +145,6 @@
         "actual": 49567.47,
         "delta": -419363.53,
         "pct": 10.57
-      },
-      {
-        "name": "RESERVE FUND",
-        "revised": 440000.0,
-        "actual": 0,
-        "delta": -440000.0,
-        "pct": 0.0
       },
       {
         "name": "COUNCIL ON AGING",
@@ -161,13 +161,6 @@
         "pct": 5.75
       },
       {
-        "name": "SELECT BOARD",
-        "revised": 723176.0,
-        "actual": 114612.86,
-        "delta": -608563.14,
-        "pct": 15.85
-      },
-      {
         "name": "BUILDING INSPECTION",
         "revised": 676519.0,
         "actual": 62292.43,
@@ -180,6 +173,13 @@
         "actual": 96771.0,
         "delta": -648000.0,
         "pct": 12.99
+      },
+      {
+        "name": "SELECT BOARD",
+        "revised": 790176.0,
+        "actual": 114612.86,
+        "delta": -675563.14,
+        "pct": 14.5
       },
       {
         "name": "PUBLIC BUILDINGS",
@@ -331,18 +331,18 @@
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 9376131.55,
-        "delta": -14696261.45,
-        "pct": 38.95
+        "actual": 9374238.66,
+        "delta": -14698154.34,
+        "pct": 38.94
       }
     ],
     "all_departments": [
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 9376131.55,
-        "delta": -14696261.45,
-        "pct": 38.95
+        "actual": 9374238.66,
+        "delta": -14698154.34,
+        "pct": 38.94
       },
       {
         "name": "DISTRICTWIDE",
@@ -485,6 +485,13 @@
         "pct": 0.0
       },
       {
+        "name": "SELECT BOARD",
+        "revised": 790176.0,
+        "actual": 114612.86,
+        "delta": -675563.14,
+        "pct": 14.5
+      },
+      {
         "name": "PUBLIC BUILDINGS",
         "revised": 751225.0,
         "actual": 34864.51,
@@ -497,13 +504,6 @@
         "actual": 96771.0,
         "delta": -648000.0,
         "pct": 12.99
-      },
-      {
-        "name": "SELECT BOARD",
-        "revised": 723176.0,
-        "actual": 114612.86,
-        "delta": -608563.14,
-        "pct": 15.85
       },
       {
         "name": "BUILDING INSPECTION",
@@ -534,18 +534,11 @@
         "pct": 10.57
       },
       {
-        "name": "RESERVE FUND",
-        "revised": 440000.0,
-        "actual": 0,
-        "delta": -440000.0,
-        "pct": 0.0
-      },
-      {
         "name": "HEALTH",
         "revised": 399320.0,
-        "actual": 22632.98,
-        "delta": -376687.02,
-        "pct": 5.67
+        "actual": 22599.92,
+        "delta": -376720.08,
+        "pct": 5.66
       },
       {
         "name": "ASSESSORS",
@@ -553,6 +546,13 @@
         "actual": 42313.85,
         "delta": -345689.15,
         "pct": 10.91
+      },
+      {
+        "name": "RESERVE FUND",
+        "revised": 373000.0,
+        "actual": 0,
+        "delta": -373000.0,
+        "pct": 0.0
       },
       {
         "name": "HUMAN RESOURCES",
@@ -671,13 +671,13 @@
   "monthly_cadence": [
     {
       "month": "2026-07",
-      "amount": 20628927.55,
-      "count": 781
+      "amount": 20669822.73,
+      "count": 818
     },
     {
       "month": "2026-08",
-      "amount": 1926681.9,
-      "count": 130
+      "amount": 3158513.48,
+      "count": 249
     }
   ],
   "drill": {
@@ -747,9 +747,14 @@
       "APLF FUND": {
         "top_vendors": [
           {
+            "name": "WHENTOWORK, LLC",
+            "amount": 666.0,
+            "count": 1
+          },
+          {
             "name": "DEBBIE LEIBOWITZ",
-            "amount": 200.0,
-            "count": 4
+            "amount": 250.0,
+            "count": 5
           },
           {
             "name": "RANDI D LEBAR",
@@ -759,6 +764,11 @@
           {
             "name": "DARA VANREMOORTEL",
             "amount": 175.0,
+            "count": 1
+          },
+          {
+            "name": "KIMBERLY GRAD",
+            "amount": 66.14,
             "count": 1
           },
           {
@@ -772,6 +782,11 @@
             "month": "2026-07",
             "amount": 609.29,
             "count": 7
+          },
+          {
+            "month": "2026-08",
+            "amount": 782.14,
+            "count": 3
           }
         ]
       },
@@ -943,9 +958,14 @@
             "count": 2
           },
           {
+            "name": "NATIONAL GRID",
+            "amount": 34453.38,
+            "count": 4
+          },
+          {
             "name": "WESCO",
-            "amount": 32395.18,
-            "count": 2
+            "amount": 32695.94,
+            "count": 4
           },
           {
             "name": "NATIONAL GRAND BANK OF MARBLEHEAD",
@@ -958,18 +978,13 @@
             "count": 1
           },
           {
-            "name": "NATIONAL GRID",
-            "amount": 17227.84,
-            "count": 2
-          },
-          {
             "name": "DENNIS K BURKE INC",
             "amount": 14654.72,
             "count": 1
           },
           {
-            "name": "MIIA HEALTH BENEFITS TRUST",
-            "amount": 9872.0,
+            "name": "DELTA BECKWITH ELEVATOR CO",
+            "amount": 13672.0,
             "count": 1
           }
         ],
@@ -981,8 +996,8 @@
           },
           {
             "month": "2026-08",
-            "amount": 85135.62,
-            "count": 3
+            "amount": 140333.62,
+            "count": 42
           }
         ]
       },
@@ -998,6 +1013,22 @@
           {
             "month": "2026-07",
             "amount": 196.81,
+            "count": 1
+          }
+        ]
+      },
+      "FORT SEWALL DONATION": {
+        "top_vendors": [
+          {
+            "name": "CARLTON ELECTRICAL CONSTRUCTION",
+            "amount": 1739.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-08",
+            "amount": 1739.0,
             "count": 1
           }
         ]
@@ -1087,12 +1118,17 @@
           },
           {
             "name": "WOODARD & CURRAN INC",
-            "amount": 31250.0,
-            "count": 1
+            "amount": 32797.2,
+            "count": 2
           },
           {
             "name": "R B ALLEN CO INC",
             "amount": 11850.0,
+            "count": 1
+          },
+          {
+            "name": "BMC CORP",
+            "amount": 4933.56,
             "count": 1
           },
           {
@@ -1124,8 +1160,8 @@
           },
           {
             "month": "2026-08",
-            "amount": 0.55,
-            "count": 1
+            "amount": 6481.31,
+            "count": 3
           }
         ]
       },
@@ -1162,6 +1198,11 @@
             "count": 2
           },
           {
+            "name": "NOBLE INC",
+            "amount": 64922.43,
+            "count": 4
+          },
+          {
             "name": "VOYA HOLDINGS INC",
             "amount": 64721.56,
             "count": 10
@@ -1185,23 +1226,18 @@
             "name": "FIFTH ASSET, INC",
             "amount": 17500.0,
             "count": 1
-          },
-          {
-            "name": "REHRIG PACIFIC COMPANY",
-            "amount": 15378.83,
-            "count": 1
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 15750112.46,
-            "count": 304
+            "amount": 15759139.06,
+            "count": 325
           },
           {
             "month": "2026-08",
-            "amount": 1748360.01,
-            "count": 110
+            "amount": 1854849.78,
+            "count": 175
           }
         ]
       },
@@ -1234,6 +1270,11 @@
             "count": 2
           },
           {
+            "name": "ONLINE MOORING LLC",
+            "amount": 19500.0,
+            "count": 1
+          },
+          {
             "name": "MIIA HEALTH BENEFITS TRUST",
             "amount": 16058.0,
             "count": 1
@@ -1259,6 +1300,11 @@
             "count": 1
           },
           {
+            "name": "LAND N SEA DISTRIBUTING, INC",
+            "amount": 331.03,
+            "count": 1
+          },
+          {
             "name": "AT&T SUPPOENA CENTER",
             "amount": 219.7,
             "count": 1
@@ -1272,16 +1318,6 @@
             "name": "F & S HARDWARE, INC",
             "amount": 82.48,
             "count": 4
-          },
-          {
-            "name": "GILBERT & COLE",
-            "amount": 29.51,
-            "count": 3
-          },
-          {
-            "name": "VERIZON INC",
-            "amount": 16.44,
-            "count": 2
           }
         ],
         "monthly": [
@@ -1292,8 +1328,8 @@
           },
           {
             "month": "2026-08",
-            "amount": 12296.39,
-            "count": 2
+            "amount": 32127.42,
+            "count": 4
           }
         ]
       },
@@ -1409,6 +1445,22 @@
           }
         ]
       },
+      "MWRA PROJECT LWSAP26-3021": {
+        "top_vendors": [
+          {
+            "name": "N GRANESE & SONS INC",
+            "amount": 266400.38,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-08",
+            "amount": 266400.38,
+            "count": 1
+          }
+        ]
+      },
       "OPIOID SETTLEMENT FUND": {
         "top_vendors": [
           {
@@ -1439,8 +1491,8 @@
         "top_vendors": [
           {
             "name": "LEAH GOODMAN",
-            "amount": 24476.4,
-            "count": 4
+            "amount": 29131.2,
+            "count": 5
           },
           {
             "name": "MATT CORREIA",
@@ -1453,6 +1505,11 @@
             "count": 3
           },
           {
+            "name": "PATRICK KEVIN BUGLER",
+            "amount": 14788.8,
+            "count": 1
+          },
+          {
             "name": "CAPTUREPOINT",
             "amount": 11007.5,
             "count": 2
@@ -1460,6 +1517,11 @@
           {
             "name": "KEVIN HUSSON",
             "amount": 6588.0,
+            "count": 1
+          },
+          {
+            "name": "TOP SECRET KIDS CORPORATION",
+            "amount": 6038.55,
             "count": 1
           },
           {
@@ -1484,25 +1546,15 @@
           },
           {
             "name": "AMAZON CAPITAL SERVICES INC",
-            "amount": 2528.46,
-            "count": 21
-          },
-          {
-            "name": "CHESS WIZARDS",
-            "amount": 1830.0,
-            "count": 1
-          },
-          {
-            "name": "MARTHA POTVIN",
-            "amount": 584.4,
-            "count": 3
+            "amount": 2944.06,
+            "count": 29
           }
         ],
         "monthly": [
           {
             "month": "2026-07",
-            "amount": 97455.56,
-            "count": 69
+            "amount": 129324.14,
+            "count": 85
           },
           {
             "month": "2026-08",
@@ -1579,6 +1631,22 @@
           }
         ]
       },
+      "SEWER CAPITAL ARTICLES": {
+        "top_vendors": [
+          {
+            "name": "DAGLE ELECTRICAL CONSTRUCTION CORP",
+            "amount": 1264.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-08",
+            "amount": 1264.0,
+            "count": 1
+          }
+        ]
+      },
       "SEWER ENTERPRISE OPERATING": {
         "top_vendors": [
           {
@@ -1605,6 +1673,11 @@
             "name": "TOWN OF MARBLEHEAD",
             "amount": 4273.88,
             "count": 25
+          },
+          {
+            "name": "CYVL, INC.",
+            "amount": 3300.0,
+            "count": 1
           },
           {
             "name": "DELANDE SUPPLY CO INC",
@@ -1640,8 +1713,24 @@
           },
           {
             "month": "2026-08",
-            "amount": 17242.36,
-            "count": 2
+            "amount": 20542.36,
+            "count": 3
+          }
+        ]
+      },
+      "WATER CAPITAL ARTICLES": {
+        "top_vendors": [
+          {
+            "name": "N GRANESE & SONS INC",
+            "amount": 767046.5,
+            "count": 3
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-08",
+            "amount": 767046.5,
+            "count": 3
           }
         ]
       },
@@ -1665,6 +1754,11 @@
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
             "amount": 28794.0,
+            "count": 1
+          },
+          {
+            "name": "CYVL, INC.",
+            "amount": 3300.0,
             "count": 1
           },
           {
@@ -1701,11 +1795,6 @@
             "name": "UPS STORE #0630",
             "amount": 116.86,
             "count": 1
-          },
-          {
-            "name": "VERIZON INC",
-            "amount": 8.21,
-            "count": 2
           }
         ],
         "monthly": [
@@ -1716,8 +1805,8 @@
           },
           {
             "month": "2026-08",
-            "amount": 26285.11,
-            "count": 2
+            "amount": 29585.11,
+            "count": 3
           }
         ]
       }
