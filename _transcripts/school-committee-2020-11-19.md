@@ -129,6 +129,7 @@ topic_segments:
       - **Special education out-of-district tuition**: ongoing concern; the Student Opportunity Act was pushed to FY22, reducing circuit-breaker reimbursement by $225,000 from budgeted levels. Current projected shortfall: approximately $148,000. A $250,000 special education reserve fund is available if needed. Two out-of-district students may be returning to in-district programming, which would reduce costs.
       
       **COVID Expenditure Report (through end of December projection)**:
+
       | Category | Amount |
       |---|---|
       | Spent to date | $986,346 |

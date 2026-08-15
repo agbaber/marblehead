@@ -42,6 +42,7 @@ topic_segments:
       **Marblehead case data (since December 1):** 64 total cases across all age groups, with the largest concentrations in the 50–59 (15 cases) and 60–69 (14 cases) ranges.
       
       **Free testing** for Marblehead residents announced at Temple Emmanuel, 393 Atlantic Ave, on four dates:
+
       | Date | Time |
       |---|---|
       | Friday, Dec. 11 | 8 a.m.–12 p.m. |

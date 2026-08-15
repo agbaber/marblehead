@@ -158,6 +158,7 @@ topic_segments:
       **Fall Leaf Collection:** Postcards with all collection dates for fall and spring are available at the transfer station, Mary Alley, and the tax collector's office. Dates are posted on the town website.
       
       **Household Hazardous Waste Day — Saturday, November 18th:**
+
       | Volume | Fee |
       |---|---|
       | 0–3 gallons/pounds | $30 |

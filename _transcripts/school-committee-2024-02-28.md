@@ -66,6 +66,7 @@ topic_segments:
       - School committee class-size policy is approximately 25 students; administration suggested the policy may warrant refinement by grade band (K–3 vs. upper grades)
       
       ## Budget Allocation by School (Level Services)
+
       | School/Area | % of Budget |
       |---|---|
       | High School | 22% |
@@ -150,6 +151,7 @@ topic_segments:
       - Staffing: just the athletic director and one additional staff member.
       
       ## Current User Fee Structure
+
       | Category | Fee |
       |---|---|
       | Athletic/Performing Arts unlimited (per student) | $495 |

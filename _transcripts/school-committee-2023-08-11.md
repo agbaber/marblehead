@@ -86,6 +86,7 @@ topic_segments:
       **Enrollment:** Village Middle School enrollment grew by 54 students overall (from 395 to 449), with seventh grade at 238 versus a projection of 221 — the third-highest single-grade increase in 15 years. Thirty of those students are new to the district. Class sizes in seventh grade world language classes will be at or near 25. Cresta noted charter school enrollment changes appear to be contributing to the increase.
       
       **FY23 Closeout (preliminary figures):**
+
       | Item | Amount |
       |---|---|
       | Total operating budget | $43,982,273 |

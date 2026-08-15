@@ -42,6 +42,7 @@ topic_segments:
       Superintendent Dr. Bucky presented the FY22 budget at the public hearing, noting the budget had evolved iteratively since November through collaboration with building principals, the leadership team, and the budget subcommittee.
       
       **Key budget figures:**
+
       | Item | Amount |
       |---|---|
       | FY22 proposed budget | ~$41,839,543 |
@@ -206,6 +207,7 @@ topic_segments:
       - **Total: approximately $2,376,000**
       
       Key planned expenditures include:
+
       | Category | Amount |
       |---|---|
       | Supplemental classroom staffing | ~$81,000 |

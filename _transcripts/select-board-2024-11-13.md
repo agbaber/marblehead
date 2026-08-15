@@ -87,6 +87,7 @@ topic_segments:
       Finance Committee Chair Alec Sby and Finance Director Alicia Benjamin joined the Select Board for a financial planning update, with Finance Committee Vice Chair Molly Teets participating via Zoom.
       
       ### Key dates
+
       | Milestone | Approximate date |
       |---|---|
       | Preliminary revenue & expense forecast presented | ~December 11, 2024 |

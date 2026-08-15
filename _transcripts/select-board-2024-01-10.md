@@ -102,6 +102,7 @@ topic_segments:
       Planning Director Becky Cutting presented the MBTA Communities Act (M.G.L. Chapter 40A, Section 3A) compliance requirements and the town's planning approach. Marblehead is classified as an **adjacent community** because it borders municipalities with MBTA rail stations, obligating it to zone for multifamily housing as of right.
       
       **Key requirements:**
+
       | Requirement | Detail |
       |---|---|
       | Minimum district size | 27 acres (1% of town's 2,771 acres) |

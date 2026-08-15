@@ -58,6 +58,7 @@ topic_segments:
       - PARE Corporation under contract for design and permitting; scope **$87,500** funded by ARPA and a state earmark secured by Representative Armini. Aeration among the likely water-quality interventions.
       
       **Personnel Updates**
+
       | Position | New Hire | Notes |
       |---|---|---|
       | Town Planner | Alexander Ler | Starts Aug. 25; background in Washington, London, Switzerland |
@@ -120,6 +121,7 @@ topic_segments:
       - Summer: Cliff Street storage areas convert to parking; Marblehead Yacht Club occupies a subsidized space on-site
       
       **Revenue**
+
       | Source | Amount |
       |---|---|
       | Boat storage program (FY prior year) | ~$152,000 |

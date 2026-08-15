@@ -39,6 +39,7 @@ topic_segments:
       Joyce Redford of the KAN Tobacco Control collaborative presented recommended updates to Marblehead's tobacco regulations:
       
       **Fine structure changes (now state minimums):**
+
       | Violation | Fine | Suspension |
       |---|---|---|
       | 1st (sale to minor) | $1,000 | 3 days (recommended) |

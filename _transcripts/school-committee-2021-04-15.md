@@ -51,6 +51,7 @@ topic_segments:
       The chair called for a vote on a motion that Marblehead Public Schools not participate in the school choice program for 2021-2022 **for lack of available classroom space**. Member Sarah Fox voted no, objecting specifically to the stated rationale, noting that empty classrooms existed at the new school. The motion passed 4-1.
       
       **Roll call:**
+
       | Member | Vote |
       |---|---|
       | Sarah Gold | Yes |

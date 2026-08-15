@@ -47,6 +47,7 @@ topic_segments:
       Terri Allen McDonough (Social Service Director), Tim Phillips and Frank Sweeney (co-presidents), and Michael Pelletier (clinical director) presented the center's annual update.
       
       **Key figures cited:**
+
       | Metric | Value |
       |---|---|
       | Current town funding | $60,000/year (~10% of total budget) |

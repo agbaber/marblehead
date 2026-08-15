@@ -81,6 +81,7 @@ topic_segments:
       - Hazardous Waste Day was reported as successful; disposal fees are increasing and residents were advised to buy only what they will use
       
       **Bills reviewed (selected):**
+
       | Vendor | Amount |
       |---|---|
       | Agri Source (grinding/compost removal) | $3,200 |

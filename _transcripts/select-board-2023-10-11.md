@@ -122,6 +122,7 @@ topic_segments:
       - Rick Meyers — Fidelity (20 yrs), founding member Bike Marblehead, helped build Green Street Woods trails
       
       **Voting results (Round 1 — each member cast 3 votes):**
+
       | Candidate | Votes |
       |---|---|
       | David Kucharski | 5 |

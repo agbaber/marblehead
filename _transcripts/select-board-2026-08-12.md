@@ -188,6 +188,7 @@ topic_segments:
       Actuary Parker (driving from Connecticut) and CFO Alicia presented the annual Other Post-Employment Benefits (OPEB) valuation.
       
       **Key valuation results:**
+
       | Metric | Value |
       |---|---|
       | Funded ratio | ~3.4% (25th percentile among peers) |
@@ -224,6 +225,7 @@ topic_segments:
       - Continuing MOU levy drawdowns with quarterly reporting
       
       **Key future milestones:**
+
       | Year | Event |
       |---|---|
       | FY2032 | ~$1M in debt service matures and falls off |

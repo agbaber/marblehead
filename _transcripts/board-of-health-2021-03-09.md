@@ -92,6 +92,7 @@ topic_segments:
       **Mission (as approved):** The task force will convene as a cross-sector group of community leaders to address and provide appropriate intervention strategies guiding citizens, particularly the most vulnerable, toward improved mental health. It operates under the auspices of the Marblehead Board of Health and reports to the board.
       
       **Proposed membership (9 members):**
+
       | Seat | Status |
       |---|---|
       | Board of Health representative (Michelle Gottlieb) | Confirmed |

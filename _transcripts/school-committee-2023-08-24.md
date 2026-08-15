@@ -77,6 +77,7 @@ topic_segments:
       Chair Sarah Fox outlined the interim superintendent search timeline in partnership with MASC (referred to as "Nasdaq" in the transcript), which is providing the search service at no cost as a membership benefit.
       
       **Key dates:**
+
       | Date | Activity |
       |---|---|
       | September 4 | Deadline for parent and staff letters of interest |

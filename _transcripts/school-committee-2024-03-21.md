@@ -59,6 +59,7 @@ topic_segments:
       Superintendent McGinnis presented the FY25 preliminary reduced-services budget, developed in response to a town appropriation yielding only approximately $755,000 in new revenue — far below the $2.5 million needed for level services.
       
       **Key budget figures:**
+
       | Item | Amount |
       |---|---|
       | Level services budget | ~$47M (5.77% increase) |

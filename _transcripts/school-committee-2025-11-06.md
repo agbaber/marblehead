@@ -111,6 +111,7 @@ topic_segments:
       The committee chair read the end-of-cycle summative evaluation of Superintendent John Romano into the public record, following a unanimous approval at a prior meeting. The evaluation follows the MASC/DESE-recommended framework.
       
       **Goal ratings:**
+
       | Goal | Rating |
       |---|---|
       | Student learning: student voice in teaching/learning | Met |

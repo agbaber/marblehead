@@ -82,6 +82,7 @@ topic_segments:
       The committee discussed the override structure approved in concept by the Select Board at a recent meeting attended by Jen and Henry. Key elements:
       
       **Three-tier structure (rough outlines):**
+
       | Tier | Label | Description |
       |------|-------|-------------|
       | 1 | Restore | Restore some prior cuts (details TBD) |

@@ -72,6 +72,7 @@ topic_segments:
       The subcommittee worked through a slate of MASC-recommended policy revisions in the C and D series:
       
       **Consent agenda items (approved for full school committee consent vote):**
+
       | Policy | Change |
       |--------|--------|
       | CA – Administration Goals | Language made less passive |
@@ -81,6 +82,7 @@ topic_segments:
       | CHCA – Approval of Handbooks | Changed approval timing to spring; deleted statutory description while retaining requirements |
       
       **Individual vote items (approved to go as separate school committee votes):**
+
       | Policy | Change |
       |--------|--------|
       | CHCA- | Rescind as unnecessary (items are already required by state law) |

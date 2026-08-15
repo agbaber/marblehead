@@ -47,6 +47,7 @@ topic_segments:
       The subcommittee also discussed the need to track review dates on policies (even when no change is made) and the desirability of building a hyperlinked index of the policy manual to improve usability, noting the school IT contact (Stephen) had discussed possible solutions.
       
       **Planned meeting schedule:**
+
       | Date | Focus |
       |---|---|
       | September 30 (8:30 a.m.) | Minor edits — introduce/discuss |

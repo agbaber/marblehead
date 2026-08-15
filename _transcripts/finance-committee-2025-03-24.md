@@ -49,6 +49,7 @@ topic_segments:
       Library Director presented the FY26 budget of $1,493,292, an increase of approximately $109,270 over FY25.
       
       **Key changes:**
+
       | Category | Notes |
       |---|---|
       | Salaries | Increased due to 2% COLA and step changes; 23 staff total (~14 full-time equivalent); new part-time custodian added |

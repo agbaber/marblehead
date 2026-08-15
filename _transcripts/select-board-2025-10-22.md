@@ -145,6 +145,7 @@ topic_segments:
       Actuary Parker Elmo of a national municipal actuarial firm presented the annual GASB OPEB valuation for Marblehead.
       
       **Key figures:**
+
       | Metric | Prior Year | Current Year |
       |---|---|---|
       | Total OPEB liability | $151M | $147M (prior) → $142M unfunded |
@@ -266,6 +267,7 @@ topic_segments:
       The Select Board chair read a public statement disclosing that the town and Officer Christopher Gallo reached a settlement agreement resolving all financial issues arising from an arbitration award that reinstated Gallo following his termination in February 2024.
       
       **Settlement terms:**
+
       | Component | Amount |
       |---|---|
       | Wages (salary, overtime, details) — subject to withholding | $260,000 |

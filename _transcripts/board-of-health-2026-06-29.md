@@ -72,6 +72,7 @@ topic_segments:
       The board reviewed the results of the CALM (Community Assessment for Local Marblehead) survey, which collected responses from 2,553 residents across 43 questions administered in partnership with UMass Boston. A 180-page full report and a 43-page leadership council summary were described as ready for distribution.
       
       **Seven highest priorities identified by UMass Boston:**
+
       | Priority Area |
       |---|
       | Stress |

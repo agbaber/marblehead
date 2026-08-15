@@ -220,6 +220,7 @@ topic_segments:
       The Finance Committee chair presented a detailed overview of the budget process and deficit before moving the vote on Article 23 (Expenses of Several Departments).
       
       **Revenue shortfall:**
+
       | Driver | Change |
       |---|---|
       | Prop 2½ levy increase | +$2.2M |

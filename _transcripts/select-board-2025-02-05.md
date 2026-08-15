@@ -67,6 +67,7 @@ topic_segments:
       - Trash and recycling contracts are expiring; a potential ~$1M increase is anticipated around 2027.
       
       **Free Cash (~$12M estimated, uncertified)**
+
       | Allocation | Amount |
       |---|---|
       | Transfer to stabilization fund | $2.0M |
