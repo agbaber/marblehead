@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-14",
+ "as_of": "2026-08-15",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -60,7 +60,7 @@
     {
      "name": "FINANCE",
      "revised_budget": 1845746.0,
-     "actual": 1785999.04,
+     "actual": 1754855.09,
      "original_budget": 1688913.0
     },
     {
@@ -236,7 +236,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 5152427.8,
-     "actual": 4792477.29,
+     "actual": 4761333.34,
      "original_budget": 4814460.0
     },
     {
@@ -1702,7 +1702,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 918600.0,
-     "actual": 950654.06,
+     "actual": 919510.11,
      "original_budget": 768600.0
     },
     {
@@ -1734,7 +1734,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 997127.0,
-     "actual": 979238.19,
+     "actual": 948094.24,
      "original_budget": 847127.0
     },
     {
@@ -3657,7 +3657,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 5152427.8,
-     "actual": 4792477.29,
+     "actual": 4761333.34,
      "original_budget": 4814460.0
     },
     {
@@ -3707,7 +3707,7 @@
     {
      "name": "FINANCE",
      "revised_budget": 918600.0,
-     "actual": 950654.06,
+     "actual": 919510.11,
      "original_budget": 768600.0
     },
     {
@@ -4855,7 +4855,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19400687.6,
-     "actual": 18138549.13,
+     "actual": 18107405.18,
      "original_budget": 18599491.0
     },
     {
@@ -4911,7 +4911,7 @@
     {
      "name": "FINANCE",
      "revised_budget": 997127.0,
-     "actual": 979238.19,
+     "actual": 948094.24,
      "original_budget": 847127.0
     },
     {
@@ -10903,7 +10903,7 @@
    {
     "name": "INFORMATION TECHNOLOGY",
     "revised_budget": 455271.0,
-    "actual": 448635.62,
+    "actual": 417491.67,
     "original_budget": 400271.0
    },
    {
@@ -14913,7 +14913,7 @@
    {
     "name": "INFORMATION TECHNOLOGY",
     "revised_budget": 502417.14,
-    "actual": 480516.65,
+    "actual": 449372.7,
     "original_budget": 457705.0
    },
    {
