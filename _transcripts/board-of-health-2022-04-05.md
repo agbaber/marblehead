@@ -96,6 +96,7 @@ topic_segments:
       - Tom Noonan (1 Gregory Street) asked the board to revisit the policy of charging swap shop volunteers for transfer station stickers
       
       **Votes taken (all unanimous 3-0):**
+
       | Motion | Result |
       |---|---|
       | Approve Plan B | In favor (unanimous) |

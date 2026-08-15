@@ -93,6 +93,7 @@ topic_segments:
       Committee member Henry presented the item, thanking the eight community members who applied. He recommended four names based on resume review; another member suggested adding a fifth.
       
       **Recommended members (approved):**
+
       | Name | Relevant background |
       |---|---|
       | Sam Altruder | Commercial property/project management; spoke at town meeting on roof project |

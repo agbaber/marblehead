@@ -118,6 +118,7 @@ topic_segments:
       - Free cash projected to decline; preliminary estimate of ~$5.7 million available for all purposes in FY27 vs. $9.5 million certified last year (of which $7 million was used to balance the budget)
       
       **Key expense drivers**
+
       | Line | Estimated change |
       |---|---|
       | Salaries & wages (all departments) | +~6% (contractual steps, market hiring) |

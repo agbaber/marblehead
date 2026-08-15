@@ -117,6 +117,7 @@ topic_segments:
       The exemption fills the gap when the state Senior Circuit Breaker Income Tax Credit (up to $2,820) does not bring a senior's property taxes plus 50% of their water/sewer bill down to 10% of their income. The Marblehead exemption covers that remaining gap.
       
       **Example calculation:**
+
       | Item | Amount |
       |---|---|
       | Annual property taxes | $8,500 |

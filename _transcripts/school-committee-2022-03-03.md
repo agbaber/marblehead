@@ -67,6 +67,7 @@ topic_segments:
       Additionally, 65% of respondents expressed interest in CPAC-hosted educational forums (webinars or in-person). More than half shared contact information, prompting formation of a subcommittee to manage advance notifications.
       
       **Upcoming CPAC events:**
+
       | Date | Event |
       |---|---|
       | March 9, 7 p.m. (Zoom) | IEP 101 with Superintendent Donnelly |

@@ -99,6 +99,7 @@ topic_segments:
       The subcommittee received a detailed update on the high school roof and HVAC replacement project:
       
       **Project milestone schedule (approximate):**
+
       | Milestone | Date |
       |---|---|
       | Roofing operations complete/demobilized | ~July 26 (typo in document noted) |

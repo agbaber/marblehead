@@ -111,6 +111,7 @@ topic_segments:
       Architect Dana Reader presented a revised Plan B for the Marblehead transfer station, incorporating Green Street as the sole ingress point. Key design elements:
       
       **Traffic circulation (color-coded):**
+
       | Color | Use |
       |---|---|
       | Red | Residential/back-of-station users, swap shed, composting, hazmat drop-off; egress via Beacon Street |

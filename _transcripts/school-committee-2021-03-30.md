@@ -123,6 +123,7 @@ topic_segments:
       **Starting point:** $42,649,142 (initial superintendent's recommended budget)
       
       **Reductions made since last presentation:**
+
       | Item | Change | Amount |
       |------|--------|--------|
       | Technology capital leases | Moved to one-time stimulus funding | –$212,706 |

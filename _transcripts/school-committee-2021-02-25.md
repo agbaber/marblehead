@@ -128,6 +128,7 @@ topic_segments:
       **Total COVID costs to date:** approximately $2,011,662 spent or encumbered.
       
       **FY22 Budget priorities** (totaling approximately $813,496, included in the previously presented $42,649,142 total ask):
+
       | Item | Estimated Cost |
       |------|---------------|
       | Brown School expanded preschool (2 teachers, 4 paraprofessionals) | $147,670 |

@@ -50,6 +50,7 @@ topic_segments:
       Andrew presented the weekly COVID-19 update. As of November 12, there were 17 new cases, bringing the cumulative total to 1,684. Over the prior 14 days, 43 cases were recorded and 2,067 tests administered, with a positivity rate of 2.03%.
       
       **Age distribution for the prior two weeks:**
+
       | Age bracket | Cases |
       |---|---|
       | 0–11 | 2 |

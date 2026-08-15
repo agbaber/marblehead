@@ -74,6 +74,7 @@ topic_segments:
       - Marblehead remained a yellow community per the state matrix despite surrounding communities being red
       
       **Vaccine phasing (state guidelines):**
+
       | Phase | Timeline |
       |---|---|
       | Phase 1 (first responders, healthcare workers) | December–February |

@@ -191,6 +191,7 @@ topic_segments:
       The board approved temporary outdoor dining applications for four restaurants, the first year operating under newly established town policies modeled on Salem's program. All approvals are contingent on receipt of required forms, fees, insurance, and sign-off from police, fire, and the town administrator on a site-by-site basis.
       
       **Approved restaurants:**
+
       | Restaurant | Address | Notes |
       |---|---|---|
       | The Barman | 259 Washington St | Unanimous |

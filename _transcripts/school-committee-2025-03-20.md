@@ -100,6 +100,7 @@ topic_segments:
       Chair Fox noted that through the fall and early winter the district had anticipated difficulty meeting its budget given town revenue projections, but in early-to-mid January those projections revised upward significantly — a development first announced publicly at the State of the Town and of which even FinCom was unaware until shortly before that event. The superintendent and administration characterized the resulting budget as a level-services budget.
       
       **Next steps in the budget calendar:**
+
       | Date | Event |
       |---|---|
       | March 31 | FinCom votes the school budget |

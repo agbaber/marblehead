@@ -87,6 +87,7 @@ topic_segments:
       | A1 Exterminators | Rat control | $875.00 |
       | RMG Enterprises | TV/monitor recycling | $628.94 |
       | Dynamic Waste Systems | Shrink wrap disposal | $551.00 |
+
       And several smaller items for uniforms, printing, phone, and legal fees.
     key_speakers: ["Board Chair", "Andrew (Transfer Station Director)"]
   - topic: admin-housekeeping

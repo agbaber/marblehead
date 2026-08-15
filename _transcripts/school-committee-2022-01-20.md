@@ -135,6 +135,7 @@ topic_segments:
       Committee member Sarah Barron referenced the ADL's guidance on school calendars and the 'lemon test' (secular purpose standard) in the context of the ongoing community discussion about religious holidays on the calendar. She stated she was following ADL guidance and expressed willingness to vote the calendar as presented.
       
       **Roll call vote:**
+
       | Member | Vote |
       |---|---|
       | Sarah Gold | Yes |

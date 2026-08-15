@@ -100,6 +100,7 @@ topic_segments:
       - Contacted the New England Association of Schools and Colleges for additional school referrals.
       
       Cost estimates discussed:
+
       | Option | Estimated Cost |
       |---|---|
       | Basic (OWL cameras, primitive approach) | ~$1,100/room |

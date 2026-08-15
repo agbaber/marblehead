@@ -145,6 +145,7 @@ topic_segments:
       The Taxation Aid Committee, which administers a voluntary tax-bill checkoff fund for residents in need, was reconstituted with two new resident appointments alongside ex officio members (Board of Assessors chair and Treasurer-Collector). The Town Administrator noted that most taxpayers pay through mortgage escrow and never see the checkoff on their bills, causing the fund balance to decline over time; the committee is expected to launch a public awareness campaign.
       
       **Appointments:**
+
       | Name | Committee | Term Expires |
       |---|---|---|
       | Meredith Rearden | Taxation Aid Committee | June 2026 |
@@ -253,6 +254,7 @@ topic_segments:
     dek: "The board unanimously approved a $839,000 roof replacement contract for the Mary Alley Community Center — well below the $1.2 million estimate — and a $19,000 timber stair repair at Hammond Nature Center, plus a full consent agenda."
     summary: |
       **Procurement approvals:**
+
       | Contract | Vendor | Amount | Funding |
       |---|---|---|---|
       | Mary Alley Community Center roof replacement (Contract 26-04) | MDM Engineering | $839,000 | Article 11, Town Meeting 2022 |

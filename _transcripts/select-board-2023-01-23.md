@@ -54,6 +54,7 @@ topic_segments:
       Following a brief recess, the Town Administrator explained the majority-vote elimination process under MGL Ch. 41 §11. A motion to place all six candidates in nomination passed.
       
       **Round 1 results:**
+
       | Candidate | Votes |
       |---|---|
       | Paul Baker | 3 |

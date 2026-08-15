@@ -37,6 +37,7 @@ topic_segments:
       Members emphasized the importance of trusting educators to be creative within policy and budget constraints the committee could help address. The superintendent noted a close working relationship with the union president (Joan) and that **impact bargaining** would be required for hybrid learning modalities, leave requests, and related matters. He expressed a *preference* for teachers to be in classrooms but stopped short of declaring in-building attendance mandatory.
       
       **Roll-call vote:**
+
       | Member | Vote |
       |---|---|
       | Sarah Gold | Yes |

@@ -1,4 +1,5 @@
 import { isKnownTopic } from './topics.mjs';
+import { normalizeSummaries } from './normalize_markdown.mjs';
 
 const OCR_DOLLAR_RE = /\bS\d[\d.,]*M?\b/;
 
@@ -79,5 +80,6 @@ export function parseResponse(text) {
   if (errors.length > 0) {
     return { valid: false, errors };
   }
+  normalizeSummaries({ summary_card: card, topic_segments: segs });
   return { valid: true, summary_card: card, topic_segments: segs, errors: [] };
 }

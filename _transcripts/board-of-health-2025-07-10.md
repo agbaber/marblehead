@@ -95,6 +95,7 @@ topic_segments:
     dek: "The board read through vendor bills including a ~$69,600 Republic Services payment for pre-strike service and learned Grace Oliver's Beach is closed pending a passing water sample."
     summary: |
       **Bills read into the record (selected items):**
+
       | Vendor | Purpose | Amount |
       |---|---|---|
       | Bonsai Logic | (unspecified) | $24,902.50 |

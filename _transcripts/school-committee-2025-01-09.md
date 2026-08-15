@@ -86,6 +86,7 @@ topic_segments:
       Assistant Superintendent Lisa Marie Alito presented a detailed analysis of 2024 MCAS results for high-needs student subgroups (students with disabilities, low-income students, and English language learners).
       
       **Key enrollment numbers (spring 2024 MCAS):**
+
       | Subject | All Students | High Needs | Low Income | Students w/ Disabilities | ELL |
       |---|---|---|---|---|---|
       | ELA | 1,356 | 564 | 192 | 303 | 69 |

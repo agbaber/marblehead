@@ -106,6 +106,7 @@ topic_segments:
       **Reporting:** Deanna McCann will serve as the district's lead for daily COVID reporting.
       
       **Mobile rapid response unit deployment conditions (within a 14-day period):**
+
       | Trigger | Scope of testing |
       |---|---|
       | 2+ individuals in a single classroom test positive | All students in that classroom |

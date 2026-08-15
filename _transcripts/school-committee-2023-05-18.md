@@ -101,6 +101,7 @@ topic_segments:
       **The problem with CP2:** Principal Bauer reported that CP2 classes at MHS had a disproportionate concentration of students with IEPs—upwards of 60-80% in some sections—compared to the school's overall IEP rate in the low 20s. Students in CP2 often traveled as a cohort across multiple subjects, effectively creating a separate sub-group and limiting scheduling flexibility.
       
       **Phased elimination:**
+
       | Subject | Status |
       |---|---|
       | English | CP2 eliminated in prior year |

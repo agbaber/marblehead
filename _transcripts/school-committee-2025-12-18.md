@@ -166,6 +166,7 @@ topic_segments:
       Student Services Director Lisa Marie (assisted by Assistant Director Victoria Ryan, watching remotely) presented an overview of the department's scope, which includes special education, Section 504, McKinney-Vento (homeless students), foster care, and restraint/safety training.
       
       **Student counts (current year):**
+
       | Category | 23–24 | 24–25 | 25–26 (current) |
       |---|---|---|---|
       | Students on IEPs | 505 | 439 | 469 |
@@ -221,6 +222,7 @@ topic_segments:
       - Marblehead has the second-lowest birth rate in Massachusetts according to a Pioneer Institute white paper (data through 2019)
       
       **Where Marblehead resident students go (selected figures, students previously enrolled in public schools):**
+
       | Destination | Approx. count |
       |---|---|
       | Charter schools | 82 |
