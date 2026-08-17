@@ -308,7 +308,7 @@ topic_segments:
 
 **[1:09](https://vimeo.com/1180849831#t=69s)** Okay. Mr. Samuels. Otherwise, we'll do it separately. Mr. Gutman? Yes. Mr. Garcia? Yes. Mr. Franklin? Yes. Ms. Heath? Yes. Mr. Goldberg? Yes.
 
-**[1:19](https://vimeo.com/1180849831#t=79s)** Mr. O'Neil? Yes. Mr. Jankow? Yes. And Ms. Duley. Yes. Linda, you missed someone. Oh, I'm sorry. Mr. Franklin. Yes. Great. And then the second item on our agenda before the warrant hearing is a reserve fund request, which it appears has come through two separate numbers. So I believe the select board's already voted for. Yep. So if you want to just present that quickly. Sure. So a few weeks ago, we, through the select board, put in a request for about 53,000 and change towards the renting of audiovisual equipment for town meeting. Subsequent to that, as we spec'd out what we think the requirements
+**[1:19](https://vimeo.com/1180849831#t=79s)** Mr. O'Neil? Yes. Mr. Janko? Yes. And Ms. Duley. Yes. Linda, you missed someone. Oh, I'm sorry. Mr. Franklin. Yes. Great. And then the second item on our agenda before the warrant hearing is a reserve fund request, which it appears has come through two separate numbers. So I believe the select board's already voted for. Yep. So if you want to just present that quickly. Sure. So a few weeks ago, we, through the select board, put in a request for about 53,000 and change towards the renting of audiovisual equipment for town meeting. Subsequent to that, as we spec'd out what we think the requirements
 
 **[2:07](https://vimeo.com/1180849831#t=127s)** are of the field house, plus the cafeteria, maybe the auditorium needing to be wired up. Long and short, we were looking to do the field house and the cafeteria. To rent the equipment, it was around $80,000. And so we were pricing out an additional transfer request to total that amount. Since then, we identified, through a vendor, the ability to purchase the audiovisual equipment we need for close to the same price as it would be for us to rent for one year. So that new total
 
@@ -324,7 +324,7 @@ topic_segments:
 
 **[4:34](https://vimeo.com/1180849831#t=274s)** I can, but the computer's loading right now. Yeah. Soon. I would say a lot. A lot. Yeah. Very little has been spent. No, I think we might have done one in the fall, but- We had 414- We had 430 ... so more than 90,000. Yeah. I think we- But yeah, I would say it's a very high amount as compared to prior years because we started with a much- We started with... Yeah. So we'll get that number later. Any other questions?
 
-**[5:04](https://vimeo.com/1180849831#t=304s)** All right. Do I need to make two motions, or can I just do one? You can do one. Okay. I'd like to make a motion to approve the amount requested of $80,723 from the FinCom reserve fund for audio and visual equipment for town meeting. Yep. Second. Second. Mr. Jankow? Yes. Mr. O'Neil? Yes. Mr. Goldberg? Yes. Ms. Heath? Yes. Mr. Ney? Yes. Mr. Franklin? Yes. Mr. Garcia? Yes. Mr. Gutman? Yes. Ms. Duley? Yes.
+**[5:04](https://vimeo.com/1180849831#t=304s)** All right. Do I need to make two motions, or can I just do one? You can do one. Okay. I'd like to make a motion to approve the amount requested of $80,723 from the FinCom reserve fund for audio and visual equipment for town meeting. Yep. Second. Second. Mr. Janko? Yes. Mr. O'Neil? Yes. Mr. Goldberg? Yes. Ms. Heath? Yes. Mr. Ney? Yes. Mr. Franklin? Yes. Mr. Garcia? Yes. Mr. Gutman? Yes. Ms. Duley? Yes.
 
 **[5:44](https://vimeo.com/1180849831#t=344s)** Great. Thank you. Thank you. And with that, I'd like to call our warrant hearing officially to order.
 
@@ -508,7 +508,7 @@ topic_segments:
 
 **[47:13](https://vimeo.com/1180849831#t=2833s)** We're working on the planning upfront so that we could do what we need to do. Just pick up from- Sorry, yeah. The things that we have been looking into is the planning so that we can be educated in making those recommendations. Thank you. So the general amount of 50,000 does give us enough to get a designer or a consultant in to actually do the review of different things. And then it does a lot of repairs. So we do have a lot of small fences all over town that don't even know are ours, until someone comes up with a piece of paper and shows us it's ours. Any other questions from FinCom? Any public comments on article 11?
 
-**[47:55](https://vimeo.com/1180849831#t=2875s)** I'd like to make a motion that we recommend that the sum of $25,000 be appropriated to be raised by taxation for article 11. Second. Mr. Jango? Yes. Ms. Zania? Yes. Ms. Felbly? Yes. Ms. Heath? Yes. Ms. Benay? Yes. Mr. Longo? Yes. Ms. Garcia? Yes. Ms. Chadal? Yes. Ms. Heath? Yes.
+**[47:55](https://vimeo.com/1180849831#t=2875s)** I'd like to make a motion that we recommend that the sum of $25,000 be appropriated to be raised by taxation for article 11. Second. Mr. Janko? Yes. Ms. Zania? Yes. Ms. Felbly? Yes. Ms. Heath? Yes. Ms. Benay? Yes. Mr. Longo? Yes. Ms. Garcia? Yes. Ms. Chadal? Yes. Ms. Heath? Yes.
 
 **[48:23](https://vimeo.com/1180849831#t=2903s)** Article 12, stormwater construction. Another article we see every year. My understanding is $200,000 is being requested to be raised by taxation, like article 11. That's only 50% of what was raised last year for the same article last year. Mm-hmm.This article's the same, too. If you don't spend it, it stays, and you're allowed to incorporate more than one of these yearly articles together. Generally has 400,000. As we have looked at history, we generally have a debt exclusion override for stormwater, which is usually in the range of between $2 and $5 million every five years. We're coming up to that five-year point.
 
@@ -546,7 +546,7 @@ topic_segments:
 
 **[59:05](https://vimeo.com/1180849831#t=3545s)** Any public comments on article 13?
 
-**[59:10](https://vimeo.com/1180849831#t=3550s)** I'd like to make a recommendation that the sum of 2.4 million be appropriated from water retained earnings for water department construction, that the sum of 2.1 million be appropriated from sewer retained earnings for sewer department construction, and that part C of this, Water and Sewer Commission claims, be adopted. Second. Mr. Jango? Yes. Mr. O'Neil? Yes. Mr. Holste? Yes. Ms. Means? Yes. Mr. Nay? Yes. Mr. Franken? Yes. Mr. Garcia? Yes. Mr. Schauerhorn? Yes. Ms. Dumi? Yes. Okay. Article 14, MWRA.
+**[59:10](https://vimeo.com/1180849831#t=3550s)** I'd like to make a recommendation that the sum of 2.4 million be appropriated from water retained earnings for water department construction, that the sum of 2.1 million be appropriated from sewer retained earnings for sewer department construction, and that part C of this, Water and Sewer Commission claims, be adopted. Second. Mr. Janko? Yes. Mr. O'Neil? Yes. Mr. Holste? Yes. Ms. Means? Yes. Mr. Nay? Yes. Mr. Franken? Yes. Mr. Garcia? Yes. Mr. Schauerhorn? Yes. Ms. Dumi? Yes. Okay. Article 14, MWRA.
 
 **[59:55](https://vimeo.com/1180849831#t=3595s)** Amy, it's still up there. Okay, so this is the local assistance program that MWRA has available to all the communities who are part of it.
 

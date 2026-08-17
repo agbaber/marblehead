@@ -31,7 +31,7 @@ topic_segments:
     headline: "Joint Select Board and School Committee meeting convened to fill SC vacancy"
     dek: "Chair explained the process: nine questions per candidate in alphabetical order, followed by roll-call majority vote with elimination rounds."
     summary: "The Select Board chair called the January 23, 2023 meeting to order and convened a joint session with the School Committee. She explained that the purpose was to fill a School Committee vacancy under MGL Chapter 41 Section 11. Candidates would be interviewed one at a time in alphabetical order, with each board or committee member asking one identical question. After interviews, a roll-call vote with elimination rounds would determine the appointee."
-    key_speakers: ["Select Board Chair (Moses Greater)", "School Committee Chair (Sarah Fox)", "Town Administrator (Kyle)"]
+    key_speakers: ["Select Board Chair (Moses Grader)", "School Committee Chair (Sarah Fox)", "Town Administrator (Kyle)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 269
@@ -64,10 +64,10 @@ topic_segments:
       | Liam McGowan | 0 |
       | Scott Stunkel | 0 |
       
-      With no majority, McGowan and Stunkel were eliminated. In Round 2, Mathers received votes from Sarah Fox, Allison Taylor, Alexa Singer, Aaron Noonan, and Moses Greater (5 votes); Baker received votes from Sarah Gold, Megan Taylor, and Jackie Beth Becker (3 votes); Hansen retained 1 vote from Jim.
+      With no majority, McGowan and Stunkel were eliminated. In Round 2, Mathers received votes from Sarah Fox, Allison Taylor, Alexa Singer, Aaron Noonan, and Moses Grader (5 votes); Baker received votes from Sarah Gold, Megan Taylor, and Jackie Beth Becker (3 votes); Hansen retained 1 vote from Jim.
       
       Thomas Mathers was declared appointed and the Town Administrator noted he would be in touch regarding onboarding steps, including a swearing-in.
-    key_speakers: ["Town Administrator", "Select Board Chair (Moses Greater)", "School Committee Chair (Sarah Fox)", "Sarah Gold (School Committee)", "Megan Taylor (School Committee)", "Allison Taylor (School Committee)", "Alexa Singer (Select Board)", "Aaron Noonan (Select Board)", "Jim (board member)", "Jackie Beth Becker (School Committee)"]
+    key_speakers: ["Town Administrator", "Select Board Chair (Moses Grader)", "School Committee Chair (Sarah Fox)", "Sarah Gold (School Committee)", "Megan Taylor (School Committee)", "Allison Taylor (School Committee)", "Alexa Singer (Select Board)", "Aaron Noonan (Select Board)", "Jim (board member)", "Jackie Beth Becker (School Committee)"]
   - topic: public-comment
     topic_confidence: 0.9
     start_seconds: 8338
@@ -75,7 +75,7 @@ topic_segments:
     headline: "Public comment period opened; no members of the public spoke"
     dek: "The chair invited public comment at the close of the meeting; no one came forward and both boards adjourned."
     summary: "After the appointment, the chair opened the floor for public comment. No members of the public addressed either board. The School Committee adjourned first, followed by the Select Board at approximately 9:19 PM on a unanimous roll-call vote."
-    key_speakers: ["Select Board Chair (Moses Greater)"]
+    key_speakers: ["Select Board Chair (Moses Grader)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

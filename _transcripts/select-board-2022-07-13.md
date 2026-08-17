@@ -302,7 +302,7 @@ topic_segments:
 
 **[32:21](https://vimeo.com/729810525#t=1941s)** for Spurs annual fundraiser subject to the following conditions delivery of our C by the licensing authority of the requirements delivery out and receipt by the licensing Authority improve for the alcohol will be perfect scores. And prove that the applicant of can receive proper delivery proper storage and Disposal law Brothers was purchase all of the courts with a requirement of General loans. Section 138 alcohol be purchased through Cathy's reporting and bentwater Brewing Company. This is a whole vote. Second please second, right? Color roll please this Newman in favor. Yes tonight and there is of
 
-**[33:07](https://vimeo.com/729810525#t=1987s)** Becker and Mr. Greater. Thank you.
+**[33:07](https://vimeo.com/729810525#t=1987s)** Becker and Mr. Grader. Thank you.
 
 **[33:16](https://vimeo.com/729810525#t=1996s)** Our next we have another one-day liquor license in the Marblehead museum for the daily mansion
 

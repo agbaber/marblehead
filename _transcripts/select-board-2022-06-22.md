@@ -160,7 +160,7 @@ topic_segments:
 
 **[1:02](https://vimeo.com/723184006#t=62s)** started Miss singer
 
-**[1:06](https://vimeo.com/723184006#t=66s)** There's Noonan in favor. Mr. Greater in favor Mr. Knight and David is spelled background in favor. Congratulations.
+**[1:06](https://vimeo.com/723184006#t=66s)** There's Noonan in favor. Mr. Grader in favor Mr. Knight and David is spelled background in favor. Congratulations.
 
 **[1:18](https://vimeo.com/723184006#t=78s)** Hi comic and just quickly I would just like that. Thank Jackie belt Becker for her years and extremely fantastic leadership and we're so much from you. We appreciate it. Thank you, and you're still here? Yes. Thank you. If I could say something's wrong. Jackie you're you're incredibly magnets. You are you gave me an indication that you would do this. It is a little bit earlier. And I'm really honored that you would certainly worthy of walking in closets. Okay, so, you know you were you were really you've been a steady hand till very long time.
 

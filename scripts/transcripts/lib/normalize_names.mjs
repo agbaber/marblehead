@@ -8,7 +8,21 @@
 // answer depends on context (Gerry School vs. a resident named Jerry) belong in
 // `flag_only`, which reports but never rewrites.
 
-const URL_RE = /https?:\/\/\S+/g;
+// Regions where a name must never be rewritten, because the string is an
+// address rather than prose. Covers schemed URLs, bare domains (speakers read
+// URLs aloud and the ASR drops the scheme), and email addresses. A rewrite
+// inside any of these invents an address that does not resolve.
+//
+// Deliberately requires a known-ish TLD rather than "any dot", so an ordinary
+// sentence-ending period does not shield the word before it.
+const ADDRESS_RE = new RegExp(
+  [
+    'https?:\\/\\/\\S+',
+    '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}',
+    '[A-Za-z0-9-]+(?:\\.[A-Za-z0-9-]+)*\\.(?:com|org|net|gov|edu|us|io|co|info|tv)\\b(?:\\/\\S*)?',
+  ].join('|'),
+  'g',
+);
 
 function escapeRe(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -87,13 +101,13 @@ export function compileDictionary(dict) {
   };
 }
 
-// Apply `fn` to the parts of `text` that are not inside a URL. Timecode links
+// Apply `fn` to the parts of `text` that are not inside an address. Timecode links
 // in transcripts carry the video URL, and a name that happens to appear in a
 // path or query string is not prose -- rewriting it would break the deep link.
-function outsideUrls(text, fn) {
+function outsideAddresses(text, fn) {
   let out = '';
   let last = 0;
-  for (const m of text.matchAll(URL_RE)) {
+  for (const m of text.matchAll(ADDRESS_RE)) {
     out += fn(text.slice(last, m.index)) + m[0];
     last = m.index + m[0].length;
   }
@@ -113,7 +127,7 @@ export function normalizeNames(text, dict) {
   if (!compiled.re || !text) return { text, hits: [] };
 
   const counts = new Map();
-  const next = outsideUrls(text, chunk =>
+  const next = outsideAddresses(text, chunk =>
     chunk.replace(compiled.re, match => {
       const key = collapse(match);
       const hit = compiled.byWrong.get(key);
@@ -146,7 +160,7 @@ export function findFlagged(text, dict) {
   const found = [];
   for (const flag of compiled.flags) {
     let count = 0;
-    outsideUrls(text, chunk => {
+    outsideAddresses(text, chunk => {
       count += (chunk.match(flag.re) ?? []).length;
       return chunk;
     });

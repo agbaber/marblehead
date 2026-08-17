@@ -575,7 +575,7 @@ topic_segments:
 
 **[1:38:41](https://vimeo.com/750124779#t=5921s)** Is Bill Beth Belcher? Just Thomas.
 
-**[1:38:51](https://vimeo.com/750124779#t=5931s)** Mr. Greater and I'm gonna vote for Cowboys
+**[1:38:51](https://vimeo.com/750124779#t=5931s)** Mr. Grader and I'm gonna vote for Cowboys
 
 **[1:38:58](https://vimeo.com/750124779#t=5938s)** four I'll be back in the account for Mississippi you. for four and spent one two three four percent and one bar for one. Definitely it so. So question the next round does it now the list or is it the whole list? How do you wish to proceed? You how to taught find the well, we have a three that have received what receive votes to the tide for the top box. I'm going to say I think procedurally probably should go around all candidates,
 

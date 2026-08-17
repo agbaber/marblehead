@@ -13,10 +13,10 @@ source: vimeo-auto+llm
 
 
 summary_card:
-  headline: "Joint meeting appoints Melissa Lucas to vacant School Committee seat"
-  summary: "The Select Board and School Committee held a joint session to fill the seat vacated by a departing member, interviewing four candidates before voting unanimously to appoint Melissa Lucas, a CFO with 18 years of finance experience. The board also adopted a zero-emissions vehicle procurement policy as a step toward Green Community designation, continued a liquor-license revocation hearing for Shin Dynasty to October 8, and received updates on street utility projects, the Coffin School reuse process, and the Marblehead 250 commemoration events."
+  headline: "Joint meeting appoints Melissa Clucas to vacant School Committee seat"
+  summary: "The Select Board and School Committee held a joint session to fill the seat vacated by a departing member, interviewing four candidates before voting unanimously to appoint Melissa Clucas, a CFO with 18 years of finance experience. The board also adopted a zero-emissions vehicle procurement policy as a step toward Green Community designation, continued a liquor-license revocation hearing for Shin Dynasty to October 8, and received updates on street utility projects, the Coffin School reuse process, and the Marblehead 250 commemoration events."
   decisions:
-    - "Appointed Melissa Lucas to vacant School Committee seat"
+    - "Appointed Melissa Clucas to vacant School Committee seat"
     - "Adopted zero-emissions vehicle first procurement policy"
     - "Approved reappointment of Duncan Facie to OHDC as full member"
     - "Approved appointment of Michael Hall as OHDC alternate member"
@@ -30,7 +30,7 @@ summary_card:
     - "Approved rotation of the Town Hall clock tower bell"
     - "Approved event permit for Marblehead Museum at Old Town House, October 18"
   votes:
-    - motion: "Appoint Melissa Lucas to School Committee"
+    - motion: "Appoint Melissa Clucas to School Committee"
       result: "in favor (unanimous)"
     - motion: "Adjourn School Committee meeting"
       result: "in favor (unanimous)"
@@ -83,12 +83,12 @@ topic_segments:
     start_seconds: 416
     end_seconds: 4274
     featured: true
-    headline: "School Committee vacancy filled: Melissa Lucas appointed unanimously over three other candidates"
+    headline: "School Committee vacancy filled: Melissa Clucas appointed unanimously over three other candidates"
     dek: "The joint board interviewed four applicants—Lucas, Sarah Fox, Yale Weissman, and Mark Schwartz—before voting 7-1 to appoint Lucas, a CFO who cited financial transparency and zero-based budgeting as top priorities."
     summary: |
       The Select Board and School Committee jointly interviewed four candidates to fill the seat vacated by a departing member. Each candidate was asked identical questions covering budget challenges, outside funding reliance, carrying out voter intent from the June election, managing difficult team members, budget-cut guiding principles, fact-based financial reporting (variance analysis, DESI dashboard), committee dynamics, and what excited them most about the role.
       
-      **Melissa Lucas** — CFO with 18 years of finance/accounting experience; parent of three children newly enrolled in Marblehead schools. Priorities: financial transparency, long-term planning, restoring community trust, and improving student outcomes. Noted 6% enrollment decline and called for zero-based budgeting. Said she would need to do detailed analysis before committing to an override position.
+      **Melissa Clucas** — CFO with 18 years of finance/accounting experience; parent of three children newly enrolled in Marblehead schools. Priorities: financial transparency, long-term planning, restoring community trust, and improving student outcomes. Noted 6% enrollment decline and called for zero-based budgeting. Said she would need to do detailed analysis before committing to an override position.
       
       **Sarah Fox** — Five-year veteran of the School Committee budget subcommittee, described as having deep institutional budget knowledge. Flagged an approximately $3 million projected deficit for the coming year tied to collective bargaining outcomes and a 6.5% enrollment decline (the largest single-year drop she had seen). Advocated strongly for zero-based budgeting and encumbrance tracking; noted revolving funds were used last year to bridge the gap.
       
@@ -96,8 +96,8 @@ topic_segments:
       
       **Mark Schwartz** — 15+ years of classroom teaching; most recent role in marketing/project management at a tech firm. Emphasized mental health and student wellbeing, transparency through simplified public communications (e.g., a plain-language blog), and building community trust post-strike. Acknowledged limited direct Marblehead budget involvement but cited Swampscott budget process experience.
       
-      One member (Jim Sison) recused himself, leaving eight voting members. On the roll-call vote, six members named Melissa Lucas, one named Sarah Fox, and one named Mark Schwartz. A motion to appoint Lucas carried unanimously on the formal vote. She was directed to be sworn in the following day.
-    key_speakers: ["Melissa Lucas (applicant, CFO)", "Sarah Fox (applicant, former School Committee member)", "Yale Weissman (applicant, municipal attorney)", "Mark Schwartz (applicant, educator/project manager)"]
+      One member (Jim Sison) recused himself, leaving eight voting members. On the roll-call vote, six members named Melissa Clucas, one named Sarah Fox, and one named Mark Schwartz. A motion to appoint Lucas carried unanimously on the formal vote. She was directed to be sworn in the following day.
+    key_speakers: ["Melissa Clucas (applicant, CFO)", "Sarah Fox (applicant, former School Committee member)", "Yale Weissman (applicant, municipal attorney)", "Mark Schwartz (applicant, educator/project manager)"]
   - topic: admin-housekeeping
     topic_confidence: 0.92
     start_seconds: 4559
@@ -291,7 +291,7 @@ topic_segments:
 
 **[6:10](https://vimeo.com/1117754860#t=370s)** No comment. All right. Anyone on the line? I didn't see any. Okay. At this point, we'll close public comment. Do you guys wanna call your meeting's order? Yeah, The school committee meeting will now come to Order. Okay, great. Thank you. Second, we have a joint meeting with the school committee. Thank you guys for coming tonight. Um, as I'm sure most of you know, we're here to appoint someone to take the vacant seat left by Mr. Ota. Um, the way that we're gonna do this is we will call one applicant to the table at a time. We're gonna old school here and go in alphabetical order. I will ask that if you have not been interviewed yet, that you sit outside, um, there's some chairs in front of our office want we take the first, once you have been interviewed, you're welcome to stay. Um, I'm gonna ask again that if you can limit answers to questions for two minutes, since we do have a fair amount to do here.
 
-**[6:56](https://vimeo.com/1117754860#t=416s)** Um, and then after that we can have some deliberation and nominations. So with that, I would like to call Melissa Lucas up, and if the other three could wait outside and Kyle can come and grab you, we'll put you in the, the silent booth out there. Welcome, Alyssa. Thanks. Thanks for having me. Welcome. Thank you. I think we're gonna, everyone nice to meet you too. I think we're gonna do is jump right into questions. Sure. Let's do it. If that's okay with you. Uh, Henry, you'd like to start. Great. So, um, My question is, what made you decide to submit your name to be appointed to the school committee, and what would your priorities be with appointed? Um, so I decided to submit my name to the school committee because I'm a parent of three young children who just recently entered the Marblehead Public Schools for my professional life. Um, I'm a chief financial officer.
+**[6:56](https://vimeo.com/1117754860#t=416s)** Um, and then after that we can have some deliberation and nominations. So with that, I would like to call Melissa Clucas up, and if the other three could wait outside and Kyle can come and grab you, we'll put you in the, the silent booth out there. Welcome, Alyssa. Thanks. Thanks for having me. Welcome. Thank you. I think we're gonna, everyone nice to meet you too. I think we're gonna do is jump right into questions. Sure. Let's do it. If that's okay with you. Uh, Henry, you'd like to start. Great. So, um, My question is, what made you decide to submit your name to be appointed to the school committee, and what would your priorities be with appointed? Um, so I decided to submit my name to the school committee because I'm a parent of three young children who just recently entered the Marblehead Public Schools for my professional life. Um, I'm a chief financial officer.
 
 **[7:42](https://vimeo.com/1117754860#t=462s)** I've been working in finance and accounting for the last 18 years. And looking at some of the challenges that the town currently has and the school currently has, um, it's clear that we need some expertise within the kind of budgeting and financial management aspect of, um, the school committee. So my top three priorities, um, around the school committee if I were to be appointed would be one really, um, financial management. And what I mean by that is transparency for taxpayers related to kind of where their money's going. I think there's a lot of, um, it's not clear right now to folks exactly where their money's going. So just being very clear with what's going on there, number one. Number two, long term planning. We need to stop being so reactive to things that are going on and be looking more proactively as to
 
@@ -473,9 +473,9 @@ topic_segments:
 
 **[1:13:34](https://vimeo.com/1117754860#t=4414s)** Um, as well as the other, you know, responsibilities we have. Um, school committee can be a lightning rod. It can be a whole bunch of different things. But the bottom line is we are here to make the right decisions, um, for our students, um, for our staff, and for our town and our taxpayers. And that's not easy. Um, so that's all I'm gonna ask. Thank you. Anybody else have anything they'd like to say? No. Okay. Great. Vote. Yeah. Could we have a motion to enter all candidates for nomination? So moved. Second. Okay. All all in favor to total way. All right. We will, Thatcher, if you don't mind going through and doing a roll call, and as, as I said, you can name the person that you would like to nominate. Okay. So, um, you vote by naming your, your person.
 
-**[1:14:24](https://vimeo.com/1117754860#t=4464s)** So, uh, Mr. Quata, Melissa Lucas, Ms. Schaffner, Sarah Fox, Ms. Schmick, pepper, Melissa Lucas, Mr. Williams, Melissa Lucas, Mr. Greater, We can tell from my question that I think Melissa Lucas will be the one who can really take it to the next level, uh, in terms of our discussion. So, Melissa, Ms. Nunan, Um, I will, um, no, uh, vote for Melissa as well. Ms. Singer, That's agree. Think we Done, I think we should allow everyone too Yeah. To do it. Go ahead. Oh, I didn't know. Go ahead. Um, I'll vote for Mark Schwartz
+**[1:14:24](https://vimeo.com/1117754860#t=4464s)** So, uh, Mr. Quata, Melissa Clucas, Ms. Schaffner, Sarah Fox, Ms. Schmick, pepper, Melissa Clucas, Mr. Williams, Melissa Clucas, Mr. Grader, We can tell from my question that I think Melissa Clucas will be the one who can really take it to the next level, uh, in terms of our discussion. So, Melissa, Ms. Noonan, Um, I will, um, no, uh, vote for Melissa as well. Ms. Singer, That's agree. Think we Done, I think we should allow everyone too Yeah. To do it. Go ahead. Oh, I didn't know. Go ahead. Um, I'll vote for Mark Schwartz
 
-**[1:15:12](https://vimeo.com/1117754860#t=4512s)** And Mr. Fox. I will vote for Melissa. Okay. So if I could have a motion to appoint Melissa Lucas to, uh, school committee. So I'll move A second, Second present to be, Nope, we're, we're working together. Great. All in favor? Okay. Looks like it's unanimous. Welcome. Thank you. Thank you all for, for coming tonight. Thank you, Melissa. Um, Melissa, you tomorrow? I would thank, can you go and get sworn in and you can, uh, contact Kyle, Mr. Chair? I'd just like to, uh, really thank those that came before us this evening to, and, and stood up and put their, their hand up to, to volunteer for this. It's, it's challenging, it's difficult, uh, but, uh, we, we really appreciate it.
+**[1:15:12](https://vimeo.com/1117754860#t=4512s)** And Mr. Fox. I will vote for Melissa. Okay. So if I could have a motion to appoint Melissa Clucas to, uh, school committee. So I'll move A second, Second present to be, Nope, we're, we're working together. Great. All in favor? Okay. Looks like it's unanimous. Welcome. Thank you. Thank you all for, for coming tonight. Thank you, Melissa. Um, Melissa, you tomorrow? I would thank, can you go and get sworn in and you can, uh, contact Kyle, Mr. Chair? I'd just like to, uh, really thank those that came before us this evening to, and, and stood up and put their, their hand up to, to volunteer for this. It's, it's challenging, it's difficult, uh, but, uh, we, we really appreciate it.
 
 **[1:15:59](https://vimeo.com/1117754860#t=4559s)** Excellent. Do you guys wanna close anything? Yeah. So I'm looking for a motion to adjourn the school committee. So moved. Second. Okay. Um, all in favor. Thank you. All right. The school committee meeting is Now adjourned. Great. Thank you all for coming and participating. We're gonna take a five minute recess so that we can rearrange here. I'd like to talk about accomplishments of, of our staff. Um, we have two recent accomplishments within our finance department regarding professional development. Uh, our Treasure Collective, Kami Elli. Kami Elli has successfully passed the Massachusetts Collectors and Treasurers Association Collector Exam. So she is now a fully certified Massachusetts certified collector. Outstanding for Her. And
 
@@ -637,7 +637,7 @@ topic_segments:
 
 **[2:16:05](https://vimeo.com/1117754860#t=8165s)** Alcohol will be purchased from Martini Liquors. This will be a poll vote.
 
-**[2:16:11](https://vimeo.com/1117754860#t=8171s)** I move. Motion? Yep. Thank you. Second. All right. Yep. Mr. Sen in favor, Ms. Singer? In favor, Mr. Grader? In favor, Ms. Nunan In favor, Mr. Fox In favor. And last but not least, uh, we have tomorrow the September 11th, um, commemoration of the terrorist attacks from 20 2001. Uh, Jason, if you want to give any details on that, it'll be at Memorial Park at 10:00 AM to pay tribute to the Norway, 3000 lost lives of firefighters, police officers and civilians alike. And the public is warmly invited, um, by the Marwood Fire and Police Departments, um, local leaders. And we will be there for, uh, to join the community
+**[2:16:11](https://vimeo.com/1117754860#t=8171s)** I move. Motion? Yep. Thank you. Second. All right. Yep. Mr. Sen in favor, Ms. Singer? In favor, Mr. Grader? In favor, Ms. Noonan In favor, Mr. Fox In favor. And last but not least, uh, we have tomorrow the September 11th, um, commemoration of the terrorist attacks from 20 2001. Uh, Jason, if you want to give any details on that, it'll be at Memorial Park at 10:00 AM to pay tribute to the Norway, 3000 lost lives of firefighters, police officers and civilians alike. And the public is warmly invited, um, by the Marwood Fire and Police Departments, um, local leaders. And we will be there for, uh, to join the community
 
 **[2:17:00](https://vimeo.com/1117754860#t=8220s)** and remembrance and reflection of this solemn event.
 

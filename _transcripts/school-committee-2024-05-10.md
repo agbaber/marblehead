@@ -13,13 +13,13 @@ source: youtube-auto+llm
 
 summary_card:
   headline: "School Committee advances two interim superintendent finalists, approves two assistant superintendent contracts"
-  summary: "The Marblehead School Committee held a special meeting to deliberate on its interim superintendent search, voting 5-0 to advance Barbara Catalo and John Robodo to the next phase. The committee also approved contracts 5-0 for two new assistant superintendents: Michael Piffer (Finance and Operations) and Lisa Marie Iolo (Student Services). The chair noted a clerical error in the original meeting posting had prompted this special session."
+  summary: "The Marblehead School Committee held a special meeting to deliberate on its interim superintendent search, voting 5-0 to advance Barbara Catalo and John Robidoux to the next phase. The committee also approved contracts 5-0 for two new assistant superintendents: Michael Piffer (Finance and Operations) and Lisa Marie Iolo (Student Services). The chair noted a clerical error in the original meeting posting had prompted this special session."
   decisions:
-    - "Approved advancing Barbara Catalo and John Robodo to the next phase of the interim superintendent search"
+    - "Approved advancing Barbara Catalo and John Robidoux to the next phase of the interim superintendent search"
     - "Approved contract with Michael Piffer as Assistant Superintendent of Finance and Operations"
     - "Approved contract with Lisa Marie Iolo as Assistant Superintendent of Student Services"
   votes:
-    - motion: "Move Barbara Catalo and John Robodo to the next phase of the interim superintendent search"
+    - motion: "Move Barbara Catalo and John Robidoux to the next phase of the interim superintendent search"
       result: "in favor (unanimous)"
     - motion: "Approve contract with Michael Piffer as Assistant Superintendent of Finance and Operations"
       result: "in favor (unanimous)"
@@ -40,14 +40,14 @@ topic_segments:
     start_seconds: 210
     end_seconds: 911
     featured: true
-    headline: "Committee votes 5-0 to advance Catalo and Robodo as interim superintendent finalists"
-    dek: "Each member shared their top candidates, with John Robodo receiving support from four of five members and Barbara Catalo receiving three votes, placing both in the next phase."
+    headline: "Committee votes 5-0 to advance Catalo and Robidoux as interim superintendent finalists"
+    dek: "Each member shared their top candidates, with John Robidoux receiving support from four of five members and Barbara Catalo receiving three votes, placing both in the next phase."
     summary: |
-      The committee went through each member's preferences for advancing candidates. Al Williams named John Robodo; Brian Oda named two candidates (later identified as King and Thompson); Allison Taylor named Thompson and Robodo; Jen Schaffner named Barbara Catalo and Robodo; and Chair Sarah Fox indicated she was between two candidates. A tally showed Robodo supported by four members and Catalo by three, placing both in the next phase.
+      The committee went through each member's preferences for advancing candidates. Al Williams named John Robidoux; Brian Oda named two candidates (later identified as King and Thompson); Allison Taylor named Thompson and Robidoux; Jen Schaffner named Barbara Catalo and Robidoux; and Chair Sarah Fox indicated she was between two candidates. A tally showed Robidoux supported by four members and Catalo by three, placing both in the next phase.
       
       The committee discussed next steps: a visit by committee members to each finalist's current district, followed by a day-in-district visit by the finalists in Marblehead that would include meetings with the admin team, teachers, students at the high school, and a parent/community session. Reference checks would precede the final decision.
       
-      A motion to advance Barbara Catalo and John Robodo to the next phase passed 5-0 (Al Williams, Brian Oda, Allison Taylor, Jen Schaffner, Sarah Fox all in favor).
+      A motion to advance Barbara Catalo and John Robidoux to the next phase passed 5-0 (Al Williams, Brian Oda, Allison Taylor, Jen Schaffner, Sarah Fox all in favor).
     key_speakers: ["Sarah Fox (School Committee Chair)", "Al Williams (School Committee)", "Brian Oda (School Committee)", "Allison Taylor (School Committee)", "Jen Schaffner (School Committee)"]
   - topic: labor-personnel
     topic_confidence: 0.97

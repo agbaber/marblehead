@@ -305,7 +305,7 @@ topic_segments:
       - All three proposed districts are already served by water and sewer
       - Milton spent ~$300,000 litigating and lost
       
-      **Vote:** 8 in favor, 1 opposed (Mr. Jenko).
+      **Vote:** 8 in favor, 1 opposed (Mr. Janko).
       
       > The select board stated it is bringing Article 23 forward to the May town meeting and has not ruled out a parallel protective compliance exemption filing if the article fails.
     key_speakers: ["Alec Goolsby (FinCom Chair)", "Alex Ler (Town Planner)", "Thatcher (Town Administrator)", "Dan Fox (Select Board member, West Cottage)", "John Dipano (public comment, Trager Road)", "Aaron Nunan (public comment, online)", "Bill Mancuso (public comment)", "Sarah Fox (public comment, Beach Street)", "David Patton (public comment, 25 Lee Street)", "Moses (Select Board member)"]
@@ -358,7 +358,7 @@ topic_segments:
       
       Research included interviews with assessors from six comparable municipalities. The program applies only after all state exemptions are exhausted and is reviewed annually by the Select Board.
       
-      Approved 8-1 (Mr. Jenko opposed).
+      Approved 8-1 (Mr. Janko opposed).
     key_speakers: ["Dan Fox (Select Board member)", "Molly (FinCom member)", "David Patton (public comment)"]
   - topic: admin-housekeeping
     topic_confidence: 0.78
@@ -371,7 +371,7 @@ topic_segments:
       
       **Article 30 – 100% Increase (Clause 22J):** If both articles pass, the CPI-adjusted exemption is further doubled. Example: $400 base + 5% CPI = $420; doubled to $840. Estimated combined maximum cost: ~$60,000 per year to the tax overlay (approximately 30 qualifying veterans). Not state-reimbursed.
       
-      Both articles approved 8-1 (Mr. Jenko opposed). A public commenter (David Patton) supported Article 29 but questioned whether doubling was necessary given existing veterans benefits; another commenter (Bill McCue) noted the importance of honoring veterans' service.
+      Both articles approved 8-1 (Mr. Janko opposed). A public commenter (David Patton) supported Article 29 but questioned whether doubling was necessary given existing veterans benefits; another commenter (Bill McCue) noted the importance of honoring veterans' service.
     key_speakers: ["Alicia (Finance Director)", "David Patton (public comment)", "Bill McCue (public comment, 38 Gingerbread Hill)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
@@ -473,7 +473,7 @@ topic_segments:
     summary: |
       **Article 46 – Independent Audit ($100,000):** Citizen-sponsored article to fund an independent audit of town departmental budgets, with results reported at the 2026 town meeting. The Finance Director noted the town is already legally required to conduct an annual CPA audit (~$70,000) and also conducted an internal controls audit in recent years through a separate firm. The FinCom voted 9-0 to oppose, citing duplication of existing requirements and the article presenter's absence.
       
-      **Article 47 – Eliminate Sustainability Coordinator:** Advisory article to eliminate the sustainability coordinator position. Brendan (Community Development Director) reported that Logan (Sustainability Coordinator, hired January 2024) has secured over $665,000 in grants and is working toward Green Community certification (which would provide $170,000 upfront and up to $125,000/year). The town administrator noted his background at CTPS and transportation grant expertise. A FinCom member noted the position appears financially net-positive. Voted 8-1 to oppose (Mr. Jenko supported the article).
+      **Article 47 – Eliminate Sustainability Coordinator:** Advisory article to eliminate the sustainability coordinator position. Brendan (Community Development Director) reported that Logan (Sustainability Coordinator, hired January 2024) has secured over $665,000 in grants and is working toward Green Community certification (which would provide $170,000 upfront and up to $125,000/year). The town administrator noted his background at CTPS and transportation grant expertise. A FinCom member noted the position appears financially net-positive. Voted 8-1 to oppose (Mr. Janko supported the article).
     key_speakers: ["Alicia (Finance Director)", "Brendan (Community Development Director)", "Thatcher (Town Administrator)", "Phil Mancuso (public comment)"]
   - topic: labor-personnel
     topic_confidence: 0.72
@@ -544,7 +544,7 @@ topic_segments:
 
 **[7:41](https://vimeo.com/1073542272#t=461s)** Any public comment on article three?
 
-**[7:48](https://vimeo.com/1073542272#t=468s)** I'd like to make a motion that FinCon recommends adoption of this article. Second, Um, Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Yes. Mr. Franklin? Yes. Mr. Gilby? Yes. Ms. Samuels? Yes. Mr. Jenko? Yes. And now I have to, um, Eric, right? Allow him to talk, Eric? Yes. Yes. Okay, Great. Article four. Unpaid accounts as presented on screen. Alicia, do you wanna summarize just what this article means? It's not a huge amount. Sure. So any bills that we've received
+**[7:48](https://vimeo.com/1073542272#t=468s)** I'd like to make a motion that FinCon recommends adoption of this article. Second, Um, Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Yes. Mr. Franklin? Yes. Mr. Gilby? Yes. Ms. Samuels? Yes. Mr. Janko? Yes. And now I have to, um, Eric, right? Allow him to talk, Eric? Yes. Yes. Okay, Great. Article four. Unpaid accounts as presented on screen. Alicia, do you wanna summarize just what this article means? It's not a huge amount. Sure. So any bills that we've received
 
 **[8:34](https://vimeo.com/1073542272#t=514s)** in the current year from the prior year, by law, we can't pay them unless it's approved by town meeting by a four fifths vote. Um, the department's affected are sewer, water, and finance. So these are, um, bills that have come in since the close of fiscal year 24 that need to be paid out of the fiscal year 25 budget. Correct. And we need to authorize that at town meeting. Yes. This is a standard article. It's $21,368,000 and 72 cents. Does anybody have any questions from the fin comm or comments on this? We've seen this every year. Every year.
 
@@ -556,7 +556,7 @@ topic_segments:
 
 **[10:17](https://vimeo.com/1073542272#t=617s)** Will we be able to see these invoices? Yes. How do I do that? Send me an email, I'll scan them. Happily to you. Thank you. Thank you. Any other public comments on article four?
 
-**[10:40](https://vimeo.com/1073542272#t=640s)** I'd like to make a motion to recommend the sum of $21,368 and 72 cents be appropriated as presented on screen. Second. Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Tets? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Mrs. Ms. Samuels? Yes. Mr. Jenko? Yes.
+**[10:40](https://vimeo.com/1073542272#t=640s)** I'd like to make a motion to recommend the sum of $21,368 and 72 cents be appropriated as presented on screen. Second. Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Mrs. Ms. Samuels? Yes. Mr. Janko? Yes.
 
 **[11:12](https://vimeo.com/1073542272#t=672s)** He's gotta unmute Eric. Unmute. He's out. Let's move on. It's fine. Hold on. Eric. Yes. Can you unmute yourself, Eric? Is he able to do that? Um, can he come in the room and he can control himself? I I asked him in the room a couple of times and he, um, When we take a vote, Eric, please be able to unmute yourself to take the vote so it's not slowing the night down. I, I don't, I don't have that option on my screen. I'm sorry. Okay. He has to, well, now you may, oh, I'm gonna not mute you, so you're just be aware that we can hear what's going on.
 
@@ -570,7 +570,7 @@ topic_segments:
 
 **[14:06](https://vimeo.com/1073542272#t=846s)** Okay. Um, any public comments on Article five?
 
-**[14:15](https://vimeo.com/1073542272#t=855s)** Anybody not? I'd like to make a recommendation that the maximum amount to be spent from department revolving funds during fiscal year 26 be as presented on screen. Second, um, Mr. Nia? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. He, yes. Mr. Franklin? Yes. Mr. Hoby? Yes. Sandra Ho? Yes. Mr. Jayco? Yes. Eric, Mr. Knight? Yes.
+**[14:15](https://vimeo.com/1073542272#t=855s)** Anybody not? I'd like to make a recommendation that the maximum amount to be spent from department revolving funds during fiscal year 26 be as presented on screen. Second, um, Mr. Nia? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. He, yes. Mr. Franklin? Yes. Mr. Hoby? Yes. Sandra Ho? Yes. Mr. Jayco? Yes. Eric, Mr. Knight? Yes.
 
 **[14:50](https://vimeo.com/1073542272#t=890s)** Great. Article six is one of our first Capital articles. Um, my understanding is this is all funded from Free Cash. Correct? Um, we'll get to a free cash article later, which will show that the sum of these next few capital articles from free cash is about 2 million this year. Um, so I'll let you present Article six. Speak on that one. Well, I'll talk about the bigger picture you do the Vehicles. Okay. So, um, we have a meeting every year with all the departments, and we go around and we have a ranking of needs and based on the ranking of needs, that's how we come up with the criteria. And based on that, we work together to figure out what's the proper criteria that they need. The waste needs a Ford F1 Crew cab, uh, for the Waste Director. Rec and Park needs an electric mower.
 
@@ -586,7 +586,7 @@ topic_segments:
 
 **[18:08](https://vimeo.com/1073542272#t=1088s)** Any other public comments on Article six?
 
-**[18:15](https://vimeo.com/1073542272#t=1095s)** All right. Recommendation. Recommend that the sum of $301,741 be appropriated and to meet this appropriation. $301,741 is to be appropriated from free cash to include sh as shown on screen. Second. Mr. O'Neill? Yes. Ms. Dooby? Yes. Mr. Meyer? Yes. Ms. Tets? Yes. Mr. Franklin? Yes. Mr. Ey? Yes. Ms. Samuels? Yes. Mr. Jenko? Yes. Mr. Knight? Yes. Article seven, lease. Lease purchase. Similarly, the majority of this article will be from free cash. A portion will be from the waste revolving of fund
+**[18:15](https://vimeo.com/1073542272#t=1095s)** All right. Recommendation. Recommend that the sum of $301,741 be appropriated and to meet this appropriation. $301,741 is to be appropriated from free cash to include sh as shown on screen. Second. Mr. O'Neill? Yes. Ms. Dooby? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Ey? Yes. Ms. Samuels? Yes. Mr. Janko? Yes. Mr. Knight? Yes. Article seven, lease. Lease purchase. Similarly, the majority of this article will be from free cash. A portion will be from the waste revolving of fund
 
 **[19:02](https://vimeo.com/1073542272#t=1142s)** Alicia and Thatcher. Yes. So this gets done every single year. And each year, the Waste Revolving Fund picks up a payment for one of its vehicles. So it's picking up the vehicle for the backhoe lease. 29,917. The waste hoe John Deere wheel loader lease will be under the General fund, uh, fire training vehicle. This was already authorized last year. This is second payment Ford F four 50 dump truck, a rec and park, a wide area mower lease continued from Rec and Park two Ford Interceptor Hybrids. This was already approved prior for the police. One Ford Interceptor and one Cruiser aerial bucket lift truck for the DPW International truck is a continued lease as well from DPWF five 50 platform. State body truck with plows a continuation, a large school bus lease is a continuation.
 
@@ -598,7 +598,7 @@ topic_segments:
 
 **[20:47](https://vimeo.com/1073542272#t=1247s)** Any public comment on Article seven?
 
-**[20:51](https://vimeo.com/1073542272#t=1251s)** No hands in the audience. Nothing online? No. I'd like to make a motion that the sum of $491,218 be appropriated. And to meet this appropriation, $29,917 is to be transferred from the Waste Revolving Fund. And $461,301 is to be appropriated from free cash to include the numbers shown on screen. Second. Second. So, Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Deeds? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Janko? Yes. Mr. Knight? Yes.
+**[20:51](https://vimeo.com/1073542272#t=1251s)** No hands in the audience. Nothing online? No. I'd like to make a motion that the sum of $491,218 be appropriated. And to meet this appropriation, $29,917 is to be transferred from the Waste Revolving Fund. And $461,301 is to be appropriated from free cash to include the numbers shown on screen. Second. Second. So, Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Deeds? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Janko? Yes. Mr. Knight? Yes.
 
 **[21:39](https://vimeo.com/1073542272#t=1299s)** Article eight, another cop capital article, capital improvements for public buildings. Alicia, you wanna speak this one? No, you're on a roll. Okay. So, um, for this article, we are doing the Abbot Library partial roof replacement, uh, 3 73, 6 48, that was requested by the library director, fire headquarters, bathroom remodel was behind the list of the fire chief. 1 68 3 10, the Glover HVAC cafeteria, Glover School playground, uh, paint, uh, for the performing arts center. And Reupholstering for the Performing Arts Center was high for the schools and Mary Alley improvements for 150,000. Uh, lots of things going on at Mary Alley right now, and we need to improve a lot of Mary, including the downstairs
 
@@ -634,7 +634,7 @@ topic_segments:
 
 **[29:43](https://vimeo.com/1073542272#t=1783s)** No, no. I guess, I guess that explains it. I, i, are, are there any other deferred maintenance items on the library that are gonna come up next year that could have been put in that original project? Uh, hi, it's Kimberly, grad director of Abbot Public Library. We don't anticipate anything at, at this time for an additional capital improvement. Nothing additional at this time. Yeah. Thank, thank you. Thank you. Any other public comments on article eight?
 
-**[30:20](https://vimeo.com/1073542272#t=1820s)** It doesn't look like it. I'd like to make a recommendation that the sum of $1,236,958 be appropriated and to meet this appropriation. 1,236,958 is to be appropriated from free cash to include the amounts listed on screen. Second. Second. Mr. O'Neill? Yes. Ms. Ley? Yes. Mr. Meyer? Yes. Ms. Bes? Yes. Mr. Franken? Yes. Mr. Spe? Yes. Ms. Samuels? Yes. Mr. Jenko? Yes. Mr. Nine? Yes. Great. Article nine standard article, walls and fences, Alicia? Yep. So we have the standard every year to appropriate $50,000 from the levee for construction
+**[30:20](https://vimeo.com/1073542272#t=1820s)** It doesn't look like it. I'd like to make a recommendation that the sum of $1,236,958 be appropriated and to meet this appropriation. 1,236,958 is to be appropriated from free cash to include the amounts listed on screen. Second. Second. Mr. O'Neill? Yes. Ms. Ley? Yes. Mr. Meyer? Yes. Ms. Bes? Yes. Mr. Franken? Yes. Mr. Spe? Yes. Ms. Samuels? Yes. Mr. Janko? Yes. Mr. Nine? Yes. Great. Article nine standard article, walls and fences, Alicia? Yep. So we have the standard every year to appropriate $50,000 from the levee for construction
 
 **[31:08](https://vimeo.com/1073542272#t=1868s)** and reconstruction of walls and fences for the protection of highways and property, including engineering services in connection there with, 'cause we have a lot of seawalls here.
 
@@ -642,7 +642,7 @@ topic_segments:
 
 **[31:55](https://vimeo.com/1073542272#t=1915s)** Any public comment on Article nine?
 
-**[32:00](https://vimeo.com/1073542272#t=1920s)** Nobody like to recommend that the sum of $50,000 be appropriated to be raised by taxation. Second, Mr. Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Keith? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Is Ms. Samuels? Yes. Mr. Jco? Yes. Mr. Knight? Yes. Article 10, stormwater Construction? Yep. So for this article, it's a standard article we have every year. It's also raised through the levy for 400,000. It's, uh, for the water construction, reconstruction, permitting, and maintenance of, uh, storm sewers for surface drainage, including engineering services.
+**[32:00](https://vimeo.com/1073542272#t=1920s)** Nobody like to recommend that the sum of $50,000 be appropriated to be raised by taxation. Second, Mr. Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Keith? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Is Ms. Samuels? Yes. Mr. Jco? Yes. Mr. Knight? Yes. Article 10, stormwater Construction? Yep. So for this article, it's a standard article we have every year. It's also raised through the levy for 400,000. It's, uh, for the water construction, reconstruction, permitting, and maintenance of, uh, storm sewers for surface drainage, including engineering services.
 
 **[32:47](https://vimeo.com/1073542272#t=1967s)** So this helps us meet our MS four requirements,
 
@@ -652,7 +652,7 @@ topic_segments:
 
 **[33:10](https://vimeo.com/1073542272#t=1990s)** Like to make a motion to recommend that the sum of $400,000 be appropriated to be raised by taxation.
 
-**[33:17](https://vimeo.com/1073542272#t=1997s)** Second. Mr. Romeo? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. D? Yes. Mr. Franklin? Yes. Mr. Yes. Ms. Samuels? Yes. Mr. Jacob? Yes. Mr. Knight? Yes.
+**[33:17](https://vimeo.com/1073542272#t=1997s)** Second. Mr. Romeo? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. D? Yes. Mr. Franklin? Yes. Mr. Yes. Ms. Samuels? Yes. Mr. Jacob? Yes. Mr. Knight? Yes.
 
 **[33:38](https://vimeo.com/1073542272#t=2018s)** Article elevens consent articles for water and sewer. Um, again, a standard article. I didn't know if you wanted to present this, Alicia or Amy. Amy's better at it, but I'll be happy to start it. Uh, this is for her, um, water construction costs and reconstruction, water mains replacement of water meters, apprehensive Engineering consultants. The 1.236 is her retained earnings from water and she's using this, this, um, time for her capital requests.
 
@@ -690,7 +690,7 @@ topic_segments:
 
 **[42:00](https://vimeo.com/1073542272#t=2520s)** Uh, Maverick also went up to eight. Um, Okay. Thank you. You're welcome. Thank you. Any other public comment on Article 10?
 
-**[42:12](https://vimeo.com/1073542272#t=2532s)** Sorry, 11? No. Uh, I'd like to make a recommendation to adopt this article and for the water department construction that the sum of 1,236,000 be appropriated to be appropriated from water retained earnings and for sewer department construction that the sum of 1,599,000 be appropriated to be appropriated from sewer retained earnings. Second. Mr. O'Neill? Yes. Ms. Doy? Yes. Mr. Meyer? Yes. Ms. Tees? Yes. Mr. Franklin? Yes. Mr. Sby? Yes. Ms. Samuel? Yes. Mr. Janko? Yes. Mr. Knight? Yes.
+**[42:12](https://vimeo.com/1073542272#t=2532s)** Sorry, 11? No. Uh, I'd like to make a recommendation to adopt this article and for the water department construction that the sum of 1,236,000 be appropriated to be appropriated from water retained earnings and for sewer department construction that the sum of 1,599,000 be appropriated to be appropriated from sewer retained earnings. Second. Mr. O'Neill? Yes. Ms. Doy? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Sby? Yes. Ms. Samuel? Yes. Mr. Janko? Yes. Mr. Knight? Yes.
 
 **[42:58](https://vimeo.com/1073542272#t=2578s)** Article 12 proposed reclassification and pay schedule for administrative positions? Yes. These are for a 2%, uh, cost of living adjustment for the non-union administrative positions. There were 38 positions with an average increase of 2030 $9 42 cents, or $169 and 95 cents per month. So this estimate is in line with the current contract in place, but contract negotiations are under, you're under negotiation right Now. Right. So these are, these are non bargaining positions, but we have, uh, uh, three collective bargaining units under negotiations. And what we try to do is keep everybody comparable as far
 
@@ -700,21 +700,21 @@ topic_segments:
 
 **[44:39](https://vimeo.com/1073542272#t=2679s)** Any public comment on Article 12?
 
-**[44:45](https://vimeo.com/1073542272#t=2685s)** Like to make a recommendation that Article 12 be adopted with a 2% cost of living increase effective July 1st, 2025. Second. Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Des? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Jenko? Yes. Mr. Knight? Yes. Article 13, proposed pay schedule and reclassification for traffic supervisors. Everything we just discussed applies only to traffic supervisors in this article rather than administrative. Um, it's an estimate still. It's in line with the current contracts, which are the new contracts are still being negotiated. Any fin com questions on Article 13?
+**[44:45](https://vimeo.com/1073542272#t=2685s)** Like to make a recommendation that Article 12 be adopted with a 2% cost of living increase effective July 1st, 2025. Second. Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Des? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Janko? Yes. Mr. Knight? Yes. Article 13, proposed pay schedule and reclassification for traffic supervisors. Everything we just discussed applies only to traffic supervisors in this article rather than administrative. Um, it's an estimate still. It's in line with the current contracts, which are the new contracts are still being negotiated. Any fin com questions on Article 13?
 
 **[45:35](https://vimeo.com/1073542272#t=2735s)** Any public comment on Article 13?
 
-**[45:40](https://vimeo.com/1073542272#t=2740s)** Like to make a motion to recommend that this article be adopted with a 2% cost of living increase effective July 1st, 2025. Second. Mr. O'Neill? Yes. Ms. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Seat? Yes. Mr. Franklin? Yes. Mr. Goldbe? Yes. Ms. Samuels? Yes. Mr. Jacob? Yes. Mr. Knight? Yes. We'll do this one more time. Same exact thing. Seasonal and temporary personnel proposed reclassification and pay schedule 2% cost of living increase effective July 1st, 2025. Yes. Uh, the only thing I'll add is on the next slide after the hourly, I put the pay schedules and on the temporary we consolidated it to seven.
+**[45:40](https://vimeo.com/1073542272#t=2740s)** Like to make a motion to recommend that this article be adopted with a 2% cost of living increase effective July 1st, 2025. Second. Mr. O'Neill? Yes. Ms. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Seat? Yes. Mr. Franklin? Yes. Mr. Goldbe? Yes. Ms. Samuels? Yes. Mr. Jacob? Yes. Mr. Knight? Yes. We'll do this one more time. Same exact thing. Seasonal and temporary personnel proposed reclassification and pay schedule 2% cost of living increase effective July 1st, 2025. Yes. Uh, the only thing I'll add is on the next slide after the hourly, I put the pay schedules and on the temporary we consolidated it to seven.
 
 **[46:26](https://vimeo.com/1073542272#t=2786s)** So we had multiple with the exact same rate and the exact same amount with the exact same steps and just didn't make sense. So we just consolidated it down to seven. Okay. Just presentation wise. But the totals increasing by 2%, correct? Yep. Fin comm, any questions or comments on Article 14?
 
 **[46:44](https://vimeo.com/1073542272#t=2804s)** Any public comments on Article 14?
 
-**[46:48](https://vimeo.com/1073542272#t=2808s)** Like to make a motion to recommend that this article be adopted with a 2% cost of living increase effective July 1st, 2025. Second. Mr. Romeo? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Yes. Mr. Franklin? Yes. Mr. Wilby? Yes. Ms. Samuels? Yes. Mr. Jacob? Yes. Mr. Knight? Yes. Alright. Article 15, compensation Town Officers. This is the elected town clerk's annual salary. I will note that we already voted, and this is included as part of the operating budget. So we've already voted on this number. Um, the number is $93,048. It's her annual salary. And this is a standard article,
+**[46:48](https://vimeo.com/1073542272#t=2808s)** Like to make a motion to recommend that this article be adopted with a 2% cost of living increase effective July 1st, 2025. Second. Mr. Romeo? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Yes. Mr. Franklin? Yes. Mr. Wilby? Yes. Ms. Samuels? Yes. Mr. Jacob? Yes. Mr. Knight? Yes. Alright. Article 15, compensation Town Officers. This is the elected town clerk's annual salary. I will note that we already voted, and this is included as part of the operating budget. So we've already voted on this number. Um, the number is $93,048. It's her annual salary. And this is a standard article,
 
 **[47:36](https://vimeo.com/1073542272#t=2856s)** I guess needs its own article because she's in elected position. Correct. Is that why it's Yep. And it's still in, um, article 22 in the budget. Yep. Okay. Any finance committee questions? I know we've already talked about at previous meetings. This, this budget. Effectively any public comments on Article 15?
 
-**[47:56](https://vimeo.com/1073542272#t=2876s)** Like to make a motion that the yearly recommendation that the yearly compensation for the town clerk be established at $93,048 second. Mr. Romeo? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. He, yes. Mr. Franklin? Yes. Mr. Sby? Yes. Ms. Samuels? Yes. Mr. Jayco? Yes. Mr. Knight? Yes. Article 16 Ratification of salary bylaw. I believe I have something from you on this stature if I can find it. Yeah. Or I can just summarize. Sure. So, um, ratification of the, the compensation plan, which is, uh, authority of the legislative branch
+**[47:56](https://vimeo.com/1073542272#t=2876s)** Like to make a motion that the yearly recommendation that the yearly compensation for the town clerk be established at $93,048 second. Mr. Romeo? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. He, yes. Mr. Franklin? Yes. Mr. Sby? Yes. Ms. Samuels? Yes. Mr. Jayco? Yes. Mr. Knight? Yes. Article 16 Ratification of salary bylaw. I believe I have something from you on this stature if I can find it. Yeah. Or I can just summarize. Sure. So, um, ratification of the, the compensation plan, which is, uh, authority of the legislative branch
 
 **[48:42](https://vimeo.com/1073542272#t=2922s)** to authorize basically the list of all the authorized positions and salary scales of the positions. Um, article 43 of the bylaws delegates the Town Meetings Authority on that to the Compensation Committee in order to take actions during the course of the year in between town meetings and then through this article would be ratified by town meeting any of the actions that, that we have performed. The Compensation Committee, uh, consists of the town administrator, the chief financial officer, and a third department head selected by the two, which is currently Andrew Petty, our, our health director, who actually has been on that committee for, for quite some time and is, uh, uh, a strong member
 
@@ -742,7 +742,7 @@ topic_segments:
 
 **[56:48](https://vimeo.com/1073542272#t=3408s)** Any public comments on Article 16? Do you see any? Not on mine. No. No.
 
-**[57:00](https://vimeo.com/1073542272#t=3420s)** I'd like to make a motion to recommend that the town ratifies certain actions taken by the Compensation Committee throughout the last year. Second, Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Heat? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Jenko? Yes. Mr. Knight? Yes. Great. Article 17 Essex North Shore Agricultural and Technical School District.
+**[57:00](https://vimeo.com/1073542272#t=3420s)** I'd like to make a motion to recommend that the town ratifies certain actions taken by the Compensation Committee throughout the last year. Second, Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Heat? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Janko? Yes. Mr. Knight? Yes. Great. Article 17 Essex North Shore Agricultural and Technical School District.
 
 **[57:34](https://vimeo.com/1073542272#t=3454s)** Do we have a presentation here? He generally comes to the warrant hearing. Maybe he does, Maybe he's not here tonight. Um, Thatcher, do you want to maybe just cover, you know, the Yeah, there's a little bit's. Got the numbers Of an uptick In. I've got the number too. An Enrollment. So we've been seeing the, The purpose of the articles, oh, Sorry. The purpose of the articles to, uh, approve the gross operating maintenance budget is the Essex North Shore Agricultural and Technical School District for the fiscal vehicle. So a portion of the students from the town of Marblehead that go to Essex Northshore Tech. Correct. And the town reimburses the, the school for those costs? Correct. Yeah. Okay. And there was both an a per pupil increase and an increase in enrollment?
 
@@ -770,7 +770,7 @@ topic_segments:
 
 **[1:06:01](https://vimeo.com/1073542272#t=3961s)** Any public comments on article 18?
 
-**[1:06:06](https://vimeo.com/1073542272#t=3966s)** I'd like to make a recommendation that the sum of 7,360,000 be appropriated from the following sources for the use of the assessors in making the tax rate from free cash, $7 million and from the electric surplus of $360,000. Dr. Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Teeds? Yes. Mr. Franklin? Yes. Mr. Goldsby? Yes. Ms. Samuels? Yes. Mr. Janko? Yes. Mr. Knight? Yes.
+**[1:06:06](https://vimeo.com/1073542272#t=3966s)** I'd like to make a recommendation that the sum of 7,360,000 be appropriated from the following sources for the use of the assessors in making the tax rate from free cash, $7 million and from the electric surplus of $360,000. Dr. Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Teeds? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuels? Yes. Mr. Janko? Yes. Mr. Knight? Yes.
 
 **[1:06:43](https://vimeo.com/1073542272#t=4003s)** Articles 19, 20 and 21 are all collective bargaining for police. MEU it says IUE here. Is that the MEU? That's correct. Yeah. Um, and then fire. We will not be making a recommendation tonight because we do not have, um, bargaining completed. However, I will open up the floor to anything you want to say on these as the sponsor and or public comment after that. So, we are currently engaged in collective bargain with all three units. Um, we're, we're in negotiating status with police and fire. We're in mediation status with, uh, MMEU or the, the local 1776 on, on all three cases.
 
@@ -820,9 +820,9 @@ topic_segments:
 
 **[1:20:55](https://vimeo.com/1073542272#t=4855s)** Yes. Two seconds. Yep. No rush. Jack Uba Palmer Road. Um, I was wondering, you, you just went through a, a, a great presentation and especially the last part where you were like 50 percent's the town, 50%, the other one, but I also understand that the, um, insurance and health budgets are paid, you know, out of that 22%. Yes. Yep. But could you in the future, make an effort to roughly allocate that to the town side? I know it's really hard because it's based on age of people. No, I, we've done that before. We Just haven't done it in the budget presentation. Yeah. 'cause it, it really does tend to understate the cost of the schools. And it would just be
 
-**[1:21:43](https://vimeo.com/1073542272#t=4903s)** A hundred percent. Yeah, thank you. I I would think it would be much closer to 65% schools based on what I've seen. Yes, no problem. Additional public comments on Article 22. Sorry, I'm losing my stuff. All right. If there's no other public comment, I'll make a recommendation. I'd like to recommend that the sum of 119,479,480 be appropriated 106,206,380 is to be raised from taxation and other available funds. And 13 million 273 100 is to be appropriated from available enterprise funds. Second, Mr. O'Neill? Yes. Ms. Duby? Yes.
+**[1:21:43](https://vimeo.com/1073542272#t=4903s)** A hundred percent. Yeah, thank you. I I would think it would be much closer to 65% schools based on what I've seen. Yes, no problem. Additional public comments on Article 22. Sorry, I'm losing my stuff. All right. If there's no other public comment, I'll make a recommendation. I'd like to recommend that the sum of 119,479,480 be appropriated 106,206,380 is to be raised from taxation and other available funds. And 13 million 273 100 is to be appropriated from available enterprise funds. Second, Mr. O'Neill? Yes. Ms. Dube? Yes.
 
-**[1:22:32](https://vimeo.com/1073542272#t=4952s)** Mr. Yes. Ms. Tes? Yes. Mr. Franklin? Yes. Mr. Sby? Yes. Ms. Samuel? Yes. Mr. Jenko? Yes. And Eric, I'm sorry, Mr. Knight, I'm gonna stop you. Yes.
+**[1:22:32](https://vimeo.com/1073542272#t=4952s)** Mr. Yes. Ms. Tes? Yes. Mr. Franklin? Yes. Mr. Sby? Yes. Ms. Samuel? Yes. Mr. Janko? Yes. And Eric, I'm sorry, Mr. Knight, I'm gonna stop you. Yes.
 
 **[1:22:48](https://vimeo.com/1073542272#t=4968s)** Alright. Article 23, amends zoning, bylaw three, a multifamily overlaid district. So this article was in the warrant last year. Um, I don't believe it's changed the presentation. Is that fair? It's pretty consistent with last year. Yes. Does somebody wanna just give a quick rundown? Um, I know we've covered this in depth at multiple meetings, but just an overall, what the purpose of this article is? Just Yep. I, I, I can't not sure. Yep. Okay, great. Does it have to be in depth? I know we presented it at town meeting last year.
 
@@ -1066,7 +1066,7 @@ topic_segments:
 
 **[2:45:36](https://vimeo.com/1073542272#t=9936s)** Um, I'll make a recommendation where I'm at is what I already stated already three times that, um, the, the outline that I, I laid out with the, the history of things that have happened since last year's town meeting, the Milton case ending, um, the, the discussion I had with the state auditor, I'd like to make a re recommendation that this article be adopted second,
 
-**[2:46:01](https://vimeo.com/1073542272#t=9961s)** Mr. Romeo. I'd say a lot of good points on both sides here. Um, but to me, where I sit, I think it's, it's much more likely and the numbers are more determinable, that in the short term there's more negative impact by not adopting this AR article. So I would say, I would say yes. Ms. Stuy? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Goolsbee? Yes. Yes. Ms. A? Yes. Mr. Jenko? No. Mr. Knight? Yes. Thank you. Thank you. Everybody who weighed in men's zoning bylaw Article 24, this one
+**[2:46:01](https://vimeo.com/1073542272#t=9961s)** Mr. Romeo. I'd say a lot of good points on both sides here. Um, but to me, where I sit, I think it's, it's much more likely and the numbers are more determinable, that in the short term there's more negative impact by not adopting this AR article. So I would say, I would say yes. Ms. Stuy? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Yes. Ms. A? Yes. Mr. Janko? No. Mr. Knight? Yes. Thank you. Thank you. Everybody who weighed in men's zoning bylaw Article 24, this one
 
 **[2:46:47](https://vimeo.com/1073542272#t=10007s)** from what I've been presented has no financial impact. So if we could just get a quick summary of this article. Um, yeah, I'll just make it quick. So, um, we currently have in the town of Marblehead, um, a DU bylaws. The state required and passed February 2nd, that came into effect of this year, um, a new, uh, requirement that ADUs be permitted by right within single family zoned, uh, parcels of districts. Um, as a result of that, we've had to kind of rehash our existing laws to make it compliant with the state. Um, and kind of the reason for doing this is that we can just default to the state regulations or we can kind of make sure and mesh it with our existing regulations and make sure that we're compliant.
 
@@ -1098,13 +1098,13 @@ topic_segments:
 
 **[2:54:15](https://vimeo.com/1073542272#t=10455s)** That as well. More risk. Right. More risk is there. And so what will the oversight be over this in our town? So the treasurer collector is the division head of Treasury Finance, who then would report to me. So I'd be looking at this with her, and she's been doing such a fantastic job with our investment income, and I think she do a fantastic job with this. Okay. And so you'll be looking just to make sure that it's appropriate the types of investments correct. That she's making in relative to each fund as well? Yes. And, and when the funds will be Yes. Need to be accessed. Yep. Any other fin com comments on Article 26? Any public comments on Article 26?
 
-**[2:54:57](https://vimeo.com/1073542272#t=10497s)** Like to make a motion to recommend that this article be adopted to provide the treasurer additional flexibility when investing trust funds to maximize income. Second. Second. Mr. O'Neill? Yes. Ms. Doy? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuels? Yes. Mr. Chenko? Yes. Mr. Knight? Yes. Article 27 General Stabilization Fund. We spoke about this one earlier. Um, it's being funded $2 million from free cash. It has a balance of 500,000. It was established, I wanna say four years ago with the hope of building it at two 50 to 500 per year.
+**[2:54:57](https://vimeo.com/1073542272#t=10497s)** Like to make a motion to recommend that this article be adopted to provide the treasurer additional flexibility when investing trust funds to maximize income. Second. Second. Mr. O'Neill? Yes. Ms. Doy? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuels? Yes. Mr. Janko? Yes. Mr. Knight? Yes. Article 27 General Stabilization Fund. We spoke about this one earlier. Um, it's being funded $2 million from free cash. It has a balance of 500,000. It was established, I wanna say four years ago with the hope of building it at two 50 to 500 per year.
 
 **[2:55:42](https://vimeo.com/1073542272#t=10542s)** I believe when we first established it, we've missed a couple years of funding. So this 2 million would catch that up plus some. And I think it's good financial planning, um, as we enter the more difficult years ahead. Um, that's the gist. We already talked about this a little bit. Mm-hmm. Anything to add, Alicia? Um, I think this is, this is really good practice for us to start doing, to follow exactly what our policies have us doing. And I think that in addition with how the market's turning right now, as we see, it's really good for us to start putting some money.
 
 **[2:56:19](https://vimeo.com/1073542272#t=10579s)** Any FinCon questions on this? Any public comment on Article 27?
 
-**[2:56:28](https://vimeo.com/1073542272#t=10588s)** I'd like to make a motion to recommend that Article 27 be approved to transfer $2 million from free cash to the general stabilization fund. Second. Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Shop? Yes. Ms. Ts? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuels? Yes. Mr. Ko? Yes. Mr. Knight? Yes. Article 28 Home rule petition. Established means tested Senior Citizen property tax exemption. Molly, I will share my screen. Thank you. And Dan, good Evening. I'll try to speak pretty quickly here. Um, so this is to, as you said, to establish a home rule petition
+**[2:56:28](https://vimeo.com/1073542272#t=10588s)** I'd like to make a motion to recommend that Article 27 be approved to transfer $2 million from free cash to the general stabilization fund. Second. Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Shop? Yes. Ms. Ts? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuels? Yes. Mr. Ko? Yes. Mr. Knight? Yes. Article 28 Home rule petition. Established means tested Senior Citizen property tax exemption. Molly, I will share my screen. Thank you. And Dan, good Evening. I'll try to speak pretty quickly here. Um, so this is to, as you said, to establish a home rule petition
 
 **[2:57:13](https://vimeo.com/1073542272#t=10633s)** to establish a mean tested senior citizen property tax exemption. So, high level, this is to help seniors out whose property taxes consume a disproportionate, um, share of their total income. Uh, this municipal exemption will not kick in until we've, until they have exhausted all state benefits. So they have to go for this for a bunch of different ones that I can show you later. But the biggest one being the state circuit breaker, which is for, for 2,730, um, the annual application process to affirm eligibility and the board of assessors will approve it. We will help them give them sort of different guidelines on how, how they approve it. The cost of the program will be funded through the tax overlay, and the select board will determine the total tax exemption on an annual basis.
 
@@ -1142,7 +1142,7 @@ topic_segments:
 
 **[3:08:37](https://vimeo.com/1073542272#t=11317s)** Any other fin com questions on Article 28? Any public comment on article 28?
 
-**[3:08:49](https://vimeo.com/1073542272#t=11329s)** Did you wanna make a recommendation? Did you want me to? You can. Okay. I'd like to make a recommendation that Article 28 be adopted to provide additional tax relief to income eligible seniors. I thank you for that. Second. Oh, second, Mr. Yes. Yes. You Mr. Meyer? Yes. Ms. Tets? Yes. Mr. Franklin? Yes. Mr. Gruby? Yes. Ms. Samuels? Yes. Mr. Janko? No. Mr. Knight? Yes. Article 29 adjusted exemption amount. Clause 22. I I can't share my screen 'cause my battery's dying in case somebody else can share. Sure. Would you to grab your charger?
+**[3:08:49](https://vimeo.com/1073542272#t=11329s)** Did you wanna make a recommendation? Did you want me to? You can. Okay. I'd like to make a recommendation that Article 28 be adopted to provide additional tax relief to income eligible seniors. I thank you for that. Second. Oh, second, Mr. Yes. Yes. You Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Gruby? Yes. Ms. Samuels? Yes. Mr. Janko? No. Mr. Knight? Yes. Article 29 adjusted exemption amount. Clause 22. I I can't share my screen 'cause my battery's dying in case somebody else can share. Sure. Would you to grab your charger?
 
 **[3:09:43](https://vimeo.com/1073542272#t=11383s)** I think I can get you,
 
@@ -1158,7 +1158,7 @@ topic_segments:
 
 **[3:12:19](https://vimeo.com/1073542272#t=11539s)** That's already an application. Any public comments on Article 30?
 
-**[3:12:28](https://vimeo.com/1073542272#t=11548s)** Like to make a motion to recommend that Article 30 be adopted to provide additional tax relief to veterans by increasing the exemption by 100%. Second. That's on the next one. This one's the consumer price index. Sorry, 29. Yeah, Sorry about that. That this article be adopted to provide additional tax relief to veterans based on the consumer price index for the previous year as determined by the commissioner of revenue. Second. Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Heats? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Chenko? No. Mr. Knight? Yes. Article 30.
+**[3:12:28](https://vimeo.com/1073542272#t=11548s)** Like to make a motion to recommend that Article 30 be adopted to provide additional tax relief to veterans by increasing the exemption by 100%. Second. That's on the next one. This one's the consumer price index. Sorry, 29. Yeah, Sorry about that. That this article be adopted to provide additional tax relief to veterans based on the consumer price index for the previous year as determined by the commissioner of revenue. Second. Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Heats? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Janko? No. Mr. Knight? Yes. Article 30.
 
 **[3:13:17](https://vimeo.com/1073542272#t=11597s)** Uh, so for this one, again, it's another Heroes Act exemption. And that can combined with the former one that was adopted. So if both clauses were adopted together, if they receive the $400 exemption, as I stated before for 22 I and the CPI went up by 5%, they get the $420. If the community further accepts 22 J at a hundred percent, the amount of that tax exemption granted would now double to eight 40 at a hundred percent.
 
@@ -1186,7 +1186,7 @@ topic_segments:
 
 **[3:20:06](https://vimeo.com/1073542272#t=12006s)** I'd like to make a motion that Article 30 be adopted to provide additional tax relief to veterans by increasing the exemption by 100%.
 
-**[3:20:16](https://vimeo.com/1073542272#t=12016s)** Second, Mr. O'Neill? Yes, Ms. Do? Yes. Mr. Meyer? Yes. Ms. Tets? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuels? Yes. Mr. Janko? No. Mr. Knight? Yes. Article 31 Coffin School, Reese Reuse, sponsored by a select board.
+**[3:20:16](https://vimeo.com/1073542272#t=12016s)** Second, Mr. O'Neill? Yes, Ms. Do? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuels? Yes. Mr. Janko? No. Mr. Knight? Yes. Article 31 Coffin School, Reese Reuse, sponsored by a select board.
 
 **[3:20:45](https://vimeo.com/1073542272#t=12045s)** So this completes the action of transferring the, um, the, the use of the, uh, the property and the facility from the school. Uh, the school committee has already voted to release it from educational purposes. Um, then it requires town meeting to complete the transactions. It would put the property in the hands of the select board, and then the select board, uh, working through the community development planning department would initiate a process to determine what the next highest best use, um, for that property would be. Which would include, you know, a public input process and, you know, very, very public process to make that determination. But this is the final, um, authorization to,
 
@@ -1196,7 +1196,7 @@ topic_segments:
 
 **[3:22:06](https://vimeo.com/1073542272#t=12126s)** Any fin com questions or comments on 31? Any public comments on 31?
 
-**[3:22:13](https://vimeo.com/1073542272#t=12133s)** Like to make a motion to recommend Article 31 be adopted? Second. Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Diets? Yes. Mr. Franklin? Yes. Mr. Gruby? Yes. Ms. Samuels? Yes. Mr. Jenko? Yes. Mr. Knight? Yes. Article 32, Gary School Playground, also known as Elm Street Park.
+**[3:22:13](https://vimeo.com/1073542272#t=12133s)** Like to make a motion to recommend Article 31 be adopted? Second. Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Diets? Yes. Mr. Franklin? Yes. Mr. Gruby? Yes. Ms. Samuels? Yes. Mr. Janko? Yes. Mr. Knight? Yes. Article 32, Gary School Playground, also known as Elm Street Park.
 
 **[3:22:44](https://vimeo.com/1073542272#t=12164s)** So this, um, what used to be the Gary School playground or was a school, um, as part of the transaction of, of surplus in that property, it preserved this space for public use. Um, it is currently ongoing construction of improvements into a park playground. Um, lots of, um, community involvement, uh, folks involved in this. Um, all this act would do is transfer the care and custody to the Recreation Park Commission, which already does that for many other parks.
 
@@ -1288,7 +1288,7 @@ topic_segments:
 
 **[3:50:39](https://vimeo.com/1073542272#t=13839s)** Yes. Not, we're not reusing 8.9 million Different way. No, but they have to set it that way 'cause that's how it was borrowed. Okay. That's helpful. So you're saying just the line for the Fire Street Franklin Street fire station? Correct. Okay. Which is only 130,000 of that 8.9 million. Correct. Um, and it's just because it'll, it'll be used in a better way if we can amend it. Yes. Okay. Does that make sense? Yep. Any questions?
 
-**[3:51:07](https://vimeo.com/1073542272#t=13867s)** Any public comment like, to make a motion to adopt Article 35. Second. Second. Mr. O'Neill? Yes. Ms. Doy? Yes. Mr. Meyer? Yes. Ms. Seats? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Jenko? Yes. Mr. Knight? Yes. Um, article 36, stormwater Enterprise Fund. My understanding is that this doesn't have any immediate financial impact, but it would fundamentally change the way we raise money for this purpose from a tax levy budget warrant item to a enterprise fund item.
+**[3:51:07](https://vimeo.com/1073542272#t=13867s)** Any public comment like, to make a motion to adopt Article 35. Second. Second. Mr. O'Neill? Yes. Ms. Doy? Yes. Mr. Meyer? Yes. Ms. Seats? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Janko? Yes. Mr. Knight? Yes. Um, article 36, stormwater Enterprise Fund. My understanding is that this doesn't have any immediate financial impact, but it would fundamentally change the way we raise money for this purpose from a tax levy budget warrant item to a enterprise fund item.
 
 **[3:51:54](https://vimeo.com/1073542272#t=13914s)** That's correct. Um, okay. Can I Say one quick item? Yes, of course. This Is really just to set up the ability to have a fund, right? It's not to put a fund in. It's not, that's way in the future for discussion. More so it Allow, allow you to like charge fees through this fund and use the fund those funds so that it would cover the stormwater budget, art budget of that's What it would be in the future Right now, now it's just to set up the fund authorized. That doesn't give the fund. Yeah, it's not, Yeah, that's what I thought. Putting Any money into it, it's not right. Yeah. So I mean there's no, there's no financial impact of this. So I don't know that we need to re make a recommendation unless somebody feels strongly that we need to.
 
@@ -1314,7 +1314,7 @@ topic_segments:
 
 **[3:59:03](https://vimeo.com/1073542272#t=14343s)** Uh, I'd like to make an, uh, recommendation to adopt Article 42nd.
 
-**[3:59:10](https://vimeo.com/1073542272#t=14350s)** Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Goby? Yes. Ms. Samuel? Yes. Mr. Janko Go more into detail on the Mr. Knight. Yes. Uh, Article 41 electrical installation. Good. Yeah.
+**[3:59:10](https://vimeo.com/1073542272#t=14350s)** Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Goby? Yes. Ms. Samuel? Yes. Mr. Janko Go more into detail on the Mr. Knight. Yes. Uh, Article 41 electrical installation. Good. Yeah.
 
 **[3:59:38](https://vimeo.com/1073542272#t=14378s)** Well to start, um, one of the things we're we're adding is, um, electric storage batteries, more and more homeowners. And I'm one of them, uh, putting in the large home battery systems, which requires, uh, a, a higher level of inspection. And right now there is no, there's no recognition of that activity in our fee structure. So we're adding that, that to the fee structure. So the fees listed above are what were approved for. All the other items already exist and, uh, are set. Um, there is the reference to the 17 per thousand.
 
@@ -1334,7 +1334,7 @@ topic_segments:
 
 **[4:03:01](https://vimeo.com/1073542272#t=14581s)** Like to make a recommendation to adopt 41
 
-**[4:03:06](https://vimeo.com/1073542272#t=14586s)** Second. Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Salman?
+**[4:03:06](https://vimeo.com/1073542272#t=14586s)** Second. Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Salman?
 
 **[4:03:14](https://vimeo.com/1073542272#t=14594s)** She's, uh, absent. Oh, I'm sorry. Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Janefield? Yes. Mr. Knight? Yes. Article 42, cemetery Perpetual Care Trust Fund Transfer. And Jerry. Okay.
 
@@ -1344,9 +1344,9 @@ topic_segments:
 
 **[4:05:12](https://vimeo.com/1073542272#t=14712s)** All right. Too much work. Any additional questions on Article 42 comments? Any public comments on Article 42?
 
-**[4:05:22](https://vimeo.com/1073542272#t=14722s)** I'd like to make a recommendation to adopt Article 42, um, to allow the transfer of funds from the Cemetery Perpetual Care Fund to the cemetery department for capital needs. Second. Mr. O'Neill? Yes. Ms. Doy? Yes. Ms. Des? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Yes. Mr. Jenko? Yes. Mr. Knight? Yes. Uh, any public comment on 43?
+**[4:05:22](https://vimeo.com/1073542272#t=14722s)** I'd like to make a recommendation to adopt Article 42, um, to allow the transfer of funds from the Cemetery Perpetual Care Fund to the cemetery department for capital needs. Second. Mr. O'Neill? Yes. Ms. Doy? Yes. Ms. Des? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Yes. Mr. Janko? Yes. Mr. Knight? Yes. Uh, any public comment on 43?
 
-**[4:05:55](https://vimeo.com/1073542272#t=14755s)** I'd like to make a motion to recommend adoption of Article 43 to transfer funds from the sale of Lots Trust Fund to the cemetery department and the sum of a hundred thousand dollars for the purposes of capital needs. Second, Mr. O? Yes. Ms. Vy? Yes. Ms. Seats? Yes. Mr. Franklin? Yes. Mr. Goldsby? Yes. Ms. Samuels? Yes. Mr. Jenko? Yes. Mr. Knight? Yes. Uh, article 44, parking tickets, increased fee for snow emergencies, noncompliance with the law or the town mandate. Maybe It's, So what are the fees at now, I guess, versus
+**[4:05:55](https://vimeo.com/1073542272#t=14755s)** I'd like to make a motion to recommend adoption of Article 43 to transfer funds from the sale of Lots Trust Fund to the cemetery department and the sum of a hundred thousand dollars for the purposes of capital needs. Second, Mr. O? Yes. Ms. Vy? Yes. Ms. Seats? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuels? Yes. Mr. Janko? Yes. Mr. Knight? Yes. Uh, article 44, parking tickets, increased fee for snow emergencies, noncompliance with the law or the town mandate. Maybe It's, So what are the fees at now, I guess, versus
 
 **[4:06:42](https://vimeo.com/1073542272#t=14802s)** what this is proposing? Uh, fees. Uh, do you know what the fees are? No.
 
@@ -1354,7 +1354,7 @@ topic_segments:
 
 **[4:07:50](https://vimeo.com/1073542272#t=14870s)** of a better way of describing In, in terms of a little bit of the background. Yeah. People were just, um, paying the original fee as a, as a, as a way to stay on the street and really impeding operations. Okay. So you need to increase it to maybe make them Yeah. Get off. And it's, and it's really a big issue because, I mean, I think years ago you couldn't even park certain times of the year overnight, and then that was expanded except for snow emergencies. And it's really a, a difficulty for the town when it, when it has cars blocking the removal of set snow and in such a tight community. Yeah. I think I've voted in favor of this in the past before. So, um, any public comment on Article 44,
 
-**[4:08:33](https://vimeo.com/1073542272#t=14913s)** like to make a recommendation to adopt Article 44? Thanks. Second. Mr. Oio? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Tes? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuels? Yes. Mr. Yes. Mr. Knight? Yes. All right. Article 45 zoning bylaw by adding Provision for the storage of fishing gear and lobster traps. Um, is Raymond Bates here to present or others? My understanding is this has no, no financial implications. Um, so we won't be deliberating on it, but if if somebody's here to present or wants to speak publicly on it,
+**[4:08:33](https://vimeo.com/1073542272#t=14913s)** like to make a recommendation to adopt Article 44? Thanks. Second. Mr. Oio? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Tes? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuels? Yes. Mr. Yes. Mr. Knight? Yes. All right. Article 45 zoning bylaw by adding Provision for the storage of fishing gear and lobster traps. Um, is Raymond Bates here to present or others? My understanding is this has no, no financial implications. Um, so we won't be deliberating on it, but if if somebody's here to present or wants to speak publicly on it,
 
 **[4:09:19](https://vimeo.com/1073542272#t=14959s)** you're welcome to at this time.
 
@@ -1370,7 +1370,7 @@ topic_segments:
 
 **[4:13:12](https://vimeo.com/1073542272#t=15192s)** Um, I am, I, I'm happy to, if you don't want to, I mean, I, I, I'd like to make, I'd like to make a motion to oppose Article 46.
 
-**[4:13:25](https://vimeo.com/1073542272#t=15205s)** Oppose, um, Mr. O'Neill. So we're saying yes, we would like to oppose it Yes. Yeah. Yes. Means yes to to, to oppose. To oppose it. Let to oppose it. Yes. Yes. Ms. Duby. Mr. Meyer? Yes. Ms. Tees? Yes. Mr. Franklin? Yes. Mr. Yes. Ms. Samuels? Yes. To folks? Yes. Mr. Vanko, Mr. Knight? Yes. Sustainability coordinator. Um, understand from legal counsel that this is advisory only. Um, just wanted to put that out there. That's what I heard, um, that you can't actually eliminate position in an article within town meeting, but it can be an advisory
+**[4:13:25](https://vimeo.com/1073542272#t=15205s)** Oppose, um, Mr. O'Neill. So we're saying yes, we would like to oppose it Yes. Yeah. Yes. Means yes to to, to oppose. To oppose it. Let to oppose it. Yes. Yes. Ms. Dube. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Yes. Ms. Samuels? Yes. To folks? Yes. Mr. Vanko, Mr. Knight? Yes. Sustainability coordinator. Um, understand from legal counsel that this is advisory only. Um, just wanted to put that out there. That's what I heard, um, that you can't actually eliminate position in an article within town meeting, but it can be an advisory
 
 **[4:14:12](https://vimeo.com/1073542272#t=15252s)** to the select board or, or whoever. Um, does somebody want to present Emily DeJoy? Is she here? No. Or others? Did you wanna speak? Sure. Uh, Brenda, Director of committee develop planning. Um, only been in this position for two months. Uh, Logan, the sustainability coordinator, is a longest staff member in our department right now. Um, the sustainable, uh, coordinator position was created after the town, uh, completed the net net zero roadmap in May of 2023. And the first action I had on that plan was to to hire a sustainability coordinator. Uh, he was hired in January, 2024, and since then, he's applied for and secured over $665,000 of grants for the town.
 
@@ -1398,7 +1398,7 @@ topic_segments:
 
 **[4:21:58](https://vimeo.com/1073542272#t=15718s)** Yeah. So that actually creates a problem. If you indefinitely postpone this right, then it's, it won't be debatable. We're not indefinitely postponing it. Oh, I'm sorry. Thought that's What he was ing No, he said an opposition, opposition Only tell meeting I'm vote, I'm recommending a vote in opposition to the article. Oh, So it'll still be discussed? Yeah. Okay, fine.
 
-**[4:22:21](https://vimeo.com/1073542272#t=15741s)** So I'd like to make anybody other public comment. So, so, so I move that, um, that we, uh, the finance committee vote to, um, vote in opposition to the article to eliminate the sustainability coordinator position. Second. Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Gruberg? Yes. Ms. Samuel? Yes. Mr. Janko? No. And Mr. Knight? Yes.
+**[4:22:21](https://vimeo.com/1073542272#t=15741s)** So I'd like to make anybody other public comment. So, so, so I move that, um, that we, uh, the finance committee vote to, um, vote in opposition to the article to eliminate the sustainability coordinator position. Second. Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Gruberg? Yes. Ms. Samuel? Yes. Mr. Janko? No. And Mr. Knight? Yes.
 
 **[4:23:02](https://vimeo.com/1073542272#t=15782s)** Article 48 residency requirements. Um, Phillip Mancuso, he hasn't joined again, has he? Nope. No. Um, to see whether the town will vote to advise the select board to enact a policy that requires any departmental division head to be employed by town of Marblehead to reside within the town of Marblehead, or take any other action relative there too. Um, again, I've heard that this is advisory only, um, but it would be something that would need to be considered by town leaders if town meeting advised them. Um, I don't know that town meeting has the legal authority to, or no, that's on the last one. Um, so again, it's very similar to the last one
 
@@ -1422,7 +1422,7 @@ topic_segments:
 
 **[4:28:06](https://vimeo.com/1073542272#t=16086s)** Motion. I'll second The motion.
 
-**[4:28:11](https://vimeo.com/1073542272#t=16091s)** Mr. O'Neill? Yes. Ms. Duby? Yes. Mr. Meyer? Yes. Ms. Tees? Yes. Mr. Franklin? Yes. Mr. Goldsby? Yes. Ms. Samuel? Yes. Mr. Chenko? Yes. Mr. Knight? Yes. All right. The rest of these have no financial impact from my perspective. So I will quickly, since it's 1136, ask, um, the sponsor of the article. But we, we have to, you know, let them speak, sponsor the article, um, to speak and then we'll take public comment after if, if the sponsor wants to speak town meeting Parliamentarian. That's the only one that came here to speak about. Come on up. No,
+**[4:28:11](https://vimeo.com/1073542272#t=16091s)** Mr. O'Neill? Yes. Ms. Dube? Yes. Mr. Meyer? Yes. Ms. Teets? Yes. Mr. Franklin? Yes. Mr. Goolsby? Yes. Ms. Samuel? Yes. Mr. Janko? Yes. Mr. Knight? Yes. All right. The rest of these have no financial impact from my perspective. So I will quickly, since it's 1136, ask, um, the sponsor of the article. But we, we have to, you know, let them speak, sponsor the article, um, to speak and then we'll take public comment after if, if the sponsor wants to speak town meeting Parliamentarian. That's the only one that came here to speak about. Come on up. No,
 
 **[4:28:56](https://vimeo.com/1073542272#t=16136s)** I don't really have, the only thing I want,
 

@@ -14,15 +14,15 @@ source: whisper-local
 
 summary_card:
   headline: "Finance Committee reorganizes, hears budget overview warning on reserve drawdown"
-  summary: "The Board of Selectmen and newly reconstituted nine-member Finance Committee held a joint October 4, 2021 meeting. Town CFO Steve presented a financial overview showing reserves declining toward concerning levels, with school, pension, and health-insurance costs growing faster than the roughly 2.5–3% annual revenue capacity. The Finance Committee elected Alec Goolsbee as chair and Pat Franklin and Emily Beall Becker as vice chairs, then received a 'FinCom 101' orientation and reviewed a proposed budget calendar that moves the review cycle several months earlier than prior years."
+  summary: "The Board of Selectmen and newly reconstituted nine-member Finance Committee held a joint October 4, 2021 meeting. Town CFO Steve presented a financial overview showing reserves declining toward concerning levels, with school, pension, and health-insurance costs growing faster than the roughly 2.5–3% annual revenue capacity. The Finance Committee elected Alec Goolsby as chair and Pat Franklin and Emily Beall Becker as vice chairs, then received a 'FinCom 101' orientation and reviewed a proposed budget calendar that moves the review cycle several months earlier than prior years."
   decisions:
-    - "Elected Alec Goolsbee as Finance Committee Chair"
+    - "Elected Alec Goolsby as Finance Committee Chair"
     - "Elected Pat Franklin as Finance Committee Vice Chair"
     - "Elected Emily Beall Becker as Finance Committee Vice Chair"
     - "Adjourned Board of Selectmen meeting to allow Finance Committee to proceed"
     - "Adjourned Finance Committee meeting"
   votes:
-    - motion: "Elect Alec Goolsbee as Finance Committee Chair"
+    - motion: "Elect Alec Goolsby as Finance Committee Chair"
       result: "in favor (unanimous)"
     - motion: "Elect Pat Franklin as Finance Committee Vice Chair"
       result: "in favor (unanimous)"
@@ -39,9 +39,9 @@ topic_segments:
     start_seconds: 1
     end_seconds: 365
     headline: "Finance Committee reorganizes with full nine-member board for first time"
-    dek: "Alec Goolsbee was elected chair and Pat Franklin and Emily Beall Becker were elected vice chairs by unanimous votes."
-    summary: "The Board of Selectmen called the joint meeting to order with a roll call. The Finance Committee then reorganized, electing Alec Goolsbee as chair, Pat Franklin as first vice chair, and Emily Beall Becker as second vice chair — all unanimously. Chair Goolsbee noted it was his fifth year on the committee and the first year the committee had a full nine-member complement, with six new members joining."
-    key_speakers: ["Alec Goolsbee (FinCom Chair)", "Pat Franklin (FinCom Vice Chair)", "Emily Beall Becker (FinCom Vice Chair)", "Jackie (Board of Selectmen Chair)"]
+    dek: "Alec Goolsby was elected chair and Pat Franklin and Emily Beall Becker were elected vice chairs by unanimous votes."
+    summary: "The Board of Selectmen called the joint meeting to order with a roll call. The Finance Committee then reorganized, electing Alec Goolsby as chair, Pat Franklin as first vice chair, and Emily Beall Becker as second vice chair — all unanimously. Chair Goolsby noted it was his fifth year on the committee and the first year the committee had a full nine-member complement, with six new members joining."
+    key_speakers: ["Alec Goolsby (FinCom Chair)", "Pat Franklin (FinCom Vice Chair)", "Emily Beall Becker (FinCom Vice Chair)", "Jackie (Board of Selectmen Chair)"]
   - topic: school-budget
     topic_confidence: 0.88
     start_seconds: 457
@@ -58,7 +58,7 @@ topic_segments:
       - **Per-pupil school spending** grew by rates well above peer communities and above revenue capacity from FY2015–16 through FY2017–18, with one year showing roughly an 8.68% increase. Officials noted this brought Marblehead to approximately the state average in per-pupil spending, but the pace of increase was described as unsustainable without a plan.
       - Presenters emphasized the slide was not an indictment of school spending levels but a structural warning about matching recurring expenditures to recurring revenues.
       - Members discussed whether the trend had started around FY2017 and connected it to a 2018 collective bargaining cycle that included significant salary and benefits increases.
-    key_speakers: ["Steve (Town Finance Director)", "Jason (Town Administrator)", "Alec Goolsbee (FinCom Chair)", "Pat Franklin (FinCom Vice Chair)", "Emily Beall Becker (FinCom Vice Chair)", "Tim Schottmacher (FinCom member)"]
+    key_speakers: ["Steve (Town Finance Director)", "Jason (Town Administrator)", "Alec Goolsby (FinCom Chair)", "Pat Franklin (FinCom Vice Chair)", "Emily Beall Becker (FinCom Vice Chair)", "Tim Schottmacher (FinCom member)"]
   - topic: health-insurance
     topic_confidence: 0.9
     start_seconds: 2166
@@ -90,7 +90,7 @@ topic_segments:
       - Officials noted Marblehead's AAA bond rating is supported in part by a history of passing debt exclusion overrides for major capital projects, which bond agencies weigh favorably.
       - Peer communities that face the same structural imbalance have used Proposition 2½ **operational overrides** to address it; this was mentioned descriptively, not as a recommendation.
       - The town appropriated $250,000 for a new stabilization fund in FY22 — the first such appropriation — and policy drafts propose annual minimum increases of $25,000.
-    key_speakers: ["Steve (Town Finance Director)", "Jason (Town Administrator)", "Pat Franklin (FinCom Vice Chair)", "Alec Goolsbee (FinCom Chair)", "Emily Beall Becker (FinCom Vice Chair)"]
+    key_speakers: ["Steve (Town Finance Director)", "Jason (Town Administrator)", "Pat Franklin (FinCom Vice Chair)", "Alec Goolsby (FinCom Chair)", "Emily Beall Becker (FinCom Vice Chair)"]
   - topic: admin-housekeeping
     topic_confidence: 0.88
     start_seconds: 4566
@@ -106,7 +106,7 @@ topic_segments:
       - Monthly or quarterly financial reporting to the Select Board
       
       The committee agreed to submit written comments to Steve and return to the policies at a future meeting for formal adoption rather than voting on the draft that evening.
-    key_speakers: ["Steve (Town Finance Director)", "Jason (Town Administrator)", "Alec Goolsbee (FinCom Chair)", "Emily Beall Becker (FinCom Vice Chair)", "Pat Franklin (FinCom Vice Chair)", "Erin (FinCom member)"]
+    key_speakers: ["Steve (Town Finance Director)", "Jason (Town Administrator)", "Alec Goolsby (FinCom Chair)", "Emily Beall Becker (FinCom Vice Chair)", "Pat Franklin (FinCom Vice Chair)", "Erin (FinCom member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 5678
@@ -128,15 +128,15 @@ topic_segments:
       | Town Meeting | Early April |
       
       The committee and department heads were described as supportive. Members acknowledged the December 20 date near the holidays as potentially difficult and agreed flexibility would be needed for larger departments like the schools.
-    key_speakers: ["Steve (Town Finance Director)", "Alec Goolsbee (FinCom Chair)", "Emily Beall Becker (FinCom Vice Chair)", "Erin (FinCom member)"]
+    key_speakers: ["Steve (Town Finance Director)", "Alec Goolsby (FinCom Chair)", "Emily Beall Becker (FinCom Vice Chair)", "Erin (FinCom member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.92
     start_seconds: 6248
     end_seconds: 9138
     headline: "FinCom 101 orientation covers liaison process, open meeting law, and reserve fund duties"
-    dek: "Chair Goolsbee walked six new members through the committee's liaison review process, warrant-article voting, reserve fund administration, and open meeting law obligations."
+    dek: "Chair Goolsby walked six new members through the committee's liaison review process, warrant-article voting, reserve fund administration, and open meeting law obligations."
     summary: |
-      FinCom Chair Alec Goolsbee delivered an orientation for the six new committee members covering:
+      FinCom Chair Alec Goolsby delivered an orientation for the six new committee members covering:
       
       **Liaison Process**
       - Members are assigned to three to five department liaison groups; chair liaisons organize review meetings with department heads.
@@ -159,7 +159,7 @@ topic_segments:
       - Even a two-member discussion in a three-member liaison group can constitute a quorum violation.
       
       A resident (Jocelyn) asked during public comment about redirecting the electric light plant's approximately $330,000 annual payment-in-lieu-of-taxes toward reserves rather than tax rate reduction. Steve clarified that the PILOT payment is already built into recurring revenue estimates and cannot simply be redirected. New financial analyst Ronan McCall was introduced as the committee's clerk.
-    key_speakers: ["Alec Goolsbee (FinCom Chair)", "Emily Beall Becker (FinCom Vice Chair)", "Pat Franklin (FinCom Vice Chair)", "Steve (Town Finance Director)", "Jocelyn (resident, public comment)"]
+    key_speakers: ["Alec Goolsby (FinCom Chair)", "Emily Beall Becker (FinCom Vice Chair)", "Pat Franklin (FinCom Vice Chair)", "Steve (Town Finance Director)", "Jocelyn (resident, public comment)"]
 ---
 
 > Transcript machine-generated with Whisper speech recognition (the source
@@ -167,7 +167,7 @@ topic_segments:
 > figures occasionally misheard. Click any timecode to jump to that moment
 > in the source video.
 
-**[0:01](https://vimeo.com/623531648#t=1s)** I'd like to call the meeting of the Board of Selectmen to order. It is October 4th, 2021, and we need a roll call, please. Mr. Grater? Present. Ms. Singer? Present. Ms. Nunnin? Present. Ms. Caulk-Pucker? Present. Thank you. Okay. Great. And I'd like to call to order the Finance Committee meeting October 4th at 7-4 p.m. We don't typically do a roll call, but we could – well, we don't typically do it, but call in this meeting to order. Thank you. And, Jackie, if you don't mind, I'll just kick off the meeting real quick with our short reorganization. Okay. Since this is the first Finance Committee meeting and typically of the year – of the new year – we will need to reorganize. So I would like to start by nominating Alec Goolsbee for chair. Do I have a second? Second. Second. Great. And now we will need to do a roll call for votes. Let's see if I can get through it. Steve, do you have a list of all of our new income members? If not, I can go through our list to make sure we get through any. Yeah, I have a list. I do not – I don't have a list. You do not. Okay. All right. I can do this. Here we go. All right. I'm just going through on my screen. Alec? Yes. Pat?
+**[0:01](https://vimeo.com/623531648#t=1s)** I'd like to call the meeting of the Board of Selectmen to order. It is October 4th, 2021, and we need a roll call, please. Mr. Grater? Present. Ms. Singer? Present. Ms. Nunnin? Present. Ms. Caulk-Pucker? Present. Thank you. Okay. Great. And I'd like to call to order the Finance Committee meeting October 4th at 7-4 p.m. We don't typically do a roll call, but we could – well, we don't typically do it, but call in this meeting to order. Thank you. And, Jackie, if you don't mind, I'll just kick off the meeting real quick with our short reorganization. Okay. Since this is the first Finance Committee meeting and typically of the year – of the new year – we will need to reorganize. So I would like to start by nominating Alec Goolsby for chair. Do I have a second? Second. Second. Great. And now we will need to do a roll call for votes. Let's see if I can get through it. Steve, do you have a list of all of our new income members? If not, I can go through our list to make sure we get through any. Yeah, I have a list. I do not – I don't have a list. You do not. Okay. All right. I can do this. Here we go. All right. I'm just going through on my screen. Alec? Yes. Pat?
 
 **[1:31](https://vimeo.com/623531648#t=91s)** Approve. Tara? Yes. Mike? And Cam? Yes. Molly? Yes. Kat? Who? And Tim? Yes. And Emily is a yes. So that is unanimous. I think I go to everybody, right? All nine of us? Congratulations. Congratulations, Alec. Congratulations. Thank you to all the members, especially the new members. It's been great catching up over the phone with each of you the last few weeks just to introduce myself. As I told everybody, I've been on the committee for five years now. It's an exciting time for the FinCom. We have six new members, which is great because we get six new fresh sets of eyes and ears and ideas. And it's always good to have new members. And we really appreciate everybody stepping up this year and volunteering. It was a lot of people that showed interest in this. And I think we're well-equipped entering our next budget season here. So with that, I'd like to nominate Pat Franklin, who's been on the committee for a long number of years now, as vice chair. Second that. Great.
 

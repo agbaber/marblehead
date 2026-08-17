@@ -207,7 +207,7 @@ topic_segments:
     summary: |
       The Board of Retirement submitted its 2024 calendar-year operating budget for legislative notification as required by MGL Chapter 32, Section 22. No board vote was required.
       
-      The board also discussed filling one Finance Committee vacancy. With two applicants on file (Gail Mack noted for Disabilities Commission; Lindsey Duby for FinCom), a December 8, 2023 deadline was set for letters of interest, with interviews planned at the December 13 meeting.
+      The board also discussed filling one Finance Committee vacancy. With two applicants on file (Gail Mack noted for Disabilities Commission; Lindsay Dube for FinCom), a December 8, 2023 deadline was set for letters of interest, with interviews planned at the December 13 meeting.
     key_speakers: ["Town Administrator (Thatcher)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
@@ -478,7 +478,7 @@ topic_segments:
 
 **[1:14:22](https://vimeo.com/885236706#t=4462s)** you know, I don't see arbitrariness here. The fact that there are other conduits is a function of, um, you know, precedent that is outside the control of the OHDC. So it's with some sympathy that, uh, you know, we would all like to get rid of all of these conduits, but, uh, you know, that is not something that the OHDC that currently constituted OHDC can, can effect. So I think we have to kind of, um, uh, you know, take that into consideration as well. And if anybody else has any, any thoughts or comments on, on, on, on, you know, on the standard of review and on kind of the authority of the OHDC in this matter,
 
-**[1:15:06](https://vimeo.com/885236706#t=4506s)** Uh, the O-O-H-D-C voted five to zero, and I don't see any, uh, uh, what they, that they were arbitrary, uh, in their decision. So, um, yes. Yeah, it's, it's a very high standard. I mean, I just wanna reiterate that we've seen that many times coming from this board. It's a very high standard for that reason to give deference, uh, to the OHDC. And, uh, we're not supposed to step in their shoes post haste, you know, and I agree with Mr. Greater, I don't see anything arbitrary or capricious here that would rise that level to, to change their decision.
+**[1:15:06](https://vimeo.com/885236706#t=4506s)** Uh, the O-O-H-D-C voted five to zero, and I don't see any, uh, uh, what they, that they were arbitrary, uh, in their decision. So, um, yes. Yeah, it's, it's a very high standard. I mean, I just wanna reiterate that we've seen that many times coming from this board. It's a very high standard for that reason to give deference, uh, to the OHDC. And, uh, we're not supposed to step in their shoes post haste, you know, and I agree with Mr. Grader, I don't see anything arbitrary or capricious here that would rise that level to, to change their decision.
 
 **[1:15:46](https://vimeo.com/885236706#t=4546s)** Yeah. I think they, the, the bo, the HD C's fully within their powers and, and, you know, we're not in a position even in this case, however painful it is to, to overturn. I mean, that, that is something we have to, and it's an honest mistake. Um, but if we were to make, uh, if the, if I'm, I, I'm speaking on, I, I think looking at the OHTC, if they were to make an exception in particular cases, that would smack of much greater arbitrariness, unfortunately. And, and this is a very difficult, uh, situation, and it is not, uh, it's, it's not, it's not a happy circumstance for this board to, uh, you know, to say that, right.
 
@@ -554,7 +554,7 @@ topic_segments:
 
 **[1:41:30](https://vimeo.com/885236706#t=6090s)** Excellent. Fantastic.
 
-**[1:41:34](https://vimeo.com/885236706#t=6094s)** And I think that's all we need to say to that. If we could enter that into the, into the record. Also, to be entered into a record is, uh, a request by, uh, Lindsey Duby, uh, to, uh, fill one of the vacancies on the fin com as well. And if we could enter that into the record, it'd be much appreciated. Um, okay. With that, we're in the public comment. Uh, part of the, is there any, Excuse me, can I just add on that? So we have two people for the finance committee Check. We have another, we have two vacancies. Yeah, I think we have two residents. 2 1 2 vacancies or one vacancy. I think it's one. It's one vacancy. So my question is, we have two,
+**[1:41:34](https://vimeo.com/885236706#t=6094s)** And I think that's all we need to say to that. If we could enter that into the, into the record. Also, to be entered into a record is, uh, a request by, uh, Lindsay Dube, uh, to, uh, fill one of the vacancies on the fin com as well. And if we could enter that into the record, it'd be much appreciated. Um, okay. With that, we're in the public comment. Uh, part of the, is there any, Excuse me, can I just add on that? So we have two people for the finance committee Check. We have another, we have two vacancies. Yeah, I think we have two residents. 2 1 2 vacancies or one vacancy. I think it's one. It's one vacancy. So my question is, we have two,
 
 **[1:42:24](https://vimeo.com/885236706#t=6144s)** if we could set a date in the future for all, anybody interested. 'cause it would be great to fill that position before the end of the year.
 

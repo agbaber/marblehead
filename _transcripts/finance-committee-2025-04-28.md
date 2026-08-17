@@ -147,7 +147,7 @@ topic_segments:
 
 **[0:55](https://vimeo.com/1079889517#t=55s)** And it related to the, it related to the will. Correct. Which is wild. Um, what's the new total? 28,006. 68.72. So everybody remembers what these are. These are fiscal year 24, closed last six 30. This is a standard article where there's unpaid accounts that come in after six 30 and they need to be appropriated through this warrant article to be paid out of 2025 fund. Right. So we're just adding 7,000 to that first one last invoice that came in between warrant. Hearing that one. Any questions?
 
-**[1:39](https://vimeo.com/1079889517#t=99s)** I'd like to make a motion to recommend twenty eight thousand six hundred sixty eight thousand seventy two dollars for Article four unpaid accounts. Second. Um, Sarah? Yes. Yes. Lec? Yes. Pat? Yes. Sim Yes. Eric? Yes. Lindsay? Yes. Mike? Yes. Michael Jenko? Yes.
+**[1:39](https://vimeo.com/1079889517#t=99s)** I'd like to make a motion to recommend twenty eight thousand six hundred sixty eight thousand seventy two dollars for Article four unpaid accounts. Second. Um, Sarah? Yes. Yes. Lec? Yes. Pat? Yes. Sim Yes. Eric? Yes. Lindsay? Yes. Mike? Yes. Michael Janko? Yes.
 
 **[2:06](https://vimeo.com/1079889517#t=126s)** Alright. So we're gonna have an update from Alicia Yes. At the end here for Article six through eight, the Capital Articles. Um, but I wanna skip over that for now 'cause we have some folks that are here, um, to make some presentation. So we'll come back to that at the end. So I'm just scrolling through to make sure I don't miss any
 

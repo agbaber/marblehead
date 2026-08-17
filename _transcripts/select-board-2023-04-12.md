@@ -402,7 +402,7 @@ topic_segments:
 
 **[59:21](https://vimeo.com/817367994#t=3561s)** mark from Yeti. Smoked and a second. Okay. We need to pull the vote on this cause if you could help us in favor.
 
-**[59:35](https://vimeo.com/817367994#t=3575s)** Mr. Greater in favor
+**[59:35](https://vimeo.com/817367994#t=3575s)** Mr. Grader in favor
 
 **[59:42](https://vimeo.com/817367994#t=3582s)** Okay, agenda item number 9 is again all alcoholic beverage license renewal a motion to renew the following all alcohol seasonal Club license subject to all taxes and fees for the to the town being paid receipt of all applicable Department approval Cory approval and compliance with chapter 304 of the acts of 2004 for the Eastern is two licenses for the Eastern Yacht Club the pool license at 42 to 44 Foster Street, the manager being Jared Cheney dolphin Yacht Club 17 hours in place manager being and Martin. somewhat second Again, hold vote Yes you in favor
 

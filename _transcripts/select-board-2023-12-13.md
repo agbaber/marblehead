@@ -13,10 +13,10 @@ source: vimeo-auto+llm
 
 
 summary_card:
-  headline: "Select Board appoints Lindsay Duby to Finance Committee, approves dozen-plus licenses"
-  summary: "The Marblehead Select Board interviewed three Finance Committee applicants and unanimously selected Lindsay Duby, a senior vice president at Eagle Bank with a finance degree and commercial credit background. The board approved annual and Sunday entertainment licenses for Riptide Group and Hidden Door, renewed lodging, entertainment, common victualler, and liquor licenses for roughly 50 businesses, and authorized a three-year $1,023,923 contract with Tyler Technologies (Munis) for new municipal financial software. Additional actions included approving a Council on Aging renovation project at the community center and hearing a presentation on no-parking zones at sewer pump stations."
+  headline: "Select Board appoints Lindsay Dube to Finance Committee, approves dozen-plus licenses"
+  summary: "The Marblehead Select Board interviewed three Finance Committee applicants and unanimously selected Lindsay Dube, a senior vice president at Eagle Bank with a finance degree and commercial credit background. The board approved annual and Sunday entertainment licenses for Riptide Group and Hidden Door, renewed lodging, entertainment, common victualler, and liquor licenses for roughly 50 businesses, and authorized a three-year $1,023,923 contract with Tyler Technologies (Munis) for new municipal financial software. Additional actions included approving a Council on Aging renovation project at the community center and hearing a presentation on no-parking zones at sewer pump stations."
   decisions:
-    - "Approved appointment of Lindsay Duby to Finance Committee (term expires June 2026)"
+    - "Approved appointment of Lindsay Dube to Finance Committee (term expires June 2026)"
     - "Approved Council on Aging community center renovation project (diner-style café addition)"
     - "Approved Warwick Entertainment change of ownership interest"
     - "Approved annual and Sunday entertainment licenses for Riptide Group, 116 Pleasant Street"
@@ -37,7 +37,7 @@ summary_card:
     - "Approved holiday hours for Abbot Hall and Mary Alley building"
     - "Approved Abbot Hall wedding permit for Will Britton and Meredith O'Hare"
   votes:
-    - motion: "Finance Committee appointment — Lindsay Duby"
+    - motion: "Finance Committee appointment — Lindsay Dube"
       result: "in favor (unanimous)"
     - motion: "Council on Aging renovation project"
       result: "in favor (unanimous)"
@@ -90,19 +90,19 @@ topic_segments:
     start_seconds: 0
     end_seconds: 1959
     featured: true
-    headline: "Select Board unanimously appoints Lindsay Duby to Finance Committee vacancy"
+    headline: "Select Board unanimously appoints Lindsay Dube to Finance Committee vacancy"
     dek: "Three candidates were interviewed before the board voted 4-0 for Duby, a senior vice president at Eagle Bank with a background in commercial credit and risk management."
     summary: |
-      The board interviewed three Finance Committee applicants in alphabetical order: Lindsay Duby, Colin Gypsy, and Roger Pellicani (phonetic). Each was asked four identical questions covering their financial background, understanding of the finance committee's role and Proposition 2½, areas of interest in town government, and ability to make unpopular decisions.
+      The board interviewed three Finance Committee applicants in alphabetical order: Lindsay Dube, Colin Gypsy, and Roger Pellicani (phonetic). Each was asked four identical questions covering their financial background, understanding of the finance committee's role and Proposition 2½, areas of interest in town government, and ability to make unpopular decisions.
       
-      **Lindsay Duby** — lifelong Marblehead resident, Salem State finance degree, career at Morgan Stanley and now Eagle Bank as SVP of commercial credit. Cited familiarity with municipal financing and construction budgets; emphasized willingness to say no when numbers don't support a proposal.
+      **Lindsay Dube** — lifelong Marblehead resident, Salem State finance degree, career at Morgan Stanley and now Eagle Bank as SVP of commercial credit. Cited familiarity with municipal financing and construction budgets; emphasized willingness to say no when numbers don't support a proposal.
       
       **Colin Gypsy** (phonetic) — new to town, extensive commercial real estate background including CBRE property management, asset management at Equity Office Properties (28 million sq ft portfolio), and current ownership of commercial real estate in Massachusetts and the Carolinas. Expressed interest in the education budget; acknowledged limited familiarity with Proposition 2½.
       
       **Roger Pellicani** (phonetic) — 30 years in financial services including senior roles at American Express (P&L responsibility for EMEA merchant business, revenue >$1 billion), consulting for Visa and private equity, and serving as treasurer/financial director of the Marblehead Rowing Club. Has three sons in Marblehead schools including one in the Village School special-ed program.
       
-      After placing all names in nomination, each board member voted by name: all four present members (Nye, Singer, Murray, Grader) selected **Lindsay Duby**. She was declared appointed; her term expires June 2026 and she must be sworn in at the clerk's office.
-    key_speakers: ["Lindsay Duby (Finance Committee appointee)", "Colin Gypsy (candidate, phonetic)", "Roger Pellicani (candidate, phonetic)", "Moses Grader (Select Board member)", "Alexa Singer (Select Board member)", "Jim Murray (Select Board member)", "Mr. Nye (Select Board member)"]
+      After placing all names in nomination, each board member voted by name: all four present members (Nye, Singer, Murray, Grader) selected **Lindsay Dube**. She was declared appointed; her term expires June 2026 and she must be sworn in at the clerk's office.
+    key_speakers: ["Lindsay Dube (Finance Committee appointee)", "Colin Gypsy (candidate, phonetic)", "Roger Pellicani (candidate, phonetic)", "Moses Grader (Select Board member)", "Alexa Singer (Select Board member)", "Jim Murray (Select Board member)", "Mr. Nye (Select Board member)"]
   - topic: recreation-events
     topic_confidence: 0.88
     start_seconds: 1960
@@ -283,7 +283,7 @@ topic_segments:
 
 **[0:00](https://vimeo.com/894514402#t=0s)** Ready, unmute. Perfect. We are at the witching hour. It is a little bit past seven o'clock. We going to call this meeting to order.
 
-**[0:13](https://vimeo.com/894514402#t=13s)** Thank you. All right. We are in session. Uh, we have a long agenda tonight, and I think the first thing we're gonna do is start out with the finance committee. We have three candidates, thankfully, who, uh, who are here, uh, tonight. And, uh, we're gonna go through our typical process, which is, uh, interview each of the candidates, and then take a poll vote for, uh, for the, for the candidate that we Mm-Hmm. Ultimately select. Um, I do wanna announce that this meeting is recorded via Zoom. Uh, before we start, uh, we have three applicants, Lindsey Duby, Colin Gypsy, and Roger Pedi.
+**[0:13](https://vimeo.com/894514402#t=13s)** Thank you. All right. We are in session. Uh, we have a long agenda tonight, and I think the first thing we're gonna do is start out with the finance committee. We have three candidates, thankfully, who, uh, who are here, uh, tonight. And, uh, we're gonna go through our typical process, which is, uh, interview each of the candidates, and then take a poll vote for, uh, for the, for the candidate that we Mm-Hmm. Ultimately select. Um, I do wanna announce that this meeting is recorded via Zoom. Uh, before we start, uh, we have three applicants, Lindsay Dube, Colin Gypsy, and Roger Pedi.
 
 **[0:58](https://vimeo.com/894514402#t=58s)** And, uh, I think what we'd like to do, what we typically do is we go by alphabetical order. So the first one to appear will be Lindsay Mm-Hmm. Okay. And, uh, we would ask the other, uh, candidates to, to step outside if you could. And, uh, Thatcher, I don't know if you want to, uh, show them, show them to your, to your office, and then we'll call you in as you, as we complete the interviews.
 
@@ -373,9 +373,9 @@ topic_segments:
 
 **[30:50](https://vimeo.com/894514402#t=1850s)** and then we'll do another round to break the tie. Um, same process as we straight Force. It's a process we, we have used, uh, Since we're getting good at this. Since since the dawn of time. Yes. Or at least 200 Some years. So we can't take 'em all like the measure of leather, unfortunately. You have one vacancy. So you, uh, to your question, you'll have to say no to two candidates.
 
-**[31:16](https://vimeo.com/894514402#t=1876s)** Well, on, on that subject, I want, I do wanna say for those that Excellent. That don't get, uh, nominated, we really appreciate your stepping up and we would really do anything to see your faces again. Uh, you know, if, uh, uh, in any other capacity in town, we are, we are a volunteer driven town, 100%. And, uh, you know, we, we, we would appreciate, we would appreciate that very much. Um, that's a very tough Choice. Yeah. Uh, okay. Ready? We're ready. I'll start here. Mr. Nye. Oh, Um, Uh, Lindsey Duby.
+**[31:16](https://vimeo.com/894514402#t=1876s)** Well, on, on that subject, I want, I do wanna say for those that Excellent. That don't get, uh, nominated, we really appreciate your stepping up and we would really do anything to see your faces again. Uh, you know, if, uh, uh, in any other capacity in town, we are, we are a volunteer driven town, 100%. And, uh, you know, we, we, we would appreciate, we would appreciate that very much. Um, that's a very tough Choice. Yeah. Uh, okay. Ready? We're ready. I'll start here. Mr. Nye. Oh, Um, Uh, Lindsay Dube.
 
-**[31:55](https://vimeo.com/894514402#t=1915s)** Okay. Ms. Singer Lindsey Duby. Mr. Murray. Lindsey Duby. Mr. Grader. Uh, Lindsey Duby. It's a tie. Yeah. All four for one. All right. I think that is, uh, congratulations. Congratulations Lindsay. Uh, and, uh, and welcome. Uh, you will need to, uh, the, the term expires, uh, in June of 2026. Uh, and you'll have to go to the clerk's office next door to swear in before you can take your seat. Um, but, uh, thank you very much and thank you to those Thank you. Okay. You know, for you, for you coming tonight,
+**[31:55](https://vimeo.com/894514402#t=1915s)** Okay. Ms. Singer Lindsay Dube. Mr. Murray. Lindsay Dube. Mr. Grader. Uh, Lindsay Dube. It's a tie. Yeah. All four for one. All right. I think that is, uh, congratulations. Congratulations Lindsay. Uh, and, uh, and welcome. Uh, you will need to, uh, the, the term expires, uh, in June of 2026. Uh, and you'll have to go to the clerk's office next door to swear in before you can take your seat. Um, but, uh, thank you very much and thank you to those Thank you. Okay. You know, for you, for you coming tonight,
 
 **[32:40](https://vimeo.com/894514402#t=1960s)** we really appreciate it. So we don't have no more, more Positions. Yeah. Okay. Thank You. Well, that brings that part of our agenda to a close. Uh, next on our agenda is Council on Aging and a request for, uh, renovations. Ali, if you would, if you would come on up. We'll, We have a, um, I think we missed licensing. Give two, But that's okay. We can, we can take it out. Water. Okay. Yeah, no, go ahead. Have a seat. Good evening. Thank you for having me. Sure. Um, I wanna let all of you know, though, I have, um, Christine Van re Mortel, who's president of the friends, Suzanne Gruel, who's COA chair, and then Walter Jacobs, who's the architect of this project
 

@@ -69,6 +69,28 @@ test('never rewrites text inside a URL', () => {
   assert.deepEqual(out.hits, [{ wrong: 'Coughlin', right: 'Coffin', count: 1 }]);
 });
 
+test('never rewrites inside a bare domain name', () => {
+  // Speakers read URLs aloud and the ASR writes them without a scheme. A name
+  // substitution inside one invents a domain that does not exist.
+  const dict = { replace: [{ wrong: ['Guazda'], right: 'Gwazda', kind: 'person' }] };
+  const src = "it's Guazda-test.com with a capital A, and Henry Guazda said so";
+  const out = normalizeNames(src, dict);
+  assert.equal(out.text, "it's Guazda-test.com with a capital A, and Henry Gwazda said so");
+  assert.deepEqual(out.hits, [{ wrong: 'Guazda', right: 'Gwazda', count: 1 }]);
+});
+
+test('never rewrites inside an email address', () => {
+  const dict = { replace: [{ wrong: ['Abbott'], right: 'Abbot', kind: 'building' }] };
+  const src = 'write to Abbott@example.org about Abbott Hall';
+  assert.equal(normalizeNames(src, dict).text, 'write to Abbott@example.org about Abbot Hall');
+});
+
+test('still corrects a name ending a sentence, despite the period', () => {
+  // Guard against over-broad domain protection swallowing ordinary punctuation.
+  const dict = { replace: [{ wrong: ['Greater'], right: 'Grader', kind: 'person' }] };
+  assert.equal(normalizeNames('seconded by Mr. Greater.', dict).text, 'seconded by Mr. Grader.');
+});
+
 test('does not re-scan its own output, so replacements never chain', () => {
   // "Mary Ellis House" -> "Mary Alley House" produces text that the second
   // entry would match if the output were scanned again. It must not be.
@@ -161,6 +183,17 @@ test('every shipped entry cites ground truth and observed evidence', () => {
     assert.ok(entry.kind, `${entry.right} is missing kind`);
     assert.ok(Array.isArray(entry.wrong) && entry.wrong.length > 0,
       `${entry.right} has no misheard forms`);
+  }
+});
+
+test('every person entry records the era its misheard forms were checked against', () => {
+  // Office-holders change. A surname correction that is right for one period
+  // can corrupt an older meeting, so the date-range check must be written down,
+  // not just promised.
+  for (const entry of SHIPPED.replace.filter(e => e.kind === 'person')) {
+    assert.ok(entry.era, `person entry "${entry.right}" is missing era`);
+    assert.match(entry.era, /\d{4}/,
+      `person entry "${entry.right}" era must cite at least one year`);
   }
 });
 

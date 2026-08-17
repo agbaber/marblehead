@@ -54,9 +54,9 @@ topic_segments:
     end_seconds: 3847
     featured: true
     headline: "School committee holds FY26 budget public hearing on $49.1 million level-services proposal"
-    dek: "Superintendent Robero presented a clarified budget overview and warned that FY27-28 salary obligations of 3%-3.5% could require staff reductions or a Proposition 2½ override."
+    dek: "Superintendent Robidoux presented a clarified budget overview and warned that FY27-28 salary obligations of 3%-3.5% could require staff reductions or a Proposition 2½ override."
     summary: |
-      The committee voted 5-0 to open the public hearing, then heard a brief slide presentation from Superintendent Robero (assisted by CFO Mike Ping and Assistant Finance Director Christine Mel).
+      The committee voted 5-0 to open the public hearing, then heard a brief slide presentation from Superintendent Robidoux (assisted by CFO Mike Ping and Assistant Finance Director Christine Mel).
       
       **Key budget figures:**
       
@@ -72,7 +72,7 @@ topic_segments:
       
       **FY27-28 outlook:** Contractual obligations call for a 3% salary increase in FY27 and 3.5% in FY28, which the superintendent said will likely require either significant staffing efficiencies or a Proposition 2½ override — a conversation he said would begin in earnest the day after Town Meeting.
       
-      **SPED programming:** Superintendent Robero and Student Services Director Lisa Maro described an ongoing effort to rebuild in-district language-based programming (including Orton-Gillingham training starting the following week for six staff) with a goal of returning out-of-district SPED students to in-house programs, which also saves on costly out-placements.
+      **SPED programming:** Superintendent Robidoux and Student Services Director Lisa Maro described an ongoing effort to rebuild in-district language-based programming (including Orton-Gillingham training starting the following week for six staff) with a goal of returning out-of-district SPED students to in-house programs, which also saves on costly out-placements.
       
       **Capital requests highlighted:** Glover cafeteria HVAC, Glover playground replacement (~$120,000 bundled with rubber surface already approved), Pack seating/painting, SPED van (rolling stock), and a $125,000 feasibility study for potential Early Childhood Center use of the Eveleth School building.
       
@@ -83,7 +83,7 @@ topic_segments:
       - Erin Nunan (via Zoom, parent of three students including two with diagnosed language-based dyslexia) urged the committee to ensure FY26 funding and the district improvement plan address dyslexia programming deficiencies, citing NIH prevalence rates of 15-20% of the student population.
       
       The committee voted 5-0 to close the public hearing. The FY26 budget vote is targeted for the March 20 school committee meeting, ahead of the Finance Committee vote scheduled for March 31.
-    key_speakers: ["Superintendent Robero", "Mike Ping (CFO/Finance Director)", "Jen Shaffner (Chair)", "Lisa Maro (Student Services Director, via Zoom)", "Erin Nunan (parent, via Zoom)", "Paul Baker (resident, via Zoom)", "Diane (Glover teacher, resident at 24 Nicholson Street)", "Al Williams (school committee member)", "West (school committee member, MASA president)"]
+    key_speakers: ["Superintendent Robidoux", "Mike Ping (CFO/Finance Director)", "Jen Shaffner (Chair)", "Lisa Maro (Student Services Director, via Zoom)", "Erin Nunan (parent, via Zoom)", "Paul Baker (resident, via Zoom)", "Diane (Glover teacher, resident at 24 Nicholson Street)", "Al Williams (school committee member)", "West (school committee member, MASA president)"]
   - topic: public-comment
     topic_confidence: 0.88
     start_seconds: 3847
@@ -97,9 +97,9 @@ topic_segments:
     start_seconds: 4200
     end_seconds: 4502
     headline: "Superintendent delivers district update including weather, February break attendance, and athletics"
-    dek: "Superintendent Robero commended custodial staff for ice/snow management, addressed staff and student expectations during make-up days, and noted the boys hockey team's playoff win."
+    dek: "Superintendent Robidoux commended custodial staff for ice/snow management, addressed staff and student expectations during make-up days, and noted the boys hockey team's playoff win."
     summary: |
-      Superintendent Robero covered several district updates:
+      Superintendent Robidoux covered several district updates:
       
       - **Weather/facilities:** Thanked maintenance and custodial crews for exceptional snow and ice removal during a difficult stretch, noting all school walkways were clear while surrounding roads and sidewalks were sheets of ice.
       - **February break attendance:** With 15 teachers granted excused absences for extraordinary circumstances (medical procedures, weddings, unavoidable situations), remaining staff were expected in school with any unexcused absence unpaid unless personal days were available. Student absences during make-up days were not counted against them per a prior school committee decision. No new major assessments or new topics were introduced during make-up week.
@@ -109,7 +109,7 @@ topic_segments:
       - **Boys hockey:** Won 3-2 over Blackstone Valley Tech in the state tournament quarterfinals; advance to the Sweet 16 the following evening at 7 p.m. at the State Arena.
       - **Village School play:** *Lion King Jr.* — March 6 at 6 p.m., March 7 at 6 p.m., March 8 at 2 p.m. and 6 p.m.
       - **Leadership philosophy:** Superintendent shared his overarching philosophy emphasizing dignity, respect, belonging, collaborative leadership, relational trust, and empowering administrators.
-    key_speakers: ["Superintendent Robero", "Jen Shaffner (Chair)", "Sarah Fox (school committee member)"]
+    key_speakers: ["Superintendent Robidoux", "Jen Shaffner (Chair)", "Sarah Fox (school committee member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 4502
@@ -135,28 +135,28 @@ topic_segments:
       6. **Addition of AP Photography** — expands AP course offerings for advanced art students.
       
       Chair Shaffner noted the financial literacy addition had been a request she had previously made to the administration. Committee members expressed enthusiasm and suggested future consideration of a full-year or more rigorous course. Motion by Alison Taylor (inferred), second by Alison. Roll-call: all in favor — 5 to 0.
-    key_speakers: ["Jen Shaffner (Chair)", "MHS principal/curriculum presenter (name not captured)", "Superintendent Robero"]
+    key_speakers: ["Jen Shaffner (Chair)", "MHS principal/curriculum presenter (name not captured)", "Superintendent Robidoux"]
   - topic: school-budget
     topic_confidence: 0.78
     start_seconds: 5072
     end_seconds: 5240
     headline: "FY26 budget timeline set; vote targeted for March 20 before Finance Committee acts March 31"
     dek: "After the public hearing, the chair outlined the remaining steps: school committee vote March 20, Finance Committee vote March 31, then warrant and Town Meeting."
-    summary: "Chair Shaffner and Superintendent Robero discussed the remaining FY26 budget timeline. The Finance Committee liaison meeting (rescheduled to the morning of Feb. 27 due to the town website launch) will provide any additional feedback. The school committee is targeting a budget vote at its March 20 meeting, ahead of the Finance Committee's vote on March 31. The chair noted the option of scheduling an additional meeting in late March as a snow-day contingency."
-    key_speakers: ["Jen Shaffner (Chair)", "Superintendent Robero", "Al Williams"]
+    summary: "Chair Shaffner and Superintendent Robidoux discussed the remaining FY26 budget timeline. The Finance Committee liaison meeting (rescheduled to the morning of Feb. 27 due to the town website launch) will provide any additional feedback. The school committee is targeting a budget vote at its March 20 meeting, ahead of the Finance Committee's vote on March 31. The chair noted the option of scheduling an additional meeting in late March as a snow-day contingency."
+    key_speakers: ["Jen Shaffner (Chair)", "Superintendent Robidoux", "Al Williams"]
   - topic: admin-housekeeping
     topic_confidence: 0.75
     start_seconds: 5240
     end_seconds: 5363
     headline: "School-year calendar approved 3-2 with before-Labor-Day start for FY26"
-    dek: "Superintendent Robero defended the earlier start as educationally beneficial for PD days and a soft student opening; two committee members opposed citing the strike's impact on students this year."
+    dek: "Superintendent Robidoux defended the earlier start as educationally beneficial for PD days and a soft student opening; two committee members opposed citing the strike's impact on students this year."
     summary: |
       The superintendent presented the FY26 school-year calendar proposing a start before Labor Day. He argued that most Massachusetts districts now start before Labor Day, Marblehead did so until recently, a before-Labor-Day start allows front-loading professional development days and provides a soft student start before the long weekend, and that starting after Labor Day creates certain low-attendance days that are not educationally effective.
       
       Two committee members (including Sarah Fox) expressed concern that — given the strike-related loss of April and February vacation days this year — asking students and families to also lose days at the start of FY26 was poor timing. The chair said she would defer to the superintendent's professional judgment.
       
       Roll-call vote: Al Williams in favor, Ran Odor in favor, Sarah Fox opposed, Alison Taylor (recorded as "J not in favor" in transcript, consistent with Taylor), Jen Shaffner in favor — **3 to 2 in favor**.
-    key_speakers: ["Superintendent Robero", "Jen Shaffner (Chair)", "Sarah Fox", "Al Williams"]
+    key_speakers: ["Superintendent Robidoux", "Jen Shaffner (Chair)", "Sarah Fox", "Al Williams"]
   - topic: labor-personnel
     topic_confidence: 0.82
     start_seconds: 5363
@@ -166,10 +166,10 @@ topic_segments:
     summary: |
       Chair Shaffner raised the need to schedule a superintendent evaluation planning workshop, noting prior scheduling difficulties. The discussion clarified terminology: the upcoming workshop is not a full summative evaluation (which covers all DESE rubric standards) but a formative assessment — checking progress toward goals and providing feedback — to inform the committee's decision on moving toward a permanent contract.
       
-      Committee members agreed they also want community, staff, and age-appropriate student input as part of the process beyond just the formative instrument. MASC representative Alicia was identified as the facilitator. Superintendent Robero indicated he would participate or not based on committee preference.
+      Committee members agreed they also want community, staff, and age-appropriate student input as part of the process beyond just the formative instrument. MASC representative Alicia was identified as the facilitator. Superintendent Robidoux indicated he would participate or not based on committee preference.
       
       Available dates discussed: March 11 (Tuesday) or March 14 (Friday), contingent on Alicia's availability. The chair committed to follow up within a day.
-    key_speakers: ["Jen Shaffner (Chair)", "Alison Taylor", "Superintendent Robero", "Sarah Fox"]
+    key_speakers: ["Jen Shaffner (Chair)", "Alison Taylor", "Superintendent Robidoux", "Sarah Fox"]
   - topic: school-budget
     topic_confidence: 0.72
     start_seconds: 5597
@@ -180,7 +180,7 @@ topic_segments:
       A committee member (name not fully captured) requested a future agenda item: a presentation from Assistant Superintendent for Teaching and Learning Julia Ferrera and Student Services Director Lisa Maro on iReady mid-year assessment results at each school level.
       
       The member noted that approximately 50% of students tested one or more grade levels below in initial iReady results, though the superintendent and others noted this figure requires nuance (e.g., some tested content may not yet have been taught in the curriculum sequence). The member also noted that Marblehead has a higher-than-state-average percentage of students on IEPs and asked how SPED and general education are working together to use multiple data sources to get ahead of learning gaps. The rest of the committee agreed to add the presentation to a future agenda.
-    key_speakers: ["Alison Taylor (school committee member)", "Superintendent Robero", "Jen Shaffner (Chair)"]
+    key_speakers: ["Alison Taylor (school committee member)", "Superintendent Robidoux", "Jen Shaffner (Chair)"]
   - topic: admin-housekeeping
     topic_confidence: 0.7
     start_seconds: 5750
@@ -196,7 +196,7 @@ topic_segments:
       - **Academic Discoveries SPED review:** The external reviewer has been given extensive documentation repeatedly but keeps requesting more; the Student Services team is frustrated. A report is still pending.
       - **SAC (School Advisory Council):** A post-occupancy evaluation by MSBA took place at Browne on Monday. The SAC at Browne presented on student groups; the Brown student council is scheduled to present to the full school committee in March. All five school SAC meetings have now been covered.
       - **MASC Advocacy Day:** March 20, 2025, at the State House, 9 a.m. to 1:30 p.m.; interested members should contact the chair.
-    key_speakers: ["Alison Taylor (communications/policy subcommittee)", "Jen Shaffner (Chair)", "Superintendent Robero", "Sarah Fox"]
+    key_speakers: ["Alison Taylor (communications/policy subcommittee)", "Jen Shaffner (Chair)", "Superintendent Robidoux", "Sarah Fox"]
 ---
 
 > Transcript captured from YouTube auto-captioning. No speaker labels;

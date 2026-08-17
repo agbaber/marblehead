@@ -356,4 +356,4 @@ topic_segments:
 
 **[1:27:24](https://vimeo.com/809083808#t=5244s)** Okay. Is that it? Yeah, okay.
 
-**[1:27:31](https://vimeo.com/809083808#t=5251s)** So we'll bring anybody in the room. We'll bring public comment to a close and I think we can move to it for a motion to adjourner. Someone second spell Becker in favor. The singer Ms. Miller Mr. Knife is able to communicate. Mr. Greater in favor at least have four fifths. Okay. This meeting is adjourned. Thank you very much you
+**[1:27:31](https://vimeo.com/809083808#t=5251s)** So we'll bring anybody in the room. We'll bring public comment to a close and I think we can move to it for a motion to adjourner. Someone second spell Becker in favor. The singer Ms. Miller Mr. Knife is able to communicate. Mr. Grader in favor at least have four fifths. Okay. This meeting is adjourned. Thank you very much you

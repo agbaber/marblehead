@@ -52,12 +52,12 @@ topic_segments:
     start_seconds: 518
     end_seconds: 931
     headline: "Student representative and superintendent deliver district updates"
-    dek: "Student rep Ella Fetto reported on senior projects, sports standings, and upcoming arts events; Superintendent Roberu noted budget collaboration and upcoming school spotlights."
+    dek: "Student rep Ella Fetto reported on senior projects, sports standings, and upcoming arts events; Superintendent Robidoux noted budget collaboration and upcoming school spotlights."
     summary: |
       Student representative Ella Fetto reported that senior project folders are available with a February 14 deadline, noted swim/dive and gymnastics senior nights, and highlighted that boys hockey is ranked third in the MIAA. The two acapella groups are competing in Plymouth.
       
-      Superintendent Roberu acknowledged facilities staff for managing two snowfalls, discussed snow day decision-making philosophy, and previewed upcoming school spotlight presentations to highlight student voice initiatives. He noted the budget collaboration with the town, select board, and FinCom has been "unprecedented," and provided athletic updates including boys hockey (9-1), girls hockey (3-6), boys basketball (5-4), girls basketball (8-2), and girls ski team ranked third in Mass Bay League East.
-    key_speakers: ["Ella Fetto (student representative)", "Superintendent Roberu"]
+      Superintendent Robidoux acknowledged facilities staff for managing two snowfalls, discussed snow day decision-making philosophy, and previewed upcoming school spotlight presentations to highlight student voice initiatives. He noted the budget collaboration with the town, select board, and FinCom has been "unprecedented," and provided athletic updates including boys hockey (9-1), girls hockey (3-6), boys basketball (5-4), girls basketball (8-2), and girls ski team ranked third in Mass Bay League East.
+    key_speakers: ["Ella Fetto (student representative)", "Superintendent Robidoux"]
   - topic: admin-housekeeping
     topic_confidence: 0.88
     start_seconds: 931
@@ -87,7 +87,7 @@ topic_segments:
       The proposal is specific to the class of 2025. The superintendent noted Governor Healey has begun discussions about a statewide competency determination framework, but Marblehead will plan independently. The committee also reviewed graduation and promotion requirements, noting financial literacy requirements may apply starting with the class of 2029.
       
       The committee voted 5-0 to approve the competency determination proposal.
-    key_speakers: ["Superintendent Roberu (via Zoom)", "Julia (assistant superintendent or curriculum director)", "Alison Taylor (member)", "Sarah Fox (member)"]
+    key_speakers: ["Superintendent Robidoux (via Zoom)", "Julia (assistant superintendent or curriculum director)", "Alison Taylor (member)", "Sarah Fox (member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.82
     start_seconds: 1871
@@ -105,7 +105,7 @@ topic_segments:
       - **Election Day PD:** November 10 (paired with Veterans Day holiday November 11)
       - New teacher orientation moved to August 22 (Friday before PD week) with union agreement
       
-      Superintendent Roberu argued the pre-Labor Day start would allow two "soft start" days before a full school week, aid continuity, and reset the calendar. Union leadership had agreed to the new teacher orientation timing.
+      Superintendent Robidoux argued the pre-Labor Day start would allow two "soft start" days before a full school week, aid continuity, and reset the calendar. Union leadership had agreed to the new teacher orientation timing.
       
       Committee member Sarah Fox raised several objections:
       - August 27 is the shortest summer the district has had
@@ -117,10 +117,10 @@ topic_segments:
       
       Member Brian supported the administration and union recommendation.
       
-      Superintendent Roberu noted the proposal was developed with input from administration, union leadership, and staff, and offered to reach out to local media to publicize the proposal before the February meeting.
+      Superintendent Robidoux noted the proposal was developed with input from administration, union leadership, and staff, and offered to reach out to local media to publicize the proposal before the February meeting.
       
       Sarah Fox moved to table the calendar to the February 6 meeting; seconded by Allison. The motion passed **4 to 1**.
-    key_speakers: ["Superintendent Roberu (via Zoom)", "Julia (assistant superintendent/curriculum)", "Sarah Fox (member)", "Alison Taylor (member)", "Brian Oda (member)"]
+    key_speakers: ["Superintendent Robidoux (via Zoom)", "Julia (assistant superintendent/curriculum)", "Sarah Fox (member)", "Alison Taylor (member)", "Brian Oda (member)"]
   - topic: bonding-capital
     topic_confidence: 0.93
     start_seconds: 3032
@@ -169,7 +169,7 @@ topic_segments:
     headline: "Committee raises ICE enforcement question; superintendent to seek legal guidance"
     dek: "A member asked whether the district has guidance for staff if federal immigration agents enter a school building; the superintendent agreed to consult district counsel."
     summary: "Member Brian raised the issue of ICE agents entering school buildings following news reports from Boston Public Schools. He asked whether the superintendent had given building administrators and teachers any direction on how to respond. The superintendent indicated the district would handle ICE agents as it does any uninvited visitor—checking IDs and asking the purpose of the visit—and that he did not anticipate it occurring in Marblehead. Member Alison Taylor recommended the superintendent consult district legal counsel (Liz) to get specific legal guidance, including whether staff must admit agents without a judicial warrant and how to handle students in sensitive settings such as the nurse's office. The superintendent agreed to reach out to counsel and report back."
-    key_speakers: ["Brian Oda (member)", "Superintendent Roberu (via Zoom)", "Alison Taylor (member)"]
+    key_speakers: ["Brian Oda (member)", "Superintendent Robidoux (via Zoom)", "Alison Taylor (member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.78
     start_seconds: 4800

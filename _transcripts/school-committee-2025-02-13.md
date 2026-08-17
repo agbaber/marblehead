@@ -27,7 +27,7 @@ topic_segments:
     headline: "Superintendent proposes $49.1M level-service FY26 budget; no override required"
     dek: "The FY26 budget request is $49,112,285, a $2,361,174 (5.05%) increase over the current adopted budget of approximately $46.75 million."
     summary: |
-      Superintendent John Robidou opened the budget workshop by presenting the proposed FY26 school operating budget. Key points:
+      Superintendent John Robidoux opened the budget workshop by presenting the proposed FY26 school operating budget. Key points:
       
       - **Budget request:** $49,112,285 (level-service)
       - **Current FY25 adopted budget:** approximately $46,750,000
@@ -50,7 +50,7 @@ topic_segments:
       - Supplies: ~3.4%; Utilities: ~3.9%; Contracted services: ~5.25%; Tuitions: ~7%
       
       Administration confirmed the town side is aligned with the requested number, arrived at through extensive collaboration with the Finance Committee and town officials.
-    key_speakers: ["John Robidou (Superintendent)", "Mike Piffling (Assistant Superintendent of Finance and Operations)", "School Committee Chair (unnamed)"]
+    key_speakers: ["John Robidoux (Superintendent)", "Mike Piffling (Assistant Superintendent of Finance and Operations)", "School Committee Chair (unnamed)"]
   - topic: admin-housekeeping
     topic_confidence: 0.7
     start_seconds: 26

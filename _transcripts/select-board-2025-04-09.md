@@ -288,7 +288,7 @@ topic_segments:
 
 **[34:53](https://vimeo.com/1074131178#t=2093s)** So move Moved by, uh, Mr. Brader. Second. Second. Second by Ms. Singer. Um, I'm confused. So who's hosting it? These Are two separate events. They're Two separate events. Okay. We Need two different thoughts. So why are they Okay, I think we'll just do One is I guess we can do it together, right? I mean, Well, it's, It's just not usually presented to Me the same Hold on. One for Coastline and one is for Marwood. Two separate. Okay. We just usually vote them separately, but it's fine to vote together. There's no reason why not. We can't. Okay. Sorry. Thank you. Sorry for the confusion. Yeah, I mean you can, yeah. This Is a roll call Vote. Yeah, roll call vote. But you can, We can bundle it up. It's fine. By the way, the conditions are the same. Doesn't happen. Yeah, it's great. I I don't have Kyle here to bail me out, so
 
-**[35:40](https://vimeo.com/1074131178#t=2140s)** It's great. I'm fine with it. All Right. So we'll call, uh, Mr. Fox. In favor? Mr. Murray? In favor, Ms. Singer? In favor, Mr. Grader? In favor, Ms. Nunan In favor.
+**[35:40](https://vimeo.com/1074131178#t=2140s)** It's great. I'm fine with it. All Right. So we'll call, uh, Mr. Fox. In favor? Mr. Murray? In favor, Ms. Singer? In favor, Mr. Grader? In favor, Ms. Noonan In favor.
 
 **[35:52](https://vimeo.com/1074131178#t=2152s)** Okay. So, um, now we have some contracts here and I know we have our DPW director here for the rail trail, um, project. Um, um, Amy would, did you wanna speak to the change order request for the rail trail?
 
