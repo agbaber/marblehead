@@ -23,7 +23,7 @@ summary_card:
     - "Approved Great Marblehead Carnival at Devereaux Beach May 4–7, 2023"
     - "Approved Marblehead Festival of Arts venue use for June–July 2023 events"
     - "Approved one-day liquor license for Festival of Arts champagne reception at Fort Sewell, June 25, 2023"
-    - "Approved Cod Whale Auction display on Abbott Hall lawn"
+    - "Approved Cod Whale Auction display on Abbot Hall lawn"
     - "Approved three one-day liquor licenses for Marblehead Arts Association jazz events"
     - "Approved legal notice for Section 12 wine and malt beverage license application"
     - "Set March 17 deadline for board vacancy applicants; interviews scheduled March 22, 2023"
@@ -31,7 +31,7 @@ summary_card:
     - "Approved declaring dog 'Nala' at 45 Pickwick Road a dangerous dog under MGL Chapter 140 Section 157"
     - "Approved $100,000 contract with Environmental Partners Group LLC for pavement management engineering services"
     - "Approved contract with GPI not to exceed $397,290.42 for Village Street bridge design and permitting"
-    - "Approved Juneteenth flag raising at Abbott Hall, June 14, 2023"
+    - "Approved Juneteenth flag raising at Abbot Hall, June 14, 2023"
     - "Approved accepting gift of massage certificates for police department, subject to Town Administrator legal review"
     - "Declared two police vehicles surplus"
     - "Approved minutes from February 1 and February 8, 2023"
@@ -50,7 +50,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Festival of Arts one-day liquor license"
       result: "in favor (unanimous)"
-    - motion: "Cod Whale Auction display at Abbott Hall"
+    - motion: "Cod Whale Auction display at Abbot Hall"
       result: "in favor (unanimous)"
     - motion: "Marblehead Arts Association three one-day liquor licenses"
       result: "in favor (unanimous)"
@@ -64,7 +64,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Village Street bridge design and permitting contract with GPI, not to exceed $397,290.42"
       result: "in favor (unanimous)"
-    - motion: "Juneteenth flag raising at Abbott Hall"
+    - motion: "Juneteenth flag raising at Abbot Hall"
       result: "in favor (unanimous)"
     - motion: "Accept massage certificate gift for police department (subject to legal review)"
       result: "in favor (unanimous)"
@@ -95,13 +95,13 @@ topic_segments:
     start_seconds: 1831
     end_seconds: 2065
     headline: "Board approves Great Marblehead Carnival and extensive Festival of Arts venue requests for 2023"
-    dek: "Unanimous votes approved the high school carnival at Devereaux Beach May 4–7 and Festival of Arts use of multiple town venues including Abbott Hall, Old Town House, Fort Sewell, Crocker Park, and Washington Street for June–July 2023."
+    dek: "Unanimous votes approved the high school carnival at Devereaux Beach May 4–7 and Festival of Arts use of multiple town venues including Abbot Hall, Old Town House, Fort Sewell, Crocker Park, and Washington Street for June–July 2023."
     summary: |
       The board approved the annual Marblehead High School Carnival at Devereaux Beach from May 4–7, 2023, subject to Recreation and Parks approval, certificate of insurance, and all required permits.
       
       The board then approved a multi-venue request from the Marblehead Festival of Arts for July 4th events and related programming, covering:
-      - Abbott Hall upper grounds (Artisans Marketplace, July 2–4)
-      - Abbott Hall second floor (exhibits, July 1–4)
+      - Abbot Hall upper grounds (Artisans Marketplace, July 2–4)
+      - Abbot Hall second floor (exhibits, July 1–4)
       - Old Town House (photography exhibit, July 1–4)
       - Washington Street closure (foot traffic only, July 4, 11:30 am–3:30 pm)
       - Fort Sewell (champagne reception, June 24–26)
@@ -182,9 +182,9 @@ topic_segments:
     start_seconds: 4411
     end_seconds: 4717
     headline: "Board approves Juneteenth flag raising, police massage gift (conditional), and surplus vehicle declarations"
-    dek: "Unanimous votes covered three administrative items: the third annual Juneteenth ceremony at Abbott Hall, conditional acceptance of massage certificate gifts for police, and surplus declaration of two police vehicles."
+    dek: "Unanimous votes covered three administrative items: the third annual Juneteenth ceremony at Abbot Hall, conditional acceptance of massage certificate gifts for police, and surplus declaration of two police vehicles."
     summary: |
-      **Juneteenth Flag Raising:** The board approved use of Abbott Hall on June 14, 2023, 4:30–6 pm, for the third annual Juneteenth flag raising ceremony organized by the Task Force Against Discrimination.
+      **Juneteenth Flag Raising:** The board approved use of Abbot Hall on June 14, 2023, 4:30–6 pm, for the third annual Juneteenth flag raising ceremony organized by the Task Force Against Discrimination.
       
       **Massage Gift:** A resident offered four one-hour massage certificates to the police department. The board approved acceptance subject to satisfactory review by the Town Administrator and clarification from Town Counsel regarding gift acceptance rules and waivers.
       
@@ -445,9 +445,9 @@ topic_segments:
 
 **[31:18](https://vimeo.com/806187971#t=1878s)** hold. Motion to approve their request to hold the annual Marblehead high school carnival at Debra Beach May 4 through 7 2023 subject to the approval from the recreation and parks department receipt of the required certificate insurance and all necessary permits. Second all those in favor. Okay. That's unanimous emotion 6. I'm going to try to this. Typically we read this out. It's related to the Marblehead Festival of Arts. There's two votes that we need to take. The motion is going to be very self-explanatory because it's fairly long, but I'm going to try to read it out quickly. The first motion to be entertained is to approve the request from the Marblehead Festival Arts to use the following venues for the Marblehead Festival of Arts July 4th events in June and July subject to the approval from police fire Recreation and Parks fees and
 
-**[32:06](https://vimeo.com/806187971#t=1926s)** receipt of the required Certificate of Insurance Fort Sewells to remain open to the public at all times for The Artisans Marketplace, the festival requests the use of Abbott Hall Upper grounds for Artisans Marketplace for following for the following stated dates and times the actual times and space to be determined at a later date in consultation with Kyle Wiley Artisans Marketplace set up Sunday July to noon to 4pm Artisans marketplace hours Monday, July three nine through five PM Tuesday. July four nine am to 4pm breakdown 4 pm to 6PM then the Abbott Hall exhibits the festival request the use of the second floor rabbit hall for exhibits the dates for the festival. Are Saturday July 1 Tuesday, Saturday, July
+**[32:06](https://vimeo.com/806187971#t=1926s)** receipt of the required Certificate of Insurance Fort Sewells to remain open to the public at all times for The Artisans Marketplace, the festival requests the use of Abbot Hall Upper grounds for Artisans Marketplace for following for the following stated dates and times the actual times and space to be determined at a later date in consultation with Kyle Wiley Artisans Marketplace set up Sunday July to noon to 4pm Artisans marketplace hours Monday, July three nine through five PM Tuesday. July four nine am to 4pm breakdown 4 pm to 6PM then the Abbot Hall exhibits the festival request the use of the second floor rabbit hall for exhibits the dates for the festival. Are Saturday July 1 Tuesday, Saturday, July
 
-**[32:52](https://vimeo.com/806187971#t=1972s)** 1 through Tuesday, July 4th. However, we will also need time for exhibit drop-offs and Pickups before and after these dates. We will coordinate all these items with Kyle old townhouse photography exhibit Festival requests. They use the old townhouse to display the photography exhibit as we have in the past the dates for the festival again, Saturday, July 1 through Tuesday, July 4th. However, we also need time for exhibit drop off and pick up before and after these days. We will Court coordinate all these again with Kyle. Kyle's going to be busy again. Street Festival Washington Street, the festival requests the use of enclosure of Washington Street from Walker at Rockaway Street to Darling Street allowing foot traffic only for a family Street party with performing arts and children's activities. We will coordinate this closure with the Marvel head police department, Tuesday, July 4th,
+**[32:52](https://vimeo.com/806187971#t=1972s)** 1 through Tuesday, July 4th. However, we will also need time for exhibit drop-offs and Pickups before and after these dates. We will coordinate all these items with Kyle old townhouse photography exhibit Festival requests. They use the old townhouse to display the photography exhibit as we have in the past the dates for the festival again, Saturday, July 1 through Tuesday, July 4th. However, we also need time for exhibit drop off and pick up before and after these days. We will Court coordinate all these again with Kyle. Kyle's going to be busy again. Street Festival Washington Street, the festival requests the use of enclosure of Washington Street from Walker at Rockaway Street to Darling Street allowing foot traffic only for a family Street party with performing arts and children's activities. We will coordinate this closure with the Marblehead police department, Tuesday, July 4th,
 
 **[33:39](https://vimeo.com/806187971#t=2019s)** 11:30 am to 3:30 pm. And champagne reception at Fort Sewell the festival request the use of Fort Sewell for the champagne was reception Saturday, June 24th for 10 set up for 10 staging and set up from 9am to five PM Sunday June 25th of the setup and reception from 9am to 9 pm and Monday, June 26th, the breakdown 8 am until finished. Performing Arts at Crocker Park the festival request the use of Crocker Park for Performing Arts and film festivals, including setup and breakdown. Saturday July 1 8 am through Tuesday, July 4th 5pm. We will send a letter to Recreation and Parks requesting these
 
@@ -455,11 +455,11 @@ topic_segments:
 
 **[35:10](https://vimeo.com/806187971#t=2110s)** the applicant can receive proper delivery provide proper storage and dispose of all alcoholic beverages purchased all in accordance with a requirement of General law section 138 liquor liability insurance alcohol is not allowed to be left unintended or stored on the premise overnight that's gonna require polled vote that motion and the second please okay. So Mr. May in favor, he's spelled cracker in favor Miss singer Miss Newman you favor, Mr. Green in favor. Okay, that is unanimous. Next item on. Our agenda is the whale auction for the Marblehead Festival of Arts and the Again, the motion is pretty self-explanatory. It's coming. It's a request coming in from Cinda
 
-**[35:57](https://vimeo.com/806187971#t=2157s)** Romer chair of the Cod whale auction to display artists whales 15 inches high by 55 inches wide during the month of June through July 4th on the lawn of the driveway side of Abbott Hall that's usually called the training field subject to review and final approval by the Town Administrator and receipt of the required Certificate of Insurance. The town will hold no liability for the artwork or any materials associated with the display all those in favor. All right, that's unanimous. Our next item is a one-day liquor license from the Marblehead Arts Association. And again, this is a self-explanatory motion with a pulled vote.
+**[35:57](https://vimeo.com/806187971#t=2157s)** Romer chair of the Cod whale auction to display artists whales 15 inches high by 55 inches wide during the month of June through July 4th on the lawn of the driveway side of Abbot Hall that's usually called the training field subject to review and final approval by the Town Administrator and receipt of the required Certificate of Insurance. The town will hold no liability for the artwork or any materials associated with the display all those in favor. All right, that's unanimous. Our next item is a one-day liquor license from the Marblehead Arts Association. And again, this is a self-explanatory motion with a pulled vote.
 
-**[36:46](https://vimeo.com/806187971#t=2206s)** In the motion to be entertained is the request is from James Murphy Marvel had Arts Associated Association for three one day liquor licenses for March 16th. 2023, April 13th, 2023 and May 18 2023 from 6:30 pm to 9pm at the king cooper Mansion 8 who proceed ape Hooper Street for jazz at the Arts performance. Sorry for jazz at the Arts performances subject to the following conditions delivery Heaven receipt by the licensing authority of the required fee of 50 dollars delivery of and receipt by the licensing authority of proof that the alcohol be purchased from an authorized Source proof that the application receive proper delivery proper provide proper storage and disposalic beverages purchased all in accordance with the requirements in general section.
+**[36:46](https://vimeo.com/806187971#t=2206s)** In the motion to be entertained is the request is from James Murphy Marblehead had Arts Associated Association for three one day liquor licenses for March 16th. 2023, April 13th, 2023 and May 18 2023 from 6:30 pm to 9pm at the king cooper Mansion 8 who proceed ape Hooper Street for jazz at the Arts performance. Sorry for jazz at the Arts performances subject to the following conditions delivery Heaven receipt by the licensing authority of the required fee of 50 dollars delivery of and receipt by the licensing authority of proof that the alcohol be purchased from an authorized Source proof that the application receive proper delivery proper provide proper storage and disposalic beverages purchased all in accordance with the requirements in general section.
 
-**[37:33](https://vimeo.com/806187971#t=2253s)** 138 alcohol will be purchased from Cappies importing and Distribution Company second. The singer in favor in favor. Okay, unanimous or the next agenda item 9 is an the Marvel beer wine license from the Marblehead Hotel. Seeking a wine malt beverage license. And the motion, is that the town of Marblehead. I'd like to entertain a motion that the town of Marblehead place a legal notice seeking applications for a section 12 on premise wine and malt beverage license pursuant to Massachusetts General law section.
+**[37:33](https://vimeo.com/806187971#t=2253s)** 138 alcohol will be purchased from Cappies importing and Distribution Company second. The singer in favor in favor. Okay, unanimous or the next agenda item 9 is an the Marblehead beer wine license from the Marblehead Hotel. Seeking a wine malt beverage license. And the motion, is that the town of Marblehead. I'd like to entertain a motion that the town of Marblehead place a legal notice seeking applications for a section 12 on premise wine and malt beverage license pursuant to Massachusetts General law section.
 
 **[38:19](https://vimeo.com/806187971#t=2299s)** 138 so moved. Second all those in favor. Oh, no. It's a pole X is also a pole vote. That is even though it's not well, it's it's actually a legal notice right? It's not exactly. And it's not like unless we can do both. Let's go for it. Let's then we're hundred percent exactly.
 
@@ -585,7 +585,7 @@ topic_segments:
 
 **[1:04:50](https://vimeo.com/806187971#t=3890s)** And did you say coordination with the complete streets project? Did you have? Sent the complete streets. Discussions that they have in the town and the tablet that they've made the table that they've made with included that so that they become part of their review also. So that work will. Just bear with me piece of the Matrix will go towards tell me if I'm right and we'll go with the engineering for the for the environmental partners that information will go to them. information will
 
-**[1:05:35](https://vimeo.com/806187971#t=3935s)** be forward to it's already been sent to them. But okay as they're putting together that prioritization Matrix or they're doing the planning and the design work for any of the projects. Okay. So we'll be reviewed again Marvel has difficult time. Yes is like as they were okay, so it's basically, you know, you have the pavement management plan the complete streets like you're having the overlap. This will be sent as part of this engineering to try to merge these things together and then they're going to give that and then what is the this is it says both of five and ten year Capital plan for payment management. Is this this part included in that?
+**[1:05:35](https://vimeo.com/806187971#t=3935s)** be forward to it's already been sent to them. But okay as they're putting together that prioritization Matrix or they're doing the planning and the design work for any of the projects. Okay. So we'll be reviewed again Marblehead has difficult time. Yes is like as they were okay, so it's basically, you know, you have the pavement management plan the complete streets like you're having the overlap. This will be sent as part of this engineering to try to merge these things together and then they're going to give that and then what is the this is it says both of five and ten year Capital plan for payment management. Is this this part included in that?
 
 **[1:06:22](https://vimeo.com/806187971#t=3982s)** Yes, the support services to be like an umbrella over all the pieces that we do so to bring all the pieces that we're all working on at the DBW. Which yeah. Yeah. There's a lot of information. Yeah being Gathering. Yeah. Yeah. Yeah, we've started down and yeah. Yeah, I've changed Direction because yeah discussions with the gas company. Right? Right. So this the idea here is to Lodge that all together make it a comprehensive, you know as possible and to add in the sidewalk piece is what you said, right? Okay, and that was the piece that way we're still working through and we're still waiting for The Pedestrian master plan. Maybe they're still collecting that on. Right now from the the contractor that
 
@@ -615,7 +615,7 @@ topic_segments:
 
 **[1:12:49](https://vimeo.com/806187971#t=4369s)** to authorize the shared son of a half of the board. So moved second second all those in favor. thing, right Great, okay. The next item item 15 on our agenda is the Juneteenth flag raising. And so we've received a letter from Candice liny who's a member of the Marblehead task force against discrimination and they'd like to formally ask the select boards approval to conduct the ceremony on Wednesday, June 14th. And they'll have a drumming and storytelling. And some formal speeches as part of the celebration. So with that.
 
-**[1:13:31](https://vimeo.com/806187971#t=4411s)** like to entertain a motion for the request from Candice slyney task force against discrimination to use Abbott Hall on Wednesday, June 14th, 2023 from 4:30 to 6:00 pm. for the third annual Juneteenth flag raising ceremony
+**[1:13:31](https://vimeo.com/806187971#t=4411s)** like to entertain a motion for the request from Candice slyney task force against discrimination to use Abbot Hall on Wednesday, June 14th, 2023 from 4:30 to 6:00 pm. for the third annual Juneteenth flag raising ceremony
 
 **[1:13:50](https://vimeo.com/806187971#t=4430s)** I was in favor. unanimous right
 
@@ -655,7 +655,7 @@ topic_segments:
 
 **[1:20:42](https://vimeo.com/806187971#t=4842s)** to send up their user accounts then they need to be set up to be assigned their departments which gives them access to, you know, the the financial data for their departments and I couldn't figure out how to make that happen. So Alicia who is has already experiencing clear about working elsewhere is making all those things happen. So we're pleased to get that that tool in place as quickly as we can. She's also.
 
-**[1:21:16](https://vimeo.com/806187971#t=4876s)** Working with our other finance department folks the the town treasure collector working with our accounts management again, we've talked about in the past about you know, the the large number of accounts. Although trust funds have been donated getting that more manageable under control. So really working with treasure collected to our new Treasurer collector to really bring that that area up to speed working with the the town account. One of the big area that I know I ran into is doing my partner. All of this is we're looking at our chart of accounts. The way Marvel head has set up its counting line items and such
+**[1:21:16](https://vimeo.com/806187971#t=4876s)** Working with our other finance department folks the the town treasure collector working with our accounts management again, we've talked about in the past about you know, the the large number of accounts. Although trust funds have been donated getting that more manageable under control. So really working with treasure collected to our new Treasurer collector to really bring that that area up to speed working with the the town account. One of the big area that I know I ran into is doing my partner. All of this is we're looking at our chart of accounts. The way Marblehead has set up its counting line items and such
 
 **[1:22:01](https://vimeo.com/806187971#t=4921s)** I'm not and I'm not a finance person. So I don't know what the exact way. It should be. It just needs to be better than I think we'll but I've been working with so she's you know working with the account on that. We're also looking at
 
@@ -679,7 +679,7 @@ topic_segments:
 
 **[1:28:55](https://vimeo.com/806187971#t=5335s)** and employees will be able to migrate from one plan to another depending on what happens to the prices of the plans. They're in and other circumstances. So the point being is, you know, we as we get this information update we will continue to refine the numbers to get a more accurate to what we expect them to be but the point being is Thus far in totaling the numbers up. We're looking at having to reduce the department head request somewhere between two and two point five. I might say two and two point two five million dollars in in reductions. so
 
-**[1:29:40](https://vimeo.com/806187971#t=5380s)** we have meeting scheduled. Tomorrow and Friday, I have blocks big blocks of time and Kyle has worked with the individual department heads to to come in and sit down and going through those numbers working with the the finance committee chair Ally goosby who's been doing? We've had lots of conversations lots of coordination as they're you know, they've develop a schedule to go through their process.
+**[1:29:40](https://vimeo.com/806187971#t=5380s)** we have meeting scheduled. Tomorrow and Friday, I have blocks big blocks of time and Kyle has worked with the individual department heads to to come in and sit down and going through those numbers working with the the finance committee chair Ally Goolsby who's been doing? We've had lots of conversations lots of coordination as they're you know, they've develop a schedule to go through their process.
 
 **[1:30:11](https://vimeo.com/806187971#t=5411s)** there as best as much as the calendar allow is is give us as much time as as we We as they can give us to get to our process on the town side. The challenge as I spoken about before is we were had no staff or short staffed. We plug, you know, folks are now filling the seats. So that's that's helping. Our information system is is a real challenge to get get the data out of format in the way that we can actually look at historical data for the purpose of building the budget. So it's been a bit of a slack but we are we are making progress and in the intent is to meet the schedule the finance committee.
 
@@ -687,7 +687,7 @@ topic_segments:
 
 **[1:31:14](https://vimeo.com/806187971#t=5474s)** objective is a real objective is to Define. What a structural deficit is we know we have a structural depth. What we want to do is really drill in in.
 
-**[1:31:29](https://vimeo.com/806187971#t=5489s)** Determine what? Number really is what what's the structural deficit? So in that Journey looking at how we're you know, estimating receipts, you know revenues how looking at those numbers looking at, you know, the the true costs of the services that we we are providing right say that the services that the people of Marvel head have been receiving and expect to receive to really drill in the numbers to Define. What's up, you know, what's what's the true cost for these services in use those numbers to determine a structural deficit? Again, as said many times our goal is to develop a balanced budget
+**[1:31:29](https://vimeo.com/806187971#t=5489s)** Determine what? Number really is what what's the structural deficit? So in that Journey looking at how we're you know, estimating receipts, you know revenues how looking at those numbers looking at, you know, the the true costs of the services that we we are providing right say that the services that the people of Marblehead have been receiving and expect to receive to really drill in the numbers to Define. What's up, you know, what's what's the true cost for these services in use those numbers to determine a structural deficit? Again, as said many times our goal is to develop a balanced budget
 
 **[1:32:18](https://vimeo.com/806187971#t=5538s)** balance to the revenues that we have.
 
@@ -901,9 +901,9 @@ topic_segments:
 
 **[2:34:07](https://vimeo.com/806187971#t=9247s)** I'm francesner. I live at 24 Pickwick Road. And I have a question that both rhetorical and real. my question is what is it? That you will have wished you were doing now. The day after we lose the override vote.
 
-**[2:34:32](https://vimeo.com/806187971#t=9272s)** So I'd like each of you in your own minds to think about the chances of losing the override votes given the current political climate in Marblehead. and given the huge task that you have to explain yourself to the people of Marvel. pets and my suggestion is that it will take probably far more participation. And interaction with the people of Marblehead than you are considering. So one open forum.
+**[2:34:32](https://vimeo.com/806187971#t=9272s)** So I'd like each of you in your own minds to think about the chances of losing the override votes given the current political climate in Marblehead. and given the huge task that you have to explain yourself to the people of Marblehead. pets and my suggestion is that it will take probably far more participation. And interaction with the people of Marblehead than you are considering. So one open forum.
 
-**[2:35:17](https://vimeo.com/806187971#t=9317s)** Beyond inadequate and so the question I'd like you to consider is how can you involve? The department head the employees the parents. The students of Marvel pets in this campaign to basically save marbleheads.
+**[2:35:17](https://vimeo.com/806187971#t=9317s)** Beyond inadequate and so the question I'd like you to consider is how can you involve? The department head the employees the parents. The students of Marblehead pets in this campaign to basically save marbleheads.
 
 **[2:35:40](https://vimeo.com/806187971#t=9340s)** Frank thank you very much. Those are those are very good thoughts and we and we've made note and and taking that into account. Thank you.
 

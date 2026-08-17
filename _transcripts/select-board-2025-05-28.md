@@ -13,8 +13,8 @@ source: vimeo-auto+llm
 
 
 summary_card:
-  headline: "Select Board renews Town Administrator Keer's contract; approves MWRA loan and multiple grants"
-  summary: "The Marblehead Select Board approved a new three-year employment contract for Town Administrator Thatcher Keer following an executive session. The board also approved a $198,750 interest-free MWRA water bond, accepted a $50,000 gift from Marblehead Youth Baseball for LED lighting at Gale's Field, and authorized letters of support for eight grant applications totaling roughly $2.5 million. The meeting was the final one for outgoing board member Brett Murray."
+  headline: "Select Board renews Town Administrator Kezer's contract; approves MWRA loan and multiple grants"
+  summary: "The Marblehead Select Board approved a new three-year employment contract for Town Administrator Thatcher Kezer following an executive session. The board also approved a $198,750 interest-free MWRA water bond, accepted a $50,000 gift from Marblehead Youth Baseball for LED lighting at Gale's Field, and authorized letters of support for eight grant applications totaling roughly $2.5 million. The meeting was the final one for outgoing board member Brett Murray."
   decisions:
     - "Approved $198,750 MWRA zero-interest water bond (10-year loan, $19,875 annual payments 2026–2035)"
     - "Continued Shin Dynasty revocation hearing to August 13, 2025"
@@ -26,7 +26,7 @@ summary_card:
     - "Approved temporary parking ban for street sweeping June 9–12, 2025"
     - "Authorized letters of support for eight grant applications"
     - "Approved $50,000 gift from Marblehead Youth Baseball for Gale's Field LED lighting"
-    - "Approved three-year employment contract for Town Administrator Thatcher Keer"
+    - "Approved three-year employment contract for Town Administrator Thatcher Kezer"
     - "Approved outdoor dining application for Café Italia at 10 Bessom Street"
     - "Released select board executive session minutes dated February 26 2025, May 15 2024, May 23 2024, May 24 2023, June 28 2023, and November 2 2021"
     - "Held select board executive session minutes dated March 12 2025, March 26 2025, November 13 2023, and November 23 2020"
@@ -55,7 +55,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Accept $50,000 gift from Marblehead Youth Baseball for Gale's Field lighting"
       result: "in favor (unanimous)"
-    - motion: "Three-year employment contract for Town Administrator Thatcher Keer"
+    - motion: "Three-year employment contract for Town Administrator Thatcher Kezer"
       result: "in favor (unanimous)"
     - motion: "Outdoor dining approval for Café Italia, 10 Bessom Street"
       result: "in favor (unanimous)"
@@ -136,7 +136,7 @@ topic_segments:
         - Change Order 4 (final balancing): -$82,874.45
       
       Funding is from stormwater construction articles.
-    key_speakers: ["Town Administrator (Keer)", "Board member (Grader/Greator)"]
+    key_speakers: ["Town Administrator (Kezer)", "Board member (Grader/Greator)"]
   - topic: trash-dpw
     topic_confidence: 0.92
     start_seconds: 1465
@@ -144,7 +144,7 @@ topic_segments:
     headline: "Board accepts $135,000 MassWorks grant for Five Corners intersection redesign with $15,100 local match"
     dek: "The grant will fund design work up to a 25% design phase for traffic calming, bicycle facilities, and stormwater improvements at the Five Corners intersection."
     summary: "The board accepted a MassWorks Infrastructure Grant of $135,000 with a local match of $15,100 for redesign of the Five Corners intersection, identified in the town's Complete Streets prioritization plan and a prior intersection study. DPW staff indicated the work will advance preliminary designs to approximately the 25% design phase, incorporating a potential mini roundabout, bicycle facilities, landscaping, and stormwater management for the School Street public parking lot. The town plans to issue an RFP by end of July, hire a consultant by August, and begin community engagement — including approximately four public meetings — shortly after project kickoff around September. The design phase is expected to take 12–18 months."
-    key_speakers: ["Brendan (DPW staff)", "Town Administrator (Keer)"]
+    key_speakers: ["Brendan (DPW staff)", "Town Administrator (Kezer)"]
   - topic: trash-dpw
     topic_confidence: 0.85
     start_seconds: 1840
@@ -158,7 +158,7 @@ topic_segments:
     start_seconds: 1887
     end_seconds: 2835
     headline: "Board authorizes letters of support for eight grant applications totaling roughly $2.5 million"
-    dek: "Applications span climate resilience, downtown parking study, Abbott Hall renovation, vacant storefronts, MBTA catalyst funding, rail trail design, Washington Street redesign, and Mary Alley ADA improvements."
+    dek: "Applications span climate resilience, downtown parking study, Abbot Hall renovation, vacant storefronts, MBTA catalyst funding, rail trail design, Washington Street redesign, and Mary Alley ADA improvements."
     summary: |
       Sustainable Coordinator Logan Casey presented eight grant applications for board authorization:
       
@@ -166,7 +166,7 @@ topic_segments:
       |-------|-----------------|-------|
       | Accelerating Climate Resilience (MAPC) — housing authority common spaces | Up to $125,000 | ~$12,500 in-kind staff hours |
       | Massachusetts Downtown Initiative — parking study | $30,000 | None required |
-      | Underutilized Properties Program — Abbott Hall attic/ADA | Up to $1,000,000 | ~$100,000 (Historical Commission museum fund) |
+      | Underutilized Properties Program — Abbot Hall attic/ADA | Up to $1,000,000 | ~$100,000 (Historical Commission museum fund) |
       | Mass Vacant Storefront Program — business incentives | Up to $50,000 | $2,500 in-kind |
       | MBTA Community Catalyst Funding — rail trail design | ~$1,000,000 | $175,000 federal earmark (2022) |
       | Real Estate Services Technical Assistance — Coffin School reuse study | $50,000 | $5,000 from Finance Reserve Fund |
@@ -174,7 +174,7 @@ topic_segments:
       | Municipal ADA Grant — Mary Alley HVAC/accessibility improvements | $250,000 | $50,000 from debt exclusion override (if passed) |
       
       A board member noted that eligibility for several grants — specifically MBTA Community Catalyst Funding, MassWorks, and Complete Streets programs — depends on Marblehead maintaining compliance with MBTA 3A zoning, which remains in abeyance pending a July 8 referendum on a petition to repeal the town meeting vote.
-    key_speakers: ["Logan Casey (Sustainable Coordinator)", "Brendan (DPW)", "Town Administrator (Keer)"]
+    key_speakers: ["Logan Casey (Sustainable Coordinator)", "Brendan (DPW)", "Town Administrator (Kezer)"]
   - topic: recreation-events
     topic_confidence: 0.95
     start_seconds: 2881
@@ -196,10 +196,10 @@ topic_segments:
     start_seconds: 3162
     end_seconds: 3535
     featured: true
-    headline: "Select Board unanimously approves new three-year contract for Town Administrator Thatcher Keer"
-    dek: "The contract includes a cost-of-living adjustment in the first year and merit-based performance reviews, and was praised by board members for reflecting market conditions and Keer's record over his first three years."
-    summary: "Following an executive session earlier in the evening, the Select Board voted unanimously to approve a new three-year employment contract for Town Administrator Thatcher Keer. The chair noted the contract reflects a cost-of-living adjustment in the first year as well as merit-based performance reviews and consideration of market conditions. Board members credited Keer with strategic reorganization of town government, successful collective bargaining in a single year with the teachers union, police union, and MMEU, and building a strong professional staff including the HR director, community development/planning department, and finance office. Keer expressed appreciation for the board's collaborative working relationship and credited the team culture across town departments. The contract will be formally executed and released once signed."
-    key_speakers: ["Town Administrator (Thatcher Keer)", "Chair (Newan)", "Board member (Murray)", "Board member (Grader/Greator)"]
+    headline: "Select Board unanimously approves new three-year contract for Town Administrator Thatcher Kezer"
+    dek: "The contract includes a cost-of-living adjustment in the first year and merit-based performance reviews, and was praised by board members for reflecting market conditions and Kezer's record over his first three years."
+    summary: "Following an executive session earlier in the evening, the Select Board voted unanimously to approve a new three-year employment contract for Town Administrator Thatcher Kezer. The chair noted the contract reflects a cost-of-living adjustment in the first year as well as merit-based performance reviews and consideration of market conditions. Board members credited Kezer with strategic reorganization of town government, successful collective bargaining in a single year with the teachers union, police union, and MMEU, and building a strong professional staff including the HR director, community development/planning department, and finance office. Kezer expressed appreciation for the board's collaborative working relationship and credited the team culture across town departments. The contract will be formally executed and released once signed."
+    key_speakers: ["Town Administrator (Thatcher Kezer)", "Chair (Newan)", "Board member (Murray)", "Board member (Grader/Greator)"]
   - topic: permits-zoning
     topic_confidence: 0.88
     start_seconds: 3622
@@ -223,7 +223,7 @@ topic_segments:
     headline: "Town Administrator reports on fiber loop expansion, Munis go-live, EV fleet transition, and assessing office improvements"
     dek: "Highlights include an $89,000 grant to extend the municipal fiber loop to the Neck, a July 1 Munis software go-live, a draft employee home EV charging policy, and a lighter-than-expected abatement season."
     summary: |
-      Town Administrator Keer presented a broad update drawn from a recent department head meeting:
+      Town Administrator Kezer presented a broad update drawn from a recent department head meeting:
       
       **Civic Engagement**
       - Veterans Service Agent held her first independent Memorial Day ceremony; described as successful.
@@ -248,7 +248,7 @@ topic_segments:
       
       **Ambulance Contract**
       - Atlantic Ambulance contract expires June 30; town is engaging the marketplace to evaluate options before renewal or replacement.
-    key_speakers: ["Town Administrator (Thatcher Keer)", "Board member (Murray)"]
+    key_speakers: ["Town Administrator (Thatcher Kezer)", "Board member (Murray)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 4552
@@ -258,7 +258,7 @@ topic_segments:
     summary: |
       Board member Brett Murray's final meeting was acknowledged by the full board. Chair Newan highlighted Murray's contributions including availability, insight, and collaborative spirit. Other members noted his long history in Marblehead (family roots to the 1700s) and collegiality.
       
-      Murray thanked Marblehead voters for multiple reelections, praised the direction of the town under Town Administrator Keer's leadership, and encouraged more residents to run for boards and committees. He thanked his family for supporting his service.
+      Murray thanked Marblehead voters for multiple reelections, praised the direction of the town under Town Administrator Kezer's leadership, and encouraged more residents to run for boards and committees. He thanked his family for supporting his service.
       
       Separately, the chair noted upcoming Town Charter Committee public forums: a Thursday noon-to-one session at the Judy Jacoby Center (Council on Aging) and a Friday 9–10 AM online webinar. A prior evening forum had approximately 25 online attendees and 15 in person. Draft A of the proposed charter is posted on the Charter Committee's website.
     key_speakers: ["Board member (Brett Murray)", "Chair (Newan)", "Board member (Fox)", "Board member (Singer)"]
@@ -274,7 +274,7 @@ topic_segments:
 
 **[0:34](https://vimeo.com/1088616089#t=34s)** Oh, yeah, I know. That's right. Yeah. Well, ebbs and flows a little bit, right. Especially now. Yeah. Well, so many of the, the World War II vets are, So is the screen gonna be off? It's just, well, I just, not why it's coming out on there, but when Patrick gets here Oh, okay. Should we wait for Him or do you wanna just go into, Oh, yeah. Okay. All right. I'm gonna just put a sign up. Okay, your Honor. So I can call us to order. Yes. Okay. Okay. It is Wednesday, May 28th, um, 2025 at seven o'clock. And I'm gonna call us to order. Our first, um, uh, order of Business is an executive session, and I, uh, do need a motion to go into executive session under general Law chapter 30 A
 
-**[1:21](https://vimeo.com/1088616089#t=81s)** for the purposes of contract negotiations, town administrator for the town administrator, and under Massachusetts General Law, chapter 30 a section 21 7 to review executive session minutes where the public discussion on the same may have a detrimental effect on the negotiating position of the public body. Votes may be taken, and if there are, there are votes, they will rebel be released at a time deemed appropriate by town council. The board will reconvene an open session. And so, um, this, uh, so I need the motion. So moved. Second. Okay. And, um, vote yes. Vote. Ms. Singer In favor, Mr. Murray? In favor, Mr. Greater in favor, Mr. Fox? In favor, Ms. In favor. Okay. So, okay. Thank you. Okay. So, uh, we are now back and, uh, ready for public comment. If anybody in the audience has any public comment, just come to the mic or raise your hand online.
+**[1:21](https://vimeo.com/1088616089#t=81s)** for the purposes of contract negotiations, town administrator for the town administrator, and under Massachusetts General Law, chapter 30 a section 21 7 to review executive session minutes where the public discussion on the same may have a detrimental effect on the negotiating position of the public body. Votes may be taken, and if there are, there are votes, they will rebel be released at a time deemed appropriate by town council. The board will reconvene an open session. And so, um, this, uh, so I need the motion. So moved. Second. Okay. And, um, vote yes. Vote. Ms. Singer In favor, Mr. Murray? In favor, Mr. Grader in favor, Mr. Fox? In favor, Ms. In favor. Okay. So, okay. Thank you. Okay. So, uh, we are now back and, uh, ready for public comment. If anybody in the audience has any public comment, just come to the mic or raise your hand online.
 
 **[2:08](https://vimeo.com/1088616089#t=128s)** Any public comment tonight?
 
@@ -378,7 +378,7 @@ topic_segments:
 
 **[35:11](https://vimeo.com/1088616089#t=2111s)** of the more downtown area, um, and then the old historic district, uh, along kind of Washington Street. Um, so we're looking to kind of get an idea of both public parking availability as well as private. Um, and from those kind of recommendations or from that data, kind of come up with some recommendations for future goals and steps to take. Um, that grant is about $30,000. There's no grant funding or matching funds required. Um, so, uh, we'd love that, your support on that one. Um, the next one is the Underutilized Properties Program. Um, this is a program for, uh, helping build up underutilized properties. Um, and one project that, um, Donna ll our grant coordinator had been working with the Historical Commission on, um,
 
-**[35:57](https://vimeo.com/1088616089#t=2157s)** is the historic commission's, uh, uh, Abbott Hall kind of attic, um, museum project that they're kind of aiming to get done in the next couple of years. Um, we, uh, Donna and I approached the historical commission, um, and asked if they'd be interested in kind of applying for, um, funds to start that project. So, um, we would be completing the two stairways that would be necessary to connect the third to the fourth floor, um, for all the fire code reasons and to make it so you can access it and, uh, the stairways aren't awkward. Um, as well as, uh, kind of completing all of the accessibility improvements that were outlined in the town's, uh, 2023 a DA transition plan.
+**[35:57](https://vimeo.com/1088616089#t=2157s)** is the historic commission's, uh, uh, Abbot Hall kind of attic, um, museum project that they're kind of aiming to get done in the next couple of years. Um, we, uh, Donna and I approached the historical commission, um, and asked if they'd be interested in kind of applying for, um, funds to start that project. So, um, we would be completing the two stairways that would be necessary to connect the third to the fourth floor, um, for all the fire code reasons and to make it so you can access it and, uh, the stairways aren't awkward. Um, as well as, uh, kind of completing all of the accessibility improvements that were outlined in the town's, uh, 2023 a DA transition plan.
 
 **[36:42](https://vimeo.com/1088616089#t=2202s)** Um, again, going back to trying to get all of those items checked off and, um, finished up kind of with, uh, how we've been doing with the a d municipal, a DA grants. Um, so, uh, the maximum grant funding request is about a million dollars. Uh, we are expecting to request about up to that amount. Um, we are just kind of, again, finalizing the scope and, uh, numbers on that. Um, we, uh, or the historical commission, um, has a, at museum fund, um, and they have about a hundred thousand dollars in private, uh, donations so far collected. Um, so they have, um, said they would be willing to use that as matching funds for this project. Um, and if it went forwarded, um, you know, get the attic space into a place where it's publicly accessible,
 
@@ -414,7 +414,7 @@ topic_segments:
 
 **[48:01](https://vimeo.com/1088616089#t=2881s)** This is, I guess the, the, the lights and the, the lighting down there is, is really defunct and you can't buy replacement materials for it anymore. And, um, the money, so they, uh, Marblehead Light owns the poles, so they're working with Marblehead Light Youth Baseball, and, um, and I, and they're using, utilizing some of the revolving fund. And I think she had just signed on. I just thought she might wanna she her hand's raised. Okay. You wanna Yeah. Yeah. Shelly A minute. Um,
 
-**[48:38](https://vimeo.com/1088616089#t=2918s)** Suzanne? Yep, I'm here. Great. We can hear you. All right. Perfect. No thanks. Sorry, this's the last minute. I wasn't sure it got on the agenda this quickly, but, um, yes. Uh, we're doing a really very efficient private public collaboration. Um, uh, there's 60 lights at GREs right now that obviously if you lived here more than a little bit of time, they haven't been caught. There's no replacement parts. Last year they went out on powder puff a bunch of times. They go out on football all the time, they're not on timers. Uh, it's kind of a, a safety issue. Um, and a lot of people don't know that Marble Hughes Baseball is a tremendous steward of that park and the amount that they raise privately to donate for refurbishments,
+**[48:38](https://vimeo.com/1088616089#t=2918s)** Suzanne? Yep, I'm here. Great. We can hear you. All right. Perfect. No thanks. Sorry, this's the last minute. I wasn't sure it got on the agenda this quickly, but, um, yes. Uh, we're doing a really very efficient private public collaboration. Um, uh, there's 60 lights at GREs right now that obviously if you lived here more than a little bit of time, they haven't been caught. There's no replacement parts. Last year they went out on powder puff a bunch of times. They go out on football all the time, they're not on timers. Uh, it's kind of a, a safety issue. Um, and a lot of people don't know that Marblehead Hughes Baseball is a tremendous steward of that park and the amount that they raise privately to donate for refurbishments,
 
 **[49:24](https://vimeo.com/1088616089#t=2964s)** and they take care of most of the upkeep. Um, they really are wonderful partners. So Jeff Morrison and John Lauler, their president approached us a few months ago that they would like to be active partners in replacing the lights. So we started, um, working on a procurement process, um, and bringing in our other town departments to see how we could, um, be efficient and say, you know, let's not pay for things twice. So, uh, electric light, and Joe Koalas and his group have been, um, wonderful in this process. And they are inspecting the poles. Um, they are replacing any poles that are needed. They're gonna be donating, donating is really the, probably the wrong term, but contributing. Um, they're gonna take the current lights down, they're gonna put the new lights up.
 
@@ -428,11 +428,11 @@ topic_segments:
 
 **[52:42](https://vimeo.com/1088616089#t=3162s)** And that brings us to a very exciting, um, uh, article is Our Town Administrator Contract, and, um, which has been prepared by council. And, uh, we're really happy to, to have this, um, going in and that you, you, you'd like to stay despite all the hours you're putting. I'm just curious what happened in executive sessions if I wasn't there. I don't know. We can't tell you. I know you have a pretty good indication. Yeah. So, uh, so, um, we'll do I need a, um, a motion? Um, I'll ask for the motion and then we can just speak to it, um, before we vote.
 
-**[53:29](https://vimeo.com/1088616089#t=3209s)** Motion to approve the employment contract as prepared by town council between the town and Thatcher Keer town administrator. So moved Second. Okay. Yeah. Um, and, um, do anybody wanna comment on just, I just, it's, this is, um, we are just really happy, uh, to be able, like I said, to renew the contract and that it's something that, you know, um, is mutually, um, uh, agreeable and, uh, so that, um, that reflective of, uh, cola in the first year as well as, uh, merit-based performance, uh, review and, uh, changes in market conditions and, um, anything, anything else. And just, so you we're just really pleased to be able
+**[53:29](https://vimeo.com/1088616089#t=3209s)** Motion to approve the employment contract as prepared by town council between the town and Thatcher Kezer town administrator. So moved Second. Okay. Yeah. Um, and, um, do anybody wanna comment on just, I just, it's, this is, um, we are just really happy, uh, to be able, like I said, to renew the contract and that it's something that, you know, um, is mutually, um, uh, agreeable and, uh, so that, um, that reflective of, uh, cola in the first year as well as, uh, merit-based performance, uh, review and, uh, changes in market conditions and, um, anything, anything else. And just, so you we're just really pleased to be able
 
 **[54:15](https://vimeo.com/1088616089#t=3255s)** to continue your strategic thinking and visioning and all the hard work that you've put in to the, to the, to the town of Marblehead. Um, and, and you've really left like a big footprint here with a lot of different, uh, initiatives that you've started. And I, it was Brett that said, you know, it's been a while since we've had a town administrator that didn't just plug and play was his words. And that is, you know, thinking creatively about strategically reorganizing, um, within the financial constraints that we have, as well as, uh, what the emerging and new modern needs of the town are. Um, so it's been, Yeah, I would just, I would just add Thatcher that you're, you know, one of the reasons why I say I've never been more optimistic about the town, right?
 
-**[55:00](https://vimeo.com/1088616089#t=3300s)** You've really, uh, been able to bring a le level of sophistication and strategy around how to kind of restructure the town without an override making use of the resources that we have. And I think, you know, along with, with hiring a and, and keeping a fantastic team that works overtime, so we're, we're, we're super pleased and we think that's gonna be reflected in your, in your, in your package. And, uh, we're really pleased that you're gonna, you know, finish out your career. It seems like with us at least as a town administrator, As as, as a full-time employee. As a Employee somewhere. That's right. Anyway, so, yeah. Um, yeah. So, um, anybody else? I'd just like to thank Mr. Greater and Ms.
+**[55:00](https://vimeo.com/1088616089#t=3300s)** You've really, uh, been able to bring a le level of sophistication and strategy around how to kind of restructure the town without an override making use of the resources that we have. And I think, you know, along with, with hiring a and, and keeping a fantastic team that works overtime, so we're, we're, we're super pleased and we think that's gonna be reflected in your, in your, in your package. And, uh, we're really pleased that you're gonna, you know, finish out your career. It seems like with us at least as a town administrator, As as, as a full-time employee. As a Employee somewhere. That's right. Anyway, so, yeah. Um, yeah. So, um, anybody else? I'd just like to thank Mr. Grader and Ms.
 
 **[55:46](https://vimeo.com/1088616089#t=3346s)** Nunan as well as our HR director and everybody else involved in the process. 'cause I know there was a lot of work looking out the different comps to come up with this. This wasn't just an arbitrary, you know, determination. This is on the facts and figures and, and taking a lot into consideration. So I wanna thank all the parties involved. Okay. Alright. Thank you. Okay, so ready to vote. How long does it last? Oh, oh, sorry. It's a three year, three year contract for your contract.
 
@@ -440,7 +440,7 @@ topic_segments:
 
 **[56:27](https://vimeo.com/1088616089#t=3387s)** Two hands.
 
-**[56:34](https://vimeo.com/1088616089#t=3394s)** Let, lemme I caught one. I can't believe it's been three years. I know It went so fast. Yeah, it's, it's gone by fast. Uh, I am having fun doing this. It doesn't look like it sometimes, but I'm having fun doing this. Um, and I, I've said it, I think here, I've said it in other places, one of the things I'm most proud of in the last three years is the team that we built and the collaboration between the team and, and, and the working together. And everyone's vision is towards making Marvel head better, make it work and make it better. Not just showing up for a job. That's how I feel. And I think that's the sense I get from, from the folks here. Um, what's also very important to me as, you know,
+**[56:34](https://vimeo.com/1088616089#t=3394s)** Let, lemme I caught one. I can't believe it's been three years. I know It went so fast. Yeah, it's, it's gone by fast. Uh, I am having fun doing this. It doesn't look like it sometimes, but I'm having fun doing this. Um, and I, I've said it, I think here, I've said it in other places, one of the things I'm most proud of in the last three years is the team that we built and the collaboration between the team and, and, and the working together. And everyone's vision is towards making Marblehead better, make it work and make it better. Not just showing up for a job. That's how I feel. And I think that's the sense I get from, from the folks here. Um, what's also very important to me as, you know,
 
 **[57:21](https://vimeo.com/1088616089#t=3441s)** my background in municipal government, primarily cities, bigger communities, being a mayor, working for a mayor, right? Uh, it came with some trepidation to work for a, a select board mm-hmm. Of five different personalities working hand in hand. Um, um, that trepidation is gone. And what's really important is having a really good board, being able to work with every member. Um, and, um, it's, it's, it's important in general to have that good working relationship and, and making things work well. It's even more important when the wheels are falling off the wagon and all hell is breaking loose and having a board that's solid that works with you to say,
 
@@ -506,13 +506,13 @@ topic_segments:
 
 **[1:18:44](https://vimeo.com/1088616089#t=4724s)** It's been, it's been great being a colleague. Yeah. Brett, I would, uh, it's good to spend some time with you. I think last time we spent much time together was what, 1992 when we were playing soccer together in high school. So, uh, that's great. Yeah. So it's true. But, uh, thank you, thank you for helping me adjust, being on the board all your advice and, and anytime I had any questions or anything always there, so I appreciate it. Thank you. Thank you for all your time, Mark. I agree. Yeah. This is, uh, you know, my second final farewell and, uh, I feel like those rock bands, I'm doing that farewell tour, you know, and you just never go away. Um, no, but it's, you know, first and foremost, I, I wanna thank you know, the voters of Marblehead for entrusting me. And, and I think, you know,
 
-**[1:19:29](https://vimeo.com/1088616089#t=4769s)** winning the election the first time you, you get a little bit of a, we're gonna put some, we're gonna put a little blind faith in you, but to get reelected, I think that's something, you know, special because you know, you have a record to run on. And, and so when you get reelected, I think that's, you know, it's just, it's even more special. And to have done that as many times as I have you, you know, I just, I can't thank the, you know, citizens, you know, enough. Um, and, and to go back to what Ms. Newnan said, you, you know, about, you know, you know, this board, you know, for the past two years. And, uh, and then Mr. Nile last year was the only difference. Um, but I, I would say of all, you know, the eight years I've sat on this is, these past two years have meant the most to me. This town has just moved in a great direction. You know, having a leader like Thatcher
+**[1:19:29](https://vimeo.com/1088616089#t=4769s)** winning the election the first time you, you get a little bit of a, we're gonna put some, we're gonna put a little blind faith in you, but to get reelected, I think that's something, you know, special because you know, you have a record to run on. And, and so when you get reelected, I think that's, you know, it's just, it's even more special. And to have done that as many times as I have you, you know, I just, I can't thank the, you know, citizens, you know, enough. Um, and, and to go back to what Ms. Noonan said, you, you know, about, you know, you know, this board, you know, for the past two years. And, uh, and then Mr. Nile last year was the only difference. Um, but I, I would say of all, you know, the eight years I've sat on this is, these past two years have meant the most to me. This town has just moved in a great direction. You know, having a leader like Thatcher
 
 **[1:20:15](https://vimeo.com/1088616089#t=4815s)** and the team that he's created, and it's just, you know, it is just wonderful, um, to see where this, this town is gonna be heading and it's gonna be heading in a, in a great direction. And, and so that's, you know, part of the reason why I can, you know, I'm, I'm happy to step back and let other people come on because, you know, I, it's, it's just, it's wonderful to sit in this seat, but until you sit in this seat, you don't understand the full picture and the work that goes behind the scenes and, and the hard work that Thatcher and the folks at Witcher Road do. Um, you talk to them, I mean, they, they really care about this town and, and they do hard work and tower away, excuse me, I forgot Tower away. And, and I have to say that, 'cause you know, again, my father was a DPW director for many years, so I have to say, you know, you know, tower away. Um, so it's just, it's a special town.
 
 **[1:21:01](https://vimeo.com/1088616089#t=4861s)** You know, again, my, my family's been here, the maternal side since the 17 hundreds people fought in the Civil War. You, you know, so I, I, I have a long history here, so that's part of the reason why I served. And, um, um, but again, serving with the five and, and you, Mr. Thatcher, you know, it's just been a wonderful two years. So, so thank you to all and thank you to assistance, but most of all, I wanna thank my family for allowing me to do this. Um, you know, because we all serve here and you don't see the work behind, you know, that we, we have to read, you know, before we come, we have to talk to certain members. They'll break an open meeting law or, or public officials to get information before we make decisions. It's not like we just come here, we open the book and make, so there's a lot of prep work. So in, in doing so, you are taking time away from your family, um, but you're also doing great to the family. And, um, and so my youngest son said,
 
-**[1:21:47](https://vimeo.com/1088616089#t=4907s)** I had a few moments in class and I googled your name dad, and guess what came up? A picture of you and me and Alex and Travis all sitting, I was, you know, where Ms. You know, Ms. Newan was sitting and, and we were all around your Slack board table. It was great. So it's those type of moments that really just mean it and say, you know what, this is worth it. You know, so for him to Google my name, to see it out there and to see that I gave back to our town. So, so again, to anybody that is stepping up in this next election, congratulations. It's, it's tough to run. Um, you know, unfortunately, there's, there's not enough seats for everybody, but I wish everybody well. And, um, and I hope more people do step up to Run because it is such a great group. And I do want to see more people sit here in the different boards and committees, you know, in town. So, so volunteer time is just a great group. So, uh, so thank you to everybody.
+**[1:21:47](https://vimeo.com/1088616089#t=4907s)** I had a few moments in class and I googled your name dad, and guess what came up? A picture of you and me and Alex and Travis all sitting, I was, you know, where Ms. You know, Ms. Noonan was sitting and, and we were all around your Slack board table. It was great. So it's those type of moments that really just mean it and say, you know what, this is worth it. You know, so for him to Google my name, to see it out there and to see that I gave back to our town. So, so again, to anybody that is stepping up in this next election, congratulations. It's, it's tough to run. Um, you know, unfortunately, there's, there's not enough seats for everybody, but I wish everybody well. And, um, and I hope more people do step up to Run because it is such a great group. And I do want to see more people sit here in the different boards and committees, you know, in town. So, so volunteer time is just a great group. So, uh, so thank you to everybody.
 
 **[1:22:33](https://vimeo.com/1088616089#t=4953s)** Well said.
 

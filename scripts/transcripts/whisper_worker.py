@@ -37,10 +37,20 @@ CHUNK_SECONDS = 1800
 
 # Bias the decoder toward local proper nouns it otherwise mangles
 # ("Marvel head" for Marblehead was the top offender in benchmarking).
+#
+# Keep this in sync with the correct spellings in data/known_names.json, and
+# keep it short: Whisper truncates initial_prompt at 224 tokens, and everything
+# past that limit is silently dropped rather than rejected. Names here are the
+# ones the corpus actually gets wrong, not a full town roster.
 INITIAL_PROMPT = (
     "Meeting of a town board in Marblehead, Massachusetts. "
     "Speakers mention the Select Board, School Committee, Finance Committee, "
-    "Board of Health, Town Meeting, Abbot Hall, and Proposition 2 1/2 overrides."
+    "Board of Health, Town Meeting, Abbot Hall, and Proposition 2 1/2 overrides. "
+    "School buildings: Glover, Village, Brown, Bell, Gerry, Eveleth, Coffin, "
+    "Veterans Middle School, Marblehead High School. "
+    "Other places: Abbot Public Library, Mary Alley Municipal Building, "
+    "Fort Sewall, Devereux Beach, Crocker Park. "
+    "Town Administrator Thatcher Kezer."
 )
 
 

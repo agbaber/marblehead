@@ -18,19 +18,19 @@ summary_card:
   decisions:
     - "Approved carry-in alcohol beverage license for A&D Clam Box, 195 Pleasant Street"
     - "Appointed Kim Goggleman to the Task Force Against Discrimination"
-    - "Approved Pride flag raising event at Abbott Hall, June 3, 2023"
+    - "Approved Pride flag raising event at Abbot Hall, June 3, 2023"
     - "Appointed Brigitte Duffy to the Disabilities Commission"
     - "Approved one-day liquor license for Bentwater Brewing at Jeremiah Lee Mansion, May 13, 2023"
     - "Approved reappointment of Daniel Perlitz as Inspector of Animals"
     - "Approved revised minutes for May 18, 2022 public comment in response to OML complaint"
-    - "Approved use of Abbott Hall meeting room for wedding ceremony, May 12, 2023"
+    - "Approved use of Abbot Hall meeting room for wedding ceremony, May 12, 2023"
     - "Approved minutes of March 17 and March 31, 2023"
     - "Awarded pavement markings contract to K5 Corporation, $48,625"
     - "Awarded Bessemer/Beacon storm sewer extension contract to North Grenzi and Sons Inc., $299,064.70"
     - "Awarded catch basin cleaning option year two to Roadway Maintenance Services, $107,500"
     - "Approved overnight parking ban May 3–5, 2023 for street cleaning"
     - "Approved temporary no-parking zones for tree maintenance on Washington Square and Heritage Way"
-    - "Approved ringing of Abbott Hall bell on May 4, 2023 for National Prayer Day"
+    - "Approved ringing of Abbot Hall bell on May 4, 2023 for National Prayer Day"
     - "Appointed Robert Ives as Interim Building Commissioner effective May 1, 2023"
     - "Awarded healthcare review and consulting contract to Risk Strategies, $25,000"
     - "Approved fire department records management contract with Brycer LLC at no cost to town"
@@ -41,7 +41,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Appoint Kim Goggleman to Task Force Against Discrimination"
       result: "in favor (unanimous)"
-    - motion: "Pride flag raising event at Abbott Hall"
+    - motion: "Pride flag raising event at Abbot Hall"
       result: "in favor (unanimous)"
     - motion: "Appoint Brigitte Duffy to Disabilities Commission"
       result: "in favor (unanimous)"
@@ -51,7 +51,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Approve revised minutes and OML complaint response"
       result: "in favor (unanimous)"
-    - motion: "Wedding ceremony at Abbott Hall"
+    - motion: "Wedding ceremony at Abbot Hall"
       result: "in favor (unanimous)"
     - motion: "Award pavement markings contract to K5 Corporation"
       result: "in favor (unanimous)"
@@ -102,9 +102,9 @@ topic_segments:
     topic_confidence: 0.9
     start_seconds: 1162
     end_seconds: 1257
-    headline: "Board approves 2023 Pride flag raising at Abbott Hall for June 3"
+    headline: "Board approves 2023 Pride flag raising at Abbot Hall for June 3"
     dek: "The event, in its third year, is organized by the Marblehead Pride 2023 Committee with a rain date of June 11."
-    summary: "The Select Board unanimously approved the request from the Marblehead Pride 2023 Committee to use Abbott Hall on Saturday, June 3, 2023 at 3 p.m. for a Pride flag raising ceremony. The rain date is Sunday, June 11, 2023. Approval is subject to usual rules, regulations, and fees."
+    summary: "The Select Board unanimously approved the request from the Marblehead Pride 2023 Committee to use Abbot Hall on Saturday, June 3, 2023 at 3 p.m. for a Pride flag raising ceremony. The rain date is Sunday, June 11, 2023. Approval is subject to usual rules, regulations, and fees."
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 1257
@@ -123,9 +123,9 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 1353
     end_seconds: 1443
-    headline: "Daniel Perlitz reappointed as Inspector of Animals; Abbott Hall wedding ceremony approved"
+    headline: "Daniel Perlitz reappointed as Inspector of Animals; Abbot Hall wedding ceremony approved"
     dek: "Two routine administrative items were approved unanimously."
-    summary: "The board reappointed Daniel Perlitz as Inspector of Animals with a term expiring April 30, 2024. The board also approved the use of Abbott Hall's Select Board meeting room for a wedding ceremony by Spencer Andrews and Tiffany Blanchette on Friday, May 12, 2023, subject to usual rules, fees, and a required certificate of insurance."
+    summary: "The board reappointed Daniel Perlitz as Inspector of Animals with a term expiring April 30, 2024. The board also approved the use of Abbot Hall's Select Board meeting room for a wedding ceremony by Spencer Andrews and Tiffany Blanchette on Friday, May 12, 2023, subject to usual rules, fees, and a required certificate of insurance."
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 1443
@@ -159,9 +159,9 @@ topic_segments:
     topic_confidence: 0.9
     start_seconds: 2112
     end_seconds: 2162
-    headline: "Abbott Hall bell approved to ring at noon May 4 for National Prayer Day"
+    headline: "Abbot Hall bell approved to ring at noon May 4 for National Prayer Day"
     dek: "Annual request from Donald Orn to ring the bell for five minutes and hold a brief gathering in the Select Board meeting room."
-    summary: "The board approved the annual request from Donald Orn to ring Abbott Hall's bell at noon on Thursday, May 4, 2023 for five minutes following the regular noon ringing, in observance of National Prayer Day. A brief public gathering for prayer and meditation in the Select Board meeting room was also approved."
+    summary: "The board approved the annual request from Donald Orn to ring Abbot Hall's bell at noon on Thursday, May 4, 2023 for five minutes following the regular noon ringing, in observance of National Prayer Day. A brief public gathering for prayer and meditation in the Select Board meeting room was also approved."
   - topic: public-safety
     topic_confidence: 0.8
     start_seconds: 2162
@@ -314,19 +314,19 @@ topic_segments:
 
 **[18:45](https://vimeo.com/821651965#t=1125s)** Elaine thank you for for letting us good update 7pm. She can get the zoom right out in the lobby. Yeah or on her on her computer. Thank you you can you better Lane. Thank you very much. Okay good hearing from you. Okay. Is it? Town Clerk and then go to the meeting tomorrow night if you if you can do it. Where is it located? It's online. It's all it's a it's a zoom. So yeah. So Kyle will get your email and send you the zoom link.
 
-**[19:22](https://vimeo.com/821651965#t=1162s)** All right with that let's move on to our third agenda item. And that is the pride you bet. That's wonderful. Thank you for volunteering. Okay, so this is This this is the the pride pride flag raising event at Abbott Hall. And I guess what is this the third fourth year? I think third I believe I think it's the third but the motion the motion is very self-explanatory, and I'm like to entertain a motion to request from restalberg Member Marblehead Pride 2023 committee to use Abbott Hall on Saturday
+**[19:22](https://vimeo.com/821651965#t=1162s)** All right with that let's move on to our third agenda item. And that is the pride you bet. That's wonderful. Thank you for volunteering. Okay, so this is This this is the the pride pride flag raising event at Abbot Hall. And I guess what is this the third fourth year? I think third I believe I think it's the third but the motion the motion is very self-explanatory, and I'm like to entertain a motion to request from restalberg Member Marblehead Pride 2023 committee to use Abbot Hall on Saturday
 
 **[20:09](https://vimeo.com/821651965#t=1209s)** June 3rd, 2023 at 3pm rain date is Sunday, June 11th, 2023 subject to the usual rules regulations and fees second. I was in favor. It is unanimous number four. Disabilities commission. This is a re-- This is a an appointment that we are administratively fixing from from our last meeting and it's an entertain. I'd like to entertain a motion to a point Brigitte Duffy to the disabilities commission with the term to expire in June 2025 removed second. Okay all in favor. And seconded with my hand. I know that's okay. No, I saw I saw what was that? I don't know just the people we interviewed. We yes a couple weeks. Yes. We
 
 **[20:57](https://vimeo.com/821651965#t=1257s)** interviewed Brigitte. Right. Okay. So again item five is a one-day liquor license from the bentwater Brewing at at Lee mansion and like dinner motion requests from John Connell on behalf of bentwater Brewing Co company for one day liquor license for Marblehead spring celebration event on Saturday, May 13th, 2023 from 9:30 to 2:30 pm at the Jeremiah Lee Mansion 161 Washington Street subject to the Fallen conditions delivery and receipt delivery of and receipt by the licensing authority of the required theme fifty dollars delivery and receipt of by the licensing authority of proof that alcohol we purchase from an authorized Source proof that the applicant can receive proper delivery
 
-**[21:44](https://vimeo.com/821651965#t=1304s)** provide proper storage and Disposal beverage purchase all on accordance with the requirements of general laws section 138 alcohol will be purchased from bent water Distributing LLC. This is a pulled photo. I have a second. Yes. Yes. Okay, let's learn it in favor. It's tonight in favor. This belt Becker in favor Miss singer in favor, Mr. Greater outstanding in favor. Okay agenda item number six. is reappointment motion Daniel prelix So the motion like energy and motion to reappoint Daniel perlitz inspector of animals with a term to expire April 30th. 2024 some of second all those in favor.
+**[21:44](https://vimeo.com/821651965#t=1304s)** provide proper storage and Disposal beverage purchase all on accordance with the requirements of general laws section 138 alcohol will be purchased from bent water Distributing LLC. This is a pulled photo. I have a second. Yes. Yes. Okay, let's learn it in favor. It's tonight in favor. This belt Becker in favor Miss singer in favor, Mr. Grader outstanding in favor. Okay agenda item number six. is reappointment motion Daniel prelix So the motion like energy and motion to reappoint Daniel perlitz inspector of animals with a term to expire April 30th. 2024 some of second all those in favor.
 
 **[22:33](https://vimeo.com/821651965#t=1353s)** Okay, unanimous item number seven is
 
 **[22:40](https://vimeo.com/821651965#t=1360s)** the open meeting law complaint emanating from Mr. Allen Waller and we this is part of a corrective action. Which you can see in your package here to revise the minutes to to address. A public public comment. So I think the motion is pretty self-explanatory. It's emotional approve the revised minutes on May 18th 2022 public comment as presented and to send notification to the Office of the Attorney General in response to oml 2023. 56 99 22 complaint filed by Alan Waller. so much second holes in favor
 
-**[23:25](https://vimeo.com/821651965#t=1405s)** Okay. Okay number eight is a wedding at Hall. wonderful that we can host these types of things and and to make good use of our historic structures motion self-explanatory to entertain a request from Spencer Andrews and Tiffany Blanchette to use Abbott Hall select boards meeting room on Friday May 12 2023 for a wedding ceremony subject to the usual rules regulations fees and receipt of the required Certificate of Insurance.
+**[23:25](https://vimeo.com/821651965#t=1405s)** Okay. Okay number eight is a wedding at Hall. wonderful that we can host these types of things and and to make good use of our historic structures motion self-explanatory to entertain a request from Spencer Andrews and Tiffany Blanchette to use Abbot Hall select boards meeting room on Friday May 12 2023 for a wedding ceremony subject to the usual rules regulations fees and receipt of the required Certificate of Insurance.
 
 **[24:03](https://vimeo.com/821651965#t=1443s)** in favor unanimous Okay, we have a slight modification here to see the approval of the minutes. We're going to approve the March minutes this time. So I'd like to entertain a motion to to approve the minutes of March 17 2023, March 22, 2023 and March 31 2023. all in favor Except Mike, March 22nd, I wasn't here. You were not. Okay, so we'll have a hold on that.
 

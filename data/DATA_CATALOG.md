@@ -278,6 +278,14 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Caveats:** Rename merges (aliases) and kind assignments are curated code in `scripts/warrant_lib.mjs`, observed from the corpus, not invented. `budget_line` series (omnibus decomposed by department) are not yet generated.
 - **Confidence:** Derived data; as good as the results CSV plus the alias map.
 
+### Known Names (speech-recognition corrections)
+- **What it is:** An allowlist of Marblehead proper nouns that speech recognition reliably mishears in meeting transcripts, mapping each observed misheard form to the correct spelling. Also carries a `flag_only` list of terms deliberately *not* auto-corrected because the right answer depends on context.
+- **Files:** `known_names.json`
+- **Consumed by:** `scripts/transcripts/lib/normalize_names.mjs` (applied at ingest by `backfill_auto.mjs` and `backfill_whisper.mjs`), the Whisper decoder prompt in `scripts/transcripts/whisper_worker.py`, and the summarization prompt in `scripts/transcripts/prompts/summary.md`.
+- **Tools:** `node scripts/transcripts/tools/name_census.mjs` reports capitalized-token frequencies across the corpus to find candidates; `node scripts/transcripts/tools/backfill_names.mjs` applies the dictionary corpus-wide (dry run by default).
+- **Caveats:** Matching is case-sensitive, whole-word, and single-pass, and never rewrites inside a URL. Every entry carries a `ground_truth` citation to a human-authored file plus an `observed` count, and the test suite fails if either is missing. These are acoustic-error fixes, not editorial changes: genuine speaker stutters (12 occurrences of "Marblehead Marblehead") are left verbatim.
+- **Confidence:** High for places and buildings. Person names are era-scoped by hand (the Town Administrator changed in 2022) and kept deliberately sparse.
+
 ## What We Don't Have (identified gaps)
 
 1. **<abbr class="g" title="Group Insurance Commission">GIC</abbr> premium rates FY12-FY18** - not publicly available online.

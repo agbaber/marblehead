@@ -14,11 +14,11 @@ source: vimeo-auto+llm
 
 summary_card:
   headline: "Finance Committee approves balanced FY27 budgets; library warned it will close by December without override"
-  summary: "The Marblehead Finance Committee held budget review sessions for the Assessors, Recreation & Parks, Abbott Public Library, Cemetery Commission, Town Clerk/Elections, and Schools for FY27. The library director stated the $857,633 budget—down roughly $700,000 from the level-service request—would force closure by approximately December 1, 2026, and result in loss of state certification and NOBLE network access absent an override. The school committee voted the previous day to adopt a $47,620,285 budget, representing a reduction from the level-service figure, with an additional $1.5 million in cuts still to be identified by April 9."
+  summary: "The Marblehead Finance Committee held budget review sessions for the Assessors, Recreation & Parks, Abbot Public Library, Cemetery Commission, Town Clerk/Elections, and Schools for FY27. The library director stated the $857,633 budget—down roughly $700,000 from the level-service request—would force closure by approximately December 1, 2026, and result in loss of state certification and NOBLE network access absent an override. The school committee voted the previous day to adopt a $47,620,285 budget, representing a reduction from the level-service figure, with an additional $1.5 million in cuts still to be identified by April 9."
   decisions:
     - "Approved FY27 Assessors budget of $388,003"
     - "Approved FY27 Recreation & Parks budget of $1,003,034"
-    - "Approved FY27 Abbott Public Library budget of $857,633"
+    - "Approved FY27 Abbot Public Library budget of $857,633"
     - "Approved FY27 Cemetery Commission budget of $410,539"
     - "Approved FY27 Town Clerk budget of $201,877"
     - "Approved FY27 Elections & Registration budget of $132,200"
@@ -28,7 +28,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Approve FY27 Recreation & Parks budget ($1,003,034)"
       result: "in favor (unanimous)"
-    - motion: "Approve FY27 Abbott Public Library budget ($857,633)"
+    - motion: "Approve FY27 Abbot Public Library budget ($857,633)"
       result: "in favor (unanimous)"
     - motion: "Approve FY27 Cemetery Commission budget ($410,539)"
       result: "in favor (unanimous)"
@@ -84,10 +84,10 @@ topic_segments:
     start_seconds: 1962
     end_seconds: 5171
     featured: true
-    headline: "Abbott Library budget cut ~$700K; director says library will close by December 2026 without override"
+    headline: "Abbot Library budget cut ~$700K; director says library will close by December 2026 without override"
     dek: "The $857,633 budget falls nearly $600,000 short of the state's minimum appropriation requirement, risking decertification, loss of NOBLE network access, and closure by approximately December 1, 2026."
     summary: |
-      Abbott Public Library Director Kim presented the FY27 library budget of $857,633—a reduction of approximately $700,000 from the level-service request and the largest proportional cut on the town side of the budget. Key findings:
+      Abbot Public Library Director Kim presented the FY27 library budget of $857,633—a reduction of approximately $700,000 from the level-service request and the largest proportional cut on the town side of the budget. Key findings:
       
       **Staffing impact**
       - Current staff: 24 (20 active; 4 vacancies including one imminent retirement)
@@ -120,7 +120,7 @@ topic_segments:
       > *"With this budget and no override, it will close after this point. We can't survive on the budget we're talking here."* — Kim, Library Director
       
       The $10 million taxpayer investment in the library building would sit underutilized. The Finance Committee approved the budget unanimously while expressing that this was the least-desired vote of the session.
-    key_speakers: ["Kim (Abbott Public Library Director)", "Alec (Finance Committee, chair/watchdog role)", "Molly (Finance Committee)", "Lindsay (Finance Committee liaison)", "Michael (Finance Committee)"]
+    key_speakers: ["Kim (Abbot Public Library Director)", "Alec (Finance Committee, chair/watchdog role)", "Molly (Finance Committee)", "Lindsay (Finance Committee liaison)", "Michael (Finance Committee)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 5171
@@ -314,7 +314,7 @@ topic_segments:
 
 **[39:05](https://vimeo.com/1178557058#t=2345s)** Now, are you in the Zoom to share your screen? Yeah. Okay. So I will stop sharing. No, that's not the one I wanted to share. Oops. You want to share this one? I'll stop sharing. Oh, okay. You took over.
 
-**[39:20](https://vimeo.com/1178557058#t=2360s)** Okay. Okay. So. It's good. Right. So first of all, I want you to take a look at this photo and see if you recognize what it is. Yeah. It's right here. Right. This room. So this is the original Abbott Public Library, which was established here at Abbott Hall in 1877. So this is my first formal presentation, so I want to thank you for the opportunity to speak here today. I appreciate being able to share all of this with you. So personally, I'm heartbroken to think that we would be in this position of such a strict cut to this budget. Professionally, I'm shocked that we're at this crossroads. We've been working tirelessly to preserve this library as a historic
+**[39:20](https://vimeo.com/1178557058#t=2360s)** Okay. Okay. So. It's good. Right. So first of all, I want you to take a look at this photo and see if you recognize what it is. Yeah. It's right here. Right. This room. So this is the original Abbot Public Library, which was established here at Abbot Hall in 1877. So this is my first formal presentation, so I want to thank you for the opportunity to speak here today. I appreciate being able to share all of this with you. So personally, I'm heartbroken to think that we would be in this position of such a strict cut to this budget. Professionally, I'm shocked that we're at this crossroads. We've been working tirelessly to preserve this library as a historic
 
 **[40:07](https://vimeo.com/1178557058#t=2407s)** fixture, investing $10 million to bring 21st century service to this 17th century town. Since moving back, we've delivered modern infrastructure. We have the most reliable HVAC system of any town building. We have the strongest Wi-Fi, mobile hotspots, and sophisticated audiovisual equipment. This building has remained flood-free since our return, and I remember that was one thing that everybody wanted to have, and we have it. We're also very proud of the fact that we've achieved high usage. So in fiscal year '25, we welcomed 80,000 visitors into the library and hosted about 500 programs attended by 8,500 people. Our meeting rooms were used by over 2,800 people and over 205,000 items
 
@@ -332,7 +332,7 @@ topic_segments:
 
 **[44:29](https://vimeo.com/1178557058#t=2669s)** So the contingency budget requires a massive restructuring of operations, likely resulting in significantly reduced hours, making it very difficult to keep the building open. So we also have a stranded investment. So the $10 million of taxpayer dollars, it's going to sit underutilized if the library closes. No certification means no state aid. No lending or borrowing privileges for residents. And then I think it's a threat to local democracy because the town would forfeit access to statewide resource sharing network, creating an information silo, and that
 
-**[45:17](https://vimeo.com/1178557058#t=2717s)** disenfranchises residents who cannot afford private access to the verified data, educational tools, and neutral civic space required for an informed electorate. What's the name of that network? Is that NOBLE? That's NOBLE. NOBLE. That's awesome. But it also brings us out of interlibrary loan. I think we had like 28,000 instances of interlibrary loan last year. Oh, did- Yeah. When you say no state aid, can you give me a range of what you get annually that- About forty- ... this would lose? Yeah. About $44,000. And if I could make one clarifying point. When you say no lending or borrowing privileges for residents, you're referring to libraries outside of Abbott itself. In other words, residents could still borrow that which is in the collection, but not
+**[45:17](https://vimeo.com/1178557058#t=2717s)** disenfranchises residents who cannot afford private access to the verified data, educational tools, and neutral civic space required for an informed electorate. What's the name of that network? Is that NOBLE? That's NOBLE. NOBLE. That's awesome. But it also brings us out of interlibrary loan. I think we had like 28,000 instances of interlibrary loan last year. Oh, did- Yeah. When you say no state aid, can you give me a range of what you get annually that- About forty- ... this would lose? Yeah. About $44,000. And if I could make one clarifying point. When you say no lending or borrowing privileges for residents, you're referring to libraries outside of Abbot itself. In other words, residents could still borrow that which is in the collection, but not
 
 **[46:04](https://vimeo.com/1178557058#t=2764s)** library sharing or access to those resources provided by other libraries. Yes. Not suggesting this is in any way a good thing. I just want to make sure we're clear- Right ... on what that means. That's right. Thank you. The benefit of having a shared resource, shared network, is just that you have access to so much more. 17 public libraries in NOBLE, which is our North of Boston Library Exchange, provide that service, and it's really pretty cool that we can do that. I know there are libraries out there that don't belong to a network, but they don't have the resources. By belonging to NOBLE, we would have an excellent... We already have an excellent base of resources,
 
@@ -374,11 +374,11 @@ topic_segments:
 
 **[57:30](https://vimeo.com/1178557058#t=3450s)** 40, 50. 68. Yeah. Something like that. It's around 50 something. And so you would still consider paying for that so that you could use this kind of silo level of service? Yes, but I think that- But it might be different. Yeah. I don't know. I do think that NOBLE would have to decide whether we're still members or not because- There would be a decision out of your control. I think so. Look at Nahant. Nahant is an associated member of NOBLE right now, and they're very excited to be able to have access to the NOBLE catalog. So that's the whole point of belonging to NOBLE is to have access to the shared catalog. So if we are not members anymore, then all we have is our catalog, and why would anyone-
 
-**[58:16](https://vimeo.com/1178557058#t=3496s)** And that's what I was asking. Is the catalog tied to NOBLE? Yes. So you have to use it no matter what, or is there a way to ship the catalog out of NOBLE into something? Well, that would be something that would be very expensive and take a lot of time and effort to create our own. I haven't done those costs yet, but that would be, like I said, probably $300,000 to go out on our own. We don't have that, so. Right. Wait, I'm sorry. So wait, when you say catalog, you mean the catalog of the books physically in Abbott Library? Yes. That would cost $300,000. Well, to create our own cataloging system- Okay ... not shared by NOBLE. Well, that's what I was saying. Can you be de-certified and still use the NOBLE catalog for Mardale
+**[58:16](https://vimeo.com/1178557058#t=3496s)** And that's what I was asking. Is the catalog tied to NOBLE? Yes. So you have to use it no matter what, or is there a way to ship the catalog out of NOBLE into something? Well, that would be something that would be very expensive and take a lot of time and effort to create our own. I haven't done those costs yet, but that would be, like I said, probably $300,000 to go out on our own. We don't have that, so. Right. Wait, I'm sorry. So wait, when you say catalog, you mean the catalog of the books physically in Abbot Library? Yes. That would cost $300,000. Well, to create our own cataloging system- Okay ... not shared by NOBLE. Well, that's what I was saying. Can you be de-certified and still use the NOBLE catalog for Mardale
 
 **[59:03](https://vimeo.com/1178557058#t=3543s)** only or not? That's kind of- I think for a time you could, but then I think you'd want to make a decision whether you're going to still process. Another point I'd like to make,
 
-**[59:16](https://vimeo.com/1178557058#t=3556s)** vis-à-vis certification is, if the Abbott Library were de-certified this year and next year the funding was restored to whatever formulaic levels, it would still require an additional three years before the Commonwealth would re-certify the library. So we can't look at this as a one-and-done situation. The library could limp along for a year. In fact, the knock-on effects would be an additional three years, and there's no knowledge yet that's been shared with me that if we were kicked out of NOBLE for being de-certified this year, that even if the funding were restored next year,
+**[59:16](https://vimeo.com/1178557058#t=3556s)** vis-à-vis certification is, if the Abbot Library were de-certified this year and next year the funding was restored to whatever formulaic levels, it would still require an additional three years before the Commonwealth would re-certify the library. So we can't look at this as a one-and-done situation. The library could limp along for a year. In fact, the knock-on effects would be an additional three years, and there's no knowledge yet that's been shared with me that if we were kicked out of NOBLE for being de-certified this year, that even if the funding were restored next year,
 
 **[1:00:05](https://vimeo.com/1178557058#t=3605s)** that they would allow us back in absent state certification. If you know anything different than what I've just said, please correct me. I was just going to say that there's a way out of this. We went completely on the other side. The way out of this is to have a little bit more money in the budget, and then you could apply for a waiver. That's the 300 and- Right ... change. Okay. Absolutely. They're- brought me back. Thank you. Yeah. So in terms of the waiver, because I think we talked about this a little bit, you thought it would maybe be unlikely to get a waiver? Oh, with the scenario that we've started with today?
 
@@ -414,7 +414,7 @@ topic_segments:
 
 **[1:09:15](https://vimeo.com/1178557058#t=4155s)** redone, and it's hard for me to say how that would run at this point. I can't even really give you a number. You don't have a quantifiable number. No. Like no. I'm not sure if they would take the average of the reduced- Yeah ... funding years and then start to rebuild after that, or if they would look back however many years to your previous salaries and then try to- Yeah ... maybe you could finally find money to reach that. We're in uncharted territory here. Yeah. That's okay. Thank you. We could probably look into that, but it'd be somewhere, one of those probably two scenarios. Thank you. I'll try to keep this quick. Sure. So basically what you're saying, this will impact how, well, I mean,
 
-**[1:10:01](https://vimeo.com/1178557058#t=4201s)** even if we do approve this with a limited budget- Yes ... we are guaranteed to lose Saturdays and evening hours. Absolutely. And pretty much guaranteed to lose our certification. Yes. Absolutely. Yeah. So we'll be left with going to Abbott with this card, or we can go down to Boston with this one. That's right.
+**[1:10:01](https://vimeo.com/1178557058#t=4201s)** even if we do approve this with a limited budget- Yes ... we are guaranteed to lose Saturdays and evening hours. Absolutely. And pretty much guaranteed to lose our certification. Yes. Absolutely. Yeah. So we'll be left with going to Abbot with this card, or we can go down to Boston with this one. That's right.
 
 **[1:10:29](https://vimeo.com/1178557058#t=4229s)** Okay. That's without a number. And that is approving this budget. Right. And where I wanted to go. So- That's approving that- Yeah, I was going to say- ... with the 310. So let me make a point. So this slide is helpful, but that's not what we're voting on. No. That's right. So I'd love to know the consequences of without the 310. Yeah. I know we're losing certification then, which is not on that, but are we reducing hours by more than that slide we were just looking at? Oh, yeah. Like I said, I started the piece saying that we can't even do that. So I'm going to go back to this again. So that's where I'm going with this. Well- I have to define what's in front of me until there's an adjustment to the budget, right? Yeah. And there isn't an adjustment as I sit here right now, right? The number is
 
@@ -462,7 +462,7 @@ topic_segments:
 
 **[1:25:07](https://vimeo.com/1178557058#t=5107s)** Yeah. And I want to thank Michael and Lindsay for their participation in the process, along with the trustees and Kim for their clarity on the dire situation. I have never wanted to recommend a budget number less But I am going to recommend that the finance committee approve the $1,003,000... Oh, I'm sorry. I'm reading the wrong line. You are. Sorry. 857. Alex cursed, it was in the wrong one. No, it wasn't. I'll make it last. That's great. Thank you. I saw Alex cursed, and I started reading that number. Thank you. The $857,633 that had been posed
 
-**[1:25:53](https://vimeo.com/1178557058#t=5153s)** for the Abbott Public Library for FY25. Exciting. Awesome. All in favor?
+**[1:25:53](https://vimeo.com/1178557058#t=5153s)** for the Abbot Public Library for FY25. Exciting. Awesome. All in favor?
 
 **[1:26:02](https://vimeo.com/1178557058#t=5162s)** Thanks. Thank you, everyone. Thank you. All right. Cemetery is up next. Okay.
 

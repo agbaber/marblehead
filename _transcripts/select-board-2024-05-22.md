@@ -26,7 +26,7 @@ summary_card:
     - "Approved elevator upgrade request from Salem Hospital at 1 Widger Road"
     - "Approved one-day liquor license for St. Andrews Church on June 29, 2024"
     - "Approved letter congratulating St. Andrews Church on its centennial"
-    - "Approved use of Abbott Hall on October 14, 2024 for Indigenous People's Day event with fee waiver"
+    - "Approved use of Abbot Hall on October 14, 2024 for Indigenous People's Day event with fee waiver"
   votes:
     - motion: "Approve minutes of May 9th and May 15th"
       result: "in favor (unanimous)"
@@ -50,7 +50,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Send congratulatory letter to St. Andrews Church for centennial"
       result: "in favor (unanimous)"
-    - motion: "Approve Abbott Hall use for Indigenous People's Day event with fee waiver"
+    - motion: "Approve Abbot Hall use for Indigenous People's Day event with fee waiver"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -107,9 +107,9 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 578
     end_seconds: 624
-    headline: "Abbott Hall approved for Indigenous People's Day event on October 14 with fee waiver"
-    dek: "The Marblehead Museum's executive director requested use of Abbott Hall for a free public event; the board waived the rental fee."
-    summary: "The board approved a request from Lauren McCormick, Executive Director of the Marblehead Museum, to use Abbott Hall on Monday, October 14, 2024 for the museum's Indigenous People's Day event from 10:00 AM to 2:00 PM. The board voted to waive the rental fee, subject to the usual rules, regulations, and receipt of a certificate of insurance."
+    headline: "Abbot Hall approved for Indigenous People's Day event on October 14 with fee waiver"
+    dek: "The Marblehead Museum's executive director requested use of Abbot Hall for a free public event; the board waived the rental fee."
+    summary: "The board approved a request from Lauren McCormick, Executive Director of the Marblehead Museum, to use Abbot Hall on Monday, October 14, 2024 for the museum's Indigenous People's Day event from 10:00 AM to 2:00 PM. The board voted to waive the rental fee, subject to the usual rules, regulations, and receipt of a certificate of insurance."
   - topic: public-comment
     topic_confidence: 0.75
     start_seconds: 625
@@ -160,11 +160,11 @@ topic_segments:
 
 **[7:54](https://vimeo.com/949356958#t=474s)** All in accordance with section 17 alteration and installation equipment as stated on the lease between the town of Marblehead and North Shore Medical Center dated March 6th, 2023. So Second. All in favor wait. Motion carries. Um, and then, uh, one day liquor license request from, um, for the Church of St. Andrews. So, um, this is our standard, uh, um, ask for a motion for a one day liquor license, um, to approve the request from Reverend c Clyde, ed El El Elledge St. Andrews Church for a one day liquor license for Saturday June 29th, 2024 at 135 Lafayette Street, 6:00 PM to 9:00 PM subject to the following conditions, delivery of and receipt of the licensing authority of the required fee of $50, delivery of,
 
-**[8:40](https://vimeo.com/949356958#t=520s)** and receipt of the licensing authority of proof, the alcohol we purchased from an orig authorized source. Proof that the applicant can receive proper delivery proper and provide proper storage and dispo disposal of all alcoholic beverages purchased in accordance with the requirements of general law Chapter 1 38, and authorized distributor to be determined before the license is released. And this is a polled vote. So, can I have a motion? So moved. Thank you. Second. Anybody second? Okay. Mr. Nye In favor, Ms. Singer? In favor, Mr. Murray? In favor, Mr. Grader? In favor, Ms. Nunan In favor, Madam Chair. Can we also send a letter, uh, of congratulations for a hundred years, a hundred year anniversary of St. Andrews? Oh, of, of the church? Yes. Okay. Um, do we have a motion to, uh, to send a letter, um, of,
+**[8:40](https://vimeo.com/949356958#t=520s)** and receipt of the licensing authority of proof, the alcohol we purchased from an orig authorized source. Proof that the applicant can receive proper delivery proper and provide proper storage and dispo disposal of all alcoholic beverages purchased in accordance with the requirements of general law Chapter 1 38, and authorized distributor to be determined before the license is released. And this is a polled vote. So, can I have a motion? So moved. Thank you. Second. Anybody second? Okay. Mr. Nye In favor, Ms. Singer? In favor, Mr. Murray? In favor, Mr. Grader? In favor, Ms. Noonan In favor, Madam Chair. Can we also send a letter, uh, of congratulations for a hundred years, a hundred year anniversary of St. Andrews? Oh, of, of the church? Yes. Okay. Um, do we have a motion to, uh, to send a letter, um, of,
 
 **[9:26](https://vimeo.com/949356958#t=566s)** um, celebrate Congratulating celebration and there Centennial. So moved. So Second. Okay. All in favor?
 
-**[9:38](https://vimeo.com/949356958#t=578s)** Um, indigenous People's Day next fall. Um, this is, uh, we have a request from the Marblehead Museum Director. Um, we need a motion to approve this request from Lauren McCormick, executive Director Marblehead Museum, to use Abbott Hall on Monday, October 14th, 2024 for 2024 is Indigenous People's Day event from 10:00 AM to 2:00 PM subject to the usual rules, regulations, fees, and receipt of the required certificate of insurance, and to waive the rental fee for this event. So Moved. Second. Second. All in favor? Great. And that brings us to, um, uh, lemme see, um, public comment, um,
+**[9:38](https://vimeo.com/949356958#t=578s)** Um, indigenous People's Day next fall. Um, this is, uh, we have a request from the Marblehead Museum Director. Um, we need a motion to approve this request from Lauren McCormick, executive Director Marblehead Museum, to use Abbot Hall on Monday, October 14th, 2024 for 2024 is Indigenous People's Day event from 10:00 AM to 2:00 PM subject to the usual rules, regulations, fees, and receipt of the required certificate of insurance, and to waive the rental fee for this event. So Moved. Second. Second. All in favor? Great. And that brings us to, um, uh, lemme see, um, public comment, um,
 
 **[10:25](https://vimeo.com/949356958#t=625s)** any regular public comment. Okay. Um, town Administrator update. Sure. I'll be very quick. So just letting you know in your books are a number of reports. First is the quarterly report to the select board from the Traffic Safety Advisory Committee, as the bylaw requires a a quarterly report to the board. So I'll present it to you for your, your purview. And obviously if you have any questions, you can reach out to me or the chair, uh, on that, so meets that requirement. Secondly, um, I have I think, five draft Human Resources policies. Now that we have a Human Resources director, he's requiring us to be compliant, which is a good thing.
 

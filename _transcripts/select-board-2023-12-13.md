@@ -13,10 +13,10 @@ source: vimeo-auto+llm
 
 
 summary_card:
-  headline: "Select Board appoints Lindsay Duby to Finance Committee, approves dozen-plus licenses"
-  summary: "The Marblehead Select Board interviewed three Finance Committee applicants and unanimously selected Lindsay Duby, a senior vice president at Eagle Bank with a finance degree and commercial credit background. The board approved annual and Sunday entertainment licenses for Riptide Group and Hidden Door, renewed lodging, entertainment, common victualler, and liquor licenses for roughly 50 businesses, and authorized a three-year $1,023,923 contract with Tyler Technologies (Munis) for new municipal financial software. Additional actions included approving a Council on Aging renovation project at the community center and hearing a presentation on no-parking zones at sewer pump stations."
+  headline: "Select Board appoints Lindsay Dube to Finance Committee, approves dozen-plus licenses"
+  summary: "The Marblehead Select Board interviewed three Finance Committee applicants and unanimously selected Lindsay Dube, a senior vice president at Eagle Bank with a finance degree and commercial credit background. The board approved annual and Sunday entertainment licenses for Riptide Group and Hidden Door, renewed lodging, entertainment, common victualler, and liquor licenses for roughly 50 businesses, and authorized a three-year $1,023,923 contract with Tyler Technologies (Munis) for new municipal financial software. Additional actions included approving a Council on Aging renovation project at the community center and hearing a presentation on no-parking zones at sewer pump stations."
   decisions:
-    - "Approved appointment of Lindsay Duby to Finance Committee (term expires June 2026)"
+    - "Approved appointment of Lindsay Dube to Finance Committee (term expires June 2026)"
     - "Approved Council on Aging community center renovation project (diner-style café addition)"
     - "Approved Warwick Entertainment change of ownership interest"
     - "Approved annual and Sunday entertainment licenses for Riptide Group, 116 Pleasant Street"
@@ -29,15 +29,15 @@ summary_card:
     - "Approved three-year contract with Tyler Technologies for $1,023,923"
     - "Approved option year three of stormwater catch basin cleaning contract with Roadway Maintenance Services for $107,500"
     - "Approved six-month contract extension with Environmental Partners for infrastructure asset management"
-    - "Approved Abbott Hall use for wedding on October 26, 2024"
+    - "Approved Abbot Hall use for wedding on October 26, 2024"
     - "Approved letter of support for Marblehead Arts Association capital grant application"
     - "Approved letter to MassDOT regarding ferry service extension"
     - "Approved donation account for Green Street Woods Bike Path"
     - "Approved surplus declaration for seven antiquated floor safes"
-    - "Approved holiday hours for Abbott Hall and Mary Alley building"
-    - "Approved Abbott Hall wedding permit for Will Britton and Meredith O'Hare"
+    - "Approved holiday hours for Abbot Hall and Mary Alley building"
+    - "Approved Abbot Hall wedding permit for Will Britton and Meredith O'Hare"
   votes:
-    - motion: "Finance Committee appointment — Lindsay Duby"
+    - motion: "Finance Committee appointment — Lindsay Dube"
       result: "in favor (unanimous)"
     - motion: "Council on Aging renovation project"
       result: "in favor (unanimous)"
@@ -71,7 +71,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Environmental Partners contract six-month extension"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall wedding permit"
+    - motion: "Abbot Hall wedding permit"
       result: "in favor (unanimous)"
     - motion: "Letter of support for Marblehead Arts Association grant"
       result: "in favor (unanimous)"
@@ -90,19 +90,19 @@ topic_segments:
     start_seconds: 0
     end_seconds: 1959
     featured: true
-    headline: "Select Board unanimously appoints Lindsay Duby to Finance Committee vacancy"
+    headline: "Select Board unanimously appoints Lindsay Dube to Finance Committee vacancy"
     dek: "Three candidates were interviewed before the board voted 4-0 for Duby, a senior vice president at Eagle Bank with a background in commercial credit and risk management."
     summary: |
-      The board interviewed three Finance Committee applicants in alphabetical order: Lindsay Duby, Colin Gypsy, and Roger Pellicani (phonetic). Each was asked four identical questions covering their financial background, understanding of the finance committee's role and Proposition 2½, areas of interest in town government, and ability to make unpopular decisions.
+      The board interviewed three Finance Committee applicants in alphabetical order: Lindsay Dube, Colin Gypsy, and Roger Pellicani (phonetic). Each was asked four identical questions covering their financial background, understanding of the finance committee's role and Proposition 2½, areas of interest in town government, and ability to make unpopular decisions.
       
-      **Lindsay Duby** — lifelong Marblehead resident, Salem State finance degree, career at Morgan Stanley and now Eagle Bank as SVP of commercial credit. Cited familiarity with municipal financing and construction budgets; emphasized willingness to say no when numbers don't support a proposal.
+      **Lindsay Dube** — lifelong Marblehead resident, Salem State finance degree, career at Morgan Stanley and now Eagle Bank as SVP of commercial credit. Cited familiarity with municipal financing and construction budgets; emphasized willingness to say no when numbers don't support a proposal.
       
       **Colin Gypsy** (phonetic) — new to town, extensive commercial real estate background including CBRE property management, asset management at Equity Office Properties (28 million sq ft portfolio), and current ownership of commercial real estate in Massachusetts and the Carolinas. Expressed interest in the education budget; acknowledged limited familiarity with Proposition 2½.
       
       **Roger Pellicani** (phonetic) — 30 years in financial services including senior roles at American Express (P&L responsibility for EMEA merchant business, revenue >$1 billion), consulting for Visa and private equity, and serving as treasurer/financial director of the Marblehead Rowing Club. Has three sons in Marblehead schools including one in the Village School special-ed program.
       
-      After placing all names in nomination, each board member voted by name: all four present members (Nye, Singer, Murray, Grader) selected **Lindsay Duby**. She was declared appointed; her term expires June 2026 and she must be sworn in at the clerk's office.
-    key_speakers: ["Lindsay Duby (Finance Committee appointee)", "Colin Gypsy (candidate, phonetic)", "Roger Pellicani (candidate, phonetic)", "Moses Grader (Select Board member)", "Alexa Singer (Select Board member)", "Jim Murray (Select Board member)", "Mr. Nye (Select Board member)"]
+      After placing all names in nomination, each board member voted by name: all four present members (Nye, Singer, Murray, Grader) selected **Lindsay Dube**. She was declared appointed; her term expires June 2026 and she must be sworn in at the clerk's office.
+    key_speakers: ["Lindsay Dube (Finance Committee appointee)", "Colin Gypsy (candidate, phonetic)", "Roger Pellicani (candidate, phonetic)", "Moses Grader (Select Board member)", "Alexa Singer (Select Board member)", "Jim Murray (Select Board member)", "Mr. Nye (Select Board member)"]
   - topic: recreation-events
     topic_confidence: 0.88
     start_seconds: 1960
@@ -189,10 +189,10 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 4489
     end_seconds: 4812
-    headline: "Board approves Abbott Hall wedding, arts association letter of support, and ferry service letter"
+    headline: "Board approves Abbot Hall wedding, arts association letter of support, and ferry service letter"
     dek: "Three routine actions: a wedding permit for October 2024, a letter backing an accessible-bathroom grant at King Hooper Mansion, and a letter to MassDOT supporting permanent North Shore ferry service."
     summary: |
-      **Abbott Hall wedding:** Will Britton and Meredith O'Hare approved for October 26, 2024, 2:00–5:00 PM, subject to standard rules and certificate of insurance.
+      **Abbot Hall wedding:** Will Britton and Meredith O'Hare approved for October 26, 2024, 2:00–5:00 PM, subject to standard rules and certificate of insurance.
       
       **Marblehead Arts Association:** Letter of support approved for a Mass Cultural Council Facilities Fund grant to create a handicap-accessible bathroom on the first floor of King Hooper Mansion (a 300-year-old building with no first-floor restroom).
       
@@ -240,13 +240,13 @@ topic_segments:
     start_seconds: 6119
     end_seconds: 6661
     headline: "Board approves holiday hours, Green Street bike path donation account, and surplus of seven floor safes"
-    dek: "Routine end-of-year housekeeping items were approved unanimously, including closing Abbott Hall and Mary Alley building on December 22, 26, 30, and January 1."
+    dek: "Routine end-of-year housekeeping items were approved unanimously, including closing Abbot Hall and Mary Alley building on December 22, 26, 30, and January 1."
     summary: |
-      **Holiday hours:** Abbott Hall and Mary Alley building will be closed December 22, December 26 (Christmas observed), December 30 (New Year's Eve observed), and January 1, 2024. Reduced hours apply on December 21 and 29 (close at 12:30 PM). The transfer station and other functions remain open on designated holidays; affected employees receive floating holidays or overtime per collective bargaining agreements.
+      **Holiday hours:** Abbot Hall and Mary Alley building will be closed December 22, December 26 (Christmas observed), December 30 (New Year's Eve observed), and January 1, 2024. Reduced hours apply on December 21 and 29 (close at 12:30 PM). The transfer station and other functions remain open on designated holidays; affected employees receive floating holidays or overtime per collective bargaining agreements.
       
       **Donation account:** A dedicated donation account was established for the Green Street Woods Bike Path under the Recreation and Parks department; funds will be used for repairs and upgrades.
       
-      **Surplus equipment:** Seven antiquated floor safes declared surplus — six at the Mary Alley municipal building and one at Abbott Hall. The safes were described as large, very heavy metal safes dating to the 1880s era that occupy significant floor space. They will be posted for two weeks; if no takers, they will be removed by a rigger. The surplus is part of preparation for an upcoming flooring project at Mary Alley.
+      **Surplus equipment:** Seven antiquated floor safes declared surplus — six at the Mary Alley municipal building and one at Abbot Hall. The safes were described as large, very heavy metal safes dating to the 1880s era that occupy significant floor space. They will be posted for two weeks; if no takers, they will be removed by a rigger. The surplus is part of preparation for an upcoming flooring project at Mary Alley.
     key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: public-comment
     topic_confidence: 0.97
@@ -283,7 +283,7 @@ topic_segments:
 
 **[0:00](https://vimeo.com/894514402#t=0s)** Ready, unmute. Perfect. We are at the witching hour. It is a little bit past seven o'clock. We going to call this meeting to order.
 
-**[0:13](https://vimeo.com/894514402#t=13s)** Thank you. All right. We are in session. Uh, we have a long agenda tonight, and I think the first thing we're gonna do is start out with the finance committee. We have three candidates, thankfully, who, uh, who are here, uh, tonight. And, uh, we're gonna go through our typical process, which is, uh, interview each of the candidates, and then take a poll vote for, uh, for the, for the candidate that we Mm-Hmm. Ultimately select. Um, I do wanna announce that this meeting is recorded via Zoom. Uh, before we start, uh, we have three applicants, Lindsey Duby, Colin Gypsy, and Roger Pedi.
+**[0:13](https://vimeo.com/894514402#t=13s)** Thank you. All right. We are in session. Uh, we have a long agenda tonight, and I think the first thing we're gonna do is start out with the finance committee. We have three candidates, thankfully, who, uh, who are here, uh, tonight. And, uh, we're gonna go through our typical process, which is, uh, interview each of the candidates, and then take a poll vote for, uh, for the, for the candidate that we Mm-Hmm. Ultimately select. Um, I do wanna announce that this meeting is recorded via Zoom. Uh, before we start, uh, we have three applicants, Lindsay Dube, Colin Gypsy, and Roger Pedi.
 
 **[0:58](https://vimeo.com/894514402#t=58s)** And, uh, I think what we'd like to do, what we typically do is we go by alphabetical order. So the first one to appear will be Lindsay Mm-Hmm. Okay. And, uh, we would ask the other, uh, candidates to, to step outside if you could. And, uh, Thatcher, I don't know if you want to, uh, show them, show them to your, to your office, and then we'll call you in as you, as we complete the interviews.
 
@@ -373,9 +373,9 @@ topic_segments:
 
 **[30:50](https://vimeo.com/894514402#t=1850s)** and then we'll do another round to break the tie. Um, same process as we straight Force. It's a process we, we have used, uh, Since we're getting good at this. Since since the dawn of time. Yes. Or at least 200 Some years. So we can't take 'em all like the measure of leather, unfortunately. You have one vacancy. So you, uh, to your question, you'll have to say no to two candidates.
 
-**[31:16](https://vimeo.com/894514402#t=1876s)** Well, on, on that subject, I want, I do wanna say for those that Excellent. That don't get, uh, nominated, we really appreciate your stepping up and we would really do anything to see your faces again. Uh, you know, if, uh, uh, in any other capacity in town, we are, we are a volunteer driven town, 100%. And, uh, you know, we, we, we would appreciate, we would appreciate that very much. Um, that's a very tough Choice. Yeah. Uh, okay. Ready? We're ready. I'll start here. Mr. Nye. Oh, Um, Uh, Lindsey Duby.
+**[31:16](https://vimeo.com/894514402#t=1876s)** Well, on, on that subject, I want, I do wanna say for those that Excellent. That don't get, uh, nominated, we really appreciate your stepping up and we would really do anything to see your faces again. Uh, you know, if, uh, uh, in any other capacity in town, we are, we are a volunteer driven town, 100%. And, uh, you know, we, we, we would appreciate, we would appreciate that very much. Um, that's a very tough Choice. Yeah. Uh, okay. Ready? We're ready. I'll start here. Mr. Nye. Oh, Um, Uh, Lindsay Dube.
 
-**[31:55](https://vimeo.com/894514402#t=1915s)** Okay. Ms. Singer Lindsey Duby. Mr. Murray. Lindsey Duby. Mr. Grader. Uh, Lindsey Duby. It's a tie. Yeah. All four for one. All right. I think that is, uh, congratulations. Congratulations Lindsay. Uh, and, uh, and welcome. Uh, you will need to, uh, the, the term expires, uh, in June of 2026. Uh, and you'll have to go to the clerk's office next door to swear in before you can take your seat. Um, but, uh, thank you very much and thank you to those Thank you. Okay. You know, for you, for you coming tonight,
+**[31:55](https://vimeo.com/894514402#t=1915s)** Okay. Ms. Singer Lindsay Dube. Mr. Murray. Lindsay Dube. Mr. Grader. Uh, Lindsay Dube. It's a tie. Yeah. All four for one. All right. I think that is, uh, congratulations. Congratulations Lindsay. Uh, and, uh, and welcome. Uh, you will need to, uh, the, the term expires, uh, in June of 2026. Uh, and you'll have to go to the clerk's office next door to swear in before you can take your seat. Um, but, uh, thank you very much and thank you to those Thank you. Okay. You know, for you, for you coming tonight,
 
 **[32:40](https://vimeo.com/894514402#t=1960s)** we really appreciate it. So we don't have no more, more Positions. Yeah. Okay. Thank You. Well, that brings that part of our agenda to a close. Uh, next on our agenda is Council on Aging and a request for, uh, renovations. Ali, if you would, if you would come on up. We'll, We have a, um, I think we missed licensing. Give two, But that's okay. We can, we can take it out. Water. Okay. Yeah, no, go ahead. Have a seat. Good evening. Thank you for having me. Sure. Um, I wanna let all of you know, though, I have, um, Christine Van re Mortel, who's president of the friends, Suzanne Gruel, who's COA chair, and then Walter Jacobs, who's the architect of this project
 
@@ -439,7 +439,7 @@ topic_segments:
 
 **[53:00](https://vimeo.com/894514402#t=3180s)** manager, Jose Bracamontes, Corinthian Yacht Club one Na uh, Nhan Street Manager, David Titus, Eastern Yacht Club 47 Foster Street Manager, Jared Cherney, uh, Tedesco Country Club 1 54 Tedesco Street Manager, uh, Michael McGillicutty, fan Yang 48 Atlantic Avenue. Manager Link, Quin Yen
 
-**[53:22](https://vimeo.com/894514402#t=3202s)** two Atlantic Avenue Manager Alexander Lewis, the Hidden Door, 2 5 9 Washington Street Manager, Todd Horvath Horvath, uh, Maddie's Sail Loft Incorporated. Doing business as Maddie's Sale Loft 15 Street, 15 State Street Manager Loretta Lang, ma Thai Lounge eight Bessam Street Manager, Amanda Breen, the new Marble Head Landing, doing business as the landing 81. Front Street Manager, Robert Simonelli, Riptide Group 116 Pleasant Street Manager, uh, Miguel Vno, uh, Gary, number five, veteran Fireman Association, incorporated two 10, uh, beacon Street Manager, art Dodge Warwick Entertainment, LLC Doing Businesses. Wix 1 23 Pleasant Street Manager, David Zion. Chaplain Lyman Rollins. Post 2 2 2 0 0 5 EFW 3 21 West Shore Drive Manager
+**[53:22](https://vimeo.com/894514402#t=3202s)** two Atlantic Avenue Manager Alexander Lewis, the Hidden Door, 2 5 9 Washington Street Manager, Todd Horvath Horvath, uh, Maddie's Sail Loft Incorporated. Doing business as Maddie's Sale Loft 15 Street, 15 State Street Manager Loretta Lang, ma Thai Lounge eight Bessam Street Manager, Amanda Breen, the new Marblehead Landing, doing business as the landing 81. Front Street Manager, Robert Simonelli, Riptide Group 116 Pleasant Street Manager, uh, Miguel Vno, uh, Gary, number five, veteran Fireman Association, incorporated two 10, uh, beacon Street Manager, art Dodge Warwick Entertainment, LLC Doing Businesses. Wix 1 23 Pleasant Street Manager, David Zion. Chaplain Lyman Rollins. Post 2 2 2 0 0 5 EFW 3 21 West Shore Drive Manager
 
 **[54:10](https://vimeo.com/894514402#t=3250s)** Edward Preble. So moved. Second. Second. Those in favor? Unanimous. Uh, I'd like to entertain another, another motion to renew the following Common Vic licenses. Subject to all taxes and fees to the town being paid in receipt of all applicable department approvals. A and DK Clam Box 1 95 Pleasant Street Manager, uh, Cleves, Crossey Amor, tequila Barr. 1 69 Pleasant Street, uh, manager, uh, Jose Luis Sanchez, Barrowman 2 59 Washington Street Manager Benjamin Newman. Uh, barnacle 1 41 Front Street Manager, Jay Sagan, blue Canoe Cafe 14th School Street Manager. Heather Harrison, cafe Italia 10 School Street Manager. Donna Oliviero, cafe Vesuvius. Eight Bes Street Manager. Bart Freddo Casa Corona 30 th Thrive Smith Street Manager.
 
@@ -459,7 +459,7 @@ topic_segments:
 
 **[59:51](https://vimeo.com/894514402#t=3591s)** and compliance with chapter 3 0 3 0 4 of the Acts of 2004. The following are all alcoholic Common Vic Barnacle Corporation, a hundred forty one, a hundred forty one Front Street Manager Jay Sogan, cafe Italia Marblehead, doing business as Cafe Italia a hundred. Uh, one school street Manager, Donna Oliviero Fe Yang Restaurant Doing businesses Fe Yang House two. I was gonna Hold you for one second. Yep. Is it 10 or one for Cafe Italia for the address? Cafe Italia is 10. Okay. 10. 10 School Street. Thank you. Fe Yang Restaurant Inc. Doing business is Fe Yang, house two 40 a Atlantic Avenue. Manager Ling Quinn Chen. Food at five LLC doing Businesses. Five Corners Kitchen two to four. School Street Manager Barry Edelman, 2 57 Washington Street, doing business as the barman.
 
-**[1:00:38](https://vimeo.com/894514402#t=3638s)** 2 5 7 to 2 5 9. Washington Street Manager Benjamin Newman, Drexel, Inc. Doing business as the Hidden Door. 2 5 9 Washington Street Manager Todd aff. My Ty Lounge. Eight Bessam Street Manager. Amanda Bre. Maddie Aloft, Inc. Doing business as Maddie Aloft. 15, uh, 15 State Street Manager, Loretta Lang, the new Marble Head Landing, doing Business of the landing. 81. Front Street Manager, Robert Simonelli, peculiar Inc. 2 61 Washington Street Manager, clevis Ori Riptide, group 116 Pleasant Street Manager, Macal Vno, seaside Restaurant Group, LLC Doing business of three Cod RN Tavern. 1 41 Pleasant Street. Manager of Percy, uh, JDHE. Doing businesses, um, as Amor is Tequila Barr. 169.
+**[1:00:38](https://vimeo.com/894514402#t=3638s)** 2 5 7 to 2 5 9. Washington Street Manager Benjamin Newman, Drexel, Inc. Doing business as the Hidden Door. 2 5 9 Washington Street Manager Todd aff. My Ty Lounge. Eight Bessam Street Manager. Amanda Bre. Maddie Aloft, Inc. Doing business as Maddie Aloft. 15, uh, 15 State Street Manager, Loretta Lang, the new Marblehead Landing, doing Business of the landing. 81. Front Street Manager, Robert Simonelli, peculiar Inc. 2 61 Washington Street Manager, clevis Ori Riptide, group 116 Pleasant Street Manager, Macal Vno, seaside Restaurant Group, LLC Doing business of three Cod RN Tavern. 1 41 Pleasant Street. Manager of Percy, uh, JDHE. Doing businesses, um, as Amor is Tequila Barr. 169.
 
 **[1:01:23](https://vimeo.com/894514402#t=3683s)** Pleasant Street Manager, Jose. Uh, Luis Sanchez, nine Lives Group, Inc. Doing Businesses. Sea Salt 126 Washington Street Manager Scott, uh, uh, Brinkman, Tula X Incorporated Doing Businesses. Casa Corona, 33 30, uh, three Smith Street Manager, Jose, uh, Bracamontes Warwick Entertainment, LLC Doing Businesses, the Beacon, uh, 1 23 Pleasant Street Manager, David Zion. The following are Wine and Malt, uh, with Cordials, common Vic licenses, Kitson Table, Inc. Doing business as Sol Bistro. Nine Besam Street. Uh, manager Hong, uh, this young, uh, N Nian, sorry. Lui one at Lakin Avenue Manager Alexander Lewis
 
@@ -471,7 +471,7 @@ topic_segments:
 
 **[1:04:27](https://vimeo.com/894514402#t=3867s)** Good job. Me straight. I think I will. I guess we're the next, the next uh, item on is, uh,
 
-**[1:04:38](https://vimeo.com/894514402#t=3878s)** extended business hours for New Year's Eve. Um, and this is what we, we do every year in celebration of the holidays, keeping our businesses open a little longer. And the motion is to allow restaurants in the town of Marble has remain open for business on Monday, January 1st, 2024 until 1:00 AM at their discretion. So moved. Second. All those in favor? Unanimous. Alright. It looks like we have, uh, the chief and Amy here, uh, to tell us a little bit about, uh, the tree burning, if there's anything to tell, except that it's a tremendous festival almost every year. Yeah. Any, any, any public announcements or any you wanna just read it?
+**[1:04:38](https://vimeo.com/894514402#t=3878s)** extended business hours for New Year's Eve. Um, and this is what we, we do every year in celebration of the holidays, keeping our businesses open a little longer. And the motion is to allow restaurants in the town of Marblehead has remain open for business on Monday, January 1st, 2024 until 1:00 AM at their discretion. So moved. Second. All those in favor? Unanimous. Alright. It looks like we have, uh, the chief and Amy here, uh, to tell us a little bit about, uh, the tree burning, if there's anything to tell, except that it's a tremendous festival almost every year. Yeah. Any, any, any public announcements or any you wanna just read it?
 
 **[1:05:28](https://vimeo.com/894514402#t=3928s)** You it coax us up here. Yeah. Come on Chief. Chief, You're always scared of the microphone. I just, it's awful, isn't it? It is. It is. Yeah. You might, well, rather than me reading the, do you want me to read the, uh, the terms, the, the letter to kind of give Could please. Just for public announcement purposes. Okay. Well, that's great. Okay. Uh, so, uh, as we all know, the animal tree burning, is it Riverhead Beach, scheduled for January 6th, uh, 2024 this year. And it'll be satellite at 6:00 PM So, uh, there is a curbside pickup from Wednesday, December 27th, 2023 through Friday, January 5th, 2024. So that's right after Christmas through, you know, the fifth, the night before the tree burning.
 
@@ -497,9 +497,9 @@ topic_segments:
 
 **[1:14:03](https://vimeo.com/894514402#t=4443s)** Contract for cleaning of stormwater catch basins dated May 1st, 2022 to Roadway Maintenance Services, Inc. For the period of January 1st, 2024 through December 31st, 2004. Uh, 24 for, uh, for the not to exceed price of $107,500 and 0 cents. And authorize the chair pro tem to sign on behalf of the board. So moved. Second. Second. All those in favor? All right. And the third contract. And the third contract is, is simply an extension of an existing contract, uh, with, um, town and Environmental partners of Quincy Mass. They are doing the, uh, infrastructure asset management or study on our sidewalks, ramps, and signals.
 
-**[1:14:49](https://vimeo.com/894514402#t=4489s)** Um, so this is through, through the public works, so it's to give them more time to complete the work, uh, adding an additional six months to the contract. Alright. I'd like to entertain a motion to extend the contract between the Town and Environmental Partners of Quincy Mass, uh, for infrastructure asset management sidewalks, ramps signals for an additional six months to end on, uh, May 23rd, 2024. And authorize the chair Pro temp to sign the contract on behalf of the board. Moved. Second. Second. All those in favor? Okay. Unanimous. Uh, the next agenda item is, uh, to open up Abbott Hall for a wedding, which we always welcome.
+**[1:14:49](https://vimeo.com/894514402#t=4489s)** Um, so this is through, through the public works, so it's to give them more time to complete the work, uh, adding an additional six months to the contract. Alright. I'd like to entertain a motion to extend the contract between the Town and Environmental Partners of Quincy Mass, uh, for infrastructure asset management sidewalks, ramps signals for an additional six months to end on, uh, May 23rd, 2024. And authorize the chair Pro temp to sign the contract on behalf of the board. Moved. Second. Second. All those in favor? Okay. Unanimous. Uh, the next agenda item is, uh, to open up Abbot Hall for a wedding, which we always welcome.
 
-**[1:15:36](https://vimeo.com/894514402#t=4536s)** And, uh, it's, uh, will Britton and met Meredith O'Hare. The motion is, uh, self-explanatory to approve the requests from Will Britton and Meredith O'Hare to use Abbott Hall for a wedding ceremony on October 26th, 2024 from 2:00 PM to 5:00 PM subject to the usual rules, regulations, custodial fees, and receipt of the required certificate of insurance. So moved. And second. All in favor? All in favor. I just wanted to say too, just, um, to speak to this, I enjoyed reading their letter and their history and Mm-Hmm. So, will and Meredith, thank you for sharing. It was very, very moving, and thanks for sharing.
+**[1:15:36](https://vimeo.com/894514402#t=4536s)** And, uh, it's, uh, will Britton and met Meredith O'Hare. The motion is, uh, self-explanatory to approve the requests from Will Britton and Meredith O'Hare to use Abbot Hall for a wedding ceremony on October 26th, 2024 from 2:00 PM to 5:00 PM subject to the usual rules, regulations, custodial fees, and receipt of the required certificate of insurance. So moved. And second. All in favor? All in favor. I just wanted to say too, just, um, to speak to this, I enjoyed reading their letter and their history and Mm-Hmm. So, will and Meredith, thank you for sharing. It was very, very moving, and thanks for sharing.
 
 **[1:16:19](https://vimeo.com/894514402#t=4579s)** Yes. All right. Uh, now we have a request for a letter of support, um, for the Marblehead Arts Association's capital grants application to the Mass Cultural Council. And, uh, Thatcher, do you have, uh, this is really, it's a handy accessible bathroom in the Hoopers Mansion. Yeah. So, yep. So they, they don't have a bathroom on the first floor. Um, it's a 300 year old building. This would create a bathroom and make it accessible for folks who visit. Awesome. Okay. I can understand a motion to approve the requests from Jim Murphy, president Marblehead Arts Associations to write a letter of support, which is included in our package
 
@@ -523,7 +523,7 @@ topic_segments:
 
 **[1:24:02](https://vimeo.com/894514402#t=5042s)** So I, you know, I think it would be important for us to see if there's opportunities that we can take bring to, you know, town meeting and say, this is, you know, these are the opportunities that exist now, what makes sense for Marblehead? You know, what are the opportunities? So, um, you know, I think that would be important to have that discussion. Agreed. I know they had the, the webinar, but, um, you know, other opportunities to, you know, call in center or anyone else, you know, I think they have presentations, you know, we could get some additional information. So, so one of the other, I think takeaways from that webinar was there, there are, there are different, um, forms of government based on charters that you may set up.
 
-**[1:24:49](https://vimeo.com/894514402#t=5089s)** Right. Um, what they described what Marble had in, in their other communities fall under is, if I have it right, a collection of state statute charter, meaning we just follow under all the various state statutes that dictate local government. So at a minimum, a charter would just codify in one coherent document your form of government, right? E even if you were to change nothing, but to put it in the form of a charter, you've at least codified in one place. This is how we operate. And then, you know, further on, as, as some of the speakers talked about, as you can tailor the charter
+**[1:24:49](https://vimeo.com/894514402#t=5089s)** Right. Um, what they described what Marblehead had in, in their other communities fall under is, if I have it right, a collection of state statute charter, meaning we just follow under all the various state statutes that dictate local government. So at a minimum, a charter would just codify in one coherent document your form of government, right? E even if you were to change nothing, but to put it in the form of a charter, you've at least codified in one place. This is how we operate. And then, you know, further on, as, as some of the speakers talked about, as you can tailor the charter
 
 **[1:25:35](https://vimeo.com/894514402#t=5135s)** to meet your community's needs and define, you know, where and how much powers are placed in different components of the local government. Um, and so that's where, you know, some of the, the decisions to be made. But the, the key takeaway was you can, you can tailor it, you know, there are sort of fairly standard structure of charters, but you can tailor it to whatever the community, uh, wants, uh, in, into, its, into its charter. And then the charters can be revised over time, through, through processes. So it was very informative. Yeah. The webinar went on. There's not one way, you know, there, there's, there's a core piece, but then like you said, it's what's best for that community.
 
@@ -589,7 +589,7 @@ topic_segments:
 
 **[1:48:57](https://vimeo.com/894514402#t=6537s)** they could, they could underscore why it's so important to keep it clear. That might help people to, uh, think twice. So that would be another thing. We, we'd have to come to someone to approve our signs going on a public way. But we actually, I do, um, you know, I do think they would be a great learning spot too, to throw a, a sign up that just a thought says this is A up station. Yeah. No one likes the word sewer, but me, I found out. But a wastewater station,
 
-**[1:49:26](https://vimeo.com/894514402#t=6566s)** A great opportunity for access Station To take this, uh, story up. Yes. We are always happy to talk about sewer anytime. Pretty darn important. Pretty darn important. Yeah. Uh, so I will leave the, uh, handouts. Those, those are really, those are really great. Thank you. Great Presentation and thank you very thank you for Taking us on such a busy night. Oh, you bet. Thank you for waiting. Appreciate it. Alright, next on our agenda is, uh, the holiday hours, which happens every year. So I'm gonna go ahead and, uh, just entertain a motion to approve the following holiday hours for Abbott Hall and the Mary a Alley building Monday, December 18th, regular hours 8:00 AM to 5:00 PM Tuesday, December 19th, regular hours 8:00 AM to 5:00 PM Wednesday, December 20th,
+**[1:49:26](https://vimeo.com/894514402#t=6566s)** A great opportunity for access Station To take this, uh, story up. Yes. We are always happy to talk about sewer anytime. Pretty darn important. Pretty darn important. Yeah. Uh, so I will leave the, uh, handouts. Those, those are really, those are really great. Thank you. Great Presentation and thank you very thank you for Taking us on such a busy night. Oh, you bet. Thank you for waiting. Appreciate it. Alright, next on our agenda is, uh, the holiday hours, which happens every year. So I'm gonna go ahead and, uh, just entertain a motion to approve the following holiday hours for Abbot Hall and the Mary a Alley building Monday, December 18th, regular hours 8:00 AM to 5:00 PM Tuesday, December 19th, regular hours 8:00 AM to 5:00 PM Wednesday, December 20th,
 
 **[1:50:14](https://vimeo.com/894514402#t=6614s)** regular hours 8:00 AM to 6:00 PM Thursday, December 21st, 8:00 AM to 12:30 PM Friday, December 22nd. Closed all day. Uh, Christmas Eve falls on Sunday, Monday, December 26th. Close all day for Christmas. Uh, the holiday Tuesday to 27th, regular hours 8:00 AM to 5:00 PM Wednesday, December 28th, regular hours 8:00 AM to 6:00 PM Thursday, December 29th, 8:00 AM to 12:30 PM Friday December 30th. Closed all day because New Year's falls on this Friday. And then Monday, January 1st, 2024, closed all day, new Year's Day. I move second. All those in favor? Unanimous. So
 

@@ -1,0 +1,380 @@
+{
+  "version": 1,
+  "purpose": "Corrections for Marblehead proper nouns that speech recognition reliably mishears in meeting transcripts. Applied by scripts/transcripts/lib/normalize_names.mjs at ingest, and supplied to the Whisper decoder and the summarization prompt so corrections happen at the source where possible.",
+  "rules": [
+    "Every entry needs two kinds of evidence: a `ground_truth` citation to a human-authored file in this repo proving the correct spelling, and an `observed` count of the misheard forms in the corpus (from scripts/transcripts/tools/name_census.mjs).",
+    "Matching is case-sensitive and whole-word. List each misheard form exactly as it occurs; do not rely on case folding.",
+    "A wrong correction is worse than an uncorrected mishearing, because it reads as authoritative. If the right answer depends on context, put the term in `flag_only` instead.",
+    "Never add an entry from memory of how a name is spelled. Cite the file.",
+    "Any entry with kind 'person' must carry an `era` field recording the corpus date range the misheard forms appear in, and the tenure that range was checked against. Office-holders change, so a surname correction that is right for one period can corrupt an older meeting. The test suite enforces this field's presence."
+  ],
+  "replace": [
+    {
+      "right": "Marblehead",
+      "wrong": [
+        "Marvel head",
+        "Marvel Head",
+        "Marvel hood",
+        "Marvel Hood",
+        "Marvelhead",
+        "Marble Head",
+        "Marble head",
+        "Marble Hood",
+        "Marvel",
+        "Marble"
+      ],
+      "kind": "place",
+      "ground_truth": "README.md; the town name is used throughout the site",
+      "observed": "1271 misheard occurrences against 10575 correct ones (~11% error rate on the town's own name). Bare 'Marvel' (451) and bare 'Marble' (287) were sampled across ~25 contexts with zero legitimate uses: 'citizens of Marvel', 'Marble had', 'Marvel head public schools', 'Marble High'.",
+      "note": "Two-word forms are corrected before the bare forms, so 'Marvel head' does not become 'Marblehead head'."
+    },
+    {
+      "right": "Marblehead",
+      "wrong": [
+        "Marblehead Marble Marblehead",
+        "Marvel head Marble",
+        "Marble Marblehead",
+        "Marblehead Marble",
+        "Marble Marvel",
+        "Marvel Marblehead"
+      ],
+      "kind": "place",
+      "ground_truth": "Same as the entry above.",
+      "observed": "'Marble Marblehead' 7, 'Marvel head Marble' 1, 'Marblehead Marble' 1. The ASR splits the town name and then repeats it, so correcting each token separately yields 'Marblehead Marblehead'.",
+      "note": "Listed separately and matched before the single-token forms, because corrections are single-pass and cannot collapse a doubled result afterward. Deliberately does NOT cover genuine 'Marblehead Marblehead' speaker stutters, of which the corpus has 12 that predate this dictionary and are correct verbatim transcription."
+    },
+    {
+      "right": "Coffin",
+      "wrong": [
+        "Coughlin/Coffin",
+        "Coffin/Coughlin",
+        "Coffman/Coffin",
+        "Coffin/Coffman"
+      ],
+      "kind": "school",
+      "ground_truth": "Same as the Coffin entry below.",
+      "observed": "'Coughlin/Coffin' 1, in the published segment dek of _transcripts/select-board-2026-07-08.md.",
+      "note": "The summarizing model half-recognized the mishearing and hedged by printing both spellings. Correcting the tokens separately would leave 'Coffin/Coffin', so the hedge is matched whole. The prompt now forbids this construction explicitly."
+    },
+    {
+      "right": "Abbot",
+      "wrong": [
+        "Abbott"
+      ],
+      "kind": "building",
+      "ground_truth": "library.html (Abbot Public Library, 18 occurrences); town-history.html (Abbot Hall, 14 occurrences). No human-authored file in the repo spells it with two t's.",
+      "observed": "376 'Abbott' against 40 correct 'Abbot'. Already named as a known ASR error in scripts/transcripts/prompts/summary.md.",
+      "note": "Correcting the bare surname also fixes 'Abbott Hall' and 'Abbott Public Library'. A resident surnamed Abbott would be over-corrected; none appears in the corpus."
+    },
+    {
+      "right": "Coffin",
+      "wrong": [
+        "Coughlin",
+        "Coffman"
+      ],
+      "kind": "school",
+      "ground_truth": "data/catalog_pass2_log.md (Coffin School, multiple entries); select-board and school-committee summary cards use 'Coffin School'.",
+      "observed": "'Coughlin' 9 occurrences in 3 files, 'Coffman' 6 in 3 files. Both are the closed Coffin School: one transcript reads 'whether it's a Coffman school or the Evert school', another 'including Coffman and Eve'.",
+      "note": "This is the error that a resident wrote in about. It reached a published segment dek as 'the Coughlin/Coffin parcel'."
+    },
+    {
+      "right": "Eveleth",
+      "wrong": [
+        "Evelith",
+        "Eveless",
+        "Evelyth",
+        "Eveles"
+      ],
+      "kind": "school",
+      "ground_truth": "school-building-maintenance.html; data/catalog.csv and data/catalog_normalized.csv (15 occurrences each).",
+      "observed": "92 correct 'Eveleth' against 'Evelith' 22, 'Eveless' 13, 'Evelyth' 2, 'Eveles' 3.",
+      "note": "'Evelyn' (19 occurrences) is deliberately excluded: it is a real first name. 'Evelace' and 'Evella' are in flag_only as too ambiguous."
+    },
+    {
+      "right": "Kezer",
+      "wrong": [
+        "Keer",
+        "Keyser",
+        "Keezer",
+        "Keser"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear only in transcripts dated 2023-09 onward, entirely within Kezer's tenure (Town Administrator since 2022). The prior Town Administrator was Jason Silva, ~2019-2022 per data/savings_measures_compiled.md:241, and no Silva-era transcript contains these forms.",
+      "ground_truth": "how-we-got-here.html line 142 ('Town Administrator Thatcher Kezer', sourced to the 2026 FinCom Report); data/SOURCE_LOOKUP.md.",
+      "observed": "Correct 'Kezer' only 3 times against 'Keer' 42, 'Keyser' 15. Every file containing 'Keer' dates from 2023-09 or later, entirely within Kezer's tenure; the prior Town Administrator was Jason Silva (~2019-2022, data/savings_measures_compiled.md line 241), and no Silva-era transcript contains these forms.",
+      "note": "Surname only. See flag_only for 'Patrick Kezer', where the first name is also wrong and a dictionary cannot fix it."
+    },
+    {
+      "right": "Buba",
+      "wrong": [
+        "Buuba"
+      ],
+      "kind": "person",
+      "era": "Appears in four Town Meeting transcripts spanning 2020-10 to 2026-05. Not an office-holder in any repo source, so there is no tenure window to bound; the repo records him as a citizen petitioner ('Citizen Petition (J. Buba et al.)') and a commenter, so the correction rests on the spelling alone.",
+      "ground_truth": "docs/superpowers/plans/2026-07-15-bylaws-history-pipeline.md; docs/superpowers/specs/2026-04-12-per-capita-levy-chart-design.md.",
+      "observed": "'Buuba' 14 occurrences against 9 correct 'Buba'.",
+      "note": "'Bubba' (1 occurrence) is excluded as plausibly a genuine informal address."
+    },
+    {
+      "right": "Janko",
+      "wrong": [
+        "Jenko",
+        "Chenko",
+        "Jankow",
+        "Jenker",
+        "Jankel",
+        "Jango"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2022-10 to 2026-04. The earliest is select-board-2022-10-26, the meeting that appointed him to the Finance Committee, so nothing predates his seating.",
+      "ground_truth": "_data/org_chart.yml:1722 (Michael Janko, Finance Committee).",
+      "observed": "The wrong forms outnumber the right one: 'Jenko' 49, 'Chenko' 7, 'Jankow' 2, 'Jenker' 2, 'Jankel' 2, 'Jango' 3, against only 34 correct 'Janko'. Every occurrence sits in a Finance Committee roll call between Goolsby/Knight/Franklin, or reads 'Michael Jenko'.",
+      "note": "No occurrence outside a Finance Committee context; no other Janko in the corpus."
+    },
+    {
+      "right": "Goolsby",
+      "wrong": [
+        "Goldsby",
+        "Goolsbee",
+        "Golsby",
+        "Goulsby",
+        "goosby"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2021-10 to 2026-06. org_chart.yml gives no `since` value for Goolsby (only term_ends: 2026), so the 2021 hits could not be date-checked against the roster; they are instead anchored by the given name, 'Alec Goolsbee' being nominated Finance Committee chair.",
+      "ground_truth": "_data/org_chart.yml:1735 (Alec Goolsby, Finance Committee).",
+      "observed": "'Goldsby' 12, 'Goolsbee' 16, 'Golsby' 4, 'Goulsby' 3, 'goosby' 1, against 81 correct 'Goolsby'. All in Finance Committee roll calls or attached to the given name Alec.",
+      "note": "Economist Austan Goolsbee would be a false positive but does not appear; both 'Goolsbee' files say Alec."
+    },
+    {
+      "right": "Teets",
+      "wrong": [
+        "Tets",
+        "Tees"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2024-04 to 2025-05, the same range in which the correct spelling first appears. No pre-tenure occurrences.",
+      "ground_truth": "_data/org_chart.yml:1728 (Molly Teets, Finance Committee).",
+      "observed": "'Tets' 13, 'Tees' 4, against 36 correct 'Teets'. Includes a self-identification: 'Molly Tets, 3 88 Ocean vice chair of the finance Committee.' Neither form is an English word in this position."
+    },
+    {
+      "right": "Gwazda",
+      "wrong": [
+        "Guazda"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2025-08 to 2026-04, inside his term (org_chart since: 2025, term_ends: 2028).",
+      "ground_truth": "_data/org_chart.yml:1666 (Henry Gwazda, School Committee).",
+      "observed": "22 'Guazda' occurrences, 16 of them the bigram 'Henry Guazda', including a self-identification: 'So, my name is Henry Guazda. was elected to the Marblehead ...'. No other Guazda in the corpus.",
+      "note": "One occurrence is inside a spoken domain, 'guazda-test.com'. That is protected by the address guard in normalize_names.mjs, which skips schemed URLs, bare domains and email addresses."
+    },
+    {
+      "right": "Robidoux",
+      "wrong": [
+        "Robero",
+        "Roberu",
+        "Rabadu",
+        "Robidou",
+        "Robido",
+        "Robbo",
+        "Rabbitu",
+        "Robledo",
+        "Robodo"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2024-05 to 2026-07. The May and June 2024 hits precede his org_chart `since: 2025` legitimately: they are the interim superintendent search and his appointment as incoming superintendent.",
+      "ground_truth": "_data/org_chart.yml:1673 (John Robidoux, Superintendent).",
+      "observed": "About 136 misheard mentions against 32 correct ones. 'Robodo' 39, 'Robero' 19, 'Roberu' 11, 'Rabadu' 11, 'Robledo' 3, 'Robbo' 3, 'Rabbitu' 3, 'Robidou' 2, 'Robido' 1. Each appears only in Superintendent context ('Superintendent Robero noted budget collaboration', 'the annual evaluation of Superintendent John Rabadu').",
+      "note": "'Roberto' (40) and 'Roboido' (4) are deliberately excluded and flagged: 'Roberto' collides with Roberto Clemente, and 'Roboido' appears inside a court case caption where the text is a legal citation."
+    },
+    {
+      "right": "Attridge",
+      "wrong": [
+        "Atridge",
+        "Hatridge"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2020-05 to 2022-01, before his first Moderator listing in the 2022 Annual Report. He is speaking as a resident and Chief Constable in that period, but it is the same surname either way, so the correction does not depend on which office he held.",
+      "ground_truth": "_data/org_chart.yml:1764 (Jack Attridge, Town Moderator).",
+      "observed": "'Atridge' 11 (all the bigram 'Jack Atridge', including a self-identification: 'Jack Atridge, 67 Beach Street.'), 'Hatridge' 1.",
+      "note": "A second Attridge exists in town (Wayne Attridge, retired Board of Health Director), so the surname correction is safe but first-name attribution is not. The lowercase social handle 'jackatridge' is untouched because matching is case-sensitive."
+    },
+    {
+      "right": "Melissa Clucas",
+      "wrong": [
+        "Melissa Lucas",
+        "Melissa Goulas"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2025-09 to 2026-06, inside her term (org_chart since: 2025).",
+      "ground_truth": "_data/org_chart.yml:1650 (Melissa Clucas, School Committee).",
+      "observed": "'Melissa Lucas' 24, 'Melissa Goulas' 9. Both attach to her appointment and to the June 2026 vote electing her vice chair.",
+      "note": "Scoped to the two-word form on purpose. The bare surname 'Lucas' is REJECTED: of 47 corpus occurrences only 24 are her, and the rest include the Stryker LUCAS mechanical CPR device ('the $16,000 firefighter grant for a Lucas device'), an MPS teacher, and two residents at public comment."
+    },
+    {
+      "right": "Grader",
+      "wrong": [
+        "Grayer",
+        "Graeter",
+        "Grado"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2020-06 to 2026-06, inside his tenure (org_chart since: 2017, term_ends: 2027).",
+      "ground_truth": "_data/org_chart.yml:1586 (Moses Grader, Select Board).",
+      "observed": "'Grayer' 18, 'Graeter' 3, 'Grado' 2, against 186 correct 'Grader'. All occur in Select Board roll calls ('Grayer In favor') or after an honorific. None is an English word.",
+      "note": "Bare-surname scope is safe for these three because none collides with a real word or another person. It is NOT safe for 'Greater', 'Grade', 'Drager' or 'Rader', which are scoped as bigrams below."
+    },
+    {
+      "right": "Mr. Grader",
+      "wrong": [
+        "Mr. Greater",
+        "Mr. Grade"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2020-06 to 2026-06, inside his tenure (org_chart since: 2017, term_ends: 2027).",
+      "ground_truth": "_data/org_chart.yml:1586 (Moses Grader, Select Board).",
+      "observed": "'Mr. Greater' 99 and 'Mr. Grade' 7.",
+      "note": "Scoped to the honorific on purpose. Bare 'Greater' is REJECTED: it is an ordinary English word and the corpus uses it correctly in 'Pediatric Associates of Greater Salem', 'the Greater Commonwealth' and 'the Greater Marblehead public school community'. Bare 'Grade' is REJECTED because 54 occurrences are grade levels ('Grade Seven', 'additional Grade 8 teacher')."
+    },
+    {
+      "right": "Moses Grader",
+      "wrong": [
+        "Moses Greater",
+        "Moses Drager",
+        "Moses Rader"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2020-06 to 2026-06, inside his tenure (org_chart since: 2017, term_ends: 2027).",
+      "ground_truth": "_data/org_chart.yml:1586 (Moses Grader, Select Board).",
+      "observed": "'Moses Greater' 15, 'Moses Drager' 5, 'Moses Rader' 9.",
+      "note": "Scoped to the given name on purpose. Bare 'Drager' is REJECTED because 'Drager Road' is a street address in the corpus ('John Deano six Drager Road. I oppose this amendment'). Bare 'Rader' is REJECTED because 'Buck Rader' is a different resident who spoke about leaf blowers."
+    },
+    {
+      "right": "Ms. Noonan",
+      "wrong": [
+        "Ms. Nunan",
+        "Ms. Noon",
+        "Ms. Newan",
+        "Ms. Newnan"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2021-06 to 2026-06, inside her tenure (org_chart since: 2021, term_ends: 2029).",
+      "ground_truth": "_data/org_chart.yml:1578 (Erin Marie Noonan, Select Board).",
+      "observed": "'Ms. Nunan' 60, 'Ms. Noon' 28, 'Ms. Newan' 18, 'Ms. Newnan' 7.",
+      "note": "Scoped to the honorific on purpose. Bare 'Noon' is REJECTED because 'Local Noon' is a beach retail store applying for a licence in the corpus. Bare 'Nunan' is REJECTED because 'Aaron Nunan' (17) and 'Sharon Nunan' (6) are other speakers; see flag_only."
+    },
+    {
+      "right": "Erin Noonan",
+      "wrong": [
+        "Erin Newan",
+        "Erin Newnan"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2021-06 to 2026-06, inside her tenure (org_chart since: 2021, term_ends: 2029).",
+      "ground_truth": "_data/org_chart.yml:1578 (Erin Marie Noonan, Select Board).",
+      "observed": "'Erin Newan' 1 (a signed board vote record, 'Signed by chair Erin Newan, Moses Greater, Brett Murray'), 'Erin Newnan' 2."
+    },
+    {
+      "right": "Ms. Dube",
+      "wrong": [
+        "Ms. Duby",
+        "Ms. Dubie"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2024-06 to 2026-04. The earliest is the Select Board meeting appointing her to the Finance Committee, so nothing predates her seating.",
+      "ground_truth": "_data/org_chart.yml:1738 (Lindsay Dube, Finance Committee).",
+      "observed": "'Ms. Duby' 40, 'Ms. Dubie' 4, against 4 correct 'Ms. Dube'.",
+      "note": "All occur in Finance Committee roll calls between Teets, Franklin and O'Neill."
+    },
+    {
+      "right": "Lindsay Dube",
+      "wrong": [
+        "Lindsay Duby",
+        "Lindsey Duby"
+      ],
+      "kind": "person",
+      "era": "Misheard forms appear 2024-06 to 2026-04. The earliest is the Select Board meeting appointing her to the Finance Committee, so nothing predates her seating.",
+      "ground_truth": "_data/org_chart.yml:1738 (Lindsay Dube, Finance Committee).",
+      "observed": "'Lindsay Duby' 11, 'Lindsey Duby' 7.",
+      "note": "Also corrects the given name: the roster spells it Lindsay, and the ASR produces Lindsey."
+    }
+  ],
+  "flag_only": [
+    {
+      "term": "Gerry",
+      "why": "Gerry School and Gerry Playground are real Marblehead places, and Gerry is also a given name that ASR renders interchangeably with Jerry. Context decides; a blind rewrite in either direction introduces errors."
+    },
+    {
+      "term": "Patrick Kezer",
+      "why": "The Town Administrator is Thatcher Kezer. _transcripts/town-meeting-2025-05-08.md renders him as 'Patrick Keer' three times with no occurrence of 'Thatcher', and the LLM carried 'Patrick Keer' into key_speakers and the summary prose. Correcting the surname leaves a wrong first name, so this needs a human fix, not a dictionary entry."
+    },
+    {
+      "term": "Evelyn",
+      "why": "A real first name that is also acoustically adjacent to Eveleth. Never auto-correct."
+    },
+    {
+      "term": "Evelace",
+      "why": "Probably Eveleth, but too few occurrences and too far from the correct spelling to correct with confidence."
+    },
+    {
+      "term": "Evella",
+      "why": "Probably Eveleth, same reasoning as Evelace."
+    },
+    {
+      "term": "Greater",
+      "why": "Ordinary English word and part of real names the corpus uses correctly ('Pediatric Associates of Greater Salem', 'the Greater Commonwealth'). Only corrected when preceded by 'Mr.' or 'Moses'."
+    },
+    {
+      "term": "Graders",
+      "why": "Mixed: '12th Graders' is a grade level, while 'Mr. Graders referring to' is Moses Grader. Never auto-correct."
+    },
+    {
+      "term": "Aaron Nunan",
+      "why": "Appears 17 times as a public commenter. Possibly Erin Noonan misheard ('Aaron' for 'Erin'), possibly a genuinely different resident; the transcripts label the speaker as online public comment rather than a board member. Needs a human to resolve."
+    },
+    {
+      "term": "Sharon Nunan",
+      "why": "Appears 6 times. Same ambiguity as Aaron Nunan; do not fold into Noonan without evidence."
+    },
+    {
+      "term": "Local Noon",
+      "why": "A beach retail store applying for licences, not a mishearing of Noonan. Guard against widening the Noonan rule to bare 'Noon'."
+    },
+    {
+      "term": "Nun",
+      "why": "'Ms. Nun' could be Noonan, but 'Alicia Nun. Ben newly Benjamin' is Aleesha Nunley Benjamin, the Finance Director. Two different people collapse onto the same token."
+    },
+    {
+      "term": "Sisson",
+      "why": "Mostly James Zisson, but 'Bonnie Sisson is with Elder Care Services' is a different real person, three years before Zisson took office. Correct only within Select Board roll-call context."
+    },
+    {
+      "term": "Lucas",
+      "why": "Only about half of 47 occurrences are Melissa Clucas. The rest include the Stryker LUCAS mechanical CPR device, an MPS teacher, and residents at public comment. Only the 'Melissa Lucas' bigram is corrected."
+    },
+    {
+      "term": "Ridge",
+      "why": "'Jack Ridge' is the Town Moderator, but the corpus also has attorney Kimberly Ridge, student Owen Ridge, Wayne Attridge rendered as 'Wayne Ridge', and a non-person 'Village Street Ridge'. Three edits from Attridge and heavily collided; not corrected at any scope yet."
+    },
+    {
+      "term": "Rogers",
+      "why": "'Dave Rogers' is David C. Rodgers, but 110 corpus occurrences span at least eight people plus Bob Rogers Travel (a vendor) and Aaron Rodgers (an NFL aside). Not corrected; a bigram rule would still need primary sources for the residents."
+    },
+    {
+      "term": "Meyers",
+      "why": "A genuinely correct surname in this corpus: Rick Meyers was appointed to the Traffic Safety Advisory Committee, and Jamie Meyers requested a licence. Not a mishearing of David Meyer."
+    },
+    {
+      "term": "Roberto",
+      "why": "40 occurrences, mostly Superintendent Robidoux, but also 'see Roberto Clemente play for the Pirates'. Needs bigram scoping before it can be corrected."
+    },
+    {
+      "term": "Roboido",
+      "why": "Appears inside a court case caption ('Kelly Ferretti et al. v. Marblehead Public Schools, John Roboido, and Al Williams, Essex Superior Court'). Correcting it would silently alter the text of a legal citation; verify against the docket first."
+    },
+    {
+      "term": "Al William",
+      "why": "Al Williams of the School Committee, misheard. Bare 'William' is REJECTED because 117 occurrences are overwhelmingly given names and the vendor William Scotsman Inc."
+    }
+  ]
+}

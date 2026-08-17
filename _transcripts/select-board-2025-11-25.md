@@ -16,10 +16,10 @@ summary_card:
   headline: "Select Board approves $8.97M Homer Contracting deal for MHS roof/HVAC project"
   summary: "The Select Board convened a brief special meeting, appointing a chair pro tem in the absence of the chair. A school official presented the results of a competitive bid process for the Marblehead High School roof and HVAC project, with the lowest qualified bid from Homer Contracting coming in approximately $2.1 million under the construction estimate. The board unanimously authorized the contract in the amount of $8,970,000 and authorized the chair to sign on behalf of the board."
   decisions:
-    - "Approved appointment of Moses Rader as chair pro tem"
+    - "Approved appointment of Moses Grader as chair pro tem"
     - "Approved contract with Homer Contracting for MHS roof/HVAC project at $8,970,000 and authorized chair to sign"
   votes:
-    - motion: "Appoint Moses Rader as chair pro tem"
+    - motion: "Appoint Moses Grader as chair pro tem"
       result: "in favor (unanimous)"
     - motion: "Approve contract with Homer Contracting for MHS roof/HVAC project at $8,970,000"
       result: "in favor (unanimous)"
@@ -31,10 +31,10 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 0
     end_seconds: 38
-    headline: "Moses Rader appointed chair pro tem for meeting"
-    dek: "With the regular chair absent, the board unanimously appointed Moses Rader to preside."
-    summary: "The board opened the meeting and immediately moved to appoint a chair pro tem. Moses Rader was nominated and approved unanimously."
-    key_speakers: ["Moses Rader (chair pro tem)"]
+    headline: "Moses Grader appointed chair pro tem for meeting"
+    dek: "With the regular chair absent, the board unanimously appointed Moses Grader to preside."
+    summary: "The board opened the meeting and immediately moved to appoint a chair pro tem. Moses Grader was nominated and approved unanimously."
+    key_speakers: ["Moses Grader (chair pro tem)"]
   - topic: public-comment
     topic_confidence: 0.9
     start_seconds: 38
@@ -69,7 +69,7 @@ topic_segments:
       The contract was drafted in conjunction with Town Counsel Lisa Mead's office, the OPM (Left Field), and the designer (Raymond Design Associates). The school committee had already approved it the prior week.
       
       The board voted unanimously to approve the contract and authorize the chair to sign.
-    key_speakers: ["School official (presenter, name not identified)", "Moses Rader (chair pro tem)"]
+    key_speakers: ["School official (presenter, name not identified)", "Moses Grader (chair pro tem)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 539
@@ -83,7 +83,7 @@ topic_segments:
 > proper names and dollar figures occasionally misheard. Click any timecode to
 > jump to that moment in the source video.
 
-**[0:00](https://vimeo.com/1140493652#t=0s)** When you are, sir. All right. So I will give you the absence of the chair. I will convene the meeting. The select board, uh, Illa business is to appoint a chair pro tem for today's meeting. Um, motion to appoint Moses Rader, chair pro tem for today's meeting. Is There a second? Second. Okay. All those in favor? That's unanimous. All right. Thank you very much. This now session, uh, I'd like to open it up to initial public comment. Um, anything, anybody online that would like to make a public comment?
+**[0:00](https://vimeo.com/1140493652#t=0s)** When you are, sir. All right. So I will give you the absence of the chair. I will convene the meeting. The select board, uh, Illa business is to appoint a chair pro tem for today's meeting. Um, motion to appoint Moses Grader, chair pro tem for today's meeting. Is There a second? Second. Okay. All those in favor? That's unanimous. All right. Thank you very much. This now session, uh, I'd like to open it up to initial public comment. Um, anything, anybody online that would like to make a public comment?
 
 **[0:38](https://vimeo.com/1140493652#t=38s)** Do not see anyone online. Anybody in this meeting? No. Okay. We'd like to, uh, move to a vote, uh, presentation from the schools on, uh, on a contract, please. Someone up, So I Don't Yeah, it's better. It's better to sit in the hot seat so the mic can, can pick you up. Excellent. Well, thank you very much. Pressure By my computer. Needs to be, uh, thank you very much for Scheduling this, this meeting. We would like to get the contract, uh, signed and executed and equipment ordered and an expeditious manner. We have, um, been told that it's could be up to a six month lead time for HVAC equipment, and so time is of the absence. We, we, I do believe we have, um,
 

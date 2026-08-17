@@ -14,13 +14,13 @@ source: vimeo-auto+llm
 
 summary_card:
   headline: "Select Board approves polling location changes and multiple contracts at May 14 meeting"
-  summary: "The Select Board approved moving four precincts' polling locations to the Marblehead High School Field House for the June 10, 2025 annual town election. The board also approved several contracts including a geothermal evaluation for Abbott Hall, roof design for Mary Alley and Jacoby Community Center buildings, and authorized a letter of support for an $11.25 million federal Port Infrastructure Development Program grant application. Two home rule petitions from the May 2025 Town Meeting were authorized for submission to the General Court."
+  summary: "The Select Board approved moving four precincts' polling locations to the Marblehead High School Field House for the June 10, 2025 annual town election. The board also approved several contracts including a geothermal evaluation for Abbot Hall, roof design for Mary Alley and Jacoby Community Center buildings, and authorized a letter of support for an $11.25 million federal Port Infrastructure Development Program grant application. Two home rule petitions from the May 2025 Town Meeting were authorized for submission to the General Court."
   decisions:
     - "Approved polling location changes moving Precincts 3–6 to Marblehead High School Field House for June 10, 2025 election"
     - "Approved Home Rule Petition for Article 28 (means-tested senior property tax exemption) for submission to General Court"
     - "Approved Home Rule Petition for Article 44 (amendment to Chapter 37 of Acts of 2004) for submission to General Court"
-    - "Approved consent agenda items including Abbott Hall use for Juneteenth Committee and Sergeant Lodge"
-    - "Approved contracts including bocce facility change order ($6,450), Abbott Hall brick repairs ($3,600 increase), geothermal evaluation ($7,010), roof design ($28,900), Purvis Systems amendment, and Office 365 license ($46,920)"
+    - "Approved consent agenda items including Abbot Hall use for Juneteenth Committee and Sergeant Lodge"
+    - "Approved contracts including bocce facility change order ($6,450), Abbot Hall brick repairs ($3,600 increase), geothermal evaluation ($7,010), roof design ($28,900), Purvis Systems amendment, and Office 365 license ($46,920)"
     - "Approved letter of support for $11.25 million Port Infrastructure Development Program federal grant application"
     - "Approved temporary outdoor dining applications for The Barman and Five Corners Kitchen"
   votes:
@@ -61,14 +61,14 @@ topic_segments:
     headline: "Town Administrator recaps Town Meeting relocation logistics and thanks collaborating towns"
     dek: "The Administrator detailed how the unexpected move to the high school field house was executed, including borrowing clickers from Hopkinton, Westford, and Hamilton to reach 2,900 units."
     summary: |
-      Town Administrator Keer reviewed the logistical effort surrounding the emergency relocation of Town Meeting to the high school field house:
+      Town Administrator Kezer reviewed the logistical effort surrounding the emergency relocation of Town Meeting to the high school field house:
       
       - **Clicker system**: The town had purchased 1,500 clickers but attendance exceeded that number. Vendor Meridian's Peter Babel delivered 800 additional rented clickers from Hopkinton, while Westford contributed 300 and Hamilton contributed 300, bringing the total to 2,900 clickers.
       - **WiFi issue**: A traffic jam on the system caused slowdowns; rebooting the WiFi cleared the problem. A technical writeup was provided back to vendor Meridian for other towns' benefit.
       - **Audio/visual improvements planned**: The board discussed upgrading screens, projectors, and permanently mounting receivers higher to avoid signal blockage, ahead of designating the field house as the standard venue.
       - **Staff recognition**: The Administrator and Chair recognized IT staff Frank Perez, school staffer Gretchen Langton (who ran the voting system), custodians, COA drivers (flagged by Lisa Hooper), childcare coordinator Janie Block, and others.
       - **Chief King award**: Police Chief King received a Community Leadership Award from ADL New England's Essex County Law and Education Day for work addressing antisemitism following October 7, 2023.
-    key_speakers: ["Town Administrator (Keer)", "Lisa Hooper (COA)", "Board Chair (Nunan)"]
+    key_speakers: ["Town Administrator (Kezer)", "Lisa Hooper (COA)", "Board Chair (Nunan)"]
   - topic: admin-housekeeping
     topic_confidence: 0.88
     start_seconds: 993
@@ -90,13 +90,13 @@ topic_segments:
     end_seconds: 1669
     featured: true
     headline: "Board moves Precincts 3–6 polling to high school field house for June 10 town election"
-    dek: "Precincts 1 and 2 remain at Abbott Hall; Precincts 3, 4, 5, and 6 move to Marblehead High School Field House at 2 Humphrey Street, effective for the June 10, 2025 annual election."
+    dek: "Precincts 1 and 2 remain at Abbot Hall; Precincts 3, 4, 5, and 6 move to Marblehead High School Field House at 2 Humphrey Street, effective for the June 10, 2025 annual election."
     summary: |
       The Select Board voted to change polling locations for the June 10, 2025 Annual Town Election:
       
       | Precincts | Location |
       |-----------|----------|
-      | 1 & 2 | Abbott Hall, 188 Washington Street |
+      | 1 & 2 | Abbot Hall, 188 Washington Street |
       | 3, 4, 5 & 6 | Marblehead High School Field House, 2 Humphrey Street |
       
       The locations will remain in effect for subsequent special or referendum elections unless the board votes otherwise. The town clerk was directed to notify the Secretary of the Commonwealth and affected voters per applicable law.
@@ -126,21 +126,21 @@ topic_segments:
     start_seconds: 1821
     end_seconds: 2230
     headline: "Board approves consent agenda contracts totaling roughly $92,880 plus Office 365 license"
-    dek: "Contracts cover bocce facility improvements, Abbott Hall brick repairs, geothermal evaluation, roof design for Mary Alley and Jacoby Center, and an annual Microsoft Office 365 license."
+    dek: "Contracts cover bocce facility improvements, Abbot Hall brick repairs, geothermal evaluation, roof design for Mary Alley and Jacoby Center, and an annual Microsoft Office 365 license."
     summary: |
       The board approved the following contracts and changes:
       
       | Item | Vendor | Amount |
       |------|--------|--------|
       | COA/Rec Bocce facility change order | Price Landscaping | $6,450 |
-      | Abbott Hall Brick Repairs increase | Raphael Construction | +$3,600 (extended to Sept 30) |
-      | Geothermal evaluation, Abbott Hall | Achieve Renewable Energy LLC, Salem | ≤$7,010 |
+      | Abbot Hall Brick Repairs increase | Raphael Construction | +$3,600 (extended to Sept 30) |
+      | Geothermal evaluation, Abbot Hall | Achieve Renewable Energy LLC, Salem | ≤$7,010 |
       | Roof design, Mary Alley & Jacoby Community Center | Gorman Richardson Lewis Architects, Hopkinton | $28,900 |
       | Fire Station alerting system amendment | Purvis Systems | language change only |
       | Office 365 license renewal | New Era Technology | $46,920 (IT budget) |
       
       The Purvis Systems amendment shifts software hosting from the vendor to the town's own IT staff, resulting in minor savings; remaining contract funds are retained for contingencies.
-    key_speakers: ["Town Administrator (Keer)", "Board Chair (Nunan)"]
+    key_speakers: ["Town Administrator (Kezer)", "Board Chair (Nunan)"]
   - topic: bonding-capital
     topic_confidence: 0.82
     start_seconds: 2091
@@ -156,7 +156,7 @@ topic_segments:
       - **Federal funding uncertainty**: The program had been pulled then reinstated for the next federal fiscal year; the town is proceeding while the grants remain active.
       
       The board unanimously authorized the chair to sign the letter of support.
-    key_speakers: ["Town Administrator (Keer)", "Board Chair (Nunan)"]
+    key_speakers: ["Town Administrator (Kezer)", "Board Chair (Nunan)"]
   - topic: permits-zoning
     topic_confidence: 0.8
     start_seconds: 2230
@@ -193,7 +193,7 @@ topic_segments:
 
 **[4:51](https://vimeo.com/1084464471#t=291s)** For sure. We hope others would, will weigh in. We're certainly, I think we're pleased with the venue change as well, so it was really nice. And then I, we do share your, um, your thoughts on getting our reuse, uh, visioning going for that property. Thank you for sure. Is there anybody online?
 
-**[5:11](https://vimeo.com/1084464471#t=311s)** Okay. So, uh, town administrator updates, Mr. Keer? Sure. Uh, thank you. Uh, I'll start. Number one. I concur in regard to town meeting at the high school field house. That worked well in my conversations, uh, with all the sort of key stakeholders in, in, in the process and decision. Uh, I've not heard any objections of designating that. Um, it, it, as was pointed out, uh, it provides very flexible space so it can be accommodated for the anticipated size of town meeting, and it can instantly grow larger if more, more come than anticipated. Um, it was a simpler setup up for the technology.
+**[5:11](https://vimeo.com/1084464471#t=311s)** Okay. So, uh, town administrator updates, Mr. Kezer? Sure. Uh, thank you. Uh, I'll start. Number one. I concur in regard to town meeting at the high school field house. That worked well in my conversations, uh, with all the sort of key stakeholders in, in, in the process and decision. Uh, I've not heard any objections of designating that. Um, it, it, as was pointed out, uh, it provides very flexible space so it can be accommodated for the anticipated size of town meeting, and it can instantly grow larger if more, more come than anticipated. Um, it was a simpler setup up for the technology.
 
 **[5:59](https://vimeo.com/1084464471#t=359s)** Um, especially the, the clickers, uh, despite the impression that the clickers were not working at the beginning. They, they were, it's just that the, um, the number of people in the room and all the other wifi signals, everything that was going on, um, it slowed down the transfer of data. So folks were thinking it was instantaneous response and, and clicking the button, and every time you click the button, it's transmitting another message into the system. Uh, and it just, it was a matter of patience. And, and, and we had to figure that out. Plus, uh, Frank Perez, who was handling the technology at some point, realized that the system basically had a traffic jam shut down the wifi and, and,
 
@@ -249,13 +249,13 @@ topic_segments:
 
 **[25:10](https://vimeo.com/1084464471#t=1510s)** Uh, we are moving on to agenda item number four, which is the 2025 annual town election polling locations. As we discussed at maybe our last meeting before town meeting, we discussed the, um, inaccessibility issues with the old townhouse and some challenges also with even just the community center and disruption of schedule. Uh, so we, uh, you know, as we discussed, are going to, um, uh, move the locations to the field house, which did a great job for us at town meeting. So let's fingers crossed. Um, it should be a great, uh, place to vote. So, um, we do need to take the vote. I ask for a motion to move that the select board pursuant to Mass General Law and in accordance with the requirements
 
-**[25:56](https://vimeo.com/1084464471#t=1556s)** of the Secretary of the Commonwealth, approve the following changes to the polling locations for the town of Marblehead, effective for the annual town election scheduled for June 10th, 2025. Precincts, um, one and two will be at Abbott Hall here at 180 8 Washington Street, precincts 3, 4, 5, and six will be at the Marblehead High School Field House, which is at two Humphrey Street. And these polling locations shall remain in effect until we further vote of the, until further vote of the board, and may also be used for any subsequent special or referendum election, including any referendum election duly scheduled by the Select Board upon certification of a referendum petition by the town clerk, unless otherwise determined by the board. Further, the town clerk is hereby directed to take all necessary steps to notify the Secretary of the Commonwealth, the public, and affected voters
+**[25:56](https://vimeo.com/1084464471#t=1556s)** of the Secretary of the Commonwealth, approve the following changes to the polling locations for the town of Marblehead, effective for the annual town election scheduled for June 10th, 2025. Precincts, um, one and two will be at Abbot Hall here at 180 8 Washington Street, precincts 3, 4, 5, and six will be at the Marblehead High School Field House, which is at two Humphrey Street. And these polling locations shall remain in effect until we further vote of the, until further vote of the board, and may also be used for any subsequent special or referendum election, including any referendum election duly scheduled by the Select Board upon certification of a referendum petition by the town clerk, unless otherwise determined by the board. Further, the town clerk is hereby directed to take all necessary steps to notify the Secretary of the Commonwealth, the public, and affected voters
 
 **[26:42](https://vimeo.com/1084464471#t=1602s)** of these changes in accordance with applicable law. So moved. Second. All those in favor? Okay.
 
-**[26:50](https://vimeo.com/1084464471#t=1610s)** And now we have a couple, we, our two homeroom rule petitions that we need to, um, send off. So I need a motion that the select board adopt the Home rule petition as approved at the May 7th, 2020 fifth, 20 20 25 town meeting. Article 28 established means tested senior citizens property tax exemption and submit. Same to the General Court. So moved. Second. Okay. So, poll vote, uh, Mr. Fox. In favor, Ms. Singer? In favor, Mr. Murray? In favor, Mr. Grader? In favor, Ms. Nunan In favor. Okay. And in the same vein, we need a, um, this is for the Article 44 Home Rule Petition. We need a motion that the select board petition for the General Court to amend chapter 37 of the Acts of 2004 as voted in Article 44 of the May 8th,
+**[26:50](https://vimeo.com/1084464471#t=1610s)** And now we have a couple, we, our two homeroom rule petitions that we need to, um, send off. So I need a motion that the select board adopt the Home rule petition as approved at the May 7th, 2020 fifth, 20 20 25 town meeting. Article 28 established means tested senior citizens property tax exemption and submit. Same to the General Court. So moved. Second. Okay. So, poll vote, uh, Mr. Fox. In favor, Ms. Singer? In favor, Mr. Murray? In favor, Mr. Grader? In favor, Ms. Noonan In favor. Okay. And in the same vein, we need a, um, this is for the Article 44 Home Rule Petition. We need a motion that the select board petition for the General Court to amend chapter 37 of the Acts of 2004 as voted in Article 44 of the May 8th,
 
-**[27:37](https://vimeo.com/1084464471#t=1657s)** 23, 5 town meeting. So moved. Second, Ms. Singer, Mr. Murray? In favor, Mr. Grader? In favor, Mr. Fox? In favor, Ms. Nunan In favor.
+**[27:37](https://vimeo.com/1084464471#t=1657s)** 23, 5 town meeting. So moved. Second, Ms. Singer, Mr. Murray? In favor, Mr. Grader? In favor, Mr. Fox? In favor, Ms. Noonan In favor.
 
 **[27:50](https://vimeo.com/1084464471#t=1670s)** Okay. And, um, now our, um, our veterans agent is away, but is, uh, has prepared, uh, or would like us to obviously publicize our Memorial Day weekend, uh, plans and activities. So I will just go through the schedule for those in the public. And the record. Friday, May 23rd is the Veteran's Breakfast at nine o'clock at the Council on Aging. This is sponsored by the Masons, and then there is grave flagging at Star of the Sea Cemetery. And then following on Saturday, May 24th at 9:00 AM there's grave flagging at the Waterside Cemetery, um, meeting at the Bell Tower and all are welcome to attend and participate. Sunday at one o'clock Is the VFW Veteran Service at the
 
@@ -263,9 +263,9 @@ topic_segments:
 
 **[29:25](https://vimeo.com/1084464471#t=1765s)** and Selectman Moses Grader at Memorial Park, uh, speaking. And there's a, um, student essay at the waterside that will be delivered.
 
-**[29:35](https://vimeo.com/1084464471#t=1775s)** Alright, consent agenda items. Uh, these, uh, we have no minutes, so I will ask for a motion to approve the following consent agenda items, except those put on hold, the use of Abbott Hall Friday, June 13th, 2025 for the Juneteenth Committee at 5:00 PM subject to the usual rules, regulations, and fees paid to the town and Abbott Hall Care. Sergeant Lodge number two 17, November 7th through eighth, 2025, subject to the usual rules, regulations, fees paid to the town and coordination and final sign off by town administrator. So moved. Second. All those in favor? Great. Now consent agenda contracts. So these are, um, funded through a lot of, uh, article
+**[29:35](https://vimeo.com/1084464471#t=1775s)** Alright, consent agenda items. Uh, these, uh, we have no minutes, so I will ask for a motion to approve the following consent agenda items, except those put on hold, the use of Abbot Hall Friday, June 13th, 2025 for the Juneteenth Committee at 5:00 PM subject to the usual rules, regulations, and fees paid to the town and Abbot Hall Care. Sergeant Lodge number two 17, November 7th through eighth, 2025, subject to the usual rules, regulations, fees paid to the town and coordination and final sign off by town administrator. So moved. Second. All those in favor? Great. Now consent agenda contracts. So these are, um, funded through a lot of, uh, article
 
-**[30:21](https://vimeo.com/1084464471#t=1821s)** 11 from the Capital Improvements Abbott Hall Article Council on Aging Donations. Do you have it? Are we on shop? Yeah. Do you have over here, do we? Oh yeah. I, I'm, I did we, um, oh, we might have jumped over, uh, something there. Chair Lisa. I just, okay. She, I have Lisa Hooper with her hand up. I don't know if she wants to Oh, okay. Discuss b bocce court or whatever. Oh, right. The bocce court is on Here. I don't know, is that anywhere in your back? I don't know. Oh yeah, This is the letter from, it's the concert that I have. Yeah. And her hand done. I have eight, I dunno what Hands up, hands down Goes with this. Alright. Goes with, so what I'm gonna, um,
+**[30:21](https://vimeo.com/1084464471#t=1821s)** 11 from the Capital Improvements Abbot Hall Article Council on Aging Donations. Do you have it? Are we on shop? Yeah. Do you have over here, do we? Oh yeah. I, I'm, I did we, um, oh, we might have jumped over, uh, something there. Chair Lisa. I just, okay. She, I have Lisa Hooper with her hand up. I don't know if she wants to Oh, okay. Discuss b bocce court or whatever. Oh, right. The bocce court is on Here. I don't know, is that anywhere in your back? I don't know. Oh yeah, This is the letter from, it's the concert that I have. Yeah. And her hand done. I have eight, I dunno what Hands up, hands down Goes with this. Alright. Goes with, so what I'm gonna, um,
 
 **[31:10](https://vimeo.com/1084464471#t=1870s)** so Lisa Hooper has her hand up. I I'm gonna presume it's comment on this. Let allow her to talk. Yes, go ahead, Lisa. Sorry. Hi. Um, so sorry. I had, can you hear me? Yes. Yeah. Okay. So I had raised my hand up earlier just because, um, for town meeting. Mm-hmm. We were called at the last minute and I had one driver work 15 and a half hours that day. I'm sorry, yes. At eight the next morning. And then I had another person who was on vacation come in to work that night. And we were happy to help and we're happy to help next year, but I just wanna give, um, you know, some notice to the people that came in and worked from the COA Thank you, Lisa. Absolutely. I do remember that.
 
@@ -273,7 +273,7 @@ topic_segments:
 
 **[32:43](https://vimeo.com/1084464471#t=1963s)** where within the contract, uh, they were gonna provide service to run the software decision, working with our IT folks that our own service will host it. So there's a bit of a savings, but we're gonna leave the funding as is in case there's any other contingencies to the contract. So I just wanted to clarify what the changes on that particular contract. The, the rest are pre self-explanatory is listed in the, in your book. Okay. Thanks. So I need a motion to approve the following consent agenda items, contracts with the town, um, accept any put on hold and authorize the chair to sign on behalf of the board change order number one to amend the contract 20 24 0 6 4 Council on Aging Recreation Bocce facility project between the town
 
-**[33:30](https://vimeo.com/1084464471#t=2010s)** and Price Landscaping in the amount of $6,450. Amend the contract of 2024 dash zero two Abbott Hall Brick Rentals with Raphael Construction by increasing the amount by $3,600 and extend the contract time to September 30th of this year. Award the contract of 2025 dash 0 1 4 to achieve renewable energy LLC of Salem Mass for geothermal evaluation for Abbott Hall System in, in amount not to exceed $7,010. And an award of a contract 2025 dash 0 1 3 to Gorman Richardson Lewis Architects of Hopton Mass for the roof design of the Mary Alley and Jacoby Community Center buildings in the amount of $28,900.
+**[33:30](https://vimeo.com/1084464471#t=2010s)** and Price Landscaping in the amount of $6,450. Amend the contract of 2024 dash zero two Abbot Hall Brick Rentals with Raphael Construction by increasing the amount by $3,600 and extend the contract time to September 30th of this year. Award the contract of 2025 dash 0 1 4 to achieve renewable energy LLC of Salem Mass for geothermal evaluation for Abbot Hall System in, in amount not to exceed $7,010. And an award of a contract 2025 dash 0 1 3 to Gorman Richardson Lewis Architects of Hopton Mass for the roof design of the Mary Alley and Jacoby Community Center buildings in the amount of $28,900.
 
 **[34:15](https://vimeo.com/1084464471#t=2055s)** Amend the contract of 2024 dash 0 4 4 with Purvis Systems Fire Station alerting system by amending language, uh, and renew the annual license agreement with new error technology for Office 360 5G 3G CC in the amount of $46,920. And that's from the IT budget. It wasn't listed there. So that's our, that's our office product license for the employees. Right. Okay. So moved second. All in favor? Okay.
 
@@ -283,7 +283,7 @@ topic_segments:
 
 **[36:25](https://vimeo.com/1084464471#t=2185s)** So as of right now, they're on, we're gonna go for it and hope that, hope for the best, but $11,250,000 for our Harbor Resiliency Project. This is, this would be a home run. A hundred percent. It looks like we, we got in just under the wire, right? With a deadline extension. Yep. Yep. So again, great work by our community development and planning folks Yep. To pull this together. A hundred percent. I mean, that's why they, that's why they're there. Mm-hmm. I think most of the design work's all been done through grant funding as well. Yep. Mm-hmm. That project. Um, so people know it's about 75% Design? Design. Yep. Yeah. Amazing. Awesome.
 
-**[37:10](https://vimeo.com/1084464471#t=2230s)** Okay. And, um, temporary outdoor dining applications from the Barrowman and Five Corner's Kitchen. They're in the packets. They, um, uh, we need a motion to approve those applications for 2025. Temporary outdoor dining in accordance with the town's policy on temporary outdoor dining, the barman of 257 Washington Street and five Quarters Kitchen of two School Street, and subject to receipt of the required forms, fees, insurance, and approval from police, fire building commissioner and town administrator. So Both. Second, Mr. Murray In favor, Mr. Grader? In favor, Mr. Fox? In favor, Ms. Singer? In favor, Ms. Nunan
+**[37:10](https://vimeo.com/1084464471#t=2230s)** Okay. And, um, temporary outdoor dining applications from the Barrowman and Five Corner's Kitchen. They're in the packets. They, um, uh, we need a motion to approve those applications for 2025. Temporary outdoor dining in accordance with the town's policy on temporary outdoor dining, the barman of 257 Washington Street and five Quarters Kitchen of two School Street, and subject to receipt of the required forms, fees, insurance, and approval from police, fire building commissioner and town administrator. So Both. Second, Mr. Murray In favor, Mr. Grader? In favor, Mr. Fox? In favor, Ms. Singer? In favor, Ms. Noonan
 
 **[37:58](https://vimeo.com/1084464471#t=2278s)** In favor.
 

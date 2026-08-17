@@ -22,7 +22,7 @@ summary_card:
     - "Approved revisions to Senate Bill 3027 (candidate name lottery on election ballots)"
     - "Approved designation of Amy McHugh as certified UST Class A/B operator"
     - "Approved letter of support for FY23 REDO Grant application by North Shore Alliance for Economic Development"
-    - "Approved closure of Abbott Hall and Marblehead Town Hall on December 26, 2022 and January 2, 2023"
+    - "Approved closure of Abbot Hall and Marblehead Town Hall on December 26, 2022 and January 2, 2023"
     - "Approved restaurants remaining open until 1 AM on January 1, 2023"
     - "Approved no-parking restriction on Smith Street near numbers 27 and 32"
   votes:
@@ -98,7 +98,7 @@ topic_segments:
       - **Christmas tree pickup and bonfire**: Annual tree burning at Riverhead Beach scheduled for Friday, January 6, 2023 at 6 PM; curbside pickup runs December 27, 2022 through January 13, 2023.
       - **UST operator designation**: Amy McHugh, Director of Public Works, was designated as the certified Class A/B underground storage tank operator for the town's system on Tower Way following her passage of the required exam.
       - **REDO Grant letter**: The board authorized the chair to sign a letter of support for the North Shore Alliance for Economic Development's FY23 REDO Grant application. The town has a pending request of approximately $13,000 from the Alliance to replace the visitor booth.
-      - **Holiday hours**: Abbott Hall and Marblehead Town Hall (Mary Alley) to be closed December 26, 2022 and January 2, 2023.
+      - **Holiday hours**: Abbot Hall and Marblehead Town Hall (Mary Alley) to be closed December 26, 2022 and January 2, 2023.
       - **New Year's Eve extended hours**: Restaurants permitted to remain open until 1 AM on January 1, 2023.
     key_speakers: ["Town Administrator (Thatcher)", "Board Chair"]
   - topic: public-safety
@@ -140,10 +140,10 @@ topic_segments:
     start_seconds: 3287
     end_seconds: 3601
     headline: "Town Administrator reports on joint appointment scheduling and $850 auction of surplus painting"
-    dek: "Thatcher updated the board on pending joint meetings for school committee and housing authority vacancies and noted the sale of a surplus painting from Abbott Hall for $850."
+    dek: "Thatcher updated the board on pending joint meetings for school committee and housing authority vacancies and noted the sale of a surplus painting from Abbot Hall for $850."
     summary: |
       - **Joint meeting scheduling**: Two joint meetings are being scheduled — one for the school committee vacancy and one for the housing authority vacancy. The school committee meeting was delayed because a select board member was unable to attend; the board's policy is to have all members present for appointment votes to avoid tied votes. The target is mid-to-late January 2023. All candidates have been notified.
-      - **Abbott Hall painting auction**: A painting found during Abbott Hall renovations and declared surplus by the board in September 2021 (at the request of the Marblehead Historical Commission chair) was sold at a Skinner auction for $850, exceeding expectations.
+      - **Abbot Hall painting auction**: A painting found during Abbot Hall renovations and declared surplus by the board in September 2021 (at the request of the Marblehead Historical Commission chair) was sold at a Skinner auction for $850, exceeding expectations.
       - **Sustainability coordinator**: The Green Marblehead Committee is discussing proposing a sustainability/energy coordinator position. The Town Administrator indicated the appropriate vehicle would be the budget process and that a preliminary update to the board may be provided in January.
     key_speakers: ["Town Administrator (Thatcher)"]
   - topic: admin-housekeeping
@@ -186,7 +186,7 @@ topic_segments:
 
 **[8:28](https://vimeo.com/779281303#t=508s)** Warwick entertainment LLC 123 Pleasant Street manager David Zion And we're going to take a regular vote from here. Do I have a motion? and the second all those in favor okay, unanimous motion to renew the following Sunday entertainment licenses subject to all fees to the town being paid and approved from an approval from the Commonwealth Department of Public Safety for Sunday entertainment. Boston Yacht Club One Front Street manager Brian peland Casa Corona 33 Smith Street manager at Jose bracamundes Corinthian Yacht Club one eight one Nahant Street Manager David H Titus Eastern Yacht Club 747 Foster Street manager Jared. Cherny Tedesco Country Club. 154 Tedesco
 
-**[9:16](https://vimeo.com/779281303#t=556s)** Street manager, Michael mckillicuddy fenyang for 48 Atlantic Avenue manager Ling Quin Chen Lupita to Atlantic Avenue manager Alexander Lewis Mattie sale Loft Inc. Doing business is Maddie sail off 15's State Street manager Loretta Lang My Thai Lounge Eight, bessem Street manager Amanda Breen the new Marvel head Landing doing business as the landing 81 Front Street manager Robert. Simonelli Riptide Lounge 116, Pleasant Street manager George a Champa Gary number five veterans farm and Association Inc. 210, Beacon Street manager art Dodge Warwick entertainment LLC doing business. X 123 Pleasant Street Manager David Zion chaplain Lyman Rollins
+**[9:16](https://vimeo.com/779281303#t=556s)** Street manager, Michael mckillicuddy fenyang for 48 Atlantic Avenue manager Ling Quin Chen Lupita to Atlantic Avenue manager Alexander Lewis Mattie sale Loft Inc. Doing business is Maddie sail off 15's State Street manager Loretta Lang My Thai Lounge Eight, bessem Street manager Amanda Breen the new Marblehead Landing doing business as the landing 81 Front Street manager Robert. Simonelli Riptide Lounge 116, Pleasant Street manager George a Champa Gary number five veterans farm and Association Inc. 210, Beacon Street manager art Dodge Warwick entertainment LLC doing business. X 123 Pleasant Street Manager David Zion chaplain Lyman Rollins
 
 **[10:04](https://vimeo.com/779281303#t=604s)** post 2005 VFW 321 West Shore Drive manager Edward Preble again. We'll take a vote here. So moved the second, please second all those in favor. Alright unanimous Motion to renew the following common Vic licenses subject to all taxes and fees to the town being paid and received of all applicable Department approvals. I'm orders Tequila Bar 169 Pleasant Street managers Jose Luis Sanchez. Barrelman. 259, Washington Street manager Benjamin, Newman, Barnacle 141, Front Street manager, JL sohegan sohegan Luke canoe Cafe 14 School Street manager Heather Harrison Cafe, Italia 10
 
@@ -252,7 +252,7 @@ topic_segments:
 
 **[29:20](https://vimeo.com/779281303#t=1760s)** Thank you. Holiday hours again. This is pretty much.
 
-**[29:27](https://vimeo.com/779281303#t=1767s)** Yeah, just to kind of. Announce the the motion to self-explanatory motion that Abbott Hall and Mary Ali will be closed on Monday, December 26th, 2022 and observance of Christmas Day and on Monday January to 2023 and observance of New Year's Day. Secondly, I was in favor. Thank you.
+**[29:27](https://vimeo.com/779281303#t=1767s)** Yeah, just to kind of. Announce the the motion to self-explanatory motion that Abbot Hall and Mary Ali will be closed on Monday, December 26th, 2022 and observance of Christmas Day and on Monday January to 2023 and observance of New Year's Day. Secondly, I was in favor. Thank you.
 
 **[29:55](https://vimeo.com/779281303#t=1795s)** And this next one is just a New Year's Eve extended business hours. If I could entertain a motion to move to allow restaurants in the town of Marblehead terrain open for business on Sunday, January. One two thousand twenty three until one am at their description. all those in favor All right.
 
@@ -296,7 +296,7 @@ topic_segments:
 
 **[39:48](https://vimeo.com/779281303#t=2388s)** so my name
 
-**[39:51](https://vimeo.com/779281303#t=2391s)** tell us to Road. I've been made aware of traffic safety concerns of residents the long Rockaway Avenue and Rock Cliff Road. And I want to preface the comment about to make my emphasizing. It's not a complaint about the Marvel head Police Department. It's not a complaint about Chief king or any of his officers. It is instead an object lesson on how we really expect. Police Department to do too much to do something that they're not equipped to do when it comes to traffic safety. So, let me tell you the story. More than six months ago two children aged four and five were nearly struck by a motor vehicle as the driver whipped around the corner from Rockaway onto Rockwell.
+**[39:51](https://vimeo.com/779281303#t=2391s)** tell us to Road. I've been made aware of traffic safety concerns of residents the long Rockaway Avenue and Rock Cliff Road. And I want to preface the comment about to make my emphasizing. It's not a complaint about the Marblehead Police Department. It's not a complaint about Chief king or any of his officers. It is instead an object lesson on how we really expect. Police Department to do too much to do something that they're not equipped to do when it comes to traffic safety. So, let me tell you the story. More than six months ago two children aged four and five were nearly struck by a motor vehicle as the driver whipped around the corner from Rockaway onto Rockwell.
 
 **[40:38](https://vimeo.com/779281303#t=2438s)** Had adults not been there to pull them out of Harm's Way according to one parent like quote we would have had a tragedy. residents asking Dennis King for stop signing for Speed humps or reduce speed limit on Rockaway Avenue, really anything So in response Chief King directed Sergeant Finnegan who I understand handle such things to collect enforcement data of Rock Club. for seven days between July 15th and July 22nd data recorders measured the volume and speed of traffic on rockcliffe. The resulting data indicated an average speed just 15 miles an hour, which is well below the default speed limit on rock with 25
 
@@ -306,7 +306,7 @@ topic_segments:
 
 **[42:55](https://vimeo.com/779281303#t=2575s)** on Westshore drop those bump out narrow the travel when you narrow the travel Lanes traffic slows and if I could just respond to the concerns about drivers hitting those currents. Guess what slow down? That's why they're there.
 
-**[43:14](https://vimeo.com/779281303#t=2594s)** Um, so you've got a proven way to reduce travel speeds independent of the person travel speed limit. so Am I criticizing the MPD for failing to issue those citations? Because if they did that they would anger residents and they would anger vehicle owners. And this is true throughout Marvel that I would suggest we could probably fund the entire town government on traffic violations below. But then we would essentially have a police force as an occupied. That's not what we want. We are driving technology. There are 20,000 residents in this town. There are 17,000 registered motor vehicles in London.
+**[43:14](https://vimeo.com/779281303#t=2594s)** Um, so you've got a proven way to reduce travel speeds independent of the person travel speed limit. so Am I criticizing the MPD for failing to issue those citations? Because if they did that they would anger residents and they would anger vehicle owners. And this is true throughout Marblehead that I would suggest we could probably fund the entire town government on traffic violations below. But then we would essentially have a police force as an occupied. That's not what we want. We are driving technology. There are 20,000 residents in this town. There are 17,000 registered motor vehicles in London.
 
 **[44:04](https://vimeo.com/779281303#t=2644s)** So let me return though to this Rock Cliff Road speed enforcement study in Canada report showed average speed 15 miles an hour. No problem. But that's not looking at the real the data very carefully. I want to I have in front of me.
 

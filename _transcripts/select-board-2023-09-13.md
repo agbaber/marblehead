@@ -24,16 +24,16 @@ summary_card:
     - "Approved one-day liquor license for Symphony by the Sea at Old North Church (October 1, 2023)"
     - "Approved one-day liquor license for Greg Mancuso Ungaro at St. Andrew's Church (October 20, 2023)"
     - "Approved delegation of town administrator to appoint Health and Safety Committee members per MEU contract Article 35"
-    - "Approved Festival of Arts use of Abbott Hall for Christmas Walk Artisans Marketplace (December 1–3, 2023)"
+    - "Approved Festival of Arts use of Abbot Hall for Christmas Walk Artisans Marketplace (December 1–3, 2023)"
     - "Approved Marblehead Rotary 5K on November 5, 2023"
     - "Approved contract for window restoration at Franklin Street Firehouse to Foster Architects for $24,200"
     - "Approved contract for DPW and police station roof project to Corolla Roof of Winthrop MA for $1,243,689"
     - "Approved private drain connection license agreement for 325 Ocean Avenue"
     - "Approved temporary no-parking tow zone on Roundhouse Road area for October 23–24, 2023 cleanup"
-    - "Approved use of Abbott Hall for Marblehead High School art show (May 6–24, 2024)"
+    - "Approved use of Abbot Hall for Marblehead High School art show (May 6–24, 2024)"
     - "Accepted resignations of Yom Tom Menjur and Beth Johnson from the Marblehead Cultural Council"
     - "Approved shanty renewal for Doug Percy, Front Street shanty number six"
-    - "Approved use of Abbott Hall for wedding ceremony on September 16, 2023"
+    - "Approved use of Abbot Hall for wedding ceremony on September 16, 2023"
     - "Set September 22 deadline for Measure of Leather applications; interviews September 27"
     - "Set October 6 deadline for Historical Commission applications"
     - "Set September 22 deadline for Traffic Safety Advisory Committee applications; interviews September 27"
@@ -54,7 +54,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Delegate town administrator to appoint Health and Safety Committee members"
       result: "in favor (unanimous)"
-    - motion: "Festival of Arts use of Abbott Hall (December 2023)"
+    - motion: "Festival of Arts use of Abbot Hall (December 2023)"
       result: "in favor (unanimous)"
     - motion: "Marblehead Rotary 5K approval"
       result: "in favor (unanimous)"
@@ -66,13 +66,13 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Temporary no-parking zone for Roundhouse Road cleanup"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall use for MHS art show (May 2024)"
+    - motion: "Abbot Hall use for MHS art show (May 2024)"
       result: "in favor (unanimous)"
     - motion: "Accept Cultural Council resignations"
       result: "in favor (unanimous)"
     - motion: "Approve shanty renewal for Doug Percy"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall use for wedding ceremony (September 16, 2023)"
+    - motion: "Abbot Hall use for wedding ceremony (September 16, 2023)"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -120,9 +120,9 @@ topic_segments:
     topic_confidence: 0.9
     start_seconds: 613
     end_seconds: 705
-    headline: "Abbott Hall approved for Festival of Arts Christmas Walk Artisans Marketplace"
-    dek: "The Marblehead Festival of Arts received approval to use Abbott Hall's second floor December 1–3, 2023 for their annual marketplace."
-    summary: "The board unanimously approved the request from the Marblehead Festival of Arts to use Abbott Hall for the annual Artisans Marketplace during the Christmas Walk on Friday December 1 (5:30–8:30 PM), Saturday December 2 (7 AM–5:30 PM), and Sunday December 3 (9 AM–6:30 PM), subject to usual rules, regulations, fees, and certificate of insurance."
+    headline: "Abbot Hall approved for Festival of Arts Christmas Walk Artisans Marketplace"
+    dek: "The Marblehead Festival of Arts received approval to use Abbot Hall's second floor December 1–3, 2023 for their annual marketplace."
+    summary: "The board unanimously approved the request from the Marblehead Festival of Arts to use Abbot Hall for the annual Artisans Marketplace during the Christmas Walk on Friday December 1 (5:30–8:30 PM), Saturday December 2 (7 AM–5:30 PM), and Sunday December 3 (9 AM–6:30 PM), subject to usual rules, regulations, fees, and certificate of insurance."
   - topic: recreation-events
     topic_confidence: 0.85
     start_seconds: 706
@@ -148,11 +148,11 @@ topic_segments:
     start_seconds: 937
     end_seconds: 1091
     headline: "Private drain license, Roundhouse Road cleanup, and MHS art show approved"
-    dek: "Three routine approvals covered a drain easement renewal at 325 Ocean Avenue, an annual DPW cleanup tow zone, and use of Abbott Hall for the high school art show."
+    dek: "Three routine approvals covered a drain easement renewal at 325 Ocean Avenue, an annual DPW cleanup tow zone, and use of Abbot Hall for the high school art show."
     summary: |
       - **Private drain connection**: License agreement renewed for new owners Sue and Hughes Scandrett at 325 Ocean Avenue, covering an existing easement.
       - **Roundhouse Road cleanup**: Temporary no-parking tow zone approved for Roundhouse Road from School Street to Bessam Street and Upper Anderson Street on October 23, 2023 (rain date October 24), 7 AM–3 PM.
-      - **MHS Art Show**: Use of Abbott Hall approved for the annual Marblehead High School Art Show, May 6–24, 2024, with an opening reception May 14, 2024.
+      - **MHS Art Show**: Use of Abbot Hall approved for the annual Marblehead High School Art Show, May 6–24, 2024, with an opening reception May 14, 2024.
     key_speakers: ["Town Administrator (unidentified)"]
   - topic: recreation-events
     topic_confidence: 0.92
@@ -204,9 +204,9 @@ topic_segments:
     topic_confidence: 0.8
     start_seconds: 2493
     end_seconds: 2578
-    headline: "Abbott Hall approved for wedding ceremony on September 16, 2023"
+    headline: "Abbot Hall approved for wedding ceremony on September 16, 2023"
     dek: "The request was approved on short notice after rain from an approaching hurricane caused a Crocker Park outdoor ceremony to be relocated indoors."
-    summary: "The board unanimously approved use of Abbott Hall for a wedding ceremony for Thomas Smith on Saturday September 16, 2023 from noon to 6 PM. The original venue was Crocker Park, but the event was moved indoors due to the approaching hurricane. The board noted the personal significance of the event for the applicant."
+    summary: "The board unanimously approved use of Abbot Hall for a wedding ceremony for Thomas Smith on Saturday September 16, 2023 from noon to 6 PM. The original venue was Crocker Park, but the event was moved indoors due to the approaching hurricane. The board noted the personal significance of the event for the applicant."
   - topic: public-comment
     topic_confidence: 0.95
     start_seconds: 2579
@@ -260,11 +260,11 @@ topic_segments:
 
 **[4:29](https://vimeo.com/864231073#t=269s)** Um, so, uh, all in favor, Uh, unanimous. We have, um, a letter. Uh, this is a, um, request for a one day liquor license, um, from Bubble Bar. So I will ask for a motion to approve the request from Maria tokens of Bubble Bar Boston for one day liquor license for Saturday October 14th, 2023 from 11:00 AM to 2:00 PM at the Jeremiah Lee Mansion, 1 61 Washington Street for the Fall Artisans Fair, subject to the following conditions, delivery of and receipt by the licensing authority of the required fee delivery of and receipt by the licensing authority of proof that the alcohol will be purchased from an authorized source, proof that the applicant can receive proper delivery, provide proper storage and disposal of all alcoholic beverages purchased,
 
-**[5:15](https://vimeo.com/864231073#t=315s)** all in accordance with the requirements of general laws. Chapter 1 38, alcohol will be purchased from Martin Netty and Horizon Liquors. This is a poll vote. Some Will second. Okay. I'll start with Mr. Grader. In favor, Mr. Nye In favor, Ms. Singer? In favor, Mr. Murray in favor, and Ms. Noon In favor. Okay. Um, another one day liquor license. This coming from Steven Hahn of Ocean Ave, um, for the, um, symphony by the Sea. So, um, I would like a motion to approve the request from Steven Hahn Symphony by the Sea for a one day liquor license for Sunday, October 1st, 2023 from 3:00 PM to 5:00 PM at the Old North Church, 35 Washington Street, subject to the following conditions,
+**[5:15](https://vimeo.com/864231073#t=315s)** all in accordance with the requirements of general laws. Chapter 1 38, alcohol will be purchased from Martin Netty and Horizon Liquors. This is a poll vote. Some Will second. Okay. I'll start with Mr. Grader. In favor, Mr. Nye In favor, Ms. Singer? In favor, Mr. Murray in favor, and Ms. Noonan In favor. Okay. Um, another one day liquor license. This coming from Steven Hahn of Ocean Ave, um, for the, um, symphony by the Sea. So, um, I would like a motion to approve the request from Steven Hahn Symphony by the Sea for a one day liquor license for Sunday, October 1st, 2023 from 3:00 PM to 5:00 PM at the Old North Church, 35 Washington Street, subject to the following conditions,
 
 **[6:01](https://vimeo.com/864231073#t=361s)** delivery of and receipt by the licensing authority of the required fee, which is $50 delivery of and receipt by the licensing authority of proof that the alcohol will be purchased from an authorized source, proof that the applicant can receive proper delivery, proper, provide proper storage and disposal of all alcoholic beverages purchased, all in accordance with the requirements of general law. Chapter 1 38, alcohol will be provided from Alfalfa Farm Winery. So moved. Second. Second. Okay. Mr. Nye in favor, Ms. Singer? In favor, Mr. Murray? In favor, Mr. Grader? In favor, Ms. Newton In favor carrying on with the celebrations, another one day liquor license. Um, I would ask for a motion to approve the request from Greg Mancuso Ungaro for a one day liquor license for Friday, October 20th, 2023 from seven to 10:00 PM at St.
 
-**[6:48](https://vimeo.com/864231073#t=408s)** Andrew's Church at 135 Lafayette Street, subject to the fallen conditions delivery of and receipt by the licensing authority of the required fee of $50, delivery of and receipt by the licensing authority of proof that the alcohol will be purchased from an authorized source, proof that the applicant can receive proper delivery, provide proper storage and disposal of all alcoholic beverages purchased, all in accordance with the requirements of general laws. Chapter 1 38, alcohol will be purchased from CAP'S importing shall Moved. Second. Second, she, you're sick of saying second. No, I beat you, Ms. Ms. Singer In favor, Mr. Marie? In favor, Mr. Grader? In favor, Mr. Nye In favor, Ms. Nunan In favor? Sounds like a fun fall. Um, okay. So, uh,
+**[6:48](https://vimeo.com/864231073#t=408s)** Andrew's Church at 135 Lafayette Street, subject to the fallen conditions delivery of and receipt by the licensing authority of the required fee of $50, delivery of and receipt by the licensing authority of proof that the alcohol will be purchased from an authorized source, proof that the applicant can receive proper delivery, provide proper storage and disposal of all alcoholic beverages purchased, all in accordance with the requirements of general laws. Chapter 1 38, alcohol will be purchased from CAP'S importing shall Moved. Second. Second, she, you're sick of saying second. No, I beat you, Ms. Ms. Singer In favor, Mr. Marie? In favor, Mr. Grader? In favor, Mr. Nye In favor, Ms. Noonan In favor? Sounds like a fun fall. Um, okay. So, uh,
 
 **[7:34](https://vimeo.com/864231073#t=454s)** this, um, we, this is regarding our next item on the agenda is to, um, is, uh, is to, uh, delegate our town administrator for the two members of the Health and Safety Committee, uh, which is, um, something created under our contract with the Labor Union. Um, yes. So if you wanted to, like, So according to the, um, the, the collective bargaining agreement with the, the Municipal Employees Union Article 35, it sets up a health and safety committee. So if there are any issues regarding health and safety with employees, the union will appoint 2, 2, 2 members of this committee. The select board has, has the authority to select two people. Uh, what I recommended is rather than selecting people by name, is to delegate,
 
@@ -274,7 +274,7 @@ topic_segments:
 
 **[9:56](https://vimeo.com/864231073#t=596s)** So we did have conversation, we're working on, you know, addressing, uh, some of the, some of the issues in that building. Great. So thank you. Thank You. Um, All in favor?
 
-**[10:13](https://vimeo.com/864231073#t=613s)** Okay. Next we have a request from the Marblehead Festival of Arts for the upcoming Marblehead Christmas walk. And, um, they are asking permission to utilize the second floor of Abbott Hall for the Artisans marketplace as they do annually. Um, so the dates are here and they're in the motion. So I'll just go ahead and read the motion that we're looking for to approve the request from the Festival of Arts to use Abbott Hall for their annual artisans marketplace on the following days. All in accordance with the usual rules, regulations, fees, and receipt of the required certificate of insurance. Friday, December 1st, 2023, 5:30 PM to 8:30 PM Saturday, December 1st, 2023, 7:00 AM to 5:30 PM Sunday, December 3rd,
+**[10:13](https://vimeo.com/864231073#t=613s)** Okay. Next we have a request from the Marblehead Festival of Arts for the upcoming Marblehead Christmas walk. And, um, they are asking permission to utilize the second floor of Abbot Hall for the Artisans marketplace as they do annually. Um, so the dates are here and they're in the motion. So I'll just go ahead and read the motion that we're looking for to approve the request from the Festival of Arts to use Abbot Hall for their annual artisans marketplace on the following days. All in accordance with the usual rules, regulations, fees, and receipt of the required certificate of insurance. Friday, December 1st, 2023, 5:30 PM to 8:30 PM Saturday, December 1st, 2023, 7:00 AM to 5:30 PM Sunday, December 3rd,
 
 **[10:59](https://vimeo.com/864231073#t=659s)** 9:00 AM to 6:30 PM So moved. Second. Uh, All in favor? Okay. Um, Uh, Next, um, is a request from the Rotary Club for an event for the Rotary's, um, annual five K, uh, on November 5th at 11. They're looking have 150 to 200 participants, and it will begin and end at the Boston Yacht Club. It's a fun race. Um, I asked for a motion to approve the request from Nancy Archer Gwen, co-president of the Marblehead Rotary Club, to hold the Marblehead Rotary five K on Sunday, November 5th at 11:00 AM Subject to approval from police and fire receipt of the required certificate of insurance and police details.
 
@@ -366,7 +366,7 @@ topic_segments:
 
 **[40:56](https://vimeo.com/864231073#t=2456s)** um, uh, one vacancy, which is a three year term and conservation commission, one vacancy, which is a three-year term. And we are encouraging all residents to send their interest, um, to, for all the boards and committees. Regardless if there is a current vacancy, these letters will be kept on file and the town will reach out when there's a vacancy which occurs. Uh, so please check out our openings and the positions that are posted too. Okay. Um, so the letters of interest are in the packet, can look at.
 
-**[41:33](https://vimeo.com/864231073#t=2493s)** Um, okay. And next we have a request for a wedding ceremony. Oh, This is coming up soon, um, This weekend. Yeah. Uh, this is important for the, for the planning. Right. So, um, I'll ask for a motion to approve this request from Thomas Smith to use Abbott Hall for a wedding ceremony on Saturday, September 16th, from 12 noon to 6:00 PM subject to the usual rules, regulations, fees, and receipt of the required certificate of insurance. So moved. I'll second. All in Favor? So the letter, just, not that they were last, a second. It was supposed to be a Crocker park, but with the, uh, expected rain on Saturday, uh, they're scrambling and, um,
+**[41:33](https://vimeo.com/864231073#t=2493s)** Um, okay. And next we have a request for a wedding ceremony. Oh, This is coming up soon, um, This weekend. Yeah. Uh, this is important for the, for the planning. Right. So, um, I'll ask for a motion to approve this request from Thomas Smith to use Abbot Hall for a wedding ceremony on Saturday, September 16th, from 12 noon to 6:00 PM subject to the usual rules, regulations, fees, and receipt of the required certificate of insurance. So moved. I'll second. All in Favor? So the letter, just, not that they were last, a second. It was supposed to be a Crocker park, but with the, uh, expected rain on Saturday, uh, they're scrambling and, um,
 
 **[42:19](https://vimeo.com/864231073#t=2539s)** Oh goodness. Okay. Right. The hurricane. And Thomas Smith's a very interesting story, but he had, uh, two back surgeries and he promised his mom, uh, that he'd walk down the, he'd be able to walk by the time his wedding came. So this is, uh, a big milestone for him. Yeah. So, yeah, real, Real, a great letter, real story of grit. That's determination. Yeah. Yep. Yeah. Okay. I think we need to vote. Did we vote? No, We didn't vote. Okay. All in favor? We had a motion, a second vote. Right? All in favor? Okay.
 
@@ -418,7 +418,7 @@ topic_segments:
 
 **[57:18](https://vimeo.com/864231073#t=3438s)** Anybody else? Yes. Oh, uh, first I'd really, um, like to congratulate our own Kyle Wiley, Right? Tomorrow night. Tomorrow night, the, uh, chamber of Commerce, uh, is doing their, uh, awards, yearly awards. And, uh, Kyle is gonna be the recipient of the Kyle, uh, Frank Regan community service award. Well deserved, well deserved Kyle. Yeah, that's great.
 
-**[57:49](https://vimeo.com/864231073#t=3469s)** I just like to mention also, uh, Terry McDonough is also a, uh, award recipient and, uh, probably one of our, uh, mentors, uh, bill Conley, a longtime selectman is gonna get the Harbor Award. So that's be a nice, nice night. Uh, and then also I'd like to, uh, thank Chief Gilland, uh, in the very talented students at S six North Shore Agricultural and Technical School for the beautiful, never forget memorial wreath that was laid by Ms. Newan at the Memorial Park for our nine 11 re remembrance ceremony on Monday. That was, um, thank you for initiating that and getting that done. And very talented group over there, the juniors and the after dark students from Marblehead participated in that.
+**[57:49](https://vimeo.com/864231073#t=3469s)** I just like to mention also, uh, Terry McDonough is also a, uh, award recipient and, uh, probably one of our, uh, mentors, uh, bill Conley, a longtime selectman is gonna get the Harbor Award. So that's be a nice, nice night. Uh, and then also I'd like to, uh, thank Chief Gilland, uh, in the very talented students at S six North Shore Agricultural and Technical School for the beautiful, never forget memorial wreath that was laid by Ms. Noonan at the Memorial Park for our nine 11 re remembrance ceremony on Monday. That was, um, thank you for initiating that and getting that done. And very talented group over there, the juniors and the after dark students from Marblehead participated in that.
 
 **[58:41](https://vimeo.com/864231073#t=3521s)** That's great. Thank you.
 

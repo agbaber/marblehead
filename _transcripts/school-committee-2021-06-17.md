@@ -217,11 +217,11 @@ topic_segments:
     start_seconds: 8112
     end_seconds: 8258
     headline: "Closing business: Sarah Fox requests invoices for Back Together Marblehead website; Juneteenth flag-raising announced"
-    dek: "The chair announced a Juneteenth flag-raising at Abbott Hall the following evening; Gene Schona received clarification that polystyrene trays will be eliminated from all schools in fall 2021."
+    dek: "The chair announced a Juneteenth flag-raising at Abbot Hall the following evening; Gene Schona received clarification that polystyrene trays will be eliminated from all schools in fall 2021."
     summary: |
       In new business, Sarah Fox requested itemized invoices related to the 'Back Together Marblehead' website, including server costs and management questions, noting community members had contacted her about the topic.
       
-      In correspondence, the chair shared an invitation to join a Juneteenth flag-raising at Abbott Hall on June 18 at 5 p.m., organized by the town with participation by the Board of Selectmen and Superintendent Dr. Bucky.
+      In correspondence, the chair shared an invitation to join a Juneteenth flag-raising at Abbot Hall on June 18 at 5 p.m., organized by the town with participation by the Board of Selectmen and Superintendent Dr. Bucky.
       
       During the second public comment period, Gene Schona sought clarification on polystyrene. Superintendent Dr. Bucky confirmed the operational goal is to have no polystyrene trays in any school by fall 2021; the food service director is currently costing out alternatives.
       

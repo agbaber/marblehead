@@ -21,7 +21,7 @@ summary_card:
     - "Approved minutes of September 28, 2022"
     - "Approved license agreement for private connection to town drainage at 45 Lincoln Ave"
     - "Accepted clock gift from Rotary Club of Marblehead for their 100th anniversary"
-    - "Approved use of Abbott Hall for Festival of Arts Artisans Marketplace, December 2–4, 2022"
+    - "Approved use of Abbot Hall for Festival of Arts Artisans Marketplace, December 2–4, 2022"
     - "Approved contract award for Leed Mills Rail Trail project to Tool Design of Boston for $150,800"
     - "Appointed Town Administrator Thatcher Keiser as hearing officer in disciplinary matter involving Officer Christopher Gallo"
   votes:
@@ -35,7 +35,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Accept Rotary Club clock gift"
       result: "in favor (unanimous)"
-    - motion: "Approve Abbott Hall use for Artisans Marketplace"
+    - motion: "Approve Abbot Hall use for Artisans Marketplace"
       result: "in favor (unanimous)"
     - motion: "Award rail trail contract to Tool Design for $150,800"
       result: "in favor (unanimous)"
@@ -92,9 +92,9 @@ topic_segments:
     topic_confidence: 0.9
     start_seconds: 3554
     end_seconds: 3654
-    headline: "Abbott Hall approved for Festival of Arts Artisans Marketplace, December 2–4"
-    dek: "The board unanimously approved use of Abbott Hall and its upper grounds for the annual Artisans Marketplace, including five ice sculptures."
-    summary: "The board approved a request from the Festival of Arts to use Abbott Hall and the upper grounds for their annual Artisans Marketplace on Friday December 2 (5:30–8:30 PM), Saturday December 3 (7 AM–5:30 PM), and Sunday December 4, 2022 (9 AM–6 PM). The upper grounds will also be used to display five ice sculptures. Use is subject to the usual rules, regulations, fees, and required certificate of insurance."
+    headline: "Abbot Hall approved for Festival of Arts Artisans Marketplace, December 2–4"
+    dek: "The board unanimously approved use of Abbot Hall and its upper grounds for the annual Artisans Marketplace, including five ice sculptures."
+    summary: "The board approved a request from the Festival of Arts to use Abbot Hall and the upper grounds for their annual Artisans Marketplace on Friday December 2 (5:30–8:30 PM), Saturday December 3 (7 AM–5:30 PM), and Sunday December 4, 2022 (9 AM–6 PM). The upper grounds will also be used to display five ice sculptures. Use is subject to the usual rules, regulations, fees, and required certificate of insurance."
   - topic: bonding-capital
     topic_confidence: 0.82
     start_seconds: 3618
@@ -355,9 +355,9 @@ topic_segments:
 
 **[58:51](https://vimeo.com/759874158#t=3531s)** Okay, and the sixth item we had a motion to thank the rotor Club. I thought I think I think we should we should that's a great idea Jim and also to Entertain a motion to provide a letter thanking the Rotary Club for their very generous gift second. I was in favor. Okay.
 
-**[59:14](https://vimeo.com/759874158#t=3554s)** The next is the use of Abbott hall for The Artisans fair in December of this year.
+**[59:14](https://vimeo.com/759874158#t=3554s)** The next is the use of Abbot hall for The Artisans fair in December of this year.
 
-**[59:28](https://vimeo.com/759874158#t=3568s)** And I think the motion is fairly self-explanatory. It is a request from the Festival of Arts to use Abbott hall for their annual Artisans Marketplace on the following days and to use the proper grounds the upper ground. Sorry of Abbott Hall to display five ice sculptures all in accordance with the usual rules regulations fees and receipts of their required Certificate of Insurance. On the following dates Friday December 2 2022 5:30 to 8:30 PM Saturday December 3 2022 7 AM to 5:30 pm and Sunday, December 4th, 2022 9 am to 6 PM emotions and the second all those in favor.
+**[59:28](https://vimeo.com/759874158#t=3568s)** And I think the motion is fairly self-explanatory. It is a request from the Festival of Arts to use Abbot hall for their annual Artisans Marketplace on the following days and to use the proper grounds the upper ground. Sorry of Abbot Hall to display five ice sculptures all in accordance with the usual rules regulations fees and receipts of their required Certificate of Insurance. On the following dates Friday December 2 2022 5:30 to 8:30 PM Saturday December 3 2022 7 AM to 5:30 pm and Sunday, December 4th, 2022 9 am to 6 PM emotions and the second all those in favor.
 
 **[1:00:14](https://vimeo.com/759874158#t=3614s)** Okay, unanimous
 
@@ -367,7 +367,7 @@ topic_segments:
 
 **[1:01:25](https://vimeo.com/759874158#t=3685s)** Specifications in the master plan. Yeah, we did and Tool design is actually the engineering company that did the master plan because they're going to do all the permitting and design so it would be ready to bend right now. Thanks for thanks for that for that background. And so the amount is for the amount requests tonight is for 150,000. 800 okay, and the second all those in favor? right Okay, and I think the last well one of the last items is a appointment of a hearing officer. Thatcher and the motion is also self-explanatory. I'd like to entertain a motion on on advice from
 
-**[1:02:12](https://vimeo.com/759874158#t=3732s)** Town Council to appoint Town Administrator Thatcher Keyser hearing officer as it relates to pending disciplinary matters, involving officer Christopher gallo, and to report his findings back to the board. Second I wasn't in favor. Okay. Thank you very much. Yes, please. Go ahead you need to request if we can? to a corrective vote for the Harper funding Okay caught a I guess a typo we written out in the motion. Okay, we doubled the administrative upper and we left off the visitor Booth upgrade supplement. So, okay. So if we were to retake the boat. Yeah, so so it would
+**[1:02:12](https://vimeo.com/759874158#t=3732s)** Town Council to appoint Town Administrator Thatcher Kezer hearing officer as it relates to pending disciplinary matters, involving officer Christopher gallo, and to report his findings back to the board. Second I wasn't in favor. Okay. Thank you very much. Yes, please. Go ahead you need to request if we can? to a corrective vote for the Harper funding Okay caught a I guess a typo we written out in the motion. Okay, we doubled the administrative upper and we left off the visitor Booth upgrade supplement. So, okay. So if we were to retake the boat. Yeah, so so it would
 
 **[1:02:59](https://vimeo.com/759874158#t=3779s)** what got left off was the visitor Booth upgrade for 6,311?
 

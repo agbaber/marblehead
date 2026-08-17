@@ -30,7 +30,7 @@ summary_card:
     - "Approved opioid settlement participation (Teva, Allergan, CVS, Walgreens, Walmart)"
     - "Approved minutes of March 8, 2023"
     - "Proclaimed May 11, 2023 Rotary Club of Marblehead Day"
-    - "Approved Eagle Scout Court of Honor use of Abbott Hall, May 13, 2023, fees waived"
+    - "Approved Eagle Scout Court of Honor use of Abbot Hall, May 13, 2023, fees waived"
     - "Approved Festival of Arts 5K race/walk on May 13, 2023 subject to standard conditions"
   votes:
     - motion: "Adopt FY24 Operating Override Statement of Intent (as amended)"
@@ -61,7 +61,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Proclaim May 11, 2023 Rotary Club of Marblehead Day"
       result: "in favor (unanimous)"
-    - motion: "Approve Eagle Scout Court of Honor use of Abbott Hall, fees waived"
+    - motion: "Approve Eagle Scout Court of Honor use of Abbot Hall, fees waived"
       result: "in favor (unanimous)"
     - motion: "Approve Festival of Arts 5K race/walk May 13, 2023"
       result: "in favor (unanimous)"
@@ -136,9 +136,9 @@ topic_segments:
     topic_confidence: 0.88
     start_seconds: 3018
     end_seconds: 3199
-    headline: "Board proclaims May 11 Rotary Club Day; approves Eagle Scout Court of Honor at Abbott Hall"
+    headline: "Board proclaims May 11 Rotary Club Day; approves Eagle Scout Court of Honor at Abbot Hall"
     dek: "The Rotary Club of Marblehead marks its 100th anniversary on May 11 with a two-faced town clock presentation; Troop 79 will hold an Eagle Scout ceremony May 13."
-    summary: "The board proclaimed May 11, 2023 as Rotary Club of Marblehead Day in honor of the club's 100th anniversary. The Rotary Club will present a two-faced town clock at the Chamber of Commerce booth at 11 a.m. The board also approved a request from BSA Troop 79 to use Abbott Hall Auditorium on May 13, 2023, from 4–7 p.m. for an Eagle Scout Court of Honor for Christopher Vasquez, Tyler Callahan, and one other scout, with fees waived."
+    summary: "The board proclaimed May 11, 2023 as Rotary Club of Marblehead Day in honor of the club's 100th anniversary. The Rotary Club will present a two-faced town clock at the Chamber of Commerce booth at 11 a.m. The board also approved a request from BSA Troop 79 to use Abbot Hall Auditorium on May 13, 2023, from 4–7 p.m. for an Eagle Scout Court of Honor for Christopher Vasquez, Tyler Callahan, and one other scout, with fees waived."
   - topic: bonding-capital
     topic_confidence: 0.85
     start_seconds: 3199
@@ -452,7 +452,7 @@ topic_segments:
 
 **[51:50](https://vimeo.com/810756287#t=3110s)** again, May 11th at 11 o'clock.
 
-**[51:55](https://vimeo.com/810756287#t=3115s)** Okay, this is all this is all great to do we have Three Eagle stick out that are getting their court of honor and have requested avat Hall. To to conduct the ceremony. So it's our honor to to do that. And the three Eagle Scouts are Cristobal Christopher Vasquez, Tyler Callahan and local and we're happy to entertain this motion. Which is, you know to approve on request a vote on a request from Andy Barnett troop 79 BSA to use Abbott Hall Auditorium on Saturday, May 13th, 2023 from four to seven PM for an eagle scout Port of Honor subject to
+**[51:55](https://vimeo.com/810756287#t=3115s)** Okay, this is all this is all great to do we have Three Eagle stick out that are getting their court of honor and have requested avat Hall. To to conduct the ceremony. So it's our honor to to do that. And the three Eagle Scouts are Cristobal Christopher Vasquez, Tyler Callahan and local and we're happy to entertain this motion. Which is, you know to approve on request a vote on a request from Andy Barnett troop 79 BSA to use Abbot Hall Auditorium on Saturday, May 13th, 2023 from four to seven PM for an eagle scout Port of Honor subject to
 
 **[52:42](https://vimeo.com/810756287#t=3162s)** the usual rules regulations fees and receipts of the required Certificate of Insurance. They asked that they eventually used to be waved. You yes.
 
@@ -566,7 +566,7 @@ topic_segments:
 
 **[1:17:12](https://vimeo.com/810756287#t=4632s)** 18 which is the
 
-**[1:17:18](https://vimeo.com/810756287#t=4638s)** Festival of Arts 5K run Saying run, I think it is a run. race run Okay, this is an annual event to to raise money for the Festival of Arts. Very important event that the tracks 100 to 200 registered Runners possibly. 50 walk-ins and the motion is pretty self-explanatory to approve a request. Sorry about that from Joan Clem Festival of Arts to hold a 5K race walk on Saturday May 13 2023 subject to approval the Marvel at police Recreation and Parks receive the required Certificate of Insurance named Marblehead as additionally insured. And police details the event will start
+**[1:17:18](https://vimeo.com/810756287#t=4638s)** Festival of Arts 5K run Saying run, I think it is a run. race run Okay, this is an annual event to to raise money for the Festival of Arts. Very important event that the tracks 100 to 200 registered Runners possibly. 50 walk-ins and the motion is pretty self-explanatory to approve a request. Sorry about that from Joan Clem Festival of Arts to hold a 5K race walk on Saturday May 13 2023 subject to approval the Marblehead at police Recreation and Parks receive the required Certificate of Insurance named Marblehead as additionally insured. And police details the event will start
 
 **[1:18:04](https://vimeo.com/810756287#t=4684s)** at on Smith Street in front of the post office and finish at the community center. Start time is 8 am with completion of event approximately 10 am no permanent marking. She'll be made on the streets and any temporary marketing removed.
 

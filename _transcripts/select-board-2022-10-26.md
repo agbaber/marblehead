@@ -14,11 +14,11 @@ source: vimeo-auto+llm
 
 summary_card:
   headline: "Board appoints two police officers, two Finance Committee members, hears offshore wind update"
-  summary: "The Select Board approved conditional offers of employment to two Marblehead residents as permanent full-time police officers and announced the department's Massachusetts re-accreditation. The board then interviewed five candidates for two Finance Committee vacancies, appointing Michael Jenko to the term expiring June 2025 and Eric Knight to the term expiring June 2023. John Berry of Crowley Wind Services presented an update on the Salem Harbor offshore wind marshalling terminal, with construction planned to begin summer 2023 and operations supporting offshore wind installation projected for 2026."
+  summary: "The Select Board approved conditional offers of employment to two Marblehead residents as permanent full-time police officers and announced the department's Massachusetts re-accreditation. The board then interviewed five candidates for two Finance Committee vacancies, appointing Michael Janko to the term expiring June 2025 and Eric Knight to the term expiring June 2023. John Berry of Crowley Wind Services presented an update on the Salem Harbor offshore wind marshalling terminal, with construction planned to begin summer 2023 and operations supporting offshore wind installation projected for 2026."
   decisions:
     - "Approved conditional offers of employment to Samuel Rizzo and Luke Marcus as permanent full-time police officers"
     - "Approved appointment of Phyllis Smith to the Council on Aging (term expiring June 2025)"
-    - "Approved appointment of Michael Jenko to Finance Committee (term expiring June 2025)"
+    - "Approved appointment of Michael Janko to Finance Committee (term expiring June 2025)"
     - "Approved appointment of Eric Knight to Finance Committee (term expiring June 2023)"
     - "Approved suspension of all-night parking ban in favor of declared snow emergency system"
     - "Approved indemnification of Lieutenant Lunt for on-duty injury (October 2022)"
@@ -33,7 +33,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Place all Finance Committee candidates into nomination"
       result: "in favor (unanimous)"
-    - motion: "Appointment of Michael Jenko to Finance Committee (3-year term)"
+    - motion: "Appointment of Michael Janko to Finance Committee (3-year term)"
       result: "in favor (3 to 2)"
     - motion: "Appointment of Eric Knight to Finance Committee (1-year term)"
       result: "in favor (3 to 2)"
@@ -58,13 +58,13 @@ topic_segments:
     start_seconds: 0
     end_seconds: 247
     headline: "Veterans Day events announced: breakfast Nov. 9, ceremony Nov. 11, Moulton town hall"
-    dek: "VFW member Dave Rogers outlined a veterans breakfast at the Council on Aging and the town's Veterans Day ceremony at Abbott Hall, with a shuttle from the National Guard armory."
+    dek: "VFW member Dave Rogers outlined a veterans breakfast at the Council on Aging and the town's Veterans Day ceremony at Abbot Hall, with a shuttle from the National Guard armory."
     summary: |
       Dave Rogers described upcoming Veterans Day events:
       
       - **Wednesday, November 9**: Veterans breakfast at the Council on Aging at 9:00 AM; veterans encouraged to call ahead for a headcount.
-      - **Friday, November 11** (Veterans Day): Town ceremony commences at 10:00 AM at Abbott Hall; shuttle service from the National Guard armory runs 9:00–9:45 AM. Tim Keeney (VFW) will be the main speaker; choral group under direction of Scoglio performs. VFW Post 2005, 321 West Shore Drive, hosts coffee and treats afterward.
-      - **11:30 AM**: Congressman Seth Moulton returns to Abbott Hall Auditorium for his Veterans Day Town Hall.
+      - **Friday, November 11** (Veterans Day): Town ceremony commences at 10:00 AM at Abbot Hall; shuttle service from the National Guard armory runs 9:00–9:45 AM. Tim Keeney (VFW) will be the main speaker; choral group under direction of Scoglio performs. VFW Post 2005, 321 West Shore Drive, hosts coffee and treats afterward.
+      - **11:30 AM**: Congressman Seth Moulton returns to Abbot Hall Auditorium for his Veterans Day Town Hall.
     key_speakers: ["Dave Rogers (VFW member / Veterans Agent)"]
   - topic: public-safety
     topic_confidence: 0.98
@@ -97,8 +97,8 @@ topic_segments:
     topic_confidence: 0.92
     start_seconds: 862
     end_seconds: 5280
-    headline: "Board interviews five Finance Committee candidates, appoints Jenko and Knight"
-    dek: "After individual interviews, Michael Jenko was appointed to the three-year term (expires June 2025) by a 3–2 vote, and Eric Knight was appointed to the one-year term (expires June 2023) by a 3–2 vote."
+    headline: "Board interviews five Finance Committee candidates, appoints Janko and Knight"
+    dek: "After individual interviews, Michael Janko was appointed to the three-year term (expires June 2025) by a 3–2 vote, and Eric Knight was appointed to the one-year term (expires June 2023) by a 3–2 vote."
     summary: |
       Five candidates were interviewed for two Finance Committee vacancies. Board members asked identical questions of each candidate covering background, willingness to make unpopular decisions, understanding of the Finance Committee's role, departmental liaison preferences, motivation, preparation, knowledge of town finances, time commitment, and past interactions with town departments.
       
@@ -107,15 +107,15 @@ topic_segments:
       | Candidate | Notable background |
       |---|---|
       | Jim Ziston (remote, Milan) | Engineer with graduate business certificate; Brown School Building Committee; Salem Housing Authority treasurer; attended many Finance Committee and town meetings |
-      | Michael Jenko | 30+ years in finance as a portfolio manager for endowments including the Town of Newton |
+      | Michael Janko | 30+ years in finance as a portfolio manager for endowments including the Town of Newton |
       | Eric Knight | ~26 years with MA Inspector General's Office (civil/criminal investigations); MBA; former part-time Marblehead police officer; Marblehead Festival of Arts (20+ years) |
       | Rebecca Linhart | Financial advisor (20 years); former Essex Finance Committee chair and Selectman; Rotary treasurer; Rotary scholarship trust president |
       | Larry Schall (remote) | Former COO of Swarthmore College (~$100M budget); former president of Oglethorpe University; current president, New England Commission of Higher Education |
       
       **Results:**
-      - Three-year term (June 2025): **Michael Jenko** — 3 votes to 2
+      - Three-year term (June 2025): **Michael Janko** — 3 votes to 2
       - One-year term (June 2023): **Eric Knight** — 3 votes to 2
-    key_speakers: ["Jim Ziston (Finance Committee candidate, remote)", "Michael Jenko (Finance Committee candidate)", "Eric Knight (Finance Committee candidate)", "Rebecca Linhart (Finance Committee candidate)", "Larry Schall (Finance Committee candidate, remote)", "Alexa (Select Board member)", "Jackie (Select Board member)", "Aaron (Select Board member)"]
+    key_speakers: ["Jim Ziston (Finance Committee candidate, remote)", "Michael Janko (Finance Committee candidate)", "Eric Knight (Finance Committee candidate)", "Rebecca Linhart (Finance Committee candidate)", "Larry Schall (Finance Committee candidate, remote)", "Alexa (Select Board member)", "Jackie (Select Board member)", "Aaron (Select Board member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 5282
@@ -178,11 +178,11 @@ topic_segments:
     start_seconds: 6822
     end_seconds: 7088
     headline: "Holiday hours, Board of Retirement budget notice, committee vacancies, and housing authority vacancy noted"
-    dek: "Routine notifications included Abbott Hall/Mary Alley holiday hours, a Board of Retirement annual budget submission, two Old Burial Hill Committee vacancies, and a Marblehead Housing Authority vacancy."
+    dek: "Routine notifications included Abbot Hall/Mary Alley holiday hours, a Board of Retirement annual budget submission, two Old Burial Hill Committee vacancies, and a Marblehead Housing Authority vacancy."
     summary: |
       Several informational items were addressed:
       
-      - **Holiday hours** for Abbott Hall and the Mary Alley building were read into the record covering Veterans Day week (Nov. 7–11) and Thanksgiving week (Nov. 21–25). Abbott Hall will be closed November 11; the Veterans Day ceremony is at 10 AM.
+      - **Holiday hours** for Abbot Hall and the Mary Alley building were read into the record covering Veterans Day week (Nov. 7–11) and Thanksgiving week (Nov. 21–25). Abbot Hall will be closed November 11; the Veterans Day ceremony is at 10 AM.
       - **Board of Retirement**: Annual budget submission from Linda Gifford (Retirement Administrator) received as required by MGL Chapter 32, Section 22.
       - **Old Burial Hill Committee**: Two vacancies noted following Betty Lautner's departure; a letter from Judy Gates of Pond Street expressing interest was received.
       - **Marblehead Housing Authority**: Joan Cutler resigned September 15; the board was asked to advertise the vacancy.
@@ -237,7 +237,7 @@ topic_segments:
 
 **[2:12](https://vimeo.com/764597565#t=132s)** It's always nice to pack there because the parking around at Hall is kind of tricky. and I would recommend it if you don't want to walk too far. This year we have.
 
-**[2:28](https://vimeo.com/764597565#t=148s)** Tim Keeney VFW member will be the main speaker. And of course, we have a coral group. Or excellent always under the direction and scoaglio. and the VFW 2005 321 West Shore Drive always has coffee and Treats son and everyone is invited invited to come up. And it's always a nice time. I would like to add that 11:30 Congressman Seth Moulton. Is coming back to Abbott Hall Auditorium for his Veterans Day Town Hall. It's always a good take. I will add that Seth has been
+**[2:28](https://vimeo.com/764597565#t=148s)** Tim Keeney VFW member will be the main speaker. And of course, we have a coral group. Or excellent always under the direction and scoaglio. and the VFW 2005 321 West Shore Drive always has coffee and Treats son and everyone is invited invited to come up. And it's always a nice time. I would like to add that 11:30 Congressman Seth Moulton. Is coming back to Abbot Hall Auditorium for his Veterans Day Town Hall. It's always a good take. I will add that Seth has been
 
 **[3:14](https://vimeo.com/764597565#t=194s)** a big advocate for VA Health Care.
 
@@ -563,7 +563,7 @@ topic_segments:
 
 **[1:24:06](https://vimeo.com/764597565#t=5046s)** Yeah, okay.
 
-**[1:24:10](https://vimeo.com/764597565#t=5050s)** of the time this is belt Becker in favor singer in favor. Is Noonan in favor Mr. Greater in favor?
+**[1:24:10](https://vimeo.com/764597565#t=5050s)** of the time this is belt Becker in favor singer in favor. Is Noonan in favor Mr. Grader in favor?
 
 **[1:24:24](https://vimeo.com/764597565#t=5064s)** Okay. LS track where I was. Okay. So for the three-year vote. I did Mark down here. so for the the round Europe here up next so Miss Newton. This is really a luxury of riches. So this you know like Alexis said any one of these candidates would be lucky to have I'm going to put Jim ziston's name forward. I just stands out to me as a long time volunteer in the in the town and I just know that I know that his he's been well respected on the communities he's worked in and he stood out to me as somebody who read who mentioned the
 
@@ -573,7 +573,7 @@ topic_segments:
 
 **[1:25:42](https://vimeo.com/764597565#t=5142s)** Where am I? Just deny. Michael jenko
 
-**[1:25:51](https://vimeo.com/764597565#t=5151s)** Miss belt Becker, you can call me Jackie and Michael. Jenko.
+**[1:25:51](https://vimeo.com/764597565#t=5151s)** Miss belt Becker, you can call me Jackie and Michael. Janko.
 
 **[1:26:02](https://vimeo.com/764597565#t=5162s)** Miss singer Jim zizen
 
@@ -585,7 +585,7 @@ topic_segments:
 
 **[1:26:49](https://vimeo.com/764597565#t=5209s)** Miss singer Rebecca, Lionheart
 
-**[1:26:55](https://vimeo.com/764597565#t=5215s)** this Noonan Rebecca line her Mr. Greater Eric Knight three for night two for Linhart Okay, that was very very tough.
+**[1:26:55](https://vimeo.com/764597565#t=5215s)** this Noonan Rebecca line her Mr. Grader Eric Knight three for night two for Linhart Okay, that was very very tough.
 
 **[1:27:14](https://vimeo.com/764597565#t=5234s)** Thank you for coming forward. It's much much appreciated. And with that that brings the finance committee agenda to an end and we'd really like to welcome a very very patient John Berry who's with Crowley wind Services who's going to bring us an update on the very exciting Salem offshore wind terminal project. And oh, yes, I'm sorry. We just congratulate them. Yes. I know you're late. I understand and before we do that. Eric and Michael we'd like to congratulate you on this office and thank you for coming through this very difficult process. It's much appreciated Jackie if you yeah, yes,
 
@@ -601,7 +601,7 @@ topic_segments:
 
 **[1:30:38](https://vimeo.com/764597565#t=5438s)** They're involved in Government Solutions as well. So big big company. And again, this is a brand new experience for Crowley to be involved in you in offshore wind us offshore wind. I should say we're very very excited to be the very new owners of the Salem windport across the Harbor from your beautiful town and we are we just closed on that property the end of last month in preparation for that closing and for this development of the offshore win martial import there. We've been working with AECOM. That's our design engineering firm and we're also working with Tetra Tech here in Boston and they're in international firm as
 
-**[1:31:26](https://vimeo.com/764597565#t=5486s)** well or national firm that is helping us with our permanent Consulting. So that process is actually just beginning because we just got psych control at that facility. There will be Any more public meetings that will be coming up around this project. We've already socialized this project to the public and the big thing that I want to make sure that that I communicate here today is that the Crowley is really interested in being a multiple neighbor in this in this community and I talk about this a lot when I get the opportunity to speak about it in Salem and I would like to say the same thing here in Marvel head, you know, we really want to impress upon the community that we had to be a neighbor that wants to work with the community. So again
+**[1:31:26](https://vimeo.com/764597565#t=5486s)** well or national firm that is helping us with our permanent Consulting. So that process is actually just beginning because we just got psych control at that facility. There will be Any more public meetings that will be coming up around this project. We've already socialized this project to the public and the big thing that I want to make sure that that I communicate here today is that the Crowley is really interested in being a multiple neighbor in this in this community and I talk about this a lot when I get the opportunity to speak about it in Salem and I would like to say the same thing here in Marblehead, you know, we really want to impress upon the community that we had to be a neighbor that wants to work with the community. So again
 
 **[1:32:12](https://vimeo.com/764597565#t=5532s)** a little bit more about what's happening at the Port we are looking at Starting construction next summer in June or July of next year that construction process will be a relatively quick one right now. We're looking to have all construction complete by the end of 2025 and we're looking to go up operational at that facility in 2026 will be at this point supporting first tenant, which will be having grid which is a big offshore wind developer. And we there will be supporting them with their New England win project and then behind that
 
@@ -651,21 +651,21 @@ topic_segments:
 
 **[1:47:33](https://vimeo.com/764597565#t=6453s)** You know promote the Commonwealth Massachusetts and all of these these communities as a as a strong leader in this industry over the world. I mean, there's there's a lot of people watching what's happening and a little bit of pressure but we can handle it. I know we're gonna do a great job in and again, I want to make sure that you know, it gets communicated that Crowley is here to be a good neighbor in the community. That's that's our role in Crowley is going to be the long-term operator at that point. It's very exciting and thank you again for your patience and coming in. Thank you time. Thank you.
 
-**[1:48:14](https://vimeo.com/764597565#t=6494s)** Okay. With that, let's go into to approval of the minutes for October 12 2022 motion to approve almost. Second and we're gonna go around the table. No, Becca. Is singer in favor? Is Noonan in favor? Just deny and there Mr. Greater in favor. Next on our agenda is the overnight parking band for winter snow emergencies. The motion is self-explanatory and long. I'll read it. Entertain a motion to sit to suspend town of marbleheads Article 5 Section 8 known as the current quote all night parking ban unquote and to implement in its places. No emergency response to snow events on an as needed basis.
+**[1:48:14](https://vimeo.com/764597565#t=6494s)** Okay. With that, let's go into to approval of the minutes for October 12 2022 motion to approve almost. Second and we're gonna go around the table. No, Becca. Is singer in favor? Is Noonan in favor? Just deny and there Mr. Grader in favor. Next on our agenda is the overnight parking band for winter snow emergencies. The motion is self-explanatory and long. I'll read it. Entertain a motion to sit to suspend town of marbleheads Article 5 Section 8 known as the current quote all night parking ban unquote and to implement in its places. No emergency response to snow events on an as needed basis.
 
 **[1:49:00](https://vimeo.com/764597565#t=6540s)** Declared snow emergencies will prohibit on street parking starting at midnight the day of the anticipated snowstorm on street parking will be allowed the following morning starting at 7:00. Am during a declared snow emergency. If the duration of any snow emergency is more than a day on street parking will be prohibited on each day of the snow emergency from Midnight to 7am. Any vehicles that violate the provisions of this motion or subject to the issuance of parking tickets and towing notification of a declared snow emergency shall be done through the town website code red automated system Town managed social media accounts mhtv and any other outlets the town has available. This vote is revocable upon the determination of the police chief fire chief Town Administrator Department
 
-**[1:49:46](https://vimeo.com/764597565#t=6586s)** of Public Works or their designees. That is that it is negatively impacting Public public health and safety second, please second. Okay, this singer in favor. Ms. Noonan in favor, Mr. And I in favor Ms. Gulf Becker in favor, Mr. Greater in favor next on our agenda is a police indemnification vote. Received a letter from from the police chief and the motion is to I to identify Lieutenant Lunt. For injury sustained while on duty October to 2022 unfortunately. So I have a motion, please and a second second.
+**[1:49:46](https://vimeo.com/764597565#t=6586s)** of Public Works or their designees. That is that it is negatively impacting Public public health and safety second, please second. Okay, this singer in favor. Ms. Noonan in favor, Mr. And I in favor Ms. Gulf Becker in favor, Mr. Grader in favor next on our agenda is a police indemnification vote. Received a letter from from the police chief and the motion is to I to identify Lieutenant Lunt. For injury sustained while on duty October to 2022 unfortunately. So I have a motion, please and a second second.
 
-**[1:50:32](https://vimeo.com/764597565#t=6632s)** Miss noon in favor just tonight in favor is Bill belth Becker in favor his singer in favor. Mr. Greater in favor The next is a emotion to extend the date and scope of a DPW contract. Again. The motion is explanatory entertain a motion to amend the contract between the town and bowbrick engineering and Construction LLC of Danvers, Massachusetts for engineering design Services by extending the time to December 31 2023 and to expand the current scope of work to include Engineering Services and assessments related to town roadways sidewalks walls fences and other Town infrastructure
+**[1:50:32](https://vimeo.com/764597565#t=6632s)** Miss noon in favor just tonight in favor is Bill belth Becker in favor his singer in favor. Mr. Grader in favor The next is a emotion to extend the date and scope of a DPW contract. Again. The motion is explanatory entertain a motion to amend the contract between the town and bowbrick engineering and Construction LLC of Danvers, Massachusetts for engineering design Services by extending the time to December 31 2023 and to expand the current scope of work to include Engineering Services and assessments related to town roadways sidewalks walls fences and other Town infrastructure
 
-**[1:51:20](https://vimeo.com/764597565#t=6680s)** with no increase to the contact contract amount and authorize the chair to sign on behalf of the board second, please second I will state with this allows is for Red's Pond work as well as Lee Street and not the sea walls, but on the walls at least street, so thank you for that. Yeah expanding the scope. It's necessary. We're getting things done. Yes, that's great. All right, Mr. Tonight in favor, Ms. Belt Becker in favor, Ms. Singer in favor. Ms. Noonan in favor, Mr. Greater in favor Okay, unanimous. The next is today liquor licenses for the Marblehead Museum. What's that one day?
+**[1:51:20](https://vimeo.com/764597565#t=6680s)** with no increase to the contact contract amount and authorize the chair to sign on behalf of the board second, please second I will state with this allows is for Red's Pond work as well as Lee Street and not the sea walls, but on the walls at least street, so thank you for that. Yeah expanding the scope. It's necessary. We're getting things done. Yes, that's great. All right, Mr. Tonight in favor, Ms. Belt Becker in favor, Ms. Singer in favor. Ms. Noonan in favor, Mr. Grader in favor Okay, unanimous. The next is today liquor licenses for the Marblehead Museum. What's that one day?
 
 **[1:52:07](https://vimeo.com/764597565#t=6727s)** One day. Mm-hmm. Oh, yeah, two one-day license two one day. Sorry. You're both right? That's okay. It's okay. I may have gotten read that, you know done that a little too quickly. And again the motion to self-explanatory. I'd like to enter an emotion to record to entertain a request from James Murphy marble at our associations for one day liquor license on Friday, October 28th, 2022 7pm to 10 pm at the king Hooper Mansion eight Hooper Street for fundraising events subject to the following conditions delivery oven receipt by the licensing authority of the required fee, which is $50 delivery of a receipt by the licensing authority of proof that the alcohol will be purchase from the authorized Source proof that the applicant can receive proper delivery provide proper storage and Disposal all alcoholic beverages purchased all the accordance with the requirement of
 
 **[1:52:55](https://vimeo.com/764597565#t=6775s)** General law section 138 alcohol be purchased from Cappy's importing. So moved and second second. Nature if you could round is belt Becca in favor is singer in favor. This Noonan in favor just tonight in favor. Just a greater in favor. Okay, unanimous, and we have a second motion or to entertain a request from Elise Bustamante Marblehead Arts Association for one day liquor license on Thursday, November 17th, 2022 7pm to 10 pm at the king Hoover mention eight Hooper Street for fundraising event subject to the following conditions delivery of and received by the licensing Authority report to keep fee of
 
-**[1:53:42](https://vimeo.com/764597565#t=6822s)** 50 dollars delivery of and received by the licensing authority of proof that the alcohol be purchase from an authorized Source proof proof that the applicant can receive proper delivery storage and Disposal beverages purchase all in accordance with the requirements of General law section 138 alcohol will be purchased from Cappy's importing please second. Miss singer in favor Ms. Noonan in favor Mr. Nye in favor, Ms. Bill Becker, Mr. Greater in favor Okay, this is something we do every year. It's for holiday hours for Abbott Hall in the Mary Ali. and I think this is a
+**[1:53:42](https://vimeo.com/764597565#t=6822s)** 50 dollars delivery of and received by the licensing authority of proof that the alcohol be purchase from an authorized Source proof proof that the applicant can receive proper delivery storage and Disposal beverages purchase all in accordance with the requirements of General law section 138 alcohol will be purchased from Cappy's importing please second. Miss singer in favor Ms. Noonan in favor Mr. Nye in favor, Ms. Bill Becker, Mr. Grader in favor Okay, this is something we do every year. It's for holiday hours for Abbot Hall in the Mary Ali. and I think this is a
 
 **[1:54:30](https://vimeo.com/764597565#t=6870s)** is this a vote? No just information. It's just information. Okay, I'll just go ahead and read these out. So it's for holiday hours for Abbot Hall and Mary Ali. And will be observed at Abbot Hall in the Mary Ali building Veterans Day week of November 7th to 11. 2022 Monday November 7 2022 8am to five PM Tuesday, November 8th, 2022 8am to five PM Wednesday, November 9th 8am to 6 PM Thursday, November 10 8am to 12:30, Friday, November 11th, 2022 will be closed on November 11th, and Veterans Day ceremony will be held at Avid Hall at 10 AM Thanksgiving week of November 21 through 25. 2022 Monday, November 21 8
 

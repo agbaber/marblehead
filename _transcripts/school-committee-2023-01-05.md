@@ -156,9 +156,9 @@ topic_segments:
     topic_confidence: 0.75
     start_seconds: 6074
     end_seconds: 6168
-    headline: "School committee vacancy interview set for January 23 at Abbott Hall"
+    headline: "School committee vacancy interview set for January 23 at Abbot Hall"
     dek: "All nine committee and selectmen members confirmed availability for January 23; applicant confirmations were still pending."
-    summary: "The chair reported that all members of the school committee and the Board of Selectmen agreed on January 23 at 7:00 p.m. at Abbott Hall for the school committee vacancy interviews. Confirmation from all applicants was still outstanding as of the meeting."
+    summary: "The chair reported that all members of the school committee and the Board of Selectmen agreed on January 23 at 7:00 p.m. at Abbot Hall for the school committee vacancy interviews. Confirmation from all applicants was still outstanding as of the meeting."
     key_speakers: ["Sarah Fox (Chair)", "Megan Taylor"]
   - topic: school-budget
     topic_confidence: 0.8
@@ -348,7 +348,7 @@ topic_segments:
 
 **[54:56](https://www.youtube.com/watch?v=Ug7oA_6BhyE&t=3296s)** what's the name it's a PowerPoint presentation foreign
 
-**[55:42](https://www.youtube.com/watch?v=Ug7oA_6BhyE&t=3342s)** okay great thanks so I'm Joe kowalik general manager of Marvel head Municipal Lake Department thanks for the opportunity of coming here to speak to you on this not as exciting as the school buses but um with me is the chairman of our board Mike Hall thank you and also providing some capable assistance is as everyone knows if you feel a land who can address any of the emergency response questions so let's get started so our objective here is this is part of our plan to make sure all the town departments are prepared so really do appreciate superintendent reaching out and asking us to come here tonight I think it's exactly the opportunity hope
+**[55:42](https://www.youtube.com/watch?v=Ug7oA_6BhyE&t=3342s)** okay great thanks so I'm Joe kowalik general manager of Marblehead Municipal Lake Department thanks for the opportunity of coming here to speak to you on this not as exciting as the school buses but um with me is the chairman of our board Mike Hall thank you and also providing some capable assistance is as everyone knows if you feel a land who can address any of the emergency response questions so let's get started so our objective here is this is part of our plan to make sure all the town departments are prepared so really do appreciate superintendent reaching out and asking us to come here tonight I think it's exactly the opportunity hope
 
 **[56:28](https://www.youtube.com/watch?v=Ug7oA_6BhyE&t=3388s)** for um really we want to make sure that everyone in town the residents as well as all the Departments understand what some of the words some some of the noise in the Press is this winter regarding this rolling blackout so the first thing I would say is what we are talking about is a very low probability event solo that in the last 25 years in which the iso New England organization has existed it has never happened so since set the parameter this is a we're talking about a low probability event and as we see it today in Marblehead if it were to occur it would be an
 
@@ -474,7 +474,7 @@ topic_segments:
 
 **[1:40:26](https://www.youtube.com/watch?v=Ug7oA_6BhyE&t=6026s)** so who's Sarah gold second invite Allison Taylor we've had the discussion on this so I will yeah Paul for a roll call vote Sarah gold yes Allison Taylor yes Megan Taylor yes Sarah Fox yes the motion carries four to zero um that brings us to sir just um I missed the date that you said the Articles the deadline um it's right now it's October 20th January 20th January 2012.
 
-**[1:41:14](https://www.youtube.com/watch?v=Ug7oA_6BhyE&t=6074s)** um so that brings the school Committee Member vacancy update as of right now um all parties from the school committee and the slackmen have agreed that the January 23rd date Works um my last correspondence Kyle was she was working with all the applicants to confirm that it worked for them as well she has not gotten the confirmation of that but all night to my knowledge all nine of the committee members can make um the 23rd work it's just whether whether or not um so as that continues to unfold I will make sure that everyone is to express them and Sarah's at 7 00 PM yes Abbott Hall yeah to be perfectly honest
+**[1:41:14](https://www.youtube.com/watch?v=Ug7oA_6BhyE&t=6074s)** um so that brings the school Committee Member vacancy update as of right now um all parties from the school committee and the slackmen have agreed that the January 23rd date Works um my last correspondence Kyle was she was working with all the applicants to confirm that it worked for them as well she has not gotten the confirmation of that but all night to my knowledge all nine of the committee members can make um the 23rd work it's just whether whether or not um so as that continues to unfold I will make sure that everyone is to express them and Sarah's at 7 00 PM yes Abbot Hall yeah to be perfectly honest
 
 **[1:42:03](https://www.youtube.com/watch?v=Ug7oA_6BhyE&t=6123s)** Megan I I can't guarantee at 7 pm because I haven't heard from Kyle and Moses but it when it initially was built booked it was seven okay uh subcommittee and liaison Leah Asian updates I feel like the last time we had a meeting went on a break for December and then before back um a couple days later so I don't know that we have many of those um I know as far as facilities goes the town we're still waiting um they had planned in December I believe to have the uh why are my words family
 

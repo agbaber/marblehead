@@ -14,9 +14,9 @@ source: vimeo-auto+llm
 
 summary_card:
   headline: "Select Board approves $5.43M Mary Alley building contract; bids farewell to Alexa Singer"
-  summary: "The Marblehead Select Board approved a $5,430,435 construction contract with Campbell Construction Group for the Mary Alley building HVAC, windows, and fire suppression project, within the $5,750,000 town meeting appropriation. The board also approved several event permits, a carry-in beverage license for Marvel Yacht Club, and authorized letters of support for three grant applications including an $867,000 MBTA Catalyst Grant for rail trail improvements. The meeting concluded with tributes to departing board member Alexa Singer, who served five years."
+  summary: "The Marblehead Select Board approved a $5,430,435 construction contract with Campbell Construction Group for the Mary Alley building HVAC, windows, and fire suppression project, within the $5,750,000 town meeting appropriation. The board also approved several event permits, a carry-in beverage license for Marblehead Yacht Club, and authorized letters of support for three grant applications including an $867,000 MBTA Catalyst Grant for rail trail improvements. The meeting concluded with tributes to departing board member Alexa Singer, who served five years."
   decisions:
-    - "Approved carry-in beer and wine license for Marvel Yacht Club at 4 Quick Street"
+    - "Approved carry-in beer and wine license for Marblehead Yacht Club at 4 Quick Street"
     - "Approved $5,430,435 contract with Campbell Construction Group for Mary Alley building project"
     - "Approved $150,000 change order for road paving contract with Richard E. Timberlea Inc."
     - "Approved temporary parking restriction on Foster Street for Eastern Yacht Club on July 4th"
@@ -27,7 +27,7 @@ summary_card:
     - "Approved citation honoring Monsignor Timothy J. Moran on his 50th anniversary of priestly ordination"
     - "Denied request from Art of Museums LLC to use Spirit of '76 image on archival prints"
   votes:
-    - motion: "Carry-in beer and wine license for Marvel Yacht Club"
+    - motion: "Carry-in beer and wine license for Marblehead Yacht Club"
       result: "in favor (unanimous)"
     - motion: "Contract with Campbell Construction Group for $5,430,435"
       result: "in favor (unanimous)"
@@ -71,16 +71,16 @@ topic_segments:
       2. **Community One Stop / MassWorks Grant**: A $70,000 application (10% local match) to advance the Five Corners intersection from 50% to final design, with an eye toward expanded pedestrian and outdoor dining space.
       3. **Senior Tax Relief Program**: A session at the Council on Aging drew 67 attendees and covered the state senior circuit breaker and Marblehead's new means-tested senior exemption program.
       4. **Picket House Exterior**: Final exterior painting is underway; work funded through the building's own trust fund, with Building Commissioner Steve Cummins leading the effort.
-      5. **Beauport Ambulance CPR Classes**: Free community CPR classes scheduled for June 4th at 4:00 PM at Abbott Hall (up to 18 people); Beauport will also train the entire Rec and Park staff at no cost to the town.
+      5. **Beauport Ambulance CPR Classes**: Free community CPR classes scheduled for June 4th at 4:00 PM at Abbot Hall (up to 18 people); Beauport will also train the entire Rec and Park staff at no cost to the town.
     key_speakers: ["Town Administrator (Thatcher)"]
   - topic: permits-zoning
     topic_confidence: 0.97
     start_seconds: 415
     end_seconds: 560
-    headline: "Select Board approves carry-in beer and wine license for Marvel Yacht Club"
-    dek: "A public hearing was held and the license approved for Marvel Yacht Club at 4 Quick Street, managed by Michael Mentalk."
-    summary: "The board held a legally advertised public hearing on a carry-in alcohol beverage license (beer and wine) for Marvel Yacht Club, 4 Quick Street. Manager Michael Mentalk appeared. Key conditions include a TIPS/BASSET-trained person on premises at all times during carry-in hours, Monday–Sunday 8:00 AM–9:00 PM, with a seating capacity of 60. No one spoke in favor or opposition. The board noted the town owns the property and therefore both signed off as owner and approved the application. The license expires upon any future ABCC transfer or application."
-    key_speakers: ["Michael Mentalk (Marvel Yacht Club manager)"]
+    headline: "Select Board approves carry-in beer and wine license for Marblehead Yacht Club"
+    dek: "A public hearing was held and the license approved for Marblehead Yacht Club at 4 Quick Street, managed by Michael Mentalk."
+    summary: "The board held a legally advertised public hearing on a carry-in alcohol beverage license (beer and wine) for Marblehead Yacht Club, 4 Quick Street. Manager Michael Mentalk appeared. Key conditions include a TIPS/BASSET-trained person on premises at all times during carry-in hours, Monday–Sunday 8:00 AM–9:00 PM, with a seating capacity of 60. No one spoke in favor or opposition. The board noted the town owns the property and therefore both signed off as owner and approved the application. The license expires upon any future ABCC transfer or application."
+    key_speakers: ["Michael Mentalk (Marblehead Yacht Club manager)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 560
@@ -99,7 +99,7 @@ topic_segments:
       **Revenue Opportunities**
       - Monetizing Round Top Road long-term commercial parking (currently free)
       - Tying beach fees to actual cost of services
-      - Promoting paid use of town properties such as Abbott Hall
+      - Promoting paid use of town properties such as Abbot Hall
       - Betterment fees for private (non-accepted) roads
       
       The Town Administrator cautioned the board to distinguish between its policy-making role and day-to-day operations, noting significant centralization already underway in HR, procurement, finance, and technology. The board agreed to invite the Procurement Director to a future meeting before taking formal action.
@@ -194,15 +194,15 @@ topic_segments:
 
 **[5:23](https://vimeo.com/1196731483#t=323s)** public buildings, especially the exterior envelopes. If the roof's leaking and the windows are leaking and the stairs are failing, if you don't address those needs, it deteriorates the interior of the buildings, and we lose those buildings. So, the Picket House is an example of how we've done all the work for that. And finally, I've inserted in the back page is a flyer. Beauport Ambulance Service, as you know, that's our new ambulance service we brought in last year. They are offering community CPR classesThey're going to do free classes for up to 18 people.
 
-**[6:08](https://vimeo.com/1196731483#t=368s)** You have to register for it, and it's education@bowportambulanceservice.com, if you can remember that. Scheduled for June 4th at 4:00 PM. So this is just a service that Bow Port is providing for free, to provide CPR classes for the community. It'll be held at Abbott Hall upstairs here in this building. In addition to doing that, they also are going to do CPR training for the entire Rec and Park staff. So, great service. We're very appreciative of Bow Port and the service they provide in the community for ambulance service, put these add-on benefits at no cost to the town. With that, that concludes my update.
+**[6:08](https://vimeo.com/1196731483#t=368s)** You have to register for it, and it's education@bowportambulanceservice.com, if you can remember that. Scheduled for June 4th at 4:00 PM. So this is just a service that Bow Port is providing for free, to provide CPR classes for the community. It'll be held at Abbot Hall upstairs here in this building. In addition to doing that, they also are going to do CPR training for the entire Rec and Park staff. So, great service. We're very appreciative of Bow Port and the service they provide in the community for ambulance service, put these add-on benefits at no cost to the town. With that, that concludes my update.
 
-**[6:55](https://vimeo.com/1196731483#t=415s)** Great. Bo, can I ask a question? Sure. Was that part of the contract or is that something they just bring up? It's possibly something- It's all part of their willingness to give back to the community. Okay. Yeah. And they had talked about that- Okay ... as far as their-- I know when we were interviewing all the different... That they planned on being a real contributor to the community, and they're following up on it. Great. That's great. Yeah. Alex, want to go? All right. Next up we have a public hearing for business carry and beverage license, Marvel Yacht Club at 4 Quick Street. Applicant, Michael Mentalk. This ultimate public hearing, this public hearing has been legally advertised and the board is notified. Mike, if you don't mind coming up.
+**[6:55](https://vimeo.com/1196731483#t=415s)** Great. Bo, can I ask a question? Sure. Was that part of the contract or is that something they just bring up? It's possibly something- It's all part of their willingness to give back to the community. Okay. Yeah. And they had talked about that- Okay ... as far as their-- I know when we were interviewing all the different... That they planned on being a real contributor to the community, and they're following up on it. Great. That's great. Yeah. Alex, want to go? All right. Next up we have a public hearing for business carry and beverage license, Marblehead Yacht Club at 4 Quick Street. Applicant, Michael Mentalk. This ultimate public hearing, this public hearing has been legally advertised and the board is notified. Mike, if you don't mind coming up.
 
 **[7:43](https://vimeo.com/1196731483#t=463s)** Michael. How are you? Good evening. How you doing? Good. How are you? Good, thanks. Hope I've been making sense.
 
 **[7:52](https://vimeo.com/1196731483#t=472s)** So, we see that you have an application for carrying. Anything you want to tell us about it? No, I don't think so. Looks like a different story. Yeah. Looks pretty straightforward and, uh- Do you guys have any questions? No. Looks like you've just still have your tips or bat trained person, hours of operation, 8:00 to 9:00, 8:00 AM to 9:00 PM, and seating capacity of 60. Yep. Great. Any questions for Michael? All right. Thanks for coming out. Awesome. Thank you. Appreciate it. Thank you. Yeah. Is there anyone here who would wish to speak in opposition to this application? Anyone want to speak in favor of this application?
 
-**[8:30](https://vimeo.com/1196731483#t=510s)** Okay. Very well. Post public hearing, any comments and so forth? Government here. Looks pretty straightforward. Just a quick note, the town does own this property. They both sign off the application as the owner of the property, as well as approve the application for the carrying license. If I could have a motion to sign off and approve the application for Marvel Yacht Club at 4 Quick Street. Its manager, Michael Mentalk, for carry-in alcohol beverage license, beer and wine. Subject to approval, completion. We've seen and received the required forms, fees, departmental approvals, and board approval. Such permit shall ex-expire upon approval from the ABCC for any future transfer or application of a liquor license. The tips or bat trained person must be on the premises at all times if carrying is allowed. Hours of operations, carrying on Monday through Sunday, 8:00 AM to 9:00 PM. Seating capacity, 60.
+**[8:30](https://vimeo.com/1196731483#t=510s)** Okay. Very well. Post public hearing, any comments and so forth? Government here. Looks pretty straightforward. Just a quick note, the town does own this property. They both sign off the application as the owner of the property, as well as approve the application for the carrying license. If I could have a motion to sign off and approve the application for Marblehead Yacht Club at 4 Quick Street. Its manager, Michael Mentalk, for carry-in alcohol beverage license, beer and wine. Subject to approval, completion. We've seen and received the required forms, fees, departmental approvals, and board approval. Such permit shall ex-expire upon approval from the ABCC for any future transfer or application of a liquor license. The tips or bat trained person must be on the premises at all times if carrying is allowed. Hours of operations, carrying on Monday through Sunday, 8:00 AM to 9:00 PM. Seating capacity, 60.
 
 **[9:19](https://vimeo.com/1196731483#t=559s)** So moved. Second. The poll vote. No? No. No questions? Okay, nope. Okay, let's get in second. All right, all fair. Thanks, Johnny. All right. Next up we have, what we're calling efficiencies and revenue opportunities. Dan, if you want to lead this? Yeah, sure. Is it, fast forward to tail? I can assume. Clicker on it. Okay. As it's being followed up, because we'll get into budget season, people talk about revenue opportunities and efficiencies and so forth. So along the way, with all the work that goes into the budgets and overrides, it's kind of tough to address those. But this would be a good time to talk about it, and really,
 
@@ -222,7 +222,7 @@ topic_segments:
 
 **[15:32](https://vimeo.com/1196731483#t=932s)** bring to the board so we can be kept up on date on the little things and the big things. I'm just thinking in the MOU, there's going to be a quarterly sit down with the two board. You have that in it, just so you know it stays on track and we don't get nine months goes on, "Oh, geez, we didn't have that review." And, so that's an example. I would be glad to help out with that. I know it keeps me on track, my job. So it's simple, but it would be nice to put that in writing. And then, just on the third slide, I'm going to talk a little bit about some revenue opportunities. This is always a good one.
 
-**[16:20](https://vimeo.com/1196731483#t=980s)** One thing, I must have heard a million times, BP Williams is always talking about it, but a lot of other people. Round Top Road, long-term parking, commercial parking, I think it's free right now, not charged. And monetize that, I think that would be something that might be a way to get revenue. Another idea is when we look at the beaches, tie them to the actual cost of services. One example is animal control, tie that to the cost of the licenses for animals. Promote and expand the paid use of town properties like Abbott Hall. We do some, but we could probably do more.
+**[16:20](https://vimeo.com/1196731483#t=980s)** One thing, I must have heard a million times, BP Williams is always talking about it, but a lot of other people. Round Top Road, long-term parking, commercial parking, I think it's free right now, not charged. And monetize that, I think that would be something that might be a way to get revenue. Another idea is when we look at the beaches, tie them to the actual cost of services. One example is animal control, tie that to the cost of the licenses for animals. Promote and expand the paid use of town properties like Abbot Hall. We do some, but we could probably do more.
 
 **[17:06](https://vimeo.com/1196731483#t=1026s)** Another one that some communities do is, and this is an interesting one, a betterment fee for private roads, so-called non-accepted roads. And as you know, there's no funding to redo private roads, and there never will be. But the way a betterment fee means that the residents of the road agree to the town comes in and replaces the road at their cost and through the betterment fee. But it's a win-win because one thing is the residents would pay the volume rate that the town does, and the town also gets another road done. I know in Argos, we've done two roads ourselves, the neighborhood association. We've had a land pay to do it, but it's at a rate that is,
 

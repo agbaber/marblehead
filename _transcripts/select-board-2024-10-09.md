@@ -24,7 +24,7 @@ summary_card:
     - "Approved letter of appreciation for departing Harbors and Waters board members Chris Hode and Peter Duron"
     - "Approved North Shore Medical Center alteration request estimated at $113,000"
     - "Approved three one-day liquor license requests"
-    - "Approved consent agenda items including September 25 minutes, Abbott Hall Artisans Fair, rights of entry agreements, and surplus declaration"
+    - "Approved consent agenda items including September 25 minutes, Abbot Hall Artisans Fair, rights of entry agreements, and surplus declaration"
     - "Approved consent agenda contracts including Stryker Lucas device, Swampscott Rail Trail amendment, Salem Sound Coast Watch amendment, and Corolla Contracting change orders 3, 4, and 5"
   votes:
     - motion: "Letter of recognition to Town Treasurer"
@@ -70,7 +70,7 @@ topic_segments:
       - Board of Health received a **$90,000 community compact grant** for maternal/child health studies and adolescent risk-behavior research; Andrew Petty to head implementation.
       
       The board voted unanimously to send a letter of recognition to the Treasurer.
-    key_speakers: ["Town Administrator (Thatcher Keer)", "Board Member"]
+    key_speakers: ["Town Administrator (Thatcher Kezer)", "Board Member"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 509
@@ -86,8 +86,8 @@ topic_segments:
       
       **Departments/boards met with or scheduled:** Town Moderator, Parks & Recreation, Board of Health, Water & Sewer Commission, Municipal Light Commission, Planning Board, Library Trustees, School Committee, Housing Authority, Town Clerk, Police Chief, Fire Chief, Harbor Master (scheduled for the following evening).
       
-      **First public forum:** October 22, 2024, 7:00–8:30 PM, Abbott Hall boardroom (hybrid). Content will cover the purpose of a town charter, committee objectives, components of a charter, trends in other Massachusetts towns, the governance process, and potential benefits for Marblehead. The committee stated its goal is to present a draft charter to the Select Board in time for the next Town Meeting, with a January 2025 checkpoint to assess feasibility.
-    key_speakers: ["Amy Drinker (Charter Commission Co-Chair)", "Rosanna Ferrante (Charter Commission Co-Chair)", "Moses (Select Board member)", "Thatcher Keer (Town Administrator, ex-officio)"]
+      **First public forum:** October 22, 2024, 7:00–8:30 PM, Abbot Hall boardroom (hybrid). Content will cover the purpose of a town charter, committee objectives, components of a charter, trends in other Massachusetts towns, the governance process, and potential benefits for Marblehead. The committee stated its goal is to present a draft charter to the Select Board in time for the next Town Meeting, with a January 2025 checkpoint to assess feasibility.
+    key_speakers: ["Amy Drinker (Charter Commission Co-Chair)", "Rosanna Ferrante (Charter Commission Co-Chair)", "Moses (Select Board member)", "Thatcher Kezer (Town Administrator, ex-officio)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 1684
@@ -113,12 +113,12 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 2212
     end_seconds: 2375
-    headline: "Consent agenda approved: minutes, Abbott Hall fair, rights of entry, surplus declaration, and multiple contracts"
+    headline: "Consent agenda approved: minutes, Abbot Hall fair, rights of entry, surplus declaration, and multiple contracts"
     dek: "The board approved routine consent items and a batch of contracts including three change orders for the DPW/police roof rehabilitation project."
     summary: |
       The board approved the following consent agenda items without separate discussion:
       
-      **General items:** Minutes of September 25, 2024; Abbott Hall Festival of Arts Artisans Fair (December 6–8); Right of Entry agreements with 55 Seaview Ave. and 297 Ocean Ave. and the Mary Alley Building; declaration of surplus items.
+      **General items:** Minutes of September 25, 2024; Abbot Hall Festival of Arts Artisans Fair (December 6–8); Right of Entry agreements with 55 Seaview Ave. and 297 Ocean Ave. and the Mary Alley Building; declaration of surplus items.
       
       **Contracts:**
       - Stryker Company — Lucas device and battery for the fire station
@@ -156,7 +156,7 @@ topic_segments:
     start_seconds: 2900
     end_seconds: 3017
     headline: "Three one-day liquor licenses approved for Friends of Performing Arts, First Church, and Rotary Club"
-    dek: "Events scheduled at King Hooper Mansion, 41 Washington Street, and Abbott Hall received approval on a unanimous roll-call vote."
+    dek: "Events scheduled at King Hooper Mansion, 41 Washington Street, and Abbot Hall received approval on a unanimous roll-call vote."
     summary: |
       The board approved three one-day liquor license requests:
       
@@ -164,7 +164,7 @@ topic_segments:
       |---|---|---|---|
       | Friends of Performing Arts | November 7, 2024 | King Hooper Mansion | 6:30–9:30 PM |
       | First Church of Christ | November 22, 2024 | 41 Washington Street | 6:30–9:30 PM |
-      | Rotary Club of Marblehead | December 14, 2024 | Abbott Hall | 7:00–11:00 PM |
+      | Rotary Club of Marblehead | December 14, 2024 | Abbot Hall | 7:00–11:00 PM |
       
       The vote was unanimous on a roll-call basis.
   - topic: admin-housekeeping
@@ -176,10 +176,10 @@ topic_segments:
     summary: |
       The Division of Marine Fisheries conditionally approved shellfishing in designated Marblehead areas effective sunrise October 2; no board action was required.
       
-      The Historical Commission offered to fund and install motorized window shades in the Abbott Hall boardroom at its own cost to protect artwork and improve conditions during meetings.
+      The Historical Commission offered to fund and install motorized window shades in the Abbot Hall boardroom at its own cost to protect artwork and improve conditions during meetings.
       
       The board voted to send a letter of appreciation recognizing **David Titus**, General Manager of the Corinthian Yacht Club for 30 years, upon his retirement. The letter from Vice Commodore Carl Reny described Titus's extensive volunteer contributions to civic and charitable organizations including the Marblehead Festival of Arts, the Chamber of Commerce, the Marblehead Hospice Regatta, Collins Middle School culinary programs, and others, often at cost or fee-waived.
-    key_speakers: ["Thatcher Keer (Town Administrator)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
@@ -204,19 +204,19 @@ topic_segments:
 
 **[6:09](https://vimeo.com/1018354635#t=369s)** So we'll have a new firefighter coming in, and then Police Academy. It's tomorrow that Christian Henneger, who the board, uh, appointed, uh, graduates from the Lowell Police Academy. So it'll be coming from the aca the academy, and into field training, um, starting Monday. So that'll add to the force. And of course, Taylor, uh, Nolasco, um, she's at the Linfield Academy and expected to graduate in mid-March. So we have two officers at the Academy soon to come join the force. It takes, it takes about a year of a new appointee before they're like fully fledged on their own. Um, so there's a lot of training
 
-**[6:56](https://vimeo.com/1018354635#t=416s)** that goes on in, in that first year. Next, uh, on the theme of grants. Um, and, and, and the Marvel Head current beat me to the punch. 'cause there's an article in today's news about the Board of Health getting a $90,000 grant, uh, to do some studies on, um, um, maternal, uh, maternal and child health, as well as, uh, study risk risky behaviors of children and adolescents of our community. So again, um, the Health department folks going out seeking, this is a community compact grant of 90,000 through these programs. Um, and, And Thatcher, what, what will, how will that get, uh, implemented? Who, who will sponsor the implementation of, I don't know if you know, So the, uh, Andrew Petty Will will be petty, yeah.
+**[6:56](https://vimeo.com/1018354635#t=416s)** that goes on in, in that first year. Next, uh, on the theme of grants. Um, and, and, and the Marblehead current beat me to the punch. 'cause there's an article in today's news about the Board of Health getting a $90,000 grant, uh, to do some studies on, um, um, maternal, uh, maternal and child health, as well as, uh, study risk risky behaviors of children and adolescents of our community. So again, um, the Health department folks going out seeking, this is a community compact grant of 90,000 through these programs. Um, and, And Thatcher, what, what will, how will that get, uh, implemented? Who, who will sponsor the implementation of, I don't know if you know, So the, uh, Andrew Petty Will will be petty, yeah.
 
 **[7:44](https://vimeo.com/1018354635#t=464s)** Will head that up. So the purpose of the grant is they're actually gonna hire or contract with someone. It basically pays for the salaries and the salary and other expenses for somebody to come in and actually do the programs for us. That's great. Yeah, Dr. Massaro talked about that at the Mental Health Task Force Monday night that I attended. He was, he didn't know the amount at that point in time, but he knew he got the award and he was excited because his big emphasis was he wanted to put the health back in the Board of health, that they were putting so much into the, into the transfer station that he wanted the focus to be where it should be on the health side. So, uh, so congrats to him. And, and there's other ones that he and the, um, mental health task force will be going after as well. So, no, great.
 
 **[8:29](https://vimeo.com/1018354635#t=509s)** No good stuff. So Thank you. That's All I have pending any Great updates. Thanks, love. Good news. Thank You. Yes. Uh, all right then, um, next I'll ask our co-chairs of the Town Charter Commission Committee to come up the table and join us, Amy Drinker and Rosanna Ferrante, um, for an update on our, our charter study. Welcome, welcome. Good evening. Good. You know this table? Yes. It's nice to be on this side. A different feel over there. Yeah. Hi, I'm Amy Drinker and Roseanna and I will be splitting up talking to you. I'm gonna talk to you about the basic work that we're doing,
 
-**[9:17](https://vimeo.com/1018354635#t=557s)** and then Rosanna will talk to you about the public presentation that we're going to have later this month. I wanted to start by mentioning the people who are on our committee besides us. Jim Sen is in the Mm-Hmm. Audience, and although he's a Z and he usually goes last, we can first for being on the committee. Also on the committee is Sean Casey, bill Conley, Amy Danforth, Ron Grier, Seamus who, Ishan Thomas Aro, Caleb Miller, and Victor Wild. And everyone is contributing to the work that we do, and it's really a, oh, sorry. I should also mention that Thatcher Keer is ex-officio. Kaya Wiley is our amazing assistant to make sure
+**[9:17](https://vimeo.com/1018354635#t=557s)** and then Rosanna will talk to you about the public presentation that we're going to have later this month. I wanted to start by mentioning the people who are on our committee besides us. Jim Sen is in the Mm-Hmm. Audience, and although he's a Z and he usually goes last, we can first for being on the committee. Also on the committee is Sean Casey, bill Conley, Amy Danforth, Ron Grier, Seamus who, Ishan Thomas Aro, Caleb Miller, and Victor Wild. And everyone is contributing to the work that we do, and it's really a, oh, sorry. I should also mention that Thatcher Kezer is ex-officio. Kaya Wiley is our amazing assistant to make sure
 
 **[10:05](https://vimeo.com/1018354635#t=605s)** that things get posted, et cetera. And then Moses and Erin are our liaisons from the select board. So we really appreciate the support we get from the select board and from the Collins Center, which is the part of UMass Boston that helps towns around Massachusetts either look at updating their charters or creating charters like Marblehead is doing right now. Um, uh, Karen Canfield and Mel Collector have been a tremendous support to us and are very flexible when we say, well, we're marblehead, we're gonna do it this way. They're giving us feedback in terms of what the state will be looking for, when it if, when it goes
 
 **[10:52](https://vimeo.com/1018354635#t=652s)** to the state, et cetera. So that's our basic team. And then the different department heads and the committees in Marblehead who are striving to meet with, to look at how Marblehead does business. The, um, town website that we have for all the departments in town. Under the committees, there is a website, uh, connection to the Marblehead Town Charter Committee. If people wanna see the postings of our meetings and what's on the agenda and documents that we're posting. Every time we have a meeting, Kyle puts those online for people. So that's a resource that people can go to if they wanna know what we're doing. And our meetings, which are twice a month,
 
-**[11:40](https://vimeo.com/1018354635#t=700s)** every other week, are posted. And also hybrid links if people wanna watch because they can't make it to the meeting in person. We recently created a mission statement, which I think is useful for people to understand what it is we're trying to do. And that mission statement reads, in crafting the Town of Marble Head's First Charter for our fellow citizens, we endeavor to comprehensively examine how effectively, efficiently, and fairly our local government structure, authorities and processes are organized and operate in the process, we will be mindful of which current features merit changing and which should remain unchanged. We pledge to prepare and pre present product built on the values
+**[11:40](https://vimeo.com/1018354635#t=700s)** every other week, are posted. And also hybrid links if people wanna watch because they can't make it to the meeting in person. We recently created a mission statement, which I think is useful for people to understand what it is we're trying to do. And that mission statement reads, in crafting the Town of Marblehead's First Charter for our fellow citizens, we endeavor to comprehensively examine how effectively, efficiently, and fairly our local government structure, authorities and processes are organized and operate in the process, we will be mindful of which current features merit changing and which should remain unchanged. We pledge to prepare and pre present product built on the values
 
 **[12:26](https://vimeo.com/1018354635#t=746s)** of thoughtful deliberation and community involvement, guided by what is in the town's best interests. So, along those lines, what we're currently doing is meeting with elected and appointed officials and department heads to understand their operations perspectives, challenges, and opportunities. As you are well aware, this is
 
@@ -292,7 +292,7 @@ topic_segments:
 
 **[36:45](https://vimeo.com/1018354635#t=2205s)** Thank you. Thank you. Yay.
 
-**[36:52](https://vimeo.com/1018354635#t=2212s)** So proceed to our consent agenda items. Um, I will, um, ask for a motion to approve the following agenda items. Accept those put on hold for further discussion. The minutes of September 25th, 2024. Abbott Hall Festival of Arts Artisans Fair. December 6th through the eighth rights of the Rite of Entry agreement between the town and 55 Seaview Ave. Right of entry agreement between the town and 2 97 Ocean and, uh, the Mary Alley building, um, to declare the surplus items.
+**[36:52](https://vimeo.com/1018354635#t=2212s)** So proceed to our consent agenda items. Um, I will, um, ask for a motion to approve the following agenda items. Accept those put on hold for further discussion. The minutes of September 25th, 2024. Abbot Hall Festival of Arts Artisans Fair. December 6th through the eighth rights of the Rite of Entry agreement between the town and 55 Seaview Ave. Right of entry agreement between the town and 2 97 Ocean and, uh, the Mary Alley building, um, to declare the surplus items.
 
 **[37:30](https://vimeo.com/1018354635#t=2250s)** So moved. Second. Second. Okay. All in favor? Great. Awesome. And next we have our contracts, our consent agenda, vo, um, agenda votes. If, um, is there anything that anybody wishes for me to pull out for further discussion from the contracts? Um, no. So I'll ask for motion to approve the following consent agenda items, um, contracts Stryker Company for a Lucas device and Battery at the fire station tool design of Boston, Massachusetts to amend the contract for the Swamp Scott Rail, trail Engineering and Design, phase two, Salem Sound Coast Watch to amend the contract for consulting services, the project management and stakeholder engagement
 
@@ -326,9 +326,9 @@ topic_segments:
 
 **[48:03](https://vimeo.com/1018354635#t=2883s)** And we have a one day liquor license request, um, straightforward request. I'll ask for a motion to approve the request, uh, for the, um, for the Friends of Mar of the Performing Arts. Are you gonna consent agenda on this?
 
-**[48:20](https://vimeo.com/1018354635#t=2900s)** Um, this looks like that's what I have on my, Oh, do we have two of 'em? You Have three. It looks like. Oh, three, right? Okay. We do that With, That's right. There are, I think we need to Pull, yeah, we need to pull up. We, We don't need one. We just have, we can do them all at once. All at once. Yeah. Okay. So, um, we have the Friends of Performing Arts November 7th, 2024, king Hooper Mansion, um, at, at King Hooper Mansion from six 30 to 9:30 PM the first Church of Christ for November 22nd, 41 Washington Street from six 30 to 9:30 PM and the Rotary Club of Marblehead, December 14th, 2024. At here at Abbott Hall from seven to 11:00 PM all one day liquor license.
+**[48:20](https://vimeo.com/1018354635#t=2900s)** Um, this looks like that's what I have on my, Oh, do we have two of 'em? You Have three. It looks like. Oh, three, right? Okay. We do that With, That's right. There are, I think we need to Pull, yeah, we need to pull up. We, We don't need one. We just have, we can do them all at once. All at once. Yeah. Okay. So, um, we have the Friends of Performing Arts November 7th, 2024, king Hooper Mansion, um, at, at King Hooper Mansion from six 30 to 9:30 PM the first Church of Christ for November 22nd, 41 Washington Street from six 30 to 9:30 PM and the Rotary Club of Marblehead, December 14th, 2024. At here at Abbot Hall from seven to 11:00 PM all one day liquor license.
 
-**[49:08](https://vimeo.com/1018354635#t=2948s)** And I have a motion to approve these requests from these applicants. Can I have a second? Second. All in favor? Oh, sorry. You wanna do Mr. Fox? In favor, Ms. Singer? In favor? Mr. Murray In favor? Degrader In favor, Ms. Nun In favor. Excellent. Okay. And, uh, that brings us to the Division of Marine Fisheries, a notice on our shellfish. And, um, I would ask to turn this over to, um, uh, our account administrator, Mr. Keer, could you just kind of, so This is, yeah. So this is a notice from the Division of Marine Fish Fisheries, um, which basically is, um, uh, conditionally approving the opening
+**[49:08](https://vimeo.com/1018354635#t=2948s)** And I have a motion to approve these requests from these applicants. Can I have a second? Second. All in favor? Oh, sorry. You wanna do Mr. Fox? In favor, Ms. Singer? In favor? Mr. Murray In favor? Degrader In favor, Ms. Nun In favor. Excellent. Okay. And, uh, that brings us to the Division of Marine Fisheries, a notice on our shellfish. And, um, I would ask to turn this over to, um, uh, our account administrator, Mr. Kezer, could you just kind of, so This is, yeah. So this is a notice from the Division of Marine Fish Fisheries, um, which basically is, um, uh, conditionally approving the opening
 
 **[49:56](https://vimeo.com/1018354635#t=2996s)** for Shellfishing. Um, I think it was, what's the effective date on here? October 2nd, as of sunrise on October 2nd. So it's basically saying it's safe to shell shellfish, uh, in, in, in these areas. So, Okay.
 

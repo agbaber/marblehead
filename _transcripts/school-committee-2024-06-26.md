@@ -13,12 +13,12 @@ source: youtube-auto+llm
 
 summary_card:
   headline: "School Committee votes to allocate up to $25,000 for independent investigation into anti-Semitism allegations"
-  summary: "The Marblehead School Committee held a special meeting to deliberate on next steps for an independent investigation following significant public comment at its previous meeting. After a failed motion to award the contract directly to a specific firm, the committee voted 5–0 to allocate up to $25,000 and delegate procurement to incoming Superintendent John Robodo, with the contract to be awarded no later than July 19th. The committee also voted unanimously to accept a Marblehead Boosters donation of up to $200,000 for lighting upgrades at Piper Field, and adjourned into executive session to discuss collective bargaining strategy."
+  summary: "The Marblehead School Committee held a special meeting to deliberate on next steps for an independent investigation following significant public comment at its previous meeting. After a failed motion to award the contract directly to a specific firm, the committee voted 5–0 to allocate up to $25,000 and delegate procurement to incoming Superintendent John Robidoux, with the contract to be awarded no later than July 19th. The committee also voted unanimously to accept a Marblehead Boosters donation of up to $200,000 for lighting upgrades at Piper Field, and adjourned into executive session to discuss collective bargaining strategy."
   decisions:
     - "Approved acceptance of Marblehead Boosters donation up to $200,000 for Piper Field lighting replacement and upgrade"
     - "Rejected motion to award independent investigation contract directly to a specific firm (Kirker Pagit) — failed 2 to 3"
     - "Rejected motion to allocate $25,000 with a July 10th procurement deadline — failed 2 to 3"
-    - "Approved allocation of up to $25,000 for independent investigation, procurement delegated to Superintendent Robodo with July 19th deadline — passed 5 to 0"
+    - "Approved allocation of up to $25,000 for independent investigation, procurement delegated to Superintendent Robidoux with July 19th deadline — passed 5 to 0"
     - "Approved entering executive session for collective bargaining strategy — passed 5 to 0"
   votes:
     - motion: "Accept Marblehead Boosters donation up to $200,000 for Piper Field lighting"
@@ -27,7 +27,7 @@ summary_card:
       result: "in favor (2 to 3)"
     - motion: "Allocate up to $25,000 for independent investigation with July 10th procurement deadline"
       result: "in favor (2 to 3)"
-    - motion: "Allocate up to $25,000 for independent investigation, procurement by Superintendent Robodo no later than July 19th"
+    - motion: "Allocate up to $25,000 for independent investigation, procurement by Superintendent Robidoux no later than July 19th"
       result: "in favor (unanimous)"
     - motion: "Enter executive session for collective bargaining strategy"
       result: "in favor (unanimous)"
@@ -68,7 +68,7 @@ topic_segments:
     end_seconds: 3007
     featured: true
     headline: "Committee votes 5–0 to allocate up to $25,000 for independent investigation into allegations, delegating procurement to incoming superintendent by July 19"
-    dek: "After two failed motions — one to award directly to a named firm and one with a July 10 deadline — the committee unanimously approved delegating the hire to Superintendent-elect John Robodo with a July 19th deadline."
+    dek: "After two failed motions — one to award directly to a named firm and one with a July 10 deadline — the committee unanimously approved delegating the hire to Superintendent-elect John Robidoux with a July 19th deadline."
     summary: |
       The committee engaged in extended deliberation over how to procure an independent investigator for complaints that arose at the end of the prior superintendent's tenure. Legal counsel had suggested three firms; the committee was uncomfortable voting on one without further vetting.
       
@@ -76,7 +76,7 @@ topic_segments:
       - One member (identified as moving the first motion) argued that a firm called Kirker Pagit was clearly the most qualified based on scope, volume of prior cases, and expertise in workplace investigations including anti-Semitism and religious harassment.
       - Other members wanted candidates to present their scope, timeline, and deliverables before a vote, and noted community demand — particularly from the Jewish community — for a thorough, unbiased process.
       - One member cautioned against delay, noting that the longer the process took, the more the issue would be amplified.
-      - The chair noted the incoming superintendent (John Robodo, starting July 1) had attended the prior meeting and should lead this effort; the prior administration had conflicts of interest because its members were subjects of the complaints.
+      - The chair noted the incoming superintendent (John Robidoux, starting July 1) had attended the prior meeting and should lead this effort; the prior administration had conflicts of interest because its members were subjects of the complaints.
       - Members discussed procurement thresholds: the school's guidelines require a different process above $50,000; the committee estimated the investigation would cost up to $25,000.
       - One member raised concern that a July 10 deadline gave the new superintendent only one week, given the July 4th holiday.
       
@@ -86,7 +86,7 @@ topic_segments:
       |---|---|
       | Award contract directly to Kirker Pagit | Failed 2–3 (Oda, Fox in favor; Taylor, Williams, Chaper opposed) |
       | Allocate $25,000 with July 10 procurement deadline | Failed 2–3 (Oda, Fox in favor; Taylor, Williams, Chaper opposed) |
-      | Allocate up to $25,000, procurement delegated to Superintendent Robodo, contract awarded no later than July 19 | **Passed 5–0** |
+      | Allocate up to $25,000, procurement delegated to Superintendent Robidoux, contract awarded no later than July 19 | **Passed 5–0** |
       
       The chair noted that the investigation would ultimately be reported back to the school committee, and expressed interest in forming a task force or subcommittee to address broader concerns about anti-Semitism, curriculum, and community climate raised at last week's meeting.
     key_speakers: ["Sarah Fox (Chair)", "Brian Oda (Board member)", "Al Williams (Board member)", "Allison Taylor (Board member)", "Board member (Chaper/Chafer)"]
@@ -97,11 +97,11 @@ topic_segments:
     headline: "Committee discusses summer retreat scheduling and goal-setting ahead of new superintendent's July 30–Aug 1 administrator retreat"
     dek: "Members agreed to coordinate via email to find a date in early-to-mid July for a school committee retreat focused on budget goals and strategic planning."
     summary: |
-      The chair raised the need to schedule a summer school committee retreat — a recurring annual event — noting that new Superintendent Robodo already has an administrator retreat planned for July 30–31 and August 1. Members debated whether to meet before or after that retreat, with one member arguing the school committee should set high-level goals first so administrators can align their plans.
+      The chair raised the need to schedule a summer school committee retreat — a recurring annual event — noting that new Superintendent Robidoux already has an administrator retreat planned for July 30–31 and August 1. Members debated whether to meet before or after that retreat, with one member arguing the school committee should set high-level goals first so administrators can align their plans.
       
       Key scheduling constraints discussed:
       - The week of July 4th was ruled out by several members due to travel and holidays.
-      - Superintendent Robodo will be out of district the week of July 22.
+      - Superintendent Robidoux will be out of district the week of July 22.
       - One member is out of town for two weeks but willing to Zoom in.
       - Another member works full-time and cannot easily take a full weekday off.
       

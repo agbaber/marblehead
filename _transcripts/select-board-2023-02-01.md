@@ -14,26 +14,26 @@ source: vimeo-auto+llm
 
 summary_card:
   headline: "Town Administrator presents FY2024 budget scenarios projecting $1.8M–$4.4M deficit"
-  summary: "Town Administrator Thatcher Keyser delivered a 'State of the Town' presentation outlining FY2024 revenue estimates of approximately $105.3M against expenditure scenarios ranging from $107M to $109M, producing projected deficits of $1.77M to $4.4M depending on cost-increase assumptions of 3% to 6%. Keyser noted that free cash has declined significantly, dropping from $10.2M drawn in the prior year to an estimated $8.5M available, and that all three collective bargaining agreements expire June 30. A second agenda item reviewed the town's cash management practices across roughly $94M held at multiple banks, following questions raised by a local newspaper. Public comment featured residents urging the board to act quickly on a potential override and to improve communication with the press."
+  summary: "Town Administrator Thatcher Kezer delivered a 'State of the Town' presentation outlining FY2024 revenue estimates of approximately $105.3M against expenditure scenarios ranging from $107M to $109M, producing projected deficits of $1.77M to $4.4M depending on cost-increase assumptions of 3% to 6%. Kezer noted that free cash has declined significantly, dropping from $10.2M drawn in the prior year to an estimated $8.5M available, and that all three collective bargaining agreements expire June 30. A second agenda item reviewed the town's cash management practices across roughly $94M held at multiple banks, following questions raised by a local newspaper. Public comment featured residents urging the board to act quickly on a potential override and to improve communication with the press."
 
 topic_segments:
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 1
     end_seconds: 548
-    headline: "Town Administrator Keyser opens State of the Town with municipal mission framework"
-    dek: "Keyser, six months into his tenure, framed the presentation around five core municipal services and the resources needed to deliver them."
-    summary: "Town Administrator Thatcher Keyser introduced the State of the Town presentation by outlining why municipalities exist, what five core services Marblehead delivers (public education, public safety, infrastructure, land use control, and health/human services), and the resources required to sustain them. He noted that resource management—finance, IT, and HR—underpins all service delivery, and that executive management sets policy and strategy."
-    key_speakers: ["Thatcher Keyser (Town Administrator)"]
+    headline: "Town Administrator Kezer opens State of the Town with municipal mission framework"
+    dek: "Kezer, six months into his tenure, framed the presentation around five core municipal services and the resources needed to deliver them."
+    summary: "Town Administrator Thatcher Kezer introduced the State of the Town presentation by outlining why municipalities exist, what five core services Marblehead delivers (public education, public safety, infrastructure, land use control, and health/human services), and the resources required to sustain them. He noted that resource management—finance, IT, and HR—underpins all service delivery, and that executive management sets policy and strategy."
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: override
     topic_confidence: 0.92
     start_seconds: 549
     end_seconds: 2553
     featured: true
     headline: "FY2024 budget faces $1.8M–$4.4M deficit; override scenarios outlined"
-    dek: "Keyser's three cost-increase scenarios all produce deficits, and free cash available to offset them has dropped by roughly $1.6M from the prior year."
+    dek: "Kezer's three cost-increase scenarios all produce deficits, and free cash available to offset them has dropped by roughly $1.6M from the prior year."
     summary: |
-      Keyser presented FY2024 revenue estimates totaling approximately **$105.26M**, built from:
+      Kezer presented FY2024 revenue estimates totaling approximately **$105.26M**, built from:
       
       | Line | Estimate |
       |------|----------|
@@ -53,8 +53,8 @@ topic_segments:
       
       Key drivers of the gap include: declining free cash (down ~$1.6M year-over-year), anticipated GIC health insurance rate increases of roughly 7–9% on a ~$15M line, expiration of all three collective bargaining agreements on June 30, recycling disposal fees at an all-time high of $95/ton, and the need for new financial software and a centralized HR function.
       
-      Keyser stated his intent is to develop a balanced budget assuming **no override**, while simultaneously developing override scenarios for public discussion. He outlined three possible override paths: no override (cuts only), a limited override to plug the structural deficit, or a broader override covering additional service enhancements. Questions of duration (one year vs. five years) and scope were identified as subjects for public deliberation.
-    key_speakers: ["Thatcher Keyser (Town Administrator)", "Aaron Noonan (Select Board member)", "Select Board Chair"]
+      Kezer stated his intent is to develop a balanced budget assuming **no override**, while simultaneously developing override scenarios for public discussion. He outlined three possible override paths: no override (cuts only), a limited override to plug the structural deficit, or a broader override covering additional service enhancements. Questions of duration (one year vs. five years) and scope were identified as subjects for public deliberation.
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Aaron Noonan (Select Board member)", "Select Board Chair"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 2553
@@ -69,32 +69,32 @@ topic_segments:
     end_seconds: 1393
     headline: "GIC health insurance rate increase estimated at 7–9% on ~$15M line item"
     dek: "The GIC has not yet published its FY2024 rate projections, leaving a major expenditure variable unresolved during early budget building."
-    summary: "Keyser noted that the town's GIC health insurance appropriation is approximately $15M and that he expects rate increases in the range of 7–9%, though the GIC has not yet released official numbers. The Personal Employee Committee (Section 19) contract governing health plan negotiations expires at the end of the next fiscal year, making an HR professional a critical resource for those negotiations."
-    key_speakers: ["Thatcher Keyser (Town Administrator)"]
+    summary: "Kezer noted that the town's GIC health insurance appropriation is approximately $15M and that he expects rate increases in the range of 7–9%, though the GIC has not yet released official numbers. The Personal Employee Committee (Section 19) contract governing health plan negotiations expires at the end of the next fiscal year, making an HR professional a critical resource for those negotiations."
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: labor-personnel
     topic_confidence: 0.78
     start_seconds: 1667
     end_seconds: 1726
     headline: "All three collective bargaining agreements expire June 30; negotiations to begin this fiscal year"
     dek: "Police, fire, and municipal employees' contracts all expire simultaneously, adding uncertainty to FY2024 and FY2025 labor cost projections."
-    summary: "Keyser reported that the town is currently in year three of three-year collective bargaining agreements with police, fire, and municipal employees, each providing 2% contractual increases plus step increases. All three agreements expire June 30 of the current fiscal year, and negotiations will begin during FY2023. He also identified workforce recruitment and retention as a challenge given upward wage pressure in both public and private sectors."
-    key_speakers: ["Thatcher Keyser (Town Administrator)"]
+    summary: "Kezer reported that the town is currently in year three of three-year collective bargaining agreements with police, fire, and municipal employees, each providing 2% contractual increases plus step increases. All three agreements expire June 30 of the current fiscal year, and negotiations will begin during FY2023. He also identified workforce recruitment and retention as a challenge given upward wage pressure in both public and private sectors."
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: bonding-capital
     topic_confidence: 0.7
     start_seconds: 2025
     end_seconds: 2063
     headline: "Town sold bonds for half of debt-exclusion road/sidewalk/building projects; Triple-A rating maintained"
     dek: "The bond sale funded the first tranche of projects approved at town meeting; a second sale is planned as projects advance."
-    summary: "Keyser listed as a recent success the bond sale for the debt-exclusion-approved road, sidewalk, and building improvement projects. The town sold bonds for approximately half the approved amount to fund near-term projects, with the remainder to be bonded in the future as projects mature. The town's bond rating remains Triple-A."
-    key_speakers: ["Thatcher Keyser (Town Administrator)"]
+    summary: "Kezer listed as a recent success the bond sale for the debt-exclusion-approved road, sidewalk, and building improvement projects. The town sold bonds for approximately half the approved amount to fund near-term projects, with the remainder to be bonded in the future as projects mature. The town's bond rating remains Triple-A."
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 4400
     end_seconds: 5709
     headline: "Town cash management review: ~$94M across eight institutions; new treasurer focused on consolidation"
-    dek: "Following a local newspaper inquiry, Keyser presented a breakdown of municipal cash holdings and the statutory framework governing treasurer investment decisions."
+    dek: "Following a local newspaper inquiry, Kezer presented a breakdown of municipal cash holdings and the statutory framework governing treasurer investment decisions."
     summary: |
-      Keyser presented three slides on town cash management in response to recent press coverage. The town holds approximately **$94M** across multiple banks:
+      Kezer presented three slides on town cash management in response to recent press coverage. The town holds approximately **$94M** across multiple banks:
       
       | Institution | Share |
       |-------------|-------|
@@ -107,10 +107,10 @@ topic_segments:
       | MNT Peoples | 2% |
       | Rockland Trust / Lending Club | ~1% |
       
-      Keyser explained that the treasurer has sole statutory responsibility for investment decisions under MGL Ch. 41 §46, Ch. 44 §55, Ch. 44 §54, and Ch. 203C (OPEB funds). Investment priorities under law and policy are: (1) safety, (2) liquidity, (3) yield. He attributed limited yield optimization during 2022 to staff turnover—the former treasurer/acting finance director departed and the assistant treasurer collector was handling three roles while mostly stationed at the front window.
+      Kezer explained that the treasurer has sole statutory responsibility for investment decisions under MGL Ch. 41 §46, Ch. 44 §55, Ch. 44 §54, and Ch. 203C (OPEB funds). Investment priorities under law and policy are: (1) safety, (2) liquidity, (3) yield. He attributed limited yield optimization during 2022 to staff turnover—the former treasurer/acting finance director departed and the assistant treasurer collector was handling three roles while mostly stationed at the front window.
       
-      The new treasurer (Rachel) and incoming finance director (Alicia Benjamin, starting in March) are working to reduce the number of bank accounts and sub-ledgers. Keyser acknowledged the large number of accounts stems partly from a historical philosophy of opening a separate account for each trust fund donation and each transaction type, driven in part by legacy software limitations.
-    key_speakers: ["Thatcher Keyser (Town Administrator)", "Select Board Chair"]
+      The new treasurer (Rachel) and incoming finance director (Alicia Benjamin, starting in March) are working to reduce the number of bank accounts and sub-ledgers. Kezer acknowledged the large number of accounts stems partly from a historical philosophy of opening a separate account for each trust fund donation and each transaction type, driven in part by legacy software limitations.
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Select Board Chair"]
   - topic: public-comment
     topic_confidence: 0.97
     start_seconds: 5709
@@ -124,7 +124,7 @@ topic_segments:
       - **Sarah Fox, 46 Peach Tree (school committee context)** urged the board to work expeditiously across all departments to present an override option to voters, warning that 1.3% revenue growth does not cover contractual obligations.
       - **Jen Schaffner, 20 Casino Road** asked for clarity on the process: who decides what goes in an override, when will a level-funded budget be presented, and what is the Finance Committee's role?
       - **Nancy (55 Commercial Street, online)** offered historical perspective on the finance department going back to the 1980s, noted the town remained on a legacy system from 1977 well into the 2000s, and suggested zero-based budgeting and position control systems.
-      - **Becca Whitten, 150 Atlantic Avenue (online)** asked which accounts the Select Board has oversight over; Keyser answered: none—the treasurer has an independent statutory mandate.
+      - **Becca Whitten, 150 Atlantic Avenue (online)** asked which accounts the Select Board has oversight over; Kezer answered: none—the treasurer has an independent statutory mandate.
       - **Jim Fall, 21 Chamber Avenue** asked for the current interest rate at Eastern Bank and expressed frustration that no one could provide a simple answer.
       - **Megan Sweeney, 23 Beacon Street** praised policy-and-procedure progress but urged the board to engage the press as a transparency partner and expressed concern about the February timeline for an override discussion.
       - **Brett Murray** noted that with town meeting on May 1st, the board is already late, citing the school department override attempt the prior year that passed town meeting but failed at the ballot box.
@@ -143,7 +143,7 @@ topic_segments:
 
 **[0:31](https://vimeo.com/795087000#t=31s)** Yeah. If folks that are participating remotely could please mute themselves. That would be very helpful. Thank you. We ready.
 
-**[0:45](https://vimeo.com/795087000#t=45s)** Okay ready? Well, good evening. I'm Thatcher Keyser Town Administrator here. and Marblehead and I've been here what six almost seven months. So it's already been an adventure. So what I'm going to present tonight as the state of the town. you'll probably see it's a little bit different presentation than Then the ones in the past. Part of the purpose is to focus in on the information. That's very pertinent to kicking off the budget process working with the the select board the fin common others to provide. What I
+**[0:45](https://vimeo.com/795087000#t=45s)** Okay ready? Well, good evening. I'm Thatcher Kezer Town Administrator here. and Marblehead and I've been here what six almost seven months. So it's already been an adventure. So what I'm going to present tonight as the state of the town. you'll probably see it's a little bit different presentation than Then the ones in the past. Part of the purpose is to focus in on the information. That's very pertinent to kicking off the budget process working with the the select board the fin common others to provide. What I
 
 **[1:33](https://vimeo.com/795087000#t=93s)** hope is specific information or guidance or contacts that's needed as we start this journey into the budget process. So with that we'll begin. Kyle do the slides anytime I get involved with any organization in the military civilian, wherever I always have to ask what I think is the pertinent question. Why do we exist? Right. It's the mission State and what's your mission? Why do you exist? So I put the answer. I found it on a Maryland website. The one I like best basically a municipality is a corporate political entity organized by the residents.
 
@@ -357,7 +357,7 @@ topic_segments:
 
 **[1:06:07](https://vimeo.com/795087000#t=3967s)** I'm just one voice of five, but I don't see a better option. So I hope we can finally get to work.
 
-**[1:06:14](https://vimeo.com/795087000#t=3974s)** Thank you Aaron. I appreciate it very much. I just do want to make a couple of comments though that this year. In fact is very different than past years. Okay, because now we are actually hitting the the impact of not having enough free cash. If you just look at the financial statements you can see that so we've never papered over the problem. I think we've given fair warning to the town over a long period of time that we're kind of moving in that direction where we're going to ultimately kind of hit that hit that hard wall. And this year is the year. Okay, so that's very different. Thankfully, thankfully we all hired Thatcher Keyser who has been through this process himself understands exactly what needs to be done and he's you know, very thoughtful tough-minded individual
+**[1:06:14](https://vimeo.com/795087000#t=3974s)** Thank you Aaron. I appreciate it very much. I just do want to make a couple of comments though that this year. In fact is very different than past years. Okay, because now we are actually hitting the the impact of not having enough free cash. If you just look at the financial statements you can see that so we've never papered over the problem. I think we've given fair warning to the town over a long period of time that we're kind of moving in that direction where we're going to ultimately kind of hit that hit that hard wall. And this year is the year. Okay, so that's very different. Thankfully, thankfully we all hired Thatcher Kezer who has been through this process himself understands exactly what needs to be done and he's you know, very thoughtful tough-minded individual
 
 **[1:07:01](https://vimeo.com/795087000#t=4021s)** who is providing our leadership. We're also you know, we do have we have to acknowledge that one of the key areas of challenge as we've been trying to set up gfoa standards. So gold-plated standards one of the challenges we've had as we've had a finance department that has been understaffed and there's been turnover. Frankly apart, you know a part of the challenge one of the reasons why these finance department is under staff is because we did try to make cuts a couple years ago to kind of diminish the structural deficit. Okay, we have you know, we've looked at other sources of revenue hospitality and all this stuff already. We did that when Jason Silva was here. Okay. He's very limited kind
 
@@ -447,7 +447,7 @@ topic_segments:
 
 **[1:35:09](https://vimeo.com/795087000#t=5709s)** I think we'll go to the third part of our agenda, which is public comment. So why don't we go ahead and open it up. If anybody has questions online, please raise your hand electronically and We would ask that you stand up please. I'll recognize you first ma'am. Please stand up and you know, tell us your name and and where you live great.
 
-**[1:35:32](https://vimeo.com/795087000#t=5732s)** If you have with Marblehead season, yes, so actually to Echo what you just said about promoting transparency and encouraging foyers and conversations and most importantly that you in reference to a newspaper cherry picking what I'd like to comment as I know you can't answer tonight. Is that the requests that specifically Marvel had Beacon sent repeatedly and resulted in ultimately an appeal to the Secretary of State for failure response was precisely seeking to get answers to timelines. So as not to cherry pick and in fact what we did receive Although we had asked for times including June
+**[1:35:32](https://vimeo.com/795087000#t=5732s)** If you have with Marblehead season, yes, so actually to Echo what you just said about promoting transparency and encouraging foyers and conversations and most importantly that you in reference to a newspaper cherry picking what I'd like to comment as I know you can't answer tonight. Is that the requests that specifically Marblehead had Beacon sent repeatedly and resulted in ultimately an appeal to the Secretary of State for failure response was precisely seeking to get answers to timelines. So as not to cherry pick and in fact what we did receive Although we had asked for times including June
 
 **[1:36:20](https://vimeo.com/795087000#t=5780s)** July August September October November December.
 
@@ -467,13 +467,13 @@ topic_segments:
 
 **[1:41:32](https://vimeo.com/795087000#t=6092s)** 1.3% doesn't allow us to stay not only does it not allow us to stay level service. It doesn't even cover or contractual obligations. The impact of what I saw is terrifying for each of our individual departments and therefore terrifying for what it could mean for what we deliver to our residents. These are real tangible things. We cut police officers that safety we cut fire that safety. We cut schools that's education. These are real things. So what I I am imploring all of you to do is to work diligently. And expediently with all of our departments all of our boards.
 
-**[1:42:18](https://vimeo.com/795087000#t=6138s)** To get what we need so that we can offer the citizens of this town an option to it. And again like Aaron said it's to them to vote it up or down but I hope that we can all we're collectively to get that option out to them and to get the information out to them about what it means if this number is approved if this number isn't approved because at the end of the day, I I think all of our citizens are really proud to live in Marvel head. All of our staff is really proud to work here and I I think they want to to not have Cuts in their service delivery and we cannot there's no more flesh and bone to cut we're here. So I really I want to work with you guys. I I think every department
+**[1:42:18](https://vimeo.com/795087000#t=6138s)** To get what we need so that we can offer the citizens of this town an option to it. And again like Aaron said it's to them to vote it up or down but I hope that we can all we're collectively to get that option out to them and to get the information out to them about what it means if this number is approved if this number isn't approved because at the end of the day, I I think all of our citizens are really proud to live in Marblehead. All of our staff is really proud to work here and I I think they want to to not have Cuts in their service delivery and we cannot there's no more flesh and bone to cut we're here. So I really I want to work with you guys. I I think every department
 
 **[1:43:06](https://vimeo.com/795087000#t=6186s)** head every board wants to work together to get where we need to get. It's a tight timeline. But I 1.3% is not getting it done it that is a gigantic Delta. That is a 4% Delta from what we or at least a 3% Delta from what we normally carry that is that is significant and I want us all to work together to make that. Not affect our citizens in a really adverse way. Thank you very much, Sarah. Any other comments from the public? Attention sorry Jen Schaffner 20 Casino Road. Thanks for your time tonight. Thanks for all of the reporting. I also with my buddy Beacon. I'm not gonna expound. I think Atlanta said it all I will take you
 
 **[1:43:51](https://vimeo.com/795087000#t=6231s)** at face value that you're welcome us into town hall to meet with Thatcher. Whoever else we need to meet with to get answers to our questions and we will report so I will I will thank you for that. I have a series of questions. I don't expect to be answered tonight, but I'm just gonna put them out there and hope that we will get those these answers at some point. The first thing that I want to understand is it seems to me what jumped out to me particularly. This is a point to Mr. Keizer is and you may not know the answer but we jumped from 22 to 23 fiscal years in our estimation of our local receipts. So there must have been a reason for that because that seems to me to be a big portion of a three million dollars. So that seems I guess Mr. Graders referring to having us hitting free cash, but someone somewhere made that decision to not
 
-**[1:44:37](https://vimeo.com/795087000#t=6277s)** Project is conservatively. So I'd like to understand that. Will there be a gfoa report this year? For fiscal year 23, I want to let the Town Administrator answer that okay, and then in the override question mark slide Mr. Keyser talked about sort of next steps need to have a public discussion. So we'd like to understand what that means. To select board into intimistication and what will be the process for this? So we'll have public discussions. Will there be a recommendation to the select board for what to go forward with? Will there be a level funded budget presented to the select board and possibly at town meeting? Where does the finance committee fit into this? Where is their role as a fiscal Watchdog to help?
+**[1:44:37](https://vimeo.com/795087000#t=6277s)** Project is conservatively. So I'd like to understand that. Will there be a gfoa report this year? For fiscal year 23, I want to let the Town Administrator answer that okay, and then in the override question mark slide Mr. Kezer talked about sort of next steps need to have a public discussion. So we'd like to understand what that means. To select board into intimistication and what will be the process for this? So we'll have public discussions. Will there be a recommendation to the select board for what to go forward with? Will there be a level funded budget presented to the select board and possibly at town meeting? Where does the finance committee fit into this? Where is their role as a fiscal Watchdog to help?
 
 **[1:45:22](https://vimeo.com/795087000#t=6322s)** When we go through this process. So I don't expect those answers tonight, but I'm putting them out there as a citizen and a taxpayer that those. Are seem to be top of mind when it comes to this presentation. Thank you. Thank you. Appreciate your comments Julie noted. Anybody online?
 
@@ -553,7 +553,7 @@ topic_segments:
 
 **[2:11:34](https://vimeo.com/795087000#t=7894s)** Okay, anybody else in the audience? please
 
-**[2:11:45](https://vimeo.com/795087000#t=7905s)** I have two points. The first one is I believe Steve pools gave a presentation last year pointing to exactly tonight. So anybody who says who pretends or does not think they were aware of what was going to happen? Was not here or wasn't paying attention because that was that was definitely on the agenda at that point Mr. Caesar came in Mr. Thatcher. Keyser came in just to the right right time. Yeah, we'll just hopefully that's we'll say about that. Mostly the second thing is As we speak the town is not has not submitted their 2022 cafr. I don't understand how you can. Try and do your budget without a cafr now it turns out you did in fact do a cafr
+**[2:11:45](https://vimeo.com/795087000#t=7905s)** I have two points. The first one is I believe Steve pools gave a presentation last year pointing to exactly tonight. So anybody who says who pretends or does not think they were aware of what was going to happen? Was not here or wasn't paying attention because that was that was definitely on the agenda at that point Mr. Caesar came in Mr. Thatcher. Kezer came in just to the right right time. Yeah, we'll just hopefully that's we'll say about that. Mostly the second thing is As we speak the town is not has not submitted their 2022 cafr. I don't understand how you can. Try and do your budget without a cafr now it turns out you did in fact do a cafr
 
 **[2:12:32](https://vimeo.com/795087000#t=7952s)** and you submitted it in as a requirement for your bond issue for review. So basically it's all done. All you have to do is put your cover letter on it and put the color in it and then you can put it out but as we speak. We don't even know what happened in 2020. The populace doesn't know what happened in 2022, and I don't know whether the select boards are where what happened in 2022. I would also point I'm not sure exactly how this works out, but that documents numbers do not match up with this document. as far as expenditures and revenues So I'm not sure I would assume that we submit to the bonding authorities is correct, which means that this one is incorrect. So I think if you hear your furniture the school year 22 numbers 23 21 26
 

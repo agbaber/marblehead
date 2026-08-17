@@ -69,7 +69,7 @@ topic_segments:
       - Employee ID cards to double as access badges
       
       The Town Administrator also announced the hire of **Brendan Callahan** as Marblehead's first Community Development Planning Director, starting February 10. Callahan currently serves as assistant director of planning for the City of Peabody and has over 19 years of public-sector experience including 16 years as senior city planner in Peabody. He holds a BA in Geography with a natural resources management concentration from Salem State College and is a Marblehead resident.
-    key_speakers: ["Town Administrator (Mr. Keer)"]
+    key_speakers: ["Town Administrator (Mr. Kezer)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 517
@@ -95,7 +95,7 @@ topic_segments:
       | Marblehead High School roof/HVAC project | Clarification: roof cost estimate unchanged; HVAC systems on roof added to scope to avoid damaging new roof |
       
       A board member asked whether the MBTA 3A plan could be adjusted to increase affordability requirements beyond the current 10% threshold for developments of six or more units. The Town Administrator indicated it was procedurally too late for this cycle given the plan's existing OHLC preliminary approval, but suggested it could be revisited in a future year.
-    key_speakers: ["Town Administrator (Mr. Keer)", "Board member (unidentified)"]
+    key_speakers: ["Town Administrator (Mr. Kezer)", "Board member (unidentified)"]
   - topic: admin-housekeeping
     topic_confidence: 0.95
     start_seconds: 1504
@@ -109,7 +109,7 @@ topic_segments:
       - **Surplus equipment** (wooden desk)
       - **Rafael Construction Elm Street Improvement Project**: contract increase of $3,800 (funded through ARPA; increase attributed to removal of weed-block fabric discovered during excavation)
       - **Ulti Floors, Mary Alley offices carpet project**: $58,828 (partially offset by insurance proceeds)
-    key_speakers: ["Town Administrator (Mr. Keer)"]
+    key_speakers: ["Town Administrator (Mr. Kezer)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 1881
@@ -144,7 +144,7 @@ topic_segments:
 
 **[0:03](https://vimeo.com/1049710330#t=3s)** Ready? We're ready. Hey, good evening. I'm gonna call us to order. It's, um, are we not on? We're good. Okay. Um, today is Wednesday, January 22nd, and it's, um, 7 0 1. So we'll begin with public comment. Is there anybody here in the audience you'd like to make public comment or online?
 
-**[0:30](https://vimeo.com/1049710330#t=30s)** I cannot see chair. Okay. Um, so let's hear from Mr. Keer on Our Town Administrator updates. Thank you, Madam Chair. Uh, couple updates. Um, couple I'm excited about, uh, among many others. First of all, uh, some more update on the Mary Alley building improvements. I know I've given some in the past. Um, and I, I think
+**[0:30](https://vimeo.com/1049710330#t=30s)** I cannot see chair. Okay. Um, so let's hear from Mr. Kezer on Our Town Administrator updates. Thank you, Madam Chair. Uh, couple updates. Um, couple I'm excited about, uh, among many others. First of all, uh, some more update on the Mary Alley building improvements. I know I've given some in the past. Um, and I, I think
 
 **[0:59](https://vimeo.com/1049710330#t=59s)** what the improvements we're making, other than I think some windows and maybe a few things here and there is like the first significant improvements for the employees, I think since we've moved into the building 30 years ago. I don't know. Well, probably, right? Yeah. Um, so I, I think it's, it's well overdue. So if you recall, we had the incident with the break in and the damage, right? Right. Um, of that, which was an insurance case. And then we had the flooding where some valves blew while folks were making some repairs and, and flooded. So, so we, we have insurance proceeds, which allowed us to, um, through that process, replace the rugs in those areas
 

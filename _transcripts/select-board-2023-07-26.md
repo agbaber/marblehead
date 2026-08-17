@@ -19,7 +19,7 @@ summary_card:
     - "Approved minutes from June 28, 2023"
     - "Approved Marblehead Counseling Center request to restrict parking at 66 Clifton Avenue, Monday–Friday 8:30 AM–5:30 PM, subject to police and fire review"
     - "Approved Breast Friends Walk on Sunday October 8, 2023 at Devereaux Beach, subject to conditions"
-    - "Approved use of Abbott Hall on Sunday August 20, 2023 for chamber music concert"
+    - "Approved use of Abbot Hall on Sunday August 20, 2023 for chamber music concert"
     - "Approved $2,390,003 in ARPA funds for Rail Trail Lead Mills Bridge Construction, school-town financial software upgrade, and municipal fiber loop replacement"
   votes:
     - motion: "Approve June 28, 2023 minutes"
@@ -28,7 +28,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Approve Breast Friends Walk October 8, 2023"
       result: "in favor (unanimous)"
-    - motion: "Approve Abbott Hall use August 20, 2023"
+    - motion: "Approve Abbot Hall use August 20, 2023"
       result: "in favor (unanimous)"
     - motion: "Approve $2,390,003 in ARPA funding for three projects"
       result: "in favor (unanimous)"
@@ -46,9 +46,9 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 108
     end_seconds: 246
-    headline: "Board approves Breast Friends Walk and Abbott Hall chamber music concert"
+    headline: "Board approves Breast Friends Walk and Abbot Hall chamber music concert"
     dek: "Two event requests received unanimous approval."
-    summary: "The board unanimously approved the annual Breast Friends Walk on Sunday, October 8, 2023 at 9:30 AM starting at Devereaux Beach, subject to police chief approval, Recreation and Parks approval, police details, receipt of a certificate of insurance, and prohibition on permanent markings. The board also unanimously approved use of Abbott Hall on Sunday, August 20, 2023 from 2:00 PM to 7:00 PM for a chamber music concert by the Joni Ensemble, subject to standard rules, fees, and certificate of insurance."
+    summary: "The board unanimously approved the annual Breast Friends Walk on Sunday, October 8, 2023 at 9:30 AM starting at Devereaux Beach, subject to police chief approval, Recreation and Parks approval, police details, receipt of a certificate of insurance, and prohibition on permanent markings. The board also unanimously approved use of Abbot Hall on Sunday, August 20, 2023 from 2:00 PM to 7:00 PM for a chamber music concert by the Joni Ensemble, subject to standard rules, fees, and certificate of insurance."
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 154
@@ -134,7 +134,7 @@ topic_segments:
 
 **[2:34](https://vimeo.com/849152447#t=154s)** And next we just have a letter of interest. We don't need to take any action on this, but we have a letter of interest, which is great from a student for the student reposition from Nico King, who's interested in, um, being appointed and considered for, um, the task force against discrimination. Student reposition. Put together a nice letter. Yeah, it's really nice. It's great. I think. Yeah. Um, there's still probably one position. Are there two student reps on that? I believe Kyle, They are, they usually just send two forward that they ask to be reappointed 'cause it's, Oh yeah. Okay. Short time. Yeah. Great for them. Okay. And they come before you, but they ask to send them. Yeah.
 
-**[3:20](https://vimeo.com/849152447#t=200s)** Okay. Uh, next item five on our agenda is a, um, a request for a chamber music concert on Sunday, August 20th at four o'clock. Um, request to rent Abbott Hall, um, like a motion to approve the request in our packet from Andrea Leblanc. Our, I'm gonna, our p Joni Ensemble to use Abbott Hall on Sunday, August 20th, 2023 from 2:00 PM to 7:00 PM subject to the usual rules, regulation fees, and receipt of required certificate of insurance. So, moved. Second. All in favor? Great. Okay. So now we get to the ARPA projects. Um, item on our agenda,
+**[3:20](https://vimeo.com/849152447#t=200s)** Okay. Uh, next item five on our agenda is a, um, a request for a chamber music concert on Sunday, August 20th at four o'clock. Um, request to rent Abbot Hall, um, like a motion to approve the request in our packet from Andrea Leblanc. Our, I'm gonna, our p Joni Ensemble to use Abbot Hall on Sunday, August 20th, 2023 from 2:00 PM to 7:00 PM subject to the usual rules, regulation fees, and receipt of required certificate of insurance. So, moved. Second. All in favor? Great. Okay. So now we get to the ARPA projects. Um, item on our agenda,
 
 **[4:07](https://vimeo.com/849152447#t=247s)** which we just received, everyone should have a copy of this. One Of these should pass it around.
 

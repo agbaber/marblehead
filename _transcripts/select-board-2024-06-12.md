@@ -14,7 +14,7 @@ source: vimeo-auto+llm
 
 summary_card:
   headline: "Select Board reorganizes, swears in Drager, approves $23,365 ADA flooring contract"
-  summary: "The Select Board held its 376th annual convening, swearing in Moses Drager and electing Erin Newton (Newnan) as chair for the coming year on a 4–0 vote. The board's sole action item was approving a contract with SOEP Painting Corporation for $23,365 to install a non-slip floor coating in the police station male cell block area, funded by an ADA accessibility grant expiring June 30. The meeting also welcomed newly elected member Dan to the board."
+  summary: "The Select Board held its 376th annual convening, swearing in Moses Grader and electing Erin Newton (Newnan) as chair for the coming year on a 4–0 vote. The board's sole action item was approving a contract with SOEP Painting Corporation for $23,365 to install a non-slip floor coating in the police station male cell block area, funded by an ADA accessibility grant expiring June 30. The meeting also welcomed newly elected member Dan to the board."
   decisions:
     - "Approved Erin Newton as Select Board Chair for the 2024–25 year"
     - "Approved contract with SOEP Painting Corporation for $23,365 for ADA floor coating at police station male cell block"
@@ -29,10 +29,10 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 4
     end_seconds: 162
-    headline: "Moses Drager sworn in; Erin Newton elected Select Board Chair 4–0"
+    headline: "Moses Grader sworn in; Erin Newton elected Select Board Chair 4–0"
     dek: "The board held its 376th annual convening, administering the oath of office and selecting its chair for the year."
-    summary: "Moses Drager was sworn in as a member of the Select Board at the opening of the meeting. The board then conducted its annual reorganization; Erin Newton was nominated for chair and elected 4–0. The outgoing chair noted appreciation for the vote of confidence and welcomed newly elected member Dan to the board, noting that Brett Murray was absent due to a prior commitment."
-    key_speakers: ["Moses Drager (incoming Select Board member)", "Erin Newton (Select Board Chair)"]
+    summary: "Moses Grader was sworn in as a member of the Select Board at the opening of the meeting. The board then conducted its annual reorganization; Erin Newton was nominated for chair and elected 4–0. The outgoing chair noted appreciation for the vote of confidence and welcomed newly elected member Dan to the board, noting that Brett Murray was absent due to a prior commitment."
+    key_speakers: ["Moses Grader (incoming Select Board member)", "Erin Newton (Select Board Chair)"]
   - topic: public-safety
     topic_confidence: 0.92
     start_seconds: 233
@@ -59,11 +59,11 @@ topic_segments:
 > proper names and dollar figures occasionally misheard. Click any timecode to
 > jump to that moment in the source video.
 
-**[0:04](https://vimeo.com/957751945#t=4s)** Please raise your right hand and repeat after me. I state your name. I, Moses Drager. Do solemnly swear and affirm. Do Solemnly swear and Affirm. Affirm that I will faithfully and impartially, that I will faithfully and impartially Discharge and perform, Discharge and perform All the duties incumbent on me. All The duties incumbent me As a member of the select board, as A member of the select board, According to the best of my abilities and understanding according To the best of my abilities and understanding According to the bylaws of the town of Marblehead, according To the bylaws of the town of Marblehead And the laws of the Commonwealth of Massachusetts, The laws of the commonwealth of Massachusetts. So help me, God, Help me God. Congratulations. Thank you.
+**[0:04](https://vimeo.com/957751945#t=4s)** Please raise your right hand and repeat after me. I state your name. I, Moses Grader. Do solemnly swear and affirm. Do Solemnly swear and Affirm. Affirm that I will faithfully and impartially, that I will faithfully and impartially Discharge and perform, Discharge and perform All the duties incumbent on me. All The duties incumbent me As a member of the select board, as A member of the select board, According to the best of my abilities and understanding according To the best of my abilities and understanding According to the bylaws of the town of Marblehead, according To the bylaws of the town of Marblehead And the laws of the Commonwealth of Massachusetts, The laws of the commonwealth of Massachusetts. So help me, God, Help me God. Congratulations. Thank you.
 
 **[1:13](https://vimeo.com/957751945#t=73s)** All right. Okay. I like the way you're keeping that company down There. Yeah, of course. Yeah.
 
-**[1:25](https://vimeo.com/957751945#t=85s)** Right. You ready? Right over there. So You ready? I will call to order the 300th and 76th annual convening of the select Board of the Town of Marblehead. The first order of business is to nominate a chair for the upcoming year and ask for nominations 'cause there a nomination for chair. Yes. I, Mr. Moses, I would like to put Erin Newnan name as chair or make a nomination. Okay. I'll second. Okay. Are there any other nominations for chairs? C and none? I'll take it to a vote. All those in favor of Erin Newnan as chair
+**[1:25](https://vimeo.com/957751945#t=85s)** Right. You ready? Right over there. So You ready? I will call to order the 300th and 76th annual convening of the select Board of the Town of Marblehead. The first order of business is to nominate a chair for the upcoming year and ask for nominations 'cause there a nomination for chair. Yes. I, Mr. Moses, I would like to put Erin Noonan name as chair or make a nomination. Okay. I'll second. Okay. Are there any other nominations for chairs? C and none? I'll take it to a vote. All those in favor of Erin Noonan as chair
 
 **[2:13](https://vimeo.com/957751945#t=133s)** for this coming year. Raise your hand. Vote for myself. You Just, you can vote for yourself. You better vote. That is four to zero Feels weird. Chairwoman Newton graduate.
 

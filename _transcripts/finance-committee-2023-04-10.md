@@ -595,7 +595,7 @@ topic_segments:
 
 **[35:40](https://vimeo.com/816534850#t=2140s)** And 14,585 is to be funded through the cemetery Trust. second Oh Alec. Yes. Yes, ham. Yes. Tim yes Molly. Yes, Michael Neil. Yes, Eric. Yes, Tara. Michael jenko, yes Thank you article 12 school Capital needs I believe is a placeholder that is not asking for additional Capital needs Beyond nine through 11 Fair Sarah.
 
-**[36:19](https://vimeo.com/816534850#t=2179s)** So there's no request at this time. So as a result, I'd like to make a motion to indefinitely postpone this article. second Oh Alec. Yes, Pat. Yes, Kim. Yes, Kim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes, Michael Jango. Yes. Thank you Article, 13 walls and fences standard article Thatcher or Alicia Fiona. subscribe standard article in there are far more walls and fences to be to be repaired than what the propriations loud, but it's a set dollar amount and then between DBW and
+**[36:19](https://vimeo.com/816534850#t=2179s)** So there's no request at this time. So as a result, I'd like to make a motion to indefinitely postpone this article. second Oh Alec. Yes, Pat. Yes, Kim. Yes, Kim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes, Michael Janko. Yes. Thank you Article, 13 walls and fences standard article Thatcher or Alicia Fiona. subscribe standard article in there are far more walls and fences to be to be repaired than what the propriations loud, but it's a set dollar amount and then between DBW and
 
 **[37:06](https://vimeo.com/816534850#t=2226s)** conservation and Engineering they sort out the priority list and and get the work done up to the amounts that they have available.
 
@@ -603,7 +603,7 @@ topic_segments:
 
 **[37:31](https://vimeo.com/816534850#t=2251s)** Like to make a motion to recommend that the sum of $50,000 be appropriated and to meet this appropriation it all be raised through taxation.
 
-**[37:40](https://vimeo.com/816534850#t=2260s)** Local boat Alec. Yes, Pat. Yes, Kim. Yes. Tim yes Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes, Michael. Jenko. Yes, don't you pass it? dorm drainage construction article 14 Thatcher
+**[37:40](https://vimeo.com/816534850#t=2260s)** Local boat Alec. Yes, Pat. Yes, Kim. Yes. Tim yes Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes, Michael. Janko. Yes, don't you pass it? dorm drainage construction article 14 Thatcher
 
 **[38:01](https://vimeo.com/816534850#t=2281s)** Again, this is a another one in which there's probably far more work than what's being appropriated. But this allows DPW to maintain the storm drainage or as we currently called stormwater system and again be mindful that municipalities are required to meet the, you know, increasing requirements for storm water management. So this this allocation allows DPW to do as much work as they can under the appropriation.
 
@@ -671,7 +671,7 @@ topic_segments:
 
 **[49:46](https://vimeo.com/816534850#t=2986s)** And you're saying yeah. Do you have a better number? There's 33 only 33. Oh, okay. Well, I can't I can't see the slide from here. Okay. So Alicia's got those numbers over there. So, okay. Yeah, no that does not include the schools. No, this is right. This is all in the town side. Yeah, my understanding is generally department heads are non-union positions and then other support staff. Where applicable? Does anybody have public comments about Article 19?
 
-**[50:31](https://vimeo.com/816534850#t=3031s)** To make a motion to recommend that this article be adopted with a 2% cost of living increase effective July 1st 2023 second. Well Cobalt Alec. Yes, Pat. Yes. Ham. Yes Tim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes, Michael. Jenko. Yes. Classes article 20 very similar article Thatcher it covers. Traffic supervisors separate AKA crossing guards who are fall under the police department, you know. 2% already included as part of article 30 just same discussion as last article any questions comments from the finance committee.
+**[50:31](https://vimeo.com/816534850#t=3031s)** To make a motion to recommend that this article be adopted with a 2% cost of living increase effective July 1st 2023 second. Well Cobalt Alec. Yes, Pat. Yes. Ham. Yes Tim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes, Michael. Janko. Yes. Classes article 20 very similar article Thatcher it covers. Traffic supervisors separate AKA crossing guards who are fall under the police department, you know. 2% already included as part of article 30 just same discussion as last article any questions comments from the finance committee.
 
 **[51:18](https://vimeo.com/816534850#t=3078s)** Any public comment on article 20? Like to make a motion to recommend that this article be adopted with a 2% cost of living increase effect of July 1st 2023. So Alec. Yes hat. Yes Cam. Yes, Tim. Yes, Molly. Yes, Michael Neal. Yes. Yes, Eric. Yes, Tara. Yes and Michaels which passes 21 similar just for seasonal and temporary personnel. Yeah same so they just have a different pay grid. for temporary and seasonal 2%
 
@@ -681,7 +681,7 @@ topic_segments:
 
 **[53:02](https://vimeo.com/816534850#t=3182s)** second
 
-**[53:06](https://vimeo.com/816534850#t=3186s)** roll call please recall Alec. Yes, Pat. Yes. Kim yes Tim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes. And Michael. Jenko. Yes you passes. article 23 gratification of salary bylaw again Thatcher So it compensation committee. Yes, so the compensation committee which was part of the bylaws allows for reclassification of certain positions based on change in jobs descriptions or change and requirements. So the function so compensation committee which consists
+**[53:06](https://vimeo.com/816534850#t=3186s)** roll call please recall Alec. Yes, Pat. Yes. Kim yes Tim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes. And Michael. Janko. Yes you passes. article 23 gratification of salary bylaw again Thatcher So it compensation committee. Yes, so the compensation committee which was part of the bylaws allows for reclassification of certain positions based on change in jobs descriptions or change and requirements. So the function so compensation committee which consists
 
 **[53:51](https://vimeo.com/816534850#t=3231s)** of the Town Administrator the finance director and one other department head which currently is the health waste director. We review all requests from the department heads if folks recall, there was a gov HR study that was done a couple years ago, which did a whole reclassification study of all the positions in addition. They provided a process and a manual for the town to do its own review positions to score and grade the positions and put them on a scale to determine the proper classification so compensation. Committee actually requires that process and evaluates that process in order
 
@@ -713,7 +713,7 @@ topic_segments:
 
 **[1:02:33](https://vimeo.com/816534850#t=3753s)** I'm 23.
 
-**[1:02:36](https://vimeo.com/816534850#t=3756s)** Bush has been made in seconded by Tim roll. Call vote Alec. Yes. Pat yes Kim. Yes, Tim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes, Michael. Jenko Yes motion passes. Thank you. article 24
+**[1:02:36](https://vimeo.com/816534850#t=3756s)** Bush has been made in seconded by Tim roll. Call vote Alec. Yes. Pat yes Kim. Yes, Tim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes, Michael. Janko Yes motion passes. Thank you. article 24
 
 **[1:02:56](https://vimeo.com/816534850#t=3776s)** no financial implications, but probably worth presenting.
 
@@ -769,7 +769,7 @@ topic_segments:
 
 **[1:16:29](https://vimeo.com/816534850#t=4589s)** Great, really appreciate your update no problems. And thanks for the public comments any additional public comments on 26.
 
-**[1:16:40](https://vimeo.com/816534850#t=4600s)** Like to make a motion to recommend appropriating 468,762 dollars to be raised by taxation. Exactly Alex. Yes, Pat. Yes. Ham. Yes Hardy. Yes, Molly. Michael Neal. Yes, Eric. Yes, Tara. Yes and Michael. Jenko. Yes. Thanks article 27 transfer funds to a special education stabilization account. Alicia do you want to present? Yes, I spoke with the school Finance director and this they have about 250,000 in this stabilization fund Desi classifies it as a reserve fund which is quite interesting. It
+**[1:16:40](https://vimeo.com/816534850#t=4600s)** Like to make a motion to recommend appropriating 468,762 dollars to be raised by taxation. Exactly Alex. Yes, Pat. Yes. Ham. Yes Hardy. Yes, Molly. Michael Neal. Yes, Eric. Yes, Tara. Yes and Michael. Janko. Yes. Thanks article 27 transfer funds to a special education stabilization account. Alicia do you want to present? Yes, I spoke with the school Finance director and this they have about 250,000 in this stabilization fund Desi classifies it as a reserve fund which is quite interesting. It
 
 **[1:17:28](https://vimeo.com/816534850#t=4648s)** falls under a different statute and they are going to postpone this indefinitely. They don't want to spend any money on it.
 
@@ -883,13 +883,13 @@ topic_segments:
 
 **[1:49:39](https://vimeo.com/816534850#t=6579s)** of $313,091.
 
-**[1:49:47](https://vimeo.com/816534850#t=6587s)** Yes Cam. Yes. Tim yes Molly. Yes. Michael Neal yes, Eric. Yes, Tara and Michael. Jenko Action passes libraries next this one was just I believe maybe a typo or an error in the final number voted. We voted 1,318,290. The new number is 1,323,456 just over 5,000 if I'm looking at that math, correct, and like I said, it was just a miss a mistyping of a number. Like to make a motion to approve the new amount for the library total request of 1,323,456.
+**[1:49:47](https://vimeo.com/816534850#t=6587s)** Yes Cam. Yes. Tim yes Molly. Yes. Michael Neal yes, Eric. Yes, Tara and Michael. Janko Action passes libraries next this one was just I believe maybe a typo or an error in the final number voted. We voted 1,318,290. The new number is 1,323,456 just over 5,000 if I'm looking at that math, correct, and like I said, it was just a miss a mistyping of a number. Like to make a motion to approve the new amount for the library total request of 1,323,456.
 
 **[1:50:34](https://vimeo.com/816534850#t=6634s)** Yes. Pat ham. Yes, Jim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes, Michael James. Yes, and then the fire department was the third with a late change. I believe this week maybe something that was just forgotten to be included the original budget last week. We voted was five million 198241. The new budget is five million, 2003,241 and exact difference of $5,000 related to fire academy bonuses that were previously omitted.
 
 **[1:51:11](https://vimeo.com/816534850#t=6671s)** Like to make a motion to recommend five fire department fiscal year 24 budget request of revised amount five million to 2003,241 Dollars exactly.
 
-**[1:51:24](https://vimeo.com/816534850#t=6684s)** One more roll call Alicia. Okay. We'll call Alec. Yes Pat. Yes Cam. Yes, Tim. Yes, Holly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes and Michael. Jenko. Yes, I think we took public comments already and there wasn't any. So the motion for article 30 the balanced budget, I'd like to make a motion to recommend that the sum of 112 million 524,622 be appropriated from available funds of 12 million 127,880 in taxation and other Revenue sources of 100 million 396,742, which will be summarized in full in our annually annual finance committee report.
+**[1:51:24](https://vimeo.com/816534850#t=6684s)** One more roll call Alicia. Okay. We'll call Alec. Yes Pat. Yes Cam. Yes, Tim. Yes, Holly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes and Michael. Janko. Yes, I think we took public comments already and there wasn't any. So the motion for article 30 the balanced budget, I'd like to make a motion to recommend that the sum of 112 million 524,622 be appropriated from available funds of 12 million 127,880 in taxation and other Revenue sources of 100 million 396,742, which will be summarized in full in our annually annual finance committee report.
 
 **[1:52:12](https://vimeo.com/816534850#t=6732s)** second Well call vote Alec. Yes Pat. Yes Cam. Yes Kim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes and Michael Django. Yes motion. Thank you article 31 supplemental appropriation and expenses of several departments. I think Thatcher will speak to this as well and we have a few things to share on screen I believe.
 
@@ -1039,7 +1039,7 @@ topic_segments:
 
 **[2:33:08](https://vimeo.com/816534850#t=9188s)** public comments on 35
 
-**[2:33:13](https://vimeo.com/816534850#t=9193s)** like to make a motion to recommend adoption of article 35, so we'll call. Yes, Pat. Yes Cam. Yes, Tim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara and Michael. Jenko Yes motion passes.
+**[2:33:13](https://vimeo.com/816534850#t=9193s)** like to make a motion to recommend adoption of article 35, so we'll call. Yes, Pat. Yes Cam. Yes, Tim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara and Michael. Janko Yes motion passes.
 
 **[2:33:36](https://vimeo.com/816534850#t=9216s)** Article 36 amend General bylaws allow the use of electronic counting devices.
 
@@ -1127,7 +1127,7 @@ topic_segments:
 
 **[2:53:58](https://vimeo.com/816534850#t=10438s)** Any public comments on article 43?
 
-**[2:54:03](https://vimeo.com/816534850#t=10443s)** Okay, I'd like to recommend it motion to I'd like to make a motion to recommend adoption of article 43. second Well Cobalt Alec. Yes, Pat. Yes Cam. Yes, Tim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes and Michael. Jenko Yes watching passes. Thank you.
+**[2:54:03](https://vimeo.com/816534850#t=10443s)** Okay, I'd like to recommend it motion to I'd like to make a motion to recommend adoption of article 43. second Well Cobalt Alec. Yes, Pat. Yes Cam. Yes, Tim. Yes, Molly. Yes, Michael Neal. Yes, Eric. Yes, Tara. Yes and Michael. Janko Yes watching passes. Thank you.
 
 **[2:54:28](https://vimeo.com/816534850#t=10468s)** 44 is Jim zissen. Change select board term to three years. Yes, Jim says in two Mound Road the three year term. We don't anticipate any Financial impact with it. It's to switch the select board term from one to three years. There's obviously a election every year 13 board stand for election. So it's not adding an additional election just as an aside the very first year presuming. This has passed to set up a stagger you have the election goes off just as usual. The only difference is the number one and two finishers get a three-year term the third and fourth get a two-year term in the fifth gets a one year term. It doesn't change
 

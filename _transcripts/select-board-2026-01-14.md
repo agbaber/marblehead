@@ -65,8 +65,8 @@ topic_segments:
     topic_confidence: 0.88
     start_seconds: 462
     end_seconds: 626
-    headline: "Superintendent reports exterior restorations at Pickett House, Franklin Street Fire Station, and Abbott Hall"
-    dek: "Building Commissioner Steve Cummings described ongoing envelope repairs at three historic town buildings, including a new boiler at the fire station and door restoration at Abbott Hall."
+    headline: "Superintendent reports exterior restorations at Pickett House, Franklin Street Fire Station, and Abbot Hall"
+    dek: "Building Commissioner Steve Cummings described ongoing envelope repairs at three historic town buildings, including a new boiler at the fire station and door restoration at Abbot Hall."
     summary: |
       Superintendent of Buildings Steve Cummings reported the following completed or near-complete projects:
       
@@ -74,7 +74,7 @@ topic_segments:
       |---|---|
       | Pickett House | New siding (3 sides), gutters, windows |
       | Franklin Street Fire Station | Exterior siding and trim replacement; 30-year-old boiler replacement |
-      | Abbott Hall | Historic door removal and off-site full restoration (one set at a time) |
+      | Abbot Hall | Historic door removal and off-site full restoration (one set at a time) |
       
       The administrator highlighted a shift toward proactive infrastructure replacement before end-of-life failure.
     key_speakers: ["Patrick (Town Administrator)", "Steve Cummings (Building Commissioner)"]
@@ -150,11 +150,11 @@ topic_segments:
       
       - Minutes of December 2 and 10, 2025, and January 7, 2026 (held)
       - Miles for Mary 5K Run/Walk (October 17, 2026) — subject to Rec & Parks approval and certificate of liability
-      - Abbott Hall Community Center Charter Public School use (June 17, 2026)
-      - Marblehead Little Theater at Abbott Hall (September 19, 2026)
-      - Marblehead Festival of Arts at Abbott Hall (February 6, 2026)
+      - Abbot Hall Community Center Charter Public School use (June 17, 2026)
+      - Marblehead Little Theater at Abbot Hall (September 19, 2026)
+      - Marblehead Festival of Arts at Abbot Hall (February 6, 2026)
       - BNS Fitness Black Cat 10/20-mile run (March 29, 2026) — subject to Rec & Parks approval and certificate of liability
-      - Washington's Birthday bell ringing at Abbott Hall and town churches (February 22, 2026) at customary holiday hours
+      - Washington's Birthday bell ringing at Abbot Hall and town churches (February 22, 2026) at customary holiday hours
   - topic: labor-personnel
     topic_confidence: 0.92
     start_seconds: 5161
@@ -178,13 +178,13 @@ topic_segments:
     start_seconds: 5583
     end_seconds: 5676
     headline: "Board approves one-day liquor licenses for Marblehead Festival of Arts, Arts Association, and New England Yankees events"
-    dek: "Multiple beer-and-wine-only one-day licenses were approved for events at Abbott Hall and the Arts Association through November 2026."
+    dek: "Multiple beer-and-wine-only one-day licenses were approved for events at Abbot Hall and the Arts Association through November 2026."
     summary: |
       The board approved one-day liquor licenses (beer and wine only) for:
       
-      - **Marblehead Festival of Arts** at Abbott Hall — February 6, 2026, 5–7 PM
+      - **Marblehead Festival of Arts** at Abbot Hall — February 6, 2026, 5–7 PM
       - **Marblehead Arts Association** at 8 Hooper Street — 11 dates from February through November 2026
-      - **New England Yankees** at Abbott Hall — February 14, 2026, 7–10 PM
+      - **New England Yankees** at Abbot Hall — February 14, 2026, 7–10 PM
       
       All approvals are subject to a $50 fee per event, proof of authorized alcohol source, proper storage and disposal, and liquor liability insurance. Alcohol must not be stored on premises overnight.
   - topic: admin-housekeeping
@@ -457,11 +457,11 @@ topic_segments:
 
 **[1:22:08](https://vimeo.com/1154720331#t=4928s)** I mean, I'm interested, um, with that. So thank you for applying. Thank you. Thank you for waiting. Thank you for Yeah. Yeah. Thank You for the education. Yeah, absolutely. So if we get a motion to point Susan Woods the, oops, this says that's the wrong thing to the cultural council, with the firm to expire in June of 2028. So moved. All in favor. Thank you. Yeah. Congratulations. Just needs to go and get, uh, SWO with our town clerk at some point from during the day. Okay, thank You very much. It was great to meet The festival. S will be mostly for a water hell, A free pine. Yeah. Hopefully too. Uh, next up we have a, um, a, a night we have a donation from Yes. From Marblehead ballot Questioning committee.
 
-**[1:22:54](https://vimeo.com/1154720331#t=4974s)** Uh, there we would like to make a donation of $5,809 and 4 cents. The Affordable Housing Trust Fund, um, is coming from who is the president, treasurer. Um, and so we really do appreciate that and definitely able to use that. So if I could have a motion to accept donation from Yes. For Marvel ballot question committee, the amount of $5,809 and 4 cents in deposit and the, the donation and the Affordable Housing trust fund. So move second. All in favor. Thank you. Then Get a Motion. Yeah, please do. Um, Letter of, um, gratitude to, uh, the, the committee, uh, when you close out the funds, you can choose any type of, um, nonprofit to donate to. And, and it's a sizeable, generous donation.
+**[1:22:54](https://vimeo.com/1154720331#t=4974s)** Uh, there we would like to make a donation of $5,809 and 4 cents. The Affordable Housing Trust Fund, um, is coming from who is the president, treasurer. Um, and so we really do appreciate that and definitely able to use that. So if I could have a motion to accept donation from Yes. For Marblehead ballot question committee, the amount of $5,809 and 4 cents in deposit and the, the donation and the Affordable Housing trust fund. So move second. All in favor. Thank you. Then Get a Motion. Yeah, please do. Um, Letter of, um, gratitude to, uh, the, the committee, uh, when you close out the funds, you can choose any type of, um, nonprofit to donate to. And, and it's a sizeable, generous donation.
 
-**[1:23:41](https://vimeo.com/1154720331#t=5021s)** So I'd like us to acknowledge acknowledges. So moved. Second In favor. Thank you. All right. Next we have some consent agenda items. If we could, if I could have a motion be made, accept to accept the following and consent agenda items. Accept those put on hold the minutes of December 2nd 10th and of 2025. And January 7th, 2026 miles for Mary. 5K Ron walk this Board of Brain Cancer research on Saturday October 17th, 2026, subject to approval in Rapid and park receipt of the prior certific of liability. And please, details as needed. No permanent markings are allowed in the public way and all temporary markings must be removed. The conclusion event, Abbott Hall Community Center Charter Public School, June 17th, 26, subject
+**[1:23:41](https://vimeo.com/1154720331#t=5021s)** So I'd like us to acknowledge acknowledges. So moved. Second In favor. Thank you. All right. Next we have some consent agenda items. If we could, if I could have a motion be made, accept to accept the following and consent agenda items. Accept those put on hold the minutes of December 2nd 10th and of 2025. And January 7th, 2026 miles for Mary. 5K Ron walk this Board of Brain Cancer research on Saturday October 17th, 2026, subject to approval in Rapid and park receipt of the prior certific of liability. And please, details as needed. No permanent markings are allowed in the public way and all temporary markings must be removed. The conclusion event, Abbot Hall Community Center Charter Public School, June 17th, 26, subject
 
-**[1:24:26](https://vimeo.com/1154720331#t=5066s)** to usual rules, regulations, fees, and receipt of the C of O Abbott Hall, marble Little Theater. September 19th, 26, subject to the same Abbott Hall, marble Hill Festival of Arts, February 6th, subject to the same as above. BNS Fitness, black Cat, 10 or 20 mile Sunday, March 29th, 2026, subject to approval from Rock and Park. Proceed of a prior of liability and police details. No permanent markings are allowed in public way and all temporary ones must be removed at the conclusion of the event. And a bell ringing on Washington's birthday that the bells of Abbott Hall and all the church and marble will be wrong on Washington's birthday someday. But fe February 22nd, 26th at the usual holiday hours from 7:30 AM to 8:00 AM noon to 1230, 6:00 PM to six 30 as in custom in the past.
+**[1:24:26](https://vimeo.com/1154720331#t=5066s)** to usual rules, regulations, fees, and receipt of the C of O Abbot Hall, marble Little Theater. September 19th, 26, subject to the same Abbot Hall, marble Hill Festival of Arts, February 6th, subject to the same as above. BNS Fitness, black Cat, 10 or 20 mile Sunday, March 29th, 2026, subject to approval from Rock and Park. Proceed of a prior of liability and police details. No permanent markings are allowed in public way and all temporary ones must be removed at the conclusion of the event. And a bell ringing on Washington's birthday that the bells of Abbot Hall and all the church and marble will be wrong on Washington's birthday someday. But fe February 22nd, 26th at the usual holiday hours from 7:30 AM to 8:00 AM noon to 1230, 6:00 PM to six 30 as in custom in the past.
 
 **[1:25:14](https://vimeo.com/1154720331#t=5114s)** So moved. Second. All in favor? All right. I think next up we have the 2025 Annual Compensation Committee report. Uh, pastor, if you give us a report. Yeah. Um, so according to the model head bylaws, chapter 43, uh, that's the personnel bylaws. Uh, the Compensation Committee is responsible for, uh, reviewing and acting all matters relative to the position classification, uh, descriptions. So that is a, an authority of the legislative branch, how Powerheads case to establish the classification plan, which is what are all the authorized positions and what are the grades of those positions, as well as the salary schedule, um, for, for all those positions.
 
@@ -483,9 +483,9 @@ topic_segments:
 
 **[1:32:18](https://vimeo.com/1154720331#t=5538s)** I think that's a, a good analysis that, yeah, so our, our employees deserve to be fair. And I just wanna add, uh, you know, a couple of years ago we established a long overdue human resources department, and it think this is, you know, an example of some of the growth that, um, needed to be done. It was probably not to be non. So that's proceed. Yeah. Tom's a great resource for, Well, oh, has it been two years? Maybe? Yeah. Well, we've had a little over a year, Right? Little over a year. I, I respect total track. Yeah. Yeah. You Having so much fun. That's called, That's called, that's called h I'm with you. It's fine. It's called by h. Yeah, sure. Yeah. Almost there. Okay, great. Alright, well, thank you. Any other question? Move on.
 
-**[1:33:03](https://vimeo.com/1154720331#t=5583s)** We do have a couple of one day liquor licenses. Um, if we could get a motion, uh, we have one further mar vessel of art and actually two. So if we get a motion to prove the request for following one day liquor licenses from Marble Festival Arts Abbot Hall, February 6th, 2026, 5:00 PM to 7:00 PM beer and wine only. Marble Arts Association, eight Hooper Street from 6:30 PM to 9:00 PM on the following dates, all in 26th, February 19th, March 19th, April 11th, April 23rd, May 21st, June 25th, July 16th. August 20th, September 17th, October 15th, November 19th, as well as the New England Yankees at Abbott Hall, February 14th, 2026, bearing wine only seven to 10:00 PM subject to the following conditions, delivery of
+**[1:33:03](https://vimeo.com/1154720331#t=5583s)** We do have a couple of one day liquor licenses. Um, if we could get a motion, uh, we have one further mar vessel of art and actually two. So if we get a motion to prove the request for following one day liquor licenses from Marblehead Festival Arts Abbot Hall, February 6th, 2026, 5:00 PM to 7:00 PM beer and wine only. Marblehead Arts Association, eight Hooper Street from 6:30 PM to 9:00 PM on the following dates, all in 26th, February 19th, March 19th, April 11th, April 23rd, May 21st, June 25th, July 16th. August 20th, September 17th, October 15th, November 19th, as well as the New England Yankees at Abbot Hall, February 14th, 2026, bearing wine only seven to 10:00 PM subject to the following conditions, delivery of
 
-**[1:33:50](https://vimeo.com/1154720331#t=5630s)** and receipt by the licensing authority and the required fee of $50 each delivery of and receipt by licensing authority of proof that the alcohol will be purchased and authorized source proof that the applicant can receive proper delivery, provide proper storage and disposal of all alcohol beverages purchased. All in accordance generally, and with a requirement that general law chapter 1 38, liquor liability insurance, no alcohol is allowed to be stored on premises overnight and alcohol will be purchased from Kathy's importing and distribution in company and martinis. So moved a second. This will be a poll vote. Mr. Is this in favor, Mr. Greater in favor, Ms. Newton? In favor, Mr. Fox In favor. And then final on our list here. Unfortunately we are losing, uh, Jerry Tucker from the Cemetery Commission.
+**[1:33:50](https://vimeo.com/1154720331#t=5630s)** and receipt by the licensing authority and the required fee of $50 each delivery of and receipt by licensing authority of proof that the alcohol will be purchased and authorized source proof that the applicant can receive proper delivery, provide proper storage and disposal of all alcohol beverages purchased. All in accordance generally, and with a requirement that general law chapter 1 38, liquor liability insurance, no alcohol is allowed to be stored on premises overnight and alcohol will be purchased from Kathy's importing and distribution in company and martinis. So moved a second. This will be a poll vote. Mr. Is this in favor, Mr. Grader in favor, Ms. Newton? In favor, Mr. Fox In favor. And then final on our list here. Unfortunately we are losing, uh, Jerry Tucker from the Cemetery Commission.
 
 **[1:34:36](https://vimeo.com/1154720331#t=5676s)** He has moved out of town and he has resigned. So that does create a vacancy again, um, unfortunately in our cemetery. So I think what we'd like to do, we will meet with the remaining board members as we've done with other ones, and have a vote to appoint someone new. If we could maybe advertise that, leave it open until, um, I wrote this to maybe February 6th, and we can have interviews on, uh, February 11th. I'll con just confer the cemetery that's ever available, those dates. But if we at least Have they formally notified Us? They have. We got it. Yeah. Yep. Well, this is Jerry notified Yeah. Through well, so it is interesting. It can't, so they Notified the i we that Yeah.
 
