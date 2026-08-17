@@ -22,6 +22,7 @@ import { YOUTUBE_YTDLP_ARGS } from './lib/config.mjs';
 import { buildSlug, renderTranscript } from './lib/render_transcript.mjs';
 import { vttToProse } from './lib/vtt_to_prose.mjs';
 import { correctKnownNames } from './lib/known_names.mjs';
+import { cleanRollingCaptions } from './lib/rolling_captions.mjs';
 
 const YT_DLP = process.env.YT_DLP ?? `${process.env.HOME}/.local/bin/yt-dlp`;
 const PYTHON = process.env.PYTHON ?? 'python3';
@@ -182,7 +183,17 @@ function processMeeting(m) {
     console.error('  - empty VTT, skipping');
     return { status: 'failed', reason: 'empty vtt' };
   }
-  const body = correctKnownNames(raw, { label: buildSlug(m.board_slug, m.date) });
+  // YouTube auto-captions roll: each cue repeats the line on screen and appends
+  // the next words, so joining every cue emits each phrase about three times
+  // alongside visible inline timestamps. Clean that before correcting names, so
+  // corrections are applied once to deduplicated prose rather than three times
+  // to duplicated prose. A no-op on Vimeo captions, which do not roll.
+  const deduped = cleanRollingCaptions(raw);
+  if (deduped !== raw) {
+    const cut = Math.round((1 - deduped.split(/\s+/).length / raw.split(/\s+/).length) * 100);
+    console.error(`  - cleaned rolling-caption artifacts in ${slug} (${cut}% shorter)`);
+  }
+  const body = correctKnownNames(deduped, { label: slug });
   const md = renderTranscript({
     board_slug: m.board_slug,
     board_display: m.board_display,
