@@ -23,7 +23,7 @@ summary_card:
     - "Accepted clock gift from Rotary Club of Marblehead for their 100th anniversary"
     - "Approved use of Abbot Hall for Festival of Arts Artisans Marketplace, December 2–4, 2022"
     - "Approved contract award for Leed Mills Rail Trail project to Tool Design of Boston for $150,800"
-    - "Appointed Town Administrator Thatcher Keiser as hearing officer in disciplinary matter involving Officer Christopher Gallo"
+    - "Appointed Town Administrator Thatcher Kezer as hearing officer in disciplinary matter involving Officer Christopher Gallo"
   votes:
     - motion: "Proclaim January 27th Holocaust Remembrance Day annually"
       result: "in favor (unanimous)"
@@ -64,7 +64,7 @@ topic_segments:
     headline: "Board approves ~$946K in ARPA allocations following detailed scoring presentation"
     dek: "After a presentation on the working group's prioritization methodology, the board approved five ARPA expenditures totaling approximately $946,000, with $5.05 million remaining."
     summary: |
-      Town Administrator Thatcher Keiser and ARPA Working Group member Moses presented the board with a detailed overview of the ARPA spending framework. Marblehead's total ARPA allocation is approximately $6.16 million, received in two tranches: a direct city/town allocation and a county allocation redistributed by the Commonwealth.
+      Town Administrator Thatcher Kezer and ARPA Working Group member Moses presented the board with a detailed overview of the ARPA spending framework. Marblehead's total ARPA allocation is approximately $6.16 million, received in two tranches: a direct city/town allocation and a county allocation redistributed by the Commonwealth.
       
       The working group of eight members — including a select board member, town administrator, town planner, health director, schools superintendent, finance director, a FinCom member, and a resident at large — solicited 72 projects town-wide and used a six-criteria scoring system (public health/safety, reserve replenishment, economic recovery, infrastructure investment, temporary deficits, and funding eligibility). A resident survey of approximately 344 participants showed 60% overlap with the working group's top-30 ranked projects.
       
@@ -79,7 +79,7 @@ topic_segments:
       | Visitor booth upgrade | $6,311 |
       
       After these approvals, approximately $5.05 million in ARPA funds remains to be allocated. The board noted all expenditures must be committed and expended by 2024. A corrective re-vote was taken after the visitor booth upgrade ($6,311) was inadvertently omitted and the staffing support line was doubled in the initial motion.
-    key_speakers: ["Thatcher Keiser (Town Administrator)", "Moses (ARPA Working Group member)", "Alexa (board member)", "Sarah Fox (resident, public comment)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Moses (ARPA Working Group member)", "Alexa (board member)", "Sarah Fox (resident, public comment)"]
   - topic: admin-housekeeping
     topic_confidence: 0.88
     start_seconds: 3336
@@ -87,7 +87,7 @@ topic_segments:
     headline: "Board approves minutes, drainage license at 45 Lincoln Ave, and Rotary Club clock gift"
     dek: "Routine consent-type items were approved unanimously, including a drainage connection license and acceptance of a commemorative clock for the Rotary Club's centennial."
     summary: "The board approved the minutes of September 28, 2022 and a license agreement allowing a private connection to the town drainage system at 45 Lincoln Avenue (property owner Margaret Strage). The board also unanimously accepted a gift from the Rotary Club of Marblehead — a ten-and-a-half-foot two-dial Howard clock made by Electric Time Company of Massachusetts — to commemorate the club's 100th anniversary in April 2023. The Town Administrator was directed to coordinate with departments on placement and installation. A separate motion to send a thank-you letter to the Rotary Club was also approved unanimously."
-    key_speakers: ["Thatcher Keiser (Town Administrator)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: recreation-events
     topic_confidence: 0.9
     start_seconds: 3554
@@ -102,15 +102,15 @@ topic_segments:
     headline: "Rail trail design contract awarded to Tool Design of Boston for $150,800"
     dek: "The board approved a contract with Tool Design, the firm that authored the rail trail master plan, to handle permitting and design for the Leed Mills Rail Trail project."
     summary: "The board voted unanimously to award a contract for the Leed Mills Rail Trail project to Tool Design of Boston, Massachusetts in the amount of $150,800, and authorized the chair to sign on behalf of the board. Tool Design previously completed the master plan for the project and will now handle permitting and design to prepare the project for bidding."
-    key_speakers: ["Thatcher Keiser (Town Administrator)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: labor-personnel
     topic_confidence: 0.85
     start_seconds: 3732
     end_seconds: 3857
     headline: "Town Administrator appointed hearing officer in disciplinary matter involving Officer Gallo"
     dek: "On advice of town counsel, the board appointed the Town Administrator to serve as hearing officer and report findings back to the board."
-    summary: "The board unanimously voted, on advice of town counsel, to appoint Town Administrator Thatcher Keiser as hearing officer in connection with pending disciplinary matters involving Officer Christopher Gallo, with findings to be reported back to the select board."
-    key_speakers: ["Thatcher Keiser (Town Administrator)"]
+    summary: "The board unanimously voted, on advice of town counsel, to appoint Town Administrator Thatcher Kezer as hearing officer in connection with pending disciplinary matters involving Officer Christopher Gallo, with findings to be reported back to the select board."
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: public-comment
     topic_confidence: 0.95
     start_seconds: 3878
@@ -127,16 +127,16 @@ topic_segments:
     start_seconds: 4254
     end_seconds: 4719
     headline: "Town Administrator reports on finance director search, IT upgrades, ADA plan, and infrastructure projects"
-    dek: "Keiser provided updates on several ongoing administrative initiatives including a finance director hire, network migration, ADA transition plan, and two public works projects."
+    dek: "Kezer provided updates on several ongoing administrative initiatives including a finance director hire, network migration, ADA transition plan, and two public works projects."
     summary: |
-      Town Administrator Thatcher Keiser provided the following updates:
+      Town Administrator Thatcher Kezer provided the following updates:
       
       - **Finance Director search:** Interviews completed; references being checked; recommendation to the board forthcoming.
       - **IT/ePlus:** New IT technician Leandro Alcantera has joined to support desktop and network services. Office 365 migration is ongoing for town staff.
       - **ADA Transition Plan:** Marblehead received a Community Compact Grant and is contracting with the Collins Center to update the ADA transition plan. Kickoff meeting with department heads scheduled.
       - **Pleasant and Village Street project:** Concrete sidewalk pouring is the next step; project expected to complete in November 2022. Water infrastructure was also upgraded under the street.
       - **Reads Pond walkway:** DPW Director Amy (last name not captured) is developing a temporary fix using fabric, stone, and stone dust to stabilize the walkway while a permanent engineered solution is developed. Equipment access and wall integrity are complicating factors.
-    key_speakers: ["Thatcher Keiser (Town Administrator)", "Amy (DPW Director, first name only)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Amy (DPW Director, first name only)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

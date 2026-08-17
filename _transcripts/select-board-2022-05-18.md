@@ -13,10 +13,10 @@ status: published
 source: whisper-local
 
 summary_card:
-  headline: "Select Board unanimously appoints Patrick Keeser as Town Administrator"
-  summary: "The Marblehead Select Board conducted a full-board interview with Patrick Keeser, the sole remaining finalist for Town Administrator after two other finalists withdrew before the public interview. The screening committee had unanimously recommended Keeser, citing his experience as mayor of a Massachusetts city, chief operating officer of Framingham, and decades in the Air National Guard. The board voted unanimously to appoint him pending successful contract negotiations."
+  headline: "Select Board unanimously appoints Thatcher Kezer as Town Administrator"
+  summary: "The Marblehead Select Board conducted a full-board interview with Thatcher Kezer, the sole remaining finalist for Town Administrator after two other finalists withdrew before the public interview. The screening committee had unanimously recommended Kezer, citing his experience as mayor of a Massachusetts city, chief operating officer of Framingham, and decades in the Air National Guard. The board voted unanimously to appoint him pending successful contract negotiations."
   decisions:
-    - "Approved appointment of Patrick Keeser as Town Administrator pending successful contract negotiations"
+    - "Approved appointment of Thatcher Kezer as Town Administrator pending successful contract negotiations"
     - "Approved transfer of all-alcoholic package store license from Haley's Public Market Inc. to Mookie's at Mumford LLC doing business as Haley's Wine and Spirits"
     - "Approved minutes of April 27, 2022 and May 11, 2022"
     - "Approved Marblehead Pride 2022 flag-raising event at Abbot Hall on June 5, 2022 (rain date June 12)"
@@ -27,7 +27,7 @@ summary_card:
     - "Approved one-day liquor license for Historical Commission opening reception at Old Townhouse on July 8, 2022"
     - "Approved two one-day liquor licenses for wine tasting events on June 2 and June 23, 2022 at 18 Atlantic Avenue"
   votes:
-    - motion: "Appoint Patrick Keeser as Town Administrator pending contract negotiations"
+    - motion: "Appoint Thatcher Kezer as Town Administrator pending contract negotiations"
       result: "in favor (unanimous)"
     - motion: "Transfer all-alcoholic package store license to Mookie's at Mumford LLC"
       result: "in favor (unanimous)"
@@ -54,24 +54,24 @@ topic_segments:
     start_seconds: 0
     end_seconds: 2868
     featured: true
-    headline: "Select Board unanimously appoints Patrick Keeser as Town Administrator"
-    dek: "Keeser, the sole remaining finalist after two others withdrew, was unanimously recommended by the screening committee and voted in by the full board."
+    headline: "Select Board unanimously appoints Thatcher Kezer as Town Administrator"
+    dek: "Kezer, the sole remaining finalist after two others withdrew, was unanimously recommended by the screening committee and voted in by the full board."
     summary: |
-      The screening committee — comprising Town Planner Becky Cunningham, former Town Administrator Tony Sasso, Select Board member Aaron Noonan, Interim Town Administrator John McGinn, and the chair — unanimously recommended Patrick Keeser to the full board after the other two finalists withdrew before the public interview stage.
+      The screening committee — comprising Town Planner Becky Cunningham, former Town Administrator Tony Sasso, Select Board member Aaron Noonan, Interim Town Administrator John McGinn, and the chair — unanimously recommended Thatcher Kezer to the full board after the other two finalists withdrew before the public interview stage.
       
-      During his interview, Keeser described a career spanning finance committee work in Salisbury, legislative advocacy at the Massachusetts Municipal Association, director of purchasing in Beverly, eight years as mayor of a Massachusetts city, and service as chief operating officer of Framingham after it transitioned to a city form of government. He also noted 30-plus years in the Air National Guard.
+      During his interview, Kezer described a career spanning finance committee work in Salisbury, legislative advocacy at the Massachusetts Municipal Association, director of purchasing in Beverly, eight years as mayor of a Massachusetts city, and service as chief operating officer of Framingham after it transitioned to a city form of government. He also noted 30-plus years in the Air National Guard.
       
       Key themes from the interview:
-      - **Budgeting/structural deficit:** Keeser recounted leading Salisbury's finance committee through a structural deficit, cutting approximately $2 million from the base budget before presenting an override with individual, itemized restoration items and requiring unified advocacy across constituencies.
+      - **Budgeting/structural deficit:** Kezer recounted leading Salisbury's finance committee through a structural deficit, cutting approximately $2 million from the base budget before presenting an override with individual, itemized restoration items and requiring unified advocacy across constituencies.
       - **Data-driven management:** He described developing an "AIMSAT" program — a standardized data-collection and reporting process — which received a government innovation award.
-      - **Town Administrator vs. elected board roles:** Keeser emphasized understanding the distinction between professional administrator and elected policy-makers, drawing on his own experience as both a mayor and a COO reporting to a mayor.
+      - **Town Administrator vs. elected board roles:** Kezer emphasized understanding the distinction between professional administrator and elected policy-makers, drawing on his own experience as both a mayor and a COO reporting to a mayor.
       - **Labor relations:** He cited an example of resolving a personnel issue informally through a direct call to a union president, avoiding formal grievance procedures.
       - **First 90 days:** He stated he would instruct all departments to continue operations unchanged while he observed, read collective bargaining agreements, reviewed strategic and master plan documents, and built relationships.
       
-      Board members noted that 19 candidates applied through the Collins Center search process; five were selected for screening interviews; and the field narrowed to three finalists, two of whom withdrew before the public interview. The board discussed but rejected restarting the search, citing the likelihood of losing Keeser and the competitiveness of the current municipal management hiring market.
+      Board members noted that 19 candidates applied through the Collins Center search process; five were selected for screening interviews; and the field narrowed to three finalists, two of whom withdrew before the public interview. The board discussed but rejected restarting the search, citing the likelihood of losing Kezer and the competitiveness of the current municipal management hiring market.
       
-      The vote to appoint Keeser pending successful contract negotiations was unanimous.
-    key_speakers: ["Patrick Keeser (Town Administrator candidate)", "Jackie (Chair, Select Board)", "Aaron Noonan (Select Board member / screening committee)", "Becky Cunningham (Town Planner / screening committee)", "Tony Sasso (former Town Administrator / screening committee)", "John McGinn (Interim Town Administrator / screening committee)"]
+      The vote to appoint Kezer pending successful contract negotiations was unanimous.
+    key_speakers: ["Thatcher Kezer (Town Administrator candidate)", "Jackie (Chair, Select Board)", "Aaron Noonan (Select Board member / screening committee)", "Becky Cunningham (Town Planner / screening committee)", "Tony Sasso (former Town Administrator / screening committee)", "John McGinn (Interim Town Administrator / screening committee)"]
   - topic: recreation-events
     topic_confidence: 0.72
     start_seconds: 2929
@@ -155,7 +155,7 @@ topic_segments:
       
       - **Resident, 159 Miami Avenue (Alan):** Expressed ongoing dissatisfaction with the performance of current town counsel over the past two years and suggested it may be time to change counsel. He also acknowledged the new town administrator appointment.
       
-      - **Second resident:** Agreed with the first speaker on town counsel. Raised IT concerns and noted he had offered feedback on the town's website and course material to the interim administrator without response. On the town administrator search, he acknowledged Keeser's qualifications but expressed concern that ending up with one finalist felt like an act of desperation, noting that Keeser had previously applied for a town manager position elsewhere and did not advance, and that his career path appeared to show a regression from mayor to working for a mayor.
+      - **Second resident:** Agreed with the first speaker on town counsel. Raised IT concerns and noted he had offered feedback on the town's website and course material to the interim administrator without response. On the town administrator search, he acknowledged Kezer's qualifications but expressed concern that ending up with one finalist felt like an act of desperation, noting that Kezer had previously applied for a town manager position elsewhere and did not advance, and that his career path appeared to show a regression from mayor to working for a mayor.
       
       - **Jack, 67th Street:** Thanked the board for the new town administrator and noted a survey on access to polling places is available on the town website.
     key_speakers: ["Alan (resident, 159 Miami Avenue)", "Second resident (name not captured)", "Jack (resident, 67th Street)"]
@@ -173,7 +173,7 @@ topic_segments:
 > figures occasionally misheard. Click any timecode to jump to that moment
 > in the source video.
 
-**[0:00](https://vimeo.com/711447916#t=0s)** Good evening, everyone. I'm calling the meeting to order. We need to... Don't need to roll. Don't need to roll. I'm calling the meeting to order. It's Wednesday, May 18, 2022, 7 o'clock. And this meeting is being recorded, videotaped via Zoom. And all the members of the board are participating. And I'd like to say welcome back to Avonall. Wow. Really wonderful. So first I'd like to introduce the members of the screening committee, which all of whom are here tonight, Becky Cunningham, our town planner, Tony Sasso, former town administrator, Aaron Noonan, member of the board, John McGinn, interim town administrator, and me. So first on our agenda, we're very excited to have an interview with Patrick Keeser. We always thought that we would be bringing multiple candidates forward to have a full board interview. But we were excited to bring them forward, but we lost two of the candidates. And to be clear, the remaining person we are about to hire, or not hire, interview first,
+**[0:00](https://vimeo.com/711447916#t=0s)** Good evening, everyone. I'm calling the meeting to order. We need to... Don't need to roll. Don't need to roll. I'm calling the meeting to order. It's Wednesday, May 18, 2022, 7 o'clock. And this meeting is being recorded, videotaped via Zoom. And all the members of the board are participating. And I'd like to say welcome back to Avonall. Wow. Really wonderful. So first I'd like to introduce the members of the screening committee, which all of whom are here tonight, Becky Cunningham, our town planner, Tony Sasso, former town administrator, Aaron Noonan, member of the board, John McGinn, interim town administrator, and me. So first on our agenda, we're very excited to have an interview with Thatcher Kezer. We always thought that we would be bringing multiple candidates forward to have a full board interview. But we were excited to bring them forward, but we lost two of the candidates. And to be clear, the remaining person we are about to hire, or not hire, interview first,
 
 **[1:32](https://vimeo.com/711447916#t=92s)** is a highly confident, experienced municipal manager. He was unanimously favored by the screening committee to bring forward to the full select board. I'm trying to say not select board. So without further ado, welcome and join us at the table, please.
 

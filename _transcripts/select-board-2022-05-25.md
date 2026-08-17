@@ -20,7 +20,7 @@ summary_card:
     - "Approved appointment of Amy as DPW Director (dual role with Water & Sewer Superintendent) effective May 26, 2022 with $30,000 stipend"
     - "Approved MOU between town and Marblehead Water and Sewer Commission for dual-role arrangement"
     - "Approved $140,611 in ARPA fund allocations for four projects"
-    - "Approved employment contract for Patrick Heaser as Town Administrator"
+    - "Approved employment contract for Thatcher Kezer as Town Administrator"
     - "Approved budget transfer of $25,243 from Court Overtime Police to Restoration and Maintenance Emergency Generator Police"
     - "Approved budget transfer of $156,000 from Health Insurance to EMT Stipend Fire"
     - "Approved budget transfer of $17,923.40 from Senior Clerk Assessors to Other Professional and Technical"
@@ -41,7 +41,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Approve ARPA fund allocations totaling $140,611"
       result: "in favor (unanimous)"
-    - motion: "Approve Town Administrator employment contract for Patrick Heaser"
+    - motion: "Approve Town Administrator employment contract for Thatcher Kezer"
       result: "in favor (unanimous)"
     - motion: "Budget transfer $25,243 police overtime to emergency generator"
       result: "in favor (unanimous)"
@@ -151,9 +151,9 @@ topic_segments:
     topic_confidence: 0.9
     start_seconds: 2499
     end_seconds: 2552
-    headline: "Board approves employment contract for incoming Town Administrator Patrick Heaser"
-    dek: "The board voted to approve the employment contract between the town and Patrick Heaser as Town Administrator."
-    summary: "The board voted to approve the employment contract for Patrick Heaser as the new Town Administrator. No terms of the contract were discussed in the transcript."
+    headline: "Board approves employment contract for incoming Town Administrator Thatcher Kezer"
+    dek: "The board voted to approve the employment contract between the town and Thatcher Kezer as Town Administrator."
+    summary: "The board voted to approve the employment contract for Thatcher Kezer as the new Town Administrator. No terms of the contract were discussed in the transcript."
     key_speakers: ["Select Board members"]
   - topic: admin-housekeeping
     topic_confidence: 0.8

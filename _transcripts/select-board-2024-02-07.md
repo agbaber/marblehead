@@ -94,15 +94,15 @@ topic_segments:
       - Sarah Magazine: 0 votes
       
       Williams was declared appointed with six votes, exceeding the required majority of five.
-    key_speakers: ["Sarah Fox (School Committee Chair)", "Alexa Abowitz (candidate)", "Louisa Zini (candidate)", "Sarah Magazine (candidate)", "Tom Mathers (candidate)", "Mel Williams (candidate)", "Brenton Speed (candidate)", "Jim Oda (School Committee member)", "Jen Schaffner (School Committee member)", "Allison Taylor (School Committee member)", "Brian Murray (Select Board)", "Deb Singer (Select Board)", "Bob Grader (Select Board)", "Nye (Select Board)", "Newton (Select Board)", "Patrick Kezer (Town Administrator)"]
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Alexa Abowitz (candidate)", "Louisa Zini (candidate)", "Sarah Magazine (candidate)", "Tom Mathers (candidate)", "Mel Williams (candidate)", "Brenton Speed (candidate)", "Jim Oda (School Committee member)", "Jen Schaffner (School Committee member)", "Allison Taylor (School Committee member)", "Brian Murray (Select Board)", "Deb Singer (Select Board)", "Bob Grader (Select Board)", "Nye (Select Board)", "Newton (Select Board)", "Thatcher Kezer (Town Administrator)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 9474
     end_seconds: 9626
     headline: "Camie Anelli appointed Treasurer-Collector through June 2024"
     dek: "After six years in the office including three stints as acting Treasurer-Collector, Anelli was formally appointed by unanimous vote."
-    summary: "Town Administrator Patrick Kezer noted Anelli had served as acting Treasurer-Collector three times and had been pursuing dual certification through the Mass Collector-Treasurers Association, a roughly three-year process. The board voted unanimously to appoint her with a term expiring June 2024."
-    key_speakers: ["Camie Anelli (appointee)", "Patrick Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
+    summary: "Town Administrator Thatcher Kezer noted Anelli had served as acting Treasurer-Collector three times and had been pursuing dual certification through the Mass Collector-Treasurers Association, a roughly three-year process. The board voted unanimously to appoint her with a term expiring June 2024."
+    key_speakers: ["Camie Anelli (appointee)", "Thatcher Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
   - topic: bonding-capital
     topic_confidence: 0.82
     start_seconds: 9748
@@ -117,7 +117,7 @@ topic_segments:
       3. **Capital Planning Committee bylaw amendment** — would restructure the currently dormant committee to include three resident appointees (three-year terms) plus professional staff: town administrator, CFO, school superintendent, DPW director, and finance committee chair. The goal is a formal five- and ten-year capital planning process.
       
       Board members noted that Mary Alley Building is in deteriorating condition and that deferred capital maintenance is becoming urgent. A discussion of the Smart Growth overlay districts (Village Plaza/Millers Plaza) under MBTA Communities was flagged as a topic to revisit with Becky Kern at a future meeting.
-    key_speakers: ["Patrick Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)", "Brian Murray (Select Board)", "Deb Singer (Select Board)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)", "Brian Murray (Select Board)", "Deb Singer (Select Board)"]
   - topic: public-safety
     topic_confidence: 0.85
     start_seconds: 10756
@@ -125,7 +125,7 @@ topic_segments:
     headline: "Select board authorizes police chief to seek $12,520 reserve fund transfer for assessment center"
     dek: "Chief King needs funds for an assessment center to fill two positions created by a retirement, which was not budgeted due to timing uncertainty."
     summary: "The town administrator explained that the police chief had a retirement and needs to fill two positions using an assessment center. The budget did not include this cost because the timing was uncertain. The board voted unanimously to authorize the chief to appear before the Finance Committee to request a $12,520 transfer from the Reserve Fund under MGL Chapter 40, Section 6."
-    key_speakers: ["Patrick Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
   - topic: recreation-events
     topic_confidence: 0.9
     start_seconds: 10834
@@ -151,7 +151,7 @@ topic_segments:
       - Extend the Old Townhouse exterior painting contract with John Scorza and Company of Peabody/Beverly to May 30, 2024, because cold weather prevented completion.
       - Adopt an updated recycled product purchasing policy required for the town to continue receiving DEP grants.
       - Approve Marblehead Historical Commission use of Old Townhouse on Sunday March 10, 2024, 12:30–4:30 PM for a lecture on Glover's Farmhouse, with rental fee waived.
-    key_speakers: ["Patrick Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
   - topic: public-comment
     topic_confidence: 0.75
     start_seconds: 11269
@@ -171,7 +171,7 @@ topic_segments:
       1. **Mary Alley Building** will be closed on Friday February 23, 2024 for plumbing maintenance (water supply must be shut off). Union staff directly involved in the project will work; other union members get the day off without makeup; administrative staff will work remotely.
       
       2. **Cable TV Advisory Committee**: The current committee has one member (Mr. Peck). The Comcast/cable franchise contract expires January 2025, requiring a negotiation process defined under the Cable TV Act. The board agreed to post for four new members with a deadline of March 8 and to consider appointments at the March 13 meeting.
-    key_speakers: ["Patrick Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
   - topic: admin-housekeeping
     topic_confidence: 0.78
     start_seconds: 11555

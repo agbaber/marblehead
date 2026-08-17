@@ -95,16 +95,16 @@ topic_segments:
     start_seconds: 2216
     end_seconds: 2556
     headline: "Committee addresses correspondence requesting Town Administrator be formally added to bargaining team"
-    dek: "Chair Fox explained that Town Administrator Thatcher Keyes has been regularly involved in bargaining strategy sessions but chose not to attend proposal-reading sessions he described as not a good use of his time."
+    dek: "Chair Fox explained that Town Administrator Thatcher Kezer has been regularly involved in bargaining strategy sessions but chose not to attend proposal-reading sessions he described as not a good use of his time."
     summary: |
-      The committee received a letter from a group called Marblehead for Change requesting that Town Administrator Thatcher Keyes be formally voted onto the bargaining subcommittee. The chair read from her correspondence with Keyes, explaining:
+      The committee received a letter from a group called Marblehead for Change requesting that Town Administrator Thatcher Kezer be formally voted onto the bargaining subcommittee. The chair read from her correspondence with Kezer, explaining:
       
       - She has briefed him before each bargaining session on which units are on the agenda.
-      - The MEA has used a verbal proposal-presentation format in early sessions; Keyes was invited but replied it did not seem a good use of his time at that stage.
-      - Keyes has attended all intermittent strategy sessions and subcommittee meetings with legal counsel and administrators.
+      - The MEA has used a verbal proposal-presentation format in early sessions; Kezer was invited but replied it did not seem a good use of his time at that stage.
+      - Kezer has attended all intermittent strategy sessions and subcommittee meetings with legal counsel and administrators.
       - All proposals have been shared with him throughout the process.
       
-      A committee member noted that bargaining subcommittee membership is not typically subject to a formal vote; subject-matter experts (e.g., the facilities director) attend as needed without being formally elected. Under state law, Keyes holds an equal ratification vote with school committee members regardless of subcommittee designation.
+      A committee member noted that bargaining subcommittee membership is not typically subject to a formal vote; subject-matter experts (e.g., the facilities director) attend as needed without being formally elected. Under state law, Kezer holds an equal ratification vote with school committee members regardless of subcommittee designation.
     key_speakers: ["Sarah Fox (Chair)", "Jen Schaffner (School Committee)"]
 ---
 

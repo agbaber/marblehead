@@ -13,12 +13,12 @@ source: youtube-auto+llm
 
 summary_card:
   headline: "School committee approves FTE expansion for student services director, cafeteria wage increases"
-  summary: "The Marblehead School Committee met on July 10, 2024, approving a schedule of bills, cafeteria worker hourly wage increases, and an expansion of the assistant director of student services from 0.5 to 1.0 FTE funded from the pre-K/kindergarten revolving account. The committee also appointed Town Administrator Patrick Kezer to the school committee bargaining subcommittee ahead of upcoming contract negotiations with multiple units. The meeting concluded with the committee entering executive session to discuss collective bargaining strategy."
+  summary: "The Marblehead School Committee met on July 10, 2024, approving a schedule of bills, cafeteria worker hourly wage increases, and an expansion of the assistant director of student services from 0.5 to 1.0 FTE funded from the pre-K/kindergarten revolving account. The committee also appointed Town Administrator Thatcher Kezer to the school committee bargaining subcommittee ahead of upcoming contract negotiations with multiple units. The meeting concluded with the committee entering executive session to discuss collective bargaining strategy."
   decisions:
     - "Approved schedule of bills totaling approximately $86,521"
     - "Approved cafeteria worker hourly wage increases for FY2024-25"
     - "Approved increase of assistant director of student services from 0.5 to 1.0 FTE, funded from pre-K/kindergarten revolving account"
-    - "Approved appointment of Town Administrator Patrick Kezer to school committee bargaining subcommittee"
+    - "Approved appointment of Town Administrator Thatcher Kezer to school committee bargaining subcommittee"
   votes:
     - motion: "Approve schedule of bills"
       result: "in favor (unanimous)"
@@ -26,7 +26,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Increase assistant director of student services to 1.0 FTE from pre-K/K revolving account"
       result: "in favor (unanimous)"
-    - motion: "Appoint Town Administrator Patrick Kezer to bargaining subcommittee"
+    - motion: "Appoint Town Administrator Thatcher Kezer to bargaining subcommittee"
       result: "in favor (unanimous)"
     - motion: "Enter executive session for collective bargaining strategy"
       result: "in favor (unanimous)"
@@ -69,10 +69,10 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 1658
     end_seconds: 1778
-    headline: "Town Administrator Patrick Kezer appointed to school committee bargaining subcommittee"
+    headline: "Town Administrator Thatcher Kezer appointed to school committee bargaining subcommittee"
     dek: "The committee voted 4–0 to add the town administrator to its bargaining subcommittee ahead of contract negotiations starting the following day."
-    summary: "The chair explained that school committee attorney advised the committee to formally appoint Town Administrator Patrick Kezer to the bargaining subcommittee. Bargaining with multiple units of the Marblehead Education Association was set to begin the following day. One committee member noted the importance of open meeting law compliance, cautioning that any conversation between two committee members and Kezer about contract matters would constitute a quorum and must be posted. The motion passed 4 to 0."
-    key_speakers: ["Patrick Kezer (Town Administrator)", "Allison Taylor (school committee member)", "Sarah Fox (school committee member, remote)", "Brian Oda (school committee member)"]
+    summary: "The chair explained that school committee attorney advised the committee to formally appoint Town Administrator Thatcher Kezer to the bargaining subcommittee. Bargaining with multiple units of the Marblehead Education Association was set to begin the following day. One committee member noted the importance of open meeting law compliance, cautioning that any conversation between two committee members and Kezer about contract matters would constitute a quorum and must be posted. The motion passed 4 to 0."
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Allison Taylor (school committee member)", "Sarah Fox (school committee member, remote)", "Brian Oda (school committee member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 1778

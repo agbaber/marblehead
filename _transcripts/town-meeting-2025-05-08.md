@@ -101,12 +101,12 @@ topic_segments:
     headline: "Select Board gains authority to set building and electrical permit fees after public hearings"
     dek: "Articles 38 and 39 passed; Articles 40 and 41 (which would have set specific fees) were then indefinitely postponed by the sponsor."
     summary: |
-      Town Administrator Patrick Kezer presented Articles 38 and 39 together. Rather than having town meeting set permit fee schedules annually, the articles delegate that authority to the Select Board following a mandatory advertised public hearing.
+      Town Administrator Thatcher Kezer presented Articles 38 and 39 together. Rather than having town meeting set permit fee schedules annually, the articles delegate that authority to the Select Board following a mandatory advertised public hearing.
       
       One resident challenged the legal basis of fees, arguing they can only cover the *extra* cost of providing a service, not total departmental overhead. Kezer responded that fees are intended to cover the full cost of the relevant function (staff, vehicles, equipment, overhead), with benchmarking against comparable municipalities to avoid overreach. A separate resident noted the building department projects approximately $1 million in building permit revenue annually across seven staff.
       
       Article 38 passed 294–127; Article 39 passed 301–111. Because both passed, Articles 40 and 41 (which would have set specific new fee schedules) were indefinitely postponed by the sponsor at 367–34 and 379–32 respectively.
-    key_speakers: ["Patrick Kezer (Town Administrator)", "Jack Buba (resident, 5 Palmer Road)", "Albert Jordan (resident, 64 Roosevelt Avenue)", "Dan Rosen (resident, 31 Lee Street)", "Alicia Benjamin (Finance Director)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Jack Buba (resident, 5 Palmer Road)", "Albert Jordan (resident, 64 Roosevelt Avenue)", "Dan Rosen (resident, 31 Lee Street)", "Alicia Benjamin (Finance Director)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 2660
@@ -292,7 +292,7 @@ topic_segments:
 
 **[22:53](https://vimeo.com/1082944790#t=1373s)** without seeing any speakers, we're gonna go to the vote on Article 37. If you favor the article, use your green yes button. If you oppose, use the red no button. 32nd. Voting starts now.
 
-**[23:38](https://vimeo.com/1082944790#t=1418s)** Article 37 is a vote that passes 375 to 14. Article 38 building permit fees. The article is moved. Do I have a second? Thank you. Patrick Kezer, town Administrator. Thank you Mr. Moderator. Good evening again. Um, I'm actually gonna touch on the next four, uh, warrant articles in my brief description. Uh, articles 38 and 39 do the same thing. 38 changes. Uh, who adjusts the fees, uh, setting of fees for building permits? 39 is for electrical permits. The goal of these of 38 39 is to, uh,
+**[23:38](https://vimeo.com/1082944790#t=1418s)** Article 37 is a vote that passes 375 to 14. Article 38 building permit fees. The article is moved. Do I have a second? Thank you. Thatcher Kezer, town Administrator. Thank you Mr. Moderator. Good evening again. Um, I'm actually gonna touch on the next four, uh, warrant articles in my brief description. Uh, articles 38 and 39 do the same thing. 38 changes. Uh, who adjusts the fees, uh, setting of fees for building permits? 39 is for electrical permits. The goal of these of 38 39 is to, uh,
 
 **[24:24](https://vimeo.com/1082944790#t=1464s)** get through town meeting much more quickly. And the way we're gonna do that is if 38 and 39 are accepted, that rather than town meeting having to deliberate on the setting of those fees, that the select board would be the body that sets the fees for building permits and electrical permits after a public hearing. That's, that's an important component. So what that means is when the select board would meet to, to make decisions on the fees, not only would they post the meetings as they normally do, they would have to advertise for a public hearing in advance so that it's well, well publicized
 
