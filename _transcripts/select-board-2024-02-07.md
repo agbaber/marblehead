@@ -21,7 +21,7 @@ summary_card:
     - "Approved sponsoring warrant articles for 2024 Annual Town Meeting including creation of a Community Development and Planning Department, appointment of Board of Assessors, assessor reporting to CFO, and Capital Planning Committee bylaw amendment"
     - "Authorized police chief to request $12,520 reserve fund transfer from Finance Committee"
     - "Approved temporary closure of Corinthian Lane on August 10, 2024"
-    - "Approved Abbott Library Foundation 5K walk on June 15, 2024"
+    - "Approved Abbot Library Foundation 5K walk on June 15, 2024"
     - "Approved two one-day liquor licenses for Marblehead Arts Association (Feb 10–11, 2024)"
     - "Approved one-day liquor license for Temple Emanuel (April 10, 2024)"
     - "Approved contract extension for Old Townhouse exterior painting to May 30, 2024"
@@ -41,7 +41,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Approve Corinthian Lane temporary closure August 10, 2024"
       result: "in favor (unanimous)"
-    - motion: "Approve Abbott Library Foundation 5K on June 15, 2024"
+    - motion: "Approve Abbot Library Foundation 5K on June 15, 2024"
       result: "in favor (unanimous)"
     - motion: "Approve Marblehead Arts Association one-day liquor licenses Feb 10–11, 2024"
       result: "in favor (unanimous)"
@@ -94,15 +94,15 @@ topic_segments:
       - Sarah Magazine: 0 votes
       
       Williams was declared appointed with six votes, exceeding the required majority of five.
-    key_speakers: ["Sarah Fox (School Committee Chair)", "Alexa Abowitz (candidate)", "Louisa Zini (candidate)", "Sarah Magazine (candidate)", "Tom Mathers (candidate)", "Mel Williams (candidate)", "Brenton Speed (candidate)", "Jim Oda (School Committee member)", "Jen Schaffner (School Committee member)", "Allison Taylor (School Committee member)", "Brian Murray (Select Board)", "Deb Singer (Select Board)", "Bob Grader (Select Board)", "Nye (Select Board)", "Newton (Select Board)", "Patrick Keyser (Town Administrator)"]
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Alexa Abowitz (candidate)", "Louisa Zini (candidate)", "Sarah Magazine (candidate)", "Tom Mathers (candidate)", "Mel Williams (candidate)", "Brenton Speed (candidate)", "Jim Oda (School Committee member)", "Jen Schaffner (School Committee member)", "Allison Taylor (School Committee member)", "Brian Murray (Select Board)", "Deb Singer (Select Board)", "Bob Grader (Select Board)", "Nye (Select Board)", "Newton (Select Board)", "Patrick Kezer (Town Administrator)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 9474
     end_seconds: 9626
     headline: "Camie Anelli appointed Treasurer-Collector through June 2024"
     dek: "After six years in the office including three stints as acting Treasurer-Collector, Anelli was formally appointed by unanimous vote."
-    summary: "Town Administrator Patrick Keyser noted Anelli had served as acting Treasurer-Collector three times and had been pursuing dual certification through the Mass Collector-Treasurers Association, a roughly three-year process. The board voted unanimously to appoint her with a term expiring June 2024."
-    key_speakers: ["Camie Anelli (appointee)", "Patrick Keyser (Town Administrator)", "Sarah Fox (Select Board Chair)"]
+    summary: "Town Administrator Patrick Kezer noted Anelli had served as acting Treasurer-Collector three times and had been pursuing dual certification through the Mass Collector-Treasurers Association, a roughly three-year process. The board voted unanimously to appoint her with a term expiring June 2024."
+    key_speakers: ["Camie Anelli (appointee)", "Patrick Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
   - topic: bonding-capital
     topic_confidence: 0.82
     start_seconds: 9748
@@ -117,7 +117,7 @@ topic_segments:
       3. **Capital Planning Committee bylaw amendment** — would restructure the currently dormant committee to include three resident appointees (three-year terms) plus professional staff: town administrator, CFO, school superintendent, DPW director, and finance committee chair. The goal is a formal five- and ten-year capital planning process.
       
       Board members noted that Mary Alley Building is in deteriorating condition and that deferred capital maintenance is becoming urgent. A discussion of the Smart Growth overlay districts (Village Plaza/Millers Plaza) under MBTA Communities was flagged as a topic to revisit with Becky Kern at a future meeting.
-    key_speakers: ["Patrick Keyser (Town Administrator)", "Sarah Fox (Select Board Chair)", "Brian Murray (Select Board)", "Deb Singer (Select Board)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)", "Brian Murray (Select Board)", "Deb Singer (Select Board)"]
   - topic: public-safety
     topic_confidence: 0.85
     start_seconds: 10756
@@ -125,17 +125,17 @@ topic_segments:
     headline: "Select board authorizes police chief to seek $12,520 reserve fund transfer for assessment center"
     dek: "Chief King needs funds for an assessment center to fill two positions created by a retirement, which was not budgeted due to timing uncertainty."
     summary: "The town administrator explained that the police chief had a retirement and needs to fill two positions using an assessment center. The budget did not include this cost because the timing was uncertain. The board voted unanimously to authorize the chief to appear before the Finance Committee to request a $12,520 transfer from the Reserve Fund under MGL Chapter 40, Section 6."
-    key_speakers: ["Patrick Keyser (Town Administrator)", "Sarah Fox (Select Board Chair)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
   - topic: recreation-events
     topic_confidence: 0.9
     start_seconds: 10834
     end_seconds: 11201
-    headline: "Board approves Corinthian Lane closure, Abbott Library 5K, YMCA 5K, and two liquor licenses"
+    headline: "Board approves Corinthian Lane closure, Abbot Library 5K, YMCA 5K, and two liquor licenses"
     dek: "Routine event and license approvals including a lane closure for Corinthian Yacht Club on August 10 and road races in June and September."
     summary: |
       The board approved:
       - Temporary closure of Corinthian Lane on Saturday August 10, 2024, 7 AM–4 PM for two Corinthian Yacht Club events (subject to police/fire approval).
-      - Abbott Public Library Foundation 5K walk on Saturday June 15, 2024, starting at Vets Middle School and finishing at Abbott Library (subject to insurance, police, fire, and school approval).
+      - Abbot Public Library Foundation 5K walk on Saturday June 15, 2024, starting at Vets Middle School and finishing at Abbot Library (subject to insurance, police, fire, and school approval).
       - YMCA North Shore Head of the Hill 5K road race on Sunday September 15, 2024 at 9 AM, starting and ending at the Lynch/Honorly YMCA (subject to police/fire approval and insurance).
       - Two one-day liquor licenses for Marblehead Arts Association at King Hooper Mansion (February 10 and 11, 2024); alcohol from CAP's Importing.
       - One-day liquor license for Temple Emanuel at 393 Atlantic Avenue (April 10, 2024, 6:30–11 PM); alcohol from Beachmont Liquors.
@@ -151,7 +151,7 @@ topic_segments:
       - Extend the Old Townhouse exterior painting contract with John Scorza and Company of Peabody/Beverly to May 30, 2024, because cold weather prevented completion.
       - Adopt an updated recycled product purchasing policy required for the town to continue receiving DEP grants.
       - Approve Marblehead Historical Commission use of Old Townhouse on Sunday March 10, 2024, 12:30–4:30 PM for a lecture on Glover's Farmhouse, with rental fee waived.
-    key_speakers: ["Patrick Keyser (Town Administrator)", "Sarah Fox (Select Board Chair)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
   - topic: public-comment
     topic_confidence: 0.75
     start_seconds: 11269
@@ -166,12 +166,12 @@ topic_segments:
     headline: "Town administrator updates: Mary Alley building shutdown Feb 23; cable TV advisory committee recruitment"
     dek: "Plumbing work requires closing Mary Alley Building on February 23; the cable TV advisory committee needs four new members before contract renegotiation in 2025."
     summary: |
-      Town Administrator Keyser provided two updates:
+      Town Administrator Kezer provided two updates:
       
       1. **Mary Alley Building** will be closed on Friday February 23, 2024 for plumbing maintenance (water supply must be shut off). Union staff directly involved in the project will work; other union members get the day off without makeup; administrative staff will work remotely.
       
       2. **Cable TV Advisory Committee**: The current committee has one member (Mr. Peck). The Comcast/cable franchise contract expires January 2025, requiring a negotiation process defined under the Cable TV Act. The board agreed to post for four new members with a deadline of March 8 and to consider appointments at the March 13 meeting.
-    key_speakers: ["Patrick Keyser (Town Administrator)", "Sarah Fox (Select Board Chair)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)", "Sarah Fox (Select Board Chair)"]
   - topic: admin-housekeeping
     topic_confidence: 0.78
     start_seconds: 11555
@@ -738,15 +738,15 @@ topic_segments:
 
 **[3:00:34](https://vimeo.com/911126003#t=10834s)** Um, okay. Next we have a letter and a request from the Corinthian Yacht Club, um, for the, um, temporary temporary closure of Corinthian Lane seven to four. Um, I think it's pretty self-explanatory. Um, I'll ask for a motion to approve the request from Timothy Dietrich Corinthian Yacht Club for temporary closure of Corinthian lien on Saturday August 10th, 2024 from seven to four 7:00 AM to 4:00 PM to fac to facilitate two events, subject to approval from police and fire, and police details as needed. So moved. Second. All in favor Present. A. And they've, they've approved this police and Fire. Oh, thank you. Okay.
 
-**[3:01:21](https://vimeo.com/911126003#t=10881s)** Um, we are, I am postponing the request on the revolving fund, and that brings us to item nine is the Abbott Library Foundation.
+**[3:01:21](https://vimeo.com/911126003#t=10881s)** Um, we are, I am postponing the request on the revolving fund, and that brings us to item nine is the Abbot Library Foundation.
 
-**[3:01:33](https://vimeo.com/911126003#t=10893s)** Um, so this is for, you know, one of our 5K walk, five Ks in town. So I, uh, need a motion to approve the request from Tanya Walker Abbot Public Library Foundation to hold a 5K walk on Saturday, June 15th, 2024, starting at 9:00 AM at the Vets Middle School, and finishing at Abbott Library. Approval is subject to receipt of the required certificate of insurance naming the town is additionally insured with end approval from the Marble police, fire, and schools and police details. As determined, no permanent markings are allowed on the streets and all temporary markings shall be removed at the conclusion of the event. So moved. Second. All in favor, a Sunday liquor license, um, from request from Marblehead Arts Association.
+**[3:01:33](https://vimeo.com/911126003#t=10893s)** Um, so this is for, you know, one of our 5K walk, five Ks in town. So I, uh, need a motion to approve the request from Tanya Walker Abbot Public Library Foundation to hold a 5K walk on Saturday, June 15th, 2024, starting at 9:00 AM at the Vets Middle School, and finishing at Abbot Library. Approval is subject to receipt of the required certificate of insurance naming the town is additionally insured with end approval from the Marblehead police, fire, and schools and police details. As determined, no permanent markings are allowed on the streets and all temporary markings shall be removed at the conclusion of the event. So moved. Second. All in favor, a Sunday liquor license, um, from request from Marblehead Arts Association.
 
 **[3:02:19](https://vimeo.com/911126003#t=10939s)** This is, um, as the application as well. So, um, this will be a polled vote. And I first need a motion to approve this request from Casi Kindle for two one day liquor licenses for Saturday, February 10th, 2024 from five to 10:00 PM and Sunday February 11th, 2024 from 12 to 5:00 PM at the King Hooper Mansion, eight Hooper Street, subject to the following conditions, delivery of and receipt by the licensing authority of the required fee of $50 each delivery of, and receipt of by the licensing authority of proof that the alcohol will be purchased from an authorized source, proof that the applicant could receive proper delivery, provide proper storage and disposal of all alcoholic beverages purchased. All in accordance with the requirements of general laws.
 
 **[3:03:04](https://vimeo.com/911126003#t=10984s)** Chapter 1 38, alcohol will be purchased from CAP'S importing, and if you could help us with the cold voice. So moved. Oh, sorry. Second. Okay. Ms. Singer, Hanging on. Mr. Murray. In favor, Mr. Grader? In favor, Mr. Nye In favor, Ms. Nun In favor? Okay. Temp Emanuel. It's also requesting a one day liquor license. Um, we need a motion to approve the request from Jamie Meyers Temple Emanuel for a one day liquor license on Wednesday, April 10th, 2024 from 6:30 PM to 11:00 PM at Temple Emanuel at 3 93 Atlantic Avenue, subject to our usual following conditions. Delivery of a receipt by the licensing authority of the required fee of $50 each delivery of and receipt by the licensing authority of proof that the alcohol will be purchased from an authorized source.
 
-**[3:03:50](https://vimeo.com/911126003#t=11030s)** Proof that the applicant can receive proper delivery, proper, provide proper storage and disposal of all alcoholic beverages purchased, all in accordance with the requirements of general law. Chapter 1 38. Alcohol will be purchased from Beachmont Liquors. So Moved. Second. Mr. Murray. In favor, Mr. Grader? In favor, Mr. Nye In favor, Ms. Singer? In favor, Ms. Nun In favor. Next on our agenda and us Mr. Keyser, to speak to the old townhouse painting project? Yeah. So, um, not all the painting was able to get done before the season changed. So we're gonna do some additional painting to be done, uh, in the spring weather. So we need to extend the contract date to allow for that to happen. Okay. Um, so we need a motion to amend the contract
+**[3:03:50](https://vimeo.com/911126003#t=11030s)** Proof that the applicant can receive proper delivery, proper, provide proper storage and disposal of all alcoholic beverages purchased, all in accordance with the requirements of general law. Chapter 1 38. Alcohol will be purchased from Beachmont Liquors. So Moved. Second. Mr. Murray. In favor, Mr. Grader? In favor, Mr. Nye In favor, Ms. Singer? In favor, Ms. Nun In favor. Next on our agenda and us Mr. Kezer, to speak to the old townhouse painting project? Yeah. So, um, not all the painting was able to get done before the season changed. So we're gonna do some additional painting to be done, uh, in the spring weather. So we need to extend the contract date to allow for that to happen. Okay. Um, so we need a motion to amend the contract
 
 **[3:04:38](https://vimeo.com/911126003#t=11078s)** for old townhouse exterior painting project John Scorza and Company of Bev Peabody Mass by extending the contract to May 30th, 2024. And authorize the chair to sign the contract on behalf of the board. So Moved. Second. All in favor? Okay. Uh, this is around our recycling grants, which we renew. Um, So yes. So on this one, um, in order for the town to continue to apply for and receive grants from the DEP, we must have a recycling product purchasing policy. So we, we reviewed it and we've made some updates to it to make it more current. So we're asking the board to, um, approve this updated version, um,
 

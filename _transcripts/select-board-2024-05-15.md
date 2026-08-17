@@ -19,7 +19,7 @@ summary_card:
     - "Approved permanent outdoor seating extension for My Thai Lounge liquor license (18 seats max)"
     - "Approved minutes of April 24, May 6, and May 7, 2024"
     - "Approved Best Friends breast cancer walk at Devereux Beach, October 13, 2024"
-    - "Approved nunc pro tunc National Prayer Day at Abbott Hall, May 2, 2024"
+    - "Approved nunc pro tunc National Prayer Day at Abbot Hall, May 2, 2024"
     - "Approved $16,000 reserve fund transfer request for fire department ladder truck maintenance"
     - "Approved acceptance of donated stationary bicycle for police department"
     - "Approved Company to Heroes 5K run/walk, September 14, 2024"
@@ -34,7 +34,7 @@ summary_card:
     - "Approved first option year for town-wide pavement markings contract at $48,625"
     - "Approved 60-month lease for two Ford F-550 trucks at $62,000 annually"
     - "Approved parking restrictions for MMLD infrastructure work on Commercial Street, Bessam Street, Heritage Way, Roundhouse Road, and School Street parking lot"
-    - "Approved Rotary Club Holiday Pops concert at Abbott Hall, December 14, 2024, with fee waiver"
+    - "Approved Rotary Club Holiday Pops concert at Abbot Hall, December 14, 2024, with fee waiver"
     - "Approved one-day liquor license for Rotary Club Holiday Pops, December 14, 2024"
     - "Approved proclamation recognizing Dave Rogers for years of Memorial Day service"
   votes:
@@ -74,7 +74,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "MMLD parking restrictions"
       result: "in favor (unanimous)"
-    - motion: "Holiday Pops concert at Abbott Hall with fee waiver"
+    - motion: "Holiday Pops concert at Abbot Hall with fee waiver"
       result: "in favor (unanimous)"
     - motion: "One-day liquor license for Holiday Pops"
       result: "in favor (unanimous)"
@@ -127,7 +127,7 @@ topic_segments:
       
       1. **Meeting minutes** for April 24, May 6, and May 7, 2024.
       2. **Best Friends walk** (Rocco Sena / MGH Chelsea Healthcare Center) — annual breast cancer walk at Devereux Beach, Sunday October 13, 2024, 9:30 AM; subject to police/rec/parks approval and $1M/$2M certificate of insurance.
-      3. **National Prayer Day** (nunc pro tunc) — request from Don Warren and Rabbi Meyer to hold the Annual National Prayer Day at Abbott Hall on May 2, 2024.
+      3. **National Prayer Day** (nunc pro tunc) — request from Don Warren and Rabbi Meyer to hold the Annual National Prayer Day at Abbot Hall on May 2, 2024.
   - topic: public-safety
     topic_confidence: 0.88
     start_seconds: 589
@@ -274,10 +274,10 @@ topic_segments:
     topic_confidence: 0.92
     start_seconds: 4307
     end_seconds: 4444
-    headline: "Rotary Club Holiday Pops concert at Abbott Hall approved for December 14, 2024 with fee waiver"
+    headline: "Rotary Club Holiday Pops concert at Abbot Hall approved for December 14, 2024 with fee waiver"
     dek: "The board unanimously approved the event and associated one-day liquor license for the annual Rotary Club benefit concert."
     summary: |
-      The Rotary Club of Marblehead Harbor received approval to hold the annual Holiday Pops Concert and pre-concert reception at Abbott Hall on Saturday, December 14, 2024, 4:00 PM–11:00 PM, with setup access on December 13 and breakdown on December 16.
+      The Rotary Club of Marblehead Harbor received approval to hold the annual Holiday Pops Concert and pre-concert reception at Abbot Hall on Saturday, December 14, 2024, 4:00 PM–11:00 PM, with setup access on December 13 and breakdown on December 16.
       
       The rental fee was waived. A one-day all-alcoholic beverage license was approved for 5:00 PM–11:00 PM on December 14, with alcohol to be purchased from North Shore Bartenders and no overnight storage on premises.
   - topic: public-comment
@@ -354,7 +354,7 @@ topic_segments:
 
 **[8:08](https://vimeo.com/946828729#t=488s)** So we have an application here from Rocco, and very good cause involving the MGH Chelsea Healthcare Center. And the motion is pretty self-explanatory. If I have any, no questions on this. And I'd like to entertain a motion to approve, uh, the request from Roco Sena to hold the annual Best Friends walk on Sunday, October 13th, 2024 at 9:30 AM subject to approval from the Marblehead Police recreation parks, uh, and receipt of the required certificate of insurance in the amount of 1 million slash 2 million. That's the occurrence in the aggregate naming the town as additionally insured and, and police details. The walk will start and finish at Devereux Beach.
 
-**[8:54](https://vimeo.com/946828729#t=534s)** No permanent markings are allowed on the streets, and all temporary markings shall be removed at the conclusion of the event. So moved. And a second, please. Second. All those in favor? Okay. Unanimous. Outstanding. Um, okay, now we have, um, a, we're gonna vote on the National Prayer Day, which is actually, uh, what they call a nun proton, uh, vote, which means that the National Prayer Day has, uh, occurred. Uh, but that we, we need to, we need to vote on it, uh, right now. So the motion is, uh, to approve the request from Don Warren and Rabbi Meyer to hold, uh, the Annual National Prayer Day at Abbott Hall on May 2nd, 2024.
+**[8:54](https://vimeo.com/946828729#t=534s)** No permanent markings are allowed on the streets, and all temporary markings shall be removed at the conclusion of the event. So moved. And a second, please. Second. All those in favor? Okay. Unanimous. Outstanding. Um, okay, now we have, um, a, we're gonna vote on the National Prayer Day, which is actually, uh, what they call a nun proton, uh, vote, which means that the National Prayer Day has, uh, occurred. Uh, but that we, we need to, we need to vote on it, uh, right now. So the motion is, uh, to approve the request from Don Warren and Rabbi Meyer to hold, uh, the Annual National Prayer Day at Abbot Hall on May 2nd, 2024.
 
 **[9:40](https://vimeo.com/946828729#t=580s)** So moved second. All in favor? Thank you. Uh, we now have the Reserve Fund transfer.
 
@@ -390,7 +390,7 @@ topic_segments:
 
 **[20:36](https://vimeo.com/946828729#t=1236s)** Install yield lines at shark's teeth pavement markings in both directions of Village Street. At least 20 to 50 feet in advance of the crosswalk marking on Village Street in front of the school. Do I have a motion? I moved. Second. Second. All in favor? Unanimous. Thank you, chief. Thank you. Well done. Welcome. Thank you for pursuing this
 
-**[21:02](https://vimeo.com/946828729#t=1262s)** Mr. Chairman. The next item, Joe Alek, is on his way to present. Okay. Uh, we're moving faster than, Than anticipated. Anticipated. So if we could come back to that when He Yeah, let's go ahead and do that. So, we'll, we will, uh, we'll put, uh, agenda item, item 12 on, on the back burner here, put it to the end of the thing. And we've got 13 I think are contracts. Yes. Okay. We have a series that we need to vote on, and you've had a chance to look at them. The, uh, motions are self-explanatory as to what the, to what is involved. And if not, then we'll ask on the, uh, on, uh, Mr. Keyser to give us to, you know, shed some light on it. Okay.
+**[21:02](https://vimeo.com/946828729#t=1262s)** Mr. Chairman. The next item, Joe Alek, is on his way to present. Okay. Uh, we're moving faster than, Than anticipated. Anticipated. So if we could come back to that when He Yeah, let's go ahead and do that. So, we'll, we will, uh, we'll put, uh, agenda item, item 12 on, on the back burner here, put it to the end of the thing. And we've got 13 I think are contracts. Yes. Okay. We have a series that we need to vote on, and you've had a chance to look at them. The, uh, motions are self-explanatory as to what the, to what is involved. And if not, then we'll ask on the, uh, on, uh, Mr. Kezer to give us to, you know, shed some light on it. Okay.
 
 **[21:48](https://vimeo.com/946828729#t=1308s)** So the first motion to entertain, I'll go right ahead in and to amend the contract for the Harbor Plan project between the town and in its associates to extend the time for performance to June 30th, 2023. And authorized the chair to sign the amendment on behalf of the board. So we have notes here, Thatcher, that says, uh, this is being done in order to close out the project file. And I guess that that involves Still in the contracts of final payments are captured within the dates of Gotcha transaction. Okay. Still moved. Second. All those in favor? Unanimous. The next one is a publicly employee, a public employee committee contract. Uh, and the motion, uh, is to approve the public employee committee agreement
 
@@ -536,11 +536,11 @@ topic_segments:
 
 **[1:11:13](https://vimeo.com/946828729#t=4273s)** Breaking a sewer. Yeah. Everybody sleep better. That's great. All right. Let's see. We are, we, we did contracts. I think we're at the letter of 14. Did we do contracts or do we need Separate? Yes, we're 14. 14. We're on 14. Letter of interest. Yes. Alright. Um, I think we've got a letter of interest, which we'll put into the record from Karen, uh, CIO for Harbors and Waters. And you can see her, uh, excellent detailed letter of interest and, uh, her cv.
 
-**[1:11:47](https://vimeo.com/946828729#t=4307s)** And, uh, we'll, we'll go ahead and please put that into the record, Kyle. All right. Uh, have it all. Holiday pops. December 14th is next on our, Wow. It's happening. Yeah, we're planning for it already. Memorial Day yet, Getting ahead of the game. So this is for December? Yeah, I think the, yeah, it's always a great festive holiday. The motion is self-explanatory. I'd like to entertain a request from the Rotary Club of Marblehead Club of Marblehead Harbor to hold the annual holiday pops concert and pre-con reception at Abbott Hall on Saturday, December 14th, 2024. Subject to the usual rules, regulations, fees, and receipt of the, uh, required certificate of insurance naming the town
+**[1:11:47](https://vimeo.com/946828729#t=4307s)** And, uh, we'll, we'll go ahead and please put that into the record, Kyle. All right. Uh, have it all. Holiday pops. December 14th is next on our, Wow. It's happening. Yeah, we're planning for it already. Memorial Day yet, Getting ahead of the game. So this is for December? Yeah, I think the, yeah, it's always a great festive holiday. The motion is self-explanatory. I'd like to entertain a request from the Rotary Club of Marblehead Club of Marblehead Harbor to hold the annual holiday pops concert and pre-con reception at Abbot Hall on Saturday, December 14th, 2024. Subject to the usual rules, regulations, fees, and receipt of the, uh, required certificate of insurance naming the town
 
 **[1:12:33](https://vimeo.com/946828729#t=4353s)** of Marblehead is additionally insured as follows. And to waive the rental fee for the event Friday, December 13th, 2024, 8:00 AM to noon, Saturday, December 14th, 2024, 4:00 PM to 11:00 PM Monday, December 16th, 2024, 8:00 AM to noon. So moved. Second. Second. All in favor? Okay. Unanimous. Thank you. All right. We now have a, uh, one day liquor license. And this is for the, in relation to the holiday pops. Again, the motion is pretty long and self-explanatory. I'd like to entertain a motion from the Rotary Club of Marblehead Harbor for a one day liquor license for Sunday, sorry, Saturday,
 
-**[1:13:18](https://vimeo.com/946828729#t=4398s)** December 14th, 2024 at Abbott Hall, 180 8 Washington Street, 5:00 PM to 11:00 PM subject to the following conditions, delivery of and receipt by the licensing authority of the required fee, $50 delivery of and receipt by the licensing authority of proof that the alcohol will be purchased from an authorized source. Proof that the applicant can receive proper delivery, provide proper storage and disposal of all alcoholic beverages purchased. All in accordance with the requirement of general law. Section 1 38. Alcohol will be purchased from North Shore Bartenders Liquor liability insurance. No alcohol is to be stored on premises overnight. A motion please. Moved a second. And it's, it's a polled vote. Thank you. Murray in favor, Mr. Tenai? Uh, present Ms. Singer? In favor,
+**[1:13:18](https://vimeo.com/946828729#t=4398s)** December 14th, 2024 at Abbot Hall, 180 8 Washington Street, 5:00 PM to 11:00 PM subject to the following conditions, delivery of and receipt by the licensing authority of the required fee, $50 delivery of and receipt by the licensing authority of proof that the alcohol will be purchased from an authorized source. Proof that the applicant can receive proper delivery, provide proper storage and disposal of all alcoholic beverages purchased. All in accordance with the requirement of general law. Section 1 38. Alcohol will be purchased from North Shore Bartenders Liquor liability insurance. No alcohol is to be stored on premises overnight. A motion please. Moved a second. And it's, it's a polled vote. Thank you. Murray in favor, Mr. Tenai? Uh, present Ms. Singer? In favor,
 
 **[1:14:04](https://vimeo.com/946828729#t=4444s)** Mr. Grader? In favor. Okay. All right. We have another poll vote coming up in relation to, uh, so This is the go to the executive session, so we'll Oh, that's right. It is. Okay. So this brings our, that's correct. So this is, uh, in, in conjunction with a motion to adjourn. We're gonna move to executive session, uh, from which we will, uh, you know, end our session there. So the motion is as follows to move. Why Don't we do the Yeah, we're just Reordering We just flipped that down, didn't we? Right. You took it Yeah, you explained that to me. So public comment before we came into the meeting. Yeah. So the arrows there. Yeah. Okay. You're right. We gotta move to public comment first. Uh, anybody online or within the room, please?
 
@@ -550,7 +550,7 @@ topic_segments:
 
 **[1:16:23](https://vimeo.com/946828729#t=4583s)** after the town meeting was completed, the fact that, um, in regard to the MBTA zoning, uh, Warren Arco, that that did not pass. Um, so as this stands right now, Marblehead is still a compliant community in that regard. Um, we are compliant until, uh, December, the end of December, 2024. Um, and as I've said in other places, I think what adds to the confusion is what happened in Milton was that the town of Milton passed in town meeting successfully passed their zoning amendments, and they had a deadline of December, 2023. But they have a provision provision in their charter that allows a citizen ballot
 
-**[1:17:09](https://vimeo.com/946828729#t=4629s)** to repeal an act of town meeting. And so the citizens did that in 2024. So that immediately after the, they were in violation to repeal it, they were no longer in compliance. So it, it is not the same scenario here as it is, uh, in the case in Milton. So, uh, I just keep emphasizing that 'cause I keep getting calls or questions in, in that regard. So we, we are compliant un until the end of the year, um, um, until we, um, can try again to, to try to get, uh, some kind of zoning amendment passed. Um, the second item, um, uh, in regard to, uh, the JCC is awarding the Marvel Head Police Department,
+**[1:17:09](https://vimeo.com/946828729#t=4629s)** to repeal an act of town meeting. And so the citizens did that in 2024. So that immediately after the, they were in violation to repeal it, they were no longer in compliance. So it, it is not the same scenario here as it is, uh, in the case in Milton. So, uh, I just keep emphasizing that 'cause I keep getting calls or questions in, in that regard. So we, we are compliant un until the end of the year, um, um, until we, um, can try again to, to try to get, uh, some kind of zoning amendment passed. Um, the second item, um, uh, in regard to, uh, the JCC is awarding the Marblehead Police Department,
 
 **[1:17:59](https://vimeo.com/946828729#t=4679s)** the, uh, stall community service award, um, for the police department's efforts of making them feel safe in their buildings, as well as, uh, the Epstein Hillel, um, who is recognized in the Marblehead Police Department at the end of their, uh, and their school year. So, congratulations to the police department for all the work they've been doing, um, with those folks, uh, in the current climate to en ensure their safety and, and, and make them feel safe, uh, within the community. So congratulations to the chief and this,
 

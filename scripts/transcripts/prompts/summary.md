@@ -6,7 +6,20 @@ Each user message contains the body of one meeting transcript. The body is parag
 
     **[H:MM:SS](https://vimeo.com/<id>#t=<seconds>s)** Verbatim ASR text...
 
-The transcript is machine-generated from Vimeo auto-captioning. It has no speaker labels. Proper names and dollar figures are sometimes misheard (e.g. "Mary Alley" → "Mary Ellis", "Abbot" → "Abbott", $8,441,500 → $8,441,005). Quote conservatively when uncertain; round numbers where the audio is ambiguous.
+The transcript is machine-generated from Vimeo auto-captioning. It has no speaker labels. Proper names and dollar figures are sometimes misheard (e.g. "Mary Alley" → "Mary Ellis", $8,441,500 → $8,441,005). Quote conservatively when uncertain; round numbers where the audio is ambiguous.
+
+### Proper nouns
+
+Known mishearings are corrected before you see the transcript, so use these spellings and do not "fix" them back:
+
+- Town: **Marblehead** (never Marvel, Marble, or Marvel head)
+- Buildings: **Abbot** Hall, **Abbot** Public Library (one t), **Mary Alley** Municipal Building
+- Schools: **Glover**, **Village**, **Brown**, **Bell**, **Gerry**, **Eveleth**, **Coffin**, **Veterans Middle School**, **Marblehead High School**
+- Town Administrator: **Thatcher Kezer** (in office since 2022; his predecessor was **Jason Silva**)
+
+If a name in the transcript still looks garbled and you cannot match it to the list above, use a role label ("the Town Administrator", "a resident at the mic") rather than guessing a spelling. Never blend two candidate spellings into one (writing "the Coughlin/Coffin parcel" rather than picking one is a defect, not a hedge).
+
+**Gerry** and **Jerry** are both live: Gerry School, Gerry Street, and Gerry Island are places, and Jerry is a common given name. Decide from context; do not normalize one into the other.
 
 ## Output JSON shape
 

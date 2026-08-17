@@ -24,16 +24,16 @@ summary_card:
     - "Approved one-day liquor license for Symphony by the Sea at Old North Church (October 1, 2023)"
     - "Approved one-day liquor license for Greg Mancuso Ungaro at St. Andrew's Church (October 20, 2023)"
     - "Approved delegation of town administrator to appoint Health and Safety Committee members per MEU contract Article 35"
-    - "Approved Festival of Arts use of Abbott Hall for Christmas Walk Artisans Marketplace (December 1–3, 2023)"
+    - "Approved Festival of Arts use of Abbot Hall for Christmas Walk Artisans Marketplace (December 1–3, 2023)"
     - "Approved Marblehead Rotary 5K on November 5, 2023"
     - "Approved contract for window restoration at Franklin Street Firehouse to Foster Architects for $24,200"
     - "Approved contract for DPW and police station roof project to Corolla Roof of Winthrop MA for $1,243,689"
     - "Approved private drain connection license agreement for 325 Ocean Avenue"
     - "Approved temporary no-parking tow zone on Roundhouse Road area for October 23–24, 2023 cleanup"
-    - "Approved use of Abbott Hall for Marblehead High School art show (May 6–24, 2024)"
+    - "Approved use of Abbot Hall for Marblehead High School art show (May 6–24, 2024)"
     - "Accepted resignations of Yom Tom Menjur and Beth Johnson from the Marblehead Cultural Council"
     - "Approved shanty renewal for Doug Percy, Front Street shanty number six"
-    - "Approved use of Abbott Hall for wedding ceremony on September 16, 2023"
+    - "Approved use of Abbot Hall for wedding ceremony on September 16, 2023"
     - "Set September 22 deadline for Measure of Leather applications; interviews September 27"
     - "Set October 6 deadline for Historical Commission applications"
     - "Set September 22 deadline for Traffic Safety Advisory Committee applications; interviews September 27"
@@ -54,7 +54,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Delegate town administrator to appoint Health and Safety Committee members"
       result: "in favor (unanimous)"
-    - motion: "Festival of Arts use of Abbott Hall (December 2023)"
+    - motion: "Festival of Arts use of Abbot Hall (December 2023)"
       result: "in favor (unanimous)"
     - motion: "Marblehead Rotary 5K approval"
       result: "in favor (unanimous)"
@@ -66,13 +66,13 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Temporary no-parking zone for Roundhouse Road cleanup"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall use for MHS art show (May 2024)"
+    - motion: "Abbot Hall use for MHS art show (May 2024)"
       result: "in favor (unanimous)"
     - motion: "Accept Cultural Council resignations"
       result: "in favor (unanimous)"
     - motion: "Approve shanty renewal for Doug Percy"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall use for wedding ceremony (September 16, 2023)"
+    - motion: "Abbot Hall use for wedding ceremony (September 16, 2023)"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -120,9 +120,9 @@ topic_segments:
     topic_confidence: 0.9
     start_seconds: 613
     end_seconds: 705
-    headline: "Abbott Hall approved for Festival of Arts Christmas Walk Artisans Marketplace"
-    dek: "The Marblehead Festival of Arts received approval to use Abbott Hall's second floor December 1–3, 2023 for their annual marketplace."
-    summary: "The board unanimously approved the request from the Marblehead Festival of Arts to use Abbott Hall for the annual Artisans Marketplace during the Christmas Walk on Friday December 1 (5:30–8:30 PM), Saturday December 2 (7 AM–5:30 PM), and Sunday December 3 (9 AM–6:30 PM), subject to usual rules, regulations, fees, and certificate of insurance."
+    headline: "Abbot Hall approved for Festival of Arts Christmas Walk Artisans Marketplace"
+    dek: "The Marblehead Festival of Arts received approval to use Abbot Hall's second floor December 1–3, 2023 for their annual marketplace."
+    summary: "The board unanimously approved the request from the Marblehead Festival of Arts to use Abbot Hall for the annual Artisans Marketplace during the Christmas Walk on Friday December 1 (5:30–8:30 PM), Saturday December 2 (7 AM–5:30 PM), and Sunday December 3 (9 AM–6:30 PM), subject to usual rules, regulations, fees, and certificate of insurance."
   - topic: recreation-events
     topic_confidence: 0.85
     start_seconds: 706
@@ -148,11 +148,11 @@ topic_segments:
     start_seconds: 937
     end_seconds: 1091
     headline: "Private drain license, Roundhouse Road cleanup, and MHS art show approved"
-    dek: "Three routine approvals covered a drain easement renewal at 325 Ocean Avenue, an annual DPW cleanup tow zone, and use of Abbott Hall for the high school art show."
+    dek: "Three routine approvals covered a drain easement renewal at 325 Ocean Avenue, an annual DPW cleanup tow zone, and use of Abbot Hall for the high school art show."
     summary: |
       - **Private drain connection**: License agreement renewed for new owners Sue and Hughes Scandrett at 325 Ocean Avenue, covering an existing easement.
       - **Roundhouse Road cleanup**: Temporary no-parking tow zone approved for Roundhouse Road from School Street to Bessam Street and Upper Anderson Street on October 23, 2023 (rain date October 24), 7 AM–3 PM.
-      - **MHS Art Show**: Use of Abbott Hall approved for the annual Marblehead High School Art Show, May 6–24, 2024, with an opening reception May 14, 2024.
+      - **MHS Art Show**: Use of Abbot Hall approved for the annual Marblehead High School Art Show, May 6–24, 2024, with an opening reception May 14, 2024.
     key_speakers: ["Town Administrator (unidentified)"]
   - topic: recreation-events
     topic_confidence: 0.92
@@ -204,9 +204,9 @@ topic_segments:
     topic_confidence: 0.8
     start_seconds: 2493
     end_seconds: 2578
-    headline: "Abbott Hall approved for wedding ceremony on September 16, 2023"
+    headline: "Abbot Hall approved for wedding ceremony on September 16, 2023"
     dek: "The request was approved on short notice after rain from an approaching hurricane caused a Crocker Park outdoor ceremony to be relocated indoors."
-    summary: "The board unanimously approved use of Abbott Hall for a wedding ceremony for Thomas Smith on Saturday September 16, 2023 from noon to 6 PM. The original venue was Crocker Park, but the event was moved indoors due to the approaching hurricane. The board noted the personal significance of the event for the applicant."
+    summary: "The board unanimously approved use of Abbot Hall for a wedding ceremony for Thomas Smith on Saturday September 16, 2023 from noon to 6 PM. The original venue was Crocker Park, but the event was moved indoors due to the approaching hurricane. The board noted the personal significance of the event for the applicant."
   - topic: public-comment
     topic_confidence: 0.95
     start_seconds: 2579
@@ -274,7 +274,7 @@ topic_segments:
 
 **[9:56](https://vimeo.com/864231073#t=596s)** So we did have conversation, we're working on, you know, addressing, uh, some of the, some of the issues in that building. Great. So thank you. Thank You. Um, All in favor?
 
-**[10:13](https://vimeo.com/864231073#t=613s)** Okay. Next we have a request from the Marblehead Festival of Arts for the upcoming Marblehead Christmas walk. And, um, they are asking permission to utilize the second floor of Abbott Hall for the Artisans marketplace as they do annually. Um, so the dates are here and they're in the motion. So I'll just go ahead and read the motion that we're looking for to approve the request from the Festival of Arts to use Abbott Hall for their annual artisans marketplace on the following days. All in accordance with the usual rules, regulations, fees, and receipt of the required certificate of insurance. Friday, December 1st, 2023, 5:30 PM to 8:30 PM Saturday, December 1st, 2023, 7:00 AM to 5:30 PM Sunday, December 3rd,
+**[10:13](https://vimeo.com/864231073#t=613s)** Okay. Next we have a request from the Marblehead Festival of Arts for the upcoming Marblehead Christmas walk. And, um, they are asking permission to utilize the second floor of Abbot Hall for the Artisans marketplace as they do annually. Um, so the dates are here and they're in the motion. So I'll just go ahead and read the motion that we're looking for to approve the request from the Festival of Arts to use Abbot Hall for their annual artisans marketplace on the following days. All in accordance with the usual rules, regulations, fees, and receipt of the required certificate of insurance. Friday, December 1st, 2023, 5:30 PM to 8:30 PM Saturday, December 1st, 2023, 7:00 AM to 5:30 PM Sunday, December 3rd,
 
 **[10:59](https://vimeo.com/864231073#t=659s)** 9:00 AM to 6:30 PM So moved. Second. Uh, All in favor? Okay. Um, Uh, Next, um, is a request from the Rotary Club for an event for the Rotary's, um, annual five K, uh, on November 5th at 11. They're looking have 150 to 200 participants, and it will begin and end at the Boston Yacht Club. It's a fun race. Um, I asked for a motion to approve the request from Nancy Archer Gwen, co-president of the Marblehead Rotary Club, to hold the Marblehead Rotary five K on Sunday, November 5th at 11:00 AM Subject to approval from police and fire receipt of the required certificate of insurance and police details.
 
@@ -366,7 +366,7 @@ topic_segments:
 
 **[40:56](https://vimeo.com/864231073#t=2456s)** um, uh, one vacancy, which is a three year term and conservation commission, one vacancy, which is a three-year term. And we are encouraging all residents to send their interest, um, to, for all the boards and committees. Regardless if there is a current vacancy, these letters will be kept on file and the town will reach out when there's a vacancy which occurs. Uh, so please check out our openings and the positions that are posted too. Okay. Um, so the letters of interest are in the packet, can look at.
 
-**[41:33](https://vimeo.com/864231073#t=2493s)** Um, okay. And next we have a request for a wedding ceremony. Oh, This is coming up soon, um, This weekend. Yeah. Uh, this is important for the, for the planning. Right. So, um, I'll ask for a motion to approve this request from Thomas Smith to use Abbott Hall for a wedding ceremony on Saturday, September 16th, from 12 noon to 6:00 PM subject to the usual rules, regulations, fees, and receipt of the required certificate of insurance. So moved. I'll second. All in Favor? So the letter, just, not that they were last, a second. It was supposed to be a Crocker park, but with the, uh, expected rain on Saturday, uh, they're scrambling and, um,
+**[41:33](https://vimeo.com/864231073#t=2493s)** Um, okay. And next we have a request for a wedding ceremony. Oh, This is coming up soon, um, This weekend. Yeah. Uh, this is important for the, for the planning. Right. So, um, I'll ask for a motion to approve this request from Thomas Smith to use Abbot Hall for a wedding ceremony on Saturday, September 16th, from 12 noon to 6:00 PM subject to the usual rules, regulations, fees, and receipt of the required certificate of insurance. So moved. I'll second. All in Favor? So the letter, just, not that they were last, a second. It was supposed to be a Crocker park, but with the, uh, expected rain on Saturday, uh, they're scrambling and, um,
 
 **[42:19](https://vimeo.com/864231073#t=2539s)** Oh goodness. Okay. Right. The hurricane. And Thomas Smith's a very interesting story, but he had, uh, two back surgeries and he promised his mom, uh, that he'd walk down the, he'd be able to walk by the time his wedding came. So this is, uh, a big milestone for him. Yeah. So, yeah, real, Real, a great letter, real story of grit. That's determination. Yeah. Yep. Yeah. Okay. I think we need to vote. Did we vote? No, We didn't vote. Okay. All in favor? We had a motion, a second vote. Right? All in favor? Okay.
 

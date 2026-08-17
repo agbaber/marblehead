@@ -110,7 +110,7 @@ topic_segments:
       - ~$33,000 for public buildings gas bills
       - ~$15,000 for park facilities heating/gas
       - ~$6,350 for planning board legal services and ~$617 for legal notices
-      - ~$5,050 for Abbott Library materials (transferred from salary line)
+      - ~$5,050 for Abbot Library materials (transferred from salary line)
       - ~$1,305 for veterans flags
       - ~$1,222 for police out-of-rank costs
       - $67 for finance committee dues and training
@@ -287,7 +287,7 @@ topic_segments:
       - Ideal start date for a new administrator: end of December 2026
       - If a candidate is currently employed, two months' notice would be expected, requiring a signed offer by approximately October
       - The board expressed a preference for overlap between outgoing and incoming administrators
-      - Town Administrator Thatcher Keezer is preparing a transition document covering all of his responsibilities
+      - Town Administrator Thatcher Kezer is preparing a transition document covering all of his responsibilities
       
       Detailed timeline planning was deferred to the July 24 retreat.
   - topic: admin-housekeeping
@@ -295,11 +295,11 @@ topic_segments:
     start_seconds: 7109
     end_seconds: 7386
     headline: "Consent agenda approved; MLT granted three parking spaces on July 4th; book on Marblehead history announced"
-    dek: "The board approved routine consent agenda items and a late-added request from Marblehead Little Theater for parking restrictions on July 4th, and noted a new 250th anniversary history book available at Abbott Hall."
+    dek: "The board approved routine consent agenda items and a late-added request from Marblehead Little Theater for parking restrictions on July 4th, and noted a new 250th anniversary history book available at Abbot Hall."
     summary: |
       **Consent agenda approved (5–0):**
       - Meeting minutes: April 27, May 4, June 10, and June 17, 2026
-      - Abbott Hall use July 19, 2026 for American Revolution talk sponsored by National Grand Bank and VFW Chaplain Lyman Rollins Post 2005
+      - Abbot Hall use July 19, 2026 for American Revolution talk sponsored by National Grand Bank and VFW Chaplain Lyman Rollins Post 2005
       - Surplus equipment declaration: Canon imageCLASS MF4770n, HP LaserJet Enterprise M608, HP LaserJet 9040n
       - Best Friends Walk on October 4, subject to police, fire, and recreation/parks approval; no permanent markings allowed
       
@@ -307,7 +307,7 @@ topic_segments:
       Marblehead Little Theater was granted restriction of three parking spaces directly in front of 12 School Street on July 4, 2026 from noon to 4:00 p.m. for an outdoor terrace event. A larger request was reduced based on traffic and public safety considerations.
       
       **Announcements:**
-      - The Marblehead Historical Commission announced a new book, *Mapping Marblehead: Five Centuries of Marblehead History*, available at Abbott Hall Gift Shop on or shortly after July 4th for a minimum of $10.
+      - The Marblehead Historical Commission announced a new book, *Mapping Marblehead: Five Centuries of Marblehead History*, available at Abbot Hall Gift Shop on or shortly after July 4th for a minimum of $10.
       - The master plan survey (2037 horizon) is available online.
       - Paving is scheduled for Wednesday on Atlantic Avenue and Boobyer Street.
 ---
@@ -622,7 +622,7 @@ topic_segments:
 
 **[1:25:47](https://vimeo.com/1204626570#t=5147s)** So, if I could have a motion to approve the First Amendment of the lease between the Town North Shore Medical Center, Inc., doing business as Salem Hospital, as prepared and presented by Town Council, extend the lease to August 13th, 2033, and authorize the chair to sign behalf of the board. So moved. Second. Mr. Zisson? In favor. Mr. Greater? In favor. Ms. Noonan? In favor. Ms. Frontek? In favor. And I'm in favor as well. All right. We are going to move on to reappointments for 2020... It says 2026 reappointments? Mm-hmm. Okay.
 
-**[1:26:25](https://vimeo.com/1204626570#t=5185s)** So, if I could have a motion to accept the following appointments, all for terms expiring in June 2027, unless noted, and accept those placed on hold in accordance with master laws and town bylaws. So if you want to place a hold as I read through, say aye. Town Administrator, Thatcher Keezer. American Disabilities Act Coordinator, Thatcher Keezer. Animal Inspector, Emily DeGrande. Building Commissioners Inspectors. Building Commissioner, Steven Cummings. Local Inspector, Ron Lebowitz. Local Inspector, Roger Ennis. Plumbing Inspector, Bradford Smith. Wiring Inspector, Eric F.S. Chisholm. On-Call Plumber, Nelson Gagnon. For the Canine Control Clerk, Robin Amicio. Assistant Dog Officers for the Parks, Brad Delisle, Greg Snow, John Globicki.
+**[1:26:25](https://vimeo.com/1204626570#t=5185s)** So, if I could have a motion to accept the following appointments, all for terms expiring in June 2027, unless noted, and accept those placed on hold in accordance with master laws and town bylaws. So if you want to place a hold as I read through, say aye. Town Administrator, Thatcher Kezer. American Disabilities Act Coordinator, Thatcher Kezer. Animal Inspector, Emily DeGrande. Building Commissioners Inspectors. Building Commissioner, Steven Cummings. Local Inspector, Ron Lebowitz. Local Inspector, Roger Ennis. Plumbing Inspector, Bradford Smith. Wiring Inspector, Eric F.S. Chisholm. On-Call Plumber, Nelson Gagnon. For the Canine Control Clerk, Robin Amicio. Assistant Dog Officers for the Parks, Brad Delisle, Greg Snow, John Globicki.
 
 **[1:27:13](https://vimeo.com/1204626570#t=5233s)** Town Council, me, Tellerman & Costa LLC. Assistant Town Council, Brody Hardoon, Perkins & Kestin, and Hinckley Allen. Council on Aging Director, Lisa Hooper. Emergency Management Coordinator, Chief Gilliland. Sorry, Chief Jason Gilliland. And Charles Ceruti, Assistant Finance Director. Alicia Noonan, Flag Officer. Roseanne Tromfi, Forest Warden. Chief Jason Gilliland. Harbormasters and Assistants, Mark Souza, Harbormaster. Craig Smith, Deputy Harbormaster. Assistant Harbormasters, which are seasonal, Rick Doan, Andrew Ouellette, Mather Thompson, Steve Lalonde, Jared Russo, Elmer Hurley, Mike Colby, Andrew Nazaro, Chris Bendixen,
 
@@ -720,7 +720,7 @@ topic_segments:
 
 **[1:57:42](https://vimeo.com/1204626570#t=7062s)** timeline at our retreat as far as we want. We can discuss that and try to stick to that. Great. I think we need really good time management on the retreat. It's just been one of those things that's hard to do. Yeah, so not too many doughnut breaks. And hopefully whoever is helping us with the executive search could fine-tune the timeline as well. Oh, would hope. Yep, I'm sure they've had a lot more experience than we have. Yep. Although you've been through it, so- Yeah, absolutely. Yep. Yeah, there's basically two firms that will bid on it. Yep. But we should- That we're going to call and thinner. Yep. So it was out there. All right, moving on, we have some consent agenda items. If I get a motion to approve the following consent agenda
 
-**[1:58:29](https://vimeo.com/1204626570#t=7109s)** items subject to the usual rules, regulations, and fees, and receipt of required certificate of insurance. The minutes of April 27th, 2026, May 4th, 2026, June 10th, 2026, and June 17th, 2026. Abbott Hall, July 19th, 2026, 1:00 to 4:00 p.m. for an American Revolution talk sponsored by National Grand Bank and VFW Chaplain Lyman Rollins Post 2005. Declare surplus of the following items as no longer needed for municipal purposes, so they may dispose of in accordance with the town's policy on surplus equipment. Canon imageCLASS MF4770n, HP LaserJet Enterprise M608, HP LaserJet 9040n. And the
+**[1:58:29](https://vimeo.com/1204626570#t=7109s)** items subject to the usual rules, regulations, and fees, and receipt of required certificate of insurance. The minutes of April 27th, 2026, May 4th, 2026, June 10th, 2026, and June 17th, 2026. Abbot Hall, July 19th, 2026, 1:00 to 4:00 p.m. for an American Revolution talk sponsored by National Grand Bank and VFW Chaplain Lyman Rollins Post 2005. Declare surplus of the following items as no longer needed for municipal purposes, so they may dispose of in accordance with the town's policy on surplus equipment. Canon imageCLASS MF4770n, HP LaserJet Enterprise M608, HP LaserJet 9040n. And the
 
 **[1:59:14](https://vimeo.com/1204626570#t=7154s)** Best Friends Walk on October 4th, subject to the approval from police, fire, and recreation, and parks. No permanent markings are allowed in the public way, and all temporary markings shall be removed at the conclusion of the event. So moved. Second. Great. Mr. Graeter? In favor. Ms. Noonan? In favor. Ms. Ferrante?
 
@@ -730,7 +730,7 @@ topic_segments:
 
 **[2:00:05](https://vimeo.com/1204626570#t=7205s)** addition here. MLT parking request. This has been reviewed by both the chiefs of police and fire chief, and it has been decided that we could, on July 4th, from 12:00 to 4:00 p.m., that we would allow a couple of spots in front of MLT to be blocked off. They are going to be doing some outdoor space. They had asked for more, but determined based on traffic and the holiday and the late request, this was best thing for public safety. So if I could have a motion to approve request from Marblehead Little Theater to restrict parking and three parking spaces directly in front of MLT at 12 School Street on Saturday, July 4th, 2026 from 12 noon to 4:00 p.m. to facilitate an event on their terrace and
 
-**[2:00:50](https://vimeo.com/1204626570#t=7250s)** to notify the chief of police. So moved. Second. Second. Ms. Noonan? In favor. Mr. Sisson? In favor. Mr. Graeter? In favor. Ms. Ferrante? In favor. In favor. Okay, great. In favor. Great. Let's move on to select board announcements. I do have one announcement I'm going to start off with, which is the Town of Marblehead Historical Commission sent us a letter saying that they are pleased to announce the publication of a new book about the Marblehead history to commemorate the 250th anniversary of the United States. The book will be available on or shortly after July 4th, and it'll be for sale at Abbott Hall Gift Shop at a minimum cost of $10. Mapping Marblehead: Five Centuries of Marblehead History covers the history of our
+**[2:00:50](https://vimeo.com/1204626570#t=7250s)** to notify the chief of police. So moved. Second. Second. Ms. Noonan? In favor. Mr. Sisson? In favor. Mr. Graeter? In favor. Ms. Ferrante? In favor. In favor. Okay, great. In favor. Great. Let's move on to select board announcements. I do have one announcement I'm going to start off with, which is the Town of Marblehead Historical Commission sent us a letter saying that they are pleased to announce the publication of a new book about the Marblehead history to commemorate the 250th anniversary of the United States. The book will be available on or shortly after July 4th, and it'll be for sale at Abbot Hall Gift Shop at a minimum cost of $10. Mapping Marblehead: Five Centuries of Marblehead History covers the history of our
 
 **[2:01:38](https://vimeo.com/1204626570#t=7298s)** town from indigenous people through an early settlement, through the events of the 21st century. Maps from all those periods are included. And through the hundreds of years, Marblehead has maintained its independent, feisty personality, both welcoming and insular. Fierce pride in its cherished history is unwavered. So it is the spirit that this book celebrates, and this was submitted by Pam Peterson. So hopefully everyone will go take a look at that. Sounds like a great book. It's great. Thanks. You got a second out there on the great book. Any other announcements? Just that the master plan survey 2037 is out, so if people want to go online and fill out the survey. I haven't done it yet, so I don't know how long it is, but it's out there.
 

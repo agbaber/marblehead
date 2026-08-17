@@ -20,18 +20,18 @@ summary_card:
     - "Approved sponsoring standard town meeting warrant articles for 2023 Annual Town Meeting"
     - "Approved sponsoring seven specific warrant articles including Franklin Street Fire Station Renovations and HR department creation"
     - "Approved Marblehead Museum use of Old Townhouse and one-day liquor license for March 10 fundraiser"
-    - "Approved Abbott Hall use for June 23 wedding ceremony"
+    - "Approved Abbot Hall use for June 23 wedding ceremony"
     - "Approved appointment of Benjamin Leibowitz as Local Inspector"
     - "Approved contract extension for Collins Center ADA Transition Plan to June 30, 2023"
     - "Approved one-day liquor license for Marblehead Little Theater Valentine's Day concert"
-    - "Approved Abbott Hall use for Eagle Scout Court of Honor on April 30"
+    - "Approved Abbot Hall use for Eagle Scout Court of Honor on April 30"
     - "Approved minutes of January 18 and January 23, 2023"
     - "Approved delegating OML complaint response to Town Counsel"
     - "Approved contract with CES Northeast LLC for new fuel station system at $805,825.12"
     - "Approved engineering services contract with Haley Ward Inc. at up to $200,000/year for three years"
     - "Approved wicked 10/20 Miler road race on March 26, 2023"
     - "Approved private drain connection license for 286 Ocean Avenue"
-    - "Approved Marblehead School of Music use of Abbott Hall on May 7"
+    - "Approved Marblehead School of Music use of Abbot Hall on May 7"
     - "Approved sending condolence letter to family of deceased DPW employee David Cameron"
   votes:
     - motion: "FY2024 revolving fund accounts authorization"
@@ -44,7 +44,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Marblehead Museum one-day liquor license"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall wedding ceremony use"
+    - motion: "Abbot Hall wedding ceremony use"
       result: "in favor (unanimous)"
     - motion: "Appointment of Benjamin Leibowitz as Local Inspector"
       result: "in favor (unanimous)"
@@ -52,7 +52,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Marblehead Little Theater one-day liquor license"
       result: "in favor (unanimous)"
-    - motion: "Eagle Scout Court of Honor Abbott Hall use and fee waiver"
+    - motion: "Eagle Scout Court of Honor Abbot Hall use and fee waiver"
       result: "in favor (unanimous)"
     - motion: "Approval of January 18 and January 23 minutes"
       result: "in favor (unanimous)"
@@ -66,7 +66,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "286 Ocean Avenue private drain connection license"
       result: "in favor (unanimous)"
-    - motion: "Marblehead School of Music Abbott Hall use"
+    - motion: "Marblehead School of Music Abbot Hall use"
       result: "in favor (unanimous)"
     - motion: "Condolence letter to David Cameron's family"
       result: "in favor (unanimous)"
@@ -165,15 +165,15 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 4730
     end_seconds: 5186
-    headline: "Board approves facility use and liquor licenses for Marblehead Museum, Abbott Hall wedding, Little Theater, and Eagle Scout ceremony"
+    headline: "Board approves facility use and liquor licenses for Marblehead Museum, Abbot Hall wedding, Little Theater, and Eagle Scout ceremony"
     dek: "Four separate facility and licensing requests were approved unanimously, including an Eagle Scout Court of Honor for Xavier Rosado whose project improved trails at Seaside."
     summary: |
       The board approved the following requests in sequence:
       
       - **Marblehead Museum**: Use of Old Townhouse on March 10, 2023 (6–8 PM) for a fundraising event; rental fee waived. One-day liquor license also approved (alcohol from Cappy's Importing).
-      - **Jeff Hunt**: Abbott Hall use on June 23, 2023 (3–5 PM) for a wedding ceremony.
+      - **Jeff Hunt**: Abbot Hall use on June 23, 2023 (3–5 PM) for a wedding ceremony.
       - **Marblehead Little Theater**: One-day liquor license for a Valentine's Day concert on February 11, 2023 (6–11 PM) at 12 School Street (alcohol from Rumson's Rum).
-      - **Eagle Scout Xavier Rosado**: Abbott Hall use on April 30, 2023 (10 AM–2 PM) for Eagle Scout Court of Honor; rental fee waived. Xavier described his Eagle Scout project improving trails, removing invasive species, and re-graveling paths at the Seaside Conservancy area.
+      - **Eagle Scout Xavier Rosado**: Abbot Hall use on April 30, 2023 (10 AM–2 PM) for Eagle Scout Court of Honor; rental fee waived. Xavier described his Eagle Scout project improving trails, removing invasive species, and re-graveling paths at the Seaside Conservancy area.
     key_speakers: ["Xavier Rosado (Eagle Scout)", "Lauren McCormick (Marblehead Museum Executive Director)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
@@ -209,10 +209,10 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 5762
     end_seconds: 6012
-    headline: "Board approves Marblehead School of Music Abbott Hall use; DPW employee David Cameron memorialized"
-    dek: "Abbott Hall was approved for student recitals on May 7 and the board voted to send condolences to the family of DPW water and tree department employee David Cameron."
+    headline: "Board approves Marblehead School of Music Abbot Hall use; DPW employee David Cameron memorialized"
+    dek: "Abbot Hall was approved for student recitals on May 7 and the board voted to send condolences to the family of DPW water and tree department employee David Cameron."
     summary: |
-      Jennifer Spungeon of the Marblehead School of Music received approval to use Abbott Hall on Sunday, May 7, 2023 (9 AM–8 PM) for student recitals, subject to standard rules, fees, and insurance.
+      Jennifer Spungeon of the Marblehead School of Music received approval to use Abbot Hall on Sunday, May 7, 2023 (9 AM–8 PM) for student recitals, subject to standard rules, fees, and insurance.
       
       The DPW's Amy delivered a tribute to David Cameron, a longtime employee who worked in both the water and tree departments, noting his dedication to Marblehead's infrastructure. The board voted unanimously to send a condolence letter from the board to his family.
     key_speakers: ["Amy (DPW)", "Town Administrator"]
@@ -301,13 +301,13 @@ topic_segments:
 
 **[20:25](https://vimeo.com/797206782#t=1225s)** Okay, I'm not administrator if you let's if Brooks. I think Brooklyn is the unshare his screen. Thank you. All right about that. That's all right. Maybe shared a publicize that on the website that it's on February 15. Okay. Yeah. It's on the website. It's already up. Okay, great. So Becky, yep. So on. Becky cutting on the town planner and I am so Ryan. We have the Architects here today, um that are gonna do a presentation but a little background the town received a grant from massive Stewart commission through its mppf program to conduct a building assessment
 
-**[21:11](https://vimeo.com/797206782#t=1271s)** and a treatment report for the Franklin Street Fire Station building. It's a historic building and the town's benefited from this program before with several other of our historic assets Abbott Hall Fort Sewell and old Burial Hill and what these studies do is do an in-depth assessment of the building and then information on what work needs to be done and what priority and how much it will cost kind of like a master plan that goes a little further than that. And so we received the Grant and we issued a request for proposal to hire an architect that has particular expertise in historic structures, and we hired Foster architect. Sure, and Ryan Foster and Eric Christiansen are here
+**[21:11](https://vimeo.com/797206782#t=1271s)** and a treatment report for the Franklin Street Fire Station building. It's a historic building and the town's benefited from this program before with several other of our historic assets Abbot Hall Fort Sewell and old Burial Hill and what these studies do is do an in-depth assessment of the building and then information on what work needs to be done and what priority and how much it will cost kind of like a master plan that goes a little further than that. And so we received the Grant and we issued a request for proposal to hire an architect that has particular expertise in historic structures, and we hired Foster architect. Sure, and Ryan Foster and Eric Christiansen are here
 
 **[21:56](https://vimeo.com/797206782#t=1316s)** tonight, and they're going to present an overview. We and then well, let me let them do that and then we can talk. further So are you able to share your screen here? I'm gonna share my screen. Let's see if it works.
 
-**[22:22](https://vimeo.com/797206782#t=1342s)** Thank you Becky. Hi, I'm Ryan Foster. I have worked on at all since 2012 through 2020 through All Phases also worked on Fort Sewell Eric Christian also worked on the restoration of Abbott Hall and Fort Sewell. So we are very well versed working with Marblehead. We did the assessment of the Franklin Street Firehouse back in last March and April of 2022. The firehouse is a wood structure is built in 1886 and it has been continuously used as a fire station since its instruction. So it is one of the oldest continuously operated fire stations in the Commonwealth. Um in that assessment we put together working with Chief the
+**[22:22](https://vimeo.com/797206782#t=1342s)** Thank you Becky. Hi, I'm Ryan Foster. I have worked on at all since 2012 through 2020 through All Phases also worked on Fort Sewell Eric Christian also worked on the restoration of Abbot Hall and Fort Sewell. So we are very well versed working with Marblehead. We did the assessment of the Franklin Street Firehouse back in last March and April of 2022. The firehouse is a wood structure is built in 1886 and it has been continuously used as a fire station since its instruction. So it is one of the oldest continuously operated fire stations in the Commonwealth. Um in that assessment we put together working with Chief the
 
-**[23:09](https://vimeo.com/797206782#t=1389s)** a schematic design and plan for moving forward tonight. We're going to go over a quick overview of the assessment kind of highlighting on the points of it and give you a summary of what's required and the cost estimate. So from there, I should say that we had Structural Engineers of structures North and our MEP and FP engineer was ggd Garcia galusia De Sosa with our costs estimators Alana this same group also worked on Abbott Hall. So hopefully I have been treating you well with the new windows and exterior restoration and from here. I'll let Eric kind of dive into some of the details of our assessment.
+**[23:09](https://vimeo.com/797206782#t=1389s)** a schematic design and plan for moving forward tonight. We're going to go over a quick overview of the assessment kind of highlighting on the points of it and give you a summary of what's required and the cost estimate. So from there, I should say that we had Structural Engineers of structures North and our MEP and FP engineer was ggd Garcia galusia De Sosa with our costs estimators Alana this same group also worked on Abbot Hall. So hopefully I have been treating you well with the new windows and exterior restoration and from here. I'll let Eric kind of dive into some of the details of our assessment.
 
 **[23:55](https://vimeo.com/797206782#t=1435s)** Hello everyone. Thanks again for having us nice nice to virtually be there and what I would do I'm gonna basically briefly run through all of the major areas of the existing conditions of the firehouse and then at the end of that we'll go into the aad review and processment and Ryan will be discussing those items. So I just want to sort of I'll try to get through this brief links. I know you have a long agenda, but just sort of a splash page of images here showing the one great historic image of the firehouse and I'll show you another couple later in this presentation and it's really gives you an idea a couple of these photos of some of the areas of deterioration of the wood structure.
 
@@ -479,7 +479,7 @@ topic_segments:
 
 **[1:19:12](https://vimeo.com/797206782#t=4752s)** Okay, that looks like we have there's another motion. again from Lauren McCormick And again the motion self-explanatory, which is to approve the request from Lauren McCormick executive director marble and museum for one day liquor license for for Friday, March 10, 2023 from 6PM to 8 PM for a fundraising event the old townhouse subject to the Fallen conditions delivery of and receipt by the licensing authority of the required $50 fee delivery of and receipt by the licensing authority of proof that the alcohol be purchased from an authorized Source proof that the applicant can receive proper delivery proper storage and disposal of all alcoholic beverages purchased all in accordance with the requirement of General law section 138 alcohol will be purchased from Cappy's importing.
 
-**[1:20:00](https://vimeo.com/797206782#t=4800s)** So amount second. Okay, hold up. Just belt Becca. in favor a singer Okay, Miss Noonan in favor. Just tonight in favor, Mr. Greater in favor. Thank you. Okay, agenda item six is a wedding at Abbott Hall. I received from Jeff Hunt. Congratulations, and the motion is also self expanded explanatory to request the request comes from Jeff Hunt to use Abbott Hall on Friday, June 23rd, 2023 from 3pm to 5pm for a wedding ceremony subject to the usual rules regulations fees and receipt of the required Certificate of Insurance. second
+**[1:20:00](https://vimeo.com/797206782#t=4800s)** So amount second. Okay, hold up. Just belt Becca. in favor a singer Okay, Miss Noonan in favor. Just tonight in favor, Mr. Greater in favor. Thank you. Okay, agenda item six is a wedding at Abbot Hall. I received from Jeff Hunt. Congratulations, and the motion is also self expanded explanatory to request the request comes from Jeff Hunt to use Abbot Hall on Friday, June 23rd, 2023 from 3pm to 5pm for a wedding ceremony subject to the usual rules regulations fees and receipt of the required Certificate of Insurance. second
 
 **[1:20:46](https://vimeo.com/797206782#t=4846s)** Miss singer in favor, Ms. Noonan in favor, Mr. Knight in favor, Ms. Bill packer in favor, Mr. Greater in favor. Thank you. Next item is appointment of a local local inspector Benjamin Leibowitz. And I don't know if Mr. Lee was here. He's not here. Yep. So normally at the level of organization, it's not a requirement that you vote to hire the person. Yeah, it's a requirement to appoint him as an inspector of the town to meet state requirements. So all your voting is him as a as an inspector and the the resume is just a background
 
@@ -497,7 +497,7 @@ topic_segments:
 
 **[1:24:48](https://vimeo.com/797206782#t=5088s)** Almost a year ago now back in May. So that was a really big deal. I worked closely with the Marblehead Conservancy for my project at Seaside improving some of the trails back there wood chipping re-graveling re taking out and improving the water bars because it got very muddy and Marshy in there. Back in there and removed a bunch of invasive species. So that was my main project and I'm at Hall is just a very meaningful place in Marblehead and it would be an honor to have my Eagle Court held here. Yeah, excellent. I don't know if there's anything congratulations. Yeah, quite an accomplishment it really is and thanks for your attention to the Seaside area because that that was definitely, you know needed some some, you
 
-**[1:25:34](https://vimeo.com/797206782#t=5134s)** know, determined and and loving touch that's that's really outstanding. So what I'd like to do is entertain a motion. For the request from Heather Rosado your mother to use Abbott Hall on Sunday, April 30th, 2023 from 10 AM to 2 PM for an Eagle Scout court of honor. Subject to the usual rules regulations and fees and receipt of the certificate of the required certificate of liability and to waive the rental fee for this event. So second. Okay, Miss singer. In favor Ms. Noon in favor just tonight in favor. It's Bill Becker in favor, Mr. Grayer in favor. Congratulations Xavier. Thank you. Thank you very much. Thanks for your service. That's great. Thanks for waiting.
+**[1:25:34](https://vimeo.com/797206782#t=5134s)** know, determined and and loving touch that's that's really outstanding. So what I'd like to do is entertain a motion. For the request from Heather Rosado your mother to use Abbot Hall on Sunday, April 30th, 2023 from 10 AM to 2 PM for an Eagle Scout court of honor. Subject to the usual rules regulations and fees and receipt of the certificate of the required certificate of liability and to waive the rental fee for this event. So second. Okay, Miss singer. In favor Ms. Noon in favor just tonight in favor. It's Bill Becker in favor, Mr. Grayer in favor. Congratulations Xavier. Thank you. Thank you very much. Thanks for your service. That's great. Thanks for waiting.
 
 **[1:26:26](https://vimeo.com/797206782#t=5186s)** Hey. Like the next is a motion to approve the minutes of January 18th, 2023 and January 23 2023. Miss noon in favor. It's deny in favor, Ms. Belle Becker the singer. In favor, Mr. Greater in favor. Thank you. And the next is a is an oml complaint emanating from Alan Waller. This is simply a motion to delegate the responsibility the response. Of the open meeting law complaint filed by Mr. Waller to Our Town Council and you can see the letter to Mr. Waller from Town Council, which hopefully you have a chance to review motion is pretty self-explanatory, which
 
@@ -523,9 +523,9 @@ topic_segments:
 
 **[1:32:56](https://vimeo.com/797206782#t=5576s)** BNS Fitness, so this is of the black cat. run
 
-**[1:33:07](https://vimeo.com/797206782#t=5587s)** and the motion is pretty self-explanatory. To request to entertain a motion to for the request from Ashley Steves DNA BNS fit Fitness companies to hold the wicked 10 20 Miler on Sunday, March 26 2023 subject to approval the Marblehead Police and record police and Recreation and Parks subject of the required Certificate of Insurance naming. The town of Marblehead is additionally insured and police details all distances. We'll start and finish at Salem Waterfront Hotel start times begin at 8:00 am with the last Runners Runners exiting Marvel head by 11:40 am no permanent marketing she'll be made on the streets and any temporary marketing she'll be removed at the conclusion of
+**[1:33:07](https://vimeo.com/797206782#t=5587s)** and the motion is pretty self-explanatory. To request to entertain a motion to for the request from Ashley Steves DNA BNS fit Fitness companies to hold the wicked 10 20 Miler on Sunday, March 26 2023 subject to approval the Marblehead Police and record police and Recreation and Parks subject of the required Certificate of Insurance naming. The town of Marblehead is additionally insured and police details all distances. We'll start and finish at Salem Waterfront Hotel start times begin at 8:00 am with the last Runners Runners exiting Marblehead by 11:40 am no permanent marketing she'll be made on the streets and any temporary marketing she'll be removed at the conclusion of
 
-**[1:33:53](https://vimeo.com/797206782#t=5633s)** the event the FW Post in Marvel head and the alley Kastner Scholarship Foundation shall be two of the Charities to benefit from this event.
+**[1:33:53](https://vimeo.com/797206782#t=5633s)** the event the FW Post in Marblehead and the alley Kastner Scholarship Foundation shall be two of the Charities to benefit from this event.
 
 **[1:34:06](https://vimeo.com/797206782#t=5646s)** so moved second effect missing Okay, Miss Noonan in favor. It's tonight in favor. Can ask a quick question? That's not the weekend of the Little League parade is it?
 
@@ -535,7 +535,7 @@ topic_segments:
 
 **[1:35:18](https://vimeo.com/797206782#t=5718s)** What singer?
 
-**[1:35:21](https://vimeo.com/797206782#t=5721s)** In favor miss doing in favor. It's tonight favor. It's the greater in favor. Okay, we now have a request for the use of Abbott Hall. And a very nice letter from Jonathan Jennifer spungeon. Owner of the Marblehead School of Music and the motion to entertain is the request from Jennifer spungeon Marblehead School of Music use Abbott Hall on Sunday May 7th 20203 for student recitals from 9 am to 8 PM subject to the usual rules regulations fees and receipt of the required certificate of liability second.
+**[1:35:21](https://vimeo.com/797206782#t=5721s)** In favor miss doing in favor. It's tonight favor. It's the greater in favor. Okay, we now have a request for the use of Abbot Hall. And a very nice letter from Jonathan Jennifer spungeon. Owner of the Marblehead School of Music and the motion to entertain is the request from Jennifer spungeon Marblehead School of Music use Abbot Hall on Sunday May 7th 20203 for student recitals from 9 am to 8 PM subject to the usual rules regulations fees and receipt of the required certificate of liability second.
 
 **[1:36:02](https://vimeo.com/797206782#t=5762s)** And I just have a question is this going to take place upstairs? That is a good question. I'm assuming so I mean the stage is there right and they're talking about 250 people. So yeah.
 
@@ -549,7 +549,7 @@ topic_segments:
 
 **[1:38:39](https://vimeo.com/797206782#t=5919s)** Yeah, come up you want to join us? That'd be great. Amy. Thank you.
 
-**[1:38:46](https://vimeo.com/797206782#t=5926s)** It's with a heavy heart that I'm delivering the sad news of David Cameron's passing. Dave was a valued employee in both water and treat departments. And I'm sure many if not all Marvel headers. So I Dave hard at work where they're operating the tree Department back cold feel asleep, plowing marbleheads ancient ways and dead ends or when working with the water department Excavating during water break to maintaining a hydrant.
+**[1:38:46](https://vimeo.com/797206782#t=5926s)** It's with a heavy heart that I'm delivering the sad news of David Cameron's passing. Dave was a valued employee in both water and treat departments. And I'm sure many if not all Marblehead headers. So I Dave hard at work where they're operating the tree Department back cold feel asleep, plowing marbleheads ancient ways and dead ends or when working with the water department Excavating during water break to maintaining a hydrant.
 
 **[1:39:13](https://vimeo.com/797206782#t=5953s)** I will miss Dave's dedication to the marbleheads infrastructure knowledge of the water system and his expertise. He used operating equipment to keep those around him safe.
 

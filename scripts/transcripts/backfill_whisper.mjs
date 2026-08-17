@@ -16,6 +16,7 @@ import { join } from 'node:path';
 import { homedir } from 'node:os';
 import { buildSlug, renderTranscript } from './lib/render_transcript.mjs';
 import { vttToProse } from './lib/vtt_to_prose.mjs';
+import { correctKnownNames } from './lib/known_names.mjs';
 
 const TRANSCRIPTS_DIR = '_transcripts';
 const INDEX_FILE = 'data/vimeo_meetings.json';
@@ -53,11 +54,12 @@ function main() {
     const vttPath = join(cacheDir, 'vtt', `${m.vimeo_id}.vtt`);
     if (!existsSync(vttPath)) { pending += 1; continue; }
 
-    const body = vttToProse(readFileSync(vttPath, 'utf8'), `https://vimeo.com/${m.vimeo_id}`);
-    if (!body) {
+    const raw = vttToProse(readFileSync(vttPath, 'utf8'), `https://vimeo.com/${m.vimeo_id}`);
+    if (!raw) {
       console.error(`- ${slug}: empty VTT, skipping`);
       continue;
     }
+    const body = correctKnownNames(raw, { label: slug });
     if (dryRun) {
       console.error(`- would write ${outPath}`);
       written += 1;

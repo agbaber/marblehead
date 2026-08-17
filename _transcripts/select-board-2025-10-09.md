@@ -17,7 +17,7 @@ summary_card:
   summary: "The Select Board met on October 9, 2025 and approved a $1,590,000 contract with D. Lewis Brothers Construction for transfer station redesign and construction work including a new scale house and site improvements. The board also authorized a $36,000 reserve fund transfer for Hobbs House windows, approved a $73-per-ton road salt contract with Eastern Salt Company, and appointed Emily DeGrande as Animal Inspector. The meeting concluded with adjournment to executive session to discuss pending litigation."
   decisions:
     - "Approved one-day liquor license for Marblehead Arts Association on October 9, 2025"
-    - "Approved revised date for Veterans Town Hall at Abbott Hall to November 10, 2025"
+    - "Approved revised date for Veterans Town Hall at Abbot Hall to November 10, 2025"
     - "Approved minutes of September 24, 2025"
     - "Awarded Contract 2025-018 transfer station redesign/construction to D. Lewis Brothers Construction for $1,590,000"
     - "Awarded road salt contract BEH-19 to Eastern Salt Company at $73.08 per ton"
@@ -27,7 +27,7 @@ summary_card:
   votes:
     - motion: "One-day liquor license for Marblehead Arts Association"
       result: "in favor (unanimous)"
-    - motion: "Revised date for Veterans Town Hall at Abbott Hall"
+    - motion: "Revised date for Veterans Town Hall at Abbot Hall"
       result: "in favor (unanimous)"
     - motion: "Approve minutes of September 24, 2025"
       result: "in favor (unanimous)"
@@ -63,7 +63,7 @@ topic_segments:
     end_seconds: 150
     headline: "Board revises Veterans Town Hall date to November 10 and approves September 24 minutes"
     dek: "Both items on the consent agenda passed unanimously."
-    summary: "The board approved a revision to the previously approved date for the Veterans Town Hall at Abbott Hall, moving it to November 10, 2025, subject to the usual rules, regulations, and fees. The board also approved the minutes of the September 24, 2025 meeting."
+    summary: "The board approved a revision to the previously approved date for the Veterans Town Hall at Abbot Hall, moving it to November 10, 2025, subject to the usual rules, regulations, and fees. The board also approved the minutes of the September 24, 2025 meeting."
   - topic: trash-dpw
     topic_confidence: 0.98
     start_seconds: 150
@@ -141,9 +141,9 @@ topic_segments:
 
 **[0:00](https://vimeo.com/1126224657#t=0s)** Let's call the meeting to order on October 9th. We have four members present with Alexis Senior.
 
-**[0:08](https://vimeo.com/1126224657#t=8s)** We'll open up a public comment. Anyone hear public comment, we will close public. Comment the line, I'm assuming. Great. Um, second thing on our agenda page, the one day liquor license, Marblehead Arts on Thursday, October nine. The applicant is Coze Kendall. Um, I'm looking for a motion to approve the request for Marblehead Arts Association for one day liquor license on Thursday, October 9th, 2025, and the Marble Wood Arts Association, Washington Street from seven to 9:00 PM subject to the following conditions, delivery receipt of and receipt by the licensed authority of the required fee of $50, delivery of and receipt by the licensed authority of proof that the alcohol will be purchased from the authorized source. Proof that the applicant can receive proper delivery,
+**[0:08](https://vimeo.com/1126224657#t=8s)** We'll open up a public comment. Anyone hear public comment, we will close public. Comment the line, I'm assuming. Great. Um, second thing on our agenda page, the one day liquor license, Marblehead Arts on Thursday, October nine. The applicant is Coze Kendall. Um, I'm looking for a motion to approve the request for Marblehead Arts Association for one day liquor license on Thursday, October 9th, 2025, and the Marblehead Wood Arts Association, Washington Street from seven to 9:00 PM subject to the following conditions, delivery receipt of and receipt by the licensed authority of the required fee of $50, delivery of and receipt by the licensed authority of proof that the alcohol will be purchased from the authorized source. Proof that the applicant can receive proper delivery,
 
-**[0:55](https://vimeo.com/1126224657#t=55s)** provide proper storage and disposal of all alcohol beverages, purchase, all accordance with the general requirements of general law GLC 1 38. Alcohol we purchase from coffee's, imports of whole vote. So Moved. Second. Mr. Sen, in favor, Ms. Moon In favor, Mr. Greater in favor, Mr. V, Ms. In favor. Next on our agenda is the Abbott Hall for the veterans, uh, town hall. We need to revise the date on which we previously approved the, like a motion to revise the previously approved date for the Veteran Town Hall at Abbott Hall to November 10th, 2025, subject to the usual rules, regulations, and fees. So Second. All in favor, unanimous.
+**[0:55](https://vimeo.com/1126224657#t=55s)** provide proper storage and disposal of all alcohol beverages, purchase, all accordance with the general requirements of general law GLC 1 38. Alcohol we purchase from coffee's, imports of whole vote. So Moved. Second. Mr. Sen, in favor, Ms. Moon In favor, Mr. Greater in favor, Mr. V, Ms. In favor. Next on our agenda is the Abbot Hall for the veterans, uh, town hall. We need to revise the date on which we previously approved the, like a motion to revise the previously approved date for the Veteran Town Hall at Abbot Hall to November 10th, 2025, subject to the usual rules, regulations, and fees. So Second. All in favor, unanimous.
 
 **[1:43](https://vimeo.com/1126224657#t=103s)** Um, consent agenda General, it looks like we just have to approve the minutes of September 24th, 2025. Have a motion to approve those minutes. I second. All in favor? Unanimous. Next up, we have the contract in this transfer station design construction project. Andrew Petty is here to discuss it with us. Good morning, Andrew. Good morning. How are you? Good, how are you? Good. Fabulous. Uh, so this contract is for some construction with the transfer station. Uh, it includes a new scale house, uh, in site work. Uh, the site work includes the scale moving to a permanent location in the scale pit right in front of the compactor. Uh, a new concrete pad for the trash trailer, um,
 

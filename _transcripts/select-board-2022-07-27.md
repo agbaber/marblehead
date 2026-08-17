@@ -24,7 +24,7 @@ summary_card:
     - "Approved use of State Street Landing for HarborFest event on August 28, 2022"
     - "Approved contract amendment for police station exterior painting, increasing contract by $4,000"
     - "Approved extension of tack coat/base layer paving contract with DNR General Construction for third year"
-    - "Approved use of Abbott Hall for Girl Scout bridging event on September 18, 2022, with fee waiver"
+    - "Approved use of Abbot Hall for Girl Scout bridging event on September 18, 2022, with fee waiver"
     - "Approved one-day liquor license for Marblehead Arts Association jazz fundraiser on July 28, 2022"
     - "Approved early voting hours for the September 2022 state primary"
   votes:
@@ -44,7 +44,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Extend tack coat paving contract third year"
       result: "in favor (unanimous)"
-    - motion: "Approve Girl Scout bridging event at Abbott Hall with fee waiver"
+    - motion: "Approve Girl Scout bridging event at Abbot Hall with fee waiver"
       result: "in favor (unanimous)"
     - motion: "Approve one-day liquor license for Marblehead Arts Association"
       result: "in favor (unanimous)"
@@ -132,7 +132,7 @@ topic_segments:
       | HarborFest 2022 | Melody Current / Harbor More granted use of State Street Landing parking lot, Sunday August 28, 2022, subject to police, harbormaster, insurance, and waterfront access requirements |
       | Police station painting change order | Contract with John's Painting (Peabody) increased by $4,000 to add stucco painting; within existing project budget |
       | Tack coat paving contract extension | Third-year extension with DNR General Construction (Melrose) for furnishing and applying base course paving materials |
-      | Girl Scout bridging event | Marblehead Girl Scout Service Unit #396 granted use of Abbott Hall, Sunday September 18, 2022, 5–7 pm; fee waived |
+      | Girl Scout bridging event | Marblehead Girl Scout Service Unit #396 granted use of Abbot Hall, Sunday September 18, 2022, 5–7 pm; fee waived |
       | One-day liquor license | Marblehead Arts Association (James Murphy applicant), Thursday July 28, 2022, King-Hooper Mansion, 8 Hooper Street; alcohol to be purchased from Cappy's Importing |
   - topic: elections-procedural
     topic_confidence: 0.97
@@ -333,9 +333,9 @@ topic_segments:
 
 **[39:41](https://vimeo.com/734469074#t=2381s)** It said please without a microphone. It's very easily at that. Let's see and Bill Cooper will get you. Shortly, sorry about that. You'll be next invasion. That's what
 
-**[40:02](https://vimeo.com/734469074#t=2402s)** it's a little background cheese that again. Thank you. Good evening. Thanks a lot more. Thank you greater. So what these nice so I'm devastating the police with Don Marblehead. These are very important and nights that Mark and special times in the department. So I'm respectfully requesting the board offer conditional office of employment to Abigail of blank and Michael Farwell is permanent full-time police officers for the town of Marvel. Abigail were playing with the lifetime Marblehead resident graduate graduate of Marvel and high class of 2014. She served in the military with the US Navy from 2014 to 2019
+**[40:02](https://vimeo.com/734469074#t=2402s)** it's a little background cheese that again. Thank you. Good evening. Thanks a lot more. Thank you greater. So what these nice so I'm devastating the police with Don Marblehead. These are very important and nights that Mark and special times in the department. So I'm respectfully requesting the board offer conditional office of employment to Abigail of blank and Michael Farwell is permanent full-time police officers for the town of Marblehead. Abigail were playing with the lifetime Marblehead resident graduate graduate of Marblehead and high class of 2014. She served in the military with the US Navy from 2014 to 2019
 
-**[40:48](https://vimeo.com/734469074#t=2448s)** cancer Bachelor of Science degree from Salem State University classes, 2021. Also a personal trainer and workflow. Like my old Robert Farwell, the Marvel has resident graduate of Lynn Boke High School class of 2011. Mike has advanced in a career focused on Private Security Services serving in a variety of positions and currently is in a supervisory role around the protection of banks. The federal background check and according to interview has been conducted on both candidates. And in my opinion that you can adjust the qualities that we're looking for in our police officers to serve the town of Marblehead and at what would like to welcome them as members to the Department.
+**[40:48](https://vimeo.com/734469074#t=2448s)** cancer Bachelor of Science degree from Salem State University classes, 2021. Also a personal trainer and workflow. Like my old Robert Farwell, the Marblehead has resident graduate of Lynn Boke High School class of 2011. Mike has advanced in a career focused on Private Security Services serving in a variety of positions and currently is in a supervisory role around the protection of banks. The federal background check and according to interview has been conducted on both candidates. And in my opinion that you can adjust the qualities that we're looking for in our police officers to serve the town of Marblehead and at what would like to welcome them as members to the Department.
 
 **[41:33](https://vimeo.com/734469074#t=2493s)** additionally, I would just note that these are conditional offers of employment that require both the benefits of medical psychological Physical Agility case test and completion of Police Academy that were also working on getting the next Chief if you could that's fantastic, if you could explain the reason behind the conditional Opera, I understand the slots in the police academy. Are tight and they move quickly. So yeah, so there's a so that the simple service. process requires that these conditional offers conditional offers of employment being in place to show the commitment of the town in the commitment of the candidates and so it is
 
@@ -557,7 +557,7 @@ topic_segments:
 
 **[1:25:50](https://vimeo.com/734469074#t=5150s)** The Marblehead is a newspaper town. For about 150 years hard with very fiber of Marblehead spiracy has been a focused Marblehead paper. And when the president ownership of that long established tradition decided to change its focus, we all felt the loss we all talk. And I'm correct. I believe this board also expressed concern that I would tell me nor the election hadn't covered by Dynasty. We are very grateful to share with you. Cool. Why and what Marblehead news group is? Our mission is to establish a value-based nonprofit sustainable Community focused reliable objective and fair news publication from Maryland. And who will be doing this you know them?
 
-**[1:26:38](https://vimeo.com/734469074#t=5198s)** Fortunately, you do already know the people in the quality of the reporting journalists who for years have covered the news of Marblehead. Will doubt will be our financing full-time editor and he will and it's right now reporting on the select board meetings. This Olsen good for years was the editor of the Marvel head reporter because our Consulting editor. They blender again who for years is reported on Marblehead is our lead freelance writer. And here's a key Point Marvel had the newest group that was governed by a board of directors people who live and/or work in Marblehead not by out of time corporations. Board members are gnara. A Marblehead celebrity in his own right and
+**[1:26:38](https://vimeo.com/734469074#t=5198s)** Fortunately, you do already know the people in the quality of the reporting journalists who for years have covered the news of Marblehead. Will doubt will be our financing full-time editor and he will and it's right now reporting on the select board meetings. This Olsen good for years was the editor of the Marblehead reporter because our Consulting editor. They blender again who for years is reported on Marblehead is our lead freelance writer. And here's a key Point Marblehead had the newest group that was governed by a board of directors people who live and/or work in Marblehead not by out of time corporations. Board members are gnara. A Marblehead celebrity in his own right and
 
 **[1:27:23](https://vimeo.com/734469074#t=5243s)** well host of mhcd's up for discussion and a former AP New England bureau chief. How many times you get something like that? Virginia Buckingham former CEO the Massachusetts Port Authority former Chief of Staff to two Massachusetts Governors a deputy editor at the Boston kennel and advisor executive. and lawyer, they I think this is amazing. I personally think that it's amazing. The stars were alive. We have this group willing to create a new entity. And why we all agreed on three values number one an independent Free Press is the Cornerstone of democracy democracy only
 
@@ -567,7 +567,7 @@ topic_segments:
 
 **[1:29:43](https://vimeo.com/734469074#t=5383s)** May invite you all to start your day every day by checking in to Marblehead news dialogue. Thank you for this opportunity and you're having an answer. Thank you very much education. Thank you. Thank you. Thank you all for coming and thank you very much appre. there's
 
-**[1:30:08](https://vimeo.com/734469074#t=5408s)** Important things that you're able to come. Thank you. Thank you for making it so I just I'm so personally like grateful to all of you for your commitment to your profession and and this true public service that you all provide to the residents in this town. And I really hope that you know, the scores of people who I know canceled their subscriptions to the Marvel head reporter will consider making the same and kind donation to the nonprofit and I think you guys have really, you know taken a risk and stuck your neck out there and done something that can be extraordinary and I hope it starts in evolution across. you know the country is really what this is such a move in the right direction
+**[1:30:08](https://vimeo.com/734469074#t=5408s)** Important things that you're able to come. Thank you. Thank you for making it so I just I'm so personally like grateful to all of you for your commitment to your profession and and this true public service that you all provide to the residents in this town. And I really hope that you know, the scores of people who I know canceled their subscriptions to the Marblehead reporter will consider making the same and kind donation to the nonprofit and I think you guys have really, you know taken a risk and stuck your neck out there and done something that can be extraordinary and I hope it starts in evolution across. you know the country is really what this is such a move in the right direction
 
 **[1:30:55](https://vimeo.com/734469074#t=5455s)** to what it you know, I I see is, you know, truly like the fourth estate and this has been really what you all do is such a such an important piece of democracy. So thank you for rising to the occasion.
 

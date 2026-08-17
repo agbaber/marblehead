@@ -14,12 +14,12 @@ source: vimeo-auto+llm
 
 summary_card:
   headline: "Select Board approves rail trail contracts, library sign, and entertainment licenses"
-  summary: "The Marblehead Select Board approved a change order extending the Rail Trail Swamp Scott Branch early construction project deadline to October 30, 2025, and approved entertainment and liquor licenses for Eastern Yacht Club and Marblehead Arts Association. The board authorized a national public library directional sign for Abbott Library, deferring final location to DPW review. The Town Administrator reported that free cash certification is in progress with an outside accounting firm assisting, and announced that June elections will be consolidated to the high school field house due to elevator accessibility issues at Abbott Hall and the Old Town House."
+  summary: "The Marblehead Select Board approved a change order extending the Rail Trail Swamp Scott Branch early construction project deadline to October 30, 2025, and approved entertainment and liquor licenses for Eastern Yacht Club and Marblehead Arts Association. The board authorized a national public library directional sign for Abbot Library, deferring final location to DPW review. The Town Administrator reported that free cash certification is in progress with an outside accounting firm assisting, and announced that June elections will be consolidated to the high school field house due to elevator accessibility issues at Abbot Hall and the Old Town House."
   decisions:
     - "Approved Eastern Yacht Club seasonal entertainment license for live music and DJs at pool, Sunday–Saturday 1–10 PM"
-    - "Approved Abbott Library national public library sign, subject to DPW and Town Administrator review for location"
-    - "Approved consent agenda items including events at Abbott Hall for Pride Committee, Marblehead Museum, and Festival of Arts on the Avenue"
-    - "Approved declaration of Abbott Library large computer table as surplus"
+    - "Approved Abbot Library national public library sign, subject to DPW and Town Administrator review for location"
+    - "Approved consent agenda items including events at Abbot Hall for Pride Committee, Marblehead Museum, and Festival of Arts on the Avenue"
+    - "Approved declaration of Abbot Library large computer table as surplus"
     - "Approved welcome letter from Select Board for 2025 Marblehead to Halifax Ocean Race"
     - "Approved contracts with MGT Impact Solutions for Employee Classification Study ($78,780) and with MAPC for Town Comprehensive Plan ($143,000)"
     - "Approved one-day liquor licenses for Coastline Marine Services and Marblehead Arts Association"
@@ -29,7 +29,7 @@ summary_card:
   votes:
     - motion: "Eastern Yacht Club entertainment license"
       result: "in favor (unanimous)"
-    - motion: "Abbott Library national public library sign"
+    - motion: "Abbot Library national public library sign"
       result: "in favor (unanimous)"
     - motion: "Consent agenda — events and surplus declaration"
       result: "in favor (unanimous)"
@@ -57,15 +57,15 @@ topic_segments:
     start_seconds: 11
     end_seconds: 337
     featured: true
-    headline: "June elections to consolidate at high school field house due to elevator failures at Abbott Hall and Old Town House"
+    headline: "June elections to consolidate at high school field house due to elevator failures at Abbot Hall and Old Town House"
     dek: "Elevator accessibility issues at both traditional polling locations are forcing a consolidation to the MHS field house, with a formal vote expected at the next meeting."
     summary: |
-      Town Administrator Keer explained that both current polling locations — Abbott Hall and the Old Town House — will be unavailable for the June election. At the Old Town House, the elevator overheats under heavy Election Day use and has trapped voters. At Abbott Hall, mandatory safety-compliance upgrades are scheduled for June and cannot be postponed.
+      Town Administrator Kezer explained that both current polling locations — Abbot Hall and the Old Town House — will be unavailable for the June election. At the Old Town House, the elevator overheats under heavy Election Day use and has trapped voters. At Abbot Hall, mandatory safety-compliance upgrades are scheduled for June and cannot be postponed.
       
       Chief Gillin and Town Clerk Robin Michoud coordinated with the schools; the School Committee voted to allow use of the high school field house as a single consolidated polling location. The date is expected to coincide with a professional day so students will not be present.
       
       A formal Select Board vote is anticipated at the next meeting, pending a site survey for ADA compliance certification required by the Secretary of the Commonwealth, which must be completed at least 20 days before the election. Board members noted the consolidation mirrors a broader trend and referenced a successful similar arrangement during COVID, suggesting it could become a permanent change if it goes well.
-    key_speakers: ["Town Administrator Keer", "Board Chair (Madam Chair)"]
+    key_speakers: ["Town Administrator Kezer", "Board Chair (Madam Chair)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 337
@@ -76,7 +76,7 @@ topic_segments:
       The Town Administrator reported that expenditure reconciliation is complete but revenue account reconciliation on the accounting side remains in progress. Legacy software and staffing turnover in the Treasurer-Collector's office have contributed to ongoing delays. The town is working closely with the Department of Local Services (DLS), which is awaiting final submission. CFO Alicia Benjamin engaged an outside accounting firm to accelerate the process and meet the town meeting deadline.
       
       The Town Administrator also highlighted the annual employee benefits fair, which drew approximately 250 attendees — more than double last year's turnout — and was organized by HR benefits coordinator Amanda Elli (name approximate per ASR).
-    key_speakers: ["Town Administrator Keer"]
+    key_speakers: ["Town Administrator Kezer"]
   - topic: permits-zoning
     topic_confidence: 0.95
     start_seconds: 570
@@ -89,31 +89,31 @@ topic_segments:
     topic_confidence: 0.8
     start_seconds: 674
     end_seconds: 1626
-    headline: "Abbott Library national public library sign approved with location deferred to DPW review"
+    headline: "Abbot Library national public library sign approved with location deferred to DPW review"
     dek: "After extended discussion about sign clutter and wayfinding value, the board approved one sign subject to DPW and Town Administrator approval of placement."
     summary: |
-      Abbott Library Director Kim (last name approximate) requested permission to erect national public library signs at two locations: the intersection of Burial/Bubier Road and Atlantic Avenue, and on Lafayette Street at the town entrance. The signs are already purchased.
+      Abbot Library Director Kim (last name approximate) requested permission to erect national public library signs at two locations: the intersection of Burial/Bubier Road and Atlantic Avenue, and on Lafayette Street at the town entrance. The signs are already purchased.
       
       The board engaged in extended discussion about sign proliferation, referencing past efforts in the 1990s to reduce roadside signage in town. Members expressed concern that the Lafayette Street sign would serve more as an advertisement than a wayfinding tool given its distance from the library, while generally supporting the Bubier/Atlantic location as a functional directional sign.
       
       The library director indicated she had no strong preference on location if the board preferred only one sign. The board ultimately approved a motion to authorize one national public library directional sign with final location to be determined by the Town Administrator and DPW Director, avoiding a prescriptive vote on placement.
-    key_speakers: ["Kim (Abbott Library Director)", "Board Chair (Madam Chair)", "Town Administrator Keer"]
+    key_speakers: ["Kim (Abbot Library Director)", "Board Chair (Madam Chair)", "Town Administrator Kezer"]
   - topic: recreation-events
     topic_confidence: 0.9
     start_seconds: 1626
     end_seconds: 1765
-    headline: "Consent agenda approved including Pride Committee, Museum, and Festival of Arts events at Abbott Hall"
-    dek: "The board approved use of Abbott Hall for three community events in spring and summer 2025, and declared a surplus library table."
+    headline: "Consent agenda approved including Pride Committee, Museum, and Festival of Arts events at Abbot Hall"
+    dek: "The board approved use of Abbot Hall for three community events in spring and summer 2025, and declared a surplus library table."
     summary: |
       The board approved the following consent agenda items:
       
       | Event | Date | Time |
       |---|---|---|
-      | Marblehead Pride Committee at Abbott Hall | Saturday, June 21, 2025 | 2:00–4:00 PM |
-      | Marblehead Museum at Abbott Hall | Saturday, April 26, 2025 | 10:00 AM–2:00 PM |
+      | Marblehead Pride Committee at Abbot Hall | Saturday, June 21, 2025 | 2:00–4:00 PM |
+      | Marblehead Museum at Abbot Hall | Saturday, April 26, 2025 | 10:00 AM–2:00 PM |
       | Festival of Arts on the Avenue | Sunday, July 6, 2025 | 2:00–5:00 PM |
       
-      The board also declared Abbott Library's large computer table as surplus in accordance with town policy.
+      The board also declared Abbot Library's large computer table as surplus in accordance with town policy.
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 1765
@@ -135,7 +135,7 @@ topic_segments:
       2. **Metropolitan Area Planning Council (MAPC)** — Town Comprehensive Plan: **$143,000**. The town previously received a $130,000 grant and is providing a $13,000 local match.
       
       Both contracts were unanimously approved.
-    key_speakers: ["Town Administrator Keer"]
+    key_speakers: ["Town Administrator Kezer"]
   - topic: permits-zoning
     topic_confidence: 0.9
     start_seconds: 2046
@@ -175,7 +175,7 @@ topic_segments:
     headline: "Northshore Medical Center approved to replace air handler unit at town-owned building for $54,930"
     dek: "The lease requires board approval for tenant improvements exceeding $25,000; the board approved the work unanimously."
     summary: "Under the terms of the lease between the town and Northshore Medical Center executed March 6, 2023, the tenant must obtain Select Board approval for building alterations exceeding $25,000. The medical center proposed replacing an existing air handler unit at a total cost of **$54,930**. The board unanimously approved the request."
-    key_speakers: ["Town Administrator Keer"]
+    key_speakers: ["Town Administrator Kezer"]
   - topic: 40b-mbta
     topic_confidence: 0.92
     start_seconds: 2597
@@ -192,9 +192,9 @@ topic_segments:
 
 **[0:00](https://vimeo.com/1074131178#t=0s)** Okay. So if there's anybody online that wishes to make public comment, just raise your hand and, um, I'm happy to call on you.
 
-**[0:11](https://vimeo.com/1074131178#t=11s)** We're good online. Okay. So, seeing no public comment this evening, I will move us forward to our next agenda item, which is our Town Administrator update. And I will hand it over to Mr. Keer for, um, his updates. All right. I don't think I got to you two, My update. So, uh, three items on, on the update. Um, first items are preview of coming vote. Um, it's gonna be necessary to change our voting location, um, for this June. So, um, the main reasons we need to, so we have polling at the old townhouse. Mm-hmm. And we are polling here. Uh, the change, what's precipitating the change in both
+**[0:11](https://vimeo.com/1074131178#t=11s)** We're good online. Okay. So, seeing no public comment this evening, I will move us forward to our next agenda item, which is our Town Administrator update. And I will hand it over to Mr. Kezer for, um, his updates. All right. I don't think I got to you two, My update. So, uh, three items on, on the update. Um, first items are preview of coming vote. Um, it's gonna be necessary to change our voting location, um, for this June. So, um, the main reasons we need to, so we have polling at the old townhouse. Mm-hmm. And we are polling here. Uh, the change, what's precipitating the change in both
 
-**[0:57](https://vimeo.com/1074131178#t=57s)** cases are the elevators. So it, the, the buildings have to be fully accessible. So at the old townhouse, um, there were issues at the last election and ongoing that, uh, if the elevator gets frequent use, which it does during, on election day, it overheats Oh. And people get trapped in the elevator. So The elevator room is air condition, and the elevator's not an elevator to lift. It's not made for right. For, for massive Use. It's not built for the that capacity. So that's an issue here at Abbott Hall. The elevator here has required maintenance and, uh, there's some, uh, uh, mandatory upgrades for safety compliance reasons that have to be done. And it, it's on a deadline that it has
+**[0:57](https://vimeo.com/1074131178#t=57s)** cases are the elevators. So it, the, the buildings have to be fully accessible. So at the old townhouse, um, there were issues at the last election and ongoing that, uh, if the elevator gets frequent use, which it does during, on election day, it overheats Oh. And people get trapped in the elevator. So The elevator room is air condition, and the elevator's not an elevator to lift. It's not made for right. For, for massive Use. It's not built for the that capacity. So that's an issue here at Abbot Hall. The elevator here has required maintenance and, uh, there's some, uh, uh, mandatory upgrades for safety compliance reasons that have to be done. And it, it's on a deadline that it has
 
 **[1:44](https://vimeo.com/1074131178#t=104s)** to be scheduled, which is in June. Mm-hmm. So both these buildings will not be accessible under the law, uh, for, for election day. So Chief Gillin and, and Robin Michoud, uh, working together, uh, approached the schools and coordinated the schools and received a, uh, a vote by the school committee to allow the use of the, um, uh, the, the field house. The field house. Thank you, um, for voting on that. So there'll be one location at the field house for the elections, and then in coordination with the schools. I think that'll be a, I think it's gonna be a professional day for the teachers. Okay. So that it won't be kids at the schools,
 
@@ -220,7 +220,7 @@ topic_segments:
 
 **[10:17](https://vimeo.com/1074131178#t=617s)** you know, elevate what we do down there. Great. Okay. Um, any questions from the boards?
 
-**[10:27](https://vimeo.com/1074131178#t=627s)** It seems fine. I mean, the pool's right on the water and, you know, um, but you, there's a lot of parties and everything and Yeah. It lends itself so well to Yeah. You know, to a little bit of music, so, yeah. Um, okay. So I just need a motion to approve the request from Eastern Yacht Club at 42 dash 44 Foster Street for seasonal, annual and Sunday entertainment license for live music and DJs Sunday through Saturday, one to 10:00 PM 1:00 PM to 10:00 PM and subject to receipt of all fees, forms, and approval from the Department of Public Safety for Entertainment on Sundays. Music is not to be heard from the street. So moved. Second. Okay. Um, all those in favor. Okay. It's unanimous and thank you. Thank You so much. Your luck. I appreciate it. Okay. And that brings us to Abbott Library.
+**[10:27](https://vimeo.com/1074131178#t=627s)** It seems fine. I mean, the pool's right on the water and, you know, um, but you, there's a lot of parties and everything and Yeah. It lends itself so well to Yeah. You know, to a little bit of music, so, yeah. Um, okay. So I just need a motion to approve the request from Eastern Yacht Club at 42 dash 44 Foster Street for seasonal, annual and Sunday entertainment license for live music and DJs Sunday through Saturday, one to 10:00 PM 1:00 PM to 10:00 PM and subject to receipt of all fees, forms, and approval from the Department of Public Safety for Entertainment on Sundays. Music is not to be heard from the street. So moved. Second. Okay. Um, all those in favor. Okay. It's unanimous and thank you. Thank You so much. Your luck. I appreciate it. Okay. And that brings us to Abbot Library.
 
 **[11:14](https://vimeo.com/1074131178#t=674s)** And Kim can join us at the table and, um, talk to us about the na the signage. Yes. They're requesting. Yes. So this is the national library sign that you'll see in many towns. I don't know if I, if Marblehead has ever had one. Um, but it's a quick and easy way for people to know that there's a library in our town and sort of how to get there. So there's two locations that I'm proposing. One of them would be at ER, road and Atlantic. Mm-hmm. And the other one would be on Lafayette as you're coming into town. So those are the two locations. The one on BIA Road would have an arrow pointing toward the library. And the other one, um, we don't have the right arrow.
 
@@ -264,15 +264,15 @@ topic_segments:
 
 **[26:06](https://vimeo.com/1074131178#t=1566s)** what you're looking forward to. And I'm sure, like, I I, I am sure that our DPW director, like I, you know, I trust her like knowledge about signage and her feelings on it. And, you know, it seemed like a big sign the way it was kind of presented. And I, um, you know, DPW is putting up a lot of signs and so I'm sure that like there is a mindfulness around it. So do are, this was just literally, I didn't even anticipate this discussion, but, Well, I think the public library is a special place. Yes, absolutely. It is a special place too, right? So I think it has a special, Are are folks in, are you folks following along with me around the one sign and so I can amend the motion? Is that okay? Mm-hmm. Okay. Um, so I'm, I'm gonna, um, ask for a motion to approve the request from Kimberly, grad director
 
-**[26:53](https://vimeo.com/1074131178#t=1613s)** of Abbott Public Library to direct a national public library sign, um, subject to review and approval by the town administrator in DPW.
+**[26:53](https://vimeo.com/1074131178#t=1613s)** of Abbot Public Library to direct a national public library sign, um, subject to review and approval by the town administrator in DPW.
 
 **[27:06](https://vimeo.com/1074131178#t=1626s)** I'm not gonna even get into as it provides more liberty if I say it that way. So we're not determining location, we're gonna let DPW and can decide Per our discussion. That's we Understand. I like that. What our idea. I just wanna make sure I said perfect. Second. Okay. Okay. All those in favor? Okay. Thank you Ken. Thanks Tim. Thank you for time and discussion. Thank you very much. I really didn't anticipate this discuss. I didn't expection. I was like, wait a minute. Let's stop. Okay. Um, so next we have votes of the board, uh, you know, just general consent, uh, agenda items. We are going to, um, pause on minutes. We're gonna postpone on those. And, um, but, uh, going forward on the others,
 
-**[27:52](https://vimeo.com/1074131178#t=1672s)** accept those put on hold. I need a motion to approve the following consent agenda items. Abbott Hall Marblehead Pride Committee for Saturday, June 21st, 2025 from two to 4:00 PM Abbott Hall, Marblehead Marble Marblehead Museum, Saturday, April 26th from 10:00 AM to 2:00 PM the Festival of Arts on the Avenue, Sunday, July 6th, 2025, two to 5:00 PM and, um, declaring Abbott Library public library's large computer table as surplus item according to our, um, policy. Okay, So moved. Second. Second. All those in favor? Okay, great. And now we have, um, the welcome letter. We've been asked from the, um, Halifax race. I love that we're talking about the summer, the weather is not.
+**[27:52](https://vimeo.com/1074131178#t=1672s)** accept those put on hold. I need a motion to approve the following consent agenda items. Abbot Hall Marblehead Pride Committee for Saturday, June 21st, 2025 from two to 4:00 PM Abbot Hall, Marblehead Museum, Saturday, April 26th from 10:00 AM to 2:00 PM the Festival of Arts on the Avenue, Sunday, July 6th, 2025, two to 5:00 PM and, um, declaring Abbot Library public library's large computer table as surplus item according to our, um, policy. Okay, So moved. Second. Second. All those in favor? Okay, great. And now we have, um, the welcome letter. We've been asked from the, um, Halifax race. I love that we're talking about the summer, the weather is not.
 
 **[28:37](https://vimeo.com/1074131178#t=1717s)** Um, but so they have asked us to, uh, send some words a greeting to, for them to incorporate in the Halifax race. And we need to vote on the language and approval that's present, like proposed here. And, um, it's in our packet. You can read the message. It's from all of us. And, um, this is the Halifax race starting July 6th, 2025. The 40th bi biennial. So it's a, it's a mile marker Marblehead to Halifax Ocean Race. And, um, this would be our message. It. This has been running, um, I think we had covid, we had a year hiatus, but it's been 120 years, um, that we've been, that it's been running. And, um, so anyway, so if you, uh, approve
 
-**[29:25](https://vimeo.com/1074131178#t=1765s)** of the message in our packet as presented, um, or if there's any comments, I'll make the motion. We can have a second and discuss it if anybody wants anything changed. Can I have a motion to approve the request from Jay Watt rear Commodore to prepare a message from the select board for the 2025 Marble Head to Halifax race book, as has been the tradition since the start of the race in 1905 and as presented in our packet. So Moved second. Does anybody have any changes to it that they'd like to make? Okay. All right. All those in favor? Is it? Question, is it possible we take a photo of all five of you? 'cause it seems like in the past that's what they've done. Okay. To include in the letter. Don't we have a picture that was taken when we were all Srn? Are you with the Halifax Re?
+**[29:25](https://vimeo.com/1074131178#t=1765s)** of the message in our packet as presented, um, or if there's any comments, I'll make the motion. We can have a second and discuss it if anybody wants anything changed. Can I have a motion to approve the request from Jay Watt rear Commodore to prepare a message from the select board for the 2025 Marblehead to Halifax race book, as has been the tradition since the start of the race in 1905 and as presented in our packet. So Moved second. Does anybody have any changes to it that they'd like to make? Okay. All right. All those in favor? Is it? Question, is it possible we take a photo of all five of you? 'cause it seems like in the past that's what they've done. Okay. To include in the letter. Don't we have a picture that was taken when we were all Srn? Are you with the Halifax Re?
 
 **[30:10](https://vimeo.com/1074131178#t=1810s)** I am. Oh. Oh, okay. Do you wanna come on up? Sorry, I didn't know you were here. I may, I may have dressed differently. Sorry. No, no worries At all. We made eye contact with Nice to have you Very Much introduce yourself. My name is Kate Ferris Richardson. I'm the Vice Comm of the Boston Yacht Club and the United States Chair of the Marblehead to Halifax Ocean Race. Great. Okay. Awesome. Um, and yes, uh, generally there is a picture that is included with, we do have a 2023 picture, but, um, I believe the board has, has changed since then. Great. Yeah, we're happy to do that for Beautiful, Wonderful. Adam Chair, can I suggest we just use the picture that we took, that we used throughout town? Or do we, do we have that? Did You do that? I don't, yeah, you stood up by the, we Stood up there. Sure. We'll dig it up and, or I'm Happy. If not, we'll get you one. Fantastic. That'd be lovely. When do you need it? By?
 
@@ -308,7 +308,7 @@ topic_segments:
 
 **[40:58](https://vimeo.com/1074131178#t=2458s)** It's already passed. We're extending It. 2026. They're extending it. Is that what we're trying to change it to? Does it say 2022? Yes. 2026. 2026. March 31st, 2026. Is that right? I wanna make sure that's right. 2026. Okay. At a cost not to exceed $100,000 and no sense a change order number three to approve option year three of the contract payment management support services between the town of Apac, DBA and Via Mental partners of Quincy Mass contract performance. Time to be March 31st, 2025 through March 31st, 2026 at a cost not to exceed $100,000 and no cents. So moved. Second. Second. Um, all those in favor? Okay.
 
-**[41:43](https://vimeo.com/1074131178#t=2503s)** And we have, um, a, uh, request from our, uh, tenant at Northshore Medical Center. I'm gonna turn this over to Mr. Keer. So Yeah, so anytime there that the lease, um, needs to make improvements to the building over 25,000. They need our permission. It's part of the, the lease agreement with them. So, um, they're, they're making, um, $54,930 improvements, um, for alterations, installation of equipment, um, air handle. So they're making improvements to the building they exceed. So it just requires, uh, the board's permission for them to do so. Uh, we are happy. Um, it's for the air handlers.
+**[41:43](https://vimeo.com/1074131178#t=2503s)** And we have, um, a, uh, request from our, uh, tenant at Northshore Medical Center. I'm gonna turn this over to Mr. Kezer. So Yeah, so anytime there that the lease, um, needs to make improvements to the building over 25,000. They need our permission. It's part of the, the lease agreement with them. So, um, they're, they're making, um, $54,930 improvements, um, for alterations, installation of equipment, um, air handle. So they're making improvements to the building they exceed. So it just requires, uh, the board's permission for them to do so. Uh, we are happy. Um, it's for the air handlers.
 
 **[42:32](https://vimeo.com/1074131178#t=2552s)** We are happy when they make improvements to that building, so. Great. Perfect. Okay. So that said, can we have a motion to approve the request from Northshore Medical Center to make alterations in accordance with the lease agreement between the Town and Shore Medical Center executed on March 6th, 2023 under section 17 alterations and installation of equipment, the estimate for the replacement of the existing air handle unit and air handler unit totals $54,930. So moved. Move by Mr. Graders. I have a second, second, second from Ms. Singer. All those in favor? Okay. Wonderful. And that concludes our regular agenda and, um, we have just a select board announcements,
 

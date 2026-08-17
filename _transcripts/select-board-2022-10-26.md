@@ -58,13 +58,13 @@ topic_segments:
     start_seconds: 0
     end_seconds: 247
     headline: "Veterans Day events announced: breakfast Nov. 9, ceremony Nov. 11, Moulton town hall"
-    dek: "VFW member Dave Rogers outlined a veterans breakfast at the Council on Aging and the town's Veterans Day ceremony at Abbott Hall, with a shuttle from the National Guard armory."
+    dek: "VFW member Dave Rogers outlined a veterans breakfast at the Council on Aging and the town's Veterans Day ceremony at Abbot Hall, with a shuttle from the National Guard armory."
     summary: |
       Dave Rogers described upcoming Veterans Day events:
       
       - **Wednesday, November 9**: Veterans breakfast at the Council on Aging at 9:00 AM; veterans encouraged to call ahead for a headcount.
-      - **Friday, November 11** (Veterans Day): Town ceremony commences at 10:00 AM at Abbott Hall; shuttle service from the National Guard armory runs 9:00–9:45 AM. Tim Keeney (VFW) will be the main speaker; choral group under direction of Scoglio performs. VFW Post 2005, 321 West Shore Drive, hosts coffee and treats afterward.
-      - **11:30 AM**: Congressman Seth Moulton returns to Abbott Hall Auditorium for his Veterans Day Town Hall.
+      - **Friday, November 11** (Veterans Day): Town ceremony commences at 10:00 AM at Abbot Hall; shuttle service from the National Guard armory runs 9:00–9:45 AM. Tim Keeney (VFW) will be the main speaker; choral group under direction of Scoglio performs. VFW Post 2005, 321 West Shore Drive, hosts coffee and treats afterward.
+      - **11:30 AM**: Congressman Seth Moulton returns to Abbot Hall Auditorium for his Veterans Day Town Hall.
     key_speakers: ["Dave Rogers (VFW member / Veterans Agent)"]
   - topic: public-safety
     topic_confidence: 0.98
@@ -178,11 +178,11 @@ topic_segments:
     start_seconds: 6822
     end_seconds: 7088
     headline: "Holiday hours, Board of Retirement budget notice, committee vacancies, and housing authority vacancy noted"
-    dek: "Routine notifications included Abbott Hall/Mary Alley holiday hours, a Board of Retirement annual budget submission, two Old Burial Hill Committee vacancies, and a Marblehead Housing Authority vacancy."
+    dek: "Routine notifications included Abbot Hall/Mary Alley holiday hours, a Board of Retirement annual budget submission, two Old Burial Hill Committee vacancies, and a Marblehead Housing Authority vacancy."
     summary: |
       Several informational items were addressed:
       
-      - **Holiday hours** for Abbott Hall and the Mary Alley building were read into the record covering Veterans Day week (Nov. 7–11) and Thanksgiving week (Nov. 21–25). Abbott Hall will be closed November 11; the Veterans Day ceremony is at 10 AM.
+      - **Holiday hours** for Abbot Hall and the Mary Alley building were read into the record covering Veterans Day week (Nov. 7–11) and Thanksgiving week (Nov. 21–25). Abbot Hall will be closed November 11; the Veterans Day ceremony is at 10 AM.
       - **Board of Retirement**: Annual budget submission from Linda Gifford (Retirement Administrator) received as required by MGL Chapter 32, Section 22.
       - **Old Burial Hill Committee**: Two vacancies noted following Betty Lautner's departure; a letter from Judy Gates of Pond Street expressing interest was received.
       - **Marblehead Housing Authority**: Joan Cutler resigned September 15; the board was asked to advertise the vacancy.
@@ -237,7 +237,7 @@ topic_segments:
 
 **[2:12](https://vimeo.com/764597565#t=132s)** It's always nice to pack there because the parking around at Hall is kind of tricky. and I would recommend it if you don't want to walk too far. This year we have.
 
-**[2:28](https://vimeo.com/764597565#t=148s)** Tim Keeney VFW member will be the main speaker. And of course, we have a coral group. Or excellent always under the direction and scoaglio. and the VFW 2005 321 West Shore Drive always has coffee and Treats son and everyone is invited invited to come up. And it's always a nice time. I would like to add that 11:30 Congressman Seth Moulton. Is coming back to Abbott Hall Auditorium for his Veterans Day Town Hall. It's always a good take. I will add that Seth has been
+**[2:28](https://vimeo.com/764597565#t=148s)** Tim Keeney VFW member will be the main speaker. And of course, we have a coral group. Or excellent always under the direction and scoaglio. and the VFW 2005 321 West Shore Drive always has coffee and Treats son and everyone is invited invited to come up. And it's always a nice time. I would like to add that 11:30 Congressman Seth Moulton. Is coming back to Abbot Hall Auditorium for his Veterans Day Town Hall. It's always a good take. I will add that Seth has been
 
 **[3:14](https://vimeo.com/764597565#t=194s)** a big advocate for VA Health Care.
 
@@ -601,7 +601,7 @@ topic_segments:
 
 **[1:30:38](https://vimeo.com/764597565#t=5438s)** They're involved in Government Solutions as well. So big big company. And again, this is a brand new experience for Crowley to be involved in you in offshore wind us offshore wind. I should say we're very very excited to be the very new owners of the Salem windport across the Harbor from your beautiful town and we are we just closed on that property the end of last month in preparation for that closing and for this development of the offshore win martial import there. We've been working with AECOM. That's our design engineering firm and we're also working with Tetra Tech here in Boston and they're in international firm as
 
-**[1:31:26](https://vimeo.com/764597565#t=5486s)** well or national firm that is helping us with our permanent Consulting. So that process is actually just beginning because we just got psych control at that facility. There will be Any more public meetings that will be coming up around this project. We've already socialized this project to the public and the big thing that I want to make sure that that I communicate here today is that the Crowley is really interested in being a multiple neighbor in this in this community and I talk about this a lot when I get the opportunity to speak about it in Salem and I would like to say the same thing here in Marvel head, you know, we really want to impress upon the community that we had to be a neighbor that wants to work with the community. So again
+**[1:31:26](https://vimeo.com/764597565#t=5486s)** well or national firm that is helping us with our permanent Consulting. So that process is actually just beginning because we just got psych control at that facility. There will be Any more public meetings that will be coming up around this project. We've already socialized this project to the public and the big thing that I want to make sure that that I communicate here today is that the Crowley is really interested in being a multiple neighbor in this in this community and I talk about this a lot when I get the opportunity to speak about it in Salem and I would like to say the same thing here in Marblehead, you know, we really want to impress upon the community that we had to be a neighbor that wants to work with the community. So again
 
 **[1:32:12](https://vimeo.com/764597565#t=5532s)** a little bit more about what's happening at the Port we are looking at Starting construction next summer in June or July of next year that construction process will be a relatively quick one right now. We're looking to have all construction complete by the end of 2025 and we're looking to go up operational at that facility in 2026 will be at this point supporting first tenant, which will be having grid which is a big offshore wind developer. And we there will be supporting them with their New England win project and then behind that
 
@@ -665,7 +665,7 @@ topic_segments:
 
 **[1:52:55](https://vimeo.com/764597565#t=6775s)** General law section 138 alcohol be purchased from Cappy's importing. So moved and second second. Nature if you could round is belt Becca in favor is singer in favor. This Noonan in favor just tonight in favor. Just a greater in favor. Okay, unanimous, and we have a second motion or to entertain a request from Elise Bustamante Marblehead Arts Association for one day liquor license on Thursday, November 17th, 2022 7pm to 10 pm at the king Hoover mention eight Hooper Street for fundraising event subject to the following conditions delivery of and received by the licensing Authority report to keep fee of
 
-**[1:53:42](https://vimeo.com/764597565#t=6822s)** 50 dollars delivery of and received by the licensing authority of proof that the alcohol be purchase from an authorized Source proof proof that the applicant can receive proper delivery storage and Disposal beverages purchase all in accordance with the requirements of General law section 138 alcohol will be purchased from Cappy's importing please second. Miss singer in favor Ms. Noonan in favor Mr. Nye in favor, Ms. Bill Becker, Mr. Greater in favor Okay, this is something we do every year. It's for holiday hours for Abbott Hall in the Mary Ali. and I think this is a
+**[1:53:42](https://vimeo.com/764597565#t=6822s)** 50 dollars delivery of and received by the licensing authority of proof that the alcohol be purchase from an authorized Source proof proof that the applicant can receive proper delivery storage and Disposal beverages purchase all in accordance with the requirements of General law section 138 alcohol will be purchased from Cappy's importing please second. Miss singer in favor Ms. Noonan in favor Mr. Nye in favor, Ms. Bill Becker, Mr. Greater in favor Okay, this is something we do every year. It's for holiday hours for Abbot Hall in the Mary Ali. and I think this is a
 
 **[1:54:30](https://vimeo.com/764597565#t=6870s)** is this a vote? No just information. It's just information. Okay, I'll just go ahead and read these out. So it's for holiday hours for Abbot Hall and Mary Ali. And will be observed at Abbot Hall in the Mary Ali building Veterans Day week of November 7th to 11. 2022 Monday November 7 2022 8am to five PM Tuesday, November 8th, 2022 8am to five PM Wednesday, November 9th 8am to 6 PM Thursday, November 10 8am to 12:30, Friday, November 11th, 2022 will be closed on November 11th, and Veterans Day ceremony will be held at Avid Hall at 10 AM Thanksgiving week of November 21 through 25. 2022 Monday, November 21 8
 

@@ -24,14 +24,14 @@ summary_card:
     - "Approved temporary street closures and traffic regulations for July 4th events"
     - "Approved indemnification of Lieutenant Lund for on-duty injury"
     - "Approved temporary parking restrictions for Marblehead Counseling Center Community Wellness Day on June 22nd"
-    - "Approved holiday hours for Abbott Hall and Mary Alley building"
+    - "Approved holiday hours for Abbot Hall and Mary Alley building"
     - "Approved renewal of Police Chief Dennis King's contract effective July 1, 2024 through June 30, 2027"
     - "Approved contract with Homer Contracting Inc. for Franklin Street Firehouse window rehabilitation in the amount of $133,000"
     - "Approved contract with DNR General Contractor for roadway and sidewalk improvements not to exceed $1,182,292.50"
     - "Approved contract with George Carnes and Sons for shipyard public access improvements in the amount of $77,700"
     - "Approved updated host community agreement with Seven Leaf Sisters"
-    - "Approved change order to Rafael Construction for Abbott Hall brick repairs increasing contract by $20,300"
-    - "Approved use of Abbott Hall and Old Townhouse for Festival of Arts setup"
+    - "Approved change order to Rafael Construction for Abbot Hall brick repairs increasing contract by $20,300"
+    - "Approved use of Abbot Hall and Old Townhouse for Festival of Arts setup"
     - "Approved one-day liquor license for Friends of Marblehead Public Schools event"
     - "Approved one-day liquor license for Our Lady Star of the Sea Garden Party"
   votes:
@@ -122,9 +122,9 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 2067
     end_seconds: 2230
-    headline: "Board approves holiday hours for Abbott Hall and Mary Alley and approves minutes"
-    dek: "Both buildings will close for Juneteenth on June 19th and for the July 4th holiday; Abbott Hall will open for the Festival of Arts."
-    summary: "The board approved holiday hours for Abbott Hall and the Mary Alley building: closed all day June 19th for Juneteenth and all day July 4th for the holiday, with Abbott Hall opening for the Festival of Arts. Minutes from May 22nd and May 23rd were also approved."
+    headline: "Board approves holiday hours for Abbot Hall and Mary Alley and approves minutes"
+    dek: "Both buildings will close for Juneteenth on June 19th and for the July 4th holiday; Abbot Hall will open for the Festival of Arts."
+    summary: "The board approved holiday hours for Abbot Hall and the Mary Alley building: closed all day June 19th for Juneteenth and all day July 4th for the holiday, with Abbot Hall opening for the Festival of Arts. Minutes from May 22nd and May 23rd were also approved."
   - topic: labor-personnel
     topic_confidence: 0.95
     start_seconds: 2230
@@ -173,16 +173,16 @@ topic_segments:
     topic_confidence: 0.8
     start_seconds: 2874
     end_seconds: 2984
-    headline: "Board approves $20,300 change order to Rafael Construction for Abbott Hall stairway repointing"
-    dek: "The change order adds seven days and $20,300 to the existing Abbott Hall brick rentals contract to repair steps and railings around the building."
-    summary: "A change order was approved to the existing Rafael Construction contract for the Abbott Hall brick rentals project, increasing the contract by $20,300 and extending the timeline by seven days. The additional scope covers repointing and securing the building's stairways and railings, identified as necessary during ongoing drainage and walkway work."
+    headline: "Board approves $20,300 change order to Rafael Construction for Abbot Hall stairway repointing"
+    dek: "The change order adds seven days and $20,300 to the existing Abbot Hall brick rentals contract to repair steps and railings around the building."
+    summary: "A change order was approved to the existing Rafael Construction contract for the Abbot Hall brick rentals project, increasing the contract by $20,300 and extending the timeline by seven days. The additional scope covers repointing and securing the building's stairways and railings, identified as necessary during ongoing drainage and walkway work."
   - topic: recreation-events
     topic_confidence: 0.8
     start_seconds: 2984
     end_seconds: 3104
     headline: "Board approves Festival of Arts building use and several one-day liquor licenses"
     dek: "Licenses approved for Friends of Marblehead Public Schools and Our Lady Star of the Sea events in June."
-    summary: "The board approved use of Abbott Hall and Old Townhouse for Festival of Arts setup and art drop-off, with times to be coordinated with the Town Administrator's office. One-day liquor licenses were also approved for the Friends of Marblehead Public Schools event at 388 Ocean Ave on June 15th (6:30–9:30 PM, alcohol from CAPS Distributors) and for Monsignor Timothy Moran's second annual Garden Party at Our Lady Star of the Sea, 85 Atlantic Ave, on June 22nd (5:00–7:00 PM)."
+    summary: "The board approved use of Abbot Hall and Old Townhouse for Festival of Arts setup and art drop-off, with times to be coordinated with the Town Administrator's office. One-day liquor licenses were also approved for the Friends of Marblehead Public Schools event at 388 Ocean Ave on June 15th (6:30–9:30 PM, alcohol from CAPS Distributors) and for Monsignor Timothy Moran's second annual Garden Party at Our Lady Star of the Sea, 85 Atlantic Ave, on June 22nd (5:00–7:00 PM)."
   - topic: public-comment
     topic_confidence: 0.95
     start_seconds: 3152
@@ -207,8 +207,8 @@ topic_segments:
     end_seconds: 3531
     headline: "Town Administrator announces landscape award for Fort Sewell and a new Flag Day retirement ceremony"
     dek: "The Fort Sewell landscape project received a merit award from the Boston Society of Landscape Architects; a flag retirement ceremony is set for June 14th at Waterside Cemetery."
-    summary: "Town Administrator Patrick Keyser reported two items: Fort Sewell's landscape project received a merit award in the general design category from the Boston Society of Landscape Architects, with project manager Naomi Catrell noting the project competed against major New England projects. Separately, Theresa Collins has organized a flag retirement ceremony at Waterside Cemetery on Flag Day, June 14th at 5:00 PM, open to all residents. The meeting concluded with a brief acknowledgment of a board member's final meeting before adjournment."
-    key_speakers: ["Patrick Keyser (Town Administrator)"]
+    summary: "Town Administrator Patrick Kezer reported two items: Fort Sewell's landscape project received a merit award in the general design category from the Boston Society of Landscape Architects, with project manager Naomi Catrell noting the project competed against major New England projects. Separately, Theresa Collins has organized a flag retirement ceremony at Waterside Cemetery on Flag Day, June 14th at 5:00 PM, open to all residents. The meeting concluded with a brief acknowledgment of a board member's final meeting before adjournment."
+    key_speakers: ["Patrick Kezer (Town Administrator)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
@@ -327,7 +327,7 @@ topic_segments:
 
 **[36:01](https://vimeo.com/954200923#t=2161s)** early June 22nd. Oh yeah, sorry. Early June 22nd to allow for drop off and delivery and of the equipment and amenities until 5:00 PM allowing for the safe dismantling of same, and notify the Abutters on Unaware lane accordingly. So Moved Second. All in favor? Okay, great.
 
-**[36:22](https://vimeo.com/954200923#t=2182s)** Um, holiday hours. Um, so we need a motion that the following holiday hours will be observed at Abbott Hall and the Mary Alley building. Wednesday, June 19th, 2024. Abbott Hall and Mary Alley closed all day for Juneteenth. Um, Thursday, July 4th, 2024, Abbot Hall and Mary Alley closed all day for regular business. Abbott Hall will open for the Festival of Arts. Is this a Vote or just, um, so moved. Do we, I think we vote the hours. Yeah. And second. All in favor. Great. And now we have a series of contracts for, um, to approve. Uh, we have, um, the, uh, the contract for, um, police Chief Dennis King, which,
+**[36:22](https://vimeo.com/954200923#t=2182s)** Um, holiday hours. Um, so we need a motion that the following holiday hours will be observed at Abbot Hall and the Mary Alley building. Wednesday, June 19th, 2024. Abbot Hall and Mary Alley closed all day for Juneteenth. Um, Thursday, July 4th, 2024, Abbot Hall and Mary Alley closed all day for regular business. Abbot Hall will open for the Festival of Arts. Is this a Vote or just, um, so moved. Do we, I think we vote the hours. Yeah. And second. All in favor. Great. And now we have a series of contracts for, um, to approve. Uh, we have, um, the, uh, the contract for, um, police Chief Dennis King, which,
 
 **[37:10](https://vimeo.com/954200923#t=2230s)** um, so we, um, So we, so you voted, the board voted in executive session, uh, to approve the contract. So now this is, uh, putting it to public vote. Um, on the contract, um, we're asking to, um, um, approve according to the terms of conditions presented subject to review by town council. So we're working on some few technical languages. Um, in there, there is nothing that would change any of the terms that, that this board would, was deliberated on part. Yeah. This is just trying to, uh, nail some technical language on that. Okay. Okay.
 
@@ -355,13 +355,13 @@ topic_segments:
 
 **[46:22](https://vimeo.com/954200923#t=2782s)** structure host community agreements. Mm-Hmm. And so, um, and they're looking to move forward to, to finish the process at, at the Cannabis Control Commission. So, um, they needed, and we needed to, uh, update the existing host community agreement to be compliant with the new Kansas Control Commission regulations around host committee agreements. And a lot of that had to do with how we manage impact fees, how we use them. So this is causing all the municipalities who have existing host committee agreements to have to review and Mm-Hmm. And update. And what the Cannabis Control Commission has done is they've actually provided a template agreement.
 
-**[47:08](https://vimeo.com/954200923#t=2828s)** So we've utilized the template, filled in the parameters, and so this is just the process to, you know, agree to the, the updated host committee agreement. Okay. Any questions? Okay. Can I have a, um, motion to approve the updated host community agreement as presented and approved by Council between the Town and Seven Leaf Sisters, and authorize the town administrator to sign on behalf of the board. So moved. Second. All in favor? Great. Um, So we have a, do you have this, We have, um, request for the use of Abbott Hall, an old townhouse to set up the Festival. Madam Chair, hold on. Oh, sorry. There was a, a last minute add in.
+**[47:08](https://vimeo.com/954200923#t=2828s)** So we've utilized the template, filled in the parameters, and so this is just the process to, you know, agree to the, the updated host committee agreement. Okay. Any questions? Okay. Can I have a, um, motion to approve the updated host community agreement as presented and approved by Council between the Town and Seven Leaf Sisters, and authorize the town administrator to sign on behalf of the board. So moved. Second. All in favor? Great. Um, So we have a, do you have this, We have, um, request for the use of Abbot Hall, an old townhouse to set up the Festival. Madam Chair, hold on. Oh, sorry. There was a, a last minute add in.
 
-**[47:54](https://vimeo.com/954200923#t=2874s)** Oh, you're right. Contract. Rafael. Rafael Construction. Okay. Sorry. Yep. The rentals. I have it. Yep. Um, Abbott Hall Brick Rentals. So the brick rentals are the drainage work, the drain's coming off, so that's being done. But as a course of doing that and doing the new walkway up and such, um, we sort of knew this was coming, but, uh, the, the steps in the railings to be repointed and updated and, and secured. So this is a change, a change order to allow the, that contractor to do the stairways around the whole building and, and appoint those and show them up.
+**[47:54](https://vimeo.com/954200923#t=2874s)** Oh, you're right. Contract. Rafael. Rafael Construction. Okay. Sorry. Yep. The rentals. I have it. Yep. Um, Abbot Hall Brick Rentals. So the brick rentals are the drainage work, the drain's coming off, so that's being done. But as a course of doing that and doing the new walkway up and such, um, we sort of knew this was coming, but, uh, the, the steps in the railings to be repointed and updated and, and secured. So this is a change, a change order to allow the, that contractor to do the stairways around the whole building and, and appoint those and show them up.
 
-**[48:41](https://vimeo.com/954200923#t=2921s)** Okay. Um, So we need a motion to approve the change order number 0 0 1 to amend the contract between the town and Rafael Construction contract 20 24 0 2 Abbott Hall Brick Rentals project by increasing the contract time by seven days and increasing the contract amount by $20,300 and authorize the chair to sign on behalf of the board. So Moved. Second. All in favor? Great. Thank you. Now onto the Arts Festival, um, for the art drop off and pick up and those setup and, and, uh, breakdown. Um, sorry. Usual request, uh, let's see.
+**[48:41](https://vimeo.com/954200923#t=2921s)** Okay. Um, So we need a motion to approve the change order number 0 0 1 to amend the contract between the town and Rafael Construction contract 20 24 0 2 Abbot Hall Brick Rentals project by increasing the contract time by seven days and increasing the contract amount by $20,300 and authorize the chair to sign on behalf of the board. So Moved. Second. All in favor? Great. Thank you. Now onto the Arts Festival, um, for the art drop off and pick up and those setup and, and, uh, breakdown. Um, sorry. Usual request, uh, let's see.
 
-**[49:26](https://vimeo.com/954200923#t=2966s)** So, um, I need a motion to approve this request from the Festival of Arts to use Abbott Hall and Old Townhouses to facilitate festival set up an art drop off, um,
+**[49:26](https://vimeo.com/954200923#t=2966s)** So, um, I need a motion to approve this request from the Festival of Arts to use Abbot Hall and Old Townhouses to facilitate festival set up an art drop off, um,
 
 **[49:38](https://vimeo.com/954200923#t=2978s)** times to be coordinated with the Town Administrator's office.
 
@@ -375,13 +375,13 @@ topic_segments:
 
 **[52:32](https://vimeo.com/954200923#t=3152s)** If we have anybody online or in the audience that would like to make public comment, um, if you're online, just raise your hand and, um, nobody online. Okay. Anybody in the audience? Just, um, your name and street. Albert Jordan Roosevelt Dabb, um, I don't care about the restaurants having seating as long as they're not out on the road. Um, down here on School Street, it looks very unpleasant to people that walk the town. It's very unsafe. The Jersey barriers are spread out. People walk from the barrel, men across the street to smoke without going the crosswalk. When cars are going by in the dark, they're hardly ever used. There's 24 hours in a day.
 
-**[53:18](https://vimeo.com/954200923#t=3198s)** I don't even know how many days a week they use them. I don't think you should be tying up public parking for Tony's. And I've been in the House of Pizzas. They're not happy with it. Um, because other people, you're tying these spaces up 24 hours a day to be used a couple hours a day. And you're, you're giving them a blanket. I don't care what Salem does. This is Marble Head. Okay. Six months a year to tie up those spots, let them buy a bigger building and have more seating. I understand. During the covid, I didn't mind help. I have to pay taxes. I can't block in front of my house and use it for my private business. Okay. Um, I think it should go to the traffic and safety. Anyone like down the landing cars aren't driving
+**[53:18](https://vimeo.com/954200923#t=3198s)** I don't even know how many days a week they use them. I don't think you should be tying up public parking for Tony's. And I've been in the House of Pizzas. They're not happy with it. Um, because other people, you're tying these spaces up 24 hours a day to be used a couple hours a day. And you're, you're giving them a blanket. I don't care what Salem does. This is Marblehead. Okay. Six months a year to tie up those spots, let them buy a bigger building and have more seating. I understand. During the covid, I didn't mind help. I have to pay taxes. I can't block in front of my house and use it for my private business. Okay. Um, I think it should go to the traffic and safety. Anyone like down the landing cars aren't driving
 
 **[54:04](https://vimeo.com/954200923#t=3244s)** by the pier, that that's a different situation. But for these restaurants, and they don't even come up here. Um, I didn't know this thing was coming up because normally these things are already out, these eyesore. Um, and like I say, some of them have the tables on the sidewalks, and some of them have 'em near the jersey barriers, and people don't know what way to go. And I feel bad for the older people that are trying to navigate and they have all this seating out here, and then it rains and then they're not getting used. And I mean, we, I we should use common sense here. This is town property. We're, we're talking about spending money. The money, the sidewalks are for the pedestrians. And at the intersections when they have deliveries there, down at that corner, they're parking on the crosswalk
 
 **[54:50](https://vimeo.com/954200923#t=3290s)** beyond the crosswalk to use the ramp to get down the truck. Because if there's parking on the right side, and you got the Jersey barriers, eliminating the parking lot there, the truck's gotta block the crosswalk during the day. That defeats the whole, per you're saying safety. I don't know who the safety person here. We need to have people walking around these department heads at night and on the weekend to see what's going on here. We don't, not, not a blanket for everyone. Like I say, if they have shoes, they have a tent on their own property, they're paying taxes. I'm happy. I think you're happy too. But I'm not happy paying the taxes, blocking these public ways. They don't clean them that good. The street sweeper can't get in between these Jersey barriers and they're an eyesore and it's a hazard.
 
-**[55:36](https://vimeo.com/954200923#t=3336s)** So before I know these people want it, uh, there's a lot of things I want I can't have too. Let them buy a piece of land and pay taxes like I do. Thank you. Thank you, Mr. Jordan. So, um, so we will get to look at each application on a, on individual basis. You A plunk thing for six months and, and I think maybe four months of peak weather, maybe we should cut it off out the street so these other businesses could have some tenants that they're paying taxes on, be able to get to their establishment. Thank you. Thank you. Um, seeing no other public, the comment, uh, will bring us to, um, Patrick Keyser's, counter administrator updates. All right. I only have a couple things. Um, always like to bring good news.
+**[55:36](https://vimeo.com/954200923#t=3336s)** So before I know these people want it, uh, there's a lot of things I want I can't have too. Let them buy a piece of land and pay taxes like I do. Thank you. Thank you, Mr. Jordan. So, um, so we will get to look at each application on a, on individual basis. You A plunk thing for six months and, and I think maybe four months of peak weather, maybe we should cut it off out the street so these other businesses could have some tenants that they're paying taxes on, be able to get to their establishment. Thank you. Thank you. Um, seeing no other public, the comment, uh, will bring us to, um, Patrick Kezer's, counter administrator updates. All right. I only have a couple things. Um, always like to bring good news.
 
 **[56:23](https://vimeo.com/954200923#t=3383s)** Um, Fort Sewell, um, had their landscape project, um, a few years ago, has received, has been awarded by the Boston Society of Landscape Architects. Um, the project received a merit award in the general design category. So, um, uh, Naomi Catrell, who actually managed, I think that project is managing this project here, uh, gave us a notice. And she said, here in Boston, that means modest projects, like these ones compete for recognition with the many of the fanciest projects in New England. So it's actually a, a pretty good award. So fancy certificate.
 

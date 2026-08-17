@@ -59,10 +59,10 @@ topic_segments:
     topic_confidence: 0.88
     start_seconds: 3482
     end_seconds: 3579
-    headline: "Resident asks about disposition of Coffin and Evelith school properties"
-    dek: "A resident asked why the vacant Coffin and Evelith properties have not been returned to town stewardship for possible sale, given the town's budget pressures."
+    headline: "Resident asks about disposition of Coffin and Eveleth school properties"
+    dek: "A resident asked why the vacant Coffin and Eveleth properties have not been returned to town stewardship for possible sale, given the town's budget pressures."
     summary: |
-      A resident (Paul Baker) noted that both the Coffin and Evelith school properties have been empty since the Brand School opened approximately 15 months ago and asked why the school committee had not voted to transfer them back to the town for potential sale, referencing the Gerry School sale at approximately $700,000–$800,000 as a comparable.
+      A resident (Paul Baker) noted that both the Coffin and Eveleth school properties have been empty since the Brand School opened approximately 15 months ago and asked why the school committee had not voted to transfer them back to the town for potential sale, referencing the Gerry School sale at approximately $700,000–$800,000 as a comparable.
       
       The school committee chair responded that the topic was discussed and voted on at the most recent Facilities Subcommittee meeting, that another facilities meeting had been posted for the following Tuesday, and that an update would be given at the full school committee meeting the following Thursday. She directed the resident to the YouTube recording of the prior facilities meeting for details.
     key_speakers: ["Paul Baker (Resident at mic)", "Sarah (School Committee Chair)"]

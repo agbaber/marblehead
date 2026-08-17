@@ -20,8 +20,8 @@ summary_card:
     - "Approved appointment of Jerry Tucker to Cemetery Commission (term to June 2025)"
     - "Approved 10-year boatyard lease to Marblehead Trading Company at $5,000/month with CPI increases"
     - "Approved acceptance of $800,000 Lars Anderson Trust distribution"
-    - "Approved establishment of three private grant accounts for Abbott Public Library"
-    - "Approved early voting at Abbott Hall October 19 through November 1"
+    - "Approved establishment of three private grant accounts for Abbot Public Library"
+    - "Approved early voting at Abbot Hall October 19 through November 1"
     - "Approved tree removal at 166 Front Street for fire department access"
     - "Approved one-day liquor license for Bent Water Brewing Company on October 5"
     - "Approved consent agenda items including minutes, event permits, and police indemnification"
@@ -34,9 +34,9 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Accept Lars Anderson Trust $800,000 distribution"
       result: "in favor (unanimous)"
-    - motion: "Establish three Abbott Public Library grant accounts"
+    - motion: "Establish three Abbot Public Library grant accounts"
       result: "in favor (unanimous)"
-    - motion: "Approve early voting at Abbott Hall"
+    - motion: "Approve early voting at Abbot Hall"
       result: "in favor (unanimous)"
     - motion: "Approve cedar removal at 166 Front Street"
       result: "in favor (unanimous)"
@@ -62,10 +62,10 @@ topic_segments:
     headline: "Town Administrator announces new grant coordinator and Commbuys procurement training"
     dek: "Donna Terel joins as grant coordinator on October 1; all department heads attended a Commbuys procurement system training session."
     summary: |
-      Town Administrator Keer announced that Donna Terel, a certified grants manager and Florida certified contract manager with master's degrees in administrative studies and education, will begin as the town's new grant coordinator on October 1.
+      Town Administrator Kezer announced that Donna Terel, a certified grants manager and Florida certified contract manager with master's degrees in administrative studies and education, will begin as the town's new grant coordinator on October 1.
       
-      Keer also reported that a trainer from Commbuys — the state's online public purchasing platform — led a session for all department heads and school administrators. He described the system as analogous to an Amazon for public purchasing, allowing municipalities to order from pre-vetted vendors, streamline procurement, and ensure compliance with purchasing laws.
-    key_speakers: ["Town Administrator (Keer)"]
+      Kezer also reported that a trainer from Commbuys — the state's online public purchasing platform — led a session for all department heads and school administrators. He described the system as analogous to an Amazon for public purchasing, allowing municipalities to order from pre-vetted vendors, streamline procurement, and ensure compliance with purchasing laws.
+    key_speakers: ["Town Administrator (Kezer)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 757
@@ -91,8 +91,8 @@ topic_segments:
     start_seconds: 2898
     end_seconds: 3037
     headline: "Board approves consent agenda covering minutes, event permits, and officer indemnification"
-    dek: "Items included meeting minutes, a 5K permit, parking restrictions for Trick or Treat, Abbott Hall reservations, and a police indemnification for Officer Clark."
-    summary: "The consent agenda covered minutes of August 23, September 11, and September 23, 2024; a Company to Heroes 5K permit for September 13, 2025; temporary parking restrictions on Washington Street for the Chamber of Commerce Trick or Treat on October 24; Abbott Hall reservations for the MHS Annual Art Show (May 12–29, 2025), a wedding rehearsal (October 25), bell ringing (October 26), and a Veterans Town Hall with Congressman Seth Moulton (November 11); a Historical Commission donation account request; Abbott Public Library surplus declaration; and indemnification of Officer Clark for on-duty injuries. All items passed."
+    dek: "Items included meeting minutes, a 5K permit, parking restrictions for Trick or Treat, Abbot Hall reservations, and a police indemnification for Officer Clark."
+    summary: "The consent agenda covered minutes of August 23, September 11, and September 23, 2024; a Company to Heroes 5K permit for September 13, 2025; temporary parking restrictions on Washington Street for the Chamber of Commerce Trick or Treat on October 24; Abbot Hall reservations for the MHS Annual Art Show (May 12–29, 2025), a wedding rehearsal (October 25), bell ringing (October 26), and a Veterans Town Hall with Congressman Seth Moulton (November 11); a Historical Commission donation account request; Abbot Public Library surplus declaration; and indemnification of Officer Clark for on-duty injuries. All items passed."
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 3037
@@ -119,22 +119,22 @@ topic_segments:
       | Exit provisions | Lessee released if town proceeds with seawall reconstruction or significant storm damage occurs |
       
       Board members noted the boatyard serves approximately 300 boats annually and contributes roughly 20% of the Harbors and Waters Enterprise Fund.
-    key_speakers: ["Town Administrator (Keer)", "Chair Nunan (Select Board)"]
+    key_speakers: ["Town Administrator (Kezer)", "Chair Nunan (Select Board)"]
   - topic: admin-housekeeping
     topic_confidence: 0.88
     start_seconds: 3498
     end_seconds: 3640
-    headline: "Board approves three private grant accounts for Abbott Public Library Foundation"
+    headline: "Board approves three private grant accounts for Abbot Public Library Foundation"
     dek: "Accounts will support general library programming, Korean American cultural programming, and medicine-and-technology programming."
     summary: |
-      Library Director Kimberly Grad and Foundation Treasurer Molly Bushman presented a request to establish three grant accounts into which the Abbott Public Library Foundation can make regular contributions:
+      Library Director Kimberly Grad and Foundation Treasurer Molly Bushman presented a request to establish three grant accounts into which the Abbot Public Library Foundation can make regular contributions:
       
       1. General support for library functions, programming, technology, and staff development.
       2. Korean American cultural art, literature, history, and educational exchange.
       3. Programming and materials at the intersection of medicine and technology.
       
       The board approved the request unanimously.
-    key_speakers: ["Kimberly Grad (Abbott Public Library Director)", "Molly Bushman (Abbott Public Library Foundation Treasurer)"]
+    key_speakers: ["Kimberly Grad (Abbot Public Library Director)", "Molly Bushman (Abbot Public Library Foundation Treasurer)"]
   - topic: admin-housekeeping
     topic_confidence: 0.87
     start_seconds: 3640
@@ -142,7 +142,7 @@ topic_segments:
     headline: "Board accepts $800,000 Lars Anderson Trust distribution as sole beneficiary"
     dek: "The funds represent proceeds from the sale of Florida real estate held in trust; a small residual of roughly $35,000 may follow once transaction fees are settled."
     summary: "The town administrator explained that the Lars Anderson Trust previously distributed funds to the town, and that this $800,000 payment represents proceeds from the sale of Florida real estate that was part of the estate. Occupancy of the property delayed the sale; once it was vacated, proceeds were distributed to the town as sole beneficiary. An estimated $35,000 residual remains to cover closing fees, and that remainder will be donated to the town upon clearance. The board authorized the chair to execute the settlement agreement."
-    key_speakers: ["Town Administrator (Keer)"]
+    key_speakers: ["Town Administrator (Kezer)"]
   - topic: recreation-events
     topic_confidence: 0.78
     start_seconds: 3786
@@ -150,14 +150,14 @@ topic_segments:
     headline: "Board approves cedar removal near Fort Sewell to improve fire department access"
     dek: "Tree Warden John Tolbert requested removal of overgrown cedars and brush at 166 Front Street following a request from Fire Captain Greg McLaughlin."
     summary: "The board approved a request from Tree Warden John Tolbert to remove cedar trees and stumps at 166 Front Street (Fort Beach Lane area near Fort Sewell). The request originated with Fire Captain Greg McLaughlin, who identified the overgrown vegetation as an impediment to emergency vehicle access. Rec and Parks indicated the area is not under its jurisdiction."
-    key_speakers: ["Town Administrator (Keer)"]
+    key_speakers: ["Town Administrator (Kezer)"]
   - topic: elections-procedural
     topic_confidence: 0.95
     start_seconds: 3930
     end_seconds: 4068
-    headline: "Board approves early voting at Abbott Hall from October 19 through November 1"
+    headline: "Board approves early voting at Abbot Hall from October 19 through November 1"
     dek: "Hours vary by day; Saturdays run 9 AM to 3 PM, weekdays open a half-hour after staff arrival and close a half-hour before staff departure."
-    summary: "The board approved the town clerk's request to hold early voting at Abbott Hall, 188 Washington Street, on the following dates: October 19, 21, 22, 23, 24, 25, 26, 28, 29, 30, 31, and November 1. Saturday hours are 9:00 AM to 3:00 PM; weekday hours align with a half-hour buffer on each end of the regular workday. Specific hours will be posted on the town clerk's website."
+    summary: "The board approved the town clerk's request to hold early voting at Abbot Hall, 188 Washington Street, on the following dates: October 19, 21, 22, 23, 24, 25, 26, 28, 29, 30, 31, and November 1. Saturday hours are 9:00 AM to 3:00 PM; weekday hours align with a half-hour buffer on each end of the regular workday. Specific hours will be posted on the town clerk's website."
   - topic: permits-zoning
     topic_confidence: 0.9
     start_seconds: 4068
@@ -172,7 +172,7 @@ topic_segments:
     headline: "Board sets October 7 deadline for Harris Street Oversight Committee applications; interviews on October 9"
     dek: "Four letters of interest already received; committee will have five members — two historical and three at large, with the Historical Commission selecting its own representatives."
     summary: "The board received letters of interest for the Harris Street Oversight Committee from Ed Nielsen, Ellen Harrington, John Falo, and David Bitterman, and a separate Cultural Council application from Joe Dippie. The committee structure is five members: two appointed by the Historical Commission from its own membership and three at-large members appointed by the Select Board. The board set a letter-of-interest deadline of October 7 with interviews scheduled for October 9. A board member also commended the town finance department and CFO Alicia Benjamin for optimizing investment revenue."
-    key_speakers: ["Chair Nunan (Select Board)", "Town Administrator (Keer)", "Peter Lake (public comment)"]
+    key_speakers: ["Chair Nunan (Select Board)", "Town Administrator (Kezer)", "Peter Lake (public comment)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
@@ -203,7 +203,7 @@ topic_segments:
 
 **[7:16](https://vimeo.com/1012986114#t=436s)** of the finance committee to get an emergency transfer. And I felt bad 'cause there was a lady walking around looking for water. And I went up to the building and got her some water. And she said to me, the mean lady won't in the office. And the same lady's there. Now, I won't mention any names, won't turn the water on here. So we need to put people up there that just don't go to a meeting. They need to know that the problems. And if someone comes in and has a concern that something needs to be fixed, if she can't address it, it should go to the board. And the board should make a decision not to say, we know about this. We don't have the money to fix it. There's holes up there, the walls are falling apart. Tree limbs have fallen on graves damaging. It hasn't been maintained for years.
 
-**[8:01](https://vimeo.com/1012986114#t=481s)** And the only last thing I'll say is that the other two superintendents used to go out and help the crew. And we have equal rights now. And I see female, female landscapers around town. So whoever we hire next, nothing wrong with a woman helping out up there, but it shouldn't just be an office job all day long. The, they need help out maintaining the cemetery and, uh, because they have so little help up there. Okay. Have a nice evening. Thank you. Do we have anybody else for public comment online? I didn't see anybody. Okay. Um, okay. So, uh, we'll move on to, uh, Mr. Keyser's, uh, town Administrator updates. Yeah. Thank you Madam Chair. Uh, just two quick items.
+**[8:01](https://vimeo.com/1012986114#t=481s)** And the only last thing I'll say is that the other two superintendents used to go out and help the crew. And we have equal rights now. And I see female, female landscapers around town. So whoever we hire next, nothing wrong with a woman helping out up there, but it shouldn't just be an office job all day long. The, they need help out maintaining the cemetery and, uh, because they have so little help up there. Okay. Have a nice evening. Thank you. Do we have anybody else for public comment online? I didn't see anybody. Okay. Um, okay. So, uh, we'll move on to, uh, Mr. Kezer's, uh, town Administrator updates. Yeah. Thank you Madam Chair. Uh, just two quick items.
 
 **[8:50](https://vimeo.com/1012986114#t=530s)** Uh, one, we are excited, uh, next Tuesday, October 1st. Our new grant coordinator will be starting starting in that role. Um, Donna, um, Terel, uh, starts on Tuesday. She's coming to us from Florida. Uh, she is a Massachusetts native, so she's coming back home. Um, she is already, uh, a certified grants manager and a Florida certified contract manager. So she has pretty ex extensive experience doing, uh, doing this role. Um, she also has a Bachelor of Arts and a bachelor's degree in Theater Arts. A master's in administrative studies with a concentration of financial economics and a master's in education.
 
@@ -225,7 +225,7 @@ topic_segments:
 
 **[13:41](https://vimeo.com/1012986114#t=821s)** Okay. Good evening. Evening. Good evening. Um, so all of us have your letter of interest and, um, resume and qualifications that you had submitted. And, uh, each of us will ask a question. I will start off by asking you just to tell us a bit about yourself and, uh, and why you'd like to serve on the cemetery Commission. I, um, grew up in Marblehead, came here at age one, and, um, uh, lived on Sunset Road. I'd walked through Waterside Cemetery on the way to the Coffin School. Um, I graduated from Marblehead High in, uh, 1962 after, um, three years at, uh, at, at Andover.
 
-**[14:28](https://vimeo.com/1012986114#t=868s)** And, um, uh, I, uh, graduated from Boston University with a degree in English, worked for the Lynn item. And then, um, I went to graduate school at UCLA and in film worked 27 years in the film industry in Los Angeles. And finally came back, um, to Marble Head, Los Angeles became uninhabitable. And, um, but I spent two years, um, working as a lobbyist in Washington, DC in the early nineties, and was a member of the, um, uh, congressional Cemetery Canine core there. The Congressional Cemetery is, um, well just that,
+**[14:28](https://vimeo.com/1012986114#t=868s)** And, um, uh, I, uh, graduated from Boston University with a degree in English, worked for the Lynn item. And then, um, I went to graduate school at UCLA and in film worked 27 years in the film industry in Los Angeles. And finally came back, um, to Marblehead, Los Angeles became uninhabitable. And, um, but I spent two years, um, working as a lobbyist in Washington, DC in the early nineties, and was a member of the, um, uh, congressional Cemetery Canine core there. The Congressional Cemetery is, um, well just that,
 
 **[15:15](https://vimeo.com/1012986114#t=915s)** it, it, it's the resting place of Elbridge Gary, the only, uh, um, signer of the declaration buried in the district. And so, um, we paid a membership fee of a hundred dollars a month, a hundred dollars a year, plus $5 a dog to walk dogs in the cemetery. And it was quite a terrific experience. You, uh, walk them off leash, you had to pick up, of course you had special id. And that, that particular year, uh, there were a thousand members who, um, uh, raised a hundred thousand dollars for the upkeep of the cemetery. A quarter of their budget, uh, comes from dog walking fees.
 
@@ -315,7 +315,7 @@ topic_segments:
 
 **[42:21](https://vimeo.com/1012986114#t=2541s)** meeting open, because I'm, I'm off this here. Right. But, So do you wanna just call your meeting order? Can I do that without a right now? Just so we vote. You are actually in the meeting. 'cause I, we posted, so just call your meeting to order. Someone's gonna pay those guys too. Yes. There you go. All right. So You're in order now. You're All, we got that perfect official. Okay. Um, so let's, um, uh, have a motion to put all of the names forward into consideration for nomination. So moved. Second. Okay. All in favor. This is to put 'em all the nomination. Okay. And, um, why don't we have, uh, Mr.
 
-**[43:08](https://vimeo.com/1012986114#t=2588s)** Keer go around and ask, um, for, uh, do we wanna do one or two names, board members? I, I think, uh, go one At a time. Do you wanna do that or do we want to just Do one round fill one seat with The vote. Okay. Fill one seat. That's right. Yeah, we do a second round. Fill the second seat. Okay. And, and I guess all of us voting for whomever. Yeah. So it'll make my math a lot easier. I think that's, so three votes would prevail. So if any, any of the candidates receive three votes, that's the majority here. They would have the seat. Yeah. That, that's what we've done historically, Madam Chair. So, yeah. And if you split the votes, then no one receives three.
+**[43:08](https://vimeo.com/1012986114#t=2588s)** Kezer go around and ask, um, for, uh, do we wanna do one or two names, board members? I, I think, uh, go one At a time. Do you wanna do that or do we want to just Do one round fill one seat with The vote. Okay. Fill one seat. That's right. Yeah, we do a second round. Fill the second seat. Okay. And, and I guess all of us voting for whomever. Yeah. So it'll make my math a lot easier. I think that's, so three votes would prevail. So if any, any of the candidates receive three votes, that's the majority here. They would have the seat. Yeah. That, that's what we've done historically, Madam Chair. So, yeah. And if you split the votes, then no one receives three.
 
 **[43:54](https://vimeo.com/1012986114#t=2634s)** What we've done is whoever receive the, the least votes drops off and we do another round. Okay. So that makes sense. So If you're ready, We're Ready to roll. Ready to roll? All right. Mr. Colletti, sir, who, who, who do you vote for to fill one of the seats
 
@@ -335,9 +335,9 @@ topic_segments:
 
 **[48:13](https://vimeo.com/1012986114#t=2893s)** So move on.
 
-**[48:18](https://vimeo.com/1012986114#t=2898s)** Alrighty. Okay. So, uh, we'll move along to our consent agenda, votes of the board, um, under, uh, tab four A through i, I will read the consent agenda items, and if anybody would like to place a hold for discussion, uh, just, uh, make it known. Um, these are, uh, minutes of August 23rd, 2024, September 11th, 2024, and September 23rd, 2024 company to heroes. 5K for September 13th, 2025. Temporary parking restrictions to close Washington Street from the bottom of Pleasant Street to Rockaway Street for the Chamber of Commerce. Trick or treat on October 24th, Abbott Hall,
+**[48:18](https://vimeo.com/1012986114#t=2898s)** Alrighty. Okay. So, uh, we'll move along to our consent agenda, votes of the board, um, under, uh, tab four A through i, I will read the consent agenda items, and if anybody would like to place a hold for discussion, uh, just, uh, make it known. Um, these are, uh, minutes of August 23rd, 2024, September 11th, 2024, and September 23rd, 2024 company to heroes. 5K for September 13th, 2025. Temporary parking restrictions to close Washington Street from the bottom of Pleasant Street to Rockaway Street for the Chamber of Commerce. Trick or treat on October 24th, Abbot Hall,
 
-**[49:03](https://vimeo.com/1012986114#t=2943s)** um, reserved for MHS Annual Art Show. May 12th to the 29th. 2025 Historical commission's request to establish a donation account. Um, Abbott Hall's, uh, the use of Abbott Hall for a wedding rehearsal on October 25th, 2024. And to ring the bells at Abbott Hall on Saturday, October 26th, Abbott Hall, um, use of Abbott Hall for Veterans Town Hall for Congressman Seth Moulton on November 11th, 2024, Abbott public Libraries request to declare items as surplus and police indemnification of Officer Clark for injured injuries sustained while on duty. Okay. So, um, I'll ask for a motion to approve the, those consent agenda items. So moved. Second.
+**[49:03](https://vimeo.com/1012986114#t=2943s)** um, reserved for MHS Annual Art Show. May 12th to the 29th. 2025 Historical commission's request to establish a donation account. Um, Abbot Hall's, uh, the use of Abbot Hall for a wedding rehearsal on October 25th, 2024. And to ring the bells at Abbot Hall on Saturday, October 26th, Abbot Hall, um, use of Abbot Hall for Veterans Town Hall for Congressman Seth Moulton on November 11th, 2024, Abbot public Libraries request to declare items as surplus and police indemnification of Officer Clark for injured injuries sustained while on duty. Okay. So, um, I'll ask for a motion to approve the, those consent agenda items. So moved. Second.
 
 **[49:50](https://vimeo.com/1012986114#t=2990s)** All in favor? Great. And that brings us to, um, the contracts, which everyone should have had a opportunity to, um, to review. Again, if anybody would like to, uh, pull something out for further discussion, just, uh, place a hold these, uh, we are about to vote on the council on Aging's re um, uh, rejection of all bids for the cafe projects because they came in over budget, as we know, award a contract between the town and Collins Engineers for release evaluation and closeout support. Um, to award a contract for the police station stairwells to statewide Flooring Incorporated. And to award a contract to Tool Design Incorporated Boston Mass for the 2024 Swamp Scott Rail Train Engineering
 
@@ -363,15 +363,15 @@ topic_segments:
 
 **[57:55](https://vimeo.com/1012986114#t=3475s)** in the amount of $5,000 per month with an annual CPI increase for the lease and a minimum of $137,000 per year in accordance with the schedule of limitations of use for the license. For the license. So moved A second, second, Mr. Fox seconds. All in favor? Great.
 
-**[58:18](https://vimeo.com/1012986114#t=3498s)** Okay. Now onto, um, our request from Abbott Library. And I noticed, um, we have Kim Gad here in the audience. Would you like to come up and an share with the board or is this, if you give you Sure. I mean yeah, come on up if you'd Like come on up. Sure. You just, the only condition is you have to speak into the microphone, please. Yeah, please come on up. Join us at the table. Okay. We have our library director and, um, so I'm Molly Bushman Shorewood Road, and I'm the treasurer of the Abbott Public Library. Oh, great. Nice to meet you. Yep. And I'm Kimberly grad, the director of Abbott Public Library. Welcome. Okay. And so you're here, uh, we have, um, here's some information around, um,
+**[58:18](https://vimeo.com/1012986114#t=3498s)** Okay. Now onto, um, our request from Abbot Library. And I noticed, um, we have Kim Gad here in the audience. Would you like to come up and an share with the board or is this, if you give you Sure. I mean yeah, come on up if you'd Like come on up. Sure. You just, the only condition is you have to speak into the microphone, please. Yeah, please come on up. Join us at the table. Okay. We have our library director and, um, so I'm Molly Bushman Shorewood Road, and I'm the treasurer of the Abbot Public Library. Oh, great. Nice to meet you. Yep. And I'm Kimberly grad, the director of Abbot Public Library. Welcome. Okay. And so you're here, uh, we have, um, here's some information around, um,
 
 **[59:06](https://vimeo.com/1012986114#t=3546s)** establishing a foundation or three three grant accounts, correct. Three Accounts, um, with the funding coming from the foundation. Oh, okay. Yes. All right. So the first account is for, um, basically contributing to programming and enhancing library services and supporting some technology items, some technology infrastructure items. Um, and then the other two grants are coming with, um, specified use. So one of them supports Korean American cultural programming and probably collections as well. And the other is a fund that is established for the intersection of technology
 
-**[59:53](https://vimeo.com/1012986114#t=3593s)** and medicine to offer programs that will provide information to our patrons. Great. Fantastic. Thank you. So I would just add that we're very excited about the new library and, uh, and we're looking forward to moving into this next phase of supporting the libraries programming. So that's where we're at. That's great. Yeah. The space looks awesome. That's, Anybody have any comments or anything? No, it's fantastic. No, thank you for doing that. Good stuff. Well done. Um, okay then. So I'll ask for a motion to approve the request from Kim grad, our Abbott Public Library Director, to establish the following three private grant accounts in which the Abbott Public Library Foundation can contribute a grant on a regular basis for the sole benefit
+**[59:53](https://vimeo.com/1012986114#t=3593s)** and medicine to offer programs that will provide information to our patrons. Great. Fantastic. Thank you. So I would just add that we're very excited about the new library and, uh, and we're looking forward to moving into this next phase of supporting the libraries programming. So that's where we're at. That's great. Yeah. The space looks awesome. That's, Anybody have any comments or anything? No, it's fantastic. No, thank you for doing that. Good stuff. Well done. Um, okay then. So I'll ask for a motion to approve the request from Kim grad, our Abbot Public Library Director, to establish the following three private grant accounts in which the Abbot Public Library Foundation can contribute a grant on a regular basis for the sole benefit
 
-**[1:00:40](https://vimeo.com/1012986114#t=3640s)** and use by Abbott Public Library as follows, one, support library functions, programming services, technology needs, and staff development. Two, uh, for some Korean American cultural art, literature, history and educational exchange. And thirdly, sponsoring programming and materials dedicated to the subject of medicine and technology. So moved. Second. Second By Mr. Fox. Uh, all in favor. Great. Thank you. Wonderful. Thank you. Thank you, Molly. Thank you. You Okay. Uh, and now, uh, we are on to agenda number, item number eight, the Lars Anderson Trust Fund. Um, it's a settlement agreement and we are, uh, essentially voting to accept funds
+**[1:00:40](https://vimeo.com/1012986114#t=3640s)** and use by Abbot Public Library as follows, one, support library functions, programming services, technology needs, and staff development. Two, uh, for some Korean American cultural art, literature, history and educational exchange. And thirdly, sponsoring programming and materials dedicated to the subject of medicine and technology. So moved. Second. Second By Mr. Fox. Uh, all in favor. Great. Thank you. Wonderful. Thank you. Thank you, Molly. Thank you. You Okay. Uh, and now, uh, we are on to agenda number, item number eight, the Lars Anderson Trust Fund. Um, it's a settlement agreement and we are, uh, essentially voting to accept funds
 
-**[1:01:29](https://vimeo.com/1012986114#t=3689s)** of $800,000, which is super generous. Um, and maybe I'll just ask Mr. Keer to Sure. Uh, just brief us on this. Sure. So, so the town has already received funds from the Lousy Anderson Fund. Um, in this case, as part of the estate, there was, um, real estate in Florida that, that was owned and was part of the trust. And that, uh, there was somebody living in the house at the time of the execution of the, of the trust. Um, I don't know if by pre-arrangement or, or, or trustee, but, uh, they waited until, I'm not sure if the person passed or moved, but vacated the home. And only until then did they
+**[1:01:29](https://vimeo.com/1012986114#t=3689s)** of $800,000, which is super generous. Um, and maybe I'll just ask Mr. Kezer to Sure. Uh, just brief us on this. Sure. So, so the town has already received funds from the Lousy Anderson Fund. Um, in this case, as part of the estate, there was, um, real estate in Florida that, that was owned and was part of the trust. And that, uh, there was somebody living in the house at the time of the execution of the, of the trust. Um, I don't know if by pre-arrangement or, or, or trustee, but, uh, they waited until, I'm not sure if the person passed or moved, but vacated the home. And only until then did they
 
 **[1:02:16](https://vimeo.com/1012986114#t=3736s)** sell the property in order to collect the proceeds and then to donate the proceeds from the sale of the house, uh, in addition to the previous proceeds into the trust. So there's 800,000 being accepted now. There is a residual of funds, um, some 35,000 thereabouts, uh, that'll be held to, to pay off any fees or transaction fees. Once that's cleared, the residual amount will also be, be, uh, donated to the town. Okay. So it's, it's an augmentation then of the original commitment. So the, the purpose of the commitment is the same, but with more money. Yeah. So it was just waiting on the sale of the, the real estate, um, transaction.
 
@@ -381,7 +381,7 @@ topic_segments:
 
 **[1:04:42](https://vimeo.com/1012986114#t=3882s)** they would like, he would like to remove the cedars, including the stumps. So, um, we can have better emergency access. So the original request came from the fire department Oh, okay. To the tree warden. Um, so Greg McLaughlin, captain McLaughlin, um, submitted the request to the tree warden, which is submitting it here. Okay. Great. Um, so, uh, can I have a motion to approve the request from John Bert, our tree warden, to remove the cedars, including stumps at 1 66 Front Street ID 4 0 5 1 to mitigate the restricted fire department access. Second. Second. Okay. And all in favor? Great.
 
-**[1:05:30](https://vimeo.com/1012986114#t=3930s)** Okay. Um, and next we have a request from, uh, the town clerk to approve, uh, early voting to take place at Abbott Hall. Um, we have a list of dates from October 19th on, uh, Saturday all the way through November 1st for early voting. Um, can I have a motion to approve this request from the town clerk, that early voting take place at Abbott Hall, uh, at 180 8 Washington Street here as follows? Um, you know, as I'm gonna say, as, um, as appears In her letter basically runs through from October 19th. Yeah. Nine through different, different hours. I'm sure she'll post Through November 1st. Yes. During the work week, it's a half hour after we open
+**[1:05:30](https://vimeo.com/1012986114#t=3930s)** Okay. Um, and next we have a request from, uh, the town clerk to approve, uh, early voting to take place at Abbot Hall. Um, we have a list of dates from October 19th on, uh, Saturday all the way through November 1st for early voting. Um, can I have a motion to approve this request from the town clerk, that early voting take place at Abbot Hall, uh, at 180 8 Washington Street here as follows? Um, you know, as I'm gonna say, as, um, as appears In her letter basically runs through from October 19th. Yeah. Nine through different, different hours. I'm sure she'll post Through November 1st. Yes. During the work week, it's a half hour after we open
 
 **[1:06:17](https://vimeo.com/1012986114#t=3977s)** and closes a half hour before we close. So it allows the staff to come in at eight. Okay. So, so the voting's from, um, I'm sorry. Yeah, from Kind of varies. It's all, Yeah. There's the Saturday, which is nine to threes, and then basically, yeah, it is kinda old place, but primarily it was designed to be a half hour after they come in, half hour before they leave to, to during the workday. And then you have your Saturdays that we're open with the, Is this state mandated? Yeah. This is part of the legal process as a polling place. Mm-Hmm. For, for early voting. So The, the earliest date is October, uh, 19th, and the latest date is November one. Just, and then there's a lot of dates in between, but
 

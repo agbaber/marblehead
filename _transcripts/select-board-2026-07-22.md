@@ -87,14 +87,14 @@ topic_segments:
     headline: "Town Administrator reports on facility improvements and Crocker Park dock damage"
     dek: "In-house crews saved an estimated $800,000 on a DPW floor repair; a temporary dock is being sought for Crocker Park after existing dock was found beyond repair."
     summary: |
-      Town Administrator Patrick Keser provided a written and verbal update on capital improvements across town facilities:
+      Town Administrator Patrick Kezer provided a written and verbal update on capital improvements across town facilities:
       
       - **Mary Alley Building**: Major HVAC renovation expected to begin late August or early September, with construction phased to maintain ongoing operations. Records have been moved to the Ayers School for medium-term storage; Building Inspections has begun digitizing property records.
       - **Pickett House**: Exterior work — fascia, soffits, corner boards, window trim, all new windows, and full repainting — is complete using modern materials that maintain the historic look.
       - **Franklin Street Fire Station**: Exterior windows, repainting, and vinyl clapboard replacement are complete; attic spray-foam insulation and hot water/heating systems were completed largely in-house.
       - **DPW Facility**: An innovative in-house solution to a degraded upper-level floor — building a cement retaining wall and backfilling — was engineered and approved, saving an estimated $800,000 compared to the original architectural plan.
       - **Crocker Park Dock**: The dock was found damaged beyond repair. Staff are seeking a temporary or borrowed dock to place for the remainder of the boating season; marina services are out to bid through August 13.
-    key_speakers: ["Patrick Keser (Town Administrator)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 930
@@ -204,7 +204,7 @@ topic_segments:
       - Approximately 14–16 retirees who did not qualify for Medicare and are enrolled in the town plan will receive a **$2,000 annual lump sum**
       
       First opt-outs will occur during the next open enrollment (April), prorated based on timing. The vote was 4 in favor, with one member voting present.
-    key_speakers: ["Patrick Keser (Town Administrator)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)"]
   - topic: labor-personnel
     topic_confidence: 0.95
     start_seconds: 5158
@@ -212,7 +212,7 @@ topic_segments:
     headline: "Collins Center hired to search for both Town Administrator and CFO; interim finance coverage outlined"
     dek: "The bundled search cost is $26,000; CLA and a retired DOR official will provide interim financial oversight as CFO Alicia Benjamin departs in late August."
     summary: |
-      Town Administrator Keser presented a plan to use the Collins Center for dual executive searches:
+      Town Administrator Kezer presented a plan to use the Collins Center for dual executive searches:
       
       | Search | Fee |
       |---|---|
@@ -230,7 +230,7 @@ topic_segments:
       **Munis revenue module issue:** A wrong chart-of-accounts table was loaded during module setup; all revenue postings were tagged to a demo table. Munis is being asked to come in and correct the data. The module will substantially improve cash reconciliation once fixed.
       
       The board agreed that given the budget cycle, the CFO search should proceed independently rather than waiting for a new town administrator to weigh in on the hire.
-    key_speakers: ["Patrick Keser (Town Administrator)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)"]
   - topic: public-safety
     topic_confidence: 0.92
     start_seconds: 6357
@@ -238,7 +238,7 @@ topic_segments:
     headline: "Board approves hold harmless agreement with Nahant for police detail mutual aid"
     dek: "The agreement mirrors existing arrangements with Salem and other communities and allows officers from each town to work details in the other when local officers don't fill them."
     summary: "The board approved a hold harmless agreement with the Town of Nahant under MGL Chapter 41, Section 99, enabling Marblehead officers to work details in Nahant and vice versa on a secondary basis — Marblehead officers always have first priority on local details. The police union has approved the arrangement. Liability remains with the officer's home community."
-    key_speakers: ["Patrick Keser (Town Administrator)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 6451
@@ -251,7 +251,7 @@ topic_segments:
       A one-day beer-and-wine license was approved for Matty's Anglers Club at Parker's Boat Yard on July 25, 2026, 1:00–4:00 PM, with alcohol purchased from Bent Water Brewing.
       
       The board set an August 7 application deadline and August 12 interview date for both the Disabilities Commission vacancy and the MMLD board vacancy created by Adam Smith's resignation effective August 1. Letters of appreciation were approved for outgoing Planning Board associate member Steve LeBrone and MMLD board member Adam Smith.
-    key_speakers: ["Patrick Keser (Town Administrator)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
@@ -378,7 +378,7 @@ topic_segments:
 
 **[1:24:28](https://vimeo.com/1215573391#t=5068s)** work between you and the unions. And I think there's one other thing in there that is changed as well, under there, where the retirees who fall in sort of this loophole for Medicare will also, there's about, don't know the exact number, but- 14 to 16 ... 14 to 16. They will be awarded $2,000 lump sum payment each year as well. These are people who have to come onto our program because they didn't qualify for Medicare, correct? So that was something to help them out as well, and we see this as just being a net positive, although we don't know the true impacts until we go through the first year. But I feel like this is a win-win for both the town and the employees. So it's a great first step in looking at some of these efficiencies we've talked about, hopefully cutting some costs, and also helping out our employees And Dan, the timing The timing. So this will go into effect as of July 1st. Thank you for asking that. The first opt-out will not be until the following year because of the open enrollment. So the open enrollment opens up in April, and then they can opt out for that following year. There is a whole schedule, which we will share with the public, on depending on when they opt-out. It's prorated as well. Great. All right. So, we were just discussing this. In the past, we have voted on contracts in executive session and done it in public. That's how we have done the last few.
 
-**[1:25:58](https://vimeo.com/1215573391#t=5158s)** I'll just fact-check that for us. I got that through secret ESP from Kyle. From secret channel. Secret channel. So if I could have a motion to approve the memorandum agreement between the town and the Public Employee Committee, the PEC, as presented and prepared by Town Council for the period of time beginning on July 1st, 2026 to June 30th, 2028. So moved. Second. Second. All in favor? And present. So we have four in favor, and Ms. Rezistion voted present. Great. Moving on to a CFO search discussion update. Mr. Keser, if you could just provide an update. Sure. So, doing some preparatory work for moving forward to find a new chief financial officer, the announcement of Alicia Benjamin moving to the island, earning an exposition. And given chief financial officer positions, it is very sort of the top of the pyramid of municipal financial knowledge and experience and such. And so it's going to be-- There's not a huge supply. So, in that regard, looking to use a recruiting
+**[1:25:58](https://vimeo.com/1215573391#t=5158s)** I'll just fact-check that for us. I got that through secret ESP from Kyle. From secret channel. Secret channel. So if I could have a motion to approve the memorandum agreement between the town and the Public Employee Committee, the PEC, as presented and prepared by Town Council for the period of time beginning on July 1st, 2026 to June 30th, 2028. So moved. Second. Second. All in favor? And present. So we have four in favor, and Ms. Rezistion voted present. Great. Moving on to a CFO search discussion update. Mr. Kezer, if you could just provide an update. Sure. So, doing some preparatory work for moving forward to find a new chief financial officer, the announcement of Alicia Benjamin moving to the island, earning an exposition. And given chief financial officer positions, it is very sort of the top of the pyramid of municipal financial knowledge and experience and such. And so it's going to be-- There's not a huge supply. So, in that regard, looking to use a recruiting
 
 **[1:27:31](https://vimeo.com/1215573391#t=5251s)** service in order to reach out and find applicants for that position to apply. One of the benefits of having a recruiter is there will be people who will respond to the advertisements because they're looking. The benefit of the recruiters that we've worked with in the municipal world is that they will help find applicants who are not looking for the job. And those are usually your best candidates. So, one, this coincides obviously with the search for town administrator, which also communities benefit by having a recruiting service for the same reasons I mentioned with CFO. There are a number of recruiting firms out there. The one firm that is by far, when you look at the numbers that's involved in this is the Collins Center. The Collins Center, people are familiar with and we've had interactions with. They do a number of different services for municipalities. So they were involved with us as far as the charter. They do other consulting work. I would say their biggest portion of work is doing personnel
 

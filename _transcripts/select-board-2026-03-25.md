@@ -21,7 +21,7 @@ summary_card:
     - "Approved motion authorizing town administrator to form a working group with School Committee and Finance Committee to develop override numbers"
     - "Approved common victualler license for Spooky Donuts LLC at 161 Pleasant Street"
     - "Approved reappointment of Emily Grande as Inspector of Animals through April 30, 2027"
-    - "Approved consent agenda including March 4 minutes, Abbott Hall Festival of the Arts July 4th events, and Arbor Day proclamation"
+    - "Approved consent agenda including March 4 minutes, Abbot Hall Festival of the Arts July 4th events, and Arbor Day proclamation"
     - "Denied request from Tiny Foods to use the Spirit of '76 image in a digital marketing campaign"
     - "Approved Marblehead Little Theatre request to stencil rabbit-feet chalk markings on public ways for two weeks starting April 10, 2026"
     - "Approved change order #08 with Rockhill Construction for $5,000 for Ann Street Park curb removal"
@@ -179,10 +179,10 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 9864
     end_seconds: 10236
-    headline: "Board approves consent agenda including Abbott Hall July 4th festival events and Arbor Day proclamation"
+    headline: "Board approves consent agenda including Abbot Hall July 4th festival events and Arbor Day proclamation"
     dek: "The consent agenda also included March 4 meeting minutes and, separately, the board denied a for-profit hot-dog company's request to use the Spirit of '76 image in advertising."
     summary: |
-      The consent agenda passed unanimously, approving the March 4, 2026 minutes; Abbott Hall Festival of the Arts July 4th events at Abbott Hall, Fort Sewall, and Old Town House; and a declaration of April 24, 2026 as Arbor Day.
+      The consent agenda passed unanimously, approving the March 4, 2026 minutes; Abbot Hall Festival of the Arts July 4th events at Abbot Hall, Fort Sewall, and Old Town House; and a declaration of April 24, 2026 as Arbor Day.
       
       Separately, the board considered and unanimously denied a request from Tiny Foods (a hot-dog company) to use the town's Spirit of '76 painting image — including a depiction of a wounded soldier holding a hot dog — in a digital marketing campaign tied to the 250th anniversary. Members noted the image was sacred to the town and the deadline was two days away.
     key_speakers: ["Alexa Singer (Select Board chair)", "Thatcher Kezer (Town Administrator)"]
@@ -524,7 +524,7 @@ topic_segments:
 
 **[1:32:41](https://vimeo.com/1177341873#t=5561s)** carefully, to keep it manageable. And if you do use a hybrid menu, a number of menu items may not even need tiers, like waste collection may not need a tier if you have that. I briefly touched on other general government, which is something that's going to be a real driver for this. That would probably not need a tier. We'd get some sort of assumptions from our financial department. So, before we go to the next slide, I just want to say, I just sketched something out in a vacuum with open meeting while being such what it is. You can't get in a back room at someone's kitchen table. So again, just like what Thatcher did, their example room. So if you can go to the next slide.
 
-**[1:33:28](https://vimeo.com/1177341873#t=5608s)** This is something you might see. Public safety is typically in towns that do it, a group, police and fire. Public health might be in there because public health has a medical and mental health component to it, but that would be a discussion point. Then there's a public infrastructure and maintenance. Not DPW department per se, that's part of it. But the other part is the building department, and that runs Abbott Hall and Widget Road. Park and Rec could be in there, because that is maintaining our parks, Seaside, Gatchell's. Same with cemetery. And even COA could be in there because as
+**[1:33:28](https://vimeo.com/1177341873#t=5608s)** This is something you might see. Public safety is typically in towns that do it, a group, police and fire. Public health might be in there because public health has a medical and mental health component to it, but that would be a discussion point. Then there's a public infrastructure and maintenance. Not DPW department per se, that's part of it. But the other part is the building department, and that runs Abbot Hall and Widget Road. Park and Rec could be in there, because that is maintaining our parks, Seaside, Gatchell's. Same with cemetery. And even COA could be in there because as
 
 **[1:34:16](https://vimeo.com/1177341873#t=5656s)** Thatcher mentioned, COA has I think 1.5 heads or so that are involved in maintenance of the Jacobi building. And, so that is a discussion point. We've talked about waste collections in both things. It's a singular item. I don't think you want waste collection lumped in with other things. I don't think anyone is thinking that. Okay. So that's just one. Culture and recreation, library, COA, Park and Rec, those are common things. This gets back to the you don't want to be pitting departments against each other. We had all the department heads in for what, three and a half hours. Jason and Lisa Hooper weren't going after each other.
 
@@ -626,7 +626,7 @@ topic_segments:
 
 **[2:00:35](https://vimeo.com/1177341873#t=7235s)** Oh, okay. That's what you were saying. Sorry. All right. Yeah. Mr. Gray. Not in favor. Mr. Fox. In favor. Ms. Zisson. In favor. Ms. Noonan. In favor. Ms. Singer. In favor. Okay. Four in favor. Thank you.
 
-**[2:01:00](https://vimeo.com/1177341873#t=7260s)** I think we're all on the same page with the trash item. So I'll just make a motion that we authorize Patrick Keezer to implement a curbside trash, the standalone option on the override. Not a fee, an override. An override, yep. An option for curbside pickups, general override at the request of the Board of Health- Thanks ... and place it alongside on the ballot as well.
+**[2:01:00](https://vimeo.com/1177341873#t=7260s)** I think we're all on the same page with the trash item. So I'll just make a motion that we authorize Patrick Kezer to implement a curbside trash, the standalone option on the override. Not a fee, an override. An override, yep. An option for curbside pickups, general override at the request of the Board of Health- Thanks ... and place it alongside on the ballot as well.
 
 **[2:01:43](https://vimeo.com/1177341873#t=7303s)** So moved. Second. And did you say the timing side? Why don't you work with- I mean- ... the Board of Health on that, and they'll come to the contract? Yeah, let us first have- We'll bring it back to us at our April 8th meeting. Okay. I just wanted to clarify where- Yeah. Well- And I just say that's a three or a five as my suggested option. So we have a second. Any other discussion? No. I'm just wondering, will these numbers going to be available on city policy? I hope not too late. No, we have a lot of item. I know health is all known. They've got their numbers close. Are you talking about- Yeah ... for the board of health or somebody- Yes ... said the fashion on therapist? All of the above.
 

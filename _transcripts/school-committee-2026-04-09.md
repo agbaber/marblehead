@@ -56,7 +56,7 @@ topic_segments:
     headline: "Magic Coalition takes its anti-hate message to Village School next"
     dek: "Student-led group formed after the October 7 swastika incident plans an assembly for sixth-graders at the start of June."
     summary: |
-      Five high-school students &ndash; **Michael Labosier**, **Max Colin**, **Don Obesi**, **Caleb Sidman** (juniors) and **Lucy Molinari** (sophomore) &ndash; presented the work of **Marblehead High School's Magic Coalition**: **Marble Headers Alliance for Growth, Inclusion, and Connection.**
+      Five high-school students &ndash; **Michael Labosier**, **Max Colin**, **Don Obesi**, **Caleb Sidman** (juniors) and **Lucy Molinari** (sophomore) &ndash; presented the work of **Marblehead High School's Magic Coalition**: **Marblehead Headers Alliance for Growth, Inclusion, and Connection.**
 
       The group formed in response to the October 7 incident in which a swastika was reportedly drawn in a second-floor men's bathroom. Existing reporting channels for hate incidents had not produced the result students wanted, so a peer-led structure was created to give students, teachers, and the broader community a clearer way to speak up.
 
@@ -276,7 +276,7 @@ associated_documents:
   - label: "Override tier slide deck (school department piece)"
     note: "Collaboratively authored by administration plus Kate and Melissa as working-group members. Chair flagged finance-law-adjacent advocacy language; will be revised before public release."
   - label: "Magic Coalition presentation"
-    note: "Student-led; Marble Headers Alliance for Growth, Inclusion, and Connection. No accompanying handout; presentation is in the video."
+    note: "Student-led; Marblehead Headers Alliance for Growth, Inclusion, and Connection. No accompanying handout; presentation is in the video."
   - label: "Portugal field trip itinerary and chaperone roster"
     note: "Vendor: same as 2025 trip; tour guide Haime Crystal returns. Chaperones: Dan Richards (admin), Erin Bark, Jay Gudara, Kelly. April 15-24, 2026."
   - label: "Tommo Tackle donation letter ($215)"
@@ -334,7 +334,7 @@ Asst Supt Mike reported the FY26 unencumbered balance just under $2.1M, down abo
 
 ## High school spotlight: Magic Coalition (approx. 25:00 &ndash; 40:00)
 
-Students Michael Labosier, Max Colin, Don Obesi, Caleb Sidman (juniors) and Lucy Molinari (sophomore) presented the Marble Headers Alliance for Growth, Inclusion, and Connection. Formed after the October 7 incident in which a swastika was reportedly drawn in the men's second-floor bathroom. Ran a full-school assembly broken by class year, set up suggestion boxes, and are preparing to bring an assembly to the Village School sixth-grade in late May / early June.
+Students Michael Labosier, Max Colin, Don Obesi, Caleb Sidman (juniors) and Lucy Molinari (sophomore) presented the Marblehead Headers Alliance for Growth, Inclusion, and Connection. Formed after the October 7 incident in which a swastika was reportedly drawn in the men's second-floor bathroom. Ran a full-school assembly broken by class year, set up suggestion boxes, and are preparing to bring an assembly to the Village School sixth-grade in late May / early June.
 
 ## Portugal field trip request (approx. 40:00 &ndash; 50:00)
 

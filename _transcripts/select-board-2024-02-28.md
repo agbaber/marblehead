@@ -19,7 +19,7 @@ summary_card:
     - "Approved appointment of Alexandra McCarran to the Cultural Council (term to June 2025)"
     - "Approved establishment of the Marblehead 250 Committee with named members"
     - "Approved use of Spirit of 76 image for Marblehead 250 Committee logo"
-    - "Approved Abbott Hall use for Troop 79 Eagle Scout Court of Honor (March 16, 2024) with fee waiver"
+    - "Approved Abbot Hall use for Troop 79 Eagle Scout Court of Honor (March 16, 2024) with fee waiver"
     - "Approved reauthorization of revolving fund accounts for FY2025"
     - "Approved updated flag policy and delegated execution to Town Administrator"
     - "Approved $100,000 ARPA allocation for Gary School Playground and Park Improvements"
@@ -27,7 +27,7 @@ summary_card:
     - "Approved $45,000 ARPA allocation for Hobbs House window replacement"
     - "Approved contract amendment decreasing Woods Hole Group Coastal Resilience contract by $11,400"
     - "Approved $10,500 contract with Ivan Meyer for restoration of Lost at Sea Monument"
-    - "Approved $79,382 contract with Rafael Construction for Abbott Hall Brick Rentals project"
+    - "Approved $79,382 contract with Rafael Construction for Abbot Hall Brick Rentals project"
     - "Approved $20,600 contract with EBI Consulting for capital needs assessments of municipal buildings"
     - "Approved $79,763 contract with Tool Design for development of a bike plan"
     - "Approved three-year payroll services contract with Harper's Payroll Services for $81,632.64 (FY25)"
@@ -37,7 +37,7 @@ summary_card:
     - "Approved nine one-day liquor licenses for Marblehead Arts at King Hooper Mansion"
     - "Appointed Town Administrator as Chief Procurement Officer"
     - "Accepted $15,321 donation for public safety drone for Police and Harbor Master departments"
-    - "Approved Abbott Hall use for Marblehead School of Music student recital (June 8, 2024)"
+    - "Approved Abbot Hall use for Marblehead School of Music student recital (June 8, 2024)"
     - "Approved proclamation of June 2, 2024 as Acorn Gallery School of Art Day"
   votes:
     - motion: "Appoint Alexandra McCarran to Cultural Council"
@@ -46,7 +46,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Approve use of Spirit of 76 image for Marblehead 250 Committee logo"
       result: "in favor (unanimous)"
-    - motion: "Approve Abbott Hall use for Troop 79 Eagle Scout Court of Honor with fee waiver"
+    - motion: "Approve Abbot Hall use for Troop 79 Eagle Scout Court of Honor with fee waiver"
       result: "in favor (unanimous)"
     - motion: "Reauthorize revolving fund accounts for FY2025"
       result: "in favor (unanimous)"
@@ -62,7 +62,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Award contract to Ivan Meyer for Lost at Sea Monument restoration ($10,500)"
       result: "in favor (unanimous)"
-    - motion: "Award contract to Rafael Construction for Abbott Hall Brick Rentals ($79,382)"
+    - motion: "Award contract to Rafael Construction for Abbot Hall Brick Rentals ($79,382)"
       result: "in favor (unanimous)"
     - motion: "Award contract to EBI Consulting for capital needs assessments ($20,600)"
       result: "in favor (unanimous)"
@@ -82,7 +82,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Accept $15,321 donation for public safety drone"
       result: "in favor (unanimous)"
-    - motion: "Approve Abbott Hall use for Marblehead School of Music recital"
+    - motion: "Approve Abbot Hall use for Marblehead School of Music recital"
       result: "in favor (unanimous)"
     - motion: "Proclaim June 2, 2024 as Acorn Gallery School of Art Day"
       result: "in favor (unanimous)"
@@ -135,9 +135,9 @@ topic_segments:
     topic_confidence: 0.9
     start_seconds: 3295
     end_seconds: 3450
-    headline: "Abbott Hall approved for Troop 79 Eagle Scout Court of Honor; fee waived"
-    dek: "The board approved use of Abbott Hall for an Eagle Scout ceremony on March 16, 2024, and waived the rental fee; a letter of commendation for both recent Eagle Scouts was also approved."
-    summary: "The board approved a request from Andrew Barnett of Troop 79 BSA to use Abbott Hall on Sunday, March 16, 2024 from 2:00 PM to 6:30 PM for an Eagle Scout Court of Honor, subject to standard rules and a certificate of insurance. The rental fee was waived. A separate motion to send a letter of commendation to both recent Eagle Scouts (Zoe and Katie) was also approved unanimously. A resident during public comment later suggested the board invite Eagle Scouts to present their projects in person rather than only sending letters."
+    headline: "Abbot Hall approved for Troop 79 Eagle Scout Court of Honor; fee waived"
+    dek: "The board approved use of Abbot Hall for an Eagle Scout ceremony on March 16, 2024, and waived the rental fee; a letter of commendation for both recent Eagle Scouts was also approved."
+    summary: "The board approved a request from Andrew Barnett of Troop 79 BSA to use Abbot Hall on Sunday, March 16, 2024 from 2:00 PM to 6:30 PM for an Eagle Scout Court of Honor, subject to standard rules and a certificate of insurance. The rental fee was waived. A separate motion to send a letter of commendation to both recent Eagle Scouts (Zoe and Katie) was also approved unanimously. A resident during public comment later suggested the board invite Eagle Scouts to present their projects in person rather than only sending letters."
   - topic: admin-housekeeping
     topic_confidence: 0.95
     start_seconds: 3450
@@ -200,7 +200,7 @@ topic_segments:
       |---|---|---|---|
       | Woods Hole Group amendment | Woods Hole Group | –$11,400 | Decrease to Coastal Resilience contract; permits combined |
       | Lost at Sea Monument restoration | Ivan Meyer, Building & Monument Conservation (Arlington) | $10,500 | Restore marble monument at Old Burial Hill using Gordon King Memorial Fund |
-      | Abbott Hall Brick Rentals | Rafael Construction Corp (Swampscott) | $79,382 | Restore decorative/functional brick drainage and new sign at Abbott Hall |
+      | Abbot Hall Brick Rentals | Rafael Construction Corp (Swampscott) | $79,382 | Restore decorative/functional brick drainage and new sign at Abbot Hall |
       | Municipal buildings capital needs assessment | EBI Consulting (Burlington) | $20,600 | Lifecycle assessment of six Select Board-managed buildings |
       | Bike plan development | Tool Design (Boston) | $79,763 | Comprehensive bike plan per Complete Streets priorities and Local Rapid Recovery Plan recommendation |
       | Payroll services (3-year) | Harper's Payroll Services (Worcester) | $81,632.64 (FY25) | Replace outdated in-house payroll system; cost offset by reduction in Munis payroll/HR modules |
@@ -244,9 +244,9 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 5752
     end_seconds: 5892
-    headline: "Abbott Hall approved for Marblehead School of Music recital; Acorn Gallery proclaimed"
+    headline: "Abbot Hall approved for Marblehead School of Music recital; Acorn Gallery proclaimed"
     dek: "Standard facility use and a proclamation for Acorn Gallery School of Art Day on June 2, 2024 were approved."
-    summary: "The board approved use of Abbott Hall on Saturday, June 8, 2024 (9:00 AM to 8:00 PM) for a student recital by the Marblehead School of Music, subject to standard rules and a certificate of insurance. The board also approved a proclamation designating June 2, 2024 as Acorn Gallery School of Art Day in Marblehead in honor of the gallery's anniversary. A letter of interest from Steven Wolf to serve on the Harbor Plan Implementation Committee was noted for the record."
+    summary: "The board approved use of Abbot Hall on Saturday, June 8, 2024 (9:00 AM to 8:00 PM) for a student recital by the Marblehead School of Music, subject to standard rules and a certificate of insurance. The board also approved a proclamation designating June 2, 2024 as Acorn Gallery School of Art Day in Marblehead in honor of the gallery's anniversary. A letter of interest from Steven Wolf to serve on the Harbor Plan Implementation Committee was noted for the record."
   - topic: public-comment
     topic_confidence: 0.95
     start_seconds: 5892
@@ -425,19 +425,19 @@ topic_segments:
 
 **[50:42](https://vimeo.com/917764509#t=3042s)** interest to the town of Boston, and they brought tourism to the town of Marblehead. Lauren McCormick, who is the executive director of the Marblehead Museum and Historical Society, decided to get a group of us together. They're representing private individuals, uh, historical groups and some businesses. And so we come before you tonight, uh, to ask to be recognized as the 250 committee. To point this out, we went for 300 years to 250 years. We're not running backwards, we're running simply forward in terms of the development of direct democracy.
 
-**[51:30](https://vimeo.com/917764509#t=3090s)** And so, um, our intention is to come together. Uh, we've already developed some themes and concepts and we are asking, first of all, to be recognized as that 250th committee. Second of all, we're requesting that, uh, we have the ability for supporters to donate to the existing celebration, which would be known as the Town Celebration Fund. And finally, it's significant that we sit here under the presence of that painting because we would like to celebrate 250 years. Marvel had two 50th, celebrating the spirit of 76.
+**[51:30](https://vimeo.com/917764509#t=3090s)** And so, um, our intention is to come together. Uh, we've already developed some themes and concepts and we are asking, first of all, to be recognized as that 250th committee. Second of all, we're requesting that, uh, we have the ability for supporters to donate to the existing celebration, which would be known as the Town Celebration Fund. And finally, it's significant that we sit here under the presence of that painting because we would like to celebrate 250 years. Marblehead had two 50th, celebrating the spirit of 76.
 
 **[52:16](https://vimeo.com/917764509#t=3136s)** Perfect opportunity for a tourism, perfect opportunity for education, perfect opportunity for culture. What questions can we answer for you? A hundred percent outstanding. Um, any questions from the, from the board at all? Great idea. Great idea. Convergence of a lot of themes, highlights, marblehead, the painting. And, uh, thank you for bringing your, your knowledge and expertise to this. It's really invaluable. Seriously, it's all volunteer and that's the nice part, as you mentioned. It's, it's pretty amazing. Okay, well that's, that's clear. And uh, I'd like to entertain a motion if there are no, no additional questions. Alright. I'd like to entertain a motion
 
-**[53:02](https://vimeo.com/917764509#t=3182s)** to establish an ad hoc committee. The Marble had 250 committee with the following members. Judy Anderson, Jack Ridge, Donald Doller, Larry Sands, Jim Murphy, Catherine Co. Pam Peterson, Edward Nelson, Lauren McCormick, Julia Ferrera, Lanning Levine, Nancy Schultz, and authorized the use of the existing Town Celebration Trust fund for supporters to donate to. So moved. Second. Second. All those in favor? Unanimous. Um, now there's another motion too, Don, I don't know if you wanna speak to the use of the logo, um, or that, that's the one that was In order to, uh, actually focus on the
+**[53:02](https://vimeo.com/917764509#t=3182s)** to establish an ad hoc committee. The Marblehead had 250 committee with the following members. Judy Anderson, Jack Ridge, Donald Doller, Larry Sands, Jim Murphy, Catherine Co. Pam Peterson, Edward Nelson, Lauren McCormick, Julia Ferrera, Lanning Levine, Nancy Schultz, and authorized the use of the existing Town Celebration Trust fund for supporters to donate to. So moved. Second. Second. All those in favor? Unanimous. Um, now there's another motion too, Don, I don't know if you wanna speak to the use of the logo, um, or that, that's the one that was In order to, uh, actually focus on the
 
-**[53:50](https://vimeo.com/917764509#t=3230s)** revolutionary events, we're focusing first on one event, but we need that logo to promote that event. Perfect use of the spirit of 76. Yep. Yep. So with that, I'd like to entertain a motion to approve the request from Donald dor to use an image of the spirit of 76 on a logo design for the Marble Head two 50 Committee. Moved, moved. Second. All those in favor, Jinx. Unanimous. As Was that easier or higher than you thought? Thank Here for a few. I've been, I'm sure this is not your first rodeo. Uh, that is Not My first rodeo. Do you think you'll come back with some more money for us this Time? We'll see what happens. I know this gentleman, charter gentleman said no one
+**[53:50](https://vimeo.com/917764509#t=3230s)** revolutionary events, we're focusing first on one event, but we need that logo to promote that event. Perfect use of the spirit of 76. Yep. Yep. So with that, I'd like to entertain a motion to approve the request from Donald dor to use an image of the spirit of 76 on a logo design for the Marblehead two 50 Committee. Moved, moved. Second. All those in favor, Jinx. Unanimous. As Was that easier or higher than you thought? Thank Here for a few. I've been, I'm sure this is not your first rodeo. Uh, that is Not My first rodeo. Do you think you'll come back with some more money for us this Time? We'll see what happens. I know this gentleman, charter gentleman said no one
 
 **[54:36](https://vimeo.com/917764509#t=3276s)** could, you know, track that 400 years. I was like, I bet these guys could come pretty close. Same. I'm like, I beg to differ, but there, There were a few people in the room I was going. Yeah, I bet, I bet we could come real close. I can't. Thank You. Thank you very much, gentlemen. Thank you, Wade. And Thanks for coming. Thanks for the work, Dawn.
 
-**[54:55](https://vimeo.com/917764509#t=3295s)** All right. Next on our agenda is the Abbott Hall Troop 79 Eagle Scout, um,
+**[54:55](https://vimeo.com/917764509#t=3295s)** All right. Next on our agenda is the Abbot Hall Troop 79 Eagle Scout, um,
 
-**[55:08](https://vimeo.com/917764509#t=3308s)** of Zoe Gas. And Katie, uh, yeah. Yeah. Adding two Eagle Scouts in the past year. So the motion is pretty explanatory. This is another Eagle Scout court. Excuse me. Excuse me. Um, and it'll take place at Abbott Hall, and it's basically a request to reserve the room. And it's always a pleasure to, it's great that we get notifications like this to, uh, to advance Eagle Scouts. I think the, uh, motion's pretty explanatory. Uh, the motion, uh, made and seconded to approve the request from Andrew Barnett, troop 79 BSA, to use Abbott Hall on Sunday, March 16th, 2024 from 2:00 PM to 6:30 PM for an Eagle Scout Court of honor, subject to the rules,
+**[55:08](https://vimeo.com/917764509#t=3308s)** of Zoe Gas. And Katie, uh, yeah. Yeah. Adding two Eagle Scouts in the past year. So the motion is pretty explanatory. This is another Eagle Scout court. Excuse me. Excuse me. Um, and it'll take place at Abbot Hall, and it's basically a request to reserve the room. And it's always a pleasure to, it's great that we get notifications like this to, uh, to advance Eagle Scouts. I think the, uh, motion's pretty explanatory. Uh, the motion, uh, made and seconded to approve the request from Andrew Barnett, troop 79 BSA, to use Abbot Hall on Sunday, March 16th, 2024 from 2:00 PM to 6:30 PM for an Eagle Scout Court of honor, subject to the rules,
 
 **[55:57](https://vimeo.com/917764509#t=3357s)** usual rules and regulations, fees, and receipt of the required certificate of insurance, naming the town of, uh, Marblehead as an additionally insured, and to waive the rental fee for this event. So moved. Second. Second. All those in favor? Unanimous. All right. Next honor item before you move on. Yes, Mr. Chair, I'd just like to ask if we can make another motion to send a letter of accommodation to this, to the Eagle Scout. That's a very good, uh, very good call. Yes. I'd like to make that motion at this time. Okay, go ahead. So, so, uh, so moved. So moved. And a second. All Those, all those in favor? You. Thank you. There's two you that, uh, two To both of 'em. Just a letter of just A letter of commendation. Both, I think we should do. I thought that was part of separate normal routine. That's a good, that's
 
@@ -493,9 +493,9 @@ topic_segments:
 
 **[1:12:59](https://vimeo.com/917764509#t=4379s)** And, um, if, um, any of you have been up there, it's a rather tall marble, um, monument that needs some work and will be spectacular when completed. Yeah, that's awesome. We've, we've gotten a, we got a, a briefing on that already, I think, and that, that's a great thing. Any questions for Yes. Any questions from the board? Okay. Without, I like a motion to vote to award the contract to Ivan Meyer, doing business as building and monument conservation of Arlington Mass for the restoration of the loss at Sea Monument in Old Burial Hill in the amount of $10,500. And authorized to share the chair to sign on behalf of the board. So moved. Second. All those in favor? Unanimous. Uh, item number three, Becky. Um, number three is Rafael Construction Corporation.
 
-**[1:13:46](https://vimeo.com/917764509#t=4426s)** So this is the, this is one of the last things that we didn't, this was part of the Abbott Hall project, but we didn't do it. Uh, we felt we'd get a better price if we did it separately, because it is the Brick Rentals, I don't know if you're familiar with them. They're sort of the old drainage system that was, um, around it's decorative that is around, but also functional around the, um, Abbott Hall. So we had put it out to bid, um, a while ago. Um, and we only got one bid and it was very high. So we kind of, um, decided to do it. Now. It's a favorable bidding climate, um, at this time of year for this type of work. And we did, we got five bids. And, uh, so this is, um, this is to complete that work. And it also, um, we'll put a new sign outside of Abbott Hall
+**[1:13:46](https://vimeo.com/917764509#t=4426s)** So this is the, this is one of the last things that we didn't, this was part of the Abbot Hall project, but we didn't do it. Uh, we felt we'd get a better price if we did it separately, because it is the Brick Rentals, I don't know if you're familiar with them. They're sort of the old drainage system that was, um, around it's decorative that is around, but also functional around the, um, Abbot Hall. So we had put it out to bid, um, a while ago. Um, and we only got one bid and it was very high. So we kind of, um, decided to do it. Now. It's a favorable bidding climate, um, at this time of year for this type of work. And we did, we got five bids. And, uh, so this is, um, this is to complete that work. And it also, um, we'll put a new sign outside of Abbot Hall
 
-**[1:14:36](https://vimeo.com/917764509#t=4476s)** that is more in keeping with the, the sign that says Abbott Hall. It's more in keeping with the, um, Victorian, um, nature of the, of the building. It'll be, uh, black, um, uh, metal railing. And then they we're gonna match the color of the, uh, window sashes. And so it's, um, it's both functional and decorative the, uh, project. Awesome. Awesome. Any questions from the board? Comments? Okay. The, the, it's the bottom one. It's the bottom one. Oh, okay. So, thank you. Thank you. Thank you for pointing that out. Okay. No questions. If that's the case, uh, I'd like to, uh, entertain a motion to vote toward the contract for the Abbott Hall Brick
+**[1:14:36](https://vimeo.com/917764509#t=4476s)** that is more in keeping with the, the sign that says Abbot Hall. It's more in keeping with the, um, Victorian, um, nature of the, of the building. It'll be, uh, black, um, uh, metal railing. And then they we're gonna match the color of the, uh, window sashes. And so it's, um, it's both functional and decorative the, uh, project. Awesome. Awesome. Any questions from the board? Comments? Okay. The, the, it's the bottom one. It's the bottom one. Oh, okay. So, thank you. Thank you. Thank you for pointing that out. Okay. No questions. If that's the case, uh, I'd like to, uh, entertain a motion to vote toward the contract for the Abbot Hall Brick
 
 **[1:15:23](https://vimeo.com/917764509#t=4523s)** Ronald's project for Rafael Construction Corps of Swamp, Scott Mass for the base bid and add alternate, uh, one for a total of $79,382 and authorize the chair to, to, uh, sign the contract on behalf of the board. So moved. Second. All those in favor? Okay. Unanimous. So, uh, I'm gonna proceed to the, she may not have a list. Oh, got it. Got it. Okay. Sure. That's, that's, yeah. Sorry about that. Becky. I'll, I'll, I'll give you a little prompt. I mean, the next one is for the capital needs assessments for the municipal Yeah. To, to EBI consulting. You could, yes. And that is, um, so that is for a capital that's $20,600 for, we had done a request for quotations
 
@@ -559,7 +559,7 @@ topic_segments:
 
 **[1:35:06](https://vimeo.com/917764509#t=5706s)** and you're trying to canvas miles, you have the ability to pick out heat signatures like that. And this is, um, this is a drone that has, um, it's kind of best in the business and it's reasonably cost. Um, but, uh, it's, it's gonna really make a difference on that. Thermal heat, heat imaging. All in favor? Okay. Unanimous. I'd also like to entertain a motion, uh, for a letter of thanks and appreciation to Biff Michelle, on behalf of this light board. So moved. Second. Second. Those in favor, unanimous. Thank you. You're welcome. Thank you very much. Chief. Hey, you can, these are Good things With Oh, they are good things. Yeah. Hundred percent. Alright.
 
-**[1:35:52](https://vimeo.com/917764509#t=5752s)** Uh, okay. So we have the Marblehead School of Music. I guess it's looking for the use of Abbott Hall. The motion is pretty self-explanatory. Uh, like a motion to approve a request from Jennifer Spungen, uh, Marblehead School of Music Hugs Abbott Hall on Saturday, June 8th, 2024 from 9:00 AM to, uh, to 8:00 PM for student recital. Uh, subject to the usual rules and regulations, fees and receipt of the required certificates of insurance. Naming the town of Marblehead, uh, as an additionally insured. So moved. Second. All in favor? All right. Unanimous, um, letter of interest. I'd like to enter a letter of interest, um, from Steven Wolf, uh, who would like to vol to be, uh,
+**[1:35:52](https://vimeo.com/917764509#t=5752s)** Uh, okay. So we have the Marblehead School of Music. I guess it's looking for the use of Abbot Hall. The motion is pretty self-explanatory. Uh, like a motion to approve a request from Jennifer Spungen, uh, Marblehead School of Music Hugs Abbot Hall on Saturday, June 8th, 2024 from 9:00 AM to, uh, to 8:00 PM for student recital. Uh, subject to the usual rules and regulations, fees and receipt of the required certificates of insurance. Naming the town of Marblehead, uh, as an additionally insured. So moved. Second. All in favor? All right. Unanimous, um, letter of interest. I'd like to enter a letter of interest, um, from Steven Wolf, uh, who would like to vol to be, uh,
 
 **[1:36:40](https://vimeo.com/917764509#t=5800s)** volunteer, volunteer for the Harbor Implementation Harbor Plan Implementation Committee. Uh, Kyle, if we could put that letter into, into consideration. Much appreciated. And, uh, there's a request, um, and I don't you have a little background around this? Yeah. This is Thatcher. I, I rather than summarize the letter, which I would butcher if you Could. Yeah. So it's, um, uh, there's an event, uh, at the ACON Gallery School of Art located on State Street, um, that's worked with, um, young students. Um, and they are proposing a
 

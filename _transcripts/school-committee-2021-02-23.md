@@ -42,7 +42,7 @@ topic_segments:
       
       **Proposal:** K–3 return to five half-days (8 a.m.–noon) on March 1; grades 4–6 on March 8. Students would come in Monday–Friday, then log on for remote classes 1:30–2:30 p.m. Monday, Tuesday, Thursday, Friday; Wednesday afternoons remain teacher planning/PD time.
       
-      Principals from Evelyth, Coffin/Village, and Glover schools each spoke positively, noting teachers had already begun rearranging classrooms. They acknowledged challenges: reconfiguring furniture, technology access with students spread across rooms, logistics of doubled drop-off/pickup traffic.
+      Principals from Eveleth, Coffin/Village, and Glover schools each spoke positively, noting teachers had already begun rearranging classrooms. They acknowledged challenges: reconfiguring furniture, technology access with students spread across rooms, logistics of doubled drop-off/pickup traffic.
       
       During Q&A, committee members raised questions about:
       - Consistency of the Wednesday afternoon schedule across buildings
@@ -50,7 +50,7 @@ topic_segments:
       - Whether the start date should be March 1 vs. March 8 vs. March 15
       
       After hearing that MEA had expressed a preference for more preparation time (ideally the March 15 trimester break), the committee moved and approved **March 15** as the start date.
-    key_speakers: ["Superintendent Bucky (district superintendent)", "Donna Zasky (Evelyth/Village principal)", "Dr. Satterfield (Coffin principal)", "Brian (Glover School principal)", "Mandy Murphy (Village principal)", "Sarah Fox (school committee member)", "Megan Taylor (school committee member)", "Emily Baron (school committee member)", "David Harris (school committee member)", "Sarah Gold (school committee chair)"]
+    key_speakers: ["Superintendent Bucky (district superintendent)", "Donna Zasky (Eveleth/Village principal)", "Dr. Satterfield (Coffin principal)", "Brian (Glover School principal)", "Mandy Murphy (Village principal)", "Sarah Fox (school committee member)", "Megan Taylor (school committee member)", "Emily Baron (school committee member)", "David Harris (school committee member)", "Sarah Gold (school committee chair)"]
   - topic: school-budget
     topic_confidence: 0.88
     start_seconds: 1105

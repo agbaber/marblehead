@@ -20,8 +20,8 @@ summary_card:
     - "Approved appointment of Brendan Callahan as Community Development and Planning Director (term to June 2025)"
     - "Approved flexible snow-emergency parking ban replacing fixed midnight-to-7 AM ban"
     - "Approved Community Golf Day on October 27, 2025 awarded to Marblehead Counseling Center"
-    - "Approved Abbott Hall bell ringing for three minutes at 11 AM on February 23, 2025"
-    - "Approved consent agenda including YMCA Head to the Hills 10K, Miles for Mary 5K, Abbott Hall use, and private drain connection license"
+    - "Approved Abbot Hall bell ringing for three minutes at 11 AM on February 23, 2025"
+    - "Approved consent agenda including YMCA Head to the Hills 10K, Miles for Mary 5K, Abbot Hall use, and private drain connection license"
     - "Approved Eastern Yacht Club change of officers and directors (clerical correction)"
     - "Approved revolving fund accounts for FY2026"
     - "Approved submission of Article 37 (Board of Health expansion to five members) to the General Court"
@@ -38,7 +38,7 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Community Golf Day awarded to Marblehead Counseling Center"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall bell ringing February 23, 2025"
+    - motion: "Abbot Hall bell ringing February 23, 2025"
       result: "in favor (unanimous)"
     - motion: "Consent agenda items"
       result: "in favor (unanimous)"
@@ -125,7 +125,7 @@ topic_segments:
       - A blue-light system is planned as a future capital purchase to signal active bans
       
       The board voted unanimously to suspend Traffic Regulation Article 5, Section 8 (the all-night parking ban) and replace it with a flexible snow-emergency response. Under the new policy, the DPW director, fire chief, and police chief — in coordination with the Town Administrator — set the start and end times of declared snow emergencies based on forecast or live conditions. Violations remain subject to ticketing and towing.
-    key_speakers: ["Chief Gill (Police Chief)", "Amy (DPW Director, last name not captured)", "Patrick Keer (Town Administrator)"]
+    key_speakers: ["Chief Gill (Police Chief)", "Amy (DPW Director, last name not captured)", "Patrick Kezer (Town Administrator)"]
   - topic: recreation-events
     topic_confidence: 0.85
     start_seconds: 2134
@@ -137,21 +137,21 @@ topic_segments:
     topic_confidence: 0.9
     start_seconds: 2168
     end_seconds: 2215
-    headline: "Abbott Hall bells approved to ring for Marblehead 250th anniversary commemoration"
+    headline: "Abbot Hall bells approved to ring for Marblehead 250th anniversary commemoration"
     dek: "Bells will ring for three minutes at 11 AM on February 23, 2025 as part of the town's 250th anniversary of the American Revolution observance."
-    summary: "At the request of Judy Anderson of the Marblehead 250 Committee, the board approved ringing the Abbott Hall bells for three minutes at 11 AM on Sunday, February 23, 2025 as part of Marblehead's commemoration of the 250th anniversary of the American Revolution."
+    summary: "At the request of Judy Anderson of the Marblehead 250 Committee, the board approved ringing the Abbot Hall bells for three minutes at 11 AM on Sunday, February 23, 2025 as part of Marblehead's commemoration of the 250th anniversary of the American Revolution."
   - topic: admin-housekeeping
     topic_confidence: 0.95
     start_seconds: 2215
     end_seconds: 2395
-    headline: "Consent agenda approved including YMCA 10K, Miles for Mary 5K, Abbott Hall, and drain license"
-    dek: "The board approved January 22 minutes, two road-race events, Abbott Hall use for a school graduation, and a private drain connection license."
+    headline: "Consent agenda approved including YMCA 10K, Miles for Mary 5K, Abbot Hall, and drain license"
+    dek: "The board approved January 22 minutes, two road-race events, Abbot Hall use for a school graduation, and a private drain connection license."
     summary: |
       Consent agenda items approved:
       - Minutes of January 22, 2025
       - YMCA Head to the Hills 10K, May 18, 2025 (subject to police and Rec & Parks approval, insurance, and police details)
       - Miles for Mary 5K Walk/Run, October 18, 2025 (same conditions)
-      - Abbott Hall for Marblehead Community Charter Public School graduation and rehearsals, June 18, 2025
+      - Abbot Hall for Marblehead Community Charter Public School graduation and rehearsals, June 18, 2025
       - License for private drain connection, 2–6 Washington Street (Barry and Beum Edelman)
       
       The board also approved a clerical correction appointing the Eastern Yacht Club change of officers and directors on seasonal club license #065600052 at 42–44 Foster Street.
@@ -185,7 +185,7 @@ topic_segments:
     headline: "Recycled products purchasing policy reaffirmed; Sealer of Weights and Measures appointed"
     dek: "Annual policy reaffirmation preserves eligibility for Board of Health grant programs; Leonard Rose appointed Sealer of Weights and Measures under the inspections department."
     summary: "The board reaffirmed the town's recycled products purchasing policy for 2025, a requirement for the Board of Health to remain eligible for certain grant programs. The board also appointed Leonard Rose as Sealer of Weights and Measures (term to June 2025), moving the role from the retired Veterans Services officer into the inspections department under Building Commissioner Steve Cummings."
-    key_speakers: ["Patrick Keer (Town Administrator)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 2626
@@ -199,7 +199,7 @@ topic_segments:
       3. Amend Greenman Peterson Inc. bridge replacement at Village Street over Rail Trail — increase by $8,948.76 and extend to September 30, 2025
       4. Reject all bids received November 19, 2025 on Maverick Street Crossing Project (all bids exceeded available funding)
       5. Sinclair Cleaning custodial services, Judy and Jean Jacoby Community Center — $36,400 through June 30, 2027
-    key_speakers: ["Patrick Keer (Town Administrator)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)"]
   - topic: labor-personnel
     topic_confidence: 0.8
     start_seconds: 2772
@@ -214,7 +214,7 @@ topic_segments:
     headline: "Town Administrator reports $50,000 ESRI GIS license award, two police recruit updates, and DPW infrastructure projects"
     dek: "Dispatch center's custom GIS emergency app earned free licensing; one recruit graduates February 28 and another enters the academy March 3."
     summary: |
-      Town Administrator Patrick Keer provided updates across two departments:
+      Town Administrator Patrick Kezer provided updates across two departments:
       
       **Police / Dispatch:**
       - Marblehead's 911 dispatch center received approximately $50,000 in free ESRI GIS licensing for a custom emergency-response dashboard application developed in-house by dispatchers. The app won the People's Choice Award at the National Alliance for Public Safety GIS Foundation Innovation Summit in 2023.
@@ -227,7 +227,7 @@ topic_segments:
       - Village Street bridge boring work is complete; the state accepted the culvert classification, reducing the estimated project cost from approximately $11 million to $2–3 million.
       - Stormwater pipe work at 297 Ocean Ave is 95% complete.
       - A neighborhood construction Zoom meeting is planned for the following week.
-    key_speakers: ["Patrick Keer (Town Administrator)"]
+    key_speakers: ["Patrick Kezer (Town Administrator)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
@@ -236,7 +236,7 @@ topic_segments:
 
 **[0:00](https://vimeo.com/1056216081#t=0s)** Seven. Um, this meeting is being recorded, like all of our meetings on hybrid. And our first item on the agenda is public comment. If there's anybody here who'd like to make public comment, um, please feel free to go to the microphone or raise your hand online.
 
-**[0:18](https://vimeo.com/1056216081#t=18s)** I don't see any hands. Okay. All great. So then we'll go, um, next to our town administrator update from Patrick Keer. Alright, as soon as I find it,
+**[0:18](https://vimeo.com/1056216081#t=18s)** I don't see any hands. Okay. All great. So then we'll go, um, next to our town administrator update from Patrick Kezer. Alright, as soon as I find it,
 
 **[0:30](https://vimeo.com/1056216081#t=30s)** I will Recommend, uh, moving on and let me find, Okay, sure. No problem. Yeah, we can. Okay. Let's then proceed to, um, the Corinthian Yacht Club's request for their change of officers and direct directors. And is Carl Renie here? Yes, I am. Okay. Hi, Carl. Would you just come to the table and Yeah, it Would be My buddy. Kind of welcome. Carl, is that your application? Thank you. You can turn, just turn on that microphone for me. Thank you. Just push the button. There we go. That's great. Okay. Wonderful. Thank you for having me here tonight. My name's Carl Renny. I am the Commodore of the Corinthian Yacht Club. Before we get started to the agenda item, let me thank the select board for your well crafted acknowledgement of David Titus. Uh, he was our general manager for the last five or six years, but had worked at the Corinthian Yacht Club
 
@@ -334,9 +334,9 @@ topic_segments:
 
 **[35:34](https://vimeo.com/1056216081#t=2134s)** Okay. Next, on our agenda, we have a letter as you see in your packet from Tenesco Country Club, who has awarded their annual complimentary golf outing to, uh, Marblehead Counseling Center. It's a great, um, that'll be great. So we just need a motion to award the Community Golf Day on October 27th, 2025 to Marblehead Counseling Center and to notify the task of Country Club of this reward award. So moved. Second. All in favor? Okay.
 
-**[36:08](https://vimeo.com/1056216081#t=2168s)** Um, and a request from Judy Anderson of our Marblehead two 50 Committee, um, around bell ringing. Can I have a motion to approve this request, um, from Marblehead two 50 Committee to have the bells of Abbott Hall rung for three minutes at 11:00 AM on Sunday, February 23rd, 2025 as part as of Marble Head's commemoration of the 250th anniversary of the American Relu Revolution. So Moved. I can. All in favor? Great. Okay. Um, and now we have our consent agenda items. Um, and I'll need a motion to accept the follow consent agenda items unless, um, anyone would like to hold them. Just call hold if you wish.
+**[36:08](https://vimeo.com/1056216081#t=2168s)** Um, and a request from Judy Anderson of our Marblehead two 50 Committee, um, around bell ringing. Can I have a motion to approve this request, um, from Marblehead two 50 Committee to have the bells of Abbot Hall rung for three minutes at 11:00 AM on Sunday, February 23rd, 2025 as part as of Marblehead's commemoration of the 250th anniversary of the American Relu Revolution. So Moved. I can. All in favor? Great. Okay. Um, and now we have our consent agenda items. Um, and I'll need a motion to accept the follow consent agenda items unless, um, anyone would like to hold them. Just call hold if you wish.
 
-**[36:55](https://vimeo.com/1056216081#t=2215s)** Minutes of January 22nd, 2025, the YMCA head to the Hills. 10 K May 18th, 2025, uh, subject to the approval of the Marblehead Police and Recs and Park receipt of the required certification of insurance naming the town of Marblehead as insured and police details. Miles for Mary. 5K Walk runs Saturday, October 18th, 2025, subject to the approval of the Marblehead Police and Rec Park. Receipt of the required certificate of insurance naming the town of Marblehead as additionally insured and police details. Abbott Hall for the Marblehead Community Charter Public School graduation and rehearsals on Monday, June 18th, 2025. License for private drain connection between the town and Barry and Beum Edelman two
+**[36:55](https://vimeo.com/1056216081#t=2215s)** Minutes of January 22nd, 2025, the YMCA head to the Hills. 10 K May 18th, 2025, uh, subject to the approval of the Marblehead Police and Recs and Park receipt of the required certification of insurance naming the town of Marblehead as insured and police details. Miles for Mary. 5K Walk runs Saturday, October 18th, 2025, subject to the approval of the Marblehead Police and Rec Park. Receipt of the required certificate of insurance naming the town of Marblehead as additionally insured and police details. Abbot Hall for the Marblehead Community Charter Public School graduation and rehearsals on Monday, June 18th, 2025. License for private drain connection between the town and Barry and Beum Edelman two
 
 **[37:41](https://vimeo.com/1056216081#t=2261s)** through six Washington Street as presented.
 
@@ -366,7 +366,7 @@ topic_segments:
 
 **[46:07](https://vimeo.com/1056216081#t=2767s)** So, so second, all In favor.
 
-**[46:12](https://vimeo.com/1056216081#t=2772s)** And That brings us To, Oh, just, um, when I acknowledge that we have some, a letter, uh, of, in on, of interest in the Disability Commission and a resignation on the Disability Commission that are in our packets as well. And, um, I'll turn it over to Patrick Keer for our Town Administrator updates. Yes, I found my files. Um, thank you. Um, oh yeah. Okay. We'll go back. Do you wanna take care of that? The other Yeah, before we start Yeah, I just, um, jumped ahead. Thank you, Moses. Um, we want to, um, uh, Cheryl Aland is stepping down from the Disabilities Commission and so, uh, we, uh, if we could just have a motion to send a letter of appreciation to her
+**[46:12](https://vimeo.com/1056216081#t=2772s)** And That brings us To, Oh, just, um, when I acknowledge that we have some, a letter, uh, of, in on, of interest in the Disability Commission and a resignation on the Disability Commission that are in our packets as well. And, um, I'll turn it over to Patrick Kezer for our Town Administrator updates. Yes, I found my files. Um, thank you. Um, oh yeah. Okay. We'll go back. Do you wanna take care of that? The other Yeah, before we start Yeah, I just, um, jumped ahead. Thank you, Moses. Um, we want to, um, uh, Cheryl Aland is stepping down from the Disabilities Commission and so, uh, we, uh, if we could just have a motion to send a letter of appreciation to her
 
 **[46:58](https://vimeo.com/1056216081#t=2818s)** for her service on the Disability commission. So, moved second. All in favor? Okay, great. Do we need to set a deadline for the day for disability commission? I saw it online packet, but thank you.
 

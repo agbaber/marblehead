@@ -21,6 +21,7 @@ import { join } from 'node:path';
 import { YOUTUBE_YTDLP_ARGS } from './lib/config.mjs';
 import { buildSlug, renderTranscript } from './lib/render_transcript.mjs';
 import { vttToProse } from './lib/vtt_to_prose.mjs';
+import { correctKnownNames } from './lib/known_names.mjs';
 
 const YT_DLP = process.env.YT_DLP ?? `${process.env.HOME}/.local/bin/yt-dlp`;
 const PYTHON = process.env.PYTHON ?? 'python3';
@@ -176,11 +177,12 @@ function processMeeting(m) {
     return { status: 'failed', reason: 'no captions' };
   }
   const vtt = readFileSync(vttPath, 'utf8');
-  const body = vttToProse(vtt, videoUrl);
-  if (!body) {
+  const raw = vttToProse(vtt, videoUrl);
+  if (!raw) {
     console.error('  - empty VTT, skipping');
     return { status: 'failed', reason: 'empty vtt' };
   }
+  const body = correctKnownNames(raw, { label: buildSlug(m.board_slug, m.date) });
   const md = renderTranscript({
     board_slug: m.board_slug,
     board_display: m.board_display,

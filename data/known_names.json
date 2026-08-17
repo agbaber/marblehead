@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "purpose": "Corrections for Marblehead proper nouns that speech recognition reliably mishears in meeting transcripts. Applied by scripts/transcripts/lib/normalize_names.mjs at ingest, and supplied to the Whisper decoder and the summarization prompt so corrections happen at the source where possible.",
+  "rules": [
+    "Every entry needs two kinds of evidence: a `ground_truth` citation to a human-authored file in this repo proving the correct spelling, and an `observed` count of the misheard forms in the corpus (from scripts/transcripts/tools/name_census.mjs).",
+    "Matching is case-sensitive and whole-word. List each misheard form exactly as it occurs; do not rely on case folding.",
+    "A wrong correction is worse than an uncorrected mishearing, because it reads as authoritative. If the right answer depends on context, put the term in `flag_only` instead.",
+    "Never add an entry from memory of how a name is spelled. Cite the file."
+  ],
+  "replace": [
+    {
+      "right": "Marblehead",
+      "wrong": [
+        "Marvel head",
+        "Marvel Head",
+        "Marvel hood",
+        "Marvel Hood",
+        "Marvelhead",
+        "Marble Head",
+        "Marble head",
+        "Marble Hood",
+        "Marvel",
+        "Marble"
+      ],
+      "kind": "place",
+      "ground_truth": "README.md; the town name is used throughout the site",
+      "observed": "1271 misheard occurrences against 10575 correct ones (~11% error rate on the town's own name). Bare 'Marvel' (451) and bare 'Marble' (287) were sampled across ~25 contexts with zero legitimate uses: 'citizens of Marvel', 'Marble had', 'Marvel head public schools', 'Marble High'.",
+      "note": "Two-word forms are corrected before the bare forms, so 'Marvel head' does not become 'Marblehead head'."
+    },
+    {
+      "right": "Marblehead",
+      "wrong": [
+        "Marblehead Marble Marblehead",
+        "Marvel head Marble",
+        "Marble Marblehead",
+        "Marblehead Marble",
+        "Marble Marvel",
+        "Marvel Marblehead"
+      ],
+      "kind": "place",
+      "ground_truth": "Same as the entry above.",
+      "observed": "'Marble Marblehead' 7, 'Marvel head Marble' 1, 'Marblehead Marble' 1. The ASR splits the town name and then repeats it, so correcting each token separately yields 'Marblehead Marblehead'.",
+      "note": "Listed separately and matched before the single-token forms, because corrections are single-pass and cannot collapse a doubled result afterward. Deliberately does NOT cover genuine 'Marblehead Marblehead' speaker stutters, of which the corpus has 12 that predate this dictionary and are correct verbatim transcription."
+    },
+    {
+      "right": "Coffin",
+      "wrong": ["Coughlin/Coffin", "Coffin/Coughlin", "Coffman/Coffin", "Coffin/Coffman"],
+      "kind": "school",
+      "ground_truth": "Same as the Coffin entry below.",
+      "observed": "'Coughlin/Coffin' 1, in the published segment dek of _transcripts/select-board-2026-07-08.md.",
+      "note": "The summarizing model half-recognized the mishearing and hedged by printing both spellings. Correcting the tokens separately would leave 'Coffin/Coffin', so the hedge is matched whole. The prompt now forbids this construction explicitly."
+    },
+    {
+      "right": "Abbot",
+      "wrong": ["Abbott"],
+      "kind": "building",
+      "ground_truth": "library.html (Abbot Public Library, 18 occurrences); town-history.html (Abbot Hall, 14 occurrences). No human-authored file in the repo spells it with two t's.",
+      "observed": "376 'Abbott' against 40 correct 'Abbot'. Already named as a known ASR error in scripts/transcripts/prompts/summary.md.",
+      "note": "Correcting the bare surname also fixes 'Abbott Hall' and 'Abbott Public Library'. A resident surnamed Abbott would be over-corrected; none appears in the corpus."
+    },
+    {
+      "right": "Coffin",
+      "wrong": ["Coughlin", "Coffman"],
+      "kind": "school",
+      "ground_truth": "data/catalog_pass2_log.md (Coffin School, multiple entries); select-board and school-committee summary cards use 'Coffin School'.",
+      "observed": "'Coughlin' 9 occurrences in 3 files, 'Coffman' 6 in 3 files. Both are the closed Coffin School: one transcript reads 'whether it's a Coffman school or the Evert school', another 'including Coffman and Eve'.",
+      "note": "This is the error that a resident wrote in about. It reached a published segment dek as 'the Coughlin/Coffin parcel'."
+    },
+    {
+      "right": "Eveleth",
+      "wrong": ["Evelith", "Eveless", "Evelyth", "Eveles"],
+      "kind": "school",
+      "ground_truth": "school-building-maintenance.html; data/catalog.csv and data/catalog_normalized.csv (15 occurrences each).",
+      "observed": "92 correct 'Eveleth' against 'Evelith' 22, 'Eveless' 13, 'Evelyth' 2, 'Eveles' 3.",
+      "note": "'Evelyn' (19 occurrences) is deliberately excluded: it is a real first name. 'Evelace' and 'Evella' are in flag_only as too ambiguous."
+    },
+    {
+      "right": "Kezer",
+      "wrong": ["Keer", "Keyser", "Keezer", "Keser"],
+      "kind": "person",
+      "ground_truth": "how-we-got-here.html line 142 ('Town Administrator Thatcher Kezer', sourced to the 2026 FinCom Report); data/SOURCE_LOOKUP.md.",
+      "observed": "Correct 'Kezer' only 3 times against 'Keer' 42, 'Keyser' 15. Every file containing 'Keer' dates from 2023-09 or later, entirely within Kezer's tenure; the prior Town Administrator was Jason Silva (~2019-2022, data/savings_measures_compiled.md line 241), and no Silva-era transcript contains these forms.",
+      "note": "Surname only. See flag_only for 'Patrick Kezer', where the first name is also wrong and a dictionary cannot fix it."
+    },
+    {
+      "right": "Buba",
+      "wrong": ["Buuba"],
+      "kind": "person",
+      "ground_truth": "docs/superpowers/plans/2026-07-15-bylaws-history-pipeline.md; docs/superpowers/specs/2026-04-12-per-capita-levy-chart-design.md.",
+      "observed": "'Buuba' 14 occurrences against 9 correct 'Buba'.",
+      "note": "'Bubba' (1 occurrence) is excluded as plausibly a genuine informal address."
+    }
+  ],
+  "flag_only": [
+    {
+      "term": "Gerry",
+      "why": "Gerry School and Gerry Playground are real Marblehead places, and Gerry is also a given name that ASR renders interchangeably with Jerry. Context decides; a blind rewrite in either direction introduces errors."
+    },
+    {
+      "term": "Patrick Kezer",
+      "why": "The Town Administrator is Thatcher Kezer. _transcripts/town-meeting-2025-05-08.md renders him as 'Patrick Keer' three times with no occurrence of 'Thatcher', and the LLM carried 'Patrick Keer' into key_speakers and the summary prose. Correcting the surname leaves a wrong first name, so this needs a human fix, not a dictionary entry."
+    },
+    {
+      "term": "Evelyn",
+      "why": "A real first name that is also acoustically adjacent to Eveleth. Never auto-correct."
+    },
+    {
+      "term": "Evelace",
+      "why": "Probably Eveleth, but too few occurrences and too far from the correct spelling to correct with confidence."
+    },
+    {
+      "term": "Evella",
+      "why": "Probably Eveleth, same reasoning as Evelace."
+    }
+  ]
+}
