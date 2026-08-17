@@ -126,7 +126,7 @@ topic_segments:
       **Debt service:** New bond issuance of $26.2M (net $24,975K after $1.5M premium) at 3.75% true interest cost. Total FY2027 debt service: $10,971,016. Total general fund debt outstanding: $146,297,626 through 2056.
       
       Finance Committee unanimously recommended yes on Article 23.
-    key_speakers: ["Alec Goolsby (Finance Committee Chair)", "Alicia Benjamin (CFO)", "Walter Casey (resident)", "Jack Buba (resident)", "Stacey Bell (resident)", "Thatcher Keiser (Town Administrator)", "Cindy Towerlowin (resident)", "Marta Bach (resident)", "Kate Thompson (resident)"]
+    key_speakers: ["Alec Goolsby (Finance Committee Chair)", "Alicia Benjamin (CFO)", "Walter Casey (resident)", "Jack Buba (resident)", "Stacey Bell (resident)", "Thatcher Kezer (Town Administrator)", "Cindy Towerlowin (resident)", "Marta Bach (resident)", "Kate Thompson (resident)"]
   - topic: health-insurance
     topic_confidence: 0.9
     start_seconds: 3278
@@ -141,7 +141,7 @@ topic_segments:
     end_seconds: 5810
     headline: "New annual curbside trash fee of ~$2.19M established by Board of Health; separate override question set for June ballot"
     dek: "The Board of Health, under Select Board direction, established a new curbside collection fee projected at $2,186,516 annually; a separate override question to revert this cost to the tax levy will appear on the June 9 ballot regardless of Article 29's outcome."
-    summary: "The FY2027 budget includes a curbside collection line of $2,186,516 funded by the new Board of Health fee rather than the tax levy. A resident (Albert Jordan) objected to the fee structure and preference for keeping curbside costs on the tax rate. Town Administrator Keiser and Finance Director Benjamin explained the distinction between waste collection (transfer station) and curbside collection. The Select Board confirmed a separate ballot question on June 9 will give voters the option to fund curbside collection through a Prop 2½ override instead of the fee."
+    summary: "The FY2027 budget includes a curbside collection line of $2,186,516 funded by the new Board of Health fee rather than the tax levy. A resident (Albert Jordan) objected to the fee structure and preference for keeping curbside costs on the tax rate. Town Administrator Kezer and Finance Director Benjamin explained the distinction between waste collection (transfer station) and curbside collection. The Select Board confirmed a separate ballot question on June 9 will give voters the option to fund curbside collection through a Prop 2½ override instead of the fee."
     key_speakers: ["Andrew Petty (Director of Public Health)", "Albert Jordan (resident)", "Alicia Benjamin (CFO)"]
   - topic: override
     topic_confidence: 1
@@ -241,7 +241,7 @@ topic_segments:
       - **Article 20** – Salary bylaw ratification: Compensation committee actions May 2025–April 2026 ratified; 6 reclassifications, 4 new/restructured positions, 1 title change, 10 job description updates.
       
       All approved by hand vote.
-    key_speakers: ["Alexa Singer (Select Board)", "Thatcher Keiser (Town Administrator)"]
+    key_speakers: ["Alexa Singer (Select Board)", "Thatcher Kezer (Town Administrator)"]
   - topic: school-budget
     topic_confidence: 0.9
     start_seconds: 11849
@@ -722,9 +722,9 @@ topic_segments:
 
 **[1:36:50](https://vimeo.com/1189445340#t=5810s)** Thank you, Mr. Petty. Hi, quick question on the community development and planning. Okay. Stacey Bell, 38 Crestwood. Just a very quick question. It was mentioned in the proposal there's going to be a cut to, among the other full-time staff, the grant writer. I'm wondering how you're going to account for the loss of future grants or current grants we'll have to give up without that grant writer staff. How is that being factored into the budget?
 
-**[1:37:17](https://vimeo.com/1189445340#t=5837s)** Mr. Keiser.
+**[1:37:17](https://vimeo.com/1189445340#t=5837s)** Mr. Kezer.
 
-**[1:37:22](https://vimeo.com/1189445340#t=5842s)** Thank you. Good evening. Thatcher Keiser, Town Administrator. So the position in the budget is grant coordinator. As I've said many times, everybody that works for the town is a grant writer. The grant coordinator position, in addition to writing grants and specializing in it, the position was to help us to coordinate to meet the reporting requirements, timing requirements, all the regulatory requirements of any and all grants that we receive. Under the constrained budget scenario that we were faced, where we had to make choices and make cuts The plan in the current balanced budget is to move the regulatory tracking into the finance department
+**[1:37:22](https://vimeo.com/1189445340#t=5842s)** Thank you. Good evening. Thatcher Kezer, Town Administrator. So the position in the budget is grant coordinator. As I've said many times, everybody that works for the town is a grant writer. The grant coordinator position, in addition to writing grants and specializing in it, the position was to help us to coordinate to meet the reporting requirements, timing requirements, all the regulatory requirements of any and all grants that we receive. Under the constrained budget scenario that we were faced, where we had to make choices and make cuts The plan in the current balanced budget is to move the regulatory tracking into the finance department
 
 **[1:38:10](https://vimeo.com/1189445340#t=5890s)** and have basically department heads and other key staff continue writing grants, managing grants on top of all their other duties. Ideally, we would like to have that position back in order to be much more efficient and allow our department heads and key staff to stay focused on their core function. But under the budget constraints we were faced with, we had to make these tough choices. And so what I take from that is that you're not factoring any less grants received, even though the loss of the position. Is that right? That is our desire. That will be challenging just based on workload as such, but our desire is to keep applying for any and all grants that we
 

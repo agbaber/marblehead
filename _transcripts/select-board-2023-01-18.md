@@ -160,7 +160,7 @@ topic_segments:
     end_seconds: 3600
     headline: "Town approves drainage connection license and designates administrator for PEC negotiations"
     dek: "A drainage license for 118 Pleasant Street and a designation for the Town Administrator to negotiate the public employee committee successor agreement were both approved."
-    summary: "The board approved a license agreement for a private connection to the town drainage system for Neptune Realty LLC at 118 Pleasant Street, authorizing the chair to sign. The board also designated Town Administrator Thatcher Keyes to act as the board's representative in negotiations under MGL Chapter 32B Section 19 with the town's Public Employee Committee regarding a successor agreement effective June 30, 2018."
+    summary: "The board approved a license agreement for a private connection to the town drainage system for Neptune Realty LLC at 118 Pleasant Street, authorizing the chair to sign. The board also designated Town Administrator Thatcher Kezer to act as the board's representative in negotiations under MGL Chapter 32B Section 19 with the town's Public Employee Committee regarding a successor agreement effective June 30, 2018."
     key_speakers: ["Thatcher (Town Administrator)"]
   - topic: public-safety
     topic_confidence: 0.85
@@ -185,7 +185,7 @@ topic_segments:
     headline: "Town Administrator outlines path forward for Village Street Bridge replacement project"
     dek: "A contract with engineering firm GPI for 25% design work, costing slightly under $400,000 funded by Chapter 90 funds, is expected to come before the board at a near-future meeting."
     summary: |
-      Town Administrator Keyes briefed the board on plans to replace the 1939 Village Street Bridge, which has a weight limit well below that of town fire trucks and has been flagged as a public safety concern. The proposed approach is to replace the bridge with a preformed cement tunnel structure, modeled on a similar project in Amesbury, which is more cost-effective and lower maintenance. 
+      Town Administrator Kezer briefed the board on plans to replace the 1939 Village Street Bridge, which has a weight limit well below that of town fire trucks and has been flagged as a public safety concern. The proposed approach is to replace the bridge with a preformed cement tunnel structure, modeled on a similar project in Amesbury, which is more cost-effective and lower maintenance. 
       
       Marblehead has already obtained a project number from MassDOT. The next step is a contract with engineering firm GPI for 25% design work, estimated at slightly under $400,000, funded by existing Chapter 90 road funds. The design phase is targeted for completion by September 2024, after which the project would pursue inclusion on the Boston Region MPO Transportation Improvement Program (TIP) for state and federal funding. The contract is expected to come before the board at a subsequent meeting.
     key_speakers: ["Thatcher (Town Administrator)"]

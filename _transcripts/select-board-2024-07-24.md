@@ -46,9 +46,9 @@ topic_segments:
     start_seconds: 15
     end_seconds: 743
     headline: "Town Administrator reports ~$898K in harbor grants and four staff hires"
-    dek: "Thatcher Keysers outlined completed harbor permitting work, a new $239,718 grant request, Red's Pond improvements, and four recent personnel changes."
+    dek: "Thatcher Kezer outlined completed harbor permitting work, a new $239,718 grant request, Red's Pond improvements, and four recent personnel changes."
     summary: |
-      Town Administrator Thatcher Keysers reported the following:
+      Town Administrator Thatcher Kezer reported the following:
       
       **Harbor Improvement Projects**
       - Phase 1 (Parker's Boatyard, Hammond Park, Cliff Street Boatyard): approximately **$898,678** in grants received over four years covering design, permitting, and ADA-accessible sidewalk work. Seawalls designed for 2030/2050 sea levels with capacity to expand to 2070 levels.
@@ -68,7 +68,7 @@ topic_segments:
       | Grant Coordinator | (Vacancy) | Ellie Lopez resigned after ~4 months; position re-posted |
       
       A board member noted concern that CZM harbor grants could be jeopardized by the town's ongoing non-compliance with the MBTA Communities Act, citing Milton's loss of a seawall project as precedent.
-    key_speakers: ["Thatcher Keysers (Town Administrator)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: school-budget
     topic_confidence: 0.72
     start_seconds: 743
@@ -100,7 +100,7 @@ topic_segments:
       - ClearGov is being used but has not yet been fully built out with personnel tables for automated scenario modeling
       
       Goki indicated the FY26 budget submission deadline to Finance Director Alicia went out before end of June — roughly three months earlier than prior years. A "level services vs. available revenues" comparison will be produced as in the prior two years. The long-term forecast is intended to determine whether an override is necessary, with Goki noting many Massachusetts towns have gone for overrides in recent years.
-    key_speakers: ["Alec Goki (Finance Committee Chair)", "Thatcher Keysers (Town Administrator)"]
+    key_speakers: ["Alec Goki (Finance Committee Chair)", "Thatcher Kezer (Town Administrator)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 2668
@@ -151,7 +151,7 @@ topic_segments:
       The board voted unanimously to rescind its July 10, 2024 votes that would have (1) converted alternate seats to voting member seats and (2) changed board terms from one year to three years on the Harbors and Waters Board. A 1977 state statute was identified as prohibiting those changes.
       
       The chair then introduced a consent agenda format for routine items, explaining that any board member may request an item be pulled for individual consideration. The one-day liquor license for Marblehead Little Theater was handled separately as a polled vote.
-    key_speakers: ["Thatcher Keysers (Town Administrator)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: permits-zoning
     topic_confidence: 0.9
     start_seconds: 5635
@@ -185,7 +185,7 @@ topic_segments:
       **HPP Implementation Committee**
       - Lou May resigned (at-large member) after relocating out of town
       - Board approved sending a formal letter of appreciation
-    key_speakers: ["Thatcher Keysers (Town Administrator)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 6046
@@ -198,7 +198,7 @@ topic_segments:
       Agenda items discussed for the retreat include short- and long-term goals, long-term financial planning, and budget strategy. The board suggested reviewing the prior year's goal list as a starting framework, noting that many items from last year have been completed.
       
       The board also reflected on the newly introduced consent agenda format, agreeing it saved time while noting that some items — such as Eagle Scout recognitions — may warrant brief public acknowledgment even when grouped in consent. Members discussed whether one-day liquor licenses could be included in future consent agendas rather than taken as polled votes, and agreed the chair would clarify that question.
-    key_speakers: ["Thatcher Keysers (Town Administrator)"]
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
@@ -207,7 +207,7 @@ topic_segments:
 
 **[0:06](https://vimeo.com/990139623#t=6s)** Otherwise, raise your hand if you're online and would like to make a public comment. And Kyle will let me know.
 
-**[0:15](https://vimeo.com/990139623#t=15s)** I don't see any hands online. Madam Chair. Okay. So seeing no, um, public comment, we'll, uh, proceed to our, uh, Thatcher Keysers Town Administrator update. Uh, thank you Madam Chair. I have, uh, put in the book in tab two, uh, an update of some projects and other activities, uh, to summarize one, uh, review our harbor improvement projects that we have ongoing. So we've finished a phase on, on one component of the harbor, the Harbor plan, and we're, um, um, initiating a second phase by seeking grant money. So the, the phase that we've, we've gone through currently is the Parker's boat, yard, Hammond Park,
+**[0:15](https://vimeo.com/990139623#t=15s)** I don't see any hands online. Madam Chair. Okay. So seeing no, um, public comment, we'll, uh, proceed to our, uh, Thatcher Kezer Town Administrator update. Uh, thank you Madam Chair. I have, uh, put in the book in tab two, uh, an update of some projects and other activities, uh, to summarize one, uh, review our harbor improvement projects that we have ongoing. So we've finished a phase on, on one component of the harbor, the Harbor plan, and we're, um, um, initiating a second phase by seeking grant money. So the, the phase that we've, we've gone through currently is the Parker's boat, yard, Hammond Park,
 
 **[1:01](https://vimeo.com/990139623#t=61s)** cliff Street, boatyard area. Um, oh, you Need to turn your microwave though. Oh, okay. Now I'm on. Um, so the, the Parker's Boatyard Hammond Park and Cliff Street Boatyard area, I just wanna highlight. So over the last four years, we've, uh, uh, received $898,678,000 in grants in order to do the projects, which primarily are, um, design permitting, which has been completed. Um, and, uh, some improvements in the area of, for example, cliff Street. Um, one of the major components built into the whole harbor plant
 

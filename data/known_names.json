@@ -91,18 +91,41 @@
       "note": "'Evelyn' (19 occurrences) is deliberately excluded: it is a real first name. 'Evelace' and 'Evella' are in flag_only as too ambiguous."
     },
     {
+      "right": "Thatcher Kezer",
+      "wrong": [
+        "Patrick Kezer",
+        "Patrick Keeser",
+        "Patrick Heaser",
+        "That Kezer",
+        "Thatcher Keiser",
+        "Thatcher Keysers",
+        "Thatcher Keys",
+        "Thatcher Keyes"
+      ],
+      "kind": "person",
+      "era": "Same window and reasoning as the Kezer surname entry: 2022-05 to 2026-07, wholly inside his tenure.",
+      "ground_truth": "_data/org_chart.yml:1601 ('Thatcher W. Kezer III', since 2022, per Annual Report 2025); how-we-got-here.html:142 uses the common form 'Thatcher Kezer'.",
+      "observed": "'Patrick Kezer' 34, 'Patrick Keeser' 8, 'Patrick Heaser' 5, 'That Kezer' 2, 'Thatcher Keiser' 12, 'Thatcher Keysers' 8, 'Thatcher Keys' 4, 'Thatcher Keyes' 3, against 176 correct 'Thatcher Kezer'.",
+      "note": "The given name is wrong, not just the surname: the ASR hears 'Thatcher' as 'Patrick'. Matched as whole two-word forms because these must beat the bare-surname entry, and because bare 'Patrick' is a real given name in this corpus (204 occurrences, including a Patrick Noonan who speaks at public comment and a Patrick in the 2020 reopening-committee discussions). Correcting the surname alone would leave the authoritative-looking 'Patrick Kezer', which is how this defect reached production."
+    },
+    {
       "right": "Kezer",
       "wrong": [
         "Keer",
         "Keyser",
         "Keezer",
-        "Keser"
+        "Keser",
+        "Keeser",
+        "Heaser",
+        "Keiser",
+        "Keysers",
+        "Keyes"
       ],
       "kind": "person",
-      "era": "Misheard forms appear only in transcripts dated 2023-09 onward, entirely within Kezer's tenure (Town Administrator since 2022). The prior Town Administrator was Jason Silva, ~2019-2022 per data/savings_measures_compiled.md:241, and no Silva-era transcript contains these forms.",
+      "era": "Misheard forms span 2022-05 to 2026-07, all inside his tenure. org_chart.yml:1601 gives Thatcher W. Kezer III as Town Administrator since June 2022 (Annual Report 2025), retiring 2026-12-31. The two earliest files, select-board-2022-05-18 and 2022-05-25, are the search that hired him ('sole remaining finalist for Town Administrator'), so they are him pre-appointment rather than a different person. The prior Town Administrator was Jason Silva, ~2019-2022 per data/savings_measures_compiled.md:241, and no Silva-era transcript contains any of these forms.",
       "ground_truth": "how-we-got-here.html line 142 ('Town Administrator Thatcher Kezer', sourced to the 2026 FinCom Report); data/SOURCE_LOOKUP.md.",
-      "observed": "Correct 'Kezer' only 3 times against 'Keer' 42, 'Keyser' 15. Every file containing 'Keer' dates from 2023-09 or later, entirely within Kezer's tenure; the prior Town Administrator was Jason Silva (~2019-2022, data/savings_measures_compiled.md line 241), and no Silva-era transcript contains these forms.",
-      "note": "Surname only. See flag_only for 'Patrick Kezer', where the first name is also wrong and a dictionary cannot fix it."
+      "observed": "Correct 'Kezer' appears 176 times as 'Thatcher Kezer'. Misheard surnames: 'Keer' 42, 'Keeser' 17, 'Keiser' 15, 'Keyser' 15, 'Keysers' 9, 'Keyes' 8, 'Keezer' 21, 'Heaser' 5, 'Keser' 8. Every bare occurrence was read in context and is the Town Administrator: 'Town Administrator Keiser and Finance Director Benjamin', 'Mr. Keysers, you're not willing to', 'Keyes holds an equal ratification vote', and 'unanimously recommended Keeser, citing his experience as mayor of Amesbury'. No resident named Keyes, Keiser, Keeser or Keysers appears anywhere in the corpus.",
+      "note": "Surname only; see the 'Thatcher Kezer' entry for the forms that also mangle the given name. 'Keys' is deliberately NOT listed bare, because it is an ordinary word; it is corrected only in the two-word form."
     },
     {
       "right": "Buba",
@@ -305,10 +328,6 @@
       "why": "Gerry School and Gerry Playground are real Marblehead places, and Gerry is also a given name that ASR renders interchangeably with Jerry. Context decides; a blind rewrite in either direction introduces errors."
     },
     {
-      "term": "Patrick Kezer",
-      "why": "The Town Administrator is Thatcher Kezer. _transcripts/town-meeting-2025-05-08.md renders him as 'Patrick Keer' three times with no occurrence of 'Thatcher', and the LLM carried 'Patrick Keer' into key_speakers and the summary prose. Correcting the surname leaves a wrong first name, so this needs a human fix, not a dictionary entry."
-    },
-    {
       "term": "Evelyn",
       "why": "A real first name that is also acoustically adjacent to Eveleth. Never auto-correct."
     },
@@ -375,6 +394,14 @@
     {
       "term": "Al William",
       "why": "Al Williams of the School Committee, misheard. Bare 'William' is REJECTED because 117 occurrences are overwhelmingly given names and the vendor William Scotsman Inc."
+    },
+    {
+      "term": "Patrick Noonan",
+      "why": "A genuine resident who speaks at public comment ('We have a comment from Patrick Noonan that says that's not right'), listed in key_speakers as a resident. NOT Erin Noonan and NOT the Town Administrator; guard against widening any Patrick or Noonan rule over it."
+    },
+    {
+      "term": "Thatcher Thatcher",
+      "why": "One occurrence, 'in addition to what Thatcher Thatcher mentioned'. A doubled given name that reads as a speaker stutter, left verbatim for the same reason the 12 'Marblehead Marblehead' stutters are."
     }
   ]
 }
