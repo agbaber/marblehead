@@ -104,12 +104,19 @@ export function collapseRepeatedRuns(text, { minRun = MIN_RUN } = {}) {
 /**
  * Strip inline cue markup, then collapse the rolling duplication it created.
  *
- * A no-op on text with no cue markup. That guard matters: the Vimeo caption
- * path produces clean, non-rolling prose, and collapsing repeated runs there
- * would edit genuine speech for no reason.
+ * By default a no-op on text with no cue markup, so the Vimeo caption path --
+ * clean, non-rolling prose -- is never edited.
+ *
+ * Pass `force` when the CALLER knows the text is YouTube-sourced. Not every
+ * rolling paragraph contains inline markup: YouTube alternates plain rolling
+ * cues with word-timed ones, so a paragraph can be fully duplicated and carry
+ * no tags at all ("The motion passes 5 to 0. And with that The motion passes 5
+ * to 0. And with that"). Sniffing per paragraph misses exactly those, which is
+ * why source is the better signal when it is available.
  */
-export function cleanRollingCaptions(text) {
-  if (!text || !hasRollingArtifacts(text)) return text;
+export function cleanRollingCaptions(text, { force = false } = {}) {
+  if (!text) return text;
+  if (!force && !hasRollingArtifacts(text)) return text;
 
   const stripped = stripCueTags(text);
   // Iterate to a fixpoint. One pass removes the period it finds, but nested
@@ -121,6 +128,53 @@ export function cleanRollingCaptions(text) {
     prev = next;
   }
   return prev;
+}
+
+// Smallest cross-paragraph overlap treated as an artifact. Two paragraphs
+// genuinely ending and starting on the same two words is unremarkable; three or
+// more is the rolling cue straddling a paragraph break.
+const MIN_BOUNDARY_OVERLAP = 3;
+
+const TIMECODE_PREFIX_RE = /^(\*\*\[[^\]]*\]\([^)]*\)\*\*\s*)/;
+
+/**
+ * Remove text duplicated across a paragraph boundary.
+ *
+ * A rolling cue that straddles a paragraph break leaves the same phrase at the
+ * end of one paragraph and the start of the next. The duplicate is dropped from
+ * the EARLIER paragraph, because the later one's timecode is the authoritative
+ * timestamp for those words -- moving them keeps deep links pointing at the
+ * moment the words were actually spoken.
+ *
+ * Each paragraph's timecode prefix is always preserved.
+ */
+export function dedupeAcrossParagraphs(paragraphs, { minOverlap = MIN_BOUNDARY_OVERLAP } = {}) {
+  const out = [...paragraphs];
+
+  for (let i = 0; i < out.length - 1; i += 1) {
+    const curPrefix = (out[i].match(TIMECODE_PREFIX_RE) ?? [''])[0];
+    const curBody = out[i].slice(curPrefix.length);
+    const nextPrefix = (out[i + 1].match(TIMECODE_PREFIX_RE) ?? [''])[0];
+    const nextBody = out[i + 1].slice(nextPrefix.length);
+
+    const cur = curBody.split(/\s+/).filter(Boolean);
+    const next = nextBody.split(/\s+/).filter(Boolean);
+
+    // Longest overlap first, so the whole straddling phrase goes at once.
+    const max = Math.min(cur.length, next.length);
+    for (let k = max; k >= minOverlap; k -= 1) {
+      let same = true;
+      for (let j = 0; j < k; j += 1) {
+        if (cur[cur.length - k + j] !== next[j]) { same = false; break; }
+      }
+      if (same) {
+        out[i] = curPrefix + cur.slice(0, cur.length - k).join(' ');
+        break;
+      }
+    }
+  }
+
+  return out;
 }
 
 /** True when text carries YouTube rolling-caption artifacts. */

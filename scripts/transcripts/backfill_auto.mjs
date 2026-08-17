@@ -188,7 +188,9 @@ function processMeeting(m) {
   // alongside visible inline timestamps. Clean that before correcting names, so
   // corrections are applied once to deduplicated prose rather than three times
   // to duplicated prose. A no-op on Vimeo captions, which do not roll.
-  const deduped = cleanRollingCaptions(raw);
+  // force on the YouTube path: not every rolling paragraph carries inline
+  // markup to sniff for, so the source is the reliable signal.
+  const deduped = cleanRollingCaptions(raw, { force: m.source === 'youtube' });
   if (deduped !== raw) {
     const cut = Math.round((1 - deduped.split(/\s+/).length / raw.split(/\s+/).length) * 100);
     console.error(`  - cleaned rolling-caption artifacts in ${slug} (${cut}% shorter)`);

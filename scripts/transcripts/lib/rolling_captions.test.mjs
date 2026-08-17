@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { stripCueTags, collapseRepeatedRuns, cleanRollingCaptions } from './rolling_captions.mjs';
+import { stripCueTags, collapseRepeatedRuns, cleanRollingCaptions, dedupeAcrossParagraphs } from './rolling_captions.mjs';
 
 // --- stripCueTags -----------------------------------------------------------
 
@@ -126,4 +126,54 @@ test('keeps a single word repeated only twice', () => {
 
 test('keeps a two-word run repeated only twice', () => {
   assert.equal(collapseRepeatedRuns('I think I think so'), 'I think I think so');
+});
+
+// --- force: rolling paragraphs that carry no inline markup ------------------
+
+test('force cleans a duplicated paragraph that has no cue tags', () => {
+  // YouTube alternates plain rolling cues with word-timed ones, so a fully
+  // duplicated paragraph can contain no markup to sniff for.
+  const src = '>> The motion passes 5 to 0. And with that >> The motion passes 5 to 0. And with that >> [laughter]';
+  assert.equal(cleanRollingCaptions(src), src, 'must be a no-op without force');
+  assert.equal(
+    cleanRollingCaptions(src, { force: true }),
+    '>> The motion passes 5 to 0. And with that >> [laughter]',
+  );
+});
+
+// --- dedupeAcrossParagraphs -------------------------------------------------
+
+test('drops a run repeated at the end of one paragraph and start of the next', () => {
+  const paras = [
+    '**[1:06](u1)** so it has been my honor to serve as chair. Any other interested?',
+    '**[1:51](u2)** Any other interested? All right, Melissa made a motion.',
+  ];
+  assert.deepEqual(dedupeAcrossParagraphs(paras), [
+    '**[1:06](u1)** so it has been my honor to serve as chair.',
+    '**[1:51](u2)** Any other interested? All right, Melissa made a motion.',
+  ]);
+});
+
+test('keeps the later paragraph intact so its timecode still matches its words', () => {
+  const paras = ['**[0:10](u1)** alpha beta gamma delta', '**[0:20](u2)** beta gamma delta epsilon'];
+  const out = dedupeAcrossParagraphs(paras);
+  assert.equal(out[1], '**[0:20](u2)** beta gamma delta epsilon');
+  assert.equal(out[0], '**[0:10](u1)** alpha');
+});
+
+test('does not dedupe an overlap shorter than three words', () => {
+  const paras = ['**[0:10](u1)** we voted yes', '**[0:20](u2)** yes and then we moved on'];
+  assert.deepEqual(dedupeAcrossParagraphs(paras), paras);
+});
+
+test('leaves non-overlapping paragraphs untouched', () => {
+  const paras = ['**[0:10](u1)** first topic entirely', '**[0:20](u2)** second topic entirely'];
+  assert.deepEqual(dedupeAcrossParagraphs(paras), paras);
+});
+
+test('never empties a paragraph of its timecode link', () => {
+  const paras = ['**[0:10](u1)** alpha beta gamma', '**[0:20](u2)** alpha beta gamma'];
+  const out = dedupeAcrossParagraphs(paras);
+  assert.match(out[0], /^\*\*\[0:10\]\(u1\)\*\*/);
+  assert.match(out[1], /^\*\*\[0:20\]\(u2\)\*\*/);
 });

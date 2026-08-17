@@ -23,7 +23,9 @@
 
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { cleanRollingCaptions, hasRollingArtifacts, stripCueTags } from '../lib/rolling_captions.mjs';
+import {
+  cleanRollingCaptions, hasRollingArtifacts, stripCueTags, dedupeAcrossParagraphs,
+} from '../lib/rolling_captions.mjs';
 
 const TRANSCRIPT_DIR = '_transcripts';
 
@@ -48,12 +50,40 @@ function isSubsequence(small, big) {
   return i === small.length;
 }
 
-function repairBody(body) {
+function repairBody(body, { force }) {
   // Paragraphs are blank-line separated; only timecoded prose is rewritten.
-  return body
-    .split('\n\n')
-    .map(p => (p.startsWith('**[') ? cleanRollingCaptions(p) : p))
-    .join('\n\n');
+  const blocks = body.split('\n\n');
+  const isProse = b => b.startsWith('**[');
+
+  const cleaned = blocks.map(b => (isProse(b) ? cleanRollingCaptions(b, { force }) : b));
+
+  if (!force) return cleaned.join('\n\n');
+
+  // Then drop phrases duplicated across paragraph boundaries. Done on the prose
+  // blocks in order, with non-prose blocks left in place.
+  //
+  // Iterated to a fixpoint: the pass walks boundaries left to right and trims
+  // the EARLIER paragraph, so trimming at boundary i can expose a fresh overlap
+  // at boundary i-1, which that pass has already gone past. Without this the
+  // corpus state would depend on how many times the tool was run.
+  const proseIdx = cleaned.map((b, i) => (isProse(b) ? i : -1)).filter(i => i !== -1);
+  let prose = proseIdx.map(i => cleaned[i]);
+  for (let pass = 0; pass < 5; pass += 1) {
+    const next = dedupeAcrossParagraphs(prose);
+    if (next.every((v, n) => v === prose[n])) break;
+    prose = next;
+  }
+  proseIdx.forEach((idx, n) => { cleaned[idx] = prose[n]; });
+
+  return cleaned.join('\n\n');
+}
+
+// The duplication is a property of the source, not of any single paragraph, so
+// decide per file. Frontmatter `source:` is the reliable signal; the markup
+// sniff is a fallback for anything mislabelled.
+function isRollingSource(src) {
+  const head = src.slice(0, src.indexOf('\n---', 3) + 1);
+  return /^source:\s*.*youtube/mi.test(head) || hasRollingArtifacts(src);
 }
 
 export function checkInvariants(before, after) {
@@ -96,10 +126,10 @@ function main() {
   for (const file of files) {
     const path = join(TRANSCRIPT_DIR, file);
     const src = readFileSync(path, 'utf8');
-    if (!hasRollingArtifacts(src)) continue;
+    if (!isRollingSource(src)) continue;
 
     const { head, body } = splitFrontmatter(src);
-    const repaired = repairBody(body);
+    const repaired = repairBody(body, { force: true });
     const next = head + repaired;
 
     const problems = checkInvariants(body, repaired);
