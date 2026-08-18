@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-08-14",
+    "date": "2026-08-17",
     "fiscal_year": "FY27",
-    "row_count": 1067,
-    "total_paid": 23828336.21,
-    "interfund_total": 39536.67,
-    "external_paid": 23788799.54,
+    "row_count": 1154,
+    "total_paid": 24019949.09,
+    "interfund_total": 107777.99,
+    "external_paid": 23912171.1,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-08-14",
-    "source_file": "checkbook_FY27_2026-08-14.csv"
+    "last_payment": "2026-08-17",
+    "source_file": "checkbook_FY27_2026-08-17.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 275439.27,
-      "share": 0.0116,
+      "share": 0.0115,
       "fund_count": 2,
       "top_funds": [
         {
@@ -34,32 +34,32 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 18041283.94,
-      "share": 0.7571,
+      "amount": 18228791.01,
+      "share": 0.7589,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 17613988.84,
-          "row_count": 500
+          "amount": 17632401.55,
+          "row_count": 522
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 245487.66,
-          "row_count": 130
+          "amount": 411827.02,
+          "row_count": 186
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
-          "amount": 181807.44,
-          "row_count": 12
+          "amount": 184562.44,
+          "row_count": 14
         }
       ]
     },
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 5273041.97,
-      "share": 0.2213,
+      "amount": 5273099.97,
+      "share": 0.2195,
       "fund_count": 7,
       "top_funds": [
         {
@@ -89,8 +89,8 @@
         },
         {
           "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 147373.66,
-          "row_count": 25
+          "amount": 147431.66,
+          "row_count": 26
         },
         {
           "name": "SEWER CAPITAL ARTICLES",
@@ -102,9 +102,9 @@
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 31986.33,
-      "share": 0.0013,
-      "fund_count": 6,
+      "amount": 32814.15,
+      "share": 0.0014,
+      "fund_count": 7,
       "top_funds": [
         {
           "name": "COVID 19 ARPA (FED)",
@@ -125,6 +125,11 @@
           "name": "CH90 FAIR SHARE GRANT",
           "amount": 3114.72,
           "row_count": 1
+        },
+        {
+          "name": "SPED IDEA 94-142 (240)",
+          "amount": 827.82,
+          "row_count": 3
         },
         {
           "name": "LIBRARY MUNICIPAL EQUAL GRANT",
@@ -160,9 +165,9 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 69649.16,
-      "share": 0.0029,
-      "fund_count": 13,
+      "amount": 72869.15,
+      "share": 0.003,
+      "fund_count": 15,
       "top_funds": [
         {
           "name": "SCHOOL USER FEES",
@@ -171,8 +176,8 @@
         },
         {
           "name": "MIDDLE SCHOOL STUDENT ACTIVITY",
-          "amount": 12950.0,
-          "row_count": 2
+          "amount": 13449.74,
+          "row_count": 3
         },
         {
           "name": "INSURANCE REIMBURS <$150,000",
@@ -200,27 +205,27 @@
           "row_count": 1
         },
         {
-          "name": "FORT SEWALL DONATION",
-          "amount": 1739.0,
+          "name": "SCHOOL BUILDING RENTAL",
+          "amount": 1794.0,
           "row_count": 1
         }
       ]
     }
   ],
   "gf_town_carveout": {
-    "total": 17613988.84,
+    "total": 17632401.55,
     "fixed_total": 16779695.04,
-    "fixed_share": 0.9526,
+    "fixed_share": 0.9516,
     "admin_contracts_total": 330752.09,
     "admin_contracts_share": 0.0188,
-    "other_recurring_total": 503541.71,
-    "other_recurring_share": 0.0286,
+    "other_recurring_total": 521954.42,
+    "other_recurring_share": 0.0296,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 3341423.14,
-        "share": 0.1897,
+        "share": 0.1895,
         "row_count": 12,
         "top_vendors": [
           {
@@ -245,7 +250,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 6934984.39,
-        "share": 0.3937,
+        "share": 0.3933,
         "row_count": 28,
         "top_vendors": [
           {
@@ -258,7 +263,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.3317,
+        "share": 0.3314,
         "row_count": 1,
         "top_vendors": [
           {
@@ -271,7 +276,7 @@
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
         "amount": 659927.51,
-        "share": 0.0375,
+        "share": 0.0374,
         "row_count": 7,
         "top_vendors": [
           {
@@ -308,9 +313,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 503541.71,
-        "share": 0.0286,
-        "row_count": 437,
+        "amount": 521954.42,
+        "share": 0.0296,
+        "row_count": 459,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -330,7 +335,7 @@
           },
           {
             "name": "FIFTH ASSET, INC",
-            "amount": 17500.0
+            "amount": 22500.0
           },
           {
             "name": "EAST COAST COMPACTOR CORP",
@@ -359,7 +364,7 @@
       "row_count": 7,
       "first_paid": "2026-07-20",
       "last_paid": "2026-08-04",
-      "days_since_last_paid": 10,
+      "days_since_last_paid": 13,
       "status": "active",
       "top_vendors": [
         {
@@ -399,7 +404,7 @@
       "row_count": 2,
       "first_paid": "2026-07-08",
       "last_paid": "2026-07-28",
-      "days_since_last_paid": 17,
+      "days_since_last_paid": 20,
       "status": "engineering",
       "top_vendors": [
         {
