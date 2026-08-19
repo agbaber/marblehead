@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-18",
+ "as_of": "2026-08-19",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -1905,13 +1905,13 @@
     {
      "name": "EXPENSES",
      "revised_budget": 337981.0,
-     "actual": 326992.63,
+     "actual": 317874.88,
      "original_budget": 337981.0
     },
     {
      "name": "HARBOR CAPITAL OUTLAYS",
      "revised_budget": 200000.0,
-     "actual": 111398.95,
+     "actual": 120516.7,
      "original_budget": 200000.0
     }
    ]
@@ -4873,7 +4873,7 @@
     {
      "name": "HARBOR ENTERPRISE OPERATING",
      "revised_budget": 337981.0,
-     "actual": 326992.63,
+     "actual": 317874.88,
      "original_budget": 337981.0
     },
     {
@@ -4947,7 +4947,7 @@
     {
      "name": "HARBOR",
      "revised_budget": 337981.0,
-     "actual": 326992.63,
+     "actual": 317874.88,
      "original_budget": 337981.0
     },
     {
@@ -5418,7 +5418,7 @@
     {
      "name": "HARBOR ENTERPRISE OPERATING",
      "revised_budget": 200000.0,
-     "actual": 111398.95,
+     "actual": 120516.7,
      "original_budget": 200000.0
     }
    ],
@@ -5426,7 +5426,7 @@
     {
      "name": "HARBOR",
      "revised_budget": 200000.0,
-     "actual": 111398.95,
+     "actual": 120516.7,
      "original_budget": 200000.0
     }
    ]
@@ -11493,13 +11493,13 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 206000.0,
-    "actual": 119299.77,
+    "actual": 128417.52,
     "original_budget": 206000.0
    },
    {
     "name": "R&M FLOATS",
     "revised_budget": 95000.0,
-    "actual": 73760.54,
+    "actual": 64642.79,
     "original_budget": 95000.0
    },
    {
@@ -17507,13 +17507,13 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 206000.0,
-    "actual": 119299.77,
+    "actual": 128417.52,
     "original_budget": 206000.0
    },
    {
     "name": "R&M FLOATS",
     "revised_budget": 95000.0,
-    "actual": 73760.54,
+    "actual": 64642.79,
     "original_budget": 95000.0
    },
    {
