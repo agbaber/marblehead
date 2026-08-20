@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-19",
+ "as_of": "2026-08-20",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -648,7 +648,7 @@
     {
      "name": "LIGHT",
      "revised_budget": 0,
-     "actual": 14789505.67,
+     "actual": 14779359.7,
      "original_budget": 0
     }
    ],
@@ -668,7 +668,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 0,
-     "actual": 2290538.08,
+     "actual": 2280392.11,
      "original_budget": 0
     },
     {
@@ -3077,7 +3077,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 0,
-     "actual": 2290538.08,
+     "actual": 2280392.11,
      "original_budget": 0
     },
     {
@@ -3109,7 +3109,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 0,
-     "actual": 11079887.41,
+     "actual": 11069741.44,
      "original_budget": 0
     }
    ]
@@ -3424,7 +3424,7 @@
     {
      "name": "ELECTRIC ENTERPRISE",
      "revised_budget": 0,
-     "actual": 2290538.08,
+     "actual": 2280392.11,
      "original_budget": 0
     }
    ],
@@ -3636,7 +3636,7 @@
     {
      "name": "LIGHT",
      "revised_budget": 0,
-     "actual": 2290538.08,
+     "actual": 2280392.11,
      "original_budget": 0
     }
    ]
@@ -4879,7 +4879,7 @@
     {
      "name": "ELECTRIC ENTERPRISE",
      "revised_budget": 0,
-     "actual": 11079887.41,
+     "actual": 11069741.44,
      "original_budget": 0
     }
    ],
@@ -5091,7 +5091,7 @@
     {
      "name": "LIGHT",
      "revised_budget": 0,
-     "actual": 11079887.41,
+     "actual": 11069741.44,
      "original_budget": 0
     },
     {
