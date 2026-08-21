@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-20",
+ "as_of": "2026-08-21",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -60,7 +60,7 @@
     {
      "name": "FINANCE",
      "revised_budget": 1845746.0,
-     "actual": 1754855.09,
+     "actual": 1757119.94,
      "original_budget": 1688913.0
     },
     {
@@ -120,7 +120,7 @@
     {
      "name": "ASSESSORS",
      "revised_budget": 370821.0,
-     "actual": 358446.96,
+     "actual": 356182.11,
      "original_budget": 394221.0
     },
     {
@@ -1702,7 +1702,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 918600.0,
-     "actual": 919510.11,
+     "actual": 921774.96,
      "original_budget": 768600.0
     },
     {
@@ -1734,7 +1734,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 997127.0,
-     "actual": 948094.24,
+     "actual": 950359.09,
      "original_budget": 847127.0
     },
     {
@@ -2487,7 +2487,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 92087.0,
-     "actual": 90681.97,
+     "actual": 88417.12,
      "original_budget": 120975.0
     },
     {
@@ -2513,7 +2513,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 110525.0,
-     "actual": 99302.0,
+     "actual": 97037.15,
      "original_budget": 135525.0
     }
    ]
@@ -3707,7 +3707,7 @@
     {
      "name": "FINANCE",
      "revised_budget": 918600.0,
-     "actual": 919510.11,
+     "actual": 921774.96,
      "original_budget": 768600.0
     },
     {
@@ -3791,7 +3791,7 @@
     {
      "name": "ASSESSORS",
      "revised_budget": 92087.0,
-     "actual": 90681.97,
+     "actual": 88417.12,
      "original_budget": 120975.0
     },
     {
@@ -4911,7 +4911,7 @@
     {
      "name": "FINANCE",
      "revised_budget": 997127.0,
-     "actual": 948094.24,
+     "actual": 950359.09,
      "original_budget": 847127.0
     },
     {
@@ -4989,7 +4989,7 @@
     {
      "name": "ASSESSORS",
      "revised_budget": 110525.0,
-     "actual": 99302.0,
+     "actual": 97037.15,
      "original_budget": 135525.0
     },
     {
@@ -10903,7 +10903,7 @@
    {
     "name": "INFORMATION TECHNOLOGY",
     "revised_budget": 455271.0,
-    "actual": 417491.67,
+    "actual": 419756.52,
     "original_budget": 400271.0
    },
    {
@@ -13177,7 +13177,7 @@
    {
     "name": "OTHER PROF & TECHNICAL",
     "revised_budget": 86039.85,
-    "actual": 86624.85,
+    "actual": 84360.0,
     "original_budget": 32000.0
    },
    {
@@ -14907,13 +14907,13 @@
    {
     "name": "OTHER PROF & TECHNICAL",
     "revised_budget": 557131.39,
-    "actual": 493611.13,
+    "actual": 491346.28,
     "original_budget": 380106.0
    },
    {
     "name": "INFORMATION TECHNOLOGY",
     "revised_budget": 502417.14,
-    "actual": 449372.7,
+    "actual": 451637.55,
     "original_budget": 457705.0
    },
    {
