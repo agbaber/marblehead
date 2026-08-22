@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-08-21",
+  "as_of": "2026-08-22",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-08-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
     "all_funds_revised_budget": 133348152.18,
-    "all_funds_actual": 32501044.01,
+    "all_funds_actual": 32515853.6,
     "budgeted_annual": {
       "revised_budget": 126104376.0,
-      "actual": 28483078.16,
+      "actual": 28497887.75,
       "original_budget": 130160456.0
     },
     "other_funds": {
@@ -22,16 +22,16 @@
     {
       "name": "GENERAL FUND - TOWN",
       "revised_budget": 69474315.0,
-      "actual": 20519258.08,
+      "actual": 20522818.8,
       "original_budget": 69331077.0,
-      "encumbrance": 15627889.6
+      "encumbrance": 15624328.88
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
       "actual": 1094039.12,
       "original_budget": 47620287.0,
-      "encumbrance": 9754226.24
+      "encumbrance": 9755700.58
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -64,7 +64,7 @@
     {
       "name": "ELECTRIC ENTERPRISE",
       "revised_budget": 0.0,
-      "actual": 2389327.17,
+      "actual": 2400576.04,
       "original_budget": 0.0,
       "encumbrance": 2028968.12
     }
@@ -103,7 +103,7 @@
       "revised_budget": 7545998.37,
       "actual": 67602.36,
       "original_budget": 7545798.37,
-      "encumbrance": 523141.42
+      "encumbrance": 524065.07
     },
     {
       "name": "FIRE",
@@ -131,7 +131,7 @@
       "revised_budget": 5424062.26,
       "actual": 46484.76,
       "original_budget": 5422623.26,
-      "encumbrance": 383117.86
+      "encumbrance": 383668.55
     },
     {
       "name": "WATER",
@@ -304,9 +304,9 @@
     {
       "name": "TOWN CLERK",
       "revised_budget": 268002.0,
-      "actual": 30810.97,
+      "actual": 31018.92,
       "original_budget": 268002.0,
-      "encumbrance": 201386.9
+      "encumbrance": 201178.95
     },
     {
       "name": "VETERANS SERVICES",
@@ -318,9 +318,9 @@
     {
       "name": "ELECTION & REGISTRATION",
       "revised_budget": 132200.0,
-      "actual": 9324.8,
+      "actual": 12677.57,
       "original_budget": 132200.0,
-      "encumbrance": 4052.77
+      "encumbrance": 700.0
     },
     {
       "name": "SNOW REMOVAL",
@@ -395,7 +395,7 @@
     {
       "name": "LIGHT",
       "revised_budget": 0.0,
-      "actual": 2389327.17,
+      "actual": 2400576.04,
       "original_budget": 0.0,
       "encumbrance": 2028968.12
     }
@@ -411,16 +411,16 @@
     {
       "name": "OTHER EXPENSE",
       "revised_budget": 39091074.0,
-      "actual": 18115451.09,
+      "actual": 18115460.15,
       "original_budget": 39082074.0,
       "encumbrance": 184201.16
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 14020242.0,
-      "actual": 1909086.43,
+      "actual": 1919485.36,
       "original_budget": 13986656.0,
-      "encumbrance": 5388579.6
+      "encumbrance": 5385579.6
     },
     {
       "name": "GOVERNMENTAL",
@@ -439,14 +439,14 @@
     {
       "name": "SUPPLIES AND MATL",
       "revised_budget": 2461324.0,
-      "actual": 205313.83,
+      "actual": 206192.32,
       "original_budget": 2458724.0,
-      "encumbrance": 656362.5
+      "encumbrance": 657276.12
     },
     {
       "name": "CAPITAL",
       "revised_budget": 1957576.0,
-      "actual": 224400.44,
+      "actual": 227923.55,
       "original_budget": 1656894.0,
       "encumbrance": 941317.05
     },
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 1094039.12,
       "original_budget": 47615287.0,
-      "encumbrance": 9754226.24
+      "encumbrance": 9755700.58
     },
     {
       "name": "SALARIES",
@@ -490,9 +490,9 @@
     {
       "name": "EXPENSES",
       "revised_budget": 20339169.0,
-      "actual": 13008987.64,
+      "actual": 13023797.23,
       "original_budget": 24880169.0,
-      "encumbrance": 1247640.89
+      "encumbrance": 1244080.17
     },
     {
       "name": "GROUP INSURANCE",
@@ -1264,12 +1264,12 @@
       "revised_budget": 619218.0,
       "actual": 49157.26,
       "original_budget": 616618.0,
-      "encumbrance": 243040.64
+      "encumbrance": 243749.21
     },
     {
       "name": "OTHER PROF & TECHNICAL",
       "revised_budget": 589237.0,
-      "actual": 234046.99,
+      "actual": 240877.66,
       "original_budget": 574322.0,
       "encumbrance": 129191.52
     },
@@ -1444,7 +1444,7 @@
     {
       "name": "R&M MOTOR VEHICLES",
       "revised_budget": 271180.0,
-      "actual": 22563.64,
+      "actual": 22890.91,
       "original_budget": 271180.0,
       "encumbrance": 113187.54
     },
@@ -1572,7 +1572,7 @@
       "revised_budget": 182374.0,
       "actual": 12385.01,
       "original_budget": 182374.0,
-      "encumbrance": 116399.57
+      "encumbrance": 117165.34
     },
     {
       "name": "BLDG & EQUIP R&M SUPPLIES",
@@ -1738,9 +1738,9 @@
     {
       "name": "POSTAGE",
       "revised_budget": 119843.0,
-      "actual": 12947.48,
+      "actual": 15947.48,
       "original_budget": 112257.0,
-      "encumbrance": 14120.96
+      "encumbrance": 11120.96
     },
     {
       "name": "FACILITIES MAINT MANAGER",
@@ -1794,7 +1794,7 @@
     {
       "name": "MISC OTHER SUPPLIES",
       "revised_budget": 96161.0,
-      "actual": 3564.83,
+      "actual": 3805.63,
       "original_budget": 96161.0,
       "encumbrance": 4683.75
     },
@@ -1927,7 +1927,7 @@
     {
       "name": "OTHER PURCHASED SERVICES",
       "revised_budget": 72879.0,
-      "actual": 43536.72,
+      "actual": 43777.71,
       "original_budget": 72879.0,
       "encumbrance": 4763.87
     },
@@ -1976,7 +1976,7 @@
     {
       "name": "OTHER MISC EXPENSE",
       "revised_budget": 70302.0,
-      "actual": 65761.56,
+      "actual": 65770.62,
       "original_budget": 70302.0,
       "encumbrance": 18289.33
     },
@@ -2193,9 +2193,9 @@
     {
       "name": "MISC OFFICE SUPPLIES",
       "revised_budget": 56240.0,
-      "actual": 21994.62,
+      "actual": 22555.34,
       "original_budget": 56240.0,
-      "encumbrance": 10781.03
+      "encumbrance": 10220.31
     },
     {
       "name": "LIBRARY TECH SVCS ASSISTANT",
@@ -2319,7 +2319,7 @@
     {
       "name": "MISC BLDG R&M SUPPLIES",
       "revised_budget": 41290.0,
-      "actual": 215.73,
+      "actual": 292.7,
       "original_budget": 41290.0,
       "encumbrance": 2932.55
     },
@@ -3698,7 +3698,7 @@
     {
       "name": "ELECTRIC EQUIPMENT",
       "revised_budget": 0.0,
-      "actual": 37968.71,
+      "actual": 41491.82,
       "original_budget": 0.0,
       "encumbrance": 0.0
     },
