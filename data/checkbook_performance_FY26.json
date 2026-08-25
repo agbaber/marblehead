@@ -712,8 +712,8 @@
     },
     {
       "month": "2026-06",
-      "amount": 14052617.16,
-      "count": 2469
+      "amount": 14032479.66,
+      "count": 2470
     }
   ],
   "drill": {
@@ -732,8 +732,8 @@
           },
           {
             "name": "RAYMOND DESIGN ASSOCIATES INC",
-            "amount": 938997.5,
-            "count": 10
+            "amount": 918860.0,
+            "count": 11
           },
           {
             "name": "MDM ENGINEERING COMPANY INC",
@@ -834,8 +834,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 4162617.12,
-            "count": 17
+            "amount": 4142479.62,
+            "count": 18
           }
         ]
       },
