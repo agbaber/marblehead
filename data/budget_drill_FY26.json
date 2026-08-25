@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-24",
+ "as_of": "2026-08-25",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -281,7 +281,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14936528.84,
+     "actual": 14937048.46,
      "original_budget": 17832596.0
     },
     {
@@ -331,7 +331,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 7940853.0,
-     "actual": 8686934.68,
+     "actual": 8687454.3,
      "original_budget": 7948732.0
     },
     {
@@ -780,7 +780,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 7735892.0,
-     "actual": 8526756.57,
+     "actual": 8527276.19,
      "original_budget": 9309954.0
     },
     {
@@ -824,7 +824,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 14574494.16,
-     "actual": 14936528.84,
+     "actual": 14937048.46,
      "original_budget": 17832596.0
     }
    ]
@@ -3651,7 +3651,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 7940853.0,
-     "actual": 8686934.68,
+     "actual": 8687454.3,
      "original_budget": 7948732.0
     },
     {
@@ -3695,7 +3695,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 7735892.0,
-     "actual": 8526756.57,
+     "actual": 8527276.19,
      "original_budget": 9309954.0
     },
     {
@@ -4599,7 +4599,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 49120287.0,
-     "actual": 48069179.67,
+     "actual": 48069699.29,
      "original_budget": 49120287.0
     }
    ],
@@ -4607,7 +4607,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14936528.84,
+     "actual": 14937048.46,
      "original_budget": 17832596.0
     },
     {
@@ -6833,7 +6833,7 @@
    {
     "name": "R&M MOTOR VEHICLES",
     "revised_budget": 73905.0,
-    "actual": 75036.49,
+    "actual": 75556.11,
     "original_budget": 58905.0
    },
    {
@@ -15853,7 +15853,7 @@
    {
     "name": "R&M MOTOR VEHICLES",
     "revised_budget": 73905.0,
-    "actual": 75036.49,
+    "actual": 75556.11,
     "original_budget": 58905.0
    },
    {
