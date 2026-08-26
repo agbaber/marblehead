@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-25",
+ "as_of": "2026-08-26",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -30,7 +30,7 @@
     {
      "name": "FIRE",
      "revised_budget": 5711260.0,
-     "actual": 5619455.21,
+     "actual": 5627455.21,
      "original_budget": 5561260.0
     },
     {
@@ -230,7 +230,7 @@
     {
      "name": "PROFESSIONAL SALARY",
      "revised_budget": 19395757.42,
-     "actual": 18729723.1,
+     "actual": 18737723.1,
      "original_budget": 18869713.0
     },
     {
@@ -281,7 +281,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14937048.46,
+     "actual": 14942666.46,
      "original_budget": 17832596.0
     },
     {
@@ -337,7 +337,7 @@
     {
      "name": "OTHER SALARIES",
      "revised_budget": 6571310.04,
-     "actual": 6158184.71,
+     "actual": 6163802.71,
      "original_budget": 6449488.0
     },
     {
@@ -792,7 +792,7 @@
     {
      "name": "OTHER SALARIES",
      "revised_budget": 1635700.16,
-     "actual": 1695407.45,
+     "actual": 1701025.45,
      "original_budget": 3212835.0
     },
     {
@@ -824,7 +824,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 14574494.16,
-     "actual": 14937048.46,
+     "actual": 14942666.46,
      "original_budget": 17832596.0
     }
    ]
@@ -1110,7 +1110,7 @@
     {
      "name": "PROFESSIONAL SALARY",
      "revised_budget": 5412406.9,
-     "actual": 5328624.27,
+     "actual": 5336624.27,
      "original_budget": 5274659.0
     },
     {
@@ -1142,7 +1142,7 @@
     {
      "name": "SALARIES",
      "revised_budget": 5370615.0,
-     "actual": 5286832.37,
+     "actual": 5294832.37,
      "original_budget": 5220615.0
     },
     {
@@ -3155,7 +3155,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19395757.42,
-     "actual": 18729723.1,
+     "actual": 18737723.1,
      "original_budget": 18869713.0
     },
     {
@@ -3199,7 +3199,7 @@
     {
      "name": "FIRE",
      "revised_budget": 5412406.9,
-     "actual": 5328624.27,
+     "actual": 5336624.27,
      "original_budget": 5274659.0
     },
     {
@@ -3991,7 +3991,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 6571310.04,
-     "actual": 6158184.71,
+     "actual": 6163802.71,
      "original_budget": 6449488.0
     }
    ],
@@ -3999,7 +3999,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 1635700.16,
-     "actual": 1695407.45,
+     "actual": 1701025.45,
      "original_budget": 3212835.0
     },
     {
@@ -4599,7 +4599,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 49120287.0,
-     "actual": 48069699.29,
+     "actual": 48075317.29,
      "original_budget": 49120287.0
     }
    ],
@@ -4607,7 +4607,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14937048.46,
+     "actual": 14942666.46,
      "original_budget": 17832596.0
     },
     {
@@ -4658,7 +4658,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19373690.4,
-     "actual": 18742967.05,
+     "actual": 18750967.05,
      "original_budget": 18831269.0
     },
     {
@@ -4690,7 +4690,7 @@
     {
      "name": "FIRE",
      "revised_budget": 5370615.0,
-     "actual": 5286832.37,
+     "actual": 5294832.37,
      "original_budget": 5220615.0
     },
     {
@@ -6931,7 +6931,7 @@
    {
     "name": "OTHER SALARIES - STIPENDS",
     "revised_budget": 35800.0,
-    "actual": 26412.0,
+    "actual": 32030.0,
     "original_budget": 0
    },
    {
@@ -8183,7 +8183,7 @@
    {
     "name": "OVERTIME",
     "revised_budget": 1701144.0,
-    "actual": 1676193.19,
+    "actual": 1684193.19,
     "original_budget": 1436144.0
    },
    {
@@ -14099,7 +14099,7 @@
    {
     "name": "OVERTIME",
     "revised_budget": 2442131.21,
-    "actual": 2286383.26,
+    "actual": 2294383.26,
     "original_budget": 1873758.0
    },
    {
@@ -15963,7 +15963,7 @@
    {
     "name": "OTHER SALARIES - STIPENDS",
     "revised_budget": 170036.0,
-    "actual": 136621.27,
+    "actual": 142239.27,
     "original_budget": 0
    },
    {
