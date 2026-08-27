@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-26",
+ "as_of": "2026-08-27",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -18,7 +18,7 @@
     {
      "name": "OTHER GOVERNMENTAL",
      "revised_budget": 21519850.0,
-     "actual": 21401498.28,
+     "actual": 21401310.52,
      "original_budget": 21851072.0
     },
     {
@@ -224,7 +224,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 31124624.8,
-     "actual": 30841130.49,
+     "actual": 30840942.73,
      "original_budget": 31798623.0
     },
     {
@@ -281,7 +281,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14942666.46,
+     "actual": 14945591.67,
      "original_budget": 17832596.0
     },
     {
@@ -325,7 +325,7 @@
     {
      "name": "PROFESSIONAL SALARY",
      "revised_budget": 30503799.96,
-     "actual": 29274306.3,
+     "actual": 29277231.51,
      "original_budget": 30957452.0
     },
     {
@@ -703,7 +703,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 21394850.0,
-     "actual": 21330366.04,
+     "actual": 21330178.28,
      "original_budget": 21726072.0
     },
     {
@@ -741,7 +741,7 @@
     {
      "name": "MEDICARE",
      "revised_budget": 330000.0,
-     "actual": 318870.7,
+     "actual": 318682.94,
      "original_budget": 280000.0
     },
     {
@@ -786,7 +786,7 @@
     {
      "name": "PROFESSIONAL SALARY",
      "revised_budget": 2667501.0,
-     "actual": 2110003.25,
+     "actual": 2112928.46,
      "original_budget": 3046147.0
     },
     {
@@ -824,7 +824,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 14574494.16,
-     "actual": 14942666.46,
+     "actual": 14945591.67,
      "original_budget": 17832596.0
     }
    ]
@@ -3149,7 +3149,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 30503799.96,
-     "actual": 29274306.3,
+     "actual": 29277231.51,
      "original_budget": 30957452.0
     },
     {
@@ -3229,7 +3229,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 2667501.0,
-     "actual": 2110003.25,
+     "actual": 2112928.46,
      "original_budget": 3046147.0
     },
     {
@@ -3394,7 +3394,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 31124624.8,
-     "actual": 30841130.49,
+     "actual": 30840942.73,
      "original_budget": 31798623.0
     },
     {
@@ -3432,7 +3432,7 @@
     {
      "name": "OTHER GOVERNMENTAL",
      "revised_budget": 21394850.0,
-     "actual": 21330366.04,
+     "actual": 21330178.28,
      "original_budget": 21726072.0
     },
     {
@@ -4599,7 +4599,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 49120287.0,
-     "actual": 48075317.29,
+     "actual": 48078242.5,
      "original_budget": 49120287.0
     }
    ],
@@ -4607,7 +4607,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14942666.46,
+     "actual": 14945591.67,
      "original_budget": 17832596.0
     },
     {
@@ -5319,7 +5319,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 330000.0,
-     "actual": 318870.7,
+     "actual": 318682.94,
      "original_budget": 280000.0
     }
    ],
@@ -5327,7 +5327,7 @@
     {
      "name": "OTHER GOVERNMENTAL",
      "revised_budget": 330000.0,
-     "actual": 318870.7,
+     "actual": 318682.94,
      "original_budget": 280000.0
     }
    ]
@@ -6639,7 +6639,7 @@
    {
     "name": "MEDICARE",
     "revised_budget": 330000.0,
-    "actual": 318870.7,
+    "actual": 318682.94,
     "original_budget": 280000.0
    },
    {
@@ -6691,7 +6691,7 @@
    {
     "name": "PROF SALARY, STIPENDS",
     "revised_budget": 0,
-    "actual": 19614.32,
+    "actual": 22539.53,
     "original_budget": 0
    },
    {
@@ -14743,7 +14743,7 @@
    {
     "name": "MEDICARE",
     "revised_budget": 330000.0,
-    "actual": 318870.7,
+    "actual": 318682.94,
     "original_budget": 280000.0
    },
    {
@@ -15687,7 +15687,7 @@
    {
     "name": "PROF SALARY, STIPENDS",
     "revised_budget": 0,
-    "actual": 19614.32,
+    "actual": 22539.53,
     "original_budget": 0
    },
    {
