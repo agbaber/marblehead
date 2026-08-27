@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-26",
+  "as_of": "2026-08-27",
   "fiscal_year": "FY26",
   "checkbook_period_end": "2026-06-01",
   "source": "data/operating_budget_FY26.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
