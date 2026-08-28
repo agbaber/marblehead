@@ -38,8 +38,20 @@ jobs:
           set -euo pipefail
           gh label create auto-checkbook-fy26 --color d62728 \
             --description "Daily auto-refresh of the FY26 checkbook archive" 2>/dev/null || true
-          open_count=$(gh pr list --label auto-checkbook-fy26 --state open --json number --jq 'length')
-          if [ "$open_count" -gt 0 ]; then
+          open_pr=$(gh pr list --label auto-checkbook-fy26 --state open \
+            --json number,createdAt --jq '.[0] // empty')
+          if [ -n "$open_pr" ]; then
+            pr_number=$(jq -r '.number' <<<"$open_pr")
+            created_at=$(jq -r '.createdAt' <<<"$open_pr")
+            age_hours=$(( ( $(date +%s) - $(date -d "$created_at" +%s) ) / 3600 ))
+            # Same repeated-skip alarm as checkbook-refresh.yml: a blocked PR
+            # older than two daily runs means auto-merge died and nothing will
+            # retry it. Fail loudly instead of skipping green forever.
+            if [ "$age_hours" -ge 48 ]; then
+              echo "::error::FY26 auto-checkbook PR #$pr_number has blocked the daily refresh for ${age_hours}h. Its CI likely failed or was cancelled; close it or rerun its checks, then re-trigger this workflow."
+              exit 1
+            fi
+            echo "FY26 auto-checkbook PR #$pr_number is open (${age_hours}h old); waiting for its auto-merge. Skipping."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"

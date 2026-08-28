@@ -65,9 +65,22 @@ jobs:
             --color d62728 \
             --description "Daily auto-refresh of the checkbook CSV" \
             2>/dev/null || true
-          open_count=$(gh pr list --label auto-checkbook --state open --json number --jq 'length')
-          if [ "$open_count" -gt 0 ]; then
-            echo "An auto-checkbook PR is already open (likely failed CI on a prior run). Skipping."
+          open_pr=$(gh pr list --label auto-checkbook --state open \
+            --json number,createdAt --jq '.[0] // empty')
+          if [ -n "$open_pr" ]; then
+            pr_number=$(jq -r '.number' <<<"$open_pr")
+            created_at=$(jq -r '.createdAt' <<<"$open_pr")
+            age_hours=$(( ( $(date +%s) - $(date -d "$created_at" +%s) ) / 3600 ))
+            # A blocked PR older than two daily runs means auto-merge died
+            # (e.g. a cancelled required check) and nothing will retry it.
+            # Fail loudly so the scheduled run goes red and emails the owner,
+            # instead of skipping green forever (PR #1150 wedged the refresh
+            # silently for 10 days in Aug 2026).
+            if [ "$age_hours" -ge 48 ]; then
+              echo "::error::Auto-checkbook PR #$pr_number has blocked the daily refresh for ${age_hours}h. Its CI likely failed or was cancelled; close it or rerun its checks, then re-trigger this workflow."
+              exit 1
+            fi
+            echo "Auto-checkbook PR #$pr_number is open (${age_hours}h old); waiting for its auto-merge. Skipping."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
