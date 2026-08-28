@@ -1,28 +1,28 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-08-14",
+    "date": "2026-08-25",
     "fiscal_year": "FY27",
-    "row_count": 1067,
-    "total_paid": 23828336.21,
-    "interfund_total": 39536.67,
-    "external_paid": 23788799.54,
+    "row_count": 1638,
+    "total_paid": 27474408.57,
+    "interfund_total": 125709.31,
+    "external_paid": 27348699.26,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-08-14",
-    "source_file": "checkbook_FY27_2026-08-14.csv"
+    "last_payment": "2026-08-25",
+    "source_file": "checkbook_FY27_2026-08-25.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
-      "amount": 275439.27,
-      "share": 0.0116,
+      "amount": 2242059.75,
+      "share": 0.0816,
       "fund_count": 2,
       "top_funds": [
         {
           "name": "A11 2022 CAPITAL IMPROVEMENT",
-          "amount": 238495.47,
-          "row_count": 7
+          "amount": 2205115.95,
+          "row_count": 11
         },
         {
           "name": "A33 2025-ALLEY BLDG IMPROV",
@@ -34,82 +34,82 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 18041283.94,
-      "share": 0.7571,
+      "amount": 19357735.18,
+      "share": 0.7046,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 17613988.84,
-          "row_count": 500
+          "amount": 18700293.0,
+          "row_count": 760
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 245487.66,
-          "row_count": 130
+          "amount": 465665.73,
+          "row_count": 261
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
-          "amount": 181807.44,
-          "row_count": 12
+          "amount": 191776.45,
+          "row_count": 20
         }
       ]
     },
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 5273041.97,
-      "share": 0.2213,
+      "amount": 5498743.31,
+      "share": 0.2001,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 2721560.22,
-          "row_count": 178
-        },
-        {
-          "name": "SEWER ENTERPRISE OPERATING",
-          "amount": 776779.61,
-          "row_count": 52
-        },
-        {
-          "name": "WATER CAPITAL ARTICLES",
-          "amount": 767046.5,
-          "row_count": 3
+          "amount": 2763723.5,
+          "row_count": 196
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 592617.6,
-          "row_count": 20
+          "amount": 927699.38,
+          "row_count": 31
         },
         {
-          "name": "MWRA PROJECT LWSAP26-3021",
-          "amount": 266400.38,
-          "row_count": 1
+          "name": "SEWER ENTERPRISE OPERATING",
+          "amount": 788348.34,
+          "row_count": 96
         },
         {
-          "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 147373.66,
-          "row_count": 25
+          "name": "WATER CAPITAL ARTICLES",
+          "amount": 587385.96,
+          "row_count": 6
         },
         {
           "name": "SEWER CAPITAL ARTICLES",
-          "amount": 1264.0,
-          "row_count": 1
+          "amount": 271284.21,
+          "row_count": 4
+        },
+        {
+          "name": "HARBOR ENTERPRISE OPERATING",
+          "amount": 160301.92,
+          "row_count": 48
+        },
+        {
+          "name": "MWRA PROJECT LWSAP26-3021",
+          "amount": 0.0,
+          "row_count": 2
         }
       ]
     },
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 31986.33,
-      "share": 0.0013,
-      "fund_count": 6,
+      "amount": 46491.07,
+      "share": 0.0017,
+      "fund_count": 8,
       "top_funds": [
         {
           "name": "COVID 19 ARPA (FED)",
-          "amount": 10850.0,
-          "row_count": 2
+          "amount": 23053.48,
+          "row_count": 3
         },
         {
           "name": "JAIL DIVERSION GRANT (FED)",
@@ -127,6 +127,16 @@
           "row_count": 1
         },
         {
+          "name": "SPED IDEA 94-142 (240)",
+          "amount": 1599.26,
+          "row_count": 7
+        },
+        {
+          "name": "FIRE SENIOR SAFE GRANT",
+          "amount": 702.0,
+          "row_count": 1
+        },
+        {
           "name": "LIBRARY MUNICIPAL EQUAL GRANT",
           "amount": 392.15,
           "row_count": 1
@@ -141,29 +151,34 @@
     {
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
-      "amount": 136935.54,
-      "share": 0.0057,
+      "amount": 192319.39,
+      "share": 0.007,
       "fund_count": 2,
       "top_funds": [
         {
           "name": "PARK REVOLVING FUND",
-          "amount": 133481.64,
-          "row_count": 86
+          "amount": 183282.1,
+          "row_count": 103
         },
         {
           "name": "COA REVOLVING",
-          "amount": 3453.9,
-          "row_count": 9
+          "amount": 9037.29,
+          "row_count": 28
         }
       ]
     },
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 69649.16,
-      "share": 0.0029,
-      "fund_count": 13,
+      "amount": 137059.87,
+      "share": 0.005,
+      "fund_count": 18,
       "top_funds": [
+        {
+          "name": "FIREWORKS DONATION FUND",
+          "amount": 55000.0,
+          "row_count": 1
+        },
         {
           "name": "SCHOOL USER FEES",
           "amount": 25321.93,
@@ -171,8 +186,8 @@
         },
         {
           "name": "MIDDLE SCHOOL STUDENT ACTIVITY",
-          "amount": 12950.0,
-          "row_count": 2
+          "amount": 13449.74,
+          "row_count": 3
         },
         {
           "name": "INSURANCE REIMBURS <$150,000",
@@ -190,38 +205,33 @@
           "row_count": 1
         },
         {
+          "name": "GLOVER SCHOOL DONATION",
+          "amount": 6041.08,
+          "row_count": 2
+        },
+        {
           "name": "COA FORMULA SPENDING PLAN",
           "amount": 2875.44,
           "row_count": 5
-        },
-        {
-          "name": "MEMORIAL PARK BENCH DONATION",
-          "amount": 1985.0,
-          "row_count": 1
-        },
-        {
-          "name": "FORT SEWALL DONATION",
-          "amount": 1739.0,
-          "row_count": 1
         }
       ]
     }
   ],
   "gf_town_carveout": {
-    "total": 17613988.84,
-    "fixed_total": 16779695.04,
-    "fixed_share": 0.9526,
-    "admin_contracts_total": 330752.09,
+    "total": 18700293.0,
+    "fixed_total": 17585247.57,
+    "fixed_share": 0.9404,
+    "admin_contracts_total": 352378.21,
     "admin_contracts_share": 0.0188,
-    "other_recurring_total": 503541.71,
-    "other_recurring_share": 0.0286,
+    "other_recurring_total": 762667.22,
+    "other_recurring_share": 0.0408,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
-        "amount": 3341423.14,
-        "share": 0.1897,
-        "row_count": 12,
+        "amount": 3343080.9,
+        "share": 0.1788,
+        "row_count": 14,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
@@ -236,6 +246,10 @@
             "amount": 2116.0
           },
           {
+            "name": "RAIS",
+            "amount": 1657.76
+          },
+          {
             "name": "VOYA HOLDINGS INC",
             "amount": 1529.0
           }
@@ -244,13 +258,13 @@
       {
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
-        "amount": 6934984.39,
-        "share": 0.3937,
-        "row_count": 28,
+        "amount": 7738584.39,
+        "share": 0.4138,
+        "row_count": 30,
         "top_vendors": [
           {
             "name": "U.S. BANK",
-            "amount": 6934984.39
+            "amount": 7738584.39
           }
         ]
       },
@@ -258,7 +272,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.3317,
+        "share": 0.3125,
         "row_count": 1,
         "top_vendors": [
           {
@@ -270,22 +284,22 @@
       {
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
-        "amount": 659927.51,
-        "share": 0.0375,
-        "row_count": 7,
+        "amount": 660222.28,
+        "share": 0.0353,
+        "row_count": 15,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 659927.51
+            "amount": 660222.28
           }
         ]
       },
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 330752.09,
+        "amount": 352378.21,
         "share": 0.0188,
-        "row_count": 15,
+        "row_count": 18,
         "top_vendors": [
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -293,7 +307,7 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 63192.56
+            "amount": 79937.23
           },
           {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
@@ -302,15 +316,19 @@
           {
             "name": "MEAD TALERMAN & COSTA LLC",
             "amount": 6748.5
+          },
+          {
+            "name": "FUTURE TECHNOLOGIES GROUP LLC",
+            "amount": 4881.45
           }
         ]
       },
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 503541.71,
-        "share": 0.0286,
-        "row_count": 437,
+        "amount": 762667.22,
+        "share": 0.0408,
+        "row_count": 682,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -321,28 +339,28 @@
             "amount": 64922.43
           },
           {
+            "name": "F W WEBB CO",
+            "amount": 50094.46
+          },
+          {
+            "name": "CLEARGOV INC",
+            "amount": 36064.5
+          },
+          {
+            "name": "OPENGOV INC",
+            "amount": 32837.13
+          },
+          {
             "name": "CARAHSOFT TECHNOLOGY CORPORATION",
             "amount": 27450.53
           },
           {
             "name": "CENTRALSQUARE TECHNOLOGIES LLC",
-            "amount": 25259.18
+            "amount": 25751.19
           },
           {
-            "name": "FIFTH ASSET, INC",
-            "amount": 17500.0
-          },
-          {
-            "name": "EAST COAST COMPACTOR CORP",
-            "amount": 15513.5
-          },
-          {
-            "name": "REHRIG PACIFIC COMPANY",
-            "amount": 15378.83
-          },
-          {
-            "name": "KASCADE LLC",
-            "amount": 13775.0
+            "name": "DENNIS K BURKE INC",
+            "amount": 24731.04
           }
         ]
       }
@@ -355,37 +373,37 @@
       "ballot_date": "2022-06-21",
       "purpose": "roofs, roads/sidewalks, smart panels, HVAC, salt shed, HS boiler",
       "context": "Bonds run 10-20 years; debt service appears in U.S. Bank rows through the late 2030s.",
-      "amount": 238495.47,
-      "row_count": 7,
+      "amount": 2205115.95,
+      "row_count": 11,
       "first_paid": "2026-07-20",
-      "last_paid": "2026-08-04",
-      "days_since_last_paid": 10,
+      "last_paid": "2026-08-13",
+      "days_since_last_paid": 12,
       "status": "active",
       "top_vendors": [
         {
+          "name": "HOMER CONTRACTING IN",
+          "amount": 1908075.0,
+          "share": 0.8653
+        },
+        {
           "name": "PAQCON LLC",
           "amount": 144476.0,
-          "share": 0.6058
+          "share": 0.0655
         },
         {
           "name": "MDM ENGINEERING COMPANY INC",
           "amount": 60723.02,
-          "share": 0.2546
+          "share": 0.0275
+        },
+        {
+          "name": "LEFTFIELD LLC",
+          "amount": 57145.0,
+          "share": 0.0259
         },
         {
           "name": "RICHARD D AMBROSIA INC",
           "amount": 28395.5,
-          "share": 0.1191
-        },
-        {
-          "name": "EJ ORFANOS PAINTING INC",
-          "amount": 4900.0,
-          "share": 0.0205
-        },
-        {
-          "name": "PURVIS SYSTEMS INC",
-          "amount": 0.95,
-          "share": 0.0
+          "share": 0.0129
         }
       ]
     },
@@ -399,7 +417,7 @@
       "row_count": 2,
       "first_paid": "2026-07-08",
       "last_paid": "2026-07-28",
-      "days_since_last_paid": 17,
+      "days_since_last_paid": 28,
       "status": "engineering",
       "top_vendors": [
         {
