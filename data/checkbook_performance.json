@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-08-25",
+  "as_of": "2026-08-26",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 2,
-  "fy_pct_elapsed": 15.3,
+  "fy_pct_elapsed": 15.6,
   "budget_execution": {
     "by_department": [
       {
@@ -676,8 +676,8 @@
     },
     {
       "month": "2026-08",
-      "amount": 6693336.62,
-      "count": 781
+      "amount": 6697896.88,
+      "count": 788
     }
   ],
   "drill": {
@@ -812,6 +812,22 @@
             "month": "2026-08",
             "amount": 2017.14,
             "count": 7
+          }
+        ]
+      },
+      "ARTS LOTTERY GRANT": {
+        "top_vendors": [
+          {
+            "name": "MARBLEHEAD FESTIVAL OF ARTS, INC",
+            "amount": 1500.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-08",
+            "amount": 1500.0,
+            "count": 1
           }
         ]
       },
@@ -1348,8 +1364,8 @@
           },
           {
             "month": "2026-08",
-            "amount": 2916106.18,
-            "count": 428
+            "amount": 2919166.44,
+            "count": 434
           }
         ]
       },

@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-08-25",
+    "date": "2026-08-26",
     "fiscal_year": "FY27",
-    "row_count": 1638,
-    "total_paid": 27474408.57,
+    "row_count": 1645,
+    "total_paid": 27478968.83,
     "interfund_total": 125709.31,
-    "external_paid": 27348699.26,
+    "external_paid": 27353259.52,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-08-25",
-    "source_file": "checkbook_FY27_2026-08-25.csv"
+    "last_payment": "2026-08-26",
+    "source_file": "checkbook_FY27_2026-08-26.csv"
   },
   "buckets": [
     {
@@ -34,14 +34,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 19357735.18,
+      "amount": 19360795.44,
       "share": 0.7046,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 18700293.0,
-          "row_count": 760
+          "amount": 18703353.26,
+          "row_count": 766
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -102,9 +102,9 @@
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 46491.07,
+      "amount": 47991.07,
       "share": 0.0017,
-      "fund_count": 8,
+      "fund_count": 9,
       "top_funds": [
         {
           "name": "COVID 19 ARPA (FED)",
@@ -132,6 +132,11 @@
           "row_count": 7
         },
         {
+          "name": "ARTS LOTTERY GRANT",
+          "amount": 1500.0,
+          "row_count": 1
+        },
+        {
           "name": "FIRE SENIOR SAFE GRANT",
           "amount": 702.0,
           "row_count": 1
@@ -139,11 +144,6 @@
         {
           "name": "LIBRARY MUNICIPAL EQUAL GRANT",
           "amount": 392.15,
-          "row_count": 1
-        },
-        {
-          "name": "FIRE SAFE GRANT",
-          "amount": 196.81,
           "row_count": 1
         }
       ]
@@ -218,19 +218,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 18700293.0,
+    "total": 18703353.26,
     "fixed_total": 17585247.57,
-    "fixed_share": 0.9404,
+    "fixed_share": 0.9402,
     "admin_contracts_total": 352378.21,
     "admin_contracts_share": 0.0188,
-    "other_recurring_total": 762667.22,
-    "other_recurring_share": 0.0408,
+    "other_recurring_total": 765727.48,
+    "other_recurring_share": 0.0409,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 3343080.9,
-        "share": 0.1788,
+        "share": 0.1787,
         "row_count": 14,
         "top_vendors": [
           {
@@ -272,7 +272,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.3125,
+        "share": 0.3124,
         "row_count": 1,
         "top_vendors": [
           {
@@ -326,9 +326,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 762667.22,
-        "share": 0.0408,
-        "row_count": 682,
+        "amount": 765727.48,
+        "share": 0.0409,
+        "row_count": 688,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -377,7 +377,7 @@
       "row_count": 11,
       "first_paid": "2026-07-20",
       "last_paid": "2026-08-13",
-      "days_since_last_paid": 12,
+      "days_since_last_paid": 13,
       "status": "active",
       "top_vendors": [
         {
@@ -417,7 +417,7 @@
       "row_count": 2,
       "first_paid": "2026-07-08",
       "last_paid": "2026-07-28",
-      "days_since_last_paid": 28,
+      "days_since_last_paid": 29,
       "status": "engineering",
       "top_vendors": [
         {
