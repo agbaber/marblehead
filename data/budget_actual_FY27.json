@@ -1,20 +1,20 @@
 {
-  "as_of": "2026-08-27",
+  "as_of": "2026-08-28",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
-    "all_funds_revised_budget": 134209610.69,
-    "all_funds_actual": 34607381.42,
+    "all_funds_revised_budget": 134217180.35,
+    "all_funds_actual": 34611941.68,
     "budgeted_annual": {
       "revised_budget": 126854296.0,
-      "actual": 30399916.54,
+      "actual": 30406665.2,
       "original_budget": 130160456.0
     },
     "other_funds": {
-      "revised_budget": 7355314.69,
-      "actual": 4207464.88,
+      "revised_budget": 7362884.35,
+      "actual": 4205276.48,
       "original_budget": 2400000.0
     }
   },
@@ -22,16 +22,16 @@
     {
       "name": "GENERAL FUND - TOWN",
       "revised_budget": 69474315.0,
-      "actual": 21777622.31,
+      "actual": 21780682.57,
       "original_budget": 69331077.0,
-      "encumbrance": 15170547.96
+      "encumbrance": 15170285.31
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
-      "actual": 1293852.89,
+      "actual": 1297541.29,
       "original_budget": 47620287.0,
-      "encumbrance": 9688822.51
+      "encumbrance": 9699782.38
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -80,9 +80,9 @@
     {
       "name": "DISTRICTWIDE",
       "revised_budget": 13083733.6,
-      "actual": 826114.32,
+      "actual": 829802.72,
       "original_budget": 13090519.6,
-      "encumbrance": 7186610.97
+      "encumbrance": 7194617.03
     },
     {
       "name": "HIGH SCHOOL",
@@ -103,21 +103,21 @@
       "revised_budget": 7545998.37,
       "actual": 88053.44,
       "original_budget": 7545798.37,
-      "encumbrance": 478147.99
+      "encumbrance": 478301.85
     },
     {
       "name": "FIRE",
       "revised_budget": 6471909.0,
-      "actual": 1072724.48,
+      "actual": 1072980.63,
       "original_budget": 6312967.0,
-      "encumbrance": 3242658.17
+      "encumbrance": 3242402.02
     },
     {
       "name": "MIDDLE SCHOOL",
       "revised_budget": 5713564.68,
       "actual": 85530.64,
       "original_budget": 5712762.68,
-      "encumbrance": 475357.68
+      "encumbrance": 475590.83
     },
     {
       "name": "POLICE",
@@ -131,7 +131,7 @@
       "revised_budget": 5424062.26,
       "actual": 60517.86,
       "original_budget": 5422623.26,
-      "encumbrance": 404616.27
+      "encumbrance": 407183.07
     },
     {
       "name": "WATER",
@@ -227,9 +227,9 @@
     {
       "name": "SELECT BOARD",
       "revised_budget": 790176.0,
-      "actual": 153583.47,
+      "actual": 153589.97,
       "original_budget": 723176.0,
-      "encumbrance": 289071.63
+      "encumbrance": 289065.13
     },
     {
       "name": "INTERFUND TRANSFERS",
@@ -318,7 +318,7 @@
     {
       "name": "VETERANS SERVICES",
       "revised_budget": 154872.0,
-      "actual": 15082.96,
+      "actual": 17880.57,
       "original_budget": 154872.0,
       "encumbrance": 68795.14
     },
@@ -411,16 +411,16 @@
     {
       "name": "OTHER EXPENSE",
       "revised_budget": 39091074.0,
-      "actual": 18945033.71,
+      "actual": 18947831.32,
       "original_budget": 39082074.0,
-      "encumbrance": 204359.14
+      "encumbrance": 209059.14
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 14770162.0,
-      "actual": 1971007.13,
+      "actual": 1971013.63,
       "original_budget": 13986656.0,
-      "encumbrance": 5427928.46
+      "encumbrance": 5429715.96
     },
     {
       "name": "GOVERNMENTAL",
@@ -432,16 +432,16 @@
     {
       "name": "OTHER SALARIES",
       "revised_budget": 6464808.35,
-      "actual": 344096.6,
+      "actual": 347785.0,
       "original_budget": 6473555.35,
       "encumbrance": 1912902.44
     },
     {
       "name": "SUPPLIES AND MATL",
       "revised_budget": 2461324.0,
-      "actual": 217905.54,
+      "actual": 218161.69,
       "original_budget": 2458724.0,
-      "encumbrance": 675062.14
+      "encumbrance": 679271.86
     },
     {
       "name": "CAPITAL",
@@ -476,9 +476,9 @@
     {
       "name": "UNDEFINED",
       "revised_budget": 47615287.0,
-      "actual": 1293852.89,
+      "actual": 1297541.29,
       "original_budget": 47615287.0,
-      "encumbrance": 9688822.51
+      "encumbrance": 9699782.38
     },
     {
       "name": "SALARIES",
@@ -490,9 +490,9 @@
     {
       "name": "EXPENSES",
       "revised_budget": 20339169.0,
-      "actual": 13889919.18,
+      "actual": 13890181.83,
       "original_budget": 24880169.0,
-      "encumbrance": 1247874.93
+      "encumbrance": 1247612.28
     },
     {
       "name": "GROUP INSURANCE",
@@ -602,7 +602,7 @@
     {
       "name": "VETERANS BENEFITS",
       "revised_budget": 65000.0,
-      "actual": 3124.15,
+      "actual": 5921.76,
       "original_budget": 65000.0,
       "encumbrance": 0.0
     },
@@ -1201,7 +1201,7 @@
       "revised_budget": 886179.0,
       "actual": 71292.75,
       "original_budget": 886179.0,
-      "encumbrance": 236993.27
+      "encumbrance": 238787.27
     },
     {
       "name": "HEALTH REIMB MEDICARE",
@@ -1271,14 +1271,14 @@
       "revised_budget": 619218.0,
       "actual": 49157.26,
       "original_budget": 616618.0,
-      "encumbrance": 247925.12
+      "encumbrance": 250725.07
     },
     {
       "name": "OTHER PROF & TECHNICAL",
       "revised_budget": 589237.0,
-      "actual": 251622.66,
+      "actual": 251629.16,
       "original_budget": 574322.0,
-      "encumbrance": 118796.52
+      "encumbrance": 118790.02
     },
     {
       "name": "SUBSTITUTES",
@@ -1425,7 +1425,7 @@
       "revised_budget": 292856.0,
       "actual": 71806.55,
       "original_budget": 292856.0,
-      "encumbrance": 137435.49
+      "encumbrance": 142135.49
     },
     {
       "name": "LEADER HEAVY EQUIP OPERATOR",
@@ -1586,12 +1586,12 @@
       "revised_budget": 180262.0,
       "actual": 9189.59,
       "original_budget": 180262.0,
-      "encumbrance": 11374.45
+      "encumbrance": 12886.51
     },
     {
       "name": "OTHER SALARIES - STIPENDS",
       "revised_budget": 173079.0,
-      "actual": 0.0,
+      "actual": 3688.4,
       "original_budget": 173079.0,
       "encumbrance": 0.0
     },
@@ -2095,7 +2095,7 @@
     {
       "name": "VETERANS BENEFITS",
       "revised_budget": 65000.0,
-      "actual": 3124.15,
+      "actual": 5921.76,
       "original_budget": 65000.0,
       "encumbrance": 0.0
     },
@@ -2349,7 +2349,7 @@
       "revised_budget": 35750.0,
       "actual": 2602.24,
       "original_budget": 35750.0,
-      "encumbrance": 5258.33
+      "encumbrance": 5412.19
     },
     {
       "name": "POLICE POST STIPEND",
@@ -2487,9 +2487,9 @@
     {
       "name": "MISC MEDICAL & SURGICAL",
       "revised_budget": 23065.0,
-      "actual": 3325.47,
+      "actual": 3581.62,
       "original_budget": 23065.0,
-      "encumbrance": 1078.4
+      "encumbrance": 822.25
     },
     {
       "name": "DUES AND MEMBERSHIPS",
