@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-27",
+ "as_of": "2026-08-28",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -281,7 +281,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14945591.67,
+     "actual": 14945745.03,
      "original_budget": 17832596.0
     },
     {
@@ -293,13 +293,13 @@
     {
      "name": "VILLAGE SCHOOL",
      "revised_budget": 7679662.0,
-     "actual": 7378263.88,
+     "actual": 7378153.17,
      "original_budget": 7301893.0
     },
     {
      "name": "MIDDLE SCHOOL",
      "revised_budget": 5857003.0,
-     "actual": 5530485.74,
+     "actual": 5530443.09,
      "original_budget": 5569396.0
     },
     {
@@ -349,13 +349,13 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 1335568.47,
-     "actual": 1095354.66,
+     "actual": 1095508.02,
      "original_budget": 815138.0
     },
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 1219582.53,
-     "actual": 1083752.44,
+     "actual": 1083599.08,
      "original_budget": 934244.0
     },
     {
@@ -798,7 +798,7 @@
     {
      "name": "OTHER EXPENSE",
      "revised_budget": 1210834.75,
-     "actual": 1008330.15,
+     "actual": 1008483.51,
      "original_budget": 700182.0
     },
     {
@@ -824,7 +824,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 14574494.16,
-     "actual": 14945591.67,
+     "actual": 14945745.03,
      "original_budget": 17832596.0
     }
    ]
@@ -939,7 +939,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 99428.0,
-     "actual": 55641.52,
+     "actual": 55530.81,
      "original_budget": 111628.0
     },
     {
@@ -965,7 +965,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 7679662.0,
-     "actual": 7378263.88,
+     "actual": 7378153.17,
      "original_budget": 7301893.0
     }
    ]
@@ -1075,7 +1075,7 @@
     {
      "name": "SUPPLIES AND MATL",
      "revised_budget": 48940.0,
-     "actual": 39214.04,
+     "actual": 39171.39,
      "original_budget": 58442.0
     },
     {
@@ -1095,7 +1095,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 5857003.0,
-     "actual": 5530485.74,
+     "actual": 5530443.09,
      "original_budget": 5569396.0
     }
    ]
@@ -3400,7 +3400,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 1335568.47,
-     "actual": 1095354.66,
+     "actual": 1095508.02,
      "original_budget": 815138.0
     },
     {
@@ -3444,7 +3444,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 1210834.75,
-     "actual": 1008330.15,
+     "actual": 1008483.51,
      "original_budget": 700182.0
     },
     {
@@ -4193,7 +4193,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 1219582.53,
-     "actual": 1083752.44,
+     "actual": 1083599.08,
      "original_budget": 934244.0
     },
     {
@@ -4273,7 +4273,7 @@
     {
      "name": "VILLAGE SCHOOL",
      "revised_budget": 99428.0,
-     "actual": 55641.52,
+     "actual": 55530.81,
      "original_budget": 111628.0
     },
     {
@@ -4315,7 +4315,7 @@
     {
      "name": "MIDDLE SCHOOL",
      "revised_budget": 48940.0,
-     "actual": 39214.04,
+     "actual": 39171.39,
      "original_budget": 58442.0
     },
     {
@@ -4607,7 +4607,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14945591.67,
+     "actual": 14945745.03,
      "original_budget": 17832596.0
     },
     {
@@ -4619,13 +4619,13 @@
     {
      "name": "VILLAGE SCHOOL",
      "revised_budget": 7679662.0,
-     "actual": 7378263.88,
+     "actual": 7378153.17,
      "original_budget": 7301893.0
     },
     {
      "name": "MIDDLE SCHOOL",
      "revised_budget": 5857003.0,
-     "actual": 5530485.74,
+     "actual": 5530443.09,
      "original_budget": 5569396.0
     },
     {
@@ -6759,7 +6759,7 @@
    {
     "name": "SCHOOLS PCARD",
     "revised_budget": 0,
-    "actual": -153.36,
+    "actual": 0,
     "original_budget": 0
    }
   ],
@@ -7451,7 +7451,7 @@
    {
     "name": "OFFICE SUPPLIES",
     "revised_budget": 900.0,
-    "actual": 1201.8,
+    "actual": 1091.09,
     "original_budget": 1100.0
    },
    {
@@ -8119,7 +8119,7 @@
    {
     "name": "EDUCATIONAL SUPPLIES",
     "revised_budget": 31633.0,
-    "actual": 28109.26,
+    "actual": 28066.61,
     "original_budget": 31633.0
    },
    {
@@ -15773,7 +15773,7 @@
    {
     "name": "SCHOOLS PCARD",
     "revised_budget": 0,
-    "actual": -153.36,
+    "actual": 0,
     "original_budget": 0
    }
   ],
@@ -16051,7 +16051,7 @@
    {
     "name": "EDUCATIONAL SUPPLIES",
     "revised_budget": 684445.36,
-    "actual": 618515.33,
+    "actual": 618472.68,
     "original_budget": 400234.0
    },
    {
@@ -16081,7 +16081,7 @@
    {
     "name": "OFFICE SUPPLIES",
     "revised_budget": 35897.22,
-    "actual": 31296.32,
+    "actual": 31185.61,
     "original_budget": 22250.0
    },
    {
