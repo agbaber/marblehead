@@ -10,7 +10,131 @@ video_url: "https://vimeo.com/1221827304"
 duration_seconds: 4281
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board approves hybrid police hiring pathway, Green Communities support"
+  summary: "The Marblehead Select Board voted to authorize the police department to pursue a civil service hybrid hiring program, establishing a local public safety registry to expand the applicant pool. The board also voted to formally support the Marblehead Light Department Commission in taking remaining steps toward Green Communities designation. Additional actions included establishing a 400th anniversary committee, accepting a $4,764 donation for a speed feedback sign, and resolving a fire department promotional conflict of interest."
+  decisions:
+    - "Approved establishment of a 400th Anniversary Town Committee with seven members"
+    - "Approved vote of support for Marblehead Light Department to pursue MassCEC Green Communities membership"
+    - "Approved authorization for police department to pursue civil service hybrid hiring program and local public safety registry"
+    - "Approved acceptance of $4,764 donation from Marblehead Neck Association for a speed feedback sign"
+    - "Approved acceptance of Fire Chief's conflict-of-interest disclosure regarding captain promotion"
+    - "Approved appointment of Town Administrator as appointing authority for fire captain promotional process"
+    - "Approved consent agenda minutes of April 8 and April 22, 2022"
+    - "Approved contract with Marblehead Marine Construction for float removal"
+    - "Approved one-day liquor license for Shaken & Served at Lee Mansion on October 3rd"
+  votes:
+    - motion: "Establish 400th Anniversary Town Committee"
+      result: "in favor (unanimous)"
+    - motion: "Support Marblehead Light Department pursuit of MassCEC membership"
+      result: "in favor (unanimous)"
+    - motion: "Authorize police hybrid hiring program and local registry"
+      result: "in favor (unanimous)"
+    - motion: "Accept $4,764 donation from Marblehead Neck Association"
+      result: "in favor (unanimous)"
+    - motion: "Accept Fire Chief conflict-of-interest disclosure"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Town Administrator as fire captain appointing authority"
+      result: "in favor (unanimous)"
+    - motion: "Approve consent agenda"
+      result: "in favor (unanimous)"
+    - motion: "Approve Marblehead Marine Construction float removal contract"
+      result: "in favor (unanimous)"
+    - motion: "Approve one-day liquor license for Shaken & Served"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 0
+    end_seconds: 186
+    headline: "Resident raises concerns about stormwater drains, cemetery staffing, and sidewalk repair"
+    dek: "A resident urged the board to consider consolidating DPW functions and pressed for faster contractor accountability on damaged sidewalks."
+    summary: "A resident (identified as Mr. Jordan by the chair) expressed concern about the scope of upcoming stormwater drain work, noting that many culverts running through private yards need substantial repair. He suggested the town consider a full-time DPW director who would also oversee trash operations, consolidating what he described as separate department-head roles. He also raised concern that a gas company contractor had torn up a sidewalk at the corner of Home Street and Evans Road and left it unrepaired for approximately a month, posing a pedestrian hazard near school reopening."
+    key_speakers: ["Resident (Mr. Jordan)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 186
+    end_seconds: 463
+    headline: "Town Administrator reports on Pleasant Street Complete Streets grant and Marblehead Alerts relaunch"
+    dek: "A $1 million Complete Streets funding request is pending with the state, and the new Marblehead Alerts notification system has surpassed 1,000 subscribers."
+    summary: "The Town Administrator reported three updates. First, the town has submitted a request for $1 million in Complete Streets funding for Pleasant Street between Balling Road/Smith Street intersection and Devereux Terrace, an area where two tragedies have occurred. Second, the town's new mass notification system, branded Marblehead Alerts, has reached over 1,000 subscribers after transitioning away from the Code Red system; residents who have not yet re-registered were urged to do so via the town website. Third, the town is continuing its townwide catch basin cleaning program and noted that a resident was issued a $50 fine for dumping into a storm drain."
+    key_speakers: ["Town Administrator (Thatcher Kezer)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 463
+    end_seconds: 838
+    headline: "RFP for Chalkham parcel nearing publication; open space carve-out option retained"
+    dek: "The RFP is under legal review and could be posted to the central register by the following Wednesday for a 45-day response window."
+    summary: "The Town Administrator reported that the RFP for the Chalkham parcel has been submitted to legal counsel for review. If approved in time, the town intends to file with the central register by the following Wednesday, triggering a 45-day submission window. Board members discussed whether the RFP allows the town to carve out open space; staff confirmed that open space is one of the evaluated criteria and that a purchase-and-sale agreement can formally designate retained open space after a final proposal is selected."
+    key_speakers: ["Town Administrator (Thatcher Kezer)"]
+  - topic: recreation-events
+    topic_confidence: 0.8
+    start_seconds: 838
+    end_seconds: 1207
+    headline: "Board votes to establish a seven-member 400th Anniversary Committee ahead of Marblehead's 2029 milestone"
+    dek: "Town historian and Museum director urged early planning, noting roughly $1,649 in seed money from the 350th anniversary remains available."
+    summary: "The town historian appeared alongside the new director of the Marblehead Museum and Historical Society to urge the board to begin planning for Marblehead's 400th anniversary in 2029. Drawing on his experience co-chairing the 350th anniversary celebration in 1999—which included 33 events and returned surplus funds to the town—he recommended appointing a committee of seven, including co-chairs, and opening applications town-wide. The board voted unanimously to establish the committee, with applications due by the end of September and interviews planned for the first October meeting. Approximately $1,649 in leftover seed money from the prior committee was noted as potentially available."
+    key_speakers: ["Town Historian", "Dan Marshall (Marblehead Museum director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 1207
+    end_seconds: 3050
+    featured: true
+    headline: "Board votes to support Marblehead Light pursuing Green Communities designation worth $140–$160K upfront"
+    dek: "Community Development director and town planner outlined six criteria, with only the Light Department's renewable energy charge adoption remaining before a December application."
+    summary: |
+      Director of Community Development Brendan Callahan and Town Planner Jacinta Williams presented a status update on Marblehead's pursuit of Green Communities designation, a process begun in 2018. Of the six required criteria, five have been substantially met:
+      
+      | Criterion | Status |
+      |---|---|
+      | 1 & 2: Zoning openness and permitting timeline | ~90% complete; need parcel ID and legal letter |
+      | 3: 20% energy reduction baseline/plan | Complete |
+      | 4: Zero-emissions vehicle policy | Complete |
+      | 5: Stretch Code (2018) | Complete |
+      | 6: Renewable energy charge by Light Dept. | Pending Light Board action |
+      
+      A DOER regional grant coordinator explained that upon receiving designation, Marblehead would receive approximately $140,000–$160,000 in initial grant funding, followed by eligibility to compete for up to $250,000 per grant cycle (roughly every one to two years) from a pool of about $7.5 million shared among approximately 50 applicants per round. Funding is sourced from the Regional Greenhouse Gas Initiative, not state taxpayers, and has been in place since 2010. The board voted unanimously to formally support the Light Department Commission in taking the remaining steps to apply for MassCEC membership. A 'Climate Leader' tier offering $1 million upfront was also discussed as a future option.
+    key_speakers: ["Brendan Callahan (Community Development director)", "Jacinta Williams (Town Planner)", "Dylan Patel (DOER grant coordinator)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 3091
+    end_seconds: 3828
+    headline: "Board authorizes police department to pursue civil service hybrid hiring program and local registry"
+    dek: "The police chief cited shrinking civil service applicant pools—only two completed applications from 41 letters sent—as the driver for the new pathway."
+    summary: "The police chief presented a request to enter a civil service hybrid hiring program that allows up to 50% of new police officer hires over five years to come from a locally maintained register rather than the traditional civil service exam list. He described a recent hiring round in which 41 letters were sent for two positions, yielding only two completed applications. The alternative pathway would permit hiring of already-certified officers from other communities or out-of-state equivalent certifications, subject to a town-designed policy addressing fairness, equity, and anti-nepotism requirements submitted to the state for approval. Once hired through the local register, employees receive the same civil service protections. The board voted unanimously to authorize the department to work with the Massachusetts Human Resources Division to pursue the necessary agreement."
+    key_speakers: ["Police Chief"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 3828
+    end_seconds: 3919
+    headline: "Marblehead Neck Association donates $4,764 for a speed feedback sign on the Neck"
+    dek: "The board unanimously accepted the gift; sign location to be determined based on traffic data and resident input."
+    summary: "The board voted unanimously to accept a $4,764 donation from the Marblehead Neck Association designated for the purchase of a speed feedback sign to be installed along Marblehead Neck. The specific installation location will be determined based on traffic data and citizen feedback."
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 3919
+    end_seconds: 4104
+    headline: "Town Administrator appointed as fire captain appointing authority due to chief's family conflict of interest"
+    dek: "Two captain vacancies arose after April promotion exams; one of two candidates is a direct family member of the fire chief."
+    summary: "The Town Administrator explained that the fire chief has a direct family member on the civil service promotional eligibility list for captain, creating a conflict of interest since the chief is normally the appointing authority. The board voted to accept the chief's letter of disclosure and to appoint the Town Administrator to conduct the promotional process for filling the captain vacancies. Both votes were unanimous."
+    key_speakers: ["Town Administrator (Thatcher Kezer)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 4104
+    end_seconds: 4500
+    headline: "Consent agenda, float removal contract, and one-day liquor license approved; 9/11 memorial noted"
+    dek: "The board cleared routine items including meeting minutes, a marine construction contract, and a liquor license for an October event at Lee Mansion."
+    summary: |
+      The board approved the following items:
+      - **Consent agenda**: Minutes of April 8 and April 22, 2022
+      - **Contract 27-F01**: Between the town and Marblehead Marine Construction, Inc. for float removal (town and private), awarded after competitive procurement
+      - **One-day liquor license**: Shaken & Served at Lee Mansion, 161 Washington Street, October 3rd, 11:30 a.m. to 3:00 p.m., with alcohol purchased from Cappy's Supporting Distribution
+      
+      The 9/11 memorial service was noted as proceeding in its usual format at Memorial Park at 10:00 a.m., with the upcoming observance marking the 25th anniversary. A letter of interest for the Traffic Safety Advisory Committee (TSAC) was left open with a September 4th finalization deadline.
+    key_speakers: ["Town Administrator (Thatcher Kezer)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
