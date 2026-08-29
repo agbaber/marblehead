@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-08-26",
+    "date": "2026-08-28",
     "fiscal_year": "FY27",
-    "row_count": 1645,
-    "total_paid": 27478968.83,
+    "row_count": 1717,
+    "total_paid": 27711988.15,
     "interfund_total": 125709.31,
-    "external_paid": 27353259.52,
+    "external_paid": 27586278.84,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-08-26",
-    "source_file": "checkbook_FY27_2026-08-26.csv"
+    "last_payment": "2026-08-28",
+    "source_file": "checkbook_FY27_2026-08-28.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
-      "amount": 2242059.75,
-      "share": 0.0816,
-      "fund_count": 2,
+      "amount": 2242909.75,
+      "share": 0.0809,
+      "fund_count": 3,
       "top_funds": [
         {
           "name": "A11 2022 CAPITAL IMPROVEMENT",
@@ -28,25 +28,30 @@
           "name": "A33 2025-ALLEY BLDG IMPROV",
           "amount": 36943.8,
           "row_count": 2
+        },
+        {
+          "name": "A34 2015 NEW TRANSF STATION",
+          "amount": 850.0,
+          "row_count": 1
         }
       ]
     },
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 19360795.44,
-      "share": 0.7046,
+      "amount": 19484580.63,
+      "share": 0.7031,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 18703353.26,
-          "row_count": 766
+          "amount": 18703687.01,
+          "row_count": 769
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 465665.73,
-          "row_count": 261
+          "amount": 589117.17,
+          "row_count": 303
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -58,14 +63,14 @@
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 5498743.31,
-      "share": 0.2001,
+      "amount": 5594422.73,
+      "share": 0.2019,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 2763723.5,
-          "row_count": 196
+          "amount": 2859402.92,
+          "row_count": 219
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
@@ -102,14 +107,19 @@
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 47991.07,
-      "share": 0.0017,
-      "fund_count": 9,
+      "amount": 58399.06,
+      "share": 0.0021,
+      "fund_count": 10,
       "top_funds": [
         {
           "name": "COVID 19 ARPA (FED)",
           "amount": 23053.48,
           "row_count": 3
+        },
+        {
+          "name": "SPED IDEA 94-142 (240)",
+          "amount": 11599.26,
+          "row_count": 8
         },
         {
           "name": "JAIL DIVERSION GRANT (FED)",
@@ -127,11 +137,6 @@
           "row_count": 1
         },
         {
-          "name": "SPED IDEA 94-142 (240)",
-          "amount": 1599.26,
-          "row_count": 7
-        },
-        {
           "name": "ARTS LOTTERY GRANT",
           "amount": 1500.0,
           "row_count": 1
@@ -142,8 +147,8 @@
           "row_count": 1
         },
         {
-          "name": "LIBRARY MUNICIPAL EQUAL GRANT",
-          "amount": 392.15,
+          "name": "SPED EC (262)",
+          "amount": 407.99,
           "row_count": 1
         }
       ]
@@ -152,7 +157,7 @@
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
       "amount": 192319.39,
-      "share": 0.007,
+      "share": 0.0069,
       "fund_count": 2,
       "top_funds": [
         {
@@ -170,7 +175,7 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 137059.87,
+      "amount": 139356.59,
       "share": 0.005,
       "fund_count": 18,
       "top_funds": [
@@ -190,6 +195,11 @@
           "row_count": 3
         },
         {
+          "name": "GLOVER SCHOOL DONATION",
+          "amount": 8337.8,
+          "row_count": 3
+        },
+        {
           "name": "INSURANCE REIMBURS <$150,000",
           "amount": 7797.85,
           "row_count": 1
@@ -205,11 +215,6 @@
           "row_count": 1
         },
         {
-          "name": "GLOVER SCHOOL DONATION",
-          "amount": 6041.08,
-          "row_count": 2
-        },
-        {
           "name": "COA FORMULA SPENDING PLAN",
           "amount": 2875.44,
           "row_count": 5
@@ -218,13 +223,13 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 18703353.26,
+    "total": 18703687.01,
     "fixed_total": 17585247.57,
     "fixed_share": 0.9402,
     "admin_contracts_total": 352378.21,
     "admin_contracts_share": 0.0188,
-    "other_recurring_total": 765727.48,
-    "other_recurring_share": 0.0409,
+    "other_recurring_total": 766061.23,
+    "other_recurring_share": 0.041,
     "segments": [
       {
         "key": "gic_insurance",
@@ -259,7 +264,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 7738584.39,
-        "share": 0.4138,
+        "share": 0.4137,
         "row_count": 30,
         "top_vendors": [
           {
@@ -326,9 +331,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 765727.48,
-        "share": 0.0409,
-        "row_count": 688,
+        "amount": 766061.23,
+        "share": 0.041,
+        "row_count": 691,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -377,7 +382,7 @@
       "row_count": 11,
       "first_paid": "2026-07-20",
       "last_paid": "2026-08-13",
-      "days_since_last_paid": 13,
+      "days_since_last_paid": 15,
       "status": "active",
       "top_vendors": [
         {
@@ -417,7 +422,7 @@
       "row_count": 2,
       "first_paid": "2026-07-08",
       "last_paid": "2026-07-28",
-      "days_since_last_paid": 29,
+      "days_since_last_paid": 31,
       "status": "engineering",
       "top_vendors": [
         {
@@ -429,6 +434,26 @@
           "name": "TODD FLANNERY",
           "amount": 3357.8,
           "share": 0.0909
+        }
+      ]
+    },
+    {
+      "fund_id": "A34 2015 NEW TRANSF STATION",
+      "display": "A34 2015 New Transfer Station + drainage",
+      "ballot_date": "2015-06-16",
+      "purpose": "transfer-station construction + drainage pipe replacement",
+      "context": "Eleven fiscal years on, construction draws still moving - phased build-out or scope amendment under the original authorization.",
+      "amount": 850.0,
+      "row_count": 1,
+      "first_paid": "2026-08-28",
+      "last_paid": "2026-08-28",
+      "days_since_last_paid": 0,
+      "status": "engineering",
+      "top_vendors": [
+        {
+          "name": "J & L WELDING AND MACHINE",
+          "amount": 850.0,
+          "share": 1.0
         }
       ]
     }
