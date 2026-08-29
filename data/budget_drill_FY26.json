@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-28",
+ "as_of": "2026-08-29",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -281,7 +281,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14945745.03,
+     "actual": 14909464.66,
      "original_budget": 17832596.0
     },
     {
@@ -305,7 +305,7 @@
     {
      "name": "BROWN SCHOOL",
      "revised_budget": 5476278.84,
-     "actual": 5311422.38,
+     "actual": 5290472.52,
      "original_budget": 5227512.0
     },
     {
@@ -325,7 +325,7 @@
     {
      "name": "PROFESSIONAL SALARY",
      "revised_budget": 30503799.96,
-     "actual": 29277231.51,
+     "actual": 29240951.14,
      "original_budget": 30957452.0
     },
     {
@@ -337,7 +337,7 @@
     {
      "name": "OTHER SALARIES",
      "revised_budget": 6571310.04,
-     "actual": 6163802.71,
+     "actual": 6142852.85,
      "original_budget": 6449488.0
     },
     {
@@ -786,7 +786,7 @@
     {
      "name": "PROFESSIONAL SALARY",
      "revised_budget": 2667501.0,
-     "actual": 2112928.46,
+     "actual": 2076648.09,
      "original_budget": 3046147.0
     },
     {
@@ -824,7 +824,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 14574494.16,
-     "actual": 14945745.03,
+     "actual": 14909464.66,
      "original_budget": 17832596.0
     }
    ]
@@ -1270,7 +1270,7 @@
     {
      "name": "OTHER SALARIES",
      "revised_budget": 964511.88,
-     "actual": 836795.8,
+     "actual": 815845.94,
      "original_budget": 649350.0
     },
     {
@@ -1302,7 +1302,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 5476278.84,
-     "actual": 5311422.38,
+     "actual": 5290472.52,
      "original_budget": 5227512.0
     }
    ]
@@ -3149,7 +3149,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 30503799.96,
-     "actual": 29277231.51,
+     "actual": 29240951.14,
      "original_budget": 30957452.0
     },
     {
@@ -3229,7 +3229,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 2667501.0,
-     "actual": 2112928.46,
+     "actual": 2076648.09,
      "original_budget": 3046147.0
     },
     {
@@ -3991,7 +3991,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 6571310.04,
-     "actual": 6163802.71,
+     "actual": 6142852.85,
      "original_budget": 6449488.0
     }
    ],
@@ -4023,7 +4023,7 @@
     {
      "name": "BROWN SCHOOL",
      "revised_budget": 964511.88,
-     "actual": 836795.8,
+     "actual": 815845.94,
      "original_budget": 649350.0
     },
     {
@@ -4599,7 +4599,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 49120287.0,
-     "actual": 48078242.5,
+     "actual": 48021012.27,
      "original_budget": 49120287.0
     }
    ],
@@ -4607,7 +4607,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14945745.03,
+     "actual": 14909464.66,
      "original_budget": 17832596.0
     },
     {
@@ -4631,7 +4631,7 @@
     {
      "name": "BROWN SCHOOL",
      "revised_budget": 5476278.84,
-     "actual": 5311422.38,
+     "actual": 5290472.52,
      "original_budget": 5227512.0
     },
     {
@@ -6679,7 +6679,7 @@
    {
     "name": "PROFESSIONAL SALARIES",
     "revised_budget": 2312214.0,
-    "actual": 1884289.97,
+    "actual": 1848009.6,
     "original_budget": 3046147.0
    },
    {
@@ -9155,7 +9155,7 @@
    {
     "name": "INSTRUCTIONAL ASSISTANTS",
     "revised_budget": 601079.68,
-    "actual": 570184.16,
+    "actual": 549234.3,
     "original_budget": 420117.0
    },
    {
@@ -15669,7 +15669,7 @@
    {
     "name": "PROFESSIONAL SALARIES",
     "revised_budget": 29748964.96,
-    "actual": 28605045.37,
+    "actual": 28568765.0,
     "original_budget": 30957452.0
    },
    {
@@ -15939,7 +15939,7 @@
    {
     "name": "INSTRUCTIONAL ASSISTANTS",
     "revised_budget": 2706947.84,
-    "actual": 2544204.34,
+    "actual": 2523254.48,
     "original_budget": 2386221.0
    },
    {
