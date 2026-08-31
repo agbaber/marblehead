@@ -1,0 +1,395 @@
+---
+layout: default
+title: "Mockup C: Twenty Years"
+body_class: "fs-mockup var-c"
+sitemap: false
+robots: noindex
+---
+
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/mockups/finance-story/shared.css' | relative_url }}">
+<style>
+  /* Mockup C variant: data-dense dashboard. Tighter type, more chart real estate. */
+  .fs-mockup.var-c { background: #F4F7FA; }
+  .fs-mockup.var-c .fs-pin { background: #FFFFFF; }
+  .fs-mockup.var-c .fs-intro h1, .fs-mockup.var-c .fs-panel h2 {
+    font-family: 'Libre Franklin', 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.012em;
+  }
+  .fs-mockup.var-c .fs-intro h1 { color: var(--c-plum); font-size: clamp(32px, 4vw, 48px); }
+  .fs-mockup.var-c .fs-panel h2 { font-size: clamp(22px, 2.6vw, 30px); }
+  .fs-mockup.var-c .fs-panel p { font-size: 15.5px; }
+  .fs-mockup.var-c .fs-panel { min-height: 60vh; padding: 6vh 0 4vh; }
+  .fs-mockup.var-c .fs-panel .step-num { color: var(--c-plum); }
+  .fs-mockup.var-c .fs-bar { background: color-mix(in srgb, var(--c-plum) 92%, black); }
+  .fs-mockup.var-c .fs-bar a { color: #DECFE0; border-bottom-color:#DECFE0;}
+  .fs-mockup.var-c .fs-canvas { max-width: 580px; aspect-ratio: 1 / 1; }
+  .fs-mockup.var-c .data-table { width: 100%; font-size: 11px; border-collapse: collapse; margin-top: 12px; }
+  .fs-mockup.var-c .data-table th, .fs-mockup.var-c .data-table td { text-align: right; padding: 4px 8px; border-top: 1px solid var(--border); }
+  .fs-mockup.var-c .data-table th:first-child, .fs-mockup.var-c .data-table td:first-child { text-align: left; }
+  .fs-mockup.var-c .data-table th { color: var(--text-subtle); font-weight: 700; font-size: 10px; letter-spacing: 0.8px; text-transform: uppercase; border-top: none; }
+</style>
+
+<nav class="fs-bar">
+  <span class="fs-bar-label">Mockup C &middot; Arc: Twenty Years &middot; Design: Dashboard</span>
+  <a href="{{ '/mockups/finance-story/' | relative_url }}">All mockups &rarr;</a>
+</nav>
+
+<div class="fs-dots"></div>
+
+<div class="fs-stage">
+  <div class="fs-pin">
+    <div class="fs-canvas">
+
+      <!-- STAGE 1: 20-year trajectory of total operating budget -->
+      <div class="stage" data-stage="trajectory">
+        <svg viewBox="0 0 540 460" role="img" aria-label="Marblehead operating budget FY05-FY26">
+          <text x="20" y="22" font-size="13" fill="var(--text-muted)" font-weight="700">Operating budget &middot; FY05 to FY26</text>
+          <text x="20" y="40" font-size="11" fill="var(--text-subtle)">In nominal dollars, millions</text>
+          <!-- Y axis labels -->
+          <g font-size="10" fill="var(--text-subtle)">
+            <text x="20" y="80">$130M</text>
+            <text x="20" y="160">$100M</text>
+            <text x="20" y="240">$70M</text>
+            <text x="20" y="320">$40M</text>
+          </g>
+          <!-- Gridlines -->
+          <g stroke="var(--chart-grid-minor)" stroke-width="0.5">
+            <line x1="60" y1="80" x2="520" y2="80"/>
+            <line x1="60" y1="160" x2="520" y2="160"/>
+            <line x1="60" y1="240" x2="520" y2="240"/>
+            <line x1="60" y1="320" x2="520" y2="320"/>
+          </g>
+          <!-- Line: 22 yrs FY05->FY26 -->
+          <polyline points="60,320 80,316 100,310 120,302 140,296 160,288 180,282 200,275 220,268 240,256 260,242 280,230 300,218 320,206 340,194 360,180 380,164 400,150 420,134 440,118 460,102 480,86" stroke="var(--c-plum)" stroke-width="2.5" fill="none"/>
+          <!-- Area under line -->
+          <polygon points="60,320 80,316 100,310 120,302 140,296 160,288 180,282 200,275 220,268 240,256 260,242 280,230 300,218 320,206 340,194 360,180 380,164 400,150 420,134 440,118 460,102 480,86 480,360 60,360" fill="var(--c-plum)" opacity="0.08"/>
+          <!-- Annotations -->
+          <text x="60" y="350" font-size="10" fill="var(--text-subtle)">FY05 $47M</text>
+          <text x="480" y="78" font-size="11" fill="var(--c-plum)" text-anchor="end" font-weight="700">FY26 ~$127M</text>
+          <!-- Axis -->
+          <line x1="60" y1="360" x2="520" y2="360" stroke="var(--text-faint)" stroke-width="0.5"/>
+          <g font-size="9" fill="var(--text-subtle)" text-anchor="middle">
+            <text x="60" y="378">FY05</text>
+            <text x="280" y="378">FY15</text>
+            <text x="480" y="378">FY26</text>
+          </g>
+
+          <text x="280" y="430" font-size="11" fill="var(--text-muted)" text-anchor="middle">2.7&times; over twenty-one years &middot; ~5% CAGR</text>
+        </svg>
+      </div>
+
+      <!-- STAGE 2: small multiples — budget, headcount, $/FTE -->
+      <div class="stage" data-stage="forces">
+        <svg viewBox="0 0 540 460" role="img" aria-label="Three small multiples: budget, headcount, cost per FTE">
+          <!-- Budget line (mini) -->
+          <g transform="translate(20,20)">
+            <text x="0" y="0" font-size="11" fill="var(--text-muted)" font-weight="700">Total budget</text>
+            <text x="0" y="14" font-size="9" fill="var(--text-subtle)">$M, FY05-26</text>
+            <polyline points="0,90 10,88 20,85 30,82 40,79 50,76 60,73 70,69 80,65 90,60 100,55 110,49 120,43 130,38 140,32 150,26" stroke="var(--c-plum)" stroke-width="2" fill="none"/>
+            <text x="150" y="22" font-size="10" fill="var(--c-plum)" font-weight="700" text-anchor="end">2.7&times;</text>
+          </g>
+
+          <!-- Headcount line (mini) -->
+          <g transform="translate(195,20)">
+            <text x="0" y="0" font-size="11" fill="var(--text-muted)" font-weight="700">Headcount</text>
+            <text x="0" y="14" font-size="9" fill="var(--text-subtle)">FTE, FY08-26</text>
+            <polyline points="0,40 10,30 20,28 30,32 40,40 50,38 60,40 70,38 80,42 90,40 100,38 110,52 120,46 130,50 140,42 150,52" stroke="var(--c-sage)" stroke-width="2" fill="none"/>
+            <text x="150" y="22" font-size="10" fill="var(--c-sage)" font-weight="700" text-anchor="end">flat</text>
+          </g>
+
+          <!-- $/FTE line (mini) -->
+          <g transform="translate(370,20)">
+            <text x="0" y="0" font-size="11" fill="var(--text-muted)" font-weight="700">Cost per FTE</text>
+            <text x="0" y="14" font-size="9" fill="var(--text-subtle)">loaded, FY08-26</text>
+            <polyline points="0,90 10,88 20,84 30,82 40,79 50,76 60,72 70,69 80,66 90,62 100,58 110,52 120,48 130,42 140,38 150,30" stroke="var(--c-buoy)" stroke-width="2" fill="none"/>
+            <text x="150" y="22" font-size="10" fill="var(--c-buoy)" font-weight="700" text-anchor="end">+90%</text>
+          </g>
+
+          <!-- Conclusion text -->
+          <g transform="translate(20,180)">
+            <text x="0" y="0" font-size="13" fill="var(--text)" font-weight="700">Budget growth came from cost-per-employee, not from hiring more people.</text>
+            <text x="0" y="22" font-size="11" fill="var(--text-muted)">Total FTE has hovered in a 100-person band for two decades. Loaded cost per FTE roughly doubled.</text>
+          </g>
+
+          <!-- Mini-table -->
+          <g transform="translate(20,240)">
+            <text x="0" y="0" font-size="10" fill="var(--text-subtle)" font-weight="700" letter-spacing="1.2" text-transform="uppercase">By the numbers</text>
+            <line x1="0" y1="10" x2="500" y2="10" stroke="var(--border)"/>
+            <g font-size="11" fill="var(--text)">
+              <text x="0" y="32">Total operating budget</text>
+              <text x="200" y="32" text-anchor="end" fill="var(--text-subtle)">FY05 $47M</text>
+              <text x="320" y="32" text-anchor="end" fill="var(--text-subtle)">FY26 $127M</text>
+              <text x="500" y="32" text-anchor="end" font-weight="700">+170%</text>
+
+              <text x="0" y="52">FTE (school + town)</text>
+              <text x="200" y="52" text-anchor="end" fill="var(--text-subtle)">FY08 999</text>
+              <text x="320" y="52" text-anchor="end" fill="var(--text-subtle)">FY26 1,020</text>
+              <text x="500" y="52" text-anchor="end" font-weight="700">+2%</text>
+
+              <text x="0" y="72">Employee benefits line</text>
+              <text x="200" y="72" text-anchor="end" fill="var(--text-subtle)">FY08 $9.2M</text>
+              <text x="320" y="72" text-anchor="end" fill="var(--text-subtle)">FY24 ~$23M</text>
+              <text x="500" y="72" text-anchor="end" font-weight="700">+150%</text>
+
+              <text x="0" y="92">CPI (Boston-Cambridge)</text>
+              <text x="200" y="92" text-anchor="end" fill="var(--text-subtle)">FY05 base</text>
+              <text x="320" y="92" text-anchor="end" fill="var(--text-subtle)">FY26</text>
+              <text x="500" y="92" text-anchor="end" font-weight="700">+50%</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- STAGE 3: Loaded-cost stack -->
+      <div class="stage" data-stage="stack">
+        <svg viewBox="0 0 540 460" role="img" aria-label="Loaded cost stack on a $75K hire">
+          <text x="20" y="22" font-size="13" fill="var(--text-muted)" font-weight="700">Where the per-FTE growth comes from</text>
+          <text x="20" y="40" font-size="11" fill="var(--text-subtle)">Stack on a representative $75K salary</text>
+
+          <g transform="translate(40,80)">
+            <rect x="0" y="0" width="380" height="48" fill="var(--c-navy)" rx="4"/>
+            <text x="14" y="30" fill="#fff" font-weight="600" font-size="13">Base salary</text>
+            <text x="370" y="30" text-anchor="end" fill="#fff" font-weight="700" font-size="13">$75,000</text>
+
+            <rect x="0" y="56" width="120" height="38" fill="var(--c-teal)" rx="4"/>
+            <text x="10" y="80" fill="#fff" font-size="11" font-weight="600">Pension (17%)</text>
+            <text x="370" y="80" text-anchor="end" font-size="11" fill="var(--text-muted)">$12,750</text>
+
+            <rect x="0" y="100" width="95" height="38" fill="var(--c-brass)" rx="4"/>
+            <text x="10" y="124" fill="#fff" font-size="11" font-weight="600">GIC (83% of premium)</text>
+            <text x="370" y="124" text-anchor="end" font-size="11" fill="var(--text-muted)">$10,000</text>
+
+            <rect x="0" y="144" width="20" height="38" fill="var(--c-plum)" rx="4"/>
+            <text x="26" y="168" font-size="11" fill="var(--text-muted)">Medicare 1.45%</text>
+            <text x="370" y="168" text-anchor="end" font-size="11" fill="var(--text-muted)">$1,100</text>
+
+            <rect x="0" y="188" width="14" height="38" fill="var(--c-buoy)" rx="4"/>
+            <text x="20" y="212" font-size="11" fill="var(--text-muted)">Workers' comp + life</text>
+            <text x="370" y="212" text-anchor="end" font-size="11" fill="var(--text-muted)">$900</text>
+
+            <line x1="0" y1="244" x2="380" y2="244" stroke="var(--border)"/>
+            <text x="0" y="276" font-size="13" fill="var(--text-muted)" font-weight="600">Loaded total</text>
+            <text x="380" y="276" text-anchor="end" fill="var(--c-buoy)" font-weight="800" font-size="22">$99,750</text>
+            <text x="380" y="296" text-anchor="end" font-size="11" fill="var(--text-subtle)">1.33&times; the salary line</text>
+          </g>
+
+          <text x="20" y="430" font-size="10" fill="var(--text-subtle)" font-style="italic">GIC premium is the fastest-growing component, year-over-year.</text>
+        </svg>
+      </div>
+
+      <!-- STAGE 4: composition stream -->
+      <div class="stage" data-stage="composition">
+        <svg viewBox="0 0 540 460" role="img" aria-label="FTE composition stream over 20 years">
+          <text x="20" y="22" font-size="13" fill="var(--text-muted)" font-weight="700">FTE composition, FY08-FY26</text>
+          <text x="20" y="40" font-size="11" fill="var(--text-subtle)">Total flat. Mix moved.</text>
+
+          <g transform="translate(20,80)">
+            <path d="M40,180 L60,176 L80,172 L100,178 L120,170 L140,168 L160,170 L180,170 L200,170 L220,168 L240,170 L260,172 L280,168 L300,176 L320,176 L340,178 L360,176 L380,168 L400,178 L460,178 L460,200 L40,200 Z" fill="var(--c-navy)" opacity="0.85"/>
+            <text x="60" y="192" fill="#fff" font-size="11" font-weight="600">Instructional 460</text>
+
+            <path d="M40,200 L460,200 L460,212 L400,215 L380,212 L360,214 L340,216 L320,218 L300,218 L280,212 L260,210 L240,212 L220,210 L200,212 L180,215 L160,212 L140,212 L120,218 L100,220 L80,215 L60,212 L40,210 Z" fill="#4F6E89" opacity="0.85"/>
+            <text x="60" y="211" fill="#fff" font-size="10" font-weight="600">Support 166</text>
+
+            <path d="M40,212 L460,212 L460,224 L40,224 Z" fill="var(--c-buoy)" opacity="0.85"/>
+            <text x="60" y="222" fill="#fff" font-size="9" font-weight="600">Public safety 95</text>
+
+            <path d="M40,224 L460,224 L460,232 L40,232 Z" fill="var(--c-sage)" opacity="0.85"/>
+            <text x="60" y="230" fill="#fff" font-size="9" font-weight="600">DPW 60</text>
+
+            <path d="M40,232 L460,232 L460,242 L40,242 Z" fill="var(--c-brass)" opacity="0.85"/>
+            <text x="60" y="240" fill="#fff" font-size="9" font-weight="600">Town admin 95</text>
+
+            <path d="M40,242 L460,242 L460,254 L40,254 Z" fill="var(--c-plum)" opacity="0.85"/>
+            <text x="60" y="251" fill="#fff" font-size="9" font-weight="600">Library, COA, rec 144</text>
+
+            <line x1="40" y1="260" x2="460" y2="260" stroke="var(--text-faint)" stroke-width="0.5"/>
+            <g font-size="9" fill="var(--text-subtle)">
+              <text x="40" y="274">FY08</text>
+              <text x="460" y="274" text-anchor="end">FY26</text>
+            </g>
+
+            <line x1="358" y1="160" x2="358" y2="258" stroke="var(--c-buoy)" stroke-dasharray="3 3" stroke-width="1"/>
+            <text x="358" y="155" font-size="9" fill="var(--c-buoy)" text-anchor="middle" font-weight="700">FY23 reporting glitch</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- STAGE 5: FY26 snapshot -->
+      <div class="stage" data-stage="snapshot">
+        <svg viewBox="0 0 540 460" role="img" aria-label="FY26 expense decomposition">
+          <text x="20" y="22" font-size="13" fill="var(--text-muted)" font-weight="700">FY26 expense decomposition</text>
+          <text x="20" y="40" font-size="11" fill="var(--text-subtle)">By type of cost rather than by department</text>
+
+          <!-- Stacked horizontal bar showing People/Set bills/Other -->
+          <g transform="translate(20,80)">
+            <rect x="0" y="0" width="404" height="42" fill="var(--c-navy)" rx="4"/>
+            <text x="14" y="27" fill="#fff" font-weight="600" font-size="13">People (~80%)</text>
+            <text x="395" y="27" text-anchor="end" fill="#fff" font-weight="700" font-size="13">~$102M</text>
+
+            <rect x="0" y="50" width="76" height="42" fill="var(--c-text-mid)" rx="4"/>
+            <text x="10" y="77" fill="#fff" font-size="11" font-weight="600">Set bills</text>
+            <text x="170" y="77" font-size="11" fill="var(--text-muted)">debt, OPEB, state assessments &mdash; ~$19M</text>
+
+            <rect x="0" y="100" width="25" height="42" fill="var(--c-text-sub)" rx="4"/>
+            <text x="32" y="127" font-size="11" fill="var(--text-muted)">Everything else (~$6M)</text>
+          </g>
+
+          <!-- Mini callout -->
+          <g transform="translate(20,200)">
+            <text x="0" y="0" font-size="11" fill="var(--text-muted)" font-weight="700">Why department breakdowns mislead</text>
+            <text x="0" y="20" font-size="11" fill="var(--text-muted)">Schools $48M and Public Safety $12M look like different decisions. But both are dominated by the same per-FTE compensation stack, and both grow on the same insurance/pension clock.</text>
+            <text x="0" y="56" font-size="11" fill="var(--text-muted)">Cutting a department by 5% rarely means 5% less spending. It usually means 5% fewer people, which means 5% fewer of the same locked stack.</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- STAGE 6: compressed org -->
+      <div class="stage" data-stage="org">
+        <svg viewBox="0 0 540 460" role="img" aria-label="Compressed org chart with current headcount">
+          <text x="20" y="22" font-size="13" fill="var(--text-muted)" font-weight="700">Who's in charge of what</text>
+
+          <rect x="200" y="50" width="140" height="32" rx="6" fill="var(--c-plum)"/>
+          <text x="270" y="70" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Voters &middot; Town Meeting</text>
+
+          <line x1="270" y1="82" x2="120" y2="120" stroke="var(--c-plum)" stroke-width="1.5"/>
+          <line x1="270" y1="82" x2="420" y2="120" stroke="var(--c-plum)" stroke-width="1.5"/>
+
+          <rect x="40" y="120" width="160" height="28" rx="6" fill="var(--c-navy)"/>
+          <text x="120" y="139" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Select Board (5)</text>
+          <line x1="120" y1="148" x2="120" y2="170" stroke="var(--c-navy)" stroke-width="1.5"/>
+          <rect x="40" y="170" width="160" height="28" rx="6" fill="#284E70"/>
+          <text x="120" y="189" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Town Administrator</text>
+
+          <g font-size="10" fill="var(--text)" text-anchor="middle">
+            <rect x="40" y="210" width="160" height="20" rx="4" fill="var(--surface)" stroke="var(--border)"/><text x="120" y="223">Police + Fire &middot; 95</text>
+            <rect x="40" y="234" width="160" height="20" rx="4" fill="var(--surface)" stroke="var(--border)"/><text x="120" y="247">DPW &middot; 60</text>
+            <rect x="40" y="258" width="160" height="20" rx="4" fill="var(--surface)" stroke="var(--border)"/><text x="120" y="271">Town admin &middot; 95</text>
+            <rect x="40" y="282" width="160" height="20" rx="4" fill="var(--surface)" stroke="var(--border)"/><text x="120" y="295">Library, COA, rec &middot; 144</text>
+          </g>
+
+          <rect x="340" y="120" width="160" height="28" rx="6" fill="var(--c-teal)"/>
+          <text x="420" y="139" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">School Committee (5)</text>
+          <line x1="420" y1="148" x2="420" y2="170" stroke="var(--c-teal)" stroke-width="1.5"/>
+          <rect x="340" y="170" width="160" height="28" rx="6" fill="#3A8FA0"/>
+          <text x="420" y="189" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Superintendent</text>
+
+          <g font-size="10" fill="var(--text)" text-anchor="middle">
+            <rect x="340" y="210" width="160" height="20" rx="4" fill="var(--surface)" stroke="var(--border)"/><text x="420" y="223">Instructional &middot; 460</text>
+            <rect x="340" y="234" width="160" height="20" rx="4" fill="var(--surface)" stroke="var(--border)"/><text x="420" y="247">Support &middot; 166</text>
+          </g>
+
+          <rect x="230" y="360" width="80" height="24" rx="4" fill="var(--c-brass)"/>
+          <text x="270" y="376" fill="#fff" font-weight="700" text-anchor="middle" font-size="10">FinCom (9)</text>
+          <text x="270" y="402" fill="var(--text-subtle)" font-size="10" text-anchor="middle">appointed by Moderator</text>
+          <text x="270" y="416" fill="var(--text-subtle)" font-size="10" text-anchor="middle">recommends every budget article</text>
+        </svg>
+      </div>
+
+      <!-- STAGE 7: unpaid roster -->
+      <div class="stage" data-stage="boards">
+        <svg viewBox="0 0 540 460" role="img" aria-label="Unpaid boards roster">
+          <text x="20" y="22" font-size="13" fill="var(--text-muted)" font-weight="700">The unpaid decision layer</text>
+          <text x="20" y="40" font-size="11" fill="var(--text-subtle)">Elected and appointed. ~60 residents in total.</text>
+
+          <g font-size="11" fill="var(--text)" transform="translate(20,70)">
+            <text x="0" y="0" font-weight="700" fill="var(--text-subtle)" letter-spacing="1.2" text-transform="uppercase" font-size="10">Elected</text>
+            <line x1="0" y1="8" x2="500" y2="8" stroke="var(--border)"/>
+            <g font-size="11">
+              <text x="0" y="28">Select Board</text><text x="280" y="28" text-anchor="end">5 members</text><text x="500" y="28" text-anchor="end" fill="var(--text-subtle)">3-yr staggered</text>
+              <text x="0" y="46">School Committee</text><text x="280" y="46" text-anchor="end">5</text><text x="500" y="46" text-anchor="end" fill="var(--text-subtle)">3-yr staggered</text>
+              <text x="0" y="64">Town Moderator</text><text x="280" y="64" text-anchor="end">1</text><text x="500" y="64" text-anchor="end" fill="var(--text-subtle)">annual</text>
+              <text x="0" y="82">Town Clerk</text><text x="280" y="82" text-anchor="end">1</text><text x="500" y="82" text-anchor="end" fill="var(--text-subtle)">5-yr</text>
+              <text x="0" y="100">Light Board</text><text x="280" y="100" text-anchor="end">3</text><text x="500" y="100" text-anchor="end" fill="var(--text-subtle)">3-yr staggered</text>
+            </g>
+
+            <text x="0" y="138" font-weight="700" fill="var(--text-subtle)" letter-spacing="1.2" text-transform="uppercase" font-size="10">Appointed</text>
+            <line x1="0" y1="146" x2="500" y2="146" stroke="var(--border)"/>
+            <g font-size="11">
+              <text x="0" y="166">Finance Committee</text><text x="280" y="166" text-anchor="end">9</text><text x="500" y="166" text-anchor="end" fill="var(--text-subtle)">by Moderator</text>
+              <text x="0" y="184">Planning Board</text><text x="280" y="184" text-anchor="end">5</text><text x="500" y="184" text-anchor="end" fill="var(--text-subtle)">by Select Bd</text>
+              <text x="0" y="202">Conservation</text><text x="280" y="202" text-anchor="end">7</text><text x="500" y="202" text-anchor="end" fill="var(--text-subtle)">by Select Bd</text>
+              <text x="0" y="220">Board of Health</text><text x="280" y="220" text-anchor="end">3</text><text x="500" y="220" text-anchor="end" fill="var(--text-subtle)">by Select Bd</text>
+              <text x="0" y="238">Recreation Comm.</text><text x="280" y="238" text-anchor="end">7</text><text x="500" y="238" text-anchor="end" fill="var(--text-subtle)">by Select Bd</text>
+              <text x="0" y="256">Zoning Board of Appeals</text><text x="280" y="256" text-anchor="end">5</text><text x="500" y="256" text-anchor="end" fill="var(--text-subtle)">by Select Bd</text>
+              <text x="0" y="274">Library Trustees</text><text x="280" y="274" text-anchor="end">6</text><text x="500" y="274" text-anchor="end" fill="var(--text-subtle)">elected</text>
+              <text x="0" y="292">COA Board</text><text x="280" y="292" text-anchor="end">5</text><text x="500" y="292" text-anchor="end" fill="var(--text-subtle)">by Select Bd</text>
+            </g>
+
+            <line x1="0" y1="318" x2="500" y2="318" stroke="var(--border)"/>
+            <text x="0" y="338" font-weight="700">Total</text><text x="280" y="338" text-anchor="end" font-weight="700">~57</text>
+            <text x="0" y="358" fill="var(--text-subtle)" font-size="10" font-style="italic">Roster will vary year-to-year as terms turn over.</text>
+          </g>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="fs-panels">
+
+    <section class="fs-intro">
+      <p class="eye">Mockup C &middot; Dashboard</p>
+      <h1>Marblehead's operating budget grew 2.7&times; over the last two decades.<br>Headcount barely moved.</h1>
+      <p>Open with the trend, decompose the drivers, end with the structure that produced them. Same arc as a dataroom briefing.</p>
+      <p class="small" style="font-size:13px;color:var(--text-faint);">Brainstorming mockup. Numbers approximate.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="trajectory">
+      <p class="step-num">Step 1 &middot; The trend</p>
+      <h2>Operating budget: $47M to $127M.</h2>
+      <p>Twenty-one fiscal years of nominal growth. About 5% per year compounded. The line accelerates after FY16 as health insurance and pension assessments grow above the 2.5% levy cap.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="forces">
+      <p class="step-num">Step 2 &middot; Decompose</p>
+      <h2>Three forces, only one moved.</h2>
+      <p>The budget grew 170%. Headcount grew 2%. Loaded cost per FTE grew about 90%. CPI grew about 50%. Whatever is driving the budget, it isn't more people.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="stack">
+      <p class="step-num">Step 3 &middot; The stack</p>
+      <h2>Per-FTE growth lives in the benefit stack.</h2>
+      <p>Salary lines grew with collective bargaining at 2-3% per year. Pension and health insurance, layered on top, grew faster. The cumulative stack on every salaried position is ~33% of base.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="composition">
+      <p class="step-num">Step 4 &middot; Composition</p>
+      <h2>The mix churned underneath.</h2>
+      <p>Special-education-related headcount grew. IT was created from zero. Clerical compressed. Public safety and DPW stayed within their long-run ranges. The total stayed close to its starting band.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="snapshot">
+      <p class="step-num">Step 5 &middot; Today's snapshot</p>
+      <h2>FY26: ~80% people, ~15% set bills, ~5% everything else.</h2>
+      <p>The familiar department breakdown obscures more than it reveals. Schools, police, DPW, and the library are all mostly the same shape of cost: salary plus the locked benefit stack on top.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="org">
+      <p class="step-num">Step 6 &middot; Who's in charge</p>
+      <h2>Two pillars, one tax base.</h2>
+      <p>Town side from Select Board to TA to departments. School side from School Committee to Superintendent to schools. FinCom reviews both, recommends to Town Meeting. Voters elect Town Meeting, both boards, the Moderator.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="boards">
+      <p class="step-num">Step 7 &middot; The unpaid roster</p>
+      <h2>~57 residents serve on the elected and appointed boards.</h2>
+      <p>None draws a salary. Between them they hire the senior managers, recommend the budget, set zoning, run the warrant, decide every land-use dispute, and govern the utility.</p>
+    </section>
+
+    <section class="fs-outro">
+      <h2>Go deeper</h2>
+      <div class="tiles">
+        <a class="tile" href="{{ '/checkbook/' | relative_url }}"><strong>Checkbook</strong><span>FY26 vendor detail.</span></a>
+        <a class="tile" href="{{ '/marblehead-101/' | relative_url }}"><strong>Marblehead 101</strong><span>The primer.</span></a>
+        <a class="tile" href="{{ '/data/' | relative_url }}"><strong>Data catalog</strong><span>Source tables.</span></a>
+        <a class="tile" href="{{ '/mockups/finance-story/' | relative_url }}"><strong>Compare mockups</strong><span>See arcs A and B.</span></a>
+      </div>
+      <p class="fs-foot">Mockup C &middot; brainstorming scratch &middot; not linked from production nav.</p>
+    </section>
+
+  </div>
+</div>
+
+<script src="{{ '/mockups/finance-story/shared.js' | relative_url }}"></script>
