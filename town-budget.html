@@ -128,6 +128,10 @@ og_url: https://marbleheaddata.org/town-budget.html
   .tb-table th.tb-col-spark, .tb-table td.tb-col-spark {
     width: 96px; text-align: center;
   }
+  .tb-col-dchg { width: 80px; min-width: 70px; text-align: right; }
+  @media (max-width: 700px) {
+    .tb-col-dchg { display: none; }
+  }
   @media (max-width: 700px) {
     .tb-col-spark { display: none; }
     .tb-table { font-size: 14px; }
@@ -509,6 +513,9 @@ og_url: https://marbleheaddata.org/town-budget.html
         '" data-id="' + r.id + '" data-level="' + r.level + '"' + parentAttr + '>' +
         '<td><span class="tb-caret">' + caret + '</span> ' + displayLabel(r) + '</td>' +
         '<td>' + fmtMillions(r.fy27_proposed) + '</td>' +
+        '<td class="' + pctClass(r.change_pct) + ' tb-col-dchg">' +
+          (r.change_dollars != null ? (r.change_dollars >= 0 ? '+' : '') + fmtMillions(r.change_dollars) : '-') +
+        '</td>' +
         '<td class="' + pctClass(r.change_pct) + '">' + fmtPct(r.change_pct) + '</td>' +
         '<td class="tb-col-spark">' + (r.history ? renderSparkline(r.history) : '') + '</td>' +
       '</tr>'
@@ -517,7 +524,7 @@ og_url: https://marbleheaddata.org/town-budget.html
 
   function renderShowMoreRow(r) {
     return '<tr class="tb-row tb-row--show-more" data-id="' + r.id + '" data-level="show_more">' +
-      '<td colspan="4">' + r.description + '</td></tr>';
+      '<td colspan="5">' + r.description + '</td></tr>';
   }
 
   function renderDetailPanel(r) {
@@ -535,7 +542,7 @@ og_url: https://marbleheaddata.org/town-budget.html
       : '-';
     return (
       '<tr class="tb-detail-row">' +
-        '<td colspan="4">' +
+        '<td colspan="5">' +
           '<div class="tb-detail-panel" data-for="' + r.id + '">' +
             '<dl>' +
               '<div><dt>FY25 Budget</dt><dd>' + fmtMillions(r.fy25_budget) + '</dd></div>' +
@@ -783,7 +790,7 @@ og_url: https://marbleheaddata.org/town-budget.html
     var html =
       toolbarHTML() +
       '<table class="tb-table"><thead><tr>' +
-        '<th>Description</th><th>FY27</th><th>% vs FY26</th>' +
+        '<th>Description</th><th>FY27</th><th class="tb-col-dchg">$ change</th><th>% vs FY26</th>' +
         '<th class="tb-col-spark">Trend FY02&rarr;FY24</th>' +
       '</tr></thead><tbody>' + bodyHtml + '</tbody></table>' +
       '<p class="tb-table-footer">' +
