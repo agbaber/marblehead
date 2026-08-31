@@ -1,0 +1,541 @@
+---
+layout: default
+title: "Mockup v4: Lottie-style explainer video"
+body_class: "fs-mockup fs-expl"
+sitemap: false
+robots: noindex
+---
+
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/mockups/finance-story/shared.css' | relative_url }}">
+<style>
+  /* v4: Lottie-style explainer. Each scene is a self-contained scene-card
+     with its own animation that auto-plays once when scrolled into view.
+     Animations are hand-rolled CSS keyframes + JS sequencing, faking the
+     aesthetic of a hand-animated motion-graphic. No external libraries. */
+
+  .fs-expl { background: #F4F7FA; }
+
+  .expl-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .expl-intro {
+    padding: 16vh 0 6vh;
+    text-align: center;
+  }
+  .expl-intro .eye {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--text-subtle); margin: 0 0 12px;
+  }
+  .expl-intro h1 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800; letter-spacing: -0.025em; line-height: 1.05;
+    margin: 0 0 18px;
+  }
+  .expl-intro p { font-size: 18px; line-height: 1.5; color: var(--text-muted); max-width: 620px; margin: 0 auto 14px; }
+
+  .expl-scene {
+    background: var(--surface);
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    margin: 0 0 28px;
+    padding: 36px 34px 34px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    overflow: hidden;
+  }
+  @media (min-width: 760px) {
+    .expl-scene { grid-template-columns: 1fr 1fr; gap: 36px; padding: 40px 44px 40px; }
+    .expl-scene.flip .expl-stage { order: 2; }
+  }
+
+  .expl-scene .expl-stage {
+    aspect-ratio: 4 / 3;
+    background: #FAFBFD;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+  }
+  .expl-scene .expl-stage svg {
+    width: 100%; height: 100%; display: block;
+  }
+
+  .expl-scene .expl-copy {
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .expl-scene .expl-copy .num {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--c-buoy); margin: 0 0 10px;
+  }
+  .expl-scene .expl-copy h2 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(22px, 2.8vw, 30px);
+    font-weight: 700; letter-spacing: -0.018em; line-height: 1.18;
+    margin: 0 0 14px;
+  }
+  .expl-scene .expl-copy p {
+    font-size: 16px; line-height: 1.55; color: var(--text-muted); margin: 0 0 10px;
+  }
+
+  /* ----- Animation primitives ----- */
+  .expl-stage .anim {
+    transform-origin: center;
+    transform-box: fill-box;
+    opacity: 0;
+  }
+  .expl-stage.play .a-fadeUp { animation: fadeUp 0.9s cubic-bezier(.2,.7,.2,1) both; }
+  .expl-stage.play .a-fadeIn { animation: fadeIn 0.7s cubic-bezier(.2,.7,.2,1) both; }
+  .expl-stage.play .a-drop   { animation: drop 0.7s cubic-bezier(.3,1.2,.4,1) both; }
+  .expl-stage.play .a-flow   { animation: flow 1.2s cubic-bezier(.4,.1,.6,1) both; }
+  .expl-stage.play .a-grow-w { animation: growW 1.0s cubic-bezier(.3,.7,.3,1) both; }
+  .expl-stage.play .a-grow-h { animation: growH 1.0s cubic-bezier(.3,.7,.3,1) both; }
+  .expl-stage.play .a-pop    { animation: pop 0.6s cubic-bezier(.34,1.56,.64,1) both; }
+  .expl-stage.play .a-walk   { animation: walk 1.6s linear infinite; }
+  .expl-stage.play .a-draw-line { animation: drawLine 1.4s cubic-bezier(.3,.7,.3,1) both; }
+  .expl-stage.play .a-bob    { animation: bob 2.0s ease-in-out infinite; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes drop {
+    0% { opacity: 0; transform: translateY(-200px); }
+    70% { opacity: 1; transform: translateY(12px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes flow {
+    0% { opacity: 0; transform: translateX(-60px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes growW {
+    0% { opacity: 0; transform: scaleX(0); }
+    100% { opacity: 1; transform: scaleX(1); }
+  }
+  @keyframes growH {
+    0% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+    100% { opacity: 1; transform: scaleY(1); transform-origin: bottom; }
+  }
+  @keyframes pop {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes walk {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(160px, -3px); }
+    50%  { transform: translate(320px, 0); }
+    75%  { transform: translate(160px, -3px); }
+    100% { transform: translate(0, 0); }
+  }
+  @keyframes drawLine {
+    from { stroke-dashoffset: var(--len, 800); }
+    to   { stroke-dashoffset: 0; }
+  }
+  @keyframes bob {
+    0%,100% { transform: translateY(0); }
+    50%     { transform: translateY(-4px); }
+  }
+
+  /* Animation delays for staged choreography */
+  .expl-stage.play .d1 { animation-delay: 0.15s; }
+  .expl-stage.play .d2 { animation-delay: 0.45s; }
+  .expl-stage.play .d3 { animation-delay: 0.75s; }
+  .expl-stage.play .d4 { animation-delay: 1.05s; }
+  .expl-stage.play .d5 { animation-delay: 1.35s; }
+  .expl-stage.play .d6 { animation-delay: 1.65s; }
+
+  /* "Replay" button shown after scene plays */
+  .expl-replay {
+    position: absolute; bottom: 12px; right: 12px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 999px; padding: 6px 12px; font-size: 12px;
+    color: var(--text-muted); cursor: pointer;
+    display: none;
+  }
+  .expl-stage.played .expl-replay { display: inline-flex; align-items: center; gap: 6px; }
+  .expl-stage.played .expl-replay:hover { border-color: var(--c-teal); color: var(--c-teal); }
+
+  /* Outro tiles */
+  .expl-outro {
+    padding: 4vh 0 14vh;
+    text-align: center;
+  }
+  .expl-outro h2 { font-family: 'Libre Franklin', sans-serif; font-size: 28px; margin: 0 0 16px; }
+  .expl-outro .tiles { display: grid; gap: 12px; grid-template-columns: 1fr; max-width: 640px; margin: 0 auto; }
+  @media (min-width: 600px) { .expl-outro .tiles { grid-template-columns: 1fr 1fr; } }
+  .expl-outro a.tile {
+    display: block; padding: 16px 18px; text-align: left;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md);
+    color: var(--text); text-decoration: none;
+  }
+  .expl-outro a.tile:hover { border-color: var(--c-teal); }
+  .expl-outro a.tile strong { display: block; margin-bottom: 4px; }
+  .expl-outro a.tile span { font-size: 13px; color: var(--text-muted); }
+</style>
+
+<nav class="fs-bar">
+  <span class="fs-bar-label">Mockup v4 &middot; Lottie-style explainer</span>
+  <a href="{{ '/mockups/finance-story/' | relative_url }}">All mockups &rarr;</a>
+</nav>
+
+<div class="expl-wrap">
+  <section class="expl-intro">
+    <p class="eye">Mockup v4 &middot; Motion-graphic explainer</p>
+    <h1>How a dollar moves through Marblehead.</h1>
+    <p>Five short scenes. Each scene plays its own short animation once when you scroll past it, then settles on a final image. Linear, video-like, not scroll-coupled.</p>
+    <p style="font-size:13px;color:var(--text-faint);">Brainstorming mockup. Numbers approximate.</p>
+  </section>
+
+  <!-- SCENE 1: A dollar arrives at Town Hall -->
+  <article class="expl-scene" data-scene="1">
+    <div class="expl-stage">
+      <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMid meet">
+        <!-- Sky background -->
+        <rect x="0" y="0" width="600" height="270" fill="#EAF1F6"/>
+        <rect x="0" y="270" width="600" height="180" fill="#D8E1E8"/>
+
+        <!-- Ground -->
+        <rect x="0" y="370" width="600" height="80" fill="#C5D1DB"/>
+
+        <!-- Town Hall (Abbot Hall-inspired silhouette) -->
+        <g class="anim a-fadeIn">
+          <rect x="180" y="210" width="240" height="160" fill="#1B3A57"/>
+          <polygon points="180,210 300,140 420,210" fill="#0F2A3D"/>
+          <!-- Clock tower -->
+          <rect x="270" y="60" width="60" height="100" fill="#1B3A57"/>
+          <polygon points="270,60 300,30 330,60" fill="#0F2A3D"/>
+          <circle cx="300" cy="110" r="14" fill="#FAF7F0"/>
+          <line x1="300" y1="110" x2="300" y2="100" stroke="#1B3A57" stroke-width="1.6"/>
+          <line x1="300" y1="110" x2="308" y2="115" stroke="#1B3A57" stroke-width="1.6"/>
+          <!-- Windows -->
+          <rect x="210" y="240" width="30" height="40" fill="#B8860B" rx="2"/>
+          <rect x="270" y="240" width="30" height="40" fill="#B8860B" rx="2"/>
+          <rect x="330" y="240" width="30" height="40" fill="#B8860B" rx="2"/>
+          <rect x="210" y="300" width="30" height="40" fill="#B8860B" rx="2"/>
+          <rect x="270" y="300" width="60" height="60" fill="#3A5775" rx="3"/>
+          <rect x="360" y="300" width="30" height="40" fill="#B8860B" rx="2"/>
+        </g>
+
+        <!-- Dollar bill descending -->
+        <g class="anim a-drop d2">
+          <g transform="translate(260, 30)">
+            <rect x="0" y="0" width="80" height="40" fill="#5B7553" rx="3" stroke="#3F5A38" stroke-width="1.5"/>
+            <circle cx="40" cy="20" r="11" fill="#FAF7F0" stroke="#3F5A38" stroke-width="1.2"/>
+            <text x="40" y="24" font-size="13" fill="#3F5A38" text-anchor="middle" font-weight="800">$1</text>
+            <text x="8" y="10" font-size="6" fill="#FAF7F0">1</text>
+            <text x="68" y="36" font-size="6" fill="#FAF7F0" text-anchor="end">1</text>
+          </g>
+        </g>
+
+        <!-- Caption -->
+        <text class="anim a-fadeUp d3" x="300" y="425" text-anchor="middle"
+              font-size="14" font-weight="700" fill="var(--text)">
+          A taxpayer dollar arrives at Town Hall.
+        </text>
+      </svg>
+      <button class="expl-replay" aria-label="Replay scene">&#x21bb; replay</button>
+    </div>
+    <div class="expl-copy">
+      <p class="num">Scene 1</p>
+      <h2>A dollar arrives at Town Hall.</h2>
+      <p>About 75&cent; of Marblehead's annual operating revenue comes from the property-tax levy. The other 25&cent; comes from state aid and local receipts. All of it lands here.</p>
+    </div>
+  </article>
+
+  <!-- SCENE 2: The dollar splits three ways -->
+  <article class="expl-scene flip" data-scene="2">
+    <div class="expl-stage">
+      <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMid meet">
+        <rect x="0" y="0" width="600" height="450" fill="#FAFBFD"/>
+
+        <!-- Source: Town Hall small icon -->
+        <g class="anim a-fadeIn">
+          <rect x="40" y="180" width="80" height="80" fill="#1B3A57" rx="3"/>
+          <polygon points="40,180 80,150 120,180" fill="#0F2A3D"/>
+          <rect x="55" y="200" width="14" height="20" fill="#B8860B"/>
+          <rect x="90" y="200" width="14" height="20" fill="#B8860B"/>
+          <rect x="68" y="230" width="24" height="30" fill="#3A5775"/>
+          <text x="80" y="278" font-size="10" font-weight="700" fill="var(--text)" text-anchor="middle">Town Hall</text>
+        </g>
+
+        <!-- Three streams flowing out -->
+        <g class="anim a-flow d1">
+          <path d="M 130 210 Q 230 130 360 110 L 510 110"
+                stroke="#1B3A57" stroke-width="50" fill="none" stroke-linecap="round" opacity="0.92"/>
+          <rect x="430" y="78" width="160" height="64" fill="#1B3A57" rx="6"/>
+          <text x="510" y="106" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">80&cent;</text>
+          <text x="510" y="128" font-size="11" font-weight="600" fill="#E6ECF1" text-anchor="middle">People</text>
+        </g>
+
+        <g class="anim a-flow d3">
+          <path d="M 130 230 Q 230 240 360 240 L 510 240"
+                stroke="#4A5C6A" stroke-width="20" fill="none" stroke-linecap="round" opacity="0.92"/>
+          <rect x="430" y="216" width="160" height="48" fill="#4A5C6A" rx="6"/>
+          <text x="510" y="240" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">15&cent;</text>
+          <text x="510" y="258" font-size="11" font-weight="600" fill="#D8E1E8" text-anchor="middle">Set bills</text>
+        </g>
+
+        <g class="anim a-flow d5">
+          <path d="M 130 250 Q 240 320 360 340 L 510 340"
+                stroke="#93A4B0" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.92"/>
+          <rect x="430" y="320" width="160" height="42" fill="#93A4B0" rx="6"/>
+          <text x="510" y="343" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">5&cent;</text>
+          <text x="510" y="358" font-size="10" font-weight="600" fill="#fff" text-anchor="middle">Other</text>
+        </g>
+
+        <text class="anim a-fadeUp d6" x="300" y="420" text-anchor="middle"
+              font-size="13" fill="var(--text-muted)">Streams sized to actual share of operating budget.</text>
+      </svg>
+      <button class="expl-replay">&#x21bb; replay</button>
+    </div>
+    <div class="expl-copy">
+      <p class="num">Scene 2</p>
+      <h2>Town Hall splits it three ways.</h2>
+      <p>About 80&cent; ends up as compensation: salary plus the automatic stack of benefits on every employee. About 15&cent; is set bills the town doesn't control: debt service, OPEB, state assessments. The remaining 5&cent; is supplies, contractors, programs, capital.</p>
+    </div>
+  </article>
+
+  <!-- SCENE 3: The biggest stream is payroll -->
+  <article class="expl-scene" data-scene="3">
+    <div class="expl-stage">
+      <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMid meet">
+        <rect x="0" y="0" width="600" height="450" fill="#FAFBFD"/>
+
+        <!-- A single person icon at left -->
+        <g class="anim a-pop">
+          <circle cx="100" cy="200" r="20" fill="#1B3A57"/>
+          <path d="M 70 280 Q 70 230 100 230 Q 130 230 130 280 L 130 320 L 70 320 Z" fill="#1B3A57"/>
+          <text x="100" y="350" font-size="11" font-weight="600" fill="var(--text)" text-anchor="middle">One FTE</text>
+        </g>
+
+        <!-- Stack components building rightward -->
+        <g class="anim a-grow-w d1" style="transform-origin: 180px center;">
+          <rect x="180" y="280" width="320" height="36" fill="#1B3A57" rx="4"/>
+          <text x="194" y="304" font-size="13" fill="#fff" font-weight="700">Salary base</text>
+          <text x="494" y="304" font-size="13" fill="#fff" font-weight="700" text-anchor="end">$75,000</text>
+        </g>
+
+        <g class="anim a-grow-h d2" style="transform-origin: 180px 280px;">
+          <rect x="180" y="230" width="80" height="42" fill="#2F7D8E" rx="4"/>
+          <text x="194" y="256" font-size="11" fill="#fff" font-weight="600">Pension</text>
+          <text x="494" y="256" font-size="11" fill="var(--text-muted)" text-anchor="end">$12,750</text>
+        </g>
+
+        <g class="anim a-grow-h d3" style="transform-origin: 180px 230px;">
+          <rect x="180" y="186" width="64" height="36" fill="#B8860B" rx="4"/>
+          <text x="194" y="208" font-size="11" fill="#fff" font-weight="600">GIC health</text>
+          <text x="494" y="208" font-size="11" fill="var(--text-muted)" text-anchor="end">$10,000</text>
+        </g>
+
+        <g class="anim a-grow-h d4" style="transform-origin: 180px 186px;">
+          <rect x="180" y="160" width="12" height="18" fill="#6C4A6E" rx="2"/>
+          <text x="200" y="173" font-size="10" fill="var(--text-muted)">Medicare</text>
+          <text x="494" y="173" font-size="10" fill="var(--text-muted)" text-anchor="end">$1,100</text>
+        </g>
+
+        <g class="anim a-grow-h d5" style="transform-origin: 180px 160px;">
+          <rect x="180" y="140" width="8" height="12" fill="#C8553D" rx="2"/>
+          <text x="194" y="150" font-size="10" fill="var(--text-muted)">Comp + life</text>
+          <text x="494" y="150" font-size="10" fill="var(--text-muted)" text-anchor="end">$900</text>
+        </g>
+
+        <g class="anim a-pop d6">
+          <line x1="180" y1="120" x2="500" y2="120" stroke="var(--border)" stroke-width="1"/>
+          <text x="180" y="106" font-size="13" font-weight="700" fill="var(--text)">Loaded cost</text>
+          <text x="500" y="106" font-size="22" font-weight="800" fill="var(--c-buoy)" text-anchor="end">$99,750</text>
+        </g>
+
+        <text class="anim a-fadeUp d6" x="300" y="420" text-anchor="middle"
+              font-size="13" fill="var(--text-muted)">A $75K salary line is closer to $100K of budget.</text>
+      </svg>
+      <button class="expl-replay">&#x21bb; replay</button>
+    </div>
+    <div class="expl-copy">
+      <p class="num">Scene 3</p>
+      <h2>Every salary carries an automatic stack.</h2>
+      <p>Pension (~17% of pay) goes to Essex Regional Retirement. The town pays ~83% of the GIC health-insurance premium. Then Medicare. Then workers' comp and life. Multiply by ~1,020 paid positions.</p>
+    </div>
+  </article>
+
+  <!-- SCENE 4: Two organizations -->
+  <article class="expl-scene flip" data-scene="4">
+    <div class="expl-stage">
+      <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMid meet">
+        <rect x="0" y="0" width="600" height="450" fill="#FAFBFD"/>
+
+        <!-- Two buildings -->
+        <g class="anim a-fadeUp">
+          <!-- Town Hall (left) -->
+          <rect x="80" y="190" width="160" height="180" fill="#1B3A57" rx="3"/>
+          <polygon points="80,190 160,140 240,190" fill="#0F2A3D"/>
+          <rect x="100" y="220" width="20" height="28" fill="#B8860B" rx="2"/>
+          <rect x="150" y="220" width="20" height="28" fill="#B8860B" rx="2"/>
+          <rect x="200" y="220" width="20" height="28" fill="#B8860B" rx="2"/>
+          <rect x="145" y="290" width="30" height="80" fill="#3A5775" rx="3"/>
+          <text x="160" y="395" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">Town Hall</text>
+          <text x="160" y="412" font-size="10" fill="var(--text-muted)" text-anchor="middle">~394 FTE</text>
+        </g>
+
+        <g class="anim a-fadeUp d1">
+          <!-- School (right) -->
+          <rect x="360" y="200" width="180" height="170" fill="#2F7D8E" rx="3"/>
+          <rect x="360" y="180" width="180" height="20" fill="#226A78"/>
+          <rect x="380" y="220" width="20" height="28" fill="#FAF7F0" rx="2"/>
+          <rect x="410" y="220" width="20" height="28" fill="#FAF7F0" rx="2"/>
+          <rect x="440" y="220" width="20" height="28" fill="#FAF7F0" rx="2"/>
+          <rect x="470" y="220" width="20" height="28" fill="#FAF7F0" rx="2"/>
+          <rect x="500" y="220" width="20" height="28" fill="#FAF7F0" rx="2"/>
+          <rect x="380" y="270" width="20" height="28" fill="#FAF7F0" rx="2"/>
+          <rect x="410" y="270" width="20" height="28" fill="#FAF7F0" rx="2"/>
+          <rect x="440" y="270" width="60" height="100" fill="#226A78" rx="3"/>
+          <rect x="500" y="270" width="20" height="28" fill="#FAF7F0" rx="2"/>
+          <text x="450" y="395" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">Marblehead Public Schools</text>
+          <text x="450" y="412" font-size="10" fill="var(--text-muted)" text-anchor="middle">~626 FTE</text>
+        </g>
+
+        <!-- Person icons walking into each (CSS animation moves them) -->
+        <g class="anim a-fadeIn d3">
+          <g transform="translate(40, 350)">
+            <circle r="6" fill="#C8553D"/>
+            <path d="M -5 16 L -5 22 L 5 22 L 5 16 Z" fill="#C8553D"/>
+          </g>
+          <g transform="translate(20, 350)">
+            <circle r="6" fill="#5B7553"/>
+            <path d="M -5 16 L -5 22 L 5 22 L 5 16 Z" fill="#5B7553"/>
+          </g>
+          <g transform="translate(0, 350)">
+            <circle r="6" fill="#B8860B"/>
+            <path d="M -5 16 L -5 22 L 5 22 L 5 16 Z" fill="#B8860B"/>
+          </g>
+        </g>
+
+        <g class="anim a-fadeIn d4">
+          <g transform="translate(580, 350)">
+            <circle r="6" fill="#1B3A57"/>
+            <path d="M -5 16 L -5 22 L 5 22 L 5 16 Z" fill="#1B3A57"/>
+          </g>
+          <g transform="translate(560, 350)">
+            <circle r="6" fill="#4F6E89"/>
+            <path d="M -5 16 L -5 22 L 5 22 L 5 16 Z" fill="#4F6E89"/>
+          </g>
+        </g>
+
+        <!-- Voters umbrella label -->
+        <g class="anim a-fadeUp d5">
+          <rect x="170" y="60" width="260" height="38" fill="#C8553D" rx="6"/>
+          <text x="300" y="84" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Voters &middot; Town Meeting</text>
+          <line x1="300" y1="98" x2="160" y2="140" stroke="#C8553D" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <line x1="300" y1="98" x2="450" y2="140" stroke="#C8553D" stroke-width="1.5" stroke-dasharray="3 4"/>
+        </g>
+      </svg>
+      <button class="expl-replay">&#x21bb; replay</button>
+    </div>
+    <div class="expl-copy">
+      <p class="num">Scene 4</p>
+      <h2>Two organizations, one tax base.</h2>
+      <p>The town side runs from the Select Board through the Town Administrator to the departments. The school side runs from the School Committee through the Superintendent to the schools. Voters elect both boards directly. Neither pillar supervises the other.</p>
+    </div>
+  </article>
+
+  <!-- SCENE 5: Twenty years of growth -->
+  <article class="expl-scene" data-scene="5">
+    <div class="expl-stage">
+      <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMid meet">
+        <rect x="0" y="0" width="600" height="450" fill="#FAFBFD"/>
+
+        <!-- Axes -->
+        <g class="anim a-fadeIn">
+          <line x1="80" y1="60" x2="80" y2="370" stroke="var(--text-faint)" stroke-width="1"/>
+          <line x1="80" y1="370" x2="560" y2="370" stroke="var(--text-faint)" stroke-width="1"/>
+          <text x="80" y="392" font-size="10" fill="var(--text-subtle)" text-anchor="middle">FY05</text>
+          <text x="320" y="392" font-size="10" fill="var(--text-subtle)" text-anchor="middle">FY15</text>
+          <text x="560" y="392" font-size="10" fill="var(--text-subtle)" text-anchor="middle">FY26</text>
+          <text x="40" y="80" font-size="10" fill="var(--text-subtle)">$130M</text>
+          <text x="40" y="370" font-size="10" fill="var(--text-subtle)">$40M</text>
+        </g>
+
+        <!-- Budget growth line -->
+        <path class="anim a-draw-line d1"
+              d="M 80 340 L 110 330 L 140 318 L 170 302 L 200 286 L 230 270 L 260 250 L 290 230 L 320 208 L 350 188 L 380 166 L 410 142 L 440 118 L 470 96 L 500 82 L 530 72 L 560 64"
+              stroke="#6C4A6E" stroke-width="3" fill="none"
+              stroke-dasharray="800" stroke-dashoffset="800"
+              style="--len: 800;"/>
+
+        <!-- Headcount flat line -->
+        <path class="anim a-draw-line d3"
+              d="M 80 230 L 110 228 L 140 230 L 170 232 L 200 230 L 230 232 L 260 234 L 290 228 L 320 230 L 350 224 L 380 230 L 410 226 L 440 232 L 470 228 L 500 232 L 530 226 L 560 234"
+              stroke="#5B7553" stroke-width="3" fill="none" stroke-dasharray="2 5"
+              stroke-dashoffset="700" style="--len: 700;"/>
+
+        <!-- Annotations -->
+        <g class="anim a-fadeUp d4">
+          <circle cx="560" cy="64" r="5" fill="#6C4A6E"/>
+          <text x="554" y="58" font-size="11" font-weight="700" fill="#6C4A6E" text-anchor="end">+170% budget</text>
+        </g>
+        <g class="anim a-fadeUp d5">
+          <circle cx="560" cy="234" r="5" fill="#5B7553"/>
+          <text x="554" y="252" font-size="11" font-weight="700" fill="#5B7553" text-anchor="end">+2% headcount</text>
+        </g>
+
+        <text class="anim a-fadeUp d6" x="300" y="430" font-size="13" text-anchor="middle"
+              fill="var(--text-muted)">Budget grew. Headcount didn't. The difference was cost-per-employee.</text>
+      </svg>
+      <button class="expl-replay">&#x21bb; replay</button>
+    </div>
+    <div class="expl-copy">
+      <p class="num">Scene 5</p>
+      <h2>The budget grew 2.7&times;. Headcount didn't.</h2>
+      <p>Twenty-one years. Operating budget went from $47M to $127M. Total FTE moved within a 200-position band the entire time. The growth came from cost per employee, mostly the GIC health premium.</p>
+    </div>
+  </article>
+
+  <section class="expl-outro">
+    <h2>Go deeper</h2>
+    <div class="tiles">
+      <a class="tile" href="{{ '/checkbook/' | relative_url }}"><strong>Checkbook</strong><span>FY26 vendor and payroll detail.</span></a>
+      <a class="tile" href="{{ '/marblehead-101/' | relative_url }}"><strong>Marblehead 101</strong><span>The full 8-chapter primer.</span></a>
+      <a class="tile" href="{{ '/data/' | relative_url }}"><strong>Data catalog</strong><span>FTE history, peer towns, ACFRs.</span></a>
+      <a class="tile" href="{{ '/mockups/finance-story/' | relative_url }}"><strong>All mockups</strong><span>Compare the variants.</span></a>
+    </div>
+  </section>
+</div>
+
+<script>
+/* Explainer engine: when a scene scrolls into view, add the 'play' class
+   to trigger its CSS animations. Show a "replay" button after they finish
+   so the user can re-watch. */
+(function () {
+  const scenes = document.querySelectorAll('.expl-scene');
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting && e.intersectionRatio > 0.35) {
+        const stage = e.target.querySelector('.expl-stage');
+        if (stage && !stage.classList.contains('play')) {
+          stage.classList.add('play');
+          // After ~2.5s mark "played" so the replay button appears
+          setTimeout(() => stage.classList.add('played'), 2400);
+        }
+      }
+    });
+  }, { threshold: [0.35, 0.5] });
+
+  scenes.forEach((s) => io.observe(s));
+
+  // Replay button: remove play/played classes and re-add after a tick
+  document.body.addEventListener('click', (e) => {
+    const btn = e.target.closest('.expl-replay');
+    if (!btn) return;
+    const stage = btn.closest('.expl-stage');
+    if (!stage) return;
+    stage.classList.remove('play', 'played');
+    requestAnimationFrame(() => {
+      stage.classList.add('play');
+      setTimeout(() => stage.classList.add('played'), 2400);
+    });
+  });
+})();
+</script>
