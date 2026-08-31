@@ -1,0 +1,110 @@
+{
+  "source_metadata": {
+    "ACS_vintage": "2023 5-year (released Dec 2024)",
+    "town": "Marblehead",
+    "geoid": "06000US2500938400"
+  },
+  "owners_total": 6776,
+  "renters_total": 1411,
+  "cost_burden": {
+    "burdened_30plus": 1672,
+    "burdened_30plus_share": 0.2468,
+    "under_65_burdened": 868,
+    "senior_burdened": 804,
+    "severely_burdened_35plus": 1300,
+    "by_income": [
+      {
+        "label": "<$20K",
+        "total": 252,
+        "ge30": 237
+      },
+      {
+        "label": "$20-35K",
+        "total": 200,
+        "ge30": 188
+      },
+      {
+        "label": "$35-50K",
+        "total": 237,
+        "ge30": 201
+      },
+      {
+        "label": "$50-75K",
+        "total": 432,
+        "ge30": 271
+      },
+      {
+        "label": "$75K+",
+        "total": 5655,
+        "ge30": 775
+      }
+    ],
+    "by_age": [
+      {
+        "label": "15-24",
+        "total": 43,
+        "ge30": 43,
+        "ge35": 0
+      },
+      {
+        "label": "25-34",
+        "total": 330,
+        "ge30": 44,
+        "ge35": 21
+      },
+      {
+        "label": "35-64",
+        "total": 4011,
+        "ge30": 781,
+        "ge35": 631
+      },
+      {
+        "label": "65+",
+        "total": 2392,
+        "ge30": 804,
+        "ge35": 648
+      }
+    ]
+  },
+  "relief_programs": {
+    "FY24_total_exemptions_granted": 144,
+    "FY24_total_exemption_value_usd": 182907.62,
+    "FY24_avg_per_recipient_usd": 1270.19,
+    "FY26_state_reimbursement_vbs_eld_usd": 129339,
+    "adopted_clauses": [
+      "41C",
+      "41D",
+      "17D",
+      "22",
+      "22D",
+      "22E",
+      "22F",
+      "22H",
+      "37A",
+      "5K"
+    ],
+    "not_adopted_or_unimproved": [
+      "41A local-option income raise (likely)",
+      "5C residential exemption",
+      "Means-tested 41M (pending state legislation)"
+    ],
+    "uptake_share_of_owners": 0.0213,
+    "uptake_share_of_burdened": 0.0861
+  },
+  "relief_gap": {
+    "total_burdened_without_exemption_min": 1528,
+    "senior_burdened_without_exemption_max": 804,
+    "working_age_burdened_no_path": 868,
+    "interpretation": "Under-65 cost-burdened owners (868 households) have no path through Marblehead's current statutory relief programs, which are all 65+ (with the exception of veteran-status / blind / surviving-spouse clauses). For seniors, the gap depends on how many of the 144 FY24 exemptions went to cost-burdened recipients vs. lower-burden seniors who happen to meet income criteria. Without per-clause data, the most defensible read is that no more than 144 of 804 senior cost-burdened owners receive any statutory relief. Circuit Breaker (state income tax credit) is potentially available to seniors but uptake is not tracked at the municipal level in available data."
+  },
+  "sources": [
+    "ACS B25106 (Tenure by Housing Costs as % of Household Income), 2023 5-year vintage, Marblehead town",
+    "ACS B25093 (Age of Householder by SMOCAPI), 2023 5-year vintage, Marblehead town",
+    "Marblehead FY24 Annual Report, Assessor's section",
+    "Marblehead FY26 Cherry Sheet (DOR DLS), exempt_vbs_eld column",
+    "Marblehead Town Meeting 2024 (Article 22, Clause 41D adoption)",
+    "Marblehead Town Meeting 2025 (Article 28, means-tested home rule petition)",
+    "https://marbleheadma.gov/town-of-marblehead-property-tax-relief-personal-exemptions/",
+    "MA G.L. c. 59, sec. 5"
+  ]
+}
