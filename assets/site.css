@@ -1711,6 +1711,49 @@ svg.chart--stacked .end-label { display: block; }
   svg.chart--stacked .end-label { display: none; }
 }
 
+/* Town staffing "then vs now" dumbbell rows (town-staffing-over-time.html).
+   Hollow "then" dot to filled navy "now" dot, joined by a subtle connector.
+   State is carried by shape and label, not by hue: a single dot marks a new
+   function, a dashed grey ring a line that no longer appears. No green/red
+   valence, so neither reads as good or bad. */
+svg.chart .dumbbell-connector   { stroke: var(--c-text-sub); stroke-width: 3; }
+svg.chart .dumbbell-dot--then   { fill: var(--c-surface); stroke: var(--c-navy); stroke-width: 1.5; }
+svg.chart .dumbbell-dot--now    { fill: var(--c-navy); }
+svg.chart .dumbbell-dot--new    { fill: var(--c-navy); }
+svg.chart .dumbbell-dot--retired{ fill: none; stroke: var(--c-text-sub); stroke-width: 1.5; stroke-dasharray: 2 2; }
+svg.chart .dumbbell-label       { fill: var(--c-text); font-size: 11px; }
+svg.chart .dumbbell-value       { fill: var(--c-text-sub); font-size: 10px; }
+svg.chart .dumbbell-arrow       { fill: var(--c-navy); }
+svg.chart .dumbbell-delta       { fill: var(--c-navy); font-weight: 700; }
+
+/* Structural timeline on town-staffing-over-time.html: bar spans the years a
+   function existed; a dot marks the year it was added or retired. */
+svg.chart .tl-bar  { fill: var(--c-navy); }
+svg.chart .tl-dot  { fill: var(--c-navy); }
+svg.chart .tl-grid { stroke: var(--c-border); stroke-width: 1; }
+svg.chart .tl-name { fill: var(--c-text); font-size: 11px; }
+svg.chart .tl-cap  { fill: var(--c-text-sub); font-size: 10px; }
+svg.chart .tl-tick { fill: var(--c-text-sub); font-size: 10px; }
+
+/* Quarantine cards on town-staffing-over-time.html. Self-contained (not the
+   org-chart .org-card details-widget, which carries its own padding on the
+   summary and would render edge-to-edge here). */
+.sq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin: 14px 0 4px;
+}
+.sq-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+.sq-dept  { display: block; font-weight: 700; font-size: 0.875rem; line-height: 1.25; }
+.sq-delta { display: block; margin: 3px 0 7px; font-size: 0.8125rem; color: var(--c-text-sub); font-feature-settings: "tnum"; }
+.sq-note  { margin: 0; font-size: 0.75rem; line-height: 1.45; color: var(--c-text-mid); }
+
 /* Series color assignments via `color` so currentColor cascades */
 svg.chart .s-marblehead { color: var(--series-marblehead); }
 svg.chart .s-swampscott { color: var(--series-swampscott); }
