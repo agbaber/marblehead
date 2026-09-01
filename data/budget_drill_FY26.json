@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-31",
+ "as_of": "2026-09-01",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -132,7 +132,7 @@
     {
      "name": "HEALTH",
      "revised_budget": 335541.0,
-     "actual": 321042.13,
+     "actual": 315127.37,
      "original_budget": 326041.0
     },
     {
@@ -236,7 +236,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 5152427.8,
-     "actual": 4761333.34,
+     "actual": 4755418.58,
      "original_budget": 4814460.0
     },
     {
@@ -281,7 +281,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14909464.66,
+     "actual": 14903846.66,
      "original_budget": 17832596.0
     },
     {
@@ -337,7 +337,7 @@
     {
      "name": "OTHER SALARIES",
      "revised_budget": 6571310.04,
-     "actual": 6142852.85,
+     "actual": 6137234.85,
      "original_budget": 6449488.0
     },
     {
@@ -792,7 +792,7 @@
     {
      "name": "OTHER SALARIES",
      "revised_budget": 1635700.16,
-     "actual": 1701025.45,
+     "actual": 1695407.45,
      "original_budget": 3212835.0
     },
     {
@@ -824,7 +824,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 14574494.16,
-     "actual": 14909464.66,
+     "actual": 14903846.66,
      "original_budget": 17832596.0
     }
    ]
@@ -2534,7 +2534,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 77528.62,
-     "actual": 78892.79,
+     "actual": 72978.03,
      "original_budget": 77899.0
     },
     {
@@ -2566,7 +2566,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 87481.0,
-     "actual": 85016.55,
+     "actual": 79101.79,
      "original_budget": 87481.0
     },
     {
@@ -3657,7 +3657,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 5152427.8,
-     "actual": 4761333.34,
+     "actual": 4755418.58,
      "original_budget": 4814460.0
     },
     {
@@ -3797,7 +3797,7 @@
     {
      "name": "HEALTH",
      "revised_budget": 77528.62,
-     "actual": 78892.79,
+     "actual": 72978.03,
      "original_budget": 77899.0
     },
     {
@@ -3991,7 +3991,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 6571310.04,
-     "actual": 6142852.85,
+     "actual": 6137234.85,
      "original_budget": 6449488.0
     }
    ],
@@ -3999,7 +3999,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 1635700.16,
-     "actual": 1701025.45,
+     "actual": 1695407.45,
      "original_budget": 3212835.0
     },
     {
@@ -4599,7 +4599,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 49120287.0,
-     "actual": 48021012.27,
+     "actual": 48015394.27,
      "original_budget": 49120287.0
     }
    ],
@@ -4607,7 +4607,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14909464.66,
+     "actual": 14903846.66,
      "original_budget": 17832596.0
     },
     {
@@ -4855,7 +4855,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19400687.6,
-     "actual": 18107405.18,
+     "actual": 18101490.42,
      "original_budget": 18599491.0
     },
     {
@@ -5007,7 +5007,7 @@
     {
      "name": "HEALTH",
      "revised_budget": 87481.0,
-     "actual": 85016.55,
+     "actual": 79101.79,
      "original_budget": 87481.0
     },
     {
@@ -6931,7 +6931,7 @@
    {
     "name": "OTHER SALARIES - STIPENDS",
     "revised_budget": 35800.0,
-    "actual": 32030.0,
+    "actual": 26412.0,
     "original_budget": 0
    },
    {
@@ -13299,7 +13299,7 @@
    {
     "name": "PSYCHOLOGICAL COUNSELING",
     "revised_budget": 60000.0,
-    "actual": 65914.76,
+    "actual": 60000.0,
     "original_budget": 60000.0
    },
    {
@@ -14985,7 +14985,7 @@
    {
     "name": "PSYCHOLOGICAL COUNSELING",
     "revised_budget": 60780.0,
-    "actual": 65914.76,
+    "actual": 60000.0,
     "original_budget": 60780.0
    },
    {
@@ -15963,7 +15963,7 @@
    {
     "name": "OTHER SALARIES - STIPENDS",
     "revised_budget": 170036.0,
-    "actual": 142239.27,
+    "actual": 136621.27,
     "original_budget": 0
    },
    {

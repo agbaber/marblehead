@@ -6,10 +6,10 @@
  "fy_start": "2025-07-01",
  "fy_end": "2026-06-30",
  "months_elapsed": 12,
- "total_amount": 113973388.99,
+ "total_amount": 113967474.23,
  "total_M": "$114.0M",
- "row_count": 17898,
- "row_count_human": "17,898",
+ "row_count": 17899,
+ "row_count_human": "17,899",
  "csv_filename": "checkbook_FY26_2026-06-30.csv",
  "performance_filename": "checkbook_performance_FY26.json",
  "generated_by": "scripts/build_checkbook_csv.py"
