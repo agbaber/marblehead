@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-08-28",
+  "as_of": "2026-08-31",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 2,
-  "fy_pct_elapsed": 16.2,
+  "fy_pct_elapsed": 17.0,
   "budget_execution": {
     "by_department": [
       {
@@ -676,8 +676,8 @@
     },
     {
       "month": "2026-08",
-      "amount": 6930916.2,
-      "count": 860
+      "amount": 6973229.62,
+      "count": 873
     }
   ],
   "drill": {
@@ -1233,8 +1233,8 @@
           },
           {
             "month": "2026-08",
-            "amount": 258255.87,
-            "count": 144
+            "amount": 259445.56,
+            "count": 147
           }
         ]
       },
@@ -1347,6 +1347,11 @@
             "count": 2
           },
           {
+            "name": "OPENGOV INC",
+            "amount": 66111.93,
+            "count": 2
+          },
+          {
             "name": "NOBLE INC",
             "amount": 64922.43,
             "count": 4
@@ -1365,11 +1370,6 @@
             "name": "CLEARGOV INC",
             "amount": 36064.5,
             "count": 2
-          },
-          {
-            "name": "OPENGOV INC",
-            "amount": 32837.13,
-            "count": 1
           }
         ],
         "monthly": [
@@ -1380,8 +1380,8 @@
           },
           {
             "month": "2026-08",
-            "amount": 2919500.19,
-            "count": 437
+            "amount": 2960209.5,
+            "count": 446
           }
         ]
       },
@@ -1482,8 +1482,8 @@
           },
           {
             "month": "2026-08",
-            "amount": 45055.68,
-            "count": 27
+            "amount": 45470.1,
+            "count": 28
           }
         ]
       },
