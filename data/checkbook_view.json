@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-08-31",
+    "date": "2026-09-01",
     "fiscal_year": "FY27",
-    "row_count": 1730,
-    "total_paid": 27754301.57,
+    "row_count": 1733,
+    "total_paid": 27772165.66,
     "interfund_total": 125709.31,
-    "external_paid": 27628592.26,
+    "external_paid": 27646456.35,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-08-31",
-    "source_file": "checkbook_FY27_2026-08-31.csv"
+    "last_payment": "2026-09-01",
+    "source_file": "checkbook_FY27_2026-09-01.csv"
   },
   "buckets": [
     {
@@ -39,14 +39,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 19526479.63,
-      "share": 0.7035,
+      "amount": 19544343.72,
+      "share": 0.7037,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 18744396.32,
-          "row_count": 778
+          "amount": 18762260.41,
+          "row_count": 781
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -64,7 +64,7 @@
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
       "amount": 5594837.15,
-      "share": 0.2016,
+      "share": 0.2015,
       "fund_count": 7,
       "top_funds": [
         {
@@ -223,19 +223,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 18744396.32,
+    "total": 18762260.41,
     "fixed_total": 17585247.57,
-    "fixed_share": 0.9382,
-    "admin_contracts_total": 352378.21,
-    "admin_contracts_share": 0.0188,
-    "other_recurring_total": 806770.54,
-    "other_recurring_share": 0.043,
+    "fixed_share": 0.9373,
+    "admin_contracts_total": 363561.15,
+    "admin_contracts_share": 0.0194,
+    "other_recurring_total": 813451.69,
+    "other_recurring_share": 0.0434,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 3343080.9,
-        "share": 0.1784,
+        "share": 0.1782,
         "row_count": 14,
         "top_vendors": [
           {
@@ -264,7 +264,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 7738584.39,
-        "share": 0.4128,
+        "share": 0.4125,
         "row_count": 30,
         "top_vendors": [
           {
@@ -277,7 +277,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.3117,
+        "share": 0.3114,
         "row_count": 1,
         "top_vendors": [
           {
@@ -302,9 +302,9 @@
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 352378.21,
-        "share": 0.0188,
-        "row_count": 18,
+        "amount": 363561.15,
+        "share": 0.0194,
+        "row_count": 19,
         "top_vendors": [
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -312,7 +312,7 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 79937.23
+            "amount": 91120.17
           },
           {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
@@ -331,9 +331,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 806770.54,
-        "share": 0.043,
-        "row_count": 700,
+        "amount": 813451.69,
+        "share": 0.0434,
+        "row_count": 702,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -382,7 +382,7 @@
       "row_count": 11,
       "first_paid": "2026-07-20",
       "last_paid": "2026-08-13",
-      "days_since_last_paid": 18,
+      "days_since_last_paid": 19,
       "status": "active",
       "top_vendors": [
         {
@@ -422,7 +422,7 @@
       "row_count": 2,
       "first_paid": "2026-07-08",
       "last_paid": "2026-07-28",
-      "days_since_last_paid": 34,
+      "days_since_last_paid": 35,
       "status": "engineering",
       "top_vendors": [
         {
@@ -447,7 +447,7 @@
       "row_count": 1,
       "first_paid": "2026-08-28",
       "last_paid": "2026-08-28",
-      "days_since_last_paid": 3,
+      "days_since_last_paid": 4,
       "status": "engineering",
       "top_vendors": [
         {
