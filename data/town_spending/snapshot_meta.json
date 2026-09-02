@@ -1,9 +1,9 @@
 {
-  "snapshot_date": "2026-09-01",
+  "snapshot_date": "2026-09-02",
   "fiscal_year": 2027,
   "department_row_count": 9,
-  "vendor_row_count": 525,
-  "department_total_usd": 27807295.71,
-  "vendor_total_usd": 27807295.71,
+  "vendor_row_count": 526,
+  "department_total_usd": 27831860.46,
+  "vendor_total_usd": 27831860.46,
   "source_url": "https://townofmarblehead-ma-oe.spending.socrata.com/"
 }
