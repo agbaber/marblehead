@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-09-01",
+  "as_of": "2026-09-02",
   "latest_fiscal_month": "2026-10-01",
-  "generated_at": "2026-09-01T15:12:19+00:00",
+  "generated_at": "2026-09-02T14:43:14+00:00",
   "fiscal_year": "FY27",
   "fy_months": [
     "2026-07",
@@ -20,7 +20,7 @@
   "funds": [
     {
       "fund": "GENERAL FUND - TOWN",
-      "total_through_as_of": 22179242.05,
+      "total_through_as_of": 22185923.2,
       "series": [
         {
           "month": "2026-07",
@@ -34,52 +34,52 @@
         },
         {
           "month": "2026-09",
-          "cumulative": 22179242.05,
-          "monthly": 0.0
+          "cumulative": 22185923.2,
+          "monthly": 6681.15
         },
         {
           "month": "2026-10",
-          "cumulative": 22179242.05,
+          "cumulative": 22185923.2,
           "monthly": 0.0
         },
         {
           "month": "2026-11",
-          "cumulative": 22179242.05,
+          "cumulative": 22185923.2,
           "monthly": 0.0
         },
         {
           "month": "2026-12",
-          "cumulative": 22179242.05,
+          "cumulative": 22185923.2,
           "monthly": 0.0
         },
         {
           "month": "2027-01",
-          "cumulative": 22179242.05,
+          "cumulative": 22185923.2,
           "monthly": 0.0
         },
         {
           "month": "2027-02",
-          "cumulative": 22179242.05,
+          "cumulative": 22185923.2,
           "monthly": 0.0
         },
         {
           "month": "2027-03",
-          "cumulative": 22179242.05,
+          "cumulative": 22185923.2,
           "monthly": 0.0
         },
         {
           "month": "2027-04",
-          "cumulative": 22179242.05,
+          "cumulative": 22185923.2,
           "monthly": 0.0
         },
         {
           "month": "2027-05",
-          "cumulative": 22179242.05,
+          "cumulative": 22185923.2,
           "monthly": 0.0
         },
         {
           "month": "2027-06",
-          "cumulative": 22179242.05,
+          "cumulative": 22185923.2,
           "monthly": 0.0
         }
       ]
