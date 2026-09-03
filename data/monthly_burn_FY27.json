@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-09-02",
+  "as_of": "2026-09-03",
   "latest_fiscal_month": "2026-10-01",
-  "generated_at": "2026-09-02T14:43:14+00:00",
+  "generated_at": "2026-09-03T14:44:06+00:00",
   "fiscal_year": "FY27",
   "fy_months": [
     "2026-07",
@@ -284,7 +284,7 @@
     },
     {
       "fund": "GENERAL FUND - SCHOOL",
-      "total_through_as_of": 1422182.42,
+      "total_through_as_of": 1422632.42,
       "series": [
         {
           "month": "2026-07",
@@ -298,52 +298,52 @@
         },
         {
           "month": "2026-09",
-          "cumulative": 1418494.02,
-          "monthly": 0.0
+          "cumulative": 1418944.02,
+          "monthly": 450.0
         },
         {
           "month": "2026-10",
-          "cumulative": 1422182.42,
+          "cumulative": 1422632.42,
           "monthly": 3688.4
         },
         {
           "month": "2026-11",
-          "cumulative": 1422182.42,
+          "cumulative": 1422632.42,
           "monthly": 0.0
         },
         {
           "month": "2026-12",
-          "cumulative": 1422182.42,
+          "cumulative": 1422632.42,
           "monthly": 0.0
         },
         {
           "month": "2027-01",
-          "cumulative": 1422182.42,
+          "cumulative": 1422632.42,
           "monthly": 0.0
         },
         {
           "month": "2027-02",
-          "cumulative": 1422182.42,
+          "cumulative": 1422632.42,
           "monthly": 0.0
         },
         {
           "month": "2027-03",
-          "cumulative": 1422182.42,
+          "cumulative": 1422632.42,
           "monthly": 0.0
         },
         {
           "month": "2027-04",
-          "cumulative": 1422182.42,
+          "cumulative": 1422632.42,
           "monthly": 0.0
         },
         {
           "month": "2027-05",
-          "cumulative": 1422182.42,
+          "cumulative": 1422632.42,
           "monthly": 0.0
         },
         {
           "month": "2027-06",
-          "cumulative": 1422182.42,
+          "cumulative": 1422632.42,
           "monthly": 0.0
         }
       ]
