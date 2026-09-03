@@ -226,9 +226,9 @@
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 543842.52,
-        "delta": -1581610.48,
-        "pct": 25.59
+        "actual": 550523.67,
+        "delta": -1574929.33,
+        "pct": 25.9
       },
       {
         "name": "SEWER",
@@ -445,9 +445,9 @@
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 543842.52,
-        "delta": -1581610.48,
-        "pct": 25.59
+        "actual": 550523.67,
+        "delta": -1574929.33,
+        "pct": 25.9
       },
       {
         "name": "WASTE COLLECTION",
@@ -681,8 +681,8 @@
     },
     {
       "month": "2026-09",
-      "amount": 17864.09,
-      "count": 3
+      "amount": 18314.09,
+      "count": 4
     }
   ],
   "drill": {
@@ -833,22 +833,6 @@
             "month": "2026-08",
             "amount": 2017.14,
             "count": 7
-          }
-        ]
-      },
-      "ARTS LOTTERY GRANT": {
-        "top_vendors": [
-          {
-            "name": "MARBLEHEAD FESTIVAL OF ARTS, INC",
-            "amount": 1500.0,
-            "count": 1
-          }
-        ],
-        "monthly": [
-          {
-            "month": "2026-08",
-            "amount": 1500.0,
-            "count": 1
           }
         ]
       },
@@ -1240,6 +1224,11 @@
             "month": "2026-08",
             "amount": 259445.56,
             "count": 147
+          },
+          {
+            "month": "2026-09",
+            "amount": 450.0,
+            "count": 1
           }
         ]
       },
@@ -1699,6 +1688,22 @@
             "month": "2026-08",
             "amount": 0.0,
             "count": 2
+          }
+        ]
+      },
+      "Mass Cultural Council Grant": {
+        "top_vendors": [
+          {
+            "name": "MARBLEHEAD FESTIVAL OF ARTS, INC",
+            "amount": 1500.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-08",
+            "amount": 1500.0,
+            "count": 1
           }
         ]
       },
