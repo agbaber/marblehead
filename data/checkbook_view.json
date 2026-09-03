@@ -3,10 +3,10 @@
   "snapshot": {
     "date": "2026-09-01",
     "fiscal_year": "FY27",
-    "row_count": 1733,
-    "total_paid": 27772165.66,
+    "row_count": 1734,
+    "total_paid": 27772615.66,
     "interfund_total": 125709.31,
-    "external_paid": 27646456.35,
+    "external_paid": 27646906.35,
     "first_payment": "2026-07-01",
     "last_payment": "2026-09-01",
     "source_file": "checkbook_FY27_2026-09-01.csv"
@@ -39,7 +39,7 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 19544343.72,
+      "amount": 19544793.72,
       "share": 0.7037,
       "fund_count": 3,
       "top_funds": [
@@ -50,8 +50,8 @@
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 590306.86,
-          "row_count": 306
+          "amount": 590756.86,
+          "row_count": 307
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -137,7 +137,7 @@
           "row_count": 1
         },
         {
-          "name": "ARTS LOTTERY GRANT",
+          "name": "Mass Cultural Council Grant",
           "amount": 1500.0,
           "row_count": 1
         },
