@@ -6,7 +6,7 @@
  "actual_filename": "budget_actual_FY27.json",
  "burn_filename": "monthly_burn_FY27.json",
  "drill_filename": "budget_drill_FY27.json",
- "all_funds_budget_M": "$134.6M",
+ "all_funds_budget_M": "$135.1M",
  "annual_operating_M": "$127.2M",
  "generated_by": "scripts/build_budget_actual.py"
 }
