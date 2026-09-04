@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-09-01",
+    "date": "2026-09-03",
     "fiscal_year": "FY27",
-    "row_count": 1734,
-    "total_paid": 27772615.66,
-    "interfund_total": 125709.31,
-    "external_paid": 27646906.35,
+    "row_count": 1930,
+    "total_paid": 29737596.81,
+    "interfund_total": 126885.47,
+    "external_paid": 29610711.34,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-09-01",
-    "source_file": "checkbook_FY27_2026-09-01.csv"
+    "last_payment": "2026-09-03",
+    "source_file": "checkbook_FY27_2026-09-03.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 2242909.75,
-      "share": 0.0808,
+      "share": 0.0754,
       "fund_count": 3,
       "top_funds": [
         {
@@ -39,48 +39,48 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 19544793.72,
-      "share": 0.7037,
+      "amount": 19753902.05,
+      "share": 0.6643,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 18762260.41,
-          "row_count": 781
+          "amount": 18830240.63,
+          "row_count": 814
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 590756.86,
-          "row_count": 307
+          "amount": 686587.75,
+          "row_count": 346
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
-          "amount": 191776.45,
-          "row_count": 20
+          "amount": 237073.67,
+          "row_count": 23
         }
       ]
     },
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 5594837.15,
-      "share": 0.2015,
+      "amount": 7056628.38,
+      "share": 0.2373,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 2859402.92,
-          "row_count": 219
+          "amount": 4282910.15,
+          "row_count": 256
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 927699.38,
-          "row_count": 31
+          "amount": 935326.56,
+          "row_count": 53
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
-          "amount": 788348.34,
-          "row_count": 96
+          "amount": 796847.51,
+          "row_count": 121
         },
         {
           "name": "WATER CAPITAL ARTICLES",
@@ -89,13 +89,13 @@
         },
         {
           "name": "SEWER CAPITAL ARTICLES",
-          "amount": 271284.21,
-          "row_count": 4
+          "amount": 292348.46,
+          "row_count": 10
         },
         {
           "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 160716.34,
-          "row_count": 49
+          "amount": 161809.74,
+          "row_count": 56
         },
         {
           "name": "MWRA PROJECT LWSAP26-3021",
@@ -107,19 +107,24 @@
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 58399.06,
-      "share": 0.0021,
-      "fund_count": 10,
+      "amount": 126902.59,
+      "share": 0.0043,
+      "fund_count": 11,
       "top_funds": [
         {
           "name": "COVID 19 ARPA (FED)",
-          "amount": 23053.48,
-          "row_count": 3
+          "amount": 52098.89,
+          "row_count": 7
+        },
+        {
+          "name": "MAPC ACR Grant",
+          "amount": 34356.32,
+          "row_count": 1
         },
         {
           "name": "SPED IDEA 94-142 (240)",
-          "amount": 11599.26,
-          "row_count": 8
+          "amount": 16701.06,
+          "row_count": 15
         },
         {
           "name": "JAIL DIVERSION GRANT (FED)",
@@ -145,25 +150,20 @@
           "name": "FIRE SENIOR SAFE GRANT",
           "amount": 702.0,
           "row_count": 1
-        },
-        {
-          "name": "SPED EC (262)",
-          "amount": 407.99,
-          "row_count": 1
         }
       ]
     },
     {
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
-      "amount": 192319.39,
-      "share": 0.0069,
+      "amount": 201719.95,
+      "share": 0.0068,
       "fund_count": 2,
       "top_funds": [
         {
           "name": "PARK REVOLVING FUND",
-          "amount": 183282.1,
-          "row_count": 103
+          "amount": 192682.66,
+          "row_count": 110
         },
         {
           "name": "COA REVOLVING",
@@ -175,10 +175,15 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 139356.59,
-      "share": 0.005,
-      "fund_count": 18,
+      "amount": 355534.09,
+      "share": 0.012,
+      "fund_count": 21,
       "top_funds": [
+        {
+          "name": "GERRY PLAYGROUND DONATION",
+          "amount": 209875.0,
+          "row_count": 3
+        },
         {
           "name": "FIREWORKS DONATION FUND",
           "amount": 55000.0,
@@ -213,30 +218,25 @@
           "name": "ROSS & RITA TERRIEN-HISTORIC",
           "amount": 6400.0,
           "row_count": 1
-        },
-        {
-          "name": "COA FORMULA SPENDING PLAN",
-          "amount": 2875.44,
-          "row_count": 5
         }
       ]
     }
   ],
   "gf_town_carveout": {
-    "total": 18762260.41,
-    "fixed_total": 17585247.57,
-    "fixed_share": 0.9373,
-    "admin_contracts_total": 363561.15,
-    "admin_contracts_share": 0.0194,
-    "other_recurring_total": 813451.69,
-    "other_recurring_share": 0.0434,
+    "total": 18830240.63,
+    "fixed_total": 17586781.57,
+    "fixed_share": 0.934,
+    "admin_contracts_total": 419621.83,
+    "admin_contracts_share": 0.0223,
+    "other_recurring_total": 823837.23,
+    "other_recurring_share": 0.0438,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
-        "amount": 3343080.9,
-        "share": 0.1782,
-        "row_count": 14,
+        "amount": 3344614.9,
+        "share": 0.1776,
+        "row_count": 15,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
@@ -255,6 +255,10 @@
             "amount": 1657.76
           },
           {
+            "name": "MIIA PROPERTY & CASUALTY GR INC",
+            "amount": 1534.0
+          },
+          {
             "name": "VOYA HOLDINGS INC",
             "amount": 1529.0
           }
@@ -264,7 +268,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 7738584.39,
-        "share": 0.4125,
+        "share": 0.411,
         "row_count": 30,
         "top_vendors": [
           {
@@ -277,7 +281,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.3114,
+        "share": 0.3103,
         "row_count": 1,
         "top_vendors": [
           {
@@ -290,7 +294,7 @@
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
         "amount": 660222.28,
-        "share": 0.0352,
+        "share": 0.0351,
         "row_count": 15,
         "top_vendors": [
           {
@@ -302,9 +306,9 @@
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 363561.15,
-        "share": 0.0194,
-        "row_count": 19,
+        "amount": 419621.83,
+        "share": 0.0223,
+        "row_count": 26,
         "top_vendors": [
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -316,11 +320,11 @@
           },
           {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
-            "amount": 39358.68
+            "amount": 78315.08
           },
           {
             "name": "MEAD TALERMAN & COSTA LLC",
-            "amount": 6748.5
+            "amount": 23852.78
           },
           {
             "name": "FUTURE TECHNOLOGIES GROUP LLC",
@@ -331,9 +335,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 813451.69,
-        "share": 0.0434,
-        "row_count": 702,
+        "amount": 823837.23,
+        "share": 0.0438,
+        "row_count": 727,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -382,7 +386,7 @@
       "row_count": 11,
       "first_paid": "2026-07-20",
       "last_paid": "2026-08-13",
-      "days_since_last_paid": 19,
+      "days_since_last_paid": 21,
       "status": "active",
       "top_vendors": [
         {
@@ -422,7 +426,7 @@
       "row_count": 2,
       "first_paid": "2026-07-08",
       "last_paid": "2026-07-28",
-      "days_since_last_paid": 35,
+      "days_since_last_paid": 37,
       "status": "engineering",
       "top_vendors": [
         {
@@ -447,7 +451,7 @@
       "row_count": 1,
       "first_paid": "2026-08-28",
       "last_paid": "2026-08-28",
-      "days_since_last_paid": 4,
+      "days_since_last_paid": 6,
       "status": "engineering",
       "top_vendors": [
         {
