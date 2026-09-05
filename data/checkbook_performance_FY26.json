@@ -1379,97 +1379,6 @@
           }
         ]
       },
-      "ARTS LOTTERY GRANT": {
-        "top_vendors": [
-          {
-            "name": "MARBLEHEAD MUSEUM & HISTORICAL SOCIETY",
-            "amount": 3300.0,
-            "count": 2
-          },
-          {
-            "name": "SALEM SOUND COASTWATCH",
-            "amount": 1200.0,
-            "count": 1
-          },
-          {
-            "name": "LANES COVEN THEATER COMPANY INCLANES COVEN THEATER",
-            "amount": 750.0,
-            "count": 1
-          },
-          {
-            "name": "SARAH ALLEN SCOVILLE",
-            "amount": 750.0,
-            "count": 1
-          },
-          {
-            "name": "JOSEPH DIPOLI",
-            "amount": 500.0,
-            "count": 1
-          },
-          {
-            "name": "MATHEW ARNOLD",
-            "amount": 500.0,
-            "count": 1
-          },
-          {
-            "name": "MASS AUDUBON SOCIETY INC",
-            "amount": 375.0,
-            "count": 1
-          },
-          {
-            "name": "BEATRICE STAHL",
-            "amount": 318.0,
-            "count": 3
-          },
-          {
-            "name": "DELVENA THEATRE COMPANY",
-            "amount": 300.0,
-            "count": 1
-          },
-          {
-            "name": "JON WATERMAN",
-            "amount": 300.0,
-            "count": 1
-          },
-          {
-            "name": "NICK A ZIANO III",
-            "amount": 250.0,
-            "count": 1
-          }
-        ],
-        "monthly": [
-          {
-            "month": "2025-09",
-            "amount": 1500.0,
-            "count": 2
-          },
-          {
-            "month": "2025-10",
-            "amount": 2000.0,
-            "count": 2
-          },
-          {
-            "month": "2025-12",
-            "amount": 500.0,
-            "count": 1
-          },
-          {
-            "month": "2026-01",
-            "amount": 618.0,
-            "count": 4
-          },
-          {
-            "month": "2026-03",
-            "amount": 250.0,
-            "count": 1
-          },
-          {
-            "month": "2026-06",
-            "amount": 3675.0,
-            "count": 4
-          }
-        ]
-      },
       "ATHLETIC FUND": {
         "top_vendors": [
           {
@@ -4849,6 +4758,97 @@
             "month": "2025-12",
             "amount": 733599.62,
             "count": 2
+          }
+        ]
+      },
+      "Mass Cultural Council Grant": {
+        "top_vendors": [
+          {
+            "name": "MARBLEHEAD MUSEUM & HISTORICAL SOCIETY",
+            "amount": 3300.0,
+            "count": 2
+          },
+          {
+            "name": "SALEM SOUND COASTWATCH",
+            "amount": 1200.0,
+            "count": 1
+          },
+          {
+            "name": "LANES COVEN THEATER COMPANY INCLANES COVEN THEATER",
+            "amount": 750.0,
+            "count": 1
+          },
+          {
+            "name": "SARAH ALLEN SCOVILLE",
+            "amount": 750.0,
+            "count": 1
+          },
+          {
+            "name": "JOSEPH DIPOLI",
+            "amount": 500.0,
+            "count": 1
+          },
+          {
+            "name": "MATHEW ARNOLD",
+            "amount": 500.0,
+            "count": 1
+          },
+          {
+            "name": "MASS AUDUBON SOCIETY INC",
+            "amount": 375.0,
+            "count": 1
+          },
+          {
+            "name": "BEATRICE STAHL",
+            "amount": 318.0,
+            "count": 3
+          },
+          {
+            "name": "DELVENA THEATRE COMPANY",
+            "amount": 300.0,
+            "count": 1
+          },
+          {
+            "name": "JON WATERMAN",
+            "amount": 300.0,
+            "count": 1
+          },
+          {
+            "name": "NICK A ZIANO III",
+            "amount": 250.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2025-09",
+            "amount": 1500.0,
+            "count": 2
+          },
+          {
+            "month": "2025-10",
+            "amount": 2000.0,
+            "count": 2
+          },
+          {
+            "month": "2025-12",
+            "amount": 500.0,
+            "count": 1
+          },
+          {
+            "month": "2026-01",
+            "amount": 618.0,
+            "count": 4
+          },
+          {
+            "month": "2026-03",
+            "amount": 250.0,
+            "count": 1
+          },
+          {
+            "month": "2026-06",
+            "amount": 3675.0,
+            "count": 4
           }
         ]
       },
