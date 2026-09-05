@@ -1,19 +1,19 @@
 {
-  "as_of": "2026-09-04",
+  "as_of": "2026-09-05",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
-    "all_funds_revised_budget": 135081900.35,
-    "all_funds_actual": 37059802.21,
+    "all_funds_revised_budget": 135269671.38,
+    "all_funds_actual": 37057876.26,
     "budgeted_annual": {
       "revised_budget": 127204296.0,
-      "actual": 32482179.88,
+      "actual": 32480253.93,
       "original_budget": 130510456.0
     },
     "other_funds": {
-      "revised_budget": 7877604.35,
+      "revised_budget": 8065375.38,
       "actual": 4577622.33,
       "original_budget": 2400000.0
     }
@@ -22,7 +22,7 @@
     {
       "name": "GENERAL FUND - TOWN",
       "revised_budget": 69474315.0,
-      "actual": 22464847.02,
+      "actual": 22462921.07,
       "original_budget": 69331077.0,
       "encumbrance": 16466482.51
     },
@@ -73,7 +73,7 @@
     {
       "name": "OTHER GOVERNMENTAL",
       "revised_budget": 24072393.0,
-      "actual": 9402509.03,
+      "actual": 9400616.14,
       "original_budget": 24072393.0,
       "encumbrance": 84511.09
     },
@@ -276,7 +276,7 @@
     {
       "name": "HEALTH",
       "revised_budget": 399320.0,
-      "actual": 37171.44,
+      "actual": 37138.38,
       "original_budget": 399320.0,
       "encumbrance": 324225.56
     },
@@ -411,14 +411,14 @@
     {
       "name": "OTHER EXPENSE",
       "revised_budget": 39091074.0,
-      "actual": 19010977.71,
+      "actual": 19009084.82,
       "original_budget": 39082074.0,
       "encumbrance": 207307.48
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 15114162.0,
-      "actual": 3182809.64,
+      "actual": 3182776.58,
       "original_budget": 14336656.0,
       "encumbrance": 6983033.12
     },
@@ -490,14 +490,14 @@
     {
       "name": "EXPENSES",
       "revised_budget": 20339169.0,
-      "actual": 15233678.29,
+      "actual": 15233645.23,
       "original_budget": 24880169.0,
       "encumbrance": 2675034.41
     },
     {
       "name": "GROUP INSURANCE",
       "revised_budget": 16833248.0,
-      "actual": 2543084.25,
+      "actual": 2541191.36,
       "original_budget": 16833248.0,
       "encumbrance": 0.0
     },
@@ -1024,7 +1024,7 @@
     {
       "name": "HEALTH INSURANCE",
       "revised_budget": 14041154.0,
-      "actual": 2304629.77,
+      "actual": 2302757.12,
       "original_budget": 14041154.0,
       "encumbrance": 0.0
     },
@@ -1710,7 +1710,7 @@
     {
       "name": "TELEPHONE",
       "revised_budget": 123148.0,
-      "actual": 10017.63,
+      "actual": 9984.57,
       "original_budget": 122188.0,
       "encumbrance": 45720.29
     },
@@ -1941,7 +1941,7 @@
     {
       "name": "LIFE INSURANCE",
       "revised_budget": 72623.0,
-      "actual": -20.24,
+      "actual": -40.48,
       "original_budget": 72623.0,
       "encumbrance": 0.0
     },
