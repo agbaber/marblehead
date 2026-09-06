@@ -128,9 +128,9 @@
       {
         "name": "HEALTH",
         "revised": 399320.0,
-        "actual": 37171.44,
-        "delta": -362148.56,
-        "pct": 9.31
+        "actual": 37138.38,
+        "delta": -362181.62,
+        "pct": 9.3
       },
       {
         "name": "RESERVE FUND",
@@ -331,18 +331,18 @@
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 9402509.03,
-        "delta": -14669883.97,
-        "pct": 39.06
+        "actual": 9400616.14,
+        "delta": -14671776.86,
+        "pct": 39.05
       }
     ],
     "all_departments": [
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 9402509.03,
-        "delta": -14669883.97,
-        "pct": 39.06
+        "actual": 9400616.14,
+        "delta": -14671776.86,
+        "pct": 39.05
       },
       {
         "name": "DISTRICTWIDE",
@@ -543,9 +543,9 @@
       {
         "name": "HEALTH",
         "revised": 399320.0,
-        "actual": 37171.44,
-        "delta": -362148.56,
-        "pct": 9.31
+        "actual": 37138.38,
+        "delta": -362181.62,
+        "pct": 9.3
       },
       {
         "name": "ASSESSORS",
