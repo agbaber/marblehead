@@ -1,0 +1,103 @@
+# Marblehead municipal workforce over time, FY2008-FY2026.
+#
+# Source: data/town_employee_headcount_FY08-26.csv and
+#   data/town_employee_headcount_summary_FY08-26.csv, derived from
+#   data/employee_count_FY2008-2026.xls (town payroll Employee Earnings
+#   History reports), released via public records request, RAO Kyle A.
+#   Wiley, April 28, 2026 response to request dated April 10, 2026.
+#
+# HEADCOUNT, not FTE: counts every paid employee regardless of pay
+# frequency (annual, weekly, on-call, seasonal). A 0.1 FTE substitute
+# counts as 1. Year-over-year deltas are reliable (consistent method);
+# absolute levels are not FTE-weighted.
+#
+# Excluded as parsing artifacts (subtotal/relabel residue in the raw extract):
+#   Total (FY16-17), Coffin School (FY16), Snow Removal (FY17), Tree Group (FY15).
+#
+# Light Department (MMLD) accounts confirmed against the Town Annual Report
+# MMLD operating-expense statement (electric-utility Uniform System of
+# Accounts): the 5xx accounts, meter, distribution, supervision, plus
+# "Admin & General" and "Cust Records" are all MMLD, not town general
+# government. They are summed into one enterprise line in the quarantine.
+
+meta:
+  source_url: "data/employee_count_FY2008-2026.xls"
+  source_label: >-
+    Town of Marblehead payroll Employee Earnings History reports FY2008-FY2026,
+    released by Records Access Officer Kyle A. Wiley, April 28, 2026.
+  caveat: "Headcount, not FTE. Year-over-year deltas reliable; absolute levels not FTE-weighted."
+  fy_first: 2008
+  fy_last: 2026
+
+# Movement 1: three trend lines.
+series:
+  fys:     [2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026]
+  total:   [999,1097,1167,1151,1088,1119,1169,1163,1167,1162,1163,1212,1143,1069,1157,1183,1122,1145,1020]
+  town:    [393,429,438,447,420,432,444,423,429,449,459,473,434,392,452,484,458,470,394]
+  schools: [606,668,729,704,668,687,725,740,738,713,704,739,709,677,705,699,664,675,626]
+
+# Movement 2: town-only "then vs now". status: stable | new | retired.
+# For retired lines, `dest` is populated ONLY where a primary source states
+# where the function went; otherwise the page says line-ended-only.
+bands:
+  - name: "General Government"
+    departments:
+      - { name: "Selectmen",                fy08: 9, fy26: 6, status: stable }
+      - { name: "Finance Department",       fy08: 6, fy26: 9, status: stable }
+      - { name: "Assessors",                fy08: 3, fy26: 3, status: stable }
+      - { name: "Town Clerk",               fy08: 2, fy26: 3, status: stable }
+      - { name: "Human Resources",          fy26: 3, status: new, since: 2022 }
+      - { name: "Community Dev & Planning", fy26: 5, status: new, since: 2018 }
+      - { name: "Town Counsel",             status: retired, span: "FY09-FY13",
+          note: "Role continued as a stipend appointment; only the separate payroll line stops." }
+  - name: "Public Safety"
+    departments:
+      - { name: "Police",                fy08: 76, fy26: 68, status: stable }
+      - { name: "Fire",                  fy08: 43, fy26: 40, status: stable }
+      - { name: "Harbormaster",          fy08: 11, fy26: 17, status: stable }
+      - { name: "Building Commissioner", fy08: 8,  fy26: 10, status: stable }
+      - { name: "Animal Inspector",      status: retired, last: 2016,
+          note: "The Board of Health animal inspector appointment continued; only the separate payroll line stops." }
+  - name: "Public Works"
+    departments:
+      - { name: "Highway",             fy08: 16, fy26: 22, status: stable }
+      - { name: "Water",               fy08: 12, fy26: 17, status: stable }
+      - { name: "Sewer",               fy08: 12, fy26: 10, status: stable }
+      - { name: "Waste Coll/Disposal", fy08: 7,  fy26: 9,  status: stable }
+      - { name: "Cemetery",            fy08: 9,  fy26: 9,  status: stable }
+      - { name: "Public Buildings",    fy08: 5,  fy26: 6,  status: stable }
+      - { name: "Engineering",         status: retired, last: 2025,
+          dest: "Engineering Division, Department of Public Works",
+          dest_source: "Town Annual Report 2025, DPW section" }
+      - { name: "Drains",              status: retired, last: 2021,
+          dest: "Department of Public Works (Highway and Storm Sewer/Drain Divisions)",
+          dest_source: "Town Annual Report 2025, DPW section" }
+      - { name: "Tree",                status: retired, last: 2018,
+          dest: "Tree Division, Department of Public Works",
+          dest_source: "Town Annual Report 2025, DPW section" }
+  - name: "Health & Human Services"
+    departments:
+      - { name: "Health",              fy08: 4, fy26: 3,  status: stable }
+      - { name: "Council on Aging",    fy08: 5, fy26: 12, status: stable }
+      - { name: "Veterans Agent",      fy08: 1, fy26: 1,  status: stable }
+      - { name: "Health Anti-Smoking", status: retired, last: 2012,
+          note: "Grant-funded North Shore tobacco-control program; function continued under the Board of Health." }
+  - name: "Culture & Recreation"
+    departments:
+      - { name: "Library", fy08: 29, fy26: 27, status: stable }
+      - { name: "Park",    fy08: 19, fy26: 26, status: stable }
+
+# Movement 3: quarantine. Each gets its own caveat on the page.
+quarantine:
+  - { name: "Election & Registration", fy08: 62, fy26: 25,
+      caveat: "Poll workers; swings by election cycle, not a staffing trend." }
+  - { name: "Park Revolving Fund", fy08: 4, fy26: 41,
+      caveat: "Seasonal and program staff funded by program fees." }
+  - { name: "Light Department (MMLD)", fy08: 31, fy26: 22,
+      caveat: "Independent municipal electric enterprise, rate-funded and outside the tax levy. Sum across all MMLD payroll accounts; internal restructuring, not a town-admin change." }
+
+excluded_artifacts:
+  - { name: "Total",         reason: "Captured subtotal row, FY16-17." }
+  - { name: "Coffin School", reason: "Single-year FY16 relabel artifact." }
+  - { name: "Snow Removal",  reason: "Single-year FY17, peak 1." }
+  - { name: "Tree Group",    reason: "Single-year FY15, peak 1." }
