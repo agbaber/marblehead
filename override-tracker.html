@@ -119,39 +119,72 @@ scripts: [citations]
     text-decoration: line-through;
   }
 
-  /* Card grid */
+  /* Scoreboard */
+  .tk-score { margin: 30px 0 6px; }
+  .tk-score-nums {
+    display: flex; flex-wrap: wrap; gap: 18px;
+    margin: 0 0 10px;
+    font-size: 14px; color: var(--text-muted);
+  }
+  .tk-score-nums strong {
+    font-size: 26px; font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+    margin-right: 5px;
+  }
+  .tk-score-bar {
+    display: flex; gap: 3px;
+    height: 18px; border-radius: 9px; overflow: hidden;
+  }
+  .tk-seg { display: block; }
+  .tk-seg--met       { background: var(--c-navy); }
+  .tk-seg--phase-in  { background: color-mix(in srgb, var(--c-navy) 55%, var(--surface)); }
+  .tk-seg--pending   { background: color-mix(in srgb, var(--c-navy) 16%, var(--surface)); }
+  .tk-seg--standing  { background: color-mix(in srgb, var(--text-subtle) 30%, var(--surface)); }
+  .tk-seg--dropped   { background: color-mix(in srgb, var(--text-subtle) 55%, var(--surface)); }
+
+  /* Checkpoint strip labels */
+  .tk-strip-caption { font-size: 13px; color: var(--text-subtle); margin: 6px 0 0; }
+
+  /* Commitment rows */
   .tk-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 14px;
-    margin-top: 28px;
+    gap: 8px;
+    margin-top: 24px;
   }
-  @media (min-width: 720px) {
-    .tk-grid { grid-template-columns: 1fr 1fr; }
-  }
-  .tk-card {
+  .tk-row {
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 16px 18px;
     background: var(--surface);
   }
-  .tk-card-h {
-    display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap;
-    margin: 0 0 8px;
+  .tk-row > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex; gap: 12px; align-items: baseline;
+    padding: 12px 16px;
   }
+  .tk-row > summary::-webkit-details-marker { display: none; }
+  .tk-row-title {
+    flex: 1 1 auto;
+    font-size: 15px;
+    line-height: 1.35;
+    font-weight: 700;
+  }
+  .tk-row-caret {
+    color: var(--text-subtle);
+    font-size: 12px;
+    transition: transform 0.15s ease;
+  }
+  .tk-row[open] .tk-row-caret { transform: rotate(180deg); }
+  .tk-row[open] > summary { border-bottom: 1px solid var(--border); }
+  .tk-row-body { padding: 12px 16px 14px; }
   .tk-card-num {
     font-variant-numeric: tabular-nums;
     color: var(--text-subtle);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.4px;
-  }
-  .tk-card-title {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.3;
-    font-weight: 700;
-    flex: 1 1 auto;
   }
   .tk-card-body  {
     font-size: 14px;
@@ -275,6 +308,30 @@ scripts: [citations]
 
   <p class="tk-section-lead" style="font-size:15px;">Every line cites a primary source. Status updates each quarter, after the joint Select Board / School Committee / Finance Committee review.</p>
 
+  {% assign tk_items = site.data.override_tracker.items %}
+  {% assign tk_met = tk_items | where: "status", "met" | size %}
+  {% assign tk_phasein = tk_items | where: "status", "phase-in" | size %}
+  {% assign tk_pending = tk_items | where: "status", "pending" | size %}
+  {% assign tk_standing = tk_items | where: "status", "standing" | size %}
+  {% assign tk_dropped = tk_items | where: "status", "dropped" | size %}
+
+  <div class="tk-score">
+    <div class="tk-score-nums">
+      {% if tk_met > 0 %}<span><strong>{{ tk_met }}</strong> met</span>{% endif %}
+      {% if tk_phasein > 0 %}<span><strong>{{ tk_phasein }}</strong> phasing in</span>{% endif %}
+      {% if tk_pending > 0 %}<span><strong>{{ tk_pending }}</strong> pending</span>{% endif %}
+      {% if tk_standing > 0 %}<span><strong>{{ tk_standing }}</strong> standing</span>{% endif %}
+      {% if tk_dropped > 0 %}<span><strong>{{ tk_dropped }}</strong> dropped</span>{% endif %}
+    </div>
+    <div class="tk-score-bar" role="img" aria-label="{{ tk_items | size }} commitments: {{ tk_met }} met, {{ tk_phasein }} phasing in, {{ tk_pending }} pending, {{ tk_standing }} standing, {{ tk_dropped }} dropped">
+      {% if tk_met > 0 %}<span class="tk-seg tk-seg--met" style="flex-grow: {{ tk_met }}"></span>{% endif %}
+      {% if tk_phasein > 0 %}<span class="tk-seg tk-seg--phase-in" style="flex-grow: {{ tk_phasein }}"></span>{% endif %}
+      {% if tk_pending > 0 %}<span class="tk-seg tk-seg--pending" style="flex-grow: {{ tk_pending }}"></span>{% endif %}
+      {% if tk_standing > 0 %}<span class="tk-seg tk-seg--standing" style="flex-grow: {{ tk_standing }}"></span>{% endif %}
+      {% if tk_dropped > 0 %}<span class="tk-seg tk-seg--dropped" style="flex-grow: {{ tk_dropped }}"></span>{% endif %}
+    </div>
+  </div>
+
   <div class="tk-legend" aria-label="Status legend">
     <span><span class="tk-status" data-s="met">Met</span> Action complete</span>
     <span><span class="tk-status" data-s="phase-in">Phase-in</span> Multi-year rollout underway</span>
@@ -282,6 +339,27 @@ scripts: [citations]
     <span><span class="tk-status" data-s="standing">Standing</span> Kept unless broken; runs through FY2030</span>
     <span><span class="tk-status" data-s="dropped">Dropped</span> Pulled off the list</span>
   </div>
+
+  <svg class="chart" viewBox="0 0 880 104" role="img"
+       aria-label="Checkpoints from July 2026 to June 2030: first quarterly review October 2026, teacher successor talks open December 2027, override phase-in completes in FY29, MOU no-new-override pledge runs through FY2030">
+    <!-- x-axis: Jul 2026 (x=40) to Jun 2030 (x=860), ~17.1px per month -->
+    <line class="axis-base" x1="40" y1="60" x2="860" y2="60"/>
+    <circle class="data-dot s-marblehead" cx="40" cy="60" r="4"/>
+    <text class="tick-label" x="40" y="84" text-anchor="start">now (July 2026)</text>
+    <circle class="data-dot s-marblehead" cx="91" cy="60" r="4"/>
+    <text class="annotation" x="91" y="38" text-anchor="start">Oct 2026: first quarterly review</text>
+    <line class="annotation-line" x1="91" y1="44" x2="91" y2="54"/>
+    <circle class="data-dot s-marblehead" cx="330" cy="60" r="4"/>
+    <text class="annotation" x="330" y="94" text-anchor="middle">Dec 2027: teacher successor talks open</text>
+    <line class="annotation-line" x1="330" y1="66" x2="330" y2="82"/>
+    <circle class="data-dot s-marblehead" cx="638" cy="60" r="4"/>
+    <text class="annotation" x="638" y="38" text-anchor="middle">FY29: phase-in complete</text>
+    <line class="annotation-line" x1="638" y1="44" x2="638" y2="54"/>
+    <circle class="data-dot s-marblehead" cx="860" cy="60" r="4"/>
+    <text class="annotation" x="860" y="94" text-anchor="end">FY2030: no-new-override pledge ends</text>
+    <line class="annotation-line" x1="860" y1="66" x2="860" y2="82"/>
+  </svg>
+  <p class="tk-strip-caption">Dates from the April 15, 2026 MOU, the June 10, 2026 Select Board meeting, and the Unit A contract.</p>
 </section>
 
 <!-- ============================================================ -->
@@ -294,7 +372,7 @@ scripts: [citations]
 
   {% assign cards = site.data.override_tracker.items | where: "section", "allocations" %}
   <div class="tk-grid">
-    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% for item in cards %}{% include tracker-row.html item=item %}
     {% endfor %}
   </div>
 </section>
@@ -309,7 +387,7 @@ scripts: [citations]
 
   {% assign cards = site.data.override_tracker.items | where: "section", "mou" %}
   <div class="tk-grid">
-    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% for item in cards %}{% include tracker-row.html item=item %}
     {% endfor %}
   </div>
 </section>
@@ -324,7 +402,7 @@ scripts: [citations]
 
   {% assign cards = site.data.override_tracker.items | where: "section", "municipal" %}
   <div class="tk-grid">
-    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% for item in cards %}{% include tracker-row.html item=item %}
     {% endfor %}
   </div>
 </section>
@@ -339,7 +417,7 @@ scripts: [citations]
 
   {% assign cards = site.data.override_tracker.items | where: "section", "schools" %}
   <div class="tk-grid">
-    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% for item in cards %}{% include tracker-row.html item=item %}
     {% endfor %}
   </div>
 </section>
@@ -354,7 +432,7 @@ scripts: [citations]
 
   {% assign cards = site.data.override_tracker.items | where: "section", "process" %}
   <div class="tk-grid">
-    {% for item in cards %}{% include tracker-card.html item=item %}
+    {% for item in cards %}{% include tracker-row.html item=item %}
     {% endfor %}
   </div>
 </section>
