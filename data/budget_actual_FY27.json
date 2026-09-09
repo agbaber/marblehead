@@ -1,20 +1,20 @@
 {
-  "as_of": "2026-09-05",
+  "as_of": "2026-09-09",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
     "all_funds_revised_budget": 135269671.38,
-    "all_funds_actual": 37057876.26,
+    "all_funds_actual": 39062487.81,
     "budgeted_annual": {
       "revised_budget": 127204296.0,
-      "actual": 32480253.93,
+      "actual": 34385083.07,
       "original_budget": 130510456.0
     },
     "other_funds": {
       "revised_budget": 8065375.38,
-      "actual": 4577622.33,
+      "actual": 4677404.74,
       "original_budget": 2400000.0
     }
   },
@@ -22,37 +22,37 @@
     {
       "name": "GENERAL FUND - TOWN",
       "revised_budget": 69474315.0,
-      "actual": 22462921.07,
+      "actual": 22823270.52,
       "original_budget": 69331077.0,
-      "encumbrance": 16466482.51
+      "encumbrance": 16299588.64
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
-      "actual": 1518463.31,
+      "actual": 2985314.27,
       "original_budget": 47620287.0,
-      "encumbrance": 9813806.42
+      "encumbrance": 37231673.57
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
       "revised_budget": 4465301.0,
-      "actual": 3507296.3,
+      "actual": 3525977.45,
       "original_budget": 6865301.0,
-      "encumbrance": 3459541.05
+      "encumbrance": 3443866.78
     },
     {
       "name": "SEWER ENTERPRISE OPERATING",
       "revised_budget": 2699291.0,
-      "actual": 979993.4,
+      "actual": 999578.01,
       "original_budget": 4799291.0,
-      "encumbrance": 2527655.62
+      "encumbrance": 2511159.39
     },
     {
       "name": "HARBOR ENTERPRISE OPERATING",
       "revised_budget": 1669500.0,
-      "actual": 270187.03,
+      "actual": 281701.79,
       "original_budget": 1669500.0,
-      "encumbrance": 364535.92
+      "encumbrance": 357741.38
     },
     {
       "name": "GENERAL FUND - TAX ARTICLES",
@@ -64,32 +64,32 @@
     {
       "name": "ELECTRIC ENTERPRISE",
       "revised_budget": 0.0,
-      "actual": 3504319.15,
+      "actual": 3532167.36,
       "original_budget": 0.0,
-      "encumbrance": 1954532.91
+      "encumbrance": 1916767.98
     }
   ],
   "by_department": [
     {
       "name": "OTHER GOVERNMENTAL",
       "revised_budget": 24072393.0,
-      "actual": 9400616.14,
+      "actual": 9407311.33,
       "original_budget": 24072393.0,
       "encumbrance": 84511.09
     },
     {
       "name": "DISTRICTWIDE",
       "revised_budget": 13184420.6,
-      "actual": 1039007.48,
+      "actual": 1229461.55,
       "original_budget": 13090519.6,
-      "encumbrance": 7311494.67
+      "encumbrance": 8200299.34
     },
     {
       "name": "HIGH SCHOOL",
       "revised_budget": 11462227.33,
-      "actual": 165658.61,
+      "actual": 582048.03,
       "original_budget": 11552590.13,
-      "encumbrance": 812583.77
+      "encumbrance": 9399213.23
     },
     {
       "name": "DEBT SERVICE",
@@ -101,58 +101,58 @@
     {
       "name": "VILLAGE SCHOOL",
       "revised_budget": 7545998.37,
-      "actual": 91638.12,
+      "actual": 368628.06,
       "original_budget": 7545798.37,
-      "encumbrance": 478845.74
+      "encumbrance": 6572621.95
     },
     {
       "name": "FIRE",
       "revised_budget": 6471909.0,
-      "actual": 1181667.38,
+      "actual": 1284633.86,
       "original_budget": 6312967.0,
-      "encumbrance": 3194853.51
+      "encumbrance": 3070285.41
     },
     {
       "name": "MIDDLE SCHOOL",
       "revised_budget": 5713564.68,
-      "actual": 86593.1,
+      "actual": 306088.22,
       "original_budget": 5712762.68,
-      "encumbrance": 475552.96
+      "encumbrance": 5067118.56
     },
     {
       "name": "POLICE",
       "revised_budget": 5460658.0,
-      "actual": 923464.29,
+      "actual": 1014753.14,
       "original_budget": 5415360.0,
-      "encumbrance": 3295374.22
+      "encumbrance": 3234432.93
     },
     {
       "name": "BROWN SCHOOL",
       "revised_budget": 5390631.06,
-      "actual": 61937.73,
+      "actual": 265491.14,
       "original_budget": 5422623.26,
-      "encumbrance": 409068.02
+      "encumbrance": 4534067.0
     },
     {
       "name": "WATER",
       "revised_budget": 4465301.0,
-      "actual": 3507296.3,
+      "actual": 3525977.45,
       "original_budget": 6865301.0,
-      "encumbrance": 3459541.05
+      "encumbrance": 3443866.78
     },
     {
       "name": "GLOVER SCHOOL",
       "revised_budget": 4312444.96,
-      "actual": 73628.27,
+      "actual": 233597.27,
       "original_budget": 4284992.96,
-      "encumbrance": 324666.26
+      "encumbrance": 3456758.49
     },
     {
       "name": "PUBLIC WORKS",
       "revised_budget": 3193686.0,
-      "actual": 459713.36,
+      "actual": 488518.51,
       "original_budget": 3063365.0,
-      "encumbrance": 1384376.34
+      "encumbrance": 1364203.82
     },
     {
       "name": "STATE ASSESSMENTS",
@@ -164,9 +164,9 @@
     {
       "name": "SEWER",
       "revised_budget": 2699291.0,
-      "actual": 979993.4,
+      "actual": 999578.01,
       "original_budget": 4799291.0,
-      "encumbrance": 2527655.62
+      "encumbrance": 2511159.39
     },
     {
       "name": "CURBSIDE COLLECTION",
@@ -178,37 +178,37 @@
     {
       "name": "FINANCE",
       "revised_budget": 2125453.0,
-      "actual": 552752.37,
+      "actual": 568867.62,
       "original_budget": 2125453.0,
-      "encumbrance": 855128.34
+      "encumbrance": 931846.22
     },
     {
       "name": "WASTE COLLECTION",
       "revised_budget": 1846337.0,
-      "actual": 116343.32,
+      "actual": 127050.83,
       "original_budget": 1790344.0,
-      "encumbrance": 1825272.18
+      "encumbrance": 1816269.63
     },
     {
       "name": "HARBOR",
       "revised_budget": 1669500.0,
-      "actual": 270187.03,
+      "actual": 281701.79,
       "original_budget": 1669500.0,
-      "encumbrance": 364535.92
+      "encumbrance": 357741.38
     },
     {
       "name": "ABBOT LIBRARY",
       "revised_budget": 1595790.0,
-      "actual": 256344.21,
+      "actual": 276159.86,
       "original_budget": 1595790.0,
-      "encumbrance": 967906.86
+      "encumbrance": 1006872.93
     },
     {
       "name": "PARKS & RECREATION",
       "revised_budget": 1109588.0,
-      "actual": 195320.68,
+      "actual": 207996.92,
       "original_budget": 1088429.0,
-      "encumbrance": 629616.24
+      "encumbrance": 620587.59
     },
     {
       "name": "CAPITAL ADMINISTRATION",
@@ -227,9 +227,9 @@
     {
       "name": "SELECT BOARD",
       "revised_budget": 790176.0,
-      "actual": 161238.33,
+      "actual": 170334.85,
       "original_budget": 723176.0,
-      "encumbrance": 281416.77
+      "encumbrance": 273768.41
     },
     {
       "name": "INTERFUND TRANSFERS",
@@ -241,51 +241,51 @@
     {
       "name": "PUBLIC BUILDINGS",
       "revised_budget": 701225.0,
-      "actual": 118370.75,
+      "actual": 121075.53,
       "original_budget": 701225.0,
-      "encumbrance": 227992.99
+      "encumbrance": 225636.21
     },
     {
       "name": "BUILDING INSPECTION",
       "revised_budget": 676519.0,
-      "actual": 130964.23,
+      "actual": 141300.3,
       "original_budget": 676519.0,
-      "encumbrance": 769605.53
+      "encumbrance": 759813.31
     },
     {
       "name": "COMMUNITY DEVELOP AND PLANNING",
       "revised_budget": 581657.0,
-      "actual": 53830.2,
+      "actual": 59374.67,
       "original_budget": 581657.0,
-      "encumbrance": 273265.37
+      "encumbrance": 269789.24
     },
     {
       "name": "COUNCIL ON AGING",
       "revised_budget": 523548.0,
-      "actual": 82213.14,
+      "actual": 90062.43,
       "original_budget": 523548.0,
-      "encumbrance": 355457.02
+      "encumbrance": 347607.73
     },
     {
       "name": "CEMETERY",
       "revised_budget": 468931.0,
-      "actual": 77295.43,
+      "actual": 86351.23,
       "original_budget": 468931.0,
-      "encumbrance": 389825.25
+      "encumbrance": 381159.08
     },
     {
       "name": "HEALTH",
       "revised_budget": 399320.0,
-      "actual": 37138.38,
+      "actual": 42162.14,
       "original_budget": 399320.0,
-      "encumbrance": 324225.56
+      "encumbrance": 319658.58
     },
     {
       "name": "ASSESSORS",
       "revised_budget": 388003.0,
-      "actual": 58249.07,
+      "actual": 63341.04,
       "original_budget": 388003.0,
-      "encumbrance": 248084.99
+      "encumbrance": 243008.89
     },
     {
       "name": "RESERVE FUND",
@@ -297,9 +297,9 @@
     {
       "name": "HUMAN RESOURCES",
       "revised_budget": 314480.0,
-      "actual": 48903.82,
+      "actual": 54661.48,
       "original_budget": 314480.0,
-      "encumbrance": 247082.93
+      "encumbrance": 243607.43
     },
     {
       "name": "TOWN COUNSEL",
@@ -311,21 +311,21 @@
     {
       "name": "TOWN CLERK",
       "revised_budget": 268002.0,
-      "actual": 40211.41,
+      "actual": 45335.76,
       "original_budget": 268002.0,
-      "encumbrance": 192363.47
+      "encumbrance": 187955.73
     },
     {
       "name": "VETERANS SERVICES",
       "revised_budget": 154872.0,
-      "actual": 19430.01,
+      "actual": 20979.45,
       "original_budget": 154872.0,
-      "encumbrance": 67245.7
+      "encumbrance": 65696.26
     },
     {
       "name": "ELECTION & REGISTRATION",
       "revised_budget": 132200.0,
-      "actual": 13769.55,
+      "actual": 17914.57,
       "original_budget": 132200.0,
       "encumbrance": 3140.96
     },
@@ -395,32 +395,32 @@
     {
       "name": "LIGHT",
       "revised_budget": 0.0,
-      "actual": 3504319.15,
+      "actual": 3532167.36,
       "original_budget": 0.0,
-      "encumbrance": 1954532.91
+      "encumbrance": 1916767.98
     }
   ],
   "by_category": [
     {
       "name": "PROFESSIONAL SALARY",
       "revised_budget": 54958578.07,
-      "actual": 4606414.58,
+      "actual": 6276300.71,
       "original_budget": 54839779.07,
-      "encumbrance": 18490220.04
+      "encumbrance": 44842938.49
     },
     {
       "name": "OTHER EXPENSE",
       "revised_budget": 39091074.0,
-      "actual": 19009084.82,
+      "actual": 19012253.2,
       "original_budget": 39082074.0,
-      "encumbrance": 207307.48
+      "encumbrance": 210663.13
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 15114162.0,
       "actual": 3182776.58,
       "original_budget": 14336656.0,
-      "encumbrance": 6983033.12
+      "encumbrance": 7002958.98
     },
     {
       "name": "GOVERNMENTAL",
@@ -432,16 +432,16 @@
     {
       "name": "OTHER SALARIES",
       "revised_budget": 6458808.35,
-      "actual": 347785.0,
+      "actual": 524854.06,
       "original_budget": 6473555.35,
-      "encumbrance": 1912902.44
+      "encumbrance": 2721108.97
     },
     {
       "name": "SUPPLIES AND MATL",
       "revised_budget": 2461324.0,
-      "actual": 244161.4,
+      "actual": 244555.0,
       "original_budget": 2458724.0,
-      "encumbrance": 675407.49
+      "encumbrance": 682906.7
     },
     {
       "name": "CAPITAL",
@@ -453,9 +453,9 @@
     {
       "name": "CLERICAL SALARIES",
       "revised_budget": 1416915.58,
-      "actual": 167589.11,
+      "actual": 221901.08,
       "original_budget": 1416915.58,
-      "encumbrance": 1094119.93
+      "encumbrance": 1076657.54
     },
     {
       "name": "UNKNOWN",
@@ -476,23 +476,23 @@
     {
       "name": "UNDEFINED",
       "revised_budget": 47615287.0,
-      "actual": 1518463.31,
+      "actual": 2985314.27,
       "original_budget": 47615287.0,
-      "encumbrance": 9813806.42
+      "encumbrance": 37231673.57
     },
     {
       "name": "SALARIES",
       "revised_budget": 25498956.0,
-      "actual": 4834257.17,
+      "actual": 5289158.82,
       "original_budget": 25314718.0,
-      "encumbrance": 16714269.48
+      "encumbrance": 16467724.92
     },
     {
       "name": "EXPENSES",
       "revised_budget": 20339169.0,
-      "actual": 15233645.23,
+      "actual": 15210026.57,
       "original_budget": 24880169.0,
-      "encumbrance": 2675034.41
+      "encumbrance": 2677955.13
     },
     {
       "name": "GROUP INSURANCE",
@@ -560,7 +560,7 @@
     {
       "name": "MEDICARE",
       "revised_budget": 277629.0,
-      "actual": 67472.11,
+      "actual": 74167.3,
       "original_budget": 277629.0,
       "encumbrance": 0.0
     },
@@ -1017,9 +1017,9 @@
     {
       "name": "PROFESSIONAL SALARIES",
       "revised_budget": 29870710.07,
-      "actual": 319683.44,
+      "actual": 1500615.59,
       "original_budget": 29872149.07,
-      "encumbrance": 1775950.56
+      "encumbrance": 27728491.84
     },
     {
       "name": "HEALTH INSURANCE",
@@ -1059,9 +1059,9 @@
     {
       "name": "INSTRUCTIONAL ASSISTANTS",
       "revised_budget": 2718089.98,
-      "actual": 3960.59,
+      "actual": 64819.52,
       "original_budget": 2718089.98,
-      "encumbrance": 0.0
+      "encumbrance": 392907.08
     },
     {
       "name": "MEDEX INSURANCE TRANSFER",
@@ -1073,9 +1073,9 @@
     {
       "name": "FIREFIGHTER",
       "revised_budget": 2540087.0,
-      "actual": 280032.08,
+      "actual": 311208.9,
       "original_budget": 2540087.0,
-      "encumbrance": 1777259.74
+      "encumbrance": 1692414.76
     },
     {
       "name": "CHARTER SCHOOL ASSESSMENT",
@@ -1087,7 +1087,7 @@
     {
       "name": "OVERTIME",
       "revised_budget": 2286000.0,
-      "actual": 491081.31,
+      "actual": 540299.59,
       "original_budget": 2286000.0,
       "encumbrance": 0.0
     },
@@ -1108,16 +1108,16 @@
     {
       "name": "DEPARTMENT HEAD",
       "revised_budget": 2071634.0,
-      "actual": 358776.76,
+      "actual": 395914.26,
       "original_budget": 2071634.0,
-      "encumbrance": 1624379.17
+      "encumbrance": 1587241.67
     },
     {
       "name": "PATROLMAN",
       "revised_budget": 1631016.0,
-      "actual": 230829.98,
+      "actual": 257758.83,
       "original_budget": 1631016.0,
-      "encumbrance": 1178879.1
+      "encumbrance": 1153523.27
     },
     {
       "name": "ELECTRICITY",
@@ -1129,16 +1129,16 @@
     {
       "name": "OTHER SALARIES",
       "revised_budget": 1326215.27,
-      "actual": 151243.48,
+      "actual": 196723.83,
       "original_budget": 1326215.27,
-      "encumbrance": 880137.84
+      "encumbrance": 954076.07
     },
     {
       "name": "CUSTODIAN SALARY",
       "revised_budget": 1312809.16,
-      "actual": 174327.51,
+      "actual": 222812.5,
       "original_budget": 1312809.16,
-      "encumbrance": 992769.6
+      "encumbrance": 986531.04
     },
     {
       "name": "TUITION-PRIVATE SCHOOLS",
@@ -1152,7 +1152,7 @@
       "revised_budget": 1236179.0,
       "actual": 128200.35,
       "original_budget": 1236179.0,
-      "encumbrance": 199090.47
+      "encumbrance": 199152.34
     },
     {
       "name": "INSURANCE PREMIUMS",
@@ -1164,23 +1164,23 @@
     {
       "name": "ASSISTANT DEPARTMENT HEAD",
       "revised_budget": 1083352.0,
-      "actual": 146021.29,
+      "actual": 162830.55,
       "original_budget": 1103480.0,
-      "encumbrance": 1046811.39
+      "encumbrance": 1038355.98
     },
     {
       "name": "PUPIL TRANSPORTATION",
       "revised_budget": 1058773.0,
       "actual": 51935.0,
       "original_budget": 1058773.0,
-      "encumbrance": 404250.0
+      "encumbrance": 404326.0
     },
     {
       "name": "SECRETARY SALARIES",
       "revised_budget": 1053990.62,
-      "actual": 125964.84,
+      "actual": 169244.3,
       "original_budget": 1053990.62,
-      "encumbrance": 861127.96
+      "encumbrance": 834505.02
     },
     {
       "name": "CAPITAL EXPENDITURE",
@@ -1192,14 +1192,14 @@
     {
       "name": "SENIOR CLERK",
       "revised_budget": 921571.0,
-      "actual": 138825.38,
+      "actual": 155558.07,
       "original_budget": 921571.0,
-      "encumbrance": 660798.91
+      "encumbrance": 645585.18
     },
     {
       "name": "MEDICARE",
       "revised_budget": 896950.0,
-      "actual": 80848.27,
+      "actual": 108016.65,
       "original_budget": 896950.0,
       "encumbrance": 0.0
     },
@@ -1213,16 +1213,16 @@
     {
       "name": "ASSISTANT DIVISION HEAD",
       "revised_budget": 769046.0,
-      "actual": 121529.09,
+      "actual": 136458.18,
       "original_budget": 769046.0,
-      "encumbrance": 715120.6
+      "encumbrance": 700439.37
     },
     {
       "name": "LIEUTENANT",
       "revised_budget": 754076.0,
-      "actual": 115263.28,
+      "actual": 129656.05,
       "original_budget": 754076.0,
-      "encumbrance": 711966.52
+      "encumbrance": 697573.75
     },
     {
       "name": "TUITION-REGIONAL DISTRICTS",
@@ -1234,9 +1234,9 @@
     {
       "name": "PROFESSIONAL SALARIES #2",
       "revised_budget": 677518.0,
-      "actual": 0.0,
+      "actual": 27151.45,
       "original_budget": 677518.0,
-      "encumbrance": 0.0
+      "encumbrance": 646721.73
     },
     {
       "name": "INFORMATION TECHNOLOGY",
@@ -1255,9 +1255,9 @@
     {
       "name": "CAPTAIN",
       "revised_budget": 622600.0,
-      "actual": 82617.64,
+      "actual": 90791.97,
       "original_budget": 622600.0,
-      "encumbrance": 440936.7
+      "encumbrance": 432762.37
     },
     {
       "name": "TUITION-COLLABORATIVES",
@@ -1271,35 +1271,35 @@
       "revised_budget": 619218.0,
       "actual": 57417.69,
       "original_budget": 616618.0,
-      "encumbrance": 248382.82
+      "encumbrance": 254678.86
     },
     {
       "name": "OTHER PROF & TECHNICAL",
       "revised_budget": 589237.0,
       "actual": 385797.28,
       "original_budget": 574322.0,
-      "encumbrance": 88494.24
+      "encumbrance": 105841.24
     },
     {
       "name": "SUBSTITUTES",
       "revised_budget": 572000.0,
-      "actual": 0.0,
+      "actual": 12050.41,
       "original_budget": 572000.0,
-      "encumbrance": 0.0
+      "encumbrance": 229759.15
     },
     {
       "name": "TELECOMMUNICATOR",
       "revised_budget": 557496.0,
-      "actual": 91878.49,
+      "actual": 102609.67,
       "original_budget": 557496.0,
-      "encumbrance": 465436.52
+      "encumbrance": 454705.34
     },
     {
       "name": "DIVISION HEAD",
       "revised_budget": 553386.0,
-      "actual": 83984.93,
+      "actual": 95909.53,
       "original_budget": 512386.0,
-      "encumbrance": 423830.95
+      "encumbrance": 504739.48
     },
     {
       "name": "MBTA",
@@ -1318,16 +1318,16 @@
     {
       "name": "STIPENDS",
       "revised_budget": 482998.0,
-      "actual": 66402.28,
+      "actual": 73298.68,
       "original_budget": 482998.0,
-      "encumbrance": 399289.72
+      "encumbrance": 382784.11
     },
     {
       "name": "HEAVY EQUIP OPERATOR",
       "revised_budget": 482273.0,
-      "actual": 64041.33,
+      "actual": 71600.88,
       "original_budget": 482273.0,
-      "encumbrance": 326666.32
+      "encumbrance": 319106.77
     },
     {
       "name": "LEGAL SERVICES",
@@ -1339,9 +1339,9 @@
     {
       "name": "INCENTIVE",
       "revised_budget": 451830.0,
-      "actual": 77399.75,
+      "actual": 85962.09,
       "original_budget": 436630.0,
-      "encumbrance": 379795.68
+      "encumbrance": 377600.35
     },
     {
       "name": "TRANSFER TO WORKERS COMP TF",
@@ -1353,9 +1353,9 @@
     {
       "name": "SPECIAL CLERK",
       "revised_budget": 388218.0,
-      "actual": 63166.13,
+      "actual": 70559.68,
       "original_budget": 388218.0,
-      "encumbrance": 313030.79
+      "encumbrance": 305821.81
     },
     {
       "name": "TUITION-RESIDENTIAL",
@@ -1374,23 +1374,23 @@
     {
       "name": "CLERICAL SALARIES",
       "revised_budget": 356804.96,
-      "actual": 41624.27,
+      "actual": 52656.78,
       "original_budget": 356804.96,
-      "encumbrance": 232991.97
+      "encumbrance": 242152.52
     },
     {
       "name": "HOLIDAY",
       "revised_budget": 353107.0,
-      "actual": 29661.38,
+      "actual": 30301.38,
       "original_budget": 353107.0,
       "encumbrance": 10500.0
     },
     {
       "name": "SARGENT",
       "revised_budget": 341641.0,
-      "actual": 55731.1,
+      "actual": 62233.06,
       "original_budget": 341641.0,
-      "encumbrance": 282370.82
+      "encumbrance": 275868.86
     },
     {
       "name": "COMPUTER RENTAL/LEASE",
@@ -1416,23 +1416,23 @@
     {
       "name": "STATION MECH/PIPEFITTER II",
       "revised_budget": 295068.0,
-      "actual": 48612.04,
+      "actual": 54264.6,
       "original_budget": 295068.0,
-      "encumbrance": 245321.08
+      "encumbrance": 239668.52
     },
     {
       "name": "EDUCATIONAL SOFTWARE",
       "revised_budget": 292856.0,
       "actual": 72456.55,
       "original_budget": 292856.0,
-      "encumbrance": 141684.99
+      "encumbrance": 144790.64
     },
     {
       "name": "LEADER HEAVY EQUIP OPERATOR",
       "revised_budget": 291671.0,
-      "actual": 36825.14,
+      "actual": 41011.86,
       "original_budget": 291671.0,
-      "encumbrance": 179871.7
+      "encumbrance": 175684.98
     },
     {
       "name": "FACILITIES MAINTENTANCE",
@@ -1453,21 +1453,21 @@
       "revised_budget": 271180.0,
       "actual": 26414.08,
       "original_budget": 271180.0,
-      "encumbrance": 129609.37
+      "encumbrance": 129622.86
     },
     {
       "name": "MECHANIC PIPEFITTER",
       "revised_budget": 263501.0,
-      "actual": 33323.71,
+      "actual": 37198.56,
       "original_budget": 263501.0,
-      "encumbrance": 168168.49
+      "encumbrance": 164293.64
     },
     {
       "name": "MECHANIC SUPERVISOR",
       "revised_budget": 261729.0,
-      "actual": 42251.63,
+      "actual": 47203.98,
       "original_budget": 261729.0,
-      "encumbrance": 213223.33
+      "encumbrance": 209368.26
     },
     {
       "name": "WATER/SEWER",
@@ -1486,9 +1486,9 @@
     {
       "name": "SPECIAL LABOR 1",
       "revised_budget": 245578.0,
-      "actual": 45765.02,
+      "actual": 50478.58,
       "original_budget": 245578.0,
-      "encumbrance": 204568.52
+      "encumbrance": 199854.96
     },
     {
       "name": "GRINDING/COMPOST REMOVAL",
@@ -1500,30 +1500,30 @@
     {
       "name": "PARK",
       "revised_budget": 230828.0,
-      "actual": 27470.98,
+      "actual": 30696.5,
       "original_budget": 230828.0,
-      "encumbrance": 138992.98
+      "encumbrance": 136565.83
     },
     {
       "name": "STAND BY PAY",
       "revised_budget": 222275.0,
-      "actual": 34550.0,
+      "actual": 38365.0,
       "original_budget": 222275.0,
       "encumbrance": 0.0
     },
     {
       "name": "MECHANIC",
       "revised_budget": 213178.0,
-      "actual": 27264.86,
+      "actual": 30009.58,
       "original_budget": 213178.0,
-      "encumbrance": 119120.84
+      "encumbrance": 116376.12
     },
     {
       "name": "SPECIALIZED HEAVY EQU OPERATOR",
       "revised_budget": 212508.0,
-      "actual": 21249.06,
+      "actual": 23762.13,
       "original_budget": 212508.0,
-      "encumbrance": 108606.72
+      "encumbrance": 106093.65
     },
     {
       "name": "UNEMPLOYMENT COMP SALARIES",
@@ -1563,23 +1563,23 @@
     {
       "name": "NIGHT DIFF",
       "revised_budget": 191883.0,
-      "actual": 35393.46,
+      "actual": 39592.72,
       "original_budget": 142945.0,
       "encumbrance": 0.0
     },
     {
       "name": "WORKING FOREMAN",
       "revised_budget": 183202.0,
-      "actual": 29445.54,
+      "actual": 32869.44,
       "original_budget": 183202.0,
-      "encumbrance": 148597.26
+      "encumbrance": 145173.36
     },
     {
       "name": "LIBRARY MATERIALS",
       "revised_budget": 182374.0,
       "actual": 15653.24,
       "original_budget": 182374.0,
-      "encumbrance": 115837.42
+      "encumbrance": 116402.42
     },
     {
       "name": "BLDG & EQUIP R&M SUPPLIES",
@@ -1591,9 +1591,9 @@
     {
       "name": "OTHER SALARIES - STIPENDS",
       "revised_budget": 167079.0,
-      "actual": 3688.4,
+      "actual": 8547.21,
       "original_budget": 173079.0,
-      "encumbrance": 0.0
+      "encumbrance": 118168.41
     },
     {
       "name": "ELECT PWR-PUMPING STATIONS",
@@ -1605,9 +1605,9 @@
     {
       "name": "SPECIAL LABOR I",
       "revised_budget": 157325.0,
-      "actual": 19224.0,
+      "actual": 21459.35,
       "original_budget": 157325.0,
-      "encumbrance": 97014.2
+      "encumbrance": 94778.85
     },
     {
       "name": "COMPUTER EQUIPMENT",
@@ -1619,23 +1619,23 @@
     {
       "name": "LONGEVITY",
       "revised_budget": 153866.0,
-      "actual": 7297.3,
+      "actual": 8171.84,
       "original_budget": 150766.0,
-      "encumbrance": 46472.64
+      "encumbrance": 45598.1
     },
     {
       "name": "WORKING FOREMAN/TREE SURGEON",
       "revised_budget": 153786.0,
-      "actual": 13144.67,
+      "actual": 14673.12,
       "original_budget": 153786.0,
-      "encumbrance": 66334.73
+      "encumbrance": 64806.28
     },
     {
       "name": "SENIOR CLERK II",
       "revised_budget": 150189.0,
-      "actual": 24715.21,
+      "actual": 27598.01,
       "original_budget": 150189.0,
-      "encumbrance": 125190.39
+      "encumbrance": 122307.59
     },
     {
       "name": "TRASH COLLECTION",
@@ -1654,16 +1654,16 @@
     {
       "name": "ELECTRICAL INSPECTORS",
       "revised_budget": 145000.0,
-      "actual": 22976.72,
+      "actual": 25848.81,
       "original_budget": 145000.0,
-      "encumbrance": 124855.73
+      "encumbrance": 121983.64
     },
     {
       "name": "GIS FIELD TECHNICIAN",
       "revised_budget": 143424.0,
-      "actual": 11931.98,
+      "actual": 13342.31,
       "original_budget": 143424.0,
-      "encumbrance": 60659.94
+      "encumbrance": 59249.61
     },
     {
       "name": "CUSTODIAL SUPPLIES",
@@ -1675,7 +1675,7 @@
     {
       "name": "SCHEDULED OT",
       "revised_budget": 141193.0,
-      "actual": 14148.79,
+      "actual": 15497.89,
       "original_budget": 141193.0,
       "encumbrance": 0.0
     },
@@ -1689,23 +1689,23 @@
     {
       "name": "DIESEL FUEL",
       "revised_budget": 125832.0,
-      "actual": 25714.47,
+      "actual": 26108.07,
       "original_budget": 125832.0,
       "encumbrance": 0.0
     },
     {
       "name": "GENERAL LABOR IV",
       "revised_budget": 124817.0,
-      "actual": 20385.1,
+      "actual": 22755.46,
       "original_budget": 124817.0,
-      "encumbrance": 102873.62
+      "encumbrance": 100503.26
     },
     {
       "name": "TOWN ENGINEER",
       "revised_budget": 123609.0,
-      "actual": 19970.49,
+      "actual": 22292.64,
       "original_budget": 123609.0,
-      "encumbrance": 100781.31
+      "encumbrance": 98459.16
     },
     {
       "name": "TELEPHONE",
@@ -1717,14 +1717,14 @@
     {
       "name": "LOCAL INSPECTORS",
       "revised_budget": 123126.0,
-      "actual": 14495.14,
+      "actual": 16258.16,
       "original_budget": 123126.0,
-      "encumbrance": 66375.49
+      "encumbrance": 64847.04
     },
     {
       "name": "TRAFFIC SUPERS",
       "revised_budget": 122000.0,
-      "actual": 587.76,
+      "actual": 3220.3,
       "original_budget": 122000.0,
       "encumbrance": 0.0
     },
@@ -1738,16 +1738,16 @@
     {
       "name": "CHIEF PROCUREMENT OFFICER",
       "revised_budget": 120487.0,
-      "actual": 13450.49,
+      "actual": 16462.66,
       "original_budget": 120487.0,
-      "encumbrance": 67878.03
+      "encumbrance": 66314.02
     },
     {
       "name": "POSTAGE",
       "revised_budget": 119843.0,
       "actual": 19557.79,
       "original_budget": 112257.0,
-      "encumbrance": 16523.54
+      "encumbrance": 18397.54
     },
     {
       "name": "FACILITIES MAINT MANAGER",
@@ -1766,23 +1766,23 @@
     {
       "name": "PLUMBING INSPECTORS",
       "revised_budget": 106388.0,
-      "actual": 15198.8,
+      "actual": 17098.65,
       "original_budget": 106388.0,
-      "encumbrance": 82504.15
+      "encumbrance": 80604.3
     },
     {
       "name": "SEAS SENIOR HARBOR ASSISTANT",
       "revised_budget": 98000.0,
-      "actual": 37144.06,
+      "actual": 40938.01,
       "original_budget": 98000.0,
       "encumbrance": 0.0
     },
     {
       "name": "TOWN PLANNER",
       "revised_budget": 97048.0,
-      "actual": 15867.96,
+      "actual": 17277.29,
       "original_budget": 97048.0,
-      "encumbrance": 90614.43
+      "encumbrance": 89205.1
     },
     {
       "name": "R&M FLOATS",
@@ -1822,7 +1822,7 @@
     {
       "name": "TRANSP ATHLETIC DRIVERS",
       "revised_budget": 89610.0,
-      "actual": 925.16,
+      "actual": 2952.29,
       "original_budget": 89610.0,
       "encumbrance": 0.0
     },
@@ -1843,9 +1843,9 @@
     {
       "name": "TELECOMMUNICATOR SUPERV",
       "revised_budget": 85105.0,
-      "actual": 13974.54,
+      "actual": 15604.89,
       "original_budget": 85105.0,
-      "encumbrance": 70803.66
+      "encumbrance": 69173.31
     },
     {
       "name": "VACATION & RET. PAYOUT-OTHER",
@@ -1857,9 +1857,9 @@
     {
       "name": "WORKING FOREMAN CONSTRUCTION",
       "revised_budget": 83004.0,
-      "actual": 12568.21,
+      "actual": 14029.63,
       "original_budget": 83004.0,
-      "encumbrance": 63425.63
+      "encumbrance": 61964.21
     },
     {
       "name": "RENTALS AND LEASES",
@@ -1871,37 +1871,37 @@
     {
       "name": "PROGRAM MANAGER",
       "revised_budget": 79480.0,
-      "actual": 13144.67,
+      "actual": 14673.12,
       "original_budget": 79480.0,
-      "encumbrance": 66334.73
+      "encumbrance": 64806.28
     },
     {
       "name": "SUPERIOR OT",
       "revised_budget": 77616.0,
-      "actual": 32072.04,
+      "actual": 36389.44,
       "original_budget": 77616.0,
       "encumbrance": 0.0
     },
     {
       "name": "YOUNG ADULT LIBRARIAN",
       "revised_budget": 76694.0,
-      "actual": 12379.71,
+      "actual": 14103.72,
       "original_budget": 76694.0,
-      "encumbrance": 63489.31
+      "encumbrance": 61765.3
     },
     {
       "name": "TECHNICAL SERVICES SUPERVISOR",
       "revised_budget": 75573.0,
-      "actual": 12346.25,
+      "actual": 13795.95,
       "original_budget": 75573.0,
-      "encumbrance": 62337.1
+      "encumbrance": 60887.4
     },
     {
       "name": "OUTREACH WORKER",
       "revised_budget": 74647.0,
-      "actual": 12128.84,
+      "actual": 13539.17,
       "original_budget": 74647.0,
-      "encumbrance": 61208.32
+      "encumbrance": 59797.99
     },
     {
       "name": "ASSISTANT ENGINEER",
@@ -1913,16 +1913,16 @@
     {
       "name": "WATER TECHNICIAN",
       "revised_budget": 73767.0,
-      "actual": 12153.01,
+      "actual": 13566.15,
       "original_budget": 73767.0,
-      "encumbrance": 61330.27
+      "encumbrance": 59917.13
     },
     {
       "name": "PARK TURF SPECIALIST",
       "revised_budget": 73767.0,
-      "actual": 12153.01,
+      "actual": 13566.15,
       "original_budget": 73767.0,
-      "encumbrance": 61330.27
+      "encumbrance": 59917.13
     },
     {
       "name": "ACCOUNTING",
@@ -1948,30 +1948,30 @@
     {
       "name": "WORKING FOREMAN MAINTENANCE",
       "revised_budget": 72595.0,
-      "actual": 11790.25,
+      "actual": 13161.21,
       "original_budget": 72595.0,
-      "encumbrance": 59499.67
+      "encumbrance": 58128.71
     },
     {
       "name": "SEAS GROUNDS CARETAKER",
       "revised_budget": 72154.0,
-      "actual": 51616.83,
+      "actual": 52625.16,
       "original_budget": 72154.0,
       "encumbrance": 0.0
     },
     {
       "name": "TRANSPORTATION COORDINATOR",
       "revised_budget": 70813.0,
-      "actual": 11409.62,
+      "actual": 12736.32,
       "original_budget": 70813.0,
-      "encumbrance": 57578.78
+      "encumbrance": 56252.08
     },
     {
       "name": "CHILD LIBRARIAN",
       "revised_budget": 70788.0,
       "actual": 0.0,
       "original_budget": 70788.0,
-      "encumbrance": 0.0
+      "encumbrance": 55599.69
     },
     {
       "name": "ADULT LIBRARIAN",
@@ -1983,7 +1983,7 @@
     {
       "name": "OTHER MISC EXPENSE",
       "revised_budget": 70302.0,
-      "actual": 72023.83,
+      "actual": 48023.83,
       "original_budget": 70302.0,
       "encumbrance": 18309.69
     },
@@ -2011,30 +2011,30 @@
     {
       "name": "PROGRAM VOLUNTEER COORDINATOR",
       "revised_budget": 69034.0,
-      "actual": 10431.52,
+      "actual": 11735.46,
       "original_budget": 69034.0,
-      "encumbrance": 56591.0
+      "encumbrance": 55287.06
     },
     {
       "name": "WORKING FORMAN BLDG",
       "revised_budget": 68635.0,
-      "actual": 11113.01,
+      "actual": 12405.22,
       "original_budget": 68635.0,
-      "encumbrance": 56081.91
+      "encumbrance": 54789.7
     },
     {
       "name": "PROFESSIONAL & TECHNICAL",
       "revised_budget": 68521.0,
       "actual": 0.0,
       "original_budget": 68521.0,
-      "encumbrance": 4806.0
+      "encumbrance": 5156.0
     },
     {
       "name": "BILLING TECH",
       "revised_budget": 68486.0,
-      "actual": 11061.32,
+      "actual": 12353.53,
       "original_budget": 68486.0,
-      "encumbrance": 56133.6
+      "encumbrance": 54841.39
     },
     {
       "name": "IN-SERVICE TRAINING",
@@ -2067,23 +2067,23 @@
     {
       "name": "LIBRARY PARAPROFESSIONAL",
       "revised_budget": 66525.0,
-      "actual": 10806.16,
+      "actual": 12062.69,
       "original_budget": 66525.0,
-      "encumbrance": 54533.4
+      "encumbrance": 53276.87
     },
     {
       "name": "LIBRARY TECH ADMIN",
       "revised_budget": 66125.0,
-      "actual": 10894.14,
+      "actual": 12160.9,
       "original_budget": 66125.0,
-      "encumbrance": 54977.38
+      "encumbrance": 53710.62
     },
     {
       "name": "GEN'L LABOR/NUTR COORD",
       "revised_budget": 65871.0,
-      "actual": 10877.25,
+      "actual": 12144.01,
       "original_budget": 65871.0,
-      "encumbrance": 54994.27
+      "encumbrance": 53727.51
     },
     {
       "name": "RETIREMENT INCENTIVE",
@@ -2102,9 +2102,9 @@
     {
       "name": "LIBRARY COORDINATOR",
       "revised_budget": 63843.0,
-      "actual": 11056.87,
+      "actual": 12251.58,
       "original_budget": 63843.0,
-      "encumbrance": 51850.41
+      "encumbrance": 50655.7
     },
     {
       "name": "PRINTING/FORMS",
@@ -2116,9 +2116,9 @@
     {
       "name": "LIBRARY TECH",
       "revised_budget": 61916.0,
-      "actual": 10052.28,
+      "actual": 11221.15,
       "original_budget": 61916.0,
-      "encumbrance": 50728.96
+      "encumbrance": 49560.09
     },
     {
       "name": "FIELD CRAFTSMAN MECHANIC",
@@ -2172,16 +2172,16 @@
     {
       "name": "SENIOR LIBRARY ASSISTANT",
       "revised_budget": 58388.0,
-      "actual": 9486.07,
+      "actual": 10684.3,
       "original_budget": 58388.0,
       "encumbrance": 0.0
     },
     {
       "name": "TRANSFER STATION OPERATOR",
       "revised_budget": 58000.0,
-      "actual": 9301.24,
+      "actual": 10358.2,
       "original_budget": 58000.0,
-      "encumbrance": 45660.68
+      "encumbrance": 44603.72
     },
     {
       "name": "OTHER EQUIPMENT",
@@ -2195,33 +2195,33 @@
       "revised_budget": 56929.0,
       "actual": 11519.13,
       "original_budget": 56929.0,
-      "encumbrance": 6161.47
+      "encumbrance": 6390.81
     },
     {
       "name": "MISC OFFICE SUPPLIES",
       "revised_budget": 56240.0,
       "actual": 25487.29,
       "original_budget": 56240.0,
-      "encumbrance": 10795.2
+      "encumbrance": 10998.07
     },
     {
       "name": "LIBRARY TECH SVCS ASSISTANT",
       "revised_budget": 55868.0,
-      "actual": 9224.62,
+      "actual": 10295.59,
       "original_budget": 55868.0,
-      "encumbrance": 46465.82
+      "encumbrance": 45394.85
     },
     {
       "name": "TEMP GENERAL CLERK",
       "revised_budget": 54760.0,
-      "actual": 6898.65,
+      "actual": 7687.82,
       "original_budget": 54760.0,
       "encumbrance": 0.0
     },
     {
       "name": "INSPECTOR OT",
       "revised_budget": 54234.0,
-      "actual": 4228.21,
+      "actual": 5024.11,
       "original_budget": 54234.0,
       "encumbrance": 0.0
     },
@@ -2263,16 +2263,16 @@
     {
       "name": "POLICE DEFIBR STIPEND",
       "revised_budget": 47070.0,
-      "actual": 7495.38,
+      "actual": 8370.4,
       "original_budget": 47070.0,
-      "encumbrance": 37601.78
+      "encumbrance": 36726.76
     },
     {
       "name": "SUBSCRIPTIONS",
       "revised_budget": 46415.0,
       "actual": 30840.96,
       "original_budget": 46415.0,
-      "encumbrance": 3162.98
+      "encumbrance": 3412.98
     },
     {
       "name": "DUES",
@@ -2300,7 +2300,7 @@
       "revised_budget": 44728.0,
       "actual": 11135.98,
       "original_budget": 44728.0,
-      "encumbrance": 2411.5
+      "encumbrance": 2615.0
     },
     {
       "name": "APPRAISOR SERVICES",
@@ -2328,12 +2328,12 @@
       "revised_budget": 41290.0,
       "actual": 1451.66,
       "original_budget": 41290.0,
-      "encumbrance": 3145.29
+      "encumbrance": 3322.24
     },
     {
       "name": "TEMPORY LIBRARY ASSISTANT",
       "revised_budget": 39489.0,
-      "actual": 1659.31,
+      "actual": 1949.69,
       "original_budget": 39489.0,
       "encumbrance": 0.0
     },
@@ -2349,14 +2349,14 @@
       "revised_budget": 35750.0,
       "actual": 3683.96,
       "original_budget": 35750.0,
-      "encumbrance": 4330.47
+      "encumbrance": 4347.44
     },
     {
       "name": "POLICE POST STIPEND",
       "revised_budget": 35303.0,
-      "actual": 9369.98,
+      "actual": 10463.66,
       "original_budget": 35303.0,
-      "encumbrance": 47055.25
+      "encumbrance": 45961.57
     },
     {
       "name": "CELLULAR PHONES",
@@ -2403,28 +2403,28 @@
     {
       "name": "ADULT PAGE",
       "revised_budget": 28971.0,
-      "actual": 4260.0,
+      "actual": 4815.0,
       "original_budget": 28971.0,
       "encumbrance": 0.0
     },
     {
       "name": "TEMP DISPATCHER",
       "revised_budget": 28227.0,
-      "actual": 2788.99,
+      "actual": 3313.98,
       "original_budget": 28227.0,
       "encumbrance": 0.0
     },
     {
       "name": "BUS MONITOR",
       "revised_budget": 27756.72,
-      "actual": 0.0,
+      "actual": 327.78,
       "original_budget": 27756.72,
-      "encumbrance": 0.0
+      "encumbrance": -327.78
     },
     {
       "name": "PER DIEM LIBRARIAN",
       "revised_budget": 26935.0,
-      "actual": 3262.5,
+      "actual": 3532.5,
       "original_budget": 26935.0,
       "encumbrance": 0.0
     },
@@ -2459,7 +2459,7 @@
     {
       "name": "TEMP OFFICER",
       "revised_budget": 24198.0,
-      "actual": 3458.87,
+      "actual": 3922.43,
       "original_budget": 24198.0,
       "encumbrance": 0.0
     },
@@ -2480,7 +2480,7 @@
     {
       "name": "ATHLETICS CUSTODIAN",
       "revised_budget": 23729.0,
-      "actual": 291.69,
+      "actual": 1266.56,
       "original_budget": 23729.0,
       "encumbrance": 0.0
     },
@@ -2536,16 +2536,16 @@
     {
       "name": "OUT OF RANK",
       "revised_budget": 20797.0,
-      "actual": 9104.02,
+      "actual": 9739.31,
       "original_budget": 20797.0,
       "encumbrance": 0.0
     },
     {
       "name": "BUDGET ANALYST STIPEND",
       "revised_budget": 20128.0,
-      "actual": 3589.72,
+      "actual": 3974.33,
       "original_budget": 0.0,
-      "encumbrance": 15256.17
+      "encumbrance": 14871.56
     },
     {
       "name": "MEDICAL/DOCTOR SERVICES",
@@ -2662,7 +2662,7 @@
     {
       "name": "STATE PRIMARY SALARIES",
       "revised_budget": 15000.0,
-      "actual": 1091.98,
+      "actual": 5237.0,
       "original_budget": 15000.0,
       "encumbrance": 0.0
     },
@@ -2704,7 +2704,7 @@
     {
       "name": "DOUBLE TIME",
       "revised_budget": 14660.0,
-      "actual": 9376.98,
+      "actual": 9847.26,
       "original_budget": 14660.0,
       "encumbrance": 0.0
     },
@@ -2746,14 +2746,14 @@
     {
       "name": "MATRON MONITOR",
       "revised_budget": 12000.0,
-      "actual": 3680.9,
+      "actual": 3949.78,
       "original_budget": 12000.0,
       "encumbrance": 0.0
     },
     {
       "name": "PROF SALARY, STIPENDS",
       "revised_budget": 12000.0,
-      "actual": 3688.4,
+      "actual": 10589.28,
       "original_budget": 0.0,
       "encumbrance": 0.0
     },
@@ -2781,7 +2781,7 @@
     {
       "name": "SEASONAL DOCENT",
       "revised_budget": 11226.0,
-      "actual": 4634.75,
+      "actual": 4912.05,
       "original_budget": 11226.0,
       "encumbrance": 0.0
     },
@@ -2837,14 +2837,14 @@
     {
       "name": "CUSTODIAN OT",
       "revised_budget": 10000.0,
-      "actual": 3343.17,
+      "actual": 5348.96,
       "original_budget": 10000.0,
       "encumbrance": 0.0
     },
     {
       "name": "OUTSIDE DETAIL",
       "revised_budget": 10000.0,
-      "actual": 25329.48,
+      "actual": 27625.56,
       "original_budget": 10000.0,
       "encumbrance": 5940.36
     },
@@ -2865,7 +2865,7 @@
     {
       "name": "SEAS BEACH SUPERVISOR",
       "revised_budget": 8972.0,
-      "actual": 12129.0,
+      "actual": 13489.95,
       "original_budget": 8972.0,
       "encumbrance": 0.0
     },
@@ -2928,9 +2928,9 @@
     {
       "name": "PROSECUTOR",
       "revised_budget": 7388.0,
-      "actual": 1253.4,
+      "actual": 1395.28,
       "original_budget": 7388.0,
-      "encumbrance": 6099.48
+      "encumbrance": 5957.6
     },
     {
       "name": "RENTAL-PHOTOCOPIER",
@@ -2991,9 +2991,9 @@
     {
       "name": "FIRE PREVENTION OFFICER",
       "revised_budget": 6000.0,
-      "actual": 988.97,
+      "actual": 1104.35,
       "original_budget": 6000.0,
-      "encumbrance": 4961.34
+      "encumbrance": 4845.96
     },
     {
       "name": "PROFESSIONAL DEVELOPMENT",
@@ -3103,16 +3103,16 @@
     {
       "name": "FIRE MECHANIC",
       "revised_budget": 4166.0,
-      "actual": 684.09,
+      "actual": 763.9,
       "original_budget": 4166.0,
-      "encumbrance": 5116.63
+      "encumbrance": 5001.72
     },
     {
       "name": "FIELD TRAINING OFFICER STIPEND",
       "revised_budget": 4015.0,
-      "actual": 832.39,
+      "actual": 967.0,
       "original_budget": 4015.0,
-      "encumbrance": 6672.81
+      "encumbrance": 6538.2
     },
     {
       "name": "TOWN REPORT",
@@ -3145,23 +3145,23 @@
     {
       "name": "FIRE EMERGENCY MNGT STIPEND",
       "revised_budget": 4000.0,
-      "actual": 660.58,
+      "actual": 737.52,
       "original_budget": 4000.0,
-      "encumbrance": 3308.42
+      "encumbrance": 3231.48
     },
     {
       "name": "FIRE TRAINING OFFICER",
       "revised_budget": 4000.0,
-      "actual": 582.4,
+      "actual": 620.86,
       "original_budget": 4000.0,
-      "encumbrance": 3384.48
+      "encumbrance": 3346.02
     },
     {
       "name": "FIRE EMT COORDINATOR",
       "revised_budget": 4000.0,
-      "actual": 659.32,
+      "actual": 736.24,
       "original_budget": 4000.0,
-      "encumbrance": 3307.56
+      "encumbrance": 3230.64
     },
     {
       "name": "FIREFIGHTING SUPPLIES",
@@ -3299,9 +3299,9 @@
     {
       "name": "FINGER PHOTO",
       "revised_budget": 1800.0,
-      "actual": 197.82,
+      "actual": 220.9,
       "original_budget": 1800.0,
-      "encumbrance": 992.44
+      "encumbrance": 969.36
     },
     {
       "name": "INSPECTOR SUPPLIES",
@@ -3369,9 +3369,9 @@
     {
       "name": "JUVENILE OFFICER",
       "revised_budget": 1200.0,
-      "actual": 131.82,
+      "actual": 147.2,
       "original_budget": 1200.0,
-      "encumbrance": 661.34
+      "encumbrance": 645.96
     },
     {
       "name": "PAPER",
@@ -3502,9 +3502,9 @@
     {
       "name": "INSP OFFICER",
       "revised_budget": 500.0,
-      "actual": 82.46,
+      "actual": 92.08,
       "original_budget": 500.0,
-      "encumbrance": 413.66
+      "encumbrance": 404.04
     },
     {
       "name": "BOARD OR COMM SALARIES",
@@ -3516,9 +3516,9 @@
     {
       "name": "YVS OFFICER",
       "revised_budget": 400.0,
-      "actual": 66.0,
+      "actual": 73.7,
       "original_budget": 400.0,
-      "encumbrance": 331.1
+      "encumbrance": 323.4
     },
     {
       "name": "IN-STATE TRAVEL-TRAINING",
@@ -3532,7 +3532,7 @@
       "revised_budget": 312.0,
       "actual": 23.45,
       "original_budget": 312.0,
-      "encumbrance": 0.0
+      "encumbrance": 12.04
     },
     {
       "name": "DEEDS",
@@ -3544,9 +3544,9 @@
     {
       "name": "NARCOTIC OFFICER",
       "revised_budget": 300.0,
-      "actual": 49.38,
+      "actual": 55.14,
       "original_budget": 300.0,
-      "encumbrance": 247.68
+      "encumbrance": 241.92
     },
     {
       "name": "BELL RINGER STIPEND",
@@ -3635,14 +3635,14 @@
     {
       "name": "WDEND NIGHT DIFF",
       "revised_budget": 0.0,
-      "actual": 3349.77,
+      "actual": 3732.82,
       "original_budget": 0.0,
       "encumbrance": 0.0
     },
     {
       "name": "INJURY PAYROLL",
       "revised_budget": 0.0,
-      "actual": 60284.66,
+      "actual": 67923.16,
       "original_budget": 0.0,
       "encumbrance": 0.0
     },
@@ -3656,37 +3656,37 @@
     {
       "name": "LIGHT NONEXEMPT",
       "revised_budget": 0.0,
-      "actual": 46458.53,
+      "actual": 51558.94,
       "original_budget": 0.0,
-      "encumbrance": 208338.01
+      "encumbrance": 203537.59
     },
     {
       "name": "LIGHT EXPEMPT",
       "revised_budget": 0.0,
-      "actual": 154389.79,
+      "actual": 170126.05,
       "original_budget": 0.0,
-      "encumbrance": 673839.69
+      "encumbrance": 658313.43
     },
     {
       "name": "LIGHT UNION",
       "revised_budget": 0.0,
-      "actual": 189868.66,
+      "actual": 214725.49,
       "original_budget": 0.0,
-      "encumbrance": 1065382.07
+      "encumbrance": 1048091.9
     },
     {
       "name": "SPECIAL STIPEND",
       "revised_budget": 0.0,
-      "actual": 826.98,
+      "actual": 923.14,
       "original_budget": 0.0,
-      "encumbrance": 4134.88
+      "encumbrance": 4038.72
     },
     {
       "name": "DISPATCH DEFIBR STIPEND",
       "revised_budget": 0.0,
-      "actual": 685.68,
+      "actual": 765.68,
       "original_budget": 0.0,
-      "encumbrance": 3440.0
+      "encumbrance": 3360.0
     },
     {
       "name": "IN SERVICE TRAINING",
