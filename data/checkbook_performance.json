@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-09-03",
+  "as_of": "2026-09-08",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 3,
-  "fy_pct_elapsed": 17.8,
+  "fy_pct_elapsed": 19.2,
   "budget_execution": {
     "by_department": [
       {
@@ -681,8 +681,8 @@
     },
     {
       "month": "2026-09",
-      "amount": 82112.6,
-      "count": 17
+      "amount": 68281.14,
+      "count": 28
     }
   ],
   "drill": {
@@ -1061,8 +1061,8 @@
           },
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 119070.64,
-            "count": 4
+            "amount": 119135.45,
+            "count": 5
           },
           {
             "name": "NORTHERN DATA SYSTEMS INC",
@@ -1085,11 +1085,6 @@
             "count": 16
           },
           {
-            "name": "EVERY ELECTRIC INC",
-            "amount": 24000.0,
-            "count": 1
-          },
-          {
             "name": "GRAYBAR ELECTRIC CO INC",
             "amount": 20470.0,
             "count": 1
@@ -1098,6 +1093,11 @@
             "name": "DENNIS K BURKE INC",
             "amount": 16400.52,
             "count": 2
+          },
+          {
+            "name": "DELTA BECKWITH ELEVATOR CO",
+            "amount": 13672.0,
+            "count": 1
           }
         ],
         "monthly": [
@@ -1110,6 +1110,11 @@
             "month": "2026-08",
             "amount": 1701683.55,
             "count": 120
+          },
+          {
+            "month": "2026-09",
+            "amount": -23935.19,
+            "count": 2
           }
         ]
       },
@@ -1253,8 +1258,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 11239.0,
-            "count": 3
+            "amount": 11251.26,
+            "count": 4
           }
         ]
       },
@@ -1343,8 +1348,8 @@
           },
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 3203670.42,
-            "count": 21
+            "amount": 3203937.45,
+            "count": 26
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
@@ -1358,8 +1363,8 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 92649.17,
-            "count": 13
+            "amount": 102424.11,
+            "count": 14
           },
           {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
@@ -1405,8 +1410,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 61324.19,
-            "count": 10
+            "amount": 71366.16,
+            "count": 16
           }
         ]
       },
@@ -2043,8 +2048,8 @@
           },
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 34501.33,
-            "count": 3
+            "amount": 34505.58,
+            "count": 4
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
@@ -2105,8 +2110,8 @@
           },
           {
             "month": "2026-09",
-            "amount": -353.75,
-            "count": 1
+            "amount": -349.5,
+            "count": 2
           }
         ]
       },
@@ -2222,8 +2227,8 @@
           },
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 52597.05,
-            "count": 3
+            "amount": 52642.3,
+            "count": 4
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
@@ -2281,6 +2286,11 @@
             "month": "2026-08",
             "amount": 372294.07,
             "count": 36
+          },
+          {
+            "month": "2026-09",
+            "amount": 45.25,
+            "count": 1
           }
         ]
       }
