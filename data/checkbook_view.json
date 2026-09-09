@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-09-03",
+    "date": "2026-09-08",
     "fiscal_year": "FY27",
-    "row_count": 1930,
-    "total_paid": 29737596.81,
+    "row_count": 1941,
+    "total_paid": 29723765.35,
     "interfund_total": 126885.47,
-    "external_paid": 29610711.34,
+    "external_paid": 29596879.88,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-09-03",
-    "source_file": "checkbook_FY27_2026-09-03.csv"
+    "last_payment": "2026-09-08",
+    "source_file": "checkbook_FY27_2026-09-08.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 2242909.75,
-      "share": 0.0754,
+      "share": 0.0755,
       "fund_count": 3,
       "top_funds": [
         {
@@ -39,19 +39,19 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 19753902.05,
-      "share": 0.6643,
+      "amount": 19763956.28,
+      "share": 0.6649,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 18830240.63,
-          "row_count": 814
+          "amount": 18840282.6,
+          "row_count": 820
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 686587.75,
-          "row_count": 346
+          "amount": 686600.01,
+          "row_count": 347
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -63,24 +63,24 @@
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 7056628.38,
-      "share": 0.2373,
+      "amount": 7032742.69,
+      "share": 0.2366,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 4282910.15,
-          "row_count": 256
+          "amount": 4258974.96,
+          "row_count": 258
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 935326.56,
-          "row_count": 53
+          "amount": 935371.81,
+          "row_count": 54
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
-          "amount": 796847.51,
-          "row_count": 121
+          "amount": 796851.76,
+          "row_count": 122
         },
         {
           "name": "WATER CAPITAL ARTICLES",
@@ -223,19 +223,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 18830240.63,
-    "fixed_total": 17586781.57,
-    "fixed_share": 0.934,
-    "admin_contracts_total": 419621.83,
-    "admin_contracts_share": 0.0223,
+    "total": 18840282.6,
+    "fixed_total": 17587048.6,
+    "fixed_share": 0.9335,
+    "admin_contracts_total": 429396.77,
+    "admin_contracts_share": 0.0228,
     "other_recurring_total": 823837.23,
-    "other_recurring_share": 0.0438,
+    "other_recurring_share": 0.0437,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 3344614.9,
-        "share": 0.1776,
+        "share": 0.1775,
         "row_count": 15,
         "top_vendors": [
           {
@@ -268,7 +268,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 7738584.39,
-        "share": 0.411,
+        "share": 0.4107,
         "row_count": 30,
         "top_vendors": [
           {
@@ -281,7 +281,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.3103,
+        "share": 0.3102,
         "row_count": 1,
         "top_vendors": [
           {
@@ -293,22 +293,22 @@
       {
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
-        "amount": 660222.28,
+        "amount": 660489.31,
         "share": 0.0351,
-        "row_count": 15,
+        "row_count": 20,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 660222.28
+            "amount": 660489.31
           }
         ]
       },
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 419621.83,
-        "share": 0.0223,
-        "row_count": 26,
+        "amount": 429396.77,
+        "share": 0.0228,
+        "row_count": 27,
         "top_vendors": [
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -316,7 +316,7 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 91120.17
+            "amount": 100895.11
           },
           {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
@@ -336,7 +336,7 @@
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
         "amount": 823837.23,
-        "share": 0.0438,
+        "share": 0.0437,
         "row_count": 727,
         "top_vendors": [
           {
@@ -386,7 +386,7 @@
       "row_count": 11,
       "first_paid": "2026-07-20",
       "last_paid": "2026-08-13",
-      "days_since_last_paid": 21,
+      "days_since_last_paid": 26,
       "status": "active",
       "top_vendors": [
         {
@@ -426,7 +426,7 @@
       "row_count": 2,
       "first_paid": "2026-07-08",
       "last_paid": "2026-07-28",
-      "days_since_last_paid": 37,
+      "days_since_last_paid": 42,
       "status": "engineering",
       "top_vendors": [
         {
@@ -451,7 +451,7 @@
       "row_count": 1,
       "first_paid": "2026-08-28",
       "last_paid": "2026-08-28",
-      "days_since_last_paid": 6,
+      "days_since_last_paid": 11,
       "status": "engineering",
       "top_vendors": [
         {
