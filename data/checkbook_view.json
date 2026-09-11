@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-09-08",
+    "date": "2026-09-10",
     "fiscal_year": "FY27",
-    "row_count": 1941,
-    "total_paid": 29723765.35,
-    "interfund_total": 126885.47,
-    "external_paid": 29596879.88,
+    "row_count": 2130,
+    "total_paid": 30021746.17,
+    "interfund_total": 131772.86,
+    "external_paid": 29889973.31,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-09-08",
-    "source_file": "checkbook_FY27_2026-09-08.csv"
+    "last_payment": "2026-09-10",
+    "source_file": "checkbook_FY27_2026-09-10.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
-      "amount": 2242909.75,
-      "share": 0.0755,
+      "amount": 2243459.75,
+      "share": 0.0747,
       "fund_count": 3,
       "top_funds": [
         {
@@ -31,56 +31,56 @@
         },
         {
           "name": "A34 2015 NEW TRANSF STATION",
-          "amount": 850.0,
-          "row_count": 1
+          "amount": 1400.0,
+          "row_count": 2
         }
       ]
     },
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 19763956.28,
-      "share": 0.6649,
+      "amount": 19984983.06,
+      "share": 0.6657,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 18840282.6,
-          "row_count": 820
+          "amount": 19055099.83,
+          "row_count": 929
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 686600.01,
-          "row_count": 347
+          "amount": 687494.09,
+          "row_count": 349
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
-          "amount": 237073.67,
-          "row_count": 23
+          "amount": 242389.14,
+          "row_count": 26
         }
       ]
     },
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 7032742.69,
-      "share": 0.2366,
+      "amount": 7091053.31,
+      "share": 0.2362,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 4258974.96,
-          "row_count": 258
+          "amount": 4293072.72,
+          "row_count": 276
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 935371.81,
-          "row_count": 54
+          "amount": 943818.29,
+          "row_count": 68
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
-          "amount": 796851.76,
-          "row_count": 122
+          "amount": 812366.3,
+          "row_count": 147
         },
         {
           "name": "WATER CAPITAL ARTICLES",
@@ -94,8 +94,8 @@
         },
         {
           "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 161809.74,
-          "row_count": 56
+          "amount": 162061.58,
+          "row_count": 59
         },
         {
           "name": "MWRA PROJECT LWSAP26-3021",
@@ -108,7 +108,7 @@
       "key": "state_fed",
       "label": "State & federal restricted grants",
       "amount": 126902.59,
-      "share": 0.0043,
+      "share": 0.0042,
       "fund_count": 11,
       "top_funds": [
         {
@@ -156,28 +156,33 @@
     {
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
-      "amount": 201719.95,
-      "share": 0.0068,
-      "fund_count": 2,
+      "amount": 217271.42,
+      "share": 0.0072,
+      "fund_count": 3,
       "top_funds": [
         {
           "name": "PARK REVOLVING FUND",
-          "amount": 192682.66,
-          "row_count": 110
+          "amount": 200690.05,
+          "row_count": 115
         },
         {
           "name": "COA REVOLVING",
-          "amount": 9037.29,
-          "row_count": 28
+          "amount": 9387.29,
+          "row_count": 29
+        },
+        {
+          "name": "VACCINE REVOLVING FUND",
+          "amount": 7194.08,
+          "row_count": 1
         }
       ]
     },
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 355534.09,
-      "share": 0.012,
-      "fund_count": 21,
+      "amount": 358076.04,
+      "share": 0.0119,
+      "fund_count": 24,
       "top_funds": [
         {
           "name": "GERRY PLAYGROUND DONATION",
@@ -223,19 +228,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 18840282.6,
+    "total": 19055099.83,
     "fixed_total": 17587048.6,
-    "fixed_share": 0.9335,
-    "admin_contracts_total": 429396.77,
-    "admin_contracts_share": 0.0228,
-    "other_recurring_total": 823837.23,
-    "other_recurring_share": 0.0437,
+    "fixed_share": 0.923,
+    "admin_contracts_total": 523963.21,
+    "admin_contracts_share": 0.0275,
+    "other_recurring_total": 944088.02,
+    "other_recurring_share": 0.0495,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 3344614.9,
-        "share": 0.1775,
+        "share": 0.1755,
         "row_count": 15,
         "top_vendors": [
           {
@@ -268,7 +273,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 7738584.39,
-        "share": 0.4107,
+        "share": 0.4061,
         "row_count": 30,
         "top_vendors": [
           {
@@ -281,7 +286,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.3102,
+        "share": 0.3067,
         "row_count": 1,
         "top_vendors": [
           {
@@ -294,7 +299,7 @@
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
         "amount": 660489.31,
-        "share": 0.0351,
+        "share": 0.0347,
         "row_count": 20,
         "top_vendors": [
           {
@@ -306,9 +311,9 @@
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 429396.77,
-        "share": 0.0228,
-        "row_count": 27,
+        "amount": 523963.21,
+        "share": 0.0275,
+        "row_count": 32,
         "top_vendors": [
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -319,12 +324,16 @@
             "amount": 100895.11
           },
           {
+            "name": "REPUBLIC SERVICES INC",
+            "amount": 94093.44
+          },
+          {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
             "amount": 78315.08
           },
           {
             "name": "MEAD TALERMAN & COSTA LLC",
-            "amount": 23852.78
+            "amount": 24325.78
           },
           {
             "name": "FUTURE TECHNOLOGIES GROUP LLC",
@@ -335,9 +344,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 823837.23,
-        "share": 0.0437,
-        "row_count": 727,
+        "amount": 944088.02,
+        "share": 0.0495,
+        "row_count": 831,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -353,23 +362,23 @@
           },
           {
             "name": "F W WEBB CO",
-            "amount": 50094.46
+            "amount": 50293.0
           },
           {
             "name": "CLEARGOV INC",
-            "amount": 36064.5
+            "amount": 47734.4
+          },
+          {
+            "name": "DENNIS K BURKE INC",
+            "amount": 41251.87
+          },
+          {
+            "name": "MAYER TREE SERVICE",
+            "amount": 27500.0
           },
           {
             "name": "CARAHSOFT TECHNOLOGY CORPORATION",
             "amount": 27450.53
-          },
-          {
-            "name": "CENTRALSQUARE TECHNOLOGIES LLC",
-            "amount": 25751.19
-          },
-          {
-            "name": "DENNIS K BURKE INC",
-            "amount": 24731.04
           }
         ]
       }
@@ -386,7 +395,7 @@
       "row_count": 11,
       "first_paid": "2026-07-20",
       "last_paid": "2026-08-13",
-      "days_since_last_paid": 26,
+      "days_since_last_paid": 28,
       "status": "active",
       "top_vendors": [
         {
@@ -426,7 +435,7 @@
       "row_count": 2,
       "first_paid": "2026-07-08",
       "last_paid": "2026-07-28",
-      "days_since_last_paid": 42,
+      "days_since_last_paid": 44,
       "status": "engineering",
       "top_vendors": [
         {
@@ -447,17 +456,22 @@
       "ballot_date": "2015-06-16",
       "purpose": "transfer-station construction + drainage pipe replacement",
       "context": "Eleven fiscal years on, construction draws still moving - phased build-out or scope amendment under the original authorization.",
-      "amount": 850.0,
-      "row_count": 1,
+      "amount": 1400.0,
+      "row_count": 2,
       "first_paid": "2026-08-28",
-      "last_paid": "2026-08-28",
-      "days_since_last_paid": 11,
-      "status": "engineering",
+      "last_paid": "2026-09-01",
+      "days_since_last_paid": 9,
+      "status": "active",
       "top_vendors": [
         {
           "name": "J & L WELDING AND MACHINE",
           "amount": 850.0,
-          "share": 1.0
+          "share": 0.6071
+        },
+        {
+          "name": "UTS OF MASSACHUSETTS INC",
+          "amount": 550.0,
+          "share": 0.3929
         }
       ]
     }
