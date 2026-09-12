@@ -712,8 +712,8 @@
     },
     {
       "month": "2026-06",
-      "amount": 14026564.9,
-      "count": 2471
+      "amount": 14030064.9,
+      "count": 2472
     }
   ],
   "drill": {
@@ -5186,6 +5186,22 @@
             "month": "2026-06",
             "amount": 34555.24,
             "count": 3
+          }
+        ]
+      },
+      "PREMIUM ON BONDS": {
+        "top_vendors": [
+          {
+            "name": "U.S. BANK",
+            "amount": 3500.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-06",
+            "amount": 3500.0,
+            "count": 1
           }
         ]
       },
