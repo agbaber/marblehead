@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-09-10",
+    "date": "2026-09-15",
     "fiscal_year": "FY27",
-    "row_count": 2130,
-    "total_paid": 30021746.17,
+    "row_count": 2144,
+    "total_paid": 32105348.99,
     "interfund_total": 131772.86,
-    "external_paid": 29889973.31,
+    "external_paid": 31973576.13,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-09-10",
-    "source_file": "checkbook_FY27_2026-09-10.csv"
+    "last_payment": "2026-09-15",
+    "source_file": "checkbook_FY27_2026-09-15.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 2243459.75,
-      "share": 0.0747,
+      "share": 0.0699,
       "fund_count": 3,
       "top_funds": [
         {
@@ -39,14 +39,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 19984983.06,
-      "share": 0.6657,
+      "amount": 21608064.23,
+      "share": 0.673,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 19055099.83,
-          "row_count": 929
+          "amount": 20678181.0,
+          "row_count": 936
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -63,24 +63,24 @@
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 7091053.31,
-      "share": 0.2362,
+      "amount": 7549471.62,
+      "share": 0.2351,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 4293072.72,
-          "row_count": 276
+          "amount": 4361770.98,
+          "row_count": 278
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 943818.29,
-          "row_count": 68
+          "amount": 1304387.37,
+          "row_count": 70
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
-          "amount": 812366.3,
-          "row_count": 147
+          "amount": 829603.83,
+          "row_count": 148
         },
         {
           "name": "WATER CAPITAL ARTICLES",
@@ -94,8 +94,8 @@
         },
         {
           "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 162061.58,
-          "row_count": 59
+          "amount": 173975.02,
+          "row_count": 60
         },
         {
           "name": "MWRA PROJECT LWSAP26-3021",
@@ -107,8 +107,8 @@
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 126902.59,
-      "share": 0.0042,
+      "amount": 129005.93,
+      "share": 0.004,
       "fund_count": 11,
       "top_funds": [
         {
@@ -127,14 +127,14 @@
           "row_count": 15
         },
         {
+          "name": "SCHOOL LUNCH",
+          "amount": 10240.32,
+          "row_count": 4
+        },
+        {
           "name": "JAIL DIVERSION GRANT (FED)",
           "amount": 9295.67,
           "row_count": 1
-        },
-        {
-          "name": "SCHOOL LUNCH",
-          "amount": 8136.98,
-          "row_count": 3
         },
         {
           "name": "CH90 FAIR SHARE GRANT",
@@ -157,7 +157,7 @@
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
       "amount": 217271.42,
-      "share": 0.0072,
+      "share": 0.0068,
       "fund_count": 3,
       "top_funds": [
         {
@@ -181,7 +181,7 @@
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
       "amount": 358076.04,
-      "share": 0.0119,
+      "share": 0.0112,
       "fund_count": 24,
       "top_funds": [
         {
@@ -228,24 +228,24 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 19055099.83,
-    "fixed_total": 17587048.6,
-    "fixed_share": 0.923,
-    "admin_contracts_total": 523963.21,
-    "admin_contracts_share": 0.0275,
+    "total": 20678181.0,
+    "fixed_total": 19203954.99,
+    "fixed_share": 0.9287,
+    "admin_contracts_total": 530137.99,
+    "admin_contracts_share": 0.0256,
     "other_recurring_total": 944088.02,
-    "other_recurring_share": 0.0495,
+    "other_recurring_share": 0.0457,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
-        "amount": 3344614.9,
-        "share": 0.1755,
-        "row_count": 15,
+        "amount": 4629771.86,
+        "share": 0.2239,
+        "row_count": 18,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 2543448.14
+            "amount": 3828605.1
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
@@ -273,7 +273,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 7738584.39,
-        "share": 0.4061,
+        "share": 0.3742,
         "row_count": 30,
         "top_vendors": [
           {
@@ -286,7 +286,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.3067,
+        "share": 0.2826,
         "row_count": 1,
         "top_vendors": [
           {
@@ -298,22 +298,22 @@
       {
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
-        "amount": 660489.31,
-        "share": 0.0347,
-        "row_count": 20,
+        "amount": 992238.74,
+        "share": 0.048,
+        "row_count": 23,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 660489.31
+            "amount": 992238.74
           }
         ]
       },
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 523963.21,
-        "share": 0.0275,
-        "row_count": 32,
+        "amount": 530137.99,
+        "share": 0.0256,
+        "row_count": 33,
         "top_vendors": [
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -321,7 +321,7 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 100895.11
+            "amount": 107069.89
           },
           {
             "name": "REPUBLIC SERVICES INC",
@@ -345,7 +345,7 @@
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
         "amount": 944088.02,
-        "share": 0.0495,
+        "share": 0.0457,
         "row_count": 831,
         "top_vendors": [
           {
@@ -395,7 +395,7 @@
       "row_count": 11,
       "first_paid": "2026-07-20",
       "last_paid": "2026-08-13",
-      "days_since_last_paid": 28,
+      "days_since_last_paid": 33,
       "status": "active",
       "top_vendors": [
         {
@@ -435,7 +435,7 @@
       "row_count": 2,
       "first_paid": "2026-07-08",
       "last_paid": "2026-07-28",
-      "days_since_last_paid": 44,
+      "days_since_last_paid": 49,
       "status": "engineering",
       "top_vendors": [
         {
@@ -460,7 +460,7 @@
       "row_count": 2,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-01",
-      "days_since_last_paid": 9,
+      "days_since_last_paid": 14,
       "status": "active",
       "top_vendors": [
         {
