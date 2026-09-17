@@ -1,5 +1,5 @@
 {
- "as_of": "2026-09-13",
+ "as_of": "2026-09-17",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -66,7 +66,7 @@
     {
      "name": "ABBOT LIBRARY",
      "revised_budget": 1501292.0,
-     "actual": 1416560.57,
+     "actual": 1415615.57,
      "original_budget": 1493292.0
     },
     {
@@ -236,7 +236,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 5152427.8,
-     "actual": 4755418.58,
+     "actual": 4754473.58,
      "original_budget": 4814460.0
     },
     {
@@ -1791,7 +1791,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 176408.32,
-     "actual": 175018.62,
+     "actual": 174073.62,
      "original_budget": 173139.0
     },
     {
@@ -1817,7 +1817,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 350289.0,
-     "actual": 346184.0,
+     "actual": 345239.0,
      "original_budget": 345239.0
     }
    ]
@@ -3657,7 +3657,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 5152427.8,
-     "actual": 4755418.58,
+     "actual": 4754473.58,
      "original_budget": 4814460.0
     },
     {
@@ -3773,7 +3773,7 @@
     {
      "name": "ABBOT LIBRARY",
      "revised_budget": 176408.32,
-     "actual": 175018.62,
+     "actual": 174073.62,
      "original_budget": 173139.0
     },
     {
@@ -4855,7 +4855,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19400687.6,
-     "actual": 18101490.42,
+     "actual": 18100545.42,
      "original_budget": 18599491.0
     },
     {
@@ -4935,7 +4935,7 @@
     {
      "name": "ABBOT LIBRARY",
      "revised_budget": 350289.0,
-     "actual": 346184.0,
+     "actual": 345239.0,
      "original_budget": 345239.0
     },
     {
@@ -11243,7 +11243,7 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 38956.65,
-    "actual": 38088.14,
+    "actual": 37143.14,
     "original_budget": 42187.0
    },
    {
@@ -14955,7 +14955,7 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 176929.3,
-    "actual": 148191.62,
+    "actual": 147246.62,
     "original_budget": 106916.0
    },
    {
