@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-09-18",
+  "as_of": "2026-09-19",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
     "all_funds_revised_budget": 135515101.02,
-    "all_funds_actual": 42320423.97,
+    "all_funds_actual": 42299913.97,
     "budgeted_annual": {
       "revised_budget": 127204296.0,
-      "actual": 37260430.78,
+      "actual": 37239920.78,
       "original_budget": 130510456.0
     },
     "other_funds": {
@@ -31,7 +31,7 @@
       "revised_budget": 47620287.0,
       "actual": 3203789.53,
       "original_budget": 47620287.0,
-      "encumbrance": 36660797.16
+      "encumbrance": 36669221.0
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -57,7 +57,7 @@
     {
       "name": "GENERAL FUND - TAX ARTICLES",
       "revised_budget": 1275602.0,
-      "actual": 288539.14,
+      "actual": 268029.14,
       "original_budget": 225000.0,
       "encumbrance": 77127.11
     },
@@ -82,14 +82,14 @@
       "revised_budget": 12884420.6,
       "actual": 1407887.28,
       "original_budget": 13090519.6,
-      "encumbrance": 8380422.6
+      "encumbrance": 8386132.34
     },
     {
       "name": "HIGH SCHOOL",
       "revised_budget": 11559661.33,
       "actual": 603631.49,
       "original_budget": 11552590.13,
-      "encumbrance": 9392298.9
+      "encumbrance": 9394820.98
     },
     {
       "name": "DEBT SERVICE",
@@ -145,7 +145,7 @@
       "revised_budget": 4350141.96,
       "actual": 234489.82,
       "original_budget": 4284992.96,
-      "encumbrance": 3456876.57
+      "encumbrance": 3457068.59
     },
     {
       "name": "PUBLIC WORKS",
@@ -220,7 +220,7 @@
     {
       "name": "EDUCATION",
       "revised_budget": 793127.0,
-      "actual": 25490.0,
+      "actual": 4980.0,
       "original_budget": 11000.0,
       "encumbrance": 1595.0
     },
@@ -420,7 +420,7 @@
       "revised_budget": 15114162.0,
       "actual": 3633260.6,
       "original_budget": 14336656.0,
-      "encumbrance": 7110746.09
+      "encumbrance": 7115926.63
     },
     {
       "name": "GOVERNMENTAL",
@@ -441,14 +441,14 @@
       "revised_budget": 2461324.0,
       "actual": 357177.03,
       "original_budget": 2458724.0,
-      "encumbrance": 648341.96
+      "encumbrance": 651558.52
     },
     {
       "name": "CAPITAL",
       "revised_budget": 1957576.0,
-      "actual": 357839.62,
+      "actual": 337329.62,
       "original_budget": 1656894.0,
-      "encumbrance": 1099701.95
+      "encumbrance": 1099728.69
     },
     {
       "name": "CLERICAL SALARIES",
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 3203789.53,
       "original_budget": 47615287.0,
-      "encumbrance": 36660797.16
+      "encumbrance": 36669221.0
     },
     {
       "name": "SALARIES",
@@ -854,7 +854,7 @@
     {
       "name": "ATM25A7-SCH-7D VAN",
       "revised_budget": 0.0,
-      "actual": 20510.0,
+      "actual": 0.0,
       "original_budget": 0.0,
       "encumbrance": 0.0
     },
@@ -1152,7 +1152,7 @@
       "revised_budget": 1236179.0,
       "actual": 184067.24,
       "original_budget": 1236179.0,
-      "encumbrance": 347612.0
+      "encumbrance": 352605.46
     },
     {
       "name": "INSURANCE PREMIUMS",
@@ -1271,7 +1271,7 @@
       "revised_budget": 619218.0,
       "actual": 82214.51,
       "original_budget": 616618.0,
-      "encumbrance": 233540.97
+      "encumbrance": 236228.33
     },
     {
       "name": "OTHER PROF & TECHNICAL",
@@ -1460,7 +1460,7 @@
       "revised_budget": 271180.0,
       "actual": 65853.23,
       "original_budget": 271180.0,
-      "encumbrance": 100397.85
+      "encumbrance": 100584.93
     },
     {
       "name": "MECHANIC PIPEFITTER",
@@ -1593,7 +1593,7 @@
       "revised_budget": 180262.0,
       "actual": 11949.17,
       "original_budget": 180262.0,
-      "encumbrance": 42576.91
+      "encumbrance": 43106.11
     },
     {
       "name": "OTHER SALARIES - STIPENDS",
@@ -2524,7 +2524,7 @@
       "revised_budget": 21894.0,
       "actual": 4494.01,
       "original_budget": 21894.0,
-      "encumbrance": 3967.68
+      "encumbrance": 3994.42
     },
     {
       "name": "TESTING SUPPLIES",
@@ -3593,7 +3593,7 @@
     {
       "name": "MOTOR VEHICLE",
       "revised_budget": 0.0,
-      "actual": 20510.0,
+      "actual": 0.0,
       "original_budget": 0.0,
       "encumbrance": 0.0
     },
