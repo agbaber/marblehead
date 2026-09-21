@@ -758,6 +758,22 @@
           }
         ]
       },
+      "A17 2023 MWRA LOAN": {
+        "top_vendors": [
+          {
+            "name": "N GRANESE & SONS INC",
+            "amount": 0.0,
+            "count": 2
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-08",
+            "amount": 0.0,
+            "count": 2
+          }
+        ]
+      },
       "A33 2025-ALLEY BLDG IMPROV": {
         "top_vendors": [
           {
@@ -1890,22 +1906,6 @@
             "month": "2026-09",
             "amount": 1.74,
             "count": 1
-          }
-        ]
-      },
-      "MWRA PROJECT LWSAP26-3021": {
-        "top_vendors": [
-          {
-            "name": "N GRANESE & SONS INC",
-            "amount": 0.0,
-            "count": 2
-          }
-        ],
-        "monthly": [
-          {
-            "month": "2026-08",
-            "amount": 0.0,
-            "count": 2
           }
         ]
       },
