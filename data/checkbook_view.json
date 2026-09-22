@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-09-18",
+    "date": "2026-09-21",
     "fiscal_year": "FY27",
-    "row_count": 2493,
-    "total_paid": 32812379.21,
+    "row_count": 2494,
+    "total_paid": 32832889.21,
     "interfund_total": 188501.86,
-    "external_paid": 32623877.35,
+    "external_paid": 32644387.35,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-09-18",
-    "source_file": "checkbook_FY27_2026-09-18.csv"
+    "last_payment": "2026-09-21",
+    "source_file": "checkbook_FY27_2026-09-21.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 2476624.31,
-      "share": 0.0755,
+      "share": 0.0754,
       "fund_count": 3,
       "top_funds": [
         {
@@ -39,8 +39,8 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 21934950.8,
-      "share": 0.6685,
+      "amount": 21955460.8,
+      "share": 0.6687,
       "fund_count": 3,
       "top_funds": [
         {
@@ -50,8 +50,8 @@
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 904590.09,
-          "row_count": 508
+          "amount": 925100.09,
+          "row_count": 509
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -64,7 +64,7 @@
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
       "amount": 7667624.34,
-      "share": 0.2337,
+      "share": 0.2335,
       "fund_count": 7,
       "top_funds": [
         {
@@ -181,7 +181,7 @@
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
       "amount": 379191.04,
-      "share": 0.0116,
+      "share": 0.0115,
       "fund_count": 24,
       "top_funds": [
         {
@@ -395,7 +395,7 @@
       "row_count": 14,
       "first_paid": "2026-07-20",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 2,
+      "days_since_last_paid": 5,
       "status": "active",
       "top_vendors": [
         {
@@ -435,7 +435,7 @@
       "row_count": 3,
       "first_paid": "2026-07-08",
       "last_paid": "2026-09-03",
-      "days_since_last_paid": 15,
+      "days_since_last_paid": 18,
       "status": "engineering",
       "top_vendors": [
         {
@@ -460,7 +460,7 @@
       "row_count": 2,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-01",
-      "days_since_last_paid": 17,
+      "days_since_last_paid": 20,
       "status": "active",
       "top_vendors": [
         {
