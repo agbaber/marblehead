@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-09-18",
+  "as_of": "2026-09-21",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 3,
-  "fy_pct_elapsed": 21.9,
+  "fy_pct_elapsed": 22.7,
   "budget_execution": {
     "by_department": [
       {
@@ -681,8 +681,8 @@
     },
     {
       "month": "2026-09",
-      "amount": 2751232.31,
-      "count": 403
+      "amount": 2771742.31,
+      "count": 404
     }
   ],
   "drill": {
@@ -1334,6 +1334,11 @@
             "count": 1
           },
           {
+            "name": "WELLS FARGO BANK, N.A.",
+            "amount": 20510.0,
+            "count": 1
+          },
+          {
             "name": "W B MASON CO INC",
             "amount": 20206.51,
             "count": 45
@@ -1342,11 +1347,6 @@
             "name": "WILLIAMS BRIDGE ACADEMY",
             "amount": 19504.68,
             "count": 2
-          },
-          {
-            "name": "ROBERT MARSHALL",
-            "amount": 18470.35,
-            "count": 4
           }
         ],
         "monthly": [
@@ -1362,8 +1362,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 117517.97,
-            "count": 64
+            "amount": 138027.97,
+            "count": 65
           }
         ]
       },
