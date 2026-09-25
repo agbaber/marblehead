@@ -839,6 +839,22 @@
           }
         ]
       },
+      "A17 2023 MWRA LOAN": {
+        "top_vendors": [
+          {
+            "name": "ONE TIME PAY",
+            "amount": 733599.62,
+            "count": 2
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2025-12",
+            "amount": 733599.62,
+            "count": 2
+          }
+        ]
+      },
       "A33 2025-ALLEY BLDG IMPROV": {
         "top_vendors": [
           {
@@ -4742,22 +4758,6 @@
             "month": "2026-06",
             "amount": 12233.99,
             "count": 17
-          }
-        ]
-      },
-      "MWRA PROJECT LWSAP26-3021": {
-        "top_vendors": [
-          {
-            "name": "ONE TIME PAY",
-            "amount": 733599.62,
-            "count": 2
-          }
-        ],
-        "monthly": [
-          {
-            "month": "2025-12",
-            "amount": 733599.62,
-            "count": 2
           }
         ]
       },
