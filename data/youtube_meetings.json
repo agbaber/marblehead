@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-17T15:28:35.595Z",
+  "last_updated": "2026-09-25T15:45:59.634Z",
   "channel_url": "https://www.youtube.com/channel/UC3mmZuBmhKUJsXeWbqwFQJQ",
-  "total_videos": 266,
+  "total_videos": 267,
   "meetings": [
     {
       "youtube_id": "gYE7TlHvW9o",
@@ -2589,6 +2589,11 @@
       "youtube_id": "8kSM41wzPfY",
       "raw_title": "Question 2 Forum   5-24-22",
       "reason": "not a board meeting"
+    },
+    {
+      "youtube_id": "fEBZk60BBts",
+      "raw_title": "Marblehead School Committee Meeting",
+      "reason": "no date in title; upload_date fetch failed"
     },
     {
       "youtube_id": "0_FNGKq7INQ",
