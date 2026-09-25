@@ -1,16 +1,16 @@
 {
-  "as_of": "2026-09-22",
+  "as_of": "2026-09-24",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 3,
-  "fy_pct_elapsed": 23.0,
+  "fy_pct_elapsed": 23.6,
   "budget_execution": {
     "by_department": [
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 3736671.94,
-        "delta": 3736671.94,
+        "actual": 3755175.48,
+        "delta": 3755175.48,
         "pct": null
       },
       {
@@ -247,9 +247,9 @@
       {
         "name": "CURBSIDE COLLECTION",
         "revised": 2186516.0,
-        "actual": 0,
-        "delta": -2186516.0,
-        "pct": 0.0
+        "actual": 92883.49,
+        "delta": -2093632.51,
+        "pct": 4.25
       },
       {
         "name": "PUBLIC WORKS",
@@ -331,8 +331,8 @@
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 10711401.87,
-        "delta": -13360991.13,
+        "actual": 10712463.87,
+        "delta": -13359929.13,
         "pct": 44.5
       }
     ],
@@ -340,8 +340,8 @@
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 10711401.87,
-        "delta": -13360991.13,
+        "actual": 10712463.87,
+        "delta": -13359929.13,
         "pct": 44.5
       },
       {
@@ -438,9 +438,9 @@
       {
         "name": "CURBSIDE COLLECTION",
         "revised": 2186516.0,
-        "actual": 0,
-        "delta": -2186516.0,
-        "pct": 0.0
+        "actual": 92883.49,
+        "delta": -2093632.51,
+        "pct": 4.25
       },
       {
         "name": "FINANCE",
@@ -662,8 +662,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 3736671.94,
-        "delta": 3736671.94,
+        "actual": 3755175.48,
+        "delta": 3755175.48,
         "pct": null
       }
     ]
@@ -681,8 +681,8 @@
     },
     {
       "month": "2026-09",
-      "amount": 2891183.0,
-      "count": 410
+      "amount": 7516405.08,
+      "count": 799
     }
   ],
   "drill": {
@@ -691,12 +691,22 @@
         "top_vendors": [
           {
             "name": "HOMER CONTRACTING IN",
-            "amount": 1908075.0,
-            "count": 1
+            "amount": 3740036.0,
+            "count": 2
+          },
+          {
+            "name": "D & R GENERAL CONTRACTING INC",
+            "amount": 953072.08,
+            "count": 2
           },
           {
             "name": "PAQCON LLC",
             "amount": 339150.0,
+            "count": 2
+          },
+          {
+            "name": "LEFTFIELD LLC",
+            "amount": 114290.0,
             "count": 2
           },
           {
@@ -705,13 +715,13 @@
             "count": 3
           },
           {
-            "name": "LEFTFIELD LLC",
-            "amount": 57145.0,
+            "name": "RICHARD D AMBROSIA INC",
+            "amount": 28395.5,
             "count": 1
           },
           {
-            "name": "RICHARD D AMBROSIA INC",
-            "amount": 28395.5,
+            "name": "RAYMOND DESIGN ASSOCIATES INC",
+            "amount": 20137.5,
             "count": 1
           },
           {
@@ -725,6 +735,11 @@
             "count": 1
           },
           {
+            "name": "STRUCTURES NORTH CONSULTING ENGINEERS, INC",
+            "amount": 4465.0,
+            "count": 1
+          },
+          {
             "name": "PURVIS SYSTEMS INC",
             "amount": 3897.57,
             "count": 2
@@ -732,11 +747,6 @@
           {
             "name": "HART HALSEY LLC",
             "amount": 1000.48,
-            "count": 1
-          },
-          {
-            "name": "UTS OF MASSACHUSETTS INC",
-            "amount": 400.0,
             "count": 1
           }
         ],
@@ -753,8 +763,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 18654.56,
-            "count": 2
+            "amount": 2885435.14,
+            "count": 8
           }
         ]
       },
@@ -762,8 +772,8 @@
         "top_vendors": [
           {
             "name": "N GRANESE & SONS INC",
-            "amount": 0.0,
-            "count": 2
+            "amount": 266400.38,
+            "count": 3
           }
         ],
         "monthly": [
@@ -771,6 +781,11 @@
             "month": "2026-08",
             "amount": 0.0,
             "count": 2
+          },
+          {
+            "month": "2026-09",
+            "amount": 266400.38,
+            "count": 1
           }
         ]
       },
@@ -803,13 +818,13 @@
       "A34 2015 NEW TRANSF STATION": {
         "top_vendors": [
           {
-            "name": "J & L WELDING AND MACHINE",
-            "amount": 850.0,
-            "count": 1
+            "name": "UTS OF MASSACHUSETTS INC",
+            "amount": 1100.0,
+            "count": 2
           },
           {
-            "name": "UTS OF MASSACHUSETTS INC",
-            "amount": 550.0,
+            "name": "J & L WELDING AND MACHINE",
+            "amount": 850.0,
             "count": 1
           }
         ],
@@ -821,7 +836,23 @@
           },
           {
             "month": "2026-09",
-            "amount": 550.0,
+            "amount": 1100.0,
+            "count": 2
+          }
+        ]
+      },
+      "ABBOT LIBRARY DONATION FUND": {
+        "top_vendors": [
+          {
+            "name": "AMAZON CAPITAL SERVICES",
+            "amount": 90.18,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-09",
+            "amount": 90.18,
             "count": 1
           }
         ]
@@ -834,14 +865,19 @@
             "count": 1
           },
           {
+            "name": "AMAZON CAPITAL SERVICES",
+            "amount": 903.1,
+            "count": 8
+          },
+          {
             "name": "WHENTOWORK, LLC",
             "amount": 666.0,
             "count": 1
           },
           {
             "name": "DEBBIE LEIBOWITZ",
-            "amount": 450.0,
-            "count": 9
+            "amount": 550.0,
+            "count": 11
           },
           {
             "name": "DARA VANREMOORTEL",
@@ -859,8 +895,8 @@
             "count": 1
           },
           {
-            "name": "AMAZON CAPITAL SERVICES",
-            "amount": 34.29,
+            "name": "STAPLES BUSINESS ADVANTAGE",
+            "amount": 51.04,
             "count": 1
           }
         ],
@@ -877,8 +913,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 100.0,
-            "count": 2
+            "amount": 1119.85,
+            "count": 12
           }
         ]
       },
@@ -911,6 +947,27 @@
             "month": "2026-07",
             "amount": 3114.72,
             "count": 1
+          }
+        ]
+      },
+      "CIRCUIT BREAKER": {
+        "top_vendors": [
+          {
+            "name": "MILESTONES, INC",
+            "amount": 15494.01,
+            "count": 1
+          },
+          {
+            "name": "LEARNING PREP SCHOOL",
+            "amount": 10085.04,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-09",
+            "amount": 25579.05,
+            "count": 2
           }
         ]
       },
@@ -983,6 +1040,11 @@
             "count": 2
           },
           {
+            "name": "STEPHANIE MAHONEY",
+            "amount": 500.0,
+            "count": 2
+          },
+          {
             "name": "KATHERINE CAMERON HOFFMAN",
             "amount": 400.0,
             "count": 2
@@ -991,11 +1053,6 @@
             "name": "KEVIN FIGUERA",
             "amount": 260.0,
             "count": 2
-          },
-          {
-            "name": "STEPHANIE MAHONEY",
-            "amount": 250.0,
-            "count": 1
           },
           {
             "name": "STACIE NARDIZZI",
@@ -1026,8 +1083,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 350.0,
-            "count": 1
+            "amount": 600.0,
+            "count": 2
           }
         ]
       },
@@ -1063,6 +1120,11 @@
             "name": "TOOLE DESIGN GROUP LLC",
             "amount": 12203.48,
             "count": 1
+          },
+          {
+            "name": "PARE CORPORATION",
+            "amount": 1415.84,
+            "count": 1
           }
         ],
         "monthly": [
@@ -1073,8 +1135,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 9903.16,
-            "count": 3
+            "amount": 11319.0,
+            "count": 4
           }
         ]
       },
@@ -1113,8 +1175,28 @@
       "EARL N REYNOLDS HISTORICAL FD": {
         "top_vendors": [
           {
+            "name": "ENVIRONMENTAL SYSTEMS RESEARCH INST",
+            "amount": 569.84,
+            "count": 1
+          },
+          {
             "name": "PAST PERFECT SOFTWARE",
             "amount": 432.0,
+            "count": 1
+          },
+          {
+            "name": "PETER MARTIN STACEY",
+            "amount": 409.98,
+            "count": 1
+          },
+          {
+            "name": "MARBLEHEAD NEWS GROUP",
+            "amount": 300.0,
+            "count": 2
+          },
+          {
+            "name": "AMERICAN ASSOCIATION FOR STATE AND LOCAL HISTORY",
+            "amount": 115.0,
             "count": 1
           },
           {
@@ -1132,6 +1214,27 @@
           {
             "month": "2026-08",
             "amount": 9.66,
+            "count": 1
+          },
+          {
+            "month": "2026-09",
+            "amount": 1394.82,
+            "count": 5
+          }
+        ]
+      },
+      "ELAINE HOFF SORENSON LIBRARY": {
+        "top_vendors": [
+          {
+            "name": "JANE WOLFF",
+            "amount": 1021.16,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-09",
+            "amount": 1021.16,
             "count": 1
           }
         ]
@@ -1164,14 +1267,14 @@
             "count": 6
           },
           {
-            "name": "NATIONAL GRAND BANK OF MARBLEHEAD",
-            "amount": 48785.94,
-            "count": 17
+            "name": "NORTHERN DATA SYSTEMS INC",
+            "amount": 53078.71,
+            "count": 4
           },
           {
-            "name": "NORTHERN DATA SYSTEMS INC",
-            "amount": 47182.66,
-            "count": 3
+            "name": "NATIONAL GRAND BANK OF MARBLEHEAD",
+            "amount": 49942.82,
+            "count": 22
           },
           {
             "name": "NATIONAL GRID",
@@ -1185,8 +1288,8 @@
           },
           {
             "name": "WESCO",
-            "amount": 34136.66,
-            "count": 5
+            "amount": 36496.19,
+            "count": 6
           },
           {
             "name": "EVERY ELECTRIC INC",
@@ -1194,9 +1297,9 @@
             "count": 3
           },
           {
-            "name": "GRAYBAR ELECTRIC CO INC",
-            "amount": 20470.0,
-            "count": 1
+            "name": "PLM ELECTRIC POWER ENGINEERING",
+            "amount": 22690.0,
+            "count": 5
           }
         ],
         "monthly": [
@@ -1212,8 +1315,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 195761.97,
-            "count": 71
+            "amount": 231104.59,
+            "count": 93
           }
         ]
       },
@@ -1290,13 +1393,33 @@
         "top_vendors": [
           {
             "name": "TOWN OF MARBLEHEAD",
-            "amount": 90618.62,
-            "count": 16
+            "amount": 127556.9,
+            "count": 20
+          },
+          {
+            "name": "NICKS LUXURY TRANSPORTATION INC",
+            "amount": 56765.0,
+            "count": 3
+          },
+          {
+            "name": "MIIA HEALTH BENEFITS TRUST",
+            "amount": 55462.0,
+            "count": 4
           },
           {
             "name": "AMAZON CAPITAL SERVICES INC",
             "amount": 52734.22,
             "count": 89
+          },
+          {
+            "name": "APPLE INC",
+            "amount": 47959.0,
+            "count": 3
+          },
+          {
+            "name": "CURRICULUM ASSOCIATES LLC",
+            "amount": 47470.2,
+            "count": 2
           },
           {
             "name": "AMERICAN SERVICE CO., INC",
@@ -1309,14 +1432,9 @@
             "count": 1
           },
           {
-            "name": "MIIA HEALTH BENEFITS TRUST",
-            "amount": 39708.0,
-            "count": 3
-          },
-          {
-            "name": "NICKS LUXURY TRANSPORTATION INC",
-            "amount": 37460.0,
-            "count": 2
+            "name": "NORTHSHORE EDUCATION CONSORTIUM",
+            "amount": 37551.83,
+            "count": 18
           },
           {
             "name": "COAST MAINTENANCE SUPPLY CO",
@@ -1324,28 +1442,13 @@
             "count": 8
           },
           {
-            "name": "RIVERVIEW SCHOOL",
-            "amount": 21702.88,
+            "name": "SUBLIME INC",
+            "amount": 23040.0,
             "count": 2
           },
           {
-            "name": "SCOTT A STUNKEL",
-            "amount": 21150.0,
-            "count": 1
-          },
-          {
-            "name": "WELLS FARGO BANK, N.A.",
-            "amount": 20510.0,
-            "count": 1
-          },
-          {
-            "name": "W B MASON CO INC",
-            "amount": 20206.51,
-            "count": 45
-          },
-          {
-            "name": "WILLIAMS BRIDGE ACADEMY",
-            "amount": 19504.68,
+            "name": "RIVERVIEW SCHOOL",
+            "amount": 21702.88,
             "count": 2
           }
         ],
@@ -1362,8 +1465,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 138027.97,
-            "count": 65
+            "amount": 427511.75,
+            "count": 155
           }
         ]
       },
@@ -1383,6 +1486,11 @@
             "name": "WOODARD & CURRAN INC",
             "amount": 32797.2,
             "count": 2
+          },
+          {
+            "name": "JOHN DEERE FINANCIAL",
+            "amount": 29916.06,
+            "count": 1
           },
           {
             "name": "PURVIS SYSTEMS INC",
@@ -1423,11 +1531,6 @@
             "name": "DILISIO BROS LANDSCAPE & MAS SUPPLY",
             "amount": 2447.62,
             "count": 1
-          },
-          {
-            "name": "LEFTFIELD LLC",
-            "amount": 740.0,
-            "count": 2
           }
         ],
         "monthly": [
@@ -1443,8 +1546,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 890.0,
-            "count": 4
+            "amount": 31593.34,
+            "count": 8
           }
         ]
       },
@@ -1462,8 +1565,8 @@
           },
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 4820843.84,
-            "count": 32
+            "amount": 4820856.34,
+            "count": 33
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
@@ -1481,14 +1584,14 @@
             "count": 5
           },
           {
+            "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
+            "amount": 116845.58,
+            "count": 3
+          },
+          {
             "name": "VOYA HOLDINGS INC",
             "amount": 116652.55,
             "count": 18
-          },
-          {
-            "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
-            "amount": 78315.08,
-            "count": 2
           },
           {
             "name": "ROSELLI & CLARK PTR",
@@ -1524,8 +1627,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 2073678.6,
-            "count": 184
+            "amount": 2281125.98,
+            "count": 335
           }
         ]
       },
@@ -1581,6 +1684,22 @@
           }
         ]
       },
+      "GLOVER STUDENT ACTIVITY": {
+        "top_vendors": [
+          {
+            "name": "PEABODY POLICE DEPT / CITY OF PEABODY",
+            "amount": 729.0,
+            "count": 2
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-09",
+            "amount": 729.0,
+            "count": 2
+          }
+        ]
+      },
       "HARBOR ENTERPRISE OPERATING": {
         "top_vendors": [
           {
@@ -1615,8 +1734,8 @@
           },
           {
             "name": "BOSTON YACHT CLUB",
-            "amount": 1850.15,
-            "count": 1
+            "amount": 3687.17,
+            "count": 2
           },
           {
             "name": "TOWN OF MARBLEHEAD",
@@ -1624,24 +1743,24 @@
             "count": 13
           },
           {
+            "name": "WILLARD & SON INC",
+            "amount": 1417.5,
+            "count": 1
+          },
+          {
+            "name": "THE WANDERLUST GROUP INC",
+            "amount": 1306.89,
+            "count": 3
+          },
+          {
             "name": "AMAZON CAPITAL SERVICES",
-            "amount": 969.28,
-            "count": 4
+            "amount": 1041.67,
+            "count": 5
           },
           {
             "name": "MARBLEHEAD MARINE INC",
             "amount": 897.45,
             "count": 3
-          },
-          {
-            "name": "THE WANDERLUST GROUP INC",
-            "amount": 871.26,
-            "count": 2
-          },
-          {
-            "name": "AT&T SUPPOENA CENTER",
-            "amount": 696.51,
-            "count": 2
           }
         ],
         "monthly": [
@@ -1657,8 +1776,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 21468.66,
-            "count": 12
+            "amount": 26245.23,
+            "count": 19
           }
         ]
       },
@@ -1678,21 +1797,42 @@
           }
         ]
       },
+      "HIGH SCHOOL DONATION FUND": {
+        "top_vendors": [
+          {
+            "name": "B & H PHOTO",
+            "amount": 18247.5,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-09",
+            "amount": 18247.5,
+            "count": 1
+          }
+        ]
+      },
       "HISTORCIAL COMM GIFT SHOP": {
         "top_vendors": [
+          {
+            "name": "HESTIA",
+            "amount": 455.5,
+            "count": 2
+          },
           {
             "name": "FRANCISCO URENA",
             "amount": 352.0,
             "count": 1
           },
           {
-            "name": "HESTIA",
-            "amount": 262.5,
+            "name": "SQUARE INC",
+            "amount": 124.33,
             "count": 1
           },
           {
-            "name": "SQUARE INC",
-            "amount": 124.33,
+            "name": "AMY KOSTECKI",
+            "amount": 118.8,
             "count": 1
           },
           {
@@ -1703,6 +1843,11 @@
           {
             "name": "ANDREA BUNDE",
             "amount": 63.0,
+            "count": 1
+          },
+          {
+            "name": "MARBLEHEAD BURGEE",
+            "amount": 15.0,
             "count": 1
           }
         ],
@@ -1716,6 +1861,11 @@
             "month": "2026-08",
             "amount": 801.83,
             "count": 4
+          },
+          {
+            "month": "2026-09",
+            "amount": 326.8,
+            "count": 3
           }
         ]
       },
@@ -1800,6 +1950,22 @@
           {
             "month": "2026-09",
             "amount": 413.74,
+            "count": 1
+          }
+        ]
+      },
+      "LIBRARY PROGRAM FUND": {
+        "top_vendors": [
+          {
+            "name": "STAPLES BUSINESS ADVANTAGE",
+            "amount": 74.45,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-09",
+            "amount": 74.45,
             "count": 1
           }
         ]
@@ -1912,8 +2078,18 @@
       "Mass Cultural Council Grant": {
         "top_vendors": [
           {
+            "name": "DONALD A DOLIBER SR",
+            "amount": 1597.0,
+            "count": 1
+          },
+          {
             "name": "MARBLEHEAD FESTIVAL OF ARTS, INC",
             "amount": 1500.0,
+            "count": 1
+          },
+          {
+            "name": "FRIENDS OF NORTH SHORE CHILDREN'S MUSEUM INC",
+            "amount": 1000.0,
             "count": 1
           }
         ],
@@ -1922,6 +2098,11 @@
             "month": "2026-08",
             "amount": 1500.0,
             "count": 1
+          },
+          {
+            "month": "2026-09",
+            "amount": 2597.0,
+            "count": 2
           }
         ]
       },
@@ -1955,13 +2136,18 @@
         "top_vendors": [
           {
             "name": "DAWN LIVIGNE",
-            "amount": 200.0,
-            "count": 1
+            "amount": 400.0,
+            "count": 2
           }
         ],
         "monthly": [
           {
             "month": "2026-08",
+            "amount": 200.0,
+            "count": 1
+          },
+          {
+            "month": "2026-09",
             "amount": 200.0,
             "count": 1
           }
@@ -2026,8 +2212,8 @@
           },
           {
             "name": "AMAZON CAPITAL SERVICES INC",
-            "amount": 3902.41,
-            "count": 41
+            "amount": 4070.29,
+            "count": 43
           }
         ],
         "monthly": [
@@ -2043,13 +2229,18 @@
           },
           {
             "month": "2026-09",
-            "amount": 856.67,
-            "count": 5
+            "amount": 3442.55,
+            "count": 8
           }
         ]
       },
       "ROSS & RITA TERRIEN-HISTORIC": {
         "top_vendors": [
+          {
+            "name": "VERMEULEN'S INC",
+            "amount": 12600.0,
+            "count": 1
+          },
           {
             "name": "GROUND PENETRATING RADAR SYSTEMS LLC",
             "amount": 6400.0,
@@ -2060,6 +2251,27 @@
           {
             "month": "2026-08",
             "amount": 6400.0,
+            "count": 1
+          },
+          {
+            "month": "2026-09",
+            "amount": 12600.0,
+            "count": 1
+          }
+        ]
+      },
+      "RYAN WALTER FADER DONATION": {
+        "top_vendors": [
+          {
+            "name": "SOTER TECHNOLOGIES LLC",
+            "amount": 600.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-09",
+            "amount": 600.0,
             "count": 1
           }
         ]
@@ -2083,9 +2295,44 @@
       "SCHOOL LUNCH": {
         "top_vendors": [
           {
+            "name": "PERFORMANCE FOODSERVICE NORTHCENTER FOODS",
+            "amount": 46333.45,
+            "count": 23
+          },
+          {
             "name": "COMMONWEALTH OF MA",
             "amount": 10055.32,
             "count": 3
+          },
+          {
+            "name": "PZA GROUP, LLC",
+            "amount": 4212.0,
+            "count": 2
+          },
+          {
+            "name": "THURSTON FOODS INC",
+            "amount": 3220.63,
+            "count": 1
+          },
+          {
+            "name": "MICHAEL SILVER",
+            "amount": 2850.0,
+            "count": 3
+          },
+          {
+            "name": "SCHOOL FOOD SERVICES OF NEW ENGLAND INC",
+            "amount": 930.0,
+            "count": 1
+          },
+          {
+            "name": "FANTINI BAKING CO INC",
+            "amount": 815.76,
+            "count": 4
+          },
+          {
+            "name": "METRO NORTH COLLABORATIVE",
+            "amount": 200.0,
+            "count": 1
           },
           {
             "name": "EMG",
@@ -2106,8 +2353,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 2103.34,
-            "count": 1
+            "amount": 60665.18,
+            "count": 36
           }
         ]
       },
@@ -2141,8 +2388,8 @@
         "top_vendors": [
           {
             "name": "NATIONAL WATER MAIN CLEANING CO",
-            "amount": 265377.75,
-            "count": 1
+            "amount": 292217.15,
+            "count": 2
           },
           {
             "name": "HALEY WARD, INC",
@@ -2175,6 +2422,11 @@
             "month": "2026-08",
             "amount": 292348.46,
             "count": 10
+          },
+          {
+            "month": "2026-09",
+            "amount": 26839.4,
+            "count": 1
           }
         ]
       },
@@ -2182,8 +2434,8 @@
         "top_vendors": [
           {
             "name": "SOUTH ESSEX SEWERAGE DISTRICT",
-            "amount": 562204.0,
-            "count": 2
+            "amount": 1096980.0,
+            "count": 3
           },
           {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
@@ -2202,8 +2454,8 @@
           },
           {
             "name": "TOWN OF MARBLEHEAD",
-            "amount": 10681.65,
-            "count": 56
+            "amount": 11769.37,
+            "count": 62
           },
           {
             "name": "TNC INDUSTRIES INC",
@@ -2254,8 +2506,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 26537.31,
-            "count": 28
+            "amount": 563109.36,
+            "count": 40
           }
         ]
       },
@@ -2270,6 +2522,11 @@
             "name": "LANDMARK SCHOOL",
             "amount": 325.0,
             "count": 1
+          },
+          {
+            "name": "HD SUPPLY INC",
+            "amount": 126.72,
+            "count": 1
           }
         ],
         "monthly": [
@@ -2280,8 +2537,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 325.0,
-            "count": 1
+            "amount": 451.72,
+            "count": 2
           }
         ]
       },
@@ -2299,13 +2556,23 @@
           },
           {
             "name": "EI US LLC",
-            "amount": 1444.0,
+            "amount": 2037.27,
+            "count": 3
+          },
+          {
+            "name": "WILSON LANGUAGE TRAINING",
+            "amount": 1185.0,
             "count": 1
           },
           {
             "name": "PERKINS SCHOOLFOR THE BLIND",
             "amount": 1127.5,
             "count": 4
+          },
+          {
+            "name": "NCS PEARSON INC",
+            "amount": 1086.36,
+            "count": 5
           },
           {
             "name": "BERTELSMANN LEARNING LLC",
@@ -2318,11 +2585,6 @@
             "count": 2
           },
           {
-            "name": "NCS PEARSON INC",
-            "amount": 275.38,
-            "count": 1
-          },
-          {
             "name": "SEEM COLLABORATIVE",
             "amount": 258.0,
             "count": 1
@@ -2333,19 +2595,14 @@
             "count": 1
           },
           {
-            "name": "TOBII DYNAVOX LLC",
+            "name": "JUSTIN GREENWOOD",
             "amount": 199.0,
             "count": 1
           },
           {
-            "name": "EDUCERE LLC",
-            "amount": 149.0,
+            "name": "TOBII DYNAVOX LLC",
+            "amount": 199.0,
             "count": 1
-          },
-          {
-            "name": "AMAZON CAPITAL SERVICES INC",
-            "amount": 34.94,
-            "count": 2
           }
         ],
         "monthly": [
@@ -2361,7 +2618,28 @@
           },
           {
             "month": "2026-09",
-            "amount": 348.0,
+            "amount": 3136.25,
+            "count": 10
+          }
+        ]
+      },
+      "STATE 911 TRAINING GRANT": {
+        "top_vendors": [
+          {
+            "name": "HANRAHAN CONSULTING LLC",
+            "amount": 390.0,
+            "count": 1
+          },
+          {
+            "name": "MCSA",
+            "amount": 300.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-09",
+            "amount": 690.0,
             "count": 2
           }
         ]
@@ -2382,12 +2660,44 @@
           }
         ]
       },
+      "VIRGINIA CARTEN LIBRARY FUND": {
+        "top_vendors": [
+          {
+            "name": "ALTEC PLASTICS INC",
+            "amount": 1679.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-09",
+            "amount": 1679.0,
+            "count": 1
+          }
+        ]
+      },
+      "WASTE REVOLVING FUND": {
+        "top_vendors": [
+          {
+            "name": "REHRIG PACIFIC COMPANY",
+            "amount": 126736.49,
+            "count": 5
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-09",
+            "amount": 126736.49,
+            "count": 5
+          }
+        ]
+      },
       "WATER CAPITAL ARTICLES": {
         "top_vendors": [
           {
             "name": "N GRANESE & SONS INC",
-            "amount": 587385.96,
-            "count": 6
+            "amount": 685807.68,
+            "count": 7
           },
           {
             "name": "FERGUSON US HOLDINGS INC",
@@ -2403,8 +2713,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 1460.28,
-            "count": 1
+            "amount": 99882.0,
+            "count": 2
           }
         ]
       },
@@ -2451,24 +2761,24 @@
             "count": 9
           },
           {
+            "name": "NATIONAL GRID COMPANY",
+            "amount": 2092.4,
+            "count": 4
+          },
+          {
             "name": "DENNIS K BURKE INC",
             "amount": 1904.62,
             "count": 4
           },
           {
-            "name": "NATIONAL GRID COMPANY",
-            "amount": 1207.93,
-            "count": 3
+            "name": "FERGUSON US HOLDINGS INC",
+            "amount": 1354.32,
+            "count": 1
           },
           {
             "name": "GENUINE PARTS COMPANY INC",
             "amount": 950.58,
             "count": 6
-          },
-          {
-            "name": "SERVICE TIRE TRUCK CENTERS, INC",
-            "amount": 940.9,
-            "count": 1
           }
         ],
         "monthly": [
@@ -2484,8 +2794,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 364413.75,
-            "count": 15
+            "amount": 367004.18,
+            "count": 20
           }
         ]
       }
