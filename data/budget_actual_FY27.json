@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-25",
+  "as_of": "2026-09-26",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
@@ -24,14 +24,14 @@
       "revised_budget": 69474315.0,
       "actual": 25394628.32,
       "original_budget": 69331077.0,
-      "encumbrance": 15738750.3
+      "encumbrance": 15743611.5
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
       "actual": 5050897.03,
       "original_budget": 47620287.0,
-      "encumbrance": 37897071.92
+      "encumbrance": 37910411.11
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -52,14 +52,14 @@
       "revised_budget": 1669500.0,
       "actual": 330767.61,
       "original_budget": 1669500.0,
-      "encumbrance": 497873.35
+      "encumbrance": 500373.35
     },
     {
       "name": "GENERAL FUND - TAX ARTICLES",
       "revised_budget": 1275602.0,
       "actual": 299242.72,
       "original_budget": 225000.0,
-      "encumbrance": 46423.77
+      "encumbrance": 49261.77
     },
     {
       "name": "ELECTRIC ENTERPRISE",
@@ -82,7 +82,7 @@
       "revised_budget": 12884420.6,
       "actual": 1857390.68,
       "original_budget": 13090519.6,
-      "encumbrance": 7931727.21
+      "encumbrance": 7945021.21
     },
     {
       "name": "HIGH SCHOOL",
@@ -117,7 +117,7 @@
       "revised_budget": 5764127.68,
       "actual": 539308.14,
       "original_budget": 5712762.68,
-      "encumbrance": 5086779.07
+      "encumbrance": 5086824.26
     },
     {
       "name": "POLICE",
@@ -194,7 +194,7 @@
       "revised_budget": 1669500.0,
       "actual": 330767.61,
       "original_budget": 1669500.0,
-      "encumbrance": 497873.35
+      "encumbrance": 500373.35
     },
     {
       "name": "ABBOT LIBRARY",
@@ -271,7 +271,7 @@
       "revised_budget": 468931.0,
       "actual": 104905.74,
       "original_budget": 468931.0,
-      "encumbrance": 364298.64
+      "encumbrance": 367136.64
     },
     {
       "name": "HEALTH",
@@ -313,7 +313,7 @@
       "revised_budget": 268002.0,
       "actual": 54590.99,
       "original_budget": 268002.0,
-      "encumbrance": 179140.25
+      "encumbrance": 180640.25
     },
     {
       "name": "VETERANS SERVICES",
@@ -327,7 +327,7 @@
       "revised_budget": 132200.0,
       "actual": 28029.48,
       "original_budget": 132200.0,
-      "encumbrance": 700.0
+      "encumbrance": 4061.2
     },
     {
       "name": "SNOW REMOVAL",
@@ -406,21 +406,21 @@
       "revised_budget": 54958578.07,
       "actual": 8422566.19,
       "original_budget": 54839779.07,
-      "encumbrance": 43144662.87
+      "encumbrance": 43147514.07
     },
     {
       "name": "OTHER EXPENSE",
       "revised_budget": 39091074.0,
       "actual": 20611562.7,
       "original_budget": 39082074.0,
-      "encumbrance": 157220.77
+      "encumbrance": 170514.77
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 15114162.0,
       "actual": 3924343.77,
       "original_budget": 14336656.0,
-      "encumbrance": 6872740.69
+      "encumbrance": 6880088.69
     },
     {
       "name": "GOVERNMENTAL",
@@ -441,7 +441,7 @@
       "revised_budget": 2461324.0,
       "actual": 430283.22,
       "original_budget": 2458724.0,
-      "encumbrance": 604734.02
+      "encumbrance": 604779.21
     },
     {
       "name": "CAPITAL",
@@ -478,21 +478,21 @@
       "revised_budget": 47615287.0,
       "actual": 5050897.03,
       "original_budget": 47615287.0,
-      "encumbrance": 37897071.92
+      "encumbrance": 37910411.11
     },
     {
       "name": "SALARIES",
       "revised_budget": 25498956.0,
       "actual": 6353143.06,
       "original_budget": 25314718.0,
-      "encumbrance": 15864261.07
+      "encumbrance": 15867112.27
     },
     {
       "name": "EXPENSES",
       "revised_budget": 20339169.0,
       "actual": 15770765.28,
       "original_budget": 24880169.0,
-      "encumbrance": 2541679.86
+      "encumbrance": 2543689.86
     },
     {
       "name": "GROUP INSURANCE",
@@ -555,7 +555,7 @@
       "revised_budget": 550000.0,
       "actual": 8234.9,
       "original_budget": 550000.0,
-      "encumbrance": 14831.0
+      "encumbrance": 17331.0
     },
     {
       "name": "MEDICARE",
@@ -744,7 +744,7 @@
       "revised_budget": 0.0,
       "actual": 0.0,
       "original_budget": 0.0,
-      "encumbrance": 0.0
+      "encumbrance": 2838.0
     },
     {
       "name": "ART 8 2024 CAPITAL IMPROVEMENT",
@@ -1152,7 +1152,7 @@
       "revised_budget": 1236179.0,
       "actual": 217184.2,
       "original_budget": 1236179.0,
-      "encumbrance": 274215.91
+      "encumbrance": 279553.91
     },
     {
       "name": "INSURANCE PREMIUMS",
@@ -1271,14 +1271,14 @@
       "revised_budget": 619218.0,
       "actual": 123121.07,
       "original_budget": 616618.0,
-      "encumbrance": 196894.51
+      "encumbrance": 196939.7
     },
     {
       "name": "OTHER PROF & TECHNICAL",
       "revised_budget": 589237.0,
       "actual": 475249.11,
       "original_budget": 574322.0,
-      "encumbrance": 33596.65
+      "encumbrance": 35606.65
     },
     {
       "name": "TELECOMMUNICATOR",
@@ -2305,7 +2305,7 @@
     {
       "name": "R&M COMPUTER EQUIPMENT",
       "revised_budget": 44728.0,
-      "actual": 11135.98,
+      "actual": 36395.16,
       "original_budget": 44728.0,
       "encumbrance": 24670.68
     },
@@ -2503,7 +2503,7 @@
       "revised_budget": 23020.0,
       "actual": 3599.0,
       "original_budget": 23020.0,
-      "encumbrance": 2425.0
+      "encumbrance": 6025.0
     },
     {
       "name": "WORKERS COMP BILLS",
@@ -2741,7 +2741,7 @@
       "revised_budget": 12494.0,
       "actual": 4142.68,
       "original_budget": 12494.0,
-      "encumbrance": 0.0
+      "encumbrance": 9694.0
     },
     {
       "name": "METRO AREA PLANNING COUNC",
@@ -2853,7 +2853,7 @@
       "revised_budget": 10000.0,
       "actual": 27625.56,
       "original_budget": 10000.0,
-      "encumbrance": 5940.36
+      "encumbrance": 8791.56
     },
     {
       "name": "PAINT",
@@ -2956,7 +2956,7 @@
     {
       "name": "SOFTWARE",
       "revised_budget": 6975.0,
-      "actual": 25991.18,
+      "actual": 732.0,
       "original_budget": 6975.0,
       "encumbrance": 0.0
     },
