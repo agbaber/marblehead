@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-26",
+  "as_of": "2026-09-27",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
@@ -24,7 +24,7 @@
       "revised_budget": 69474315.0,
       "actual": 25394628.32,
       "original_budget": 69331077.0,
-      "encumbrance": 15743611.5
+      "encumbrance": 15743840.26
     },
     {
       "name": "GENERAL FUND - SCHOOL",
@@ -250,7 +250,7 @@
       "revised_budget": 676519.0,
       "actual": 164621.26,
       "original_budget": 676519.0,
-      "encumbrance": 738215.43
+      "encumbrance": 738444.19
     },
     {
       "name": "COMMUNITY DEVELOP AND PLANNING",
@@ -413,7 +413,7 @@
       "revised_budget": 39091074.0,
       "actual": 20611562.7,
       "original_budget": 39082074.0,
-      "encumbrance": 170514.77
+      "encumbrance": 170743.53
     },
     {
       "name": "CONTRACTED SERVICES",
@@ -492,7 +492,7 @@
       "revised_budget": 20339169.0,
       "actual": 15770765.28,
       "original_budget": 24880169.0,
-      "encumbrance": 2543689.86
+      "encumbrance": 2543918.62
     },
     {
       "name": "GROUP INSURANCE",
@@ -2167,7 +2167,7 @@
       "revised_budget": 59151.0,
       "actual": 3628.87,
       "original_budget": 59151.0,
-      "encumbrance": 3309.43
+      "encumbrance": 3538.19
     },
     {
       "name": "ATHLETICS OFFICIALS SALARIES",
