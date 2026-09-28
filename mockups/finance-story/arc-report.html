@@ -1,0 +1,691 @@
+---
+layout: default
+title: "Mockup v5: Executive brand-report"
+body_class: "fs-mockup fs-report"
+sitemap: false
+robots: noindex
+---
+
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/mockups/finance-story/shared.css' | relative_url }}">
+<style>
+  /* v5: executive brand-report. Section-at-a-time scrolly with big serif
+     italics, huge stat numbers, cream + navy + teal alternating sections,
+     scroll-driven SVG line drawings, sticky bottom progress bar with CTA.
+     Reference: bidwells.co.uk/.../driving-innovation-at-speed/ */
+
+  .fs-report {
+    background: #FAF6EE;           /* cream surface */
+    --r-navy: #0E2440;
+    --r-teal: #2F7D8E;
+    --r-cream: #FAF6EE;
+    --r-buoy: #C8553D;
+    --r-ink:  #0F2A3D;
+    --r-mute: #4A5C6A;
+  }
+
+  /* ---------- Top bar (mockup label) ---------- */
+  .r-bar {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 20px; font-size: 13px;
+    background: color-mix(in srgb, var(--r-navy) 96%, transparent);
+    color: #E6ECF1;
+  }
+  .r-bar a { color: #B7D1E2; text-decoration: none; border-bottom: 1px dotted #B7D1E2; }
+  .r-bar .label {
+    font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+    font-size: 11px; opacity: 0.85;
+  }
+
+  /* ---------- Hero ---------- */
+  .r-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    background: linear-gradient(135deg, #0E2440 0%, #1C3B5C 60%, #224768 100%);
+    overflow: hidden;
+  }
+  .r-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(0deg, transparent 49%, rgba(255,255,255,0.04) 50%, transparent 51%),
+      linear-gradient(90deg, transparent 49%, rgba(255,255,255,0.04) 50%, transparent 51%);
+    background-size: 48px 48px;
+    opacity: 0.6;
+    mask-image: radial-gradient(ellipse 90% 60% at 30% 50%, #000 40%, transparent 80%);
+  }
+  .r-hero-inner {
+    position: relative; z-index: 1;
+    text-align: center; padding: 0 24px;
+    max-width: 900px;
+  }
+  .r-hero h1 {
+    font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(48px, 8vw, 110px);
+    line-height: 1.02; letter-spacing: -0.02em;
+    margin: 0 0 22px;
+  }
+  .r-hero h1 em {
+    font-style: italic; font-weight: 300;
+    color: #B7D1E2;
+  }
+  .r-hero p {
+    font-size: clamp(15px, 1.8vw, 18px);
+    line-height: 1.55; color: #B7D1E2;
+    max-width: 540px; margin: 0 auto 28px;
+  }
+  .r-scroll-pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 22px; border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #B7D1E2; text-decoration: none; font-size: 13px;
+    font-weight: 600; letter-spacing: 0.4px;
+    backdrop-filter: blur(8px);
+    transition: background 0.2s;
+  }
+  .r-scroll-pill:hover { background: rgba(255,255,255,0.16); color: #fff; }
+  .r-scroll-pill::after { content: '\2193'; font-size: 16px; }
+
+  /* ---------- Sections shared ---------- */
+  .r-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 80px 0;
+    overflow: hidden;
+  }
+  .r-wrap {
+    max-width: 1180px; margin: 0 auto;
+    padding: 0 32px;
+    width: 100%;
+  }
+  .r-grid {
+    display: grid; gap: 48px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 900px) { .r-grid { grid-template-columns: 1fr 1fr; align-items: center; } }
+  .r-grid.flip > :first-child { order: 2; }
+  @media (max-width: 899px) { .r-grid.flip > :first-child { order: initial; } }
+
+  .r-eye {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase;
+    color: var(--r-mute); margin: 0 0 16px;
+  }
+  .r-h2 {
+    font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(34px, 4.4vw, 60px);
+    line-height: 1.05; letter-spacing: -0.018em;
+    color: var(--r-ink);
+    margin: 0 0 24px;
+  }
+  .r-h2 em { font-style: italic; color: var(--r-teal); font-weight: 300; }
+  .r-body {
+    font-size: 17px; line-height: 1.65;
+    color: var(--r-mute);
+    max-width: 540px; margin: 0 0 16px;
+  }
+
+  /* Section variants */
+  .r-section.r-bg-cream { background: var(--r-cream); }
+  .r-section.r-bg-navy { background: var(--r-navy); color: #DDE6EE; }
+  .r-section.r-bg-navy .r-h2 { color: #fff; }
+  .r-section.r-bg-navy .r-h2 em { color: #94C3CF; }
+  .r-section.r-bg-navy .r-eye { color: #94C3CF; }
+  .r-section.r-bg-navy .r-body { color: #B7D1E2; }
+  .r-section.r-bg-teal { background: var(--r-teal); color: #fff; }
+  .r-section.r-bg-teal .r-h2 { color: #fff; }
+  .r-section.r-bg-teal .r-h2 em { color: #CFE9EE; font-style: italic; }
+  .r-section.r-bg-teal .r-eye { color: rgba(255,255,255,0.7); }
+  .r-section.r-bg-teal .r-body { color: rgba(255,255,255,0.86); }
+
+  /* ---------- Big stat ---------- */
+  .r-stat {
+    font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(110px, 18vw, 220px);
+    line-height: 0.95; letter-spacing: -0.04em;
+    color: var(--r-buoy);
+  }
+  .r-stat sup {
+    font-size: 0.42em; vertical-align: top;
+    color: var(--r-buoy); font-weight: 400; margin-left: 4px;
+  }
+  .r-stat-block {
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .r-stat-meta {
+    font-size: 17px; line-height: 1.6; color: var(--r-mute);
+    max-width: 500px;
+  }
+  .r-bg-navy .r-stat { color: #E97056; }
+  .r-bg-navy .r-stat-meta { color: #B7D1E2; }
+  .r-bg-teal .r-stat { color: #FAF6EE; }
+  .r-bg-teal .r-stat-meta { color: rgba(255,255,255,0.86); }
+
+  /* ---------- Floating quote card ---------- */
+  .r-quote {
+    background: rgba(255,255,255,0.94);
+    border-radius: 20px;
+    padding: 36px 40px;
+    max-width: 480px;
+    box-shadow: 0 24px 50px rgba(15,42,61,0.18);
+    backdrop-filter: blur(10px);
+  }
+  .r-quote .open { color: var(--r-buoy); font-size: 30px; font-weight: 700; }
+  .r-quote-h {
+    font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(26px, 3.2vw, 36px);
+    line-height: 1.18; letter-spacing: -0.012em;
+    color: var(--r-ink); margin: 8px 0 12px;
+  }
+  .r-quote-h em { font-style: italic; color: var(--r-teal); }
+  .r-quote-attr {
+    font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase;
+    color: var(--r-mute); font-weight: 600;
+  }
+
+  /* ---------- Photo placeholder ---------- */
+  .r-photo {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 14px;
+    overflow: hidden;
+    background-position: center; background-size: cover;
+    box-shadow: 0 16px 36px rgba(15,42,61,0.16);
+  }
+  .r-photo.abbot {
+    background:
+      radial-gradient(ellipse 40% 50% at 50% 30%, #5B7553 0%, transparent 60%),
+      linear-gradient(180deg, #C8D4DC 0%, #93A4B0 50%, #5B7553 100%);
+  }
+  .r-photo.abbot::after {
+    content: '';
+    position: absolute; left: 50%; bottom: 16%;
+    transform: translateX(-50%);
+    width: 30%; aspect-ratio: 1 / 1.5;
+    background: linear-gradient(180deg, #1B3A57 0%, #0E2440 100%);
+    clip-path: polygon(15% 28%, 50% 0%, 85% 28%, 85% 100%, 15% 100%);
+    box-shadow: 4px 0 10px rgba(0,0,0,0.2);
+  }
+  .r-photo.abbot::before {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 28%;
+    background: linear-gradient(180deg, transparent 0%, rgba(15,42,61,0.4) 100%);
+    z-index: 1;
+  }
+  .r-photo.harbor {
+    background:
+      linear-gradient(180deg, #B5D2DB 0%, #6A99A8 40%, #1B3A57 100%);
+  }
+  .r-photo.harbor::before {
+    content: '';
+    position: absolute; inset: 50% 0 0 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent 0, transparent 6px, rgba(255,255,255,0.08) 6px, rgba(255,255,255,0.08) 7px);
+  }
+  .r-photo.school {
+    background:
+      linear-gradient(180deg, #C5D1DB 0%, #93A4B0 100%);
+  }
+  .r-photo.school::after {
+    content: '';
+    position: absolute; left: 12%; right: 12%; bottom: 18%;
+    height: 50%;
+    background:
+      linear-gradient(180deg, #B8860B 0%, #8E6709 100%);
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 100%, 0 100%);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  .r-photo .r-tag {
+    position: absolute; left: 16px; bottom: 16px;
+    z-index: 2;
+    background: rgba(255,255,255,0.92);
+    padding: 6px 12px; border-radius: 8px;
+    font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    color: var(--r-ink);
+  }
+
+  /* ---------- Animated map (Marblehead silhouette dot pattern) ---------- */
+  .r-map { width: 100%; max-width: 460px; aspect-ratio: 1 / 1; }
+  .r-map circle { transition: opacity 0.6s; }
+
+  /* ---------- Sticky bottom progress bar ---------- */
+  .r-progress {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    z-index: 90;
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(15,42,61,0.08);
+    box-shadow: 0 -2px 14px rgba(15,42,61,0.06);
+    display: flex; align-items: center; gap: 20px;
+  }
+  .r-progress-bar {
+    flex: 1; height: 4px; background: #E7DFCF;
+    border-radius: 999px; overflow: hidden;
+    position: relative;
+  }
+  .r-progress-bar .r-progress-fill {
+    height: 100%; background: var(--r-buoy);
+    width: 0%; border-radius: 999px;
+    transition: width 0.18s linear;
+  }
+  .r-progress-bar .r-progress-fill::after {
+    content: '';
+    position: absolute; right: -7px; top: -5px;
+    width: 14px; height: 14px;
+    border-radius: 50%; background: #fff;
+    border: 2px solid var(--r-buoy);
+    transform: translateX(0);
+  }
+  .r-progress-cta {
+    background: var(--r-navy); color: #fff;
+    padding: 8px 16px; border-radius: 999px; font-size: 13px;
+    font-weight: 600; text-decoration: none; letter-spacing: 0.3px;
+    display: inline-flex; align-items: center; gap: 6px;
+    white-space: nowrap;
+    transition: filter 0.18s;
+  }
+  .r-progress-cta:hover { filter: brightness(1.15); }
+  .r-progress-cta::after { content: '\2192'; }
+
+  /* ---------- Reveal animations ---------- */
+  .r-reveal {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(.2,.7,.2,1), transform 0.9s cubic-bezier(.2,.7,.2,1);
+  }
+  .r-reveal.in-view { opacity: 1; transform: translateY(0); }
+  .r-reveal.d1 { transition-delay: 0.1s; }
+  .r-reveal.d2 { transition-delay: 0.25s; }
+  .r-reveal.d3 { transition-delay: 0.4s; }
+  .r-reveal.d4 { transition-delay: 0.55s; }
+
+  /* ---------- Trajectory chart ---------- */
+  .r-traj { width: 100%; max-width: 580px; aspect-ratio: 3 / 2; }
+  .r-traj path { transition: stroke-dashoffset 1.4s cubic-bezier(.3,.7,.3,1); }
+
+  /* ---------- Footer ---------- */
+  .r-foot {
+    background: #1B3A57; color: #B7D1E2; padding: 80px 32px 120px;
+    text-align: center;
+  }
+  .r-foot h3 {
+    font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(28px, 3.6vw, 40px);
+    color: #fff; margin: 0 0 16px;
+  }
+  .r-foot h3 em { font-style: italic; color: #94C3CF; }
+  .r-foot p { font-size: 16px; line-height: 1.6; max-width: 580px; margin: 0 auto 24px; }
+  .r-foot .tiles {
+    display: grid; gap: 14px; grid-template-columns: 1fr; max-width: 720px; margin: 32px auto 0;
+  }
+  @media (min-width: 600px) { .r-foot .tiles { grid-template-columns: 1fr 1fr; } }
+  .r-foot a.tile {
+    display: block; padding: 18px 22px; text-align: left;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 14px; color: #fff; text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .r-foot a.tile:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.28); }
+  .r-foot a.tile strong { display: block; margin-bottom: 4px; font-weight: 700; }
+  .r-foot a.tile span { font-size: 13px; color: #94C3CF; }
+</style>
+
+<nav class="r-bar">
+  <span class="label">Mockup v5 &middot; Brand-report &middot; reference: bidwells</span>
+  <a href="{{ '/mockups/finance-story/' | relative_url }}">All mockups &rarr;</a>
+</nav>
+
+<!-- ============= HERO ============= -->
+<section class="r-hero">
+  <div class="r-hero-inner">
+    <h1>Following the <em>taxpayer dollar</em><br/>through Marblehead</h1>
+    <p>A primer on where the town's $127 million operating budget actually goes, who decides, and what's locked in by the time anyone votes.</p>
+    <a class="r-scroll-pill" href="#chapter-1">Scroll down</a>
+  </div>
+</section>
+
+<!-- ============= CHAPTER 1 ============= -->
+<section id="chapter-1" class="r-section r-bg-cream">
+  <div class="r-wrap">
+    <div class="r-grid">
+      <div class="r-reveal">
+        <p class="r-eye">Chapter 1 &middot; Where it goes</p>
+        <h2 class="r-h2">Marblehead spends about <em>$127 million</em> a year.</h2>
+        <p class="r-body">Most of it pays people. Some of it is bills the town doesn't control. A small slice is everything else. The shape of the spending hasn't changed much in twenty years; the size has nearly tripled.</p>
+        <p class="r-body">Three centuries of town-meeting government still set the rules. The choices that move the budget happen in places most residents never see.</p>
+      </div>
+      <div class="r-reveal d2">
+        <div class="r-photo abbot"><span class="r-tag">Abbot Hall &middot; town seat</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= STAT 1 ============= -->
+<section class="r-section r-bg-navy">
+  <div class="r-wrap">
+    <div class="r-grid">
+      <div class="r-stat-block r-reveal">
+        <p class="r-eye">By the numbers</p>
+        <div class="r-stat">80<sup>&cent;</sup></div>
+        <p class="r-stat-meta">of every dollar Marblehead spends ends up paying a person. Salary plus the automatic stack of pension, health insurance, Medicare, and workers' comp on top.</p>
+      </div>
+      <div class="r-stat-block r-reveal d2">
+        <p class="r-eye">By the numbers</p>
+        <div class="r-stat">~1,020</div>
+        <p class="r-stat-meta">full-time-equivalent positions on the FY26 payroll. About 626 on the school side. About 394 on the town side.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= QUOTE 1 (over photo) ============= -->
+<section class="r-section r-bg-cream" style="overflow:hidden;">
+  <div class="r-wrap">
+    <div class="r-grid">
+      <div class="r-reveal" style="position: relative;">
+        <div class="r-photo harbor"><span class="r-tag">Marblehead Harbor</span></div>
+      </div>
+      <div class="r-reveal d2">
+        <div class="r-quote">
+          <span class="open">&ldquo;</span>
+          <h3 class="r-quote-h">A $75K hire is closer to <em>$100K</em> to the budget.</h3>
+          <p class="r-quote-attr">Pension &middot; GIC health &middot; Medicare &middot; workers' comp + life</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= CHAPTER 2: THE CUT ============= -->
+<section id="chapter-2" class="r-section r-bg-cream">
+  <div class="r-wrap">
+    <div class="r-grid flip">
+      <div class="r-reveal">
+        <p class="r-eye">Chapter 2 &middot; The cut</p>
+        <h2 class="r-h2">The dollar splits <em>three ways</em>.</h2>
+        <p class="r-body">About 80&cent; ends up as compensation. About 15&cent; is set bills the town doesn't control: debt service, OPEB amortization, state assessments (Essex Tech, MBTA, charter schools). The remaining 5&cent; is supplies, contractors, programs, and capital scope.</p>
+        <p class="r-body">The split is what makes "cuts" so difficult. The locked share doesn't move when revenue is short.</p>
+      </div>
+      <div class="r-reveal d2">
+        <svg viewBox="0 0 480 320" class="r-traj" role="img" aria-label="A dollar split into three proportional shares">
+          <text x="0" y="20" font-size="11" fill="var(--r-mute)" font-weight="700" letter-spacing="1.4" style="text-transform:uppercase;">$1.00 of operating budget</text>
+          <rect x="0" y="50" width="384" height="80" fill="var(--r-navy)" rx="6"/>
+          <text x="16" y="98" fill="#fff" font-weight="700" font-size="18">People</text>
+          <text x="368" y="98" fill="#fff" font-weight="700" font-size="18" text-anchor="end">80&cent;</text>
+
+          <rect x="0" y="150" width="72" height="48" fill="#4A5C6A" rx="4"/>
+          <text x="12" y="180" fill="#fff" font-weight="600" font-size="14">Set bills</text>
+          <text x="60" y="180" fill="#fff" font-weight="700" font-size="14" text-anchor="end" transform="translate(28,0)">15&cent;</text>
+
+          <rect x="0" y="218" width="24" height="32" fill="#93A4B0" rx="3"/>
+          <text x="32" y="240" fill="var(--r-mute)" font-size="13">Other &middot; 5&cent;</text>
+
+          <text x="0" y="290" font-size="12" fill="var(--r-mute)" font-style="italic">Bars sized to actual share of the FY26 general fund.</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= GEOGRAPHIC SECTION ============= -->
+<section class="r-section r-bg-teal">
+  <div class="r-wrap">
+    <div class="r-grid">
+      <div class="r-reveal">
+        <p class="r-eye">Chapter 3 &middot; The workforce</p>
+        <h2 class="r-h2">Two parallel organizations, <em>one tax base</em>.</h2>
+        <p class="r-body">The town side runs from the elected Select Board through the hired Town Administrator to the departments. The school side runs from the elected School Committee through the hired Superintendent to the schools.</p>
+        <p class="r-body">Each FTE is roughly one dot. Schools left, town right. The two pillars don't connect at the top; voters elect both boards directly.</p>
+      </div>
+      <div class="r-reveal d2">
+        <svg viewBox="0 0 460 460" class="r-map" role="img" aria-label="Marblehead workforce, ~1,020 FTE in two pillars">
+          <g id="report-pillars"></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= STAT 2 ============= -->
+<section class="r-section r-bg-cream">
+  <div class="r-wrap">
+    <div class="r-grid">
+      <div class="r-stat-block r-reveal">
+        <p class="r-eye">By the numbers</p>
+        <div class="r-stat">2.7<sup>&times;</sup></div>
+        <p class="r-stat-meta">Operating-budget growth from FY05 to FY26. From $47 million to $127 million in nominal dollars. About 5% per year compounded.</p>
+      </div>
+      <div class="r-stat-block r-reveal d2">
+        <p class="r-eye">By the numbers</p>
+        <div class="r-stat">+2<sup>%</sup></div>
+        <p class="r-stat-meta">FTE growth over the same span. Headcount has stayed within a 200-person band the entire time. The budget growth came from cost per employee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= QUOTE 2 ============= -->
+<section class="r-section r-bg-cream">
+  <div class="r-wrap">
+    <div class="r-grid flip">
+      <div class="r-reveal" style="position:relative;">
+        <div class="r-photo school"><span class="r-tag">Marblehead High School</span></div>
+      </div>
+      <div class="r-reveal d2">
+        <div class="r-quote">
+          <span class="open">&ldquo;</span>
+          <h3 class="r-quote-h">Budget grew. Headcount didn't. The difference was <em>cost-per-employee</em>.</h3>
+          <p class="r-quote-attr">GIC premium &middot; Essex Regional pension &middot; collective bargaining cycle</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= TRAJECTORY ============= -->
+<section class="r-section r-bg-navy">
+  <div class="r-wrap">
+    <div class="r-grid">
+      <div class="r-reveal">
+        <p class="r-eye">Chapter 4 &middot; Twenty years</p>
+        <h2 class="r-h2">The total grew. The <em>mix moved</em>.</h2>
+        <p class="r-body">Special-education support staff grew with student needs. Information technology was built from zero. Clerical compressed. Public safety and DPW stayed within their long-run ranges. Per-FTE loaded cost grew faster than CPI in nearly every year, mostly from health-insurance premium growth.</p>
+      </div>
+      <div class="r-reveal d2">
+        <svg viewBox="0 0 580 360" class="r-traj" id="report-traj"
+             role="img" aria-label="Operating budget FY05 to FY26">
+          <g font-size="10" fill="#7E8E9C">
+            <text x="0" y="40">$130M</text>
+            <text x="0" y="160">$100M</text>
+            <text x="0" y="260">$70M</text>
+            <text x="0" y="340">$40M</text>
+          </g>
+          <g stroke="rgba(180,200,220,0.18)" stroke-width="0.5">
+            <line x1="50" y1="40" x2="570" y2="40"/>
+            <line x1="50" y1="160" x2="570" y2="160"/>
+            <line x1="50" y1="260" x2="570" y2="260"/>
+            <line x1="50" y1="340" x2="570" y2="340"/>
+          </g>
+          <!-- Budget curve -->
+          <path id="traj-line"
+                d="M 60 340 L 80 332 L 100 322 L 120 312 L 140 300 L 160 286 L 180 272 L 200 258 L 220 244 L 240 226 L 260 208 L 280 192 L 300 176 L 320 156 L 340 138 L 360 118 L 380 96 L 400 74 L 420 60 L 440 52 L 460 46 L 480 42 L 500 40"
+                stroke="#E97056" stroke-width="3" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"
+                stroke-dasharray="1000" stroke-dashoffset="1000"/>
+          <text x="500" y="32" font-size="12" font-weight="700" fill="#E97056" text-anchor="end">FY26 ~$127M</text>
+          <text x="60" y="356" font-size="10" fill="#7E8E9C">FY05</text>
+          <text x="280" y="356" font-size="10" fill="#7E8E9C" text-anchor="middle">FY15</text>
+          <text x="500" y="356" font-size="10" fill="#7E8E9C" text-anchor="end">FY26</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= CLOSING QUOTE ============= -->
+<section class="r-section r-bg-cream" style="text-align:center;">
+  <div class="r-wrap r-reveal">
+    <p class="r-eye" style="text-align:center;">In closing</p>
+    <h2 class="r-h2" style="max-width:880px; margin:0 auto 28px; text-align:center;">
+      Most of the budget is <em>already committed</em><br/>before anyone votes.
+    </h2>
+    <p class="r-body" style="margin: 0 auto; text-align: center; max-width: 620px;">
+      Locked bills, contractual stacks on every employee, lump-sum School Committee allocation, capital scope from prior years. The annual choice space is small. Knowing how small is the first step in any honest budget conversation.
+    </p>
+  </div>
+</section>
+
+<!-- ============= FOOTER / CTA ============= -->
+<section class="r-foot">
+  <h3>Read the <em>full data</em>.</h3>
+  <p>Numbers in this primer trace to ACFRs, DOR DLS reports, GIC rate sheets, the FY27 proposed budget, and the FY26 Excel. Every line on the checkbook is one merge away from public.</p>
+  <div class="tiles">
+    <a class="tile" href="{{ '/checkbook/' | relative_url }}"><strong>Checkbook</strong><span>FY26 vendor and payroll detail.</span></a>
+    <a class="tile" href="{{ '/marblehead-101/' | relative_url }}"><strong>Marblehead 101</strong><span>The full 8-chapter primer.</span></a>
+    <a class="tile" href="{{ '/data/' | relative_url }}"><strong>Data catalog</strong><span>FTE history, peer towns, ACFRs.</span></a>
+    <a class="tile" href="{{ '/mockups/finance-story/' | relative_url }}"><strong>All mockups</strong><span>Compare with v1-v4.</span></a>
+  </div>
+</section>
+
+<!-- ============= STICKY BOTTOM PROGRESS BAR ============= -->
+<div class="r-progress" aria-hidden="true">
+  <div class="r-progress-bar">
+    <div class="r-progress-fill" id="r-progress-fill"></div>
+  </div>
+  <a class="r-progress-cta" href="{{ '/checkbook/' | relative_url }}">Open the checkbook</a>
+</div>
+
+<script>
+/* v5 engine: simple reveal-on-view + scroll-progress for the bottom bar +
+   stroke-dashoffset draw for the trajectory chart. Section-at-a-time
+   scrollytelling, no continuous interpolation. */
+(function () {
+  // ------------- Reveal-on-view -------------
+  const reveals = document.querySelectorAll('.r-reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.18 });
+  reveals.forEach((r) => io.observe(r));
+
+  // ------------- Trajectory draw on view -------------
+  const trajLine = document.getElementById('traj-line');
+  if (trajLine) {
+    const len = trajLine.getTotalLength();
+    trajLine.setAttribute('stroke-dasharray', len);
+    trajLine.setAttribute('stroke-dashoffset', len);
+    const tio = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting && e.intersectionRatio > 0.4) {
+          trajLine.setAttribute('stroke-dashoffset', 0);
+        }
+      });
+    }, { threshold: [0.4] });
+    tio.observe(trajLine);
+  }
+
+  // ------------- Two-pillar workforce dots -------------
+  const pillarHost = document.getElementById('report-pillars');
+  if (pillarHost) {
+    const ns = 'http://www.w3.org/2000/svg';
+    const CATS = [
+      { name: 'Instructional',    n: 460, color: '#FAF6EE', pillar: 'school' },
+      { name: 'Schools support',  n: 166, color: '#CFE9EE', pillar: 'school' },
+      { name: 'Public safety',    n: 95,  color: '#E97056', pillar: 'town' },
+      { name: 'DPW',              n: 60,  color: '#C7D7B4', pillar: 'town' },
+      { name: 'Town admin',       n: 95,  color: '#F1D080', pillar: 'town' },
+      { name: 'Library/COA/rec',  n: 144, color: '#D9B7DB', pillar: 'town' }
+    ];
+    const slots = {
+      0: [230, 60,  20, 11, 9.5],  // instructional
+      1: [230, 280, 14, 11, 9.5],  // support
+      2: [30,  60,  12, 11, 9.5],  // safety
+      3: [30,  180, 10, 11, 9.5],  // dpw
+      4: [30,  260, 12, 11, 9.5],  // admin
+      5: [30,  340, 14, 11, 9.5]   // other
+    };
+    // Headers
+    const t1 = document.createElementNS(ns, 'text');
+    t1.setAttribute('x', 110); t1.setAttribute('y', 24);
+    t1.setAttribute('font-size','12'); t1.setAttribute('font-weight','700');
+    t1.setAttribute('letter-spacing','1.4'); t1.setAttribute('fill','rgba(255,255,255,0.7)');
+    t1.setAttribute('text-anchor','middle');
+    t1.style.textTransform = 'uppercase';
+    t1.textContent = 'Town side';
+    pillarHost.appendChild(t1);
+    const t2 = document.createElementNS(ns, 'text');
+    t2.setAttribute('x', 350); t2.setAttribute('y', 24);
+    t2.setAttribute('font-size','12'); t2.setAttribute('font-weight','700');
+    t2.setAttribute('letter-spacing','1.4'); t2.setAttribute('fill','rgba(255,255,255,0.7)');
+    t2.setAttribute('text-anchor','middle');
+    t2.style.textTransform = 'uppercase';
+    t2.textContent = 'School side';
+    pillarHost.appendChild(t2);
+
+    // Dots
+    for (let c = 0; c < CATS.length; c++) {
+      const cat = CATS[c];
+      const slot = slots[c];
+      for (let i = 0; i < cat.n; i++) {
+        const col = i % slot[2];
+        const row = Math.floor(i / slot[2]);
+        const cx = slot[0] + col * slot[3];
+        const cy = slot[1] + row * slot[4];
+        const dot = document.createElementNS(ns, 'circle');
+        dot.setAttribute('cx', cx);
+        dot.setAttribute('cy', cy);
+        dot.setAttribute('r', 2.6);
+        dot.setAttribute('fill', cat.color);
+        dot.setAttribute('opacity', 0);
+        pillarHost.appendChild(dot);
+      }
+    }
+    // Animate in on view
+    const mio = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting && e.intersectionRatio > 0.25) {
+          const dots = pillarHost.querySelectorAll('circle');
+          dots.forEach((d, i) => {
+            d.style.transition = `opacity 1.4s cubic-bezier(.3,.7,.3,1) ${i * 0.6 / dots.length}s`;
+            d.setAttribute('opacity', 1);
+          });
+          mio.disconnect();
+        }
+      });
+    }, { threshold: [0.25] });
+    mio.observe(pillarHost.parentElement);
+  }
+
+  // ------------- Bottom progress bar -------------
+  const fill = document.getElementById('r-progress-fill');
+  let queued = false;
+  function tickProgress() {
+    const max = document.body.scrollHeight - window.innerHeight;
+    const t = max > 0 ? window.scrollY / max : 0;
+    fill.style.width = (t * 100).toFixed(2) + '%';
+    queued = false;
+  }
+  function onScroll() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(tickProgress);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', tickProgress);
+  tickProgress();
+})();
+</script>
