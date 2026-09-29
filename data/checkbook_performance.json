@@ -681,8 +681,8 @@
     },
     {
       "month": "2026-09",
-      "amount": 7516405.08,
-      "count": 799
+      "amount": 7520353.62,
+      "count": 800
     }
   ],
   "drill": {
@@ -2171,14 +2171,14 @@
             "count": 3
           },
           {
+            "name": "CAPTUREPOINT",
+            "amount": 14956.04,
+            "count": 3
+          },
+          {
             "name": "PATRICK KEVIN BUGLER",
             "amount": 14788.8,
             "count": 1
-          },
-          {
-            "name": "CAPTUREPOINT",
-            "amount": 11007.5,
-            "count": 2
           },
           {
             "name": "MEGAN WHITE",
@@ -2229,8 +2229,8 @@
           },
           {
             "month": "2026-09",
-            "amount": 3442.55,
-            "count": 8
+            "amount": 7391.09,
+            "count": 9
           }
         ]
       },
