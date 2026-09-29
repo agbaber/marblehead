@@ -3,10 +3,10 @@
   "snapshot": {
     "date": "2026-09-24",
     "fiscal_year": "FY27",
-    "row_count": 2889,
-    "total_paid": 37577551.98,
+    "row_count": 2890,
+    "total_paid": 37581500.52,
     "interfund_total": 230476.65,
-    "external_paid": 37347075.33,
+    "external_paid": 37351023.87,
     "first_payment": "2026-07-01",
     "last_payment": "2026-09-24",
     "source_file": "checkbook_FY27_2026-09-24.csv"
@@ -40,7 +40,7 @@
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
       "amount": 22584032.45,
-      "share": 0.601,
+      "share": 0.6009,
       "fund_count": 3,
       "top_funds": [
         {
@@ -156,14 +156,14 @@
     {
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
-      "amount": 347700.46,
-      "share": 0.0093,
+      "amount": 351649.0,
+      "share": 0.0094,
       "fund_count": 4,
       "top_funds": [
         {
           "name": "PARK REVOLVING FUND",
-          "amount": 204132.6,
-          "row_count": 123
+          "amount": 208081.14,
+          "row_count": 124
         },
         {
           "name": "WASTE REVOLVING FUND",
