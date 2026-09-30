@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-09-24",
+    "date": "2026-09-29",
     "fiscal_year": "FY27",
-    "row_count": 2890,
-    "total_paid": 37581500.52,
+    "row_count": 2895,
+    "total_paid": 37676439.92,
     "interfund_total": 230476.65,
-    "external_paid": 37351023.87,
+    "external_paid": 37445963.27,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-09-24",
-    "source_file": "checkbook_FY27_2026-09-24.csv"
+    "last_payment": "2026-09-29",
+    "source_file": "checkbook_FY27_2026-09-29.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5343954.89,
-      "share": 0.1422,
+      "share": 0.1418,
       "fund_count": 3,
       "top_funds": [
         {
@@ -39,14 +39,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 22584032.45,
-      "share": 0.6009,
+      "amount": 22590287.26,
+      "share": 0.5996,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 21070716.1,
-          "row_count": 1176
+          "amount": 21076970.91,
+          "row_count": 1177
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -64,7 +64,7 @@
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
       "amount": 8657071.05,
-      "share": 0.2304,
+      "share": 0.2298,
       "fund_count": 7,
       "top_funds": [
         {
@@ -108,7 +108,7 @@
       "key": "state_fed",
       "label": "State & federal restricted grants",
       "amount": 227619.33,
-      "share": 0.0061,
+      "share": 0.006,
       "fund_count": 14,
       "top_funds": [
         {
@@ -156,19 +156,19 @@
     {
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
-      "amount": 351649.0,
-      "share": 0.0094,
+      "amount": 440333.59,
+      "share": 0.0117,
       "fund_count": 4,
       "top_funds": [
+        {
+          "name": "WASTE REVOLVING FUND",
+          "amount": 215421.08,
+          "row_count": 9
+        },
         {
           "name": "PARK REVOLVING FUND",
           "amount": 208081.14,
           "row_count": 124
-        },
-        {
-          "name": "WASTE REVOLVING FUND",
-          "amount": 126736.49,
-          "row_count": 5
         },
         {
           "name": "COA REVOLVING",
@@ -233,11 +233,11 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 21070716.1,
+    "total": 21076970.91,
     "fixed_total": 19252361.31,
-    "fixed_share": 0.9137,
-    "admin_contracts_total": 673425.05,
-    "admin_contracts_share": 0.032,
+    "fixed_share": 0.9134,
+    "admin_contracts_total": 679679.86,
+    "admin_contracts_share": 0.0322,
     "other_recurring_total": 1144929.74,
     "other_recurring_share": 0.0543,
     "segments": [
@@ -286,7 +286,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 7738584.39,
-        "share": 0.3673,
+        "share": 0.3672,
         "row_count": 30,
         "top_vendors": [
           {
@@ -299,7 +299,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2773,
+        "share": 0.2772,
         "row_count": 1,
         "top_vendors": [
           {
@@ -324,9 +324,9 @@
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 673425.05,
-        "share": 0.032,
-        "row_count": 38,
+        "amount": 679679.86,
+        "share": 0.0322,
+        "row_count": 39,
         "top_vendors": [
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -337,12 +337,12 @@
             "amount": 186976.93
           },
           {
-            "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
-            "amount": 116845.58
+            "name": "VOYA HOLDINGS INC",
+            "amount": 120316.36
           },
           {
-            "name": "VOYA HOLDINGS INC",
-            "amount": 114061.55
+            "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
+            "amount": 116845.58
           },
           {
             "name": "MEAD TALERMAN & COSTA LLC",
@@ -408,7 +408,7 @@
       "row_count": 20,
       "first_paid": "2026-07-20",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 8,
+      "days_since_last_paid": 13,
       "status": "active",
       "top_vendors": [
         {
@@ -448,7 +448,7 @@
       "row_count": 3,
       "first_paid": "2026-07-08",
       "last_paid": "2026-09-03",
-      "days_since_last_paid": 21,
+      "days_since_last_paid": 26,
       "status": "engineering",
       "top_vendors": [
         {
@@ -473,7 +473,7 @@
       "row_count": 3,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-18",
-      "days_since_last_paid": 6,
+      "days_since_last_paid": 11,
       "status": "active",
       "top_vendors": [
         {
