@@ -9,8 +9,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 3829269.77,
-        "delta": 3829269.77,
+        "actual": 3832343.35,
+        "delta": 3832343.35,
         "pct": null
       },
       {
@@ -226,9 +226,9 @@
       {
         "name": "HARBOR",
         "revised": 1669500.0,
-        "actual": 341731.42,
-        "delta": -1327768.58,
-        "pct": 20.47
+        "actual": 341595.36,
+        "delta": -1327904.64,
+        "pct": 20.46
       },
       {
         "name": "FINANCE",
@@ -331,8 +331,8 @@
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 10766849.02,
-        "delta": -13305543.98,
+        "actual": 10766891.62,
+        "delta": -13305501.38,
         "pct": 44.73
       }
     ],
@@ -340,8 +340,8 @@
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 10766849.02,
-        "delta": -13305543.98,
+        "actual": 10766891.62,
+        "delta": -13305501.38,
         "pct": 44.73
       },
       {
@@ -459,9 +459,9 @@
       {
         "name": "HARBOR",
         "revised": 1669500.0,
-        "actual": 341731.42,
-        "delta": -1327768.58,
-        "pct": 20.47
+        "actual": 341595.36,
+        "delta": -1327904.64,
+        "pct": 20.46
       },
       {
         "name": "ABBOT LIBRARY",
@@ -662,8 +662,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 3829269.77,
-        "delta": 3829269.77,
+        "actual": 3832343.35,
+        "delta": 3832343.35,
         "pct": null
       }
     ]
