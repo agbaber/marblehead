@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-09-29",
+  "as_of": "2026-10-01",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
-  "fy_months_elapsed": 3,
-  "fy_pct_elapsed": 24.9,
+  "fy_months_elapsed": 4,
+  "fy_pct_elapsed": 25.5,
   "budget_execution": {
     "by_department": [
       {
@@ -681,8 +681,13 @@
     },
     {
       "month": "2026-09",
-      "amount": 7615293.02,
-      "count": 805
+      "amount": 7621259.52,
+      "count": 813
+    },
+    {
+      "month": "2026-10",
+      "amount": -106197.63,
+      "count": 7
     }
   ],
   "drill": {
@@ -1467,6 +1472,11 @@
             "month": "2026-09",
             "amount": 427511.75,
             "count": 155
+          },
+          {
+            "month": "2026-10",
+            "amount": -1505.42,
+            "count": 2
           }
         ]
       },
@@ -1627,8 +1637,13 @@
           },
           {
             "month": "2026-09",
-            "amount": 2287380.79,
-            "count": 336
+            "amount": 2292696.64,
+            "count": 340
+          },
+          {
+            "month": "2026-10",
+            "amount": 6665.45,
+            "count": 1
           }
         ]
       },
@@ -2679,21 +2694,31 @@
       "WASTE REVOLVING FUND": {
         "top_vendors": [
           {
-            "name": "REHRIG PACIFIC COMPANY",
-            "amount": 126736.49,
-            "count": 5
-          },
-          {
             "name": "FIRST AMERICAN COMMERCIAL BANCORP INC",
             "amount": 88684.59,
+            "count": 4
+          },
+          {
+            "name": "REHRIG PACIFIC COMPANY",
+            "amount": 15378.83,
+            "count": 9
+          },
+          {
+            "name": "AMAZON CAPITAL SERVICES INC",
+            "amount": 650.65,
             "count": 4
           }
         ],
         "monthly": [
           {
             "month": "2026-09",
-            "amount": 215421.08,
-            "count": 9
+            "amount": 216071.73,
+            "count": 13
+          },
+          {
+            "month": "2026-10",
+            "amount": -111357.66,
+            "count": 4
           }
         ]
       },

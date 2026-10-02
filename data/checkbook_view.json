@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-09-29",
+    "date": "2026-10-01",
     "fiscal_year": "FY27",
-    "row_count": 2895,
-    "total_paid": 37676439.92,
+    "row_count": 2910,
+    "total_paid": 37576208.79,
     "interfund_total": 230476.65,
-    "external_paid": 37445963.27,
+    "external_paid": 37345732.14,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-09-29",
-    "source_file": "checkbook_FY27_2026-09-29.csv"
+    "last_payment": "2026-10-01",
+    "source_file": "checkbook_FY27_2026-10-01.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5343954.89,
-      "share": 0.1418,
+      "share": 0.1422,
       "fund_count": 3,
       "top_funds": [
         {
@@ -39,19 +39,19 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 22590287.26,
-      "share": 0.5996,
+      "amount": 22600763.14,
+      "share": 0.6015,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 21076970.91,
-          "row_count": 1177
+          "amount": 21088952.21,
+          "row_count": 1182
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 1214583.87,
-          "row_count": 599
+          "amount": 1213078.45,
+          "row_count": 601
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -64,7 +64,7 @@
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
       "amount": 8657071.05,
-      "share": 0.2298,
+      "share": 0.2304,
       "fund_count": 7,
       "top_funds": [
         {
@@ -108,7 +108,7 @@
       "key": "state_fed",
       "label": "State & federal restricted grants",
       "amount": 227619.33,
-      "share": 0.006,
+      "share": 0.0061,
       "fund_count": 14,
       "top_funds": [
         {
@@ -156,19 +156,19 @@
     {
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
-      "amount": 440333.59,
-      "share": 0.0117,
+      "amount": 329626.58,
+      "share": 0.0088,
       "fund_count": 4,
       "top_funds": [
-        {
-          "name": "WASTE REVOLVING FUND",
-          "amount": 215421.08,
-          "row_count": 9
-        },
         {
           "name": "PARK REVOLVING FUND",
           "amount": 208081.14,
           "row_count": 124
+        },
+        {
+          "name": "WASTE REVOLVING FUND",
+          "amount": 104714.07,
+          "row_count": 17
         },
         {
           "name": "COA REVOLVING",
@@ -233,19 +233,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 21076970.91,
+    "total": 21088952.21,
     "fixed_total": 19252361.31,
-    "fixed_share": 0.9134,
-    "admin_contracts_total": 679679.86,
-    "admin_contracts_share": 0.0322,
-    "other_recurring_total": 1144929.74,
-    "other_recurring_share": 0.0543,
+    "fixed_share": 0.9129,
+    "admin_contracts_total": 684561.31,
+    "admin_contracts_share": 0.0325,
+    "other_recurring_total": 1152029.59,
+    "other_recurring_share": 0.0546,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 4678165.68,
-        "share": 0.222,
+        "share": 0.2218,
         "row_count": 38,
         "top_vendors": [
           {
@@ -286,7 +286,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 7738584.39,
-        "share": 0.3672,
+        "share": 0.3669,
         "row_count": 30,
         "top_vendors": [
           {
@@ -299,7 +299,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2772,
+        "share": 0.2771,
         "row_count": 1,
         "top_vendors": [
           {
@@ -324,9 +324,9 @@
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 679679.86,
-        "share": 0.0322,
-        "row_count": 39,
+        "amount": 684561.31,
+        "share": 0.0325,
+        "row_count": 40,
         "top_vendors": [
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -350,16 +350,16 @@
           },
           {
             "name": "FUTURE TECHNOLOGIES GROUP LLC",
-            "amount": 9762.86
+            "amount": 14644.31
           }
         ]
       },
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 1144929.74,
-        "share": 0.0543,
-        "row_count": 1045,
+        "amount": 1152029.59,
+        "share": 0.0546,
+        "row_count": 1049,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -408,7 +408,7 @@
       "row_count": 20,
       "first_paid": "2026-07-20",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 13,
+      "days_since_last_paid": 15,
       "status": "active",
       "top_vendors": [
         {
@@ -448,7 +448,7 @@
       "row_count": 3,
       "first_paid": "2026-07-08",
       "last_paid": "2026-09-03",
-      "days_since_last_paid": 26,
+      "days_since_last_paid": 28,
       "status": "engineering",
       "top_vendors": [
         {
@@ -473,7 +473,7 @@
       "row_count": 3,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-18",
-      "days_since_last_paid": 11,
+      "days_since_last_paid": 13,
       "status": "active",
       "top_vendors": [
         {
