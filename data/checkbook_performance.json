@@ -184,9 +184,9 @@
       {
         "name": "SELECT BOARD",
         "revised": 790176.0,
-        "actual": 193362.68,
-        "delta": -596813.32,
-        "pct": 24.47
+        "actual": 200028.13,
+        "delta": -590147.87,
+        "pct": 25.31
       },
       {
         "name": "EDUCATION",
@@ -233,9 +233,9 @@
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 643766.12,
-        "delta": -1481686.88,
-        "pct": 30.29
+        "actual": 649081.97,
+        "delta": -1476371.03,
+        "pct": 30.54
       },
       {
         "name": "WASTE COLLECTION",
@@ -324,9 +324,9 @@
       {
         "name": "DISTRICTWIDE",
         "revised": 12884420.6,
-        "actual": 1857390.68,
-        "delta": -11027029.92,
-        "pct": 14.42
+        "actual": 1855885.26,
+        "delta": -11028535.34,
+        "pct": 14.4
       },
       {
         "name": "OTHER GOVERNMENTAL",
@@ -347,9 +347,9 @@
       {
         "name": "DISTRICTWIDE",
         "revised": 12884420.6,
-        "actual": 1857390.68,
-        "delta": -11027029.92,
-        "pct": 14.42
+        "actual": 1855885.26,
+        "delta": -11028535.34,
+        "pct": 14.4
       },
       {
         "name": "HIGH SCHOOL",
@@ -445,9 +445,9 @@
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 643766.12,
-        "delta": -1481686.88,
-        "pct": 30.29
+        "actual": 649081.97,
+        "delta": -1476371.03,
+        "pct": 30.54
       },
       {
         "name": "WASTE COLLECTION",
@@ -494,9 +494,9 @@
       {
         "name": "SELECT BOARD",
         "revised": 790176.0,
-        "actual": 193362.68,
-        "delta": -596813.32,
-        "pct": 24.47
+        "actual": 200028.13,
+        "delta": -590147.87,
+        "pct": 25.31
       },
       {
         "name": "INTERFUND TRANSFERS",
@@ -681,8 +681,8 @@
     },
     {
       "month": "2026-09",
-      "amount": 7621259.52,
-      "count": 813
+      "amount": 7605880.69,
+      "count": 812
     },
     {
       "month": "2026-10",
@@ -2699,21 +2699,21 @@
             "count": 4
           },
           {
-            "name": "REHRIG PACIFIC COMPANY",
-            "amount": 15378.83,
-            "count": 9
-          },
-          {
             "name": "AMAZON CAPITAL SERVICES INC",
             "amount": 650.65,
             "count": 4
+          },
+          {
+            "name": "REHRIG PACIFIC COMPANY",
+            "amount": 0.0,
+            "count": 8
           }
         ],
         "monthly": [
           {
             "month": "2026-09",
-            "amount": 216071.73,
-            "count": 13
+            "amount": 200692.9,
+            "count": 12
           },
           {
             "month": "2026-10",
