@@ -1,5 +1,5 @@
 {
- "as_of": "2026-09-27",
+ "as_of": "2026-10-03",
  "fiscal_year": "FY26",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
@@ -54,7 +54,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 2213842.0,
-     "actual": 1938272.59,
+     "actual": 1941272.59,
      "original_budget": 2301042.0
     },
     {
@@ -236,7 +236,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 5152427.8,
-     "actual": 4754473.58,
+     "actual": 4757473.58,
      "original_budget": 4814460.0
     },
     {
@@ -281,7 +281,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14903846.66,
+     "actual": 14907221.66,
      "original_budget": 17832596.0
     },
     {
@@ -331,7 +331,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 7940853.0,
-     "actual": 8687454.3,
+     "actual": 8690829.3,
      "original_budget": 7948732.0
     },
     {
@@ -506,7 +506,7 @@
     {
      "name": "PUBLIC BUILDINGS",
      "revised_budget": 555285.65,
-     "actual": 222230.54,
+     "actual": 218855.54,
      "original_budget": 485285.65
     },
     {
@@ -530,7 +530,7 @@
     {
      "name": "POLICE",
      "revised_budget": 151267.09,
-     "actual": 145669.21,
+     "actual": 142669.21,
      "original_budget": 3585.09
     },
     {
@@ -568,13 +568,13 @@
     {
      "name": "CAPITAL",
      "revised_budget": 2934470.11,
-     "actual": 1656790.89,
+     "actual": 1653790.89,
      "original_budget": 1111726.35
     },
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 1370532.77,
-     "actual": 796601.46,
+     "actual": 793226.46,
      "original_budget": 743209.77
     }
    ]
@@ -780,7 +780,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 7735892.0,
-     "actual": 8527276.19,
+     "actual": 8530651.19,
      "original_budget": 9309954.0
     },
     {
@@ -824,7 +824,7 @@
     {
      "name": "UNDEFINED",
      "revised_budget": 14574494.16,
-     "actual": 14903846.66,
+     "actual": 14907221.66,
      "original_budget": 17832596.0
     }
    ]
@@ -1323,7 +1323,7 @@
     {
      "name": "CAPITAL",
      "revised_budget": 151267.09,
-     "actual": 145669.21,
+     "actual": 142669.21,
      "original_budget": 3585.09
     },
     {
@@ -1373,7 +1373,7 @@
     {
      "name": "ATM25A6-POL-RADAR REPLACEMENT",
      "revised_budget": 21690.0,
-     "actual": 0,
+     "actual": 18690.0,
      "original_budget": 0
     },
     {
@@ -1385,7 +1385,7 @@
     {
      "name": "ATM25A6-POL-PORTABLE RADIOS",
      "revised_budget": 18861.0,
-     "actual": 40545.64,
+     "actual": 18855.64,
      "original_budget": 0
     },
     {
@@ -1411,6 +1411,12 @@
      "revised_budget": 420.0,
      "actual": 0,
      "original_budget": 420.0
+    },
+    {
+     "name": "ART 30 2024 CAPITAL TRANSFERS",
+     "revised_budget": 0,
+     "actual": 0,
+     "original_budget": 0
     }
    ]
   },
@@ -1489,7 +1495,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 461701.91,
-     "actual": 145395.08,
+     "actual": 148395.08,
      "original_budget": 461349.21
     },
     {
@@ -1527,7 +1533,7 @@
     {
      "name": "EXPENSES",
      "revised_budget": 375680.0,
-     "actual": 235100.79,
+     "actual": 238100.79,
      "original_budget": 399680.0
     },
     {
@@ -2086,7 +2092,7 @@
     {
      "name": "CONTRACTED SERVICES",
      "revised_budget": 660466.01,
-     "actual": 330810.31,
+     "actual": 327435.31,
      "original_budget": 589263.76
     },
     {
@@ -2124,7 +2130,7 @@
     {
      "name": "ART 11 2023 CAPITAL IMPROV",
      "revised_budget": 185076.3,
-     "actual": 78661.72,
+     "actual": 75286.72,
      "original_budget": 185076.3
     },
     {
@@ -2574,6 +2580,12 @@
      "revised_budget": 100.0,
      "actual": 0,
      "original_budget": 100.0
+    },
+    {
+     "name": "ART 6 2024 PURCHASE OF EQUIP",
+     "revised_budget": 0,
+     "actual": 0,
+     "original_budget": 0
     }
    ]
   },
@@ -3651,19 +3663,19 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 7940853.0,
-     "actual": 8687454.3,
+     "actual": 8690829.3,
      "original_budget": 7948732.0
     },
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 5152427.8,
-     "actual": 4754473.58,
+     "actual": 4757473.58,
      "original_budget": 4814460.0
     },
     {
      "name": "GENERAL FUND - TAX ARTICLES",
      "revised_budget": 1370532.77,
-     "actual": 796601.46,
+     "actual": 793226.46,
      "original_budget": 743209.77
     },
     {
@@ -3695,7 +3707,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 7735892.0,
-     "actual": 8527276.19,
+     "actual": 8530651.19,
      "original_budget": 9309954.0
     },
     {
@@ -3713,7 +3725,7 @@
     {
      "name": "PUBLIC BUILDINGS",
      "revised_budget": 660466.01,
-     "actual": 330810.31,
+     "actual": 327435.31,
      "original_budget": 589263.76
     },
     {
@@ -3725,7 +3737,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 461701.91,
-     "actual": 145395.08,
+     "actual": 148395.08,
      "original_budget": 461349.21
     },
     {
@@ -4044,7 +4056,7 @@
     {
      "name": "GENERAL FUND - TAX ARTICLES",
      "revised_budget": 2934470.11,
-     "actual": 1656790.89,
+     "actual": 1653790.89,
      "original_budget": 1111726.35
     },
     {
@@ -4118,7 +4130,7 @@
     {
      "name": "POLICE",
      "revised_budget": 151267.09,
-     "actual": 145669.21,
+     "actual": 142669.21,
      "original_budget": 3585.09
     },
     {
@@ -4599,7 +4611,7 @@
     {
      "name": "GENERAL FUND - SCHOOL",
      "revised_budget": 49120287.0,
-     "actual": 48015394.27,
+     "actual": 48018769.27,
      "original_budget": 49120287.0
     }
    ],
@@ -4607,7 +4619,7 @@
     {
      "name": "DISTRICTWIDE",
      "revised_budget": 14574494.16,
-     "actual": 14903846.66,
+     "actual": 14907221.66,
      "original_budget": 17832596.0
     },
     {
@@ -4855,7 +4867,7 @@
     {
      "name": "GENERAL FUND - TOWN",
      "revised_budget": 19400687.6,
-     "actual": 18100545.42,
+     "actual": 18103545.42,
      "original_budget": 18599491.0
     },
     {
@@ -4929,7 +4941,7 @@
     {
      "name": "PUBLIC WORKS",
      "revised_budget": 375680.0,
-     "actual": 235100.79,
+     "actual": 238100.79,
      "original_budget": 399680.0
     },
     {
@@ -5405,6 +5417,12 @@
      "revised_budget": 7831.0,
      "actual": 0,
      "original_budget": 7831.0
+    },
+    {
+     "name": "POLICE",
+     "revised_budget": 0,
+     "actual": 0,
+     "original_budget": 0
     }
    ]
   },
@@ -5441,7 +5459,7 @@
     {
      "name": "GENERAL FUND - TAX ARTICLES",
      "revised_budget": 185076.3,
-     "actual": 78661.72,
+     "actual": 75286.72,
      "original_budget": 185076.3
     }
    ],
@@ -5449,7 +5467,7 @@
     {
      "name": "PUBLIC BUILDINGS",
      "revised_budget": 185076.3,
-     "actual": 78661.72,
+     "actual": 75286.72,
      "original_budget": 185076.3
     }
    ]
@@ -6091,6 +6109,12 @@
      "revised_budget": 2514.88,
      "actual": 0,
      "original_budget": 2514.88
+    },
+    {
+     "name": "HEALTH",
+     "revised_budget": 0,
+     "actual": 0,
+     "original_budget": 0
     }
    ]
   },
@@ -6265,7 +6289,7 @@
     {
      "name": "GENERAL FUND - TAX ARTICLES",
      "revised_budget": 21690.0,
-     "actual": 0,
+     "actual": 18690.0,
      "original_budget": 0
     }
    ],
@@ -6273,7 +6297,7 @@
     {
      "name": "POLICE",
      "revised_budget": 21690.0,
-     "actual": 0,
+     "actual": 18690.0,
      "original_budget": 0
     }
    ]
@@ -6334,7 +6358,7 @@
     {
      "name": "GENERAL FUND - TAX ARTICLES",
      "revised_budget": 18861.0,
-     "actual": 40545.64,
+     "actual": 18855.64,
      "original_budget": 0
     }
    ],
@@ -6342,7 +6366,7 @@
     {
      "name": "POLICE",
      "revised_budget": 18861.0,
-     "actual": 40545.64,
+     "actual": 18855.64,
      "original_budget": 0
     }
    ]
@@ -6797,7 +6821,7 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 557089.0,
-    "actual": 778073.9,
+    "actual": 781448.9,
     "original_budget": 557089.0
    },
    {
@@ -8461,6 +8485,12 @@
     "revised_budget": 2296.06,
     "actual": 0,
     "original_budget": 2296.06
+   },
+   {
+    "name": "EQUIPMENT (REPLACEMENT)",
+    "revised_budget": 0,
+    "actual": 0,
+    "original_budget": 0
    }
   ],
   "FIRE||SUPPLIES AND MATL": [
@@ -9707,7 +9737,7 @@
    {
     "name": "OTHER EQUIPMENT",
     "revised_budget": 40551.0,
-    "actual": 40545.64,
+    "actual": 37545.64,
     "original_budget": 0
    },
    {
@@ -10207,7 +10237,7 @@
    {
     "name": "R&M OTHER EQUIPMENT",
     "revised_budget": 36400.0,
-    "actual": 9510.91,
+    "actual": 12510.91,
     "original_budget": 51000.0
    },
    {
@@ -12109,7 +12139,7 @@
    {
     "name": "REPAIRS & MAINTENANCE",
     "revised_budget": 445517.76,
-    "actual": 144074.54,
+    "actual": 140699.54,
     "original_budget": 445517.76
    },
    {
@@ -14967,7 +14997,7 @@
    {
     "name": "R&M OTHER EQUIPMENT",
     "revised_budget": 103877.34,
-    "actual": 92831.65,
+    "actual": 95831.65,
     "original_budget": 110773.0
    },
    {
@@ -15811,7 +15841,7 @@
    {
     "name": "R&M BUILDING AND GROUNDS",
     "revised_budget": 557089.0,
-    "actual": 778073.9,
+    "actual": 781448.9,
     "original_budget": 557089.0
    },
    {
@@ -17295,7 +17325,7 @@
    {
     "name": "REPAIRS & MAINTENANCE",
     "revised_budget": 445517.76,
-    "actual": 144074.54,
+    "actual": 140699.54,
     "original_budget": 445517.76
    },
    {
@@ -17363,7 +17393,7 @@
    {
     "name": "OTHER EQUIPMENT",
     "revised_budget": 103951.0,
-    "actual": 103944.71,
+    "actual": 100944.71,
     "original_budget": 0
    },
    {
