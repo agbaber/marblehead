@@ -1,12 +1,12 @@
 {
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
     "all_funds_revised_budget": 135775880.3,
-    "all_funds_actual": 49708844.24,
+    "all_funds_actual": 49693465.41,
     "budgeted_annual": {
       "revised_budget": 127204296.0,
       "actual": 40885864.14,
@@ -14,7 +14,7 @@
     },
     "other_funds": {
       "revised_budget": 8571584.3,
-      "actual": 8822980.1,
+      "actual": 8807601.27,
       "original_budget": 2400000.0
     }
   },
@@ -24,14 +24,14 @@
       "revised_budget": 69474315.0,
       "actual": 25763792.91,
       "original_budget": 69331077.0,
-      "encumbrance": 15467160.93
+      "encumbrance": 15468160.93
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
       "actual": 5049391.61,
       "original_budget": 47620287.0,
-      "encumbrance": 37961001.87
+      "encumbrance": 37961370.16
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -89,7 +89,7 @@
       "revised_budget": 11559661.33,
       "actual": 1072077.14,
       "original_budget": 11552590.13,
-      "encumbrance": 9504226.72
+      "encumbrance": 9504595.01
     },
     {
       "name": "DEBT SERVICE",
@@ -124,7 +124,7 @@
       "revised_budget": 5460658.0,
       "actual": 1329913.23,
       "original_budget": 5415360.0,
-      "encumbrance": 3035494.95
+      "encumbrance": 3036494.95
     },
     {
       "name": "BROWN SCHOOL",
@@ -420,7 +420,7 @@
       "revised_budget": 15114162.0,
       "actual": 3934819.65,
       "original_budget": 14336656.0,
-      "encumbrance": 6933582.96
+      "encumbrance": 6933732.96
     },
     {
       "name": "GOVERNMENTAL",
@@ -441,7 +441,7 @@
       "revised_budget": 2461324.0,
       "actual": 430283.22,
       "original_budget": 2458724.0,
-      "encumbrance": 613353.74
+      "encumbrance": 614572.03
     },
     {
       "name": "CAPITAL",
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 5049391.61,
       "original_budget": 47615287.0,
-      "encumbrance": 37961001.87
+      "encumbrance": 37961370.16
     },
     {
       "name": "SALARIES",
@@ -492,7 +492,7 @@
       "revised_budget": 20339169.0,
       "actual": 15782746.58,
       "original_budget": 24880169.0,
-      "encumbrance": 2574932.89
+      "encumbrance": 2575932.89
     },
     {
       "name": "GROUP INSURANCE",
@@ -2027,7 +2027,7 @@
       "revised_budget": 68521.0,
       "actual": 3953.0,
       "original_budget": 68521.0,
-      "encumbrance": 4386.0
+      "encumbrance": 4536.0
     },
     {
       "name": "BILLING TECH",
@@ -2349,7 +2349,7 @@
       "revised_budget": 35750.0,
       "actual": 4629.04,
       "original_budget": 35750.0,
-      "encumbrance": 5798.49
+      "encumbrance": 6016.78
     },
     {
       "name": "POLICE POST STIPEND",
@@ -3308,7 +3308,7 @@
       "revised_budget": 1560.0,
       "actual": 732.6,
       "original_budget": 1560.0,
-      "encumbrance": 1267.4
+      "encumbrance": 2267.4
     },
     {
       "name": "ELECTED OFFICIAL EXPENSES",
