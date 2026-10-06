@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-10-01",
+  "as_of": "2026-10-05",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 4,
-  "fy_pct_elapsed": 25.5,
+  "fy_pct_elapsed": 26.6,
   "budget_execution": {
     "by_department": [
       {
@@ -686,8 +686,8 @@
     },
     {
       "month": "2026-10",
-      "amount": -106197.63,
-      "count": 7
+      "amount": -37087.63,
+      "count": 12
     }
   ],
   "drill": {
@@ -1475,8 +1475,8 @@
           },
           {
             "month": "2026-10",
-            "amount": -1505.42,
-            "count": 2
+            "amount": 15944.58,
+            "count": 4
           }
         ]
       },
@@ -1642,8 +1642,8 @@
           },
           {
             "month": "2026-10",
-            "amount": 6665.45,
-            "count": 1
+            "amount": 56665.45,
+            "count": 3
           }
         ]
       },
@@ -2671,6 +2671,22 @@
           {
             "month": "2026-09",
             "amount": 7194.08,
+            "count": 1
+          }
+        ]
+      },
+      "VILLAGE STUDENT ACTIVITY FUND": {
+        "top_vendors": [
+          {
+            "name": "MASS AUDUBON SOCIETY INC",
+            "amount": 1660.0,
+            "count": 1
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2026-10",
+            "amount": 1660.0,
             "count": 1
           }
         ]

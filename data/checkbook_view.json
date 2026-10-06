@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-10-01",
+    "date": "2026-10-05",
     "fiscal_year": "FY27",
-    "row_count": 2909,
-    "total_paid": 37560829.96,
+    "row_count": 2914,
+    "total_paid": 37629939.96,
     "interfund_total": 230476.65,
-    "external_paid": 37330353.31,
+    "external_paid": 37399463.31,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-10-01",
-    "source_file": "checkbook_FY27_2026-10-01.csv"
+    "last_payment": "2026-10-05",
+    "source_file": "checkbook_FY27_2026-10-05.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5343954.89,
-      "share": 0.1423,
+      "share": 0.142,
       "fund_count": 3,
       "top_funds": [
         {
@@ -39,19 +39,19 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 22600763.14,
-      "share": 0.6017,
+      "amount": 22668213.14,
+      "share": 0.6024,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 21088952.21,
-          "row_count": 1182
+          "amount": 21138952.21,
+          "row_count": 1184
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 1213078.45,
-          "row_count": 601
+          "amount": 1230528.45,
+          "row_count": 603
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -64,7 +64,7 @@
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
       "amount": 8657071.05,
-      "share": 0.2305,
+      "share": 0.2301,
       "fund_count": 7,
       "top_funds": [
         {
@@ -108,7 +108,7 @@
       "key": "state_fed",
       "label": "State & federal restricted grants",
       "amount": 227619.33,
-      "share": 0.0061,
+      "share": 0.006,
       "fund_count": 14,
       "top_funds": [
         {
@@ -185,9 +185,9 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 417173.8,
+      "amount": 418833.8,
       "share": 0.0111,
-      "fund_count": 31,
+      "fund_count": 32,
       "top_funds": [
         {
           "name": "GERRY PLAYGROUND DONATION",
@@ -233,19 +233,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 21088952.21,
+    "total": 21138952.21,
     "fixed_total": 19252361.31,
-    "fixed_share": 0.9129,
+    "fixed_share": 0.9108,
     "admin_contracts_total": 684561.31,
-    "admin_contracts_share": 0.0325,
-    "other_recurring_total": 1152029.59,
-    "other_recurring_share": 0.0546,
+    "admin_contracts_share": 0.0324,
+    "other_recurring_total": 1202029.59,
+    "other_recurring_share": 0.0569,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 4678165.68,
-        "share": 0.2218,
+        "share": 0.2213,
         "row_count": 38,
         "top_vendors": [
           {
@@ -286,7 +286,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 7738584.39,
-        "share": 0.3669,
+        "share": 0.3661,
         "row_count": 30,
         "top_vendors": [
           {
@@ -299,7 +299,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2771,
+        "share": 0.2764,
         "row_count": 1,
         "top_vendors": [
           {
@@ -312,7 +312,7 @@
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
         "amount": 992251.24,
-        "share": 0.0471,
+        "share": 0.0469,
         "row_count": 24,
         "top_vendors": [
           {
@@ -325,7 +325,7 @@
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
         "amount": 684561.31,
-        "share": 0.0325,
+        "share": 0.0324,
         "row_count": 40,
         "top_vendors": [
           {
@@ -357,9 +357,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 1152029.59,
-        "share": 0.0546,
-        "row_count": 1049,
+        "amount": 1202029.59,
+        "share": 0.0569,
+        "row_count": 1051,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -378,6 +378,10 @@
             "amount": 50392.46
           },
           {
+            "name": "ALL WEB MAIL ORDER INC",
+            "amount": 50000.0
+          },
+          {
             "name": "CLEARGOV INC",
             "amount": 47734.4
           },
@@ -388,10 +392,6 @@
           {
             "name": "DENNIS K BURKE INC",
             "amount": 41251.87
-          },
-          {
-            "name": "CAMPBELL CONSTRUCTION GROUP, LLC",
-            "amount": 28737.5
           }
         ]
       }
@@ -408,7 +408,7 @@
       "row_count": 20,
       "first_paid": "2026-07-20",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 15,
+      "days_since_last_paid": 19,
       "status": "active",
       "top_vendors": [
         {
@@ -448,7 +448,7 @@
       "row_count": 3,
       "first_paid": "2026-07-08",
       "last_paid": "2026-09-03",
-      "days_since_last_paid": 28,
+      "days_since_last_paid": 32,
       "status": "engineering",
       "top_vendors": [
         {
@@ -473,7 +473,7 @@
       "row_count": 3,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-18",
-      "days_since_last_paid": 13,
+      "days_since_last_paid": 17,
       "status": "active",
       "top_vendors": [
         {
