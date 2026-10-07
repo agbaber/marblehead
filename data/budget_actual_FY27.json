@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-06",
+  "as_of": "2026-10-07",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
@@ -24,14 +24,14 @@
       "revised_budget": 69474315.0,
       "actual": 26167568.95,
       "original_budget": 69331077.0,
-      "encumbrance": 15438998.54
+      "encumbrance": 15440121.72
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
       "actual": 6616473.55,
       "original_budget": 47620287.0,
-      "encumbrance": 36547037.29
+      "encumbrance": 36551162.99
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -82,14 +82,14 @@
       "revised_budget": 12884420.6,
       "actual": 2068032.65,
       "original_budget": 13090519.6,
-      "encumbrance": 7960401.1
+      "encumbrance": 7961401.09
     },
     {
       "name": "HIGH SCHOOL",
       "revised_budget": 11559661.33,
       "actual": 1509432.11,
       "original_budget": 11552590.13,
-      "encumbrance": 8955289.09
+      "encumbrance": 8958355.15
     },
     {
       "name": "DEBT SERVICE",
@@ -131,7 +131,7 @@
       "revised_budget": 5437773.06,
       "actual": 707610.03,
       "original_budget": 5422623.26,
-      "encumbrance": 4634829.34
+      "encumbrance": 4634896.56
     },
     {
       "name": "WATER",
@@ -145,7 +145,7 @@
       "revised_budget": 4350141.96,
       "actual": 594292.72,
       "original_budget": 4284992.96,
-      "encumbrance": 3644036.31
+      "encumbrance": 3644028.74
     },
     {
       "name": "PUBLIC WORKS",
@@ -187,7 +187,7 @@
       "revised_budget": 1846337.0,
       "actual": 352311.74,
       "original_budget": 1790344.0,
-      "encumbrance": 668669.41
+      "encumbrance": 669792.59
     },
     {
       "name": "HARBOR",
@@ -413,14 +413,14 @@
       "revised_budget": 39091074.0,
       "actual": 20650405.96,
       "original_budget": 39082074.0,
-      "encumbrance": 176069.49
+      "encumbrance": 176069.48
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 15114162.0,
       "actual": 3934819.65,
       "original_budget": 14336656.0,
-      "encumbrance": 6942602.97
+      "encumbrance": 6944726.15
     },
     {
       "name": "GOVERNMENTAL",
@@ -434,14 +434,14 @@
       "revised_budget": 6458808.35,
       "actual": 1072586.24,
       "original_budget": 6473555.35,
-      "encumbrance": 4481163.45
+      "encumbrance": 4482232.65
     },
     {
       "name": "SUPPLIES AND MATL",
       "revised_budget": 2461324.0,
       "actual": 445733.22,
       "original_budget": 2458724.0,
-      "encumbrance": 599681.04
+      "encumbrance": 601737.55
     },
     {
       "name": "CAPITAL",
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 6616473.55,
       "original_budget": 47615287.0,
-      "encumbrance": 36547037.29
+      "encumbrance": 36551162.99
     },
     {
       "name": "SALARIES",
@@ -492,7 +492,7 @@
       "revised_budget": 20339169.0,
       "actual": 15782746.58,
       "original_budget": 24880169.0,
-      "encumbrance": 2581582.21
+      "encumbrance": 2582705.39
     },
     {
       "name": "GROUP INSURANCE",
@@ -1264,14 +1264,14 @@
       "revised_budget": 619218.0,
       "actual": 123121.07,
       "original_budget": 616618.0,
-      "encumbrance": 205211.51
+      "encumbrance": 207268.02
     },
     {
       "name": "OTHER PROF & TECHNICAL",
       "revised_budget": 589237.0,
       "actual": 481914.56,
       "original_budget": 574322.0,
-      "encumbrance": 31171.2
+      "encumbrance": 31446.2
     },
     {
       "name": "TELECOMMUNICATOR",
@@ -1418,7 +1418,7 @@
       "revised_budget": 292856.0,
       "actual": 129741.53,
       "original_budget": 292856.0,
-      "encumbrance": 95772.66
+      "encumbrance": 95772.65
     },
     {
       "name": "LEADER HEAVY EQUIP OPERATOR",
@@ -2027,7 +2027,7 @@
       "revised_budget": 68521.0,
       "actual": 3953.0,
       "original_budget": 68521.0,
-      "encumbrance": 4536.0
+      "encumbrance": 4261.0
     },
     {
       "name": "BILLING TECH",
@@ -2615,7 +2615,7 @@
       "revised_budget": 16480.0,
       "actual": 0.0,
       "original_budget": 16480.0,
-      "encumbrance": 0.0
+      "encumbrance": 1069.2
     },
     {
       "name": "SAFETY SUPPLIES/EQUIPMENT",
@@ -2797,7 +2797,7 @@
       "revised_budget": 10650.0,
       "actual": 149.75,
       "original_budget": 10650.0,
-      "encumbrance": 1023.05
+      "encumbrance": 2146.23
     },
     {
       "name": "COA TEMP SPECIAL CLERK",
@@ -3000,7 +3000,7 @@
       "revised_budget": 5866.0,
       "actual": 200.0,
       "original_budget": 11866.0,
-      "encumbrance": -200.0
+      "encumbrance": 800.0
     },
     {
       "name": "R&M GAS PUMPS",
