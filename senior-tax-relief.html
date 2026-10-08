@@ -282,6 +282,22 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     font-size: 12px; color: var(--c-teal); font-style: italic;
     grid-column: 1 / -1; padding-left: 18px; margin-top: 2px;
   }
+  .sr-actions { border-top-color: var(--c-teal); }
+  .sr-action {
+    display: flex; gap: 11px; align-items: flex-start;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--divider);
+    font-size: 14px; line-height: 1.5; color: var(--text);
+  }
+  .sr-action:last-child { border-bottom: none; }
+  .sr-action-mark {
+    flex: 0 0 18px; margin-top: 1px;
+    font-weight: 700; font-size: 13px; text-align: center;
+  }
+  .sr-action--do .sr-action-mark { color: var(--c-teal); }
+  .sr-action--note .sr-action-mark { color: var(--text-subtle); }
+  .sr-action-body strong { color: var(--text); }
+  .sr-action-body a { font-weight: 600; }
   @media (max-width: 520px) {
     .sr-tier-header { font-size: 14px; }
     .sr-tier-detail { font-size: 12px; }
@@ -380,6 +396,7 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
 
     <div class="sr-results sr-override-panel" id="sr-override-results" style="border-top-color: var(--c-navy);"></div>
     <div class="sr-results" id="sr-results" style="margin-top: 16px;"></div>
+    <div class="sr-results sr-actions" id="sr-actions" style="margin-top: 16px; display: none;"></div>
     <p class="sr-source">Circuit Breaker: <a href="https://www.mass.gov/technical-information-release/tir-25-7-annual-update-of-real-estate-tax-credit-for-certain-persons-age-65-and-older">MA DOR TIR 25-7</a>, TY2025. Tax rate: $8.60/$1,000 (FY2026). Article 28: <a href="https://marbleheadma.gov/wp-content/uploads/2025/05/2026-Annual-Town-Meeting-Finance-Committee-Annual-Report.pdf">FinCom Report</a>, warrant text. Override rates: Town Administrator presentation, April 8, 2026.</p>
   </div>
 
@@ -895,6 +912,7 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
   var elWater = document.getElementById('sr-water');
   var elResults = document.getElementById('sr-results');
   var elOverrideResults = document.getElementById('sr-override-results');
+  var elActions = document.getElementById('sr-actions');
   var elArt28Note = document.getElementById('sr-art28-note');
   var elArt28Tabs = document.getElementById('sr-art28-tabs');
 
@@ -1033,6 +1051,59 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     return '<div class="sr-warn">' + msg + '</div>';
   }
 
+  // Build the "Your next steps" checklist from the SAME eligibility verdict
+  // the breakdown above already computed. Each item: act('do'|'note', html).
+  //   'do'   = a concrete action this person should take (teal check)
+  //   'note' = context / a thing to watch, no action yet (grey dot)
+  // Available facts on `base`: cbEligible, cbCredit, cbCapped, incomeOk,
+  //   homeOk, art28Eligible, art28Amount, art28HomeWarn, incomeLimit.
+  // Also in scope: renter (bool), art28On (bool), priorYears (3x annual credit).
+  // Editorial rules apply: state facts, no "you should vote", no green/red
+  // value judgments, no em-dashes.
+  function buildActions(base, renter, art28On, priorYears) {
+    var items = [];
+    function act(type, html) { items.push({ type: type, html: html }); }
+
+    // --- Worked example: qualifies and the credit is worth real money ---
+    if (base.cbEligible && base.cbCredit > 0) {
+      act('do', 'You likely qualify for a Circuit Breaker credit of about <strong>' +
+        money(base.cbCredit) + '/year</strong>. Claim it on Schedule CB with your ' +
+        'Massachusetts return. <a href="https://www.mass.gov/info-details/massachusetts-senior-circuit-breaker-tax-credit">Schedule CB and instructions</a>.');
+      act('do', 'You can amend up to three prior years. If you qualified but did not ' +
+        'claim, that is roughly <strong>' + money(priorYears) + '</strong> in recoverable credits.');
+    }
+
+    // TODO (your call): handle the remaining eligibility states. Suggested branches:
+    //   - renter who is cbEligible: claim path uses 25% of rent (same Schedule CB)
+    //   - !incomeOk: over the income limit, so not eligible this year
+    //   - homeOk false (owner over $1,298,000): not eligible this year
+    //   - cbCapped: already at the $2,820 cap, nothing more to claim
+    //   - art28Eligible / art28On: Article 28 is pending, what to watch for
+    // Add act('do'|'note', '...') lines for the cases you want to cover.
+
+    // Always-on close: free local help (this one stays for everyone).
+    act('note', 'Free help: the Council on Aging (781-631-6240) and AARP Tax-Aide ' +
+      'can prepare Schedule CB and the local exemption forms. Local exemptions are ' +
+      'filed with the <a href="mailto:assessors@marbleheadma.gov">Assessor\'s Office</a> by April 1.');
+
+    return items;
+  }
+
+  function renderActions(base, renter, art28On) {
+    var priorYears = base.cbCredit * 3;
+    var items = buildActions(base, renter, art28On, priorYears);
+    if (!items.length) { elActions.style.display = 'none'; return; }
+    var html = '<div class="sr-results-label">Your next steps</div>';
+    items.forEach(function(it) {
+      var mark = it.type === 'do' ? '&#10003;' : '&bull;';
+      html += '<div class="sr-action sr-action--' + it.type + '">' +
+        '<span class="sr-action-mark">' + mark + '</span>' +
+        '<span class="sr-action-body">' + it.html + '</span></div>';
+    });
+    elActions.innerHTML = html;
+    elActions.style.display = '';
+  }
+
   function render() {
     var assessed = parseNum(elAssessed.value);
     var income = parseNum(elIncome.value);
@@ -1091,6 +1162,9 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     }
 
     elResults.innerHTML = html;
+
+    // === Next-steps action checklist ===
+    renderActions(base, renter, art28On);
 
     // === Override comparison panel ===
     if (renter) {
