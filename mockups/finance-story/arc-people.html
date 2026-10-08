@@ -1,0 +1,352 @@
+---
+layout: default
+title: "Mockup B: The Workforce"
+body_class: "fs-mockup var-b"
+sitemap: false
+robots: noindex
+---
+
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/mockups/finance-story/shared.css' | relative_url }}">
+<style>
+  /* Mockup B variant: humanizing illustrative. Larger type, warmer surface,
+     sage/teal/brass led, no Libre Franklin. */
+  .fs-mockup.var-b { background: #FAF7F2; }
+  .fs-mockup.var-b .fs-pin { background: #FCFAF6; }
+  .fs-mockup.var-b .fs-intro h1, .fs-mockup.var-b .fs-panel h2 {
+    font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .fs-mockup.var-b .fs-intro h1 { color: var(--c-sage); }
+  .fs-mockup.var-b .fs-panel h2 { font-size: clamp(28px, 3.6vw, 40px); }
+  .fs-mockup.var-b .fs-panel p { font-size: 18px; }
+  .fs-mockup.var-b .fs-panel .step-num { color: var(--c-sage); }
+  .fs-mockup.var-b .fs-bar { background: color-mix(in srgb, var(--c-sage) 95%, black); }
+  .fs-mockup.var-b .fs-bar a { color: #D8E5D2; border-bottom-color:#D8E5D2;}
+</style>
+
+<nav class="fs-bar">
+  <span class="fs-bar-label">Mockup B &middot; Arc: The Workforce &middot; Design: Humanizing</span>
+  <a href="{{ '/mockups/finance-story/' | relative_url }}">All mockups &rarr;</a>
+</nav>
+
+<div class="fs-dots"></div>
+
+<div class="fs-stage">
+  <div class="fs-pin">
+    <div class="fs-canvas">
+
+      <!-- STAGE 1: full grid of 1020 -->
+      <div class="stage" data-stage="grid">
+        <div style="width:100%;">
+          <div style="text-align:center;font-size:11px;color:var(--text-subtle);letter-spacing:1.4px;text-transform:uppercase;margin-bottom:14px;">FY26 &middot; 1,020 people work for Marblehead</div>
+          <svg viewBox="0 0 510 380" role="img" aria-label="1020 people in a uniform grid">
+            <g id="dotgrid-b"></g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- STAGE 2: same dots, separated by category -->
+      <div class="stage" data-stage="categories">
+        <svg viewBox="0 0 510 460" role="img" aria-label="1020 people grouped by category">
+          <g id="dotgrid-categories"></g>
+        </svg>
+      </div>
+
+      <!-- STAGE 3: zoom on one person + cost stack -->
+      <div class="stage" data-stage="cost">
+        <svg viewBox="0 0 460 460" role="img" aria-label="Cost stack on one full-time employee">
+          <!-- Big person dot -->
+          <circle cx="120" cy="230" r="60" fill="var(--c-sage)"/>
+          <circle cx="120" cy="180" r="22" fill="var(--c-sage)" opacity="0.85"/>
+          <text x="120" y="320" text-anchor="middle" font-size="12" fill="var(--text-muted)" font-weight="700">One FTE</text>
+          <text x="120" y="338" text-anchor="middle" font-size="11" fill="var(--text-subtle)">Avg salary ~$75K</text>
+
+          <!-- Stack of costs to the right -->
+          <g transform="translate(220,80)">
+            <text x="0" y="0" font-size="11" font-weight="700" fill="var(--text-subtle)" letter-spacing="1.4" text-transform="uppercase">Loaded cost</text>
+            <rect x="0" y="20" width="200" height="44" fill="var(--c-sage)" rx="4"/>
+            <text x="10" y="48" fill="#fff" font-weight="600" font-size="13">Salary $75,000</text>
+
+            <rect x="0" y="72" width="56" height="38" fill="var(--c-teal)" rx="4"/>
+            <text x="6" y="96" fill="#fff" font-weight="600" font-size="11">Pension</text>
+            <text x="64" y="96" fill="var(--text-muted)" font-size="11">$12,750</text>
+
+            <rect x="0" y="116" width="44" height="38" fill="var(--c-brass)" rx="4"/>
+            <text x="6" y="140" fill="#fff" font-weight="600" font-size="11">GIC</text>
+            <text x="50" y="140" fill="var(--text-muted)" font-size="11">$10,000</text>
+
+            <rect x="0" y="160" width="14" height="38" fill="var(--c-plum)" rx="4"/>
+            <text x="19" y="184" fill="var(--text-muted)" font-size="11">Medicare $1,100</text>
+
+            <rect x="0" y="204" width="10" height="38" fill="var(--c-buoy)" rx="4"/>
+            <text x="15" y="228" fill="var(--text-muted)" font-size="11">Workers' comp + life $900</text>
+
+            <line x1="0" y1="260" x2="200" y2="260" stroke="var(--border)"/>
+            <text x="0" y="288" fill="var(--text-muted)" font-size="13">Total</text>
+            <text x="200" y="288" fill="var(--c-buoy)" font-weight="800" font-size="20" text-anchor="end">~$99,750</text>
+            <text x="0" y="310" font-size="10" fill="var(--text-faint)" font-style="italic">1.33&times; salary, on average</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- STAGE 4: payroll as share of total budget -->
+      <div class="stage" data-stage="share">
+        <div style="text-align:center;width:100%;">
+          <div style="font-size:11px;color:var(--text-subtle);letter-spacing:1.4px;text-transform:uppercase;margin-bottom:14px;">Total compensation</div>
+          <svg viewBox="0 0 400 320" role="img">
+            <!-- Donut showing payroll share of total budget -->
+            <circle cx="200" cy="160" r="120" fill="none" stroke="var(--c-divider)" stroke-width="36"/>
+            <circle cx="200" cy="160" r="120" fill="none" stroke="var(--c-sage)" stroke-width="36"
+                    stroke-dasharray="603 754" transform="rotate(-90 200 160)" stroke-linecap="butt"/>
+            <text x="200" y="146" text-anchor="middle" font-size="40" font-weight="800" fill="var(--c-sage)">~80%</text>
+            <text x="200" y="172" text-anchor="middle" font-size="13" fill="var(--text-muted)">of operating budget</text>
+            <text x="200" y="194" text-anchor="middle" font-size="13" fill="var(--text-muted)">is paying people</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- STAGE 5: org pillars (re-used pattern) -->
+      <div class="stage" data-stage="org">
+        <svg viewBox="0 0 500 460" role="img" aria-label="Two-pillar org chart with elected boards">
+          <rect x="160" y="20" width="180" height="36" rx="6" fill="var(--c-sage)"/>
+          <text x="250" y="44" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">Voters &middot; Town Meeting</text>
+
+          <line x1="250" y1="56" x2="120" y2="92" stroke="var(--c-sage)" stroke-width="2"/>
+          <line x1="250" y1="56" x2="380" y2="92" stroke="var(--c-sage)" stroke-width="2"/>
+
+          <rect x="40" y="92" width="160" height="32" rx="6" fill="var(--c-sage)"/>
+          <text x="120" y="113" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Select Board</text>
+          <line x1="120" y1="124" x2="120" y2="146" stroke="var(--c-sage)" stroke-width="2"/>
+          <rect x="40" y="146" width="160" height="32" rx="6" fill="#4F6B49"/>
+          <text x="120" y="167" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Town Administrator</text>
+          <line x1="120" y1="178" x2="120" y2="200" stroke="var(--c-sage)" stroke-width="2"/>
+
+          <g font-size="11" fill="var(--text)" text-anchor="middle">
+            <rect x="40" y="200" width="160" height="22" rx="4" fill="var(--surface)" stroke="var(--border)"/>
+            <text x="120" y="215">Police &middot; Fire 95</text>
+            <rect x="40" y="228" width="160" height="22" rx="4" fill="var(--surface)" stroke="var(--border)"/>
+            <text x="120" y="243">DPW 60</text>
+            <rect x="40" y="256" width="160" height="22" rx="4" fill="var(--surface)" stroke="var(--border)"/>
+            <text x="120" y="271">Town admin 95</text>
+            <rect x="40" y="284" width="160" height="22" rx="4" fill="var(--surface)" stroke="var(--border)"/>
+            <text x="120" y="299">Library, COA, rec 144</text>
+          </g>
+
+          <rect x="300" y="92" width="160" height="32" rx="6" fill="var(--c-teal)"/>
+          <text x="380" y="113" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">School Committee</text>
+          <line x1="380" y1="124" x2="380" y2="146" stroke="var(--c-teal)" stroke-width="2"/>
+          <rect x="300" y="146" width="160" height="32" rx="6" fill="#3A8FA0"/>
+          <text x="380" y="167" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Superintendent</text>
+          <line x1="380" y1="178" x2="380" y2="200" stroke="var(--c-teal)" stroke-width="2"/>
+
+          <g font-size="11" fill="var(--text)" text-anchor="middle">
+            <rect x="300" y="200" width="160" height="22" rx="4" fill="var(--surface)" stroke="var(--border)"/>
+            <text x="380" y="215">Instructional 460</text>
+            <rect x="300" y="228" width="160" height="22" rx="4" fill="var(--surface)" stroke="var(--border)"/>
+            <text x="380" y="243">Support 166</text>
+          </g>
+
+          <rect x="200" y="350" width="100" height="28" rx="6" fill="var(--c-brass)"/>
+          <text x="250" y="368" fill="#fff" font-weight="700" text-anchor="middle" font-size="11">FinCom (9)</text>
+        </svg>
+      </div>
+
+      <!-- STAGE 6: boards highlighted above the paid layer -->
+      <div class="stage" data-stage="boards">
+        <svg viewBox="0 0 500 460" role="img" aria-label="Unpaid boards above paid employees">
+          <!-- Top: unpaid -->
+          <g font-size="10" fill="var(--text)">
+            <text x="250" y="22" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.4" text-transform="uppercase" fill="var(--c-plum)">Unpaid decision layer &middot; ~60 residents</text>
+            <g transform="translate(0,40)">
+              <rect x="20" y="0" width="90" height="30" rx="6" fill="var(--surface)" stroke="var(--c-plum)" stroke-width="2"/>
+              <text x="65" y="20" text-anchor="middle" font-weight="700">Select Board</text>
+              <rect x="120" y="0" width="90" height="30" rx="6" fill="var(--surface)" stroke="var(--c-plum)" stroke-width="2"/>
+              <text x="165" y="20" text-anchor="middle" font-weight="700">School Comm.</text>
+              <rect x="220" y="0" width="70" height="30" rx="6" fill="var(--surface)" stroke="var(--c-plum)" stroke-width="2"/>
+              <text x="255" y="20" text-anchor="middle" font-weight="700">FinCom</text>
+              <rect x="300" y="0" width="80" height="30" rx="6" fill="var(--surface)" stroke="var(--c-plum)" stroke-width="2"/>
+              <text x="340" y="20" text-anchor="middle" font-weight="700">Planning</text>
+              <rect x="390" y="0" width="90" height="30" rx="6" fill="var(--surface)" stroke="var(--c-plum)" stroke-width="2"/>
+              <text x="435" y="20" text-anchor="middle" font-weight="700">Conservation</text>
+              <rect x="20" y="40" width="60" height="30" rx="6" fill="var(--surface)" stroke="var(--c-plum)" stroke-width="2"/>
+              <text x="50" y="60" text-anchor="middle" font-weight="700">ZBA</text>
+              <rect x="90" y="40" width="80" height="30" rx="6" fill="var(--surface)" stroke="var(--c-plum)" stroke-width="2"/>
+              <text x="130" y="60" text-anchor="middle" font-weight="700">Light Board</text>
+              <rect x="180" y="40" width="80" height="30" rx="6" fill="var(--surface)" stroke="var(--c-plum)" stroke-width="2"/>
+              <text x="220" y="60" text-anchor="middle" font-weight="700">Bd of Health</text>
+              <rect x="270" y="40" width="80" height="30" rx="6" fill="var(--surface)" stroke="var(--c-plum)" stroke-width="2"/>
+              <text x="310" y="60" text-anchor="middle" font-weight="700">Recreation</text>
+              <rect x="360" y="40" width="120" height="30" rx="6" fill="var(--surface)" stroke="var(--c-plum)" stroke-width="2"/>
+              <text x="420" y="60" text-anchor="middle" font-weight="700">Library Trustees</text>
+            </g>
+          </g>
+
+          <line x1="40" y1="135" x2="460" y2="135" stroke="var(--border)" stroke-dasharray="2 4"/>
+
+          <text x="250" y="160" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.4" text-transform="uppercase" fill="var(--c-sage)">Paid workforce &middot; ~1,020 FTE</text>
+
+          <!-- Mini grid below: -->
+          <g id="dotgrid-mini"></g>
+        </svg>
+      </div>
+
+      <!-- STAGE 7: composition over time -->
+      <div class="stage" data-stage="trajectory">
+        <svg viewBox="0 0 500 360" role="img" aria-label="Composition over 20 years">
+          <path d="M40,240 L60,235 L80,232 L100,238 L120,232 L140,229 L160,230 L180,229 L200,231 L220,228 L240,231 L260,232 L280,229 L300,235 L320,237 L340,238 L360,236 L380,232 L400,239 L460,239 L460,260 L40,260 Z" fill="var(--c-sage)" opacity="0.85"/>
+          <text x="60" y="252" fill="#fff" font-size="11" font-weight="600">Instructional</text>
+          <path d="M40,260 L460,260 L460,272 L400,275 L380,272 L360,274 L340,276 L320,278 L300,278 L280,272 L260,270 L240,272 L220,270 L200,272 L180,275 L160,272 L140,272 L120,278 L100,280 L80,275 L60,272 L40,270 Z" fill="#4F6B49" opacity="0.85"/>
+          <text x="60" y="271" fill="#fff" font-size="11" font-weight="600">Support</text>
+          <path d="M40,272 L460,272 L460,282 L40,282 Z" fill="var(--c-buoy)" opacity="0.85"/>
+          <path d="M40,282 L460,282 L460,290 L40,290 Z" fill="var(--c-teal)" opacity="0.85"/>
+          <path d="M40,290 L460,290 L460,300 L40,300 Z" fill="var(--c-brass)" opacity="0.85"/>
+          <path d="M40,300 L460,300 L460,312 L40,312 Z" fill="var(--c-plum)" opacity="0.85"/>
+          <line x1="40" y1="320" x2="460" y2="320" stroke="var(--text-faint)" stroke-width="0.5"/>
+          <text x="40" y="335" font-size="10" fill="var(--text-subtle)">FY08</text>
+          <text x="460" y="335" font-size="10" fill="var(--text-subtle)" text-anchor="end">FY26</text>
+          <text x="250" y="40" font-size="13" fill="var(--text-muted)" text-anchor="middle" font-weight="700">Total flat, composition churned</text>
+          <text x="250" y="58" font-size="11" fill="var(--text-subtle)" text-anchor="middle">Special ed support grew. Clerical compressed. IT created from zero.</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="fs-panels">
+
+    <section class="fs-intro">
+      <p class="eye">Mockup B &middot; Humanizing</p>
+      <h1>About a thousand people work for Marblehead.</h1>
+      <p>Start with the people. Walk back to the budget. Same material, opposite direction.</p>
+      <p class="small" style="font-size:13px;color:var(--text-faint);">Brainstorming mockup. Numbers approximate.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="grid">
+      <p class="step-num">Step 1 &middot; The workforce</p>
+      <h2>Each dot is one person on Marblehead's payroll.</h2>
+      <p class="lede">Schools instructional, schools support, police, fire, DPW, town admin, library, recreation, council on aging. Different jobs, different titles, one tax base behind all of them.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="categories">
+      <p class="step-num">Step 2 &middot; Who's who</p>
+      <h2>The school side is twice the size of the town side.</h2>
+      <p>626 school-side. 394 town-side. Inside the school number, instructional staff (teachers, special-ed staff, related services) is the largest single group at about 460 FTE.</p>
+      <p>Inside the town number, public safety, DPW, town administration, and the library/recreation/COA cluster split the work.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="cost">
+      <p class="step-num">Step 3 &middot; What each one costs</p>
+      <h2>An average $75K salary is closer to $100K of budget.</h2>
+      <p>Every paid position carries a stack on top of the base salary: pension contribution to Essex Regional, the town's share of the GIC health premium, Medicare, workers' comp, life.</p>
+      <p>The stack is contractually and statutorily fixed. When GIC raises premiums, every line on the payroll rises.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="share">
+      <p class="step-num">Step 4 &middot; The aggregate</p>
+      <h2>About 80% of the budget is total compensation.</h2>
+      <p>Multiply ~1,020 people times their loaded cost. That's the dominant line of the entire operating budget. Set bills (debt, OPEB, state assessments) make up most of the rest. Discretionary spending is small.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="org">
+      <p class="step-num">Step 5 &middot; Who reports to whom</p>
+      <h2>Two parallel pillars. They don't connect at the top.</h2>
+      <p>Town side: Select Board hires Town Administrator who manages town departments. School side: School Committee hires Superintendent who manages schools. Voters elect both boards directly.</p>
+      <p>FinCom, appointed by the Town Moderator, reviews both sides before Town Meeting votes.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="boards">
+      <p class="step-num">Step 6 &middot; Above the payroll</p>
+      <h2>Above every paid employee is an unpaid resident who decides.</h2>
+      <p>Roughly sixty residents serve on the elected and appointed boards: Select Board, School Committee, FinCom, Planning, Conservation, ZBA, Board of Health, Recreation, Light Board, Library Trustees, Moderator.</p>
+      <p>They write the warrant. They set zoning. They recommend the budget. They hire the senior managers. They take no salary.</p>
+    </section>
+
+    <section class="fs-panel" data-stage="trajectory">
+      <p class="step-num">Step 7 &middot; Over time</p>
+      <h2>The total stayed flat. The mix moved.</h2>
+      <p>Special-education staff grew with student needs. IT was built from scratch. Clerical compressed. Public safety and DPW held roughly steady. Cost per FTE grew faster than CPI in nearly every year.</p>
+    </section>
+
+    <section class="fs-outro">
+      <h2>Go deeper</h2>
+      <div class="tiles">
+        <a class="tile" href="{{ '/checkbook/' | relative_url }}"><strong>Checkbook</strong><span>FY26 vendor and payroll detail.</span></a>
+        <a class="tile" href="{{ '/marblehead-101/' | relative_url }}"><strong>Marblehead 101</strong><span>The full primer.</span></a>
+        <a class="tile" href="{{ '/data/' | relative_url }}"><strong>Data catalog</strong><span>FTE, benefits, peer towns.</span></a>
+        <a class="tile" href="{{ '/mockups/finance-story/' | relative_url }}"><strong>Compare mockups</strong><span>See arcs A and C.</span></a>
+      </div>
+      <p class="fs-foot">Mockup B &middot; brainstorming scratch &middot; not linked from production nav.</p>
+    </section>
+
+  </div>
+</div>
+
+<script>
+  (function(){
+    function buildGrid(id, cols, rows, dotR, spacingX, spacingY, mixed) {
+      const grid = document.getElementById(id);
+      if (!grid) return;
+      const buckets = mixed ? [
+        {n: 460, color: '#5B7553'},
+        {n: 166, color: '#7E966F'},
+        {n: 95,  color: '#C8553D'},
+        {n: 60,  color: '#2F7D8E'},
+        {n: 95,  color: '#B8860B'},
+        {n: 144, color: '#6C4A6E'}
+      ] : null;
+      let bucket = 0, used = 0;
+      for (let r=0; r<rows; r++) {
+        for (let c=0; c<cols; c++) {
+          if (buckets) {
+            if (used >= buckets[bucket].n) { bucket++; used = 0; if (bucket >= buckets.length) bucket = buckets.length-1; }
+          }
+          const cx = 10 + c*spacingX, cy = 10 + r*spacingY;
+          const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          dot.setAttribute('cx', cx);
+          dot.setAttribute('cy', cy);
+          dot.setAttribute('r', dotR);
+          dot.setAttribute('fill', buckets ? buckets[bucket].color : '#5B7553');
+          grid.appendChild(dot);
+          used++;
+        }
+      }
+    }
+    buildGrid('dotgrid-b', 51, 20, 4, 9.6, 18, false);
+    buildGrid('dotgrid-mini', 51, 12, 2.5, 9.5, 14, true);
+
+    // For "categories" stage, build clusters
+    (function(){
+      const g = document.getElementById('dotgrid-categories');
+      if (!g) return;
+      const ns = 'http://www.w3.org/2000/svg';
+      const groups = [
+        {label: 'Schools instructional', n: 460, color: '#5B7553', cols: 20, x: 30, y: 60},
+        {label: 'Schools support', n: 166, color: '#7E966F', cols: 14, x: 320, y: 60},
+        {label: 'Public safety', n: 95,  color: '#C8553D', cols: 10, x: 30,  y: 230},
+        {label: 'DPW',           n: 60,  color: '#2F7D8E', cols: 10, x: 170, y: 230},
+        {label: 'Town admin',    n: 95,  color: '#B8860B', cols: 10, x: 280, y: 230},
+        {label: 'Library, COA, rec', n: 144, color: '#6C4A6E', cols: 12, x: 390, y: 230}
+      ];
+      groups.forEach(grp => {
+        const cols = grp.cols;
+        const rows = Math.ceil(grp.n / cols);
+        for (let i=0; i<grp.n; i++) {
+          const c = i % cols, r = Math.floor(i / cols);
+          const cx = grp.x + c*9, cy = grp.y + r*11;
+          const d = document.createElementNS(ns, 'circle');
+          d.setAttribute('cx', cx); d.setAttribute('cy', cy); d.setAttribute('r', 3); d.setAttribute('fill', grp.color);
+          g.appendChild(d);
+        }
+        const t = document.createElementNS(ns, 'text');
+        t.setAttribute('x', grp.x); t.setAttribute('y', grp.y - 12);
+        t.setAttribute('font-size', '10'); t.setAttribute('fill', 'var(--text-subtle)');
+        t.setAttribute('font-weight', '700'); t.setAttribute('letter-spacing', '1.2');
+        t.textContent = grp.label.toUpperCase() + ' · ' + grp.n;
+        g.appendChild(t);
+      });
+    })();
+  })();
+</script>
+<script src="{{ '/mockups/finance-story/shared.js' | relative_url }}"></script>
