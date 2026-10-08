@@ -1,0 +1,234 @@
+---
+title: "How big is a first grade class?"
+scripts: [citations]
+og_title: "How big is a first grade class in Massachusetts?"
+og_description: "Marblehead's superintendent told Glover families first grade will drop from four classrooms to three so the district can restore a fourth kindergarten room, raising class sizes from about 16 to about 21. Where that sits against Massachusetts law, state data, and the research."
+og_url: https://marbleheaddata.org/class-size.html
+community_pulse: off-sections
+---
+<style>
+  /* Page-scoped: class-size explainer */
+
+  /* Restore list indent inside this page */
+  h2 + ul, h2 + ol, p + ul, p + ol { padding-left: 22px; list-style: disc; }
+  p + ol, h2 + ol { list-style: decimal; }
+  h2 + ul li, h2 + ol li, p + ul li, p + ol li { margin-bottom: 8px; line-height: 1.55; }
+
+  /* "What we could confirm" callout */
+  .cs-flag {
+    background: color-mix(in srgb, var(--c-buoy) 7%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c-buoy) 26%, var(--border));
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    margin: 22px 0;
+  }
+  .cs-flag-label {
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1.2px;
+    color: color-mix(in srgb, var(--c-buoy) 75%, var(--text));
+    margin-bottom: 10px;
+  }
+  .cs-flag p { margin: 0 0 8px; font-size: 14px; line-height: 1.6; color: var(--text-muted); }
+  .cs-flag p:last-child { margin-bottom: 0; }
+  .cs-flag strong { color: var(--text); }
+
+  /* Two-scenario arithmetic */
+  .cs-scenarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 20px 0 8px;
+  }
+  .cs-scenario {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 20px;
+    border-top: 3px solid var(--c-navy);
+  }
+  .cs-scenario--alt { border-top-color: var(--c-teal); }
+  .cs-scenario-head {
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    color: var(--text-subtle); margin-bottom: 8px;
+  }
+  .cs-scenario-big {
+    font-size: 32px; font-weight: 700; color: var(--text);
+    font-variant-numeric: tabular-nums; line-height: 1.1;
+  }
+  .cs-scenario-unit { font-size: 14px; font-weight: 500; color: var(--text-muted); }
+  .cs-scenario-sub { font-size: 13px; color: var(--text-muted); margin-top: 6px; line-height: 1.45; }
+  @media (max-width: 520px) {
+    .cs-scenarios { grid-template-columns: 1fr; }
+    .cs-scenario-big { font-size: 28px; }
+  }
+
+  /* Data tables */
+  table.cs-table {
+    width: 100%; border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+    margin: 14px 0 6px;
+  }
+  table.cs-table th {
+    text-align: right; padding: 8px 10px; font-size: 13px;
+    color: var(--text-subtle); font-weight: 600;
+    border-bottom: 2px solid var(--border);
+  }
+  table.cs-table th:first-child { text-align: left; }
+  table.cs-table td {
+    padding: 8px 10px; font-size: 14px; text-align: right;
+    border-bottom: 1px solid var(--divider); color: var(--text);
+  }
+  table.cs-table td:first-child { text-align: left; font-weight: 600; }
+  table.cs-table tr:last-child td { border-bottom: none; }
+  table.cs-table .cs-row-hl td { background: color-mix(in srgb, var(--c-teal) 8%, transparent); }
+  .cs-caption { font-size: 12px; color: var(--text-subtle); margin: 4px 0 20px; line-height: 1.5; }
+  @media (max-width: 520px) {
+    table.cs-table th, table.cs-table td { padding: 6px 5px; font-size: 12px; }
+  }
+
+  /* "Ways to read this" framings */
+  .cs-framings { display: flex; flex-direction: column; gap: 14px; margin: 18px 0 8px; }
+  .cs-framing {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 16px 20px 14px;
+    border-left: 3px solid var(--divider);
+  }
+  .cs-framing--parent { border-left-color: var(--c-buoy); }
+  .cs-framing--district { border-left-color: var(--c-teal); }
+  .cs-framing--evidence { border-left-color: var(--c-brass); }
+  .cs-framing h3 { font-size: 16px; margin: 0 0 8px; color: var(--text); }
+  .cs-framing p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--text-muted); }
+</style>
+
+<h1>How big is a first grade class?</h1>
+
+<p class="page-lead">
+  Marblehead's superintendent told Glover families on July&nbsp;13 that first grade will run with three classrooms next year instead of four, so the district can restore a fourth kindergarten classroom for a growing kindergarten class. That raises first grade class sizes from about 16 students to about 21. The district calls the move a strategic step toward tuition-free, full-day kindergarten starting in 2027&ndash;2028. Some Glover families are asking the district to keep the four first grade classrooms instead.
+</p>
+
+<div class="cs-flag">
+  <div class="cs-flag-label">Where this stands</div>
+  <p><strong>Confirmed by the district.</strong> In a July&nbsp;13 email to Glover families, Superintendent John Robidoux said the district has "proactively decided to restore the fourth Kindergarten classroom," and that "this logistical shift requires us to adjust our 1st grade configuration from four classrooms to three." He wrote that current student-to-teacher ratios "remain manageable" and framed the change as preparation for tuition-free, full-day kindergarten beginning in 2027&ndash;2028, which he expects to drive further enrollment growth.</p>
+  <p><strong>From the parents, not confirmed by the district.</strong> A letter circulated among Glover families states that 16 of the 64 incoming first graders (25%) are high-needs learners, and that kindergarten classes have both a teacher and an aide while first grade has a teacher only. The district has not published figures to confirm those specifics.</p>
+</div>
+
+<ul class="tldr">
+  <li><strong>A fixed 64 first graders, in one fewer room.</strong> Glover's incoming first grade is 64 children. In four classrooms that is 16 apiece; in three, about 21.<sup class="cite" data-href="https://profiles.doe.mass.edu/profiles/student.aspx?orgcode=01680020&orgtypecode=6" data-source="MA DESE School and District Profiles, Glover Elementary (org 01680020), Enrollment by Grade: 2025-26 Kindergarten = 64. This kindergarten cohort becomes first grade in 2026-27."></sup></li>
+  <li><strong>Massachusetts sets no class-size limit for first grade.</strong> State regulation caps only kindergarten, at an average of 25. Grades 1 and up are left to local school committees and teacher contracts, which commonly land around 25.<sup class="cite" data-href="https://www.doe.mass.edu/research/reports/2017/12class-size.docx" data-source="MA DESE, 'Class Size in Massachusetts' research brief (Dec 2017). 603 CMR 8.01 caps kindergarten average class size at 25; no state maximum for grades 1-3."></sup></li>
+  <li><strong>21 is right at the state median; 16 was well below it.</strong> The most recent state breakdown by grade puts the typical first-grade general-education class at 20 students.<sup class="cite" data-href="https://www.doe.mass.edu/research/reports/2017/12class-size.docx" data-source="MA DESE 2017 class-size brief, Table 1: median (50th percentile) general-education class size, Grade 1 = 20.0, Grade 2 = 20.7, Grade 3 = 21.1, Grade 4 = 21.4."></sup></li>
+  <li><strong>16-to-21 is close to the contrast the landmark study measured.</strong> Project STAR compared small classes of 13&ndash;17 against regular classes of 22&ndash;25. A class of 16 is a small class; 21 is one short of a regular one. STAR found the small classes worth a modest early-grade edge (about a quarter of a standard deviation), though studies outside STAR find smaller or mixed effects.<sup class="cite" data-href="https://edsource.org/wp-content/uploads/old/STAR.pdf" data-source="Tennessee Project STAR summary (Word/Finn & Achilles): K-3 randomized trial, small classes 13-17 vs regular 22-25; gains of roughly one-fourth of a standard deviation, concentrated in early grades."></sup></li>
+</ul>
+
+<h2>The Glover numbers</h2>
+
+<p>The count that drives everything is the size of the incoming first-grade class. That is this year's kindergarten cohort moving up. State data puts it at 64.<sup class="cite" data-href="https://profiles.doe.mass.edu/profiles/student.aspx?orgcode=01680020&orgtypecode=6" data-source="MA DESE School and District Profiles, Glover Elementary (org 01680020), Enrollment by Grade, 2020-21 through 2025-26."></sup></p>
+
+<div class="cs-scenarios">
+  <div class="cs-scenario">
+    <div class="cs-scenario-head">Four classrooms (planned)</div>
+    <div class="cs-scenario-big">16<span class="cs-scenario-unit"> per class</span></div>
+    <div class="cs-scenario-sub">64 children &divide; 4 teachers</div>
+  </div>
+  <div class="cs-scenario cs-scenario--alt">
+    <div class="cs-scenario-head">Three classrooms (reported)</div>
+    <div class="cs-scenario-big">21<span class="cs-scenario-unit"> per class</span></div>
+    <div class="cs-scenario-sub">64 children &divide; 3 teachers</div>
+  </div>
+</div>
+
+<p>Glover's kindergarten and first-grade cohorts have bounced between the low 60s and high 80s over the past five years, so a class of 64 is ordinary for the school. What varies year to year is how many rooms the district opens for a given cohort.</p>
+
+<table class="cs-table">
+  <thead>
+    <tr><th>School year</th><th>Kindergarten</th><th>Grade 1</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>2021&ndash;22</td><td>63</td><td>71</td></tr>
+    <tr><td>2022&ndash;23</td><td>80</td><td>68</td></tr>
+    <tr><td>2023&ndash;24</td><td>60</td><td>87</td></tr>
+    <tr><td>2024&ndash;25</td><td>66</td><td>63</td></tr>
+    <tr class="cs-row-hl"><td>2025&ndash;26</td><td>64</td><td>69</td></tr>
+  </tbody>
+</table>
+<p class="cs-caption">Glover Elementary enrollment by grade, from state records. The 2025&ndash;26 kindergarten class of 64 is the cohort entering first grade in 2026&ndash;27.<sup class="cite" data-href="https://profiles.doe.mass.edu/profiles/student.aspx?orgcode=01680020&orgtypecode=6" data-source="MA DESE School and District Profiles, Glover Elementary (org 01680020), Enrollment by Grade, one year per fiscal-year code, 2020-21 through 2025-26."></sup></p>
+
+<p>The parents' letter also states that 16 of the 64 incoming first graders (25%) are high-needs learners, including 13 students with disabilities, and that kindergarten classes have both a teacher and an instructional assistant while first grade has a teacher only. Those specifics are not independently verifiable from public records, though the district's own November&nbsp;2025 budget discussion did single out Glover for the intensity of its special-education services.<sup class="cite" data-href="https://www.marbleheadschools.org/school-committee/agendas-materials-and-minutes" data-source="Marblehead School Committee budget subcommittee minutes, Nov 17, 2025: discussion noted staffing needs 'particularly in special education services at Glover Elementary.' The 16-of-64 figure is from the parents' letter, not a district document."></sup></p>
+
+<h2>What Massachusetts requires</h2>
+
+<p>Massachusetts is one of the states that does not cap class size by law. State regulation sets a single number: kindergarten classes cannot exceed an average of 25. For first grade and above, there is no state maximum and no required teacher-to-student ratio.<sup class="cite" data-href="https://www.doe.mass.edu/research/reports/2017/12class-size.docx" data-source="MA DESE 2017 class-size brief: 603 CMR 8.01 caps kindergarten average class size at 25; no statewide class-size maximum for grades 1-3. Limits are set locally, most often through teacher-union contracts."></sup><sup class="cite" data-href="https://files.eric.ed.gov/fulltext/ED608353.pdf" data-source="Education Commission of the States, '50-State Comparison: K-3 Quality' (Sept 2020): 14 states plus D.C. have no K-3 class-size statute; states that do regulate cluster at 1:15 to 1:25."></sup></p>
+
+<p>Where a limit exists, it is almost always in a local teacher contract. Marblehead's is typical: the teachers' agreement (Unit&nbsp;A) commits the district to "an average class size of 25 pupils, more or less," and nothing more specific. It sets no separate number for first grade, and no separate number for a class with more high-needs students. The most recent contract, running through 2028, left that language unchanged.<sup class="cite" data-href="https://resources.finalsite.net/images/v1741690358/marbleheadschoolsorg/m9ybwueu1kaz4dftzj8p/Unit_A_2021-2024.pdf" data-source="Marblehead Public Schools, Unit A teachers' contract, Article IX (Class Size): 'An average class size of 25 pupils, more or less, will be maintained by the Committee.' The 2025-2028 memorandum of agreement amends other articles but not Article IX."></sup> A class of 21 is inside that average; a class of 16 was comfortably below it.</p>
+
+<p>Some districts add their own School Committee guideline on top of the contract. Marblehead does not appear to have one setting grade-specific class-size targets, so the "25, more or less" average is the only written standard the decision has to satisfy.</p>
+
+<h2>Where 21 sits against the rest of the state</h2>
+
+<p>The state does not publish a current average class size broken out by grade. Its most recent statewide figure, 17.2 students for 2024&ndash;25, folds in special-education, English-learner, and small elective sections, so it runs below the size of a regular first-grade homeroom and is not the right yardstick here.<sup class="cite" data-href="https://profiles.doe.mass.edu/statereport/classsizebyraceethnicity.aspx" data-source="MA DESE, Class Size by Race/Ethnicity statewide report, 2024-25: statewide average 17.2 across 479,169 classes. This all-classes average includes special-education, ELL, and elective sections and is not broken out by grade."></sup></p>
+
+<p>The last time the state broke class size out by grade for general-education classes, in 2016&ndash;17, the typical first-grade class was 20 students, rising slightly through the elementary grades. By that measure a 21-student first grade is a hair above the state median, and the 16-student version was well below it.</p>
+
+<table class="cs-table">
+  <thead>
+    <tr><th>Grade</th><th>Median class (Massachusetts)</th></tr>
+  </thead>
+  <tbody>
+    <tr class="cs-row-hl"><td>Grade 1</td><td>20.0</td></tr>
+    <tr><td>Grade 2</td><td>20.7</td></tr>
+    <tr><td>Grade 3</td><td>21.1</td></tr>
+    <tr><td>Grade 4</td><td>21.4</td></tr>
+  </tbody>
+</table>
+<p class="cs-caption">Median (50th-percentile) general-education class size by grade, statewide. This is the most recent grade-level breakdown the state has published.<sup class="cite" data-href="https://www.doe.mass.edu/research/reports/2017/12class-size.docx" data-source="MA DESE, 'Class Size in Massachusetts' (Dec 2017), Table 1, general-education classes, 50th percentile."></sup></p>
+
+<p>Affluent peer districts run their early grades on informal targets in the same range. Needham treats a K&ndash;3 class of 19 or fewer as having room to take a transfer student, an operating ceiling near 20.<sup class="cite" data-href="http://www.needham.k12.ma.us/UserFiles/Servers/Server_64429/File/Departments/School%20Committee/Policies/SchoolCommitteePoliciesSectionJ3-18.pdf" data-source="Needham Public Schools, School Committee policy JECBC: an out-of-district placement is considered if a receiving Grade K-3 class is 19 or below and a Grade 4-5 class is 21 or below."></sup> The Martha's Vineyard teachers' contract sets a maximum of 25 but requires a staff review whenever a K&ndash;3 class passes 20.<sup class="cite" data-href="https://mvea.massteacher.org/wp-content/uploads/sites/79/2025/06/MVEA-Teacher-Contract-25-28.pdf" data-source="Martha's Vineyard Education Association contract 2025-2028, Article XVII: maximum of 25 students; review triggered when K-3 exceeds 20 and grades 4-12 exceed 22."></sup> Both suggest that a first grade in the low 20s is common but sits at the upper edge of what these districts aim for in the earliest grades.</p>
+
+<h2>What the research does and doesn't say</h2>
+
+<p>The evidence on class size is real but narrower than either side of an argument tends to claim. The strongest study is Tennessee's Project STAR, a 1980s experiment that randomly assigned kindergarten-through-third-grade students and their teachers to small classes of 13&ndash;17 or regular classes of 22&ndash;25. Students in the small classes gained roughly two to three months of extra learning, about one-fourth of a standard deviation, and the benefit was largest in the earliest grades.<sup class="cite" data-href="https://edsource.org/wp-content/uploads/old/STAR.pdf" data-source="Project STAR summary (Finn & Achilles): K-3 randomized trial, small classes 13-17 vs regular 22-25; ~0.2-0.25 SD gains concentrated in early grades, some persistence to grade 8."></sup> That finding is the basis for the widely shared claim that small early-grade classes matter.</p>
+
+<p>That finding is fairly close to the Glover case. A class of 16 falls inside STAR's small-class range, and 21 sits just below its regular-class range, so moving first grade from 16 to 21 is close to the small-versus-regular contrast STAR measured, roughly a quarter of a standard deviation in the early grades. Two things keep it from being a clean match. First, 21 is one student below STAR's 22&ndash;25 regular class, so the expected effect is a little smaller than STAR's full gap. Second, the size of the effect is contested: a systematic review outside STAR found only a small effect on reading and no clear effect on math, and skeptics argue the gains are modest except in the very smallest classes.<sup class="cite" data-href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8428040/" data-source="Filges et al., Campbell Collaboration systematic review of class-size reduction: reading pooled SMD 0.11 (95% CI 0.05-0.16); mathematics SMD -0.03 (95% CI -0.22 to 0.16), not significant."></sup><sup class="cite" data-href="https://hanushek.stanford.edu/publications/some-findings-independent-investigation-tennessee-star-experiment-and-other" data-source="Hanushek, 'Some Findings from an Independent Investigation of the Tennessee STAR Experiment': benefits limited to very large reductions in kindergarten or possibly first grade; no support for smaller reductions leaving classes above 13-17."></sup> A class of 16 was already inside the range STAR found beneficial; 21 is not.</p>
+
+<p>There is also a trade-off that cuts the other way. Adding a classroom means hiring another teacher, and studies of large class-size-reduction programs, including California's in the 1990s, found that the scramble to fill new positions can lower average teacher quality enough to offset part of the benefit of the smaller class.<sup class="cite" data-href="https://www.doe.mass.edu/research/reports/2017/12class-size.docx" data-source="MA DESE 2017 brief, citing Schrag (2006) on California's 1996 K-3 reduction and teacher-quality decline, and Gilraine (2017) on the offsetting effect of hiring a new teacher."></sup> The honest summary: smaller classes in the early grades probably help a little, the help is clearest for classes well under 20, and the research neither shows that 16 was necessary nor that 21 is harmful.</p>
+
+<h2>Three ways to read this</h2>
+
+<p>The numbers above are not in dispute. What people disagree about is what weight to give them.</p>
+
+<div class="cs-framings">
+  <article class="cs-framing cs-framing--parent">
+    <h3>The parents' case</h3>
+    <p>First grade is where children learn to read independently and build number sense, and it is the point where a class of high-needs learners most needs small groups and individual attention. Going from 16 to 21 removes a teacher from a cohort the parents describe as one-quarter high-needs, at the same time the school is without a permanent principal and has no assistant principal. Whatever the statewide median, the change makes this particular class larger and thinner-staffed at the worst moment to do it.</p>
+  </article>
+  <article class="cs-framing cs-framing--district">
+    <h3>The operational case</h3>
+    <p>A district has a fixed number of teachers and has to place them where the children are. The superintendent says kindergarten registration is climbing, and the district is restoring a fourth kindergarten room to meet it and to prepare for full-day kindergarten in 2027&ndash;2028; first grade at 21 stays at the state median and well inside the contract's average of 25. On this reading the change is a reallocation driven by kindergarten demand, not a cut, and 21 is an ordinary first-grade class almost anywhere in Massachusetts.</p>
+  </article>
+  <article class="cs-framing cs-framing--evidence">
+    <h3>What the evidence supports</h3>
+    <p>The strongest study measured almost this contrast: 16 is a small class and 21 is close to a regular one, and the small classes showed a modest early-grade edge. So a class of 16 likely carried a real early-literacy advantage over a class of 21. But that edge is an average across thousands of students, not a guarantee for any one classroom; it is small and its size is contested; and adding a teacher has its own costs. The research does not show that 21 harms first graders, nor that 16 was required. It leaves the decision a judgment call, not a question the data answers on its own.</p>
+  </article>
+</div>
+
+<h2>Open questions</h2>
+
+<ol>
+  <li><strong>How firm is the three-classroom configuration?</strong> The superintendent announced it on July&nbsp;13, weeks before school starts and while kindergarten registration is still moving. Whether three first-grade rooms is final, or would be revisited if the kindergarten count settles differently, is not yet clear.</li>
+  <li><strong>Kindergarten up, district down.</strong> The superintendent cites a steady rise in kindergarten registration and expects full-day kindergarten to drive more growth. The district's FY27 budget narrative cites <em>declining</em> district-wide enrollment to explain why cut positions were not restored. Both can hold at once, one grade rising while the district shrinks, but the two pictures have not been reconciled publicly.<sup class="cite" data-href="https://www.marbleheadschools.org/school-committee/agendas-materials-and-minutes" data-source="Marblehead Public Schools FY27 budget materials cite district-wide declining enrollment; the superintendent's July 13 email cites a steady rise in Glover kindergarten registration. The two are not necessarily in conflict but have not been reconciled publicly."></sup></li>
+  <li><strong>How many high-needs students, and how are they distributed?</strong> The 16-of-64 figure comes from the parents' letter. The district has not published a high-needs count for the cohort, and how those students are spread across three rooms matters as much as the raw class size.</li>
+</ol>
+
+<details class="notes">
+  <summary>Sources and methodology</summary>
+  <p><strong>Glover enrollment.</strong> Kindergarten and first-grade headcounts are from the Massachusetts Department of Elementary and Secondary Education (<abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr>) School and District Profiles, Glover Elementary, organization code 01680020, "Enrollment by Grade," pulled one year at a time for 2020&ndash;21 through 2025&ndash;26. Glover serves pre-kindergarten through grade 3. The incoming first-grade class of 64 is the 2025&ndash;26 kindergarten cohort.</p>
+  <p><strong>The 16 and 21 figures.</strong> Arithmetic: 64 students divided by 4 sections is 16.0; divided by 3 sections is 21.3. These match the "about 16" and "about 21" in the parents' letter. The four-section 2025&ndash;26 baseline is from the district's FY27 budget-packet staffing roster.</p>
+  <p><strong>State law.</strong> 603 CMR 8.01 limits kindergarten to an average of 25 students and sets no maximum for grades 1&ndash;3, as summarized in the department's December 2017 research brief "Class Size in Massachusetts." The 50-state context is from the Education Commission of the States, "50-State Comparison: K-3 Quality" (2020).</p>
+  <p><strong>Marblehead contract.</strong> Article IX of the Unit A teachers' contract reads: "An average class size of 25 pupils, more or less, will be maintained by the Committee." The 2025&ndash;2028 memorandum of agreement amends other articles and leaves Article IX unchanged. No Marblehead School Committee policy sets grade-specific class-size targets.</p>
+  <p><strong>Grade-level medians.</strong> The department's 2017 brief, Table 1, reports general-education median class sizes of 20.0 (grade 1), 20.7 (grade 2), 21.1 (grade 3), and 21.4 (grade 4). The 2024&ndash;25 statewide average of 17.2 is an all-classes figure that includes special-education, English-learner, and elective sections and is not comparable to a single first-grade homeroom.</p>
+  <p><strong>Research.</strong> Tennessee Project STAR figures are from the Finn &amp; Achilles summary: a K&ndash;3 randomized trial comparing classes of 13&ndash;17 to 22&ndash;25, with gains of roughly one-fourth of a standard deviation concentrated in the early grades. The mixed broader evidence is from the Campbell Collaboration systematic review (Filges et al.) and Eric Hanushek's independent analysis of STAR. The teacher-quality trade-off is documented in the department's 2017 brief, citing the California and New York experiences.</p>
+  <p><strong>Peer districts.</strong> Needham's "19 or below" transfer threshold is from School Committee policy JECBC. Martha's Vineyard's review-above-20 trigger is from Article XVII of the 2025&ndash;2028 MVEA contract. These are illustrative peer practices, not Marblehead standards.</p>
+  <p><strong>Sourcing of the decision.</strong> The move from four first-grade classrooms to three, and the reason for it, restoring a fourth kindergarten classroom and preparing for full-day kindergarten in 2027&ndash;2028, come from Superintendent John J. Robidoux's July&nbsp;13, 2026 email to Glover families (on file, not published here). The 16-of-64 high-needs figure and the teacher-plus-aide staffing detail come from a separate letter circulated among Glover families and are not confirmed by any district document.</p>
+</details>
