@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-10-05",
+    "date": "2026-10-08",
     "fiscal_year": "FY27",
-    "row_count": 2914,
-    "total_paid": 37629939.96,
-    "interfund_total": 230476.65,
-    "external_paid": 37399463.31,
+    "row_count": 3558,
+    "total_paid": 39628259.53,
+    "interfund_total": 318543.52,
+    "external_paid": 39309716.01,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-10-05",
-    "source_file": "checkbook_FY27_2026-10-05.csv"
+    "last_payment": "2026-10-08",
+    "source_file": "checkbook_FY27_2026-10-08.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
-      "amount": 5343954.89,
-      "share": 0.142,
-      "fund_count": 3,
+      "amount": 5355158.83,
+      "share": 0.1351,
+      "fund_count": 4,
       "top_funds": [
         {
           "name": "A11 2022 CAPITAL IMPROVEMENT",
@@ -30,6 +30,11 @@
           "row_count": 3
         },
         {
+          "name": "A34 2025-HS ROOF & HVAC SYST",
+          "amount": 11203.94,
+          "row_count": 3
+        },
+        {
           "name": "A34 2015 NEW TRANSF STATION",
           "amount": 1950.0,
           "row_count": 3
@@ -39,48 +44,48 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 22668213.14,
-      "share": 0.6024,
+      "amount": 23103967.44,
+      "share": 0.583,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 21138952.21,
-          "row_count": 1184
+          "amount": 21278363.54,
+          "row_count": 1399
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 1230528.45,
-          "row_count": 603
+          "amount": 1482126.12,
+          "row_count": 816
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
-          "amount": 298732.48,
-          "row_count": 36
+          "amount": 343477.78,
+          "row_count": 45
         }
       ]
     },
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 8657071.05,
-      "share": 0.2301,
+      "amount": 10126651.3,
+      "share": 0.2555,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 4514014.74,
-          "row_count": 349
+          "amount": 5962110.4,
+          "row_count": 410
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
-          "amount": 1373743.23,
-          "row_count": 178
+          "amount": 1382030.81,
+          "row_count": 217
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 1308401.91,
-          "row_count": 80
+          "amount": 1312879.32,
+          "row_count": 98
         },
         {
           "name": "WATER CAPITAL ARTICLES",
@@ -89,8 +94,8 @@
         },
         {
           "name": "SEWER CAPITAL ARTICLES",
-          "amount": 319187.86,
-          "row_count": 11
+          "amount": 319784.38,
+          "row_count": 12
         },
         {
           "name": "A17 2023 MWRA LOAN",
@@ -99,22 +104,22 @@
         },
         {
           "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 188054.97,
-          "row_count": 75
+          "amount": 196178.05,
+          "row_count": 87
         }
       ]
     },
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 227619.33,
-      "share": 0.006,
-      "fund_count": 14,
+      "amount": 279495.94,
+      "share": 0.0071,
+      "fund_count": 16,
       "top_funds": [
         {
           "name": "SCHOOL LUNCH",
-          "amount": 68802.16,
-          "row_count": 39
+          "amount": 110806.1,
+          "row_count": 67
         },
         {
           "name": "COVID 19 ARPA (FED)",
@@ -133,8 +138,8 @@
         },
         {
           "name": "SPED IDEA 94-142 (240)",
-          "amount": 19837.31,
-          "row_count": 25
+          "amount": 20799.39,
+          "row_count": 30
         },
         {
           "name": "JAIL DIVERSION GRANT (FED)",
@@ -142,52 +147,52 @@
           "row_count": 1
         },
         {
+          "name": "SPED EC (262)",
+          "amount": 5414.01,
+          "row_count": 4
+        },
+        {
           "name": "Mass Cultural Council Grant",
           "amount": 4097.0,
           "row_count": 3
-        },
-        {
-          "name": "FIRE SENIOR SAFE GRANT",
-          "amount": 3257.56,
-          "row_count": 2
         }
       ]
     },
     {
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
-      "amount": 314247.75,
-      "share": 0.0084,
+      "amount": 321368.47,
+      "share": 0.0081,
       "fund_count": 4,
       "top_funds": [
         {
           "name": "PARK REVOLVING FUND",
-          "amount": 208081.14,
-          "row_count": 124
+          "amount": 208974.92,
+          "row_count": 130
         },
         {
           "name": "WASTE REVOLVING FUND",
-          "amount": 89335.24,
-          "row_count": 16
+          "amount": 90069.55,
+          "row_count": 18
         },
         {
           "name": "COA REVOLVING",
-          "amount": 9637.29,
-          "row_count": 30
+          "amount": 13227.29,
+          "row_count": 38
         },
         {
           "name": "VACCINE REVOLVING FUND",
-          "amount": 7194.08,
-          "row_count": 1
+          "amount": 9096.71,
+          "row_count": 2
         }
       ]
     },
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 418833.8,
+      "amount": 441617.55,
       "share": 0.0111,
-      "fund_count": 32,
+      "fund_count": 35,
       "top_funds": [
         {
           "name": "GERRY PLAYGROUND DONATION",
@@ -201,8 +206,8 @@
         },
         {
           "name": "MIDDLE SCHOOL STUDENT ACTIVITY",
-          "amount": 26399.74,
-          "row_count": 5
+          "amount": 28999.74,
+          "row_count": 6
         },
         {
           "name": "SCHOOL USER FEES",
@@ -221,31 +226,31 @@
         },
         {
           "name": "GLOVER SCHOOL DONATION",
-          "amount": 16402.8,
-          "row_count": 4
+          "amount": 16455.48,
+          "row_count": 5
         },
         {
-          "name": "INSURANCE REIMBURS <$150,000",
-          "amount": 7797.85,
-          "row_count": 1
+          "name": "EARL N REYNOLDS HISTORICAL FD",
+          "amount": 15843.24,
+          "row_count": 9
         }
       ]
     }
   ],
   "gf_town_carveout": {
-    "total": 21138952.21,
-    "fixed_total": 19252361.31,
-    "fixed_share": 0.9108,
-    "admin_contracts_total": 684561.31,
-    "admin_contracts_share": 0.0324,
-    "other_recurring_total": 1202029.59,
-    "other_recurring_share": 0.0569,
+    "total": 21278363.54,
+    "fixed_total": 19258412.51,
+    "fixed_share": 0.9051,
+    "admin_contracts_total": 701002.16,
+    "admin_contracts_share": 0.0329,
+    "other_recurring_total": 1318948.87,
+    "other_recurring_share": 0.062,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 4678165.68,
-        "share": 0.2213,
+        "share": 0.2199,
         "row_count": 38,
         "top_vendors": [
           {
@@ -286,7 +291,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 7738584.39,
-        "share": 0.3661,
+        "share": 0.3637,
         "row_count": 30,
         "top_vendors": [
           {
@@ -299,7 +304,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2764,
+        "share": 0.2746,
         "row_count": 1,
         "top_vendors": [
           {
@@ -311,22 +316,22 @@
       {
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
-        "amount": 992251.24,
+        "amount": 998302.44,
         "share": 0.0469,
-        "row_count": 24,
+        "row_count": 26,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 992251.24
+            "amount": 998302.44
           }
         ]
       },
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 684561.31,
-        "share": 0.0324,
-        "row_count": 40,
+        "amount": 701002.16,
+        "share": 0.0329,
+        "row_count": 48,
         "top_vendors": [
           {
             "name": "TYLER TECHNOLOGIES INC",
@@ -346,7 +351,7 @@
           },
           {
             "name": "MEAD TALERMAN & COSTA LLC",
-            "amount": 24325.78
+            "amount": 40766.63
           },
           {
             "name": "FUTURE TECHNOLOGIES GROUP LLC",
@@ -357,9 +362,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 1202029.59,
-        "share": 0.0569,
-        "row_count": 1051,
+        "amount": 1318948.87,
+        "share": 0.062,
+        "row_count": 1256,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -408,7 +413,7 @@
       "row_count": 20,
       "first_paid": "2026-07-20",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 19,
+      "days_since_last_paid": 22,
       "status": "active",
       "top_vendors": [
         {
@@ -448,7 +453,7 @@
       "row_count": 3,
       "first_paid": "2026-07-08",
       "last_paid": "2026-09-03",
-      "days_since_last_paid": 32,
+      "days_since_last_paid": 35,
       "status": "engineering",
       "top_vendors": [
         {
@@ -464,6 +469,36 @@
       ]
     },
     {
+      "fund_id": "A34 2025-HS ROOF & HVAC SYST",
+      "display": "A34 2025-HS ROOF & HVAC SYST",
+      "ballot_date": "",
+      "purpose": "",
+      "context": "",
+      "amount": 11203.94,
+      "row_count": 3,
+      "first_paid": "2026-09-16",
+      "last_paid": "2026-09-16",
+      "days_since_last_paid": 22,
+      "status": "active",
+      "top_vendors": [
+        {
+          "name": "WAKEFIELD MOVING & STORAGE SERVICES, LLC",
+          "amount": 5995.0,
+          "share": 0.5351
+        },
+        {
+          "name": "MICHAEL SILVER",
+          "amount": 5050.0,
+          "share": 0.4507
+        },
+        {
+          "name": "AMAZON CAPITAL SERVICES INC",
+          "amount": 158.94,
+          "share": 0.0142
+        }
+      ]
+    },
+    {
       "fund_id": "A34 2015 NEW TRANSF STATION",
       "display": "A34 2015 New Transfer Station + drainage",
       "ballot_date": "2015-06-16",
@@ -473,7 +508,7 @@
       "row_count": 3,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-18",
-      "days_since_last_paid": 17,
+      "days_since_last_paid": 20,
       "status": "active",
       "top_vendors": [
         {
