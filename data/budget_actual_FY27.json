@@ -1,19 +1,19 @@
 {
-  "as_of": "2026-10-09",
+  "as_of": "2026-10-10",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
-    "all_funds_revised_budget": 135775880.3,
-    "all_funds_actual": 53537553.66,
+    "all_funds_revised_budget": 135823661.14,
+    "all_funds_actual": 53537520.6,
     "budgeted_annual": {
       "revised_budget": 127204296.0,
-      "actual": 44434436.33,
+      "actual": 44434403.27,
       "original_budget": 130510456.0
     },
     "other_funds": {
-      "revised_budget": 8571584.3,
+      "revised_budget": 8619365.14,
       "actual": 9103117.33,
       "original_budget": 2400000.0
     }
@@ -22,16 +22,16 @@
     {
       "name": "GENERAL FUND - TOWN",
       "revised_budget": 69474315.0,
-      "actual": 26302097.97,
+      "actual": 26302064.91,
       "original_budget": 69331077.0,
-      "encumbrance": 15284386.62
+      "encumbrance": 15284805.62
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
       "actual": 6868071.22,
       "original_budget": 47620287.0,
-      "encumbrance": 35660284.26
+      "encumbrance": 35995399.75
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -82,7 +82,7 @@
       "revised_budget": 12884420.6,
       "actual": 2258310.69,
       "original_budget": 13090519.6,
-      "encumbrance": 7806058.83
+      "encumbrance": 8139525.47
     },
     {
       "name": "HIGH SCHOOL",
@@ -117,7 +117,7 @@
       "revised_budget": 5764127.68,
       "actual": 771186.92,
       "original_budget": 5712762.68,
-      "encumbrance": 4181718.29
+      "encumbrance": 4182823.42
     },
     {
       "name": "POLICE",
@@ -145,7 +145,7 @@
       "revised_budget": 4350141.96,
       "actual": 597244.41,
       "original_budget": 4284992.96,
-      "encumbrance": 3641083.45
+      "encumbrance": 3641627.17
     },
     {
       "name": "PUBLIC WORKS",
@@ -187,7 +187,7 @@
       "revised_budget": 1846337.0,
       "actual": 418252.88,
       "original_budget": 1790344.0,
-      "encumbrance": 546100.44
+      "encumbrance": 546519.44
     },
     {
       "name": "HARBOR",
@@ -276,7 +276,7 @@
     {
       "name": "HEALTH",
       "revised_budget": 399320.0,
-      "actual": 72300.96,
+      "actual": 72267.9,
       "original_budget": 399320.0,
       "encumbrance": 291104.84
     },
@@ -413,14 +413,14 @@
       "revised_budget": 39091074.0,
       "actual": 20747561.3,
       "original_budget": 39082074.0,
-      "encumbrance": 125460.74
+      "encumbrance": 125905.74
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 15114162.0,
-      "actual": 5183571.55,
+      "actual": 5183538.49,
       "original_budget": 14336656.0,
-      "encumbrance": 6670357.32
+      "encumbrance": 6992085.32
     },
     {
       "name": "GOVERNMENTAL",
@@ -441,7 +441,7 @@
       "revised_budget": 2461324.0,
       "actual": 528822.95,
       "original_budget": 2458724.0,
-      "encumbrance": 528551.12
+      "encumbrance": 541912.61
     },
     {
       "name": "CAPITAL",
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 6868071.22,
       "original_budget": 47615287.0,
-      "encumbrance": 35660284.26
+      "encumbrance": 35995399.75
     },
     {
       "name": "SALARIES",
@@ -490,9 +490,9 @@
     {
       "name": "EXPENSES",
       "revised_budget": 20339169.0,
-      "actual": 16940158.95,
+      "actual": 16940125.89,
       "original_budget": 24880169.0,
-      "encumbrance": 2428956.44
+      "encumbrance": 2429375.44
     },
     {
       "name": "GROUP INSURANCE",
@@ -1145,7 +1145,7 @@
       "revised_budget": 1236179.0,
       "actual": 274315.54,
       "original_budget": 1236179.0,
-      "encumbrance": 274064.97
+      "encumbrance": 279588.97
     },
     {
       "name": "INSURANCE PREMIUMS",
@@ -1166,7 +1166,7 @@
       "revised_budget": 1058773.0,
       "actual": 93214.11,
       "original_budget": 1058773.0,
-      "encumbrance": 478046.89
+      "encumbrance": 783351.89
     },
     {
       "name": "SECRETARY SALARIES",
@@ -1264,14 +1264,14 @@
       "revised_budget": 619218.0,
       "actual": 164483.47,
       "original_budget": 616618.0,
-      "encumbrance": 166163.9
+      "encumbrance": 175008.5
     },
     {
       "name": "OTHER PROF & TECHNICAL",
       "revised_budget": 589237.0,
       "actual": 519728.42,
       "original_budget": 574322.0,
-      "encumbrance": 6318.14
+      "encumbrance": 10318.14
     },
     {
       "name": "TELECOMMUNICATOR",
@@ -1320,7 +1320,7 @@
       "revised_budget": 452300.0,
       "actual": 78589.93,
       "original_budget": 452300.0,
-      "encumbrance": 182448.57
+      "encumbrance": 189123.57
     },
     {
       "name": "INCENTIVE",
@@ -1453,7 +1453,7 @@
       "revised_budget": 271180.0,
       "actual": 72257.29,
       "original_budget": 271180.0,
-      "encumbrance": 142881.01
+      "encumbrance": 143105.01
     },
     {
       "name": "MECHANIC PIPEFITTER",
@@ -1586,7 +1586,7 @@
       "revised_budget": 180262.0,
       "actual": 30438.86,
       "original_budget": 180262.0,
-      "encumbrance": 15659.08
+      "encumbrance": 17087.08
     },
     {
       "name": "OTHER SALARIES - STIPENDS",
@@ -1670,7 +1670,7 @@
       "revised_budget": 142256.0,
       "actual": 33325.94,
       "original_budget": 142256.0,
-      "encumbrance": 8849.19
+      "encumbrance": 10913.19
     },
     {
       "name": "SCHEDULED OT",
@@ -1710,7 +1710,7 @@
     {
       "name": "TELEPHONE",
       "revised_budget": 123148.0,
-      "actual": 16673.24,
+      "actual": 16640.18,
       "original_budget": 122188.0,
       "encumbrance": 43796.52
     },
@@ -2195,7 +2195,7 @@
       "revised_budget": 56929.0,
       "actual": 15524.81,
       "original_budget": 56929.0,
-      "encumbrance": 2997.76
+      "encumbrance": 3923.93
     },
     {
       "name": "MISC OFFICE SUPPLIES",
@@ -2650,7 +2650,7 @@
       "revised_budget": 15042.0,
       "actual": 4919.66,
       "original_budget": 15042.0,
-      "encumbrance": 1633.89
+      "encumbrance": 1732.61
     },
     {
       "name": "VACATION OWED",
@@ -2734,7 +2734,7 @@
       "revised_budget": 12494.0,
       "actual": 13851.0,
       "original_budget": 12494.0,
-      "encumbrance": 0.0
+      "encumbrance": 445.0
     },
     {
       "name": "METRO AREA PLANNING COUNC",
