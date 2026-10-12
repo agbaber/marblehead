@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-10",
+  "as_of": "2026-10-12",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
@@ -24,7 +24,7 @@
       "revised_budget": 69474315.0,
       "actual": 26302064.91,
       "original_budget": 69331077.0,
-      "encumbrance": 15284805.62
+      "encumbrance": 15288290.14
     },
     {
       "name": "GENERAL FUND - SCHOOL",
@@ -110,7 +110,7 @@
       "revised_budget": 6471909.0,
       "actual": 1754326.2,
       "original_budget": 6312967.0,
-      "encumbrance": 3124339.34
+      "encumbrance": 3127793.34
     },
     {
       "name": "MIDDLE SCHOOL",
@@ -285,7 +285,7 @@
       "revised_budget": 388003.0,
       "actual": 112069.83,
       "original_budget": 388003.0,
-      "encumbrance": 213730.13
+      "encumbrance": 213760.65
     },
     {
       "name": "RESERVE FUND",
@@ -406,14 +406,14 @@
       "revised_budget": 54958578.07,
       "actual": 10534366.49,
       "original_budget": 54839779.07,
-      "encumbrance": 40990723.43
+      "encumbrance": 40994177.43
     },
     {
       "name": "OTHER EXPENSE",
       "revised_budget": 39091074.0,
       "actual": 20747561.3,
       "original_budget": 39082074.0,
-      "encumbrance": 125905.74
+      "encumbrance": 125936.26
     },
     {
       "name": "CONTRACTED SERVICES",
@@ -492,7 +492,7 @@
       "revised_budget": 20339169.0,
       "actual": 16940125.89,
       "original_budget": 24880169.0,
-      "encumbrance": 2429375.44
+      "encumbrance": 2432859.96
     },
     {
       "name": "GROUP INSURANCE",
@@ -2041,7 +2041,7 @@
       "revised_budget": 68145.0,
       "actual": 15869.03,
       "original_budget": 68145.0,
-      "encumbrance": 2670.0
+      "encumbrance": 6124.0
     },
     {
       "name": "TSA/403B MATCH",
@@ -2160,7 +2160,7 @@
       "revised_budget": 59151.0,
       "actual": 4882.57,
       "original_budget": 59151.0,
-      "encumbrance": 2719.59
+      "encumbrance": 2750.11
     },
     {
       "name": "ATHLETICS OFFICIALS SALARIES",
