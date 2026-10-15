@@ -1,19 +1,19 @@
 {
-  "as_of": "2026-10-14",
+  "as_of": "2026-10-15",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
-    "all_funds_revised_budget": 135823661.14,
-    "all_funds_actual": 55539103.38,
+    "all_funds_revised_budget": 135827073.65,
+    "all_funds_actual": 55537210.49,
     "budgeted_annual": {
       "revised_budget": 127204296.0,
-      "actual": 46382118.35,
+      "actual": 46380225.46,
       "original_budget": 130510456.0
     },
     "other_funds": {
-      "revised_budget": 8619365.14,
+      "revised_budget": 8622777.65,
       "actual": 9156985.03,
       "original_budget": 2400000.0
     }
@@ -22,16 +22,16 @@
     {
       "name": "GENERAL FUND - TOWN",
       "revised_budget": 69474315.0,
-      "actual": 28049816.64,
+      "actual": 28047923.75,
       "original_budget": 69331077.0,
-      "encumbrance": 14961594.95
+      "encumbrance": 14969397.39
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
       "actual": 6868071.22,
       "original_budget": 47620287.0,
-      "encumbrance": 36002443.89
+      "encumbrance": 36056654.77
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -52,7 +52,7 @@
       "revised_budget": 1669500.0,
       "actual": 382826.72,
       "original_budget": 1669500.0,
-      "encumbrance": 471866.65
+      "encumbrance": 472125.23
     },
     {
       "name": "GENERAL FUND - TAX ARTICLES",
@@ -73,7 +73,7 @@
     {
       "name": "OTHER GOVERNMENTAL",
       "revised_budget": 24072393.0,
-      "actual": 12060691.95,
+      "actual": 12058799.06,
       "original_budget": 24072393.0,
       "encumbrance": 81447.1
     },
@@ -82,14 +82,14 @@
       "revised_budget": 12884420.6,
       "actual": 2258310.69,
       "original_budget": 13090519.6,
-      "encumbrance": 8146048.59
+      "encumbrance": 8145948.59
     },
     {
       "name": "HIGH SCHOOL",
       "revised_budget": 11559661.33,
       "actual": 1535401.74,
       "original_budget": 11552590.13,
-      "encumbrance": 8932921.27
+      "encumbrance": 8987429.38
     },
     {
       "name": "DEBT SERVICE",
@@ -103,14 +103,14 @@
       "revised_budget": 7613162.37,
       "actual": 983646.1,
       "original_budget": 7545798.37,
-      "encumbrance": 6476682.19
+      "encumbrance": 6476484.96
     },
     {
       "name": "FIRE",
       "revised_budget": 6471909.0,
       "actual": 1876129.32,
       "original_budget": 6312967.0,
-      "encumbrance": 3152176.21
+      "encumbrance": 3154198.8
     },
     {
       "name": "MIDDLE SCHOOL",
@@ -187,21 +187,21 @@
       "revised_budget": 1846337.0,
       "actual": 428784.39,
       "original_budget": 1790344.0,
-      "encumbrance": 540757.64
+      "encumbrance": 543492.49
     },
     {
       "name": "HARBOR",
       "revised_budget": 1669500.0,
       "actual": 382826.72,
       "original_budget": 1669500.0,
-      "encumbrance": 471866.65
+      "encumbrance": 472125.23
     },
     {
       "name": "ABBOT LIBRARY",
       "revised_budget": 1595790.0,
       "actual": 414336.37,
       "original_budget": 1595790.0,
-      "encumbrance": 881966.85
+      "encumbrance": 884966.85
     },
     {
       "name": "PARKS & RECREATION",
@@ -229,7 +229,7 @@
       "revised_budget": 790176.0,
       "actual": 215566.9,
       "original_budget": 723176.0,
-      "encumbrance": 228532.34
+      "encumbrance": 228577.34
     },
     {
       "name": "INTERFUND TRANSFERS",
@@ -406,21 +406,21 @@
       "revised_budget": 54958578.07,
       "actual": 10998389.51,
       "original_budget": 54839779.07,
-      "encumbrance": 40670858.85
+      "encumbrance": 40671015.85
     },
     {
       "name": "OTHER EXPENSE",
       "revised_budget": 39091074.0,
-      "actual": 22138369.87,
+      "actual": 22136476.98,
       "original_budget": 39082074.0,
-      "encumbrance": 125942.76
+      "encumbrance": 125987.76
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 15114162.0,
       "actual": 5276421.98,
       "original_budget": 14336656.0,
-      "encumbrance": 6909961.51
+      "encumbrance": 6914720.53
     },
     {
       "name": "GOVERNMENTAL",
@@ -434,14 +434,14 @@
       "revised_budget": 6458808.35,
       "actual": 1072586.24,
       "original_budget": 6473555.35,
-      "encumbrance": 4482232.65
+      "encumbrance": 4532232.65
     },
     {
       "name": "SUPPLIES AND MATL",
       "revised_budget": 2461324.0,
       "actual": 528822.95,
       "original_budget": 2458724.0,
-      "encumbrance": 543649.73
+      "encumbrance": 550960.61
     },
     {
       "name": "CAPITAL",
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 6868071.22,
       "original_budget": 47615287.0,
-      "encumbrance": 36002443.89
+      "encumbrance": 36056654.77
     },
     {
       "name": "SALARIES",
@@ -492,12 +492,12 @@
       "revised_budget": 20339169.0,
       "actual": 17033009.38,
       "original_budget": 24880169.0,
-      "encumbrance": 2345435.63
+      "encumbrance": 2353496.65
     },
     {
       "name": "GROUP INSURANCE",
       "revised_budget": 16833248.0,
-      "actual": 5154566.03,
+      "actual": 5152673.14,
       "original_budget": 16833248.0,
       "encumbrance": 0.0
     },
@@ -1017,7 +1017,7 @@
     {
       "name": "HEALTH INSURANCE",
       "revised_budget": 14041154.0,
-      "actual": 4656830.81,
+      "actual": 4654958.16,
       "original_budget": 14041154.0,
       "encumbrance": 0.0
     },
@@ -1243,7 +1243,7 @@
       "revised_budget": 653928.0,
       "actual": 12291.48,
       "original_budget": 653928.0,
-      "encumbrance": 616191.73
+      "encumbrance": 616354.43
     },
     {
       "name": "CAPTAIN",
@@ -1264,14 +1264,14 @@
       "revised_budget": 619218.0,
       "actual": 164483.47,
       "original_budget": 616618.0,
-      "encumbrance": 175529.52
+      "encumbrance": 179748.54
     },
     {
       "name": "OTHER PROF & TECHNICAL",
       "revised_budget": 589237.0,
       "actual": 519728.42,
       "original_budget": 574322.0,
-      "encumbrance": 10318.14
+      "encumbrance": 10218.14
     },
     {
       "name": "TELECOMMUNICATOR",
@@ -1453,7 +1453,7 @@
       "revised_budget": 271180.0,
       "actual": 72257.29,
       "original_budget": 271180.0,
-      "encumbrance": 143607.58
+      "encumbrance": 146698.34
     },
     {
       "name": "MECHANIC PIPEFITTER",
@@ -1579,7 +1579,7 @@
       "revised_budget": 182374.0,
       "actual": 33694.54,
       "original_budget": 182374.0,
-      "encumbrance": 94808.51
+      "encumbrance": 97808.51
     },
     {
       "name": "BLDG & EQUIP R&M SUPPLIES",
@@ -1941,7 +1941,7 @@
     {
       "name": "LIFE INSURANCE",
       "revised_budget": 72623.0,
-      "actual": 13291.34,
+      "actual": 13271.1,
       "original_budget": 72623.0,
       "encumbrance": 0.0
     },
@@ -2041,7 +2041,7 @@
       "revised_budget": 68145.0,
       "actual": 16339.32,
       "original_budget": 68145.0,
-      "encumbrance": 6124.0
+      "encumbrance": 6281.0
     },
     {
       "name": "TSA/403B MATCH",
@@ -2160,7 +2160,7 @@
       "revised_budget": 59151.0,
       "actual": 4882.57,
       "original_budget": 59151.0,
-      "encumbrance": 2756.61
+      "encumbrance": 2801.61
     },
     {
       "name": "ATHLETICS OFFICIALS SALARIES",
@@ -2230,7 +2230,7 @@
       "revised_budget": 51900.0,
       "actual": 0.0,
       "original_budget": 51900.0,
-      "encumbrance": 0.0
+      "encumbrance": 50000.0
     },
     {
       "name": "RAIL TRAIL MAINTENANCE",
@@ -2349,7 +2349,7 @@
       "revised_budget": 35750.0,
       "actual": 8357.48,
       "original_budget": 35750.0,
-      "encumbrance": 2653.61
+      "encumbrance": 2745.47
     },
     {
       "name": "POLICE POST STIPEND",
@@ -2797,7 +2797,7 @@
       "revised_budget": 10650.0,
       "actual": 149.75,
       "original_budget": 10650.0,
-      "encumbrance": 4796.23
+      "encumbrance": 6401.79
     },
     {
       "name": "COA TEMP SPECIAL CLERK",
