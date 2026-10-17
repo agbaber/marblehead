@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-16",
+  "as_of": "2026-10-17",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
@@ -24,14 +24,14 @@
       "revised_budget": 69474315.0,
       "actual": 28094751.55,
       "original_budget": 69331077.0,
-      "encumbrance": 14959557.39
+      "encumbrance": 14961129.39
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
       "actual": 6873374.94,
       "original_budget": 47620287.0,
-      "encumbrance": 36072276.72
+      "encumbrance": 36087525.79
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -82,14 +82,14 @@
       "revised_budget": 12884420.6,
       "actual": 2263614.41,
       "original_budget": 13090519.6,
-      "encumbrance": 8157910.51
+      "encumbrance": 8173050.51
     },
     {
       "name": "HIGH SCHOOL",
       "revised_budget": 11559661.33,
       "actual": 1535401.74,
       "original_budget": 11552590.13,
-      "encumbrance": 8991052.67
+      "encumbrance": 8991052.66
     },
     {
       "name": "DEBT SERVICE",
@@ -117,7 +117,7 @@
       "revised_budget": 5764127.68,
       "actual": 771186.92,
       "original_budget": 5712762.68,
-      "encumbrance": 4182815.42
+      "encumbrance": 4182924.5
     },
     {
       "name": "POLICE",
@@ -152,7 +152,7 @@
       "revised_budget": 3193686.0,
       "actual": 681302.07,
       "original_budget": 3063365.0,
-      "encumbrance": 1282606.32
+      "encumbrance": 1283556.32
     },
     {
       "name": "STATE ASSESSMENTS",
@@ -264,7 +264,7 @@
       "revised_budget": 523548.0,
       "actual": 127240.56,
       "original_budget": 523548.0,
-      "encumbrance": 305558.61
+      "encumbrance": 305993.61
     },
     {
       "name": "CEMETERY",
@@ -285,7 +285,7 @@
       "revised_budget": 388003.0,
       "actual": 117161.8,
       "original_budget": 388003.0,
-      "encumbrance": 208668.68
+      "encumbrance": 208855.68
     },
     {
       "name": "RESERVE FUND",
@@ -413,14 +413,14 @@
       "revised_budget": 39091074.0,
       "actual": 22136476.98,
       "original_budget": 39082074.0,
-      "encumbrance": 126599.76
+      "encumbrance": 126599.75
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 15114162.0,
       "actual": 5486908.25,
       "original_budget": 14336656.0,
-      "encumbrance": 6909504.21
+      "encumbrance": 6924831.21
     },
     {
       "name": "GOVERNMENTAL",
@@ -441,7 +441,7 @@
       "revised_budget": 2461324.0,
       "actual": 568329.02,
       "original_budget": 2458724.0,
-      "encumbrance": 561346.88
+      "encumbrance": 562840.96
     },
     {
       "name": "CAPITAL",
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 6873374.94,
       "original_budget": 47615287.0,
-      "encumbrance": 36072276.72
+      "encumbrance": 36087525.79
     },
     {
       "name": "SALARIES",
@@ -492,7 +492,7 @@
       "revised_budget": 20339169.0,
       "actual": 17090218.0,
       "original_budget": 24880169.0,
-      "encumbrance": 2343656.65
+      "encumbrance": 2345228.65
     },
     {
       "name": "GROUP INSURANCE",
@@ -1264,14 +1264,14 @@
       "revised_budget": 619218.0,
       "actual": 164483.47,
       "original_budget": 616618.0,
-      "encumbrance": 184086.57
+      "encumbrance": 184195.65
     },
     {
       "name": "OTHER PROF & TECHNICAL",
       "revised_budget": 589237.0,
       "actual": 523978.42,
       "original_budget": 574322.0,
-      "encumbrance": 10218.14
+      "encumbrance": 10755.14
     },
     {
       "name": "TELECOMMUNICATOR",
@@ -1320,7 +1320,7 @@
       "revised_budget": 452300.0,
       "actual": 78589.93,
       "original_budget": 452300.0,
-      "encumbrance": 189123.57
+      "encumbrance": 204263.57
     },
     {
       "name": "INCENTIVE",
@@ -1418,7 +1418,7 @@
       "revised_budget": 292856.0,
       "actual": 161087.95,
       "original_budget": 292856.0,
-      "encumbrance": 65038.23
+      "encumbrance": 65038.22
     },
     {
       "name": "LEADER HEAVY EQUIP OPERATOR",
@@ -2027,7 +2027,7 @@
       "revised_budget": 68521.0,
       "actual": 3953.0,
       "original_budget": 68521.0,
-      "encumbrance": 4261.0
+      "encumbrance": 3911.0
     },
     {
       "name": "BILLING TECH",
@@ -2202,7 +2202,7 @@
       "revised_budget": 56240.0,
       "actual": 37312.13,
       "original_budget": 56240.0,
-      "encumbrance": 12795.86
+      "encumbrance": 13230.86
     },
     {
       "name": "LIBRARY TECH SVCS ASSISTANT",
@@ -2699,7 +2699,7 @@
       "revised_budget": 14825.0,
       "actual": 2796.2,
       "original_budget": 14825.0,
-      "encumbrance": 3462.47
+      "encumbrance": 4412.47
     },
     {
       "name": "DOUBLE TIME",
