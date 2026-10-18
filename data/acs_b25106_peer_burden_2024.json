@@ -1,0 +1,104 @@
+{
+  "vintage": "ACS 2024 5-year (2020-2024)",
+  "source": "https://api.census.gov/data/2024/acs/acs5",
+  "rows": [
+    {
+      "label": "Marblehead",
+      "level": "town",
+      "owners": 7061,
+      "burdened": 1756,
+      "rate": 24.87
+    },
+    {
+      "label": "Swampscott",
+      "level": "town",
+      "owners": 4669,
+      "burdened": 1489,
+      "rate": 31.89
+    },
+    {
+      "label": "Beverly",
+      "level": "town",
+      "owners": 10212,
+      "burdened": 2702,
+      "rate": 26.46
+    },
+    {
+      "label": "Andover",
+      "level": "town",
+      "owners": 10622,
+      "burdened": 2710,
+      "rate": 25.51
+    },
+    {
+      "label": "Melrose",
+      "level": "town",
+      "owners": 8328,
+      "burdened": 1783,
+      "rate": 21.41
+    },
+    {
+      "label": "Lexington",
+      "level": "town",
+      "owners": 10042,
+      "burdened": 2080,
+      "rate": 20.71
+    },
+    {
+      "label": "Concord",
+      "level": "town",
+      "owners": 4991,
+      "burdened": 1241,
+      "rate": 24.86
+    },
+    {
+      "label": "Winchester",
+      "level": "town",
+      "owners": 6811,
+      "burdened": 1374,
+      "rate": 20.17
+    },
+    {
+      "label": "Wellesley",
+      "level": "town",
+      "owners": 7742,
+      "burdened": 1824,
+      "rate": 23.56
+    },
+    {
+      "label": "Cohasset",
+      "level": "town",
+      "owners": 2522,
+      "burdened": 567,
+      "rate": 22.48
+    },
+    {
+      "label": "Hingham",
+      "level": "town",
+      "owners": 7816,
+      "burdened": 1734,
+      "rate": 22.19
+    },
+    {
+      "label": "Essex County",
+      "level": "county",
+      "owners": 198838,
+      "burdened": 59195,
+      "rate": 29.77
+    },
+    {
+      "label": "Massachusetts",
+      "level": "state",
+      "owners": 1741158,
+      "burdened": 469014,
+      "rate": 26.94
+    },
+    {
+      "label": "United States",
+      "level": "us",
+      "owners": 84210142,
+      "burdened": 19701293,
+      "rate": 23.4
+    }
+  ]
+}
