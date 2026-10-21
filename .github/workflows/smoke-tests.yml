@@ -8,7 +8,10 @@ on:
 jobs:
   smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # Normal run is ~2 min. 20 leaves room for a slow Playwright CDN
+    # download on a cache miss without the 10-minute cliff that
+    # cancelled the smoke check on PRs #1150 and #1287.
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -25,7 +28,24 @@ jobs:
         run: bundle exec jekyll build
 
       - run: npm install
-      - run: npx playwright install --with-deps chromium
+
+      # Unit tests for CI helpers (scripts/ci). Fast; runs before the
+      # browser install so a helper regression fails in seconds.
+      - run: npm run test:ci
+
+      # Cache the Chromium build Playwright downloads (~150 MB) so the
+      # usual run never touches the Playwright CDN.
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      # No --with-deps: that flag apt-installs ~80 MB of font packages on
+      # every run, and the Azure apt mirror stalling inside it is what
+      # pushed PR #1150 (Aug 18) and PR #1287 (Oct 9) past the job
+      # timeout and wedged the checkbook refresh for 10+ days each.
+      # ubuntu-latest already ships Chromium's shared libraries.
+      - run: npx playwright install chromium
 
       - name: Start local server
         run: npx serve _site -p 4000 &
