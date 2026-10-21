@@ -712,8 +712,8 @@
     },
     {
       "month": "2026-06",
-      "amount": 14030064.9,
-      "count": 2472
+      "amount": 14023661.7,
+      "count": 2475
     }
   ],
   "drill": {
@@ -4898,8 +4898,8 @@
         "top_vendors": [
           {
             "name": "BETH ISRAEL LAHEY HEALTH PRIMARY",
-            "amount": 23691.86,
-            "count": 10
+            "amount": 17288.66,
+            "count": 13
           },
           {
             "name": "BLOOM ED INC",
@@ -4945,8 +4945,8 @@
           },
           {
             "month": "2026-06",
-            "amount": 5442.73,
-            "count": 2
+            "amount": -960.47,
+            "count": 5
           }
         ]
       },
