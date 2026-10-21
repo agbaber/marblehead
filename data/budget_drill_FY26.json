@@ -1,17 +1,18 @@
 {
- "as_of": "2026-10-04",
+ "as_of": "2026-10-21",
  "fiscal_year": "FY26",
+ "actuals_sha256": "ed22f798daa48f39660b82402018b850c94ef85d3da489183d4805877c847eee",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
   "revised_budget": 127338097.88,
-  "actual": 132757136.98,
+  "actual": 135923378.2,
   "original_budget": 123810031.12
  },
  "by_fund": {
   "GENERAL FUND - TOWN": {
    "rollup": {
     "revised_budget": 60614084.0,
-    "actual": 57094363.1,
+    "actual": 58512657.5,
     "original_budget": 59561708.0
    },
    "by_department": [
@@ -274,7 +275,7 @@
   "GENERAL FUND - SCHOOL": {
    "rollup": {
     "revised_budget": 49120287.0,
-    "actual": 46970271.36,
+    "actual": 48018769.27,
     "original_budget": 49120287.0
    },
    "by_department": [
@@ -369,7 +370,7 @@
   "WATER ENTERPRISE OPERATING": {
    "rollup": {
     "revised_budget": 6475995.0,
-    "actual": 5775719.25,
+    "actual": 5813332.1,
     "original_budget": 6463957.0
    },
    "by_department": [
@@ -428,7 +429,7 @@
   "SEWER ENTERPRISE OPERATING": {
    "rollup": {
     "revised_budget": 5544161.0,
-    "actual": 5145799.32,
+    "actual": 5215194.81,
     "original_budget": 5532269.0
    },
    "by_department": [
@@ -487,7 +488,7 @@
   "GENERAL FUND - TAX ARTICLES": {
    "rollup": {
     "revised_budget": 4305002.88,
-    "actual": 2422583.58,
+    "actual": 2447017.35,
     "original_budget": 1854936.12
    },
    "by_department": [
@@ -582,7 +583,7 @@
   "HARBOR ENTERPRISE OPERATING": {
    "rollup": {
     "revised_budget": 1278568.0,
-    "actual": 1120941.16,
+    "actual": 1137047.47,
     "original_budget": 1276874.0
    },
    "by_department": [
@@ -641,7 +642,7 @@
   "ELECTRIC ENTERPRISE": {
    "rollup": {
     "revised_budget": 0.0,
-    "actual": 14227459.21,
+    "actual": 14779359.7,
     "original_budget": 0.0
    },
    "by_department": [
@@ -695,8 +696,8 @@
  "by_department": {
   "OTHER GOVERNMENTAL": {
    "rollup": {
-    "revised_budget": 21851072.0,
-    "actual": 21402081.06,
+    "revised_budget": 21519850.0,
+    "actual": 21401310.52,
     "original_budget": 21851072.0
    },
    "by_category": [
@@ -773,7 +774,7 @@
   "DISTRICTWIDE": {
    "rollup": {
     "revised_budget": 14574494.16,
-    "actual": 13901433.85,
+    "actual": 14907221.66,
     "original_budget": 17832596.0
    },
    "by_category": [
@@ -832,7 +833,7 @@
   "HIGH SCHOOL": {
    "rollup": {
     "revised_budget": 11158028.0,
-    "actual": 10710093.27,
+    "actual": 10752170.36,
     "original_budget": 9105277.0
    },
    "by_category": [
@@ -891,7 +892,7 @@
   "DEBT SERVICE": {
    "rollup": {
     "revised_budget": 9314141.0,
-    "actual": 9382449.38,
+    "actual": 9214614.78,
     "original_budget": 9314141.0
    },
    "by_category": [
@@ -914,7 +915,7 @@
   "VILLAGE SCHOOL": {
    "rollup": {
     "revised_budget": 7679662.0,
-    "actual": 7374207.22,
+    "actual": 7378153.17,
     "original_budget": 7301893.0
    },
    "by_category": [
@@ -973,7 +974,7 @@
   "WATER": {
    "rollup": {
     "revised_budget": 6475995.0,
-    "actual": 5775719.25,
+    "actual": 5813332.1,
     "original_budget": 6463957.0
    },
    "by_category": [
@@ -1050,7 +1051,7 @@
   "MIDDLE SCHOOL": {
    "rollup": {
     "revised_budget": 5857003.0,
-    "actual": 5527384.64,
+    "actual": 5530443.09,
     "original_budget": 5569396.0
    },
    "by_category": [
@@ -1103,7 +1104,7 @@
   "FIRE": {
    "rollup": {
     "revised_budget": 5752426.13,
-    "actual": 5570757.25,
+    "actual": 5643159.15,
     "original_budget": 5586722.13
    },
    "by_category": [
@@ -1186,7 +1187,7 @@
   "SEWER": {
    "rollup": {
     "revised_budget": 5544161.0,
-    "actual": 5145799.32,
+    "actual": 5215194.81,
     "original_budget": 5532269.0
    },
    "by_category": [
@@ -1257,7 +1258,7 @@
   "BROWN SCHOOL": {
    "rollup": {
     "revised_budget": 5476278.84,
-    "actual": 5308913.5,
+    "actual": 5290472.52,
     "original_budget": 5227512.0
    },
    "by_category": [
@@ -1309,8 +1310,8 @@
   },
   "POLICE": {
    "rollup": {
-    "revised_budget": 5302215.09,
-    "actual": 5187666.15,
+    "revised_budget": 5303437.09,
+    "actual": 5223683.94,
     "original_budget": 4988272.09
    },
    "by_category": [
@@ -1423,7 +1424,7 @@
   "GLOVER SCHOOL": {
    "rollup": {
     "revised_budget": 4374821.0,
-    "actual": 4148238.88,
+    "actual": 4160308.47,
     "original_budget": 4083613.0
    },
    "by_category": [
@@ -1475,8 +1476,8 @@
   },
   "PUBLIC WORKS": {
    "rollup": {
-    "revised_budget": 3465281.69,
-    "actual": 2279460.05,
+    "revised_budget": 3365281.69,
+    "actual": 2342550.7,
     "original_budget": 2646763.87
    },
    "by_category": [
@@ -1595,7 +1596,7 @@
   "WASTE COLLECTION": {
    "rollup": {
     "revised_budget": 3085898.09,
-    "actual": 2556132.56,
+    "actual": 2952521.95,
     "original_budget": 2943402.09
    },
    "by_category": [
@@ -1678,7 +1679,7 @@
   "STATE ASSESSMENTS": {
    "rollup": {
     "revised_budget": 2475615.0,
-    "actual": 1713450.0,
+    "actual": 2541095.0,
     "original_budget": 2475615.0
    },
    "by_category": [
@@ -1700,8 +1701,8 @@
   },
   "FINANCE": {
    "rollup": {
-    "revised_budget": 1972597.93,
-    "actual": 1856525.15,
+    "revised_budget": 2099530.93,
+    "actual": 1853494.94,
     "original_budget": 1942697.93
    },
    "by_category": [
@@ -1784,7 +1785,7 @@
   "ABBOT LIBRARY": {
    "rollup": {
     "revised_budget": 1501292.0,
-    "actual": 1372014.84,
+    "actual": 1415615.57,
     "original_budget": 1493292.0
    },
    "by_category": [
@@ -1854,7 +1855,7 @@
   "HARBOR": {
    "rollup": {
     "revised_budget": 1278568.0,
-    "actual": 1120941.16,
+    "actual": 1137047.47,
     "original_budget": 1276874.0
    },
    "by_category": [
@@ -1925,7 +1926,7 @@
   "EDUCATION": {
    "rollup": {
     "revised_budget": 1275192.26,
-    "actual": 943249.27,
+    "actual": 952869.27,
     "original_budget": 254784.32
    },
    "by_category": [
@@ -1995,8 +1996,8 @@
   },
   "PARKS & RECREATION": {
    "rollup": {
-    "revised_budget": 1133161.26,
-    "actual": 1032979.67,
+    "revised_budget": 1149141.26,
+    "actual": 1082879.45,
     "original_budget": 1045002.26
    },
    "by_category": [
@@ -2084,8 +2085,8 @@
   },
   "PUBLIC BUILDINGS": {
    "rollup": {
-    "revised_budget": 881311.65,
-    "actual": 498349.93,
+    "revised_budget": 918311.65,
+    "actual": 532511.0,
     "original_budget": 772111.65
    },
    "by_category": [
@@ -2180,7 +2181,7 @@
   "SELECT BOARD": {
    "rollup": {
     "revised_budget": 720316.8,
-    "actual": 535903.81,
+    "actual": 542862.86,
     "original_budget": 720316.8
    },
    "by_category": [
@@ -2245,7 +2246,7 @@
   "CEMETERY": {
    "rollup": {
     "revised_budget": 703243.0,
-    "actual": 609841.4,
+    "actual": 614225.17,
     "original_budget": 518043.0
    },
    "by_category": [
@@ -2310,7 +2311,7 @@
   "BUILDING INSPECTION": {
    "rollup": {
     "revised_budget": 691113.0,
-    "actual": 599169.31,
+    "actual": 606923.5,
     "original_budget": 687313.0
    },
    "by_category": [
@@ -2354,10 +2355,57 @@
     }
    ]
   },
+  "SNOW REMOVAL": {
+   "rollup": {
+    "revised_budget": 687658.0,
+    "actual": 687053.81,
+    "original_budget": 105000.0
+   },
+   "by_category": [
+    {
+     "name": "PROFESSIONAL SALARY",
+     "revised_budget": 366092.4,
+     "actual": 366091.62,
+     "original_budget": 49900.0
+    },
+    {
+     "name": "SUPPLIES AND MATL",
+     "revised_budget": 265404.6,
+     "actual": 227396.2,
+     "original_budget": 33939.0
+    },
+    {
+     "name": "CONTRACTED SERVICES",
+     "revised_budget": 55861.0,
+     "actual": 92565.51,
+     "original_budget": 20861.0
+    },
+    {
+     "name": "OTHER EXPENSE",
+     "revised_budget": 300.0,
+     "actual": 1000.48,
+     "original_budget": 300.0
+    }
+   ],
+   "by_division": [
+    {
+     "name": "SALARIES",
+     "revised_budget": 366092.4,
+     "actual": 366091.62,
+     "original_budget": 49900.0
+    },
+    {
+     "name": "EXPENSES",
+     "revised_budget": 321565.6,
+     "actual": 320962.19,
+     "original_budget": 55100.0
+    }
+   ]
+  },
   "COMMUNITY DEVELOP AND PLANNING": {
    "rollup": {
-    "revised_budget": 495123.0,
-    "actual": 398240.5,
+    "revised_budget": 435831.0,
+    "actual": 400227.31,
     "original_budget": 494402.0
    },
    "by_category": [
@@ -2398,7 +2446,7 @@
   "DRAINS": {
    "rollup": {
     "revised_budget": 434970.98,
-    "actual": 271281.03,
+    "actual": 282954.33,
     "original_budget": 434970.98
    },
    "by_category": [
@@ -2433,7 +2481,7 @@
   "COUNCIL ON AGING": {
    "rollup": {
     "revised_budget": 426160.0,
-    "actual": 415400.02,
+    "actual": 418974.11,
     "original_budget": 423460.0
    },
    "by_category": [
@@ -2479,8 +2527,8 @@
   },
   "ASSESSORS": {
    "rollup": {
-    "revised_budget": 395821.0,
-    "actual": 348563.43,
+    "revised_budget": 370821.0,
+    "actual": 356182.11,
     "original_budget": 394221.0
    },
    "by_category": [
@@ -2527,7 +2575,7 @@
   "HEALTH": {
    "rollup": {
     "revised_budget": 335641.0,
-    "actual": 311997.76,
+    "actual": 315127.37,
     "original_budget": 326141.0
    },
    "by_category": [
@@ -2589,80 +2637,10 @@
     }
    ]
   },
-  "TOWN CLERK": {
-   "rollup": {
-    "revised_budget": 326956.0,
-    "actual": 315002.88,
-    "original_budget": 244733.0
-   },
-   "by_category": [
-    {
-     "name": "PROFESSIONAL SALARY",
-     "revised_budget": 236696.0,
-     "actual": 227953.14,
-     "original_budget": 231396.0
-    },
-    {
-     "name": "OTHER EXPENSE",
-     "revised_budget": 82039.36,
-     "actual": 80731.79,
-     "original_budget": 1045.0
-    },
-    {
-     "name": "CONTRACTED SERVICES",
-     "revised_budget": 8234.32,
-     "actual": 5210.69,
-     "original_budget": 9392.0
-    },
-    {
-     "name": "SUPPLIES AND MATL",
-     "revised_budget": 3786.32,
-     "actual": 2960.51,
-     "original_budget": 2900.0
-    }
-   ],
-   "by_division": [
-    {
-     "name": "SALARIES",
-     "revised_budget": 236696.0,
-     "actual": 227953.14,
-     "original_budget": 231396.0
-    },
-    {
-     "name": "EXPENSES",
-     "revised_budget": 94060.0,
-     "actual": 88902.99,
-     "original_budget": 13337.0
-    }
-   ]
-  },
-  "RESERVE FUND": {
-   "rollup": {
-    "revised_budget": 315016.0,
-    "actual": 0.0,
-    "original_budget": 444000.0
-   },
-   "by_category": [
-    {
-     "name": "OTHER EXPENSE",
-     "revised_budget": 27358.0,
-     "actual": 0,
-     "original_budget": 444000.0
-    }
-   ],
-   "by_division": [
-    {
-     "name": "EXPENSES",
-     "revised_budget": 27358.0,
-     "actual": 0,
-     "original_budget": 444000.0
-    }
-   ]
-  },
   "HUMAN RESOURCES": {
    "rollup": {
-    "revised_budget": 296282.0,
-    "actual": 288330.85,
+    "revised_budget": 335522.0,
+    "actual": 290523.39,
     "original_budget": 294927.0
    },
    "by_category": [
@@ -2706,10 +2684,57 @@
     }
    ]
   },
+  "TOWN CLERK": {
+   "rollup": {
+    "revised_budget": 330756.0,
+    "actual": 316856.13,
+    "original_budget": 244733.0
+   },
+   "by_category": [
+    {
+     "name": "PROFESSIONAL SALARY",
+     "revised_budget": 236696.0,
+     "actual": 227953.14,
+     "original_budget": 231396.0
+    },
+    {
+     "name": "OTHER EXPENSE",
+     "revised_budget": 82039.36,
+     "actual": 80731.79,
+     "original_budget": 1045.0
+    },
+    {
+     "name": "CONTRACTED SERVICES",
+     "revised_budget": 8234.32,
+     "actual": 5210.69,
+     "original_budget": 9392.0
+    },
+    {
+     "name": "SUPPLIES AND MATL",
+     "revised_budget": 3786.32,
+     "actual": 2960.51,
+     "original_budget": 2900.0
+    }
+   ],
+   "by_division": [
+    {
+     "name": "SALARIES",
+     "revised_budget": 236696.0,
+     "actual": 227953.14,
+     "original_budget": 231396.0
+    },
+    {
+     "name": "EXPENSES",
+     "revised_budget": 94060.0,
+     "actual": 88902.99,
+     "original_budget": 13337.0
+    }
+   ]
+  },
   "VETERANS SERVICES": {
    "rollup": {
-    "revised_budget": 148525.0,
-    "actual": 120806.01,
+    "revised_budget": 149830.0,
+    "actual": 116547.73,
     "original_budget": 148525.0
    },
    "by_category": [
@@ -2762,7 +2787,7 @@
   "TOWN COUNSEL": {
    "rollup": {
     "revised_budget": 115000.0,
-    "actual": 100208.89,
+    "actual": 117069.73,
     "original_budget": 115000.0
    },
    "by_category": [
@@ -2794,57 +2819,10 @@
     }
    ]
   },
-  "SNOW REMOVAL": {
-   "rollup": {
-    "revised_budget": 105000.0,
-    "actual": 687053.81,
-    "original_budget": 105000.0
-   },
-   "by_category": [
-    {
-     "name": "PROFESSIONAL SALARY",
-     "revised_budget": 366092.4,
-     "actual": 366091.62,
-     "original_budget": 49900.0
-    },
-    {
-     "name": "SUPPLIES AND MATL",
-     "revised_budget": 265404.6,
-     "actual": 227396.2,
-     "original_budget": 33939.0
-    },
-    {
-     "name": "CONTRACTED SERVICES",
-     "revised_budget": 55861.0,
-     "actual": 92565.51,
-     "original_budget": 20861.0
-    },
-    {
-     "name": "OTHER EXPENSE",
-     "revised_budget": 300.0,
-     "actual": 1000.48,
-     "original_budget": 300.0
-    }
-   ],
-   "by_division": [
-    {
-     "name": "SALARIES",
-     "revised_budget": 366092.4,
-     "actual": 366091.62,
-     "original_budget": 49900.0
-    },
-    {
-     "name": "EXPENSES",
-     "revised_budget": 321565.6,
-     "actual": 320962.19,
-     "original_budget": 55100.0
-    }
-   ]
-  },
   "ELECTION & REGISTRATION": {
    "rollup": {
-    "revised_budget": 71015.0,
-    "actual": 31394.32,
+    "revised_budget": 59015.0,
+    "actual": 40416.14,
     "original_budget": 71015.0
    },
    "by_category": [
@@ -2882,6 +2860,58 @@
     }
    ]
   },
+  "RESERVE FUND": {
+   "rollup": {
+    "revised_budget": 27358.0,
+    "actual": 0.0,
+    "original_budget": 444000.0
+   },
+   "by_category": [
+    {
+     "name": "OTHER EXPENSE",
+     "revised_budget": 27358.0,
+     "actual": 0,
+     "original_budget": 444000.0
+    }
+   ],
+   "by_division": [
+    {
+     "name": "EXPENSES",
+     "revised_budget": 27358.0,
+     "actual": 0,
+     "original_budget": 444000.0
+    }
+   ]
+  },
+  "PLANNING BOARD": {
+   "rollup": {
+    "revised_budget": 12742.0,
+    "actual": 9702.07,
+    "original_budget": 5775.0
+   },
+   "by_category": [
+    {
+     "name": "CONTRACTED SERVICES",
+     "revised_budget": 12642.0,
+     "actual": 9702.07,
+     "original_budget": 5675.0
+    },
+    {
+     "name": "SUPPLIES AND MATL",
+     "revised_budget": 100.0,
+     "actual": 0,
+     "original_budget": 100.0
+    }
+   ],
+   "by_division": [
+    {
+     "name": "EXPENSES",
+     "revised_budget": 12742.0,
+     "actual": 9702.07,
+     "original_budget": 5775.0
+    }
+   ]
+  },
   "PARKING CLERK": {
    "rollup": {
     "revised_budget": 8400.0,
@@ -2908,7 +2938,7 @@
   "MEMORIAL & VETERANS DAY": {
    "rollup": {
     "revised_budget": 7550.0,
-    "actual": 212.5,
+    "actual": 5072.5,
     "original_budget": 7550.0
    },
    "by_category": [
@@ -2942,7 +2972,7 @@
   },
   "FINANCE COMMITTEE": {
    "rollup": {
-    "revised_budget": 6375.0,
+    "revised_budget": 6442.0,
     "actual": 6442.0,
     "original_budget": 6375.0
    },
@@ -2966,35 +2996,6 @@
      "revised_budget": 6442.0,
      "actual": 6442.0,
      "original_budget": 6375.0
-    }
-   ]
-  },
-  "PLANNING BOARD": {
-   "rollup": {
-    "revised_budget": 5775.0,
-    "actual": 5652.83,
-    "original_budget": 5775.0
-   },
-   "by_category": [
-    {
-     "name": "CONTRACTED SERVICES",
-     "revised_budget": 12642.0,
-     "actual": 9702.07,
-     "original_budget": 5675.0
-    },
-    {
-     "name": "SUPPLIES AND MATL",
-     "revised_budget": 100.0,
-     "actual": 0,
-     "original_budget": 100.0
-    }
-   ],
-   "by_division": [
-    {
-     "name": "EXPENSES",
-     "revised_budget": 12742.0,
-     "actual": 9702.07,
-     "original_budget": 5775.0
     }
    ]
   },
@@ -3070,7 +3071,7 @@
   "LIGHT": {
    "rollup": {
     "revised_budget": 0.0,
-    "actual": 14227459.21,
+    "actual": 14779359.7,
     "original_budget": 0.0
    },
    "by_category": [
@@ -3129,7 +3130,7 @@
   "ENGINEERING": {
    "rollup": {
     "revised_budget": 0.0,
-    "actual": 121.7,
+    "actual": 0.0,
     "original_budget": 0.0
    },
    "by_category": [
@@ -3153,8 +3154,8 @@
  "by_category": {
   "PROFESSIONAL SALARY": {
    "rollup": {
-    "revised_budget": 52594052.98,
-    "actual": 53511334.69,
+    "revised_budget": 52732098.38,
+    "actual": 53651533.98,
     "original_budget": 52634082.0
    },
    "by_fund": [
@@ -3398,8 +3399,8 @@
   },
   "OTHER EXPENSE": {
    "rollup": {
-    "revised_budget": 34980346.27,
-    "actual": 36073308.77,
+    "revised_budget": 34361533.27,
+    "actual": 35908394.36,
     "original_budget": 34515101.0
    },
    "by_fund": [
@@ -3655,8 +3656,8 @@
   },
   "CONTRACTED SERVICES": {
    "rollup": {
-    "revised_budget": 15101658.57,
-    "actual": 21789824.94,
+    "revised_budget": 15356605.57,
+    "actual": 23664813.54,
     "original_budget": 14399193.77
    },
    "by_fund": [
@@ -3937,7 +3938,7 @@
   "GOVERNMENTAL": {
    "rollup": {
     "revised_budget": 9314518.0,
-    "actual": 8297531.62,
+    "actual": 9125176.62,
     "original_budget": 9314518.0
    },
    "by_fund": [
@@ -3996,7 +3997,7 @@
   "OTHER SALARIES": {
    "rollup": {
     "revised_budget": 6571310.04,
-    "actual": 6119751.54,
+    "actual": 6137234.85,
     "original_budget": 6449488.0
    },
    "by_fund": [
@@ -4049,7 +4050,7 @@
   "CAPITAL": {
    "rollup": {
     "revised_budget": 3311275.11,
-    "actual": 1911693.27,
+    "actual": 2125321.49,
     "original_budget": 1477347.35
    },
    "by_fund": [
@@ -4197,8 +4198,8 @@
   },
   "SUPPLIES AND MATL": {
    "rollup": {
-    "revised_budget": 2417128.2,
-    "actual": 2170061.5,
+    "revised_budget": 2642948.8,
+    "actual": 2419824.31,
     "original_budget": 2147014.0
    },
    "by_fund": [
@@ -4514,7 +4515,7 @@
   "CLERICAL SALARIES": {
    "rollup": {
     "revised_budget": 1442995.0,
-    "actual": 1535304.94,
+    "actual": 1542753.34,
     "original_budget": 1920239.0
    },
    "by_fund": [
@@ -4604,7 +4605,7 @@
   "UNDEFINED": {
    "rollup": {
     "revised_budget": 49120287.0,
-    "actual": 46970271.36,
+    "actual": 48018769.27,
     "original_budget": 49120287.0
    },
    "by_fund": [
@@ -4662,8 +4663,8 @@
   },
   "SALARIES": {
    "rollup": {
-    "revised_budget": 23167663.0,
-    "actual": 26018030.99,
+    "revised_budget": 23305708.4,
+    "actual": 26191485.44,
     "original_budget": 22737663.0
    },
    "by_fund": [
@@ -4859,8 +4860,8 @@
   },
   "EXPENSES": {
    "rollup": {
-    "revised_budget": 21048150.0,
-    "actual": 28636065.76,
+    "revised_budget": 21225346.6,
+    "actual": 30463490.54,
     "original_budget": 20424150.0
    },
    "by_fund": [
@@ -5116,8 +5117,8 @@
   },
   "GROUP INSURANCE": {
    "rollup": {
-    "revised_budget": 15150391.0,
-    "actual": 14785756.02,
+    "revised_budget": 14819169.0,
+    "actual": 14778609.86,
     "original_budget": 15200391.0
    },
    "by_fund": [
@@ -5278,7 +5279,7 @@
   "ART 14 DRAIN CONSTRUCTION": {
    "rollup": {
     "revised_budget": 434970.98,
-    "actual": 271281.03,
+    "actual": 282954.33,
     "original_budget": 434970.98
    },
    "by_fund": [
@@ -5301,7 +5302,7 @@
   "STORMWATER CONSTRUCTION": {
    "rollup": {
     "revised_budget": 400000.0,
-    "actual": 115372.0,
+    "actual": 115955.75,
     "original_budget": 0.0
    },
    "by_fund": [
@@ -5324,7 +5325,7 @@
   "MEDICARE": {
    "rollup": {
     "revised_budget": 330000.0,
-    "actual": 316205.84,
+    "actual": 318682.94,
     "original_budget": 280000.0
    },
    "by_fund": [
@@ -5376,7 +5377,7 @@
   "ART 30 2024 CAPITAL TRANSFERS": {
    "rollup": {
     "revised_budget": 277426.21,
-    "actual": 18906.92,
+    "actual": 22326.92,
     "original_budget": 277426.21
    },
    "by_fund": [
@@ -5429,7 +5430,7 @@
   "HARBOR CAPITAL OUTLAYS": {
    "rollup": {
     "revised_budget": 200000.0,
-    "actual": 105909.69,
+    "actual": 120516.7,
     "original_budget": 200000.0
    },
    "by_fund": [
@@ -5452,7 +5453,7 @@
   "ART 11 2023 CAPITAL IMPROV": {
    "rollup": {
     "revised_budget": 185076.3,
-    "actual": 73150.0,
+    "actual": 75286.72,
     "original_budget": 185076.3
    },
    "by_fund": [
@@ -5613,7 +5614,7 @@
   "LANDFILL MONITORING EXPENSE": {
    "rollup": {
     "revised_budget": 114600.0,
-    "actual": 51874.72,
+    "actual": 104235.26,
     "original_budget": 114600.0
    },
    "by_fund": [
@@ -5735,7 +5736,7 @@
   "PW MAINTAIN STREETS & SIDEWALK": {
    "rollup": {
     "revised_budget": 73526.0,
-    "actual": 42406.84,
+    "actual": 50213.01,
     "original_budget": 49526.0
    },
    "by_fund": [
@@ -5804,7 +5805,7 @@
   "ATM25A8-SCH-GLOVER HVAC CAFE": {
    "rollup": {
     "revised_budget": 70000.0,
-    "actual": 0.0,
+    "actual": 9620.0,
     "original_budget": 0.0
    },
    "by_fund": [
@@ -5821,6 +5822,29 @@
      "revised_budget": 70000.0,
      "actual": 9620.0,
      "original_budget": 0
+    }
+   ]
+  },
+  "PARK FACILITY": {
+   "rollup": {
+    "revised_budget": 66730.0,
+    "actual": 65368.06,
+    "original_budget": 50750.0
+   },
+   "by_fund": [
+    {
+     "name": "GENERAL FUND - TOWN",
+     "revised_budget": 66730.0,
+     "actual": 65368.06,
+     "original_budget": 50750.0
+    }
+   ],
+   "by_department": [
+    {
+     "name": "PARKS & RECREATION",
+     "revised_budget": 66730.0,
+     "actual": 65368.06,
+     "original_budget": 50750.0
     }
    ]
   },
@@ -5873,7 +5897,7 @@
   "STREET LIGHTING": {
    "rollup": {
     "revised_budget": 60000.0,
-    "actual": 56893.81,
+    "actual": 60792.33,
     "original_budget": 60000.0
    },
    "by_fund": [
@@ -5890,29 +5914,6 @@
      "revised_budget": 60000.0,
      "actual": 60792.33,
      "original_budget": 60000.0
-    }
-   ]
-  },
-  "PARK FACILITY": {
-   "rollup": {
-    "revised_budget": 50750.0,
-    "actual": 46940.93,
-    "original_budget": 50750.0
-   },
-   "by_fund": [
-    {
-     "name": "GENERAL FUND - TOWN",
-     "revised_budget": 66730.0,
-     "actual": 65368.06,
-     "original_budget": 50750.0
-    }
-   ],
-   "by_department": [
-    {
-     "name": "PARKS & RECREATION",
-     "revised_budget": 66730.0,
-     "actual": 65368.06,
-     "original_budget": 50750.0
     }
    ]
   },
@@ -6282,7 +6283,7 @@
   "ATM25A6-POL-RADAR REPLACEMENT": {
    "rollup": {
     "revised_budget": 21690.0,
-    "actual": 0.0,
+    "actual": 18690.0,
     "original_budget": 0.0
    },
    "by_fund": [
@@ -6351,7 +6352,7 @@
   "ATM25A6-POL-PORTABLE RADIOS": {
    "rollup": {
     "revised_budget": 18861.0,
-    "actual": 40545.64,
+    "actual": 18855.64,
     "original_budget": 0.0
    },
    "by_fund": [
@@ -12887,6 +12888,164 @@
     "original_budget": 209.0
    }
   ],
+  "SNOW REMOVAL||PROFESSIONAL SALARY": [
+   {
+    "name": "OVERTIME",
+    "revised_budget": 366092.4,
+    "actual": 257969.74,
+    "original_budget": 49900.0
+   },
+   {
+    "name": "STRAIGHT TIME",
+    "revised_budget": 0,
+    "actual": 28340.93,
+    "original_budget": 0
+   },
+   {
+    "name": "INSIDE DETAIL",
+    "revised_budget": 0,
+    "actual": 4939.94,
+    "original_budget": 0
+   },
+   {
+    "name": "DOUBLE TIME",
+    "revised_budget": 0,
+    "actual": 74841.01,
+    "original_budget": 0
+   }
+  ],
+  "SNOW REMOVAL||OTHER EXPENSE": [
+   {
+    "name": "OTHER MISC EXPENSE",
+    "revised_budget": 300.0,
+    "actual": 1000.48,
+    "original_budget": 300.0
+   }
+  ],
+  "SNOW REMOVAL||CONTRACTED SERVICES": [
+   {
+    "name": "R&M MOTOR VEHICLES",
+    "revised_budget": 52201.0,
+    "actual": 55331.37,
+    "original_budget": 17201.0
+   },
+   {
+    "name": "R&M OTHER EQUIPMENT",
+    "revised_budget": 3000.0,
+    "actual": 35452.89,
+    "original_budget": 3000.0
+   },
+   {
+    "name": "R&M RADIO",
+    "revised_budget": 410.0,
+    "actual": 1781.25,
+    "original_budget": 410.0
+   },
+   {
+    "name": "LEGAL NOTICES",
+    "revised_budget": 100.0,
+    "actual": 0,
+    "original_budget": 100.0
+   },
+   {
+    "name": "ELECTRICITY",
+    "revised_budget": 100.0,
+    "actual": 0,
+    "original_budget": 100.0
+   },
+   {
+    "name": "R&M GAS PUMPS",
+    "revised_budget": 50.0,
+    "actual": 0,
+    "original_budget": 50.0
+   }
+  ],
+  "SNOW REMOVAL||SUPPLIES AND MATL": [
+   {
+    "name": "SALT",
+    "revised_budget": 237550.6,
+    "actual": 145475.9,
+    "original_budget": 16085.0
+   },
+   {
+    "name": "DIESEL FUEL",
+    "revised_budget": 11500.0,
+    "actual": 11444.76,
+    "original_budget": 1500.0
+   },
+   {
+    "name": "GASOLINE UNLEADED",
+    "revised_budget": 4654.0,
+    "actual": 7009.11,
+    "original_budget": 4654.0
+   },
+   {
+    "name": "MISC VEHICULAR SUPPLIES",
+    "revised_budget": 3150.0,
+    "actual": 12045.84,
+    "original_budget": 3150.0
+   },
+   {
+    "name": "TIRES",
+    "revised_budget": 2500.0,
+    "actual": 5201.43,
+    "original_budget": 2500.0
+   },
+   {
+    "name": "STREET SWEEPER SUPPLIES",
+    "revised_budget": 2300.0,
+    "actual": 0,
+    "original_budget": 2300.0
+   },
+   {
+    "name": "UNIFORMS/PROTECTIVE CLOTHING",
+    "revised_budget": 1000.0,
+    "actual": 0,
+    "original_budget": 1000.0
+   },
+   {
+    "name": "SAND",
+    "revised_budget": 1000.0,
+    "actual": 597.5,
+    "original_budget": 1000.0
+   },
+   {
+    "name": "MISC OTHER SUPPLIES",
+    "revised_budget": 750.0,
+    "actual": 9373.0,
+    "original_budget": 750.0
+   },
+   {
+    "name": "MOTOR OIL & GREASE",
+    "revised_budget": 500.0,
+    "actual": 0,
+    "original_budget": 500.0
+   },
+   {
+    "name": "LANDSCAPING SUPPLIES",
+    "revised_budget": 250.0,
+    "actual": 0,
+    "original_budget": 250.0
+   },
+   {
+    "name": "GRASS SEED",
+    "revised_budget": 150.0,
+    "actual": 0,
+    "original_budget": 150.0
+   },
+   {
+    "name": "SMALL TOOLS",
+    "revised_budget": 100.0,
+    "actual": 42.41,
+    "original_budget": 100.0
+   },
+   {
+    "name": "SIGNS",
+    "revised_budget": 0,
+    "actual": 36206.25,
+    "original_budget": 0
+   }
+  ],
   "COMMUNITY DEVELOP AND PLANNING||PROFESSIONAL SALARY": [
    {
     "name": "DEPARTMENT HEAD",
@@ -13457,6 +13616,62 @@
     "original_budget": 100.0
    }
   ],
+  "HUMAN RESOURCES||PROFESSIONAL SALARY": [
+   {
+    "name": "DEPARTMENT HEAD",
+    "revised_budget": 117428.0,
+    "actual": 117427.03,
+    "original_budget": 117428.0
+   },
+   {
+    "name": "ASSISTANT DEPARTMENT HEAD",
+    "revised_budget": 97985.74,
+    "actual": 97983.62,
+    "original_budget": 98247.0
+   },
+   {
+    "name": "ASSISTANT DIVISION HEAD",
+    "revised_budget": 70108.26,
+    "actual": 70108.26,
+    "original_budget": 0
+   },
+   {
+    "name": "SENIOR CLERK",
+    "revised_budget": 0,
+    "actual": 0,
+    "original_budget": 64252.0
+   }
+  ],
+  "HUMAN RESOURCES||OTHER EXPENSE": [
+   {
+    "name": "IN-STATE TRAVEL",
+    "revised_budget": 1500.0,
+    "actual": 197.2,
+    "original_budget": 1500.0
+   },
+   {
+    "name": "DUES",
+    "revised_budget": 500.0,
+    "actual": 0,
+    "original_budget": 500.0
+   }
+  ],
+  "HUMAN RESOURCES||CONTRACTED SERVICES": [
+   {
+    "name": "OTHER PROF & TECHNICAL",
+    "revised_budget": 46000.0,
+    "actual": 4275.0,
+    "original_budget": 11000.0
+   }
+  ],
+  "HUMAN RESOURCES||SUPPLIES AND MATL": [
+   {
+    "name": "MISC OFFICE SUPPLIES",
+    "revised_budget": 2000.0,
+    "actual": 532.28,
+    "original_budget": 2000.0
+   }
+  ],
   "TOWN CLERK||PROFESSIONAL SALARY": [
    {
     "name": "SPECIAL CLERK",
@@ -13567,70 +13782,6 @@
     "original_budget": 1400.0
    }
   ],
-  "RESERVE FUND||OTHER EXPENSE": [
-   {
-    "name": "RESERVE FUND TRANSFER",
-    "revised_budget": 27358.0,
-    "actual": 0,
-    "original_budget": 444000.0
-   }
-  ],
-  "HUMAN RESOURCES||PROFESSIONAL SALARY": [
-   {
-    "name": "DEPARTMENT HEAD",
-    "revised_budget": 117428.0,
-    "actual": 117427.03,
-    "original_budget": 117428.0
-   },
-   {
-    "name": "ASSISTANT DEPARTMENT HEAD",
-    "revised_budget": 97985.74,
-    "actual": 97983.62,
-    "original_budget": 98247.0
-   },
-   {
-    "name": "ASSISTANT DIVISION HEAD",
-    "revised_budget": 70108.26,
-    "actual": 70108.26,
-    "original_budget": 0
-   },
-   {
-    "name": "SENIOR CLERK",
-    "revised_budget": 0,
-    "actual": 0,
-    "original_budget": 64252.0
-   }
-  ],
-  "HUMAN RESOURCES||OTHER EXPENSE": [
-   {
-    "name": "IN-STATE TRAVEL",
-    "revised_budget": 1500.0,
-    "actual": 197.2,
-    "original_budget": 1500.0
-   },
-   {
-    "name": "DUES",
-    "revised_budget": 500.0,
-    "actual": 0,
-    "original_budget": 500.0
-   }
-  ],
-  "HUMAN RESOURCES||CONTRACTED SERVICES": [
-   {
-    "name": "OTHER PROF & TECHNICAL",
-    "revised_budget": 46000.0,
-    "actual": 4275.0,
-    "original_budget": 11000.0
-   }
-  ],
-  "HUMAN RESOURCES||SUPPLIES AND MATL": [
-   {
-    "name": "MISC OFFICE SUPPLIES",
-    "revised_budget": 2000.0,
-    "actual": 532.28,
-    "original_budget": 2000.0
-   }
-  ],
   "VETERANS SERVICES||PROFESSIONAL SALARY": [
    {
     "name": "DEPARTMENT HEAD",
@@ -13725,164 +13876,6 @@
     "revised_budget": 113000.0,
     "actual": 115069.73,
     "original_budget": 113000.0
-   }
-  ],
-  "SNOW REMOVAL||PROFESSIONAL SALARY": [
-   {
-    "name": "OVERTIME",
-    "revised_budget": 366092.4,
-    "actual": 257969.74,
-    "original_budget": 49900.0
-   },
-   {
-    "name": "STRAIGHT TIME",
-    "revised_budget": 0,
-    "actual": 28340.93,
-    "original_budget": 0
-   },
-   {
-    "name": "INSIDE DETAIL",
-    "revised_budget": 0,
-    "actual": 4939.94,
-    "original_budget": 0
-   },
-   {
-    "name": "DOUBLE TIME",
-    "revised_budget": 0,
-    "actual": 74841.01,
-    "original_budget": 0
-   }
-  ],
-  "SNOW REMOVAL||OTHER EXPENSE": [
-   {
-    "name": "OTHER MISC EXPENSE",
-    "revised_budget": 300.0,
-    "actual": 1000.48,
-    "original_budget": 300.0
-   }
-  ],
-  "SNOW REMOVAL||CONTRACTED SERVICES": [
-   {
-    "name": "R&M MOTOR VEHICLES",
-    "revised_budget": 52201.0,
-    "actual": 55331.37,
-    "original_budget": 17201.0
-   },
-   {
-    "name": "R&M OTHER EQUIPMENT",
-    "revised_budget": 3000.0,
-    "actual": 35452.89,
-    "original_budget": 3000.0
-   },
-   {
-    "name": "R&M RADIO",
-    "revised_budget": 410.0,
-    "actual": 1781.25,
-    "original_budget": 410.0
-   },
-   {
-    "name": "LEGAL NOTICES",
-    "revised_budget": 100.0,
-    "actual": 0,
-    "original_budget": 100.0
-   },
-   {
-    "name": "ELECTRICITY",
-    "revised_budget": 100.0,
-    "actual": 0,
-    "original_budget": 100.0
-   },
-   {
-    "name": "R&M GAS PUMPS",
-    "revised_budget": 50.0,
-    "actual": 0,
-    "original_budget": 50.0
-   }
-  ],
-  "SNOW REMOVAL||SUPPLIES AND MATL": [
-   {
-    "name": "SALT",
-    "revised_budget": 237550.6,
-    "actual": 145475.9,
-    "original_budget": 16085.0
-   },
-   {
-    "name": "DIESEL FUEL",
-    "revised_budget": 11500.0,
-    "actual": 11444.76,
-    "original_budget": 1500.0
-   },
-   {
-    "name": "GASOLINE UNLEADED",
-    "revised_budget": 4654.0,
-    "actual": 7009.11,
-    "original_budget": 4654.0
-   },
-   {
-    "name": "MISC VEHICULAR SUPPLIES",
-    "revised_budget": 3150.0,
-    "actual": 12045.84,
-    "original_budget": 3150.0
-   },
-   {
-    "name": "TIRES",
-    "revised_budget": 2500.0,
-    "actual": 5201.43,
-    "original_budget": 2500.0
-   },
-   {
-    "name": "STREET SWEEPER SUPPLIES",
-    "revised_budget": 2300.0,
-    "actual": 0,
-    "original_budget": 2300.0
-   },
-   {
-    "name": "UNIFORMS/PROTECTIVE CLOTHING",
-    "revised_budget": 1000.0,
-    "actual": 0,
-    "original_budget": 1000.0
-   },
-   {
-    "name": "SAND",
-    "revised_budget": 1000.0,
-    "actual": 597.5,
-    "original_budget": 1000.0
-   },
-   {
-    "name": "MISC OTHER SUPPLIES",
-    "revised_budget": 750.0,
-    "actual": 9373.0,
-    "original_budget": 750.0
-   },
-   {
-    "name": "MOTOR OIL & GREASE",
-    "revised_budget": 500.0,
-    "actual": 0,
-    "original_budget": 500.0
-   },
-   {
-    "name": "LANDSCAPING SUPPLIES",
-    "revised_budget": 250.0,
-    "actual": 0,
-    "original_budget": 250.0
-   },
-   {
-    "name": "GRASS SEED",
-    "revised_budget": 150.0,
-    "actual": 0,
-    "original_budget": 150.0
-   },
-   {
-    "name": "SMALL TOOLS",
-    "revised_budget": 100.0,
-    "actual": 42.41,
-    "original_budget": 100.0
-   },
-   {
-    "name": "SIGNS",
-    "revised_budget": 0,
-    "actual": 36206.25,
-    "original_budget": 0
    }
   ],
   "ELECTION & REGISTRATION||PROFESSIONAL SALARY": [
@@ -13999,6 +13992,48 @@
     "original_budget": 2800.0
    }
   ],
+  "RESERVE FUND||OTHER EXPENSE": [
+   {
+    "name": "RESERVE FUND TRANSFER",
+    "revised_budget": 27358.0,
+    "actual": 0,
+    "original_budget": 444000.0
+   }
+  ],
+  "PLANNING BOARD||CONTRACTED SERVICES": [
+   {
+    "name": "LEGAL SERVICES",
+    "revised_budget": 10350.0,
+    "actual": 8707.5,
+    "original_budget": 4000.0
+   },
+   {
+    "name": "LEGAL NOTICES",
+    "revised_budget": 1617.0,
+    "actual": 616.16,
+    "original_budget": 1000.0
+   },
+   {
+    "name": "POSTAGE",
+    "revised_budget": 375.0,
+    "actual": 269.14,
+    "original_budget": 375.0
+   },
+   {
+    "name": "INTERNET ACCESS",
+    "revised_budget": 300.0,
+    "actual": 109.27,
+    "original_budget": 300.0
+   }
+  ],
+  "PLANNING BOARD||SUPPLIES AND MATL": [
+   {
+    "name": "MISC OFFICE SUPPLIES",
+    "revised_budget": 100.0,
+    "actual": 0,
+    "original_budget": 100.0
+   }
+  ],
   "PARKING CLERK||CONTRACTED SERVICES": [
    {
     "name": "INFORMATION TECHNOLOGY",
@@ -14063,40 +14098,6 @@
     "revised_budget": 6000.0,
     "actual": 6000.0,
     "original_budget": 6000.0
-   }
-  ],
-  "PLANNING BOARD||CONTRACTED SERVICES": [
-   {
-    "name": "LEGAL SERVICES",
-    "revised_budget": 10350.0,
-    "actual": 8707.5,
-    "original_budget": 4000.0
-   },
-   {
-    "name": "LEGAL NOTICES",
-    "revised_budget": 1617.0,
-    "actual": 616.16,
-    "original_budget": 1000.0
-   },
-   {
-    "name": "POSTAGE",
-    "revised_budget": 375.0,
-    "actual": 269.14,
-    "original_budget": 375.0
-   },
-   {
-    "name": "INTERNET ACCESS",
-    "revised_budget": 300.0,
-    "actual": 109.27,
-    "original_budget": 300.0
-   }
-  ],
-  "PLANNING BOARD||SUPPLIES AND MATL": [
-   {
-    "name": "MISC OFFICE SUPPLIES",
-    "revised_budget": 100.0,
-    "actual": 0,
-    "original_budget": 100.0
    }
   ],
   "ANIMAL INSPECTOR||PROFESSIONAL SALARY": [
