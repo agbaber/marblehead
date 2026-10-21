@@ -656,3 +656,82 @@ gh pr create --base main --title "Checkbook refresh: self-healing auto-PRs, smok
 - Spec coverage: §1 helper = Tasks 1-2; §2 wiring = Tasks 3-4; §3 smoke = Task 5; §4 FY26 weekly = Task 4; proof = Task 6. Follow-ups (siblings, crawler speed) stay out of scope as the spec says.
 - Names used consistently: `classifyChecks`, `decide`, `gateDecision`, `runIdFromDetailsUrl`, `gate`, `awaitMerge`; step id `pr`, output `url`; npm script `test:ci`.
 - No placeholders.
+
+---
+
+## Follow-up plan: FY26 job survives a slow portal (spec section "Follow-up")
+
+### Task 7: fingerprint + skip in the crawler, test-first
+
+**Files:**
+- Create: `tests/test_crawl_budget_drill.py`
+- Modify: `scripts/crawl_budget_drill.py`
+
+- [ ] **Step 1: Write the failing tests** (pytest, imports `crawl_budget_drill` the way `tests/test_fylib.py` imports `fylib`)
+
+```python
+def test_fingerprint_ignores_the_as_of_stamp(): ...        # same hash, different as_of
+def test_fingerprint_changes_when_a_number_moves(): ...    # different hash
+def test_fingerprint_is_a_sha256_hex_digest(): ...         # 64 hex chars
+def test_skip_only_when_the_existing_drill_recorded_the_same_fingerprint(): ...
+    # True for matching actuals_sha256; False for different, missing key, or None
+```
+
+- [ ] **Step 2: Run** `python3 -m pytest tests/test_crawl_budget_drill.py -q`. Expected: 4 failures, `AttributeError: module 'crawl_budget_drill' has no attribute 'actuals_fingerprint'`.
+
+- [ ] **Step 3: Implement** in `scripts/crawl_budget_drill.py`
+
+```python
+import hashlib  # add to the existing import line
+
+def actuals_fingerprint(b):
+    """sha256 of the budget_actual JSON minus its as_of stamp."""
+    stable = {k: v for k, v in b.items() if k != 'as_of'}
+    return hashlib.sha256(json.dumps(stable, sort_keys=True).encode()).hexdigest()
+
+def should_skip_crawl(existing_drill, fingerprint):
+    """True when a prior drill file recorded the same actuals fingerprint."""
+    return bool(existing_drill) and existing_drill.get('actuals_sha256') == fingerprint
+```
+
+In `main()`: add `--skip-if-unchanged`; after loading `b`, compute `fp`; if the flag is set and `should_skip_crawl(json.load(open(out)) if os.path.exists(out) else None, fp)`, print `budget_actual unchanged since the last crawl (actuals_sha256 match); keeping <out>` and return; put `'actuals_sha256': fp` in the `drill` dict right after `'fiscal_year'`.
+
+- [ ] **Step 4: Run** the tests again. Expected: `4 passed`. Also `python3 -m pytest tests/test_fylib.py -q` still green.
+
+- [ ] **Step 5: Commit** `feat: crawl_budget_drill --skip-if-unchanged via actuals fingerprint`.
+
+### Task 8: wire the FY26 workflow
+
+**Files:** `.github/workflows/checkbook-refresh-fy26.yml`
+
+- [ ] Job-level `env: PYTHONUNBUFFERED: '1'`; `timeout-minutes: 45`.
+- [ ] In "Fetch + redact FY26 export, rebuild artifacts": add `python3 scripts/fetch_operating_budget.py --year 2026` before `build_budget_actual.py`; remove the crawl line.
+- [ ] New step after it:
+
+```yaml
+      - name: Re-crawl budget drill (skipped when the FY26 actuals are unchanged)
+        id: crawl
+        timeout-minutes: 25
+        continue-on-error: true
+        run: python3 scripts/crawl_budget_drill.py --year 2026 --skip-if-unchanged
+```
+
+- [ ] Last step of the job:
+
+```yaml
+      - name: Fail the run if the drill crawl did not finish (the actuals above still landed)
+        if: steps.crawl.outcome == 'failure'
+        run: |
+          echo "::error::crawl_budget_drill.py did not finish inside its 25-minute step budget. The operating-budget CSV and budget_actual changes were still committed; the drill keeps its previous snapshot and the next Sunday run re-crawls because its actuals_sha256 is stale."
+          exit 1
+```
+
+- [ ] Validate with `yaml.safe_load` + a step dump; commit `ci: FY26 job fetches its budget CSV, crawls only when actuals moved, unbuffered`.
+
+### Task 9: proof
+
+- pytest output for both test files.
+- Local CLI proof without network: copy the committed drill, add the matching `actuals_sha256`, run `--skip-if-unchanged`, expect the skip line and exit 0 in under a second; then restore.
+- Local CLI proof of the proceed path with `PYTHONUNBUFFERED=1 timeout 90 ...`: expect `Will make 754 API calls` and at least one `N/754 ...` progress line before the kill.
+- `git diff --stat` of the live-fetched FY26 CSV and rebuilt actuals (the staleness evidence).
+- PR CI green; after merge, `gh workflow run checkbook-refresh-fy26.yml` and link the run.

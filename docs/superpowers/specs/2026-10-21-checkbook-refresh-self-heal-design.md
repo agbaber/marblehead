@@ -130,3 +130,46 @@ exercised by a local dry run against the real repo.
 - Adopt `gate` / `await-merge` in `data-refresh.yml`,
   `budget-refresh.yml`, `ingest-meetings.yml`.
 - Speed up `crawl_budget_drill.py`.
+
+## Follow-up (same day): FY26 job survives a slow portal
+
+After the merge, the first FY26 dispatch ran the full 40 minutes inside
+`crawl_budget_drill.py` and was killed. Measured from both a GitHub
+runner and the Hetzner box, the Open Budget cross-tab endpoint answered
+every query in 4 to 18 seconds (about 1.3 s on Oct 5), with HTTP 200 and
+correct data, so 754 sequential calls cannot finish in any sane budget
+while that lasts. Socrata's status page showed nothing. The CSV export
+endpoint the daily budget refresh uses was unaffected.
+
+Two more findings came out of designing the fix:
+
+- The crawler's progress `print`s are block-buffered under Actions, so a
+  killed run shows nothing. `PYTHONUNBUFFERED=1` on the job fixes that.
+- `data/operating_budget_FY26.csv`, the input to
+  `build_budget_actual.py --year 2026`, was last fetched on 2026-06-30
+  (PR #960). The daily budget refresh only fetches the current FY and the
+  FY26 job never fetched it. So the FY26 page's budget-vs-actual rollups
+  have been frozen at the June 30 snapshot while the drill (crawled live)
+  moved on. A live fetch on 2026-10-21 moved budgeted-annual actual from
+  $132,757,136.98 to $135,923,378.20 and all-funds actual from
+  $156,918,974.97 to $165,388,482.69: the year-end close entries. Any
+  "skip the crawl when the actuals are unchanged" rule keyed on that file
+  would have fired forever.
+
+Design:
+
+- The FY26 job fetches `operating_budget.csv?year=2026` before rebuilding
+  the actuals (about 17 s, 9.9 MB; the export is stable day to day, the
+  FY27 copy diffs by tens of lines a day).
+- `crawl_budget_drill.py --skip-if-unchanged`: the crawler records a
+  sha256 of its input (`budget_actual_FY<N>.json` minus `as_of`) in its
+  output as `actuals_sha256`; when the existing drill file carries the
+  same fingerprint it exits without crawling. A crawl that is killed
+  never writes the file, so the fingerprint stays stale and the next run
+  crawls again.
+- The crawl is its own step with `timeout-minutes: 25` and
+  `continue-on-error: true`, so the CSV and actuals still commit when the
+  portal is too slow; a final step then fails the run with an `::error::`
+  so the owner sees that the drill is behind. Job timeout 45.
+- Concurrency in the crawler is the next lever if the portal stays slow;
+  not taken here.

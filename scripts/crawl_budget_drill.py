@@ -16,7 +16,7 @@ Usage:
   scripts/crawl_budget_drill.py              # current fiscal year
   scripts/crawl_budget_drill.py --year 2026  # recrawl a prior FY
 """
-import argparse, json, urllib.request, urllib.parse, time, sys, os, ssl
+import argparse, hashlib, json, urllib.request, urllib.parse, time, sys, os, ssl
 from datetime import UTC, datetime
 
 import fylib
@@ -61,20 +61,50 @@ def norm(entities):
         key=lambda x: -x['revised_budget']
     )
 
+def actuals_fingerprint(b):
+    """sha256 of the budget_actual JSON with its as_of stamp removed.
+
+    The crawl is built from these rollups, so two builds with the same
+    fingerprint can only produce the same drill. Recorded in the output
+    as `actuals_sha256` so a later run can skip the ~754-call crawl when
+    nothing but the stamp moved (--skip-if-unchanged).
+    """
+    stable = {k: v for k, v in b.items() if k != 'as_of'}
+    return hashlib.sha256(json.dumps(stable, sort_keys=True).encode()).hexdigest()
+
+
+def should_skip_crawl(existing_drill, fingerprint):
+    """True when a prior drill file recorded the same actuals fingerprint."""
+    return bool(existing_drill) and existing_drill.get('actuals_sha256') == fingerprint
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[1])
     ap.add_argument('--year', type=int, default=fylib.current_fiscal_year(),
                     help='fiscal year to crawl (default: current fiscal year)')
+    ap.add_argument('--skip-if-unchanged', action='store_true',
+                    help='exit without crawling when data/budget_drill_FY<N>.json '
+                         'already records the same budget_actual fingerprint')
     args = ap.parse_args()
     year = args.year
     label = fylib.fy_label(year)
 
     os.chdir(os.path.join(os.path.dirname(__file__), '..'))
     b = json.load(open(f'data/budget_actual_{label}.json'))
+    out = f'data/budget_drill_{label}.json'
+
+    fp = actuals_fingerprint(b)
+    if args.skip_if_unchanged:
+        existing = json.load(open(out)) if os.path.exists(out) else None
+        if should_skip_crawl(existing, fp):
+            print(f'{label} budget_actual unchanged since the last crawl '
+                  f'(actuals_sha256 match); keeping {out}')
+            return
 
     drill = {
         'as_of': datetime.now(UTC).date().isoformat(),
         'fiscal_year': label,
+        'actuals_sha256': fp,
         'envelope': ENVELOPE,
         'envelope_totals': b['totals']['budgeted_annual'],
         'by_fund': {},
@@ -240,7 +270,6 @@ def main():
             print(f'  {done}/{total_calls} ...')
         time.sleep(0.15)
 
-    out = f'data/budget_drill_{label}.json'
     with open(out, 'w') as f:
         json.dump(drill, f, indent=1)
     size_kb = os.path.getsize(out) / 1024
