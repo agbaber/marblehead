@@ -87,3 +87,118 @@ export function gateDecision(prs) {
   const isBot = (p) => p.headRefName.startsWith('bot/');
   return { close: prs.filter(isBot), refuse: prs.filter((p) => !isBot(p)) };
 }
+
+// ---- gh plumbing -------------------------------------------------------
+
+function gh(args, { json = true } = {}) {
+  const out = execFileSync('gh', args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'inherit'] });
+  return json ? JSON.parse(out) : out.trim();
+}
+
+function summarize(rollup) {
+  const parts = (rollup ?? []).map((c) => `${c.name}: ${c.status === 'COMPLETED' ? c.conclusion : c.status}`);
+  return parts.join(', ') || 'no checks reported';
+}
+
+function requiredChecks() {
+  try {
+    return gh(['api', REQUIRED_CHECKS_ENDPOINT]);
+  } catch {
+    console.log('::warning::could not read required checks from branch protection; treating every check as required');
+    return null;
+  }
+}
+
+function rerun(runId) {
+  const attempts = [['run', 'rerun', String(runId), '--failed'], ['run', 'rerun', String(runId)]];
+  for (const args of attempts) {
+    try {
+      gh(args, { json: false });
+      console.log(`re-ran workflow run ${runId}${args.includes('--failed') ? ' (failed jobs)' : ' (all jobs)'}`);
+      return;
+    } catch (e) {
+      console.log(`::warning::gh ${args.join(' ')} failed: ${String(e.message).split('\n')[0]}`);
+    }
+  }
+}
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const isoSeconds = () => new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
+
+export function gate(label) {
+  const prs = gh(['pr', 'list', '--label', label, '--state', 'open',
+    '--json', 'number,url,headRefName,createdAt,statusCheckRollup']);
+  const { close, refuse } = gateDecision(prs);
+  for (const p of refuse) {
+    console.log(`::error::${p.url} carries the ${label} label but ${p.headRefName} is not a bot/ branch; leaving it alone`);
+  }
+  if (refuse.length) return 1;
+  for (const p of close) {
+    const comment = `Closing: this auto PR never merged (${summarize(p.statusCheckRollup)}). `
+      + 'Today\'s refresh replaces it with current data. See scripts/ci/auto_pr.mjs.';
+    gh(['pr', 'close', p.url, '--delete-branch', '--comment', comment], { json: false });
+    console.log(`closed leftover ${p.url} (${p.headRefName}, opened ${p.createdAt})`);
+  }
+  if (!close.length) console.log(`no open ${label} PR; proceeding`);
+  return 0;
+}
+
+export async function awaitMerge(ref, minutes) {
+  const started = Date.now();
+  const deadline = started + minutes * 60_000;
+  const required = requiredChecks();
+  let rerunDone = false;
+  let rerunAt = null;
+  for (;;) {
+    const pr = gh(['pr', 'view', ref, '--json', 'url,state,mergeStateStatus,statusCheckRollup']);
+    if (pr.state === 'MERGED') {
+      console.log(`merged: ${pr.url}`);
+      return 0;
+    }
+    if (pr.state !== 'OPEN') {
+      console.log(`::error::${pr.url} is ${pr.state}; nothing to wait for`);
+      return 1;
+    }
+    const names = required ?? [...new Set(pr.statusCheckRollup.map((c) => c.name))];
+    const checks = classifyChecks(pr.statusCheckRollup, names, rerunAt);
+    const next = decide(checks, { rerunDone });
+    const elapsed = Math.round((Date.now() - started) / 1000);
+    console.log(`[${elapsed}s] ${pr.mergeStateStatus}; ${summarize(pr.statusCheckRollup)}`);
+    if (next.action === 'fail') {
+      console.log(`::error::${pr.url} did not merge: ${next.reason}. Left open for diagnosis.`);
+      return 1;
+    }
+    if (next.action === 'rerun') {
+      for (const id of next.runIds) rerun(id);
+      rerunDone = true;
+      rerunAt = isoSeconds();
+    }
+    if (Date.now() >= deadline) {
+      console.log(`::error::${pr.url} not merged after ${minutes} min (${summarize(pr.statusCheckRollup)}). Left open for diagnosis.`);
+      return 1;
+    }
+    await sleep(POLL_MS);
+  }
+}
+
+// ---- CLI -----------------------------------------------------------------
+
+async function main(argv) {
+  const [cmd, ref, ...rest] = argv;
+  if (cmd === 'gate' && ref) return gate(ref);
+  if (cmd === 'await-merge' && ref) {
+    const i = rest.indexOf('--minutes');
+    const minutes = i >= 0 ? Number(rest[i + 1]) : 15;
+    if (!Number.isFinite(minutes) || minutes <= 0) {
+      console.error('--minutes must be a positive number');
+      return 2;
+    }
+    return awaitMerge(ref, minutes);
+  }
+  console.error('usage: auto_pr.mjs gate <label> | await-merge <pr-url-or-number> [--minutes N]');
+  return 2;
+}
+
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  process.exitCode = await main(process.argv.slice(2));
+}

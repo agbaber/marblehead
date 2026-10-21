@@ -6,6 +6,7 @@
   "scripts": {
     "test:minutes": "node --test scripts/minutes/lib/*.test.mjs",
     "test:transcripts": "node --test scripts/transcripts/lib/*.test.mjs",
+    "test:ci": "node --test scripts/ci/*.test.mjs",
     "transcripts:pull-vimeo": "node scripts/transcripts/pull_vimeo.mjs",
     "transcripts:backfill": "node scripts/transcripts/backfill_auto.mjs",
     "dev": "bundle exec jekyll serve --port 4000",
