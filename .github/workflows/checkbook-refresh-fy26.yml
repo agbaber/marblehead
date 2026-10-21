@@ -1,13 +1,19 @@
 name: Refresh checkbook CSV (FY26 archive)
 
-# Daily refresh of the FY26 checkbook archive until the town closes its
-# FY26 books (expected fall 2026, at which point delete this workflow).
+# Weekly refresh of the FY26 checkbook archive. The FY26 ledger stopped
+# moving in Sep 2026 but the budget-side FY26 actuals still pick up
+# close adjustments and nothing else refreshes them. Delete this
+# workflow once the FY26 ACFR is published (expected ~Jan 2027); the
+# page then freezes on its last snapshot as the permanent archive.
 # Kept separate from checkbook-refresh.yml so a stuck FY26 PR never
 # blocks the live current-year refresh.
 
 on:
   schedule:
-    - cron: '0 11 * * *'
+    # Sundays 11:00 UTC. Was daily; the output is a verification stamp
+    # plus the occasional close adjustment, and each run crawls the
+    # budget portal for ~16 minutes.
+    - cron: '0 11 * * 0'
   workflow_dispatch:
 
 concurrency:
@@ -21,7 +27,10 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # crawl_budget_drill.py alone runs ~16 min (15m53s on 2026-10-05);
+    # the old 15-minute timeout killed 26 of 104 runs. 40 covers the
+    # crawl plus the 15-minute merge wait.
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,35 +39,16 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Skip if an open FY26 auto PR already exists
-        id: gate
+      - name: Close any leftover FY26 auto PR (a prior run that never merged)
         env:
           GH_TOKEN: ${{ secrets.INGEST_PAT }}
         run: |
           set -euo pipefail
           gh label create auto-checkbook-fy26 --color d62728 \
-            --description "Daily auto-refresh of the FY26 checkbook archive" 2>/dev/null || true
-          open_pr=$(gh pr list --label auto-checkbook-fy26 --state open \
-            --json number,createdAt --jq '.[0] // empty')
-          if [ -n "$open_pr" ]; then
-            pr_number=$(jq -r '.number' <<<"$open_pr")
-            created_at=$(jq -r '.createdAt' <<<"$open_pr")
-            age_hours=$(( ( $(date +%s) - $(date -d "$created_at" +%s) ) / 3600 ))
-            # Same repeated-skip alarm as checkbook-refresh.yml: a blocked PR
-            # older than two daily runs means auto-merge died and nothing will
-            # retry it. Fail loudly instead of skipping green forever.
-            if [ "$age_hours" -ge 48 ]; then
-              echo "::error::FY26 auto-checkbook PR #$pr_number has blocked the daily refresh for ${age_hours}h. Its CI likely failed or was cancelled; close it or rerun its checks, then re-trigger this workflow."
-              exit 1
-            fi
-            echo "FY26 auto-checkbook PR #$pr_number is open (${age_hours}h old); waiting for its auto-merge. Skipping."
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "skip=false" >> "$GITHUB_OUTPUT"
-          fi
+            --description "Weekly auto-refresh of the FY26 checkbook archive" 2>/dev/null || true
+          node scripts/ci/auto_pr.mjs gate auto-checkbook-fy26
 
       - name: Fetch + redact FY26 export, rebuild artifacts
-        if: steps.gate.outputs.skip == 'false'
         run: |
           set -euo pipefail
           python3 scripts/fetch_checkbook_export.py --year 2026
@@ -71,7 +61,6 @@ jobs:
           git checkout -- data/checkbook_redaction_disclosure.json
 
       - name: Prune superseded FY26 dated CSVs
-        if: steps.gate.outputs.skip == 'false'
         run: |
           set -euo pipefail
           python3 <<'PY'
@@ -85,7 +74,6 @@ jobs:
           PY
 
       - name: Detect changes
-        if: steps.gate.outputs.skip == 'false'
         id: changes
         run: |
           set -euo pipefail
@@ -97,6 +85,7 @@ jobs:
           fi
 
       - name: Commit, push, open PR, auto-merge
+        id: pr
         if: steps.changes.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.INGEST_PAT }}
@@ -111,6 +100,14 @@ jobs:
           git push -u origin "$branch"
           pr_url=$(gh pr create \
             --title "Refresh FY26 checkbook archive through ${as_of}" \
-            --body "Daily FY26 archive refresh. Auto-merged; same redaction + required checks as the live job. Delete this workflow once FY26 books close." \
+            --body "Weekly FY26 archive refresh. Auto-merged; same redaction + required checks as the live job. The workflow waits for the merge and re-runs a cancelled check once. Delete this workflow once the FY26 ACFR is out." \
             --label auto-checkbook-fy26 --base main --head "$branch")
+          echo "url=$pr_url" >> "$GITHUB_OUTPUT"
           gh pr merge "$pr_url" --auto --squash --delete-branch
+
+      - name: Wait for auto-merge (re-run a cancelled required check once; fail loudly otherwise)
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+          PR_URL: ${{ steps.pr.outputs.url }}
+        run: node scripts/ci/auto_pr.mjs await-merge "$PR_URL" --minutes 15
