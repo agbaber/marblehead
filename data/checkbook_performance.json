@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-10-15",
+  "as_of": "2026-10-21",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 4,
-  "fy_pct_elapsed": 29.3,
+  "fy_pct_elapsed": 31.0,
   "budget_execution": {
     "by_department": [
       {
@@ -686,8 +686,8 @@
     },
     {
       "month": "2026-10",
-      "amount": 2100887.71,
-      "count": 141
+      "amount": 2621667.76,
+      "count": 145
     }
   ],
   "drill": {
@@ -1685,8 +1685,8 @@
         "top_vendors": [
           {
             "name": "U.S. BANK",
-            "amount": 7738584.39,
-            "count": 30
+            "amount": 8254475.24,
+            "count": 31
           },
           {
             "name": "COMMONWEALTH OF MA",
@@ -1715,8 +1715,8 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 129444.77,
-            "count": 20
+            "amount": 134923.11,
+            "count": 22
           },
           {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
@@ -1762,8 +1762,8 @@
           },
           {
             "month": "2026-10",
-            "amount": 1858162.96,
-            "count": 80
+            "amount": 2378943.01,
+            "count": 84
           }
         ]
       },
