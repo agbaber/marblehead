@@ -380,8 +380,7 @@ Wind Power (MMLD's purchased power, $3,900,599, down $253,402).
 **New.** 133 vendors paid in FY27 never appear in FY26, $1,413,355 in
 total. The top three are contractors: PAQCON ($339,150, Vets roof),
 National Water Main Cleaning ($292,217, sewer article), Belko Landscaping
-($208,525, Gerry Playground). After them the list is ordinary: a mail
-vendor on the new "capital recurring" division ($65,450), the Housing
+($208,525, Gerry Playground). After them the list is ordinary: a mail-order supplier on the new "capital recurring" division ($65,450), the Housing
 Authority through an MAPC grant ($34,356), a handful of new
 special-education placements and evaluators on the school fund.
 
