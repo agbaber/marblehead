@@ -1,0 +1,12 @@
+<details class="tk-row" data-status="{{ include.item.status }}">
+      <summary>
+        <span class="tk-card-num">{{ include.item.num }}</span>
+        <span class="tk-row-title">{{ include.item.title }}</span>
+        <span class="tk-status" data-s="{{ include.item.status }}">{{ include.item.status | capitalize }}</span>
+        <span class="tk-row-caret" aria-hidden="true">&#9662;</span>
+      </summary>
+      <div class="tk-row-body">
+        <p class="tk-card-body">{{ include.item.body_html }}</p>
+        <p class="tk-card-src">{{ include.item.source_html }}</p>
+      </div>
+    </details>
