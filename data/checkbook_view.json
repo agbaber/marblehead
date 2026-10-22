@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-10-15",
+    "date": "2026-10-21",
     "fiscal_year": "FY27",
-    "row_count": 3681,
-    "total_paid": 41742047.5,
+    "row_count": 3685,
+    "total_paid": 42262827.55,
     "interfund_total": 320513.75,
-    "external_paid": 41421533.75,
+    "external_paid": 41942313.8,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-10-15",
-    "source_file": "checkbook_FY27_2026-10-15.csv"
+    "last_payment": "2026-10-21",
+    "source_file": "checkbook_FY27_2026-10-21.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5355158.83,
-      "share": 0.1283,
+      "share": 0.1267,
       "fund_count": 4,
       "top_funds": [
         {
@@ -44,14 +44,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 25074061.3,
-      "share": 0.6007,
+      "amount": 25594841.35,
+      "share": 0.6056,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 23055673.68,
-          "row_count": 1470
+          "amount": 23576453.73,
+          "row_count": 1474
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -69,7 +69,7 @@
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
       "amount": 10257437.28,
-      "share": 0.2457,
+      "share": 0.2427,
       "fund_count": 7,
       "top_funds": [
         {
@@ -113,7 +113,7 @@
       "key": "state_fed",
       "label": "State & federal restricted grants",
       "amount": 288809.84,
-      "share": 0.0069,
+      "share": 0.0068,
       "fund_count": 16,
       "top_funds": [
         {
@@ -162,7 +162,7 @@
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
       "amount": 322659.2,
-      "share": 0.0077,
+      "share": 0.0076,
       "fund_count": 4,
       "top_funds": [
         {
@@ -191,7 +191,7 @@
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
       "amount": 443921.05,
-      "share": 0.0106,
+      "share": 0.0105,
       "fund_count": 35,
       "top_funds": [
         {
@@ -238,20 +238,20 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 23055673.68,
-    "fixed_total": 20889473.95,
-    "fixed_share": 0.906,
-    "admin_contracts_total": 800423.1,
-    "admin_contracts_share": 0.0347,
-    "other_recurring_total": 1365776.63,
-    "other_recurring_share": 0.0592,
+    "total": 23576453.73,
+    "fixed_total": 21405990.3,
+    "fixed_share": 0.9079,
+    "admin_contracts_total": 805275.94,
+    "admin_contracts_share": 0.0342,
+    "other_recurring_total": 1365187.49,
+    "other_recurring_share": 0.0579,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
-        "amount": 5957989.57,
-        "share": 0.2584,
-        "row_count": 41,
+        "amount": 5958615.07,
+        "share": 0.2527,
+        "row_count": 42,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
@@ -267,7 +267,7 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 2591.0
+            "amount": 3216.5
           },
           {
             "name": "TRAVELERS INSURANCE",
@@ -290,13 +290,13 @@
       {
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
-        "amount": 7738584.39,
-        "share": 0.3356,
-        "row_count": 30,
+        "amount": 8254475.24,
+        "share": 0.3501,
+        "row_count": 31,
         "top_vendors": [
           {
             "name": "U.S. BANK",
-            "amount": 7738584.39
+            "amount": 8254475.24
           }
         ]
       },
@@ -304,7 +304,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2534,
+        "share": 0.2478,
         "row_count": 1,
         "top_vendors": [
           {
@@ -317,7 +317,7 @@
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
         "amount": 1349539.99,
-        "share": 0.0585,
+        "share": 0.0572,
         "row_count": 29,
         "top_vendors": [
           {
@@ -329,9 +329,9 @@
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 800423.1,
-        "share": 0.0347,
-        "row_count": 52,
+        "amount": 805275.94,
+        "share": 0.0342,
+        "row_count": 53,
         "top_vendors": [
           {
             "name": "REPUBLIC SERVICES INC",
@@ -343,7 +343,7 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 126853.77
+            "amount": 131706.61
           },
           {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
@@ -362,9 +362,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 1365776.63,
-        "share": 0.0592,
-        "row_count": 1317,
+        "amount": 1365187.49,
+        "share": 0.0579,
+        "row_count": 1318,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -413,7 +413,7 @@
       "row_count": 20,
       "first_paid": "2026-07-20",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 29,
+      "days_since_last_paid": 35,
       "status": "active",
       "top_vendors": [
         {
@@ -453,7 +453,7 @@
       "row_count": 3,
       "first_paid": "2026-07-08",
       "last_paid": "2026-09-03",
-      "days_since_last_paid": 42,
+      "days_since_last_paid": 48,
       "status": "engineering",
       "top_vendors": [
         {
@@ -478,7 +478,7 @@
       "row_count": 3,
       "first_paid": "2026-09-16",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 29,
+      "days_since_last_paid": 35,
       "status": "active",
       "top_vendors": [
         {
@@ -508,7 +508,7 @@
       "row_count": 3,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-18",
-      "days_since_last_paid": 27,
+      "days_since_last_paid": 33,
       "status": "active",
       "top_vendors": [
         {
