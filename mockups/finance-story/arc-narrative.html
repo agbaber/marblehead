@@ -1,0 +1,901 @@
+---
+layout: default
+title: "Mockup v3: Choreographed narrative motion"
+body_class: "fs-mockup fs-narr"
+sitemap: false
+robots: noindex
+---
+
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/mockups/finance-story/shared.css' | relative_url }}">
+<style>
+  /* v3 narrative-motion: every transition is a choreographed argument,
+     not a decorative rearrangement. Mobile engine: simple scroll-progress
+     through the scenes container, works on every screen size. */
+
+  .fs-narr { background: var(--bg); }
+
+  .narr-stage {
+    position: relative;
+  }
+  @media (min-width: 900px) {
+    .narr-stage { display: grid; grid-template-columns: 1.05fr 0.95fr; }
+  }
+
+  .narr-pin {
+    position: sticky;
+    top: 44px;
+    height: calc(100vh - 44px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 8px 16px;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    z-index: 5;
+  }
+  @media (max-width: 899px) {
+    .narr-pin {
+      top: 44px;
+      height: 55vh;
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 6px 14px rgba(15, 42, 61, 0.06);
+    }
+  }
+
+  .narr-canvas { width: 100%; max-width: 760px; aspect-ratio: 5 / 4; }
+  .narr-canvas svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+  .narr-scenes {
+    position: relative; z-index: 1;
+    padding: 0 28px; max-width: 620px;
+  }
+  @media (max-width: 899px) {
+    .narr-scenes {
+      padding: 0 20px;
+      max-width: 100%;
+    }
+    .narr-scene {
+      min-height: 60vh !important;
+      padding: 5vh 0 8vh !important;
+    }
+    .narr-intro {
+      padding: 8vh 0 4vh !important;
+    }
+  }
+
+  .narr-intro { padding: 18vh 0 6vh; }
+  .narr-intro .eye {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--text-subtle); margin: 0 0 12px;
+  }
+  .narr-intro h1 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(34px, 4.8vw, 54px);
+    font-weight: 800; letter-spacing: -0.025em; line-height: 1.05;
+    margin: 0 0 18px;
+  }
+  .narr-intro p { font-size: 18px; line-height: 1.5; color: var(--text-muted); margin: 0 0 14px; max-width: 540px; }
+
+  .narr-scene {
+    min-height: 100vh;
+    padding: 26vh 0 14vh;
+    display: flex; flex-direction: column; justify-content: flex-start;
+  }
+  .narr-scene .step {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+    color: var(--c-buoy); margin: 0 0 10px;
+  }
+  .narr-scene h2 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(26px, 3.3vw, 36px);
+    font-weight: 700; letter-spacing: -0.018em; line-height: 1.15;
+    margin: 0 0 14px;
+  }
+  .narr-scene p { font-size: 17px; line-height: 1.55; color: var(--text-muted); margin: 0 0 12px; }
+  .narr-scene p.lede { font-size: 19px; color: var(--text); }
+
+  .narr-outro {
+    padding: 12vh 0 18vh;
+    border-top: 1px solid var(--border); margin-top: 6vh;
+  }
+  .narr-outro h2 { font-family: 'Libre Franklin', sans-serif; font-size: 28px; margin: 0 0 16px; }
+  .narr-outro .tiles { display: grid; gap: 12px; grid-template-columns: 1fr; }
+  @media (min-width: 600px) { .narr-outro .tiles { grid-template-columns: 1fr 1fr; } }
+  .narr-outro a.tile {
+    display: block; padding: 16px 18px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md);
+    color: var(--text); text-decoration: none;
+  }
+  .narr-outro a.tile:hover { border-color: var(--c-teal); }
+  .narr-outro a.tile strong { display: block; margin-bottom: 4px; }
+  .narr-outro a.tile span { font-size: 13px; color: var(--text-muted); }
+
+  .narr-dots {
+    position: fixed; right: 14px; top: 50%;
+    transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 8px;
+    z-index: 80;
+  }
+  @media (max-width: 899px) { .narr-dots { display: none; } }
+  .narr-dots .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--c-text-faint); opacity: 0.5;
+    transition: all 0.25s;
+  }
+  .narr-dots .dot.active { background: var(--c-buoy); opacity: 1; transform: scale(1.4); }
+
+  /* SVG style helpers */
+  .narr-canvas .lbl {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px; font-weight: 700;
+    fill: var(--text);
+  }
+  .narr-canvas .lbl-sub {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.6px;
+    fill: var(--text-muted);
+  }
+  .narr-canvas .stack-amt {
+    font-size: 13px; fill: var(--text-muted); font-weight: 600;
+  }
+  .narr-canvas .axis-yr {
+    font-size: 10px; fill: var(--text-subtle); text-anchor: middle;
+  }
+</style>
+
+<nav class="fs-bar">
+  <span class="fs-bar-label">Mockup v3 &middot; Choreographed narrative motion</span>
+  <a href="{{ '/mockups/finance-story/' | relative_url }}">All mockups &rarr;</a>
+</nav>
+
+<div class="narr-dots"></div>
+
+<div class="narr-stage">
+  <div class="narr-pin">
+    <div class="narr-canvas">
+      <svg id="narr-canvas" viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid meet"
+           aria-label="Choreographed budget narrative">
+
+        <!-- BG: time-axis (drawn in scene 5→6) -->
+        <g id="axis-layer" style="opacity:0">
+          <line id="axis-line" x1="80" y1="700" x2="80" y2="700"
+                stroke="var(--text-faint)" stroke-width="1"/>
+          <g id="axis-ticks"></g>
+          <text class="axis-yr" x="500" y="745">Twenty years of FTE composition (FY08 to FY26)</text>
+        </g>
+
+        <!-- Scene 0: $1 sign + bar that will split -->
+        <g id="dollar-layer">
+          <text id="dollar-text" x="500" y="450"
+                font-family="Libre Franklin, sans-serif"
+                font-weight="800" font-size="240" fill="var(--c-sage)"
+                text-anchor="middle" letter-spacing="-0.03em">$1</text>
+          <text x="500" y="520" font-size="13" fill="var(--text-subtle)"
+                text-anchor="middle" letter-spacing="1.5"
+                style="text-transform:uppercase;">one taxpayer dollar</text>
+        </g>
+
+        <!-- Scene 1 elements: the cut bar -->
+        <g id="cut-layer" style="opacity:0">
+          <!-- bar grows out of dollar; gets vertical dividers; gets labels -->
+          <rect id="cut-bar-people" x="500" y="380" width="0" height="80" fill="#1B3A57" rx="4"/>
+          <rect id="cut-bar-bills"  x="500" y="380" width="0" height="80" fill="#4A5C6A" rx="4"/>
+          <rect id="cut-bar-other"  x="500" y="380" width="0" height="80" fill="#93A4B0" rx="4"/>
+          <text id="lbl-people" class="lbl" x="100" y="400" fill="#fff" opacity="0">People (~80&cent;)</text>
+          <text id="lbl-bills"  class="lbl" x="500" y="400" fill="#fff" opacity="0">Set bills (~15&cent;)</text>
+          <text id="lbl-other"  class="lbl" x="850" y="400" fill="#fff" opacity="0" font-size="11">Other (~5&cent;)</text>
+        </g>
+
+        <!-- Scene 2: stack components stacked on the "people" bar -->
+        <g id="stack-layer" style="opacity:0">
+          <!-- People bar at bottom -->
+          <rect id="people-base" x="120" y="500" width="760" height="60" fill="#1B3A57" rx="4"/>
+          <text x="135" y="538" class="lbl" fill="#fff">Salary base</text>
+          <text x="865" y="538" class="stack-amt" fill="#fff" text-anchor="end" font-size="14">$75,000</text>
+
+          <rect id="stack-pension"   x="120" y="430" width="0" height="56" fill="#2F7D8E" rx="4"/>
+          <text id="stack-pension-l" x="135" y="464" class="lbl" fill="#fff" opacity="0">Pension</text>
+          <text id="stack-pension-a" x="865" y="464" class="stack-amt" text-anchor="end" opacity="0">$12,750</text>
+
+          <rect id="stack-gic"       x="120" y="368" width="0" height="56" fill="#B8860B" rx="4"/>
+          <text id="stack-gic-l"     x="135" y="402" class="lbl" fill="#fff" opacity="0">GIC health share</text>
+          <text id="stack-gic-a"     x="865" y="402" class="stack-amt" text-anchor="end" opacity="0">$10,000</text>
+
+          <rect id="stack-mc"        x="120" y="318" width="0" height="42" fill="#6C4A6E" rx="4"/>
+          <text id="stack-mc-l"      x="135" y="346" class="lbl" fill="#fff" opacity="0" font-size="12">Medicare</text>
+          <text id="stack-mc-a"      x="865" y="346" class="stack-amt" text-anchor="end" opacity="0">$1,100</text>
+
+          <rect id="stack-wc"        x="120" y="278" width="0" height="32" fill="#C8553D" rx="4"/>
+          <text id="stack-wc-l"      x="135" y="300" class="lbl" fill="#fff" opacity="0" font-size="11">Workers' comp + life</text>
+          <text id="stack-wc-a"      x="865" y="300" class="stack-amt" text-anchor="end" opacity="0">$900</text>
+
+          <line id="tally-line" x1="120" y1="252" x2="120" y2="252" stroke="var(--border)" stroke-width="1"/>
+          <text id="tally-lbl"  x="120" y="232" class="lbl-sub" opacity="0" font-size="13">Loaded total</text>
+          <text id="tally-amt"  x="880" y="232" class="lbl" opacity="0" font-size="20" fill="var(--c-buoy)" text-anchor="end" font-weight="800">$99,750</text>
+        </g>
+
+        <!-- Pillar headers (scene 4+) -->
+        <g id="pillar-headers" style="opacity:0">
+          <rect x="200" y="80" width="600" height="36" fill="var(--c-buoy)" rx="6"/>
+          <text x="500" y="103" font-weight="700" font-size="14" fill="#fff" text-anchor="middle">Voters &middot; Town Meeting</text>
+
+          <line x1="500" y1="116" x2="220" y2="146" stroke="var(--c-buoy)" stroke-width="1.5"/>
+          <line x1="500" y1="116" x2="780" y2="146" stroke="var(--c-buoy)" stroke-width="1.5"/>
+
+          <rect x="80" y="146" width="280" height="30" fill="#1B3A57" rx="4"/>
+          <text x="220" y="166" font-weight="700" font-size="12" fill="#fff" text-anchor="middle">Select Board &rarr; Town Administrator</text>
+
+          <rect x="640" y="146" width="280" height="30" fill="#2F7D8E" rx="4"/>
+          <text x="780" y="166" font-weight="700" font-size="12" fill="#fff" text-anchor="middle">School Committee &rarr; Superintendent</text>
+        </g>
+
+        <!-- Boards label cluster (scene 5+) -->
+        <g id="boards-headers" style="opacity:0">
+          <text x="500" y="40" class="lbl-sub" text-anchor="middle">
+            Above the paid workforce: ~60 unpaid residents
+          </text>
+        </g>
+
+        <!-- Pillar split-line (scene 3→4) -->
+        <g id="splitline-layer" style="opacity:0">
+          <line id="splitline" x1="500" y1="100" x2="500" y2="100"
+                stroke="var(--c-buoy)" stroke-width="1.5" stroke-dasharray="4 6"/>
+          <text id="splitline-l" x="200" y="135" class="lbl-sub" text-anchor="middle" opacity="0">TOWN SIDE</text>
+          <text id="splitline-r" x="800" y="135" class="lbl-sub" text-anchor="middle" opacity="0">SCHOOL SIDE</text>
+        </g>
+
+        <!-- Stream graph year labels (scene 6) -->
+        <g id="stream-years" style="opacity:0">
+          <text class="axis-yr" x="80"  y="720">FY08</text>
+          <text class="axis-yr" x="290" y="720">FY13</text>
+          <text class="axis-yr" x="500" y="720">FY17</text>
+          <text class="axis-yr" x="710" y="720">FY21</text>
+          <text class="axis-yr" x="920" y="720">FY26</text>
+        </g>
+
+        <!-- Legend (scenes 3-5) -->
+        <g id="legend" style="opacity:0">
+          <g transform="translate(80,750)" font-size="10" fill="var(--text-muted)">
+            <circle cx="0"   cy="0" r="4" fill="#1B3A57"/><text x="10" y="3">Schools instructional</text>
+            <circle cx="160" cy="0" r="4" fill="#4F6E89"/><text x="170" y="3">Schools support</text>
+            <circle cx="300" cy="0" r="4" fill="#C8553D"/><text x="310" y="3">Public safety</text>
+            <circle cx="420" cy="0" r="4" fill="#5B7553"/><text x="430" y="3">DPW</text>
+            <circle cx="500" cy="0" r="4" fill="#B8860B"/><text x="510" y="3">Town admin</text>
+            <circle cx="620" cy="0" r="4" fill="#6C4A6E"/><text x="630" y="3">Library/COA/rec</text>
+            <circle cx="780" cy="0" r="4" fill="#7A3A6A"/><text x="790" y="3">Unpaid boards</text>
+          </g>
+        </g>
+
+        <!-- Dots layer (built in JS) -->
+        <g id="dots-layer"></g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="narr-scenes">
+    <section class="narr-intro">
+      <p class="eye">Mockup v3 &middot; Narrative motion</p>
+      <h1>Marblehead spends $127 million a year.<br>Where does it go?</h1>
+      <p>Same arc as before; this time every transition is choreographed to make an argument. Each motion is a sentence. Built to work on any screen size.</p>
+      <p style="font-size:13px;color:var(--text-faint);">Brainstorming mockup. Numbers approximate.</p>
+    </section>
+
+    <section class="narr-scene" data-scene="0">
+      <p class="step">Step 1</p>
+      <h2>Start with a single dollar.</h2>
+      <p class="lede">About 75&cent; of every dollar Marblehead collects comes from the property-tax levy. Follow it.</p>
+    </section>
+
+    <section class="narr-scene" data-scene="1">
+      <p class="step">Step 2 &middot; The cut</p>
+      <h2>The dollar splits three ways.</h2>
+      <p>About 80&cent; of every dollar ends up paying a person. About 15&cent; is set bills the town doesn't control: debt service, OPEB, state assessments. The remaining 5&cent; is supplies, contractors, programs, capital.</p>
+    </section>
+
+    <section class="narr-scene" data-scene="2">
+      <p class="step">Step 3 &middot; Zoom into &ldquo;people&rdquo;</p>
+      <h2>Every salary carries an automatic stack.</h2>
+      <p>Watch the pieces build. Pension at ~17% of pay. Then the town's share of the GIC health premium. Then Medicare. Then workers' comp and life. The base salary line at the bottom is what the employee sees on their paycheck. The whole stack is what the budget pays.</p>
+    </section>
+
+    <section class="narr-scene" data-scene="3">
+      <p class="step">Step 4 &middot; Multiply</p>
+      <h2>Now do that ~1,020 times.</h2>
+      <p>Each dot is one full-time-equivalent position on the FY26 payroll. About 626 on the school side, 394 on the town side, color-coded by category.</p>
+    </section>
+
+    <section class="narr-scene" data-scene="4">
+      <p class="step">Step 5 &middot; The split</p>
+      <h2>School-side dots flow right. Town-side dots flow left.</h2>
+      <p>The two pillars don't connect at the top. Voters elect both boards directly; the Select Board hires the Town Administrator, the School Committee hires the Superintendent, and neither one supervises the other.</p>
+    </section>
+
+    <section class="narr-scene" data-scene="5">
+      <p class="step">Step 6 &middot; Decision layer drops in</p>
+      <h2>Sixty unpaid residents sit above all of it.</h2>
+      <p>Select Board, School Committee, FinCom, Planning, Conservation, ZBA, Recreation, Board of Health, Light Board, Library Trustees, Moderator. None draws a salary. Between them they write the warrant, set zoning, hire the senior managers, and recommend every dollar in the budget.</p>
+    </section>
+
+    <section class="narr-scene" data-scene="6">
+      <p class="step">Step 7 &middot; Twenty years</p>
+      <h2>The total barely moved. The mix moved a lot.</h2>
+      <p>School support staff grew with special-education needs. IT was created from zero. Clerical compressed. Public safety and DPW stayed within their long-run ranges. Per-FTE loaded cost grew faster than CPI in nearly every year, mostly from health-insurance premium growth.</p>
+    </section>
+
+    <section class="narr-outro">
+      <h2>Go deeper</h2>
+      <div class="tiles">
+        <a class="tile" href="{{ '/checkbook/' | relative_url }}"><strong>Checkbook</strong><span>FY26 vendor detail.</span></a>
+        <a class="tile" href="{{ '/marblehead-101/' | relative_url }}"><strong>Marblehead 101</strong><span>The 8-chapter primer.</span></a>
+        <a class="tile" href="{{ '/data/' | relative_url }}"><strong>Data catalog</strong><span>Source tables.</span></a>
+        <a class="tile" href="{{ '/mockups/finance-story/' | relative_url }}"><strong>All mockups</strong><span>Compare the variants.</span></a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+/* Narrative scrollytelling engine.
+ *
+ * Each transition has its own choreography function rather than a generic
+ * lerp between scene A and scene B. The motion is meaningful: dots multiply,
+ * dollars cut, boards drop, time axes draw themselves.
+ *
+ * Scene detection uses direct scroll progress through .narr-scenes (works
+ * on every screen size, including mobile where the pin doesn't take the
+ * whole viewport).
+ */
+(function () {
+  // ----- Constants -----
+  const VW = 1000, VH = 800;
+  const FTE_COUNT = 1020;
+  const BOARD_COUNT = 60;
+  const TOTAL = FTE_COUNT + BOARD_COUNT;
+  const DOT_R = 4;
+
+  const CATS = [
+    { name: 'Instructional',     count: 460, color: '#1B3A57', pillar: 'school' },
+    { name: 'Schools support',   count: 166, color: '#4F6E89', pillar: 'school' },
+    { name: 'Public safety',     count: 95,  color: '#C8553D', pillar: 'town' },
+    { name: 'DPW',               count: 60,  color: '#5B7553', pillar: 'town' },
+    { name: 'Town admin',        count: 95,  color: '#B8860B', pillar: 'town' },
+    { name: 'Library / COA / rec', count: 144, color: '#6C4A6E', pillar: 'town' }
+  ];
+  const BOARD_COLOR = '#7A3A6A';
+
+  // ----- Build dot elements -----
+  const dotsLayer = document.getElementById('dots-layer');
+  const ns = 'http://www.w3.org/2000/svg';
+  const dotCat = [];
+  {
+    let used = 0, bk = 0;
+    for (let i = 0; i < FTE_COUNT; i++) {
+      while (used >= CATS[bk].count && bk < CATS.length - 1) { bk++; used = 0; }
+      dotCat.push(bk); used++;
+    }
+    for (let i = 0; i < BOARD_COUNT; i++) dotCat.push(6);
+  }
+  const dots = new Array(TOTAL);
+  for (let i = 0; i < TOTAL; i++) {
+    const c = dotCat[i];
+    const color = c < 6 ? CATS[c].color : BOARD_COLOR;
+    const d = document.createElementNS(ns, 'circle');
+    d.setAttribute('r', DOT_R);
+    d.setAttribute('fill', color);
+    d.setAttribute('cx', VW / 2);
+    d.setAttribute('cy', -50);
+    d.setAttribute('opacity', 0);
+    dotsLayer.appendChild(d);
+    dots[i] = d;
+  }
+
+  // ----- Precompute target positions used across scenes -----
+  function gridPositions() {
+    const cols = 51, rows = 20;
+    const startX = 80, startY = 200;
+    const spX = 17, spY = 22;
+    const out = new Array(FTE_COUNT);
+    for (let i = 0; i < FTE_COUNT; i++) {
+      const c = i % cols, r = Math.floor(i / cols);
+      out[i] = { x: startX + c * spX, y: startY + r * spY };
+    }
+    return out;
+  }
+  function pillarPositions() {
+    const slots = {
+      0: [580, 230, 25, 14, 12], // instructional
+      1: [580, 525, 18, 14, 12], // support
+      2: [80,  230, 14, 14, 12], // safety
+      3: [80,  360, 12, 14, 12], // dpw
+      4: [80,  450, 14, 14, 12], // admin
+      5: [80,  555, 16, 14, 12]  // library/coa/rec
+    };
+    const counts = [0, 0, 0, 0, 0, 0];
+    const out = new Array(FTE_COUNT);
+    for (let i = 0; i < FTE_COUNT; i++) {
+      const c = dotCat[i];
+      const slot = slots[c];
+      const k = counts[c]++;
+      const cols = slot[2];
+      const col = k % cols, row = Math.floor(k / cols);
+      out[i] = { x: slot[0] + col * slot[3], y: slot[1] + row * slot[4] };
+    }
+    return out;
+  }
+  function boardRingPositions() {
+    // 60 boards on a rounded-rectangle perimeter around the pillars
+    const out = new Array(BOARD_COUNT);
+    const cx = 500, cy = 380;
+    const rx = 470, ry = 320;
+    for (let i = 0; i < BOARD_COUNT; i++) {
+      const t = (i / BOARD_COUNT) * Math.PI * 2 - Math.PI / 2;
+      out[i] = { x: cx + rx * Math.cos(t), y: cy + ry * Math.sin(t) };
+    }
+    return out;
+  }
+  function streamPositions() {
+    const years = 19;
+    const x0 = 80, xN = 920;
+    const yearW = (xN - x0) / years;
+    const top = 120, totalH = 540;
+    let cumY = top;
+    const bands = CATS.map(cat => {
+      const h = totalH * (cat.count / FTE_COUNT);
+      const b = { top: cumY, bottom: cumY + h, count: cat.count };
+      cumY += h;
+      return b;
+    });
+    function jit(i) { return ((i * 9301 + 49297) % 233280) / 233280; }
+    const counts = [0, 0, 0, 0, 0, 0];
+    const out = new Array(FTE_COUNT);
+    for (let i = 0; i < FTE_COUNT; i++) {
+      const c = dotCat[i];
+      const k = counts[c]++;
+      const catN = CATS[c].count;
+      const dpy = catN / years;
+      const yearIdx = Math.min(years - 1, Math.floor(k / dpy));
+      const inY = k % dpy;
+      const band = bands[c];
+      const wobble = (jit(i) - 0.5) * 6;
+      out[i] = {
+        x: x0 + yearIdx * yearW + (inY / dpy + jit(i * 7) * 0.3) * yearW,
+        y: band.top + (inY / dpy) * (band.bottom - band.top) + wobble
+      };
+    }
+    return out;
+  }
+
+  const GRID = gridPositions();
+  const PILLAR = pillarPositions();
+  const BOARDS = boardRingPositions();
+  const STREAM = streamPositions();
+
+  // ----- Easing -----
+  const ease = (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+  const easeIn = (t) => t * t * t;
+  // Smooth step at edges
+  const smoothstep = (lo, hi, t) => {
+    if (t <= lo) return 0;
+    if (t >= hi) return 1;
+    const x = (t - lo) / (hi - lo);
+    return x * x * (3 - 2 * x);
+  };
+
+  // ----- Overlay helpers -----
+  function setOpacity(id, v) {
+    const el = document.getElementById(id);
+    if (el) el.style.opacity = v;
+  }
+  function setAttr(id, attr, val) {
+    const el = document.getElementById(id);
+    if (el) el.setAttribute(attr, val);
+  }
+  function setText(id, txt) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = txt;
+  }
+
+  function hideAllOverlays() {
+    ['dollar-layer','cut-layer','stack-layer','pillar-headers',
+     'boards-headers','splitline-layer','stream-years','axis-layer','legend']
+      .forEach(id => setOpacity(id, 0));
+  }
+  function hideAllDots() {
+    for (let i = 0; i < TOTAL; i++) {
+      dots[i].setAttribute('opacity', 0);
+    }
+  }
+  function placeDots(positions, opacity) {
+    for (let i = 0; i < FTE_COUNT; i++) {
+      const p = positions[i];
+      dots[i].setAttribute('cx', p.x.toFixed(2));
+      dots[i].setAttribute('cy', p.y.toFixed(2));
+      dots[i].setAttribute('opacity', opacity);
+    }
+  }
+
+  // ----- Per-transition choreography -----
+
+  // Scene 0 stable: $1 visible, nothing else
+  function renderScene0(t) {
+    hideAllOverlays(); hideAllDots();
+    setOpacity('dollar-layer', 1);
+  }
+
+  // Transition 0 -> 1: the $1 shrinks; a bar grows from center; bar splits 80/15/5 with labels
+  function renderTransition0(t) {
+    hideAllDots();
+    setOpacity('dollar-layer', 1);
+    setOpacity('cut-layer', 1);
+    setOpacity('stack-layer', 0);
+    setOpacity('pillar-headers', 0); setOpacity('boards-headers', 0);
+    setOpacity('splitline-layer', 0); setOpacity('axis-layer', 0);
+
+    // Phase A (0-0.35): $1 shrinks toward center, no bar yet
+    // Phase B (0.35-0.7): bar grows outward from center
+    // Phase C (0.7-1.0): bar splits into 3 segments with labels
+
+    const phaseA = smoothstep(0, 0.35, t);
+    const phaseB = smoothstep(0.35, 0.7, t);
+    const phaseC = smoothstep(0.7, 1.0, t);
+
+    // $1 shrink + fade
+    const dol = document.getElementById('dollar-text');
+    const dolScale = 1 - phaseA * 0.85;
+    dol.setAttribute('transform', `translate(${500 * (1 - dolScale)} ${450 * (1 - dolScale)}) scale(${dolScale})`);
+    setOpacity('dollar-layer', 1 - phaseA);
+
+    // Bar grows: width 0 -> 760, total bar = 760, split 80/15/5
+    const totalW = 760 * phaseB;
+    const wPeople = totalW * 0.80;
+    const wBills  = totalW * 0.15;
+    const wOther  = totalW * 0.05;
+    const x0 = 500 - totalW / 2;
+
+    setAttr('cut-bar-people','x', x0);
+    setAttr('cut-bar-people','width', wPeople);
+    setAttr('cut-bar-bills', 'x', x0 + wPeople + (phaseC * 4)); // tiny gap appears as it cuts
+    setAttr('cut-bar-bills', 'width', wBills);
+    setAttr('cut-bar-other', 'x', x0 + wPeople + wBills + (phaseC * 8));
+    setAttr('cut-bar-other', 'width', wOther);
+
+    // Labels appear in phase C
+    setAttr('lbl-people','x', x0 + wPeople / 2);
+    setAttr('lbl-people','y', 426);
+    setAttr('lbl-people','text-anchor','middle');
+    setAttr('lbl-people','opacity', phaseC);
+    setAttr('lbl-bills', 'x', x0 + wPeople + wBills/2 + 4);
+    setAttr('lbl-bills', 'y', 426);
+    setAttr('lbl-bills', 'text-anchor','middle');
+    setAttr('lbl-bills', 'opacity', phaseC);
+    setAttr('lbl-other', 'x', x0 + wPeople + wBills + wOther + 16);
+    setAttr('lbl-other', 'y', 426);
+    setAttr('lbl-other', 'text-anchor','start');
+    setAttr('lbl-other', 'opacity', phaseC);
+  }
+
+  // Scene 1 stable: full 80/15/5 bar
+  function renderScene1(t) {
+    renderTransition0(1);
+  }
+
+  // Transition 1 -> 2: People segment expands. Bills/other slide off. Stack components build up.
+  function renderTransition1(t) {
+    hideAllDots();
+    setOpacity('dollar-layer', 0);
+    setOpacity('cut-layer', 1 - smoothstep(0.0, 0.4, t)); // cut bar fades out as stack takes over
+    setOpacity('stack-layer', smoothstep(0.1, 0.4, t));
+    setOpacity('pillar-headers', 0); setOpacity('boards-headers', 0);
+    setOpacity('splitline-layer', 0); setOpacity('axis-layer', 0);
+
+    // Phase A (0-0.4): cut bar transforms; people bar grows wider; bills/other fall off
+    // Phase B (0.4-1.0): stack components build up sequentially
+
+    // Bills + other slide off
+    if (t < 0.4) {
+      const aT = smoothstep(0, 0.4, t);
+      const x0 = 500 - 760/2;
+      const dy = aT * 300;
+      const op = 1 - aT;
+      const billsEl = document.getElementById('cut-bar-bills');
+      const otherEl = document.getElementById('cut-bar-other');
+      billsEl.setAttribute('opacity', op);
+      otherEl.setAttribute('opacity', op);
+      billsEl.setAttribute('y', 380 + dy);
+      otherEl.setAttribute('y', 380 + dy);
+      setAttr('lbl-bills','opacity', op);
+      setAttr('lbl-other','opacity', op);
+
+      // People bar: grow to 760 wide (it was 608 = 760*0.80)
+      const peopleW = 608 + (760 - 608) * aT;
+      setAttr('cut-bar-people','width', peopleW);
+      setAttr('cut-bar-people','x', 500 - peopleW/2);
+      setAttr('lbl-people','x', 500);
+      // Move people bar downward smoothly to align with stack base
+      const peopleY = 380 + aT * 120;
+      setAttr('cut-bar-people','y', peopleY);
+      setAttr('lbl-people','y', peopleY + 46);
+    }
+
+    // Stack-layer components build up
+    if (t > 0.35) {
+      const localStack = (t - 0.35) / 0.65;
+      // 4 components: pension, gic, mc, wc — each occupies 0.18 of localStack
+      const p1 = smoothstep(0, 0.22, localStack); // pension
+      const p2 = smoothstep(0.22, 0.44, localStack); // gic
+      const p3 = smoothstep(0.44, 0.62, localStack); // mc
+      const p4 = smoothstep(0.62, 0.80, localStack); // wc
+      const p5 = smoothstep(0.85, 1.0, localStack); // total
+
+      setAttr('stack-pension','width', 760 * 0.17 * p1);
+      setAttr('stack-pension-l','opacity', p1);
+      setAttr('stack-pension-a','opacity', p1);
+
+      setAttr('stack-gic','width', 760 * 0.135 * p2);
+      setAttr('stack-gic-l','opacity', p2);
+      setAttr('stack-gic-a','opacity', p2);
+
+      setAttr('stack-mc','width', 760 * 0.015 * p3);
+      setAttr('stack-mc-l','opacity', p3);
+      setAttr('stack-mc-a','opacity', p3);
+
+      setAttr('stack-wc','width', 760 * 0.012 * p4);
+      setAttr('stack-wc-l','opacity', p4);
+      setAttr('stack-wc-a','opacity', p4);
+
+      setAttr('tally-line','x2', 120 + 760 * p5);
+      setAttr('tally-lbl','opacity', p5);
+      setAttr('tally-amt','opacity', p5);
+    }
+  }
+
+  function renderScene2(t) {
+    renderTransition1(1);
+  }
+
+  // Transition 2 -> 3: stack collapses to a single dot, which multiplies into 1,020 dots
+  function renderTransition2(t) {
+    setOpacity('dollar-layer', 0); setOpacity('cut-layer', 0);
+    setOpacity('pillar-headers', 0); setOpacity('boards-headers', 0);
+    setOpacity('splitline-layer', 0); setOpacity('axis-layer', 0);
+
+    // Phase A (0-0.3): stack contracts/shrinks toward an origin point at (120, 480)
+    // Phase B (0.3-1.0): single dot multiplies into 1,020 dots flowing into the grid
+    const phaseA = smoothstep(0, 0.3, t);
+    const phaseB = smoothstep(0.25, 1.0, t);
+
+    setOpacity('stack-layer', 1 - phaseA);
+    setOpacity('legend', phaseB);
+
+    // Animate dots: each dot starts at the origin and flows to its grid position
+    // Add per-dot stagger so they appear in a cascade
+    const originX = 120, originY = 480;
+    for (let i = 0; i < FTE_COUNT; i++) {
+      const stagger = i / FTE_COUNT;
+      // Each dot waits until its stagger time, then animates over a window
+      const dotT = Math.max(0, Math.min(1, (phaseB - stagger * 0.7) / 0.3));
+      const eT = easeOut(dotT);
+      const target = GRID[i];
+      // Curve: x goes mostly straight, y has a slight arc
+      const x = originX + (target.x - originX) * eT;
+      const arcY = -40 * Math.sin(eT * Math.PI); // bow up
+      const y = originY + (target.y - originY) * eT + arcY;
+      dots[i].setAttribute('cx', x.toFixed(2));
+      dots[i].setAttribute('cy', y.toFixed(2));
+      // Opacity ramps in at start of stagger, holds
+      dots[i].setAttribute('opacity', dotT > 0 ? 1 : 0);
+    }
+    // Boards hidden
+    for (let i = FTE_COUNT; i < TOTAL; i++) dots[i].setAttribute('opacity', 0);
+  }
+
+  function renderScene3(t) {
+    hideAllOverlays();
+    setOpacity('legend', 1);
+    // Grid stable
+    placeDots(GRID, 1);
+    for (let i = FTE_COUNT; i < TOTAL; i++) dots[i].setAttribute('opacity', 0);
+  }
+
+  // Transition 3 -> 4: dots split. School-side flow right, town-side flow left.
+  // Vertical split line draws first, then dots flow to their pillar positions.
+  function renderTransition3(t) {
+    hideAllOverlays();
+    setOpacity('legend', 1);
+    setOpacity('splitline-layer', smoothstep(0, 0.2, t));
+    setOpacity('pillar-headers', smoothstep(0.7, 1.0, t));
+
+    // Phase A (0-0.2): vertical split line draws down
+    // Phase B (0.2-1.0): dots flow to pillar positions
+    const lineP = smoothstep(0, 0.2, t);
+    setAttr('splitline','y2', 100 + lineP * 580);
+    setAttr('splitline-l','opacity', lineP);
+    setAttr('splitline-r','opacity', lineP);
+
+    const flowP = smoothstep(0.2, 1.0, t);
+    const eT = ease(flowP);
+    for (let i = 0; i < FTE_COUNT; i++) {
+      const from = GRID[i];
+      const to = PILLAR[i];
+      // Each dot uses a slight bezier curve via control point at midpoint, offset by pillar
+      const cat = dotCat[i];
+      const pillar = CATS[cat].pillar;
+      const cx = pillar === 'school' ? 750 : 250;
+      const cpX = (from.x + to.x) / 2 + (cx - 500) * 0.3;
+      const cpY = (from.y + to.y) / 2 - 30;
+      // Quadratic bezier interpolation
+      const mt = 1 - eT;
+      const x = mt * mt * from.x + 2 * mt * eT * cpX + eT * eT * to.x;
+      const y = mt * mt * from.y + 2 * mt * eT * cpY + eT * eT * to.y;
+      dots[i].setAttribute('cx', x.toFixed(2));
+      dots[i].setAttribute('cy', y.toFixed(2));
+      dots[i].setAttribute('opacity', 1);
+    }
+    for (let i = FTE_COUNT; i < TOTAL; i++) dots[i].setAttribute('opacity', 0);
+  }
+
+  function renderScene4(t) {
+    hideAllOverlays();
+    setOpacity('legend', 1);
+    setOpacity('pillar-headers', 1);
+    placeDots(PILLAR, 1);
+    for (let i = FTE_COUNT; i < TOTAL; i++) dots[i].setAttribute('opacity', 0);
+  }
+
+  // Transition 4 -> 5: boards drop in from above with stagger and bounce
+  function renderTransition4(t) {
+    hideAllOverlays();
+    setOpacity('legend', 1);
+    setOpacity('pillar-headers', 1);
+    setOpacity('boards-headers', smoothstep(0.6, 1.0, t));
+
+    placeDots(PILLAR, 1);
+
+    // Boards drop from y = -50 to their ring position with stagger
+    for (let i = 0; i < BOARD_COUNT; i++) {
+      const dotIdx = FTE_COUNT + i;
+      const stagger = i / BOARD_COUNT;
+      const dotT = Math.max(0, Math.min(1, (t - stagger * 0.6) / 0.4));
+      const eT = easeOut(dotT);
+      const target = BOARDS[i];
+      const fromY = -50;
+      const x = target.x;
+      const y = fromY + (target.y - fromY) * eT;
+      dots[dotIdx].setAttribute('cx', x.toFixed(2));
+      dots[dotIdx].setAttribute('cy', y.toFixed(2));
+      dots[dotIdx].setAttribute('opacity', dotT > 0 ? 1 : 0);
+      dots[dotIdx].setAttribute('r', dotT > 0 ? DOT_R + 1 : DOT_R);
+    }
+  }
+
+  function renderScene5(t) {
+    hideAllOverlays();
+    setOpacity('legend', 1);
+    setOpacity('pillar-headers', 1);
+    setOpacity('boards-headers', 1);
+    placeDots(PILLAR, 1);
+    for (let i = 0; i < BOARD_COUNT; i++) {
+      const p = BOARDS[i];
+      const idx = FTE_COUNT + i;
+      dots[idx].setAttribute('cx', p.x.toFixed(2));
+      dots[idx].setAttribute('cy', p.y.toFixed(2));
+      dots[idx].setAttribute('opacity', 1);
+      dots[idx].setAttribute('r', DOT_R + 1);
+    }
+  }
+
+  // Transition 5 -> 6: time axis draws + dots slide to stream positions
+  function renderTransition5(t) {
+    hideAllOverlays();
+    setOpacity('legend', 1);
+    // Fade pillar headers and boards
+    const fade = 1 - smoothstep(0, 0.3, t);
+    setOpacity('pillar-headers', fade);
+    setOpacity('boards-headers', fade);
+
+    setOpacity('axis-layer', smoothstep(0.1, 0.5, t));
+    setOpacity('stream-years', smoothstep(0.25, 0.65, t));
+
+    // Time axis: line draws from left to right
+    const lineT = smoothstep(0.1, 0.5, t);
+    setAttr('axis-line','x2', 80 + 840 * lineT);
+
+    // FTE dots flow from pillar to stream
+    const flowP = smoothstep(0.2, 1.0, t);
+    const eT = ease(flowP);
+    for (let i = 0; i < FTE_COUNT; i++) {
+      const from = PILLAR[i];
+      const to = STREAM[i];
+      const x = from.x + (to.x - from.x) * eT;
+      const y = from.y + (to.y - from.y) * eT;
+      dots[i].setAttribute('cx', x.toFixed(2));
+      dots[i].setAttribute('cy', y.toFixed(2));
+      dots[i].setAttribute('opacity', 1);
+    }
+
+    // Boards fade out + slide up
+    for (let i = 0; i < BOARD_COUNT; i++) {
+      const idx = FTE_COUNT + i;
+      const from = BOARDS[i];
+      const upT = smoothstep(0, 0.4, t);
+      const y = from.y - upT * 200;
+      const opacity = 1 - upT;
+      dots[idx].setAttribute('cy', y.toFixed(2));
+      dots[idx].setAttribute('opacity', opacity);
+    }
+  }
+
+  function renderScene6(t) {
+    hideAllOverlays();
+    setOpacity('legend', 1);
+    setOpacity('axis-layer', 1);
+    setOpacity('stream-years', 1);
+    setAttr('axis-line','x2', 920);
+    placeDots(STREAM, 0.9);
+    for (let i = FTE_COUNT; i < TOTAL; i++) dots[i].setAttribute('opacity', 0);
+  }
+
+  // ----- Master dispatch -----
+  function render(sceneIdx, localT) {
+    // If localT is essentially 0, render the static scene. Otherwise interpolate.
+    if (sceneIdx === 0 && localT === 0) { renderScene0(0); return; }
+    switch (sceneIdx) {
+      case 0: renderTransition0(localT); break;
+      case 1: renderTransition1(localT); break;
+      case 2: renderTransition2(localT); break;
+      case 3: renderTransition3(localT); break;
+      case 4: renderTransition4(localT); break;
+      case 5: renderTransition5(localT); break;
+      case 6: renderScene6(localT); break;
+      default: renderScene6(1);
+    }
+  }
+
+  // ----- Scroll engine -----
+  const scenesEl = document.querySelector('.narr-scenes');
+  const sceneEls = scenesEl.querySelectorAll('.narr-scene');
+  const sceneCount = sceneEls.length;
+  const dotsHost = document.querySelector('.narr-dots');
+
+  sceneEls.forEach((s) => {
+    const d = document.createElement('span');
+    d.className = 'dot';
+    d.dataset.scene = s.dataset.scene;
+    dotsHost.appendChild(d);
+  });
+  const indicatorDots = dotsHost.querySelectorAll('.dot');
+
+  function currentState() {
+    // Map scroll progress through the scene elements directly.
+    // Each scene element is ~100vh tall; transition n -> n+1 happens during
+    // the scroll through scene n's section.
+    const firstRect = sceneEls[0].getBoundingClientRect();
+    const sectionH = firstRect.height || window.innerHeight;
+    const startY = firstRect.top;
+    // How far we've scrolled past the start of scene 0
+    const scrolled = -startY;
+    if (scrolled <= 0) return { sceneIdx: 0, localT: 0 };
+    const fProgress = scrolled / sectionH;
+    const sceneIdx = Math.max(0, Math.min(sceneCount - 1, Math.floor(fProgress)));
+    const localT = Math.max(0, Math.min(1, fProgress - sceneIdx));
+    return { sceneIdx, localT };
+  }
+
+  let queued = false;
+  function tick() {
+    const { sceneIdx, localT } = currentState();
+    render(sceneIdx, localT);
+    indicatorDots.forEach((d, i) => d.classList.toggle('active', i === sceneIdx));
+    queued = false;
+  }
+  function onScroll() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(tick);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', tick);
+  tick();
+})();
+</script>

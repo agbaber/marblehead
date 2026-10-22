@@ -1,0 +1,730 @@
+---
+layout: default
+title: "Mockup A v2: Continuous motion"
+body_class: "fs-mockup fs-cont"
+sitemap: false
+robots: noindex
+---
+
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/mockups/finance-story/shared.css' | relative_url }}">
+<style>
+  /* Continuous-motion variant of Arc A. Pin a single SVG; the same dots
+     persist across all seven scenes and interpolate position/opacity
+     based on scroll progress within each scene. */
+
+  .fs-cont { background: var(--bg); }
+
+  .fs-cont .cont-stage {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 900px) {
+    .fs-cont .cont-stage { grid-template-columns: 1.05fr 1fr; }
+  }
+
+  .fs-cont .cont-pin {
+    position: sticky;
+    top: 44px;
+    height: calc(100vh - 44px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    z-index: 1;
+  }
+  @media (max-width: 899px) {
+    .fs-cont .cont-pin {
+      height: 60vh;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+  }
+
+  .fs-cont .cont-canvas {
+    width: 100%;
+    max-width: 720px;
+    aspect-ratio: 5 / 4;
+    overflow: visible;
+  }
+  .fs-cont .cont-canvas svg { width: 100%; height: 100%; display: block; }
+
+  .fs-cont .cont-scenes {
+    position: relative;
+    z-index: 2;
+    padding: 0 28px;
+    max-width: 620px;
+  }
+
+  .fs-cont .cont-intro {
+    padding: 18vh 0 6vh;
+  }
+  .fs-cont .cont-intro .eye {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--text-subtle); margin: 0 0 12px;
+  }
+  .fs-cont .cont-intro h1 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800; letter-spacing: -0.025em; line-height: 1.05;
+    margin: 0 0 18px;
+  }
+  .fs-cont .cont-intro p { font-size: 18px; line-height: 1.5; color: var(--text-muted); margin: 0 0 14px; max-width: 540px; }
+
+  .fs-cont .cont-scene {
+    min-height: 100vh;
+    padding: 30vh 0 14vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .fs-cont .cont-scene .step-num {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+    color: var(--c-buoy); margin: 0 0 10px;
+  }
+  .fs-cont .cont-scene h2 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(26px, 3.4vw, 38px);
+    font-weight: 700; letter-spacing: -0.018em; line-height: 1.15;
+    margin: 0 0 14px;
+  }
+  .fs-cont .cont-scene p { font-size: 17px; line-height: 1.55; color: var(--text-muted); margin: 0 0 12px; }
+  .fs-cont .cont-scene p.lede { font-size: 19px; color: var(--text); }
+
+  .fs-cont .cont-outro {
+    padding: 12vh 0 18vh;
+    border-top: 1px solid var(--border);
+    margin-top: 6vh;
+  }
+  .fs-cont .cont-outro h2 { font-family: 'Libre Franklin', sans-serif; font-size: 28px; margin: 0 0 16px; }
+  .fs-cont .cont-outro .tiles {
+    display: grid; grid-template-columns: 1fr; gap: 12px;
+  }
+  @media (min-width: 600px) { .fs-cont .cont-outro .tiles { grid-template-columns: 1fr 1fr; } }
+  .fs-cont .cont-outro a.tile {
+    display: block; padding: 16px 18px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md);
+    color: var(--text); text-decoration: none;
+  }
+  .fs-cont .cont-outro a.tile:hover { border-color: var(--c-teal); }
+  .fs-cont .cont-outro a.tile strong { display: block; margin-bottom: 4px; }
+  .fs-cont .cont-outro a.tile span { font-size: 13px; color: var(--text-muted); }
+
+  .fs-cont .scene-dots {
+    position: fixed;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 8px;
+    z-index: 80;
+  }
+  @media (max-width: 899px) { .fs-cont .scene-dots { display: none; } }
+  .fs-cont .scene-dots .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--c-text-faint); opacity: 0.5;
+    transition: all 0.25s;
+  }
+  .fs-cont .scene-dots .dot.active { background: var(--c-buoy); opacity: 1; transform: scale(1.4); }
+
+  /* SVG overlay text classes */
+  .fs-cont .ov-title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 800; fill: var(--c-sage);
+    letter-spacing: -0.03em; text-anchor: middle;
+  }
+  .fs-cont .ov-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+    fill: var(--text-subtle); text-anchor: middle;
+  }
+  .fs-cont .ov-stack-label {
+    font-size: 13px; font-weight: 700; fill: var(--text);
+  }
+  .fs-cont .ov-stack-amount {
+    font-size: 12px; fill: var(--text-muted);
+  }
+  .fs-cont .ov-pillar {
+    font-size: 12px; font-weight: 700; fill: var(--text);
+    text-anchor: middle;
+  }
+  .fs-cont .ov-year {
+    font-size: 9px; fill: var(--text-subtle); text-anchor: middle;
+  }
+  .fs-cont .legend-row { font-size: 10px; fill: var(--text-muted); }
+  .fs-cont .legend-row.swatch-text { fill: var(--text); font-weight: 600; }
+</style>
+
+<nav class="fs-bar">
+  <span class="fs-bar-label">Mockup A v2 &middot; Continuous motion &middot; same arc</span>
+  <a href="{{ '/mockups/finance-story/' | relative_url }}">All mockups &rarr;</a>
+</nav>
+
+<div class="scene-dots"></div>
+
+<div class="cont-stage">
+  <div class="cont-pin">
+    <div class="cont-canvas">
+      <svg viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid meet" aria-label="Continuous-motion budget story">
+
+        <!-- Stream-graph year axis (shown only in scene 6) -->
+        <g id="year-axis" style="opacity: 0;">
+          <line x1="80" y1="700" x2="920" y2="700" stroke="var(--text-faint)" stroke-width="0.5"/>
+          <text class="ov-year" x="80"  y="720">FY08</text>
+          <text class="ov-year" x="500" y="720">FY17</text>
+          <text class="ov-year" x="920" y="720">FY26</text>
+        </g>
+
+        <!-- Big $1 overlay (shown only in scene 0) -->
+        <g id="dollar-overlay">
+          <text class="ov-title" x="500" y="430" style="font-size: 220px;">$1</text>
+          <text class="ov-label" x="500" y="500">one taxpayer dollar</text>
+        </g>
+
+        <!-- Stack-label overlay (shown in scenes 1 transition) -->
+        <g id="stack-labels" style="opacity: 0;">
+          <text x="170" y="200" class="ov-stack-label" text-anchor="end">People (~80&cent;)</text>
+          <text x="170" y="430" class="ov-stack-label" text-anchor="end">Set bills (~15&cent;)</text>
+          <text x="170" y="600" class="ov-stack-label" text-anchor="end">Other (~5&cent;)</text>
+        </g>
+
+        <!-- Loaded-cost stack overlay (shown in scene 2) -->
+        <g id="cost-stack" style="opacity: 0;">
+          <text x="500" y="100" class="ov-label">Loaded cost on one $75K hire</text>
+          <rect x="540" y="160" width="320" height="60" rx="6" fill="var(--c-navy)"/>
+          <text x="555" y="198" fill="#fff" font-weight="700" font-size="14">Salary</text>
+          <text x="845" y="198" fill="#fff" font-weight="700" font-size="14" text-anchor="end">$75,000</text>
+
+          <rect x="540" y="230" width="100" height="44" rx="4" fill="var(--c-teal)"/>
+          <text x="555" y="258" fill="#fff" font-weight="600" font-size="12">Pension</text>
+          <text x="845" y="258" font-size="12" fill="var(--text-muted)" text-anchor="end">$12,750</text>
+
+          <rect x="540" y="284" width="80" height="44" rx="4" fill="var(--c-brass)"/>
+          <text x="555" y="312" fill="#fff" font-weight="600" font-size="12">GIC</text>
+          <text x="845" y="312" font-size="12" fill="var(--text-muted)" text-anchor="end">$10,000</text>
+
+          <rect x="540" y="338" width="18" height="44" rx="4" fill="var(--c-plum)"/>
+          <text x="564" y="366" font-size="11" fill="var(--text-muted)">Medicare $1,100</text>
+
+          <rect x="540" y="392" width="12" height="44" rx="4" fill="var(--c-buoy)"/>
+          <text x="558" y="420" font-size="11" fill="var(--text-muted)">Workers' comp + life $900</text>
+
+          <line x1="540" y1="455" x2="860" y2="455" stroke="var(--border)"/>
+          <text x="540" y="488" font-size="14" fill="var(--text-muted)" font-weight="600">Loaded total</text>
+          <text x="860" y="488" font-size="22" fill="var(--c-buoy)" font-weight="800" text-anchor="end">~$99,750</text>
+        </g>
+
+        <!-- Org pillar labels (shown in scene 4) -->
+        <g id="pillar-labels" style="opacity: 0;">
+          <rect x="60" y="100" width="280" height="34" rx="6" fill="var(--c-navy)"/>
+          <text x="200" y="123" class="ov-pillar" fill="#fff">Town &middot; Select Board &rarr; TA</text>
+
+          <rect x="660" y="100" width="280" height="34" rx="6" fill="var(--c-teal)"/>
+          <text x="800" y="123" class="ov-pillar" fill="#fff">Schools &middot; SC &rarr; Superintendent</text>
+
+          <text x="200" y="170" class="ov-label">Police, Fire, DPW, Town Admin, Library &amp; COA</text>
+          <text x="800" y="170" class="ov-label">Instructional &middot; Support staff</text>
+        </g>
+
+        <!-- Boards roster label (shown in scene 5) -->
+        <g id="boards-label" style="opacity: 0;">
+          <text x="500" y="60" class="ov-label">Around the perimeter: ~60 unpaid residents</text>
+          <text x="500" y="80" class="ov-label" style="font-style: italic; letter-spacing: 0.3px;">Select Bd &middot; SC &middot; FinCom &middot; Planning &middot; Cons &middot; ZBA &middot; Health &middot; Rec &middot; Light &middot; Library</text>
+        </g>
+
+        <!-- Trajectory labels (shown in scene 6) -->
+        <g id="trajectory-labels" style="opacity: 0;">
+          <text x="500" y="50" class="ov-stack-label" text-anchor="middle">FTE composition, FY08 to FY26</text>
+          <text x="500" y="72" font-size="12" fill="var(--text-subtle)" text-anchor="middle">Total roughly flat. Mix moved underneath.</text>
+        </g>
+
+        <!-- Dots layer -->
+        <g id="dots-layer"></g>
+
+        <!-- Caption layer (text under the active scene) -->
+        <text id="caption" class="ov-label" x="500" y="780" style="opacity:0;">
+        </text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="cont-scenes">
+    <section class="cont-intro">
+      <p class="eye">Mockup A v2 &middot; Continuous motion</p>
+      <h1>Marblehead spends $127 million a year.<br>Where does it go?</h1>
+      <p>The same arc as Mockup A, rebuilt so the visualization morphs continuously as you scroll instead of swapping between fixed frames. One thousand twenty dots persist the whole way through, taking different shapes as the story unfolds.</p>
+      <p style="font-size:13px;color:var(--text-faint);">Brainstorming mockup. Numbers approximate.</p>
+    </section>
+
+    <section class="cont-scene" data-scene="0">
+      <p class="step-num">Step 1 &middot; A dollar</p>
+      <h2>Start with a single dollar from your tax bill.</h2>
+      <p class="lede">About 75&cent; of every dollar Marblehead collects comes from the property-tax levy. The rest is state aid and local receipts. Same destination.</p>
+      <p>Keep scrolling to follow this dollar.</p>
+    </section>
+
+    <section class="cont-scene" data-scene="1">
+      <p class="step-num">Step 2 &middot; The three shapes</p>
+      <h2>Almost every dollar pays a person.</h2>
+      <p>The dollar split into three shapes. About 80&cent; of the operating budget is total compensation: salary plus the automatic stack of benefits on top. About 15&cent; is set bills the town doesn't control: debt service, state assessments, OPEB. The remaining 5&cent; is supplies, contractors, programs, and capital.</p>
+    </section>
+
+    <section class="cont-scene" data-scene="2">
+      <p class="step-num">Step 3 &middot; The stack on every person</p>
+      <h2>A $75K hire is closer to $100K to the budget.</h2>
+      <p>Every salary line carries an automatic stack: pension contribution to Essex Regional (~17% of pay), the town's share of the GIC health premium, Medicare, workers' comp, life. About 1.33&times; the base salary, on average.</p>
+      <p>When the GIC raises premiums, every line on the payroll rises. That's why the budget can grow even with headcount flat.</p>
+    </section>
+
+    <section class="cont-scene" data-scene="3">
+      <p class="step-num">Step 4 &middot; How many people</p>
+      <h2>About 1,020 people work for the town and schools.</h2>
+      <p>FY26 figures. Roughly 626 on the school side, 394 on the town side. Counts have hovered between 1,020 and 1,210 for two decades.</p>
+      <p>Each dot on screen is one full-time-equivalent position.</p>
+    </section>
+
+    <section class="cont-scene" data-scene="4">
+      <p class="step-num">Step 5 &middot; The hierarchy</p>
+      <h2>All of them report up to one of two elected boards.</h2>
+      <p>The town side runs through the Select Board to the Town Administrator to the departments. The school side runs through the School Committee to the Superintendent to the schools. The two pillars share a tax base. Not much else.</p>
+    </section>
+
+    <section class="cont-scene" data-scene="5">
+      <p class="step-num">Step 6 &middot; The unpaid layer</p>
+      <h2>The decision layer is unpaid.</h2>
+      <p>About sixty residents serve on the elected and appointed boards around the paid workforce: Select Board, School Committee, FinCom, Planning, Conservation, ZBA, Board of Health, Recreation, Light Board, Library Trustees, Moderator.</p>
+      <p>None of them draws a salary for it.</p>
+    </section>
+
+    <section class="cont-scene" data-scene="6">
+      <p class="step-num">Step 7 &middot; Twenty years</p>
+      <h2>The total stayed flat. The mix moved.</h2>
+      <p>School support staff grew with special-education needs. IT was created from zero. Clerical compressed. Public safety and DPW stayed within their long-run ranges. Per-FTE loaded cost grew faster than CPI in nearly every year.</p>
+    </section>
+
+    <section class="cont-outro">
+      <h2>Go deeper</h2>
+      <div class="tiles">
+        <a class="tile" href="{{ '/checkbook/' | relative_url }}"><strong>Checkbook</strong><span>Every FY26 vendor check, drillable.</span></a>
+        <a class="tile" href="{{ '/marblehead-101/' | relative_url }}"><strong>Marblehead 101</strong><span>The full 8-chapter primer.</span></a>
+        <a class="tile" href="{{ '/data/' | relative_url }}"><strong>Data catalog</strong><span>FTE history, benefits, peer towns.</span></a>
+        <a class="tile" href="{{ '/mockups/finance-story/' | relative_url }}"><strong>All mockups</strong><span>Compare v1 versions A, B, C.</span></a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+/* Continuous-motion engine.
+ *
+ * Each of the ~1,080 dots has a pre-computed position at each of 7 scenes.
+ * Scroll position within the scene container is mapped to (sceneIdx, localT).
+ * Each frame, we interpolate every dot's position and opacity between its
+ * scene-N and scene-(N+1) values using an easing function, then write the
+ * new cx/cy/opacity attributes.
+ *
+ * Overlay groups (the big $1, the stack labels, the cost stack, the pillar
+ * labels, the boards label, the trajectory labels) fade in/out with scene
+ * boundaries via their `style.opacity`.
+ */
+(function () {
+  const VIEW_W = 1000, VIEW_H = 800;
+  const DOT_R = 4;
+  const FTE_COUNT = 1020;
+  const BOARD_COUNT = 60;
+  const TOTAL = FTE_COUNT + BOARD_COUNT;
+
+  // Categories (in dot order)
+  const CATS = [
+    { name: 'Instructional', count: 460, color: '#1B3A57', pillar: 'school' },
+    { name: 'Support',       count: 166, color: '#4F6E89', pillar: 'school' },
+    { name: 'Public safety', count: 95,  color: '#C8553D', pillar: 'town'   },
+    { name: 'DPW',           count: 60,  color: '#5B7553', pillar: 'town'   },
+    { name: 'Town admin',    count: 95,  color: '#B8860B', pillar: 'town'   },
+    { name: 'Library/COA/rec', count: 144, color: '#6C4A6E', pillar: 'town' }
+  ];
+  const BOARD_COLOR = '#7A3A6A';
+
+  // Assign category to each FTE dot
+  const dotCat = new Array(TOTAL);
+  let used = 0, bk = 0;
+  for (let i = 0; i < FTE_COUNT; i++) {
+    while (used >= CATS[bk].count && bk < CATS.length - 1) { bk++; used = 0; }
+    dotCat[i] = bk; used++;
+  }
+  for (let i = FTE_COUNT; i < TOTAL; i++) dotCat[i] = 6; // boards
+
+  // Build the dot elements
+  const dotsLayer = document.getElementById('dots-layer');
+  const dots = new Array(TOTAL);
+  const ns = 'http://www.w3.org/2000/svg';
+  for (let i = 0; i < TOTAL; i++) {
+    const c = dotCat[i];
+    const color = c < 6 ? CATS[c].color : BOARD_COLOR;
+    const dot = document.createElementNS(ns, 'circle');
+    dot.setAttribute('r', DOT_R);
+    dot.setAttribute('fill', color);
+    dot.setAttribute('cx', VIEW_W / 2);
+    dot.setAttribute('cy', VIEW_H / 2);
+    dot.setAttribute('opacity', 0);
+    dotsLayer.appendChild(dot);
+    dots[i] = dot;
+  }
+
+  // ----- Per-scene position computation -----
+  //
+  // Each function returns an array of length TOTAL with {x, y, opacity}.
+  //
+  // Convention for scenes where a dot is conceptually "absent" (e.g. boards
+  // before scene 5): set opacity to 0 and place it near where it WILL appear,
+  // so the motion-in feels like a fade-in rather than a fly-in from off-screen.
+
+  function clusterAroundDollar() {
+    // Tight cluster around the big $1, very low opacity (audience reads the $).
+    const pos = new Array(TOTAL);
+    for (let i = 0; i < FTE_COUNT; i++) {
+      const angle = (i / FTE_COUNT) * Math.PI * 2 * 6;
+      const r = 12 + (i * 0.18) % 90;
+      pos[i] = {
+        x: 500 + r * Math.cos(angle),
+        y: 380 + r * Math.sin(angle),
+        opacity: 0
+      };
+    }
+    for (let i = FTE_COUNT; i < TOTAL; i++) {
+      pos[i] = { x: 500, y: 380, opacity: 0 };
+    }
+    return pos;
+  }
+
+  function threeShapes() {
+    // 80% people (816), 15% set bills (153), 5% other (51).
+    // FTE dots fill the "people" band, colored by category.
+    // The set-bills and other-bands are filled by the 60 board dots plus
+    // a few "borrowed" FTE dots at the tail. To keep all 1020 active, we
+    // place the bottom 153 + 51 = 204 in the gray bands.
+    const pos = new Array(TOTAL);
+    const peopleN = 816, setN = 153, otherN = 51; // 816+153+51 = 1020
+    // People band
+    const pCols = 40;
+    const pRows = Math.ceil(peopleN / pCols);
+    const pW = 600, pH = 220;
+    const pX0 = 250, pY0 = 160;
+    for (let i = 0; i < peopleN; i++) {
+      const c = i % pCols, r = Math.floor(i / pCols);
+      pos[i] = {
+        x: pX0 + (c + 0.5) * (pW / pCols),
+        y: pY0 + (r + 0.5) * (pH / pRows),
+        opacity: 1
+      };
+    }
+    // Set-bills band
+    const sCols = 32;
+    const sRows = Math.ceil(setN / sCols);
+    const sX0 = 250, sY0 = 410, sH = 80;
+    for (let i = 0; i < setN; i++) {
+      const idx = peopleN + i;
+      const c = i % sCols, r = Math.floor(i / sCols);
+      pos[idx] = {
+        x: sX0 + (c + 0.5) * (pW / sCols),
+        y: sY0 + (r + 0.5) * (sH / sRows),
+        opacity: 1
+      };
+    }
+    // Other band
+    const oCols = 26;
+    const oRows = Math.ceil(otherN / oCols);
+    const oX0 = 250, oY0 = 580, oH = 40;
+    for (let i = 0; i < otherN; i++) {
+      const idx = peopleN + setN + i;
+      const c = i % oCols, r = Math.floor(i / oCols);
+      pos[idx] = {
+        x: oX0 + (c + 0.5) * (pW / oCols),
+        y: oY0 + (r + 0.5) * (oH / oRows),
+        opacity: 1
+      };
+    }
+    // Boards hidden
+    for (let i = FTE_COUNT; i < TOTAL; i++) {
+      pos[i] = { x: 500, y: 380, opacity: 0 };
+    }
+    return pos;
+  }
+
+  function fteFocus() {
+    // One enlarged dot in the lower-left as a "single FTE" focus.
+    // The cost-stack overlay sits to the right. All other FTE dots fade out.
+    // A small ring of ~40 dots persists around the focal dot as visual texture.
+    const pos = new Array(TOTAL);
+    const focusX = 230, focusY = 330;
+    for (let i = 0; i < FTE_COUNT; i++) {
+      if (i === 0) {
+        pos[i] = { x: focusX, y: focusY, opacity: 0 };
+        continue;
+      }
+      if (i < 60) {
+        // Halo around the focal dot
+        const angle = (i / 60) * Math.PI * 2;
+        const r = 70 + (i * 7) % 60;
+        pos[i] = {
+          x: focusX + r * Math.cos(angle),
+          y: focusY + r * Math.sin(angle),
+          opacity: 0.18
+        };
+      } else {
+        pos[i] = { x: focusX, y: focusY, opacity: 0 };
+      }
+    }
+    for (let i = FTE_COUNT; i < TOTAL; i++) {
+      pos[i] = { x: focusX, y: focusY, opacity: 0 };
+    }
+    return pos;
+  }
+
+  function regularGrid() {
+    // 51 x 20 grid of dots.
+    const pos = new Array(TOTAL);
+    const cols = 51, rows = 20;
+    const startX = 80, startY = 140;
+    const spacingX = 17, spacingY = 26;
+    for (let i = 0; i < FTE_COUNT; i++) {
+      const c = i % cols, r = Math.floor(i / cols);
+      pos[i] = {
+        x: startX + c * spacingX,
+        y: startY + r * spacingY,
+        opacity: 1
+      };
+    }
+    for (let i = FTE_COUNT; i < TOTAL; i++) {
+      pos[i] = { x: VIEW_W / 2, y: -50, opacity: 0 };
+    }
+    return pos;
+  }
+
+  function twoPillars() {
+    // School cluster on the right, town cluster on the left.
+    // Each category gets its own sub-cluster inside its pillar.
+    const pos = new Array(TOTAL);
+    // Town-side cat slots: top=safety, then dpw, admin, other.
+    // School-side cat slots: top=instructional, bottom=support.
+    const slots = {
+      // [pillar, x0, y0, cols, spacingX, spacingY]
+      0: ['school', 580, 180, 25, 14, 13], // instructional
+      1: ['school', 580, 510, 18, 14, 12], // support
+      2: ['town',   80,  180, 14, 14, 13], // safety
+      3: ['town',   80,  310, 12, 14, 13], // dpw
+      4: ['town',   80,  410, 14, 14, 13], // admin
+      5: ['town',   80,  530, 16, 14, 12]  // library/coa/rec
+    };
+    const catProgress = [0, 0, 0, 0, 0, 0];
+    for (let i = 0; i < FTE_COUNT; i++) {
+      const c = dotCat[i];
+      const slot = slots[c];
+      const pidx = catProgress[c]++;
+      const cols = slot[3];
+      const col = pidx % cols, row = Math.floor(pidx / cols);
+      pos[i] = {
+        x: slot[1] + col * slot[4],
+        y: slot[2] + row * slot[5],
+        opacity: 1
+      };
+    }
+    for (let i = FTE_COUNT; i < TOTAL; i++) {
+      pos[i] = { x: VIEW_W / 2, y: -50, opacity: 0 };
+    }
+    return pos;
+  }
+
+  function pillarsPlusBoards() {
+    // Same as twoPillars but the 60 board dots appear in a ring around
+    // the perimeter of the two pillars.
+    const pos = twoPillars();
+    const cx = 500, cy = 380;
+    for (let i = 0; i < BOARD_COUNT; i++) {
+      const angle = (i / BOARD_COUNT) * Math.PI * 2 - Math.PI / 2;
+      const rx = 460, ry = 320;
+      pos[FTE_COUNT + i] = {
+        x: cx + rx * Math.cos(angle),
+        y: cy + ry * Math.sin(angle),
+        opacity: 1
+      };
+    }
+    return pos;
+  }
+
+  function streamGraph() {
+    // Each category's dots arrange into a horizontal strip across the year axis.
+    // The strip's vertical thickness reflects the category's share of total FTE.
+    // We add a small per-year jitter so it looks like a flowing river, not a grid.
+    const pos = new Array(TOTAL);
+    const years = 19; // FY08-FY26
+    const x0 = 80, xN = 920;
+    const yearW = (xN - x0) / years;
+
+    // Vertical band per category, stacked top-to-bottom.
+    const top = 100, totalH = 580;
+    let cumY = top;
+    const bands = CATS.map(cat => {
+      const h = totalH * (cat.count / FTE_COUNT);
+      const band = { top: cumY, bottom: cumY + h, count: cat.count };
+      cumY += h;
+      return band;
+    });
+
+    const catProgress = [0, 0, 0, 0, 0, 0];
+    // Pseudo-random deterministic jitter per dot
+    function jit(i) { return ((i * 9301 + 49297) % 233280) / 233280; }
+
+    for (let i = 0; i < FTE_COUNT; i++) {
+      const c = dotCat[i];
+      const pidx = catProgress[c]++;
+      const catN = CATS[c].count;
+      const dotsPerYear = catN / years;
+      const yearIdx = Math.min(years - 1, Math.floor(pidx / dotsPerYear));
+      const inYear = pidx % dotsPerYear;
+      const band = bands[c];
+      // Slight vertical wobble within the band
+      const wobble = (jit(i) - 0.5) * 6;
+      pos[i] = {
+        x: x0 + yearIdx * yearW + (inYear / dotsPerYear + jit(i * 7) * 0.4) * yearW,
+        y: band.top + (inYear / dotsPerYear) * (band.bottom - band.top) + wobble,
+        opacity: 0.85
+      };
+    }
+    for (let i = FTE_COUNT; i < TOTAL; i++) {
+      pos[i] = { x: VIEW_W / 2, y: -50, opacity: 0 };
+    }
+    return pos;
+  }
+
+  const positions = [
+    clusterAroundDollar(),  // scene 0
+    threeShapes(),          // scene 1
+    fteFocus(),             // scene 2
+    regularGrid(),          // scene 3
+    twoPillars(),           // scene 4
+    pillarsPlusBoards(),    // scene 5
+    streamGraph()           // scene 6
+  ];
+
+  // ----- Overlay opacity per scene -----
+  //
+  // Each overlay is visible during the scene that owns it, fading in early
+  // and out late. We return an opacity per overlay given the current
+  // (sceneIdx, localT).
+
+  function overlayOpacity(scene, localT) {
+    function band(targetScene, fadeIn = 0.15, fadeOut = 0.85) {
+      if (scene < targetScene - 1) return 0;
+      if (scene > targetScene) return 0;
+      if (scene === targetScene - 1) {
+        return localT > fadeOut ? (localT - fadeOut) / (1 - fadeOut) : 0;
+      }
+      if (scene === targetScene) {
+        if (localT < fadeIn) return localT / fadeIn;
+        if (localT > fadeOut) return 1 - (localT - fadeOut) / (1 - fadeOut);
+        return 1;
+      }
+      return 0;
+    }
+    return {
+      dollar:      band(0, 0.0, 0.55),
+      stackLabels: band(1),
+      costStack:   band(2),
+      pillarLabels: band(4),
+      boardsLabel: band(5),
+      trajectoryLabels: band(6, 0.15, 0.95),
+      yearAxis:    band(6, 0.15, 0.95)
+    };
+  }
+
+  // ----- Scroll engine -----
+
+  const scenesEl = document.querySelector('.cont-scenes');
+  const sceneEls = scenesEl.querySelectorAll('.cont-scene');
+  const sceneCount = sceneEls.length; // 7 scenes
+  const dotsHost = document.querySelector('.scene-dots');
+
+  // Build indicator dots
+  sceneEls.forEach((s) => {
+    const d = document.createElement('span');
+    d.className = 'dot';
+    d.dataset.scene = s.dataset.scene;
+    dotsHost.appendChild(d);
+  });
+  const indicatorDots = dotsHost.querySelectorAll('.dot');
+
+  function currentState() {
+    // Find which scene element is most aligned with the viewport center.
+    // sceneIdx is the integer scene; localT is progress through it (0..1).
+    const vpCenter = window.innerHeight * 0.45;
+    let best = { idx: 0, localT: 0, dist: Infinity };
+    sceneEls.forEach((el, idx) => {
+      const r = el.getBoundingClientRect();
+      // localT: how far through this section we are
+      const sectionH = r.height || 1;
+      const elapsed = -r.top + vpCenter;
+      const localT = Math.max(0, Math.min(1, elapsed / sectionH));
+      // Distance from this section's "center" to viewport center
+      const midDist = Math.abs((r.top + sectionH / 2) - vpCenter);
+      if (midDist < best.dist) best = { idx, localT, dist: midDist };
+    });
+    return { sceneIdx: best.idx, localT: best.localT };
+  }
+
+  // Easing: smooth cubic
+  function ease(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  const ov = {
+    dollar: document.getElementById('dollar-overlay'),
+    stackLabels: document.getElementById('stack-labels'),
+    costStack: document.getElementById('cost-stack'),
+    pillarLabels: document.getElementById('pillar-labels'),
+    boardsLabel: document.getElementById('boards-label'),
+    trajectoryLabels: document.getElementById('trajectory-labels'),
+    yearAxis: document.getElementById('year-axis')
+  };
+
+  function render() {
+    const { sceneIdx, localT } = currentState();
+    const fromPos = positions[sceneIdx];
+    const toPos = positions[Math.min(sceneIdx + 1, sceneCount - 1)];
+    const eased = ease(localT);
+    for (let i = 0; i < TOTAL; i++) {
+      const a = fromPos[i], b = toPos[i];
+      const x = a.x + (b.x - a.x) * eased;
+      const y = a.y + (b.y - a.y) * eased;
+      const o = a.opacity + (b.opacity - a.opacity) * eased;
+      const dot = dots[i];
+      dot.setAttribute('cx', x.toFixed(2));
+      dot.setAttribute('cy', y.toFixed(2));
+      dot.setAttribute('opacity', o.toFixed(3));
+    }
+
+    const op = overlayOpacity(sceneIdx, localT);
+    ov.dollar.style.opacity = op.dollar;
+    ov.stackLabels.style.opacity = op.stackLabels;
+    ov.costStack.style.opacity = op.costStack;
+    ov.pillarLabels.style.opacity = op.pillarLabels;
+    ov.boardsLabel.style.opacity = op.boardsLabel;
+    ov.trajectoryLabels.style.opacity = op.trajectoryLabels;
+    ov.yearAxis.style.opacity = op.yearAxis;
+
+    indicatorDots.forEach((d, i) => {
+      d.classList.toggle('active', i === sceneIdx);
+    });
+  }
+
+  let queued = false;
+  function onScroll() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(() => { render(); queued = false; });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  render(); // initial
+})();
+</script>
