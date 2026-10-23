@@ -3,10 +3,10 @@
   "snapshot": {
     "date": "2026-10-21",
     "fiscal_year": "FY27",
-    "row_count": 3685,
-    "total_paid": 42262827.55,
-    "interfund_total": 320513.75,
-    "external_paid": 41942313.8,
+    "row_count": 4369,
+    "total_paid": 43379461.76,
+    "interfund_total": 346484.3,
+    "external_paid": 43032977.46,
     "first_payment": "2026-07-01",
     "last_payment": "2026-10-21",
     "source_file": "checkbook_FY27_2026-10-21.csv"
@@ -16,7 +16,7 @@
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5355158.83,
-      "share": 0.1267,
+      "share": 0.1234,
       "fund_count": 4,
       "top_funds": [
         {
@@ -44,48 +44,48 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 25594841.35,
-      "share": 0.6056,
+      "amount": 26143497.48,
+      "share": 0.6027,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 23576453.73,
-          "row_count": 1474
+          "amount": 23691337.48,
+          "row_count": 1678
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 1487429.84,
-          "row_count": 822
+          "amount": 1856385.69,
+          "row_count": 1016
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
-          "amount": 530957.78,
-          "row_count": 46
+          "amount": 595774.31,
+          "row_count": 55
         }
       ]
     },
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 10257437.28,
-      "share": 0.2427,
+      "amount": 10381768.17,
+      "share": 0.2393,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 6030144.15,
-          "row_count": 415
+          "amount": 6137427.7,
+          "row_count": 493
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
-          "amount": 1401972.29,
-          "row_count": 229
+          "amount": 1409790.04,
+          "row_count": 261
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 1343170.92,
-          "row_count": 109
+          "amount": 1345224.91,
+          "row_count": 123
         },
         {
           "name": "WATER CAPITAL ARTICLES",
@@ -94,8 +94,8 @@
         },
         {
           "name": "SEWER CAPITAL ARTICLES",
-          "amount": 319784.38,
-          "row_count": 12
+          "amount": 320364.72,
+          "row_count": 14
         },
         {
           "name": "A17 2023 MWRA LOAN",
@@ -104,27 +104,37 @@
         },
         {
           "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 208697.2,
-          "row_count": 92
+          "amount": 215292.46,
+          "row_count": 103
         }
       ]
     },
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 288809.84,
-      "share": 0.0068,
-      "fund_count": 16,
+      "amount": 590044.07,
+      "share": 0.0136,
+      "fund_count": 17,
       "top_funds": [
         {
+          "name": "CIRCUIT BREAKER",
+          "amount": 194867.37,
+          "row_count": 13
+        },
+        {
           "name": "SCHOOL LUNCH",
-          "amount": 120120.0,
-          "row_count": 69
+          "amount": 156811.38,
+          "row_count": 104
         },
         {
           "name": "COVID 19 ARPA (FED)",
-          "amount": 53514.73,
-          "row_count": 8
+          "amount": 88410.02,
+          "row_count": 10
+        },
+        {
+          "name": "SPED IDEA 94-142 (240)",
+          "amount": 65529.05,
+          "row_count": 75
         },
         {
           "name": "MAPC ACR Grant",
@@ -132,14 +142,9 @@
           "row_count": 1
         },
         {
-          "name": "CIRCUIT BREAKER",
-          "amount": 25579.05,
-          "row_count": 2
-        },
-        {
-          "name": "SPED IDEA 94-142 (240)",
-          "amount": 20799.39,
-          "row_count": 30
+          "name": "SPED EC (262)",
+          "amount": 15153.59,
+          "row_count": 8
         },
         {
           "name": "JAIL DIVERSION GRANT (FED)",
@@ -147,42 +152,42 @@
           "row_count": 1
         },
         {
-          "name": "SPED EC (262)",
-          "amount": 5414.01,
-          "row_count": 4
-        },
-        {
-          "name": "Mass Cultural Council Grant",
-          "amount": 4097.0,
-          "row_count": 3
+          "name": "MASS REVOLUTION GRANT",
+          "amount": 5000.0,
+          "row_count": 1
         }
       ]
     },
     {
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
-      "amount": 322659.2,
-      "share": 0.0076,
-      "fund_count": 4,
+      "amount": 443577.91,
+      "share": 0.0102,
+      "fund_count": 5,
       "top_funds": [
         {
           "name": "PARK REVOLVING FUND",
-          "amount": 210265.65,
-          "row_count": 132
+          "amount": 283051.44,
+          "row_count": 141
         },
         {
           "name": "WASTE REVOLVING FUND",
-          "amount": 90069.55,
-          "row_count": 18
+          "amount": 136832.21,
+          "row_count": 22
         },
         {
           "name": "COA REVOLVING",
-          "amount": 13227.29,
-          "row_count": 38
+          "amount": 14400.29,
+          "row_count": 44
         },
         {
           "name": "VACCINE REVOLVING FUND",
           "amount": 9096.71,
+          "row_count": 2
+        },
+        {
+          "name": "SCHOOL TUITION REVOLVING",
+          "amount": 197.26,
           "row_count": 2
         }
       ]
@@ -190,9 +195,9 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 443921.05,
-      "share": 0.0105,
-      "fund_count": 35,
+      "amount": 465415.3,
+      "share": 0.0107,
+      "fund_count": 36,
       "top_funds": [
         {
           "name": "GERRY PLAYGROUND DONATION",
@@ -206,8 +211,8 @@
         },
         {
           "name": "MIDDLE SCHOOL STUDENT ACTIVITY",
-          "amount": 28999.74,
-          "row_count": 6
+          "amount": 29049.74,
+          "row_count": 7
         },
         {
           "name": "SCHOOL USER FEES",
@@ -238,19 +243,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 23576453.73,
-    "fixed_total": 21405990.3,
-    "fixed_share": 0.9079,
+    "total": 23691337.48,
+    "fixed_total": 21406039.95,
+    "fixed_share": 0.9035,
     "admin_contracts_total": 805275.94,
-    "admin_contracts_share": 0.0342,
-    "other_recurring_total": 1365187.49,
-    "other_recurring_share": 0.0579,
+    "admin_contracts_share": 0.034,
+    "other_recurring_total": 1480021.59,
+    "other_recurring_share": 0.0625,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 5958615.07,
-        "share": 0.2527,
+        "share": 0.2515,
         "row_count": 42,
         "top_vendors": [
           {
@@ -291,7 +296,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 8254475.24,
-        "share": 0.3501,
+        "share": 0.3484,
         "row_count": 31,
         "top_vendors": [
           {
@@ -304,7 +309,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2478,
+        "share": 0.2466,
         "row_count": 1,
         "top_vendors": [
           {
@@ -316,13 +321,13 @@
       {
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
-        "amount": 1349539.99,
-        "share": 0.0572,
-        "row_count": 29,
+        "amount": 1349589.64,
+        "share": 0.057,
+        "row_count": 31,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 1349539.99
+            "amount": 1349589.64
           }
         ]
       },
@@ -330,7 +335,7 @@
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
         "amount": 805275.94,
-        "share": 0.0342,
+        "share": 0.034,
         "row_count": 53,
         "top_vendors": [
           {
@@ -362,9 +367,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 1365187.49,
-        "share": 0.0579,
-        "row_count": 1318,
+        "amount": 1480021.59,
+        "share": 0.0625,
+        "row_count": 1520,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -383,8 +388,12 @@
             "amount": 64922.43
           },
           {
+            "name": "MAYER TREE SERVICE",
+            "amount": 55000.0
+          },
+          {
             "name": "F W WEBB CO",
-            "amount": 50392.46
+            "amount": 50474.06
           },
           {
             "name": "ALL WEB MAIL ORDER INC",
@@ -393,10 +402,6 @@
           {
             "name": "CLEARGOV INC",
             "amount": 47734.4
-          },
-          {
-            "name": "PURVIS SYSTEMS INC",
-            "amount": 41525.58
           }
         ]
       }
