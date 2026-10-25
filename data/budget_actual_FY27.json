@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
     "all_funds_revised_budget": 135827073.65,
-    "all_funds_actual": 59542322.33,
+    "all_funds_actual": 59541622.33,
     "budgeted_annual": {
       "revised_budget": 127204296.0,
-      "actual": 49787187.77,
+      "actual": 49786487.77,
       "original_budget": 130510456.0
     },
     "other_funds": {
@@ -22,9 +22,9 @@
     {
       "name": "GENERAL FUND - TOWN",
       "revised_budget": 69474315.0,
-      "actual": 29108249.97,
+      "actual": 29107549.97,
       "original_budget": 69331077.0,
-      "encumbrance": 14567174.75
+      "encumbrance": 14567874.75
     },
     {
       "name": "GENERAL FUND - SCHOOL",
@@ -122,9 +122,9 @@
     {
       "name": "POLICE",
       "revised_budget": 5460658.0,
-      "actual": 1642777.69,
+      "actual": 1642077.69,
       "original_budget": 5415360.0,
-      "encumbrance": 2799611.9
+      "encumbrance": 2800311.9
     },
     {
       "name": "BROWN SCHOOL",
@@ -418,9 +418,9 @@
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 15114162.0,
-      "actual": 5949032.99,
+      "actual": 5948332.99,
       "original_budget": 14336656.0,
-      "encumbrance": 6554580.58
+      "encumbrance": 6555280.58
     },
     {
       "name": "GOVERNMENTAL",
@@ -490,9 +490,9 @@
     {
       "name": "EXPENSES",
       "revised_budget": 20339169.0,
-      "actual": 17782893.85,
+      "actual": 17782193.85,
       "original_budget": 24880169.0,
-      "encumbrance": 2274154.61
+      "encumbrance": 2274854.61
     },
     {
       "name": "GROUP INSURANCE",
@@ -1556,9 +1556,9 @@
     {
       "name": "R&M OTHER EQUIPMENT",
       "revised_budget": 192698.0,
-      "actual": 57873.95,
+      "actual": 57173.95,
       "original_budget": 192698.0,
-      "encumbrance": 21968.02
+      "encumbrance": 22668.02
     },
     {
       "name": "NIGHT DIFF",
