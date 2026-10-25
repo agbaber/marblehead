@@ -1,11 +1,11 @@
 {
-  "as_of": "2026-10-21",
+  "as_of": "2026-10-25",
   "fiscal_year": "FY26",
   "checkbook_period_end": "2026-06-01",
   "source": "data/operating_budget_FY26.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
-    "all_funds_revised_budget": 217950891.53,
+    "all_funds_revised_budget": 218331548.58,
     "all_funds_actual": 165388482.69,
     "budgeted_annual": {
       "revised_budget": 127338097.88,
@@ -13,7 +13,7 @@
       "original_budget": 123810031.12
     },
     "other_funds": {
-      "revised_budget": 90612793.65,
+      "revised_budget": 90993450.7,
       "actual": 29465104.49,
       "original_budget": 43189750.53
     }
@@ -1729,7 +1729,7 @@
       "encumbrance": 0.0
     },
     {
-      "name": "WORKING FOREMAN CONSTRUCTION",
+      "name": "WORKING FOREMAN STORMWATER",
       "revised_budget": 78369.86,
       "actual": 77518.54,
       "original_budget": 0.0,
