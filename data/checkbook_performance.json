@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-10-21",
+  "as_of": "2026-10-24",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 4,
-  "fy_pct_elapsed": 31.0,
+  "fy_pct_elapsed": 31.8,
   "budget_execution": {
     "by_department": [
       {
@@ -686,8 +686,8 @@
     },
     {
       "month": "2026-10",
-      "amount": 3629107.64,
-      "count": 759
+      "amount": 3628407.64,
+      "count": 760
     }
   ],
   "drill": {
@@ -1817,8 +1817,8 @@
           },
           {
             "month": "2026-10",
-            "amount": 2475682.02,
-            "count": 234
+            "amount": 2474982.02,
+            "count": 235
           }
         ]
       },
