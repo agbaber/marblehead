@@ -1,20 +1,20 @@
 {
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-27",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-10-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
     "all_funds_revised_budget": 135827073.65,
-    "all_funds_actual": 59541622.33,
+    "all_funds_actual": 59881879.74,
     "budgeted_annual": {
       "revised_budget": 127204296.0,
-      "actual": 49786487.77,
+      "actual": 50120776.57,
       "original_budget": 130510456.0
     },
     "other_funds": {
       "revised_budget": 8622777.65,
-      "actual": 9755134.56,
+      "actual": 9761103.17,
       "original_budget": 2400000.0
     }
   },
@@ -24,21 +24,21 @@
       "revised_budget": 69474315.0,
       "actual": 29107549.97,
       "original_budget": 69331077.0,
-      "encumbrance": 14567874.75
+      "encumbrance": 14574025.75
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
       "actual": 8772410.36,
       "original_budget": 47620287.0,
-      "encumbrance": 35225760.52
+      "encumbrance": 35232524.88
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
       "revised_budget": 4465301.0,
-      "actual": 4056287.18,
+      "actual": 4390575.98,
       "original_budget": 6865301.0,
-      "encumbrance": 3107889.81
+      "encumbrance": 2773601.01
     },
     {
       "name": "SEWER ENTERPRISE OPERATING",
@@ -52,7 +52,7 @@
       "revised_budget": 1669500.0,
       "actual": 400002.2,
       "original_budget": 1669500.0,
-      "encumbrance": 458735.43
+      "encumbrance": 459035.43
     },
     {
       "name": "GENERAL FUND - TAX ARTICLES",
@@ -82,14 +82,14 @@
       "revised_budget": 12884420.6,
       "actual": 2796576.41,
       "original_budget": 13090519.6,
-      "encumbrance": 7856126.98
+      "encumbrance": 7862610.58
     },
     {
       "name": "HIGH SCHOOL",
       "revised_budget": 11559661.33,
       "actual": 1984305.23,
       "original_budget": 11552590.13,
-      "encumbrance": 8620373.96
+      "encumbrance": 8620563.96
     },
     {
       "name": "DEBT SERVICE",
@@ -136,16 +136,16 @@
     {
       "name": "WATER",
       "revised_budget": 4465301.0,
-      "actual": 4056287.18,
+      "actual": 4390575.98,
       "original_budget": 6865301.0,
-      "encumbrance": 3107889.81
+      "encumbrance": 2773601.01
     },
     {
       "name": "GLOVER SCHOOL",
       "revised_budget": 4350141.96,
       "actual": 775029.36,
       "original_budget": 4284992.96,
-      "encumbrance": 3585399.65
+      "encumbrance": 3585490.41
     },
     {
       "name": "PUBLIC WORKS",
@@ -194,21 +194,21 @@
       "revised_budget": 1669500.0,
       "actual": 400002.2,
       "original_budget": 1669500.0,
-      "encumbrance": 458735.43
+      "encumbrance": 459035.43
     },
     {
       "name": "ABBOT LIBRARY",
       "revised_budget": 1595790.0,
       "actual": 437145.15,
       "original_budget": 1595790.0,
-      "encumbrance": 867103.58
+      "encumbrance": 868454.58
     },
     {
       "name": "PARKS & RECREATION",
       "revised_budget": 1109588.0,
       "actual": 310309.12,
       "original_budget": 1088429.0,
-      "encumbrance": 508391.25
+      "encumbrance": 508591.25
     },
     {
       "name": "CAPITAL ADMINISTRATION",
@@ -243,7 +243,7 @@
       "revised_budget": 701225.0,
       "actual": 206657.47,
       "original_budget": 701225.0,
-      "encumbrance": 309547.13
+      "encumbrance": 313847.13
     },
     {
       "name": "BUILDING INSPECTION",
@@ -334,7 +334,7 @@
       "revised_budget": 105000.0,
       "actual": 544.95,
       "original_budget": 105000.0,
-      "encumbrance": 76550.36
+      "encumbrance": 76850.36
     },
     {
       "name": "MEMORIAL & VETERANS DAY",
@@ -413,21 +413,21 @@
       "revised_budget": 39091074.0,
       "actual": 22694721.53,
       "original_budget": 39082074.0,
-      "encumbrance": 115367.94
+      "encumbrance": 115621.48
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 15114162.0,
       "actual": 5948332.99,
       "original_budget": 14336656.0,
-      "encumbrance": 6555280.58
+      "encumbrance": 6563421.58
     },
     {
       "name": "GOVERNMENTAL",
       "revised_budget": 9000026.0,
-      "actual": 2352248.51,
+      "actual": 2686537.31,
       "original_budget": 9000026.0,
-      "encumbrance": 3464429.6
+      "encumbrance": 3130140.8
     },
     {
       "name": "OTHER SALARIES",
@@ -441,7 +441,7 @@
       "revised_budget": 2461324.0,
       "actual": 631360.68,
       "original_budget": 2458724.0,
-      "encumbrance": 568409.7
+      "encumbrance": 573230.52
     },
     {
       "name": "CAPITAL",
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 8772410.36,
       "original_budget": 47615287.0,
-      "encumbrance": 35225760.52
+      "encumbrance": 35232524.88
     },
     {
       "name": "SALARIES",
@@ -492,7 +492,7 @@
       "revised_budget": 20339169.0,
       "actual": 17782193.85,
       "original_budget": 24880169.0,
-      "encumbrance": 2274854.61
+      "encumbrance": 2281305.61
     },
     {
       "name": "GROUP INSURANCE",
@@ -511,9 +511,9 @@
     {
       "name": "MASS WATER RESOURCES AUTHORITY",
       "revised_budget": 3596779.0,
-      "actual": 1002866.4,
+      "actual": 1337155.2,
       "original_budget": 3596779.0,
-      "encumbrance": 2340021.6
+      "encumbrance": 2005732.8
     },
     {
       "name": "SOUTH ESSEX SEWER DISTRICT",
@@ -1045,9 +1045,9 @@
     {
       "name": "MASS WATER RESOURCE AUTHORITY",
       "revised_budget": 3596779.0,
-      "actual": 1002866.4,
+      "actual": 1337155.2,
       "original_budget": 3596779.0,
-      "encumbrance": 2340021.6
+      "encumbrance": 2005732.8
     },
     {
       "name": "INSTRUCTIONAL ASSISTANTS",
@@ -1145,7 +1145,7 @@
       "revised_budget": 1236179.0,
       "actual": 305732.68,
       "original_budget": 1236179.0,
-      "encumbrance": 267175.12
+      "encumbrance": 268526.12
     },
     {
       "name": "INSURANCE PREMIUMS",
@@ -1243,7 +1243,7 @@
       "revised_budget": 653928.0,
       "actual": 18319.13,
       "original_budget": 653928.0,
-      "encumbrance": 612002.31
+      "encumbrance": 613502.31
     },
     {
       "name": "CAPTAIN",
@@ -1264,7 +1264,7 @@
       "revised_budget": 619218.0,
       "actual": 177318.25,
       "original_budget": 616618.0,
-      "encumbrance": 172319.24
+      "encumbrance": 172410.0
     },
     {
       "name": "OTHER PROF & TECHNICAL",
@@ -1453,7 +1453,7 @@
       "revised_budget": 271180.0,
       "actual": 98402.31,
       "original_budget": 271180.0,
-      "encumbrance": 137917.33
+      "encumbrance": 138717.33
     },
     {
       "name": "MECHANIC PIPEFITTER",
@@ -1586,7 +1586,7 @@
       "revised_budget": 180262.0,
       "actual": 36072.68,
       "original_budget": 180262.0,
-      "encumbrance": 45837.09
+      "encumbrance": 50527.6
     },
     {
       "name": "OTHER SALARIES - STIPENDS",
@@ -2027,7 +2027,7 @@
       "revised_budget": 68521.0,
       "actual": 5778.0,
       "original_budget": 68521.0,
-      "encumbrance": 1028.1
+      "encumbrance": 1218.1
     },
     {
       "name": "BILLING TECH",
@@ -2160,7 +2160,7 @@
       "revised_budget": 59151.0,
       "actual": 5237.11,
       "original_budget": 59151.0,
-      "encumbrance": 1987.55
+      "encumbrance": 2241.09
     },
     {
       "name": "ATHLETICS OFFICIALS SALARIES",
@@ -2349,7 +2349,7 @@
       "revised_budget": 35750.0,
       "actual": 9250.49,
       "original_budget": 35750.0,
-      "encumbrance": 1988.62
+      "encumbrance": 2028.17
     },
     {
       "name": "POLICE POST STIPEND",
@@ -2510,7 +2510,7 @@
       "revised_budget": 22442.0,
       "actual": 1895.83,
       "original_budget": 22442.0,
-      "encumbrance": 3435.46
+      "encumbrance": 7735.46
     },
     {
       "name": "EQUIPMENT (REPLACEMENT)",
