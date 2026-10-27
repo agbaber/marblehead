@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-10-24",
+    "date": "2026-10-26",
     "fiscal_year": "FY27",
-    "row_count": 4370,
-    "total_paid": 43378761.76,
+    "row_count": 4373,
+    "total_paid": 43720313.6,
     "interfund_total": 346484.3,
-    "external_paid": 43032277.46,
+    "external_paid": 43373829.3,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-10-24",
-    "source_file": "checkbook_FY27_2026-10-24.csv"
+    "last_payment": "2026-10-26",
+    "source_file": "checkbook_FY27_2026-10-26.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5355158.83,
-      "share": 0.1235,
+      "share": 0.1225,
       "fund_count": 4,
       "top_funds": [
         {
@@ -44,14 +44,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 26142797.48,
-      "share": 0.6027,
+      "amount": 26150029.72,
+      "share": 0.5981,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 23690637.48,
-          "row_count": 1679
+          "amount": 23697869.72,
+          "row_count": 1680
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -68,8 +68,8 @@
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 10381768.17,
-      "share": 0.2393,
+      "amount": 10716056.97,
+      "share": 0.2451,
       "fund_count": 7,
       "top_funds": [
         {
@@ -78,14 +78,14 @@
           "row_count": 493
         },
         {
+          "name": "WATER ENTERPRISE OPERATING",
+          "amount": 1679513.71,
+          "row_count": 124
+        },
+        {
           "name": "SEWER ENTERPRISE OPERATING",
           "amount": 1409790.04,
           "row_count": 261
-        },
-        {
-          "name": "WATER ENTERPRISE OPERATING",
-          "amount": 1345224.91,
-          "row_count": 123
         },
         {
           "name": "WATER CAPITAL ARTICLES",
@@ -112,8 +112,8 @@
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 590044.07,
-      "share": 0.0136,
+      "amount": 590074.87,
+      "share": 0.0135,
       "fund_count": 17,
       "top_funds": [
         {
@@ -123,8 +123,8 @@
         },
         {
           "name": "SCHOOL LUNCH",
-          "amount": 156811.38,
-          "row_count": 104
+          "amount": 156842.18,
+          "row_count": 105
         },
         {
           "name": "COVID 19 ARPA (FED)",
@@ -162,7 +162,7 @@
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
       "amount": 443577.91,
-      "share": 0.0102,
+      "share": 0.0101,
       "fund_count": 5,
       "top_funds": [
         {
@@ -196,7 +196,7 @@
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
       "amount": 465415.3,
-      "share": 0.0107,
+      "share": 0.0106,
       "fund_count": 36,
       "top_funds": [
         {
@@ -243,11 +243,11 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 23690637.48,
+    "total": 23697869.72,
     "fixed_total": 21406039.95,
-    "fixed_share": 0.9036,
-    "admin_contracts_total": 805275.94,
-    "admin_contracts_share": 0.034,
+    "fixed_share": 0.9033,
+    "admin_contracts_total": 812508.18,
+    "admin_contracts_share": 0.0343,
     "other_recurring_total": 1479321.59,
     "other_recurring_share": 0.0624,
     "segments": [
@@ -255,7 +255,7 @@
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 5958615.07,
-        "share": 0.2515,
+        "share": 0.2514,
         "row_count": 42,
         "top_vendors": [
           {
@@ -296,7 +296,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 8254475.24,
-        "share": 0.3484,
+        "share": 0.3483,
         "row_count": 31,
         "top_vendors": [
           {
@@ -309,7 +309,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2467,
+        "share": 0.2466,
         "row_count": 1,
         "top_vendors": [
           {
@@ -322,7 +322,7 @@
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
         "amount": 1349589.64,
-        "share": 0.057,
+        "share": 0.0569,
         "row_count": 31,
         "top_vendors": [
           {
@@ -334,9 +334,9 @@
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 805275.94,
-        "share": 0.034,
-        "row_count": 53,
+        "amount": 812508.18,
+        "share": 0.0343,
+        "row_count": 54,
         "top_vendors": [
           {
             "name": "REPUBLIC SERVICES INC",
@@ -348,7 +348,7 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 131706.61
+            "amount": 138938.85
           },
           {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
@@ -418,7 +418,7 @@
       "row_count": 20,
       "first_paid": "2026-07-20",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 38,
+      "days_since_last_paid": 40,
       "status": "active",
       "top_vendors": [
         {
@@ -458,7 +458,7 @@
       "row_count": 3,
       "first_paid": "2026-07-08",
       "last_paid": "2026-09-03",
-      "days_since_last_paid": 51,
+      "days_since_last_paid": 53,
       "status": "engineering",
       "top_vendors": [
         {
@@ -483,7 +483,7 @@
       "row_count": 3,
       "first_paid": "2026-09-16",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 38,
+      "days_since_last_paid": 40,
       "status": "active",
       "top_vendors": [
         {
@@ -513,7 +513,7 @@
       "row_count": 3,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-18",
-      "days_since_last_paid": 36,
+      "days_since_last_paid": 38,
       "status": "active",
       "top_vendors": [
         {

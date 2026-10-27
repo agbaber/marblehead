@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-26",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 4,
-  "fy_pct_elapsed": 31.8,
+  "fy_pct_elapsed": 32.3,
   "budget_execution": {
     "by_department": [
       {
@@ -686,8 +686,8 @@
     },
     {
       "month": "2026-10",
-      "amount": 3628407.64,
-      "count": 760
+      "amount": 3969959.48,
+      "count": 763
     }
   ],
   "drill": {
@@ -1770,8 +1770,8 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 134923.11,
-            "count": 22
+            "amount": 142155.35,
+            "count": 23
           },
           {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
@@ -1817,8 +1817,8 @@
           },
           {
             "month": "2026-10",
-            "amount": 2474982.02,
-            "count": 235
+            "amount": 2482214.26,
+            "count": 236
           }
         ]
       },
@@ -2607,8 +2607,8 @@
           },
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 12158.66,
-            "count": 4
+            "amount": 12189.46,
+            "count": 5
           },
           {
             "name": "THURSTON FOODS INC",
@@ -2674,8 +2674,8 @@
           },
           {
             "month": "2026-10",
-            "amount": 46005.28,
-            "count": 37
+            "amount": 46036.08,
+            "count": 38
           }
         ]
       },
@@ -3182,8 +3182,8 @@
         "top_vendors": [
           {
             "name": "MASSACHUSETTS WATER RESOURCES AUTHORITY",
-            "amount": 1002866.4,
-            "count": 3
+            "amount": 1337155.2,
+            "count": 4
           },
           {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
@@ -3259,8 +3259,8 @@
           },
           {
             "month": "2026-10",
-            "amount": 32345.59,
-            "count": 25
+            "amount": 366634.39,
+            "count": 26
           }
         ]
       }
