@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-10-26",
+  "as_of": "2026-10-27",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 4,
-  "fy_pct_elapsed": 32.3,
+  "fy_pct_elapsed": 32.6,
   "budget_execution": {
     "by_department": [
       {
@@ -75,6 +75,13 @@
         "actual": 0,
         "delta": -9500.0,
         "pct": 0.0
+      },
+      {
+        "name": "WATER",
+        "revised": 4465301.0,
+        "actual": 4390575.98,
+        "delta": -74725.02,
+        "pct": 98.33
       },
       {
         "name": "ELECTION & REGISTRATION",
@@ -152,13 +159,6 @@
         "actual": 135129.21,
         "delta": -388418.79,
         "pct": 25.81
-      },
-      {
-        "name": "WATER",
-        "revised": 4465301.0,
-        "actual": 4056287.18,
-        "delta": -409013.82,
-        "pct": 90.84
       },
       {
         "name": "BUILDING INSPECTION",
@@ -403,9 +403,9 @@
       {
         "name": "WATER",
         "revised": 4465301.0,
-        "actual": 4056287.18,
-        "delta": -409013.82,
-        "pct": 90.84
+        "actual": 4390575.98,
+        "delta": -74725.02,
+        "pct": 98.33
       },
       {
         "name": "GLOVER SCHOOL",
@@ -686,8 +686,8 @@
     },
     {
       "month": "2026-10",
-      "amount": 3969959.48,
-      "count": 763
+      "amount": 3973453.32,
+      "count": 764
     }
   ],
   "drill": {
@@ -1817,8 +1817,8 @@
           },
           {
             "month": "2026-10",
-            "amount": 2482214.26,
-            "count": 236
+            "amount": 2485708.1,
+            "count": 237
           }
         ]
       },
