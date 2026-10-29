@@ -5,7 +5,10 @@ vendor checkbook through October 15, 2026 (3,681 rows, $41.74M), the
 archived FY26 checkbook (full year, 17,903 rows, $113.96M), the Open
 Budget portal's monthly exports through fiscal month October 2026
 (payroll included), FY25 department actuals from the same portal, and the
-primary sources cited inline. Every table quoted here is in the
+primary sources cited inline. Checked on 2026-10-29 against the Town's
+own "Fiscal Year 2027 First Quarter Update" of October 27, 2026
+(archived as `data/2026-10-27_FY27_Q1_Update.txt`; section 12). Every
+table quoted here is in the
 companion file `2026-10-22-fy27-checkbook-vs-fy26-tables.md`, generated
 by `scripts/analysis_checkbook_yoy.py`; re-run the script to regenerate
 both the companion and the numbers below. Dollar figures are cash-basis
@@ -22,13 +25,14 @@ vendor payments unless marked "budget portal".*
    they reconcile to Article 29 almost to the dollar on the municipal
    side: public safety $547,635 in the portal against $546,946
    appropriated; human services $196,171 against $196,171.
-3. Article 29's year-one appropriation has no school line, and the
-   portal's FY27 school budget equals the no-override proposal exactly
-   ($47,620,287). How and when the $8.5M school share phases in is the
-   biggest open question in this document.
+3. The school share of the override is $0 in FY27 by design. The
+   Town's first-quarter update gives the phase-in: schools receive
+   $5,152,733 in FY28 and $3,349,502 in FY29. The FY27 school budget is
+   the no-override figure, $47,620,287, which is what the portal shows.
 4. The GIC health bill is up 8.7% to 8.8% in every month so far, not
    flat. The Finance Committee's March projection was 4% to 8% for rates;
-   the bill also moves with enrollment.
+   the bill also moves with enrollment. The Town's own update reports
+   health insurance cost "up 11% over the first quarter of last year".
 5. Pension was paid in full on July 1: $5.84M, up 8.6%, matching the
    "up half a million" the CFO gave Town Meeting.
 6. Debt service is up only 1.8% so far, but the FY27 budget is up 17.8%
@@ -81,6 +85,7 @@ Data vintage:
 | Budget portal FY26, FY27 | monthly, FY27 through October (partial) | `data/operating_budget_FY2{6,7}.csv` |
 | Budget portal FY25 | year-end department actuals only | `data/budget_actual_FY25.json` |
 | No-override FY27 proposal | by department | `data/town_budget_FY27.json` |
+| Town's FY27 first-quarter update | quarter ended 2026-09-30, dated 2026-10-27 | `data/2026-10-27_FY27_Q1_Update.txt` (pdftotext of the Current's copy) |
 
 ## 2. Headline
 
@@ -111,35 +116,48 @@ article (section 5). The state and federal bucket is ARPA winding down
 
 Town Meeting's Article 29 (May 4, 2026) appropriated supplemental FY27
 funds "contingent upon the passage of a Proposition 2.5 override", by
-function. Tier 3 passed on June 9. The motion as read (Town Meeting
-transcript, 1:50:27):
+function. Tier 3 passed on June 9. The Town's first-quarter update
+(October 27, 2026, Appendix 1) then published the revised FY27 general
+fund budget it built "to incorporate the override": $98,822,778 from
+Town Meeting plus $4,296,718 of override, $103,119,496 in all, with the
+override column by department.
 
-| Function | Tier 3, year one (Article 29) | Portal adopted minus no-override proposal | Difference |
+| Function | Article 29, Tier 3 year one | Town's revised budget, override column | Portal adopted minus no-override proposal |
 |---|---:|---:|---:|
-| General government | $1,250,302 | $1,350,302 | +$100,000 |
-| Public safety | $546,946 | $547,635 | +$689 |
-| Public works and facilities | $477,286 | $646,986 | +$169,700 |
-| Human services | $196,171 | $196,171 | $0 |
-| Culture and recreation | $973,941 | $823,552 | -$150,389 |
-| Other general government | $852,072 | -$719,743 | -$1,571,815 |
-| Schools | (no line in the motion) | -$127,499 | |
-| **Total, year one** | **$4,296,718** | | |
+| General government | $1,250,302 | $1,360,302 | $1,350,302 |
+| Public safety | $546,946 | $537,635 | $547,635 |
+| Public works and facilities | $477,286 | $526,986 | $646,986 |
+| Human services | $196,171 | $196,171 | $196,171 |
+| Culture and recreation | $973,941 | $823,552 | $823,552 |
+| Other general government | $852,072 | -$147,928 | -$719,743 |
+| Capital funding | (inside the line above) | $1,000,000 | $1,000,000 |
+| Schools | (no line) | $0 | -$127,499 |
+| **Total** | **$4,296,718** | **$4,296,718** | |
 
-The right-hand column is the FY27 original budget in the portal minus
-the department's line in the "FY27 Proposed Budget, No Override"
-document (`data/town_budget_FY27.json`), summed over the 37 departments
-that match by name. Public safety and human services reconcile. General
-government is $100,000 over; public works $169,700 over, partly a scope
-difference (the proposal's "Public Works (Highway, Tree, Drains)" line
-does not map cleanly onto the portal's separate PUBLIC WORKS and DRAINS
-departments). Culture and recreation is $150K under. "Other general
-government" (benefits, insurance, reserves) is $592K *below* the
-no-override proposal in the portal even though Article 29 added $852K
-there; the most likely explanation is a re-estimate of health insurance
-after the GIC rates came in lower than the proposal assumed (Finance
-Committee, March 2, 2026: "GIC rate increases for FY27 are now projected
-at roughly 4 to 8% in the aggregate, down from an earlier 8 to 12%
-estimate"), but that is a hypothesis for the CFO, not a finding.
+Three readings of the same $4,296,718. The middle column is the Town's
+own allocation. Against the Article 29 motion it moves $150,389 out of
+culture and recreation and $9,311 out of public safety into general
+government (+$110,000) and public works (+$49,700); the sum of the moves
+is zero. "Other general government" nets to -$147,928 because the
+override adds $470,433 of reserves (workers' compensation $97,662,
+stabilization $250,000, OPEB $96,771, Finance Committee reserve
+$26,000) and removes $592,361 of unemployment cost that had been
+budgeted for layoffs that did not happen; add the $1,000,000 capital
+line and it is Article 29's $852,072 exactly.
+
+The right-hand column is what this document reconstructed before the
+Town published Appendix 1: the FY27 original budget in the portal minus
+each department's line in the February "no override" proposal, over the
+37 departments that match by name. It lands within $10,000 of the Town's
+column on general government and public safety; the residue is two
+lines where the proposal differs from the final Town Meeting budget
+(Human Resources and Building Inspections, $10,000 each) and Fire's
+$143,238 from Article 19, which sits outside the portal's original
+budget. Public works is $120,000 over because the proposal's "Public
+Works (Highway, Tree, Drains)" line does not map onto the portal's
+separate PUBLIC WORKS and DRAINS departments; the $592,361 unemployment
+reduction explains all of the "other general government" gap. Appendix
+1 supersedes the reconstruction.
 
 ### 3b. Department by department
 
@@ -171,6 +189,23 @@ proposal, modest or negative against FY26. Harbor is also $350,000 above
 its proposal line, but harbor is an enterprise funded by user fees, not
 the override.
 
+The Town's Appendix 2 itemizes the same money as $1,711,376 of restored
+cuts and $1,135,342 of new positions and services (plus the $1,000,000
+capital and $450,000 maintenance lines): library salaries and materials
+$699,779 and two part-time library hires $38,378; Community Development
+salaries $307,975 and a $70,000 grant revenue and development
+coordinator; DPW salaries and materials $200,594 plus a GIS position,
+a heavy equipment operator and a foreman at $70,000 to $74,000 each;
+four firefighters $296,000; the police student resource officer $67,482
+and two officers $130,964; two Public Buildings custodians $122,554;
+Finance's IT director $150,000, budget analyst $70,000 and $147,648 of
+restored clerk, training and equipment lines; Council on Aging salaries
+$76,171 plus a part-time social worker $45,000; mental health
+counseling $60,000; a cemetery laborer $58,392; a Town Clerk special
+clerk $66,125; Building Inspections software $43,189; a Recreation and
+Parks groundskeeper $43,395 and $42,000 of utilities and park
+maintenance.
+
 ### 3c. First-quarter payroll, July to September (budget portal)
 
 Operating actuals with transfers, assessments and placeholders excluded;
@@ -194,16 +229,23 @@ salaries are the three salary categories.
 
 Reading it with the commitments:
 
-| Commitment | Budget signal | Q1 payroll signal | Data-side read |
+| Commitment | Budget signal | Q1 payroll signal | Town's hiring status, Oct 27 |
 |---|---|---|---|
-| #10 Library restored | +$738K vs proposal, +6.9% vs FY26 | salaries +5.8% | funded; staffing level roughly FY26 |
-| #11 Police SRO, 29 to 33 officers | +$198K vs proposal, +8.6% vs FY26 | salaries +12.4% | growing, cannot separate heads from the new contract |
-| #12 Fire, four firefighters | +$296K vs proposal, +13.0% vs FY26 | salaries +19.5% | growing; the Local 2043 FY27 to FY29 contract (Article 19) is also in this number |
-| #13 DPW restoration plus 4 | +$589K vs proposal, +15.7% vs FY26 | salaries +8.4% | funded, hiring partly visible |
-| #14 Public Buildings custodians, $450K maintenance | +$523K vs proposal | salaries +32.2% on a small base | funded; maintenance spend not yet visible in Q1 |
-| #15 Community Development hires | +$378K vs proposal | salaries -25.9% | funded, not yet hired as of September |
+| #10 Library restored | +$738K vs proposal, +6.9% vs FY26 | salaries +5.8% | part-time custodian hired in September; part-time assistant interviewing |
+| #11 Police SRO, 29 to 33 officers | +$198K vs proposal, +8.6% vs FY26 | salaries +12.4% | one officer in the academy; a second to be hired in January |
+| #12 Fire, four firefighters | +$296K vs proposal, +13.0% vs FY26 | salaries +19.5% | two started August 6; two in process |
+| #13 DPW restoration plus 4 | +$589K vs proposal, +15.7% vs FY26 | salaries +8.4% | heavy equipment operator filled; GIS and foreman job descriptions being drafted |
+| #14 Public Buildings custodians, $450K maintenance | +$523K vs proposal | salaries +32.2% on a small base | facilities maintenance manager job description being finalized; $276,000 of facility maintenance funds in the budget |
+| #15 Community Development hires | +$378K vs proposal | salaries -25.9% | grant coordinator job description being finalized; vacancies named as an "area of focus" |
 | #16 $60K counseling via Health | +$60,000 vs proposal, exact | salaries +14.4% | funded |
-| #17 $1M recurring capital | $1,000,000 new line | $98,223 spent through September | funded, early |
+| #17 $1M recurring capital | $1,000,000 new line | $98,223 spent through September | earmarked for Mary Alley alternative bids, police and fire building work, school gym lighting, Village field structure, Brown playground shade, snow equipment |
+
+The Town's count is "6 of 16 override-funded hires in place" as of
+October: two firefighters, one police officer, the DPW heavy equipment
+operator, the library custodian, and the budget analyst role, whose
+"duties [were] assumed by Town Accountant for an annual stipend". Five
+positions were still at the job-description stage, four in process, one
+with a candidate selected.
 
 The salary growth in public safety cannot be split between new positions
 and the collective bargaining agreements Town Meeting funded ($1.3M on
@@ -213,38 +255,45 @@ the fall payrolls settle.
 
 ### 3d. Schools
 
-The data and the record agree once the tracker's wording is read
-carefully, and the agreement is not what the phrase "$8.5M for schools"
-suggests for this year.
+The school share of the override is $0 in FY27 by design. The Town's
+first-quarter update publishes the phase-in that the tracker and the
+April presentation never showed in dollars:
+
+| | FY27 | FY28 | FY29 | Cumulative |
+|---|---:|---:|---:|---:|
+| Town | $4,296,718 | $1,170,782 | $1,030,267 | $6,497,766 |
+| Schools | $0 | $5,152,733 | $3,349,502 | $8,502,234 |
+| Total | $4,296,718 | $6,323,514 | $4,379,768 | $15,000,000 |
+
+The planned school uses start in FY28 (contractual salary increases,
+out-of-district special education tuition, free full-day kindergarten,
+revolving-fund positions returned to the general fund, technology
+leases, curriculum and professional development) and FY29 adds the
+post-graduate special education program and the school building capital
+fund. That is consistent with everything the data showed:
 
 - The portal's FY27 school budget by cost center sums to $47,620,287,
-  which is the "VOTE TOTAL SCHOOLS" line of the no-override proposal to
-  the dollar. The proposal cut schools from $49,120,287.
+  the "VOTE TOTAL SCHOOLS" line of the no-override proposal to the
+  dollar, and Appendix 1 of the Q1 update carries the School Department
+  at $47,620,287 with an override column of zero.
 - Article 29's year-one motion lists six municipal functions and no
-  school line. The CFO's 10-year forecast (Select Board, August 12,
-  2026) describes FY27 as "drawing $4.2M off the levy per the MOU",
-  which is the municipal Tier 3 figure.
-- The tracker's own text for the school items describes preservation,
-  not restoration, in FY27: #18, "$6.2M school-side floor preserves the
-  staffing left after the FY27 balanced budget eliminated 18.25 FTEs";
-  #19, "The FY27 gap was closed in part by a one-time $1.5M SPED OOD
-  prepayment. Tier 1 establishes recurring funding for SPED through FY29
-  without repeating that one-time measure." Both cite the School
-  Committee's May 21, 2026 proclamation. I found no School Committee
-  record between June and October of positions restored for FY27
-  (searched the transcripts for restore, position, FTE).
+  school line, and the CFO's August forecast describes FY27 as "drawing
+  $4.2M off the levy per the MOU".
+- The tracker's own text describes preservation, not restoration: #18,
+  "$6.2M school-side floor preserves the staffing left after the FY27
+  balanced budget eliminated 18.25 FTEs"; #19, "The FY27 gap was closed
+  in part by a one-time $1.5M SPED OOD prepayment."
 
-So for FY27 the school side of the override is a floor under a reduced
-staff plus a one-time prepayment, and the recurring school dollars are
-an FY28 and FY29 question. What the next quarterly review should be
-asked is the schedule.
-
-Quarter-one school salaries are down 5.7% ($4,024,956 to $3,796,780 for
-the education function), but two things make that a weak signal: the
-district re-mapped cost centers between years (Districtwide's budget
-fell $4.74M while the High School's rose $2.45M), and a September with a
-different number of pay dates moves a quarter by several percent. The
-district total through October and November is the first clean read.
+The Q1 update's school figure matches this document's to the dollar:
+"$5.3M of $47.6M" spent through September 30 (11.1%), against the
+script's $5,303,786 for the education function. The Town attributes the
+low share to "teacher payroll drops in the summer months". Quarter-one
+school salaries are 5.7% below last year ($4,024,956 to $3,796,780),
+but the district re-mapped cost centers between years (Districtwide's
+budget fell $4.74M while the High School's rose $2.45M) and a September
+with a different number of pay dates moves a quarter by several
+percent, so the district total through November is the first clean
+read.
 
 What is clear is the special-education prepayment. On June 12, 2026 the
 district's finance director reported "an unexpended balance of
@@ -254,6 +303,10 @@ education tuitions". The checkbook shows it: General Fund - School
 payments to placement schools and collaboratives were $1,187,209 in June
 2026, four times any other month, and $106,762 so far in FY27 against
 $444,993 in the same window last year. Section 8 has the monthly table.
+The Q1 update also records that the school district's Superintendent of
+Finance and Operations position is eliminated in November, with a
+Finance Director (an internal hire) and the Facilities Director
+reporting to the Superintendent.
 
 ### 3e. Trash
 
@@ -307,7 +360,13 @@ weight-loss drugs, and on April 6 that "GIC health insurance rates have
 risen 5 to 12% annually over the past four years". A bill up 8.8% with
 rates up 4 to 8% implies enrollment or plan mix also moved. The CFO's
 10-year plan "assumes inflation at or below 10%" and names sustained
-inflation above that as the key risk.
+inflation above that as the key risk. The Q1 update itself reports
+health insurance for active employees and retirees at "$3.9M of
+$16.0M" (24.1%) spent through September and "up 11% over the first
+quarter of last year, in line with expectations". That is the town's
+net cost in the budget portal; the 8.8% here is the gross GIC bill.
+Both say the same thing: high single digits to eleven percent, on a
+budget line that assumed eleven.
 
 **Debt service.** The FY26 pattern is lumpy: $6.81M in July, $0.80M in
 August, $1.26M in January, $0.25M in February, $5.12M in May. FY27's
@@ -512,23 +571,79 @@ of FY26's capital spend).
 - **The quiet articles** in section 5.
 - **The screens** in section 6, if anyone with access to invoice numbers
   wants to close them.
+- **The ten unfilled override hires** on the Town's October list: the
+  second police officer and the COA social worker are dated January;
+  the grant coordinator, DPW GIS and foreman, and facilities manager
+  were still job descriptions.
+- **The FY27 tax rate**, set in January with both overrides; the
+  February 1 and May 1 bills carry the increase plus a true-up for the
+  two preliminary quarters.
+- **Mary Alley alternative bids** and the rest of the $1M capital
+  earmarks; the Town Administrator selection in early November.
 
 ## 11. Open questions that need a primary source
 
-1. The schedule for the school share of the override: Article 29's
-   motion appropriated municipal functions only, the portal's school
-   budget equals the no-override proposal, and the tracker describes
-   FY27 as a floor plus a prepayment. When do recurring school dollars
-   start, and at what amounts?
-2. Why "other general government" is $592K below the no-override
-   proposal in the portal while Article 29 added $852K there.
-3. The negative "other financing uses" revisions on water (-$2.11M) and
+Resolved by the Town's first-quarter update of October 27, 2026:
+
+- The school share of the override in FY27 is $0; the schedule is
+  $5,152,733 in FY28 and $3,349,502 in FY29 (section 3d).
+- "Other general government" sits $592,361 below the no-override
+  proposal because the override budget removed that much unemployment
+  cost; it is not a health-insurance re-estimate (section 3a).
+
+Still open:
+
+1. The negative "other financing uses" revisions on water (-$2.11M) and
    sewer (-$1.94M) and water's $2.40M first-quarter OFU actual.
-4. The DPW scope difference between the proposal and the portal.
-5. The identical-row items in section 6.
-6. Pipeline, not finance: the FY27 drill file behind the live checkbook
+2. The DPW scope difference between the proposal and the portal, now
+   moot for the override column (Appendix 1 gives it directly) but still
+   relevant to any FY26-to-FY27 department comparison.
+3. The identical-row items in section 6.
+4. Pipeline, not finance: the FY27 drill file behind the live checkbook
    page has an as-of of July 5, because no workflow re-crawls FY27. Logged
    as a follow-up to PR #1300.
+
+## 12. Checked against the Town's first-quarter update
+
+The Town published its "Fiscal Year 2027 First Quarter Update" (quarter
+ended September 30, 2026; dated October 27; PowerPoint export, 17
+pages) on October 28; the Current hosted the file. It is the first
+quarterly report under the override MOU (tracker #23). Where it and
+this document measure the same thing:
+
+| Measure | Town's Q1 update | This document | Note |
+|---|---:|---:|---|
+| Override, FY27 | $4,296,718 | $4,296,718 | Article 29 Tier 3 |
+| Revised FY27 general fund budget | $103,119,496 | | $98,822,778 plus override; excludes debt service, assessments, enterprise funds |
+| School department, FY27 budget | $47,620,287 | $47,620,287 | no override in FY27 |
+| School spending through Sept 30 | $5.3M (11.1%) | $5,303,786 | education function, operating |
+| Public safety spending through Sept 30 | $3.1M of $12.6M (24.7%) | $3,199,867 | this document's function includes $143,238 less budget (Article 19) and a slightly wider category set |
+| Retirement assessment | $5.8M of $5.8M (100%) | $5,843,360 paid July 1 | |
+| Insurance premiums | $800K of $908K (88%) | $799,638 | "other insurance" division, all vendors |
+| Health insurance, active and retirees | $3.9M of $16.0M, "up 11%" | GIC bill +8.8% per month | net cost vs gross premium |
+| Override hires in place | 6 of 16 | fire and police salaries up, planning down | section 3c |
+
+What the update adds that the data could not show: the three-year
+phase-in by town and schools; the department-level override column;
+the hiring status of all 16 positions; the $450,000 maintenance split
+($276,000 facility funds, $112,000 facilities maintenance manager,
+$50,000 rail trail, $12,000 superintendent of buildings stipend); the
+$1,000,000 capital earmarks; a health-insurance opt-out paying $4,000
+(individual) or $8,000 (family) with net savings the Town estimates at
+about $5,000 and $18,000 per participant; the elimination of the
+schools' Superintendent of Finance and Operations post; the Town
+Administrator and Finance Director searches; the senior property tax
+exemption applications due November 30, 2026; and the warning that the
+February and May tax bills will be higher once the FY27 rate, with the
+$4.3M override and the $2.2M trash override, is set in January.
+
+Two notes on the update's own framing. Its "Department Spending on
+Track" page compares spending to annual budget by function, which is
+the right test for staying within appropriation and a weak test for
+year-over-year change; this document's same-window comparison is the
+complement, not a contradiction. And its revised budget "excludes debt
+service and state assessments", the two lines growing fastest in the
+portal (+17.8% and +21.3%); section 4 covers them.
 
 ## Appendix: reproduction
 
