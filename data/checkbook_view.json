@@ -3,10 +3,10 @@
   "snapshot": {
     "date": "2026-10-27",
     "fiscal_year": "FY27",
-    "row_count": 4374,
-    "total_paid": 43723807.44,
+    "row_count": 4396,
+    "total_paid": 43844206.0,
     "interfund_total": 346484.3,
-    "external_paid": 43377323.14,
+    "external_paid": 43497721.7,
     "first_payment": "2026-07-01",
     "last_payment": "2026-10-27",
     "source_file": "checkbook_FY27_2026-10-27.csv"
@@ -16,7 +16,7 @@
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5355158.83,
-      "share": 0.1225,
+      "share": 0.1221,
       "fund_count": 4,
       "top_funds": [
         {
@@ -44,19 +44,19 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 26153523.56,
-      "share": 0.5982,
+      "amount": 26263259.13,
+      "share": 0.599,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 23701363.56,
-          "row_count": 1681
+          "amount": 23794188.07,
+          "row_count": 1695
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 1856385.69,
-          "row_count": 1016
+          "amount": 1873296.75,
+          "row_count": 1017
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -69,7 +69,7 @@
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
       "amount": 10716056.97,
-      "share": 0.2451,
+      "share": 0.2444,
       "fund_count": 7,
       "top_funds": [
         {
@@ -112,8 +112,8 @@
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 590074.87,
-      "share": 0.0135,
+      "amount": 598833.27,
+      "share": 0.0137,
       "fund_count": 17,
       "top_funds": [
         {
@@ -128,8 +128,8 @@
         },
         {
           "name": "COVID 19 ARPA (FED)",
-          "amount": 88410.02,
-          "row_count": 10
+          "amount": 95068.42,
+          "row_count": 14
         },
         {
           "name": "SPED IDEA 94-142 (240)",
@@ -152,9 +152,9 @@
           "row_count": 1
         },
         {
-          "name": "MASS REVOLUTION GRANT",
-          "amount": 5000.0,
-          "row_count": 1
+          "name": "Mass Cultural Council Grant",
+          "amount": 6697.0,
+          "row_count": 5
         }
       ]
     },
@@ -195,9 +195,9 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 465415.3,
-      "share": 0.0106,
-      "fund_count": 36,
+      "amount": 467319.89,
+      "share": 0.0107,
+      "fund_count": 37,
       "top_funds": [
         {
           "name": "GERRY PLAYGROUND DONATION",
@@ -243,20 +243,20 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 23701363.56,
-    "fixed_total": 21406039.95,
-    "fixed_share": 0.9032,
-    "admin_contracts_total": 812508.18,
-    "admin_contracts_share": 0.0343,
-    "other_recurring_total": 1482815.43,
-    "other_recurring_share": 0.0626,
+    "total": 23794188.07,
+    "fixed_total": 21410905.95,
+    "fixed_share": 0.8998,
+    "admin_contracts_total": 859096.0,
+    "admin_contracts_share": 0.0361,
+    "other_recurring_total": 1524186.12,
+    "other_recurring_share": 0.0641,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
-        "amount": 5958615.07,
-        "share": 0.2514,
-        "row_count": 42,
+        "amount": 5963481.07,
+        "share": 0.2506,
+        "row_count": 43,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
@@ -268,7 +268,7 @@
           },
           {
             "name": "BOSTON MUTUAL LIFE INS",
-            "amount": 13331.82
+            "amount": 18197.82
           },
           {
             "name": "VOYA HOLDINGS INC",
@@ -296,7 +296,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 8254475.24,
-        "share": 0.3483,
+        "share": 0.3469,
         "row_count": 31,
         "top_vendors": [
           {
@@ -309,7 +309,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2465,
+        "share": 0.2456,
         "row_count": 1,
         "top_vendors": [
           {
@@ -322,7 +322,7 @@
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
         "amount": 1349589.64,
-        "share": 0.0569,
+        "share": 0.0567,
         "row_count": 31,
         "top_vendors": [
           {
@@ -334,9 +334,9 @@
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 812508.18,
-        "share": 0.0343,
-        "row_count": 54,
+        "amount": 859096.0,
+        "share": 0.0361,
+        "row_count": 56,
         "top_vendors": [
           {
             "name": "REPUBLIC SERVICES INC",
@@ -347,12 +347,12 @@
             "amount": 221452.35
           },
           {
-            "name": "VOYA HOLDINGS INC",
-            "amount": 138938.85
+            "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
+            "amount": 155866.82
           },
           {
-            "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
-            "amount": 116845.58
+            "name": "VOYA HOLDINGS INC",
+            "amount": 138938.85
           },
           {
             "name": "MEAD TALERMAN & COSTA LLC",
@@ -361,15 +361,19 @@
           {
             "name": "FUTURE TECHNOLOGIES GROUP LLC",
             "amount": 14644.35
+          },
+          {
+            "name": "MIIA HEALTH BENEFITS TRUST",
+            "amount": 7566.58
           }
         ]
       },
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 1482815.43,
-        "share": 0.0626,
-        "row_count": 1522,
+        "amount": 1524186.12,
+        "share": 0.0641,
+        "row_count": 1533,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
