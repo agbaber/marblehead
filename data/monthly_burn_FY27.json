@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-10-29",
+  "as_of": "2026-10-30",
   "latest_fiscal_month": "2026-10-01",
-  "generated_at": "2026-10-29T17:05:31+00:00",
+  "generated_at": "2026-10-30T16:49:38+00:00",
   "fiscal_year": "FY27",
   "fy_months": [
     "2026-07",
@@ -20,7 +20,7 @@
   "funds": [
     {
       "fund": "GENERAL FUND - TOWN",
-      "total_through_as_of": 29525571.85,
+      "total_through_as_of": 29524936.85,
       "series": [
         {
           "month": "2026-07",
@@ -34,52 +34,52 @@
         },
         {
           "month": "2026-09",
-          "cumulative": 25883002.37,
-          "monthly": 3417348.68
+          "cumulative": 25882367.37,
+          "monthly": 3416713.68
         },
         {
           "month": "2026-10",
-          "cumulative": 29525571.85,
+          "cumulative": 29524936.85,
           "monthly": 3642569.48
         },
         {
           "month": "2026-11",
-          "cumulative": 29525571.85,
+          "cumulative": 29524936.85,
           "monthly": 0.0
         },
         {
           "month": "2026-12",
-          "cumulative": 29525571.85,
+          "cumulative": 29524936.85,
           "monthly": 0.0
         },
         {
           "month": "2027-01",
-          "cumulative": 29525571.85,
+          "cumulative": 29524936.85,
           "monthly": 0.0
         },
         {
           "month": "2027-02",
-          "cumulative": 29525571.85,
+          "cumulative": 29524936.85,
           "monthly": 0.0
         },
         {
           "month": "2027-03",
-          "cumulative": 29525571.85,
+          "cumulative": 29524936.85,
           "monthly": 0.0
         },
         {
           "month": "2027-04",
-          "cumulative": 29525571.85,
+          "cumulative": 29524936.85,
           "monthly": 0.0
         },
         {
           "month": "2027-05",
-          "cumulative": 29525571.85,
+          "cumulative": 29524936.85,
           "monthly": 0.0
         },
         {
           "month": "2027-06",
-          "cumulative": 29525571.85,
+          "cumulative": 29524936.85,
           "monthly": 0.0
         }
       ]
