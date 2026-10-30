@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-10-27",
+    "date": "2026-10-29",
     "fiscal_year": "FY27",
-    "row_count": 4396,
-    "total_paid": 43844206.0,
+    "row_count": 4397,
+    "total_paid": 43848655.21,
     "interfund_total": 346484.3,
-    "external_paid": 43497721.7,
+    "external_paid": 43502170.91,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-10-27",
-    "source_file": "checkbook_FY27_2026-10-27.csv"
+    "last_payment": "2026-10-29",
+    "source_file": "checkbook_FY27_2026-10-29.csv"
   },
   "buckets": [
     {
@@ -44,14 +44,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 26263259.13,
-      "share": 0.599,
+      "amount": 26267708.34,
+      "share": 0.5991,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 23794188.07,
-          "row_count": 1695
+          "amount": 23798637.28,
+          "row_count": 1696
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -243,13 +243,13 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 23794188.07,
+    "total": 23798637.28,
     "fixed_total": 21410905.95,
-    "fixed_share": 0.8998,
+    "fixed_share": 0.8997,
     "admin_contracts_total": 859096.0,
     "admin_contracts_share": 0.0361,
-    "other_recurring_total": 1524186.12,
-    "other_recurring_share": 0.0641,
+    "other_recurring_total": 1528635.33,
+    "other_recurring_share": 0.0642,
     "segments": [
       {
         "key": "gic_insurance",
@@ -296,7 +296,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 8254475.24,
-        "share": 0.3469,
+        "share": 0.3468,
         "row_count": 31,
         "top_vendors": [
           {
@@ -309,7 +309,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2456,
+        "share": 0.2455,
         "row_count": 1,
         "top_vendors": [
           {
@@ -371,9 +371,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 1524186.12,
-        "share": 0.0641,
-        "row_count": 1533,
+        "amount": 1528635.33,
+        "share": 0.0642,
+        "row_count": 1534,
         "top_vendors": [
           {
             "name": "ROSELLI & CLARK PTR",
@@ -422,7 +422,7 @@
       "row_count": 20,
       "first_paid": "2026-07-20",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 41,
+      "days_since_last_paid": 43,
       "status": "active",
       "top_vendors": [
         {
@@ -462,7 +462,7 @@
       "row_count": 3,
       "first_paid": "2026-07-08",
       "last_paid": "2026-09-03",
-      "days_since_last_paid": 54,
+      "days_since_last_paid": 56,
       "status": "engineering",
       "top_vendors": [
         {
@@ -487,7 +487,7 @@
       "row_count": 3,
       "first_paid": "2026-09-16",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 41,
+      "days_since_last_paid": 43,
       "status": "active",
       "top_vendors": [
         {
@@ -517,7 +517,7 @@
       "row_count": 3,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-18",
-      "days_since_last_paid": 39,
+      "days_since_last_paid": 41,
       "status": "active",
       "top_vendors": [
         {

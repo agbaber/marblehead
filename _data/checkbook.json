@@ -1,16 +1,16 @@
 {
- "as_of": "2026-10-27",
- "as_of_human": "Oct 27",
+ "as_of": "2026-10-29",
+ "as_of_human": "Oct 29",
  "fiscal_year": "FY27",
  "year": 2027,
  "fy_start": "2026-07-01",
  "fy_end": "2027-06-30",
  "months_elapsed": 4,
- "total_amount": 43844206.0,
+ "total_amount": 43848655.21,
  "total_M": "$43.8M",
- "row_count": 4396,
- "row_count_human": "4,396",
- "csv_filename": "checkbook_FY27_2026-10-27.csv",
+ "row_count": 4397,
+ "row_count_human": "4,397",
+ "csv_filename": "checkbook_FY27_2026-10-29.csv",
  "performance_filename": "checkbook_performance.json",
  "generated_by": "scripts/build_checkbook_csv.py"
 }
