@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-10-27",
+  "as_of": "2026-10-29",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 4,
-  "fy_pct_elapsed": 32.6,
+  "fy_pct_elapsed": 33.2,
   "budget_execution": {
     "by_department": [
       {
@@ -100,9 +100,9 @@
       {
         "name": "VETERANS SERVICES",
         "revised": 154872.0,
-        "actual": 34804.7,
-        "delta": -120067.3,
-        "pct": 22.47
+        "actual": 37602.31,
+        "delta": -117269.69,
+        "pct": 24.28
       },
       {
         "name": "TOWN CLERK",
@@ -240,9 +240,9 @@
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 737017.29,
-        "delta": -1388435.71,
-        "pct": 34.68
+        "actual": 770690.58,
+        "delta": -1354762.42,
+        "pct": 36.26
       },
       {
         "name": "CURBSIDE COLLECTION",
@@ -289,9 +289,9 @@
       {
         "name": "FIRE",
         "revised": 6471909.0,
-        "actual": 2116443.06,
-        "delta": -4355465.94,
-        "pct": 32.7
+        "actual": 2124009.64,
+        "delta": -4347899.36,
+        "pct": 32.82
       },
       {
         "name": "BROWN SCHOOL",
@@ -324,32 +324,32 @@
       {
         "name": "DISTRICTWIDE",
         "revised": 12884420.6,
-        "actual": 2796576.41,
-        "delta": -10087844.19,
-        "pct": 21.71
+        "actual": 2813487.47,
+        "delta": -10070933.13,
+        "pct": 21.84
       },
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 12078734.75,
-        "delta": -11993658.25,
-        "pct": 50.18
+        "actual": 12083600.75,
+        "delta": -11988792.25,
+        "pct": 50.2
       }
     ],
     "all_departments": [
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 12078734.75,
-        "delta": -11993658.25,
-        "pct": 50.18
+        "actual": 12083600.75,
+        "delta": -11988792.25,
+        "pct": 50.2
       },
       {
         "name": "DISTRICTWIDE",
         "revised": 12884420.6,
-        "actual": 2796576.41,
-        "delta": -10087844.19,
-        "pct": 21.71
+        "actual": 2813487.47,
+        "delta": -10070933.13,
+        "pct": 21.84
       },
       {
         "name": "HIGH SCHOOL",
@@ -375,9 +375,9 @@
       {
         "name": "FIRE",
         "revised": 6471909.0,
-        "actual": 2116443.06,
-        "delta": -4355465.94,
-        "pct": 32.7
+        "actual": 2124009.64,
+        "delta": -4347899.36,
+        "pct": 32.82
       },
       {
         "name": "MIDDLE SCHOOL",
@@ -445,9 +445,9 @@
       {
         "name": "FINANCE",
         "revised": 2125453.0,
-        "actual": 737017.29,
-        "delta": -1388435.71,
-        "pct": 34.68
+        "actual": 770690.58,
+        "delta": -1354762.42,
+        "pct": 36.26
       },
       {
         "name": "WASTE COLLECTION",
@@ -585,9 +585,9 @@
       {
         "name": "VETERANS SERVICES",
         "revised": 154872.0,
-        "actual": 34804.7,
-        "delta": -120067.3,
-        "pct": 22.47
+        "actual": 37602.31,
+        "delta": -117269.69,
+        "pct": 24.28
       },
       {
         "name": "ELECTION & REGISTRATION",
@@ -686,8 +686,8 @@
     },
     {
       "month": "2026-10",
-      "amount": 4093851.88,
-      "count": 786
+      "amount": 4098301.09,
+      "count": 787
     }
   ],
   "drill": {
@@ -1827,8 +1827,8 @@
           },
           {
             "month": "2026-10",
-            "amount": 2578532.61,
-            "count": 251
+            "amount": 2582981.82,
+            "count": 252
           }
         ]
       },
