@@ -135,9 +135,9 @@
       {
         "name": "HEALTH",
         "revised": 399320.0,
-        "actual": 92958.98,
-        "delta": -306361.02,
-        "pct": 23.28
+        "actual": 92323.98,
+        "delta": -306996.02,
+        "pct": 23.12
       },
       {
         "name": "CEMETERY",
@@ -543,9 +543,9 @@
       {
         "name": "HEALTH",
         "revised": 399320.0,
-        "actual": 92958.98,
-        "delta": -306361.02,
-        "pct": 23.28
+        "actual": 92323.98,
+        "delta": -306996.02,
+        "pct": 23.12
       },
       {
         "name": "ASSESSORS",
