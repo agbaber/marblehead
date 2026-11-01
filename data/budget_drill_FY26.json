@@ -1,7 +1,7 @@
 {
- "as_of": "2026-10-25",
+ "as_of": "2026-11-01",
  "fiscal_year": "FY26",
- "actuals_sha256": "82b468631044dfa00cece17172b120cb0609d05420ac018a0077dbcb49115113",
+ "actuals_sha256": "a3ebc3c29d55921e69cf033f77527637bd2dfa0a07552557024edd68e6e065d9",
  "envelope": "BUDGETED ANNUAL FUNDS",
  "envelope_totals": {
   "revised_budget": 127338097.88,

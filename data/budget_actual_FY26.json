@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-25",
+  "as_of": "2026-11-01",
   "fiscal_year": "FY26",
   "checkbook_period_end": "2026-06-01",
   "source": "data/operating_budget_FY26.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
@@ -31,7 +31,7 @@
       "revised_budget": 49120287.0,
       "actual": 48018769.27,
       "original_budget": 49120287.0,
-      "encumbrance": 218106.29
+      "encumbrance": 214235.27
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -82,7 +82,7 @@
       "revised_budget": 14574494.16,
       "actual": 14907221.66,
       "original_budget": 17832596.0,
-      "encumbrance": 216783.87
+      "encumbrance": 212912.85
     },
     {
       "name": "HIGH SCHOOL",
@@ -413,7 +413,7 @@
       "revised_budget": 15356605.57,
       "actual": 23664813.54,
       "original_budget": 14399193.77,
-      "encumbrance": 379833.33
+      "encumbrance": 375962.31
     },
     {
       "name": "GOVERNMENTAL",
@@ -471,7 +471,7 @@
       "revised_budget": 49120287.0,
       "actual": 48018769.27,
       "original_budget": 49120287.0,
-      "encumbrance": 218106.29
+      "encumbrance": 214235.27
     },
     {
       "name": "SALARIES",
@@ -1138,7 +1138,7 @@
       "revised_budget": 725662.68,
       "actual": 756350.67,
       "original_budget": 647848.0,
-      "encumbrance": 13957.77
+      "encumbrance": 10086.75
     },
     {
       "name": "ASSISTANT DIVISION HEAD",
