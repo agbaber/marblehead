@@ -686,8 +686,8 @@
     },
     {
       "month": "2026-10",
-      "amount": 4098301.09,
-      "count": 787
+      "amount": 4142986.73,
+      "count": 796
     }
   ],
   "drill": {
@@ -1441,14 +1441,14 @@
             "count": 14
           },
           {
+            "name": "ARTHUR J HURLEY CO INC",
+            "amount": 41656.93,
+            "count": 2
+          },
+          {
             "name": "COMM TRACT CORP",
             "amount": 41390.6,
             "count": 1
-          },
-          {
-            "name": "PLM ELECTRIC POWER ENGINEERING",
-            "amount": 24450.0,
-            "count": 6
           }
         ],
         "monthly": [
@@ -1469,8 +1469,8 @@
           },
           {
             "month": "2026-10",
-            "amount": 175317.3,
-            "count": 83
+            "amount": 220002.94,
+            "count": 92
           }
         ]
       },

@@ -3,10 +3,10 @@
   "snapshot": {
     "date": "2026-10-29",
     "fiscal_year": "FY27",
-    "row_count": 4397,
-    "total_paid": 43848655.21,
+    "row_count": 4406,
+    "total_paid": 43893340.85,
     "interfund_total": 346484.3,
-    "external_paid": 43502170.91,
+    "external_paid": 43546856.55,
     "first_payment": "2026-07-01",
     "last_payment": "2026-10-29",
     "source_file": "checkbook_FY27_2026-10-29.csv"
@@ -16,7 +16,7 @@
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5355158.83,
-      "share": 0.1221,
+      "share": 0.122,
       "fund_count": 4,
       "top_funds": [
         {
@@ -45,7 +45,7 @@
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
       "amount": 26267708.34,
-      "share": 0.5991,
+      "share": 0.5984,
       "fund_count": 3,
       "top_funds": [
         {
@@ -68,14 +68,14 @@
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 10716056.97,
-      "share": 0.2444,
+      "amount": 10760742.61,
+      "share": 0.2452,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 6137427.7,
-          "row_count": 493
+          "amount": 6182113.34,
+          "row_count": 502
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
@@ -113,7 +113,7 @@
       "key": "state_fed",
       "label": "State & federal restricted grants",
       "amount": 598833.27,
-      "share": 0.0137,
+      "share": 0.0136,
       "fund_count": 17,
       "top_funds": [
         {
@@ -196,7 +196,7 @@
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
       "amount": 467319.89,
-      "share": 0.0107,
+      "share": 0.0106,
       "fund_count": 37,
       "top_funds": [
         {
