@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-10-29",
+    "date": "2026-11-03",
     "fiscal_year": "FY27",
-    "row_count": 4406,
-    "total_paid": 43893340.85,
+    "row_count": 4408,
+    "total_paid": 43922656.12,
     "interfund_total": 346484.3,
-    "external_paid": 43546856.55,
+    "external_paid": 43576171.82,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-10-29",
-    "source_file": "checkbook_FY27_2026-10-29.csv"
+    "last_payment": "2026-11-03",
+    "source_file": "checkbook_FY27_2026-11-03.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5355158.83,
-      "share": 0.122,
+      "share": 0.1219,
       "fund_count": 4,
       "top_funds": [
         {
@@ -44,14 +44,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 26267708.34,
-      "share": 0.5984,
+      "amount": 26277028.68,
+      "share": 0.5983,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 23798637.28,
-          "row_count": 1696
+          "amount": 23807957.62,
+          "row_count": 1697
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -68,14 +68,14 @@
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 10760742.61,
-      "share": 0.2452,
+      "amount": 10780737.54,
+      "share": 0.2454,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 6182113.34,
-          "row_count": 502
+          "amount": 6202108.27,
+          "row_count": 503
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
@@ -243,11 +243,11 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 23798637.28,
+    "total": 23807957.62,
     "fixed_total": 21410905.95,
-    "fixed_share": 0.8997,
-    "admin_contracts_total": 859096.0,
-    "admin_contracts_share": 0.0361,
+    "fixed_share": 0.8993,
+    "admin_contracts_total": 868416.34,
+    "admin_contracts_share": 0.0365,
     "other_recurring_total": 1528635.33,
     "other_recurring_share": 0.0642,
     "segments": [
@@ -255,7 +255,7 @@
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 5963481.07,
-        "share": 0.2506,
+        "share": 0.2505,
         "row_count": 43,
         "top_vendors": [
           {
@@ -296,7 +296,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 8254475.24,
-        "share": 0.3468,
+        "share": 0.3467,
         "row_count": 31,
         "top_vendors": [
           {
@@ -309,7 +309,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2455,
+        "share": 0.2454,
         "row_count": 1,
         "top_vendors": [
           {
@@ -334,9 +334,9 @@
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 859096.0,
-        "share": 0.0361,
-        "row_count": 56,
+        "amount": 868416.34,
+        "share": 0.0365,
+        "row_count": 57,
         "top_vendors": [
           {
             "name": "REPUBLIC SERVICES INC",
@@ -352,7 +352,7 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 138938.85
+            "amount": 148259.19
           },
           {
             "name": "MEAD TALERMAN & COSTA LLC",
@@ -422,7 +422,7 @@
       "row_count": 20,
       "first_paid": "2026-07-20",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 43,
+      "days_since_last_paid": 48,
       "status": "active",
       "top_vendors": [
         {
@@ -462,7 +462,7 @@
       "row_count": 3,
       "first_paid": "2026-07-08",
       "last_paid": "2026-09-03",
-      "days_since_last_paid": 56,
+      "days_since_last_paid": 61,
       "status": "engineering",
       "top_vendors": [
         {
@@ -487,7 +487,7 @@
       "row_count": 3,
       "first_paid": "2026-09-16",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 43,
+      "days_since_last_paid": 48,
       "status": "active",
       "top_vendors": [
         {
@@ -517,7 +517,7 @@
       "row_count": 3,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-18",
-      "days_since_last_paid": 41,
+      "days_since_last_paid": 46,
       "status": "active",
       "top_vendors": [
         {
