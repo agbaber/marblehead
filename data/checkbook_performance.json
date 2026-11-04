@@ -1,16 +1,16 @@
 {
-  "as_of": "2026-10-29",
+  "as_of": "2026-11-03",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
-  "fy_months_elapsed": 4,
-  "fy_pct_elapsed": 33.2,
+  "fy_months_elapsed": 5,
+  "fy_pct_elapsed": 34.5,
   "budget_execution": {
     "by_department": [
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 5163165.69,
-        "delta": 5163165.69,
+        "actual": 5165153.42,
+        "delta": 5165153.42,
         "pct": null
       },
       {
@@ -662,8 +662,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 5163165.69,
-        "delta": 5163165.69,
+        "actual": 5165153.42,
+        "delta": 5165153.42,
         "pct": null
       }
     ]
@@ -688,6 +688,11 @@
       "month": "2026-10",
       "amount": 4142986.73,
       "count": 796
+    },
+    {
+      "month": "2026-11",
+      "amount": 29315.27,
+      "count": 2
     }
   ],
   "drill": {
@@ -1416,6 +1421,11 @@
             "count": 1
           },
           {
+            "name": "NATIONAL GRAND BANK OF MARBLEHEAD",
+            "amount": 70788.93,
+            "count": 31
+          },
+          {
             "name": "NORTHERN DATA SYSTEMS INC",
             "amount": 62372.49,
             "count": 6
@@ -1424,11 +1434,6 @@
             "name": "NATIONAL GRID",
             "amount": 58978.79,
             "count": 8
-          },
-          {
-            "name": "NATIONAL GRAND BANK OF MARBLEHEAD",
-            "amount": 50794.0,
-            "count": 30
           },
           {
             "name": "SCHWEITZER ENGINEERING LABORATORIES INC",
@@ -1471,6 +1476,11 @@
             "month": "2026-10",
             "amount": 220002.94,
             "count": 92
+          },
+          {
+            "month": "2026-11",
+            "amount": 19994.93,
+            "count": 1
           }
         ]
       },
@@ -1785,8 +1795,8 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 142155.35,
-            "count": 23
+            "amount": 151475.69,
+            "count": 24
           },
           {
             "name": "ROSELLI & CLARK PTR",
@@ -1829,6 +1839,11 @@
             "month": "2026-10",
             "amount": 2582981.82,
             "count": 252
+          },
+          {
+            "month": "2026-11",
+            "amount": 9320.34,
+            "count": 1
           }
         ]
       },
