@@ -1,12 +1,12 @@
 {
- "as_of": "2026-11-03",
+ "as_of": "2026-11-05",
  "generated_by": "scripts/build_checkbook_csv.py",
  "excluded_funds": [
   {
    "name": "111F INJURY LEAVE FUND",
    "reason": "Pays for medical care of named police/fire employees injured on duty under MGL c.41 \u00a7111F. Vendor + amount + employee identity combine to form identifiable medical claim data.",
-   "row_count": 52,
-   "total_amount": 79288.77,
+   "row_count": 66,
+   "total_amount": 81189.87,
    "distinct_vendors": 13
   },
   {
