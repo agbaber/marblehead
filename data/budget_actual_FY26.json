@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-01",
+  "as_of": "2026-11-08",
   "fiscal_year": "FY26",
   "checkbook_period_end": "2026-06-01",
   "source": "data/operating_budget_FY26.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
@@ -24,14 +24,14 @@
       "revised_budget": 60614084.0,
       "actual": 58512657.5,
       "original_budget": 59561708.0,
-      "encumbrance": 331897.51
+      "encumbrance": 364297.51
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 49120287.0,
       "actual": 48018769.27,
       "original_budget": 49120287.0,
-      "encumbrance": 214235.27
+      "encumbrance": 162047.18
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -82,7 +82,7 @@
       "revised_budget": 14574494.16,
       "actual": 14907221.66,
       "original_budget": 17832596.0,
-      "encumbrance": 212912.85
+      "encumbrance": 160724.76
     },
     {
       "name": "HIGH SCHOOL",
@@ -96,7 +96,7 @@
       "revised_budget": 9314141.0,
       "actual": 9214614.78,
       "original_budget": 9314141.0,
-      "encumbrance": 66529.8
+      "encumbrance": 98929.8
     },
     {
       "name": "VILLAGE SCHOOL",
@@ -406,14 +406,14 @@
       "revised_budget": 34361533.27,
       "actual": 35908394.36,
       "original_budget": 34515101.0,
-      "encumbrance": 149068.57
+      "encumbrance": 150170.35
     },
     {
       "name": "CONTRACTED SERVICES",
       "revised_budget": 15356605.57,
       "actual": 23664813.54,
       "original_budget": 14399193.77,
-      "encumbrance": 375962.31
+      "encumbrance": 364454.39
     },
     {
       "name": "GOVERNMENTAL",
@@ -441,7 +441,7 @@
       "revised_budget": 2642948.8,
       "actual": 2419824.31,
       "original_budget": 2147014.0,
-      "encumbrance": 46437.4
+      "encumbrance": 37055.45
     },
     {
       "name": "OFU",
@@ -471,7 +471,7 @@
       "revised_budget": 49120287.0,
       "actual": 48018769.27,
       "original_budget": 49120287.0,
-      "encumbrance": 214235.27
+      "encumbrance": 162047.18
     },
     {
       "name": "SALARIES",
@@ -485,7 +485,7 @@
       "revised_budget": 21225346.6,
       "actual": 30463490.54,
       "original_budget": 20424150.0,
-      "encumbrance": 384061.22
+      "encumbrance": 416461.22
     },
     {
       "name": "GROUP INSURANCE",
@@ -1054,7 +1054,7 @@
       "revised_budget": 1225251.51,
       "actual": 1128075.5,
       "original_budget": 1155238.21,
-      "encumbrance": 20179.59
+      "encumbrance": 14916.67
     },
     {
       "name": "PUPIL TRANSPORTATION",
@@ -1306,7 +1306,7 @@
       "revised_budget": 334682.48,
       "actual": 388928.48,
       "original_budget": 309800.0,
-      "encumbrance": 8896.5
+      "encumbrance": 3407.5
     },
     {
       "name": "SARGENT",
@@ -1481,7 +1481,7 @@
       "revised_budget": 165262.0,
       "actual": 117577.54,
       "original_budget": 180262.0,
-      "encumbrance": 10154.5
+      "encumbrance": 4059.94
     },
     {
       "name": "MECHANIC",
@@ -1558,7 +1558,7 @@
       "revised_budget": 142256.0,
       "actual": 154160.05,
       "original_budget": 142256.0,
-      "encumbrance": 3287.39
+      "encumbrance": 0.0
     },
     {
       "name": "ELECT PWR-PUMPING STATIONS",
@@ -1586,7 +1586,7 @@
       "revised_budget": 134334.36,
       "actual": 373411.06,
       "original_budget": 90993.0,
-      "encumbrance": 1094.68
+      "encumbrance": 28102.86
     },
     {
       "name": "RETIREMENT INCENTIVE",
@@ -1817,7 +1817,7 @@
       "revised_budget": 71829.23,
       "actual": 30940.17,
       "original_budget": 83567.0,
-      "encumbrance": 1934.8
+      "encumbrance": 17.4
     },
     {
       "name": "WORKING FORMAN BLDG",
@@ -1866,7 +1866,7 @@
       "revised_budget": 68000.0,
       "actual": 0.0,
       "original_budget": 68000.0,
-      "encumbrance": 56389.0
+      "encumbrance": 0.0
     },
     {
       "name": "SCHOOL CHOICE ASSESSMENT",
@@ -2426,7 +2426,7 @@
       "revised_budget": 16511.0,
       "actual": 9414.0,
       "original_budget": 19280.0,
-      "encumbrance": 1693.0
+      "encumbrance": 937.0
     },
     {
       "name": "SPECIAL LICENSE STIPEND",
@@ -3651,7 +3651,7 @@
       "revised_budget": 0.0,
       "actual": -99429.8,
       "original_budget": 0.0,
-      "encumbrance": 66529.8
+      "encumbrance": 98929.8
     },
     {
       "name": "SPECIAL EDUCATION",
