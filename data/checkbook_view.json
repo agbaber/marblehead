@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-11-05",
+    "date": "2026-11-10",
     "fiscal_year": "FY27",
-    "row_count": 4844,
-    "total_paid": 45939135.32,
+    "row_count": 4870,
+    "total_paid": 47792212.72,
     "interfund_total": 354557.67,
-    "external_paid": 45584577.65,
+    "external_paid": 47437655.05,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-11-05",
-    "source_file": "checkbook_FY27_2026-11-05.csv"
+    "last_payment": "2026-11-10",
+    "source_file": "checkbook_FY27_2026-11-10.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5513377.24,
-      "share": 0.12,
+      "share": 0.1154,
       "fund_count": 4,
       "top_funds": [
         {
@@ -44,19 +44,19 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 26605644.63,
-      "share": 0.5791,
+      "amount": 28217738.18,
+      "share": 0.5904,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 24003782.61,
-          "row_count": 1855
+          "amount": 25615766.74,
+          "row_count": 1869
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 1942948.11,
-          "row_count": 1066
+          "amount": 1943057.53,
+          "row_count": 1067
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -68,24 +68,24 @@
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 12189393.16,
-      "share": 0.2653,
+      "amount": 12428273.67,
+      "share": 0.26,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 7553212.76,
-          "row_count": 571
+          "amount": 7637231.56,
+          "row_count": 575
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 1686644.03,
-          "row_count": 137
+          "amount": 1812973.53,
+          "row_count": 140
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
-          "amount": 1455064.97,
-          "row_count": 298
+          "amount": 1471683.74,
+          "row_count": 300
         },
         {
           "name": "WATER CAPITAL ARTICLES",
@@ -104,22 +104,22 @@
         },
         {
           "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 219893.54,
-          "row_count": 120
+          "amount": 231806.98,
+          "row_count": 121
         }
       ]
     },
     {
       "key": "state_fed",
       "label": "State & federal restricted grants",
-      "amount": 676000.28,
-      "share": 0.0147,
+      "amount": 678103.62,
+      "share": 0.0142,
       "fund_count": 17,
       "top_funds": [
         {
           "name": "SCHOOL LUNCH",
-          "amount": 215688.61,
-          "row_count": 143
+          "amount": 217791.95,
+          "row_count": 144
         },
         {
           "name": "CIRCUIT BREAKER",
@@ -162,7 +162,7 @@
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
       "amount": 461199.41,
-      "share": 0.01,
+      "share": 0.0097,
       "fund_count": 5,
       "top_funds": [
         {
@@ -196,7 +196,7 @@
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
       "amount": 493520.6,
-      "share": 0.0107,
+      "share": 0.0103,
       "fund_count": 39,
       "top_funds": [
         {
@@ -243,24 +243,24 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 24003782.61,
-    "fixed_total": 21410905.95,
-    "fixed_share": 0.892,
-    "admin_contracts_total": 889358.34,
-    "admin_contracts_share": 0.0371,
+    "total": 25615766.74,
+    "fixed_total": 23015663.9,
+    "fixed_share": 0.8985,
+    "admin_contracts_total": 896584.52,
+    "admin_contracts_share": 0.035,
     "other_recurring_total": 1703518.32,
-    "other_recurring_share": 0.071,
+    "other_recurring_share": 0.0665,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
-        "amount": 5963481.07,
-        "share": 0.2484,
-        "row_count": 43,
+        "amount": 7239119.53,
+        "share": 0.2826,
+        "row_count": 47,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 5108428.99
+            "amount": 6383446.45
           },
           {
             "name": "MIIA HEALTH BENEFITS TRUST",
@@ -272,7 +272,7 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 3216.5
+            "amount": 3837.5
           },
           {
             "name": "TRAVELERS INSURANCE",
@@ -296,7 +296,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 8254475.24,
-        "share": 0.3439,
+        "share": 0.3222,
         "row_count": 31,
         "top_vendors": [
           {
@@ -309,7 +309,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2434,
+        "share": 0.2281,
         "row_count": 1,
         "top_vendors": [
           {
@@ -321,22 +321,22 @@
       {
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
-        "amount": 1349589.64,
-        "share": 0.0562,
-        "row_count": 31,
+        "amount": 1678709.13,
+        "share": 0.0655,
+        "row_count": 40,
         "top_vendors": [
           {
             "name": "COMMONWEALTH OF MA",
-            "amount": 1349589.64
+            "amount": 1678709.13
           }
         ]
       },
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 889358.34,
-        "share": 0.0371,
-        "row_count": 62,
+        "amount": 896584.52,
+        "share": 0.035,
+        "row_count": 63,
         "top_vendors": [
           {
             "name": "REPUBLIC SERVICES INC",
@@ -352,7 +352,7 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 148259.19
+            "amount": 155485.37
           },
           {
             "name": "MEAD TALERMAN & COSTA LLC",
@@ -372,7 +372,7 @@
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
         "amount": 1703518.32,
-        "share": 0.071,
+        "share": 0.0665,
         "row_count": 1687,
         "top_vendors": [
           {
@@ -422,7 +422,7 @@
       "row_count": 21,
       "first_paid": "2026-07-20",
       "last_paid": "2026-10-22",
-      "days_since_last_paid": 14,
+      "days_since_last_paid": 19,
       "status": "active",
       "top_vendors": [
         {
@@ -462,7 +462,7 @@
       "row_count": 4,
       "first_paid": "2026-07-08",
       "last_paid": "2026-10-20",
-      "days_since_last_paid": 16,
+      "days_since_last_paid": 21,
       "status": "active",
       "top_vendors": [
         {
@@ -492,7 +492,7 @@
       "row_count": 3,
       "first_paid": "2026-09-16",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 50,
+      "days_since_last_paid": 55,
       "status": "active",
       "top_vendors": [
         {
@@ -522,7 +522,7 @@
       "row_count": 3,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-18",
-      "days_since_last_paid": 48,
+      "days_since_last_paid": 53,
       "status": "active",
       "top_vendors": [
         {
