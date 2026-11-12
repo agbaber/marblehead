@@ -9,9 +9,16 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 6159058.23,
-        "delta": 6159058.23,
+        "actual": 6229724.73,
+        "delta": 6229724.73,
         "pct": null
+      },
+      {
+        "name": "WATER",
+        "revised": 4465301.0,
+        "actual": 4585509.69,
+        "delta": 120208.69,
+        "pct": 102.69
       },
       {
         "name": "DRAINS",
@@ -61,13 +68,6 @@
         "actual": 572.0,
         "delta": -5803.0,
         "pct": 8.97
-      },
-      {
-        "name": "WATER",
-        "revised": 4465301.0,
-        "actual": 4459180.19,
-        "delta": -6120.81,
-        "pct": 99.86
       },
       {
         "name": "PARKING CLERK",
@@ -198,16 +198,16 @@
       {
         "name": "PARKS & RECREATION",
         "revised": 1109588.0,
-        "actual": 344783.92,
-        "delta": -764804.08,
+        "actual": 344798.01,
+        "delta": -764789.99,
         "pct": 31.07
       },
       {
         "name": "SEWER",
         "revised": 2699291.0,
-        "actual": 1844738.63,
-        "delta": -854552.37,
-        "pct": 68.34
+        "actual": 1861357.4,
+        "delta": -837933.6,
+        "pct": 68.96
       },
       {
         "name": "CAPITAL ADMINISTRATION",
@@ -226,9 +226,9 @@
       {
         "name": "HARBOR",
         "revised": 1669500.0,
-        "actual": 426772.79,
-        "delta": -1242727.21,
-        "pct": 25.56
+        "actual": 438686.23,
+        "delta": -1230813.77,
+        "pct": 26.28
       },
       {
         "name": "FINANCE",
@@ -240,8 +240,8 @@
       {
         "name": "WASTE COLLECTION",
         "revised": 1846337.0,
-        "actual": 558289.7,
-        "delta": -1288047.3,
+        "actual": 558318.62,
+        "delta": -1288018.38,
         "pct": 30.24
       },
       {
@@ -254,8 +254,8 @@
       {
         "name": "PUBLIC WORKS",
         "revised": 3193686.0,
-        "actual": 846373.41,
-        "delta": -2347312.59,
+        "actual": 846450.88,
+        "delta": -2347235.12,
         "pct": 26.5
       },
       {
@@ -289,8 +289,8 @@
       {
         "name": "FIRE",
         "revised": 6471909.0,
-        "actual": 2346649.03,
-        "delta": -4125259.97,
+        "actual": 2346749.02,
+        "delta": -4125159.98,
         "pct": 36.26
       },
       {
@@ -324,31 +324,31 @@
       {
         "name": "DISTRICTWIDE",
         "revised": 12884420.6,
-        "actual": 3055052.07,
-        "delta": -9829368.53,
+        "actual": 3055161.49,
+        "delta": -9829259.11,
         "pct": 23.71
       },
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 12097218.2,
-        "delta": -11975174.8,
-        "pct": 50.25
+        "actual": 13370963.77,
+        "delta": -10701429.23,
+        "pct": 55.54
       }
     ],
     "all_departments": [
       {
         "name": "OTHER GOVERNMENTAL",
         "revised": 24072393.0,
-        "actual": 12097218.2,
-        "delta": -11975174.8,
-        "pct": 50.25
+        "actual": 13370963.77,
+        "delta": -10701429.23,
+        "pct": 55.54
       },
       {
         "name": "DISTRICTWIDE",
         "revised": 12884420.6,
-        "actual": 3055052.07,
-        "delta": -9829368.53,
+        "actual": 3055161.49,
+        "delta": -9829259.11,
         "pct": 23.71
       },
       {
@@ -375,8 +375,8 @@
       {
         "name": "FIRE",
         "revised": 6471909.0,
-        "actual": 2346649.03,
-        "delta": -4125259.97,
+        "actual": 2346749.02,
+        "delta": -4125159.98,
         "pct": 36.26
       },
       {
@@ -403,9 +403,9 @@
       {
         "name": "WATER",
         "revised": 4465301.0,
-        "actual": 4459180.19,
-        "delta": -6120.81,
-        "pct": 99.86
+        "actual": 4585509.69,
+        "delta": 120208.69,
+        "pct": 102.69
       },
       {
         "name": "GLOVER SCHOOL",
@@ -417,8 +417,8 @@
       {
         "name": "PUBLIC WORKS",
         "revised": 3193686.0,
-        "actual": 846373.41,
-        "delta": -2347312.59,
+        "actual": 846450.88,
+        "delta": -2347235.12,
         "pct": 26.5
       },
       {
@@ -431,9 +431,9 @@
       {
         "name": "SEWER",
         "revised": 2699291.0,
-        "actual": 1844738.63,
-        "delta": -854552.37,
-        "pct": 68.34
+        "actual": 1861357.4,
+        "delta": -837933.6,
+        "pct": 68.96
       },
       {
         "name": "CURBSIDE COLLECTION",
@@ -452,16 +452,16 @@
       {
         "name": "WASTE COLLECTION",
         "revised": 1846337.0,
-        "actual": 558289.7,
-        "delta": -1288047.3,
+        "actual": 558318.62,
+        "delta": -1288018.38,
         "pct": 30.24
       },
       {
         "name": "HARBOR",
         "revised": 1669500.0,
-        "actual": 426772.79,
-        "delta": -1242727.21,
-        "pct": 25.56
+        "actual": 438686.23,
+        "delta": -1230813.77,
+        "pct": 26.28
       },
       {
         "name": "ABBOT LIBRARY",
@@ -473,8 +473,8 @@
       {
         "name": "PARKS & RECREATION",
         "revised": 1109588.0,
-        "actual": 344783.92,
-        "delta": -764804.08,
+        "actual": 344798.01,
+        "delta": -764789.99,
         "pct": 31.07
       },
       {
@@ -662,8 +662,8 @@
       {
         "name": "LIGHT",
         "revised": 0,
-        "actual": 6159058.23,
-        "delta": 6159058.23,
+        "actual": 6229724.73,
+        "delta": 6229724.73,
         "pct": null
       }
     ]
