@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-11-10",
+    "date": "2026-11-12",
     "fiscal_year": "FY27",
-    "row_count": 4870,
-    "total_paid": 47792212.72,
-    "interfund_total": 354557.67,
-    "external_paid": 47437655.05,
+    "row_count": 4924,
+    "total_paid": 47842757.83,
+    "interfund_total": 356307.41,
+    "external_paid": 47486450.42,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-11-10",
-    "source_file": "checkbook_FY27_2026-11-10.csv"
+    "last_payment": "2026-11-12",
+    "source_file": "checkbook_FY27_2026-11-12.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5513377.24,
-      "share": 0.1154,
+      "share": 0.1152,
       "fund_count": 4,
       "top_funds": [
         {
@@ -44,19 +44,19 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 28217738.18,
-      "share": 0.5904,
+      "amount": 28252399.09,
+      "share": 0.5905,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 25615766.74,
-          "row_count": 1869
+          "amount": 25626336.47,
+          "row_count": 1901
         },
         {
           "name": "GENERAL FUND - SCHOOL",
-          "amount": 1943057.53,
-          "row_count": 1067
+          "amount": 1967148.71,
+          "row_count": 1070
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
@@ -68,24 +68,24 @@
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 12428273.67,
-      "share": 0.26,
+      "amount": 12443480.47,
+      "share": 0.2601,
       "fund_count": 7,
       "top_funds": [
         {
           "name": "ELECTRIC ENTERPRISE",
-          "amount": 7637231.56,
-          "row_count": 575
+          "amount": 7638094.24,
+          "row_count": 576
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 1812973.53,
-          "row_count": 140
+          "amount": 1814343.36,
+          "row_count": 146
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
-          "amount": 1471683.74,
-          "row_count": 300
+          "amount": 1473459.17,
+          "row_count": 306
         },
         {
           "name": "WATER CAPITAL ARTICLES",
@@ -104,8 +104,8 @@
         },
         {
           "name": "HARBOR ENTERPRISE OPERATING",
-          "amount": 231806.98,
-          "row_count": 121
+          "amount": 243005.84,
+          "row_count": 124
         }
       ]
     },
@@ -162,7 +162,7 @@
       "key": "revolving",
       "label": "Revolving funds (paid by users of the service)",
       "amount": 461199.41,
-      "share": 0.0097,
+      "share": 0.0096,
       "fund_count": 5,
       "top_funds": [
         {
@@ -195,7 +195,7 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 493520.6,
+      "amount": 494198.0,
       "share": 0.0103,
       "fund_count": 39,
       "top_funds": [
@@ -243,19 +243,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 25615766.74,
+    "total": 25626336.47,
     "fixed_total": 23015663.9,
-    "fixed_share": 0.8985,
+    "fixed_share": 0.8981,
     "admin_contracts_total": 896584.52,
     "admin_contracts_share": 0.035,
-    "other_recurring_total": 1703518.32,
-    "other_recurring_share": 0.0665,
+    "other_recurring_total": 1714088.05,
+    "other_recurring_share": 0.0669,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 7239119.53,
-        "share": 0.2826,
+        "share": 0.2825,
         "row_count": 47,
         "top_vendors": [
           {
@@ -296,7 +296,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 8254475.24,
-        "share": 0.3222,
+        "share": 0.3221,
         "row_count": 31,
         "top_vendors": [
           {
@@ -309,7 +309,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5843360.0,
-        "share": 0.2281,
+        "share": 0.228,
         "row_count": 1,
         "top_vendors": [
           {
@@ -371,13 +371,17 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 1703518.32,
-        "share": 0.0665,
-        "row_count": 1687,
+        "amount": 1714088.05,
+        "share": 0.0669,
+        "row_count": 1719,
         "top_vendors": [
           {
             "name": "KASCADE LLC",
             "amount": 75399.1
+          },
+          {
+            "name": "DENNIS K BURKE INC",
+            "amount": 73481.62
           },
           {
             "name": "ROSELLI & CLARK PTR",
@@ -386,10 +390,6 @@
           {
             "name": "OPENGOV INC",
             "amount": 66111.93
-          },
-          {
-            "name": "DENNIS K BURKE INC",
-            "amount": 65881.66
           },
           {
             "name": "NOBLE INC",
@@ -422,7 +422,7 @@
       "row_count": 21,
       "first_paid": "2026-07-20",
       "last_paid": "2026-10-22",
-      "days_since_last_paid": 19,
+      "days_since_last_paid": 21,
       "status": "active",
       "top_vendors": [
         {
@@ -462,7 +462,7 @@
       "row_count": 4,
       "first_paid": "2026-07-08",
       "last_paid": "2026-10-20",
-      "days_since_last_paid": 21,
+      "days_since_last_paid": 23,
       "status": "active",
       "top_vendors": [
         {
@@ -492,7 +492,7 @@
       "row_count": 3,
       "first_paid": "2026-09-16",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 55,
+      "days_since_last_paid": 57,
       "status": "active",
       "top_vendors": [
         {
@@ -522,7 +522,7 @@
       "row_count": 3,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-18",
-      "days_since_last_paid": 53,
+      "days_since_last_paid": 55,
       "status": "active",
       "top_vendors": [
         {
