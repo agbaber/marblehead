@@ -1,11 +1,11 @@
 {
-  "as_of": "2026-11-13",
+  "as_of": "2026-11-14",
   "fiscal_year": "FY27",
   "checkbook_period_end": "2026-11-01",
   "source": "data/operating_budget_FY27.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)",
   "generated_by": "scripts/build_budget_actual.py",
   "totals": {
-    "all_funds_revised_budget": 137012652.56,
+    "all_funds_revised_budget": 137062652.56,
     "all_funds_actual": 66482595.17,
     "budgeted_annual": {
       "revised_budget": 127204296.0,
@@ -13,7 +13,7 @@
       "original_budget": 130510456.0
     },
     "other_funds": {
-      "revised_budget": 9808356.56,
+      "revised_budget": 9858356.56,
       "actual": 10527290.89,
       "original_budget": 2400000.0
     }
@@ -24,14 +24,14 @@
       "revised_budget": 69474315.0,
       "actual": 31727143.44,
       "original_budget": 69331077.0,
-      "encumbrance": 13656887.86
+      "encumbrance": 13660420.19
     },
     {
       "name": "GENERAL FUND - SCHOOL",
       "revised_budget": 47620287.0,
       "actual": 10438251.9,
       "original_budget": 47620287.0,
-      "encumbrance": 33320348.0
+      "encumbrance": 33322940.33
     },
     {
       "name": "WATER ENTERPRISE OPERATING",
@@ -82,14 +82,14 @@
       "revised_budget": 12884420.6,
       "actual": 3079252.67,
       "original_budget": 13090519.6,
-      "encumbrance": 7581872.22
+      "encumbrance": 7583746.22
     },
     {
       "name": "HIGH SCHOOL",
       "revised_budget": 11559661.33,
       "actual": 2440817.95,
       "original_budget": 11552590.13,
-      "encumbrance": 8359054.05
+      "encumbrance": 8359432.03
     },
     {
       "name": "DEBT SERVICE",
@@ -110,28 +110,28 @@
       "revised_budget": 6471909.0,
       "actual": 2348000.83,
       "original_budget": 6312967.0,
-      "encumbrance": 2862246.68
+      "encumbrance": 2862887.45
     },
     {
       "name": "MIDDLE SCHOOL",
       "revised_budget": 5764127.68,
       "actual": 1221358.79,
       "original_budget": 5712762.68,
-      "encumbrance": 3697785.32
+      "encumbrance": 3697853.31
     },
     {
       "name": "POLICE",
       "revised_budget": 5460658.0,
       "actual": 1913418.96,
       "original_budget": 5415360.0,
-      "encumbrance": 2622311.58
+      "encumbrance": 2624303.14
     },
     {
       "name": "BROWN SCHOOL",
       "revised_budget": 5437773.06,
       "actual": 1161062.3,
       "original_budget": 5422623.26,
-      "encumbrance": 4378279.05
+      "encumbrance": 4378551.41
     },
     {
       "name": "WATER",
@@ -201,7 +201,7 @@
       "revised_budget": 1595790.0,
       "actual": 511145.21,
       "original_budget": 1595790.0,
-      "encumbrance": 807455.77
+      "encumbrance": 808355.77
     },
     {
       "name": "PARKS & RECREATION",
@@ -420,7 +420,7 @@
       "revised_budget": 15114162.0,
       "actual": 7025451.02,
       "original_budget": 14336656.0,
-      "encumbrance": 6397223.65
+      "encumbrance": 6400038.98
     },
     {
       "name": "GOVERNMENTAL",
@@ -441,7 +441,7 @@
       "revised_budget": 2461324.0,
       "actual": 672581.58,
       "original_budget": 2458724.0,
-      "encumbrance": 577334.18
+      "encumbrance": 580643.51
     },
     {
       "name": "CAPITAL",
@@ -478,7 +478,7 @@
       "revised_budget": 47615287.0,
       "actual": 10438251.9,
       "original_budget": 47615287.0,
-      "encumbrance": 33318526.5
+      "encumbrance": 33321118.83
     },
     {
       "name": "SALARIES",
@@ -492,7 +492,7 @@
       "revised_budget": 20339169.0,
       "actual": 18980338.26,
       "original_budget": 24880169.0,
-      "encumbrance": 2170869.96
+      "encumbrance": 2174402.29
     },
     {
       "name": "GROUP INSURANCE",
@@ -1149,10 +1149,10 @@
     },
     {
       "name": "R&M BUILDING AND GROUNDS",
-      "revised_budget": 1236179.0,
+      "revised_budget": 1244679.0,
       "actual": 356717.28,
       "original_budget": 1236179.0,
-      "encumbrance": 246907.56
+      "encumbrance": 248972.89
     },
     {
       "name": "INSURANCE PREMIUMS",
@@ -1271,7 +1271,7 @@
       "revised_budget": 619218.0,
       "actual": 177318.25,
       "original_budget": 616618.0,
-      "encumbrance": 175721.18
+      "encumbrance": 176089.51
     },
     {
       "name": "OTHER PROF & TECHNICAL",
@@ -1719,7 +1719,7 @@
       "revised_budget": 123148.0,
       "actual": 21320.16,
       "original_budget": 122188.0,
-      "encumbrance": 41411.52
+      "encumbrance": 41811.52
     },
     {
       "name": "LOCAL INSPECTORS",
@@ -2034,7 +2034,7 @@
       "revised_budget": 68521.0,
       "actual": 5778.0,
       "original_budget": 68521.0,
-      "encumbrance": 1920.6
+      "encumbrance": 2270.6
     },
     {
       "name": "BILLING TECH",
@@ -2069,7 +2069,7 @@
       "revised_budget": 67545.0,
       "actual": 16463.56,
       "original_budget": 67545.0,
-      "encumbrance": 17469.83
+      "encumbrance": 18036.83
     },
     {
       "name": "LIBRARY PARAPROFESSIONAL",
@@ -2317,13 +2317,6 @@
       "encumbrance": -9500.0
     },
     {
-      "name": "EMPLOYEE TRAINING/SEMINARS",
-      "revised_budget": 43069.0,
-      "actual": 1275.0,
-      "original_budget": 43069.0,
-      "encumbrance": 6858.0
-    },
-    {
       "name": "INSIDE DETAIL",
       "revised_budget": 41978.0,
       "actual": 5074.19,
@@ -2349,7 +2342,7 @@
       "revised_budget": 38140.0,
       "actual": 9739.65,
       "original_budget": 38140.0,
-      "encumbrance": 12307.95
+      "encumbrance": 14181.95
     },
     {
       "name": "OFFICE SUPPLIES",
@@ -2364,6 +2357,13 @@
       "actual": 20265.53,
       "original_budget": 35303.0,
       "encumbrance": 36159.7
+    },
+    {
+      "name": "EMPLOYEE TRAINING/SEMINARS",
+      "revised_budget": 34569.0,
+      "actual": 1275.0,
+      "original_budget": 43069.0,
+      "encumbrance": 6858.0
     },
     {
       "name": "CELLULAR PHONES",
@@ -2895,7 +2895,7 @@
       "revised_budget": 8075.0,
       "actual": 3726.19,
       "original_budget": 8075.0,
-      "encumbrance": 3073.17
+      "encumbrance": 3573.17
     },
     {
       "name": "STONE DUST",
