@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-11-12",
+    "date": "2026-11-17",
     "fiscal_year": "FY27",
-    "row_count": 4924,
-    "total_paid": 47842757.83,
+    "row_count": 4927,
+    "total_paid": 48184511.48,
     "interfund_total": 356307.41,
-    "external_paid": 47486450.42,
+    "external_paid": 47828204.07,
     "first_payment": "2026-07-01",
-    "last_payment": "2026-11-12",
-    "source_file": "checkbook_FY27_2026-11-12.csv"
+    "last_payment": "2026-11-17",
+    "source_file": "checkbook_FY27_2026-11-17.csv"
   },
   "buckets": [
     {
       "key": "ballot",
       "label": "Voted by you, at the ballot",
       "amount": 5513377.24,
-      "share": 0.1152,
+      "share": 0.1144,
       "fund_count": 4,
       "top_funds": [
         {
@@ -44,14 +44,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 28252399.09,
-      "share": 0.5905,
+      "amount": 28259804.06,
+      "share": 0.5865,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 25626336.47,
-          "row_count": 1901
+          "amount": 25633741.44,
+          "row_count": 1902
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -68,8 +68,8 @@
     {
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
-      "amount": 12443480.47,
-      "share": 0.2601,
+      "amount": 12777769.27,
+      "share": 0.2652,
       "fund_count": 7,
       "top_funds": [
         {
@@ -79,8 +79,8 @@
         },
         {
           "name": "WATER ENTERPRISE OPERATING",
-          "amount": 1814343.36,
-          "row_count": 146
+          "amount": 2148632.16,
+          "row_count": 147
         },
         {
           "name": "SEWER ENTERPRISE OPERATING",
@@ -113,7 +113,7 @@
       "key": "state_fed",
       "label": "State & federal restricted grants",
       "amount": 678103.62,
-      "share": 0.0142,
+      "share": 0.0141,
       "fund_count": 17,
       "top_funds": [
         {
@@ -195,7 +195,7 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 494198.0,
+      "amount": 494257.88,
       "share": 0.0103,
       "fund_count": 39,
       "top_funds": [
@@ -243,11 +243,11 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 25626336.47,
+    "total": 25633741.44,
     "fixed_total": 23015663.9,
-    "fixed_share": 0.8981,
-    "admin_contracts_total": 896584.52,
-    "admin_contracts_share": 0.035,
+    "fixed_share": 0.8979,
+    "admin_contracts_total": 903989.49,
+    "admin_contracts_share": 0.0353,
     "other_recurring_total": 1714088.05,
     "other_recurring_share": 0.0669,
     "segments": [
@@ -255,7 +255,7 @@
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 7239119.53,
-        "share": 0.2825,
+        "share": 0.2824,
         "row_count": 47,
         "top_vendors": [
           {
@@ -296,7 +296,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 8254475.24,
-        "share": 0.3221,
+        "share": 0.322,
         "row_count": 31,
         "top_vendors": [
           {
@@ -334,9 +334,9 @@
       {
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
-        "amount": 896584.52,
-        "share": 0.035,
-        "row_count": 63,
+        "amount": 903989.49,
+        "share": 0.0353,
+        "row_count": 64,
         "top_vendors": [
           {
             "name": "REPUBLIC SERVICES INC",
@@ -347,12 +347,12 @@
             "amount": 221452.35
           },
           {
-            "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
-            "amount": 155866.82
+            "name": "VOYA HOLDINGS INC",
+            "amount": 162890.34
           },
           {
-            "name": "VOYA HOLDINGS INC",
-            "amount": 155485.37
+            "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
+            "amount": 155866.82
           },
           {
             "name": "MEAD TALERMAN & COSTA LLC",
@@ -422,7 +422,7 @@
       "row_count": 21,
       "first_paid": "2026-07-20",
       "last_paid": "2026-10-22",
-      "days_since_last_paid": 21,
+      "days_since_last_paid": 26,
       "status": "active",
       "top_vendors": [
         {
@@ -462,7 +462,7 @@
       "row_count": 4,
       "first_paid": "2026-07-08",
       "last_paid": "2026-10-20",
-      "days_since_last_paid": 23,
+      "days_since_last_paid": 28,
       "status": "active",
       "top_vendors": [
         {
@@ -492,8 +492,8 @@
       "row_count": 3,
       "first_paid": "2026-09-16",
       "last_paid": "2026-09-16",
-      "days_since_last_paid": 57,
-      "status": "active",
+      "days_since_last_paid": 62,
+      "status": "wrapping",
       "top_vendors": [
         {
           "name": "WAKEFIELD MOVING & STORAGE SERVICES, LLC",
@@ -522,7 +522,7 @@
       "row_count": 3,
       "first_paid": "2026-08-28",
       "last_paid": "2026-09-18",
-      "days_since_last_paid": 55,
+      "days_since_last_paid": 60,
       "status": "active",
       "top_vendors": [
         {

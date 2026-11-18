@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-11-12",
+  "as_of": "2026-11-17",
   "fiscal_year": "FY27",
   "generated_by": "scripts/build_checkbook_performance.py",
   "fy_months_elapsed": 5,
-  "fy_pct_elapsed": 37.0,
+  "fy_pct_elapsed": 38.4,
   "budget_execution": {
     "by_department": [
       {
@@ -691,8 +691,8 @@
     },
     {
       "month": "2026-11",
-      "amount": 2086277.0,
-      "count": 119
+      "amount": 2428030.65,
+      "count": 122
     }
   ],
   "drill": {
@@ -1855,8 +1855,8 @@
           },
           {
             "name": "VOYA HOLDINGS INC",
-            "amount": 159322.87,
-            "count": 26
+            "amount": 166727.84,
+            "count": 27
           },
           {
             "name": "ALTUS DENTAL INSURANCE COMPANY, INC",
@@ -1907,8 +1907,8 @@
           },
           {
             "month": "2026-11",
-            "amount": 1702233.06,
-            "count": 60
+            "amount": 1709638.03,
+            "count": 61
           }
         ]
       },
@@ -2148,8 +2148,8 @@
           },
           {
             "name": "SQUARE INC",
-            "amount": 124.33,
-            "count": 1
+            "amount": 184.21,
+            "count": 2
           },
           {
             "name": "AMY KOSTECKI",
@@ -2187,6 +2187,11 @@
             "month": "2026-10",
             "amount": 295.0,
             "count": 2
+          },
+          {
+            "month": "2026-11",
+            "amount": 59.88,
+            "count": 1
           }
         ]
       },
@@ -3405,8 +3410,8 @@
         "top_vendors": [
           {
             "name": "MASSACHUSETTS WATER RESOURCES AUTHORITY",
-            "amount": 1437155.2,
-            "count": 5
+            "amount": 1771444.0,
+            "count": 6
           },
           {
             "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
@@ -3487,8 +3492,8 @@
           },
           {
             "month": "2026-11",
-            "amount": 127699.33,
-            "count": 9
+            "amount": 461988.13,
+            "count": 10
           }
         ]
       }
