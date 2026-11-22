@@ -168,6 +168,13 @@
         "pct": 94.23
       },
       {
+        "name": "DEBT SERVICE",
+        "revised": 9314141.0,
+        "actual": 9247014.78,
+        "delta": -67126.22,
+        "pct": 99.28
+      },
+      {
         "name": "POLICE",
         "revised": 5303437.09,
         "actual": 5223683.94,
@@ -194,13 +201,6 @@
         "actual": 614225.17,
         "delta": -89017.83,
         "pct": 87.34
-      },
-      {
-        "name": "DEBT SERVICE",
-        "revised": 9314141.0,
-        "actual": 9214614.78,
-        "delta": -99526.22,
-        "pct": 98.93
       },
       {
         "name": "FIRE",
@@ -354,9 +354,9 @@
       {
         "name": "DEBT SERVICE",
         "revised": 9314141.0,
-        "actual": 9214614.78,
-        "delta": -99526.22,
-        "pct": 98.93
+        "actual": 9247014.78,
+        "delta": -67126.22,
+        "pct": 99.28
       },
       {
         "name": "VILLAGE SCHOOL",
